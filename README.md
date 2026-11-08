@@ -50,3 +50,7 @@ python3 tools/reproduce.py affine
 ```
 
 These controls need no large-data download. See the [reproduction guide](docs/REPRODUCIBILITY.md) for dependencies, selective downloads, and restoration. See [contributing](CONTRIBUTING.md) for changes to the research record.
+
+## AI assistance
+
+OpenAI Codex and Anthropic Claude were used to develop, review, and update the research, theorem proofs, and manuscripts in this archive. The authors remain responsible for the content.

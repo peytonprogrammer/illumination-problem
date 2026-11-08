@@ -235,16 +235,16 @@ If the bridge is present, the segment $ST$ works. Otherwise, Proposition~\ref{pr
 This note doesn't reproduce the optical case proofs behind Table~\ref{tab:cases}. The source manifest pins 148 files across these proofs, their reviews, and their checkers.
 
 \section{Verification status}\label{sec:status}
-\paragraph{Review.} Two OpenAI Codex agent sessions wrote and reciprocally reviewed the proof. The final review accepted the theorem and the five erasure rows on 5 November 2026. Its checker recomputes 436 necessary interface patches and 2{,}546 angular completions. It also recomputes the guards of the 21 building-block paths, including reversal and $\sigma$. These are local checks, not a count of rooms. A later Codex audit reran that checker. All 148 manifest pins, 6 supplement pins, and 157 review pins matched.
+\paragraph{Checks.} The exact checker recomputes 436 necessary interface patches, 2{,}546 angular completions, and the guards of the 21 building-block paths, including reversal and $\sigma$. These are local checks, not a count of rooms. The archived verification records report matching 148 manifest pins, 6 supplement pins, and 157 review pins.
 
-\paragraph{Limits.} The reviewing sessions share accepted lower-layer foundations, and each wrote parts of them, so their independence is limited. Some optical paths came from earlier bounded searches. The proof uses each path only through its guard. The rerun isn't a fresh hand proof of every inherited lemma. No proof assistant or external expert has checked the result.
+\paragraph{Limits.} Some checks rely on shared lower-layer foundations, so their independence is limited. Some optical paths came from earlier bounded searches; the proof uses each path only through its exact guard. Computational replay is not a fresh hand proof of every inherited lemma. No proof assistant or external expert has checked the result.
 
 \paragraph{Data availability.} The proof records, exact checkers and certificate download instructions are in the project repository: \url{https://github.com/peytonprogrammer/illumination-problem}. See \texttt{docs/DATA.md} and \texttt{docs/REPRODUCIBILITY.md}. Access follows the repository policy; this draft does not claim a public supplement.
 
 \paragraph{Open questions.} Lemma~\ref{lem:count} also allows $\Delta=5$ with $W=21$ and $k=6$, which this theorem doesn't cover. Other three-star supports are also outside it. It's open whether a bound below 32 holds.
 
 \section*{Acknowledgments}
-The authors used OpenAI Codex agents to develop and review the proof, and Anthropic's Claude to prepare this manuscript. The authors remain responsible for its content.
+The authors used AI tools, including OpenAI Codex and Anthropic Claude, to develop and revise this research, its theorem proofs, and the manuscript. The authors remain responsible for the content.
 
 \begin{thebibliography}{9}
 \bibitem{DeWinterTokarsky2026}

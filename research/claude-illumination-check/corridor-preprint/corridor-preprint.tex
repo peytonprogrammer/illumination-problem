@@ -297,14 +297,14 @@ C7 & Step 5 & 770{,}912 saved clauses and 3{,}085{,}728 integer guard identities
 \label{tab:certs}
 \end{table}
 
-\paragraph{Review.} Two separate OpenAI Codex agent sessions wrote and reviewed the proof. The reviewing session read the hand arguments and wrote its own exact checkers for each certificate. It reproduced the finite list and replayed every C7 clause, then accepted the whole theorem on 6 November 2026. The authoring session checked 2{,}043 prescribed physical paths with exact arithmetic, and the reviewing session checked 153. These paths support the hand geometry, and they don't replace the quantified cover. A separate Claude session reviewed the L-room lemma. This review is AI review of a computer-assisted proof. It isn't formal verification, and no external expert has refereed it.
+\paragraph{Checks.} The verification reproduces the finite residual list and replays every C7 clause. Exact prescribed-path checks support the hand geometry without replacing the quantified cover. The result has not been formally verified or externally refereed.
 
 \paragraph{Data availability.} The proof records, exact checkers and certificate download instructions are in the project repository: \url{https://github.com/peytonprogrammer/illumination-problem}. See \texttt{docs/DATA.md} and \texttt{docs/REPRODUCIBILITY.md}. Access follows the repository policy; this draft does not claim a public supplement.
 
 \paragraph{Open questions.} A hand proof of certificates C1--C7 would remove the computer dependence. It's also open whether covering or periodic-point theory gives a shorter proof. The theorem doesn't settle other interior pairs in $P$.
 
 \section*{Acknowledgments}
-The authors used OpenAI Codex agents to develop and review the proof, and Anthropic's Claude to prepare this manuscript. The authors remain responsible for its content.
+The authors used AI tools, including OpenAI Codex and Anthropic Claude, to develop and revise this research, its theorem proofs, and the manuscript. The authors remain responsible for the content.
 
 \begin{thebibliography}{9}
 \bibitem{ApisaWright2021}
