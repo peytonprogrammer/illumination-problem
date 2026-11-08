@@ -1,0 +1,135 @@
+{
+  "status": "PARENT_NONCRITICAL2101_D_R_N_WHOLE13",
+  "forcing": [
+    {
+      "name": "forcing_missingB",
+      "reflections": 1,
+      "required_caps": [],
+      "forbidden_caps": [
+        "B+"
+      ]
+    },
+    {
+      "name": "forcing_sigma_missingB",
+      "reflections": 1,
+      "required_caps": [],
+      "forbidden_caps": [
+        "E-"
+      ]
+    },
+    {
+      "name": "forcing_missingT_ordinaryB",
+      "reflections": 4,
+      "required_caps": [
+        "B+"
+      ],
+      "forbidden_caps": [
+        "B-",
+        "T-"
+      ]
+    },
+    {
+      "name": "forcing_sigma_missingT_ordinaryB",
+      "reflections": 4,
+      "required_caps": [
+        "E-"
+      ],
+      "forbidden_caps": [
+        "L+",
+        "E+"
+      ]
+    }
+  ],
+  "N_windows": [
+    {
+      "sectors": [
+        0,
+        1,
+        2
+      ],
+      "covers": [
+        "old13"
+      ]
+    },
+    {
+      "sectors": [
+        3,
+        4,
+        5
+      ],
+      "covers": [
+        "sigma13"
+      ]
+    },
+    {
+      "sectors": [
+        4,
+        5,
+        6
+      ],
+      "covers": [
+        "sigma13"
+      ]
+    },
+    {
+      "sectors": [
+        0,
+        1,
+        7
+      ],
+      "covers": [
+        "old13"
+      ]
+    },
+    {
+      "sectors": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "covers": [
+        "old13"
+      ]
+    },
+    {
+      "sectors": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "covers": [
+        "sigma13"
+      ]
+    },
+    {
+      "sectors": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "covers": [
+        "sigma13"
+      ]
+    },
+    {
+      "sectors": [
+        0,
+        1,
+        2,
+        7
+      ],
+      "covers": [
+        "old13"
+      ]
+    }
+  ],
+  "limits": "Onlysixalreadyacceptedguards; noopticalsearch/newroom/ordinaryassignment. Fullguard supportallwithinK, soallsoleoutsideKremoteleavesareharmless. Independenthandreviewneeded.",
+  "source_sha256": {
+    "fourth-surplus-review/three-unit-b1-independent/check.json": "988210b87485a0e8caf554a1f4806d0247a96421e6bee0e6b7d01502093cb316",
+    "triangle-composition/inputs/caps.json": "8b852f70adaaf883062b5b7c6c8f2ede7e16a78f32d9b59efa7c6325cd27c0e4",
+    "fourth-surplus-review/remote2101/noncritical.py": "47d18cc7fb2e21a77b823012cc22ea03b9bad00e0a0a3daa106b00029b9850bf"
+  }
+}

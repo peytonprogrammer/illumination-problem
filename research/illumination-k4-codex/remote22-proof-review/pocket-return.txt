@@ -1,0 +1,125 @@
+Reusable pocket return maps
+4 November 2026 — Codex01a1a00f
+
+Purpose
+Use a pocket's exact returning position and velocity as one optical operation.
+This handles a deleted mirror by following the excursion, instead of assuming
+that deleting/reinserting a pocket preserves illumination. The maps below are
+proved directly. They do not force a source ray to enter the pocket, avoid
+corners, or reach the target after returning; that global compatibility remains
+the next question. No novelty claim is intended.
+
+1. Rectangle with one open bottom side
+Let 0<=x<=w,0<=y<=h be a rectangle, open only at y0. A ray enters at(x,0),
+0<x<w, with velocity(a,b), b>0. All other sides reflect.
+Unfold vertical-wall reflections. The vertical coordinate reaches h once,
+then returns to0 after time tau=2h/b. Its unfolded horizontal coordinate is
+ z=x+2ha/b.
+Define F_w(z) by period2w: F_w(z)=z on[0,w], and2w-z on[w,2w].
+The exit is(F_w(z),0). If n=floor(z/w), the exit velocity is
+ ((-1)^n a,-b).
+Reject corner cases: x+ha/b or z an integer multiple of w. The former hits
+a roof corner; the latter exits at a portal endpoint. These are precisely
+the possible corners because vertical motion has only one roof contact.
+For a=0, every positive height returns at the same x with velocity(0,-b).
+
+Proof: fold the single straight unfolded horizontal motion into the interval.
+Every integer-w crossing flips horizontal velocity; the one roof reflection
+flips vertical velocity. The ray cannot hit the bottom earlier. This proves
+finite return, with1+|floor(z/w)| reflections, for every nonsingular input.
+
+Height periodicity, a nonzero:
+Replacing h by h+n*w*b/|a| for any integer n>=0 changes z by sign(a)*2nw.
+The return position and velocity are therefore EXACTLY unchanged. Roof phase
+changes by sign(a)*nw, so corner avoidance is unchanged too. The excursion
+adds exactly2n side-wall reflections. This is a class-wide replacement rule
+for any outside path whose only contacts with the pocket occur at its portal.
+
+2. Consequence for the reviewed20-wall room
+Its square pocket is [-2,-1]x[1,2], width1 and height1. The verified ray enters
+with velocity(-1,d), d10/13, at local x=4-3/d (local x0 is physical x-2).
+Its four-contact return has z=4-5/d in(-3,-2), so its physical exit at y1 is
+ x_exit=5/d-8, velocity(1,-d).
+This is the compact optical operation underlying the new14-reflection path.
+
+Raise only the pocket roof to
+ y=2+10n/13, n=0,1,2,... .
+The enlarged rooms remain simple20-wall polygons: the taller pocket occupies
+x between-2 and-1, separated from the upper-right chamber. S/T and all other
+walls stay fixed. The exact same launch(10,-13) reaches actual T, with14+2n
+reflections. The entire outside path is unchanged; only the pocket excursion
+gains side bounces. This is an infinite family, proved by periodicity, not by
+sampling. Prescribed controls n0,1,2,13 pass exact actual-boundary replay:
+14,16,18,40 reflections respectively.
+This extends beyond the original lattice/exception budget and supplies no
+stronger minimum-wall bound. Its value is demonstrating compositional optics.
+
+3. Single right-isosceles triangle, open at one leg
+This is the remote leaf in BOTH remaining parent2 rows. Choose coordinates
+D={(x,y):x>=0,y>=0,x+y<=w}, with portal y0 and reflecting x0/hypotenuse.
+Entry(x,0),0<x<w, velocity(a,b),b>0.
+Reflect D across its hypotenuse into the square[0,w]^2. The hypotenuse becomes
+a fold, while square LEFT and TOP sides reflect and BOTTOM and RIGHT sides
+are exits. Crossing the fold represents an actual hypotenuse reflection.
+
+Define ty=2w/b. Define tx=(w-x)/a for a>0; tx=(w+x)/|a| for a<0; tx=infinity
+for a0. The first square exit is at tau=min(tx,ty).
+
+BOTTOM exit, ty<tx:
+ z=x+2wa/b;
+ original exit=(|z|,0), velocity(sign(z)*a,-b).
+Here |z|<w; z0 is a corner and is excluded. The square horizontal motion
+can have at most one reflection at the left edge before this exit.
+
+RIGHT exit, tx<ty:
+ z=w-b*tx;
+ original exit=(|z|,0), velocity(-sign(z)*b,-|a|).
+The square's right edge belongs to the reflected triangle; folding sends
+(w,y) to(w-y,0), and(vx,vy) to(-vy,-vx). This gives the displayed formula.
+The square vertical motion has at most one top reflection. Reject tx=ty,
+z0, or a simultaneous left/top collision: these hit triangle vertices.
+The local lemma excludes ALL triangle-vertex events. An attached room might
+make a portal endpoint smooth, but that more permissive case is not used here.
+
+Uniform local return bound: before the first square exit there is at most
+one left and one top reflection, hence at most three straight square legs.
+Each leg crosses the folding diagonal at most once. There are thus at most
+five physical reflections (two square-boundary plus three diagonal contacts).
+A collinear folding-diagonal leg would require entry at its endpoint, already
+a forbidden corner. The bound need not be sharp. Every corner-avoiding input
+returns, with the explicit exit state above. Five prescribed exact controls
+exercise right exits, bottom exits, left/top reflections, and a0; all pass.
+
+4. Composition principle and precise remaining work
+If a room is split at a portal and an excursion returns through that portal
+at a specified point/velocity, the outside trajectory depends only on that
+exit state. Replacing the pocket by another with the same return state
+preserves the connecting path, provided the outside path and endpoints stay
+outside the changed region. This follows by uniqueness of straight flight
+and specular reflection at each subsequent smooth wall contact. No assertion
+of monotonic illumination under arbitrary enlargement is needed or true here.
+
+Use the SAME triangle map in remaining rows(2,1,0,1) and(2,1,1,0), rather
+than erasing the leaf and exposing a new smooth C/B point. The parent2 fan
+can present a full C pair with only one half attached to the triangle; that
+half is a unit-leg portal. Rotate/reflect the displayed coordinates to it.
+Compose the local return with the parent and core flights; then solve the
+actual S/T endpoint equation and prove that its parameter lies in an allowed
+branch. In the second row, the extra local unit fan must be handled explicitly
+as a possible changed exterior mirror. The return map alone does not remove it.
+
+Success criterion: one common implication closes both charge rows, with every
+branch obstruction paid by the budget or resolved by another explicitly
+compatible return. Failure criterion: a legal arrangement blocks the proposed
+external itinerary; then report the obstruction rather than scan more rooms.
+This is the next bounded theoretical task; no global existence theorem or
+new case closure is claimed by these local maps.
+
+Supplementary robustness result
+For every real h in(19/20,21/20), replacing the original unit pocket height by h
+also admits a14-reflection path with adjusted launch(h+9,-13). The endpoint
+formula is x=20+2h-26d at y2, so d=(h+9)/13 reaches actual T. Exact symbolic
+reflection identities and complete sign-cell/root isolation certify the entire
+interval, not just its three checked representatives. See pocket-family.json.
+This illustrates parameter compensation; most such rooms leave the canonical
+lattice class, so it is not a new result inside the Delta4 budget.

@@ -1,0 +1,133 @@
+# Independent review: 22-wall room and four-copy extension
+
+I re-derived every combinatorial and dynamical claim by hand. The checker agrees with my derivations, but none of the verdicts below rely on it.
+
+| Part | Verdict |
+|---|---|
+| (1) Base parity lemma | **ACCEPT** |
+| (2) Folding event classification and corner census | **ACCEPT** (one expository fix) |
+| (3) First-b / last-a argument | **ACCEPT** (one step should be made explicit) |
+| (4) Four-copy extension | **ACCEPT** (census and endpoint list must be restated) |
+
+None of the gaps below is fatal. They are places where the write-up asserts something that is true but leaves a step unstated.
+
+---
+
+## (1) Base parity lemma: ACCEPT
+
+**Census.** I checked all ten corners cell by cell.
+- **Convex (one occupied cell):** (-1,-1), (-1,0), (1,0), (2,-1), (2,-3), (1,-3), (0,-2).
+- **Concave (three occupied cells):** (0,-1), (1,-1), (1,-2).
+- **Smooth:** (0,0) is the midpoint of the top wall y=0, x∈[-1,1]. (2,-2) is the midpoint of the right wall x=2, y∈[-3,-1].
+- **Interior integer points:** none.
+
+**Logic.**
+- Every unfolding map is a composition of reflections x↦2c−x and y↦2d−y with integer c and d. So each map has the form (x,y)↦(±x+2m, ±y+2n).
+- Such maps preserve the lattice and both coordinate parities. The same holds for their inverses, which is what the fold-back step needs.
+- V = g(b) is even-even. V is nonzero because the path has positive length.
+- z = V/2^k sits at parameter 2^(−k), which lies strictly inside (0,1).
+- The fold of z is the path's actual position at that parameter. It is an integer point of P with an odd coordinate. It cannot be a or b, and P has no interior integer points, so it is a corner. That contradicts corner avoidance.
+- The "join" case is fine. Adjacent unfolded copies agree on their shared wall, so the fold of z is still well defined.
+
+**Correction (wording only).** Say explicitly that the inverse unfolding maps also preserve parity. The text uses this fact but does not state it.
+
+---
+
+## (2) Event classification and census: ACCEPT
+
+**Fold continuity on the seams.**
+- On y=0, the identity and (x,−y) agree.
+- On x=2, (x,−y) and (4−x,−y) both give (2,−y).
+
+**Seam crossings.**
+- At y=0, folded velocity (u,v) becomes (u,−v). This is a reflection off P's top wall.
+- At x=2, folded velocity (u,−v) becomes (−u,−v). This is a reflection off P's right wall.
+- Neither seam endpoint is included, because the seams are open. So a crossing always folds to a reflection at a smooth point of P (possibly at a or b).
+
+**Endpoints.** I checked each one cell by cell. Each is a smooth point of Q and folds to a convex corner of P:
+
+| Endpoint in Q | Occupied cells | Local wall | Fold in P |
+|---|---|---|---|
+| (−1,0) | (−1,−1), (−1,0) | vertical | (−1,0) |
+| (1,0) | (0,−1), (0,0) | vertical | (1,0) |
+| (2,1) | (1,1), (2,1) | horizontal | (2,−1) |
+| (2,3) | (1,2), (2,2) | horizontal | (2,−3) |
+
+I computed the before/after folded velocities at all four. Each gives an exact reversal (factor −1,−1), and by time reversal this holds from either side.
+
+**Census.**
+- 30 corner incidences = 8 at the four smooth endpoints + 13 convex corners of Q + 9 concave corners of Q. The total of 22 matches the boundary list.
+- Every integer point of Q is accounted for. S and T are the only interior integer points.
+- Every point that folds to a corner of P is an integer point. So the only non-corner physical points with abnormal folded dynamics are the four endpoints.
+
+**Correction (expository).** "The other three by symmetry or interchanging x and y" should be replaced by the direct per-endpoint check in the table. Also add one sentence: nonaxiality is preserved, because |u| and |v| are invariant. That rules out legs running along a seam or a wall.
+
+---
+
+## (3) First-b / last-a argument: ACCEPT
+
+**Stopping at the first b and starting at the last a.**
+- Folding is purely a statement about the folded curve f:[0,L]→P.
+- t_b > 0 exists because f(L) = b.
+- t_a is the last visit to a in [0,t_b], so t_a < t_b.
+- It does not matter which physical point produced each visit: S or (4,0) for a, (2,−2) or T for b. Step C only needs some a-to-b ordinary path in P.
+
+**Step B: does a reversal force a return to a before the first b?** Yes. The text needs this lemma made explicit:
+
+> At any physical point whose fold is an interior point or a smooth wall point of P, the folded motion locally *is* the billiard flow of P. This holds regardless of which copy the physical point is in, and regardless of whether the event is a physical wall reflection or a seam crossing.
+
+Given that lemma:
+1. Let t_r be the first reversal on γ. It falls strictly inside (t_a, t_b), because a and b are not corners.
+2. The forward route on [t_a, t_r) touches only interior and smooth points of P.
+3. So the reversed route is a valid P-billiard trajectory, and determinism forces f(t_r+s) = f(t_r−s) for s ∈ [0, t_r−t_a].
+4. That retraced segment contains no b, since t_r < t_b.
+5. f(t_b) = b, so t_b > 2t_r − t_a.
+6. Therefore f(2t_r−t_a) = a is an interior visit to a in (t_a, t_b). This contradicts the choice of t_a.
+
+The retrace also cannot reach an actual corner or a seam endpoint, because it passes only through folds of smooth or interior points.
+
+**Step C.** With no reversals and no actual-corner hits, γ avoids every corner of P. Lemma (1) then applies.
+
+**Finiteness.** The argument is valid. As a side note, finite length already forces finitely many reflections here: consecutive reflections on parallel walls are at least 1 apart in that coordinate.
+
+**Correction.** Replace "retracing visits no point that was not already on the preceding route" with steps 3–6 above, including the explicit inequality t_b > 2t_r − t_a.
+
+---
+
+## (4) Four-copy extension: ACCEPT
+
+**New copy and seam.**
+- P3 = (−2−x, y) maps the base cells to (−2,−1), (−3,−1), (−3,−2), (−4,−2), (−4,−3).
+- The seam x=−1, y∈(−1,0) folds continuously; both maps give (−1,y).
+- A crossing folds to a reflection off P's left wall x=−1, which runs between corners (−1,−1) and (−1,0).
+
+**Endpoint (−1,−1).**
+- The occupied cells are (−2,−1) and (−1,−1), so it is a smooth point on a horizontal wall.
+- Folded velocity: (−u,−v) before, (u,v) after. This is a reversal at the convex corner (−1,−1) of P.
+
+**Endpoint (−1,0).**
+- Three cells are occupied: (−2,−1) in P3, (−1,−1) in P0, and (−1,0) in P1. So it is an actual concave corner of Q4 and corner avoidance excludes it.
+- All three copies send it to (−1,0), so the fold is consistent there.
+- The P1–P3 contact is only this excluded point. The seam graph is the tree 2–1–0–3, so there is no monodromy.
+
+**Other endpoints.** (1,0), (2,1) and (2,3) are unchanged. The four reversal points are (−1,−1), (1,0), (2,1), (2,3), folding to (−1,−1), (1,0), (2,−1), (2,−3). This matches your statement.
+
+**Remaining checks.**
+- S and T stay interior.
+- The extra mark preimages (−2,0) and (−4,−2) are smooth wall points. Step A already permits visits to them.
+- Finiteness carries over with three seam lines.
+
+**Corrections required.** Section 2's text is specific to the three-copy room and must be restated for the four-copy room:
+- **Reversal list:** (−1,0) is replaced by (−1,−1).
+- **Census:** 40 incidences = 8 at the four smooth endpoints + 3 at (−1,0), which together form one concave corner + 17 convex corners + 12 concave corners from base concave corners. That gives 17 convex + 13 concave = 30 walls.
+- **Wording:** the sentence "three concave base corners give nine" does not apply here.
+
+---
+
+## Remarks on the checker
+
+- The reversal test (componentwise g_j·r·g_i = (−1,−1)) is the correct algebra.
+- The shared-edge fold test checks only endpoints, but the maps are affine, so that suffices.
+- The Euler characteristic, connectivity and single-cycle checks establish a simple polygon. The pinch assertion catches diagonal contacts.
+- The parity and halving "controls" are finite sanity checks, not proofs. The text correctly says so.
+- The checker does not verify the dynamical lemma in (3) or the parity lemma. Those rest on the hand proofs above, which I find sound.

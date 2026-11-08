@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "saved_rooms_revalidated": 30,
+  "distinct_unit_square_sets": 30,
+  "actual_paths_replayed": 30,
+  "universal_guards_rechecked": 30,
+  "method_counts": {
+    "short_direction": 22,
+    "finite_orbit_witness": 8
+  },
+  "walls_histogram": {
+    "20": 24,
+    "18": 6
+  },
+  "triangle_histogram": {
+    "34": 7,
+    "32": 8,
+    "30": 13,
+    "28": 1,
+    "36": 1
+  },
+  "reflections_min": 0,
+  "reflections_max": 19,
+  "short_directions_tested": 1055,
+  "orbit_states_total": 895,
+  "search_wall_seconds": 4.236013750080019,
+  "search_runs": 1,
+  "timing_scope": "Search loop only: SAT calls,30optical subprocesses,geometry checks,guard derivation/audit and artifact writes. Encoding,controls and this replay excluded.",
+  "benchmark_checklist": {
+    "errors_counted": true,
+    "timed_work_consumed": true,
+    "runtime_extrapolation": "Unsupported by one capped case; no speedup/comparative benchmark claimed."
+  },
+  "scope": "Same-agent replay plus frozen separately authored triangle/guard checkers; no new search, formal proof or independent reviewer.",
+  "result_sha256": "076cac66b5957361e504aa1d0ba7dc9962b7fa2b54338269df857f1a46dde842"
+}

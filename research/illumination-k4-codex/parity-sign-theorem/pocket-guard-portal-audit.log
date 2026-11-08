@@ -1,0 +1,84 @@
+{
+  "status": "FROZEN_PACKET_PROPERTY_AUDIT_COMPLETE",
+  "counts": {
+    "guards": 3660,
+    "one_distinct_BC_point": 2204,
+    "potential_open_seal_bounce": 1390,
+    "all_compatible_unit_intervals_clear_at_recorded_bounces": 814,
+    "two_points_incompatible_with_single_unit_seal": 94,
+    "no_recorded_BC_bounce": 1206,
+    "has_nonaxis_integer_bounce": 156
+  },
+  "local_compatibility_counts": {
+    "locally_incompatible_interval_placements": 3456,
+    "locally_compatible_interval_placements": 952,
+    "locally_compatible_clear_intervals": 686,
+    "locally_compatible_dirty_intervals": 266
+  },
+  "saved_guard_substitution_counts": {
+    "unresolved_dirty_guard_interval_implications": 234,
+    "discharged_by_clear_saved_guard_subset": 32
+  },
+  "local_propagation_counts": {
+    "remaining_unresolved_guard_intervals": 120,
+    "discharged_by_local_vertex_contradiction": 114
+  },
+  "I2_charge_propagation_counts": {
+    "remaining_unresolved_I2_guard_intervals": 104,
+    "discharged_by_I2_charge_or_vertex_contradiction": 16
+  },
+  "clear_guard_unit_resolution_counts": {
+    "remaining_unresolved_I2_guard_intervals": 96,
+    "covered_by_clear_guard_disjunction_unit_resolution": 8
+  },
+  "first_compatible_dirty_example": [
+    {
+      "packet": "two-global-1-1",
+      "record": 31,
+      "guard": 0,
+      "endpoints": [
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "-1",
+          "-1"
+        ]
+      ],
+      "offenders": [
+        {
+          "index": 1,
+          "point": [
+            "-1",
+            "-2/5"
+          ]
+        }
+      ]
+    }
+  ],
+  "first_dirty_example": [
+    {
+      "packet": "two-global-1-1",
+      "record": 0,
+      "guard": 0,
+      "violations": [
+        {
+          "endpoint": [
+            "0",
+            "1"
+          ],
+          "other_endpoint": [
+            "-1",
+            "1"
+          ],
+          "bounce_index": 1,
+          "bounce": [
+            "-3/4",
+            "1"
+          ]
+        }
+      ]
+    }
+  ]
+}

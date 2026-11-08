@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-08T16:42:24.568Z",
+  "decision": "ACCEPT_COMPLETE_DIAGONAL_STABILIZER_AND_D3MOD4_ALL_WORD_SUBGROUP_RESIDUAL",
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/target-fiber-peer-goals/reviewer/complete-diagonal-stabilizer.md",
+      "sha256": "41d59390afe02f1849bf9f5249a824d6ac0ea7e1147f44d91c3077c66958f4ee",
+      "actual": "41d59390afe02f1849bf9f5249a824d6ac0ea7e1147f44d91c3077c66958f4ee",
+      "pass": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/target-fiber-peer-goals/reviewer/diagonal-phase-lemma.md",
+      "sha256": "1f505b9fc60e3d7720d50637063c861f485eb0009e8b3bda7ebf9012bb819fef",
+      "actual": "1f505b9fc60e3d7720d50637063c861f485eb0009e8b3bda7ebf9012bb819fef",
+      "pass": true
+    }
+  ],
+  "dependency": "author/diagonal-phase-review.json ACCEPTED BEFORE THIS AUDIT",
+  "review_pin": {
+    "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/target-fiber-peer-goals/author/complete-diagonal-review.md",
+    "sha256": "b311a4e047aec3c9e23093cbeb322ceb6f3f4400d9317c00ce539378443760e8"
+  },
+  "material_findings": [],
+  "scope": "Full four-direction stabilizer-generated subgroup, not full affine group",
+  "full_gate_resolved": false,
+  "full_goal_complete": false,
+  "new_numerical_runs": 0
+}

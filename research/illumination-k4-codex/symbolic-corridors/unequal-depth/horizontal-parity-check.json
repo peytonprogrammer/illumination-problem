@@ -1,0 +1,225 @@
+{
+  "status": "PRESCRIBED_CONTROLS_PASS",
+  "physical_paths": 6,
+  "endpoint_fiber_checks": 48,
+  "wall_contacts": 34,
+  "rows": [
+    {
+      "fixture": [
+        "1/2",
+        "1/4",
+        "1/2",
+        "1/2",
+        "2",
+        "2"
+      ],
+      "delta": "1",
+      "n": 1,
+      "L": "4",
+      "source_image": "3/2",
+      "target_image": "7/4",
+      "original_velocity": [
+        "-33/4",
+        "2"
+      ],
+      "wall_contacts": 4,
+      "edges": [
+        11,
+        3,
+        9,
+        5
+      ],
+      "time": "1"
+    },
+    {
+      "fixture": [
+        "1/3",
+        "2/3",
+        "1/2",
+        "3/2",
+        "2",
+        "2"
+      ],
+      "delta": "1",
+      "n": 1,
+      "L": "4",
+      "source_image": "5/3",
+      "target_image": "4/3",
+      "original_velocity": [
+        "-35/3",
+        "3"
+      ],
+      "wall_contacts": 6,
+      "edges": [
+        11,
+        3,
+        9,
+        5,
+        7,
+        5
+      ],
+      "time": "1"
+    },
+    {
+      "fixture": [
+        "1/2",
+        "3/2",
+        "1/2",
+        "1",
+        "2",
+        "2"
+      ],
+      "delta": "1",
+      "n": 1,
+      "L": "4",
+      "source_image": "3/2",
+      "target_image": "3/2",
+      "original_velocity": [
+        "-10",
+        "5/2"
+      ],
+      "wall_contacts": 5,
+      "edges": [
+        11,
+        3,
+        9,
+        5,
+        7
+      ],
+      "time": "1"
+    },
+    {
+      "fixture": [
+        "3/2",
+        "1/2",
+        "1",
+        "1/2",
+        "2",
+        "2"
+      ],
+      "delta": "1",
+      "n": 1,
+      "L": "4",
+      "source_image": "3/2",
+      "target_image": "3/2",
+      "original_velocity": [
+        "-10",
+        "5/2"
+      ],
+      "wall_contacts": 5,
+      "edges": [
+        11,
+        1,
+        9,
+        3,
+        7
+      ],
+      "time": "1"
+    },
+    {
+      "fixture": [
+        "1/3",
+        "2/3",
+        "1/4",
+        "1/4",
+        "3/2",
+        "5/2"
+      ],
+      "delta": "1/2",
+      "n": 1,
+      "L": "8",
+      "source_image": "5/3",
+      "target_image": "4/3",
+      "original_velocity": [
+        "-35/3",
+        "3/2"
+      ],
+      "wall_contacts": 6,
+      "edges": [
+        11,
+        3,
+        9,
+        3,
+        9,
+        5
+      ],
+      "time": "1"
+    },
+    {
+      "fixture": [
+        "2/5",
+        "3/7",
+        "1/6",
+        "1/6",
+        "2",
+        "3"
+      ],
+      "delta": "1",
+      "n": 3,
+      "L": "12",
+      "source_image": "8/5",
+      "target_image": "11/7",
+      "original_velocity": [
+        "-559/35",
+        "4/3"
+      ],
+      "wall_contacts": 8,
+      "edges": [
+        11,
+        3,
+        9,
+        3,
+        9,
+        3,
+        9,
+        5
+      ],
+      "time": "1"
+    }
+  ],
+  "arithmetic": [
+    {
+      "a": "1/2",
+      "b": "1/3",
+      "s": "1/2",
+      "t": "1/4",
+      "criterion": true
+    },
+    {
+      "a": "1/2",
+      "b": "1/3",
+      "s": "1",
+      "t": "1/4",
+      "criterion": false
+    },
+    {
+      "a": "1/3",
+      "b": "1/2",
+      "s": "1/2",
+      "t": "1",
+      "criterion": false
+    },
+    {
+      "a": "1/3",
+      "b": "1/3",
+      "s": "1/2",
+      "t": "1/4",
+      "criterion": false
+    },
+    {
+      "a": "1/4",
+      "b": "1/2",
+      "s": "1/2",
+      "t": "1",
+      "criterion": true
+    },
+    {
+      "a": "1/2",
+      "b": "1/2",
+      "s": "1",
+      "t": "1/4",
+      "criterion": true
+    }
+  ],
+  "scope": "Candidate hand criterion only; no full rational coverage."
+}

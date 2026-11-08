@@ -1,0 +1,18 @@
+One bounded applicability screen,2026-11-02
+Outcome: published orbit-closure results give a conditional reduction, but do not remove the lattice/exception gap. Do not launch a classification campaign from this screen.
+
+Primary statements checked
+Mirzakhani–Wright, Full rank affine invariant submanifolds, Theorem1.1 classifies full-rank orbit closures as stratum components or hyperelliptic loci. Full rank is a hypothesis about the orbit closure, not about the presence of a hyperelliptic involution on one curve.
+https://public.websites.umich.edu/~alexmw/FullRank.pdf
+Apisa–Wright, Marked points on translation surfaces, Assumption3.2 excludes torus covers. Theorem3.6 then makes a finitely blocked pair periodic (or zero) unless the points agree in the minimal half-translation quotient. Theorem1.4 classifies periodic points over FULL orientation-double-cover loci of quadratic strata, not every individual proper orbit closure inside them.
+https://public.websites.umich.edu/~alexmw/ApisaWright.pdf
+
+Exact conditional consequence
+Suppose a non-torus orthogonal unfolding X is translation-primitive, and all its orbit-closure-periodic points lie in the actual corner set F. Then every two distinct physical interior points illuminate each other, and indeed no finite physical blocker set separates them. Reason: physical blocking gives finite surface blocking after adding the regular convex corner lifts. Theorem3.6 forces both endpoints to be periodic (impossible for interior lifts under the stated periodic-point hypothesis), or identified by the minimal half-translation quotient. Translation primitivity makes X_min=X. Any extra affine−I involution would compose with canonical iota to give a nonidentity translation automorphism and a proper lower-genus translation quotient, contrary to primitivity. Thus Q_min=X/iota, and identified endpoints are equal or canonical conjugates, both the same physical point. Contradiction.
+This is a conditional application of existing theory, extending the already recorded genus-two pattern. It is not a new unconditional illumination theorem.
+
+Why it does not close the target
+Canonical lattice rooms unfold to torus covers. Their orbit closures are arithmetic rank1, irrespective of the room's genus; the non-torus hypothesis fails exactly on the examples central to our investigation. Small genus by itself does not force full rank or the stated periodic-point classification. For real-coordinate orthogonal rooms, proper lower-rank orbit closures must also be retained. Hyperellipticity alone cannot replace full-locus hypotheses. No claimed genus>=10 or exception cap follows.
+
+Decision
+This is an applicability check, not a third singularity-budget proof attempt. It supplies no new wall-budget inequality and cannot justify R5 sampling. Retire it as an immediate next route. A genuinely new argument must address actual connections on the arithmetic/covering cases or prove a reduction to a class where these published hypotheses hold. Restating that requirement is not proof progress. No new search, computation, implementation or enumeration was performed; one primary literature query and two primary texts were consulted.

@@ -1,0 +1,64 @@
+{
+  "status": "INDEPENDENT_ACCEPT_LOCAL_OR01_AND_SCOPED_OR02",
+  "reviewer": "Codex01a1a00f",
+  "request": "construction/optical-routing-review-request-01.json",
+  "author_pins": {
+    "optical-routing-candidate-01.md": "3f4ef69649d3b8868551e91431b9d11e5246934a858f8e442a2ab1b1f7b649a9",
+    "optical-routing-proof-01.md": "58ea59f6460c7760cbf43d5dfa05dad20d0ab925a9b372278c2583ffa16305b4",
+    "optical-routing-reflex-reuse.md": "c2a6ffaf30dc30132a31fb22e3069818da695eca41956eab44604ba38fe327b2"
+  },
+  "pins_current_before": {
+    "optical-routing-candidate-01.md": true,
+    "optical-routing-proof-01.md": true,
+    "optical-routing-reflex-reuse.md": true
+  },
+  "pins_current_after": {
+    "optical-routing-candidate-01.md": true,
+    "optical-routing-proof-01.md": true,
+    "optical-routing-reflex-reuse.md": true
+  },
+  "claims": [
+    {
+      "claim": "OR01 physical signed fold and first-return formula",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "OR01 exact source/target root progression and strict interval guarantee",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "OR01 actual-pair convex-corner removal",
+      "decision": "ACCEPT",
+      "note": "Own sole-root actual r2 fixture requires this removal; frozen proof supplies it."
+    },
+    {
+      "claim": "A matching root must itself avoid roof corners",
+      "decision": "REJECT",
+      "author_claim": false,
+      "note": "Stronger auxiliary claim refuted by prescribed r2 fixture, not a defect of frozen proof."
+    },
+    {
+      "claim": "OR02 one-reflex infinitely many access boundaries",
+      "decision": "ACCEPT",
+      "coverage": "All integers n>=1 by hand inequalities; prescribed n1,n2 independently replayed."
+    },
+    {
+      "claim": "G8 follows from original r<=8",
+      "decision": "OPEN",
+      "author_claim": false
+    }
+  ],
+  "own_evidence_pins": {
+    "optical-routing-or01-independent.md": "de023cfd2f30d67df56050a6622bf737d706018cc3354bbdb8d3d7616ef0944c",
+    "optical-routing-or01-independent-replay.py": "5e075c0cbb7e7f754e19de37bde0625d3296b10c337cfe230e50ca9e9edad2f9",
+    "optical-routing-or01-independent-replay.json": "3862a3669eb7f159ab36df08bf508c2991d17c97d987275d7f4903cf7106f938",
+    "optical-routing-or02-independent-replay.py": "3d4b9a3afd16146757e38a9d8b6d8999441e38e43e637e1001e5b57fbfbf15f8",
+    "optical-routing-or02-independent-replay.json": "87307c98d541ea4cef280fb4ac7393f6254366e77ed740abcb79218a05931e7e"
+  },
+  "method": "Independent signed unfolding algebra, deterministic backwards-overlap proof, own exact Fraction physical-wall replays; no author script executed.",
+  "all_author_local_claims_accepted": true,
+  "global_r_le_8_forcing_proved": false,
+  "missing_positive_implication": "Every nondirectly-lit original r<=8 marked room must supply some genuine chamber and common guarded branch interval with (a+b+2h)*length(J)>2w, or another proved actual-target route. No such availability established.",
+  "whole_goal_complete": false,
+  "created_utc": "2026-11-07T18:15:06.691878+00:00"
+}

@@ -1,0 +1,77 @@
+Exact middle returns and actual endpoint coupling
+4 November 2026 — bounded follow-up, same-agent hand argument and exact checks
+
+[done] The middle chamber admits an exact open-rotation formula, but summing its returns alone does not ensure the actual target. In the existing 12-wall fixture, every legal initially upward source ray that reaches the top chamber on its first visit to the middle misses the top chamber's center on its first upward target-height pass. A hand-derived 11-reflection trajectory reaches that SAME target after one top-ceiling reflection. This is a limitation of the stated itinerary class, not a dark pair or an impossibility theorem for general return maps.
+
+1. Exact map, with its stopping rule
+For the family defined in proof.txt, enter the middle rectangle at (q,2h), 0<q<delta, with upward velocity and signed horizontal/vertical ratio p. At the nth subsequent horizontal-level crossing, provided no earlier exit or corner has occurred,
+  x_n = F(q+n*h*p),  n=1,2,...,
+  F(z)=1-|((z mod 2)-1)|.
+For odd n the level is 3h: exit upward iff 1-eta<x_n<1. For even n the level is 2h: exit downward iff 0<x_n<delta. Otherwise the relevant horizontal mirror reverses the vertical velocity. With entry vertical speed normalized to 1, the horizontal velocity at crossing n is p*F'(q+n*h*p); the arrival vertical velocity is (-1)^(n-1). The ratio to CURRENT vertical velocity therefore also has an alternating sign. A crossing with x_n=0 or 1, or at the appropriate portal endpoint, hits a corner and is illegal.
+Proof: unfold side reflections into a straight horizontal phase with vertical travel nh. Fold x back to [0,1]; the derivative records the side-reflection parity. Horizontal reflections only change the direction of vertical travel. The formula stops at the first opening or corner. Continuing it through an opening would trace a fictitious rectangular billiard.
+Thus arbitrarily many side reflections and level returns have a concise exact representation. The first-exit inequalities and source/target labels are still required. Rotation density does not specify which opening is reached first or hit a prescribed target.
+
+2. Fixed fixture and complete source branches
+Use exactly the existing fixture delta=1/10, eta=1/5, h=H=1:
+  R0=[-9/10,1/10]x[0,2], R1=[0,1]x[2,3],
+  R2=[4/5,9/5]x[3,4], S=(-2/5,1).
+Set the NEW target to the center of R2:
+  T*=(13/10,7/2).
+Restrict only this test to initially upward rays that enter the middle before ANY horizontal reflection in R0, stay there until their first upper exit, then reach height7/2 before ANY horizontal reflection in R2. All vertical-wall bounce counts and all middle retries are allowed.
+Every source ray in this class has first portal q=1/10-e, 0<e<1/10. The source unfolding from proof.txt gives exactly two possible incoming-middle ratios:
+  A: p=2m+1/2-e,
+  B: p=2m-1/2-e,    m any integer.
+These retain both source-fold orientations and every initial signed slope. The integer 2m disappears at all integer-height middle crossings but reappears in top transport. No bounded-slope assumption is made.
+
+3. Complete first upper-exit classification
+For e<=1/25, a legal ray cannot reach the upper opening before it exits down through the first opening at n=4; equality is a corner. Some smaller e hit a corner earlier, which also disqualifies them. For e>1/25, every possible first upper exit is in this table. Endpoints are excluded, and s is the horizontal folding derivative at the exit:
+
+ source | first upper crossing N | e interval           | s
+ A      | 7                      | (1/20,3/40)          | -1
+ A      | 7                      | (3/40,1/10)          | +1
+ A      | 11                     | (1/25,1/20)          | -1
+ B      | 5                      | (1/15,1/10)          | -1
+ B      | 9                      | (1/25,3/50)          | -1
+ B      | 9                      | (3/50,1/15)          | +1
+
+Hand coverage argument. Before n=4 neither source branch reaches the upper opening. At n=4, x_4=|1/10-5e|. This is in the lower opening when 0<e<1/25 and equals its endpoint at e=1/25.
+For A with e>1/25, n=5 gives x_5=3/5-6e in(0,9/25), so no upper exit there. At n=7, x_7=F(18/5-8e): it enters the upper opening exactly for e>1/20, with a corner at e=3/40. For 1/25<e<1/20, n=9 gives x_9=3/5-10e in(1/10,1/5), and n=11 gives x_11=2/5+12e in(22/25,1), so that branch exits there. The intervening even crossings stay strictly outside the lower opening.
+For B with e>1/25, n=5 gives x_5=2/5+6e; it exits exactly when e>1/15. For 1/25<e<1/15, n=7 gives x_7=3/5-8e in(1/15,7/25), so it cannot exit. At n=9, x_9=F(8/5-10e) is in the upper opening, with a corner at e=3/50. Again all intervening even crossings stay outside the lower opening. At e=1/20 for A and e=1/15 for B the relevant approach hits the upper portal's reflex endpoint. These account for all boundaries.
+For either source branch, the even-crossing formulas needed here are x_2=11/10-3e, x_4=5e-1/10, x_6=11/10-7e, x_8=9e-1/10, and x_10=11/10-11e. Use x_8 only when N>=9 and x_10 only when N=11. On the corresponding table domains each is strictly between1/10 and1, verifying the lower-opening exclusions by hand.
+In particular this fixture does NOT need unboundedly many middle retries on this source class: successful legal first upper exits have N<=11. Unbounded side-reflection counts remain present through m.
+
+4. Why every such ray misses actual T* on its first upward pass
+Let a=4/5, x_N be the physical upper exit, and s the sign from the table. For the following upward distance1/2, unfolding within R2 gives local target-height coordinate
+  u=x_N-a+(s*p)/2,
+and physical horizontal position a+F(u). The actual center T* requires
+  F(u)=1/2, equivalently u in Z+1/2.
+In each table row, u=c+d*e+s*m. Removing the integer s*m gives these exact open ranges:
+
+ row    | c+d*e                    | open range
+ A7 -   | -13/20+(17/2)e          | (-9/40,-1/80)
+ A7 +   |  21/20-(17/2)e          | (1/5,33/80)
+ A11 -  | -13/20+(25/2)e          | (-3/20,-1/40)
+ B5 -   | -3/20+(13/2)e           | (17/60,1/2)
+ B9 -   | -3/20+(21/2)e           | (27/100,12/25)
+ B9 +   | 11/20-(21/2)e           | (-3/20,-2/25)
+
+None contains a half-integer. In B5 the limiting value1/2 occurs only at e=1/10, where q=0 is an illegal portal endpoint. Therefore NO ray in the stated entire itinerary class hits T*. This includes every integer m and every legal number of middle level returns, not a finite direction test.
+This does NOT cover a source ray beginning downward, a horizontal reflection/return in the bottom chamber, an exit from the middle into R0 followed by reentry, or a horizontal reflection/return in R2. Those excluded behaviors are precisely why the result is NOT nonillumination.
+
+5. Analytic connection to the SAME target using one top return
+Use source branch A, m=0, and the first row N=7. Allow one top-ceiling reflection, so the unfolded vertical travel in R2 to height7/2 becomes3/2 instead of1/2. Before folding,
+  u=-2/5+8e-(3/2)(1/2-e)=-23/20+(19/2)e.
+Set u=-1/2 to reach the center; this forces
+  e=13/190, p=41/95, q=3/95.
+It lies strictly inside (1/20,3/40). Thus the middle part stays legal, and the top flight reflects once at its left wall and once at its ceiling, then reaches T*. No bottom reentry is needed.
+The complete prescribed reflection list is:
+  (44/95,3), (17/19,2), (1,92/41), (64/95,3),
+  (23/95,2), (0,105/41), (18/95,3), (59/95,2),
+  (1,118/41), (4/5,137/41), (103/95,4),
+then T*=(13/10,7/2).
+Initial direction (41,95). Portal crossings are (3/95,2) and (18/19,3). The earlier target (47/50,7/2) and its10-reflection path remain valid separately.
+
+6. Research decision and limits
+The exact return formula is useful bookkeeping. However, even a COMPLETE treatment of middle retries, all source-fold labels and arbitrary side bounce counts misses the actual endpoint unless the target chamber's return behavior is included. A rule proving mere access to the upper opening cannot fill that gap.
+This bounded test does not prove a general three-chamber theorem, a global finite-state reduction, or the proposed20-wall illumination theorem. The11-reflection path is one analytic fixture, not general coverage. The strongest new exclusion is the full itinerary-class statement in sections2–4. The method has not earned an unrestricted campaign; a useful next theory step would have to include returns across multiple chambers and preserve the actual target equation.
+returns-check.py validates the six whole open parameter intervals, all prior opening/corner inequalities, exact endpoint exclusion, source coupling, and every leg/reflection of the SINGLE prescribed new path against the actual12-wall boundary. returns-check.json is its receipt. These checks are same-agent verification; no independent reviewer verdict is claimed. No room/ray/direction/reflection-word discovery search, solver, archive lookup, orbit run or worker was used.

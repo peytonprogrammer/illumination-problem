@@ -1,0 +1,88 @@
+You are an independent mathematical reviewer. No tools. Review the appended directed fan-tree proof under its exact raw hypotheses. Check all local cases and counting, and try to derive a genuinely useful next lemma toward an actual S-to-T one-corner midpoint billiard event detecting a triangular leaf pocket. Such an event must have equal primitive integer half-vectors, no other physical corners, an embedded intrinsic pi-sector at the midpoint corner and nonzero first derivative of its endpoint mismatch for the literal pocket slide. Do not claim a tree path or continuous loop is a straight event. Do not propose room/direction/word/ray scans. State what you can prove and what remains open. In particular can separating off an indegree2 merger supply a valid induction, or what precise information prevents it?
+
+
+
+## 24. Directed fan tree: compulsory mergers between full A fans
+
+This is a cell-topological refinement of `axis-alignment.md`, not a
+trajectory-realization theorem. Throughout this section require the RAW
+condition: every B/C lattice point belonging to the room is a physical
+boundary corner. The earlier axis-alignment theorem allowed smooth B/C
+boundary points; that weaker hypothesis is insufficient here.
+
+Cut the room at its interior BC edges as before. The resulting tree has
+one vertex per contiguous A-centered fan. At a C point, a particular fan
+contains either one triangle (an endpoint C of that fan) or two triangles
+(an internal C). The two triangles of the latter occupy a half-plane.
+Exactly one of its two BC edges must be a portal: neither would make C a
+smooth physical boundary point, and both would make C interior. Both
+possibilities violate the raw condition. Thus C has three triangles in
+the room. Across the chosen portal, the neighboring A fan contains one
+triangle at C. A portal cannot join two endpoint-C fans: their two
+triangles would make C smooth. It cannot join two internal-C fans:
+C would be interior. Orient each portal from its internal-C fan to its
+endpoint-C fan. This orientation is therefore well-defined and unique.
+
+A full fan has eight triangles, four internal C points, no endpoint C,
+and hence outdegree4 and indegree0. It is a source of the directed tree.
+For any boundary fan, write m for its number of triangles, q for the
+number of its two radial boundary edges of type AB, h for its number of
+internal C points, and e for its number of endpoint C points. Counting
+triangle incidences at C and the two radial fan endpoints gives
+
+    h=(m-2+q)/2,       e=2-q,
+    outdegree=h,     indegree<=2-q.                  (24.1)
+
+Here 1<=m<=7 and q is0,1or2. In particular every tree vertex has indegree
+at most2. Every indegree2 vertex is a boundary fan with q=0: its two
+radial boundary edges are AC, and its physical angle is90,180or270degrees.
+Smooth A boundary points are allowed. An outdegree0 vertex can only have
+(m,q)=(1,1)or(2,0); these are45or90degree boundary A fans. A45degree
+triangular leaf pocket is consequently a sink with indegree1, provided
+the room has more than one fan.
+
+Let T be the total number of canonical triangles, V the number of A fans,
+I the number of full fans, and D the total number of boundary AB UNIT
+SEGMENTS counted at their A ends. Summing (24.1), treating each full fan
+separately, and using the tree identity E=V-1 gives
+
+    E=T/2-V+I+D/2,
+    T+D+2I=4V-2.                                  (24.2)
+
+D is not the number of merged diagonal physical walls. In particular two
+collinear AB segments can meet at a smooth boundary A point and form one
+physical wall; their contribution to D is still2. These identities alone
+do not supply a lower bound on the physical diagonal-wall count.
+
+Let Z be the number of boundary fans of indegree0, and M the number of
+fans of indegree2. Every vertex has indegree0,1or2; summing indegrees yields
+
+    M=I+Z-1.                                      (24.3)
+
+For two distinct interior A marks S,T, the unique undirected fan-tree path
+from the full fan at S to the full fan at T MUST contain an internal
+vertex with both path edges directed into it. Indeed the first path edge
+points forward, and the last points backward because both full fans are
+sources. At a forward-to-backward change, both edges enter that vertex.
+Thus every mark-to-mark fan path passes through an AC-ended boundary fan
+of angle90,180or270degrees. More generally I full fans require at least
+I-1 such merger vertices. The fan tree can therefore route a potential
+connection through boundary A fans whose two incoming portals do not
+force a physical corner contact at A itself.
+
+**Exact finite audit.** `pocket-fan.py` reconstructs triangle incidence,
+with no unfolded-surface permutations or trajectory operations. It checks
+all56proper contiguous local fan sectors and all34previously frozen raw
+rooms. The68full fans and306portals satisfy (24.1)-(24.3); all34actual
+mark-to-mark fan paths contain a merger. These are implementation checks
+of the proved identities, not a search for events. Independent peer
+review of this refinement is requested separately.
+
+**Exact remaining gap.** A directed portal-tree path is not a straight
+billiard path. A merger is not the requested one-corner midpoint event.
+These identities neither impose equal half-vectors nor show a nonzero
+pocket period defect. Any proposed induction must additionally retain
+reflection development, the actual S/T lift labels, and the intrinsic
+pi-sector at its single physical corner. In particular a proof cannot
+replace the admissible event by an arbitrary continuous walk through the
+tree or by the existence of its unique connecting graph path.

@@ -1,0 +1,86 @@
+Delta3 review reconciliation — corrections submitted for bounded re-review
+4 November2026 — Codex01a18403. Goal ACTIVE; no completion claim.
+
+Review provenance
+A and B completed, exact modelUsage canonicalModel claude-sonnet-5-5, provider
+firstParty, no fallback, costs respectively2.5052532USD and2.3371935USD.
+Both verdicts ACCEPT WITH FIXES. Reviews were independent of each other, read-only,
+and did not execute paths. Parent exact checker supplies that separate evidence.
+
+A F1 material coverage gap: CONFIRMED and CORRECTED.
+Row2250 was not valid evidence for local B_outer4. At N=Nr+, T+ absent, D-
+present: R+ uses its own row361, R- uses its own row3866; R empty is residueE,
+B_outer4+L+/E-/Nr+/D- with T empty. Geometry check confirms Delta3,W19,k6.
+Only this frozen hand-forced fixture was added; the same already-used I2 archive
+provides line6428, identity frame, actual S/T, nine reflections. Complete guards
+replayed PASS. Prior4 residue paths retained. local-e2.txt §§9–10 corrected.
+
+A F2 transferred citation2253: CONFIRMED and CORRECTED.
+B_outer3,Nr-/R+/T-,Dempty uses row2642 from ITS OWN receipt. It forbids only
+D+/D-/R- and is valid. B_outer4's analogous C also has row2642; redundant exact
+C certificate retained, explicitly labelled redundant. No transferred guard used.
+
+A F3 remote connectivity omissions: CLARIFIED.
+remote-roots.txt §1 now includes d0 K intermediary cost1+2+1>=4, remote leaf
+attached to two roots cost1+1+2>=4, and N windows<=5 touching both H sides
+contain the two bridge sectors6/7. These close omissions, not extra hypotheses.
+
+A F4 inventory name mismatch: CONFIRMED and CORRECTED.
+centeredB3path from trusted Delta2 closure is the explicit reviewer-derived
+three-reflection B return. Its actual path and complete guard now appear in
+independent-review/guard-extension-check.json, with its sigma counterpart and
+the two-hit square forcing path+sigma. path-support-check includes all four:
+21fixed paths+their sigma support checks PASS, all support in K.
+
+B F1 omitted noncritical outer triangles: CORRECTED with full-set check.
+guard-extension-check.py runs each named fallback guard computation and checks
+its COMPLETE forbidden set avoids full D and R stars and both nonbridge N
+outside mates. All39 guard sets PASS. Full needed/forbidden sets retained for
+inspection. Parent fixed symbolic implications already verify requirements and
+cap absences. The extension adds no untested mirror-removing triangle.
+
+B F2 short forcing assumptions: CORRECTED.
+All three interacting proofs append explicit short forcing lemma. CenteredB3
+needs H+B-/B+ and forbids only its two outer mates and T-. OuterB2 needs H+B+
+plus east upper mate and forbids bse,T-. Complete exact requirements checked
+against the full K universe, as are their sigma images. West and joined fans
+with bse present are explicitly exempt from T forcing.
+
+B F3 N-unit extension: CLARIFIED.
+Appended lemma enumerates four nonbridge N unit forms (two centered/two quarters).
+B/E pair uses B6 or sigmaB6, centerL/outerB uses five or L12, others use stated
+L11/E11/sigma13 bottom-N fallbacks. Bottom centered N may contain BOTH Nb caps;
+fallbacks allow them. Outside N mates checked harmless against full guard sets.
+
+Remaining gate
+Bounded independent re-review must assess these fixes and any residual coverage
+concerns. Parent then refreshes full completion audit including new guard script,
+current residue provenance and proof hashes. Original reviewers' unreviewed scope
+is retained in their reports: no independent code execution or expert endorsement.
+
+Final targeted review and minor fixes
+Targeted exact Sonnet5.5/firstParty review completed ACCEPT WITH FIXES,
+cost0.374084USD, and explicitly found no material logical gap in the corrections.
+It walked all remaining Bouter3/Bouter4 N-slot branches and accepted the fifth
+residue, forcing/guard extensions, N-unit argument and remote-cost fixes.
+It did not execute paths, read all receipt rows or independently replay the
+geometry. Original reviews' scopes plus parent exact replay remain the evidence.
+
+Minor1 resolved: the old script comment incorrectly described omitted N mates
+as bridges. The four N noncap triangles consist of SW/NE unit mates and NW
+sectors2/3. The bridge sectors6/7 are ALREADY the Nb+/Nr- cap labels.
+The script now asserts all these exact triangle identities before selecting
+unit mates. The review's suggested dropped-set identity was checked and corrected,
+not accepted mechanically: it would have mislabeled NW sectors as the bridge.
+
+Minor2 resolved: exact full N-star checks now assert old13's N forbidden set
+is EXACTLY {Nb-,Nb+}, and sigma13's is EXACTLY {Nr-,Nr+}. Both ignore every
+other N sector, including2/3, and the full D/R stars. Thus a nonbridge N e2
+fan touching only one H side admits the opposite13path. No extra ray or room
+was generated. These are two deterministic guard assertions, not a new approach.
+
+All material findings closed; both requested final minor checks PASS. The
+independent-review gate is satisfied to the stated AI hand-review scope, not
+formal verification or expert refereeing. Final artifact audit is refreshed
+separately after the proof-text changes below. No unresolved mathematical case
+or external dependency remains in this bounded goal.

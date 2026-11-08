@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "corollary11": [
+    {
+      "epsilon": "1/4",
+      "source_normal_distance": "3/4",
+      "target_normal_distance": "1",
+      "source_offset": "-15/64",
+      "target_offset": "1/4",
+      "limit_weight_prediction": "1/128",
+      "exact_window_crossing": "-3/112"
+    },
+    {
+      "epsilon": "1/8",
+      "source_normal_distance": "7/8",
+      "target_normal_distance": "1",
+      "source_offset": "-63/512",
+      "target_offset": "1/8",
+      "limit_weight_prediction": "1/1024",
+      "exact_window_crossing": "-7/960"
+    },
+    {
+      "epsilon": "1/16",
+      "source_normal_distance": "15/16",
+      "target_normal_distance": "1",
+      "source_offset": "-255/4096",
+      "target_offset": "1/16",
+      "limit_weight_prediction": "1/8192",
+      "exact_window_crossing": "-15/7936"
+    },
+    {
+      "epsilon": "1/32",
+      "source_normal_distance": "31/32",
+      "target_normal_distance": "1",
+      "source_offset": "-1023/32768",
+      "target_offset": "1/32",
+      "limit_weight_prediction": "1/65536",
+      "exact_window_crossing": "-31/64512"
+    },
+    {
+      "epsilon": "1/64",
+      "source_normal_distance": "63/64",
+      "target_normal_distance": "1",
+      "source_offset": "-4095/262144",
+      "target_offset": "1/64",
+      "limit_weight_prediction": "1/524288",
+      "exact_window_crossing": "-63/520192"
+    }
+  ],
+  "corollary14_missing_bounded_offsets": [
+    {
+      "h": "1/4",
+      "neck_width": "1/16",
+      "normalized_source_offset": "-7/2",
+      "normalized_target_offset": "4",
+      "limit_weight_prediction": "1/4",
+      "exact_normalized_crossing": "-2/7"
+    },
+    {
+      "h": "1/8",
+      "neck_width": "1/64",
+      "normalized_source_offset": "-15/2",
+      "normalized_target_offset": "8",
+      "limit_weight_prediction": "1/4",
+      "exact_normalized_crossing": "-4/15"
+    },
+    {
+      "h": "1/16",
+      "neck_width": "1/256",
+      "normalized_source_offset": "-31/2",
+      "normalized_target_offset": "16",
+      "limit_weight_prediction": "1/4",
+      "exact_normalized_crossing": "-8/31"
+    },
+    {
+      "h": "1/32",
+      "neck_width": "1/1024",
+      "normalized_source_offset": "-63/2",
+      "normalized_target_offset": "32",
+      "limit_weight_prediction": "1/4",
+      "exact_normalized_crossing": "-16/63"
+    },
+    {
+      "h": "1/64",
+      "neck_width": "1/4096",
+      "normalized_source_offset": "-127/2",
+      "normalized_target_offset": "64",
+      "limit_weight_prediction": "1/4",
+      "exact_normalized_crossing": "-32/127"
+    }
+  ],
+  "scope": "Counterexamples to the interpolation inference for the specified pair of developed words, not examples of dark nearby rooms. Other paths may light them.",
+  "repair": "Use exact current perpendicular distances a_n,b_n. For a first-order asymptotic statement require a uniform interior margin; for the local-model limit also bound individual offsets in neck units or explicitly control the interpolation remainder."
+}

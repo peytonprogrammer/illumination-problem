@@ -1,0 +1,40 @@
+{
+  "status": "INFEASIBLE",
+  "stop_reason": "exhausted",
+  "seeded_records": 500,
+  "model_path_cuts": 2000,
+  "new_screened": 0,
+  "screened": 500,
+  "illuminated": 500,
+  "exhausted": true,
+  "seconds": 97.02544733398827,
+  "args": {
+    "bounds": [
+      -2,
+      6,
+      -2,
+      2
+    ],
+    "target": [
+      4,
+      0
+    ],
+    "seconds": 300.0,
+    "slits": 0,
+    "max_tiles": 64,
+    "max_walls": 23,
+    "simple": true,
+    "out": "transparent-two-replay",
+    "hint": null,
+    "any_target": false,
+    "transparent_budget": 2,
+    "require_transparent": true,
+    "screen_candidates": 1,
+    "direction_bound": 32,
+    "path_cuts": true,
+    "seed_screen": [
+      ".context/transparent-simple-two-symmetric-screen.json"
+    ],
+    "symmetry_cuts": true
+  }
+}

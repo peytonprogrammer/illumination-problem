@@ -1,0 +1,124 @@
+West1234 closes by a FOUR-reflection bottom-only return
+Codex01a18403, 5 November 2026
+
+STATUS: Parent exact/hand proof PASS; independent review requested.
+Every finite strictly simple local-K room containing H+B1234, and no other
+B sectors, illuminates actual S=(0,0) to T=(2,2) within FOUR reflections.
+All support at L,D,R,E,Tc,N may be arbitrary. Sigma/reversal gives the
+corresponding opposite orientation. No W/k/b premise is needed by the
+optical lemma. In particular the ENTIRE established West1234 two-root/b1
+family is covered, including its final D1 description.
+
+Missing implication: the earlier E4 SIX loses its mirror at D1. The new
+path never enters any partial cell except B. Its angle is outside the
+previously tried shallow three-contact bottom-return branch, so it is a
+different four-contact physical itinerary. No old failed branch is revived.
+
+1. Exact path and smooth contacts
+
+S -> (-1,-2) -> (-2/3,-8/3) -> (-1,-5/2) -> (0,-2) -> T.
+
+Mirrors alternate between the open vertical segment
+ V: x=-1, -3<y<-1,
+and the open diagonal segment
+ D: y=x-2, -1<x<1.
+These are actual straight boundary segments of the filled B1234 triangle,
+whose vertices are (-1,-3),(-1,-1),(1,-1). The union H+B1234 continues
+through its top edge and contains every open leg of the proposed path.
+
+Two contacts need explicit care. C=(-1,-2) is a subdivision point of V;
+A=(0,-2) is a subdivision point of D. Each has occupied angle exactly180
+and lies in the interior of its maximal straight wall. Neither is an actual
+polygon corner. Local K supplies no triangle on V's exterior remote side;
+B0,B5,B6,B7 are absent, protecting D and its smooth A point. Adding any
+support in L,D,R,E,Tc,N changes none of these facts.
+The final open segment from (0,-2) to T crosses (1,0). All its incident
+triangles are already in H, so it is a legal interior crossing.
+
+2. Physical derivation and strict gates
+
+Launch (-d,-1). For the first hit to be on V rather than the diagonal,
+and for four subsequent contacts to stay in the triangle, take
+ 3/7 < d < 3/5.
+The consecutive contacts and outgoing directions are:
+
+ V1=(-1,-1/d), outgoing (d,-1);
+ D1=(a,a-2), a=2(d-1)/(1+d), outgoing (-1,d);
+ V2=(-1,3d-4), outgoing (1,d);
+ D2=(c,c-2), c=(4d-2)/(1-d), outgoing (d,1).
+
+The contact formulas follow by intersecting each outgoing line with the
+next specified mirror. At V the horizontal velocity changes sign. At D
+reflection swaps the two velocity components. Every displayed outgoing
+vector is therefore the exact specular reflection of the incoming vector.
+
+On this strict interval -3<-1/d<-1, -1<a<1, -3<3d-4<-1,
+and -1<c<1. The first and third contacts are thus strictly inside V;
+the second and fourth are strictly inside D. The segment directions
+place the contacts in forward order, with no intervening wall contact.
+After D2, its line is
+ x=d*y+6d-2.
+It crosses the B/H top portal y=-1 at x=5d-2 in(0,1), and the target
+entry y=1 at x=7d-2 in(1,3). Between these crossings it is inside H.
+These sufficient portal inequalities also hold on the stated strict interval.
+Complete incident support is checked separately at the forced actual root.
+
+At target height y=2 the abscissa is 8d-2. Actual T=(2,2) therefore forces
+ 8d-2=2, or d=1/2,
+strictly inside the gate. Substitution gives the exact path in section1.
+Actual T unfolds to (-4,-8), aligned with the initial direction (-1,-2).
+There is no earlier T visit and no revisit to S.
+
+3. Complete support certificate and geometry check
+
+The independent fixed-path checker recomputes U12 and Z6 from open-leg
+incidence and mirror-side protection. U12 lies in H+B1234. Z6 is exactly:
+ B0,B5,B6,B7;
+ remote A=(-2,-2), sectors0 and7.
+No forbidden triangle belongs to any of the other six partial K cells.
+Thus for EVERY local-K room between the stated minimum and maximum,
+the required incident neighborhoods remain filled and all mirrors remain
+exposed. This is whole-support inheritance, not monotonicity under
+arbitrary room enlargement. The remote restriction is essential.
+
+Only the supplied West D1 room was constructed:
+ H+B1234+L70+E4+Tc6+R3+N7+D1.
+Its 35 triangles form one strictly simple boundary with20 maximal walls.
+Full A stars are exactly S,U,T; J4,s_N2,Q10,k6,Delta4. The two smooth
+contacts are independently checked by local angles and maximal-wall lists.
+Exact first-boundary/first-target replay, positive specularity, reversal
+and sigma all pass. Search and proof engines use different computations:
+integer reflected-source trace for discovery; Fraction finite-boundary
+replay, full triangle incidence and direct vectors for proof checking.
+Both share historical geometry helpers, so this is not formal verification.
+
+4. Coverage consequence
+
+The accepted West classification fixes B1234 and confines support to K.
+All of its reference exceptions and previously unresolved complements fit
+the larger maximum above. Consequently this four-path alone covers the
+WHOLE stated West1234 branch. Earlier six/eleven/twelve covers remain
+correct but are no longer needed to obtain this branch's uniform bound.
+In particular both remaining D choices, including the formerly open
+Tc6/R3/N7/D1 description, are safe. The new D1 room is a valid control,
+not a proof that every symbolic upper envelope is geometrically realizable.
+
+5. Discovery scope, reproduction and review
+
+The recorded focused-search scope allowed one prescribed room.
+The geometry passed before tracing. Hard300s, primitive component<=512,
+reflection bound400; STOP at first candidate after11 directions in about
+0.003 seconds. No replacement room, cap product or second search was run.
+A numerical failure would not have implied darkness. The successful finite
+candidate was then replaced by the exact hand derivation and full guards.
+
+Run only the proof checker, adapting output location for independent review:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/west-D1-search/check.py
+Independent peer challenge should check the smooth C and A contacts,
+full U/Z, finite wall order, actual endpoint and entire West support transfer.
+No rerun of search is needed. Original files remain frozen during review.
+
+Other mixed all-root fixtures, remaining four-unit and remote obligations
+are separate. Full surplus four and the universal22-wall minimum remain
+unproved. This result is parent AI mathematical work pending independent
+hand review, not expert refereeing or a general-polygon theorem.

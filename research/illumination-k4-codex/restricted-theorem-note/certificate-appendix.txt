@@ -1,0 +1,64 @@
+Certificate appendix — local review and reproduction map
+2 November 2026. Companion to theorem.txt. This maps the EXISTING frozen packet; no search, solve, census rerun, path discovery or certificate replay was performed to write the note.
+
+Location convention
+OWN=.context/illumination-k4-codex
+PEER=.context/claude-illumination-check
+Commands below assume the sucre workspace root. Relative identifiers are given so reviewers can find the files; existing scripts also contain local absolute paths or path-derived ownership roots. They are local entrypoints, not a portable public release.
+
+A. Coverage and finite geometry
+- OWN/k6-support-census/{findings.md,count.py,count.json}: I2/I3 completeness,36 support shapes,61 raw marked pairs,56 marked-pair orbits. I3 rooted radius12 domain and necessary connectivity filters are explicit.
+- OWN/global-route-review/{findings.md,check.py,check.json}, section4: four-cell external boundary at least8, with3 equality classes; independent peer reconstruction is recorded in the findings. This is a finite classification, not a mere sample.
+- OWN/k6-i4-review/{findings.md,check.json,manifest.json,check.py,inputs/}: O/T/S necessary geometry formulas, byte-identical binding and3 VERIFIED proof receipts.
+- PEER/encoder-necessity-audit/findings.md: extension witnesses for every geometry clause family, including the41-triangle bound, depth33, and partial-plus-missing budgets12/10/8. The old arithmetic dependency is explicitly closed by the later arithmetic review.
+
+B. Arithmetic encodings and exact formula binding
+- OWN/lower-bound-proof-audit/arithmetic/{findings.txt,audit.py,receipts.json,source-inventory.json,sources/}.
+- PEER/arithmetic-review/findings.md: independent HAND acceptance; the accompanying checker reproduction reuses Codex code and is not a second implementation.
+- Reconstructed227 cardinality calls and64 weighted equalities,291 calls total, across all64 cases;3028784 arithmetic clauses matched. Complete saved base prefixes are also bound.
+- Actual recorded packages: python-sat1.9.dev17, pindakaas0.6.1. Source archive URLs and SHA256 values are in source-inventory.json. The weighted backend is not PBLib.
+
+C. Optical implications and clause provenance
+- OWN/lower-bound-proof-audit/provenance/{checker.py,frozen-inputs.json,summary.json,clause-witnesses.jsonl.gz,findings.txt}: independent standard-library reconstruction of all875332 added clauses across61 formulas;0 unexplained. The118 input files are hash-bound. The witness table identifies the source guard, transformation and endpoint orientation of each matched clause.
+- PEER/provenance-review/{findings.md,witness_check.py}: independent hand argument and a DIFFERENT-ALGORITHM witness check. It regenerates61 ordered base prefixes (9063300 clauses), recomputes all875332 witnesses and checks one-witness suffix coverage. All52 guard and61 CNF hashes match the frozen packet.
+- Endpoint reversal accounts for436856 clauses;52964 clauses omit at least one out-of-universe absent tile. These operations have explicit soundness arguments, not just matching counts.
+
+D. Complete physical replay and contradiction verification
+- OWN/lower-bound-proof-audit/full-replay/{manifest.json,replay.py,guard-checker.py,controls.json,summary.json,final-binding.json,findings.txt,guard-*.json,drat-*.json,*.log}.
+- All193480 records/all52 guard files pass the independently written rational optical checker. It checks3363038 reflections,160831 lattice-point wall contacts and17879 supplied generating-room agreements. Four malformed controls are rejected. Zero guards rely on an impossible endpoint-star premise.
+- All61 I2/I3 saved CNF/DRAT pairs have successful standard drat-trim execution with s VERIFIED. Proof inputs total8749278597 bytes. The separate I4 check.json records3 further complete refutations. Do not add the I4 count to the61-case replay manifest without its separate binding.
+- final-binding.json reconciles every expected receipt by identity and rehashes all frozen guard/CNF/proof inputs after replay. summary.json alone is only a status summary, not this complete reconciliation.
+- Optical checking is an independently written implementation relative to the producer. DRAT checking is independent EXECUTION of the standard drat-trim checker, not a separately written second DRAT verifier.
+
+E. Existing local entrypoints (documentation only; not rerun for this note)
+Use a reviewer-owned output copy and adjust its explicit source/output path constants before a fresh replay. Do not overwrite either agent's audit outputs. Preserve the frozen inputs and their recorded hashes.
+
+1. Finite census:
+ python3 -B .context/illumination-k4-codex/k6-support-census/count.py
+This writes that census directory. Use an owned copy for an independent reconstruction.
+
+2. Arithmetic binding, using the existing recorded environment:
+ .context/illumination-k4-codex/bounded-proof/venv/bin/python -B .context/illumination-k4-codex/lower-bound-proof-audit/arithmetic/audit.py
+This instantiates arithmetic encoders and compares emitted clauses; it does not construct or run a SAT solver.
+
+3. Optical clause provenance:
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/provenance/checker.py
+Its independent base-prefix receipts are an explicit prerequisite; the peer witness checker additionally regenerates all prefixes. This command writes provenance receipts.
+
+4. Full physical/contradiction replay:
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py init
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py guards
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py drat
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py status
+Matching receipts are reused. A genuinely fresh replay needs an owned output copy without old checkpoints. The existing final-binding.json provides the historical final reconciliation; status does not replace it.
+
+5. I4 geometry binding/refutations:
+ .context/illumination-k4-codex/bounded-proof/venv/bin/python -B .context/illumination-k4-codex/k6-i4-review/check.py
+This regenerates the3 necessary formulas and runs drat-trim; it does not solve them.
+
+F. Trusted components and publication readiness
+The proof relies on the stated finite-domain/reduction arguments, encoder-extension arguments, exact guard logic, file binding, Python integer/rational arithmetic, and native drat-trim. It is not a proof-assistant formalization. Solver heuristics, old discovery direction limits, successful search logs and an UNSAT label are not used as mathematical premises.
+A public supplement still needs relative-path configuration, a documented environment/build recipe for the verifier, legally redistributable frozen inputs and certificates, a manifest-driven replay command, and a small manifest/receipt validator covering all stages including census andI4. None of that packaging is claimed done by this note. No further room or ray discovery is required to prepare it.
+
+Novelty
+Prior22-wall constructions and their parity principles are known. This appendix makes no claim that the restricted exclusion, census method or certificate architecture is historically new. The bounded independent literature comparison is separate and must report its coverage limits.

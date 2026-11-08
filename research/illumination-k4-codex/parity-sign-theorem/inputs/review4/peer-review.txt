@@ -1,0 +1,117 @@
+# Review: ear-family opening proof and `ear-hand-check.py`
+
+**Verdict: CORRECT.** The mathematics holds. I re-derived every product, image, clearance formula and base bounce point by hand. Four things need fixing:
+
+- One optical convention is unstated, and the darkness at e=0 depends on it.
+- One count in the write-up is wrong.
+- The general rule is stated more narrowly than the algebra allows, and it covers only one sign.
+- The machine interval is unexecuted. I reviewed the checker's logic but did not run it.
+
+## 1. Verified algebra (hand-checked)
+
+**Mirror-pair identity.** D_{d+2e}(x,y) = (y−d−2e, x+d+2e). Applying H_{b+e} gives (y−d−2e, 2b−d−x). The shift is exactly (−2e, 0). ✓
+
+**Positive word.** The word maps correctly to walls: 23→H_1, 20→D_4, 2→D_0, 3→H_2, 0→H_0, 24→V_0, then H_{4+e}, D_{2+2e}, V_0, V_1, V_{−1}, V_1, V_0, A_8.
+
+- Composing right to left gives Φ₊ = (−x−4, −y−6). This is a half-turn about (−2,−3), so Φ₊⁻¹ = Φ₊ and S′ = (−4,−8). ✓
+- Ψ₊ steps: (8−y, 8−x) → (y−8, 8−x) → (10−y, 8−x) → (y−12, 8−x) → (14−y, 8−x) → (y−14, 8−x) → (6−x−2e, y−12+2e) → (6−x−2e, 20−y). So T′ = (6−2e, 14). ✓
+- Clearance: 110 − (11+2e)(10−2e) = 2e + 4e², giving e(1+2e)/(5−e). Slope is 11/(5−e). ✓
+- At C_e the vertex turns right, so it is reflex. The interior angle is 225° and the exterior is the 135° sector {x>1, y<x+2+2e}. The chord crosses x=1 once, above C_e, and has slope >1. So it touches neither wall4 nor wall5. ✓
+- Full image: Φ₊(T′) = (−10+2e, −20), so the initial direction is (−10+2e, −22). ✓
+
+**Negative word.**
+
+- Φ₋ = (y−2−2e, 8−x) and Φ₋⁻¹(u,v) = (8−v, u+2+2e), so S′ = (6, 2+2e). ✓
+- Ψ₋ = (−8−x, 16−y), so T′ = (−8, 10). ✓
+- At t = 1/2 the crossing is y = 2+2e + (8−2e)/2 = 6+e. ✓
+- K = (−1,6) joins wall15 (direction +x) to wall16 (direction −y). This is a right turn, so the interior angle is 270° and the exterior is {x<−1, y<6}. For e<0, both the incoming and outgoing segments have x > −1 near the bounce, so wall15 is untouched. ✓
+- Full image: Φ₋(T′) = (8−2e, 16). ✓
+
+**Base bounce tables.** I traced both e=0 paths segment by segment, using directions ±(5,±11) and ±(11,±5) for the positive word and ±(4,±7) and ±(7,±4) for the negative word. All 14 and 8 points match the table and lie strictly inside their walls. The only vertex contacts are C₀ and K. The tightest clearances are about 1/11 to 1/14:
+
+| Segment | Near-miss |
+|---|---|
+| (−5/11,1)→(−5/4,11/4) | Passes vertex (−1,2) with x-gap 1/11 |
+| 5→18 | Crosses x=1 at 43/11, gap 1/11 below V₀=(1,4) |
+| 24→6 | Passes vertex (0,1) with x-gap 1/11 |
+| 7→16 (negative) | Clears vertex (0,5) at height 38/7 |
+
+These margins are comfortable for |e| ≤ 10⁻³. Neither path passes through S or T early.
+
+**Simplicity for −1/2 < e < 1.**
+
+- Wall4 has positive length iff 3+2e > 2. Walls 5, 6 and 7 have positive length iff e < 1.
+- The triangle (C, U, V) is counterclockwise, with cross product (1−e)² > 0.
+- The protrusion lies in y ∈ (2,5) and x ≥ 1. It is therefore disjoint from the spikes at y ≤ 2 and y ≥ 5, and from everything at x ≤ 0.
+- The marks sit at x = 0 and are unaffected. ✓
+
+**Base parity.**
+
+- Every vertical and horizontal mirror has an integer offset.
+- The diagonal offsets d ∈ {0, 2, 4, 8, 4} are all even, and the anti-diagonal offset c = 8 is even.
+- So each reflection preserves Z² and the even-even class.
+- A connection would unfold to T″ − S ∈ (2Z)² \ {0}. If g is the gcd of its components, then g is even and S + (T″−S)/g is a non-even-even lattice point strictly inside the chord. Folding it back gives a non-even-even lattice point on the physical path.
+- I enumerated all closed lattice points. Every non-even-even point is a vertex. The even-even points (0,2), (0,4) and (0,6) are the only exceptions, and (0,4) lies inside wall18. ✓
+
+## 2. Missing optical assumption (needs a correction)
+
+The e=0 positive path meets C₀ only as a graze through a 225° reflex vertex. It never leaves the closed room and is locally straight. Under a "pass-through at reflex grazes" convention, that path is a valid connection, and **e=0 would not be dark.** The parity argument therefore needs an explicit rule: any trajectory that meets any vertex is absorbed, including tangential grazes of reflex corners. This is Tokarsky's convention. K is a head-on vertex hit, so it is dark under any convention.
+
+State this rule in the claim. The darkness at e=0 depends on it, and so does the statement that e=0 is a jump.
+
+## 3. Continuity argument
+
+The argument is sound. The open conditions are strict bounces, strict segment clearances, and nonparallel directions. They persist because S′ and T′ move continuously. The single non-strict contact is handled locally:
+
+- Near C₀, only walls 4 and 5 are within reach.
+- Near K, only walls 15 and 16 are within reach.
+
+One sentence is missing: name these as the only walls near the limiting vertex. The other inequalities are then uniformly strict on a neighbourhood. The hand proof gives an inexplicit radius. Only the checker gives 1/1000.
+
+## 4. General q > 2p rule
+
+The rule is correct as stated. I re-derived e(q−2p+2e)/(p−e). Two corrections:
+
+- **The symmetric hypothesis is unnecessary.** Take source c − (p₁,q₁) and target c + (p₂,q₂) with q₁/p₁ = q₂/p₂. The clearance is 2e(q₁ − p₁ − p₂ + 2e)/(p₁ + p₂ − 2e). The condition is **q₁ > p₁ + p₂**, and q > 2p is the case p₁ = p₂.
+- **The rule covers one sign only.** It also relies on the specific deformation: corner moving (0,2e), top vertex moving (−e,e), and the moving pair H, D used exactly once, first in the suffix, with no moving walls in the prefix. For e<0 the same chord hits wall4. The negative side uses a different mechanism, a 270° corner turned into a reflection, for which there is no general rule.
+
+## 5. Checker logic (reviewed, not executed)
+
+**Sound:**
+
+- The coefficient bound is valid: p(u) ≥ u^r(a_r − Σ|aᵢ|ρ^{i−r}) > 0.
+- Denominators are sign-normalized before any comparison.
+- Developed walls satisfy (On)·(q−B) = h, and the tau formula is correct.
+- The physical point is recovered as Oᵀ(q−B).
+- Vertex contacts fail, because the edge-exclusion test is strict.
+- The non-strict "at start/end" exclusions only accept a line through the previous bounce point or S/T. Those points are proven off all other walls, so the acceptance is legitimate.
+- Parallel segments would crash `rational()`. None occur: N·A ∈ {−10+2e, −22, −32+2e, 12+2e} and {8−2e, 14, 22−2e, −6−2e}.
+- Bad normal scaling is caught by the asserts on all 25 vertices.
+- The crucial C_e certificate is wall4 `outside_after_edge`, with −remaining ∝ e(1+2e)/(5−e). It has leading order 1.
+
+**Gaps:**
+
+1. **The count is wrong.** Positive: 14×24 + 25 = 361 exclusions. Negative: 8×24 + 25 = 217. 361 + 217 = **578 is the total**, not the per-sign figure. The 275 nonadjacent pairs is correct per sign, since C(25,2) − 25 = 275.
+2. **Marks interior relies on an unstated step.** For the deformed polygon this follows from three things together: `inside` on BASE at e=0, edge separation on (0, ρ], and constancy of the winding number. The output should say so.
+3. **Input hashes are written but never compared** against pinned values. `room.json` and `coupling.json` were not shown, so the normals and saved words are unaudited. The vertex and word asserts mitigate this.
+
+**Not checked:** I did not run the script, see its output, or confirm EXACT_UNIFORM_PASS.
+
+## 6. Contribution
+
+This is a rigorous two-sided opening of one dark parameter in one one-parameter family. It adds a conditional local lemma for one sign. For a general sign theorem it does not provide:
+
+- existence of a return itinerary meeting q₁ > p₁ + p₂ for an arbitrary ear;
+- any general mechanism for the opposite sign;
+- handling of limiting paths through several vertices;
+- multi-parameter or non-ear perturbations.
+
+Since both signs open here, the family shows no sign selection. That is evidence about what a sign theorem must exclude, not progress toward proving one. The write-up's own scope statement is accurate.
+
+## Required edits
+
+1. State the vertex-absorption convention, including reflex grazes.
+2. Change "578 … for each sign" to 361 + 217.
+3. Generalize the rule to q₁ > p₁ + p₂ and note that it is one-sided.
+4. Add the continuity and winding sentences: the only walls near the limiting vertex, and why the marks stay interior.
+5. Pin the input hashes.

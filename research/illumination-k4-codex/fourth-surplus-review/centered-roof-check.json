@@ -1,0 +1,340 @@
+{
+  "status": "PASS",
+  "scope": "Ten retained implication names, six unique retained fixed paths. Static incompatibility proof, NOT darkness or failure of all paths. No source archive, room assignment or direction search.",
+  "paths": {
+    "B6": {
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS",
+      "reflections": 6,
+      "impossible_required": [
+        [
+          [
+            -1,
+            -1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ]
+        ]
+      ],
+      "forbidden_already_present": [
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ]
+    },
+    "sigma_B6": {
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS",
+      "reflections": 6,
+      "impossible_required": [
+        [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      ],
+      "forbidden_already_present": [
+        [
+          [
+            -2,
+            0
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            -2,
+            0
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ]
+        ]
+      ]
+    },
+    "L11": {
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS",
+      "reflections": 11,
+      "impossible_required": [],
+      "forbidden_already_present": [
+        [
+          [
+            -3,
+            1
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            -2,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ]
+    },
+    "E11": {
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS",
+      "reflections": 11,
+      "impossible_required": [
+        [
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      ],
+      "forbidden_already_present": [
+        [
+          [
+            -2,
+            0
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            -2,
+            0
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ]
+    },
+    "sigma13": {
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS",
+      "reflections": 13,
+      "impossible_required": [],
+      "forbidden_already_present": [
+        [
+          [
+            -2,
+            0
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            -2,
+            0
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ]
+    },
+    "five": {
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS",
+      "reflections": 5,
+      "impossible_required": [
+        [
+          [
+            0,
+            -2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ]
+        ]
+      ],
+      "forbidden_already_present": [
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ]
+    }
+  },
+  "implications": {
+    "centerL_centerB": {
+      "path": "B6",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "centerB_centerE_Nb_absent": {
+      "path": "B6",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "centerB_centerE_Nb_present": {
+      "path": "sigma_B6",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "centerB_outerL_Nb_absent": {
+      "path": "B6",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "centerB_outerL_Nb_present": {
+      "path": "L11",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "centerB_outerE_Nb_absent": {
+      "path": "B6",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "centerB_outerE_Nb_present": {
+      "path": "E11",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "centerB_outerT_Nb_present": {
+      "path": "sigma13",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "BD_join_Nbplus_absent": {
+      "path": "five",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    },
+    "BD_join_Nbplus_present": {
+      "path": "sigma13",
+      "status": "INAPPLICABLE_TO_EVERY_ROOM_IN_THIS_RESIDUAL_CLASS"
+    }
+  },
+  "prefix_only_roof_return": {
+    "target_image": [
+      6,
+      6
+    ],
+    "parameter": "6/7",
+    "first_floor_contact": [
+      "0",
+      "-1"
+    ],
+    "status": "ACTUAL_CORNER"
+  },
+  "inputs": {
+    "fourth-surplus-review/inherited-two-unit-support.json": "9d10e161ffee94be5e56a166cc5e5f5a416de50364b665f8be1e018fb08052a3",
+    "first-surplus-review/bottom-residual-check.json": "6408344b2c304f95ab3a9df64b0e04d4c2e0e33c2af9f41bb29521e56ebfb631",
+    "first-surplus-review/square-exchange-check.json": "68be137dd44997265aa84b2ddfe5899711c31dccb2c03faf2b981b9b80eca53a",
+    "zero-surplus-L/cover-check.json": "92b37634e01aa8700e0f1d336f370421e8b15caa2c6e765227a336ac28f21c4d",
+    "second-surplus-review/five-path-check.json": "7c6cdcc85fbc7c2e019622b9e8cb72f8b3a9fde7100d66a3b2e01c3ae5ceae09",
+    "zero-surplus-L/guard-incidence-check.json": "8b852f70adaaf883062b5b7c6c8f2ede7e16a78f32d9b59efa7c6325cd27c0e4",
+    "triangle-composition/check.json": "da02b78538e81aa6423b5e2f40c25dec158003b58566b10987d8d568adc9b71c",
+    "lower-bound-proof-audit/full-replay/guard-checker.py": "00463d79fa3477204f451d1d38d812950dc4766299cee3c024a781c2d36af914"
+  }
+}

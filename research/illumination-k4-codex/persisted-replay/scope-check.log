@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "placements": [
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      12,
+      2
+    ]
+  ],
+  "adjacent_direct_segment": true,
+  "max_I_W21_k4": 3,
+  "max_N_W21_k4": 36,
+  "arithmetic_rows": 458,
+  "coordinate_bound_for_N38": "64/3",
+  "mutation_controls_rejected": [
+    "missing-used",
+    "missing-absent",
+    "wrong-reflection",
+    "wrong-target",
+    "missing-used",
+    "missing-absent",
+    "wrong-reflection",
+    "wrong-target",
+    "missing-used",
+    "missing-absent",
+    "wrong-reflection",
+    "wrong-target"
+  ],
+  "limitations": [
+    "Run receipts confirm completion metadata but do not cryptographically bind the executable/argv/environment at launch.",
+    "BFS verifies all placements for N<=38; no full enumeration rerun or formal UNSAT proof."
+  ]
+}

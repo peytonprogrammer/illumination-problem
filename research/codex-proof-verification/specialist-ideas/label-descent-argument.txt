@@ -1,0 +1,87 @@
+Label descent and a finite repair
+Coordinator, 2026-11-07. Universal lower bound remains OPEN.
+
+1. Reflection obstruction verified by hand
+
+For A_n=[[1,n],[0,1]] and R=diag(1,-1), direct multiplication gives
+A_n R A_n^-1=[[1,-2n],[0,-1]]. On the square torus with period48,
+T^48 restores the horizontal/vertical permutations and all color labels.
+Nevertheless the transported reflection derivative becomes[[1,-96],[0,-1]].
+Different derivatives cannot be identified by a translation isomorphism.
+Thus the FULL transported reflection is not a function of that coarse finite
+state. This confirms the peer's obstruction. It does not invalidate functions
+that use only the finite labelled surface.
+
+2. Corner identities also need a descent check
+
+The saved known22 certificate has10368 rooted states(h,v,color), each with
+60 squares. Its color records four actual source lifts, four actual target
+lifts, and forbidden square corners. C=v h v^-1 h^-1 identifies genuine zeros
+as its nine length3 cycles; forbidden regular corners are transparent.
+
+Anchored T:(h,v)->(h,v h^-1), U:(h,v)->(h v^-1,v) preserve C EXACTLY
+before the common rooted relabelling. Individual zero/source/target IDs may
+therefore be transported exactly. But a closed coarse-state word can permute
+them. Our audit fixes one spanning-tree transport, checks ALL20736 existing
+T/U edges, and stores a12-step closed-word witness. It returns to exactly
+the initial h,v,color while swapping zero IDs0/7 and2/4, cycling3/6/5,
+and swapping target lifts13/16 and14/15. Source IDs remain fixed.
+
+The resulting identity-transport orbits under all fundamental loops are:
+ zeros {0,1,7} and {2,3,4,5,6,8};
+ source IDs {9},{10},{11},{12};
+ target IDs {13,16} and {14,15}.
+These numbers are features of THIS saved example and rooted conventions.
+They are not a universal3+6 lower bound. The zero names themselves are arbitrary.
+
+This explains a limitation of the preceding singleton-witness packet: each
+witness is valid along its saved shear path, but its named corner cannot be
+silently treated as a single-valued feature on the coarse state space.
+The packet already specifies its chosen transport; its replay results survive.
+
+3. What is now justified
+
+Option A: Require a proposed feature to be invariant under every closed-word
+identity permutation. Fixed identity weights must agree within each of the
+orbits just listed. This leaves two possible zero weight classes here, not one.
+General permutation-invariant relational features need not reduce to counts.
+This observation is about identity-weight descent, not a proof that every
+weighted aggregate distinguishes all required states.
+
+Option B: Enrich the state with all r zero IDs and all four source/four target
+IDs, retaining the entire cover and every regular sheet. There are at most
+r!*(4!)^2 refinements of each coarse state, so its SL2 orbit remains finite.
+T,U remain bijections on the refined orbit, and telescoping averages are valid
+there. No refined orbit was enumerated. This is a finite encoding repair,
+not a new illumination theorem or a degree-independent complexity bound.
+
+The half-turn rho is different from the problematic reflection: its derivative
+-I commutes with every shear. It preserves the source fiber. With a regular
+root, an affine map with specified derivative is uniquely determined by the
+image of that root: two maps agreeing there differ by a translation map fixing
+a regular point, hence agree locally and by continuation everywhere. Thus rho
+has at most four choices per coarse state, according to which source lift is
+its image. Equivalently one may store its full finite vertex/sector action.
+No full physical reflection or geometric planar-wall characterization is
+claimed to follow from rho alone.
+
+4. The positive step still missing
+
+A finite bookkeeping repair does not produce the nine-corner inequality.
+An arbitrary potential obtained by solving on a state graph merely restates
+the desired average illumination inequality. A useful next candidate must
+specify an actual relational feature (which source, which zero, and which
+incoming sector or ordered intervening marks), prove its shear transition
+rule, and obtain positive charge for every required low-wall orbit.
+
+There is a second scope guard: a shear of an orthogonal unfolding need not
+itself be the unfolding of an orthogonal Euclidean room. The entire orbit
+still transports straight trajectories back to the original surface, but a
+geometric lemma restricted to physical orthogonal representatives cannot be
+applied pointwise throughout it without proof. An invariant assertion that
+the orbit CONTAINS a physical representative is legitimate but not supplied
+by a generic passport, the half-turn, or the labels alone.
+
+Verdict: verified two descent issues and a valid finite repair; no positive
+local charge, universal illumination result, new wall bound or novelty claim.
+Evidence: label-descent-audit.py/json. Independent peer review not yet obtained.

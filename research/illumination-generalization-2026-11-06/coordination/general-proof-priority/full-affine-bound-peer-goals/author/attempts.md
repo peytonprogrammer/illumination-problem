@@ -1,0 +1,7 @@
+# Entire affine orbit bound: attempt ledger
+
+1. Predeclared HAND question: can the primitive period homomorphism and integral symplectic intersection pairing force the proposed norm minimum? Success requires excluding every symplectically compatible shortening derivative, with a justified bridge to actual affine maps. Falsification criterion for this approach: prove that an ambient shortening matrix admits an integral symplectic period-compatible lift despite its known geometric nonrealization. No numerical check or discovery clock. This is a route assessment, not the requested bound or a realized counterexample.
+
+Outcome of attempt 1: proved abstract homological lifting lemma for EVERY determinant-one torus matrix by primitive rank-two discriminant gluing. The already prescribed lowering C therefore passes all absolute symplectic/period constraints but is known geometrically unrealizable. Retire absolute-homology-only minimum route. This is a proof-route obstruction, not progress on the minimum itself. Independent review requested; no new run/clock.
+
+Independent review: reviewer/author-homology-review.md/json accepts all five algebraic claims, no material findings. Source and review pins match in author/homology-reconciliation.json. Peer same-surface nonaffine control also independently accepted and final-packet reconciled. Both establish limitations of weaker data, not the genuine affine minimum. All currently delivered reciprocal reviews are complete. No full realized-group construction or inequality is available from these results.

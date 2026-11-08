@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-11-08T06:04:44.445473+00:00",
+  "status": "INDEPENDENT_HAND_ACCEPTANCE_RECONCILED",
+  "decision": "Accept A, B, conditional A+B and the one prescribed actual-ray replay at their stated scopes; no material correction.",
+  "request_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/two-sided-return-test.md",
+      "sha256": "96983f3998dda94bd15087765d12270375944dc4d8edfdde5fb31270d9365b79",
+      "actual": "96983f3998dda94bd15087765d12270375944dc4d8edfdde5fb31270d9365b79",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/two-sided-return-check.py",
+      "sha256": "9ce1eb494176ef8f0f934972e9f407129342becd01c93c53dabea0ded246dfc8",
+      "actual": "9ce1eb494176ef8f0f934972e9f407129342becd01c93c53dabea0ded246dfc8",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/two-sided-return-check.json",
+      "sha256": "c09842a71909d51e563d17da216742666d081259aac16f49bcc4004fb881c514",
+      "actual": "c09842a71909d51e563d17da216742666d081259aac16f49bcc4004fb881c514",
+      "match": true
+    }
+  ],
+  "independent_review_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-return-independent.md",
+      "sha256": "d7e1485dcadc1dbc9a3dd6fd4dba2e55bb8dd149eb5c3d15bf1879c918a0f013"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-return-independent.json",
+      "sha256": "ee822ffb919bdd31180541e44de3f9d2cabfb55cd62e687a92bb56ba33776bb1"
+    }
+  ],
+  "verified_result": {
+    "slope": "369232/1923",
+    "epsilon": "16/1923",
+    "actual_first_target_time": "3846",
+    "actual_reflections": 47748,
+    "bottom_floor_contacts": 176,
+    "downward_R_entries": 97,
+    "upward_R_entries": 96,
+    "all_target_height_visits_including_left_arm": 473,
+    "bottom_chamber_target_height_visits": 353,
+    "final_target_vy_sign": -1,
+    "first_R_x": "53848/1923",
+    "first_R_overshoot": "4/1923",
+    "path_sha256": "a4f18c0022a6ed0149887720e05bf978f25c69a9251a0b0e128d02b4bc706e12",
+    "wall_leg_guards": 477490,
+    "elapsed_seconds": 10.213226375000886,
+    "first_10_circuit_signed_section_and_actual_target_height_checks": true,
+    "same_path_as_coordinator": true
+  },
+  "review_limit": "Internal same-model AI hand review with shared accepted WR01/LR01 foundations and reused reviewer exact geometry routines; not formal verification, a second numerical engine or external expert review.",
+  "full_ordered_or_r3_or_r8_existence_proved": false,
+  "new_room_coverage": false,
+  "native_goal_mutated": false,
+  "no_new_discovery_or_room_scan": true,
+  "next_gap": "Produce a legal starting ray for an arbitrary residual actual pair; the affine normalization assumes one exists."
+}

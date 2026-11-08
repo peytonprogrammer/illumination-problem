@@ -1,0 +1,236 @@
+{
+  "status": "PASS",
+  "families": [
+    {
+      "family": "bevel",
+      "original_walls": 5,
+      "zero_edges": 1,
+      "smooth_fusions": 0,
+      "limit_walls": 4,
+      "checks": [
+        {
+          "epsilon": "1/2",
+          "simple": true,
+          "maximal_walls": 5
+        },
+        {
+          "epsilon": "1/10",
+          "simple": true,
+          "maximal_walls": 5
+        },
+        {
+          "epsilon": "1/100",
+          "simple": true,
+          "maximal_walls": 5
+        }
+      ]
+    },
+    {
+      "family": "step",
+      "original_walls": 6,
+      "zero_edges": 1,
+      "smooth_fusions": 1,
+      "limit_walls": 4,
+      "checks": [
+        {
+          "epsilon": "1/2",
+          "simple": true,
+          "maximal_walls": 6
+        },
+        {
+          "epsilon": "1/10",
+          "simple": true,
+          "maximal_walls": 6
+        },
+        {
+          "epsilon": "1/100",
+          "simple": true,
+          "maximal_walls": 6
+        }
+      ]
+    },
+    {
+      "family": "notch",
+      "original_walls": 8,
+      "zero_edges": 3,
+      "smooth_fusions": 1,
+      "limit_walls": 4,
+      "checks": [
+        {
+          "epsilon": "1/2",
+          "simple": true,
+          "maximal_walls": 8
+        },
+        {
+          "epsilon": "1/10",
+          "simple": true,
+          "maximal_walls": 8
+        },
+        {
+          "epsilon": "1/100",
+          "simple": true,
+          "maximal_walls": 8
+        }
+      ]
+    }
+  ],
+  "vanished_smooth_point_reflection": [
+    {
+      "epsilon": "1/2",
+      "lower_face_bounce": [
+        "2",
+        "1"
+      ],
+      "upper_face_bounce": [
+        "5/2",
+        "1"
+      ],
+      "both_at_actual_corners": true,
+      "limit_reflection_strictly_inside_maximal_wall": true,
+      "direct_segment_lit": true
+    },
+    {
+      "epsilon": "1/10",
+      "lower_face_bounce": [
+        "2",
+        "1"
+      ],
+      "upper_face_bounce": [
+        "21/10",
+        "1"
+      ],
+      "both_at_actual_corners": true,
+      "limit_reflection_strictly_inside_maximal_wall": true,
+      "direct_segment_lit": true
+    },
+    {
+      "epsilon": "1/100",
+      "lower_face_bounce": [
+        "2",
+        "1"
+      ],
+      "upper_face_bounce": [
+        "201/100",
+        "1"
+      ],
+      "both_at_actual_corners": true,
+      "limit_reflection_strictly_inside_maximal_wall": true,
+      "direct_segment_lit": true
+    }
+  ],
+  "nested_scale_example": {
+    "outer_scale": "h",
+    "inner_scale": "h^2",
+    "outer_zoom_bottom_edge_length": "h -> 0",
+    "conclusion": "A single outer zoom loses a smaller edge; a second point-cluster zoom is needed."
+  },
+  "step_transfer_interval": [
+    {
+      "epsilon": "1/2",
+      "K_over_epsilon": -1,
+      "lower_word_valid": true,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": false
+    },
+    {
+      "epsilon": "1/2",
+      "K_over_epsilon": 0,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/2",
+      "K_over_epsilon": 1,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/2",
+      "K_over_epsilon": 2,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/2",
+      "K_over_epsilon": 3,
+      "lower_word_valid": false,
+      "upper_word_valid": true,
+      "blocked_interval_contains_K": false
+    },
+    {
+      "epsilon": "1/10",
+      "K_over_epsilon": -1,
+      "lower_word_valid": true,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": false
+    },
+    {
+      "epsilon": "1/10",
+      "K_over_epsilon": 0,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/10",
+      "K_over_epsilon": 1,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/10",
+      "K_over_epsilon": 2,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/10",
+      "K_over_epsilon": 3,
+      "lower_word_valid": false,
+      "upper_word_valid": true,
+      "blocked_interval_contains_K": false
+    },
+    {
+      "epsilon": "1/100",
+      "K_over_epsilon": -1,
+      "lower_word_valid": true,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": false
+    },
+    {
+      "epsilon": "1/100",
+      "K_over_epsilon": 0,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/100",
+      "K_over_epsilon": 1,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/100",
+      "K_over_epsilon": 2,
+      "lower_word_valid": false,
+      "upper_word_valid": false,
+      "blocked_interval_contains_K": true
+    },
+    {
+      "epsilon": "1/100",
+      "K_over_epsilon": 3,
+      "lower_word_valid": false,
+      "upper_word_valid": true,
+      "blocked_interval_contains_K": false
+    }
+  ],
+  "bookkeeping_checks": 37448,
+  "scope": "Nine exact strictly simple polygon controls, three fixed-word reflection diagnostics 15 fixed-word step-interval checks, 37448 bookkeeping checks and one symbolic scale identity. No dark sequence, ray search, or global lower bound."
+}

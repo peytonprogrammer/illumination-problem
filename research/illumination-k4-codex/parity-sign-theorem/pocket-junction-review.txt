@@ -1,0 +1,58 @@
+# Verdict: ACCEPT, with corrections
+
+This is a hand check only. Tools were disabled, and I did no room, ray, word or direction discovery. All conclusions are local and conditional on the stated 26.7 premises:
+
+- The connected-H normalization.
+- T is a full fan and M is the upper half-star.
+- The seven-center leaf list is complete.
+- Leaves have a single unit portal.
+- Rawness forbids a straight 180° angle at a fan's diagonal B-junction.
+
+I could not check the rawness definition from what was supplied, so that conclusion depends on it.
+
+## 1. Raw-B angle incidences: correct
+
+Each triangle `(a, a+ring[j], a+ring[j+1])` has 45° at its center, 90° at its axial vertex and 45° at its diagonal vertex.
+
+**At (5,1):**
+- T (center (4,0), diagonal corner) gives 90°.
+- The one-triangle end pocket (6,0),(5,0),(5,1) gives 45°.
+- The only other center within Chebyshev distance 1 is (4,2).
+- To reach a literal 225°, (4,2) must supply 90°, so it needs both j=6 and j=7. That is the m=2 rectangle [4,5]×[1,2], with portal (4,1)–(5,1). This shape is forced.
+
+**At b=(3,1):**
+- M gives 90° (j=0,1) and T gives 90°.
+- The forced (4,2) rectangle gives 0°.
+- N gives 0° if its portal is on the left. It gives 45° (j=6) or 90° (j=6,7) if its portal is on the right.
+- So the totals are 180 / 180 / 225 / 270, which matches the script.
+
+## 2. Withdrawn end-leaf premise: impossible, not merely unsupported
+
+The premise was a fixed wall on y=1, 2<x<3, which means N's portal is on the left. That gives b=(3,1) a straight 180° boundary. The walls (2,1)–(3,1) and (3,1)–(4,1) would be collinear, which rawness forbids.
+
+So N's portal must be (2,1)–(3,1). The proposed first reflection point (5/2,1) lies strictly inside that portal. The first half fails, and the withdrawal is justified.
+
+Two scope notes:
+
+- **"Literal end pocket" needs L to have m=1.** If L were the m=2 rectangle, (5,1) could reach 225° with the (4,2) leaf contributing only j=6. That configuration is not the premise, so the text should state m=1 explicitly.
+- **This proves incompatibility only.** It does not show that any room with N on the right and this end pocket exists. End leaves remain open, as the text already says.
+
+## 3. Reviewer correction (corridor B forces N's portal to the left, not N's size): correct
+
+At b=(3,1), T, M and the pocket triangle j=5, i.e. (4,2),(3,1),(4,1), give 90+90+45 = 225°. N must add 0°, so its portal is on the left. Both the left triangle (j=5) and the left rectangle (j=4,5) add 0° at b, so N's size is not determined.
+
+The fixed left flank (2,1)–(3,1) is a wall, because N is M's only further neighbor. The excluded case B=(5,1) gives 90+45+0 = 135°, which is also correct.
+
+The physical link at b is [π, 9π/4]. The developed interval [α, π+α], with α = atan(1/3), crosses the ray π once and fits in the 10π cone (8 × 5π/4). This is consistent.
+
+## Corrections
+
+1. **Script bug.** `end_upper = fan((6,0),2,1)` is the triangle (6,0),(6,1),(5,1). It does not contain C=(5,0) and does not touch T. It should be `fan((6,0),3,1)`. The assertion passes only because both triangles have 45° at (5,1). This does not change any receipt, but the prescribed fan is wrong as written.
+
+2. **Hidden assumption in `angle_at_B`.** It counts a flat 45° per incident triangle. That is only valid when the query point is a diagonal ring vertex of every contributing center; an axial vertex gets 90°. All current queries happen to satisfy this. The script should assert it, or compute the true angles.
+
+3. **Rawness dependency.** The end-leaf impossibility relies on "180° at a diagonal B-junction is forbidden." Cite the definition explicitly at that step.
+
+4. **Key naming.** `end_leaf_fixed_right_flank` means "the right-central flank (2,1)–(3,1) is a fixed wall." Use that wording so it lines up with the "fixed left-central-flank" naming in 26.8.
+
+5. **What the checker shows.** It reproduces these four local incidences and nothing more. It is not independent evidence of global realizability, and it should not be read as such.

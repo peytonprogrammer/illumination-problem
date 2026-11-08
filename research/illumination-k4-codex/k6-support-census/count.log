@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE_NECESSARY_SUPPORT_CENSUS",
+  "W_cap": 21,
+  "k_cap": 6,
+  "N_cap": 41,
+  "input_hashes": {
+    "old-branch-support.json": "547b88becc780b3bb785ac971b9be1b2059c5ded7a7676762328d1ccb67f78dd",
+    "illumination_geometry.py": "544192ba3b5b0105d0c5dd6417e8093d2d81c813a7da19b885fcffbe2330daf1"
+  },
+  "summary": {
+    "2": {
+      "supports": 18,
+      "new_supports": 4,
+      "marked_pairs_raw": 18,
+      "marked_pair_orbits": 18,
+      "triangle_universe_min": 656,
+      "triangle_universe_max": 1024,
+      "triangle_universe_sum_per_raw_pair": 14488,
+      "disconnected_overlap_supports": 16
+    },
+    "3": {
+      "supports": 18,
+      "new_supports": 10,
+      "marked_pairs_raw": 43,
+      "marked_pair_orbits": 38,
+      "triangle_universe_min": 104,
+      "triangle_universe_max": 440,
+      "triangle_universe_sum_per_raw_pair": 7392,
+      "disconnected_overlap_supports": 8
+    }
+  },
+  "total_supports": 36,
+  "total_marked_pairs_raw": 61,
+  "total_marked_pair_orbits": 56,
+  "I3_radius12_rooted": 306,
+  "I3_disconnected_mandatory_rejected": 3272,
+  "scope": "Necessary full-cell supports and conservative encoder-style universes, not geometrically feasible rooms or SAT workload timings. I4 is peer-owned and excluded from this count."
+}

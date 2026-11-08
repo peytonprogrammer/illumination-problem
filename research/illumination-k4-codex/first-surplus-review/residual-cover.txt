@@ -1,0 +1,57 @@
+Three reflections close the entire centered-left/top first-surplus family
+4 November 2026 — Codex01a18403
+
+THEOREM
+Fix the three interior A stars at S=(0,0), U=(2,0), T=(2,2), and Delta=Q+s_N-8=1. If the unique excess fan is the centered L pair L+,L-, then S and T illuminate with AT MOST THREE reflections. The same holds for the centered T pair by sigma(x,y)=(2-y,2-x) and reversal. No wall/exception budget or additional N/D/R condition is needed.
+Hand proof and exact fixed-path/actual-endpoint/tile replay PASS; separate-session peer independently HAND ACCEPTED the corrected proof with no corrections; first-surplus-L/centered-left-closure-review.txt and check.json record the independent path/C-star/sigma checks. Together with the already independently accepted square exchange and earlier optical reductions, only centered B/E remain. Full Delta1 is not yet claimed.
+
+1. The new mechanism
+Both L triangles fill the two missing left quadrants at C=(-1,0). With H's two right quadrants, C becomes an interior point of the larger polygon. A straight leg may now pass through C legally. In the single L+ cap it was a boundary corner and blocked this path. The short route uses one diagonal reflection in L+, then passes through C without reflecting.
+This is distinct from the earlier two-hit-prefix substitution and does not continue the long return beam. The point-count change supplies a specific usable crossing, rather than an unsupported assertion that adding interior points must create illumination.
+
+2. Entire family split
+The earlier complete first-surplus geometry says all occupied partial cells other than the centered L cell are ordinary single caps, apart from a possible zero-slack N bridge that already illuminates directly.
+If B+ is absent, the old one-reflection path S ->(1/2,-1)->T is legal. Thus it suffices to assume B+ present. The B cell then cannot contain B- or an outer B mate; that would supply another positive-slack cell. L's outer mate is absent because L contains exactly the centered two-triangle fan. These are the only absence conditions used below.
+
+3. Explicit three-reflection proof
+Take
+ S=(0,0),
+ P=(6/7,-8/7),
+ Q=(-10/7,4/7),
+ R=(-1/4,-1),
+ T=(2,2).
+Launch with velocity(3,-4).
+At P the B+ diagonal is y=x-2. Reflection swaps velocity components, giving(-4,3). P is strictly inside that diagonal,0<6/7<1, so it is not a corner. The outer B triangle is absent, making the diagonal a real mirror.
+At Q the upper L diagonal is y=x+2. Reflection swaps(-4,3) to(3,-4). Q lies strictly between the diagonal endpoints(-2,0),(-1,1). L's outer mate is absent, so this too is a real mirror.
+At R, the source-square bottom half-side is horizontal. B- is absent, so this open half-side is a real mirror. Reflection sends(3,-4) to(3,4), which reaches actual T because T-R=(9/4,3)=(3/4)(3,4).
+The segment time multiples are
+ P-S=(2/7)(3,-4),
+ Q-P=(4/7)(-4,3),
+ R-Q=(11/28)(3,-4),
+ T-R=(3/4)(3,4).
+Thus every stated reflection is specular and every travel time is positive.
+
+4. Complete containment, including the former corner
+S-to-P leaves H through(3/4,-1), strictly in the open B+ portal, and stays inside B+ until P.
+After P it returns through(2/3,-1), crosses H's source square, and enters the L pocket through(-1,1/4). It stays inside the upper L triangle until Q.
+After Q it crosses x=-1 at EXACTLY C=(-1,0): Q+(1/7)(3,-4)=(-1,0). The outgoing leg immediately before C lies in the UPPER L triangle; immediately after C it lies in H. The lower L triangle is required to remove the actual boundary corner at C, rather than to contain an open segment of this leg. All four quadrants at C are present, so this is an interior crossing, not a vertex collision or an illegal pi-sector continuation. The leg then stays in the source square until R. This step is why L- is required even though no reflection occurs inside it.
+After R the final segment crosses the source/elbow portal at(1,2/3), then the elbow/target portal at(5/4,1), both strictly interior to their openings. It stays in the target star until T.
+These segment descriptions account for every part of the path. Other ordinary caps cannot obstruct interior legs or cover any of the three reflecting sides. The N choice, D choice, R-cell choice, E cap and T cap play no role.
+
+5. Universal tile implication and symmetry
+The exact rational checker recomputes the following implication:
+ required caps outside H: B+, L+, L-;
+ forbidden ordinary cap: B-;
+ forbidden outside the single-cap alphabet: the outer B and outer L mates.
+It independently checks that the entire C=(-1,0) star is occupied by H+L++L-, and ceases to be full if L- is removed. The exact requirements therefore agree with the hand proof's crucial interior passage.
+Sigma/reversal gives a three-reflection actual-S/T path requiring E-, T-, T+, with E+ absent and the outer E/T mates absent. It crosses the corresponding interior mouth midpoint(2,3). If E- is absent, the old one-reflection counterpart works. Hence the centered T family too is completely illuminated.
+No symmetry of an arbitrary completion is assumed: symmetry transfers the fixed path and its requirements between the two classes.
+
+6. Provenance, bounded projection, and limits
+The path was not generated by a new ray/direction/word search. It is the unchanged stored guard at line28534 of the previously frozen I2_00_11-pair0/guards.jsonl, using the coordinate swap frame. The source hash is recorded in residual-cover-check.json. One bounded symbolic projection of the SAME three previously hashed archives used in the zero-layer proof exposed this uniform term after the centered-L requirements were permitted. The old zero-layer projector disallowed two caps in L, so it could not retain this guard. No room or cap assignment was enumerated.
+The projection's counts are not a premise of the theorem. Sections2–4 give a complete elementary proof from the displayed coordinates. residual-cover-check.py verifies only this ONE selected actual path and its symmetry, exact required/forbidden sets and the newly interior C star, using the existing checker. PASS; not formal/expert verification or a new independent checker implementation.
+This closes all centered L/T cases even beyond the narrowed residual, so centered-left.txt's conditional twelve-path theorem is superseded for family exclusion (its geometric identities remain valid). The earlier eleven-path cover and its unsuccessful extra selected-witness reuse remain correctly recorded; no claim that those earlier methods closed the case.
+Remaining first-layer problem: centered B/E. Universal arbitrary-polygon goal stays paused. No external action or worker used.
+
+Peer request
+Independently HAND challenge this proof, especially the passage through C and sufficiency of B-/outer-mate absences for every completion. Inputs this note and residual-cover-check.json. Optional exact check: python3 -B .context/illumination-k4-codex/first-surplus-review/residual-cover-check.py, with your own output receipt. No new discovery run requested.

@@ -1,0 +1,20 @@
+Exact frozen paths for the three forced healed-L rooms
+4 November2026 — Codex01a18403
+
+These are actual S=(0,0) to T=(2,2) paths. Each room is defined exhaustively in healed-budget.txt; exact required/forbidden triangles and checks are retained in healed-frozen.json. No new ray discovery. Parent exact replay PASS; independent review pending.
+
+Archive SHA256: 8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750
+Records read through first full cover: 908 (one frozen source only).
+
+remote_right_Nb+
+13 reflections; source line 515; frame rotate90; endpoint reversal False.
+(0,0) -> (2/13,-24/13) -> (0,-11/6) -> (2/11,-20/11) -> (6/13,20/13) -> (0,3/2) -> (6/11,16/11) -> (10/13,-16/13) -> (0,-7/6) -> (10/11,-12/11) -> (14/11,36/11) -> (2,10/3) -> (18/13,44/13) -> (7/4,-1) -> (2,2)
+
+remote_left_Nb-
+14 reflections; source line 907; frame flip_y; endpoint reversal True.
+(0,0) -> (-24/11,2/11) -> (-30/13,22/13) -> (-2,5/3) -> (-26/11,18/11) -> (-32/13,6/13) -> (3,11/12) -> (1,13/12) -> (36/11,14/11) -> (10/3,2) -> (44/13,18/13) -> (1,19/12) -> (42/11,20/11) -> (23/6,2) -> (50/13,24/13) -> (2,2)
+
+remote_right_Nb-
+10 reflections; source line 908; frame flip_y; endpoint reversal True.
+(0,0) -> (-20/7,6/7) -> (-29/10,1) -> (-38/13,12/13) -> (-8/3,1) -> (3,-7/10) -> (2,-1) -> (-1,-1/10) -> (22/7,8/7) -> (17/5,2) -> (46/13,20/13) -> (2,2)
+

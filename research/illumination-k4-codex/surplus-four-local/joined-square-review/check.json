@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "two": {
+    "reflections": 2,
+    "required_count": 16,
+    "forbidden_count": 2,
+    "segment_internal_edge_events": [
+      4,
+      9,
+      0
+    ],
+    "unfolded_target": [
+      "2",
+      "-10"
+    ],
+    "forward_reverse_sigma": "PASS"
+  },
+  "four": {
+    "reflections": 4,
+    "required_count": 15,
+    "forbidden_count": 3,
+    "segment_internal_edge_events": [
+      4,
+      12,
+      0,
+      0,
+      1
+    ],
+    "unfolded_target": [
+      "2",
+      "-12"
+    ],
+    "forward_reverse_sigma": "PASS"
+  },
+  "square_exchange": "strict same entry/exit and tangent/normal velocity",
+  "floor_exterior_mate": "remote(0,-4) sector1, outsideK",
+  "D_support": "two requiresD2/D3 crossing; four U AND Z avoid ENTIRE D star",
+  "applications": [
+    {
+      "branch": "mixed O4+D23, ordinaryTc empty/6",
+      "reflections": 2
+    },
+    {
+      "branch": "mixed O4+D23, ordinaryTc5",
+      "reflections": 4
+    },
+    {
+      "branch": "b1 O4+ordinaryTc5, ANY root partner awayTc, fullD safe",
+      "reflections": 4
+    },
+    {
+      "branch": "singleDleaf3,O4,ordinaryTc5",
+      "reflections": 4
+    },
+    {
+      "branch": "singleDleaf4,O4,ordinaryTc5",
+      "reflections": 4
+    }
+  ],
+  "accepted_join": "previous accepted seven-window b0 classification + Beast<=13 + west/rectangle<=2 + O3/H4<=7 + O4ordinaryTc<=4 and previousTcunit<=7 => entire criticalB/E allroot mixed<=13",
+  "source_sha256": {
+    "fourth-surplus-review/mixed-e2-e1/joined-square-check.json": "e1667795fbb74e1cb8f10325a3f264a518194f9e70e1831d47c6eddbe06901c7",
+    "fourth-surplus-review/mixed-e2-e1/joined-square.txt": "77a7de102b21903cd5c714f63ce5acc30c34a535f91e61ed987574cb727cc488",
+    "fourth-surplus-review/mixed-e2-e1/joined-square-check.py": "c62b190e16c9b38e262a6023a7e7b41397e9e77421e8ef985af035c20a0d5c4b",
+    "fourth-surplus-review/mixed-e2-e1/joined-four-check.json": "2a5204d9c577c5d2038a26effbd3ec71010ea35bf299ba6bf158fc05206ab572",
+    "fourth-surplus-review/mixed-e2-e1/argument.txt": "f6473d058e884f5e31589ab3c44826670cb7d4f63b3829df0ac1ee3983131eb0",
+    "fourth-surplus-review/mixed-e2-e1/critical-B.txt": "c124b5d4b529e52fdd191e8e851d5be829869520df959ea70531aa2171100289",
+    "surplus-four-local/joined-six-review/review.txt": "207e175b7d0bcd4d42084460b52af6338bbd50471430b7ecf2586d40a3ed7c44",
+    "surplus-four-local/mixed-critical-B-review/review.txt": "cf15c0539290a70a8306e7be730ad627ae1d77bbcdd9a8b6c479bd0174ef74ce",
+    "surplus-four-local/mixed-Beast-four-review/review.txt": "620c71f430505b8bcb911943f630c4bf990cbfe1e7b951f391017a78f04eb8b7",
+    "surplus-four-local/two-bounce-review/review.txt": "7823f2aacf5dd2efc7787d6cf429121c7bfb5b605d2eb0ed7e68cac7291784a3"
+  },
+  "checker_sha256": "de88c55ad4d3f356e8305cbab4b736eb9c0cfee07dd24d1c2e97d285b96cb31d",
+  "limits": "Fixed optical proofs only; previous classification/forcing/row reduction/Tcunit and sigma inherited. No new room, cap census, ray/word search or peer script execution. Does not accept separate Beast012 b1 consolidation."
+}

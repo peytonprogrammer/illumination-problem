@@ -1,0 +1,92 @@
+{
+  "status": "COMPLETE_NECESSARY_ORTHOGONAL_SUPPORT_CENSUS",
+  "wall_cap": 20,
+  "exception_cap": 7,
+  "selected_triangle_cap": 42,
+  "selected_unit_square_cap": 21,
+  "interior_A_cap_coarse": 4,
+  "interior_A_cap_after_orthogonality": 3,
+  "canonical45_partial_plus_missing_caps": {
+    "2": 13,
+    "3": 11,
+    "4": 9
+  },
+  "orthogonal_partial_plus_missing_caps": {
+    "2": 13,
+    "3": 10,
+    "4": 7
+  },
+  "summary": {
+    "2": {
+      "supports": 18,
+      "marked_pairs_raw": 18,
+      "marked_pair_orbits": 18,
+      "disconnected_overlap_supports": 16,
+      "new_supports_vs_k6": 0,
+      "new_marked_orbits_vs_k6": 0,
+      "allowed_A_cells_range": [
+        110,
+        162
+      ],
+      "triangle_universe_range": [
+        880,
+        1296
+      ]
+    },
+    "3": {
+      "supports": 18,
+      "marked_pairs_raw": 43,
+      "marked_pair_orbits": 38,
+      "disconnected_overlap_supports": 8,
+      "new_supports_vs_k6": 0,
+      "new_marked_orbits_vs_k6": 0,
+      "allowed_A_cells_range": [
+        13,
+        55
+      ],
+      "triangle_universe_range": [
+        104,
+        440
+      ]
+    },
+    "4": {
+      "supports_retained": 0,
+      "coarse_equality_supports_excluded": 3,
+      "reason": "orthogonal cap7 is below the all-four-support boundary minimum8"
+    }
+  },
+  "total_supports": 36,
+  "total_marked_pairs_raw": 61,
+  "total_marked_pair_orbits": 56,
+  "I3_root_radius": 12,
+  "I3_rooted_triples_retained": 306,
+  "I3_disconnected_neighborhood_rejections": 3272,
+  "I4_comparison_root_radius": 6,
+  "I4_coarse_rooted_equality_patterns": 36,
+  "orthogonal_partial_fan_controls": [
+    {
+      "unit_quadrants": 1,
+      "triangles": 2,
+      "Q": 2
+    },
+    {
+      "unit_quadrants": 2,
+      "triangles": 4,
+      "Q": 3
+    },
+    {
+      "unit_quadrants": 3,
+      "triangles": 6,
+      "Q": 6
+    }
+  ],
+  "comparison_to_k6": {
+    "supports": 36,
+    "raw_marked_pairs": 61,
+    "marked_pair_orbits": 56
+  },
+  "input_sha256": {
+    "k6-count.json": "b48a230d6d50c4306dfce26bcfd4e97167404ad75972a89db7463fe246f6f775"
+  },
+  "scope": "Complete necessary support cover, not a list of feasible rooms. Orthogonal unit-square unions in the fixed canonical grid, interior A marks, k<=7, W<=20. Adjacent marked pairs and proved geometric exclusions omitted. No room assignments, SAT, optical guards, ray/orbit tests or pilot."
+}

@@ -1,0 +1,53 @@
+Independent theory-only proof review; no tools or search. Challenge this new raw-room counting theorem. Definitions: canonical45-45-90 tiling with A even-even (angle45 per triangle), B odd-odd (angle45), C mixed (angle90). Strictly simple finite polygonal disk, raw=all occupied B/C are nonsmooth boundary corners. I full A stars, P partial A fans, N triangles, W maximal straight boundary walls. The previously reviewed wall identity is W=2+6I+Q at k=0, where Q sums partial A charges m except smooth m4 charge3. Cutting interior BC edges gives a TREE of contiguous A fans. At an internal C of a full A fan, exactly one BC edge is an interior portal: neither would make C smooth and both would make it interior. All full A fans consequently have degree4. A boundary fan with mtriangles and qAB radial ends has out=(m-2+q)/2, in<=2-q; portals are directed from internal-C fan to endpoint-C fan. These reviewed inputs are assumptions of the new deduction; feel free to flag an inconsistency but do not reclassify the entire billiard problem.
+
+Check the forest counting and charge>=degree argument independently. The proposed theorem W>=10I+2 implies raw I>=3 needs>=32walls, and W<=31 with two interior A marks forces I2. Does the H subgraph actually have4I distinct edges andI+bvertices? Can full fans be adjacent? Are degree/charge and the global Q sum correct? No darkness or optical conclusion is claimed. Provide accept/correct/refute with a complete concise argument and any equality restrictions. Do not conflate raw k0 with the broader k<=3 theorem (which permits I3 below32 when smooth or interior B/C exceptions exist).
+
+### 27.4 Raw-room wall count from the full-fan neighbor forest
+
+**New hand theorem; independent review requested.** For a strictly simple
+RAW canonical room with I>=1 full interior A fans,
+
+    W >= 10I+2.
+
+Here the raw hypothesis forbids both interior and smooth boundary B/C
+points. It is stronger than the hypotheses of the earlier exception-budget
+bounds; do not apply this inequality to a room with transparent exceptions.
+In particular I>=3 implies W>=32, and a raw room with two interior marks
+and W<=31 has exactly I=2 full A fans.
+
+Proof. Let the fan tree of Section24 have I full vertices and P partial
+vertices. Every full vertex has degree4 and all its neighbors are partial:
+its C points require exactly one portal, and a full-full portal would
+make C interior. Let b be the number of DISTINCT partial vertices adjacent
+to at least one full vertex. Keep just those4I incident edges, the I full
+vertices and their b neighbors. This is a nonempty forest, being a subgraph
+of the fan tree. If it has c components, the forest identity gives
+
+    4I=I+b-c,       b=3I+c>=3I+1,       P>=b.
+
+No lattice placement enumeration or minimum-spacing argument is used.
+
+For a partial A fan of m canonical triangles, define its standard charge
+q_A=m, except q_A=3 for a smooth m=4 fan. Its number q of radial AB ends
+is0,1or2. Section24 gives
+
+    d <= (m-2+q)/2 + (2-q) = (m+2-q)/2.
+
+This implies q_A>=d in every case: m=1 requires q=1 and d<=1;
+m=2 gives d<=2; m=3 gives d<=2; m=4 gives d<=3=q_A;
+and for m>=5, d< m=q_A. (The integer/parity conditions leave ten partial
+fan types, all checked by the prescribed local algebra.) Summing over
+partial vertices and using full degree4 in the complete tree gives
+
+    Q=sum q_A >= sum_partial d
+      =2(I+P-1)-4I =2P-2I-2 >=4I.
+
+Finally the established boundary identity at zero exceptions is
+W=2+6I+Q, yielding W>=10I+2. This proves the theorem, subject to the
+previously reviewed fan-tree/raw-C incidence and wall identity inputs.
+
+This bound supplies no midpoint event. It does justify the I=2 premise
+of the saved-guard portal audit for raw rooms with W<=26 (indeed W<=31).
+The sealed core of a literal leaf loses no interior A fan, since the
+removed A_0 fan has only one triangle, so its I is unchanged.
+

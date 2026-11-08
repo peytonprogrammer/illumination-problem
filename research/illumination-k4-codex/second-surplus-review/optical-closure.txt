@@ -1,0 +1,79 @@
+Second-surplus L-family optical closure
+4 November 2026 — Codex01a18403
+
+THEOREM AND CURRENT STATUS
+Every finite strictly simple canonical45-degree triangle room with exactly three interior A points S=(0,0), U=(2,0), T=(2,2) and Delta=Q+s_N-8=2 illuminates actual S,T. A path with at most13reflections suffices. The proof below does not use W<=21 or k<=6, so in particular covers every room required by the active bounded goal. The adjacent A pairs connect directly inside H.
+Parent hand proof and exact symbolic fixed-path checks complete. The peer's exhaustive structural/optical reduction has independently been HAND ACCEPTED in review.txt. The peer independently HAND ACCEPTED this final four-family closure with no corrections; second-surplus-L/closure-review.txt and closure-review-check.json record the complete review and exact supplied-path checks. Reviewed hashes were verified before these status-only updates. The bounded goal is now COMPLETE. No universal minimum or higher-layer claim is made.
+
+1. Approach, gap and success criterion
+The structural proof leaves exactly four reflection families: a single active triple at L/B (with sigma giving T/E), centeredL plus outerB (sigma centeredT plus outerE), and centeredB plus outerL (sigma centeredE plus outerT). Other caps remain variable. The missing implication is illumination for EVERY completion of those patterns, not for selected rooms.
+New idea: put the initial roof reflection on the POSITIVE-x half of the source roof, then use the already proved square-pocket one-hit return. This avoids a diagonal that an outer mate removes. When the positive roof is blocked, the blocker is a bottom-facing N cap and leaves the older right-facing N mirrors exposed. Another already proved path then covers the whole blocked branch.
+Success is a complete four-family cover. The strongest objection is that an extra centered/outer triangle may remove a mirror from a fallback path. five-path-check.py verifies all six symbolic branches against exact universal required/forbidden sets, over a superset of all remaining ordinary-cap choices. It does not construct rooms or enumerate cap assignments.
+
+2. Definitions and common preliminary illumination
+H is the three full stars at the marks. Cap labels are those in the established16cap alphabet. Write
+ b = conv{(0,-2),(1,-2),(1,-1)}, the outer mate of B+;
+ l = conv{(-2,0),(-2,1),(-1,1)}, the outer mate of L+.
+A B square consists of B+ and b; an L square consists of L+ and l. A centered B/L pair consists of its +/- full-facing cap triangles instead.
+N's ordinary bottom caps are Nb-/Nb+; its right caps are Nr-/Nr+. An N bridge Nb++Nr- makes ST direct and is always handled first. In a remaining potentially dark room N is ordinary single in the four residual families. Thus a present bottom N cap excludes both right N caps.
+Throughout, a missing B+ or E- gives an old one-reflection connection. When E is an ordinary single cap, E- present and L+ absent gives the old sigma/reversed four-reflection path. When B is ordinary single, B+ present and T- absent gives the old four-path. When B is a square (including a third LEFT triangle B-), the square-replaced two-path gives illumination if T- is absent. Its only forbidden ordinary cap is T-; B- or a centered L pair does not spoil it. When B is centered, its two-hit source prefix gives the already proved three-path if T- is absent. These preliminary implications will force only the critical caps needed below.
+
+3. New five-reflection square beam
+Suppose B+ and b are present, T- is present, Nb+ and T+ are absent, and the other two forbidden outer triangles identified below are absent. No condition on B- is imposed.
+Choose d in the strict interval
+ 1/7<d<2/11.
+Launch actual S with velocity(d,1), reflect at(d,1), then enter the B square at(3d,-1). One far-wall reflection at(4d,-2) returns the ray to(5d,-1) with velocity(d,1).
+The ray enters T- at(9d,3), makes its usual three reflections and exits at(11d,3) with velocity(d,-1). At height2 it reaches(12d,2). Thus the actual-target equation12d=2 chooses d=1/6 inside the interval.
+The exact six path points (five mirrors plus T) are
+ S=(0,0)
+ ->(1/6,1)
+ ->(2/3,-2)
+ ->(8/5,18/5)
+ ->(2,11/3)
+ ->(12/7,26/7)
+ ->T=(2,2).
+The roof is opposite Nb+, hence exposed when Nb+ is absent. The square legs remain strictly within0<x<1: entry3d, far4d, exit5d. The B- triangle, if present, lies to the left and affects none of them or the far wall used.
+After square exit, the rising leg crosses x=1 at y=1/d-6 in(-1,1), and the elbow/target portal y=1 at x=7d in(1,3). It enters the top triangle at1<9d<2. In top local coordinates, entryu=2-9d and tangential component-d satisfy0<u<1 and0<u-2d=2-11d<1. Thus the diagonal/vertical/diagonal excursion is strict and its portal return is1<11d<2. All remaining legs lie in the target star.
+The three top mirror points, as functions of d, are
+ (8d/(1-d),8d/(1-d)+2),
+ (2,2+10d),
+ (12d/(1+d),12d/(1+d)+2).
+At d=1/6 these equal the displayed points. The last target coordinate12d lies in(1,3) on the interval and equals2 at the chosen parameter. No corner is hit.
+Exact universal implication:
+ required outside H: B+, b, T-;
+ forbidden ordinary caps: Nb+, T+;
+ other forbidden triangles: the B triangle BELOW the square's far wall, and the outer T mate.
+The latter two are absent in every residual family where this beam is used. The claim is an analytic composition of existing cap maps, not a searched new direction or word.
+
+4. Two previously proved fallback paths remain legal with the extra triangles
+(a) L-square eleven-path (first-surplus-review/square-exchange.txt): requires E-,L+,l; forbidden ordinary caps E+,Nr-,Nr+,T+. Its remaining forbidden outer triangles are different from L- and B-. Consequently adding L- to the L square (forming a triple), or adding B- in a separate centered B cell, does NOT invalidate this route.
+(b) Centered-L twelve-path (first-surplus-review/centered-left.txt): requires E-,L+,L-; forbidden ordinary caps E+,Nr-,Nr+,T+. Its remaining forbidden triangles do NOT include b. Thus a separate B square does not invalidate it.
+(c) Ordinary sigma13path (zero-surplus-L/optical-cover.txt): requires E-,L+; forbidden ordinary caps E+,L-,Nr-,Nr+,T+. Its forbidden outer triangles are at L/E and do not include b. Hence a B triple does not invalidate it when L/E are single.
+All three use only the RIGHT-facing N mirrors. The exact checker independently recomputes these path implications and tests the added L-/B-/b triangles rather than assuming monotonic illumination.
+
+5. Single L triple: complete family cover
+The L triple is L-,L+,l. Its upper convex B at(-1,1) receives90degrees from H and90from the triple, making a forbidden smooth180-degree point unless Nb- is added. Because the extra-smooth-point count s_N-|M| is zero in this branch, the Nb- repair is mandatory. N is therefore the single bottom cap Nb-; Nr-/Nr+ are absent.
+If B+ or E- is absent use an old1path. Otherwise B and E are ordinary single; if T- is absent use old4 through B. We may therefore assume B+,E-,T- present. E+ and T+ are absent by single-cell occupancy. The L-square eleven-path now applies, and its extra L- triangle is harmless by4(a). This closes the entire L-triple class. Sigma closes the T triple.
+
+6. Centered B plus outer L: complete family cover
+L+ and l are the L square, and B-/B+ the centered B pair. The same upper convex-B count forces the ordinary Nb- repair, so neither Nr cap is present. A missing E- gives old1; a missing T- gives centeredB3. Otherwise E-,T- are present in ordinary cells and exclude E+,T+. The L-square eleven-path works, and the additional B- is harmless by4(a). Sigma closes centeredE plus outerT.
+
+7. Single B triple: complete family cover
+The B triple is B-,B+,b. An absent E- gives old1; with E- present but L+ absent, old sigma4 works because E is ordinary. An absent T- gives the B-square two-path; B- is harmless for that local exchange. Thus E-,L+,T- are forced for putative darkness, and their cells are single. In particular E+,L-,T+ are absent.
+If Nb+ is absent, use the new five-path. The extra B- is harmless, and T's outer mate is absent because T is single.
+If Nb+ is present, N is the single bottom cap (or a direct bridge, handled first), so neither Nr cap is present. The ordinary sigma13path works by4(c). This covers every N choice and every optional D/R cap completion. Sigma handles E triple.
+
+8. Centered L plus outer B: complete family cover
+L-/L+ form the centered L pair; B+ and b form the B square. An absent E- gives old1. An absent T- gives the B-square two-path; L- does not affect it. We may assume E-,T- present in their ordinary single cells, so E+,T+ are absent.
+If Nb+ is absent, the new five-path works; the L pair is not in its forbidden set.
+If Nb+ is present, N is bottom-facing and neither Nr cap is present. The centered-L twelve-path works by4(b), even though B has the outer mate b. This covers all completions. Sigma handles centeredT plus outerE.
+
+9. Exhaustiveness and active-goal completion boundary
+The independently HAND ACCEPTED peer classification, source hash recorded in review.txt, exhausts Delta2 geometry and closes every case outside these four sigma families. Sections5–8 close all four remaining families, with actual finite corner-avoiding paths. Thus the parent proof covers EVERY room in the active bounded class, not only individual fixtures. No W/k cap is used in this final cover, or in the prior structural/optical reductions except their optional ledger restrictions.
+All paths here have5,11,12or13reflections. Together with earlier reductions,13 is a valid upper bound for the full Delta2 fixed-support theorem. The zero/first-layer theorem is already independently accepted; combining gives illumination when Q+s_N<=10 for this exact support.
+Consequently a dark pair with this support would requireQ+s_N>=11 and W+2k=20+Q+s_N>=31. At k<=6 this gives only W>=19. This does NOT establish a universal22wall minimum or address other supports. Higher layers remain outside the active objective.
+Final independent HAND ACCEPT of this closure has been received, with no corrections. A classification alone did not resolve the goal; the full case-cover above is the new required implication. No new room/ray/direction/word discovery search, archived-word projection, occupancy solver, worker or external action was used. The five-path is a prescribed analytic composition and only its fixed exact implication was computed.
+
+10. Reproducibility and review request
+five-path-check.py/json: recompute the new5path, the three stated existing fallback paths, and all six symbolic family/roof branches. Every required triangle is forced; no forbidden triangle is in the full remaining possible alphabet plus the exact outer mates. All sigma/reversal transfers PASS. This is symbolic family-guard verification, not a room assignment census. The all-room logical implications are the hand argument above. The rational checker is reused, not an independent new implementation or formal/expert proof.
+Peer: independently HAND challenge sections2–9, especially mandatory Nb- repairs, the Nb+ dichotomy, the two extra-triangle harmlessness claims, the5path strict interval and the final completeness claim. Inputs this note and five-path-check.json. Please write your own receipt; no search or archive retrieval requested.

@@ -1,0 +1,84 @@
+Larger illumination research strategy — 4 November 2026
+
+CURRENT VERDICT after the authorized two-passage test: the forward/y-monotone compatibility claim is FALSE for a whole12-wall parameter family. One explicit member is lit by10reflections with retries. See two-portal-test/proof.txt and check.json. General return-map methods remain unproved; this proposal has not earned a large campaign. Earlier recommendations below are historical proposals, superseded by this test where applicable.
+
+[done] Strategic assessment requested by Daniel. No new minimum-wall theorem.
+
+Decision
+The main new-theorem target should be arbitrary simple ORTHOGONAL rooms with at most20 walls, arbitrary real side lengths and arbitrary distinct interior marks. This would remove the grid/mark and six-exception restrictions on this whole class. It would not settle nonorthogonal rooms with21 or fewer walls. Treat22 as a conjectured threshold, not a constraint that a proof must confirm. The present request does not activate a universal campaign or cancel the other session's Delta3 goal.
+
+Why change targets
+The accepted W<=21,k<=6 theorem already excludes all lower-surplus cases in the requested restricted class. The recent Delta<=2 theorem gives a human proof without those caps for one fixed support, but does not establish a broader minimum. Continuing layers is useful closure work, not our strongest route to a new lower bound. k changes under scaling; independent axis scaling is already known and does not remove all relative lengths.
+
+Bet1: symbolic transport with arbitrary bounce counts
+The useful unit should be a geometric chamber together with exact position-and-direction transport. A tree of chambers by itself is not an illumination proof. Keep physical source/target labels, portal position, direction, exact legality intervals, and true reflex-corner cost.
+
+A concrete elementary transport formula is available. Consider a rectangular cap [0,a] x [0,h], whose full bottom side is an open portal, other three sides mirrors. Enter at(x,0),0<x<a with velocity(u,v),v>0. Unfold the side-wall reflections and the single top reflection. At the first return to the portal,
+
+ x_out = F_a(x+2h*u/v),
+ (u_out,v_out)=(F_a'(x+2h*u/v)*u,-v),
+ F_a(z)=a-|((z mod 2a)-a)|.
+
+This treats every finite number of side bounces at once. Exclude x+h*u/v in aZ (a top corner), and x+2h*u/v in aZ (portal endpoint); take the derivative only off its breakpoints. These are the only possible cap corner encounters. If u=0, the same formula holds with interior x. Proof: the unfolded x-coordinate changes uniformly for total time2h/v; folding at multiples of a recovers the horizontal coordinate and velocity sign. This is standard rectangular unfolding, not a claimed novel result.
+
+The proposal is to use such exact maps to prove an overlap theorem for the source's reachable portal states and reversed target's states, allowing integer repetition counts. Our existing arbitrary-real L-room theorem succeeds by rounding a target image to land inside an open portal. The next method test is TWO successive portals with one common slope, arbitrary lengths and actual endpoints. Independent rounding at each portal is invalid: one slope must satisfy all conditions simultaneously. Success means a whole parameter-family theorem, not a supplied lit fixture. Failure means an exact geometric incompatibility or a counterexample to the proposed overlap criterion.
+
+Hard global gap
+The map for a single cap is not a finite-state reduction for a whole room. Multiple portals and repeated returns can create infinitely many branches; a valid proof needs a summation/composition theorem with endpoint coupling and corner avoidance. We have not supplied it. Interval-exchange recurrence or density alone does not hit a specified target. This proposal differs from retired strip deletion because it retains the lost phase displacement and arbitrary repetitions; it differs from retired sealed portals only if that global composition step is actually proved.
+
+Important fixed control: do not count rectangles alone
+For a simple orthogonal polygon, W=2r+4, where r is the number of reflex corners. Thus the target is r<=8. A vertical decomposition uses at most r cuts and at most r+1 rectangles, but fewer rectangles can already support darkness.
+I checked the supplied known22-wall boundary Q in tokarsky-followup-2026-11-02/seam-endpoints.py. Its nine reflex corners are
+ (0,-1),(1,-2),(1,-1),(1,1),(3,1),(4,1),(3,2),(1,2),(0,1).
+The five distinct interior vertical cuts are
+ x=0,y in[-1,1]; x=1,y in[-2,-1]; x=1,y in[1,2];
+ x=3,y in[1,2]; x=4,y in[0,1].
+They partition Q into SIX rectangles. Four cuts join two reflex corners, the last joins a reflex corner to a smooth wall point. Therefore an assertion that all trees of at most9 rectangles illuminate is already false. Any transport argument must retain physical reflex-corner costs and the actual portal geometry. This fixed-artifact check uses the published workspace boundary only, no room discovery.
+
+Bet2: finish angle-changing rigidity through actual endpoint cylinders
+This is an existing hard route, not a new discovery. The147 saved corner events all miss one exact nonsymmetry angle deformation. More rank or higher derivatives of those same functions cannot fix that failure. The repeated-cylinder conditional theorem and the peer's winding formula supply an explicit alternative: for an ACTUAL source/target cylinder, angular response is2*sum_v(n_v*alpha_v_prime). Appropriate cylinder-boundary families must give both opening signs across every deformation outside the known family symmetries.
+The first decisive question is whether the known strict-escape deformation is detected by an actual source/target cylinder with the required opening sign. A formal closed wall word or unrelated periodic core is insufficient. This remains unproved; no cylinder discovery is authorized here. Even full local rigidity would concern a neighborhood of the known22-wall room and would not prove global minimality. This route is strategically useful for explaining why the known construction is special, but has less direct leverage on the wall minimum than Bet1.
+
+Recommendation
+Prioritize Bet1's two-portal analytic compatibility question. Leave the peer's explicitly authorized Delta3 work separate, and do not automatically accept ownership of its structural classification. If symbolic transport cannot handle two junctions, report that precise failure before promising a global corner theorem. No new claim of novelty, literature classification, finite-word completeness, or universal reduction is made.
+
+
+Follow-up: bounded20-gon brute-force feasibility
+[done] Daniel approved assessing new search coverage. Read-only source/result assessment; no candidate generation or search executed.
+
+Correction to the chat explanation
+Unbounded bounce counts obstruct a fixed ray cutoff, but do NOT prevent exact darkness decision for a fixed canonical grid room. The accepted origami-decider-review/findings.md proves a finite labeled-square orbit argument for valid canonical45 tile unions with distinct nonsingular integer marks, including interior marks. The implementation assumes validated geometry and can return UNDECIDED at its state cap. Its whole builder has not been formally verified, and any new DARK output should receive independent exact confirmation or a geometric proof. Rational orthogonal rooms and rational marks can be scaled to integers; that scaling may greatly enlarge the square-tiled surface. Arbitrary real geometry/marks remain outside this finite-grid implementation.
+
+What is already reusable
+The audited k5/k6 pipeline supplies necessary tile/fan geometry, wall/exception budgets, source/target labels, exact path verification, transferable illumination guards, proof logging and checked contradictions. k6-run/run.py uses short directions as a fast rejection, then a breadth-first orbit extractor, with a separate decider check on a DARK candidate. Thus repeated bounces are already handled in principle for each fixed eligible room. No new procedure needs to be invented merely to escape a short-ray limit.
+The current solver fixes all interior A stars and actual marks at their centers. It allows diagonal boundaries and has no ready general orthogonal20-gon mode in the read source. Pairing the two canonical triangles of every unit square with equal occupancy would enforce an orthogonal unit-square union, but that constraint and its completeness must be checked before adopting the variant. Non-A integer marks are supported by the reviewed decider, not automatically by the current support-based generator.
+
+Recommended first new tranche
+Strictly simple orthogonal rooms, W<=20, interior A marks, k=7. Reuse the old exclusion for k<=6, so those need not be rediscovered. Accepted counting bounds give
+ N<=floor(4*(20-2+2*7)/3)=42 triangles,
+ I<=floor((20-6+2*7)/6)=4,
+ P+missing<=13,11,9 for I=2,3,4.
+For W20/k6 the corresponding values are N<=40 and12,10,8. This is a genuine extension of the PRESENTATION-bounded theorem; remove identified similarities/axis-affine duplicate marked rooms when feasible rather than count stretched known cases as independent evidence. Absence of a found normalization is not proof that a room has no other eligible presentation.
+The k6 list cannot simply be rerun with a changed number: its support classification is no longer complete. I2's distance bound can rise from7 to8 by the same neighborhood-connection inequality. I3 needs refreshed support geometry. I4's old obstruction W+2k>=34 is no longer strict: W20/k7 reaches equality, so this branch reopens. No k7 support count or room count has been computed here.
+For comparison k8 allows I5 and N<=45 in the general canonical45 model (orthogonal unit-square unions have even N, so <=44). This is a structural reason to test k7 first; it is not a runtime prediction.
+
+Why not brute every tile subset in a box
+Raw unit-square occupancy masks number65,536 for4x4,33,554,432 for5x5,and68,719,476,736 for6x6. These are arithmetic upper bounds before connectedness/simplicity/20wall/mark/symmetry filtering, NOT numbers of valid candidate rooms or seconds of runtime. Exactly20 orthogonal walls force12convex and8reflex turns, giving at most binomial(20,8)=125,970 rooted binary turn strings before geometry; lengths and mark positions remain additional variables. Neither count proves that search is cheap or infeasible. Necessary-constraint solving with reusable path exclusions is more relevant than raw-mask iteration.
+
+Assessment result
+A bounded k7/20wall tranche is technically credible and covers new cases beyond the directly checked k6 class. It is not a complete search of arbitrary20-gons, arbitrary rational marked pairs or real geometry. Do not quote an hours estimate or a new candidate count without a support census and a bounded pilot. This turn performs neither. A geometry census would first quantify model cases; a pilot would measure candidate rejection and orbit growth. The present task is complete as an assessment, with no solver/census/ray run queued.
+
+Follow-up: complete middle retries still do not couple the actual endpoint
+[done] Approved bounded theory test. In the existing12wall fixture, exact triangularwave transport plus source coupling classifies ALL first upperexits into6openintervals, N in{5,7,9,11}, retaining arbitrary integer sidebounce images. Actual topcenterT*=(13/10,7/2) is inaccessible on the first topascent for every initiallyup source ray without bottomhorizontalreflection or middle-to-bottom return. An analytically solved11reflectionpath reaches SAME T* after a topceilreflection; fixed exact replayPASS. See two-portal-test/returns.txt and returns-check.json. Thus complete middle-return bookkeeping does not replace target-chamber returns. No general3chamber theorem,20wall theorem or finite-state reduction. Confidence in a shortcut stays LOW; no unrestricted campaign/search authorized or queued.
+
+Follow-up: inverse-darkness distinct-corner counting screen
+[done] Daniel approved testing the proposed corner-obstruction mechanism. Its bare local-bypass premise duplicates universal-corner-bound/local-bypass.txt, so the chat overstated freshness. Stronger new fixed6wall/1reflex control: actualS/T have infinitely many loop-free first-arrival singular candidates, with6k smoothbounces and SAME reflexcorner; no uniform per-corner failed-direction count. Exact minimumlegal lengthsqrt5 vs singularshortest sqrt2 also prevents arbitrarily close localfixed-endpoint repair. Hand proof and prescribedchecksPASS in inverse-darkness-test/findings.txt/check.json; diagramvisuallychecked. This does NOT refute an independence theorem that uses darkness, but none is supplied. Retire unqualified failedpath=>freshcorner accounting; no9reflex/W22bound, noveltyclaim, search, worker, externalaction or newcampaign. Simple returnmap/visibility/minimizer reformulations are not new progress without a proved global independence invariant.
+
+Follow-up: shared-endpoint compression closes a construction-class loophole
+[done] Approvedtest. Explicit3copyjunctionat(-1,0) yields24walls/10reflexcorners, not20/22, and ALL targetimagesremainboundary. Newhandextension R=mr+t3, W=m(w-4)+4+2t3; E=m-1+t4 handles sharedendsandcycles. Any paritybase hasw>=10 and bothinteriormarks requirem>=3, henceW>=22 throughoutthefoldcompatiblefullwallclass. Furtherpointwiseisometryrigidity forcesFULLwallcontactautomaticallyforwholecongruentcopies, so partialslidinglosesthesamebasepointfoldcertificate. Thus both suggestedcompressionloopholes are CLOSED for this precise mechanism; the prior suggestionthatpartialseamsremainanindependentloopholewiththissamefold is superseded. Exactknown22/shared24/fourfold28 andpartialslidemismatchcontrolsPASS; handproofinshared-seam-test/findings.txt, independentchallengepending. No universalminimality/noveltyclaim, discovery/worker/solver or newcampaign. Beating22 needs leaving this wholecopy pointwisefold class, not another placementofit.
+
+Authorized step1 COMPLETE: orthogonal k7/W20 marked-support census
+[done] See k7-support-census/findings.txt and proof.txt. OrthogonalityQ>=2P sharpensP+missing caps13/11/9 to13/10/7, soI4isEXCLUDEDinthisorthogonalsubcase despite reopeninginthegeneralcanonical45assessment. Distance8I2wouldforce7singlequarterpartialfans; anyquarter-onlyconnectedcomponent hasoneBcornerand<=4Acells, contradiction. ALL5distance8placements excluded. Completecover36supports (18I2+18I3),61rawmarkpairs/56orbits, exactlysamefull/markedgeometryasoldk6. I2safeuniversesgrowone layer; I3universesunchanged. RetainedsupportsNOTcertifiedfeasiblerooms; oldk6certificatesDO NOTcovernewk7completions. Primaryrootdiamondenumeration+separateconnectedgrowth/canonicalizationchecksPASS, same-agentonly; optionalpeerreviewpending. 42selectedtriangles/21unitssquarescap; actualroomcount/runtimeunknown. STEP2pilot/roomassignments/SAT/ray/orbit/search NOTSTARTED orqueued. No newgoal/worker/peeredit.
+
+Authorized STEP2 single pilot COMPLETE (supersedes earlier not-started status)
+[done] k7-pilot/findings.txt: chosenI2_1_1_p00, S0,0/T2,2, W<=20/exactk7/orthogonalpairedunits. Predeclared180s/30roomcap. Reached30validroomsin4.236searchseconds, all30LIT via22shortdirections+8finiteorbitwitnesses;0undecided/dark/errors. 24W20/6W18, paths0–19reflections. 30savedrooms/actualpaths/universaltriangleguardcertificatesrecheckedPASS. Operationallyencouraging; onecappedrun/biasedmodelorder, nofullcaseclosure/DRAT/tranchetheorem orruntimeextrapolation. Exactkadaptervalidatedviaanalytic16squareW18/k7positivefixture andnegativecontrols. Initial17squarefillactuallyk6wascorrectedbeforesearch. WrapperlimitedTHISI2case; I3oldencodercoarsewindow11vsorthocensus10requiresadaptationbeforebroaderwork. Allothercasesunrun; no automaticfullcampaign/goal/workers. Budget/reproduction/sourcehashesandtimingscopewritteninencoding-notes.txt/receipts.

@@ -1,0 +1,41 @@
+{
+  "status": "PRESCRIBED_OCCUPANCY_AND_RESIDUE_ALGEBRA_PASS",
+  "symbolic_variables": [
+    "n",
+    "K",
+    "L",
+    "j",
+    "alpha",
+    "beta"
+  ],
+  "controls": [
+    "formal_parabolic_determinants",
+    "formal_Bezout_residue_conjugacy",
+    "formal_image_half_vector_coefficients",
+    "wall_line_determinant_affine_in_n",
+    "abstract_relative_nilpotent_conjugation",
+    "weighted_occupancy_and_strip_grouping",
+    "unit_occupancy_flux_contrast",
+    "six_images_exceed_five_possible_exclusions",
+    "fixed_annulus_degree_common_level_arithmetic"
+  ],
+  "formulas": {
+    "increment": "z_j+n N_w z_j",
+    "defect": "b_j+n d_j",
+    "image_half_vector": "(1-n K L_j)w-L_j v_j"
+  },
+  "scope": "Formal coefficient polynomials, one abstract3dimensional nilpotent representation and prescribed rational occupancy weights only. No geometric direction, cylinder, room, event, word or orbit was discovered or traced.",
+  "degree_control": {
+    "component_cover_degrees": [
+      2,
+      3,
+      4
+    ],
+    "total_degree": 9,
+    "common_level": 2520
+  },
+  "geometric_hypotheses": "Actual seed still required. Marked refinement, torus-lift pure parabolics, occupancy and finite-residue proofs accepted by two tools-disabled reviews; this checker verifies only prescribed algebra, not actual path existence.",
+  "independent_review": "TWO_TOOLS_DISABLED_OPUS_REVIEWS_ACCEPTED_EXIT0; corrections to pairing/sign/pure-scope and chart-derivative wording incorporated; no independent code execution claimed",
+  "goal_complete": false,
+  "discovery_runs": 0
+}

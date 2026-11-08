@@ -1,0 +1,76 @@
+# Audit of Section 26.5 (direct actual-endpoint construction)
+
+**Verdict: accepted as a conditional local lemma, with the corrections below.** I found no counterexample to the construction or to (26.3)–(26.5). The corrections tighten the proof and the scope. None of them rescues or weakens the universal claim, which stays open.
+
+## 1. Item-by-item check
+
+**Strip coordinates and integer phases.** Since det(v,u)=1, the lattice Zv+Zu equals Z². In strip coordinates (x,y), with the chosen p occurrence at (0,0), the points over 0 are exactly the integer pairs. The far boundary y=±1 lies over the v-leaf through 0, so far-boundary points over 0 have integer x.
+
+The deck translation of D_± is m_±·v, because the strip covers the base annulus with degree m_±. Upper sectors at p correspond one-to-one to bottom-boundary occurrences of p. That makes the phase origin well defined.
+
+The marks s and t are regular points over 0. Each one occurs exactly once among all annulus top boundaries and once among all bottom boundaries. So a_s mod m_- and a_t mod m_+ are well defined when they exist. **Accepted.**
+
+**"Exactly when" in (26.3).** A segment from p into D_+ that reaches the far boundary with no intermediate point over 0 has displacement (x,1), which is u+xv. So directions of the form u+nv are the only candidates. For D_-, the displacement −w_n reaches (−n,−1). The CRT condition (26.4), the solution set n_0+LZ, and the Bezout-reindexing computation are all correct. Under u↦u+hv, a point xv+yu has new x-coordinate x−hy. **Accepted.**
+
+**Corner avoidance and primitivity.** Each open half satisfies 0<|y|<1, so it meets nothing over 0. That excludes every physical corner and every other lift of S or T. The direction w_n is primitive because det(v,w_n)=1. **Accepted.**
+
+**Legal π-sector at a true corner.** Put +v at angle 0 and the upper sector at (0,π), so the T germ w_n sits at some φ∈(0,π).
+- If the lower sector is adjacent across the −v prong, it is (π,2π) and the S germ is at φ+π.
+- If it is adjacent across the +v prong, it is (−π,0) and the S germ is at φ−π.
+
+Either way, the arc through the shared prong has length exactly π. The other side has angle Θ−π. True corners here have Θ∈{6π,10π,14π} (corner angles 135°, 270°, 225°, 315°), so the other side is at least 5π, and any 2π arc embeds. The "3π" warning for non-consecutive strips is correct; in general the separation is (2j+1)π. **Accepted (see correction C3).**
+
+**Winding signs and the absolute increment.** Take the new upper half followed by the reversed old upper half. Its lift runs (0,0)→(n+L,1)→(L,0). It is homotopic rel endpoints, inside the closed strip's universal cover, to a radial arc, then L/m_+ turns of the core in the +v direction, then the arc back. The lower half gives (0,0)→(−n−L,−1)→(−L,0), which is L/m_- turns in the −v direction.
+
+So the increment is (L/m_+)c_+ − (L/m_-)c_-, its holonomy is Lv−Lv=0, and (26.5) follows by linearity of Q. **Accepted (see correction C2).**
+
+**Counting argument.** If D≠0, at most one k gives zero defect. Each wall line excludes at most one k, and none if v is parallel to it. That is at most 5 bad k values, so 6 distinct k suffice. If D=0 and Q(η_0)≠0, 5 suffice. **Accepted.**
+
+## 2. Required corrections
+
+- **C1 (degenerate D_+=D_-).** One annulus may have p occurrences on both its bottom and top boundaries, so the two chosen sectors can lie in the same strip. Then c_+=c_-, m_+=m_- and D≡0. The lemma still holds but gives no contrast. State this explicitly.
+
+- **C2 (homology step).** Cite the injectivity of H_1(X)→H_1(X,Σ′), which follows from H_1(Σ′)=0. That is what identifies the closed difference cycle with the absolute class. The homotopy may pass through boundary points of the closed strip, including singular ones; this is harmless for relative homology.
+
+- **C3 (which sector is selected).** The admissible continuation is the π side that contains the *shared* prong. Say so, rather than just "the π arc".
+
+- **C4 (Q is vector-valued).** Write δ(η_k)=δ(η_0)+kD as an identity in R². "Normalized fluxes differ" means the vectors δ(c_+)/m_+ and δ(c_-)/m_- differ.
+
+- **C5 (source normalization).** Here s is whatever S lift sits on D_-'s far boundary. If a fixed source lift is wanted, apply the D4 automorphism g of X_0 to the whole configuration. When g reverses orientation, det(gv,gu)=−1, so replace u by −gu, or equivalently swap the roles of upper and lower.
+
+- **C6 (moving p).** p may be a moving pocket corner: C_0 is 270° and B_0 is 225°. In that case δ(η_0) must use the material p, as in (26.1). The absolute increment is unaffected.
+
+- **C7 (scope).** The lemma proves: *given* the strip incidences, compatible phases, and either D≠0 or δ(η_0)≠0, an admissible non-wall-parallel actual event with nonzero vector defect exists. Both opening signs then come from Section 5's transfer theorem. It proves nothing about whether such strips, phases or fluxes exist.
+
+## 3. Theory-only next step
+
+### Theorems (short proofs, conditional only where stated)
+
+**T1. A seed yields premises for every Bezout partner** (conditional on a seed, e.g. Section 26.4 if it survives its review). Let (p,s,t,w) be an actual seed with p a true corner and w primitive. Take any v with det(v,w)=1, so v ranges over v_0+jw for j∈Z, and set u=w.
+
+- The open half p→t lies in 0<y<1, and p→s lies in −1<y<0.
+- The seed's π arc from w to −w avoids the angles of ±v, since v is not parallel to w. So it contains exactly one ±v prong, which means the two sectors are consecutive.
+- Hence a_t=a_s=0, (26.4) holds, and n_0=0.
+
+So every seed gives a Z²-indexed family of 26.5 events, indexed by (j,k). This is the explicit-coordinate form of Section 9.3. For the 26.4 seeds, v=(1,0) with u=(2,1) works directly.
+
+**T2. Tautological obstruction.** Let δ_abs be the restriction of δ to H_1(X_0). Suppose δ_abs=A∘hol for some A∈M_2(R). Then every 26.5 family has D=A·v−A·v=0.
+
+More generally, every event obtained from η_0 by 26.5 moves differs from η_0 by a zero-holonomy absolute class. So if δ_abs vanishes on ker(hol), then δ(η) is constant across the entire orbit generated from a seed. In that case strips can never rescue a seed with δ(η_0)=0.
+
+**T2′. Reduction to δ_abs≠0.** Suppose two absolute classes with independent holonomies have representatives avoiding the support of the pocket's load cocycle, so their δ is zero. Then a tautological δ_abs must be zero. So under that hypothesis, flux contrast requires that the slide not be purely "rel", i.e. δ_abs≠0.
+
+### Conjectures (not proved; do not cite as results)
+
+**K1 (flux contrast).** For the 26.4 seeds there is a j such that the contrast class z_j = m_-c_+ − m_+c_- for the cut v_0+jw satisfies δ(z_j)≠0.
+
+A natural route has three steps:
+1. Show δ_abs≠0 for the pocket slide, using Section 3's reflection loads on a cylinder core through the pocket.
+2. Show that {z_j} spans ker(hol) ∩ H_1(X_0;Q), or at least is not contained in ker δ_abs.
+3. Use Section 3 to write δ(c)/m as the average moving-wall load per base circumference of the strip.
+
+On step 2: I am not certain that the classical statement "cylinder cores span homology" applies here. The adjacency and true-corner constraints restrict which cores appear, so treat step 2 as open.
+
+**K2 (universal strips without a seed).** For arbitrary W, there exist a true corner p and a v whose consecutive sectors carry the actual S and T on their far boundaries with compatible phases. Nothing in the fan tree currently implies this. T1 shows K2 is equivalent to seed existence for some primitive direction, so it is no easier than the original seed problem. Its only value is as a reformulation.
+
+The cheapest decisive check needs no room or ray search: exactly compute δ_abs on a homology basis of one existing frozen room. If it is zero (or tautological), T2 kills the flux route outright, and detection rests entirely on δ(η_0).

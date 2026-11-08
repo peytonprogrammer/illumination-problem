@@ -1,0 +1,600 @@
+{
+  "status": "PASS",
+  "purpose": "fixed arithmetic certificates; no discovery search",
+  "finite_frequency_box": [
+    -32,
+    32
+  ],
+  "constant_coefficient_squared_ge": "1/128",
+  "threshold_bound_lt": "1/128",
+  "integer_inequality_128_times_6_pow_32_lt_7_pow_32": true,
+  "fixed_control": {
+    "d": "1",
+    "g": "1",
+    "a": "sqrt(2)",
+    "b": "sqrt(3)",
+    "s": "1/2",
+    "t": "3/2",
+    "M": 12,
+    "first_portal_interval": [
+      "356845/20732",
+      "356869/20731"
+    ],
+    "second_portal_interval": [
+      "601845/20732",
+      "601869/20731"
+    ],
+    "lower_contacts": 8,
+    "middle_contacts": 6,
+    "upper_contacts": 10,
+    "total_contacts": 24
+  },
+  "limits": "Does not verify the full proof independently or close resonance cases.",
+  "equal_pair_prescribed_controls": {
+    "cases": 70,
+    "wall_contacts": 336,
+    "maximum_contacts": 19,
+    "records": [
+      {
+        "p": 1,
+        "q": 3,
+        "s": "1/100",
+        "M": 1,
+        "contacts": 3,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 3,
+        "s": "1/2",
+        "M": 1,
+        "contacts": 3,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 3,
+        "s": "1",
+        "M": 1,
+        "contacts": 3,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 3,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 3,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 4,
+        "s": "1/100",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 4,
+        "s": "1/2",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 4,
+        "s": "1",
+        "mechanism": "three middle contacts",
+        "contacts": 3,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 4,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 4,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 5,
+        "s": "1/100",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 5,
+        "s": "1/2",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 5,
+        "s": "1",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 5,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 5,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 5,
+        "s": "1/100",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 5,
+        "s": "1/2",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 5,
+        "s": "1",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 5,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 5,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 7,
+        "s": "1/100",
+        "M": 2,
+        "contacts": 3,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 7,
+        "s": "1/2",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 7,
+        "s": "1",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 7,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 7,
+        "s": "199/100",
+        "M": 6,
+        "contacts": 11,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 7,
+        "s": "1/100",
+        "M": 4,
+        "contacts": 7,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 7,
+        "s": "1/2",
+        "M": 4,
+        "contacts": 7,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 7,
+        "s": "1",
+        "M": 4,
+        "contacts": 7,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 7,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 7,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 7,
+        "s": "1/100",
+        "M": 5,
+        "contacts": 9,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 7,
+        "s": "1/2",
+        "M": 5,
+        "contacts": 9,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 7,
+        "s": "1",
+        "M": 5,
+        "contacts": 9,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 7,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 7,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 8,
+        "s": "1/100",
+        "M": 2,
+        "contacts": 3,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 8,
+        "s": "1/2",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 8,
+        "s": "1",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 8,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 8,
+        "s": "199/100",
+        "M": 7,
+        "contacts": 13,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 8,
+        "s": "1/100",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 8,
+        "s": "1/2",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 8,
+        "s": "1",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 8,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 8,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 11,
+        "s": "1/100",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 11,
+        "s": "1/2",
+        "M": 2,
+        "contacts": 3,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 11,
+        "s": "1",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 11,
+        "s": "3/2",
+        "M": 10,
+        "contacts": 19,
+        "passed": true
+      },
+      {
+        "p": 1,
+        "q": 11,
+        "s": "199/100",
+        "M": 9,
+        "contacts": 17,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 11,
+        "s": "1/100",
+        "M": 1,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 11,
+        "s": "1/2",
+        "M": 6,
+        "contacts": 11,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 11,
+        "s": "1",
+        "M": 6,
+        "contacts": 11,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 11,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 2,
+        "q": 11,
+        "s": "199/100",
+        "M": 5,
+        "contacts": 9,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 11,
+        "s": "1/100",
+        "M": 8,
+        "contacts": 15,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 11,
+        "s": "1/2",
+        "M": 4,
+        "contacts": 7,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 11,
+        "s": "1",
+        "M": 4,
+        "contacts": 7,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 11,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 3,
+        "q": 11,
+        "s": "199/100",
+        "M": 7,
+        "contacts": 13,
+        "passed": true
+      },
+      {
+        "p": 4,
+        "q": 11,
+        "s": "1/100",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 4,
+        "q": 11,
+        "s": "1/2",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 4,
+        "q": 11,
+        "s": "1",
+        "M": 3,
+        "contacts": 5,
+        "passed": true
+      },
+      {
+        "p": 4,
+        "q": 11,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 4,
+        "q": 11,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 5,
+        "q": 11,
+        "s": "1/100",
+        "M": 9,
+        "contacts": 17,
+        "passed": true
+      },
+      {
+        "p": 5,
+        "q": 11,
+        "s": "1/2",
+        "M": 9,
+        "contacts": 17,
+        "passed": true
+      },
+      {
+        "p": 5,
+        "q": 11,
+        "s": "1",
+        "M": 9,
+        "contacts": 17,
+        "passed": true
+      },
+      {
+        "p": 5,
+        "q": 11,
+        "s": "3/2",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      },
+      {
+        "p": 5,
+        "q": 11,
+        "s": "199/100",
+        "M": 0,
+        "contacts": 1,
+        "passed": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+# Independent hand review of MC01--MC03 and ST10-A scope
+
+ACCEPT at the declared restricted monotone-height optical scope, not as an existence theorem. Read peer monotone-constraints.md/json and candidate-preliminary.md in full. No peer selector or numerical run used.
+
+At a seam the old folded physical x is F_old(Z). It lies in the narrower open mouth exactly when Z has a unique representative r in(-w_new,w_new) modulo2w_old; uniqueness uses w_new<w_old. Subtracting that even old-width period and applying F_new gives exactly the same local absolute value, including the legal common-left-wall reflection when r=0. The strict inequality excludes both true finite ledge endpoints; a larger x would actually reverse vertical velocity at a ledge and leave this class. Between seams all vertical contacts occur at genuine finite walls. This proves necessity and sufficiency of the full signed recursion with the final actual-target fold, not independently chosen interface states.
+
+Every accumulated period C is an even multiple of the gcd g of visited widths. Actual T therefore forces s+sigma*tau*D=eta*t modulo2g. Both eta and sigma remain; native s,t even imply tau*D even, a necessary rational condition. This is not sufficient without the intermediate guards.
+
+For the period P=2lcm(visited widths), let T_l be travel from ACTUAL u to seam y_l. Under tau->tau+P, use C_l'=C_l+sigma*P*T_l. At each recursion the new period increment differs from the old by sigma*P*(T_l-T_(l-1)), an even multiple of the old band width. The first preceding T_i is ZERO, not y_i-u. Thus all seam residuals and horizontal signs coincide. At the target the extra phase sigma*P*(v-y_j) is a full final-width period; no image/sign is lost. Native heights make each difference integral. Additional vertical bounces can occur but stay on original finite wall interiors because seam guards are identical. Tau0, if legal, is the direct vertical path, not an invented zero horizontal germ.
+
+For each sigma/eta pair the root spacing is2g/D and P is a multiple of it. A half-open period therefore has DP/(2g) candidates for that pair, and at most2DP/g before duplicates across four pairs. This count is INPUT-dependent; no wall-only direction/reflection cutoff and no automatic passing candidate follows. No enumeration was performed. These statements are independent of artificial floor/roof charts, which require their own up/down guards before extending any period theorem.
+
+The five ST10-A vertical programmes correctly enumerate the declared class for u<v: no horizontal contact, bottom, roof, bottom-then-roof, roof-then-bottom. The listed durations follow by summing original vertical travel distances. They are not all physical billiard words. No success of any programme for every pair follows from enumeration. The frozen(-3,+1) witness independently checked in staircase10-axis-control-independent.md calibrates signs and the smooth seam only.
+
+These prerequisites support an exact COMPLETE-class challenge if one is later justified. They neither refute ST10-A nor complete staircase10/r<=8. Prior A11 clock remains expired and unchanged.

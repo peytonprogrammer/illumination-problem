@@ -1,0 +1,30 @@
+Review of supplied Wang_illumination_preprint_v01.tex
+
+Scope
+Original attachment is unchanged. revised.tex is a separate v0.2 copy. research-brief.tex discusses the unfinished theory separately. Neither file has been sent or submitted. Author names, order, and affiliations are retained from the supplied draft and have not been independently confirmed.
+
+Mathematical assessment
+No fatal gap found in the stated finite, corner-avoiding construction proof. This is a hand assessment, not formal verification or a claim of external peer review. The independent exact construction check returns15 squares, area15, a single boundary component,22 maximal walls,13 convex and9 reflex vertices, and two interior marks. The proposed vertex cycle matches the union of the three reflected copies.
+
+The parity lemma correctly chooses an unfolded interior lattice point with an odd coordinate by dividing the even-even endpoint by its largest common power of2. Integer-line reflections preserve each coordinate parity. No assertion about a bounded collection of directions is used.
+
+At each of the four smooth seam endpoints, the copy change and actual wall reflection negate complementary components. The folded velocity reverses completely. Before the first reversal, the projected path is ordinary reversible billiard motion. After first reversal it must retrace to its last initial occurrence of a before reaching b. Taking the last visit to a after folding is essential because several physical points may map to a. The revised text states that point and the finite-leg convention explicitly. Axis-parallel physical paths cannot connect S,T because their two coordinates differ, so positive-length seam-gliding does not enter the argument.
+
+Changes to the preprint
+Clarified finite paths and why last folded visits exist. Added the explicit multiple-preimage explanation.
+Added a reference to the published removable-corner reversal convention, to avoid presenting reversal itself as a new general principle.
+Removed the unused incomplete Castro bibliography entry. The24-edge history remains explicitly attributed through Wolecki; the original Quantum item was not independently checked.
+Fixed the build comment and versioned the copy. No minimality claim or first-orthogonal-example claim was added.
+
+Published source check
+https://arxiv.org/html/1905.09358v3
+Theorem1.3 supplies the unrestricted22-edge upper bound. The introduction records26 and24-edge predecessors, and the acknowledgements record an independent unpublished22-edge example. Remark2.2 explicitly discusses retracing at removable corners. Historical priority among strictly simple orthogonal examples remains unresolved; the source check is not a complete literature search. The v3 date is30 November2024.
+
+Separate brief
+Provides the raw canonical room class, exact pocket/slide convention, a fixed-word response Q, and an explicit expert question. It distinguishes periodic-core detection from actual S/T single-corner coupling. It records only the independently verified two-direction counterexample and norm41 example as examples, not the entire peer census. It makes no claim of unbounded detecting norm, global22-wall minimality, or novelty of the deformation results. There is no recipient's name or correspondence acknowledgement in the brief.
+
+Outstanding before submission
+Independent review of the final source and brief by Opus; external mathematical review; historical priority; authors' confirmation of authorship/affiliations and any eventual submission. No response from Opus is presumed received.
+
+Build and visual review
+Both PDFs compile successfully with task-local Tectonic. revised.pdf has5 letter-size pages; research-brief.pdf has2. Every rendered page was visually inspected. A crowded P0/S figure label was separated in the final preprint and the affected page was rendered and inspected again. Final extracted text has no unresolved references or replacement glyphs. The brief initially lacked xcolor; the import was corrected and the final build passes. This layout/build validation is separate from mathematical peer review.

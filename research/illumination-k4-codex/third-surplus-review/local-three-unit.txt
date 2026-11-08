@@ -1,0 +1,162 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+Local third surplus: three unit fans, b0
+4 November2026 — Codex01a18403
+
+RESULT: parent hand proof, independent review pending. Every local room in the
+active class with exactly three e1 cells and b0 illuminates actualS/T within13
+reflections. This proof needs no W/k cap beyond the charge/fan hypotheses.
+No new room, ray, direction or reflection-word discovery occurs.
+
+1. Geometry and reduction to critical sites
+Exclude the directly illuminating N bridge. Each positive cell is a two-triangle
+centered or quarter fan at d1; all other partial cells are ordinary caps.
+No two quarters can join across an outside C: each supplies one90-degree
+quadrant, creating an extra smooth C contrary to b0. A third cell cannot
+repair it, because only the two adjacent A cells meet that C. Opposite
+quadrants would be a boundary pinch. Thus the previous unit-fan geometry and
+local portal exchanges apply without a new cross-cell opening.
+
+Call B/E/L/T critical. If at most one defect is critical, the old single-unit
+optical cover survives both noncritical fans. D/R triangles do not meet its
+forbidden mirrors. A nonbridge N unit fan is entirely bottom- or right-facing,
+so the opposite13path or centered six-path fallback survives. The argument
+is the same guard implication as in local-two-unit.txt§3 with D/R both allowed.
+
+If exactly two defects are critical, use local-two-unit.txt§§4–6's critical-pair
+cover. Its potentially new smooth-B case L+B centered is impossible here:
+B=(-1,-1) remains smooth, and the third noncritical N/D/R fan cannot reach
+that vertex. E+T centered is its sigma counterpart. The other pair covers use
+only the following N implications: presence of Nb- or Nb+ in a nonbridge unit
+N fan excludes BOTH right-facing N caps; absence of a specified Nb cap leaves
+that particular source roof mirror exposed. These remain true with N itself
+a unit fan, and all these paths' outside-N forbidden tiles are unchanged.
+Thus the pair cover extends to a noncritical third fan. No N-fullness assumption
+or assertion that smooth B is harmless is substituted for these guard conditions.
+
+Only three distinct critical sites remain. Their fourth critical site is ordinary.
+Old one-bounce routes force B+/E-; centered/square variants of the short cap
+route force T-/L+. Those short paths visit only the B/T or E/L cells involved,
+so the third critical fan introduces no additional mirror requirement. Hence
+each critical unit fan is centered C or its active outer square O.
+
+2. Four exact square substitutions, composed with old paths
+All input paths were already fixed and accepted. The exchange lemma preserves
+the complete portal exit point and outgoing velocity for the affected triangle
+excursion; the rest of the path is untouched.
+ B4: replace the top-cap three contacts in B6 by (5/3,4), giving4reflections.
+ F3: replace those top contacts in the old five-path by (5/3,4), giving3.
+ L10: replace E's three contacts in centeredL12 by (4,16/11), giving10.
+ BT9: replace top contacts in the existing bottom-square11 by (18/11,4),
+      giving9. This exchanges both B/T triangular excursions of old13.
+Their sigma images are taken with reversal, preserving actual S/T.
+Exact full paths and all named symbolic implications are in
+local-three-unit-check.json. Every replacement and implication PASS.
+In particular L10 is a composed response, not the assumption that E's newly
+removed diagonal stays available. F3 is the explicit path
+ S -> (1/6,1) -> (2/3,-2) -> (5/3,4) -> T.
+
+3. Symmetry representatives and notation
+Sigma=(2-y,2-x), with time reversal, exchanges B/E and L/T. Among choices
+of three critical sites, take representatives with B missing or L missing.
+Descriptions below list C/O types in the stated site order. Every ordinary
+critical cap is its forced reference cap. N is ordinary, because all three
+positive cells are critical. Thus a present N cap excludes its other three
+ordinary alternatives.
+
+4. B missing: sites (L,E,T)
+If L=C, centered-L3 works for E/T either type, since B remains ordinary.
+The complete guards permit the union of all possible E/T additions.
+Otherwise L=O:
+ - E=O,T=O: if Nb-/Nb+ are absent, T-square11 works. Otherwise N is bottom-
+   facing, Nr-/Nr+ absent, and sigmaBT9 exchanges both L/E trips.
+ - E=C,T=O: if Nr+ absent, sigmaB4 works (outer L square substituted).
+   If Nr+ present, N is right-facing, Nb-/Nb+ absent, and T-square11 works.
+   Its guards allow E's additional centered cap and L's outer square.
+ - E=O,T=C: transfer by sigma the following already checked cover for
+   centerL+outerB+outerT: if Nb+ absent use F3; if Nb+ present, N is bottom-
+   facing and centeredL12 works. The outer T mate does not affect its guards.
+ - E=C,T=C: impossible. B=(3,3) is smooth from H90+E+45+T+45, and L's outer
+   fan cannot repair that distant vertex. This contradicts b0.
+These are all possibilities with B missing.
+
+5. L missing: sites (B,E,T)
+First exclude E=C,T=C by the same unrepairable smooth B=(3,3).
+The remaining possibilities are:
+ - B=O,E=O,T=O: Nb-/Nb+ absent gives BT9; a bottom-facing N instead gives
+   E-square11. L is ordinary, so the latter exchanges only E's trip.
+ - B=C,E=O,T=O: Nb- absent gives B4; Nb- present gives bottom-facing N and
+   E-square11. It allows the extra B centered cap and T outer mate.
+ - B=C,E=C,T=O: Nb- absent gives B4; Nb- present gives sigmaB6. Its L mirror
+   is exposed because L is ordinary, and Nr+ is absent in bottom-facing N.
+ - B=O,E=C,T=O: Nr+ absent gives sigmaB6. If Nr+ present, N is right-facing
+   and BT9 works (B/T outer exchanges; L- absent since L is ordinary).
+ - B=O,E=O,T=C: apply sigma to centerL+outerB+outerE. That cover uses five
+   when Nb+ absent, and L10 when Nb+ present. Both extra outer mates are
+   explicitly allowed by the checked guards.
+ - B=C,E=O,T=C: apply sigma to centerL+centerE+outerB. If Nb+ absent, five
+   works. If Nb+ present, use section6's uniform frozen9path.
+These six possibilities plus the excluded E/T centered pairs exhaust all
+2^3C/O patterns; no room assignment enumeration is used in the proof.
+
+6. Last interaction: center L, center E, outer B
+The ordinary T cap is T-. The N ordinary slot either lacks Nb+, in which
+case five is valid even with E's extra centered cap, or is Nb+ itself.
+For the latter, local-three-residue-project.json retains ONE unconditional
+9reflection guard, source I3line800 in its stored actual-endpoint frame.
+Fixed triangles are H+L-/L++E-/E++B++outerB+T-+Nb+; all ordinary D/R choices
+are left free. Exact full required/forbidden guards imply the path for the
+whole family, not one room. No wall/exception count is needed for this guard.
+The complete path and provenance are retained in the receipt. No other frozen
+archive or new ray was needed.
+
+7. Validation and scope
+local-three-unit-check.py/json recomputes four specified square substitutions
+and eighteen named symbolic implications with exact rational arithmetic.
+It includes extra fans' possible tiles explicitly; checks are not proxies for
+case coverage. Section6's one symbolic projection uses the existing I3archive
+and endpoint-forced coordinate conversions only. Actual finite source-to-target
+legs, smooth specular mirrors and corner avoidance are retained throughout.
+Independent hand review has not ACKed; this is not formal verification or an
+external expert endorsement.
+
+This closes the entire three-e1 local partition at parent-proof level. Together
+with the prior remote and local charge results, the ONLY remaining mathematical
+partition is local e2+e1,b0. The full goal remains open, and all new exclusions
+must still receive and reconcile independent challenge before completion.
+
+
+Review reconciliation: explicit short forcing and noncritical support
+The two universally forced caps B+/E- follow from the old one-bounce paths.
+T-/L+ require the following extra local statements; they are not assumptions.
+If B is ordinary, the old four-path works when T- is absent. If B is centered,
+with its two outer mates absent, the exact three-reflection path is
+ S -> (-2/5,-8/5) -> (2/3,-4/3) -> (7/4,3) -> T.
+It needs only H+B-/B+ and forbids only those two B outer mates and T-.
+If the B active east quarter or B_east/B_rectangle is present and the lower
+south-east mate bse is absent, the exact two-reflection path is
+ S -> (1/2,-2) -> (7/4,3) -> T.
+It needs H+B+ plus its east upper mate b, and forbids only bse and T-.
+Sigma and reversal give L+ forcing. A west-reaching or joined B fan with
+bse present is not subject to this forcing; no such implication is used.
+These four paths, full guards, and all39named fallback guard sets appear in
+independent-review/guard-extension-check.json. Exact replay verifies that every
+fallback's complete forbidden set avoids the FULL D/R cell stars and both
+nonbridge N outside mates. This enlarges the symbolic check universe beyond
+ordinary cap labels. It does not permit the two N bridge triangles.
+
+For a nonbridge N unit fan the four possible forms are the bottom centered
+pair {Nb-,Nb+}, SW quarter {Nb-,nw}, right centered pair {Nr-,Nr+}, and NE
+quarter {Nr+,ne}. The SE quarter contains the direct bridge. Consequently:
+ - B/E centered pair uses B6 if Nb- absent, otherwise sigmaB6; bottom-facing
+   N may have BOTH Nb caps, and neither fallback forbids the other Nb cap.
+ - Centered L/outer B uses five if Nb+ absent, otherwise L12; L12 allows both
+   Nb caps. Its sigma gives the corresponding endpoint-reversed case.
+ - Remaining centered/outer pairs use L11/E11/sigma13 when N is bottom-facing;
+   these forbid no Nb cap. Opposite N orientation uses the stated short path.
+N's outside mates were checked harmless against the complete forbidden sets,
+not omitted from an alphabet. With all critical sites occupied, N is ordinary,
+as in the original tables. Thus the N-unit extension adds no untested mirror.

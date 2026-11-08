@@ -1,0 +1,1806 @@
+J OURNAL OF M ODERN DYNAMICS                                     doi: 10.3934/jmd.2011.5.285
+V OLUME 5, N O. 2, 2011, 285–318
+
+
+
+
+                           SQUARE-TILED CYCLIC COVERS
+
+                GIOVANNI FORNI, CARLOS MATHEUS AND ANTON ZORICH
+                         (Communicated by Raphaël Krikorian)
+
+
+         A BSTRACT. A cyclic cover of the complex projective line branched at four ap-
+         propriate points has a natural structure of a square-tiled surface. We describe
+         the combinatorics of such a square-tiled surface, the geometry of the corre-
+         sponding Teichmüller curve, and compute the Lyapunov exponents of the
+         determinant bundle over the Teichmüller curve with respect to the geodesic
+         flow. This paper includes a new example (announced by G. Forni and C.
+         Matheus in [17]) of a Teichmüller curve of a square-tiled cyclic cover in a
+         stratum of Abelian differentials in genus four with a maximally degenerate
+         Kontsevich–Zorich spectrum (the only known example in genus three found
+         previously by Forni also corresponds to a square-tiled cyclic cover [15]). We
+         present several new examples of Teichmüller curves in strata of holomor-
+         phic and meromorphic quadratic differentials with a maximally degenerate
+         Kontsevich–Zorich spectrum. Presumably, these examples cover all possible
+         Teichmüller curves with maximally degenerate spectra. We prove that this is
+         indeed the case within the class of square-tiled cyclic covers.
+
+
+
+
+                                     1. I NTRODUCTION
+    The Kontsevich–Zorich cocycle is a dynamical system on the total space of
+the Hodge bundle over the moduli space of Abelian or quadratic differentials.
+It is a continuous-time cocycle in the standard sense: it is a flow which acts lin-
+early on the fibers of the bundle. Its projection to the moduli space is given by
+the Teichmüller geodesic flow. Since the Kontsevich–Zorich cocycle is closely
+related to the tangent cocycle of the Teichmüller flow, its Lyapunov structure
+determines that of the Teichmüller flow and has implications for its dynam-
+ics. The Kontsevich–Zorich spectrum also plays a crucial role in applications of
+Teichmüller theory to the dynamics of translation flows and interval-exchange
+transformations— in particular, to results on the deviation of ergodic averages
+(see [38, 39, 40, 22, 14]), on the existence and nature of the limit distributions
+(see [7, 8]) and on the weak mixing property (see [2]).
+
+    Received July 24, 2010; revised June 1, 2011.
+    2000 Mathematics Subject Classification: Primary: 37D25, 37D40; Secondary: 14F05.
+    Key words and phrases: Teichmüller geodesic flow, Kontsevich–Zorich cocycle, square-tiled
+surfaces.
+    GF: Partially supported by the National Science Foundation under grant DMS 0800673.
+    CM: Partially supported by Collège de France and French ANR (grant 0864 Dynamique dans
+l’espace de Teichmüller).
+
+I N THE PUBLIC DOMAIN AFTER 2039              285                           ©2011 AIMS CIENCES
+286               G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+   M. Kontsevich and A. Zorich conjectured that the Lyapunov spectrum of the
+cocycle is simple (in particular, that all the exponents are nonzero) for SL(2, R)-
+invariant canonical absolutely continuous measures on all connected compo-
+nents of strata of the moduli spaces of Abelian (and quadratic) holomorphic
+differentials. G. Forni [14] proved that for the canonical measures on strata of
+Abelian differentials, the exponents are all nonzero. A. Avila and M. Viana [3]
+later completed the proof of the Kontsevich–Zorich conjecture in this case. Re-
+cently, G. Forni developed his approach to give a general criterion for the non-
+vanishing property of the Kontsevich–Zorich exponents for SL(2, R)-invariant
+measures on the moduli space of Abelian differentials [16]. Based on this crite-
+rion (and on a standard construction of an orienting double-cover), R. Treviño
+[33] proved the nonvanishing of the exponents for all canonical measures on
+strata of quadratic differentials. The full Kontsevich–Zorich conjecture is still
+open for strata of nonorientable quadratic differentials.
+   The aforementioned results lead to the natural questions as to whether or
+not it is possible for the Kontsevich–Zorich cocycle to have zero exponents with
+respect to other invariant measures. It is well known to experts (cf. [34]) that it
+is possible to construct invariant measures for the Teichmüller geodesic flow (for
+instance, supported on periodic orbits) with maximally degenerate Kontsevich–
+Zorich spectra, that is, with all exponents equal to zero with the exception of
+the “trivial” ones. Answering a question of W. Veech, G. Forni found in [15] the
+first example of a SL(2, R)-invariant measure with a maximally degenerate spec-
+trum. The example is given by the measure supported on the SL(2, R)-orbit of
+a genus three square-tiled cyclic cover; that is, a branched cover of the four-
+punctured Riemann sphere endowed with a quadratic differential with four
+simple poles at the punctures. Any cover of this type is “parallelogram-tiled”
+in the sense that it is also a branched cover of the torus with a single branch-
+ing point. The flat surface in Forni’s example, found independently by F. Her-
+rlich, M. Möller and G. Schmithuesen, is very peculiar, very symmetric, and
+has so many remarkable properties that it has been aptly named Eierlegende
+Wollmilchsau [20]. Later G. Forni and C. Matheus announced in the preprint
+[17] a second example of the same kind in genus four (see also [27]). The
+present article has, in fact, grown out of that announcement.
+   M. Möller conjectured in [30] that these two examples are the only Teich-
+müller curves with maximally degenerate Kontsevich–Zorich spectra. He was
+able to prove his conjecture up to a few strata in genus five where the arith-
+metic conditions he derives to rule out maximally degenerate spectra could not
+be verified [30]. Möller result naturally led to the more general conjecture on
+whether the Teichmüller curves of the Eierlegende Wollmilchsau and the Forni–
+Matheus curve indeed give the only examples of SL(2, R)-invariant measures (or
+even of SL(2, R)-orbits) with maximally degenerate Kontsevich–Zorich spectra
+on strata of Abelian differentials. For sufficiently high genus the conjecture is
+proved in [11] for SL(2, R)-invariant suborbifolds in the moduli space of holo-
+morphic Abelian and quadratic differentials, as a corollary of the key formula
+
+J OURNAL OF M ODERN DYNAMICS                                V OLUME 5, N O. 2 (2011), 285–318
+                               S QUARE - TILED CYCLIC COVERS                                287
+
+
+for the sum of the exponents. Other results in this direction for moduli spaces
+of holomorphic (Abelian or quadratic) differentials in all genera have been an-
+nounced by A. Avila and M. Möller and, independently, by D. Aulicino. Similar
+conjectures for strata of meromorphic quadratic differentials are at the moment
+wide open, to the authors’ best knowledge.
+   In this paper, we systematically investigate these questions within the class
+of all square-tiled cyclic covers. We remark that the idea of the construction
+of a square-tiled cyclic cover already appeared in [15] (and in [17]) but only
+in a particular case. Here we generalize the construction and derive the main
+topological, geometric, and combinatorial properties of the resulting transla-
+tion and half-translation surfaces. We then classify all the examples of Teich-
+müller curves derived from square-tiled cyclic covers with maximally degen-
+erate spectra in strata of Abelian holomorphic differentials and of quadratic
+holomorphic and meromorphic differentials. The main tool in our investiga-
+tion of the spectrum of Lyapunov exponents is the formula from [11] for the
+sum of the nonnegative Lyapunov exponents (that is, for the exponent of the
+determinant bundle). The formula takes a particularly simple, explicit form in
+the case of square-tiled cyclic covers. In fact, our paper can be considered as a
+companion to the paper by A. Eskin, M. Kontsevich and A. Zorich [12] in which
+the authors derive a completely explicit formula for each individual Lyapunov
+exponent of a square-tiled cyclic cover. In a related paper D. Chen [9] com-
+putes the Lyapunov exponent of the determinant bundle for square-tiled cyclic
+covers by different methods and relates it to the slope of the corresponding Te-
+ichmüller curve.
+   Finally, we remark that the Eierlegende Wollmilchsau and the Forni–Matheus
+example were originally found in [15] and [17], respectively, by a completely
+different method based on the analysis of the action of the cyclic group of deck
+transformations on the second fundamental form of the Hodge bundle (related
+to the Kontsevich–Zorich spectrum by the variational formulas of [14, 15]). This
+symmetry approach has led us to conduct a systematic investigation of the
+spectrum of the Kontsevich–Zorich cocycle on equivariant subbundles of the
+Hodge bundle, which will appear in forthcoming paper [18].
+Additional bibliographic remarks. Cyclic covers were already studied by I.
+Bouw and M. Möller in [6] in a similar context, but with respect to completely
+different (not square-tiled) flat structures. The papers [5] of I. Bouw and [28]
+of C. McMullen investigate more general cyclic covers but without any relation
+to flat metrics. The paper [37] of A. Wright studies general square-tiled Abelian
+(versus cyclic) covers.
+
+1.1. Reader’s guide. Cyclic covers are defined in Section 2.1. In Section 2.2 we
+introduce a square-tiled flat structure on any appropriate cyclic cover. A reader
+interested in the main results can then choose to pass directly to Section 3.2.
+In Section 2.3 we characterize square-tiled cyclic covers defined by holomor-
+phic one-forms. We determine the corresponding ambient strata of holomor-
+phic 1-forms (of quadratic differentials in the general situation). In Section
+J OURNAL OF M ODERN DYNAMICS                                   V OLUME 5, N O. 2 (2011), 285–318
+288                   G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+2.4 we describe in detail how to explicitly construct the square-tiled surface
+(M N (a 1 , a 2 , a 3 , a 4 ), p ∗ q 0 ), and in Section 2.6 we characterize its Veech group
+and the corresponding arithmetic Teichmüller curve. In Section 2.5 we describe
+the automorphism group of a cyclic cover. In Section 3.1 we recall a general
+formula from [11] for the sum of positive Lyapunov exponents of the Hodge
+bundle over an arithmetic Teichmüller curve. From this formula we derive in
+Section 3.2 an explicit expression for the sum of exponents in the case of an
+arbitrary square-tiled cyclic cover. We apply these results in Section 3.3 to de-
+termine square-tiled cyclic covers giving rise to arithmetic Teichmüller curves
+with a maximally degenerate Kontsevich–Zorich spectrum.
+   In Appendix A we present an analytic computation of the spin-structure (dif-
+ferent from the original computation in [27]), which allows us to determine
+the connected component of the ambient stratum corresponding to the excep-
+tional square-tiled cyclic cover in genus four. Appendix B is provided for the
+sake of completeness: it is a technical exercise related to the proof of one of the
+main Theorems (namely Theorem 18).
+
+               2. S QUARE - TILED FLAT STRUCTURE ON A CYCLIC COVER
+2.1. Cyclic covers. Consider an integer N such that N > 1 and a 4-tuple of in-
+tegers (a 1 , . . . , a 4 ) satisfying the following conditions:
+                                                                    4
+                                                                    X
+(1)           0 < ai ≤ N ;      gcd(N , a 1 , . . . , a 4 ) = 1 ;          a i ≡ 0 ( mod N ) .
+                                                                    i =1
+Let z 1 , z 2 , z 3 , z 4 ∈ C be four distinct points. Conditions (1) imply that, possibly
+after a desingularization, a Riemann surface M N (a 1 , a 2 , a 3 , a 4 ) defined by equa-
+tion
+(2)                     w N = (z − z 1 )a1 (z − z 2 )a2 (z − z 3 )a3 (z − z 4 )a4
+is closed, connected and nonsingular. By construction, M N (a 1 , a 2 , a 3 , a 4 ) is a
+ramified cover over the Riemann sphere P1 (C) branched over the points z 1 , . . . ,
+z 4 . By puncturing the ramification points we obtain a regular N -fold cover over
+P1 (C) à {z 1 , z 2 , z 3 , z 4 }.
+R EMARK 1. It is easy to see that quadruples (a 1 , a 2 , a 3 , a 4 ) and (ã 1 , ã 2 , ã 3 , ã 4 )
+with a i = ã i (mod N ) for i = 1, 2, 3, 4, define isomorphic cyclic covers, which
+explains the first condition in formula (1). The condition on gcd in (1) is a nec-
+essary and sufficient condition of connectedness of the resulting cyclic cover.
+The third condition in formula (1) implies that there is no branching at infinity.
+   A group of deck transformations of this cover is the cyclic group Z/N Z with
+a generator T : M → M given by
+(3)                                       T (z, w) = (z, ζw) ,
+where ζ is a primitive N th root of unity, ζN = 1. Throughout this paper we will
+use the term cyclic cover when referring to a Riemann surface M N (a 1 , . . . , a 4 ),
+with parameters N , a 1 , . . . , a 4 satisfying relations (1).
+J OURNAL OF M ODERN DYNAMICS                                                V OLUME 5, N O. 2 (2011), 285–318
+                                      S QUARE - TILED CYCLIC COVERS                                       289
+
+
+2.2. Square-tiled surface associated to a cyclic cover. Any meromorphic qua-
+dratic differential q(z)(d z)2 with at most simple poles on a Riemann surface
+defines a flat metric g (z) = |q(z)| with conical singularities at zeroes and poles
+of q. Let us consider a meromorphic quadratic differential q 0 on P1 (C) of the
+form
+                                     c 0 (d z)2
+(4)           q 0 :=                                            ,       where c 0 ∈ C à {0} .
+                       (z − z 1 )(z − z 2 )(z − z 3 )(z − z 4 )
+It has simple poles at z 1 , z 2 , z 3 , z 4 and no other zeroes or poles. The quadratic
+differential q 0 defines a flat metric on a sphere obtained by the following con-
+struction. Consider an appropriate flat cylinder. On each boundary compo-
+nent of the cylinder mark a pair of opposite points and glue the resulting pairs
+of cords by isometries. The four marked points become conical points of the
+flat metric. For a convenient choice of parameters c 0 , z 1 , . . . , z 4 the resulting flat
+sphere can be obtained by identifying the boundaries of two copies of a unit
+square. Metrically, we get a square pillow with four corners corresponding to
+the four poles of q 0 , see Figure 1.
+   Now consider some cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) and the canonical projec-
+tion p : M N (a 1 , a 2 , a 3 , a 4 ) → P1 (C). Consider an induced quadratic differential
+q = p ∗ q 0 on M N (a 1 , a 2 , a 3 , a 4 ) and the corresponding flat metric. By construc-
+tion, the resulting flat surface is tiled with unit squares. In other words, we get
+a square-tiled surface, see [10, 41] (also called an origami, [25, 32]; also called
+an arithmetic translation surface, see [19]).
+   In this paper we mostly focus on square-tiled cyclic covers, which are pairs
+
+                                   (M N (a 1 , a 2 , a 3 , a 4 ) , p ∗ q 0 ) ,
+
+where the meromorphic quadratic differential q 0 on the underlying P1 (C) de-
+fines a “unit square pillow with vertical and horizontal sides” as in Figure 1.
+
+2.3. Singularity pattern of a square-tiled cyclic cover. The Riemann surface
+M N (a 1 , a 2 , a 3 , a 4 ) has gcd(N , a i ) ramification points over each branching point
+z i ∈ P1 (C), where i = 1, 2, 3, 4, on the base sphere. Each ramification point has
+degree N / gcd(N , a i ). The flat metric has four conical points z = z i , i = 1, . . . , 4,
+on the base sphere with a cone angle π at each conical point. Hence, the in-
+duced flat metric on M N (a 1 , a 2 , a 3¡, a 4 ) has gcd(N     ¢ , a i ) conical points over z i ;
+each conical point has cone angle N / gcd(N , a i ) π.
+    If one of the cone angles is an odd multiple of π, then the flat metric has
+nontrivial holonomy; in other words, the quadratic differential q = p ∗ q 0 is not
+a global square of a holomorphic 1-form. Note, however, that although the con-
+dition that all cone angles be even multiples of π is necessary, it is not a suffi-
+cient condition for triviality of the holonomy of the flat metric.
+    Denote by H (m 1 , . . . , m n ) the stratum of Abelian differentials with zeroes of
+degrees m 1 , . . . , m n and by Q(d 1 , . . . , d n ) the stratum of meromorphic quadratic
+differentials with singularities of degrees d 1 , . . . , d n . Here m i ∈ N, for i = 1, . . . , n,
+J OURNAL OF M ODERN DYNAMICS                                                 V OLUME 5, N O. 2 (2011), 285–318
+290                 G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+and ni=1 m i = 2g −2. We do not allow poles of orders higher than one for mero-
+   P
+
+morphic quadratic differentials, so d i ∈ {−1, 1, 2, 3, . . . }, for i = 1, . . . , n, and the
+sum of degrees of singularities satisfies the equality ni=1 d i = 4g − 4.
+                                                           P
+
+L EMMA 2. If N is even and all a i , i = 1, 2, 3, 4, are odd, the quadratic differential
+q = p ∗ q 0 is a global square of a holomorphic 1-form ω on M N (a 1 , a 2 , a 3 , a 4 ),
+where ω belongs to the stratum
+                      Ã                                                                 !
+                             N                                            N
+(5)             ω∈H                     − 1, . . . , . . . , . . . ,                 −1 .
+                        2 gcd(N , a 1 )                              2 gcd(N , a 4 )
+                        |        {z             }           |             {z          }
+                                gcd(N ,a 1 )               gcd(N ,a 4 )
+
+The associated flat metric on such a square-tiled cyclic cover has a trivial linear
+holonomy.
+   If N is odd, or if N is even but at least one of a i , i = 1, 2, 3, 4, is also even, the
+quadratic differential q = p ∗ q 0 is not a global square of a holomorphic 1-form
+on M N (a 1 , a 2 , a 3 , a 4 ). In this case q belongs to the stratum
+                                Ã                                                             !
+                                      N                                          N
+(6)                  q ∈Q                       − 2, . . . , . . . , . . . ,               −2 ,
+                                  gcd(N , a 1 )                              gcd(N , a 4 )
+                                  |       {z            }           |            {z         }
+                                gcd(N ,a 1 )              gcd(N ,a 4 )
+
+and the flat metric on such a square-tiled cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) has non-
+trivial linear holonomy.
+R EMARK 3. In the case, when gcd(N , a i ) = N2 , the corresponding “conical points”
+have cone angles 2π and so are actually regular points of the metric. Depend-
+ing on the context we either consider such points as marked points or simply
+ignore them.
+R EMARK 4. Lemma 2 implies, in particular, that the quadratic differential q =
+p ∗ q 0 is holomorphic if and only if inequalities a i ≤ N are strict for all i = 1, 2, 3, 4.
+If a i = N for at least one index i , then the quadratic differential q = p ∗ q 0 is
+meromorphic; that is, it has simple poles.
+Proof of the Lemma. Let σi be a small contour around z i in the positive direc-
+tion on the sphere (see Figure 1). The paths σi , i = 1, 2, 3 generate the funda-
+mental group of the sphere punctured at the four ramification points.
+   Since the cone angle at each cone singularity of the underlying “flat sphere”
+is π (whether it is glued from squares or not), the parallel transport along each
+loop σi brings a tangent vector v ~ to −~
+                                        v . Let z ∈ P1 (C) be a point of the loop σi ,
+and let (w, z) be one of its preimages in the cover M N (a 1 , a 2 , a 3 , a 4 ). By lifting
+the loop σi to a path on the cover which starts at the point (w, z), we land at
+the point (ζai w, z), where ζ is the primitive N th root of unity. Thus we get the
+following representation of the fundamental group of the punctured sphere in
+the cyclic group Z/N Z of deck transformations (3) and the holonomy group
+Z/2Z of the flat metric on the sphere:
+(7)                 Deck : σi 7→ a i ∈ Z/N Z        Hol : σi 7→ 1 ∈ Z/2Z
+J OURNAL OF M ODERN DYNAMICS                                   V OLUME 5, N O. 2 (2011), 285–318
+                                       S QUARE - TILED CYCLIC COVERS                                     291
+
+
+Since the metric on M N (a 1 , a 2 , a 3 , a 4 ) is induced from the metric on the sphere,
+the holonomy representation hol of the fundamental group of the covering sur-
+face M N (a 1 , a 2 , a 3 , a 4 ) factors through the one of the sphere, i.e., hol = Hol ◦p ∗ .
+   Let us suppose that N is odd. Let αi = N / gcd(N , a i ). Then
+                       α                  N             ai
+              Deck(σi i ) = a i ·                  =              N = 0 (mod N ) .
+                                      gcd(N , a i ) gcd(N , a i )
+          α
+Hence σi i can be lifted to a closed path on M N (a 1 , a 2 , a 3 , a 4 ). On the other
+              α
+hand, Hol(σi i ) = αi = N / gcd(N , a i ) = 1 (mod 2). Thus, the flat metric on the
+cover M N (a 1 , a 2 , a 3 , a 4 ) has nontrivial holonomy, and our quadratic differential
+q is not a global square of a holomorphic 1-form.
+   Let us suppose that N is even, but some a i is also even. Since
+                                        gcd(N , a 1 , . . . , a 4 ) = 1 ,
+at least one of a j is odd. Since a 1 +· · ·+a 4 is divisible by N , this sum is even, and
+hence we have exactly two even entries. By relabeling the ramification points
+on the sphere, if necessary, we may assume that a 1 , a 3 are odd while a 2 , a 4 are
+even. Let us consider a path
+                                                 (a +a 3 ) −a 1 −a 1
+                                        ρ := σ1 2         σ2 σ3
+For the induced deck transformation we get
+                       Deck(ρ) = ((a 2 + a 3 )a 1 − a 1 a 2 − a 1 a 3 ) = 0 .
+Hence, a lift of ρ is closed on M N (a 1 , a 2 , a 3 , a 4 ). On the other hand, this path
+acts as an element Hol(ρ) = (a 2 + a 3 ) − a 1 − a 1 = 1 (mod 2) in the holonomy
+group Z/2Z. Hence, the holonomy of the metric along this closed path on the
+cover M N (a 1 , a 2 , a 3 , a 4 ) is nontrivial, and our quadratic differential q is not a
+global square of a holomorphic 1-form.
+   Finally, suppose that N is even and all a i , i = 1, 2, 3, 4 are odd. Any element
+of the fundamental group of the underlying four-punctured sphere can be rep-
+resented by a product
+                             n
+                                    pj
+                     τ=           σi , where p j = ±1 and i j ∈ {1, 2, 3, 4} .
+                             Y
+                                  j
+                           j =1
+
+Let k i be the algebraic number of entries of the “letter” σi in the word as above,
+where σ−1 i
+             is counted with the sign minus, and i = 1, 2, 3, 4. The loop τ as above
+can be lifted to a closed loop on the cover if and only if Deck(τ) = 0, that is, if
+and only if k 1 a 1 +· · ·+k 4 a 4 = 0 (mod N ). In this case Hol(τ) = k 1 +· · ·+k 4 . Since
+all a i are odd we have k 1 + · · · + k 4 = k 1 a 1 + · · · + k 4 a 4 (mod 2). Finally, since
+N is even and k 1 a 1 + · · · + k 4 a 4 = 0 (mod N ), we also have k 1 a 1 + · · · + k 4 a 4 = 0
+(mod 2). Thus, in this case, the flat metric on M N (a 1 , a 2 , a 3 , a 4 ) has trivial linear
+holonomy.
+   Recall that a flat metric associated to a meromorphic quadratic differential
+with at most simple poles has cone angle (d + 2)π at a zero of order d (we
+consider a simple pole as a “zero of degree −1”). A flat metric associated to
+a holomorphic 1-form has cone angle 2(k + 1)π at a zero of degree k. We have
+J OURNAL OF M ODERN DYNAMICS                                                V OLUME 5, N O. 2 (2011), 285–318
+292                G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+already evaluated the number of ramification points and their ramification de-
+grees which define cone angles at all conical singularities, and hence the de-
+grees of the corresponding quadratic (Abelian) differential. This completes the
+proof of the Lemma.
+
+L EMMA 5. In the case when the quadratic differential q = p ∗ q 0 determining a
+square-tiled flat structure is the global square of a holomorphic 1-form, that is,
+q = ω2 , the form ω is anti-invariant with respect to the action of a generator of
+the group of deck transformations,
+
+(8)                                          T ∗ ω = −ω .
+
+Proof. By construction, the quadratic differential q = p ∗ q 0 is invariant under
+the action of deck transformations on M N (a 1 , a 2 , a 3 , a 4 ). Hence, when N is
+even, all a i , i = 1, 2, 3, 4 are odd, and q = p ∗ q 0 = ω2 , the holomorphic 1-form
+ω is either invariant or anti-invariant under the action of a generator of the
+group of deck transformations (3).
+    Invariance of ω under T ∗ would mean that ω can be pushed forward to
+  1
+P (C), which would imply in turn that q 0 is a global square of a holomorphic
+1-form. This is not true. Hence, ω is anti-invariant.
+
+  By the Riemann–Hurwitz formula, the genus g of M N (a 1 , a 2 , a 3 , a 4 ) satisfies
+                            X
+             2 − 2g = 2N −        (degree of ramification − 1)
+                                   ramification
+                                     points
+                                    4
+                                    X                     ¡                      ¢
+                       = 2N −              gcd(N , a i ) · N / gcd(N , a i ) − 1
+                                    i =1
+                           4
+                           X
+                       =          gcd(N , a i ) − 2N
+                           i =1
+
+and hence,
+
+                                                  1 4
+                                                    X
+(9)                            g = N +1−                 gcd(a i , N ) .
+                                                  2 i =1
+
+   The same result can be obtained by summing up the degrees of zeroes, which
+gives 2g − 2 for a holomorphic 1-form in (5), and 4g − 4 for a quadratic differ-
+ential in (6).
+
+2.4. Combinatorics of a square-tiled cyclic cover. It is convenient to define a
+square-tiled surface corresponding to a holomorphic 1-form by a pair of per-
+mutations on the set of all squares, πh and πv , indicating for each square its
+neighbor to the right and its neighbor on top respectively. Let us evaluate these
+permutations for a square-tiled surface defined by a holomorphic 1-form ω on
+M N (a 1 , a 2 , a 3 , a 4 ) (and in addition to the conditions in formula (1) we assume
+that N is even and all a i are odd).
+J OURNAL OF M ODERN DYNAMICS                                          V OLUME 5, N O. 2 (2011), 285–318
+                                S QUARE - TILED CYCLIC COVERS                                   293
+
+
+  We start with an appropriate enumeration of the squares. By construction,
+our “square-tiled pillow” (P1 (C), q 0 ) in the base of the cover
+
+                               M N (a 1 , a 2 , a 3 , a 4 ) → P1 (C)
+
+is tiled with two unit squares. Since the above cover has degree N , our square-
+tiled cyclic cover gets tiled with 2N squares.
+    Assume that the branch points z 1 , z 2 , z 3 , z 4 are associated to the corners of
+the pillow as in Figure 1. We associate the letters A, B,C , D to the four corners
+respectively. We also associate the corresponding letters to the corners of each
+square on the surface M N (a 1 , a 2 , a 3 , a 4 ).
+    Let us color one of the faces of our pillow white, and the other black. Let us
+lift this coloring to M N (a 1 , a 2 , a 3 , a 4 ). Choose some white square, and associate
+the number 0 to it. Take a black square adjacent to the side [C D] of the first
+one and associate the number 1 to it. Acting by deck transformations we as-
+sociate to a white square T k (S 0 ) the number 2k, and to a black square T k (S 1 )
+the number 2k + 1. As usual, k is taken modulo N , so we may assume that
+0 ≤ k < N.
+
+                               z1                                z4
+                                    A                      D
+
+                                        σ1
+
+                                                      τh
+
+                                    B                      C
+                               z2                                z3
+
+                  F IGURE 1. Flat sphere glued from two squares
+
+
+    Let us consider a small loop σi encircling z i in a positive direction; we as-
+sume that σi does not have other ramification points inside an encircled do-
+main, see Figure 1. Let us then consider a lift of σi to M N (a 1 , a 2 , a 3 , a 4 ). The
+end-point of the lifted path is the image of the action of T ai on the starting
+point of the lifted path. Hence, starting at a square number j and “going around
+a corner” on M N (a 1 , a 2 , a 3 , a 4 ) in the positive (counterclockwise) direction we
+get to a square number j + 2a j (mod 2N ) (see Figure 2).
+    Let us consider a horizontal path τh as in Figure 1 and a lift of τh to the
+surface M N (a 1 , a 2 , a 3 , a 4 ). The end-point of the resulting path is the image of
+the action of T a1 +a4 = T −(a2 +a3 ) on the starting point of the lifted path. Hence,
+“moving two squares to the right” on M N (a 1 , a 2 , a 3 , a 4 ) we move from a square
+number j to a square number j + 2(a 1 + a 4 ) (mod 2N ) if vertices B and C are
+at the bottom of the squares, and to a square number j − 2(a 1 + a 4 ) (mod 2N )
+if vertices B and C are on top of the squares (see Figure 3).
+J OURNAL OF M ODERN DYNAMICS                                       V OLUME 5, N O. 2 (2011), 285–318
+294                       G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+
+
+        j + 2a 1 Î                                  j          j                                   Ï j − 2a 1
+
+
+                 A                     Î        A                  A     Î                         A
+                          j         j + 2a 1                           j − 2a 1           j
+        σ1                                              σ1   σ−1
+                                                              1                                          σ−1
+                                                                                                          1
+
+
+        σ2                                                                                τh
+                       j + 2a 2    j + 2a 2 Î
+                 B       Ï                                                A           D        A              D
+                                           B                 • • •
+                                                                                                       j + 2a 1
+             j                                      j                             j                Ï
+                                   σ2                                                                    + 2a 4
+
+                                                                         B            C        B              C
+
+
+                     F IGURE 2. Local moves on a square-tiled cyclic cover
+
+    Using these rules, it is easy to determine the permutations πh and πv . Start
+with two neighboring squares numbered by 0 and 1. By iterating the operation
+τh , we can determine all the squares to the right of 0 and 1 till we close up
+and get a cylinder. Recall that we associate letters A, B,C , D to the corners of
+the squares. By applying appropriate operations σi we find the squares located
+atop those which are already constructed. By applying appropriate operations
+σ−1
+  i
+     we find a direct neighbor to the right for every square which does not be-
+long to one of the previously constructed horizontal cylinders. Having two hor-
+izontally adjacent squares, we apply iteratively the operation τh to obtain all
+2N / gcd(N , a 1 + a 4 ) squares in the corresponding cylinder (row), etc.
+E XAMPLE 6. Figure 3 presents a construction of the enumeration for the square-
+tiling of M 6 (1, 1, 1, 3), where the exponents {1, 1, 1, 3} are represented by vertices
+{A, B,C , D} respectively. Note that by moving two squares to the right in the first
+row (say, 0 −→ 8) we apply τh , while by moving two squares to the right in the
+second row (say, 10 −→ 2) we apply τ−1     h
+                                             . In this example the permutations πh
+and πv have the following decompositions into cycles
+                                  πh = (0, 1, 8, 9, 4, 5)(11, 10, 3, 2, 7, 6)
+                                  πv = (0, 7, 4, 11, 8, 3)(1, 6, 9, 2, 5, 10)
+   When N is odd, or when N is even but at least one of a i is also even, the
+quadratic differential q = p ∗ q 0 on M N (a 1 , a 2 , a 3 , a 4 ) is not a global square of
+a holomorphic 1-form. The holonomy of the flat structure defined by q is no
+longer trivial: a parallel transport of a tangent vector v along certain closed
+paths brings it to −v. In particular the notions of “up–down” or “left–right” are
+no longer globally defined. However, the notions of horizontal direction and of
+vertical direction are still globally well-defined. Our flat surface is square-tiled
+and its combinatorial geometry can still be encoded by a pair of permutations
+πh and πv .
+J OURNAL OF M ODERN DYNAMICS                                                  V OLUME 5, N O. 2 (2011), 285–318
+                                       S QUARE - TILED CYCLIC COVERS                                                295
+
+
+                  A       D        A                        A        D        A        D
+             τh       0       1    Ï8                           0        1        8    Ï9
+
+                  B       C        B                        B        C        B        C
+                              •
+                              •
+                              •
+                  A       D        A        D       A       D        A
+             τh       0       1        8        9       4       5    Ï0            Closed up a cylinder
+                  B       C        B        C       B       C        B
+
+                                                                10
+                                                                Ï
+
+             σ4       0       1        8        9       4       5
+
+
+                                                                10       Ï3
+
+
+            σ−1
+             1        0       1        8        9       4       5
+
+
+                                                                10       3        Ï2
+
+
+            τ−1
+             h        0       1        8        9       4       5
+                              •
+                              •                         8       1        0        5        4   9
+                              •
+                      7       6        3        26      11 10            3        2        7   6 11
+            τ−1
+             h 5 0            1        8        9       4       5 08              9        0   1
+
+                      3       10       11       6       7       2
+
+
+
+             F IGURE 3. Cartoon movie construction of M 6 (1, 1, 1, 3)
+
+
+   Note that the vertices of every square of our tiling are naturally labeled by
+indices A, B,C , D according to the label of their projections on the Riemann
+sphere. By convention, πh (2k) indicates the number of a black square adjacent
+to the side [C D] of the white square 2k, and πh (2k + 1) indicates the number of
+a white square adjacent to the side [AB ] of the black square 2k + 1. Similarly,
+πv (2k) indicates the number of a black square adjacent to the side [AD] of the
+white square 2k, and πh (2k+1) indicates the number of a white square adjacent
+to the side [BC ] of the black square 2k + 1.
+   With this definition the remaining part of the construction literally coincides
+with the one for an Abelian differential, which was described above.
+
+E XAMPLE 7. Figure 4 illustrates a square-tiling of M 4 (1, 3, 2, 2). The flat met-
+ric has nontrivial linear holonomy; the corresponding quadratic differential be-
+longs to the stratum Q(2, 2). In this example the permutations πh and πv are
+J OURNAL OF M ODERN DYNAMICS                                                           V OLUME 5, N O. 2 (2011), 285–318
+296                     G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+                                                                                             A       7 D   6   A
+
+                                                                                             5       2     3   0
+  A   5 D   4   A   3 D     2   A   1 D     0   A   7 D   6    A              B   0 C    1
+                                                                                                               B
+ 3    0     1       6       7       4       5       2     3    0              2   5      4           7     6   1
+                                                                             A
+ B    5 C   4 B     3 C     2 B     1 C     0 B     7 C   6   B                                      2 D   3   A
+                                                                              3   0      1       6
+
+                                                                              B   5 C    4       B
+
+
+          F IGURE 4. These two ways to unfold the square-tiled cyclic
+          cover M 4 (1, 3, 2, 2) represent decompositions into horizontal
+          and into vertical cylinders
+
+decomposed into cycles as
+                                        πh = (0, 1, 6, 7, 4, 5, 2, 3)
+                                        πv = (0, 5)(1, 4)(2, 7)(3, 6)
+R EMARK 8. Note that when pairing sides of boundary squares of an abstract
+square-tiled surface one has to respect the orientation of the surface.
+  We proceed below with an elementary lemma which will, however, be im-
+portant later.
+L EMMA 9. Consider a decomposition M N (a 1 , a 2 , a 3 , a 4 ) = tcyli of a square-tiled
+cyclic cover into cylinders cyli filled by closed horizontal trajectories. For every
+cylinder cyli we denote by w i its width (the length of each closed horizontal tra-
+jectory) and by h i its height (the length of each vertical segment).
+   Assuming that the branch points z 1 , z 2 , z 3 , z 4 are numbered as indicated in
+Figure 1, the widths of the corresponding cylinders and the sum of the heights of
+all cylinders are given by the formulas:
+                            2N                                     X
+            wi =                          , for all i , and             h i = gcd(N , a 1 + a 4 ) .
+                    gcd(N , a 1 + a 4 )                            i
+
+Proof. Clearly, the operation τh = T (a1 +a4 ) has order gcd(NN,a1 +a4 ) . Hence, the
+length of each horizontal trajectory is equal to gcd(N2N ,a 1 +a 4 ) which, in turn, is
+equal to the width of any cylinder. Since the area of the surface is 2N , the total
+height of all cylinders is equal to gcd(N , a 1 + a 4 ).
+R EMARK 10. It is irrelevant whether or not the quadratic differential q = p ∗ q 0
+defining the square-tiled flat structure in Lemma 9 is a global square of a holo-
+morphic 1-form.
+2.5. Symmetries of cyclic covers. We continue with a description of the iso-
+morphisms of cyclic covers (certainly known to all who worked with them).
+Note that in the Lemma below we do not use any flat structure.
+L EMMA 11. Two cyclic covers M N (a 1 , . . . , a 4 ) and M N (ã 1 , . . . , ã 4 ) admit an iso-
+morphism compatible with the projection to P1 (C)
+J OURNAL OF M ODERN DYNAMICS                                               V OLUME 5, N O. 2 (2011), 285–318
+                                       S QUARE - TILED CYCLIC COVERS                                           297
+
+
+
+                          M N (a 1 , . . . , a 4 ) ≃ M N (ã 1 , . . . , ã 4 )
+
+
+                                                    P1 (C)
+
+if and only if for some primitive element k ∈ Z/N Z one has
+(10)                     ã i = ka i      (mod N ),             for      i = 1, 2, 3, 4 .
+In particular,
+(11)           M N (a 1 , a 2 , a 3 , a 4 ) ≃ M N (N − a 1 , N − a 2 , N − a 3 , N − a 4 ) .
+Proof. Any isomorphism g of cyclic covers as above induces an isomorphism
+g ∗ of their groups of deck transformations such that,
+                        i ) = g ∗ (Deck(σi )) ,
+                       Deck(σ                                          for i = 1, . . . , 4 .
+Since by construction Deck(σ     i ) = ã i and Deck(σi ) = a i in Z/N Z, for i = 1, . . . , 4,
+and any automorphism of a cyclic group Z/N Z is given by the multiplication
+by a primitive element k ∈ Z/N Z, the above relation yields formula (10).
+   On the other hand, when condition (10) is satisfied, one can find integers
+m 1 , . . . , m 4 such that ã i = ka i + m i N , where 0 < ã i ≤ N , and, hence, we have an
+obvious isomorphism
+                     w̃ = w k (z − z 1 )m1 (z − z 2 )m2 (z − z 3 )m3 (z − z 4 )m4
+between the two cyclic covers w N = (z − z 1 )a1 (z − z 2 )a2 (z − z 3 )a3 (z − z 4 )a4 and
+w̃ N = (z − z 1 )ã1 (z − z 2 )ã2 (z − z 3 )ã3 (z − z 4 )ã4 .
+  Consider the particular case when {a 1 , . . . , a 4 } and {ã 1 , . . . , ã 4 } coincide as un-
+ordered sets (possibly with multiplicities).
+D EFINITION 12. A permutation π in S4 is called a symmetry of a cyclic cover
+M N (a 1 , a 2 , a 3 , a 4 ) if there exists an integer k such that
+                         k · ai     (mod N ) = a π(i )             for i = 1, 2, 3, 4 .
+2.6. The Veech group of a square-tiled cyclic cover. The groups SL(2, R) and
+PSL(2, R) act naturally on any stratum of holomorphic 1-forms and, respec-
+tively, meromorphic quadratic differentials with at most simple poles. The Veech
+group Γ(S) of a flat surface S is the stabilizer of the corresponding point of the
+stratum under this action. In this section we study the Veech groups of square-
+tiled cyclic covers. In particular, we prove the following statement.
+T HEOREM 13. The Veech group Γ(S) of any square-tiled cyclic cover S contains
+the group Γ(2) (respectively Γ(2)/(± Id)) as a subgroup. The Veech group Γ(S) has
+one of the indices 1, 2, 3 or 6 in SL(2, Z) (respectively in PSL(2, Z)).
+   If the Veech groups Γ(S 1 ) and Γ(S 2 ) of two square-tiled cyclic covers S 1 , S 2 have
+the same index in SL(2, Z) (respectively in PSL(2, Z)), then Γ(S 1 ) and Γ(S 2 ) are
+conjugate.
+
+J OURNAL OF M ODERN DYNAMICS                                                      V OLUME 5, N O. 2 (2011), 285–318
+298                G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+R EMARK 14. A proper subgroup of SL(2, Z) containing Γ(2) is said to be a con-
+gruence subgroup of level two. It is not hard to check that the conjugation class
+of a congruence subgroup of level two is uniquely determined by its index. An
+example of a congruence subgroup of SL(2, Z) of level two with index 3 is
+                      ½µ       ¶                                 ¾
+                         a b
+             Γ0 (2) =            : a ≡ d ≡ 1(mod 2), c ≡ 0(mod 2) .
+                         c d
+In the literature, the congruence subgroups of level two of SL(2, Z) are called
+theta groups (sometimes denoted Θ).
+   Theorem 13 will be derived from Lemma 15 and from a more precise Theo-
+rem 18.
+   Sometimes it is convenient to “mark” (in other words “label” or “give names
+to”) the zeroes (and the simple poles) of the corresponding holomorphic 1-
+form (respectively, quadratic differential). In this way, one gets the strata of
+marked (in other words “labeled”, “named”), flat surfaces. The action of the
+group SL(2, R) (respectively PSL(2, R)) on the strata of marked flat surfaces, and
+the Veech group Γ(S marked ) of a marked flat surface S marked are defined analo-
+gously.
+   Let the flat surface S be a “unit square pillow”, that is, let S be P1 (C) endowed
+with the quadratic differential (4), where the parameters are chosen in such
+way that the flat surface S is glued from two unit squares, and their sides are
+vertical and horizontal. The Veech group Γ(S) of such a flat surface S coincides
+with PSL(2, Z). We will need the following elementary Lemma for the marked
+version of the latter surface.
+L EMMA 15. The action of the group PSL(2, Z) on the “unit square pillow with
+marked corners” factors through the free action of the group S3 of permutations
+of three elements by means of the surjective homomorphism
+(12)                        PSL(2, Z) → PSL(2, Z/2Z) ≃ S3 .
+In particular, the Veech group Γ(S marked ) of the “unit square pillow with marked
+corners” S marked coincides with the kernel Γ(2)/(± Id) of this homomorphism.
+Proof. Let the labels of the corners of the pillow be A, B,C , D, say, as in Figure
+1. An element g of PSL(2, Z) acts on the flat surface (P1 (C), q 0 ), giving a new
+flat surface isomorphic to the original one. It can still be obtained by gluing
+two squares, but the labels A, B,C , D have moved around. Using an appropri-
+       z1              z4          z1                 z4           z1                  z4
+            B      C                    A         D                     D          A
+
+
+
+            A     D                     B         C                     C         B
+       z2              z3          z2                 z3           z2                  z3
+
+                F IGURE 5. Symmetries of the flat surface P1 (C), q 0
+                                                         ¡            ¢
+
+J OURNAL OF M ODERN DYNAMICS                                 V OLUME 5, N O. 2 (2011), 285–318
+                                S QUARE - TILED CYCLIC COVERS                                299
+
+
+ate “pillow symmetry” as in Figure 5, one can always move back one chosen
+label to the original position, but the other labels B,C , D are not fixed. Speak-
+ing more formally, the “pillow symmetries” define the normal subgroup
+                         ©                                               ª
+(13)                 K = () ; (1, 2)(3, 4) ; (1, 3)(2, 4) ; (1, 4)(2, 3)
+
+of the symmetric group S4 . The subgroup K is isomorphic to the Klein group.
+The quotient of S4 over K is isomorphic to the symmetric group S3 . The pro-
+jection
+
+(14)                                S4 → S3 ≃ S4 /K
+
+is not canonical, since it depends on the choice of the fixed label. However, the
+conjugacy class of the image of any element is defined canonically.
+   Note that the “pillow symmetries” are diffeomorphisms of our flat sphere
+with differential ± Id in flat coordinates. Thus, all “unit square pillows with
+marked corners” related by “pillow symmetries” define one and the same point
+of the stratum Qmarked (−1, −1, −1, −1).
+   It is easy to see that under
+                            µ    the
+                                  ¶ convention
+                                        µ      ¶ that PSL(2, Z) keeps one of the
+                              1 2        1 0
+labels fixed, the elements         and            of PSL(2, Z) fix all the labels, and,
+                              0 1        2 1
+thus, belong to the Veech group of S marked . It is a well-known fact that the above
+two elements generate the kernel Γ(2)/(± Id) of the homomorphism of formula
+(12), and that the group PSL(2, Z/2Z) = SL(2, Z/2Z) is isomorphic to S3 .
+   It is also easy to check that under this identification the elements of S3 act
+by the corresponding permutations of the three “free” labels; in particular, the
+action of S3 on the six distinct “unit square pillows with marked corners” is
+free.
+
+    Let S be a cyclic cover of a type M N (a 1 , . . . , a 4 ) endowed with the flat struc-
+ture induced from the flat structure (4) on P1 (C). As always, we assume that
+when N is even and all a i are odd, the flat structure on S is defined by the
+holomorphic 1-form ω, such that ω2 = p ∗ q 0 ; otherwise it is defined by the qua-
+dratic differential q = p ∗ q 0 .
+    It is easy to see, that for any g in SL(2, R) (respectively, for any g in PSL(2, R)),
+the image S̃ := g S is also represented by a cyclic cover. Moreover, any affine
+diffeomorphism A g : S → S̃ of the corresponding flat surfaces intertwines the
+action of the group of the deck transformations on S and S̃, that is, A g ◦ T =
+T̃ ◦ A g . Similarly, for any g ∈ SL(2, Z) (respectively, for any g ∈ PSL(2, Z)) the
+image of a square-tiled cyclic cover under the action of g is again a square-tiled
+cyclic cover.
+    In the rest of this section (and, basically, in the remaining part of the paper)
+we consider only square-tiled cyclic covers, in particular, to avoid cumbersome
+notations, we denote by M N (a 1 , a 2 , a 3 , a 4 ) a cyclic cover endowed with the flat
+structure induced from the “square pillow” as in Figure 1. Under this conven-
+tion, the order of the entries a 1 , . . . , a 4 matters in the definition of a square-tiled
+J OURNAL OF M ODERN DYNAMICS                                    V OLUME 5, N O. 2 (2011), 285–318
+300                       G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+cyclic cover M N (a 1 , a 2 , a 3 , a 4 ). However, the square-tiled cyclic covers
+
+ M N (a 1 , a 2 , a 3 , a 4 ), M N (a 2 , a 1 , a 4 , a 3 ), M N (a 4 , a 3 , a 2 , a 1 ), and M N (a 3 , a 4 , a 1 , a 2 ) ,
+
+related by “pillow symmetries” (see formula (13)) define the same flat surface.
+    The fact that the square-tiled cyclic cover M N (a 3 , a 4 , a 1 , a 2 ) defines the same
+flat surface as M N (a 1 , a 2 , a 3 , a 4 ) implies, in particular, that in the case when
+the flat structure on µa square-tiled   ¶           cyclic cover is defined by a holomorphic
+                             −1 0
+1-form, the element                         of SL(2, Z) belongs to the Veech group of the
+                              0 −1
+corresponding flat surface. Hence, the action of SL(2, Z) on square-tiled cyclic
+covers factors through the action of PSL(2, Z). We shall sometimes consider the
+latter action without specifying it explicitly.
+    It is easy to see, that if an element g ∈ PSL(2, Z) permutes the marking of the
+initial “unit square pillow with marked corners” by a permutation π ∈ S4 , then
+the square-tiled cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) is mapped by g to the square-
+tiled cyclic cover M N (a π(1) , a π(2) , a π(3) , a π(4) ). Since the elements of the sub-
+group K of S4 correspond to isomorphic square-tiled cyclic covers, we con-
+clude that the action of SL(2, Z) (respectively of PSL(2, Z)) on square-tiled cyclic
+covers factors through the action on “unit square pillows with marked corners”.
+    By combining the latter observation with Lemma 15 we conclude that the
+Veech group of M N (a 1 , a 2 , a 3 , a 4 ) contains the group Γ(2) (respectively the group
+Γ(2)/(± Id)), that it has index at most 6 in SL(2, Z) (respectively, in PSL(2, Z)),
+and that it is determined by its index up to conjugation.
+    To complete the proof of Theorem 13 it remains to prove that all indices 1,
+2, 3, 6 are realized.
+    In order to describe this Veech group more precisely we need the following
+remark. Let
+                        fˆ : M N (a 1 , a 2 , a 3 , a 4 ) → M N (ã 1 , ã 2 , ã 3 , ã 4 )
+be an isomorphism of square-tiled cyclic covers, that is, a diffeomorphism with
+differential equal to Id (respectively ± Id) in flat coordinates. It is not hard to
+see that fˆ is part of a commutative diagram
+                                                              fˆ
+                            M N (a 1 , a 2 , a 3 , a 4 ) −−−−→ M N (ã 1 , ã 2 , ã 3 , ã 4 )
+                                                                          
+                                       p                                  p
+                                       y                                   y
+                                                              f
+                                 (P1 (C), q 0 )          −−−−→            (P1 (C), q 0 ) ,
+
+where p is the canonical projection and f : P1 (C) → P1 (C) is an automorphism
+of the underlying flat sphere. We have seen that the only automorphisms of the
+“square pillow” (P1 (C), q 0 ) are the “pillow symmetries” (see Figure 5). It follows
+from formula (13) that all “pillow symmetries”, that is, all elements of the Klein
+group K are involutions. Let s be the the “pillow symmetry” corresponding to
+the automorphism f : P1 (C) → P1 (C) or, equivalently, to its inverse. Let it act
+on the canonical labeling of the corners of the pillow by a permutation Å ∈ K.
+J OURNAL OF M ODERN DYNAMICS                                                       V OLUME 5, N O. 2 (2011), 285–318
+                                       S QUARE - TILED CYCLIC COVERS                                        301
+
+
+Let ŝ be the induced automorphism of M N (ã 1 , ã 2 , ã 3 , ã 4 ). By definition of ŝ the
+diagram
+                                                  ŝ
+                M N (ã 1 , ã 2 , ã 3 , ã 4 ) −−−−→ M N (ã κ(1) , ã κ(2) , ã κ(3) , ã κ(4) )
+                                                                         
+                            p                                            p̃
+                            y                                             y
+                                                  s
+                 (P1 (C), q 0 ) −−−−→       (P1 (C), q 0 )
+commutes. Note that by construction the composition f ◦ s is the identity map,
+which allows us to merge the two commutative diagrams above into the com-
+mutative diagram
+
+
+(15)                  M N (a 1 , . . . , a 4 ) ≃ M N (ã κ(1) , ã κ(2) , ã κ(3) , ã κ(4) )
+
+
+                                                   P1 (C) .
+
+  Let us consider the case when {a 1 , . . . , a 4 } and {ã 1 , . . . , ã 4 } coincide as unor-
+dered sets (possibly with multiplicities). Since all symmetries of cyclic covers
+such as those in formula (15) are described by Definition 12 and Lemma 11,
+our considerations imply the following statement.
+L EMMA 16. Consider π ∈ S4 . The square-tiled cyclic covers M N (a 1 , a 2 , a 3 , a 4 )
+and M N (a π(1) , a π(2) , a π(3) , a π(4) ) are isomorphic (that is define the same point of
+the corresponding stratum) if and only if there exists a symmetry π0 of the cyclic
+cover M N (a 1 , a 2 , a 3 , a 4 ) such that the permutation π0 · π−1 belongs to the Klein
+subgroup K defined in formula (13).
+   By passing to the quotient S3 ≃ S4 /K we get the following immediate Corol-
+lary of the Lemma above.
+C OROLLARY 17. For any square-tiled cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) the index of
+its Veech group in SL(2, Z) (in PSL(2, Z) when the flat structure is defined by a
+quadratic differential) coincides with the index of the image of the subgroup of
+symmetries of M N (a 1 , a 2 , a 3 , a 4 ) in S3 under the projection of formula (14).
+   In order to complete the proof of Theorem 13 it is sufficient to prove that
+all indices 1, 2, 3, 6 are realized. We prefer to prove a strengthened version of
+Theorem 13.
+T HEOREM 18. The index of the Veech group of a square-tiled cyclic cover is de-
+scribed by the following list.
+    • If for some triple of pairwise distinct indices i , j , k ∈ {1, 2, 3, 4} one has a i =
+      a j = a k , the index of the Veech group of the corresponding square-tiled
+      cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) is 1.
+    • If there is no such triple of pairwise distinct indices, but there is a pair of
+      indices i 6= j , where i , j ∈ {1, 2, 3, 4}, such that a i = a j , then the index of the
+      Veech group is 3.
+J OURNAL OF M ODERN DYNAMICS                                                   V OLUME 5, N O. 2 (2011), 285–318
+302                   G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+   If all a i are pairwise distinct, then
+      • If M N (a 1 , . . . , a 4 ) does not have nontrivial symmetries, or if any nontrivial
+        symmetry decomposes into two cycles of length 2, the index of the Veech
+        group is 6.
+      • If M N (a 1 , . . . , a 4 ) has a symmetry represented by a cycle of length 4 or by a
+        single cycle of length 2, the index of the Veech group is 3.
+      • If M N (a 1 , . . . , a 4 ) has a symmetry represented by a cycle of length 3, the in-
+        dex of the Veech group is 2.
+All the symmetries listed above are realized.
+
+Proof. If for some triple of pairwise distinct indices i , j , k ∈ {1, 2, 3, 4} the num-
+bers a i = a j = a k coincide, it is clear that the index of the Veech group of the
+square-tiled cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) is 1, say, as for M 4 (1, 1, 1, 1) or for
+M 6 (3, 1, 1, 1).
+    Let us suppose that there is no such triple of indices, but there is a pair of
+indices i 6= j , where i , j ∈ {1, 2, 3, 4}, such that a i = a j , say, as for M 10 (1, 1, 3, 5)
+or for M 6 (1, 1, 5, 5). Then the transposition in the symmetric group S4 which
+interchanges the two labels corresponding to a i and a j fixes the square-tiled
+cyclic cover M N (a 1 , . . . , a 4 ). The image of a transposition under the projection
+(14) is again a transposition. Hence, the index of the Veech group in this case
+is either 3 or 1.
+    Let us show that index 1 is excluded. Let us suppose that the index of the
+Veech group is 1, that is, for all permutations π ∈ S4 the flat surfaces repre-
+sented by square-tiled cyclic covers M N (a π(1) , a π(2) , a π(3) , a π(4) ) are isomorphic.
+Thus, without loss of generality we may assume that a 2 = a 1 , and a 3 6= a 1 ,
+a 4 6= a 1 . Then
+                                 Deck(σ1 σ−1
+                                          2 ) = a1 − a2 = 0 .
+
+This property can be formulated in a form invariant under “pillow symmetries”,
+namely: for at least one of the two vertical saddle connections of the “square
+pillow” (P1 (C), q 0 ) the loop encircling first one of the corresponding singulari-
+ties in the positive direction and then the other singularity in the negative di-
+rection lifts to a closed loop on M N (a 1 , a 2 , a 3 , a 4 ). Clearly this property is not
+valid for the surface M N (a 1 , a 3 , a 2 , a 4 ) and we get a contradiction.
+   Consider now the remaining case when all a i are pairwise distinct.
+   If any nontrivial symmetry decomposes into two cycles of length 2, all the
+symmetries are reduced to “pillow symmetries” and by Corollary 17 the index
+of the Veech group of M N (a 1 , . . . , a 4 ) is 6. This situation realizes, for example,
+for M 8 (1, 3, 5, 7).
+   Let us suppose that M N (a 1 , . . . , a 4 ) has a symmetry represented by a cycle of
+length 4. As an example, consider M 10 (1, 3, 9, 7) and a symmetry corresponding
+to the multiplication by k = 3. The image of such symmetry under projection
+(14) is a transposition. By Corollary 17 this implies that the index of the Veech
+group of M N (a 1 , . . . , a 4 ) is either 3 or 1. It is left as an exercise to verify that
+index 1 is excluded (see Appendix B).
+J OURNAL OF M ODERN DYNAMICS                                    V OLUME 5, N O. 2 (2011), 285–318
+                               S QUARE - TILED CYCLIC COVERS                                303
+
+
+   Let us suppose now that M N (a 1 , . . . , a 4 ) has a symmetry represented by a cy-
+cle of length 2. As an example, consider M 40 (1, 9, 5, 25) and a symmetry induced
+by multiplication by 9. A transposition is mapped by the projection (14) to a
+transposition. Hence, the index of the Veech group in this case is again either 3
+or 1. It is left as an exercise to verify that index 1 is excluded (see Appendix B).
+   Finally, let us suppose that M N (a 1 , . . . , a 4 ) has a symmetry represented by a
+cycle of length 3. As an example, consider M 14 (1, 9, 11, 7) and a symmetry in-
+duced by multiplication by k = 9. A cycle of length 3 is mapped by the projec-
+tion (14) to a cycle of length 3. Hence, the index of the Veech group is either 2
+or 1. If it were 1, one of the symmetries would be an odd permutation, i.e., a
+single cycle of length 2 or 4. We have proved that the presence of such a sym-
+metry excludes index 1. Theorem 18 and, thus, Theorem 13 are proved.
+
+   To complete this section we note that the SL(2, R)-orbit of any square-tiled
+surface (respectively, the PSL(2, R)-orbit in the case when the flat structure is
+represented by a quadratic differential) inside the ambient moduli space of
+Abelian or quadratic differentials is closed. Its projection to the moduli space of
+curves is a Riemann surface with cusps, often called an arithmetic Teichmüller
+curve, see [35, 19]. Any arithmetic Teichmüller curve is a finite cover of the
+modular curve. Theorem 13 shows that for a square-tiled cyclic cover, the cor-
+responding arithmetic Teichmüller curve is small: it is a 1, 2, 3, or 6-fold cover
+of the modular curve.
+
+
+                         3. S UM OF LYAPUNOV EXPONENTS
+3.1. Sum of the Lyapunov exponents for a square-tiled surface. Let us con-
+sider a Teichmüller curve C . Each point x of C is represented by a Riemann
+surface S x . We can consider the cohomology space of H 1 (S x , R) as a fiber of
+a vector bundle H 1 over C , called the Hodge bundle. Similarly one defines
+the bundles H 1,0 and HC1 . Note that each fiber is endowed with a natural in-
+teger lattice H 1 (S x , Z), which enables us to identify the fibers at nearby points
+x 1 , x 2 . Hence, the bundle H 1 is endowed with a natural flat connection called
+the Gauss–Manin connection.
+     The Teichmüller curve C is endowed with a natural hyperbolic metric asso-
+ciated to the complex structure of C ; the total area of C with respect to this
+metric is finite. Consider a geodesic flow in this metric, and consider the mon-
+odromy of the Gauss–Manin connection in H 1 with respect to the geodesic flow
+on C . We get a 2g -dimensional symplectic cocycle. The geodesic flow on C is
+ergodic with respect to the natural finite Lebesgue measure. Let us denote by
+λ1 ≥ λ2 ≥ · · · ≥ λ2g the Lyapunov exponents of the corresponding cocycle. Since
+the cocycle is symplectic, its Lyapunov spectrum is symmetric in the sense that
+λk = −λ2g −k+1 for all k = 1, . . . , 2g .
+     Note that C is isometrically immersed (usually embedded) into the corre-
+sponding moduli space of curves with respect to the hyperbolic metric on the
+Teichmüller curve C and Teichmüller metric in the moduli space. The cocycle
+J OURNAL OF M ODERN DYNAMICS                                   V OLUME 5, N O. 2 (2011), 285–318
+304                  G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+described above is a particular case of a more general cocycle related to the Te-
+ichmüller geodesic flow on the moduli space (sometimes called the Kontsevich–
+Zorich cocycle).
+   The Lyapunov exponents of this cocycle are important in the study of the
+dynamics of flows on surfaces and of interval-exchange transformations. They
+were studied by many authors including A. Avila and M. Viana [3]; M. Bain-
+bridge [4]; I. Bouw and M. Möller [6]; G. Forni [13]–[15]; A. Eskin, M. Kontse-
+vich and A. Zorich [11, 22, 42]; W. Veech [35]; see surveys [15] and [43] for an
+overview. In particular, from elementary geometric arguments it follows that
+one always has λ1 = 1.
+   We need two results from [11] concerning the sum λ1 +· · ·+λg of all nonneg-
+ative Lyapunov exponents of the Hodge bundle H 1 along the geodesic flow on
+an arithmetic Teichmüller curve.
+
+T HEOREM 19 ([11]). The sum of nonnegative Lyapunov exponents of the Hodge
+bundle H 1 along the geodesic flow on an arithmetic Teichmüller curve in a stra-
+tum H (m 1 , . . . , m n ), where m 1 +· · ·+m n = 2g −2, satisfies the following relation:
+
+(16) 1 + λ2 + · · · + λg
+               1 nX m i (m i + 2)          1                    X                  X            hi j
+          =     ·                 +                                                                    .
+              12 i =1 m i + 1       card(SL(2, Z) · S 0 ) S i ∈SL(2,Z)·S 0     horizontal       wi j
+                                                                             cylinders cyli j
+                                                                               such that
+                                                                               S i =tcyli j
+
+where S 0 is a square-tiled surface representing the corresponding arithmetic Te-
+ichmüller curve.
+
+R EMARK 20. Note that the sum of the top g Lyapunov exponents of the Hodge
+bundle coincides with a single positive Lyapunov exponent of the complex line
+bundle Λg H 1,0 often called determinant line bundle.
+
+   When an arithmetic Teichmüller curve belongs to a stratum Q(d 1 , . . . , d n ) of
+quadratic differentials, one can consider the same vector bundle H 1 as above
+and define the cocycle and the Lyapunov exponents exactly in the same way
+as for holomorphic 1-forms. By reasons which will become clear below, it is
+convenient to denote these Lyapunov exponents by λ+   1 ≥ · · · ≥ λ2g . Since the
+                                                                   +
+
+cocycle is symplectic, we again have the symmetry λk = −λ2g −k+1 for all k =
+                                                     +         +
+
+1, . . . , 2g . However, for quadratic differentials one has λ+   1 < 1 for any invariant
+suborbifold (in fact, for any invariant probability measure, see [14]).
+    Following M. Kontsevich [22], in the case of quadratic differentials one can
+define one more vector bundle, H−1 , over Q(d 1 , . . . , d n ). Consider a pair (Rie-
+mann surface S, quadratic differential q) representing a point of a stratum of
+quadratic differentials Q(d 1 , . . . , d n ). By assumption, q is not a global square of
+a 1-form. There exists a canonical (possibly ramified) double cover p 2 : Ŝ → S
+such that p 2∗ q = ω2 , where ω is a holomorphic 1-form on Ŝ. Following [22] it
+will be convenient to introduce the following notation. Let ĝ be the genus of
+J OURNAL OF M ODERN DYNAMICS                                     V OLUME 5, N O. 2 (2011), 285–318
+                                   S QUARE - TILED CYCLIC COVERS                                          305
+
+
+the cover Ŝ. By effective genus we call the positive integer
+
+(17)                                     g eff := ĝ − g .
+
+  The cohomology space H 1 (Ŝ, R) splits into a direct sum H 1 (Ŝ, R) = H+1 (Ŝ, R)⊕
+ 1
+H− (Ŝ, R) of invariant and anti-invariant subspaces with respect to the action
+ 1             1
+H (Ŝ, R) → H (Ŝ, R) induced on cohomology by the canonical involution which
+commutes with the double covering map p 2 : Ŝ → S. Note that the invariant
+part is canonically isomorphic to the cohomology of the underlying surface,
+that is, H+1 (Ŝ, R) ≃ H 1 (S, R).
+   We consider the subspaces H+1 (Ŝ, R) and H−1 (Ŝ, R) as fibers of natural vector
+bundles H+1 and H−1 over Q(d 1 , . . . , d n ). The bundle H+1 is canonically isomor-
+phic to the bundle H 1 . The splitting H 1 = H+1 ⊕ H−1 is equivariant with respect
+to the Gauss–Manin connection. The symplectic form restricted to each sum-
+mand is nondegenerate. Thus, the monodromy of the Gauss–Manin connec-
+tion on H+1 and on H−1 along Teichmüller geodesic flow defines two symplectic
+cocycles. Following the notations established above, we denote the Lyapunov
+exponents of the cocycle acting on H+1 by λ+        1 ≥ · · · ≥ λ2g and the ones of the
+                                                                 +
+
+cocycle acting on H−1 by λ−
+                          1 ≥ · · · ≥ λ2g eff . As always for symplectic cocycles we
+                                       −
+
+have the symmetries λ+
+                     k
+                       = −λ+
+                           2g −k+1
+                                   and λ−
+                                        k
+                                          = −λ−
+                                              2g
+                                                                              . It follows from the
+                                                                   eff −k+1
+analogous result for the case of Abelian differentials that one always has λ−      1 = 1.
+                    1                         1
+   Unlike H+ , the vector bundle H− on a stratum of quadratic differentials is
+not induced from a vector bundle on an underlying moduli space of curves.
+However, it can be descended to Q(d 1 , . . . , d n )/C∗ , where C∗ is identified with
+the subgroup of GL(2, R) acting on Q(d 1 , . . . , d n ) by multiplying a quadratic dif-
+ferential by a nonzero constant. In particular, for any Veech surface (S, q) in
+Q(d 1 , . . . , d n ) the bundle H−1 can be descended from the PSL(2, R)-orbit O of
+(S, q) in Q(d 1 , . . . , d n ) to the corresponding Teichmüller curve C = O /C∗ .
+
+T HEOREM 21 ([11]). The sums of all nonnegative Lyapunov exponents of the
+bundles H+1 and H−1 along the geodesic flow on an arithmetic Teichmüller curve
+in a stratum Q(d 1 , . . . , d n ), of meromorphic quadratic differentials with at most
+simple poles, satisfy the following relations:
+
+
+                                1 nX d i (d i + 4)
+(18) λ+    +            +
+      1 + λ2 + · · · + λg =      ·
+                               24 i =1 d i + 2
+                                               1                   X                  X            hi j
+                               +                                                                          .
+                                    card(PSL(2, Z) · S 0 ) S i ∈PSL(2,Z)·S 0      horizontal       wi j
+                                                                                cylinders cyli j
+                                                                                  such t hat
+                                                                                   S i =tcyli j
+
+
+for the Lyapunov exponents of the bundle H 1 = H+1 and
+J OURNAL OF M ODERN DYNAMICS                                       V OLUME 5, N O. 2 (2011), 285–318
+306                 G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+
+
+                                  1 nX d i (d i + 4)  1                1
+(19) 1 + λ−            −
+          2 + · · · + λg eff =
+                                                            X
+                                   ·                 + ·
+                                 24 i =1 d i + 2      4 j such that d j + 2
+                                                                 d j is odd
+
+                                                1                   X                 X            hi j
+                                 +                                                                        .
+                                     card(PSL(2, Z) · S 0 ) S i ∈PSL(2,Z)·S 0     horizontal       wi j
+                                                                                cylinders cyli j
+                                                                                  such t hat
+                                                                                   S i =tcyli j
+
+
+
+for the Lyapunov exponents of the bundle H−1 . Here S 0 is a square-tiled surface
+representing the corresponding arithmetic Teichmüller curve, and g and g eff are
+the genus and the effective genus (17) of S 0 .
+
+3.2. Sum of the Lyapunov exponents for a square-tiled cyclic cover. Now ev-
+erything is ready to apply the results of the previous section to square-tiled
+cyclic covers.
+
+T HEOREM 22. Let us consider an even integer N and a collection of odd integers
+a 1 , a 2 , a 3 , a 4 satisfying the relations in formula (1).
+    The sum of all nonnegative Lyapunov exponents of the Hodge bundle H 1 along
+the geodesic flow on the arithmetic Teichmüller curve of the square-tiled cyclic
+cover M N (a 1 , a 2 , a 3 , a 4 ) is expressed by the formula below:
+
+
+                               N   1 X4
+(20) 1 + λ2 + · · · + λg =       −       gcd2 (N , a i )
+                               6 6N i =1
+                        1
+                             µ                                                                     ¶
+                    +         gcd2 (N , a 1 + a 2 ) + gcd2 (N , a 1 + a 3 ) + gcd2 (N , a 1 + a 4 )
+                        6N
+
+Proof. We apply formula (16) taking into account the following data. The sin-
+gularity pattern (m 1 , . . . , m n ) of the holomorphic 1-form corresponding to the
+square-tiled cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) is computed in Lemma 2, see for-
+mula (5). The SL(2, Z)-orbit of the square-tiled surface M N (a 1 , a 2 , a 3 , a 4 ) is de-
+scribed by Theorem 18 and the cylinder decomposition for each square-tiled
+surface in the orbit is given in Lemma 9. By plugging the above data in formula
+(16) we obtain formula (20).
+
+T HEOREM 23. Let us consider integers N and a 1 , . . . , a 4 satisfying the relations in
+formula (1). Let us suppose, in addition, that either N is odd, or N is even and
+at least one of a i , i = 1, 2, 3, 4, is also even.
+   The sum of all nonnegative Lyapunov exponents of the bundle H+1 along the
+geodesic flow on the arithmetic Teichmüller curve of the square-tiled cyclic cover
+J OURNAL OF M ODERN DYNAMICS                                        V OLUME 5, N O. 2 (2011), 285–318
+                                        S QUARE - TILED CYCLIC COVERS                                        307
+
+
+M N (a 1 , a 2 , a 3 , a 4 ) is expressed by the following formula:
+
+                                     N   1 X4
+(21) λ+    +            +
+      1 + λ2 + · · · + λg =            −       gcd2 (N , a i )
+                                     6 6N i =1
+                          1 ¡
+                             gcd2 (N , a 1 + a 2 ) + gcd2 (N , a 1 + a 3 ) + gcd2 (N , a 1 + a 4 )
+                                                                                                  ¢
+                     +
+                         6N
+
+  The sum of all nonnegative Lyapunov exponents of the bundle H−1 along the
+geodesic flow on the arithmetic Teichmüller curve of the square-tiled cyclic cover
+M N (a 1 , a 2 , a 3 , a 4 ) is expressed by the following formula:
+
+                                    N
+(22) 1 + λ−            −
+          2 + · · · + λg eff =
+                                    6
+                1                                               1
+                                           gcd2 (N , a i ) −                               gcd2 (N , a i )
+                            X                                              X
+           +
+               12N    i such that                              6N     i such that
+                         N                                              N
+                     gcd(N ,a i )
+                                  is odd                            gcd(N ,a i )
+                                                                                 is even
+
+                          1 ¡
+                             gcd2 (N , a 1 + a 2 ) + gcd2 (N , a 1 + a 3 ) + gcd2 (N , a 1 + a 4 )
+                                                                                                  ¢
+                     +
+                         6N
+Proof. We apply formulae (18) and (19) taking into account the following data.
+The singularity pattern (d 1 , . . . , d n ) of the quadratic differential corresponding
+to the square-tiled cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) is computed in Lemma 2, see
+(6). The PSL(2, Z)-orbit of the square-tiled cyclic surface M N (a 1 , a 2 , a 3 , a 4 ) is
+described by Theorem 13 and a cylinder decomposition for each square-tiled
+surface in the orbit is given in Lemma 9. By plugging the above data in (18)
+and (19) we obtain (21) and (22) respectively.
+
+R EMARK 24. Actually, the Hodge bundles H 1,0 and HC1 over the Teichmüller
+curve of a square-tiled cyclic cover have an explicit decomposition into a di-
+rect sum of one- and two-dimensional vector subbundles, see [5]. A similar
+decomposition, used also in [6, 28] and [18], enables, in particular, to compute
+explicitly all individual Lyapunov exponents for any square-tiled cyclic cover,
+see [12].
+
+3.3. Degenerate Lyapunov spectrum. In this section we list all examples of
+arithmetic Teichmüller curves coming from square-tiled cyclic covers with max-
+imally degenerate Lyapunov spectra. We recall that by elementary geometric
+reasons in strata of Abelian differentials λ1 is equal to one, while in strata of
+quadratic differentials (which are not squares) λ− 1 is equal to one, for any er-
+godic invariant measure. Thus, for strata of Abelian differentials we speak of
+“maximally degenerate spectrum” whenever λ2 = · · · = λg = 0, while for strata of
+quadratic differentials (which are not squares) we speak of “maximally degen-
+erate spectrum” of λ− -exponents, whenever λ−   2 = · · · = λg eff = 0 and “maximally
+                                                              −
+
+degenerate spectrum” of λ+ -exponents, whenever λ+       1 = · · · = λg = 0.
+                                                                      +
+
+J OURNAL OF M ODERN DYNAMICS                                                V OLUME 5, N O. 2 (2011), 285–318
+308                  G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+3.3.1. Abelian Differentials. We start with square-tiled cyclic covers
+M N (a 1 , a 2 , a 3 , a 4 ), which give rise to holomorphic 1-forms. By Lemma 2
+this corresponds to even N and odd a i , i = 1, 2, 3, 4.
+
+T HEOREM 25. The cyclic cover M 2 (1, 1, 1, 1) has genus one, so there is a single
+nonnegative Lyapunov exponent λ1 of the Hodge bundle H 1 along the geodesic
+flow on the arithmetic Teichmüller curve of this cyclic cover; as always λ1 = 1.
+   For the arithmetic Teichmüller curves corresponding to the square-tiled cyclic
+covers
+
+          M 4 (1, 1, 1, 1) ≃ M 4 (3, 3, 3, 3)     and      M 6 (1, 1, 1, 3) ≃ M 6 (5, 5, 5, 3)
+
+the Lyapunov spectrum is maximally degenerate, that is λ2 = · · · = λg = 0.
+     For all other cyclic covers of the form M N (a 1 , a 2 , a 3 , a 4 ) with even N and odd
+a i , i = 1, 2, 3, 4, one has λ2 > 0.
+
+R EMARK 26. The fact that the Lyapunov spectrum of M 4 (1, 1, 1, 1) is maximally
+degenerate was discovered by G. Forni in [15] using a symmetry argument.
+Later G. Forni and C. Matheus discovered by the same approach that the Lya-
+punov spectrum of M 6 (1, 1, 1, 3) is also maximally degenerate, see [17] (and also
+[18]).
+
+R EMARK 27. M. Möller [30] has an independent and by far stronger result show-
+ing that the two aforementioned examples of arithmetic Teichmüller curves
+with a maximally degenerate Lyapunov spectrum are really exceptional; see
+Conjecture 29 and Remarks 30 and 31 below.
+
+Proof. Applying formula (20) to M 4 (1, 1, 1, 1) and M 6 (1, 1, 1, 3) we get a relation
+1 + λ2 + · · · + λg = 1. Since λ2 ≥ · · · ≥ λg ≥ 0, this implies that, actually, λ2 = · · · =
+λg = 0.
+   It remains to prove that for all other collections N , a 1 , . . . , a 4 the right-hand
+side of formula (20) is strictly greater than 1. Applying formula (20) we see that
+this statement is valid for the remaining two collections for N = 4. Now we can
+assume that N ≥ 6.
+   Since gcd(N , a i ) is a divisor of N , and 1 ≤ a i < N , we conclude that gcd(N , a i )
+might be N /2, N /3 or less. Hence, we always have
+                                     4
+                                            gcd2 (N , a i ) ≤ N 2 .
+                                     X
+                                     i =1
+
+This implies that if we have gcd(N , a i ) = gcd(N , a j ) = N /2 for two distinct in-
+dices i 6= j , then a i = a j = N /2 and at least one of the summands in
+
+                gcd2 (N , a 1 + a 2 ) + gcd2 (N , a 1 + a 3 ) + gcd2 (N , a 1 + a 4 )
+
+is equal to N 2 . This means that the expression on the right of (20) is strictly
+greater than 1.
+J OURNAL OF M ODERN DYNAMICS                                          V OLUME 5, N O. 2 (2011), 285–318
+                                     S QUARE - TILED CYCLIC COVERS                                309
+
+
+  Thus, we can assume that there is at most one a i such that gcd(N , a i ) = N /2,
+while for the other indices j 6= i we have gcd(N , a j ) ≤ N /3. Then
+
+                             N   1 4                     5N
+                                       gcd2 (N , a i ) ≥
+                                   X
+                               −                            .
+                             6 6N i =1                   72
+For N ≥ 16 we have 5N /72 > 1, and hence, for N ≥ 16 the expression on the
+right of (20) is strictly greater than 1.
+   It remains to consider finite number of arrangements N , a 1 , . . . , a 4 , with 6 ≤
+N ≤ 14. This can be done either by a straightforward check, or by considera-
+tions similar to the ones as above.
+
+
+                                                  6 6   6 66     °         ä
+
+                      6          66         6              6         66    6
+
+
+                     6 66      6 6        ä       °
+
+
+                          F IGURE 6. Eierlegende Wollmilchsau
+
+
+R EMARK 28. Figure 6 presents the square-tiled cyclic cover M 4 (1,1,1,1). This
+surface is also a 2-fold cover over a torus branched at four points. It has plenty
+of unusual properties. In particular, T. Monteil noticed that for every saddle
+connection there is always a twin saddle connection with the same length and
+the same direction, and there are no simple saddle connections joining a singu-
+larity to itself. M. Möller proved that the Teichmüller curves of the square-tiled
+cyclic covers M 4 (1, 1, 1, 1), presented in Figure 6, and M 6 (1, 1, 1, 3), presented in
+Figure 3, are also Shimura curves [30].
+
+C ONJECTURE 29. The only Teichmüller curves in the strata of Abelian differen-
+tials in genus g ≥ 2 with maximally degenerate Lyapunov spectra, that is, such
+that λ2 = · · · = λg = 0, are the arithmetic Teichmüller curves of the cyclic cover-
+ings M 4 (1, 1, 1, 1) and M 6 (1, 1, 1, 3).
+
+R EMARK 30. According to M. Möller [30], the conjecture holds in all genera
+different from five and for some strata in genus five. For the remaining strata
+in genus five the statement requires some extra verification.
+
+P ROBLEM . Are there any closed invariant suborbifolds (of any dimension) in
+strata of Abelian differentials with maximally degenerate Lyapunov spectra (λ2 =
+· · · = λg = 0) different from the two Teichmüller curves presented above?
+
+R EMARK 31. It is proved in [11] that there are no such regular SL(2, R)-invariant
+suborbifolds in any stratum of Abelian differentials of genus 7 and higher and
+in some strata in genera 5 and 6.
+
+J OURNAL OF M ODERN DYNAMICS                                         V OLUME 5, N O. 2 (2011), 285–318
+310                    G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+R EMARK 32. In genus g = 2, M. Bainbridge [4] has proved that the second expo-
+nent λ2 equals 1/2 for all ergodic SL(2, R)-invariant measures supported in the
+stratum H (1, 1), corresponding to two simple zeros of the holomorphic differ-
+ential, and λ2 equals 1/3 for all ergodic SL(2, R)-invariant measures supported
+in the stratum H (2), corresponding to a double zero. In particular, in genus 2
+the Lyapunov spectrum is always nondegenerate and simple. Bainbridge’s re-
+sult was already known conjecturally since [22] as a consequence of a formula
+for the sum of exponents for an SL(2, R)-invariant submanifold of the hyperel-
+liptic locus in any stratum. Such a formula has now been proved in [11].
+  Thus, any regular SL(2, R)-invariant suborbifold with maximally degenerate
+Lyapunov spectrum might live in genera 3 and 4 and in some strata in genera 5
+and 6 only.
+
+3.3.2. Holomorphic quadratic differentials. Let us consider next square-tiled
+cyclic covers M N (a 1 , a 2 , a 3 , a 4 ), which give rise to holomorphic quadratic dif-
+ferentials. In particular, we assume through Section 3.3.2 that inequalities in
+formula (1) are strict.
+T HEOREM 33. A square-tiled cyclic cover M 4 (3, 2, 2, 1) in the stratum Q(2, 2) has
+effective genus one, so there is a single nonnegative Lyapunov exponent λ− 1 of the
+                  1
+vector bundle H− along the geodesic flow on the arithmetic Teichmüller curve of
+this cyclic cover; as always λ−1 = 1.
+   The Lyapunov spectrum of the vector bundle H−1 along the geodesic flow on
+the arithmetic Teichmüller curves of the following cyclic covers
+      • M 5 (2, 1, 1, 1) ≃ M 5 (4, 2, 2, 2) ≃ M 5 (1, 3, 3, 3) ≃ M 5 (3, 4, 4, 4) in Q(3, 3, 3, 3);
+      • M 6 (5, 3, 2, 2) ≃ M 6 (1, 3, 4, 4) in the stratum Q(4, 1, 1, 1, 1);
+      • M 8 (4, 2, 1, 1) ≃ M 8 (4, 6, 3, 3) ≃ M 8 (4, 2, 5, 5) ≃ M 8 (4, 6, 7, 7) and M 8 (7, 4, 3, 2) ≃
+        M 8 (1, 4, 5, 6) in the stratum Q(6, 6, 2, 2)
+is maximally degenerate, that is, λ− 2 = · · · = λg eff = 0.
+                                                  −
+
+   For all other cyclic covers of the form M N (a 1 , a 2 , a 3 , a 4 ) with odd N , or with
+even N and at least one even a i , i = 1, 2, 3, 4, one has g eff ≥ 2 and λ−     2 > 0. Here
+we assume that 0 < a i < N for all i = 1, 2, 3, 4.
+Proof. Applying formula (22) to the cyclic covers from the list given in the The-
+orem we check that 1 + λ−    2 + · · · + λg eff = 1. Since λ2 ≥ · · · ≥ λg eff ≥ 0 this proves
+                                          −                 −            −
+
+the equalities λ−
+                2 = · · · = λg eff = 0 in the cases mentioned above. The remaining
+                             −
+
+part of the proof is completely analogous to the one of Theorem 25.
+P ROBLEM . Are there any other Teichmüller curves in a stratum of holomorphic
+quadratic differentials with effective genus at least two and with maximally de-
+generate Lyapunov spectrum of the bundle H−1 ?
+   Are there closed invariant submanifolds (suborbifolds) of dimension greater
+than one satisfying this property?
+R EMARK 34. The only holomorphic quadratic differentials in genus one are the
+squares of holomorphic 1-forms. In genus two the strata Q(4) and Q(3, 1) are
+J OURNAL OF M ODERN DYNAMICS                                         V OLUME 5, N O. 2 (2011), 285–318
+                                      S QUARE - TILED CYCLIC COVERS                                311
+
+
+empty, see [26]. The stratum Q(2, 2) in genus two has effective genus one. The
+remaining two strata, namely Q(2, 1, 1) and Q(1, 1, 1, 1), have effective genera
+two and three respectively; both of them are hyperelliptic, see [24]. It is proved
+in [11] that one has λ−   2 = 1/3 for any regular PSL(2, R)-invariant suborbifold in
+Q1 (2, 1, 1) and one has λ− 2 +λ3 = 2/3 for any regular PSL(2, R)-invariant suborb-
+                                 −
+
+ifold in Q1 (1, 1, 1, 1).
+   It is proved in [11] that there are no regular PSL(2, R)-invariant suborbifolds
+with maximally degenerate Lyapunov spectra on the bundle H−1 in any stratum
+of holomorphic quadratic differentials of genus 7 and higher and in some strata
+in genera 5 and 6. Thus, if the answer to Problem 3.3.2 is affirmative, the corre-
+sponding invariant suborbifold should correspond to genera 3 or 4 or to some
+particular strata in genera 5 or 6.
+   A formula in [11], which generalizes formula (18), shows that one always has
+                                                                          1
+λ+1 > 0, hence the spectrum of Lyapunov exponents of the subbundle H+ over
+an PSL(2, R)-invariant submanifold in a stratum of holomorphic quadratic dif-
+ferentials can never be maximally degenerate. Theorem 35 in the section below
+shows that the situation is different for strata of meromorphic quadratic differ-
+entials with at most simple poles.
+3.3.3. Meromorphic quadratic differentials. Let us consider square-tiled cyclic
+covers M N (a 1 , a 2 , a 3 , a 4 ) which give rise to meromorphic quadratic differentials
+with simple poles. This case corresponds to collections (N ; a 1 , a 2 , a 3 , a 4 ) of pa-
+rameters where at least one of the a i ’s is equal to N .
+T HEOREM 35. If a i = N for at least one of i = 1, 2, 3, 4, then the Lyapunov spec-
+trum of the vector bundle H+1 along the geodesic flow on the arithmetic Teich-
+müller curve of the cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) is maximally degenerate: all
+Lyapunov exponents λ+ i
+                        are equal to zero.
+Proof. Without loss of generality we may assume that a 1 = N . Applying formula
+(21) we get:
+
+                                 N gcd2 (N , N )    1 4
+  λ+    +            +
+   1 + λ2 + · · · + λg =                                   gcd2 (N , a i )
+                                                      X
+                                   −             −
+                                 6    6N           6N i =2
+                1
+                     µ                                                               ¶
+                             2                     2                      2
+            +            gcd (N , N + a 2 ) + gcd (N , N + a 3 ) + gcd (N , N + a 4 )
+                6N
+                                              1 4                       1 4
+                                                     gcd2 (N , a i ) +         gcd2 (N , a i ) = 0
+                                                X                         X
+                                       = −
+                                             6N i =2                   6N i =2
+
+
+T HEOREM 36. The square-tiled cyclic cover M 2 (2, 2, 1, 1) belongs to the stratum
+Q(−14 ). There is a single nonnegative Lyapunov exponent λ−     1 = 1 of the vector
+bundle H−1 along the geodesic flow on the arithmetic Teichmüller curve of this
+cyclic cover and no other Lyapunov exponents.
+   The Lyapunov spectrum of the vector bundle H−1 ⊕ H+1 along the geodesic flow
+on the arithmetic Teichmüller curve of the following cyclic covers in genus one
+J OURNAL OF M ODERN DYNAMICS                                          V OLUME 5, N O. 2 (2011), 285–318
+312                   G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+      • M 3 (3, 1, 1, 1) ≃ M 3 (3, 2, 2, 2) in the stratum Q(13 , −13 );
+      • M 4 (4, 2, 1, 1) ≃ M 4 (4, 2, 3, 3) in the stratum Q(22 , −14 )
+is maximally degenerate, that is, λ− 2 = · · · = λg eff = 0 and λ1 = 0.
+                                                  −                 +
+
+   For all other cyclic covers of the form M N (N , a 2 , a 3 , a 4 ) one has g eff ≥ 2 and
+λ−2 > 0.
+
+Proof. Without loss of generality we may assume that a 1 = N ≥ 3. Formula (22)
+applied to this case can be rewritten as follows:
+                               N
+  1 + λ−            −
+       2 + · · · + λg eff =
+                               4
+                  1                                    1
+                                    gcd2 (N , a i ) −                              gcd2 (N , a i )
+                              X                                    X
+             +
+                 12N i ≥2 such that                   6N      i such that
+                           N                                    N
+                       gcd(N ,a i )
+                                    is odd                  gcd(N ,a i )
+                                                                         is even
+
+                                             1                                              N
+                                        µ                                                ¶
+                                            2                2                2
+                                   +     gcd (N , a 2 ) + gcd (N , a 3 ) + gcd (N , a 4 ) ≥
+                                     6N                                                     4
+Hence, for N > 4 we get λ− 2 > 0. Applying the above formula to remaining data
+for N = 2, 3, 4 we complete the proof of the Theorem.
+R EMARK 37. The maximally degenerate examples in Theorem 36 have the fol-
+lowing origin. For each of the cyclic covers as above consider a canonical rami-
+fied double cover such that the induced quadratic differential is a global square
+of a holomorphic 1-form. The resulting square-tiled surface is isomorphic to
+the square-tiled cyclic cover M 6 (3, 1, 1, 1) for the double cover over M 3 (3, 1, 1, 1)
+and also to the square-tiled cyclic cover M 4 (1, 1, 1, 1) for the double cover over
+M 4 (4, 2, 1, 1). Thus the statement of Theorem 36 for such examples follows im-
+mediately from Theorem 25.
+P ROBLEM . Are there other Teichmüller curves in strata of meromorphic qua-
+dratic differentials with at most simple poles with effective genus at least two
+and with maximally degenerate Lyapunov spectrum of the bundle H+1 ? Same
+question for the bundle H−1 ? For both bundles H−1 and H+1 simultaneously?
+   Are there closed invariant submanifolds (suborbifolds) of dimension greater
+than one satisfying this property?
+
+                      A PPENDIX A. PARITY OF THE SPIN STRUCTURE
+    The ambient stratum H (1, 1, 1, 1) for the Eierlegende Wollmilchsau represen-
+ting the square-tiled M 4 (1, 1, 1, 1) is connected. The ambient stratum H (2, 2, 2)
+for the square-tiled surface corresponding to the cyclic cover M 6 (1, 1, 1, 3) con-
+tains two connected components representing even and odd parity of the spin-
+structure of the corresponding holomorphic 1-form, see [23]. The correspond-
+ing parity of the spin-structure of the square-tiled cyclic cover M 6 (1, 1, 1, 3) was
+computed in [27] by combinatorial methods. We present another calculation to
+illustrate an alternative analytic technique, which is less known in the dynami-
+cal community.
+J OURNAL OF M ODERN DYNAMICS                                        V OLUME 5, N O. 2 (2011), 285–318
+                                     S QUARE - TILED CYCLIC COVERS                                    313
+
+
+P ROPOSITION 38. A holomorphic 1-form ω defining a square-tiled surface asso-
+ciated to the cyclic cover M 6 (1, 1, 1, 3) has even parity of the spin structure, hence
+
+                             (M 6 (1, 1, 1, 3), ω) ∈ H even (2, 2, 2) .
+
+Proof. Let us consider a holomorphic 1-form ω with zeroes of even degrees
+only, that is, with a pattern of zeroes of the form (2d 1 , . . . , 2d n ) and let K (ω) =
+2d 1 P 1 + · · · + 2d n P n be its zero divisor. An equivalent definition of the parity of
+the spin structure φ(ω) associated to ω is the dimension of the space of holo-
+morphic 1-forms with zeroes of degrees at least d 1 , . . . , d n at P 1 , . . . , P n respec-
+tively, computed modulo 2, that is,
+                                            ¯       ¯
+                                            ¯1
+                               φ(ω) := dim ¯¯ K (ω)¯¯ + 1 (mod 2)
+                                                    ¯
+                                              2
+
+(see [1, 21, 29, 31] for more information on the spin-structure). Let us compute
+the above dimension for the holomorphic 1-form ω defining the square-tiled
+flat structure ω2 = p ∗ q 0 on M 6 (1, 1, 1, 3).
+   We recall that M 6 (1, 1, 1, 3) is defined by the equation
+
+                           w 6 = (z − z 1 )(z − z 2 )(z − z 3 )(z − z 4 )3 .
+
+Let us consider the following 1-forms on M 6 (1, 1, 1, 3),
+
+                                                              dz
+                  α(c 1 , c 2 ) = (c 1 z + c 2 )(z − z 4 )2            c 1 , c 2 = const
+                                                              w5
+                                         dz
+(23)                       β = (z − z 4 )
+                                         w4
+                                         dz
+                           γ = (z − z 4 ) 3
+                                         w
+We claim that all these forms are holomorphic (in the case of α(c 1 , c 2 ), it is holo-
+morphic for all values of parameters c 1 , c 2 ∈ C). For example, let us check this
+for γ. When w 6= 0 and z 6= ∞, the form γ is clearly holomorphic. In a neighbor-
+hood of any of the ramification points P i , where i = 1, 2, 3, we have w 6 ∼ (z −z i ),
+so d z ∼ w 5 d w, and with respect to a local coordinate w in a neighborhood of
+P 4 , we get γ ∼ w 2 d w. This shows that γ has a double zero at each of the points
+P 1 , P 2 , P 3 . In a neighborhood of z 4 we have w 2 ∼ (z − z 4 ), so with respect to a
+                                                                          w dw
+local coordinate w we get d z = w d w, and hence γ ∼ w 2                        = d w. Hence,
+                                                                           w3
+each of the three preimages of z 4 on our Riemann surface is a regular point of
+γ. Finally, choosing a local coordinate t = 1/z in a neighborhood of z = ∞ we
+see that (z − z i ) ∼ t −1 , d z ∼ t −2 d t , and w ∼ t −1 , so γ ∼ d t . Hence, any preimage
+of z = ∞ is a regular point of γ. In a similar way we can check that α(c 1 , c 2 ) and
+β are holomorphic (see [5, 6, 12] for more details). Clearly,
+
+(24)                                   α(c 1 , c 2 ) + c 3 β + c 4 γ
+J OURNAL OF M ODERN DYNAMICS                                             V OLUME 5, N O. 2 (2011), 285–318
+314                 G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+is identically zero if and only if c 1 = c 2 = c 3 = c 4 = 0. By formula (9), we know
+that the genus of M 6 (1, 1, 1, 3) is equal to 4. Hence, we have constructed a ba-
+sis of the space of holomorphic 1-forms on M 6 (1, 1, 1, 3): every holomorphic 1-
+form can be represented as a linear combination (24), and this representation
+is unique.
+   Note that the forms α, β, γ are eigenforms of the deck transformation (z, w) 7→
+(z, ζw), where ζ is a sixth primitive root of unity, ζ6 = 1. The corresponding ei-
+genvalues are ζ, ζ2 , ζ3 . In particular, since ζ3 = −1, the form γ is anti-invariant
+with respect to a generator of the group of deck transformations. Our calcu-
+lation shows that the eigenspace corresponding to the eigenvalue −1 is one-
+dimensional. Hence, the form γ differs from the holomorphic 1-form ω defin-
+ing our square-tiled flat structure on M 6 (1, 1, 1, 3) only by a (nonzero) multi-
+plicative constant.
+   Assume that c 1 , c 2 are not simultaneously equal to zero. When −c 2 /c 1 satis-
+fies −c 2 /c 1 ∉ {z 1 , z 2 , z 3 , z 4 , ∞}, the holomorphic 1-form α(c 1 , c 2 ) has six simple
+zeroes: one at each of the six preimages of the root of the polynomial (c 1 z +c 2 ).
+When c 1 = 0, the holomorphic 1-form α(c 1 , c 2 ) also has six simple zeroes: one at
+each of the six preimages of z = ∞. When −c 2 /c 1 = z i , where i = 1, 2, 3, the form
+α(c 1 , c 2 ) has a single zero of degree 6 at P i . Finally, when −c 2 /c 1 = z 4 , the form
+α(c 1 , c 2 ) has three zeroes of degree two: one at each of the three preimages of
+z = z4 .
+   The holomorphic form β has 6 simple zeroes: one at each of the six ramifi-
+cation points z = z i , where i = 1, 2, 3, 4.
+   Our consideration implies that a linear combination (24) has a zero at each
+ramification point P 1 , P 2 , P 3 if and only if α(c 1 , c 2 ) is not present in our linear
+combination (i.e., if and only if c 1 = c 2 = 0). This means that
+
+                    φ(ω) = φ(γ) = dim Vect(β, γ) = 2 ≡ 0 (mod 2)
+
+and our Lemma is proved.
+
+
+
+                      A PPENDIX B. A N EXERCISE IN ARITHMETICS
+    In this appendix we present an exercise mentioned in the proof of Theorem
+18. We show that if a square-tiled cyclic cover M N (a 1 , a 2 , a 3 , a 4 ) has a symmetry
+represented by a single cycle of length 4 or 2, then the index of the Veech group
+is different from 1.
+    We start with a symmetry represented by a cycle of length 4. If the index of
+the Veech group is 1, then for all permutations π ∈ S4 the flat surfaces repre-
+sented by square-tiled cyclic covers M N (a π(1) , a π(2) , a π(3) , a π(4) ) are isomorphic.
+By Lemma 9 this implies that for any i 6= j and any m 6= l , where i , j , m, l ∈
+{1, 2, 3, 4} one has
+
+(25)                        gcd(N , a i + a j ) = gcd(N , a m + a l ) .
+J OURNAL OF M ODERN DYNAMICS                                     V OLUME 5, N O. 2 (2011), 285–318
+                                    S QUARE - TILED CYCLIC COVERS                                315
+
+
+Since the symmetry group is the entire S4 , we may assume that the ramifica-
+tion points are numbered in such way that the cycle π acts as
+                                   a1 → a2 → a3 → a4 → a1 ,
+that is
+                      a i = a 1 · k i −1   (mod N ), where i = 1, 2, 3, 4 .
+Conditions (1) imply that gcd(a 1 , N ) = 1. Hence,
+                gcd(a 1 + a 2 , N ) = gcd(a 1 · (1 + k), N ) = gcd(1 + k, N )
+(26)            gcd(a 1 + a 3 , N ) = gcd(a 1 · (1 + k 2 ), N ) = gcd(1 + k 2 , N )
+                gcd(a 2 + a 3 , N ) = gcd(a 1 · (k + k 2 ), N ) = gcd(k + k 2 , N ) .
+By (25) we have
+               gcd(a 1 + a 2 , N ) = gcd(a 1 + a 3 , N ) = gcd(a 2 + a 3 , N ) := d .
+Clearly
+          gcd((a 2 + a 3 ) − (a 1 + a 3 )), N ) = gcd(a 1 · (k − 1), N ) = gcd(k − 1, N )
+is divisible by d . Since gcd(k + 1, N ) = d we conclude that 2 = (k + 1) − (k − 1) is
+divisible by d , and, hence, d is either 1 or 2.
+   By (1) a 1 + a 2 + a 3 + a 4 is divisible by N . On the other hand,
+
+   gcd(a 1 + a 2 + a 3 + a 4 , N ) = gcd (a 1 (1 + k)(1 + k 2 ), N =
+                                        ¡                         ¢
+
+                                                                  = gcd (1 + k)(1 + k 2 ), N
+                                                                       ¡                     ¢
+
+divides the product gcd(1 + k, N ) · gcd(1 + k 2 , N ) which is equal to d 2 by (26).
+Hence, N is one of the integers 1, 2, 4, which contradicts the assumption that
+all a i , a j are pairwise distinct.
+   Let us suppose now that M N (a 1 , . . . , a 4 ) has a symmetry represented by a cy-
+cle of length 2 and let us show that the Veech group cannot have index 1. Since
+the symmetry group is the entire S4 , without loss of generality we may assume
+that
+                                      k · a1   (mod N ) = a 1
+                                      k · a2   (mod N ) = a 2
+                                      k · a3   (mod N ) = a 4
+                                      k · a4   (mod N ) = a 3
+   Let ` := N / gcd(k −1, N ). Since (k −1)· a 1 (mod N ) = 0 and a 1 ≤ N , 1 < k < N ,
+we have ` > 1, and ` divides a 1 . Similarly, ` divides a 2 . Hence ` divides a 1 + a 2
+and thus gcd(a 1 +a 2 , N ). We have seen that, when the index of the Veech group
+is 1, the relations in formula (25) hold, in particular
+                             gcd(a 1 + a 2 , N ) = gcd(a 1 + a 3 , N ) .
+Since ` is a divisor of both gcd(a 1 + a 3 , N ) and a 1 , it divides a 3 , hence it also
+divides a 4 = k · a 3 (mod N ). Thus, ` divides gcd(N , a 1 , a 2 , a 3 , a 4 ). Since ` > 1,
+this contradicts the second condition in formula (1).
+J OURNAL OF M ODERN DYNAMICS                                        V OLUME 5, N O. 2 (2011), 285–318
+316                  G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+Acknowledgments. We would like to thank J.-C. Yoccoz, who has motivated
+our work by asking whether the example in [15] could be generalized. We are
+also grateful to M. Möller who told us about cyclic covers, directed us to the
+reference [5] and suggested the correct algebraic equation of one of our exam-
+ples. A. Zorich also thanks A. Eskin and M. Kontsevich for the pleasure to work
+with them on the project [11] on Lyapunov exponents; in particular, on its part
+related to evaluation of individual Lyapunov exponents of square-tiled cyclic
+covers [12].
+   We thank an anonymous referee, V. Delecroix, P. Hubert, and A. Wright for
+careful reading the manuscript and for indicating to us some typos, and a gap
+in the initial version of Theorem 13.
+   The authors thank Collège de France, IHES, HIM and MPIM for their hospi-
+tality while preparation of this paper.
+
+                                          R EFERENCES
+ [1] M. Atiyah, Riemann surfaces and spin structures, Ann. scient. ÉNS (4), 4 (1971), 47–62.
+ [2] A. Avila and G. Forni, Weak mixing for interval exchange transformations and translation
+     flows, Ann. of Math. (2), 165 (2007), 637–664.
+ [3] A. Avila and M. Viana, Simplicity of Lyapunov spectra: Proof of the Zorich-Kontsevich conjec-
+     ture, Acta Math., 198 (2007), 1–56.
+ [4] M. Bainbridge, Euler characteristics of Teichmüller curves in genus two, Geometry and
+     Topology, 11 (2007), 1887–2073.
+ [5] I. Bouw, The p-rank of ramified covers of curves, Compositio Math., 126 (2001), 295–322.
+ [6] I. Bouw and M. Möller, Teichmüller curves, triangle groups and Lyapunov exponents, Ann.
+     of Math. (2), 172 (2010), 139–185.
+ [7] A. Bufetov, Hölder cocycles and ergodic integrals for translation flows on flat surfaces, Elec-
+     tron. Res. Announc. Math. Sci., 17 (2010), 34–42.
+ [8]         , Limit theorems for translation flows, (2010), 1–69, arXiv:0804.3970v3.
+ [9] D. Chen, Covers of the projective line and the moduli space of quadratic differentials, (2010),
+     1–19, arXiv:1005.3120v1.
+[10] A. Eskin and A. Okounkov, Asymptotics of numbers of branched coverings of a torus and vol-
+     umes of moduli spaces of holomorphic differentials, Inventiones Mathematicae, 145 (2001),
+     59–103.
+[11] A. Eskin, M. Kontsevich and A. Zorich, Sum of Lyapunov exponents of the Hodge bundle with
+     respect to the Teichmüller geodesic flow, preprint.
+[12]         , Lyapunov spectrum of square-tiled cyclic covers, J. Mod. Dyn., 5 (2011), 319–353.
+[13] G. Forni, Solutions of the cohomological equation for area-preserving flows on compact sur-
+     faces of higher genus, Ann. of Math. (2), 146 (1997), 295–344.
+[14]         , Deviation of ergodic averages for area-preserving flows on surfaces of higher genus,
+     Ann. of Math. (2), 155 (2002), 1–103.
+[15]         , On the Lyapunov exponents of the Kontsevich-Zorich cocycle, in “Handbook of Dy-
+     namical Systems" (eds. B. Hasselblatt and A. Katok), 1B, Elsevier B. V., Amsterdam, 2006,
+     549–580.
+[16]         , A geometric criterion for the non-uniform hyperbolicity of the Kontsevich-Zorich co-
+     cycle, J. Mod. Dyn., 5 (2011), 355–395.
+[17] G. Forni and C. Matheus, An example of a Teichmüller disk in genus 4 with degenerate
+     Kontsevich-Zorich spectrum, 2008, 1–8, arXiv:0810.0023v1.
+[18] G. Forni, C. Matheus and A. Zorich, Lyapunov spectrum of equivariant subbundles of the
+     Hodge bundle, in preparation.
+
+J OURNAL OF M ODERN DYNAMICS                                      V OLUME 5, N O. 2 (2011), 285–318
+                                   S QUARE - TILED CYCLIC COVERS                                317
+
+
+[19] E. Gutkin and C. Judge, Affine mappings of translation surfaces: Geometry and arithmetic,
+     Duke Math. J., 103 (2000), 191–213.
+[20] F. Herrlich and G. Schmithüsen, An extraordinary origami curve, Math. Nachr., 281 (2008),
+     219–237.
+[21] D. Johnson, Spin structures and quadratic forms on surfaces, J. London Math. Soc. (2), 22
+     (1980), 365–373.
+[22] M. Kontsevich, Lyapunov exponents and Hodge theory, in “The Mathematical Beauty of
+     Physics,” (Saclay, 1996), Adv. Ser. Math. Phys., 24, World Scientific Publ., River Edge, NJ,
+     1997, 318–332.
+[23] M. Kontsevich and A. Zorich, Connected components of the moduli spaces of Abelian differ-
+     entials with prescribed singularities, Inventiones Mathematicae, 153 (2003), 631–678.
+[24] E. Lanneau, Hyperelliptic components of the moduli spaces of quadratic differentials with
+     prescribed singularities, Comment. Math. Helvetici, 79 (2004), 471–501.
+[25] P. Lochak, On arithmetic curves in the moduli spaces of curves, J. Inst. Math. Jussieu, 4
+     (2005), 443–508.
+[26] H. Masur and J. Smillie, Quadratic differentials with prescribed singularities and pseudo-
+     Anosov diffeomorphisms, Comment. Math. Helvetici, 68 (1993), 289–307.
+[27] C. Matheus and J.-C. Yoccoz, The action of the affine diffeomorphisms on the relative ho-
+     mology group of certain exceptionally symmetric origamis, Journal of Modern Dynamics, 4
+     (2010), 453–486.
+[28] C. McMullen, Braid groups and Hodge theory, to appear in Math. Ann.
+[29] J. Milnor, Remarks concerning spin manifolds, Differential and Combinatorial Topology (A
+     Symposium in Honor of Marston Morse), Princeton Univ. Press, Princeton, NJ, 1965, 55–62.
+[30] M. Möller, Shimura and Teichmüller curves, J. Mod. Dyn., 5 (2011), 1–32.
+[31] D. Mumford, Theta-characteristics of an algebraic curve, Ann. scient. Éc. Norm. Sup. (4), 4
+     (1971), 181–191.
+[32] G. Schmithüsen, An algorithm for finding the Veech group of an origami, Experimental
+     Mathematics, 13 (2004), 459–472.
+[33] R. Treviño, On the non-uniform hyperbolicity of the Kontsevich-Zorich cocycle for quadratic
+     differentials, 2010, 1–25, arXiv:1010.1038v2.
+[34] W. Veech, Gauss measures for transformations on the space of interval exchange maps, Ann.
+     of Math. (2), 115 (1982), 201–242.
+[35]         , The Teichmüller Geodesic Flow, Ann. of Math. (2), 124 (1986), 441–530.
+[36]         , Moduli spaces of quadratic differentials, J. Anal. Math., 55 (1990), 117–171.
+[37] A. Wright, Abelian square-tiled surfaces, preprint, 2011.
+[38] A. Zorich, Asymptotic flag of an orientable measured foliation on a surface, in “Geometric
+     Study of Foliations," (Tokyo, 1993), World Scientific Publ., River Edge, NJ, 1994, 479–498.
+[39]         , Finite Gauss measure on the space of interval-exchange transformations. Lyapunov
+     exponents, Ann. Inst. Fourier (Grenoble), 46 (1996), 325–370.
+[40]         , Deviation for interval-exchange transformations, Ergod. Th. & Dynam. Sys., 17
+     (1997), 1477–1499.
+[41]         , Square-tiled surfaces and Teichmüller volumes of the moduli spaces of Abelian differ-
+     entials, “Rigidity in Dynamics and Geometry" (eds. M. Burger and A. Iozzi), Proceedings of
+     the Programme on Ergodic Theory, Geometric Rigidity and Number Theory, Isaac Newton
+     Institute for the Mathematical Sciences, Cambridge, UK, January 5–July 7, 2000, Springer-
+     Verlag, Berlin, 2002, 459–471.
+[42]         , How do the leaves of a closed 1-form wind around a surface, in the collection: “Pseu-
+     doperiodic Topology” (eds. Vladimir Arnold, Maxim Kontsevich and Anton Zorich), AMS
+     Translations, Ser. 2, 197, Advances in the Mathematical Sciences, 46, AMS, Providence, RI,
+     1999, 135–178.
+[43]         , Flat surfaces, in collection “Frontiers in Number Theory, Physics and Geometry. Vol.
+     1: On Random Matrices, Zeta Functions and Dynamical Systems” (eds. P. Cartier, B. Ju-
+     lia, P. Moussa and P. Vanhove), Ecole de physique des Houches, France, March 9–21, 2003,
+     Springer-Verlag, Berlin, 2006, 439–586.
+
+J OURNAL OF M ODERN DYNAMICS                                       V OLUME 5, N O. 2 (2011), 285–318
+318                 G IOVANNI F ORNI , C ARLOS M ATHEUS AND A NTON Z ORICH
+
+
+G IOVANNI F ORNI <[redacted-email]>: Department of Mathematics, University of Mary-
+land, College Park, MD 20742-4015, USA
+
+C ARLOS M ATHEUS <[redacted-email]>: Collège de France, 3 Rue d’Ulm, Paris, CEDEX 05, France
+URL: http://w3.impa.br/∼cmateus
+   Current address: CNRS, LAGA, Institut Galilée, Université Paris 13, 99, Av. Jean-Baptiste Clé-
+ment, 93430, Villetaneuse, France
+
+A NTON Z ORICH <[redacted-email].>: IRMAR, Université de Rennes 1, Cam-
+pus de Beaulieu, 35042, Rennes, France
+URL: http://perso.univ-rennes1.fr/anton.zorich/
+
+
+
+
+J OURNAL OF M ODERN DYNAMICS                                   V OLUME 5, N O. 2 (2011), 285–318
+

@@ -1,0 +1,43 @@
+Separate-session hand review of the four-cell exclusion
+3 November 2026
+
+VERDICT: ACCEPT. No mathematical corrections required.
+
+Reviewed source: exception-geometry/four-cell-hand-proof.txt
+SHA256: c8fc977381487b24b6d276b33b8481408a69ae43337d1e28a86ca7d1cf8979fa
+Exact ambient definitions checked in restricted-theorem-note/theorem.txt.
+Reviewer: Codex thread01a18403, distinct from author thread01a1a00f.
+This is a same-model, separate-session hand review. This reviewer originally supplied the reused support-charge lemma; it is not a wholly independent origin for that lemma. The new grid-boundary proof was independently reconstructed below. No second implementation, formal verification, expert acceptance or novelty clearance is claimed.
+
+1. Expansion: independently checked without compactness assumptions
+For each occupied row of S, shifting its rightmost point one step right adds a new point. These additions are distinct across rows and are outside S. Therefore H=S union(S+e1) has at least m+r points.
+The occupied columns of H include every occupied column of S and an extra column beyond their maximum: at least c+1. In each such column, shifting its uppermost point one step up adds a point outside H. The additions are distinct. Thus |H union(H+e2)|>=m+r+c+1.
+This union is precisely S+{0,1}^2. Gaps in rows/columns and disconnected S do not invalidate either injection. Since m<=rc, the minimum r+c values for m=1,2,3,4 are2,3,4,4, giving union bounds4,6,8,9. All entries checked; notably the m3 bound is8, not7.
+
+2. Checkerboard-coordinate bijections
+For even x+y, (u,v)=((x+y)/2,(x-y)/2) is integral, with inverse (x,y)=(u+v,u-v).
+For odd x+y, (u',v')=((x+y-1)/2,(x-y-1)/2) is integral, with inverse (x,y)=(u'+v'+1,u'-v').
+Applying the odd-coordinate map to the four neighbors of an even cell gives, respectively for +x,-x,+y,-y:
+ (u,v), (u-1,v-1), (u,v-1), (u-1,v).
+Their union over S is S+{-1,0}^2, a translate of S+{0,1}^2. Therefore the expansion bounds apply to the distinct neighbors, with no counting multiplicity. Translating the original grid exchanges colors and proves the corresponding odd-color claim.
+
+3. Subtraction of full cells: key double-counting check
+Neighbors of even full cells are odd; neighbors of odd full cells are even. Their unions are disjoint. Hence they can be added before removing full cells. For color splits3+1 and2+2 the lower bound for the union is12; removing F deletes at most its4 points, leaving at least8 external neighbors. For4+0, every neighbor has opposite color from F and none is deleted; the bound is9. These cases include disconnected F and exhaust all four-point sets. No equality classification or finite census is used.
+
+4. Physical charging: key geometric check
+Each nonempty partial cell corresponds to a distinct boundary A point. A proper fan is contiguous because a disconnected fan would create a forbidden boundary self-contact/pinch. Its Q contribution is positive: a corner contributes its positive incidence; a smooth A point contributes3. Thus each occupied external neighbor supplies a distinct unit of Q.
+At the midpoint C of the side between a full and an empty cell, the full cell supplies precisely the occupied half-plane of the local four-quadrant star. The empty cell supplies none of the opposite half-plane. This is a smooth physical boundary point, not a corner or an interior exception, and contributes to s_N. Other A cells cannot alter these quadrants. A chosen midpoint determines exactly its full/empty cell pair, so different empty cells cannot be assigned the same midpoint. The A charges and C midpoint charges are disjoint. Therefore Q+s_N>=b(F).
+This does not incorrectly charge one smooth midpoint for each incident full cell: exactly one full neighbor is chosen per empty cell. Some empty cells could supply more smooth midpoints, but these extra contributions are simply unused.
+
+5. Exact ledger and arithmetic
+Euler for the disk triangulation gives N=2V_int+V_boundary-2, with V_int=I+J and V_boundary=W+s_A+s_N. All triangle vertices are integer points and W counts maximal walls/genuine corners.
+A-incidence gives N=8I+4s_A+sum_Acorners(m)=8I+Q+s_A. Subtracting yields W=2+6I+Q-2J-s_N. Because k=J+s_N, adding2k yields W+2k=2+6I+Q+s_N.
+For I4, b(F)>=8 and Q+s_N>=b(F) imply W+2k>=26+8=34. k<=6 therefore gives W>=22. No darkness premise is used or needed.
+
+6. Logical payoff and retained scope
+The I4 branch now requires neither its old four-cell boundary enumeration nor the three geometry-CNF contradiction proofs. This is a stronger simplification than merely replacing three solver cases while retaining the finite boundary lemma.
+The exact lattice, disk, strictly simple boundary, exactly four interior A points, and exception cap remain essential hypotheses. The complete restricted illumination theorem still needs its coarse I<=4 reduction and its I2/I3 support coverage and optical certificates. This review does not replay or independently reprove those remaining stages.
+No conclusion about arbitrary polygons, unbounded exceptions, arbitrary marks, historical novelty, or a universal22 minimum follows. The universal goal remains paused.
+
+Delivery
+Post ACCEPT and this review path on the shared board. Author may update the restricted theorem/appendix to substitute this hand argument; this reviewer leaves those and all peer files unchanged. Historical certificates should remain preserved as records even though no longer needed in the I4 proof.

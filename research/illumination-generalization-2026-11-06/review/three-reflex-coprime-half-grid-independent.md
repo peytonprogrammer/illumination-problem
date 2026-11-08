@@ -1,0 +1,23 @@
+# LC04 independent final half-grid audit
+
+Decision: ACCEPT all six pinned claims at the stated terminal-pair scope. All89 source pins and request hash match before/after independent actual-wall replay. Read the complete candidate, proof, arithmetic checker and evidence. No material mathematical correction. This is not universal K1 or a whole-room theorem.
+
+1. **ACCEPT — a half-grid can locate strict physical portals.** With g|P,K=g set eprime=eg/2,Pprime=2P/g>=2,Kprime=2. Actual source/right widths are Pprime*eprime and2eprime. The primitive selection variable is integerj, while q=r+gj/2 may be half-integral. First-crossing source resets and event periods depend on j and the actual widths; they do not require integerq. The actual right strong event modulo2eprime is sufficient because source removal and actual right periods are multiples of2eprime. Fixed offsets are preserved. No reduced integer N is assumed.
+
+2. **ACCEPT — uniform m/residue selection.** The common bound B=a+C*(A+z-s+2e(g-1))/D dominates the initial cap phase for every integer residue r0..g-1. Choose m with U>B+4rho before selecting r=Nm modg. This removes circularity. Belowh the source period is strictly larger than Pprime>=2, so no source-period2 branch occurs. The right-period2 four-predecessor argument and the both-periods>=3 reset argument apply. At/aboveh, no source event is imposed and two cap predecessors suffice. All chosen guards refer to one common m.
+
+3. **ACCEPT — switch target index before integer arithmetic.** Exact E=z+2eJ remains valid for realq. From q=r+gj/2 and g|P,K follows J/g in Z+j/2. If j is even, I=J is an integer multipleg. If j is odd, I=J+z/e is an integer multipleg because2z/(eg) is odd integral. For oddg this is essential even to make I integral; for eveng, J may already be integral but still not divisibleg. The proof distinguishes both correctly. No integer congruence is applied directly to half-integral J.
+
+4. **ACCEPT — full actual target for either image.** The coefficient Lambda*d2/g is a unit moduloL/g by the definition ofg. The final2eLambda*p correction has integer original fold-index changes and preserves literal signed residuals. It gives E=+z or-z modulo2Le according to the PREVIOUSLY selected image. Both fold toz and actual t=A-z. The physical target never changes. One final positive slope defines the entire retained ray; this does not concatenate trajectories of different direction or use a projected endpoint as a substitute for actual arrival.
+
+5. **ACCEPT — original finite walls, source seam and roof.** Independent checks agree with the inherited source/cap/right/bottom signed charts, strict original passage germs and true-corner exclusions. Zero centered residuals are smooth ordinary outer-wall contacts. At u=h the source is regular and starts in the cap. Lower-source roof singularity contradicts separated mouths; an upper singular roof is bypassed only by the accepted exact same-S descending suffix. The target's height and abscissa separation gives first actual T. Rational source heights not assumed: vertical data and u,v remain integral, as stated.
+
+6. **ACCEPT — precise scope limits.** This is the paired-image terminal-pair class g|P,K=g and2z/(eg) oddinteger, all admissible source levels. It does not establish every native pair, all K1 rooms or every target offset. Reviewer K1R01 all-one-roof obstruction has z/e2 and does not satisfy the half-odd condition; it is not contradicted. The earlier positive-grid-only control has z/e3/2 and DOES satisfy LC04, which now supplies an illuminating ray. These two controls must not be conflated.
+
+## Own exact prescribed replay
+
+Run `python3 .context/illumination-generalization-2026-11-06/review/three-reflex-coprime-half-grid-check.py`.
+
+Own six prescribed actual rays pass482 reflections and4880 finite-wall/leg guards. All four author slopes reproduce exactly464/3,339/2,184/7,41/6 with first crossings8,43,38,17. Initial J values1/2,2,5/2,1 become integer target indices I2,2,4,4, with selected target signs(-,+,-,-). Added same-room loweru2 and upperg2/u8 sources pass original earliest-wall replay. This checks actual endpoint identity and both image cases without executing author code. Finite samples corroborate the hand proof; they do not establish its quantifiers by sampling.
+
+No discovery search, deadline renewal, new engine, worker or git-state change. The full native r<=8 objective and all-r3 milestone remain open. Author's initial-floor-prefix construction is the next distinct itinerary to audit, preserving the newly identified physical floor-corner and upper-source first-mouth prerequisites.

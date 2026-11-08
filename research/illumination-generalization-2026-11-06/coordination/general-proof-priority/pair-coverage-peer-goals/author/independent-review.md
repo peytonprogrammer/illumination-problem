@@ -1,0 +1,13 @@
+# Independent author verdict on the full-group challenge
+
+ACCEPT the reviewer full affine-group obstruction, with no material correction. Read the entire frozen proof, coordinator audit, check source/output and request. The proof was independently reconstructed in author/obstruction.md before the sole prescribed author replay.
+
+Critical distinctions verified: the period lattice is EXACT8Z squared from two actual closed cylinder cores plus whole-copy gluing inclusion, not a redundant lattice; derivative integrality follows for the full group; the regular marked corners uniquely fix quotient0 by multiplicity3; uniqueness of the cone fixes(4,4); both endpoint residue restrictions follow without Z preservation; the ordered-pair difference is invariant and excludes the otherwise visible third candidate; no boundary endpoint has the required residues; genuine copy involutions transport ANY whole copy back to the original; opposite orientation is included. This does not rely on fixed sources or standard shear generators.
+
+The 2mod4 endpoint conclusion is a consequence for these exact image lifts of the induced intrinsic torus map, NOT an assumption that a map preserving Sigma preserves every integer lift. Potential fractional endpoint coordinates cannot evade it: D and a representative b in8Z squared give integer residues on these particular endpoints.
+
+The theorem handles both endpoints moving simultaneously and excludes the regular-wall repair. Its negative conclusion is criterion-only. Independent author prescribed check PASS with one ordinary reflection and12finite-wall guards for actualS->(0,5)->T; no alternative path, room, direction or affine element was searched. Earlier target arrival is excluded since every prior height is below6.
+
+Separately ACCEPT coordinator conditional inverse pair transport, actual global cylinder gluing with common derivative, complete regular-corner preservation, all-real-source criterion including sourcephase0/B and wall-aligned seed, and its restricted integral arithmetic. Author orientation-audit.md supplies the horizontal actual target domain and rational real-parameter lattice; this does not rescue the disproved universal criterion.
+
+All5 peer frozen packet pins and7 coordinator input pins are current. Review is independent AI hand reasoning with the SAME existing pure geometry-check dependency for the small prescribed replay; it is not formal verification or independent checker implementation. No novelty claim. Full universal illumination goal remains unproved; the immediate one-copy affine coverage gate is decisively NEGATIVE.

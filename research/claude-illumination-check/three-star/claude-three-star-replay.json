@@ -1,0 +1,377 @@
+{
+ "shapes": [
+  {
+   "shape": 0,
+   "full": [
+    [
+     -2,
+     -2
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "budget": 0,
+   "support_matches_codex": true,
+   "geometry_without_marks_or_cuts": "INFEASIBLE"
+  },
+  {
+   "shape": 1,
+   "full": [
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "budget": 0,
+   "support_matches_codex": true,
+   "geometry_without_marks_or_cuts": "INFEASIBLE"
+  },
+  {
+   "shape": 2,
+   "full": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "budget": 0,
+   "support_matches_codex": true,
+   "geometry_without_marks_or_cuts": "INFEASIBLE"
+  },
+  {
+   "shape": 3,
+   "full": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "budget": 0,
+   "support_matches_codex": true,
+   "geometry_without_marks_or_cuts": "OPTIMAL"
+  },
+  {
+   "shape": 4,
+   "full": [
+    [
+     -1,
+     -1
+    ],
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "budget": 1,
+   "support_matches_codex": true,
+   "geometry_without_marks_or_cuts": "OPTIMAL"
+  }
+ ],
+ "cases": [
+  {
+   "shape": 0,
+   "marks_cells": [
+    [
+     -2,
+     -2
+    ],
+    [
+     -1,
+     -1
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": false,
+   "cuts": 0,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 0,
+   "marks_cells": [
+    [
+     -2,
+     -2
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": false,
+   "cuts": 0,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 0,
+   "marks_cells": [
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": false,
+   "cuts": 0,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 1,
+   "marks_cells": [
+    [
+     -2,
+     -1
+    ],
+    [
+     -1,
+     -1
+    ]
+   ],
+   "adjacent": true,
+   "status": "ILLUMINATED_DIRECT (shared interior C on the segment)"
+  },
+  {
+   "shape": 1,
+   "marks_cells": [
+    [
+     -2,
+     -1
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": false,
+   "cuts": 0,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 1,
+   "marks_cells": [
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": false,
+   "cuts": 0,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 2,
+   "marks_cells": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     -1
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": false,
+   "cuts": 0,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 2,
+   "marks_cells": [
+    [
+     -2,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": false,
+   "cuts": 0,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 2,
+   "marks_cells": [
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": false,
+   "cuts": 0,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 3,
+   "marks_cells": [
+    [
+     -2,
+     0
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "adjacent": true,
+   "status": "ILLUMINATED_DIRECT (shared interior C on the segment)"
+  },
+  {
+   "shape": 3,
+   "marks_cells": [
+    [
+     -2,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": true,
+   "positive_controls": [
+    [
+     "OPTIMAL",
+     23,
+     23
+    ]
+   ],
+   "cuts": 1,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 3,
+   "marks_cells": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": true,
+   "status": "ILLUMINATED_DIRECT (shared interior C on the segment)"
+  },
+  {
+   "shape": 4,
+   "marks_cells": [
+    [
+     -1,
+     -1
+    ],
+    [
+     -1,
+     0
+    ]
+   ],
+   "adjacent": true,
+   "status": "ILLUMINATED_DIRECT (shared interior C on the segment)"
+  },
+  {
+   "shape": 4,
+   "marks_cells": [
+    [
+     -1,
+     -1
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": false,
+   "digest_matches_codex": true,
+   "positive_controls": [
+    [
+     "OPTIMAL",
+     23,
+     23
+    ],
+    [
+     "OPTIMAL",
+     22,
+     22
+    ],
+    [
+     "OPTIMAL",
+     23,
+     23
+    ]
+   ],
+   "cuts": 22,
+   "status": "INFEASIBLE"
+  },
+  {
+   "shape": 4,
+   "marks_cells": [
+    [
+     -1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "adjacent": true,
+   "status": "ILLUMINATED_DIRECT (shared interior C on the segment)"
+  }
+ ],
+ "guard_failures": [],
+ "status": "PASS"
+}

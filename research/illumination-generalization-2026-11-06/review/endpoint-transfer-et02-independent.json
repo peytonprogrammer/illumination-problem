@@ -1,0 +1,455 @@
+{
+  "status": "PASS_PRESCRIBED_ET02_INDEPENDENT_AUDIT",
+  "method": "Own rational polygon intersection audit, exhaustive 14 finite actual mirrors, and two prescribed physical reflections",
+  "polygon": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "49",
+      "0"
+    ],
+    [
+      "49",
+      "19"
+    ],
+    [
+      "51",
+      "19"
+    ],
+    [
+      "51",
+      "0"
+    ],
+    [
+      "80",
+      "0"
+    ],
+    [
+      "80",
+      "40"
+    ],
+    [
+      "40",
+      "40"
+    ],
+    [
+      "40",
+      "80"
+    ],
+    [
+      "0",
+      "80"
+    ],
+    [
+      "0",
+      "51"
+    ],
+    [
+      "19",
+      "51"
+    ],
+    [
+      "19",
+      "49"
+    ],
+    [
+      "0",
+      "49"
+    ]
+  ],
+  "area": "4724",
+  "r": 5,
+  "walls": 14,
+  "actual_even_even_marks": [
+    [
+      "60",
+      "20"
+    ],
+    [
+      "20",
+      "60"
+    ]
+  ],
+  "singular_direct_chord": [
+    "40",
+    "40"
+  ],
+  "one_reflection_rows": [
+    {
+      "wall": 0,
+      "edge": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "49",
+          "0"
+        ]
+      ],
+      "target_image": [
+        "20",
+        "-60"
+      ],
+      "unfolded_contact_time": "1/4",
+      "contact": [
+        "50",
+        "0"
+      ],
+      "rejection": "outside_smooth_finite_wall"
+    },
+    {
+      "wall": 1,
+      "edge": [
+        [
+          "49",
+          "0"
+        ],
+        [
+          "49",
+          "19"
+        ]
+      ],
+      "target_image": [
+        "78",
+        "60"
+      ],
+      "unfolded_contact_time": "-11/18",
+      "contact": [
+        "49",
+        "-40/9"
+      ],
+      "rejection": "nonpositive_first_or_second_flight"
+    },
+    {
+      "wall": 2,
+      "edge": [
+        [
+          "49",
+          "19"
+        ],
+        [
+          "51",
+          "19"
+        ]
+      ],
+      "target_image": [
+        "20",
+        "-22"
+      ],
+      "unfolded_contact_time": "1/42",
+      "contact": [
+        "1240/21",
+        "19"
+      ],
+      "rejection": "outside_smooth_finite_wall"
+    },
+    {
+      "wall": 3,
+      "edge": [
+        [
+          "51",
+          "19"
+        ],
+        [
+          "51",
+          "0"
+        ]
+      ],
+      "target_image": [
+        "82",
+        "60"
+      ],
+      "unfolded_contact_time": "-9/22",
+      "contact": [
+        "51",
+        "40/11"
+      ],
+      "rejection": "nonpositive_first_or_second_flight"
+    },
+    {
+      "wall": 4,
+      "edge": [
+        [
+          "51",
+          "0"
+        ],
+        [
+          "80",
+          "0"
+        ]
+      ],
+      "target_image": [
+        "20",
+        "-60"
+      ],
+      "unfolded_contact_time": "1/4",
+      "contact": [
+        "50",
+        "0"
+      ],
+      "rejection": "outside_smooth_finite_wall"
+    },
+    {
+      "wall": 5,
+      "edge": [
+        [
+          "80",
+          "0"
+        ],
+        [
+          "80",
+          "40"
+        ]
+      ],
+      "target_image": [
+        "140",
+        "60"
+      ],
+      "unfolded_contact_time": "1/4",
+      "contact": [
+        "80",
+        "30"
+      ],
+      "rejection": "earlier_outgoing_actual_wall",
+      "first_hit": [
+        {
+          "wall": 6,
+          "time": "1/3",
+          "point": [
+            "60",
+            "40"
+          ]
+        }
+      ]
+    },
+    {
+      "wall": 6,
+      "edge": [
+        [
+          "80",
+          "40"
+        ],
+        [
+          "40",
+          "40"
+        ]
+      ],
+      "target_image": [
+        "20",
+        "20"
+      ],
+      "rejection": "parallel_to_support"
+    },
+    {
+      "wall": 7,
+      "edge": [
+        [
+          "40",
+          "40"
+        ],
+        [
+          "40",
+          "80"
+        ]
+      ],
+      "target_image": [
+        "60",
+        "60"
+      ],
+      "rejection": "parallel_to_support"
+    },
+    {
+      "wall": 8,
+      "edge": [
+        [
+          "40",
+          "80"
+        ],
+        [
+          "0",
+          "80"
+        ]
+      ],
+      "target_image": [
+        "20",
+        "100"
+      ],
+      "unfolded_contact_time": "3/4",
+      "contact": [
+        "30",
+        "80"
+      ],
+      "rejection": "earlier_incoming_actual_wall",
+      "first_hit": [
+        {
+          "wall": 6,
+          "time": "1/3",
+          "point": [
+            "50",
+            "40"
+          ]
+        }
+      ]
+    },
+    {
+      "wall": 9,
+      "edge": [
+        [
+          "0",
+          "80"
+        ],
+        [
+          "0",
+          "51"
+        ]
+      ],
+      "target_image": [
+        "-20",
+        "60"
+      ],
+      "unfolded_contact_time": "3/4",
+      "contact": [
+        "0",
+        "50"
+      ],
+      "rejection": "outside_smooth_finite_wall"
+    },
+    {
+      "wall": 10,
+      "edge": [
+        [
+          "0",
+          "51"
+        ],
+        [
+          "19",
+          "51"
+        ]
+      ],
+      "target_image": [
+        "20",
+        "42"
+      ],
+      "unfolded_contact_time": "31/22",
+      "contact": [
+        "40/11",
+        "51"
+      ],
+      "rejection": "nonpositive_first_or_second_flight"
+    },
+    {
+      "wall": 11,
+      "edge": [
+        [
+          "19",
+          "51"
+        ],
+        [
+          "19",
+          "49"
+        ]
+      ],
+      "target_image": [
+        "18",
+        "60"
+      ],
+      "unfolded_contact_time": "41/42",
+      "contact": [
+        "19",
+        "1240/21"
+      ],
+      "rejection": "outside_smooth_finite_wall"
+    },
+    {
+      "wall": 12,
+      "edge": [
+        [
+          "19",
+          "49"
+        ],
+        [
+          "0",
+          "49"
+        ]
+      ],
+      "target_image": [
+        "20",
+        "38"
+      ],
+      "unfolded_contact_time": "29/18",
+      "contact": [
+        "-40/9",
+        "49"
+      ],
+      "rejection": "nonpositive_first_or_second_flight"
+    },
+    {
+      "wall": 13,
+      "edge": [
+        [
+          "0",
+          "49"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "target_image": [
+        "-20",
+        "60"
+      ],
+      "unfolded_contact_time": "3/4",
+      "contact": [
+        "0",
+        "50"
+      ],
+      "rejection": "outside_smooth_finite_wall"
+    }
+  ],
+  "one_reflection_path_exists": false,
+  "two_reflection_path": [
+    [
+      "60",
+      "20"
+    ],
+    [
+      "160/3",
+      "40"
+    ],
+    [
+      "40",
+      "0"
+    ],
+    [
+      "20",
+      "60"
+    ]
+  ],
+  "contacts": [
+    {
+      "wall": 6,
+      "point": [
+        "160/3",
+        "40"
+      ],
+      "positive_speed_scale": "2"
+    },
+    {
+      "wall": 0,
+      "point": [
+        "40",
+        "0"
+      ],
+      "positive_speed_scale": "3/2"
+    }
+  ],
+  "actual_pair_lit": true,
+  "universal_one_reflection_availability": "REJECTED_BY_THIS_R5_ROOM",
+  "all_multi_reflection_transfer_rejected": false,
+  "nine_distinct_corner_bound_proved": false,
+  "whole_goal_complete": false
+}

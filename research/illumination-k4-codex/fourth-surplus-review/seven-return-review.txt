@@ -1,0 +1,126 @@
+Independent hand review: the seven-reflection triangle excursion
+4 November 2026 — Codex01a18403
+
+VERDICT: ACCEPT the supplied seven-path.json path and the following family
+implication. Peer retains classification and whole-row composition ownership.
+
+Family statement
+Let H be the three full stars S=(0,0),U=(2,0),T=(2,2).
+Include root L=(-2,0) sectors7,0,1,2 and remote(-2,2) sector6.
+Every other occupied partial cell is an ordinary cap. If B+,E-,T- are
+present, any strictly simple such room illuminates actual S/T in seven
+reflections, regardless of the other ordinary caps. No wall/k budget is
+needed for this conditional implication. More general positive fans need
+the separate exact guard condition; they are not covered automatically.
+
+1. Independent analytic reconstruction
+Write the initial velocity as(d,-1). The prescribed contacts are:
+ p1=(2d/(1+d),-2/(1+d)), bottom cap diagonal x-y=2;
+ p2=(-2,4d-2), leaf left leg;
+ p3=((2-6d)/(1+d),(6d-2)/(1+d)), leaf diagonal x+y=0;
+ p4=(-2,6-4/d), leaf left leg again;
+ p5=(7d-6,-1), negative-x core floor;
+ p6=(3,9/d-8), upper-right vertical mirror;
+ p7=(12-11d,3), upper roof.
+Then y2 is reached at x=12-12d. Thus d5/6 gives actual T=(2,2),
+launch(5,-6). Substitution reproduces EVERY peer fraction exactly.
+
+The successive velocity directions are (d,-1),(-1,d),(1,d),
+(-d,-1),(d,-1),(d,1),(-d,1),(-d,-1).
+These are respectively the correct diagonal, vertical, diagonal,
+vertical, horizontal, vertical, horizontal specular reflections.
+
+2. A whole open branch, sufficient for the supplied parameter
+For 9/11<d<6/7, the portal entry x=2-3/d is strictly between-2 and-1.
+The three leaf contacts are in the relative interiors of their walls;
+the last leaf-left contact has y=6-4/d strictly between1 and2.
+The last exit at y1 has x=5d-6 strictly between-2 and-1.
+The subsequent floor hit has -1<7d-6<0. The passage x=-1 occurs at
+y=6-5/d, between-1/9 and1/6, inside the full root/core connection.
+The ascending passage x1 occurs at y=7/d-8, between1/6 and5/9:
+it stays below the vertical notch wall beginning at(1,1).
+The right-wall hit satisfies2<9/d-8<3 and the roof hit
+2<12-11d<3. Thus all seven hits are strict and the connecting segments
+stay in the stated occupied triangles. d5/6 is strictly inside this branch.
+The interval describes the itinerary; only its d5/6 member reaches T.
+
+3. Arbitrary ordinary caps cannot invalidate this path
+Independent guard recomputation yields the same required and forbidden
+triangles as the peer. All required triangles belong to H, L, the given
+single leaf, and B+. E-/T- need not themselves be used by the path:
+their presence prevents the opposite ordinary caps E+/T+.
+Among the ENTIRE ordinary-cap alphabet, forbidden tiles are exactly
+B-,E+,T+. Slot exclusivity with B+,E-,T- excludes all three.
+The three other forbidden triangles are two different remote sectors,
+absent because the sole remote leaf is exactly sector6, and an outer
+B triangle, absent because B is an ordinary single cap.
+No other ordinary cap can erase a needed mirror or add an earlier wall.
+This establishes the family implication without enumerating cap assignments.
+
+Unconditional ordinary-cap subfamily corollary, at most seven reflections:
+The same fixed root/leaf room illuminates even WITHOUT assuming B+/E-/T-.
+If B+ is absent use the old one-path; if E- is absent use one_sigma.
+Otherwise B+,E- are present. If T- is absent use the old four-path:
+B-/outer-B are absent because B is an ordinary B+ single cap. If T- is
+present use the seven-path above. The three short paths' full guards have
+been recomputed and their forbidden tiles are disjoint from this fixed
+root/leaf. The maximum of1,1,4,7 is7. This closes the ENTIRE ordinary-cap
+subfamily at this root/leaf orientation, without a W/k bound. It does not
+classify other orientations in row(2,1,0,1).
+
+4. Check provenance and scope
+seven-return-check.py reconstructs the analytic fractions independently
+and recomputes guards using the established lower-bound guard checker.
+That guard implementation is REUSED, not a newly independent implementation.
+All source hashes are in seven-return-check.json. The independent hand
+wall/portal/endpoint analysis is sections1–3 of this note.
+
+This does not prove that B+,E-,T- are forced in every remaining room,
+or that this root/leaf orientation covers the other orientations. An
+additional local unit fan may include one of the three forbidden cap
+triangles or the outer B triangle. Such interacting fans require another
+argument; no entire remote charge row is claimed closed here.
+
+5. Extra unit fan: exact threats for this fixed root/leaf orientation
+For row(2,1,1,0), keep the same full-H/north L root and right single leaf.
+There is one extra local e1 fan in a DIFFERENT K cell. Exclude the N bridge
+first by the direct S/T segment. The established local table then has19
+possible two-sector fans in the six remaining cells. This is a local fan
+alphabet, not19 assembled rooms. Twelve do not meet ANY forbidden tile
+of the seven path. The seven threats are:
+ B=(0,-2): starts0,1,2;
+ E=(4,2): starts2,3;
+ Tcap=(2,4): starts5,6.
+All starts have length2. No other local site can remove a seven-path mirror.
+
+Three threats already illuminate:
+ - B start2 omits B+, so the established one-reflection path works.
+ - E start2 omits E-, so the reflected one-reflection path works.
+ - Tcap start6 omits T-. B is then ordinary. If B+ is absent the one
+   path works; if present the established four-reflection path works.
+   Its forbidden B-/outer-B tiles are absent by the ordinary B slot,
+   and its only remaining forbidden tile is precisely the absent T-.
+These paths stay in H plus B+ when required; this root/leaf cannot affect them.
+
+The centered B start1 is impossible when b0. At vertex(-1,-1), H contributes
+90 degrees, the root's sector7 contributes45, and B's sector2 contributes45.
+They form a contiguous180-degree fan, a new smooth B. The fourth incident
+A cell is(-2,-2), which would be a second remote cell and is absent.
+No ordinary cap from another K cell reaches this vertex. Hence b>=1,
+contrary to row(2,1,1,0). This is a structural exclusion, not illumination.
+
+For the twelve nonthreatening fans, B+ and E- are forced in any still-dark
+room by the two one-paths. If B is ordinary, the four-path forces T-;
+if the fan is at E or Tcap, its nonthreatening orientation already contains
+E- or T-, respectively. Thus the seven-path's required tiles are present,
+and no forbidden tile is introduced. Every ordinary cap in another slot
+still obeys the B+/E-/T- exclusions. All twelve types therefore illuminate.
+
+ONLY THREE local-fan interactions remain for this fixed orientation:
+ - B start0 (sectors0,1): erases the FIRST bottom-cap diagonal mirror.
+ - E start3 (sectors3,4): erases the upper-right vertical mirror.
+ - Tcap start5 (sectors5,6): erases the final roof mirror.
+Their ordinary-cap choices and realizability under the budget still need
+the peer's global argument. No claim is made that all three occur, that
+they are dark, or that these are the only cases across other root/leaf
+orientations. The result identifies the exact missing optical implications.

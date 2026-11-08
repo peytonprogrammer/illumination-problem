@@ -1,0 +1,151 @@
+# Independent review: Sections 29–30
+
+## Verdict
+
+**Section 29: correct**, given its stated hypotheses. Every finite claim checks:
+
+- the truncation;
+- the at-most-twice bound;
+- the parity split;
+- C ≤ 1 and B ≤ 2;
+- the n-counting;
+- the 1π/3π/7π/9π table.
+
+**Section 30: valid as a conditional extension.** One step needs an explicit statement: the quadrant selection needs **inverse** shear powers. With positive powers only, a positive horizontal power drives sign(x) to sign(a·y), and that can lock the quadrant. Inverses are harmless: if φ fixes all labels and prongs and satisfies φ\*δ = δ, then so does φ⁻¹. The two-visit opening lemma holds; a proof is in §5 below.
+
+I found no hidden gap beyond the obligations the text already names: portal avoidance, and that existence is not proved.
+
+## 1. Truncation and the ≤2 bound (any D4-direction room)
+
+**Setup.** A non-wall-parallel direction has a D4 orbit of size 8. Exactly four of the eight velocities are inward at any smooth axis or diagonal point.
+
+**K_q is a free involution on inward states.** A fixed point would need Rv = −v, which means v is normal to the wall. Every normal is itself a wall direction, so it is excluded.
+
+**Same state twice.** If the state at time t₂ equals the state at t₁, the motion is periodic with period t₂−t₁. A first T at time t₃ > t₂ would then also occur at t₃−(t₂−t₁) < t₃, contradicting "first T." ✓
+
+**K-partner state.** If the second incoming velocity is v′ = −Rv, the outgoing velocity is Rv′ = −v. The path then retraces [0, t₁] backwards. That stretch contains no T and no corners, so the path reaches S at time t₂+t₁, which is before T. This contradicts "last S." ✓
+
+## 2. C ≤ 1, B ≤ 2, and the parity split
+
+**Lattice hits.**
+- Linear parts lie in D4 and translations lie in (2ℤ)², so A points map to A points. Hence the S-to-T vector is 2nw with w primitive.
+- Images of q are integer points. Because w is primitive, the hits are exactly S + kw.
+- Odd k gives parity(w), never A.
+
+**Subtype argument.** All hits of a C point have the subtype of w. Since g(q) ≡ Mq mod 2, every hit copy has the same swap bit.
+- It does not matter whether the pre- or post-reflection copy is used. At an axis wall, M and MR have the same swap bit.
+
+**One K pair.** At a vertical wall, the inward states with a fixed assignment (|v_x|, |v_y|) are (a, ±b). Since −R(a, b) = (a, −b), these two states form exactly one K pair. Hence **C ≤ 1**. ✓
+
+**C points avoid diagonal walls.** A diagonal wall with even offset has x ± y even, while every C point has x + y odd. ✓
+
+**Applying this in P⁻.**
+- P⁻ has no interior B/C points: the leaf triangle has no interior lattice points.
+- Odd steps k = 1, 3, …, 2n−1 number n, and there is always at least one.
+- Therefore n = 1 for C₀, and n ≤ 2 for B₀, with hits at w and 3w. ✓
+- In the two-hit case the states must come from different K pairs, so the coordinate assignments are swapped. ✓
+
+**Not checked.** The I=2 / Z=0 remark depends on earlier sections not shown here. The only part checkable here is that 2w ∉ {S, T}, which holds.
+
+## 3. One-hit events (§29.1)
+
+**Which side the sector lies on.** Take incoming velocity (p, q) with p > 0 at a smooth vertical point. The right side of the developed line always contains (0, −1), since det(w, (0, −1)) = −p < 0.
+- So the π-sector on the lower (flank) side is the right side.
+- At B₀ that side is the actual wall below B.
+- At C₀ the flank lies above, so the sector is on the left side.
+
+Neither sector touches D or H. ✓
+
+**Q = −2Lu.**
+- V fixes B(t) for every t, because B(t) stays on x = 1. So the incoming and outgoing lifts of the corner coincide, and δ(γ) = 0.
+- δ(γ₁) = M₁u, which gives Q = −2M₁u.
+- R_V·u = u, so the choice of sheet at the hit does not matter. ✓
+
+**The row is nonzero.** det(w, axis vector) ≠ 0 because both components of w are nonzero. ✓
+
+**Elementary one-sided opening.** This is correct: B(t) = (1, 1−t) moves up for t < 0, and C(t) moves down for t > 0. All other contacts have positive clearance from the closed portal. ✓
+
+## 4. Shortcut table: recomputed independently
+
+**Sheet structure.** Sheet k covers cone angle [π/4 + 5πk/4, π/4 + 5π(k+1)/4], with labels I, V, VD, VDV, −I, −V, (VD)³, (VD)³V. I confirmed this:
+- VD is rotation by π/2.
+- Even sheets preserve orientation, running from the D edge to the flank edge.
+- Odd sheets reverse orientation.
+
+**Locating the second visit.**
+- The developed direction is constant, w = (p, q).
+- The second copy satisfies M₂(|q|, εp) = (p, q), so M₂ = [[0, ε], [sgn q, 0]].
+- The second backward ray sits at Θ₂ = β₁ + 2πm inside sheet k₂, where β₁ = arg(−p, −q).
+- The flank-side outgoing ray is at Θ₂ + π for even k₂ and Θ₂ − π for odd k₂.
+
+| (sgn q, ε) | M₂ | sheet | Θ₂ − β₁ | outgoing − β₁ | smaller arc |
+|---|---|---|---|---|---|
+| (+,+) | (VD)³V | 7 | 8π | 7π | 3π |
+| (+,−) | VD | 2 | 2π | 3π | 3π |
+| (−,+) | (VD)³ | 6 | 8π | 9π | **π** |
+| (−,−) | VDV | 3 | 4π | 3π | 3π |
+
+This matches the text.
+
+**The (−,+) case.** The π-arc runs from β₁ − π (in sheet 7) to β₁ and crosses the sheet-0 start edge, which is the D seam. ✓
+
+A physical cross-check also passes. Rotate from the backward ray to π/4, reflect in D, and continue: the final direction is π/2 + atan(|q|/p). That equals arg(−|q|, p), the actual outgoing direction. ✓
+
+**The (−,+) load.** R_{D_t} has translation (t, −t), so a_D = (1, −1). Then δ(E′) = (1, −1) − 2(0, −1) = (1, 1). The row is det(w, (1, 1)) = p − q, which is nonzero because |p| ≠ |q|. ✓
+
+## 5. Section 30 audit
+
+**Classes.** Both E₁ = γ − 4γ₁ and E₃ = 3γ − 4γ₃ have zero holonomy at t = 0.
+- δ(γ) = 0, because both folds are V and V fixes B(t) for all t.
+- δ(E₁) = −4u = (0, 4).
+- δ(E₃) = −4M₂u = (4ε, 0).
+
+These are orthogonal and nonzero. ✓
+
+**The two-visit opening lemma (valid).** Periods are affine in t.
+
+1. The lift-j offset of B from the line S→hol γ is proportional to −det(hol γ, hol E_j). This equals −t·det(4Aw, δE_j) exactly, because δγ = 0 makes hol γ constant.
+2. At each contact, the π-side is a flat half-disk in the cone. If B lies strictly on the non-π side, the developed straight segment lies in the developed image of that half-disk. So it is an honest straight segment of X_t near that contact.
+3. The two contacts occur at separated times. Their rays are distinct: the incoming rays are in sheet 0 and sheet k₂ ∈ {2, 3, 6, 7}, and the visit-1 outgoing ray is in sheet 1.
+4. Everything else, including A₂ and the other corners, has positive clearance.
+
+So strict first-order inequalities at both visits suffice. The same argument works for any finite number of visits.
+
+**Transfer.**
+- φ preserves orientation and fixes B, S, T and the prongs. So φ maps π-sectors to π-sectors with the same left/right sign σ_j, and introduces no new corner, S or T contacts.
+- φ\*δ = δ gives δ(φ_*E_j) = δ(E_j).
+- The image's physical copy sectors may change. That is irrelevant, because the rows are intrinsic.
+
+**Quadrant selection.**
+- Apply H^k to make sgn x′ the desired sign; this needs y ≠ 0 and the right sign of k.
+- Then apply V^m, which leaves x′ fixed, to make sgn y″ the desired sign; this needs x′ ≠ 0.
+- Taking |m| large avoids |x″| = |y″|.
+- This requires both signs of exponents (see the verdict).
+
+**Sign sanity check: consistent.** For the untransformed path, both visits open at t < 0, matching the elementary portal argument:
+- Visit 1: the π-sector is on the right, and for t < 0 the lift moves to the left.
+- Visit 2: the same holds in its copy.
+
+Hence t > 0 opening requires both rows flipped, which concretely means **Aw in the open quadrant of −w** (non-diagonal). The t < 0 side needs no shear at all.
+
+## 6. What Section 30 proves, and what it does not
+
+**Proves.** Assume:
+- P⁻ has a supplied, portal-avoiding, reduced, corner-free S→T connection in a non-wall-parallel direction;
+- the Section 5 axis-shear facts hold (labels and prongs fixed, φ\*δ = δ on all relative classes).
+
+Then S illuminates T in P_t for all 0 < |t| < ε. In each case:
+- **C₀:** a one-corner event on the flank.
+- **B₀, single hit:** a one-corner event on the flank.
+- **B₀, two hits, (−,+):** a one-corner event via the D-seam shortcut.
+- **B₀, two hits, other three cases:** a two-corner certificate. Both sides use affine images; t < 0 can also use the elementary argument.
+
+Here ε depends on the chosen images.
+
+**Does not prove.**
+- That such a connection exists.
+- Portal avoidance; affine maps of P⁻ cannot supply it.
+- A one-corner event in the (+,+), (+,−) and (−,−) cases.
+- Anything global in t.
+
+The original one-corner goal stays open.

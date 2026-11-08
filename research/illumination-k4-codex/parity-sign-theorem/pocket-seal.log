@@ -1,0 +1,117 @@
+{
+  "status": "EXACT_SEALED_STATE_AND_CONE_ALGEBRA_PASS",
+  "cone_table": [
+    {
+      "first_y_sign": "+",
+      "second_y_sign": "+",
+      "directed_pi": "7",
+      "minimum_pi": "3"
+    },
+    {
+      "first_y_sign": "+",
+      "second_y_sign": "-",
+      "directed_pi": "3",
+      "minimum_pi": "3"
+    },
+    {
+      "first_y_sign": "-",
+      "second_y_sign": "+",
+      "directed_pi": "9",
+      "minimum_pi": "1"
+    },
+    {
+      "first_y_sign": "-",
+      "second_y_sign": "-",
+      "directed_pi": "3",
+      "minimum_pi": "3"
+    }
+  ],
+  "multiple_corner_algebra": [
+    {
+      "j": 1,
+      "target_derivative": [
+        5,
+        -2
+      ],
+      "corner_derivative": [
+        1,
+        2
+      ],
+      "defect": [
+        1,
+        -10
+      ],
+      "area_linear_coefficient": 31
+    },
+    {
+      "j": 3,
+      "target_derivative": [
+        5,
+        -2
+      ],
+      "corner_derivative": [
+        -3,
+        4
+      ],
+      "defect": [
+        27,
+        -22
+      ],
+      "area_linear_coefficient": 93
+    }
+  ],
+  "prescribed_quadrant_controls": [
+    {
+      "desired_signs": [
+        1,
+        1
+      ],
+      "horizontal_power": 5,
+      "vertical_power": 15,
+      "result": [
+        13,
+        781
+      ]
+    },
+    {
+      "desired_signs": [
+        1,
+        -1
+      ],
+      "horizontal_power": 5,
+      "vertical_power": -15,
+      "result": [
+        13,
+        -779
+      ]
+    },
+    {
+      "desired_signs": [
+        -1,
+        1
+      ],
+      "horizontal_power": -5,
+      "vertical_power": -9,
+      "result": [
+        -7,
+        253
+      ]
+    },
+    {
+      "desired_signs": [
+        -1,
+        -1
+      ],
+      "horizontal_power": -5,
+      "vertical_power": 9,
+      "result": [
+        -7,
+        -251
+      ]
+    }
+  ],
+  "scope": "Five prescribed D4/parity arrival-state sets, four exact cone-index cases, two determinant identities, and four prescribed shear-quadrant controls only. No billiard tracing, ray, room, direction, word, cylinder or origami discovery.",
+  "portal_avoiding_connection_exists": null,
+  "portal_avoiding_existence_status": "NOT_PROVED_OR_DISPROVED",
+  "universal_one_corner_event_proved": false
+}

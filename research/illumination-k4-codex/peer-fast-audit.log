@@ -1,0 +1,199 @@
+{
+  "status": "PARTIAL_AUDIT_PASS_WITH_LIMITATIONS",
+  "scope": "Read-only independent audit; no rays or orbit generation.",
+  "candidate_counts": {
+    "walls": 22,
+    "interior_A": 2,
+    "interior_nonA": 0,
+    "smooth_boundary_nonA": 4,
+    "charge": 12,
+    "defect_credit": 4,
+    "triangles": 30,
+    "used_A_cells": 7
+  },
+  "placement_check": {
+    "status": "PASS",
+    "count": 20,
+    "placements": [
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        12,
+        0
+      ],
+      [
+        12,
+        2
+      ]
+    ],
+    "dual_triangles_visited": 864,
+    "maximum_dual_distance": 23,
+    "window_coordinate_bound_n38": "64/3",
+    "note": "Infinite tiling BFS matches saved 20 placements. Independently, every vertex of any <=38-tile room with a full root star has |x|,|y|<=64/3, inside the fast window [-24,24]."
+  },
+  "local_patterns_checked": 528,
+  "bookkeeping": {
+    "transitions": 10000,
+    "learned_clauses": 435,
+    "all_checks_pass": true,
+    "scope": "Exact peer certificate bookkeeping functions with unrelated vertex updates disabled; not an audit of the full undo trail."
+  },
+  "saved_room_equivalence": [
+    {
+      "k": 2,
+      "walls": 20,
+      "identical_rooms": 224
+    },
+    {
+      "k": 3,
+      "walls": 18,
+      "identical_rooms": 260
+    },
+    {
+      "k": 4,
+      "walls": 18,
+      "identical_rooms": 1356
+    }
+  ],
+  "probe_robustness": {
+    "status": "REPRODUCED_ASSERTION",
+    "point": [
+      "0",
+      "1/1000"
+    ],
+    "impact": "Fixed-epsilon probing can fail at a valid rational edge point. This is a completeness/runtime issue, not by itself an unsound emitted certificate."
+  },
+  "cached_certificates": [
+    {
+      "file": "certs-2_0.json",
+      "count": 1829,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-2_2.json",
+      "count": 1989,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-4_0.json",
+      "count": 1969,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-4_2.json",
+      "count": 2057,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-4_4.json",
+      "count": 1857,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-6_0.json",
+      "count": 1963,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-6_2.json",
+      "count": 2007,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-6_4.json",
+      "count": 1992,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-6_6.json",
+      "count": 1747,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    },
+    {
+      "file": "certs-8_0.json",
+      "count": 1745,
+      "status": "DISJOINTNESS_ONLY",
+      "limitation": "Cached U/Z entries do not contain paths or source hashes; per-entry proof replay requested from peer."
+    }
+  ],
+  "darkness_status": "PENDING independent verification of a complete finite closed-orbit certificate"
+}

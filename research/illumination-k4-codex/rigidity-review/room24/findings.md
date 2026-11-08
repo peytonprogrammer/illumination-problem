@@ -1,0 +1,15 @@
+# Independent24-wall rigidity review
+
+[done] ACCEPT the local rigidity certificate for this fixed mixed-angle shape, up to translations and positive uniform scaling. This extends the independent replay beyond the orthogonal22-wall example; no global minimum follows.
+
+The independently extracted24-wall boundary uses all eight canonical directions. Two anchor coordinates,24 positive edge parameters and four mark coordinates give30 variables. Two independent closure equations leave28 dimensions. All168 supplied signed functionals have rank25 on closure; their common kernel is precisely the three-dimensional translation/uniform-scaling subspace. All168 supplied coefficients are strictly positive and their weighted sum vanishes on closure. `check.json` records exact Fraction-arithmetic checks.
+
+The initially missing event metadata is now frozen in `inputs/events-room-illumination-search-simple-unrestricted-R12.json` and hashed in `manifest.json`. `replay.py` uses only the149 supplied directions, resolving their298 sides with independent exact infinitesimal geometry and2x2 wall-reflection matrices. It reconstructs168 distinct one-corner events, matching every supplied oriented gradient up to a positive scalar. It also matches each event's corner, initial direction and unfolded target. The other130 sides stop at a second corner. No extra direction is tested.
+
+`validate.py` verifies all168 event-specific descending deformations using their exact prescribed wall words. Four independent deterministic perturbations give671 further non-tangent predictions:333 valid connecting words and338 invalid words, with no disagreement; one tangent prediction is skipped. Every perturbed polygon is checked for closure, positive edge parameters, strict simplicity and interior marks. No alternate event is credited when a particular word fails. Invalidity of a word is not room darkness.
+
+The normalized-slice proof in the parent `findings.md` applies with3 symmetries and a25-dimensional transverse slice: restore the first vertex and one positive edge length using translation/uniform scaling; positive span supplies a strict linear negative margin, and the finite quadratic event remainders plus open ordinary-contact conditions give a common neighborhood. The one-sided corner continuations are reconstructed in the source plane, including the sign changes induced by diagonal reflections. The original room's established darkness supplies the reverse inclusion of the similarity orbit.
+
+Files: `check.py/json/log`, `replay.py/json/log`, `events.json`, `validate.py/json/log`, frozen inputs and manifest. Run each Python script with `-B` in a separate output copy. No peer executable or source was read/imported; the code reuses Codex's own exact arithmetic and geometry routines. No new rooms or primitive directions were discovered.
+
+This accepts a local statement for the supplied room, arbitrary sufficiently small real parameter changes, and the fixed canonical edge directions. It gives no explicit radius, no global rigidity classification, no sub22 exclusion, and no historical-priority conclusion.

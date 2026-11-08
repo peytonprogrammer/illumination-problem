@@ -1,0 +1,122 @@
+Independent mathematical review, no tools or discovery. Check this NEW deduction, do not simply agree. We inherit a previously independently verified computer-assisted theorem: every strictly simple finite union of canonical45-45-90 triangles with distinct interior even-even A marks, <=3 transparent B/C points, and <=23 walls illuminates its actual marked pair. Prior theorem carries finite-reduction/exact-guard/CP-SAT qualifications; no formal UNSAT certificate. Do not reprove or expand that computational theorem.
+
+Canonical tiling: A even-even, B odd-odd, C mixed. Every unit square split along its A-B diagonal. A raw room is a strictly simple finite union with no interior B/C and no smooth boundary B/C. Mirror lines x=k,y=k,x+-y=2m have even reflection translations. Two arbitrary distinct interior A marks S,T; may be other full A fans. Literal straight-attached leaf pocket B=(1,1),A=(2,2),C=(1,2) with open portal x=1,1<y<2. Actual vertical flanks immediately below B and above C both x=1. Physical pocket angles B225,A45,C270. It is a single canonical triangle, a leaf in the fan tree formed by cutting interior BC edges. Deleting it leaves a connected simple disk. We want a one-corner event detecting its vertical slide, but that goal remains open.
+
+Review the corollary below and its wall-parallel exclusion. In the reduced sealed connection stop at first T and start at last preceding S. If a smooth-wall incoming state repeats, it is periodic; if a later incoming state is -R times an earlier one, outgoing path reverses the earlier source history, contradicting truncation. This is available for diagonal states as well as genericD4 states; normal incidence is handled separately by retracing. Any full developed S/T vector is2n w with primitiveintegerw because both endpoints and mirror translations are even. Every odd integer step must land at a transparent B/C point in the sealed room, hence at B or C only.
+
+Explicitly decide: exact k=2,Wcore=Wraw-3, geometric eligibility, actual-pair implication for Wraw<=26, axis exclusion, diagonal exclusion and the raw full-star contradiction. Identify any hidden assumption. This does NOT claim open-portal avoidance or solve the universal one-corner goal. Also check local nonpersistence and the DHD substitution calculation in29.2 if useful. Return accept/correct/refute with a concise proof.
+
+### 29.2 Why an open-seal reflection cannot persist locally
+
+This is a local obstruction to using an arbitrary sealed connection as
+an opening certificate; it is not an obstruction to a different connection.
+Let q be a point of the OPEN segment B_0C_0. It is an interior point of P,
+so a closed disk of some radius r>0 about q lies in the interior of P.
+After reducing r and the slide interval, the same disk lies in every P_t.
+A transverse reflection at q in P^- changes a nonzero normal component
+of the velocity. Its two germs therefore form a genuine kink.
+
+No sequence of unit-speed ordinary billiard paths in P_t can converge
+locally uniformly, with the reflection time fixed, to this kink as t->0.
+On a short time interval about that time, uniform convergence would keep
+the approximating paths inside the common free disk. They have no wall
+hit there and hence are straight affine functions of time. Their uniform
+limit is also straight, contradicting the kink. This rules out local
+persistence even if a different reflection word is proposed nearby. It
+does not rule out unrelated P_t connections elsewhere in phase space.
+
+The already prescribed DHD pocket return does not implement the sealed
+mirror. In global coordinates,
+
+    V_seal(x,y)=(2-x,y),
+    (D_t H_t D_t)(x,y)=(4-x,y),
+    (D_t H_t D_t)-V_seal=(2,0).
+
+For an entry at (1,y) with velocity proportional to (1,m) in the DHD
+return branch at t=0, its exit is (1,y+2m) with reflected velocity proportional
+to(-1,m). The branch requires 1<y+2m<2, together with the exclusions in
+Section2. A sealed reflection instead turns at the original (1,y).
+Thus replacing the sealed mirror with the unchanged-return branch
+introduces both a travel interval and a tangential displacement.
+
+More generally, take a supplied fixed sealed word with r open-seal
+reflections. FORMALLY replace each such factor by DHD, assuming nothing
+about geometric realization. Their linear parts agree. If L_j is the
+product of linear parts preceding that sealed factor in the development,
+the target image changes by exactly
+
+    Delta V = 2 sum_(j=1)^r L_j (1,0).
+
+This is ordinary composition of affine maps with identical linear parts.
+The final D4 copy label is unchanged because the linear parts agree;
+the developed target lift can nevertheless shift by this absolute period.
+Even if the sum vanishes, legal branch inequalities and absence of new
+corner hits still need proof. An even integral shift does not make the
+old straight segment reach that new developed endpoint. This
+calculation explains why a formal return-map substitution cannot remove
+portal avoidance from Sections29-30.
+
+### 29.3 Bounded-wall sealed-core existence from the prior k<=3 result
+
+**New corollary of an inherited computer-assisted theorem; geometry
+independently rederived here, peer verification requested.** The report
+`../../three-triples/three-exception-complete.md` and its composition JSON
+state that a strictly simple canonical room with distinct interior A
+marks and at most3transparent B/C exceptions is illuminated whenever
+W<=23. This is the earlier computer-assisted family result, with its
+stated finite-reduction, exact-guard and CP-SAT qualifications; it is not
+a new computer search or a new analytic proof of that theorem.
+
+Deleting this literal pocket removes exactly ONE canonical triangle.
+The fan tree regards it as a leaf, so its deletion leaves a connected
+strictly simple disk, with S,T still interior. At B_0 the boundary angle
+changes from225to180degrees; at C_0 it changes from270to180degrees.
+The45degree A_0 vertex disappears. All other B/C points keep their
+original nonsmooth boundary status. Thus the sealed core has exactly
+TWO transparent B/C points, both smooth boundary points; it has no
+interior B/C points.
+
+The original local boundary has four maximal wall pieces: the lower
+vertical flank, D, H, and the upper vertical flank. In the sealed room
+these become one straight vertical wall. Their far endpoints and all
+other corners are unchanged, so
+
+    W(P^-)=W(P)-3,       k(P^-)=2.
+
+Consequently, if W(P)<=26, the inherited k<=3 exclusion supplies an
+ordinary actual S-to-T connection in P^-. This conclusion is about the
+specified pair; it does not substitute an arbitrary A point. There is
+no restriction to exactly two full A fans.
+
+For applying Section29, its direction can also be shown NOT wall-parallel.
+This last claim has an elementary proof independent of the computer bound:
+
+* Axis directions: their primitive vector is a coordinate unit vector.
+  Every odd developed lattice step must hit the only transparent C point,
+  C_0. A legal axis hit on its vertical smooth wall is normal, and reverses
+  the entire preceding path. It cannot connect distinct S and T after
+  truncation at first T and last S. A tangential wall approach from the
+  interior is impossible without an earlier corner.
+* Diagonal directions: the D4 orbit consists of four diagonal velocities.
+  At smooth vertical B_0 the two incoming states form a single K-pair, so
+  the reduced path visits B_0 at most once by the Section29 reversibility
+  argument. Every odd developed lattice step is B; hence its full vector
+  must be2w with w=(+/-1,+/-1). Each primitive half has no reflection in
+  its open interior. Indeed a unit diagonal between integer vertices
+  crosses no integer axis mirror in its interior, and it meets no
+  transverse canonical even-offset diagonal mirror there. A parallel
+  mirror glide cannot start at an interior mark. Thus the two physical
+  halves are direct diagonals meeting the vertical wall at B_0.
+  Since the core lies to the left of that wall near B_0, the source and
+  target would be (0,0) and(0,2), in either order. Their two full A stars
+  jointly contain a neighborhood of C=(0,1), making this C an interior
+  point of the original room, contrary to rawness.
+
+Therefore every supplied reduced core connection in this bounded range
+falls into the NON-wall-parallel B/C dichotomy of Section29. This removes
+the existence obligation for W(P)<=26, using prior computational evidence.
+The separate OPEN-PORTAL avoidance obligation remains entirely unproved.
+For W(P)>=27 even core illumination remains an additional question.
+This corollary neither proves the universal goal nor supplies a one-corner
+certificate in the two-B 3pi cases.
+

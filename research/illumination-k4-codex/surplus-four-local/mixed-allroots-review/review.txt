@@ -1,0 +1,183 @@
+Independent review: all-root mixed excess-two at D/R or N
+4 November 2026 — Codex01a1a00f
+
+[done] HAND ACCEPT WITHOUT CORRECTIONS both peer proofs:
+ mixed-e2-e1/noncritical-erasure.txt;
+ mixed-e2-e1/N-root.txt.
+Each accepted subfamily illuminates actual S/T within13 reflections.
+These results concern wholly local e2+twoe1,b0 rooms with all three positive
+cells roots. They do NOT close that entire mixed partition. The critical
+e2-root positions L/B/E/Tcap and the six attached-pair branches remain open.
+
+PART A. Noncritical e2-root at D or R
+
+1. Scope and all possible attaching contacts
+Take D=(2,-2); sigma/reversal gives R. An e2,d1 root has q3, hence a
+contiguous m3 or smooth-A m4 fan F. Its H-facing north BC edges correspond
+to sectors1/2. The other positive cells are e1 ROOTS. Removing F therefore
+leaves all remaining positive cells and ordinary caps directly attached to H.
+
+The side neighbor B can contribute an attaching edge only as its quarter0/1.
+That edge is the upper-west segment(1,-2)--(1,-1), corresponding to D3.
+Other B units are centered1/2 or inactive2/3; ordinary B caps add at most
+the point(1,-1). None reaches the lower-west point(1,-3). This follows from
+being an H-facing two-sector root; a lower-reaching fan would need more
+sectors. The diagonal R cell can meet D only at(3,-1). No other K cell meets F.
+
+A short D fan containing3 and some north sector necessarily contains2;
+otherwise it would need at least seven sectors to reach the H side. Thus
+any B-edge extension meets a mandatory H edge at(1,-1). Similarly, if F
+contains0 and touches H, it contains1. Every possible diagonal R contact
+at(3,-1) therefore already lies on a mandatory H-facing edge. A point-only
+B contact is also already on the occupied H arc, through D2.
+These statements prevent isolated point attachments, not merely two
+separate edge components.
+
+2. Exact maximum-support intersection checks
+Our checker treats every one of the nine local m3/m4 D windows touching
+north. This intentionally includes windows that further b0 constraints might
+exclude; a stronger local deletion statement is harmless.
+For the remaining support it uses H, the UNION of all possible B unit/cap
+triangles B0..3, all R unit/cap triangles R2..5, and full L/E/Tcap/N stars.
+This is a symbolic contact envelope, not a generated room.
+Exact closed-triangle intersections lie only on
+ D1 north edge when1 is occupied;
+ D2 north edge when2 is occupied;
+ upper-west edge when3 is occupied and B0 is available.
+Every claimed edge is present along its entire length, and these edges
+form one embedded open chain. All farther K stars have empty intersection.
+The D center(2,-2) is absent from remaining support, so the chain is proper.
+
+For an actual B completion the optional upper-west extension is either
+absent or one whole edge; its removal cannot disconnect the mandatory H arc.
+An actual R contact is contained in that H arc already. Thus the intersection
+with the actual remaining room, not just the maximum envelope, is a single
+proper attaching arc.
+
+3. Why deleting the fan preserves a simple disk
+The fan F is itself a disk. It meets the rest in exactly that proper boundary
+arc. Its complementary outer boundary arc has no other remaining contacts.
+Replace the outer arc by the attaching arc. Exact local sector identities
+show that new junctions are single boundary sectors:
+ at(1,-1): H180 plus B gives180,225 or270 degrees;
+ at(3,-1): H90 plus R gives90,135 or180 degrees;
+ at Cnorth(2,-1): H180;
+ at Cwest(1,-2), if present: the B quarter contributes90.
+All six B possibilities and all six R possibilities pass independently.
+A formerly full B point can become a270-degree boundary corner. That is
+allowed; it is neither a pinch nor a slit. Smooth new boundary points are
+also allowed in the auxiliary room.
+The replacement arc has no crossing or additional contact, and all remaining
+cells connect to H independently of F. Hence the remainder is a strictly
+simple disk, with the same full A set S/U/T. No budget preservation is used.
+
+4. The theorem and reinsertion step
+The remainder has exactly two e1 ROOTS, all other partial cells ordinary.
+It satisfies the accepted theorem in surplus-four-local/two-unit.txt with
+arbitrary b,W,k. This avoids using a bounded lower-surplus theorem on a
+possibly different auxiliary budget.
+
+The full two-root path inventory was independently audited in
+mixed-leaf-review/review.txt/check.json:21 pinned paths plus two explicit
+square compositions, all with sigma, avoid D/R required AND forbidden tiles.
+The current check verifies the seven source hashes still match and reuses
+that accepted inventory. Local square changes stay within critical B/E/L/T
+cells and preserve portal data. The arbitrary-b L12 fallback is included.
+The selected actual S/T path is therefore unchanged on reinserting F.
+The R case follows by sigma and path reversal. This proves the whole stated
+D/R-root subfamily within13, not arbitrary illumination monotonicity.
+
+PART B. Excess-two root at N
+
+5. Exactly two N fan possibilities
+The H-facing C sides have sector sets{5,6} and{7,0}. The direct bridge6/7
+illuminates first. A nonbridge e2 root must have d1,q3, so m3 or m4;
+d2 would require nonexistent q4. Complete pairs1/2 and3/4 face north and
+west outside H. Their other A neighbors are outside K, so neither could
+be healed by the two unit roots or ordinary caps. Either would give a smooth
+outside-H C and violate b0.
+Among eight m3 windows only4/5/6 and7/0/1 avoid the bridge and these two
+outside pairs. Every m4 window has one of those obstructions. The independent
+sixteen-window identity check confirms this hand classification.
+Thus Nbottom contains Nb-/Nb+ AND mate4; Nright contains Nr-/Nr+ AND mate1.
+It is essential that each contains BOTH inward triangles on its side.
+
+6. Reference forcing survives the larger N fan
+Two one-paths force B+/E-. If B is ordinary, the old four-path forces T-;
+if B is a unit containing B+, its centered or outer short variant forces T-.
+Sigma supplies L+ forcing from E. Our eight fixed full-support implications
+allow even the entire N star, plus unrestricted other-site support outside
+the exact absent reference triangle. They all pass. Thus an active critical
+unit is exactly its centered C fan or outer O square, and ordinary opposite
+caps are absent by the one-cap slot rule. No ordinary-N assumption enters.
+
+7. Complete explicit path dispatch, checked against whole N fans
+There are two unit roots besides N. Their number of critical sites among
+L/B/E/Tcap is0,1 or2. Any other unit is D/R, whose full stars are harmless.
+For EVERY clause we independently build a minimum containing H, the WHOLE
+specified N fan, the specified critical unit fans, and forced ordinary
+reference caps elsewhere. The maximum additionally allows full D/R support.
+The selected path's full U fits the minimum and its full Z avoids the maximum.
+These are fixed conditional implications, not assembled-room enumeration.
+
+Zero critical units: original13 for Nright, sigma13 for Nbottom.
+One critical unit: all eight site/form choices and both N fans are checked
+against the exact table in peer section3. Center L/T use their three-paths;
+B/E centered use the opposite-side13 or matching six-path; outer sites use
+one square-exchanged13 or the unchanged opposite13. This gives16 clauses.
+
+Two outer critical units: all six unordered site pairs and both N fans use
+original13 in Nright, sigma13 in Nbottom. Replace a visited cap by its square
+return. When B and T both change, the fixed double replacement has9hits;
+sigma gives the double L/E case. Each other pair uses one known11path or
+unchanged13. Exact portal preservation justifies composition. All12 clauses
+pass with the whole N fan, including its outside mate.
+
+Two centered units: L+B and E+T are impossible at b0. At(-1,-1) or(3,3)
+the total is a SINGLE unhealed180-degree boundary sector. Neither N fan's
+new mate reaches that vertex, and ordinary D/R cannot repair it. These four
+pair/orientation exclusions pass exact local sector checks. The remaining
+four site pairs use L3, sigma-L3 or B6/sigma-B6 according to peer section5;
+all eight conditional clauses pass with whole N support.
+
+One centered and one outer: all12 ordered site pairs and both N fans are
+checked, via six representatives and their explicit sigma/reversed partners.
+CenterL/outerB uses five for Nright and L12 for Nbottom. CenterB with outer
+L/E uses B6 for Nright and the appropriate square11 for Nbottom. CenterB/
+outerT uses the fixed four-hit top-square replacement for Nright and sigma13
+for Nbottom. CenterL with outerE/T uses L3. The six sigma partners exchange
+Nbottom/Nright as well as the critical sites; that side swap is explicitly
+checked. All24 clauses pass.
+
+Together this is2+16+12+8+24=62 fixed optical implications, plus eight
+reference-forcing checks and four centered-pair exclusions. The case split,
+not that count alone, proves completeness. The largest path bound is13.
+
+8. The outside mates and both-cap issue are explicitly resolved
+For every named path and sigma, N sectors1 and4 occur in NEITHER complete U
+nor complete Z. Original13's entire N forbidden set is EXACTLY{Nb-,Nb+};
+sigma13's is EXACTLY{Nr-,Nr+}. These identities are recomputed independently,
+not inferred from an ordinary-cap alphabet.
+L12 allows both Nb caps; its sigma allows both Nr caps. The bottom-facing
+square11/sigma13 fallbacks likewise avoid both bottom caps and the extra
+mate4. Sigma handles the right-facing counterpart with mate1. The four-hit
+T-square substitution and double square paths are included explicitly.
+This supplies precisely the extra justification an ordinary-N proof lacks.
+
+9. Reproduction, independence and remaining work
+Command:
+ python3 -B .context/illumination-k4-codex/surplus-four-local/mixed-allroots-review/check.py
+Receipt: check.json, local arcs/angles, all70 guard implications, exact U/Z,
+source hashes and the four centered-pair exclusions.
+Our frozen guard/geometry implementation was used, not a peer checker or
+any discovery code. Catalog origins and some helpers are shared with earlier
+work; this is an independent agent review, not formal verification or expert
+refereeing. No new physical-room examples were needed for the whole-support
+implications; the finite paths were already accepted constructions.
+
+[done] All-root mixed e2 at D/R is independently accepted<=13.
+[done] All-root mixed e2 at N is independently accepted<=13.
+[in progress] Mixed all-root e2 at L/B/E/Tcap and the six attached-pair rows
+remain unresolved. Other local charge types and remote gaps are separate.
+No new ray/word/direction discovery, cap-assignment scan, room generation,
+orbit run, archive lookup or worker was used.

@@ -1,0 +1,145 @@
+What the three shared extensions cost
+4 November 2026
+
+Result
+All THREE shared ways of invalidating the saved 10- and 13-reflection
+paths can occur within W=17,k=6. Two need one further specified triangle
+to restore the exception budget. Each of the three resulting fixed rooms
+has a legal S-to-T connection from an already-saved certificate, with
+11,10,12 reflections respectively. All three paths pass exact triangle
+and actual-boundary verification. These are explicit illuminated rooms,
+not candidate dark rooms, and not an exhaustive classification of their
+possible further completions.
+
+The useful negative result is quantitative: simultaneously interrupting
+these two saved paths can cost only ONE extra wall with k unchanged.
+Neither a second independent obstruction cost nor W>=22 follows from
+these two paths.
+
+1. Inputs / exact scope
+Start with the fixed W16,k6 room R in darkness-constraint.txt section 5.
+S=(0,0), T=(2,2); full stars at (0,0),(2,0),(2,2), and the four listed caps.
+Its ledger is N28,W16,I3,J2,s_N4,Q4,k6.
+Our 10-bounce path's forbidden triangle set Z10 is saved in
+cap-continuation-check.json. The other session's 13-bounce set Z13 is in
+../cap-return-review/verify.json. Their intersection is exactly:
+ A = conv{(-2,0),(-1,-1),(-1,0)}   source-left lower half-side;
+ B = conv{(-1,-1),(0,-2),(0,-1)}   source-bottom left half-side;
+ C = conv{(-1,1),(0,1),(0,2)}      source-roof left half-side.
+Each triangle covers a reflecting half-edge used by BOTH old paths.
+Since all their previously required triangles remain occupied, each
+addition spoils those particular reflections. This says nothing about
+other directions.
+
+Only these three prescribed additions were inspected. The stated repair
+below was chosen by hand. No coordinate/room/direction/word enumeration,
+solver, or new path discovery is part of this work.
+
+2. Geometry and budget
+Define the repair triangle
+ D = conv{(1,-1),(2,-2),(2,-1)},
+attached across the elbow star's bottom-left half-side.
+All five unions below are strictly simple canonical triangle disks and
+retain precisely the same three interior A points. Exact ledgers:
+
+ Fixed union     N   W   I   J   s_N   Q   k   Within W21/k6?
+ R              28  16   3   2    4    4   6   yes
+ R+A            29  15   3   3    4    5   7   no, k7
+ R+B            29  15   3   3    4    5   7   no, k7
+ R+C            29  17   3   2    4    5   6   yes
+ R+A+D          30  17   3   3    3    6   6   yes
+ R+B+D          30  17   3   3    3    6   6   yes
+
+There are no smooth A vertices in these unions. The Euler identity
+ W=2+6I+Q-2J-s_N
+and the triangle incidence identity N=8I+Q+s_A hold in every row.
+
+Hand explanation of the ledger changes
+For A, the left cap's A fan grows from one to two triangles (Q increases
+by one). Its mouth midpoint (-1,0), previously a 270-degree corner,
+becomes interior (J increases by one; W decreases by one). Other affected
+vertices retain their corner status. Thus k increases to seven.
+B does the same at the bottom-cap midpoint (0,-1).
+
+D turns the smooth C point (2,-1) into a 270-degree corner, adds a new
+45-degree A corner at (2,-2), and leaves the shared B endpoint a genuine
+corner. It therefore adds two walls and lowers s_N by one. This repairs
+the k7 defect in either R+A or R+B, giving W17,k6.
+
+C adds a 45-degree A corner at (0,2), turns the smooth C point (0,1) into
+a reflex corner, and turns the existing B corner (-1,1) into a SMOOTH
+boundary point. The two non-A exception changes cancel. The new total is
+W17,k6 directly.
+
+The scalar charge Q+s_N rises from eight in R to nine in each of the three
+eligible modified rooms. Equivalently W+2k rises from28 to29. So these
+shared interruptions use just one unit of the available charge surplus.
+
+Do not reject the A/B branches merely because the immediate single-tile
+unions have k7: adding another tile can reduce k. D explicitly demonstrates
+that nonmonotonicity. Conversely, D is one available repair, not a proof
+that every completion must contain D.
+
+3. Existing optical certificates and independent verification
+Use the same fixed L-support guard file:
+ ../claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl
+(the actual absolute path and frozen SHA256 are retained in the JSON).
+The source hash agrees with the existing full-replay manifest.
+Read each saved record once and test its already-specified required/absent
+triangles against the three eligible fixed unions under the established
+coordinate map (x,y)->(-y,x). Choose the fewest-reflection matching saved
+record in this ONE file, ties by source line. This is not a shortest-path
+search or a global shortestness claim.
+
+ Fixed room    Matching saved records   Selected line   Reflections
+ R+A+D                   5                  361             11
+ R+B+D                   2                  167             10
+ R+C                     1                 2553             12
+
+Each selected record is checked by the independently written exact
+canonical-triangle path checker: all traversed triangles, smooth mirror
+half-stars, actual endpoint stars, reflection laws and required/forbidden
+consistency. A separate rational check then uses the modified room's own
+maximal boundary walls: every bounce is strictly inside one wall and
+specular; every open leg has no boundary intersection or overlap and an
+interior midpoint; both endpoints are interior. Each actual boundary has
+exactly17maximal walls. All checks PASS.
+Full rational paths, source records, occupied/absent sets, modified boundary
+cycles, input hashes and separate verification statuses are in
+shared-extensions-check.json. No new direction was generated or traced.
+
+4. Why the roof extension is especially instructive
+In R+C, the newly smooth B point (-1,1) lies on the extended diagonal mirror
+ y=x+2.
+The selected 12-reflection path actually REFLECTS at this point (bounce6).
+Its incoming leg is from (15/7,-1), with direction proportional to(-11,7).
+The outgoing leg goes to (5/9,-13/9), proportional to(7,-11), exactly the
+component swap required by reflection in a slope-one mirror.
+Thus the same addition that removes the old source-roof reflection also
+creates a legal reflection at a formerly forbidden physical corner. The
+new certificate uses this change. It is not safe to treat a triangle
+addition purely as a lost trajectory or an extra permanent obstruction.
+The A/B additions similarly create interior C points; the repaired rooms
+have different cap/bridge connections, which the saved paths exploit.
+
+5. What this closes and what remains
+Closed: the three proposed shared interruptions can all fit the budget;
+the three specified eligible completions are illuminated, with actual
+fixed witnesses, not just reliance on the aggregate restricted theorem.
+The two-path independent-cost shortcut is invalid for these fixtures.
+
+Not closed: other repairs of A/B; additional triangles around R+C; unions
+of several shared extensions; all supersets of any listed fixture; other
+I2/I3 supports; a wall-budget guarantee of compatible cap entry/return;
+the universal22-wall minimum. A connecting path in one union need not
+survive another extension of a required reflecting wall.
+
+Assessment
+This bounded test supplies another precise warning against local cost
+counting, and explains how a newly transparent point can supply the next
+connection. It does not advance the certified W21/k6 exclusion to a
+computer-free proof. Turning each lost witness into another saved-witness
+lookup would reproduce the existing computer-assisted guard process.
+Further proof work should require a structural argument controlling the
+exchange between lost mirrors and newly legal interior/smooth points.
+No larger trajectory or room campaign is launched from these results.

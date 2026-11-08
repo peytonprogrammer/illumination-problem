@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "source": [
+    "12/7",
+    "16/7"
+  ],
+  "target": [
+    "9/2",
+    "2"
+  ],
+  "blocker": [
+    "3",
+    "4"
+  ],
+  "source_denominator": 7,
+  "target_denominator": 2,
+  "direct_primitive_direction": [
+    39,
+    -4
+  ],
+  "direct_determinant": "96",
+  "direct_bypass": true,
+  "all_connecting_directions_good": false,
+  "all_connecting_directions_bad": true,
+  "universal_argument": "For any integer direction v connecting P to Q+2lambda, det(v,P)=det(v,Q)+2 det(v,lambda) lies in (1/7)Z intersect (1/2)Z = Z. Applies to every reflected target image and source sign choice.",
+  "fixed_endpoint_controls": [
+    {
+      "target_image": [
+        "-9/2",
+        "-2"
+      ],
+      "common_denominator": 14,
+      "endpoint_numerator": [
+        "-87",
+        "-60"
+      ],
+      "primitive_coset_gcd": 1,
+      "clean_segment_lemma_hypothesis": true
+    },
+    {
+      "target_image": [
+        "-9/2",
+        "2"
+      ],
+      "common_denominator": 14,
+      "endpoint_numerator": [
+        "-87",
+        "-4"
+      ],
+      "primitive_coset_gcd": 1,
+      "clean_segment_lemma_hypothesis": true
+    },
+    {
+      "target_image": [
+        "9/2",
+        "-2"
+      ],
+      "common_denominator": 14,
+      "endpoint_numerator": [
+        "39",
+        "-60"
+      ],
+      "primitive_coset_gcd": 1,
+      "clean_segment_lemma_hypothesis": true
+    },
+    {
+      "target_image": [
+        "9/2",
+        "2"
+      ],
+      "common_denominator": 14,
+      "endpoint_numerator": [
+        "39",
+        "-4"
+      ],
+      "primitive_coset_gcd": 1,
+      "clean_segment_lemma_hypothesis": true
+    }
+  ],
+  "scope": "Refutes unconditional good-direction existence for connected interior pairs; does not refute a conditional claim assuming a globally essential blocker, or the denominator clean-segment lemma."
+}

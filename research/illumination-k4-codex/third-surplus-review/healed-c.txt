@@ -1,0 +1,91 @@
+Healed outer-C parent: useful local return, but no simple chamber closure
+4 November 2026 — Codex01a18403
+
+STATUS: first optical approach RETIRED. No family illumination claimed here.
+The literal proposed14path is rejected by an exact contradictory triangle guard.
+A hand arithmetic argument below explains why retuning the same branch fails.
+
+1. Named geometry and gap
+The parent fan at L=(-2,0) is L+ together with
+ l=conv{(-2,0),(-2,1),(-1,1)},
+ c=conv{(-2,0),(-2,1),(-3,1)}.
+A remote single triangle at A=(-2,2), across either half of the parent's
+upper side, turns the outside C=(-2,1) from smooth to a270-degree corner.
+This is one previously unclosed e2-root/e1-leaf pattern, not all remote rooms.
+Other cells are ordinary caps, under the preliminary charge reduction.
+
+Target: replace the old square-pocket excursion by an analytic return and
+connect actualS/T. Strongest objection: the altered exit height may force
+transit through N and remove a later reflecting wall. That objection occurs.
+
+2. Exact local return
+Launch S with velocity(-1,d). It enters L through(-1,d), crosses the square
+to(-2,2d), and makes three reflections in triangle c:
+ P1=(-2/(1-d),2d/(1-d)) on x+y=-2;
+ P2=(-2-3d,1) on y=1;
+ P3=(-2(1+3d)/(1+d),4d/(1+d)) on x+y=-2.
+The velocities are(-1,d),(-d,1),(-d,-1),(1,d).
+It exits c at(-2,4d) and L at(-1,5d). For0<d<1/5 this stays below the
+remote portal y=1, so either remote leaf leaves the return unchanged.
+This is an effective depth-two return: displacement4d, rather than the
+old square's2d. It does not have the same global transfer map as the old cap.
+
+To reach E without entering the N cell, the line from(-1,5d) must cross
+x=1 BELOW y=1. Its height there is7d. Thus d<1/7 is necessary for this
+particular H-only leg. It reaches the E portal x=3 at height9d.
+The E- triangular excursion has three reflections and returns at(3,11d)
+with velocity(-1,d), provided the corresponding strict cap branch holds.
+The proposed interval below is within that branch.
+
+3. Why the initial14candidate is invalid
+A naive substitution into the old upper-chamber return solves26d=4, giving
+d=2/13. That violates d<1/7. The L-to-E leg uses Nr-, whereas the subsequent
+reflection at(1,2) requires Nr- absent. Exact segment/bounce requirements give
+precisely this contradictory tile; it cannot be repaired by choosing a different
+ordinary cap completion. healed-c-check.json records EXPECTED_REJECTION, not PASS
+of illumination. All14proposed bounces are individually specular; that alone is
+insufficient to validate a billiard path in any actual room.
+
+4. Entire simple upper-chamber continuation fails
+Assume d<1/7, E- present and E+ absent, then follow the same E-cap3 branch.
+After its return at(3,11d), the first arrival at x=1 is at y=13d. The next
+arrival at x=3 is at y=15d. It cannot reflect on that right wall below y=2:
+E- fills the other side. Hitting y=2 exactly is the actual270-degree corner
+at(3,2). Hence staying in the upper square on that passage requires15d>2.
+The strict simple-chamber branch therefore needs
+                     2/15 < d < 1/7.
+Before the path first leaves downward through the open bottom portal y=1,
+the unfolded height of an image of actualT is either2 or4: direct or after
+one top reflection. Its unfolded horizontal distance from x=3 is a positive
+odd integer h. Thus
+                     (11+h)d=2 or4,
+so d=1/n or2/n for a positive integer n.
+There is no such d in the strict interval. For1/n, adjacent relevant values
+are1/8<2/15 and1/7 at the upper endpoint. For2/n, the endpoints are2/15
+and2/14=1/7. All others lie outside. No enumeration is needed.
+
+The bottom y=1 is an OPEN portal to the elbow star, so one cannot continue
+this square-unfolding fiction with a bottom-wall reflection. A proof using
+this return must instead follow the real descent into H, or use a different
+initial itinerary. This retires the whole simple-chamber attempt, rather than
+just the first rational parameter.
+
+5. Exact remaining family split, conditional on ordinary other cells
+The old short paths force B+,E-,T- for hypothetical darkness. With L's fan
+specified, L- is absent; the other critical cells are single. If Nb+ and Nb-
+are both absent, the old thirteen path remains a candidate with the appropriate
+outer-tile guards unchanged by L's added upper pair. This guard implication is
+exactly checked in healed-c-check.json, PASS for either remote leaf. If N is bottom-facing,
+Nr-/Nr+ are absent and the natural attempt is sections2–4, now retired.
+Neither this split nor the failed branch proves the family dark.
+
+6. Goal realignment
+Previous remote erasure proofs and their support check remain unchanged.
+This first healed-C approach yielded a return formula and a general obstruction
+to a tempting continuation, but no new illumination theorem. The bounded goal
+remains unresolved: healed e2-root geometry and wholly local Delta3 interactions.
+Do not spend another attempt retuning this simple-chamber branch. A new attempt
+must use actual motion after descent or another geometric implication.
+The1–3hour estimate remains only structural reduction plus first serious optical
+pass, which has now exposed this concrete obstruction; full proof LoE remains
+unknown. No discovery search, archive retrieval, solver or workers used.

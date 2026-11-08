@@ -1,0 +1,171 @@
+# Adversarial review: Section 20 compactness lemma (Q-A) and Section 19 degree bounds (Q-B)
+
+**Summary**
+
+- **Q-A:** The exact-degree fold locus is closed. Section 20's equivalence-relation outline is not a proof as written, and its listed gaps are real. A different route, taking limits of the covering *maps* rather than the relations, avoids all of them. The step that does real work is showing the targets do not degenerate. Below is a full argument modulo standard citations. It should get its own written audit before promotion.
+- **Q-B:** Section 19 is correct given the imported inputs. Three points need to be written out explicitly: that Apisa-Wright's Q_min equals Y/j, the "not a torus cover" hypothesis, and a per-pattern genus check. If Q-A holds, Section 20 makes Section 19 unnecessary.
+- **Both together:** These exclude only the all-nonperiodic dark pair. The periodic case and the existence of an actual event remain open. The goal stays OPEN.
+
+---
+
+## Question A: is the exact-degree fold locus closed?
+
+### Definition
+
+Let H\* be the smooth pointed stratum, where the mark is regular. For fixed even D, let L_D be the set of (X′, x′) in H\* such that there exist:
+- a halftranslation cover f : X′ → Q of degree exactly D, meaning f\*q = ω²,
+- with f(x′+u) = f(x′−u) for all small u.
+
+No minimality is imposed on f.
+
+### Claim: L_D is closed in H\*
+
+Take (X_n, x_n) → (X, x) in H\*, with covers f_n : X_n → Q_n.
+
+**Step 1. Finitely many target strata.** This is proven.
+- Zeros of Q_n of order k ≥ 1 only have preimages with cone angle e(k+2)π ≥ 3π. These are zeros of X_n.
+- So the number and orders of the zeros of Q_n are bounded by the stratum of X and by D.
+- Poles are then bounded by the relation Σk = 4g_Q − 4, and g_Q ≤ g_X.
+- Pass to a subsequence with a fixed target stratum.
+- area(Q_n) = area(X_n)/D, which converges.
+
+**Step 2. Targets do not degenerate.** This is the crux. I believe it is proven, and it is the step to audit.
+
+Let γ be a saddle connection on Q_n of length ε.
+- Preimages of zeros of Q_n are zeros of X_n.
+- A preimage of a pole is either a zero (e ≥ 4) or a regular point with e = 2.
+- At a regular point with e = 2, exactly two lifts of γ meet, and they meet in opposite directions. So they continue as one straight line.
+- f_n^{-1}(γ) is therefore a union of D lifts that chain into straight trajectories.
+- Each trajectory is either a closed geodesic or a saddle connection on X_n, of length ≤ Dε.
+
+Since X_n → X in the unpointed stratum, the shortest saddle connection or cylinder circumference on X_n is bounded below by some δ > 0. Hence every saddle connection on Q_n has length ≥ δ/D.
+
+By Masur compactness for quadratic differentials, a subsequence Q_n → Q in the same stratum. This is exactly where a degree jump would have to come from, and it is excluded.
+
+Branch values that are regular points of Q may collide with each other or with poles. That is harmless here, because nothing below marks them.
+
+**Step 3. Equicontinuity.** This is proven, citing standard period-coordinate facts.
+- Choose piecewise-affine maps φ_n : X → X_n with φ_n(x) = x_n, and ψ_n : Q_n → Q, with derivatives tending to I uniformly in charts. These come from shared triangulations.
+- Each f_n is a local isometry, so it is 1-Lipschitz for the flat path metrics.
+- So g_n = ψ_n ∘ f_n ∘ φ_n is (1+o(1))-Lipschitz.
+- Arzelà–Ascoli gives a subsequence g_n → f uniformly.
+- f is surjective, being a uniform limit of surjections.
+
+**Step 4. f is holomorphic of degree D.**
+- g_n is K_n-quasiregular with K_n → 1. Uniform limits of such maps are 1-quasiregular, i.e. holomorphic (Reshetnyak / Lehto–Virtanen). f is nonconstant.
+- For large n, g_n is uniformly close to f, hence homotopic to it. So deg f = deg f_n = D.
+- **This is why degree cannot jump** once Step 2 holds.
+
+**Step 5. f\*q = ω_X².**
+- Pick a regular point a with f(a) regular, and a small disk U around a.
+- For large n, f_n is u ↦ ±u + c_n on φ_n(U). The sign is constant because U is connected and its image lies in a regular disk.
+- The limit on U is therefore z ↦ ±z + c, so f\*q = ω² on U.
+- By the identity theorem, f\*q = ω² on all of X.
+
+**Step 6. The fold persists, with a uniform radius.**
+- Let R_n = dist(x_n, Z(X_n)). Then u ↦ f_n(exp(u)) and u ↦ f_n(exp(−u)) are holomorphic on B(0, R_n).
+- They agree near 0, so by the identity theorem they agree on all of B(0, R_n).
+- R_n → R = dist(x, Z(X)) > 0.
+- Pass to the limit using the uniform convergence of φ_n⁻¹ ∘ exp_{x_n} to exp_x. This gives f(x+u) = f(x−u) for |u| < R/2.
+
+**Why this sidesteps Section 20's listed gaps.** "Uniform disk, bounded exceptional set, transitivity of the limit relation, extension across zeros" only arise if one takes limits of covering relations. With maps:
+- the uniform disk is Step 6;
+- the exceptional set and extension across zeros are handled by holomorphy (Step 4);
+- transitivity is automatic.
+
+The (2d+1)-point nonmerging trick is locally valid, but it does not address the actual danger, which is target degeneration (Step 2).
+
+### Finite fiber over X, with D = 2d and d = deg π
+
+This step was already essentially correct in Section 20.
+- A fold forces a pole, so q_Q is not a square and Q̂ is connected.
+- The fiber product with X splits because f\*q = ω_X². So f lifts to a translation cover X → Q̂ of degree d.
+- Every translation cover factors as X → Z → Y. With degree equal to d, this forces Q̂ ≅ Y.
+- Y has trivial translation-automorphism group; otherwise Y/G would be a smaller quotient. So Y has at most one negating involution, and τ = j.
+- Hence f ≅ q ∘ π, and its regular folds are exactly the regular points of π⁻¹(Fix j).
+
+### Dimension step
+
+This is proven, with standard inputs.
+- L_{2d} is closed and invariant under GL₂R, since −I is central.
+- So the orbit closure N of (X, x), which is affine by EMM with marked points, satisfies N ⊂ L_{2d}.
+- dim_ℂ N ∈ {dim M, dim M + 1}.
+- If dim N = dim M + 1, then N is open and closed in the connected full pointed space over M, so N is all of it. Its fiber over X is then X minus its zeros, which is infinite. This contradicts the finite fiber.
+- So x is periodic.
+
+### Fallback via degree ≤ D and de Franchis
+
+This is not needed, but it also works.
+- L_{≤2d} is closed, being a finite union of closed sets.
+- Its fiber over X is finite:
+  - intermediate covers X → Z → Y have g_Z ≥ 2, so there are finitely many Z and finitely many maps (de Franchis–Severi);
+  - each Z has a finite automorphism group, so finitely many negating involutions;
+  - each involution has finitely many fixed points.
+- So exact-degree closedness is not load-bearing.
+
+### Status of Q-A
+
+- **Proven, given the cited standard results:** Steps 1, 3, 4, 5, 6 and the dimension step.
+- **Needs a careful written audit before Section 20 is promoted:** Step 2, specifically the chaining of lifts at regular double points over poles, and that closed geodesics on X_n are uniformly long.
+
+Also worth checking: Apisa–Wright or Möller may already state "regular points of π⁻¹(Fix J) are periodic." If so, cite it rather than reprove it.
+
+---
+
+## Question B: Section 19 with no compactness input
+
+I checked every step.
+
+**r, j and uniqueness.** All correct.
+- π∘ρ is a translation cover onto (Y, −iω_Y), so minimality gives r with r\*ω_Y = iω_Y.
+- From r⁴π = πρ⁴ = π and surjectivity of π, r⁴ = 1. The derivative i gives order exactly 4.
+- Uniqueness of the negating involution follows from Aut_trans(Y) being trivial.
+
+**Q_min = Y/j.** Section 19 asserts this; it needs a one-line proof or a citation of Remark 3.4.
+- X → Y/j factors through Q_min, so deg(X → Q_min) ≤ 2d.
+- X → Q_min lifts to a translation cover X → Q̂_min of degree at most d, so deg(X → Q_min) ≥ ... let me state it precisely: since X → Y/j → Q_min, we have deg(X → Q_min) ≥ ... no, Y/j → Q_min only lowers the target, so deg(X → Q_min) ≥ deg(X → Y/j) = 2d.
+- Combining, the degree is exactly 2d, so Y/j → Q_min has degree 1 and they are equal.
+- If Q_min were a translation surface, the pullback to Y/j would be a square, contradicting the connectedness of Y.
+
+Without this, the step "a q-fiber has at most 2 points" is unjustified.
+
+**Fiber argument.** Correct.
+- r·π(s₀) ∈ {π(s₀), jπ(s₀)} = {π(s₀), r²π(s₀)}. Either case forces r to fix π(s₀).
+- So all 16 lifts go to a single regular, unramified point p, and deg π ≥ 16.
+
+**Theorem 3.6 hypotheses.** You must verify that each deformed surface X is *not a torus cover*. This is the same condition as g_Y ≥ 2, which Section 19 also uses. "Non-torus" must mean exactly that.
+
+**Darkness implies all-to-all finitely blocked.** This holds trivially: the blocking set is empty, then apply the deck symmetry.
+
+**Zero orders.** Correct.
+- A corner of type m has gcd(m,4) lifts, each of order m/gcd(m,4) − 1.
+- This gives orders 0, 0, 2, 4, 2, 6 for m = 1, 2, 3, 5, 6, 7. All even.
+- A target zero of odd order would force an odd source order, since ord_x + 1 = e(ord_y + 1).
+
+**Genus.**
+- g_X = 1 + n₃ + 2n₅ + 2n₆ + 3n₇.
+- If g_Y ≥ 3, then 2g_X − 2 ≥ 16·4 = 64, i.e. g_X ≥ 33. So g_X ≤ 32 forces g_Y = 2, hence Y ∈ H(2).
+- **Check that `pocket-planar` verifies g_X ≤ 32 per pattern, not just inequality (10).** Patterns with g_X ≥ 33 are not covered by Section 19.
+
+**Fix(r).** Correct, and independent of X/ρ.
+- The hyperelliptic involution acts as −1 on all 1-forms, so it equals j.
+- Riemann–Hurwitz for Y → Y/r, with a points of stabilizer order 4 and 6 − a points of stabilizer order 2:
+  2 = 8g′ − 8 + 3a + (6 − a), which gives g′ = 0 and a = 2.
+- So Fix(r) = {z, p}: the unique zero (fixed by any automorphism) and p.
+- The hypothesis "X/ρ is a sphere" is not needed.
+
+**Corners.**
+- m = 1, 5, 7 have a single D₄-fixed lift, so it is ρ-fixed and maps into {z, p}.
+  - Mapping to z would need m = 3e, which is impossible.
+  - So each maps to p with e = m. **(8) is correct.**
+- m = 2 and m = 6 lifts are swapped by ρ and fixed by ρ². They land in Fix(j) but not necessarily at p, so omitting them is correct.
+- m = 3 corners go either to p with e = 3 or to z with e = 1.
+  - Tracking them does not sharpen anything: with c₃ of them over p, the condition becomes 16 + n₁ + 5n₅ + 7n₇ + 4c₃ ≤ n₃ + 2n₆, which is weakest at c₃ = 0. That is (10) exactly.
+
+**Over z.** Correct.
+- A source point over z needs ord_x + 1 = 3e with ord_x + 1 ∈ {1, 3, 5, 7}.
+- So only order-2 zeros with e = 1 lie over z. **(9) is correct.**
+
+**Verdict on Q-B.** Section 19 is a valid fixed-surface proof once three things are written in: Q_min = Y/j, the torus-cover hypothesis, and the per-pattern genus check.
+
+It excludes only the case where all 16 lifts are nonperiodic, on patterns with g_X ≤ 32 that satisfy (10). It says nothing about dark periodic pairs, illumination, or the existence of the first-order event. The 33/34 count is arithmetic about a necessary condition, as the section already says.

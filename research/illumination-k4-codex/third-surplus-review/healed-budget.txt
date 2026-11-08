@@ -1,0 +1,95 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+Healed outer-C left triple: exact active-budget optical reduction
+4 November 2026 — Codex01a18403
+
+RESULT (parent proof; independent review pending)
+Every Delta3/W<=21/k<=6 room with the parent fan L+,l,c specified in
+healed-c.txt and one remote single triangle at(-2,2) healing C=(-2,1),
+all other partial cells ordinary, illuminates actualS/T within14reflections.
+The endpoint-exchanging sigma images satisfy the same conclusion.
+This is one complete bounded family, not the full Delta3 theorem.
+
+1. Geometry, actual endpoint preservation and assumptions
+H consists of the full stars S=(0,0),U=(2,0),T=(2,2). Fix
+ L+=conv{(-2,0),(-1,0),(-1,1)},
+ l =conv{(-2,0),(-2,1),(-1,1)},
+ c =conv{(-2,0),(-2,1),(-3,1)}.
+The remote triangle is one of
+ r_left =conv{(-2,2),(-2,1),(-3,1)},
+ r_right=conv{(-2,2),(-2,1),(-1,1)}.
+These are the two possibilities on the parent's outer side. Other occupied
+partial A cells have one ordinary H-facing cap each. If N contains the direct
+bridge, S/T already illuminate. The statement concerns the remaining nonbridge
+case. Global exhaustion of all remote Delta3 patterns is not claimed here.
+
+2. Exact budget, including possible smooth B
+Let n count ordinary cap triangles, excluding the L parent and remote leaf.
+Q=3+1+n=4+n, N_triangles=28+n and s_A=0. Exactly two non-A vertices are
+interior: the original C points(1,0),(2,1). Each new ordinary H-side midpoint
+has only3quadrants occupied; the healed outer C has3quadrants; no B gains a
+full8triangle star. At(-1,1), even the parent,near remote leaf and an N cap
+give at most6triangles including H. At the central notch B=(1,1), one ordinary
+N cap gives at most7. Other B vertices have still fewer. Thus J=2.
+
+For an actual Delta3 room, Q+s_N=11, so s_N=7-n, k=J+s_N=9-n.
+Using W+2k=31 gives W=13+2n. W<=21 requires n<=4; k<=6 requires n>=3.
+Therefore n=3or4. This uses the actual Delta condition and does not ignore
+extra smooth B vertices: a completion creating an extra smooth point may
+simply fail Delta3, as one of the four forced combinations does below.
+
+3. Short-path necessities and the easy branch
+If B+ is absent, the old one-bounce S->(1/2,-1)->T remains legal. If E- is
+absent, its endpoint-exchanging counterpart remains legal. With B+ present,
+the ordinary B triangle's four-bounce path forces T- for potential darkness.
+The L and remote additions do not touch any of these mirrors. Hence assume
+B+,E-,T- present; their ordinary cells force B-,E+,T+ absent.
+
+If both Nb- and Nb+ are absent, the old thirteen path is valid. Its other
+forbidden ordinary caps B-,L-,T+ are absent, as are the outer B/T mates.
+The only L additions are l,c; the remote leaf also misses its guards. This
+implication was exactly checked in healed-c-check.json. N may be empty or
+right-facing; D/R ordinary choices do not affect this old path.
+
+4. The hard branch has exactly three possible rooms
+If Nb- or Nb+ is present, then the ordinary N slot is bottom-facing and
+Nr-/Nr+ are absent. The three compulsory caps B+,E-,T- plus this fourth N
+cap consume n=4. No D/R cap or any other triangle is affordable. Consequently
+the room is EXACTLY H+{L+,l,c}+one r+{B+,E-,T-,one Nb}.
+
+There are four indicated combinations, determined by the two explicitly
+specified remote halves and two N caps. For r_left+Nb+, the vertex(-1,1)
+is smooth (H contributes90degrees and L+,l another90); neither r_left nor
+Nb+ reaches that vertex. This gives Delta4, so it is outside the goal class.
+All other three combinations satisfy the stated hypotheses. The fixed geometry
+check verifies a single simple boundary cycle, actual full S/U/T stars,
+N32,Q8,J2,s_N3,s_A0,W21,k5,Delta3 for each. The excluded combination has
+W20,k6,Delta4. No room was generated or sought: these four completions were
+forced by the preceding hand count and local choices.
+
+5. Optical closure and its evidentiary limits
+healed-frozen.txt displays a legal actual-S/T rational path for each of the
+three rooms. The complete required/forbidden canonical triangle guards,
+exact coordinates and source provenance are in healed-frozen.json. The
+reused exact segment/specular checker confirms all legs are interior,
+every reflection lies on a real smooth mirror, and no corner is hit.
+The paths have13,14and10reflections. Existence of these paths, together
+with the preceding exhaustive reduction, closes this family. This is not
+merely three further examples: there are no other rooms in its hard branch.
+
+The earlier hand-derived simple-chamber attempt remains correctly retired;
+these frozen paths use different continuations, including multiple cap visits
+or actual motion into the elbow star. They were retrieved from one existing
+archive with fixed coordinate conversions, not found by a new ray search.
+Independent hand challenge remains pending. The reused checker and this
+parent proof do not constitute formal verification or an expert endorsement.
+
+6. Realignment
+A previously open healed-C triple family is now closed under the actualW/k
+limits. This does not close other e2-root parents or the wholly local Delta3
+charge partitions. Peer global classification and independent challenge have
+not ACKed; no ongoing peer work is asserted. Continue on those exact gaps,
+without expanding to higher surplus or claiming universal minimality.

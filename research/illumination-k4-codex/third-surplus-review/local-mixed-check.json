@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "cases": {
+    "Llower_centerB": {
+      "status": "PASS",
+      "path": "B6",
+      "forced_caps": [
+        "L-",
+        "L+",
+        "B-",
+        "B+",
+        "T-"
+      ],
+      "absent_caps": [
+        "Nb-",
+        "T+"
+      ],
+      "only_outer_extras": [
+        "llow"
+      ]
+    },
+    "Lrectangle_centerB": {
+      "status": "PASS",
+      "path": "L11",
+      "forced_caps": [
+        "L-",
+        "L+",
+        "B-",
+        "B+",
+        "E-",
+        "T-",
+        "Nb-"
+      ],
+      "absent_caps": [
+        "E+",
+        "T+",
+        "Nb+",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "l",
+        "llow"
+      ]
+    },
+    "Lupper_outerB": {
+      "status": "PASS",
+      "path": "L11",
+      "forced_caps": [
+        "L-",
+        "L+",
+        "B+",
+        "E-",
+        "T-",
+        "Nb-"
+      ],
+      "absent_caps": [
+        "B-",
+        "E+",
+        "T+",
+        "Nb+",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "l",
+        "b"
+      ]
+    },
+    "Lupper_outerE": {
+      "status": "PASS",
+      "path": "sigma_BT9",
+      "forced_caps": [
+        "L-",
+        "L+",
+        "B+",
+        "E-",
+        "T-",
+        "Nb-"
+      ],
+      "absent_caps": [
+        "B-",
+        "E+",
+        "T+",
+        "Nb+",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "l",
+        "e"
+      ]
+    },
+    "Lupper_centerT": {
+      "status": "PASS",
+      "path": "sigma_L3",
+      "forced_caps": [
+        "L-",
+        "L+",
+        "T-",
+        "T+",
+        "E-"
+      ],
+      "absent_caps": [
+        "E+"
+      ],
+      "only_outer_extras": [
+        "l"
+      ]
+    },
+    "Lupper_outerT": {
+      "status": "PASS",
+      "path": "L11",
+      "forced_caps": [
+        "L-",
+        "L+",
+        "E-",
+        "T-",
+        "Nb-"
+      ],
+      "absent_caps": [
+        "E+",
+        "T+",
+        "Nb+",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "l",
+        "t"
+      ]
+    },
+    "BactiveTriple_centerE_Nbplus": {
+      "status": "PASS",
+      "path": "sigma_B6",
+      "forced_caps": [
+        "B-",
+        "B+",
+        "E-",
+        "E+",
+        "L+",
+        "T-",
+        "Nb+"
+      ],
+      "absent_caps": [
+        "L-",
+        "T+",
+        "Nb-",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "b"
+      ]
+    },
+    "BactiveTriple_outerE_Nbplus": {
+      "status": "PASS",
+      "path": "E11",
+      "forced_caps": [
+        "B-",
+        "B+",
+        "E-",
+        "L+",
+        "T-",
+        "Nb+"
+      ],
+      "absent_caps": [
+        "E+",
+        "L-",
+        "T+",
+        "Nb-",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "b",
+        "e"
+      ]
+    },
+    "BactiveTriple_centerT": {
+      "status": "PASS",
+      "path": "sigma_L3",
+      "forced_caps": [
+        "B-",
+        "B+",
+        "T-",
+        "T+",
+        "E-"
+      ],
+      "absent_caps": [
+        "E+"
+      ],
+      "only_outer_extras": [
+        "b"
+      ]
+    },
+    "BactiveTriple_outerT_notNbplus": {
+      "status": "PASS",
+      "path": "F3",
+      "forced_caps": [
+        "B-",
+        "B+",
+        "T-",
+        "E-",
+        "L+"
+      ],
+      "absent_caps": [
+        "T+",
+        "Nb+"
+      ],
+      "only_outer_extras": [
+        "b",
+        "t"
+      ]
+    },
+    "BactiveTriple_outerT_Nbplus": {
+      "status": "PASS",
+      "path": "sigma13",
+      "forced_caps": [
+        "B-",
+        "B+",
+        "T-",
+        "E-",
+        "L+",
+        "Nb+"
+      ],
+      "absent_caps": [
+        "T+",
+        "E+",
+        "L-",
+        "Nb-",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "b",
+        "t"
+      ]
+    },
+    "Droot_Bunit_notNbplus": {
+      "status": "PASS",
+      "path": "five",
+      "whole_D_support_harmless": true
+    },
+    "Droot_Bunit_Nbplus": {
+      "status": "PASS",
+      "path": "sigma13",
+      "whole_D_support_harmless": true
+    }
+  },
+  "scope": "Thirteen specified inherited guard implications, no new trajectories, rooms, words or archive query."
+}

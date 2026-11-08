@@ -1,0 +1,46 @@
+{
+  "OR01_OR02": {
+    "decision": "INDEPENDENT_ACCEPT_LOCAL_OR01_AND_SCOPED_OR02",
+    "author_pins_current": {
+      "optical-routing-candidate-01.md": true,
+      "optical-routing-proof-01.md": true,
+      "optical-routing-reflex-reuse.md": true
+    },
+    "peer_evidence_pins_current": {
+      "optical-routing-or01-independent.md": true,
+      "optical-routing-or01-independent-replay.py": true,
+      "optical-routing-or01-independent-replay.json": true,
+      "optical-routing-or02-independent-replay.py": true,
+      "optical-routing-or02-independent-replay.json": true
+    },
+    "material_objections_open": [],
+    "scope": "Local positive guarded shooting and all-n repeated-corner obstruction only; global G8 OPEN"
+  },
+  "reciprocal_prerequisites": "optical-routing-peer-prerequisites-independent.json",
+  "reciprocal_width": "optical-routing-width-independent.json",
+  "OR03": {
+    "decision": "INDEPENDENT_ACCEPT_SCOPED_OR03",
+    "author_pins_current": {
+      "optical-routing-width-obstruction.md": true
+    },
+    "peer_evidence_pins_current": {
+      "optical-routing-or03-independent.md": true,
+      "optical-routing-or03-independent-replay.py": true,
+      "optical-routing-or03-independent-replay.json": true
+    },
+    "qualification": "Retain WHOLE outside-E_c prefix guard. First arrival at the open section alone does not prohibit bypass through a smooth section endpoint. Frozen candidate already requires exterior access.",
+    "material_objections_open": []
+  },
+  "whole_goal_complete": false,
+  "updated_utc": "2026-11-07T18:21:38.660230+00:00",
+  "nondirect_fixed_cap": {
+    "decision": "ACCEPT_SCOPED",
+    "receipt": "optical-routing-nondirect-independent.json",
+    "reviewed_source_pins_current": {
+      "optical-routing-nondirect-cap-control.md": true,
+      "optical-routing-nondirect-cap-control.py": true,
+      "optical-routing-nondirect-cap-control.json": true
+    },
+    "material_objections_open": []
+  }
+}

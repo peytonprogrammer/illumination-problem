@@ -1,0 +1,43 @@
+{
+  "verdict": "ACCEPT_MATHEMATICS_WITH_BIBLIOGRAPHIC_PRECISION",
+  "input": ".context/illumination-generalization-2026-11-06/review/dark-endpoint-rationality.md",
+  "input_sha256": "defb97e3eb4414ae61f855ffca08087a6b1c340f9e58bf6a0a02db22926f150b",
+  "review_sha256": "05346ab66e5e8264a4c5b1ffb51c8a90df4cd41438a12a01a2adf84e6637a992",
+  "sources": [
+    {
+      "url": "https://msp.org/gt/2016/20-3/gt-v20-n3-p11-s.pdf",
+      "locations": [
+        "Theorem2 PDF p2",
+        "Section2 marked singularities PDF p4",
+        "Theorem10 PDF p17"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/1407.2975",
+      "version": "v1",
+      "locations": [
+        "Theorem2",
+        "Theorem11",
+        "Section2 marked-point convention"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/1905.09358v3",
+      "locations": [
+        "Definition1.1",
+        "Theorem1.2(i)",
+        "Lemma2.1",
+        "Remark2.2"
+      ]
+    }
+  ],
+  "conditions": [
+    "retain actual Sigma including regular corner lifts",
+    "use all endpoint lift pairs",
+    "use full local graph equality, not mere containment",
+    "journal numbering and complement-finite wording clarified"
+  ],
+  "uncapped_goal_complete": false,
+  "novelty_assessed": false,
+  "method": "independent arbitrary-degree hand reconstruction; no checker or discovery run"
+}

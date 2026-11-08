@@ -1,0 +1,47 @@
+# Unit interception at a non-even corner: an index-two flank relation
+
+This is a new conditional necessity and prerequisite challenge, not a global illumination proof. DI01/DI02 and the independent regular Farey triangle are accepted dependencies. This argument removes the even-even shared-corner restriction of DI02 by changing the triangle, not by changing endpoint fibers or rescaling a first-cone time.
+
+## Exact statement
+
+Let P be an integral orthogonal disk room with distinct actual interior even-even S,T. Work on its four-copy translation unfolding M, with complete actual endpoint fibers X,Y, genuine cone set Z, and natural map to the unit torus. Assume actual S,T darkness, using the accepted complete-fiber cone-only equivalence.
+
+Take integer vectors u,w with det(u,w)=+/-1, and put v=2w-u. Then u,w,v are primitive, det(u,v)=+/-2, and (u+v)/2=w. Thus u,w are primitive neighbors, while u,v are the two flanks of their midpoint direction. This is NOT the unit determinant-one u,v premise of DI01.
+
+Suppose specified x in X, y in Y and z in Z satisfy:
+
+1. The actual u ray from x first reaches z at time1.
+2. The reverse -v ray from y first reaches the SAME surface cone z at time1; retain the particular outgoing v prong.
+3. Those two actual germs at z bound the narrow oriented sector of the developed triangle with vertices 0,u,2w.
+
+Then the actual w ray from x first reaches a genuine cone z' at time1. Its underlying physical reflex corner has a different parity from the physical reflex corner under z. Consequently these hypotheses force at least two distinct physical reflex corners. There is no assertion that hypotheses 1--3 are globally available, even under darkness.
+
+## Independent proof
+
+Use the unimodular basis with columns u,w. The triangle becomes conv{(0,0),(1,0),(0,2)}. Its only lattice points are the three vertices and the midpoint (0,1) of its third side. Indeed a point satisfies x>=0, y>=0, 2x+y<=2; x=0 gives y=0,1,2 and x=1 gives only y=0. There are no interior lattice points, and no lattice point in either open flank side. The vector v has basis coordinates (-1,2), so is primitive. The vector w is primitive as a basis vector.
+
+The open triangle therefore has no branch value. Its sheet adjacent to regular x is uniquely fixed. Complete its first side at the actual z. The specified narrow cone sector identifies the outgoing boundary germ with the particular v prong reaching actual y. The endpoint y is regular and its completion is unique. This identifies the exact target lift, not merely its torus image.
+
+The third side has velocity w and duration2. Before time1 its projection avoids the branch value, so its actual lift cannot encounter a genuine cone. If its midpoint were regular, the boundary of this same triangle sheet would continue regularly through that point and finish at the SAME y. This would be a genuine-cone-avoiding connection between complete actual fibers. Cone-only purification, if needed for removable physical corners, would give a legal original S-to-T path, contradicting darkness. Hence the midpoint is a genuine cone, first reached at time1. Nothing continues an optical ray through z or z'.
+
+Developed x has parity zero. The corner z has parity u; the corner z' has parity w. Since [u w] is invertible modulo2, these are distinct nonzero residues. All developed images of one physical corner retain its physical parity: integral orthogonal reflections have diagonal sign derivative and even integral translation. Therefore z and z' project to different physical reflex corners. This also covers all repeated developments and either determinant sign.
+
+The accepted cone-only complete-fiber equivalence is essential for ruling out a regular physical-corner midpoint. A fixed individual source/target sheet equivalence is not substituted for that dependency.
+
+## Nonvacuous mandatory dark control
+
+In the previously accepted dark Q0 with S=(0,0), T=(2,2), choose
+
+    u=(0,1), w=(1,1), v=(2,1), C=(0,1).
+
+The physical S-to-C leg is interior until its first genuine corner at time1. The reverse physical T-to-C leg in direction -v is also interior until C at time1. At C the missing physical quadrant is northwest. The narrow angle from the downward incoming source germ to outgoing northeast v goes through southeast and is an actual compatible sector. The w ray from S first hits the distinct genuine corner C'=(1,1) at time1, as the lemma predicts. Thus unlike DI02, this premise is attained in Q0 despite Q0 having no even-even reflex corner.
+
+Our exact prescribed replay verifies all three first wall intersections, interiority, negative corner turns and the sector. It does not reprove inherited all-word darkness. It performs no room or direction search.
+
+For Q100=diag(100,1)Q0, the transported data are u=(0,1), w=(100,1), v=(200,1). Their neighbor determinant in the fixed unit frame is -100, not -1. The same proof applies in the transported lattice generated by (100,0),(0,1), where all walls are integral and endpoints even-even. Distinct transported parity classes separate the two physical corners even though their fixed-unit coordinate parities agree. The replay records these different frames explicitly; it makes no fixed-unit Farey assertion for this transported triple.
+
+## Precise remaining obstacle
+
+This is a nonvacuous local darkness necessity. It does not supply the cross-fiber joint, its narrow sector, or an unbounded-weight reduction for a general dark room. The new cone has the other nonzero parity, but a second application requires NEW original X/Y legs and sector data: the two half-diagonal legs already present have identical direction w, determinant zero, so cannot themselves be its next flank pair. The proof provides no such new pair. Different applications can reuse the same physical corners; only this pair is separated by parity. There are only three nonzero parity classes, so parity separation alone cannot yield nine distinct corners.
+
+No positive use of r<=8 or universal corner count has been established. The full orthogonal theorem and actual qualifying dark counterexample remain open. This finding is submitted for independent author challenge before use in any further implication.

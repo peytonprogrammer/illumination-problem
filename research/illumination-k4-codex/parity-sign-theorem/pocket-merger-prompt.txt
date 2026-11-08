@@ -1,0 +1,197 @@
+Independent mathematical review, no tools. Check the local90degree merger lemma below, with actual canonical sectors and strict raw disk hypothesis. Especially verify no hidden fourth-A-quadrant contribution can repair a=b=1 without a pinch, and verify pi-sector interval width and that B is a truezero. Do NOT infer equal half-vectors from accessible sectors. Then try one genuinely proved further step toward actualS-to-T matching at this B, or give a structural obstruction to affine synchronization. The rawroom has two actual interiorA marks, I2,Z0 one merger. A triangularleaf pocket anywhere has literal translatedmirrors D:y-x=-t,H:y=2-t, allotherwalls/marks fixed. Goal onephysicalcorner midpoint event with nonzero slide perioddefect; valid embeddedintrinsicpi-sector, actualtargetlift, nootherphysicalcorners. No room/ray/direction/word discovery or orbit enumeration. Acyclic fan tree gives only topology. Label/prong fixing affinegroup finiteindexSL2Z and preserves admissibleevent, but severalprimitivevectororbits possible. Outsidepolygonperfectcentralcontrol alreadydisprovesalltoruscover realization, not aroomcounterexample. Need independent verdict on locallemma even ifglobalmatching remainsopen.
+
+## 24. Directed fan tree: compulsory mergers between full A fans
+
+This is a cell-topological refinement of `axis-alignment.md`, not a
+trajectory-realization theorem. Throughout this section require the RAW
+condition: every B/C lattice point belonging to the room is a physical
+boundary corner. The earlier axis-alignment theorem allowed smooth B/C
+boundary points; that weaker hypothesis is insufficient here.
+
+Cut the room at its interior BC edges as before. The resulting tree has
+one vertex per contiguous A-centered fan. At a C point, a particular fan
+contains either one triangle (an endpoint C of that fan) or two triangles
+(an internal C). The two triangles of the latter occupy a half-plane.
+Exactly one of its two BC edges must be a portal: neither would make C a
+smooth physical boundary point, and both would make C interior. Both
+possibilities violate the raw condition. Thus C has three triangles in
+the room. Across the chosen portal, the neighboring A fan contains one
+triangle at C. A portal cannot join two endpoint-C fans: their two
+triangles would make C smooth. It cannot join two internal-C fans:
+C would be interior. Orient each portal from its internal-C fan to its
+endpoint-C fan. This orientation is therefore well-defined and unique.
+
+A full fan has eight triangles, four internal C points, no endpoint C,
+and hence outdegree4 and indegree0. It is a source of the directed tree.
+For any boundary fan, write m for its number of triangles, q for the
+number of its two radial boundary edges of type AB, h for its number of
+internal C points, and e for its number of endpoint C points. Counting
+triangle incidences at C and the two radial fan endpoints gives
+
+    h=(m-2+q)/2,       e=2-q,
+    outdegree=h,     indegree<=2-q.                  (24.1)
+
+Here 1<=m<=7 and q is0,1or2. In particular every tree vertex has indegree
+at most2. Every indegree2 vertex is a boundary fan with q=0: its two
+radial boundary edges are AC, and its physical angle is90,180or270degrees.
+Smooth A boundary points are allowed. An outdegree0 vertex can only have
+(m,q)=(1,1)or(2,0); these are45or90degree boundary A fans. A45degree
+triangular leaf pocket is consequently a sink with indegree1, provided
+the room has more than one fan.
+
+Let T be the total number of canonical triangles, V the number of A fans,
+I the number of full fans, and D the total number of boundary AB UNIT
+SEGMENTS counted at their A ends. Summing (24.1), treating each full fan
+separately, and using the tree identity E=V-1 gives
+
+    E=T/2-V+I+D/2,
+    T+D+2I=4V-2.                                  (24.2)
+
+D is not the number of merged diagonal physical walls. In particular two
+collinear AB segments can meet at a smooth boundary A point and form one
+physical wall; their contribution to D is still2. These identities alone
+do not supply a lower bound on the physical diagonal-wall count.
+
+Let Z be the number of boundary fans of indegree0, and M the number of
+fans of indegree2. Every vertex has indegree0,1or2; summing indegrees yields
+
+    M=I+Z-1.                                      (24.3)
+
+For two distinct interior A marks S,T, the unique undirected fan-tree path
+from the full fan at S to the full fan at T MUST contain an internal
+vertex with both path edges directed into it. Indeed the first path edge
+points forward, and the last points backward because both full fans are
+sources. At a forward-to-backward change, both edges enter that vertex.
+Thus every mark-to-mark fan path passes through an AC-ended boundary fan
+of angle90,180or270degrees. More generally I full fans require at least
+I-1 such merger vertices. The fan tree can therefore route a potential
+connection through boundary A fans whose two incoming portals do not
+force a physical corner contact at A itself.
+
+**Exact finite audit.** `pocket-fan.py` reconstructs triangle incidence,
+with no unfolded-surface permutations or trajectory operations. It checks
+all56proper contiguous local fan sectors and all34previously frozen raw
+rooms. The68full fans and306portals satisfy (24.1)-(24.3); all34actual
+mark-to-mark fan paths contain a merger. These are implementation checks
+of the proved identities, not a search for events. A focused tools-disabled Opus review accepts the incidence/count proof.
+Its suggested optical-routing strengthenings are NOT adopted wholesale:
+a path may meet several cuts at their shared B endpoint, and graph routing
+does not imply positive-length passage through every intervening fan.
+The checker does not trace any optical path. Here AB unit means one
+canonical edge of Euclidean length sqrt(2); strict simplicity excludes
+pinch vertices. The tree property is the previously reviewed crosscut
+theorem in axis-alignment.md. Actual diagonal mirror offsets are even;
+the review's assertion that arbitrary integer diagonal offsets preserve
+A/B individually is incorrect.
+
+**Exact remaining gap.** A directed portal-tree path is not a straight
+billiard path. A merger is not the requested one-corner midpoint event.
+These identities neither impose equal half-vectors nor show a nonzero
+pocket period defect. Any proposed induction must additionally retain
+reflection development, the actual S/T lift labels, and the intrinsic
+pi-sector at its single physical corner. In particular a proof cannot
+replace the admissible event by an arbitrary continuous walk through the
+tree or by the existence of its unique connecting graph path.
+
+
+### 24.1 Why cutting off a merger is not a raw-room induction
+
+Cut a single BC portal, whose incident fans are directed upstream to
+downstream. Locally C has three triangles: two on the upstream side and
+one downstream. If the kept component is upstream, its new boundary
+angle at C is180degrees. It fails the raw hypothesis. If the kept
+component is downstream, its new angle at C is90degrees; it remains raw
+precisely when its new angle at B is not180degrees. All other lattice
+points are unchanged. The pieces are simple disks by the crosscut
+property. Thus deleting a45degree leaf pocket always creates a smooth
+non-A point at its C endpoint, exactly outside the class of this goal.
+
+At a merger on the S/T fan path, each incoming cut separates S from T.
+The separate components containing S and T are the upstream components
+and acquire smooth C points. Neither inherits the two-interior-mark raw
+hypothesis. Recombining subroom paths would also have to match their
+physical directions, reflection developments and actual lift labels;
+matching merely their portal endpoints does not give a straight event.
+Capping such a cut with a triangle adds a new mirror and cannot silently
+transfer its billiard paths back to the original room.
+
+There is a second obstacle. A primitive integer half-vector based at A
+ends at B or C, never at A; every developed corner image is integer.
+Therefore the merger's own A vertex cannot be the midpoint of the
+primitive event sought here, including when that A is a270degree corner.
+Any successful use of merger structure must control its B/C endpoints
+or a different physical corner, with the equal-half-vector and sector
+conditions retained. The merger supplies a topological separator, not a
+candidate midpoint at its A center.
+
+The prescribed cell audit checks all306portal cuts in the34frozen
+rooms: every upstream piece has exactly two incident triangles at C,
+and every downstream piece has one. Of the downstream pieces,280retain
+a nonsmooth B; the other26make B smooth as well. These counts validate
+the incidence implementation only; the general cut obstruction is the
+local argument above.
+
+This does not rule out every conceivable induction. It rules out direct
+application of the SAME raw-room hypothesis to the two pieces after
+these cuts. A stronger induction would need explicit boundary scattering
+and label data or allow controlled transparent C exceptions, and would
+have to prove the gluing step. No such strengthened induction is proved.
+
+
+## 27. A90degree merger supplies a reflex B with a local pi window
+
+**Status: direct local proof and finite cell audit; independent general
+proof challenge requested.** Let U be a merger A fan with m=2,q=0,
+physical angle90degrees. It is one canonical unit square, and its two
+incoming BC portals meet at the opposite B vertex b. Write a,b' in{1,2}
+for the numbers of triangles at that B in the two incoming neighboring
+A fans, counting only the contiguous parts meeting this merger.
+Each is at least1 because the portal is present, and at most2 because
+an A-centered fan can occupy at most90degrees at this B.
+
+If both contributions were1, the merger's two triangles and these two
+neighbors would occupy exactly four consecutive45degree sectors at B.
+The fourth A quadrant cannot contain triangles without violating the
+single contiguous boundary sector there: a missing second triangle of
+each neighboring fan separates it from the occupied block. Thus B would
+be a smooth180degree boundary point, contrary to rawness. Consequently
+
+    a+b'>=3.
+
+Any extra triangles in the fourth A quadrant only enlarge the occupied
+sector, and B cannot be interior. Its physical angle is therefore225,
+270or315degrees. In particular it is a TRUE zero in the unfolding.
+This identifies a real candidate midpoint corner at the merger, unlike
+its A center, which primitive parity excludes.
+
+Take angular coordinates about B with the merger quadrant(0,pi/2), the
+first incoming fan portion(-a*pi/4,0), and the second
+(pi/2,pi/2+b'*pi/4). Opposite prongs theta and theta+pi lie strictly
+inside the two incoming portions precisely when
+
+    theta in (-a*pi/4,0) intersect (-pi/2,(b'-2)*pi/4).
+
+That interval has width(a+b'-2)*pi/4:45degrees if one contribution is1,
+and90degrees if both are2. The sector from theta to theta+pi through
+the merger is an embedded physical pi-sector. It stays inside these
+three fan portions. This is a positive-width LOCAL sector window, not
+an assertion that the two upstream marks reach its endpoints with equal
+half-vectors.
+
+Exact audit: the34frozen rooms contain11right-angle mergers and23smooth
+180degree mergers. All11right-angle cases satisfy the B-angle and
+window inequalities. The checker also tests the9possible contiguous
+local B-sector masks containing the four mandatory sectors and excluding
+smooth B. These are local cell configurations, not room enumeration or
+trajectory/direction discovery. Both records are in pocket-fan.json.
+
+The remaining matching problem is explicit. The two upstream marks must
+have primitive corner-free developments ending at THIS actual B lift,
+with opposite incoming prongs in that window and EXACTLY equal lengths
+(or equal developed half-vectors after the same continuation). Two
+individually accessible sectors do not imply this equality. A finite-index
+affine group can have several orbits of primitive vectors, so independently
+moving the two half-paths does not automatically align them. Pocket
+involvement and nonzero defect in(26.1) are further requirements. The
+lemma supplies none of those global conclusions and does not yet treat
+smooth180degree or reflex270degree merger fans.

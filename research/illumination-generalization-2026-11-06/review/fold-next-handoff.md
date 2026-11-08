@@ -1,0 +1,26 @@
+# Fold-next assignment: verified progress and remaining gap
+
+Current universal objective: OPEN. The existing native goal has been preserved, with the existing native budget configuration. Last readback still reports its stale blocked flag, tokensUsed784447, remainingTokens null and no numeric budget. No goal was replaced, reset, completed or internally edited. Explicit research authorization remains recorded. No workers, git actions, outward messages, or new discovery scans were used.
+
+## Verified results from this assignment
+
+- [done] Common Euclidean-similarity placements reduce to the previously accepted congruent-copy case. Peer acceptance is reconciled in fold-similarity-acceptance.json.
+- [done] R22: a strict canonical whole-copy Euclidean-similarity factor at W<=22 forces at most34 normalized triangles and maximal/minimal wall ratio <=34sqrt(2), including every alternate diagonal base, scale and decomposition. The explicit actual-dark room Q100=diag(100,1)Q0 has22walls, S=(0,0),T=(200,2), and ratio200. Physical darkness follows exactly by axial reflection conjugacy from the accepted22room, including all corners, axis cases and actual target arrival. Thus the UNRESTRICTED Euclidean strict-factor converse is false. Full independent hand review accepted; fold-area-invariant-acceptance.json. This is still an affine parity mechanism, not a new optical mechanism or a W21 counterexample.
+- [done] A23: independently accepted the peer's exact marked-prong and clean-reverser theorem. On every orthogonal unfolding, each Sigma-preserving -I involution other than intrinsic rho has exactly4 regular fixed points outside Sigma. It cannot be a clean reversal proof. Full review: reverser-prong-independent.md and acceptance receipt.
+- [done] R23: independently accepted faithful descent of ALL Sigma-preserving derivative-I automorphisms to physical polygon symmetries. For any orthogonal disk with arbitrary real lengths, G embeds in Klein4. Complete cross-fiber explanation by global -I maps would require |G|>=8; impossible even without cleanliness or involution assumptions. global-translation-descent-acceptance.json.
+- [done] R24: independently accepted the arbitrary-degree obstruction for ONE reversing quotient relation with BOTH inverse-forbidden-set guard C and intrinsic-half-turn equivariance E. It covers at mostq²/2 pairs of a full qbyq physical rectangle; a union needs at least2 relations. No sufficiency or exclusion of general correspondences is claimed. equivariant-correspondence-acceptance.json. Peer clarification: reversal uniqueness uses the geometric regular surface and does not require preservation of extra regular forbidden marks.
+
+Each mathematical authoring effort retained its original840-second aggregate deadline and terminated before it. Later prescribed review/reconciliation did not restart discovery. Frozen sources and peer files remain unchanged.
+
+## Exact unresolved obligation
+
+- [in progress] For EVERY strict canonical45 disk with W<=21 and EVERY distinct actual interior A pair, prove illumination or rigorously construct an actual dark counterexample. There is no k, support, area, diameter or surplus cap. The accepted historical W21,k<=6 theorem and provided-factor exclusion do not cover arbitrary inputs.
+- [in progress] No theorem currently derives a strict common base, literal whole copies and two distinct smooth marked base fibers from actual darkness. H restrictedW21 is equivalent to the main theorem relative to the accepted exclusion; merely restating it gives no reduction.
+- [in progress] The accepted cone-only full-fiber reduction in cone-only-fiber-dependency.md remains available. It removes regular corner blockers by physical retracing while allowing endpoint sheet changes. It must not be replaced by a claim about one selected lift pair.
+- [in progress] Multiple correspondences, quotient reversers different from induced rho, and regular forbidden preimages with controlled retracing are not classified. None of the newly accepted negative results rules out them or proves physical illumination.
+
+## Next concrete distinct attempt
+
+Stop extending the global-symmetry exclusions: they have already disproved that shortcut. A useful next attempt must derive an actual constraint from the ZERO-ONLY dark cross-fiber condition, retaining the physical planar quotient. One concrete calibration is to construct, or reject by an explicit gluing obstruction, the suggested three-sheet translation-cover realization of the known22fold and identify every regular preimage of its base-corner marks. Only after proving that map may its continuation data support a general corner/prong count. The genus10/basegenus4 and eight-extra-regular-preimage arithmetic are compatibility hints, NOT an established covering or necessity theorem. This is not permission for a census and not a claim that another known-room description resolves W21.
+
+Peer Codex01a18403 owns positive necessity/direct-proof development and has received this lead. Coordinate a file claim before any new work; review/ owns the adversarial audit and independent reviews. No active authoring effort or unreviewed packet remains at this checkpoint. All universal gaps remain explicitly open, and the general arbitrary-polygon/real-endpoint bridge remains separate.

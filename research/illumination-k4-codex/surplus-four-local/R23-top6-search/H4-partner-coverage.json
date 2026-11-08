@@ -1,0 +1,314 @@
+{
+  "status": "PARENT_H4_LOCAL_PARTNER_EXHAUSTION_PASS",
+  "local_unit_windows": {
+    "L": [
+      [
+        0,
+        1
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        0,
+        7
+      ]
+    ],
+    "D": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "R": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "E": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "Tc": [
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "N": [
+      [
+        0,
+        1
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        0,
+        7
+      ]
+    ]
+  },
+  "dispatch": [
+    {
+      "unit_site": "L",
+      "sectors": [
+        0,
+        1
+      ],
+      "label": "L01",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "L",
+      "sectors": [
+        6,
+        7
+      ],
+      "label": "L67",
+      "dispatch": "REFERENCE_FORCING_EXCEPTION",
+      "bound": 4,
+      "reason": "ordinary E4 forces L0 by accepted four_sigma"
+    },
+    {
+      "unit_site": "L",
+      "sectors": [
+        0,
+        7
+      ],
+      "label": "L07",
+      "dispatch": "IMPOSSIBLE_AT_B1",
+      "reason": "two unhealable extra180 non-A points",
+      "points": [
+        [
+          1,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ]
+      ]
+    },
+    {
+      "unit_site": "D",
+      "sectors": [
+        0,
+        1
+      ],
+      "label": "D01",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "D",
+      "sectors": [
+        1,
+        2
+      ],
+      "label": "D12",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "D",
+      "sectors": [
+        2,
+        3
+      ],
+      "label": "D23",
+      "dispatch": "ACCEPTED_FOUR_SIX_ORDINARY_TC_SPLIT",
+      "bound": 6
+    },
+    {
+      "unit_site": "R",
+      "sectors": [
+        2,
+        3
+      ],
+      "label": "R23",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "R",
+      "sectors": [
+        3,
+        4
+      ],
+      "label": "R34",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "R",
+      "sectors": [
+        4,
+        5
+      ],
+      "label": "R45",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "E",
+      "sectors": [
+        2,
+        3
+      ],
+      "label": "E23",
+      "dispatch": "REFERENCE_FORCING_EXCEPTION",
+      "bound": 1,
+      "reason": "absent E4 invokes accepted one_sigma"
+    },
+    {
+      "unit_site": "E",
+      "sectors": [
+        3,
+        4
+      ],
+      "label": "E34",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "E",
+      "sectors": [
+        4,
+        5
+      ],
+      "label": "E45",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "Tc",
+      "sectors": [
+        4,
+        5
+      ],
+      "label": "Tc45",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "Tc",
+      "sectors": [
+        5,
+        6
+      ],
+      "label": "Tc56",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "Tc",
+      "sectors": [
+        6,
+        7
+      ],
+      "label": "Tc67",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "N",
+      "sectors": [
+        0,
+        1
+      ],
+      "label": "N01",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "N",
+      "sectors": [
+        4,
+        5
+      ],
+      "label": "N45",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "N",
+      "sectors": [
+        5,
+        6
+      ],
+      "label": "N56",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    },
+    {
+      "unit_site": "N",
+      "sectors": [
+        0,
+        7
+      ],
+      "label": "N07",
+      "dispatch": "NEW_THREE_WHOLE_ENVELOPE",
+      "bound": 3
+    }
+  ],
+  "counts": {
+    "NEW_THREE_WHOLE_ENVELOPE": 15,
+    "REFERENCE_FORCING_EXCEPTION": 2,
+    "IMPOSSIBLE_AT_B1": 1,
+    "ACCEPTED_FOUR_SIX_ORDINARY_TC_SPLIT": 1
+  },
+  "maximum_bound": 6,
+  "source_sha256": {
+    "surplus-four-local/R23-top6-search/findings.txt": "2fe64ec911ea6096af6eb2cfeb0770ead8f1d6293ff7cd9ef85d761ee6931dd2",
+    "surplus-four-local/R23-top6-search/verification.json": "2a8dd60e98a8e933f2e3c979e56b07525e56357b132461845ac3f4f60d6c1f16",
+    "surplus-four-local/e2-e1-b1/critical-B-check.json": "66c4867dfd78418776be56d02c2781af9e34425000d59c82f17267206050cfa6",
+    "fourth-surplus-review/mixed-e2-e1/joined-four-check.json": "2a5204d9c577c5d2038a26effbd3ec71010ea35bf299ba6bf158fc05206ab572",
+    "surplus-four-local/joined-six-review/check.json": "755be70195da4916a5e99795f059372df5e914332c8accca5ba7160239ebdbd0",
+    "fourth-surplus-review/peer-critical-B-b1-independent/review.txt": "5274b5b55f44bf8fe07711ea747eeda17d22f95773e723bc811595839b8500c7"
+  },
+  "checker_sha256": "3cef5e65a93dfc21f36fabdd72ec6d4f73bbebcb1cdfa428ac343f2b71f38ab6",
+  "limits": "Static cyclic local m2 fan exhaustion, not room/cap-assignment enumeration or another discovery search. Inherits root/leaf and H-side-touch definition, b/M interpretation, reference forcing and independently accepted D23 optics. Parent corroboration; independent new3/H4 peer review still pending."
+}

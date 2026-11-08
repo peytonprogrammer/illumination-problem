@@ -1,0 +1,93 @@
+Independent B-unit six-reflection review
+Codex01a18403 — 4 November 2026
+
+VERDICT: ACCEPT critical-L-continuation.txt section4's conditional optical
+lemma and its application to the TWO stated L670+BC+D-/R± inward
+descriptions. No corrections. This does not independently establish the
+original thirteen-description classification or completeness of the
+remaining eleven-description frontier.
+
+1. Hand derivation, actual endpoints and strict branch
+
+Launch(-d,-1) from actual S=(0,0). Enter B12 at(-d,-1).
+The left mirror y=-x-2 gives
+ A=(-2d/(1+d),-2+2d/(1+d)), outgoing(1,d).
+The right mirror y=x-2 gives
+ B=(2d/(1-d),-2+2d/(1-d)), outgoing(d,1).
+The exit is(3d,-1). Both contacts and the exit are strict for0<d<1/3.
+The source ceiling at(5d,1) needs0<5d<1 and N6 absent. It reflects to
+(d,-1). Entry into ordinary D2 is(7d,-1).
+
+Direct line intersections, independently derived for the D return:
+ C=(6d/(1-d),-6d/(1-d)), outgoing(1,-d);
+ D=(2,-8d), outgoing(-1,-d);
+ E=(10d/(1+d),-10d/(1+d)), outgoing(d,1).
+The two diagonal hits use x+y=0; the middle hit uses x=2. The exit
+is(9d,-1). At height2 the final ascending segment has x=12d.
+Thus actual T=(2,2) forces d=1/6. The combined strict branch
+1/7<d<1/5 ensures B contacts, the ceiling, D entry/exit and all D
+contacts stay away from finite mirror endpoints. In particular
+7d=7/6 and9d=3/2 are both strictly between1 and2.
+
+This yields exactly the declared SIX-reflection path
+ S,(-2/7,-12/7),(2/5,-8/5),(5/6,1),
+ (6/5,-6/5),(2,-4/3),(10/7,-10/7),T.
+
+2. Whole-family certificate
+
+Exact verification recomputes13 required and5 forbidden triangles.
+Required support lies in H+B12+D2. Forbidden support misses the maximum
+ H+B12+D2+FULL L/E/Tc/R+all N sectors EXCEPT6.
+Therefore every room between this minimum and maximum retains the
+entire trajectory; no completed-room sample is needed. The maximum is
+only a support envelope, not a claimed valid room.
+
+All six finite mirror contacts are strict; local specularity, positive
+travel direction, first actual target encounter, reversal and sigma
+with reversal PASS. Actual target unfolds to(-2,-12), aligned with
+launch(-1,-6). Every open segment is interior under the support
+conditions: the canonical crossing/midpoint calculation requires all
+incident triangles occupied. At each bounce the occupied and absent
+half-neighborhoods preserve the mirror and exclude a corner.
+
+Negative controls confirm that N6 removes the ceiling, B0/B3 remove
+B-pocket mirrors, and D1/D3 remove D-pocket mirrors. Consequently this
+lemma cannot be transferred to the larger B012 or arbitrary D-root fan
+without checking those restrictions. The peer explicitly distinguishes
+its B12 unit from a larger B root.
+
+3. Application to the two inward descriptions
+
+The two descriptions are
+ H+L670+B12+E4+Tc5+N5+D2+R3,
+ H+L670+B12+E4+Tc5+N5+D2+R4.
+They both contain the minimum. All additional triangles lie in the
+maximum: full L/E/Tc/R are harmless; ordinary N5 omits N6; D is exactly2.
+This establishes the optical implication for every valid room having
+either description. It does not assert that each description actually
+produces a valid room. No completed room was built in this audit.
+
+The same conditional path permits any of the larger L forms and any
+other additional support allowed by the envelope. The peer's ordinary
+N=Nb- implication means N5 only, which satisfies the restriction. The
+separate inherited B6 case with Nb- absent was not re-audited here.
+
+4. Realignment and review limits
+
+Proved here: the new B12/D2 conditional optical lemma and both stated
+inward-case inclusions, within six reflections. The peer's original
+13-to-11 subtraction is valid relative to its original list, but this
+review does not certify completeness of that list or of all local
+critical-L cases. Other centered-B choices without D2 and centered-E
+cases remain open; the full surplus-four theorem remains unresolved.
+
+Method: independent hand algebra and local finite-mirror arithmetic;
+reused own prior verification functions and historically shared
+triangle-composition/inputs/guard_checker.py. No peer checker execution,
+new completed room, cap enumeration, ray/direction/reflection-word
+discovery, archive retrieval, solver or worker. This is independent AI
+review, not formal verification or expert refereeing.
+
+Reproduce:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/peer-Bunit-six-independent/check.py
+Receipt: check.json, including exact source hashes and full guard sets.

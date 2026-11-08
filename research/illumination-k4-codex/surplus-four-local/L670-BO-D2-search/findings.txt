@@ -1,0 +1,111 @@
+B-outer square: FIVE covers all four remaining inward descriptions
+Codex01a1a00f, 5 November 2026
+
+STATUS: Parent hand proof and exact whole-support checks PASS.
+Independent review requested. This closes the remaining FOUR inward
+necessary descriptions at parent level, conditional on the separate
+new-eight reviews. Other outside-C and fullDelta4 gaps remain open.
+
+1. One fixed discovery and exact frozen geometry
+
+After two direct Bsquare/N6 prescriptions failed, use Daniel's explicit
+standing search-if-needed authorization for ONLY
+ H+L670+B01+E4+Tc5+N6+D2, Rempty.
+Geometry was checked FIRST: simple20wall polygon,33tiles, interiorA exactly
+S/U/T, J3,sN3,Q9,k6,Delta4. The first exact candidate was(3,-4), FIVE
+reflections, after45directions/44cornerstops, about0.0008seconds.
+The300second budget was only an upper bound. Search stopped immediately;
+no second pattern, replacement room or unused-budget reuse occurred.
+
+Own separate Fraction engine reconstructs that ONE frozen actual polygon,
+checks simplicity/angle ledger and replays every first-wall hit. Exact
+open-leg incidence, finite mirror conditions, first actualT, noSrevisit,
+reverse/sigma and actual target unfolding all PASS.
+
+2. Mechanism and hand derivation
+
+The B01 unit is the square[0,1]x[-2,-1]. Launch(d,-1) from actualS.
+Use a THREE-contact square return, rather than the failed one-floor-hit
+return. Hit its RIGHT x=1 at y=-1/d, then its BOTTOM y=-2 at x=2-2d,
+then its LEFT x=0 at y=2/d-4. The outgoing direction is(d,1).
+It leaves the square at(3d-2,-1), crosses H and reaches the target-star
+RIGHT wall at(3,5/d-4), which reflects(-d,1). Its next contact is the
+bare upper RIGHT half of the T roof, y=3 at x=8-7d; outgoing(-d,-1).
+At target height y=2 its x coordinate is8-8d. ActualT therefore forces
+ 8-8d=2, or d=3/4.
+
+The sufficient strict branch5/7<d<5/6 guarantees:
+ - B right/left heights lie strictly in(-2,-1), bottom x in(0,1);
+ - B exit x=3d-2 lies in(0,1);
+ - the U-to-T crossing y1 has x=5d-2 in(1,3);
+ - T-right height5/d-4 lies in(2,3), roof x8-7d lies in(2,3).
+Thus every mirror and necessary portal is strict. At the forced root,
+the exact crossing(1,0) lies in the full360 interior of H, not at a wall.
+All other intermediate edge/vertex events are checked by complete support.
+
+The fixed path is
+ S,(1,-4/3),(1/2,-2),(0,-4/3),(3,8/3),(11/4,3),T.
+All FIVE contacts are strictly inside finite walls. Unfold actualT through
+the five mirrors to(6,-8), aligned with launch(3,-4).
+
+3. Whole support: why this covers all four D/R descriptions
+
+Complete required13triangles lie in minimum H+B01. Complete forbidden5:
+ B2,B7,D3,E3,Tc6.
+No L,N,R triangle is needed or forbidden. A maximum support allows full
+L/N/R, Bexcept2/7, Dexcept3, Eexcept3, Tcexcept6. No remote blocker appears.
+Every valid room between these extrema has the same path. Extrema are
+support envelopes, not extra completed rooms or a cap census.
+
+The four original necessary descriptions are
+ H+L670+B01+E4+Tc5+N6 +exactlyone ofD2,D1,R4,R3.
+Take ONE common minimum containing all their shared support. Add BOTH
+D1/D2 and BOTHR3/R4 to a single upper envelope. It still fits the maximum
+and misses allZ5. Therefore ALL FOUR descriptions inherit this ONE FIVE
+path. The proof does not need four new room constructions or searches.
+Five blocker controls each reject the corresponding mirror-filling tile.
+
+The important change from the failed direct route is that the actual
+five NEVER visits N6. It crosses the core to the target star above the
+E4 pocket. Thus N6's filled ceiling is harmless, and all ordinaryD/R
+choices are simultaneously allowed.
+
+4. Outside-C transfers and reflected Eouter five
+
+The original outside-C table has Bouter01 with ordinary E4,Tc5,N5 and
+larger L012,L7012,L0123; additional D/R caps follow that table's one-DR
+rule. All these fit the same five maximum, even allowing fullL and both
+ordinaryD/R choices as a symbolic upper. Thus ALL THREE outside-C Bouter
+rows inherit<=5. L012 was already covered; L7012 andL0123 are new useful
+transfers. This does not assert each described completion is a valid room.
+
+Sigma(x,y)=(2-y,2-x), with time reversal, yields a five with minimumH+E45.
+Its blockers are E3,E6,R2,B2,L7. FullD/Tc/N and Rexcept2 are safe.
+The checker separately recomputes the transformed complete guard and
+finite specularity. It covers L012/L0123 with Eouter45,B1,Tc5,N5 and any
+ordinaryD/R required by the outside-C table: neither L shape contains7.
+L012's Eouter row already had a13bound; L0123's row newly closes<=5.
+L7012 contains L7 and does NOT inherit this reflected five. Its Eouter
+row remains open; a filled bare mirror cannot be ignored.
+
+5. What this establishes and what remains
+
+Together with previously accepted inward covers and the two separately
+pending new-eight proofs, this covers the ENTIRE original THIRTEEN
+necessary inward list. No inward necessary description remains at parent
+level. Independent acceptance of that joined assertion still requires
+all pending new optics/transfer reviews. This is not the entire critical-L
+proof: the outside-C L7012 andL0123 partner rows still have open cases,
+plus other local/mixed/remote Delta4 work. No universal wall minimum claim.
+
+Evidence verify.py/verification.json, frozenroom/result/search/log. The
+receipt pins the source geometry primitives and original accepted table
+reviews. Own Fraction arithmetic; no peer execution or worker. Independent
+AI review remains distinct from parent exact checks/formal/expert proof.
+
+[done parent] FIVE, full13U5Z/finitefirstwalls/firstT/reverse/sigma.
+[done parent] ONE envelope covers all FOUR BO inward descriptions.
+[done parent] All outside-C Bouter rows; L012/L0123 Eouter via sigma.
+[waiting on Codex01a18403] Independent five/wholeguard/transfers review.
+[in progress] Outside-C/otherlocal/mixed/remote/fullDelta4 remain open.
+Next move: peer challenge newfive while own work moves to outside-C.

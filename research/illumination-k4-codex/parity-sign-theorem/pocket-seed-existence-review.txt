@@ -1,0 +1,106 @@
+# HAL0: no proof and no counterexample obtained
+
+**Status.** I have neither a proof of HAL0 nor a counterexample in the class. Below are four hand results. Each is proved in full, but each is a reformulation or a reduction, not the universal lemma. Section 5 states exactly what is still missing.
+
+---
+
+## 1. Lemma M: the mod‑2 chart and the "one A‑side" property
+
+**Claim.** The D4 unfolding X maps onto the 2‑torus R²/2Z², not only onto R²/Z². The map is a branched cover of degree T, where T is the number of canonical triangles in P. It is branched only over the four classes A=(0,0), B=(1,1), C₁=(1,0), C₂=(0,1).
+
+**Proof.**
+- Copy g ∈ D4 uses the chart z ↦ g·z. Across a wall ℓ with affine reflection r_ℓ(z) = rz + t_ℓ, copies g and g·r are glued by translation by g·t_ℓ.
+- Vertical and horizontal walls lie on integer lines x=k or y=k, so t_ℓ = (2k,0) or (0,2k).
+- AB walls lie on lines x∓y = 2m, so t_ℓ = (2m, ∓2m)·(±1).
+- In every case g·t_ℓ ∈ 2Z². Each copy has T triangles and R²/2Z² has 8, so the degree is 8T/8 = T. ∎
+
+**Consequence for cylinders.** Fix a primitive direction w that is not parallel to any wall.
+- In R²/2Z² the lattice classes lie on exactly two closed w‑lines:
+  - the A‑line through A and X_w := A+w (mod 2);
+  - the other line, through the remaining two classes.
+- Their complement consists of two annuli. Each annulus has one A‑line side.
+- Every lattice class is a branch value, and every B/C room point is a corner by rawness. Hence the Σ_c‑marked w‑cylinders of X are exactly the components of the preimages of these two annuli. This gives three facts:
+  1. Every marked w‑cylinder has exactly one boundary side lying over the A‑line. No A point ever lies on the other side.
+  2. Every A‑line saddle connection borders two distinct cylinders, one over each annulus.
+  3. Let a cylinder have degree d over its annulus. Its A‑side has length 2d|w| and consists of exactly d "letters". A letter is either:
+     - a long edge X_w→X_w of holonomy 2w with a regular A midpoint, or
+     - a pair of short edges X_w→A‑corner→X_w.
+
+## 2. Exact monodromy form of HAL0 (audit of the algebraic model)
+
+**Sheets.** Pick a base point b at distance ε from A, on one side of the A‑line. Its T preimages are the A‑sheets.
+- A regular A lift (S, T, or a smooth boundary A) has exactly one sheet.
+- An A‑corner lift of cone angle 2πk has k sheets.
+- In total, a fan with m triangles contributes m sheets.
+
+**Monodromy.** Let σ_{w,±} ∈ Sym(T) be the monodromy of the straight loop b → b+2w, taken on the ± side of the A‑line. The cycles of σ_{w,±} are exactly the A‑side words of the cylinders over the two annuli.
+
+**Theorem.** HAL0 holds if and only if there are a direction w (not wall‑parallel), a sign ±, an S‑lift s and a T‑lift t with σ_{w,±}^{±1}(s) = t.
+
+**Proof.**
+- (⇐) The step from s to t is two consecutive A‑side edges. Each is a long edge, because S and T are regular, so it has holonomy 2w with midpoints s and t.
+  - They share one X_w corner c. The two edges are consecutive on a cylinder boundary, so the sector at c is an embedded π‑sector.
+  - The corner c is a true zero: if c were regular, the step would be a retroreflection, giving t = (another lift of S), contradicting S≠T.
+- (⇒) This is Section 26's equivalence, read through fact 3 of Lemma M. ∎
+
+**Audit verdict on the triangle‑involution model.** The model is correct when its word g_w means the monodromy of this straight loop. It is not correct for an arbitrary word in the free group. Its ρ‑sweeps appear only through the relation σ_{w,+}σ_{w,−}⁻¹, which is a product of local rotations at the A and X_w punctures. Two points matter:
+- Transitivity of ⟨all σ_{w,±}⟩ only places T in the group orbit of S. HAL0 needs a single σ_{w,±}.
+- A‑corner κ‑letters must be kept as letters. They are not edges that can be skipped.
+
+## 3. Corner‑wheel reduction (absorbers bypassed)
+
+At a true‑zero X_w corner lift c of cone angle 2πk:
+- The k incoming (−w) prongs and k outgoing (+w) prongs alternate at spacing π.
+- An event through c means an incoming S‑letter and an outgoing T‑letter whose prongs are adjacent, i.e. separated by π in either rotational direction.
+- So HAL0 is equivalent to two conditions holding in some direction w:
+  - **(CO) co‑arrival:** some S‑lift and some T‑lift satisfy c(s,w) = c = c(t,−w). Each of these is a corner‑free primitive segment, so no absorber can intervene.
+  - **(ADJ) adjacency:** the two prongs are adjacent.
+
+**k = 3 corners (135° corners and both 6π lifts of 270° corners).** From a given incoming prong, the outgoing prongs sit at π, 3π and 5π ≡ −π. So **CO implies an event unless the separation is exactly 3π.** This includes every C corner adjacent to a full fan, all of which are 270° by Section 24. For k = 5 and k = 7, the non‑adjacent separations are {3π, 5π, 7π} and {3π, …, 11π} respectively.
+
+**Physical‑opposite criterion.** Suppose S's last leg arrives at c along physical ray a and T's first leg leaves along physical ray a+π. Then the prongs are adjacent automatically.
+- The room's link at c is a single arc (strict simplicity) that is not the full circle (rawness).
+- That arc contains both rays, so it contains one of the two π‑arcs between them. This gives an embedded one‑copy sector.
+
+Special case: if the straight segment from S to T, with primitive half‑vector, meets no wall and contains only its midpoint as a lattice point, then HAL0 holds with no further hypothesis.
+
+**Checked local instance.** Take S=(0,0), T=(4,2), w=(2,1), c=(2,1). The path crosses these triangles:
+- {S,(1,0),(1,1)};
+- {(2,0),(1,0),(1,1)} and {(2,0),(2,1),(1,1)}, which together form a 90° merger;
+- {(2,2),(2,1),(3,1)} and {(2,2),(3,1),(3,2)};
+- {T,(3,2),(3,1)}.
+
+The checks are as follows:
+- The only crossings are the internal AB diagonals and the portals x=1 and x=3.
+- Rawness holds at (1,0), (1,1), (2,1) and (3,2). At (3,1) it needs one extra triangle, for example {(4,0),(4,1),(3,1)}.
+- The corner c is a 270° C point: the endpoint C of the merger's second incoming portal. This is a C‑type candidate, distinct from Section 27's B.
+- Fan tree: S→(2,0)←(2,2)←T. The full‑fan spacing is (4,2), which satisfies 27.1.
+
+This is a local certificate only: **any** raw room containing these triangles satisfies HAL0. I did not complete it to a full room with the pocket, so it is not offered as a universal result.
+
+## 4. Does graph connectivity plus I=2 force an event? No.
+
+**Absorbers are exactly the partial fans.** With I=2, every non‑S/T letter comes from a partial A fan:
+- m=4 fans are smooth 180° points and give regular long‑edge midpoints;
+- m≠4 fans are A‑corner marks and give κ‑letters. These are regular for m=1,2 and true zeros otherwise.
+
+The absorber sheet count is T − 8I ≥ P ≥ 3I+1 = 7 (Section 27.4). So every raw room has absorbers. In each σ_{w,±}‑cycle, as few as two absorber letters can separate the S‑letters from the T‑letters. Counting therefore never yields a contradiction.
+
+**Connectivity gives the wrong conclusion.** Graph connectivity, or group transitivity, yields at best a word in the σ's. Geometrically that is a straight path of holonomy 2k·w whose k corners are separated by absorber letters, i.e. k corners rather than one. Nothing reduces k to 1.
+
+**So the failure is real, not technical.** Pigeonhole on the two interior labels can act only inside an absorber‑free run. Whether such a run exists is the content of HAL0 itself.
+
+## 5. The precise missing premise
+
+> **(CO+ADJ).** For some non‑wall‑parallel primitive w, some true‑zero corner lift c receives an S‑lift along +w and emits a T‑lift along +w, with prongs that are not at an odd multiple ≥3 of π apart.
+
+- **CO** says the S‑arrival corner set and the T‑departure corner set in direction w intersect.
+- Both sets are unions of orbits of the finite‑index pointwise mark stabilizer Γ' acting on primitive vectors. So CO is a cusp‑matching statement. As already noted in Section 27, several orbits can keep these sets disjoint.
+- I could not prove CO, even for I=2.
+
+**Toward a counterexample.** A counterexample would need an invariant that separates the two arrival sets for every w. The natural candidates fail inside this class:
+- The copy label fails because all 8 lifts of T count.
+- The mod‑2 chart (Lemma M) is too coarse.
+- The mod‑4 chart is not well defined. Every full fan forces a BC wall on an odd line (x=±1 or y=±1 through its C corners), and each such wall shifts the chart by (2,0) mod 4.
+
+The failure of these invariants is not a proof that no obstruction exists. HAL0 remains **open** in both directions.

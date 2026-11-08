@@ -1,0 +1,122 @@
+{
+  "status": "TWO_E2_PARTITION_CLOSED_INDEPENDENTLY_ACCEPTED",
+  "classification_independent_review": "fourth-surplus-review/two-e2-independent/review.txt",
+  "BE_families_independent_review": "fourth-surplus-review/two-e2-BE-independent/review.txt",
+  "BE_family_reflections": 10,
+  "closed_original_fixtures": {
+    "Llower_Beast_Nbplus_Dminus": {
+      "reflections": 4,
+      "proof_review": "surplus-four-local/two-e2-D8-review.txt"
+    },
+    "Llower_Beast_Nbplus_Dplus": {
+      "reflections": 4,
+      "proof_review": "surplus-four-local/two-e2-D8-review.txt"
+    },
+    "Llower_Beast_Nbplus_Rminus": {
+      "reflections": 4,
+      "proof_review": "surplus-four-local/two-e2-D8-review.txt"
+    },
+    "Llower_Beast_Nbplus_Rplus": {
+      "reflections": 19,
+      "proof_review": "surplus-four-local/two-e2-Rplus19-review.txt",
+      "discovery_provenance": "fourth-surplus-review/rplus-exact-one/result.json"
+    },
+    "BHeast4_Dhalf3_Rplus_Tplus": {
+      "reflections": 12,
+      "proof": "surplus-four-local/two-e2-joined-exact-one/findings.txt",
+      "fixed_path_receipt": "surplus-four-local/two-e2-joined-exact-one/inheritance.json",
+      "independent_peer_review": "fourth-surplus-review/joined12-independent/review.txt"
+    },
+    "Bouter3_Dfullwest4_Rplus_Tminus": {
+      "reflections": 12,
+      "proof": "surplus-four-local/two-e2-joined-exact-one/findings.txt",
+      "fixed_path_receipt": "surplus-four-local/two-e2-joined-exact-one/inheritance.json",
+      "independent_peer_review": "fourth-surplus-review/joined12-independent/review.txt"
+    },
+    "Bouter3_Dfullwest4_Rplus_Tplus": {
+      "reflections": 12,
+      "proof": "surplus-four-local/two-e2-joined-exact-one/findings.txt",
+      "fixed_path_receipt": "surplus-four-local/two-e2-joined-exact-one/inheritance.json",
+      "independent_peer_review": "fourth-surplus-review/joined12-independent/review.txt"
+    },
+    "Bouter3_Dhalf3_Rplus_Tempty": {
+      "reflections": 12,
+      "proof": "surplus-four-local/two-e2-joined-exact-one/findings.txt",
+      "fixed_path_receipt": "surplus-four-local/two-e2-joined-exact-one/inheritance.json",
+      "independent_peer_review": "fourth-surplus-review/joined12-independent/review.txt"
+    },
+    "Bouter4_Dfullwest4_Rplus_Tminus": {
+      "reflections": 12,
+      "proof": "surplus-four-local/two-e2-joined-exact-one/findings.txt",
+      "fixed_path_receipt": "surplus-four-local/two-e2-joined-exact-one/inheritance.json",
+      "independent_peer_review": "fourth-surplus-review/joined12-independent/review.txt"
+    },
+    "Bouter4_Dfullwest4_Rplus_Tplus": {
+      "reflections": 12,
+      "proof": "surplus-four-local/two-e2-joined-exact-one/findings.txt",
+      "fixed_path_receipt": "surplus-four-local/two-e2-joined-exact-one/inheritance.json",
+      "independent_peer_review": "fourth-surplus-review/joined12-independent/review.txt"
+    },
+    "Bouter4_Dhalf3_Rplus_Tempty": {
+      "reflections": 12,
+      "proof": "surplus-four-local/two-e2-joined-exact-one/findings.txt",
+      "fixed_path_receipt": "surplus-four-local/two-e2-joined-exact-one/inheritance.json",
+      "independent_peer_review": "fourth-surplus-review/joined12-independent/review.txt"
+    }
+  },
+  "remaining_exact_fixtures": [],
+  "ownership": {
+    "seven_joined_B_D": "Codex01a1a00f"
+  },
+  "original_fixture_receipt_sha256": "b518db44d3911fb20e9a3e3b3b123553c8fa3a58d75596338191d064ba651e72",
+  "limits": "Not fulltwo-e2 orDelta4 closure; sibling partitions andremote gaps remain open.",
+  "joined_bounded_checkpoint": {
+    "status": "TWO_PRESCRIBED_CIRCUITS_REJECTED",
+    "receipt": "surplus-four-local/two-e2-joined-gate.json",
+    "new_case_closures": 0,
+    "first_obstructions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "seven_reflection_transport": "INVALID_AT_TARGET_ROOT",
+    "next_step": "Hand-derive a different target-first circuit with strict portal inequalities."
+  },
+  "joined_two_ended_match": {
+    "status": "NO_LEGAL_MATCH_FOR_DECLARED_PAIR",
+    "receipt": "surplus-four-local/two-e2-joined-match.json",
+    "new_case_closures": 0,
+    "source_interval": [
+      "5/4",
+      "7/5"
+    ],
+    "target_interval": [
+      "3/2",
+      "5/3"
+    ],
+    "formal_root": "4/3",
+    "failure": "First target-side proposed mirror is interior."
+  },
+  "broader_local_partition_list": "Independent HAND ACCEPT of repaired TEN necessary types and e3+e1 cover: surplus-four-local/local-partition-review.txt. Two restored b1 types remain open.",
+  "joined12": {
+    "direction": [
+      -3,
+      4
+    ],
+    "reflections": 12,
+    "original_rooms_closed": 7,
+    "discovery_runs": 1,
+    "run_state_limit": 20000,
+    "run_seconds_limit": 60,
+    "states_visited": 49,
+    "fixed_replay": "PASS",
+    "same_path_all_seven": "PASS",
+    "peer_review": "ACCEPT_WITHOUT_CORRECTIONS",
+    "peer_review_source": "fourth-surplus-review/joined12-independent/review.txt"
+  }
+}

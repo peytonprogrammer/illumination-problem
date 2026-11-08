@@ -1,0 +1,114 @@
+# Follow-up review: Sections 5, 7, 8 and incorporation of earlier fixes
+
+**Verdict:** I accept all three new arguments. There are three points to fix:
+
+- **(A)** The saved control event already looks like the seed that §5 asks for, and the note doesn't say so.
+- **(B)** The final step of §5 needs a multi-parameter form of the opening proposition, and its phrase "quotienting the symmetries" needs defining.
+- **(C)** One claim in my earlier review was wrong. The note correctly did not import it.
+
+Everything below was checked by hand. I did not run the checker.
+
+## §5: two-sided sign transfer
+
+**Shear formulas.** The twist increments are combinations of core classes, and Q vanishes on those cores. So Q(gη) = v is unchanged, while the period w moves to Mⁿw.
+
+- Horizontal shear: w′ = (p + naq, q), so det(w′, v) = p v_y − q v_x + naq v_y. This matches g_h,n.
+- Vertical shear: w′ = (p, q + nbp), so det(w′, v) = p v_y − q v_x − nbp v_x. This matches g_v,n.
+- Both shears have determinant 1, so σ is preserved.
+
+**Odd seed.** Q ≡ (1,1) mod 2 and Q is an integer vector, so v_x and v_y are odd and hence nonzero. The slopes aqv_y (when q ≠ 0) and −bpv_x (when q = 0) are therefore nonzero, provided a, b ≠ 0. State that a, b ≠ 0 explicitly.
+
+**Wall-parallel powers.** When q ≠ 0, w′ is wall-parallel only if p + naq ∈ {0, ±q}. That excludes at most three values of n. The q = 0 branch is the same. The claim is correct.
+
+**Axis exceptions in the general paragraph.**
+- If q v_y = 0 and p v_x = 0 with w, v ≠ 0, the only cases are w = (0,q) with v = (v_x,0), or w = (p,0) with v = (0,v_y). The case analysis is exhaustive.
+- In the first case, one horizontal power n₀ ≠ 0 makes p′ = n₀aq ≠ 0, and then the vertical powers give slope −bp′v_x ≠ 0.
+- The composite h^{n₀}vⁿ lies in the group, and v and σ are unchanged. So "at most one preliminary shear" is correct.
+- Side remark: in both exceptional cases det(w, v) ≠ 0 already, so the seed itself has a nonzero row. Only the second sign needs the shear.
+
+**Admissibility of the image events.** Images of events under the affine maps are straight. They keep the midpoint, the equal halves, singularity avoidance and the π-sector. The physical labels being fixed is still imported from `corner-rigidity.md`. That dependency is honestly stated.
+
+**Required fix B (the compactness sentence).**
+1. *"After quotienting the symmetries" is undefined.* The hypothesis "vector seed detection on the subspace" already excludes a common kernel, so the quotient is either unnecessary or a sign that detection only holds modulo some trivial directions. Either name those directions or delete the phrase.
+   - The covering argument itself is right: the open sets {r_e > 0} cover the unit sphere, a finite subcover exists, and by Farkas these finitely many rows positively span the dual space.
+2. *Multi-parameter opening.* The reviewed opening proposition is one-parameter. For a finite family on a k-dimensional subspace you need a radius that is uniform over directions. It is a one-line lemma:
+   - With the word fixed, C_img and T_img are affine in δ.
+   - So the signed area equals r_e(δ) + O(|δ|²) uniformly, and admissibility is an open condition.
+   - On the compact set {r_e ≥ c|δ|} this gives a uniform ε.
+
+   State it rather than relying on the one-parameter proposition.
+
+**Issue A (event1).** §6's event1 has wall word H then D: one diagonal factor, so it is odd. Its defect is (−1,−1), w = (−12,5) is not wall-parallel, and its row is −17.
+- If the saved room satisfies the raw-parity hypotheses of `corner-rigidity.md`, then §5 gives two-sided local opening for this slide in the saved room right now, not just conditionally.
+- The note should either claim this, scoped to the saved room with admissibility imported, or say which hypothesis fails.
+- It should also say that this does not touch the universal question.
+- Optionally, add `assert records[1]['diagonal_hit_parity']==1` so the claim is checked rather than implied.
+
+## §7: binary full rank implies real detection
+
+- **Per-pocket parity.**
+  - The diagonal load of each pocket, (I−R)u_r, has both coordinates odd. For example, the anti-diagonal case gives (−1,−1).
+  - The moving axis wall is perpendicular to u_r under rotations, so its load 2u_r is even.
+  - The portal-line walls are fixed, and the corner term 2L_p v_c is even even when c is a vertex of pocket r.
+  - So ∂Q/∂t_r ≡ B_er·(1,1) mod 2. This needs the stated hypothesis that the walls are distinct, so that each hit is charged to one parameter.
+- **The minor argument.** The determinant is an integer polynomial, so reduction mod 2 commutes with it. A minor that is 1 over F₂ is therefore odd over ℤ, hence nonzero, so the real matrix has rank k and Mδ ≠ 0 for every real δ ≠ 0. This is correct.
+- **The non-converse.** The note correctly says that failing the binary rank test does not imply failing real detection.
+- **Wording.** "D4 rotations" should probably be "D4 images". A pocket reflected in the portal-normal axis is not a rotation of the original, and the argument covers it equally well.
+- **Hypothesis to state.** The transfer to §5 needs every pocket slide to fix the continued axis-core periods in the k-pocket room. The local reason holds for any D4 image: axis rays entering the portal use the fixed vertical-line branch, DHD or its image. But the invariance is imported per pocket, so state it as a hypothesis on the k-pocket room.
+
+## §8: copy colour and the topological bit
+
+**Seam structure at the two endpoints.**
+- The room angle at B₀ is 225°: the wall on x=1 below the portal plus the 45° pocket wedge. Its mirrors V and D generate D4. So there is one lift, with cone angle 8·5π/4 = 10π, and the seams alternate V and D, giving four D-seams.
+- At A₀ the angle is 45°, generated by D and H. There is one lift with cone angle 2π and four D-seams.
+- So D̂ is four arcs between two points, each of even degree. It is closed mod 2. ✓
+
+**Strengthening worth adding.** Going once around either cone point crosses four D-seams, which is even. So the D-bit of a corner event does not depend on which side the path is pushed off the corner. The "selected π-sector" qualifier in §4 and §8 is harmless for the parity, though it still matters for (2).
+
+**Case 1 (D is the only diagonal wall).**
+- Colour changes exactly across the D-seams, so D̂ = ∂(colour-0 copies) mod 2.
+- The bit of a path is the colour difference of its endpoint copies. Equivalently, the event's total linear part swaps the axes.
+- X is connected. ✓
+
+**Case 2 (another diagonal wall E exists).**
+- If R_E = R_D, then R_D R_E = I.
+- If R_E = −R_D, then R_D(−R_D)R_H R_V = (−I)(−I) = I.
+- The interior arcs in the open disk cross no walls, so each loop meets D̂ exactly once. Intersection pairing then makes [D̂] ≠ 0. ✓
+- The note correctly says these are continuous loops, not billiard words.
+
+**Checker.**
+- The colour assertions match the g ↦ gR_w convention. `colour` (a zero diagonal means swapped), Vlin, Hlin, Dlin and both loop products are correct.
+- The self-invocation with `-O` exits at the top guard, so there is no recursion.
+- Suggested addition: assert that (R_V R_D)⁴ = (R_D R_H)⁴ = I with each product's minimal period 4, and that D appears four times in each cyclic seam word. That checks the closedness of D̂ instead of only stating it.
+
+## Earlier corrections
+
+| Earlier item | Status |
+|---|---|
+| 1. Odd-word gives Q ≠ 0, not the scalar row | Incorporated in §4, and §5 now supplies the sign. The criterion box still says "detects the slide". Change it to "has Q(η) ≠ 0 (vector detection)". |
+| 1b. Single excursion gives a nonzero row, and the sign of the slide | Incorporated in §3. |
+| 2. Zero-based indexing | Incorporated. |
+| 3. Chronological reading | Incorporated. |
+| 4. D-parity as a character | Incorporated in §4. |
+| 5. Corner outside means c ∉ {B₀,A₀,C₀}; S, T off the closed pocket | Incorporated in the note and asserted in the checker. |
+| 6. Name collision | Mitigated by the subscripts. Acceptable. |
+| Checker geometry and structure assertions | All added: V[2:5], wall lines through endpoints, D4 normals, corners in V, empty loads for event0, consecutive [3,2] before the corner for event1. |
+
+**Correction C, retracting my earlier claim.** I wrote that "Corner A is excluded anyway, since a 45° angle cannot hold a π-sector." That is wrong. It confuses the physical wedge with the unfolded sector: A₀ unfolds to a regular point of cone angle 2π, and a straight continuation through it bounds π on both sides.
+
+- Whether such passes count as events is a definitional matter for the event class.
+- The note rightly keeps A₀ in the v_c = u case and did not import my claim.
+- Likewise, B₀ is a reflex 225° corner, not a convex 45° wedge. That is consistent with the note's warning.
+
+## Scope
+
+Accepted:
+- The §5 shear sign transfer, including both axis exceptions, given a, b ≠ 0 and the multi-parameter lemma for the finite-family statement.
+- The §7 F₂-minor criterion as vector detection.
+- The §8 copy-colour dichotomy and the nontriviality of the bit.
+
+Still imported:
+- The affine multitwists, their fixing of the physical labels, and the constancy of the axis-core periods (`corner-rigidity.md`).
+- The optical admissibility of the frozen events.
+
+Nothing here supplies an event for a general room. Item A only potentially settles the saved room.

@@ -1,0 +1,80 @@
+Marked-support census: orthogonal rooms, W<=20, k<=7
+4 November 2026 — authorized geometry classification only
+
+[done] Complete necessary cover:36 support shapes,61 raw marked pairs,56 marked-pair symmetry classes.
+No room completion, illumination test, solver or pilot has run. Retained supports are not certified feasible rooms.
+
+I counts every interior A point, not just the two selected marks. Coordinates below are A/2; multiply by2 for original coordinates.
+
+| Interior A points | Supports | Raw pairs | Pairs after symmetry |
+|---|---:|---:|---:|
+|2|18|18|18|
+|3|18|43|38|
+|4|0|0|0|
+|Total|36|61|56|
+
+What changed from the assessment
+Orthogonality gives Q>=2P, tightening P+missing caps from13/11/9 to13/10/7.
+The I4 branch is impossible because its external-neighbor count is at least8, above cap7.
+The five coarse I2 distance8 placements also fail: the budget would force a seven-cell chain of single-quarter fans, while any connected quarter-only component shares one B corner and has at most four cells. See proof.txt sections3–4.
+
+The surviving36support shapes and56marked symmetry classes are exactly the old k6 inventory. This is actual shape/pair equality, not just equal totals. I2 allowed-cell windows grow by one layer; I3 windows stay the same. k7 permits NEW ROOM COMPLETIONS inside these supports, so old k6 certificates do not settle the new tranche.
+
+Complete inventory
+Full lists: count.json (36supports, all61rawpairs and safe windows), supports.tsv, marked-cases.json/tsv (56nonredundant actual marked pairs). Raw pair coordinates and orbit multiplicities are explicit. Every neighborhood may contain empty cells; do not force all its cells occupied.
+
+| Support | Full A cells | b | Outside cap | Allowed A cells | Raw pairs | Pair orbits | Old k6 tag |
+|---|---|---:|---:|---:|---:|---:|---|
+|I2_1_1|(0,0); (1,1)|6|7|162|1|1|I2_1_1|
+|I2_2_0|(0,0); (2,0)|7|6|141|1|1|I2_2_0|
+|I2_2_1|(0,0); (2,1)|8|5|110|1|1|I2_2_1|
+|I2_3_0|(0,0); (3,0)|8|5|120|1|1|I2_3_0|
+|I2_2_2|(0,0); (2,2)|8|5|111|1|1|I2_2_2|
+|I2_3_1|(0,0); (3,1)|8|5|120|1|1|I2_3_1|
+|I2_4_0|(0,0); (4,0)|8|5|129|1|1|I2_4_0|
+|I2_3_2|(0,0); (3,2)|8|5|122|1|1|I2_3_2|
+|I2_4_1|(0,0); (4,1)|8|5|130|1|1|I2_4_1|
+|I2_5_0|(0,0); (5,0)|8|5|138|1|1|I2_5_0|
+|I2_3_3|(0,0); (3,3)|8|5|124|1|1|I2_3_3|
+|I2_4_2|(0,0); (4,2)|8|5|131|1|1|I2_4_2|
+|I2_5_1|(0,0); (5,1)|8|5|138|1|1|I2_5_1|
+|I2_6_0|(0,0); (6,0)|8|5|145|1|1|I2_6_0|
+|I2_4_3|(0,0); (4,3)|8|5|134|1|1|I2_4_3|
+|I2_5_2|(0,0); (5,2)|8|5|140|1|1|I2_5_2|
+|I2_6_1|(0,0); (6,1)|8|5|146|1|1|I2_6_1|
+|I2_7_0|(0,0); (7,0)|8|5|152|1|1|I2_7_0|
+|I3_00|(-4,-1); (-3,0); (0,0)|10|0|13|3|3|I3_k6_0|
+|I3_01|(-4,0); (-3,0); (0,0)|10|0|13|2|2|I3_k6_1|
+|I3_02|(-4,0); (-2,0); (0,0)|10|0|13|3|2|I3_k6_2|
+|I3_03|(-3,-2); (-2,-1); (0,0)|10|0|13|3|3|I3_k6_3|
+|I3_04|(-3,-1); (-3,0); (0,0)|10|0|13|2|2|I3_k6_4|
+|I3_05|(-3,-1); (-2,-1); (0,0)|10|0|13|2|2|I3_k6_5|
+|I3_06|(-3,-1); (-2,0); (0,0)|9|1|26|3|3|I3_0|
+|I3_07|(-3,0); (-2,-1); (0,0)|10|0|13|3|3|I3_k6_6|
+|I3_08|(-3,0); (-2,0); (0,0)|9|1|26|2|2|I3_1|
+|I3_09|(-2,-2); (-2,-1); (0,0)|10|0|13|2|2|I3_k6_7|
+|I3_10|(-2,-2); (-2,0); (0,0)|10|0|13|3|2|I3_k6_8|
+|I3_11|(-2,-2); (-1,-1); (0,0)|8|2|39|3|2|I3_2|
+|I3_12|(-2,-1); (-2,0); (0,0)|9|1|25|2|2|I3_3|
+|I3_13|(-2,-1); (-1,-2); (0,0)|10|0|13|3|2|I3_k6_9|
+|I3_14|(-2,-1); (-1,-1); (0,0)|8|2|39|2|2|I3_4|
+|I3_15|(-2,0); (-1,-1); (0,0)|8|2|39|3|2|I3_5|
+|I3_16|(-2,0); (-1,0); (0,0)|8|2|39|1|1|I3_6|
+|I3_17|(-1,-1); (-1,0); (0,0)|7|3|55|1|1|I3_7|
+
+Bounds and implementation limits
+Every selected room has at most42canonical triangles, equivalently21original unit squares. An allowed-cell universe is larger: I2 has110–162A cells (880–1296triangle variables), I3 has13–55A cells (104–440triangles). These are universe sizes, not rooms, timing estimates or selected-area claims.
+Eight I3 supports have disconnected distance-two full-cell overlap graphs and are included. Connected-R plus the budget, not the old connected-overlap premise, justifies completeness.
+Only translations, D4 and unordered-mark reversal are quotiented. No affine/scaling equivalence is assumed.
+The tranche uses the fixed grid with interior A marks and k<=7; a later pilot may restrict to exactly7 because k<=6 is already covered. Arbitrary marks, arbitrary real lengths and nonorthogonal boundaries are outside this census.
+
+Verification
+verify.py independently reconstructs the support sets by connected growth, checks a different canonicalization, every marked pair/orbit and every allowed cell by direct Manhattan distance. It checks12orthogonal fan masks and64neighboring-quarter pairs, with8actual edge connections. verification.json PASS binds count.json.
+These are separate implementations by the SAME agent. The new hand arguments are not independently reviewed or formally verified. Optional peer hand challenge requested on the shared board; no review is claimed live or accepted.
+
+Reproduce
+  python3 -B count.py
+  python3 -B verify.py
+  python3 -B report.py
+
+Next move: retain this inventory for the separately authorized pilot. No pilot, SAT, room assignment, optical guard, ray/direction/word or origami-orbit run is queued.

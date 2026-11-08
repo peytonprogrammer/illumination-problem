@@ -1,0 +1,42 @@
+{
+  "status": "PASS_PRESCRIBED_WIDTH_CONTROLS",
+  "depth_balance_equality_case": {
+    "w": 8,
+    "h": 1,
+    "a": 2,
+    "b": 4,
+    "max_K_ell": 16,
+    "two_w": 16,
+    "strict_C_possible": false
+  },
+  "fixed_development_section_slides": [
+    {
+      "c": "0",
+      "a": "4",
+      "b": "4",
+      "h": "16",
+      "K": "40"
+    },
+    {
+      "c": "2",
+      "a": "6",
+      "b": "6",
+      "h": "14",
+      "K": "40"
+    }
+  ],
+  "actual_r2_access_only_intervals": {
+    "source": [
+      "-1/2",
+      "3/2"
+    ],
+    "target": [
+      "1/8",
+      "9/8"
+    ],
+    "overlap_length": "1",
+    "other_guards_still_required": true
+  },
+  "proof_basis": "Hand W1-W4 inequalities, affine cancellation and integer reflection parity; no finite controls substituted for proof",
+  "G8_proved": false
+}

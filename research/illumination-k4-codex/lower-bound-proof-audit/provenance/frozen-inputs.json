@@ -1,0 +1,597 @@
+{
+  "status": "FROZEN",
+  "guard_files": 52,
+  "inputs": [
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases.json",
+      "bytes": 6234,
+      "sha256": "a75b9d3926f18c5b19a199a1a3a704d8eeeee5529a90ca06541f678c0366ea9f"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k6-final-review/encoder-binding.json",
+      "bytes": 8067,
+      "sha256": "0edd120213ba3fcd5f19bc0fdac5e50367bef4abc113e431bd84fe8bb487bb3a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k6-final-review/audit.json",
+      "bytes": 13783,
+      "sha256": "6b901ff373e02253ccb378960bf28f4d5ed434d90195be8adf05882afc5876ad"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-pilot/inputs/encode.py",
+      "bytes": 11136,
+      "sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-pilot/inputs/illumination_geometry.py",
+      "bytes": 7616,
+      "sha256": "544192ba3b5b0105d0c5dd6417e8093d2d81c813a7da19b885fcffbe2330daf1"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/learned.jsonl",
+      "bytes": 41608799,
+      "sha256": "2820188c352871135e3a00e14e347557c8de57be3fabab2cdf4e7f59a0862891"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/peer-guards.json",
+      "bytes": 128171,
+      "sha256": "f6b20dac5cd5d1ce491bb791e906d4ebce6aeb18ae7c31c866267a0917f19a72"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-pilot/orbit-guard.json",
+      "bytes": 9075,
+      "sha256": "2cf039e283bf94751d8867bf65c76c4c7438309f53d89f7c5e35fb115b3cb897"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube0.jsonl",
+      "bytes": 1371906,
+      "sha256": "ab229da16a1833d44c9723a765ea3013b0e26a52670904205ed43746de91cee1"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube1.jsonl",
+      "bytes": 798478,
+      "sha256": "afcb61b96de9d60d192f82e91a9c8379cd7bd9e7f578dab44fc8d4964f5092df"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube2.jsonl",
+      "bytes": 1639029,
+      "sha256": "0904f775c44b51a97e0761ff169cd8d454d84c9d3540fd46a8a5884537f56348"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube3.jsonl",
+      "bytes": 1292420,
+      "sha256": "c23f8e2f2abefbb7a1459cad4392802b6e4c5467c6ca39cd0e89e180c502225d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube4.jsonl",
+      "bytes": 1218465,
+      "sha256": "6b74037adfdbce7ded24394c35763e012b2fb4e21c564fcaa1c25fca0108eba2"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube5.jsonl",
+      "bytes": 340430,
+      "sha256": "9692202086f8a178421e4c6240437773d9108739a18b8c212976dc44f4fa18b1"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube6.jsonl",
+      "bytes": 1349914,
+      "sha256": "53c853d20e14ccc2ad6dd4cd114837fe7d12166f4836eeb100fbb120db30a22a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube7.jsonl",
+      "bytes": 1024639,
+      "sha256": "d7ae8343796c6c12315354314c1c07f419b1e9feb880e4053fd3508ff8bbe51a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.jsonl",
+      "bytes": 33773267,
+      "sha256": "21f11e8d8ec62ef2ca7f49e491f7cc23e44ae696b91615350e1a34776eaeba55"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_03-pair0/guards.jsonl",
+      "bytes": 9688627,
+      "sha256": "0b9b6b380291a07561882c6b6c293dae631d304c5f11ba442e006ae0338e7473"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "bytes": 41596797,
+      "sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube0.jsonl",
+      "bytes": 7427244,
+      "sha256": "b89fdfee32b49c9e8bc1ab442b26b1b6a5a8891e6ad60620278d86caac952cde"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube1.jsonl",
+      "bytes": 6042954,
+      "sha256": "2cf4aba3b2667e1243763671352976e5dfa23daa72b45833f8fd055a2254ed4b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube16.jsonl",
+      "bytes": 24723,
+      "sha256": "0d5b8c11a192192e73c74b12a0207efa3ede8bf863d11d85e78cbf9b68e6522b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube2.jsonl",
+      "bytes": 8206505,
+      "sha256": "c003912db8075982553b3a71ad437b9f8d964813a4057041f69cf34528f96430"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube24.jsonl",
+      "bytes": 5516,
+      "sha256": "622b6ea95a248a7b29ed8294f6e33443079cbf8f05c164c0b0cc65eadfb3a58f"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube3.jsonl",
+      "bytes": 6388042,
+      "sha256": "0275ac1a3dbf731974001a9885fd1f048cf48953de05d86e51dc654824c3054e"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube32.jsonl",
+      "bytes": 9185,
+      "sha256": "381e59cb53907cce63e9f8d6971f8ba361f0b494881f6d3f36fc1c620ba24973"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube4.jsonl",
+      "bytes": 7229607,
+      "sha256": "6ef5cee3ddaa9770d46cf716f48c41932dd11b6b66d91c41b197bf7263b2a625"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube40.jsonl",
+      "bytes": 13153,
+      "sha256": "71be5ae537e2dee11a657d19ec11b1bde88a8e933ac56d0910ef1d8a156d32cb"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube48.jsonl",
+      "bytes": 10987,
+      "sha256": "343c2e1e7d24c4f1f8ac89f61e5be8683032d99d77698d2ad0273203e6d06a1d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube5.jsonl",
+      "bytes": 3115442,
+      "sha256": "5c73721f73393eb0fee6c6f6f86317b67cb57474dc7d56b81bac3a12d8f1e8b2"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube56.jsonl",
+      "bytes": 24284,
+      "sha256": "eb3a62240fe2c6a210725deea8e1f24c337ea3b25637c9d05e2ea758b2f3267b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube6.jsonl",
+      "bytes": 5797151,
+      "sha256": "859b054e6a9c9300f36cbcde16d62ac1895e42c7d695b3cf373551a5ea6d55c9"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube7.jsonl",
+      "bytes": 4217613,
+      "sha256": "972d829a8c86b88ade437808ae1f252d4b86dacb49061725f6a608f0e84a2ff5"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube8.jsonl",
+      "bytes": 19501,
+      "sha256": "78eb21bc8a04f0fc28dc6bb35e37a9b6fc47f4ed10b6f56485e64d5a3522edf7"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.jsonl",
+      "bytes": 37773460,
+      "sha256": "fbd7462da5ca5eaaa4ed29b3f086ce936ae262360d9a148426d6db030db4a620"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_13-pair0/guards.jsonl",
+      "bytes": 12370116,
+      "sha256": "3448eaea714c87d4acc49a8552da3c7729406c7cc2181b3e21b9f6f22b0bed78"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_22-pair0/guards.jsonl",
+      "bytes": 18291159,
+      "sha256": "65bc0572f3f67095819bd4f6d2d4e37376341dc9af78b3bd5de266a2b4e0994c"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_23-pair0/guards.jsonl",
+      "bytes": 5160744,
+      "sha256": "20b312f076c45cdbbd21423c333f930cf0ae92353d3fa6b06c712ace49e671c6"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_33-pair0/guards.jsonl",
+      "bytes": 19007,
+      "sha256": "887fab4a50de4b3b5bd0ce8c0c5064dbbe5545106354bfcf57e26247c9a01b49"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_02-pair0/guards.jsonl",
+      "bytes": 5305859,
+      "sha256": "6ea1bf879facc5c416bde1d7e05e6cae0aafe09f8ed3e969a44b2c68c52fcb85"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_03-pair0/guards.jsonl",
+      "bytes": 121566,
+      "sha256": "137697a27cb2e851a426f1b9a64372ffbd6dc3178873ef780b61bb71a26c9a7b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_03-pair1/guards.jsonl",
+      "bytes": 258550,
+      "sha256": "8696396bf639235bf216d7f1796d13d1d6d0aca3ee05e952466c205775adc047"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "bytes": 5776660,
+      "sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_12-pair0/guards.jsonl",
+      "bytes": 7249610,
+      "sha256": "6154274e8304ecef732cc665656caace11d1533f06d99cc531faa4717d03bf9a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_12-pair1/guards.jsonl",
+      "bytes": 5786927,
+      "sha256": "bb43a1ee85a8dac60e066da3341a8f32ba42a2b29ad453ebdea0436815da2a1f"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_13-pair0/guards.jsonl",
+      "bytes": 31674,
+      "sha256": "1bddda65cd1bdc5c33b3b6d606243457b398108149af2232794e451d6b3bc004"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_13-pair1/guards.jsonl",
+      "bytes": 24807,
+      "sha256": "ad268589d7b774e882f04121b98450bc5a7ee47c960c474ad49a5fb6d1bf1904"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_20-pair0/guards.jsonl",
+      "bytes": 875640,
+      "sha256": "27b765318aa340c1bd292ec2556f08b99be51b5ef00535fa43e797fc9b539989"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_20-pair1/guards.jsonl",
+      "bytes": 831388,
+      "sha256": "b968ecee393f7d965edadb524b2dd090b0ffab2e3021f1b4c97bbedbdf5390e3"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_22-pair0/guards.jsonl",
+      "bytes": 32942,
+      "sha256": "d3105d7bee4affad3d76ce2a0b05e61e7489a98d775432f13bd986fa0aa9ac1d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_22-pair1/guards.jsonl",
+      "bytes": 20443,
+      "sha256": "39017a359cff5c11db0ebbbc19be2a24b2d751d24d2cd47950f4f467406eeaab"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair0/guards.jsonl",
+      "bytes": 1177138,
+      "sha256": "5558364c7fab30886eea189bf8282d7b39045054aed40254d1a32a7b65ea3544"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair1/guards.jsonl",
+      "bytes": 906568,
+      "sha256": "764e286834e62ec8d9cdd94daff0d99c4cd7f69e36f77d2a00e02e95bcb6de4d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair2/guards.jsonl",
+      "bytes": 807265,
+      "sha256": "d27838ce24d7aef19ee6848be6eba2b210fca58d3d5fa59609edce899f05b71a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair0/guards.jsonl",
+      "bytes": 422005,
+      "sha256": "069686e41d3c16ac1325bd18f2db032d289ea177e4800a6541b5c7051bf80ccd"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair1/guards.jsonl",
+      "bytes": 353427,
+      "sha256": "ff72c67706d1da84b9360212d3381efd1dfe9c3a8759dc095892b69e94a510b6"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair2/guards.jsonl",
+      "bytes": 514886,
+      "sha256": "84ee4726738e5ea61791660ece0d250e6013ddac7d27a398cc4d6b7386289a55"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/formula.cnf",
+      "bytes": 31988703,
+      "sha256": "f68c83ed285f3a6fcdd80a5f9e544d87dedb1002e71d7fbd69db39ced97110a6"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_03-pair0/formula.cnf",
+      "bytes": 11079168,
+      "sha256": "9f2b7f48d26f8d24a171aec77fbbd8c31cc572cd4c6eb7c8223d6e9d5b3cb0a4"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_04-pair0/formula.cnf",
+      "bytes": 6402432,
+      "sha256": "18256d74f0ef7fda6ab5c78e0f3a729f2508e34c3637c4226e45bd1536c4442d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_05-pair0/formula.cnf",
+      "bytes": 6903339,
+      "sha256": "fc70a9dc30b89b8ae9e66a61b6c960358770adea3106377b910346fbf8f113d1"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_06-pair0/formula.cnf",
+      "bytes": 7247186,
+      "sha256": "81e586406645e47043fbc0e3c5d8a7d5fb290d16665a88342ad433ce98af3c09"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_07-pair0/formula.cnf",
+      "bytes": 7683079,
+      "sha256": "3edb5f4b8e94f391792d4b1720be8386ecfc148bda4674a1015ed51a2d760bf9"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/formula.cnf",
+      "bytes": 35411810,
+      "sha256": "9768fbcef275b6e9da5c6f4c146b44b9f51045f301a66319047e8eb73534b4dd"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/formula.cnf",
+      "bytes": 27323853,
+      "sha256": "15a912a8cf14a0c307e2ab57c223f70f865360db430c4dae0126830e63c26936"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_13-pair0/formula.cnf",
+      "bytes": 9460742,
+      "sha256": "46996e3b974190814893e05c2bc017ae76a5c839a763819fa65c68f434a0a1f1"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_14-pair0/formula.cnf",
+      "bytes": 6481133,
+      "sha256": "e8297ea63965f5f7de4fe7e2c56884ca2ade1fbd3fca4087f0af90ca7bc34bd6"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_15-pair0/formula.cnf",
+      "bytes": 6896962,
+      "sha256": "955d8fd402f6b8826343f7455c27bae9bc4a46c81857da0fc5638e214c1abf13"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_16-pair0/formula.cnf",
+      "bytes": 7336430,
+      "sha256": "c0b4d9d01cf9f576b1a5d9fc83597bbafff6346235bbda9b45759daa50bb037d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_22-pair0/formula.cnf",
+      "bytes": 15610519,
+      "sha256": "b9af561d44202cb9ce18be0cd263d782f9e9d23a39256b32341a4a0fcc686964"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_23-pair0/formula.cnf",
+      "bytes": 7408186,
+      "sha256": "670b5bc76817de6de13bcef0a65b07a709bba5d6f67d7504bae92e15c5fd9cf7"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_24-pair0/formula.cnf",
+      "bytes": 6547929,
+      "sha256": "d4c8d40d627f4c0bcbc171da6772df8b3c81987c494104355673b3b43f02b9d1"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_25-pair0/formula.cnf",
+      "bytes": 7048084,
+      "sha256": "54dca5954106a42b640e97abebfdab20e3451c010b698c732bec9f3c59939c84"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_33-pair0/formula.cnf",
+      "bytes": 6205908,
+      "sha256": "8fdc94a7e21b6d6b124fcf0dd26dd5f593deda77dcccb9a562682052f41d69c2"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_34-pair0/formula.cnf",
+      "bytes": 6770850,
+      "sha256": "a94d6d430ab03f41e8e5d5978216bd59016475464a85a2a9c425c2e1276f91fd"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_02-pair0/formula.cnf",
+      "bytes": 7835788,
+      "sha256": "6b03589267a01e68dedc7fdb6b92c2023e4eb1f9fba54d40d1cfffcadf6ce41b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_03-pair0/formula.cnf",
+      "bytes": 1999460,
+      "sha256": "a757db52c900341463c1d96ce411003a59e0a19d46e95801475e65f5c6cb335e"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_03-pair1/formula.cnf",
+      "bytes": 4325652,
+      "sha256": "9eb4ea2ee9bbd50799826c4873a46a5c897377b4ff7cbee7d339c1c19236743d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_04-pair0/formula.cnf",
+      "bytes": 602621,
+      "sha256": "f748aa5fb0d26833796daa7dc27ab4eeb945a2785b913d5145ee808d58c54142"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_04-pair1/formula.cnf",
+      "bytes": 682925,
+      "sha256": "4c17b0e4f2d7f5f88d09f1262c46d7b334996ab9287e68a9b5363bb2e2d9aac2"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/formula.cnf",
+      "bytes": 6874157,
+      "sha256": "d0d7ddf621d26672b0684f58ed34f4b53c8f5f1ea439c47a30a84472f0e465d4"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_12-pair0/formula.cnf",
+      "bytes": 6764860,
+      "sha256": "237ece6aace16fbda4d2e098e7c7fae02a8027255ea3d5b5252b8045e3f00447"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_12-pair1/formula.cnf",
+      "bytes": 5748857,
+      "sha256": "d9d7194bde768d248127c3de8f0b587a29010088006a5f769cfb38756beab39d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_13-pair0/formula.cnf",
+      "bytes": 996159,
+      "sha256": "aa1f88518cd37dcea0ae305fb43c4870c79fc288ffced93ee7194cbd787529ab"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_13-pair1/formula.cnf",
+      "bytes": 1895249,
+      "sha256": "1b7561d9e1778d31329e5922735c4ca8c4d28eee48f126cacd2bf24e0f292d9c"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_20-pair0/formula.cnf",
+      "bytes": 4630479,
+      "sha256": "af2140e78212e2d8b7d3d81279c945389087b1f7caab184edc8b2b2cfe3fb2a0"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_20-pair1/formula.cnf",
+      "bytes": 4123167,
+      "sha256": "13ae176d33c705fb0f1f98fd7b0ae043d2a0214383582d26883004ab8b8ee882"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_22-pair0/formula.cnf",
+      "bytes": 1559022,
+      "sha256": "abd845799e77625eeb423896b8f37cb12489c78a0a33b654fe432dd55646a294"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_22-pair1/formula.cnf",
+      "bytes": 2225907,
+      "sha256": "30c5611b9d720af5e414d85c1a815802a26b15936a2c94fc6939f8a45687d156"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_30-pair0/formula.cnf",
+      "bytes": 700481,
+      "sha256": "275acce90ab8215691c20d2fad23660353dd73fcb91d64ec0174e868f01ae64b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_30-pair1/formula.cnf",
+      "bytes": 733804,
+      "sha256": "97a53b500508c1b9c9874c20ede82bf9ed14b985cf2242a18dc78804c843558e"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_04-pair0/formula.cnf",
+      "bytes": 804911,
+      "sha256": "98f437f3a4742b9eda7dfe4727014e1fdc31764e4305090191c396bf131a9b0f"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_04-pair1/formula.cnf",
+      "bytes": 594676,
+      "sha256": "ff14b1760c2574fd95aecb15ab872ba20aa81aa04df2051b2da56243f8bd9909"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_04-pair2/formula.cnf",
+      "bytes": 805786,
+      "sha256": "59378cc9000b4e3ebbc4bf6701848b4d83e41d0211d96a0cb2256b3fe12abe72"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair0/formula.cnf",
+      "bytes": 5914734,
+      "sha256": "63c4d21d51210a918ee40f64d9b5bd66b3672241e39c24324e74e8d3eb66d89f"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair1/formula.cnf",
+      "bytes": 3513682,
+      "sha256": "f59e3a4459a855b35cd0c0690c83987042d427982c9b687a6970ac02e0d189ce"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair2/formula.cnf",
+      "bytes": 3464037,
+      "sha256": "5bc7de783fd2c9ee61ba308f85d7709d56107090f0233e75f51b0c328119a73a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_13-pair0/formula.cnf",
+      "bytes": 4101994,
+      "sha256": "0399f272730c7d912c51b2af507106c6a1c2f921e70fa695622f0dc264fdba38"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_13-pair1/formula.cnf",
+      "bytes": 1963417,
+      "sha256": "e01e41a5f7e4a08a7a5abce0d54aaf71a75c649422b026587cdc11df529392ed"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_13-pair2/formula.cnf",
+      "bytes": 2121327,
+      "sha256": "f0b82143929939d5f48345fba8f87ea549a1333007920612b821ddab36adb424"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_20-pair0/formula.cnf",
+      "bytes": 801057,
+      "sha256": "c48ea252016230684ef72608377b0d03cd6fe592674913db2dcb8da315c38a9d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_20-pair1/formula.cnf",
+      "bytes": 802518,
+      "sha256": "df60f084f31916d0c31dd478fabcaf9701643ae611f24a3a1dc63cfc42215512"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_20-pair2/formula.cnf",
+      "bytes": 595031,
+      "sha256": "af31501101cb80cf3d294f10d83d3d60f5e502405934ac9abba5bc5fc0a99099"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_03_11-pair0/formula.cnf",
+      "bytes": 850768,
+      "sha256": "309c3e42e3fe2c8a8b443940a3a072bd13f9356f2bf6aed9e2d4635ffa60586b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_03_11-pair1/formula.cnf",
+      "bytes": 794860,
+      "sha256": "23f000280b1cea007f2d920ec6a3be54a05ae9e53500e710f2184a2b2664d069"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_03_11-pair2/formula.cnf",
+      "bytes": 1836934,
+      "sha256": "4b3ed58767054f9394f01562d99c295b24470dcee42917da7aa058060ddc1de4"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_03_14-pair0/formula.cnf",
+      "bytes": 679289,
+      "sha256": "7d5f230a1b20ab2ddbfa9b905f4669b1ce9683fcf4605f0f929c991368ad4e6e"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_03_14-pair1/formula.cnf",
+      "bytes": 599069,
+      "sha256": "dc032adee561bd174c43040257349259ec9029d2b8515b0807ef675d81b2a5f9"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_03_14-pair2/formula.cnf",
+      "bytes": 734764,
+      "sha256": "8724c8e46b8eda4b5f996111dc40667e5ca1db29eda64f9bfa0a612203895f0d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair0/formula.cnf",
+      "bytes": 3249545,
+      "sha256": "9584c6f2affe886dfa59658926a326b3a459e8b77967983cac1e609ceb5f9191"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair1/formula.cnf",
+      "bytes": 3709423,
+      "sha256": "762eb466c6b09d2c97bcc859deb3cad86f1292d17c6f8b208cf213b8a080c610"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair2/formula.cnf",
+      "bytes": 3332187,
+      "sha256": "5ee74e276e6d2899bcd56f189ee7d1a7cc0483d3dc472eae45ac159028565448"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_23-pair0/formula.cnf",
+      "bytes": 807848,
+      "sha256": "090b422e57d41317e56b13cf3eca4c26e216c717042e58f206e76662dc365471"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_23-pair1/formula.cnf",
+      "bytes": 673129,
+      "sha256": "3a5dcc2032c45356f8df39a1d834a73bbc416ba473a7f609b8df86bdc49eba07"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_23-pair2/formula.cnf",
+      "bytes": 1846073,
+      "sha256": "31deaedfa873493c13f1539e69ad4955c47c7e96b7d275cd91116406f31b040e"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_12_21-pair0/formula.cnf",
+      "bytes": 2164187,
+      "sha256": "9a7b1bb2237a1517a408a60bce2c1c845ff415aca47973ee5ebb94262c415b50"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_12_21-pair1/formula.cnf",
+      "bytes": 2163888,
+      "sha256": "ef1b7a008df92b70c586136eea82109b91fbfaa25ce95f630ffd48c08be2704b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_12_21-pair2/formula.cnf",
+      "bytes": 828300,
+      "sha256": "202515d5c24e719e0b2c197a8ee03a9a1c32ce107b36ac7a68b2761d3e85dc25"
+    }
+  ],
+  "scope": "CNF premises only; no fresh DRAT or complete physical-path replay"
+}

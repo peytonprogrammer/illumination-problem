@@ -1,0 +1,9354 @@
+{
+  "status": "PASS",
+  "source_sha256": "2734c9ead4032beb6ca40aa9707898ef8703448cefd9bcaf9f7aa1a71697ebcb",
+  "probe_sha256": "789ed069e3dfccd374e0a09d21810bd5219c2ebee7103350fa7eec3fc5081c47",
+  "provenance": {
+    "parent": {
+      "parent": {
+        "parent": {
+          "seed": {
+            "source_file": "three-two-star/case-2-1.json",
+            "source_sha256": "fd0671ff0eb1f4cd208b7669de3ffd3a42a2a13a05b3be06135d1a76ac144eae",
+            "prior_audit_sha256": "79e760579e08e1c040356519df3e776f2c6d080e02175e374ec60c89e3238e0c",
+            "triangle_index_sha256": "b2f41cbc2221177e6f46bebf5031d1c39d44096a33d6b2964073e7a3cf5b9386",
+            "seed_cuts": 859
+          },
+          "bootstrap_sha256": "e7219d6188c46680008fb5247dcf12eff463618d6cfcadd82c7e3bc52835f64c",
+          "connectivity_audit_sha256": "95704ff97d14f250cad049fdaf6bf852148dedfd67cae546baffc90125cdf630"
+        },
+        "cell_search_sha256": "0187c19ccf85e3f946138e16c7d09c4253d912912f0eaf0dd9e8b6fbf16968c4",
+        "cell_audit_sha256": "ef3a5af31523187c3dcc58f2f3df2a0098aab3bd762efe5ea6d2e2deb7a57297"
+      },
+      "fan_search_sha256": "8c94b91b3440c3e76fdd3910dca98ee72dceca6871f385bac6628aba1a0ace37",
+      "fan_audit_sha256": "dc8cb39836c32fc06aa22df10c6b342f430377265ba98bf8dd46dd41a16cd620"
+    },
+    "probe_sha256": "789ed069e3dfccd374e0a09d21810bd5219c2ebee7103350fa7eec3fc5081c47"
+  },
+  "samples": 18,
+  "sample_catalogue": 61,
+  "sample_trace_statuses": {
+    "corner": 1058,
+    "illuminated": 27,
+    "periodic": 13
+  },
+  "sample_cover_directions": 15,
+  "minimum_sample_cover": 15,
+  "probe_guards": 34,
+  "new_records": 129,
+  "new_guards": 258,
+  "total_new_exact_guards": 292,
+  "mutations": 8,
+  "corruptions": 8,
+  "max_bounces": 28,
+  "partition_size": 1026,
+  "branches_excluded": 1002,
+  "classes": [
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 82,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 83,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 210,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 83,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 83,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 83,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 83,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 80,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 80,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 2,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 18,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 80,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 208,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 240,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 64,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 80,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 128,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 0,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 64,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 173,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 172,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 172,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 173,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 172,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "fresh_first_fan_parent"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 0,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 1,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 2,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 3,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 4,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 8,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 12,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 13,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 15,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 16,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 18,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 19,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 31,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 32,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 40,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 44,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 45,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 47,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 63,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 64,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 80,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 82,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 83,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 95,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 127,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 128,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 160,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 168,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 172,
+      "status": "OPTIMAL",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 173,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 175,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 191,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 192,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 208,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 210,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 211,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 223,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 224,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 232,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 236,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 237,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 239,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 240,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 242,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 243,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 248,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 250,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 251,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 252,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 253,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "second_mask": 254,
+      "status": "INFEASIBLE",
+      "via": "direct_second_fan_solve"
+    }
+  ],
+  "first_fan_parents": [
+    {
+      "outside_cells": [],
+      "first_mask": 4,
+      "status": "INFEASIBLE"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 8,
+      "status": "INFEASIBLE"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 12,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 13,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 15,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 32,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 40,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 44,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 45,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 172,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [],
+      "first_mask": 236,
+      "status": "INFEASIBLE"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 83,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "first_mask": 211,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 0,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 1,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 4,
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 5,
+      "status": "INFEASIBLE"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_mask": 12,
+      "status": "OPTIMAL"
+    }
+  ],
+  "unrestricted_parent": "OPTIMAL",
+  "placement_excluded": false,
+  "scope": "Complete second-fan refinement of the18 first-fan residuals. Earlier exclusions compose monotonically with verified positive-ray constraints. Sample direction coverage is not universal. Caps unresolved; no formal UNSAT proof."
+}

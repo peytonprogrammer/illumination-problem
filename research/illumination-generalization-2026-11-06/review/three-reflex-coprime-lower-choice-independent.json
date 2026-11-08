@@ -1,0 +1,666 @@
+{
+  "decision": "INDEPENDENT_ACCEPT_LC02_ALL_SOURCE_TARGET_CLASS_AND_WHOLE_NATIVE_FAMILY",
+  "created_utc": "2026-11-08T02:20:35.060018+00:00",
+  "claims": [
+    {
+      "id": 1,
+      "claim": "First crossing and fixed-m cap block",
+      "decision": "ACCEPT"
+    },
+    {
+      "id": 2,
+      "claim": "Three target-compatible q indices",
+      "decision": "ACCEPT"
+    },
+    {
+      "id": 3,
+      "claim": "Actual source/right periods under K|P",
+      "decision": "ACCEPT"
+    },
+    {
+      "id": 4,
+      "claim": "Full target congruence with g>1",
+      "decision": "ACCEPT"
+    },
+    {
+      "id": 5,
+      "claim": "Original actual optical path, all source levels and firstT",
+      "decision": "ACCEPT"
+    },
+    {
+      "id": 6,
+      "claim": "Whole native P=K*odd family with arbitrary depth and even multipliers",
+      "decision": "ACCEPT"
+    }
+  ],
+  "source_pins_before": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-candidate.md",
+      "sha256": "330f1a2c289e14c8aa9bfe079ade7987e8990ee99ddf4703ba90ba470b25237c"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-proof.md",
+      "sha256": "60c90cafded42f391007bbf0529123f27254b16c9f14eeac25f87ad6d8aa7289"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-check.py",
+      "sha256": "809e8b132afeb438a0be9d8a5cbb6e608c059f53c0487665d0f8f13ce068de48"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-check.json",
+      "sha256": "2aa3622e98398dbc299ce9c7a88d8201f29d7733f99780582f9760cef0abf396"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-review-request.json",
+      "sha256": "1f72ebe36fe30960c7cd15bd900f8413ffb3922522ad25a05794cc4bdb362a88"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-source-width-independent.md",
+      "sha256": "5b007bcae48d6a843e545e9aa6878b2c6c625c2521334109f83a6637aa388de2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-source-width-independent.json",
+      "sha256": "f92c8efebc3e10958d1f4d151a6f7b5fcc092236c5fcd5e508d5bcd01ed340f3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-candidate.md",
+      "sha256": "6534c440ce19bea433b0afdb0b6715640fd40309ad94ee9c263ed9f7a6ccc1ab"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-proof.md",
+      "sha256": "23ef98a97e55344c3a4b4e2961518a60245fd9eb1f174aa2890a872dee4c2d53"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-check.py",
+      "sha256": "c387a936eab87fab5b3e19edd5adf8894e47164be123653dc864fd01efd3fbf5"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-check.json",
+      "sha256": "9289b05f56c002f392babf45975aeed3607ef2529054f5b153a0fc366052ff90"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-review-request.json",
+      "sha256": "a3ac874846b9cf4ef008fc7c9dd73cd7c4a11520aa7b4b9ba84d3cfbaaf45d67"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-wide-final-packet-review.md",
+      "sha256": "f4f960377616244f563e3abd8797e0baf51bea2aedff495b8fb64c1d0cab1ec3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-wide-final-packet-review.json",
+      "sha256": "3c222c6f9fcfed7dffdb71d179502613bed201c44209002653401cffe3772b91"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-candidate.md",
+      "sha256": "f78b4c9e7ae48b6dab25553559f19889f87a0ab8c8dc61715ef5a0d253ccbca2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-proof.md",
+      "sha256": "a5136465311272b295d00283d434759399d89b56ec7073b2dce8f17ca63b55fa"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-prescribed-check.py",
+      "sha256": "4e835d8be92cff63d4b8f30c9705eeceae0918b953cd36ef9b17c3a92cea6b91"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-prescribed-check.json",
+      "sha256": "5b655ebb38db066f6326ae70711e176c9aa4075cdb831c00662759405ed6f2b9"
+    },
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/coprime-candidate.md",
+      "sha256": "dfb9ae56f03352f9bd9ec27f3528feff5c8c1fa65ba09852dd37e337a5341a78"
+    },
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/coprime-proof.md",
+      "sha256": "8edde875d1ad99e1c8fb7fe5a9097679d4b3ec40eff0882cfecf5ae958a75bcc"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent.md",
+      "sha256": "f1f5b389cae624f8f791a5a10aa7582af447d4323f50f8a9d796f721fc7e27d7"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent.json",
+      "sha256": "2993d551f50d55feccc96c7979b91109e5e421d35a0925b269325f63bc819ca5"
+    },
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/equal-block-cover-addendum.md",
+      "sha256": "ff1990d4d2cf3a39e6a78834b87ba09ad8d8c0529dc2d850091bad2498f7d1c6"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-equal-block-independent.md",
+      "sha256": "5fa9efe9b6954a890bbc1c31f2bbddfcbab6b7cc325c33993e8a665fe52cb8a3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-equal-block-independent.json",
+      "sha256": "0fa7c0f198939b54aa6a37b0652426a497432f9aeed3fbd0770d846e7d0f91b4"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-01.md",
+      "sha256": "384d4f32e9eaaab9b76bf8886cf844924ac96e65b9404f39c56beb03b041f2a0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent.md",
+      "sha256": "bdfd57c1521ff4efe32adbc238cc732c5d85850995f793dcba9035c0c80cdceb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent.json",
+      "sha256": "7f700a3211be69a69724c50507b749af42614ec800971d77bf0bc66c89e29c68"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/resumed-exact-check.py",
+      "sha256": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent-check.py",
+      "sha256": "e2e4bb0dcfc225d8b392b5b7a6d6622058b8b10c395d4bf59d7dab029329e161"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-03.md",
+      "sha256": "e1b1d0e474108ebec0d92e725962a12be643bb79d78cba5a9271e5dda157d97e"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-03.md",
+      "sha256": "e9bf0db0e814b685333cf85af27d298a4d9c570955d4aed8812ca6ded020a6ee"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-tall-prescribed-check.py",
+      "sha256": "fea4c50a4467f44b25eb16a497f18bfea12317bcddd81907ef355e1b65533f22"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-tall-prescribed-check.json",
+      "sha256": "048e70ed0ad88d14b4922f7880a00b8e3d14fcd3d062ed260abaf68b1994ec16"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-01.md",
+      "sha256": "64640c28451b69910455543d9a190548f323a08daacd0734ad2efe14d1babbdf"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-review-request-01.json",
+      "sha256": "35c298dc5603351466a42aa08e3557832f21b2325d81a5eba9218f56c179addf"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-05.md",
+      "sha256": "2091760a07f0bcb53edb23bd639be4fdc32e736f8a7de6c1680504c3fca63409"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-05.md",
+      "sha256": "8d541d5d7503e765e67900d18f21d2cd1812d2ffce151f7f397449b4d920d6d8"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-rotated-U-prescribed-check.py",
+      "sha256": "a1746ad74aa170a62332118bf91e56835b580cd3ae3cb25a8f126900d9f656c3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-rotated-U-prescribed-check.json",
+      "sha256": "cc5124898f9e99641e329c725ca0cc74796950b53971a50d4ee1dfe74132be2d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-04.md",
+      "sha256": "29471b33fd5b82c980ba2ec3501b18687c28d5fbe47a461f0353f2fb6d59ca05"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr04-independent.json",
+      "sha256": "fffab202d9c7853e7349423d15bfabf14bc05500b3817ab0811eaf0b1b13cc03"
+    },
+    {
+      "path": ".context/illumination-k4-codex/two-reflex-blocker/all-heights.md",
+      "sha256": "25ae281ecec09edef135f51d6a4aac0308d1f7767505cca40fd5645afd492016"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-review.md",
+      "sha256": "16aa60f945c22c9588de002d3da8579aca601950d0da1889db22e8d4c0f02f34"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
+      "sha256": "31cd407a59dfd1a16e834a67d61f847b5cbd78423363b411f48464d053ff22c6"
+    },
+    {
+      "path": ".context/illumination-k4-codex/single-boundary-blocker/l-monotone-proof.md",
+      "sha256": "dc80c57e5d3d74c82863779913a4b6fc59256363391ff4e1bfbff506cd769db3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-candidate.md",
+      "sha256": "89c1c6179529d3bbff61d74783fc8188432be7caf3d771101baee80128d2f5bf"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-proof.md",
+      "sha256": "208c110eda44546f2c89c369a1a94671232846eeeb35a044b3d6b66fcda1482c"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-check.py",
+      "sha256": "6a106f3e16bb574b19c251638f9fe6119acb2f722314e0bc8aea0eb593511a26"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-check.json",
+      "sha256": "6a4c7af37e66cf9a73c64d69628e0671ed6f856425c49e1450ca23e057a8621b"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.md",
+      "sha256": "bb80191dde8d22c482618f68c8f12f91b7908b6a0f85ebd0969885a585b8c357"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.json",
+      "sha256": "708ed66078cd1ebc90964be800eab3ad84291c9c5274ef9513f6b4ea070e5ec0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.md",
+      "sha256": "0d57019acc0b9d30a8031c1f0eea6ce2887b03a16f53303a2810104be0897983"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.json",
+      "sha256": "e8cdc500a16d42f76c1e0414850ddcc0cc5cfe832c23de74941206243a0f8ceb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-generalized-independent.md",
+      "sha256": "e79d0b762c8610e0a717be37600dccb60b441047a23d7a38e098528827f74ce9"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-generalized-independent.json",
+      "sha256": "dcb253e5b2b1d8d56efc236b7a01e533aba2f23d02c1a6481d4a551e49ed9c5d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-review-request.json",
+      "sha256": "74b473815293e3bdd8a0be12f623cf8a433a89a0d249dc948e7a9ff62a435beb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-upper-window-independent.md",
+      "sha256": "0105e20d71e1b946f29a4379c0918ea615103fc56685d3a27278b161e2ac39a2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-upper-window-independent.json",
+      "sha256": "65f706f5616c6d37a7e6b7b7a0f9a2581402ce3acd4d4ca40e99ea4d200e3524"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-upper-window-final-check.py",
+      "sha256": "3bd10c76506ce5e29262314983846fe1a175d316cdad2cea8a1090ca026c261f"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-upper-window-final-check.json",
+      "sha256": "95de2994e467289a256e8ed3f5dcdf25ac52c75282c84a6e4b71e73ad8e5426d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-candidate.md",
+      "sha256": "9281cf8ccc1a74bcb3090d6407dbbb1708e061f8de054585b19090ea5ccfd906"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-proof.md",
+      "sha256": "1ef7ddf84b031250cd427a2211487c012e283564d1ea83b52925d541be55a184"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-check.py",
+      "sha256": "ad95e1a04ca1a305bd6c088324949e23a07fe728e33343f679ae2cf47ad44fce"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-check.json",
+      "sha256": "940ecdfdc97d7f79a028d927286099c4fcc4733f657587c349b051e17596a64f"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-source-width-check.py",
+      "sha256": "5acdf546e6b70945751152f8e860e2279eb6f40f7ac89fb019e14ec0eac393dd"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-wide-check.py",
+      "sha256": "d12a2ab0b93af94286c28d921e46a2b2d18a1e872d23624543216ebfccde7609"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent-check.py",
+      "sha256": "be85b60c99a94668d5502dd8359ccd1597e7af8380e50ae54e99db1b6a8a04e2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-review-request.json",
+      "sha256": "78408c51cfb1a7686daeb060fcc5cef2610f54fff1218f9d25270c3ab7b6e224"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-forward-review.md",
+      "sha256": "706f92262a1d60a69f2f43bd32eadc76bf3c4c01e0e4f3ba25ac2f1796d4b655"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-forward-review.json",
+      "sha256": "4d5e775f90672c2938ebb7116aac33a50b415c020b16c091d9a4de9e08386b7a"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-candidate.md",
+      "sha256": "98b373212d5fa96c391708af5518f2a1067a7e43a8481077ebf69918bbe931e2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-proof.md",
+      "sha256": "119ccf3644160de3cb5161b7eb6b5157f470d411ef5cedb3b73919aaecb672db"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-check.py",
+      "sha256": "9c009a3ebb979ce1bc59957faba947d0d55cd6571ab0f94ba9ede1755211d2f3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-check.json",
+      "sha256": "4d8e2ebcea93f8b37e15e8674612413994afa4db12b1f5d499383b69f3a89324"
+    }
+  ],
+  "source_pins_after": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-candidate.md",
+      "sha256": "330f1a2c289e14c8aa9bfe079ade7987e8990ee99ddf4703ba90ba470b25237c"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-proof.md",
+      "sha256": "60c90cafded42f391007bbf0529123f27254b16c9f14eeac25f87ad6d8aa7289"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-check.py",
+      "sha256": "809e8b132afeb438a0be9d8a5cbb6e608c059f53c0487665d0f8f13ce068de48"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-check.json",
+      "sha256": "2aa3622e98398dbc299ce9c7a88d8201f29d7733f99780582f9760cef0abf396"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-review-request.json",
+      "sha256": "1f72ebe36fe30960c7cd15bd900f8413ffb3922522ad25a05794cc4bdb362a88"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-source-width-independent.md",
+      "sha256": "5b007bcae48d6a843e545e9aa6878b2c6c625c2521334109f83a6637aa388de2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-source-width-independent.json",
+      "sha256": "f92c8efebc3e10958d1f4d151a6f7b5fcc092236c5fcd5e508d5bcd01ed340f3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-candidate.md",
+      "sha256": "6534c440ce19bea433b0afdb0b6715640fd40309ad94ee9c263ed9f7a6ccc1ab"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-proof.md",
+      "sha256": "23ef98a97e55344c3a4b4e2961518a60245fd9eb1f174aa2890a872dee4c2d53"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-check.py",
+      "sha256": "c387a936eab87fab5b3e19edd5adf8894e47164be123653dc864fd01efd3fbf5"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-sourcewide-check.json",
+      "sha256": "9289b05f56c002f392babf45975aeed3607ef2529054f5b153a0fc366052ff90"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-review-request.json",
+      "sha256": "a3ac874846b9cf4ef008fc7c9dd73cd7c4a11520aa7b4b9ba84d3cfbaaf45d67"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-wide-final-packet-review.md",
+      "sha256": "f4f960377616244f563e3abd8797e0baf51bea2aedff495b8fb64c1d0cab1ec3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-wide-final-packet-review.json",
+      "sha256": "3c222c6f9fcfed7dffdb71d179502613bed201c44209002653401cffe3772b91"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-candidate.md",
+      "sha256": "f78b4c9e7ae48b6dab25553559f19889f87a0ab8c8dc61715ef5a0d253ccbca2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-proof.md",
+      "sha256": "a5136465311272b295d00283d434759399d89b56ec7073b2dce8f17ca63b55fa"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-prescribed-check.py",
+      "sha256": "4e835d8be92cff63d4b8f30c9705eeceae0918b953cd36ef9b17c3a92cea6b91"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-prescribed-check.json",
+      "sha256": "5b655ebb38db066f6326ae70711e176c9aa4075cdb831c00662759405ed6f2b9"
+    },
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/coprime-candidate.md",
+      "sha256": "dfb9ae56f03352f9bd9ec27f3528feff5c8c1fa65ba09852dd37e337a5341a78"
+    },
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/coprime-proof.md",
+      "sha256": "8edde875d1ad99e1c8fb7fe5a9097679d4b3ec40eff0882cfecf5ae958a75bcc"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent.md",
+      "sha256": "f1f5b389cae624f8f791a5a10aa7582af447d4323f50f8a9d796f721fc7e27d7"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent.json",
+      "sha256": "2993d551f50d55feccc96c7979b91109e5e421d35a0925b269325f63bc819ca5"
+    },
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/equal-block-cover-addendum.md",
+      "sha256": "ff1990d4d2cf3a39e6a78834b87ba09ad8d8c0529dc2d850091bad2498f7d1c6"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-equal-block-independent.md",
+      "sha256": "5fa9efe9b6954a890bbc1c31f2bbddfcbab6b7cc325c33993e8a665fe52cb8a3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-equal-block-independent.json",
+      "sha256": "0fa7c0f198939b54aa6a37b0652426a497432f9aeed3fbd0770d846e7d0f91b4"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-01.md",
+      "sha256": "384d4f32e9eaaab9b76bf8886cf844924ac96e65b9404f39c56beb03b041f2a0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent.md",
+      "sha256": "bdfd57c1521ff4efe32adbc238cc732c5d85850995f793dcba9035c0c80cdceb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent.json",
+      "sha256": "7f700a3211be69a69724c50507b749af42614ec800971d77bf0bc66c89e29c68"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/resumed-exact-check.py",
+      "sha256": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent-check.py",
+      "sha256": "e2e4bb0dcfc225d8b392b5b7a6d6622058b8b10c395d4bf59d7dab029329e161"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-03.md",
+      "sha256": "e1b1d0e474108ebec0d92e725962a12be643bb79d78cba5a9271e5dda157d97e"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-03.md",
+      "sha256": "e9bf0db0e814b685333cf85af27d298a4d9c570955d4aed8812ca6ded020a6ee"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-tall-prescribed-check.py",
+      "sha256": "fea4c50a4467f44b25eb16a497f18bfea12317bcddd81907ef355e1b65533f22"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-tall-prescribed-check.json",
+      "sha256": "048e70ed0ad88d14b4922f7880a00b8e3d14fcd3d062ed260abaf68b1994ec16"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-01.md",
+      "sha256": "64640c28451b69910455543d9a190548f323a08daacd0734ad2efe14d1babbdf"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-review-request-01.json",
+      "sha256": "35c298dc5603351466a42aa08e3557832f21b2325d81a5eba9218f56c179addf"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-05.md",
+      "sha256": "2091760a07f0bcb53edb23bd639be4fdc32e736f8a7de6c1680504c3fca63409"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-05.md",
+      "sha256": "8d541d5d7503e765e67900d18f21d2cd1812d2ffce151f7f397449b4d920d6d8"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-rotated-U-prescribed-check.py",
+      "sha256": "a1746ad74aa170a62332118bf91e56835b580cd3ae3cb25a8f126900d9f656c3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-rotated-U-prescribed-check.json",
+      "sha256": "cc5124898f9e99641e329c725ca0cc74796950b53971a50d4ee1dfe74132be2d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-04.md",
+      "sha256": "29471b33fd5b82c980ba2ec3501b18687c28d5fbe47a461f0353f2fb6d59ca05"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr04-independent.json",
+      "sha256": "fffab202d9c7853e7349423d15bfabf14bc05500b3817ab0811eaf0b1b13cc03"
+    },
+    {
+      "path": ".context/illumination-k4-codex/two-reflex-blocker/all-heights.md",
+      "sha256": "25ae281ecec09edef135f51d6a4aac0308d1f7767505cca40fd5645afd492016"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-review.md",
+      "sha256": "16aa60f945c22c9588de002d3da8579aca601950d0da1889db22e8d4c0f02f34"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
+      "sha256": "31cd407a59dfd1a16e834a67d61f847b5cbd78423363b411f48464d053ff22c6"
+    },
+    {
+      "path": ".context/illumination-k4-codex/single-boundary-blocker/l-monotone-proof.md",
+      "sha256": "dc80c57e5d3d74c82863779913a4b6fc59256363391ff4e1bfbff506cd769db3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-candidate.md",
+      "sha256": "89c1c6179529d3bbff61d74783fc8188432be7caf3d771101baee80128d2f5bf"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-proof.md",
+      "sha256": "208c110eda44546f2c89c369a1a94671232846eeeb35a044b3d6b66fcda1482c"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-check.py",
+      "sha256": "6a106f3e16bb574b19c251638f9fe6119acb2f722314e0bc8aea0eb593511a26"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-wide-check.json",
+      "sha256": "6a4c7af37e66cf9a73c64d69628e0671ed6f856425c49e1450ca23e057a8621b"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.md",
+      "sha256": "bb80191dde8d22c482618f68c8f12f91b7908b6a0f85ebd0969885a585b8c357"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.json",
+      "sha256": "708ed66078cd1ebc90964be800eab3ad84291c9c5274ef9513f6b4ea070e5ec0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.md",
+      "sha256": "0d57019acc0b9d30a8031c1f0eea6ce2887b03a16f53303a2810104be0897983"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.json",
+      "sha256": "e8cdc500a16d42f76c1e0414850ddcc0cc5cfe832c23de74941206243a0f8ceb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-generalized-independent.md",
+      "sha256": "e79d0b762c8610e0a717be37600dccb60b441047a23d7a38e098528827f74ce9"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-generalized-independent.json",
+      "sha256": "dcb253e5b2b1d8d56efc236b7a01e533aba2f23d02c1a6481d4a551e49ed9c5d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-review-request.json",
+      "sha256": "74b473815293e3bdd8a0be12f623cf8a433a89a0d249dc948e7a9ff62a435beb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-upper-window-independent.md",
+      "sha256": "0105e20d71e1b946f29a4379c0918ea615103fc56685d3a27278b161e2ac39a2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-upper-window-independent.json",
+      "sha256": "65f706f5616c6d37a7e6b7b7a0f9a2581402ce3acd4d4ca40e99ea4d200e3524"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-upper-window-final-check.py",
+      "sha256": "3bd10c76506ce5e29262314983846fe1a175d316cdad2cea8a1090ca026c261f"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-upper-window-final-check.json",
+      "sha256": "95de2994e467289a256e8ed3f5dcdf25ac52c75282c84a6e4b71e73ad8e5426d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-candidate.md",
+      "sha256": "9281cf8ccc1a74bcb3090d6407dbbb1708e061f8de054585b19090ea5ccfd906"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-proof.md",
+      "sha256": "1ef7ddf84b031250cd427a2211487c012e283564d1ea83b52925d541be55a184"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-check.py",
+      "sha256": "ad95e1a04ca1a305bd6c088324949e23a07fe728e33343f679ae2cf47ad44fce"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-check.json",
+      "sha256": "940ecdfdc97d7f79a028d927286099c4fcc4733f657587c349b051e17596a64f"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-source-width-check.py",
+      "sha256": "5acdf546e6b70945751152f8e860e2279eb6f40f7ac89fb019e14ec0eac393dd"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-wide-check.py",
+      "sha256": "d12a2ab0b93af94286c28d921e46a2b2d18a1e872d23624543216ebfccde7609"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent-check.py",
+      "sha256": "be85b60c99a94668d5502dd8359ccd1597e7af8380e50ae54e99db1b6a8a04e2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-forward-crossing-review-request.json",
+      "sha256": "78408c51cfb1a7686daeb060fcc5cef2610f54fff1218f9d25270c3ab7b6e224"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-forward-review.md",
+      "sha256": "706f92262a1d60a69f2f43bd32eadc76bf3c4c01e0e4f3ba25ac2f1796d4b655"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-forward-review.json",
+      "sha256": "4d5e775f90672c2938ebb7116aac33a50b415c020b16c091d9a4de9e08386b7a"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-candidate.md",
+      "sha256": "98b373212d5fa96c391708af5518f2a1067a7e43a8481077ebf69918bbe931e2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-proof.md",
+      "sha256": "119ccf3644160de3cb5161b7eb6b5157f470d411ef5cedb3b73919aaecb672db"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-check.py",
+      "sha256": "9c009a3ebb979ce1bc59957faba947d0d55cd6571ab0f94ba9ede1755211d2f3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-check.json",
+      "sha256": "4d8e2ebcea93f8b37e15e8674612413994afa4db12b1f5d499383b69f3a89324"
+    }
+  ],
+  "request_pin": {
+    "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-lowerchoice-review-request.json",
+    "sha256": "e9319be842680c0ec6cd4e22808123a8a63c5a19bc50ae4735ab11f17c032645"
+  },
+  "evidence_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-lower-choice-independent.md",
+      "sha256": "6b3d6b959dbd0fc1633ffd8f79d0e5ea0f67ff5d2d336b5a759b6a96c8c7797a"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-lower-choice-check.py",
+      "sha256": "aff5710d71ac70af1eada7acd7e7319a15dae0476209ceef73bcc94c773982e1"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-lower-choice-check.json",
+      "sha256": "b62a5fa632d598ac441900c0d135e41270dda7a8c3266d3fb45de8d61a238e96"
+    }
+  ],
+  "own_prescribed_cases": 6,
+  "reflections": 1858,
+  "wall_leg_guards": 18640,
+  "author_code_executed": false,
+  "discovery_search_used": false,
+  "material_corrections": [],
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

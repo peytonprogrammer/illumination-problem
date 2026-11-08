@@ -1,0 +1,109 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+Full-H-facing healed L half-fan: bounded family illumination
+4 November2026 — Codex01a18403
+
+RESULT: parent proof, independent review pending. Under Delta3,W<=21,k<=6,
+the parent L-,L+,l,c with a remote r_left or r_right at(-2,2), all other partial
+cells ordinary, illuminates actual S/T within14reflections. This is the last
+of the three upper-facing L parent variants considered here, not the full
+Delta3 classification. The previous half-fan.txt handles L+,l,c,w; the triple
+case is healed-budget.txt. Sigma transfers each theorem to its partner at T.
+
+1. Fixed geometry and budget
+The parent is the union of the four indicated contiguous triangles; l,c,r_left,
+r_right are exactly as defined in healed-budget.txt. It fills the H-facing
+C=(-1,0), making that C interior. Its A midpoint is smooth: q=3, s_A=1.
+The remote leaf contributes q=1, and its C=(-2,1) is270degrees. All other
+partial cells are single H-facing caps; exclude the directly illuminating N
+bridge first.
+If n is the number of ordinary caps, Q=4+n, N_triangles=29+n and J=3:
+the two original interior C plus(-1,0), with no full additional B/C star.
+At Delta3, s_N=7-n,k=10-n,W=11+2n. The two budgets imply n=4or5.
+
+The inherited one-bounce and four-bounce paths force B+,E-,T- for hypothetical
+darkness. Other triangles in these ordinary cells are then absent. Thus exactly
+one or two further caps lie in D,R,N. Each slot has at most one cap; N's four
+nonbridge ordinary choices are Nb-,Nb+,Nr-,Nr+.
+
+Two local restrictions follow from b=0, since parente2+remotee1 already use3.
+(a) r_left forces Nb-: without it, B=(-1,1) has180degrees from H90+L+45+l45.
+Only Nb- can repair that smooth B; r_left does not reach it.
+(b) Nr+ is impossible: B=(1,3) would have H90+T-45+Nr+45=180degrees.
+Neither the parent nor remote leaf reaches this B; other caps are excluded
+by the ordinary slot rules. So Nr+ necessarily creates an extra b unit.
+These are exact local angle statements, not assumptions that every formal cap
+choice is a valid room.
+
+2. Fixed guard implications from one frozen source
+center-half-project.json retains fixed actual-S/T paths and exact sufficient
+conditions on D/R/N and remote-leaf labels. The following subset suffices.
+A row's required labels must be present; forbidden labels must be absent.
+All fixed triangles in section1 are included separately in each row's guard.
+
+source line  required               forbidden                    reflections
+ 907         leaf_left              Nr-,R+,leaf_right                  14
+ 958         Nr-,leaf_right          Nb+,leaf_left                      13
+ 515         Nb+                    D-,Nb-,Nr-                          13
+3777         D-                     Nr-,R-,leaf_left                    12
+2534         R-,leaf_right          Nr-,leaf_left                       14
+ 652         R+                     Nr-,R-,leaf_left                    14
+ 361         D-                     D+,Nb+,R-                           11
+3224         D+                     D-,Nr+,R+,R-                        12
+2642         (none)                 D+,Nr+,R+,R-                        10
+
+Every row is independently replayed with the existing exact segment/specular
+checker against its symbolic guard by center-half-project.py. The original
+frozen archive has q=(2,-2); the two endpoint-forced isometries, and endpoint
+reversals, map to actual S=(0,0),T=(2,2). The full paths, frames, source SHA256
+and required/forbidden triangles are retained. This is a bounded frozen
+projection, not new path or direction discovery, and no assembled room
+assignments were enumerated.
+
+3. Complete hand cover: left remote leaf
+By1(a), N=Nb-. If R+ is absent, row907 applies, regardless of any affordable
+D choice or R-. All its other absences follow from the N/leaf slot rules.
+If R+ is present, N and R already consume both additional slots. D must be
+empty. The room is therefore the single fixed residue
+ H+{L-,L+,l,c,r_left,B+,E-,T-,Nb-,R+}.
+Its exact geometry is strictly simple with N34,Q9,J3,s_N2,s_A1,W21,k5,Delta3.
+center-residue-frozen.json retains a12reflection actual-S/T path, frozen I2
+archive line2134 in the identity frame, exact replay PASS. This closes the
+left-leaf case. Absence of a convenient earlier guard was not darkness.
+
+4. Complete hand cover: right remote leaf
+Nr+ is excluded by1(b). Split on the remaining N choices:
+ - N=Nr-: row958 applies; other N labels and left leaf are absent.
+ - N=Nb+: if D- is absent, row515 applies. If D- is present, N and D consume
+   both extra slots, so R is empty and row3777 applies.
+ - N=Nb- or N empty: if R- is present, row2534 applies. Otherwise if R+ is
+   present, row652 applies. If R is empty, use row361 when D- is present,
+   row3224 when D+ is present, and row2642 when D is empty.
+These alternatives are exhaustive and mutually ordered; every listed forbidden
+label follows from the split and the one-cap-per-cell rule. The final empty
+D/R/N branch is vacuous under n>=4, but its guard is valid regardless.
+Thus the right-leaf case also illuminates. No case-assignment loop or solver
+is a premise of this hand cover.
+
+5. Fixed-geometry exclusion receipt
+The fixed right-leaf+Nr+-only residue was checked before recognizing1(b).
+It is indeed strictly simple, but has Delta4,k7,W18,N33,Q8,J3,s_N4,s_A1.
+The smooth B=(1,3) is explicitly listed in center-residue-check.json. It is
+outside the active goal class. The other fixed residue is in class and has
+its explicit12path. These checks support the hand local and counting arguments;
+they do not replace their exhaustive logical cover.
+
+6. What this achieves and does not achieve
+All three upper-facing L parent variants (triple, outward smooth half-fan,
+full-H-facing smooth half-fan) with one healed outer-C leaf now have parent
+bounded-family illumination proofs, with at most14reflections. All three
+require independent review. Noncritical and other critical parent orientations
+still need a complete written remote classification before asserting that EVERY
+remote Delta3 room is covered. Wholly local Delta3 interactions remain open.
+No universal bound, larger-surplus result, formal verification or expert
+endorsement is claimed. The only frozen sources consulted were the previously
+claimed I3archive and one final exact-residue lookup in the I2archive; no new
+room, ray, direction, or reflection-word discovery occurred.

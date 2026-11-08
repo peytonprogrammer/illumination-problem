@@ -1,0 +1,91 @@
+{
+  "id": "ER01_INDEPENDENT",
+  "decision": "ACCEPT_ALL_N_SAME_ACTUAL_MARKED_PAIR_GENUINE_FLOOR_REPAIR",
+  "claims": [
+    {
+      "claim": "all_odd_n_actual_path",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "all_even_n_actual_three_horizontal_contact_path",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "strict_original_walls_corners_and_signed_velocities",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "actual_first_target_and_finite_reflections",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "marked_pair_only_scope_and_necessity_compatibility",
+      "decision": "ACCEPT"
+    }
+  ],
+  "source_pins_before": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-obstruction-repair-candidate.md",
+      "sha256": "7cab22ef1aa2ce1cde502a0322852d41dcf021f5efe80293af48b72668be8cb9"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-obstruction-repair-proof.md",
+      "sha256": "dfe3581620bf4b47376d0f90da653c103de752ca3c97174f2c29e664dde84fd0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-obstruction-repair-hand-check.json",
+      "sha256": "8a2c7ee4e3d5565590281d7c390933dc99b171b5b6df5b2a0d9bdb1ded5e2aac"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-equal-arm-one-roof-proof.md",
+      "sha256": "50827909282e35bf51441f9cae7548f8e1637d3b60bb8091739b0bb3b2759d92"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-equal-arm-one-roof-review-request.json",
+      "sha256": "9224fc713c943b266d6d29b7b14b7b858ac8bb2e7d57148708eda2c6bea48f43"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-one-roof-reciprocal-review.md",
+      "sha256": "677d21bac2ac508d2ca33ecbbc940ca1106e6e45a335d9b0062b922b194c11e0"
+    }
+  ],
+  "source_pins_after": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-obstruction-repair-candidate.md",
+      "sha256": "7cab22ef1aa2ce1cde502a0322852d41dcf021f5efe80293af48b72668be8cb9"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-obstruction-repair-proof.md",
+      "sha256": "dfe3581620bf4b47376d0f90da653c103de752ca3c97174f2c29e664dde84fd0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-obstruction-repair-hand-check.json",
+      "sha256": "8a2c7ee4e3d5565590281d7c390933dc99b171b5b6df5b2a0d9bdb1ded5e2aac"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-equal-arm-one-roof-proof.md",
+      "sha256": "50827909282e35bf51441f9cae7548f8e1637d3b60bb8091739b0bb3b2759d92"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-equal-arm-one-roof-review-request.json",
+      "sha256": "9224fc713c943b266d6d29b7b14b7b858ac8bb2e7d57148708eda2c6bea48f43"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-one-roof-reciprocal-review.md",
+      "sha256": "677d21bac2ac508d2ca33ecbbc940ca1106e6e45a335d9b0062b922b194c11e0"
+    }
+  ],
+  "request_sha256": "8f90795c32cf15985b14d26d77d36d2a006a573006d8f71fcb0f318b4be3517d",
+  "review_sha256": "8018565a47a25876f8659afdf66ac8eaebaded71123fdd1119cac80b95ccea98",
+  "checker_sha256": "dc37cc581c7b6f57600742edb8795381c9dfef0907ad7afcb7e2186687131a22",
+  "evidence_sha256": "374170a54a914fb3d8713652e96e3c2122d7035305f2cdd7c377be0a6970b3db",
+  "prescribed_checks": {
+    "cases": 2,
+    "reflections": 145,
+    "wall_leg_guards": 1470
+  },
+  "material_findings": [],
+  "whole_native_pair_family_claim": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

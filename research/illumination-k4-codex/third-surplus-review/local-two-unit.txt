@@ -1,0 +1,172 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+Local third surplus: two e1 fans and one extra smooth non-A point
+4 November2026 — Codex01a18403
+
+RESULT: parent hand proof, independent review pending. Every local active-class
+room with Delta=e1+e1+b1 illuminates actualS/T within13reflections. The W/k
+bounds are not needed in this partition. The proof uses inherited paths and
+return exchanges only; no frozen archive query or new path discovery.
+
+1. Geometry and the new b1 option
+Exclude the direct N bridge first. The two positive cells are d1/q2 contiguous
+two-triangle fans: centered H-side pairs or quarters. All other partial cells
+are ordinary single caps. At a C away from H, each quarter can contribute only
+one90-degree quadrant. A smooth outside C therefore needs quarters from BOTH
+adjacent A cells. A centered unit pair uses its full C toward H, so cannot
+supply the needed outside pair.
+
+Inside K the only pairs of distinct partial A cells sharing a full side are
+B-D and R-E. All other adjacent pairs in K involve a full H star; diagonal
+partial cells meet at B vertices, not at C. For B-D, the H-facing side is
+north for each. There is exactly one unit-quarter choice in each that meets
+across their outside side: B+ plus its active east outer mate, and D- plus
+its west upper mate. They form [0,2]x[-2,-1]. Their common C=(1,-2) is smooth
+on the far horizontal wall; B=(1,-1) becomes interior. R-E is its sigma image.
+These are the only new outside-C join geometries. Opposite occupied quadrants
+at an otherwise empty C would be a boundary pinch, violating strict simplicity.
+
+If no such join occurs, the two unit cells have the same necessary geometric
+forms as the accepted Delta2 C2 reduction. Its no-smooth-B exclusions cannot
+be reused uncritically: extra smooth B is now allowed. Sections3–6 explicitly
+replace every optical step that depended on that exclusion.
+
+2. The outside-C join family is illuminated
+Use B-D as representative. If E- is absent, the old one-bounce counterpart
+lights. With E- present, the sigma four-path forces ordinary L+. The B square's
+far-wall one-hit return supplies the old two-reflection short route when T-
+is absent: its far hit x=1/2,y=-2 lies in the LEFT square, so the neighboring
+D square does not remove it. Thus potential darkness requires T- as well.
+Ordinary L/E/T then exclude L-/E+/T+.
+
+If Nb+ is absent, the previous five-path works: its B far reflection at
+(2/3,-2) lies strictly in the left square. Neither extra D triangle affects
+its complete guards. If Nb+ is present, N is an ordinary bottom cap, so both
+Nr-/Nr+ are absent, and the old sigma13path works. It has no D-cell restriction
+and is unaffected by either square. The two symbolic implications are exactly
+checked in local-two-unit-check.json. This closes the join family and sigma.
+
+3. No join: noncritical positions and cap forcing
+If neither unit cell is critical B/E/L/T, ordinary short paths force the four
+reference caps. D/R changes affect neither13path, and a nonbridge N unit fan
+cannot contain both inward bottom and right blocking caps. Thus the opposite
+original/sigma13 path works.
+
+If exactly one unit cell is critical, its accepted single-unit optical proof
+survives a noncritical second fan: centered L/T three-paths have no noncritical
+restrictions; square exchanges retain portal data; centered B six-path has no
+D/R restriction. If its Nb- source roof is removed by an N unit fan, that N
+fan is bottom-facing, so the old sigma13path works with ordinary L/E/T. The
+same statement transfers to E. These uses require actual mirror absences, not
+an inference that an extra smooth point helps a ray.
+
+Thus only two distinct critical cells require new interaction analysis. The
+old one-bounce routes and square/centered variants of the short cap route force
+each critical cap: B+,E-,L+,T- as applicable. This forcing argument from the
+accepted Delta2 classification§9 uses only the local return identities and
+ordinary remaining caps, not b0. Consequently each critical unit fan is either
+centered or its active outer square. An inactive orientation omitting the
+critical cap is already illuminated. The other two critical cells are ordinary.
+
+4. Both critical fans are outer squares
+Replace each affected cap excursion in the old original/sigma13pair by the
+accepted square exchange. Each excursion keeps its exact exit point and outgoing
+velocity, so disjoint replacements compose. N is ordinary and cannot remove
+both bottom- and right-facing mirror sets. The corresponding13-or-shorter
+path survives. This is the previously accepted two-outer proof; b1 changes
+no triangle requirement in it.
+
+5. Both critical fans are centered: all six site pairs
+L+B: B=(-1,-1) has H90+L-45+B-45=180degrees. It is an extra smooth B, now
+allowed but it consumes b1. Nb- would also make B=(-1,1) smooth from H90+
+L+45+Nb-45. No third positive cell can repair either point. Thus Nb- is
+absent. The centered-B six-path works, with ordinary T- and T+ absent; its
+complete guards allow both L triangles. E+T is the sigma case.
+
+L+E and L+T: centered-L three-path works, since B is ordinary with B+ present,
+B- and outer B absent; neither other centered site affects its guards.
+B+T: the centered-T sigma three-path works since E is ordinary.
+
+B+E: if Nb- is absent, the B six-path works. If Nb- is present, N is ordinary
+bottom-facing, hence Nr+ is absent, and the centered-E sigma six-path works.
+Its other potentially removed mirror is the lower L cap, absent because L is
+ordinary with L+ present. Both paths allow the OTHER centered B/E pair.
+This replaces the former b0-only argument excluding Nb-.
+
+These are all six unordered pairs of four critical sites. The three new
+six-path implications are checked exactly in local-two-unit-check.json.
+
+6. One centered and one active outer fan: all ordered site pairs
+Center L with outer E or T: centered-L three-path still works (B ordinary).
+Center L with outer B: the accepted Delta2 five/Nb+ dichotomy applies unchanged:
+Nb+ absent uses five; Nb+ present makes N bottom-facing and allows centered-L
+12path. No no-smooth-B premise is needed. Center T follows by sigma.
+
+It remains to consider center B with outer L/E/T (center E follows by sigma).
+In each, short local returns force T- (or it is already the outer T cap) and
+ordinary E-/L+ where needed.
+ - Outer L: Nb- absent gives B6; Nb- present gives a bottom-facing N and the
+   Lsquare11path. Added B- is harmless to that path. This replaces the former
+   requirement that the otherwise smooth B=(-1,1) had to be repaired.
+ - Outer E: Nb- absent gives B6; Nb- present gives bottom-facing N and the
+   Esquare11path. L is ordinary with L+; E+ absent, T+ absent. The centered B
+   triangles do not affect the square-exchanged sigma path.
+ - Outer T: Nb- absent gives the previously accepted B6 with its three-hit
+   T excursion replaced by the one-hit square return, a four-hit total path.
+   If Nb- present, N is bottom-facing and the OLD sigma13path works: L/E are
+   ordinary, L-/E+/T+ absent, and the outer T mate is harmless to its guards.
+
+These cover all twelve ordered centered/outer site pairs. Seven newly used
+fallback implications, including the relevant centered-pair cases, are exactly
+checked here; the centerL/outerB dichotomy was already exactly checked in
+second-surplus-review/five-path-check.json. The top-square four-path substitution
+was independently accepted with the prior Delta2 classification.
+
+7. Validation and goal boundary
+local-two-unit-check.py/json checks ten specifically stated symbolic inherited
+path implications using the existing exact segment/reflection checker. Each
+requires a fixed set of actual triangles and forbids every mirror-removing
+triangle. Possible other ordinary cap choices are left free. This does not
+enumerate assembled rooms or discover new rays. All ten implications PASS.
+The complete case split is the hand proof above, not the number of checks.
+
+This closes the entire local e1+e1+b1 partition, pending independent challenge.
+Together with the other parent proofs, the exact remaining LOCAL charge patterns
+are e2+e1 with b0 and three e1 with b0. No full-goal completion, higher-surplus
+result, universal wall bound or formal/expert verification is claimed.
+
+
+Review reconciliation: explicit short forcing and noncritical support
+The two universally forced caps B+/E- follow from the old one-bounce paths.
+T-/L+ require the following extra local statements; they are not assumptions.
+If B is ordinary, the old four-path works when T- is absent. If B is centered,
+with its two outer mates absent, the exact three-reflection path is
+ S -> (-2/5,-8/5) -> (2/3,-4/3) -> (7/4,3) -> T.
+It needs only H+B-/B+ and forbids only those two B outer mates and T-.
+If the B active east quarter or B_east/B_rectangle is present and the lower
+south-east mate bse is absent, the exact two-reflection path is
+ S -> (1/2,-2) -> (7/4,3) -> T.
+It needs H+B+ plus its east upper mate b, and forbids only bse and T-.
+Sigma and reversal give L+ forcing. A west-reaching or joined B fan with
+bse present is not subject to this forcing; no such implication is used.
+These four paths, full guards, and all39named fallback guard sets appear in
+independent-review/guard-extension-check.json. Exact replay verifies that every
+fallback's complete forbidden set avoids the FULL D/R cell stars and both
+nonbridge N outside mates. This enlarges the symbolic check universe beyond
+ordinary cap labels. It does not permit the two N bridge triangles.
+
+For a nonbridge N unit fan the four possible forms are the bottom centered
+pair {Nb-,Nb+}, SW quarter {Nb-,nw}, right centered pair {Nr-,Nr+}, and NE
+quarter {Nr+,ne}. The SE quarter contains the direct bridge. Consequently:
+ - B/E centered pair uses B6 if Nb- absent, otherwise sigmaB6; bottom-facing
+   N may have BOTH Nb caps, and neither fallback forbids the other Nb cap.
+ - Centered L/outer B uses five if Nb+ absent, otherwise L12; L12 allows both
+   Nb caps. Its sigma gives the corresponding endpoint-reversed case.
+ - Remaining centered/outer pairs use L11/E11/sigma13 when N is bottom-facing;
+   these forbid no Nb cap. Opposite N orientation uses the stated short path.
+N's outside mates were checked harmless against the complete forbidden sets,
+not omitted from an alphabet. With all critical sites occupied, N is ordinary,
+as in the original tables. Thus the N-unit extension adds no untested mirror.

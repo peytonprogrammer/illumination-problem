@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "method": "Independent exact prescribed arithmetic and all-wall path verifier; no discovery or peer-code import",
+  "positive_actual_paths": [
+    {
+      "scale": 1,
+      "reflections": 43,
+      "all_wall_leg_guards": 736,
+      "actual_endpoints": true,
+      "strict_all_corners": true
+    },
+    {
+      "scale": 12,
+      "reflections": 43,
+      "all_wall_leg_guards": 736,
+      "actual_endpoints": true,
+      "strict_all_corners": true
+    },
+    {
+      "scale": 1,
+      "reflections": 6,
+      "all_wall_leg_guards": 144,
+      "actual_endpoints": true,
+      "strict_all_corners": true
+    },
+    {
+      "scale": 1,
+      "reflections": 13,
+      "all_wall_leg_guards": 256,
+      "actual_endpoints": true,
+      "strict_all_corners": true
+    },
+    {
+      "scale": 20,
+      "reflections": 13,
+      "all_wall_leg_guards": 256,
+      "actual_endpoints": true,
+      "strict_all_corners": true
+    }
+  ],
+  "total_reflections": 118,
+  "total_all_wall_leg_guards": 2128,
+  "restricted_classes": 176,
+  "all_rejected": true,
+  "rejection_breakdown": [
+    {
+      "target_orientation": 1,
+      "source_sign": 1,
+      "target_sign": 1,
+      "source_portal_failure": 12,
+      "target_portal_failure": 5,
+      "integer_spine_failure": 5,
+      "success": 0
+    },
+    {
+      "target_orientation": 1,
+      "source_sign": 1,
+      "target_sign": -1,
+      "source_portal_failure": 10,
+      "target_portal_failure": 6,
+      "integer_spine_failure": 6,
+      "success": 0
+    },
+    {
+      "target_orientation": 1,
+      "source_sign": -1,
+      "target_sign": 1,
+      "source_portal_failure": 12,
+      "target_portal_failure": 5,
+      "integer_spine_failure": 5,
+      "success": 0
+    },
+    {
+      "target_orientation": 1,
+      "source_sign": -1,
+      "target_sign": -1,
+      "source_portal_failure": 10,
+      "target_portal_failure": 6,
+      "integer_spine_failure": 6,
+      "success": 0
+    },
+    {
+      "target_orientation": -1,
+      "source_sign": 1,
+      "target_sign": 1,
+      "source_portal_failure": 10,
+      "target_portal_failure": 6,
+      "integer_spine_failure": 6,
+      "success": 0
+    },
+    {
+      "target_orientation": -1,
+      "source_sign": 1,
+      "target_sign": -1,
+      "source_portal_failure": 12,
+      "target_portal_failure": 5,
+      "integer_spine_failure": 5,
+      "success": 0
+    },
+    {
+      "target_orientation": -1,
+      "source_sign": -1,
+      "target_sign": 1,
+      "source_portal_failure": 10,
+      "target_portal_failure": 6,
+      "integer_spine_failure": 6,
+      "success": 0
+    },
+    {
+      "target_orientation": -1,
+      "source_sign": -1,
+      "target_sign": -1,
+      "source_portal_failure": 12,
+      "target_portal_failure": 5,
+      "integer_spine_failure": 5,
+      "success": 0
+    }
+  ],
+  "darkness_asserted": false,
+  "whole_goal_complete": false
+}

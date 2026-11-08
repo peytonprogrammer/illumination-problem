@@ -1,0 +1,62 @@
+# Verdicts on P1, P2, and P3
+
+All three propositions survive review. P2's proof needs a genus restriction, and P3 needs two scope corrections. I found no counterexample that keeps the stated hypotheses.
+
+## Setup checks
+
+- **Corner angles.** A convex corner has total angle 4·π/2 = 2π in X, so it's a regular point. A reflex corner has 4·3π/2 = 6π, so it's a zero of order 2.
+- **Lifts.** Each corner lifts to one point. Interior points lift to four points and edge points to two. iota maps edge class {g, gV} to {gH, gHV}, which is disjoint, so iota fixes no edge point. Therefore Fix(iota) = F.
+- **Genus.** Since c − r = 4, |F| = 2r + 4. X/iota = X/G-double = doubled disk, a sphere. Riemann–Hurwitz gives 2 − 2g = 4 − (2r + 4), so g = r + 1. Zero orders sum to 2r = 2g − 2, and |F| = 2g + 2 = W.
+- **Hyperellipticity.** iota has 2g + 2 fixed points and a genus-0 quotient, so it's hyperelliptic. For g ≥ 2 it's unique and central in Aut(X). This holds for this precise unfolding.
+
+## P1: accept
+
+S is interior, so its stabilizer in G is trivial. G acts freely and diagonally on the 16 pairs, which gives 16/4 = 4 orbits.
+
+G acts by affine maps that preserve F and send segments to segments. Fixing one lift x of S therefore loses nothing.
+
+The equivalence uses the convention that a ray hitting any vertex terminates. That's why regular convex corner lifts must be excluded. Under the other convention, where a ray reflects straight back from a right-angle corner, those segments would count. You must state the convention explicitly. Segments may pass through other lifts of S or T.
+
+## P2: accept, with a genus correction
+
+The stated hypotheses grant hyperellipticity and centrality only for g ≥ 2. The proof uses both, so it doesn't cover the rectangle (r = 0, g = 1).
+
+**g = 1.** On X = C/L, every h with derivative −I has the form z ↦ −z + c. Each such map is an involution. Most don't commute with iota, so tau isn't an involution there. The conclusion still holds directly. Fix(h) = {z : 2z ≡ c} has four points. If c ≢ 0, none lies in F, because 2z ≡ 0 on F. g = 1 is odd.
+
+**g ≥ 2.** I checked each step of the proof.
+
+- **Holomorphy.** Derivative −I means h*ω = −ω, so h is holomorphic and centrality applies.
+- **Translation involution.** tau² = 1 follows from commutation, and Dtau = I.
+- **Regular fixed point.** tau is locally z ↦ z, so it's the identity on an open set. By the identity theorem it's the identity on connected X. This also covers regular convex corner lifts.
+- **Order-2 zero.** In a chart with ω = w² dw, a fixing translation map φ satisfies φ²φ′ = w². Integrating with φ(0) = 0 gives φ³ = w³, so φ = ζw with ζ³ = 1. Adding ζ² = 1 forces ζ = 1. The normal form is correct.
+- **No fixed points in F.** If h fixes p ∈ F, then tau(p) = h(iota(p)) = p. That's a contradiction.
+- **Descent.** bar(h) = id would force h ∈ {1, iota}. So bar(h) is a nonidentity Möbius involution with exactly two fixed points. Neither is a branch value. Their preimages avoid F and are therefore regular, because every zero lies in F.
+- **Swap exclusion.** If h(p) = iota(p), then tau(p) = h(h(p)) = p. So h fixes all four preimages, and every h-fixed point lies over a bar(h)-fixed point. That gives exactly four.
+- **Parity.** tau acts freely, so g − 1 = 2(g′ − 1) and g is odd. The h-quotient gives g = 2g_h + 1, which agrees.
+
+The corollaries hold. Fix(h) ⊆ F forces h = iota. iota ∈ G pairs lifts of the same physical point. You can add that g odd means r is even.
+
+## P3: accept, with two corrections
+
+The midpoint lemma holds. Take a corner-avoiding segment γ from x to h(x) with Dh = −I and h² = 1. Then h(γ) leaves h(x) in direction −v with the same length as γ. So h(γ) equals reversed γ, by uniqueness of geodesics through regular points. Its midpoint is h-fixed.
+
+The restriction to involutions is harmless for g ≥ 2. If Dh = −I, then h² is a translation automorphism. h²(x) = x at a regular x forces h² = id. For g = 1 every such h is already an involution. Other derivatives, such as diag(−1, 1), reverse only axis-parallel segments, so they give no general certificate.
+
+**Correction 1: a weaker certificate remains.** P2 removes only the certificate that relies on Fix(h) ⊆ F. For h ≠ iota, a corner-avoiding segment from x to h(x) exists if and only if x reaches some regular fixed point pᵢ by a corner-avoiding segment. In that case, extend the segment by h. So darkness of x → h(x) is equivalent to x failing to illuminate all four pᵢ. That's a reduction, not an automatic certificate. "Retires the automatic mechanism" is accurate. "Retires the mechanism" without that qualifier overstates it.
+
+**Correction 2: "not necessary" is conditional.** P2 shows that Fix(h) ⊆ F never certifies a pair of distinct physical points. So Fix(h) ⊆ F fails to be necessary exactly when some dark distinct-point pair exists. That existence comes from outside this argument, and you can't derive it from P2.
+
+The remaining claims hold:
+
+- P3 correctly states that P2 neither proves any pair is lit nor bounds the genus of dark rooms.
+- 22 walls gives 22 corners, so r = 9 and g = 10.
+- g = 10 is even, so P2 excludes every affine involution with derivative −I other than iota.
+- The previous point shows this also excludes every derivative −I map h with h²(x) = x, involution or not.
+
+## Summary
+
+| Proposition | Verdict | Required change |
+|---|---|---|
+| P1 | Accept | State the vertex-termination convention. |
+| P2 | Accept | Restrict the proof to g ≥ 2, and add the direct g = 1 torus argument. |
+| P3 | Accept | Say "automatic." Note the residual reduction to the four pᵢ. Make "not necessary" conditional on a dark pair existing. |

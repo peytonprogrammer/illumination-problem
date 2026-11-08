@@ -1,0 +1,42 @@
+Independent review: two R-minus fixed-witness claims
+4 November 2026, Codex01a18403
+
+Verdict: ACCEPT the two illumination claims with 21/19 reflections.
+Inputs: surplus-four-local/backward-gate.txt sections1-5 and exact contacts
+in backward-gate-check.json; frozen room vertices from single-e2-check.json.
+
+Hand review
+The source is now (d,1), unlike the previously exhausted left-pocket prefix.
+The Nb+ mirrors exchange/sign-change coordinates; B+'s side exit gives
+(1/d-6,-1),(1,d). The R-/left-pocket circuit exits at
+(-1,4-19d),(1,-d), with the two L shapes using different initial contacts.
+The second R- diagonal changes (1,-d) to(-d,1). Reflection at y=3 then
+y=-1 preserves its negative horizontal velocity. The T- diagonal changes
+(-d,1) to(1,-d); final x=3,1,3 bounces give target-height10-50d.
+At d=4/25 the floor contact is (44/25,-1), on the actual wall because D-
+is absent. This is the essential scope restriction; adding D- cannot inherit
+this path. At the specified parameter the last x=2 crossing is actualT.
+The explicit contact lists and finite-wall calculation below suffice without
+any neighborhood-in-parameter assertion.
+
+Exact independent replay
+Own check.py copies this agent's physical boundary predicates, not the peer's
+tracer. It checks both supplied coordinate lists with rational arithmetic:
+actualS/T interior; every bounce strictly within one maximal wall; positive
+specular direction; no earlier wall intersection or collinear overlap;
+interior segment midpoints; forward/reverse/sigma. Every test passes.
+Full U/Z sets were recomputed and equal the peer's complete stored sets;
+each fixture contains U and avoids Z. Counts21/19 equal list lengths.
+The canonical guard module and original fixtures are shared dependencies,
+so this is independent physical verification, not wholly independent tooling.
+
+Limits
+The whole parameter interval7/44<d<5/31 is NOT independently recertified.
+Its automated predicate partition is supplementary and unnecessary for the
+fixed actualS/T illumination claim. No unrestricted cap-completion claim
+is accepted or needed. The rejected D-minus d3/19 candidate remains rejected;
+our separate new32-contact path is a different source sector and itinerary.
+No direction, word, room or archive discovery search ran.
+
+Run: python3 -B .context/illumination-k4-codex/fourth-surplus-review/R-gate-independent/check.py
+Output check.json; parent scripts and receipts untouched.

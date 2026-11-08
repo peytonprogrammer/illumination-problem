@@ -1,0 +1,71 @@
+Independent no-tools proof review. Check the new axis-pencil obstruction below. Critical premises: exact literalpocketflux zero on everyabsolute horizontal/vertical core atEVERY nearbyparameter, and resulting invariance of actualmarked slide cohomology under label-fixing parabolics at rationalr. Check relative path endpoints insidecylinders, whether extra point-push terms can matter, GaussManin comparison betweenrationalr, action convention, and determinant16 nonzeroabsoluteperiod minor. Sourcecopyquarterturn existsforallphysicalsliceparameters with derivativei (notassumedonwholeGLorbitclosure). No allaffineorallmarked-tangentclaim. If correct, this rulesoutusingonlyaxisaffinegroupsatmanyrationalr fornewmarkedfreeness. No discovery.
+
+
+
+## 28. All rational-parameter AXIS groups still cannot free the marks
+
+**Status: candidate under focused review.** Section25 makes rational
+slice affine actions available on one actual marked tangent. But its
+axis-only version has a uniform obstruction; changing rational slice
+does not remove it. This statement concerns that specified generated
+module, not the full tangent or all affine directions.
+
+Use one Gauss-Manin chart for the small slice, with actual marks
+retained. Write omega_t=x_0+i*y_0+t*(x_1+i*y_1), where all four cochains
+are real and rational. Let
+
+    W_Q=span_Q{x_0,y_0,x_1,y_1}.
+
+The full pocket-flux argument of Section16 applies at EVERY slice
+parameter, not just the raw base: the eight translated pocket triangles
+still form an isometric open square. Every generic horizontal/vertical
+closed core traverses it between opposite sides in the same half, hence
+its period derivative delta=x_1+i*y_1 is0. At rational r, take powers of
+the horizontal/vertical affine parabolics fixing all actual marks and
+chosen branch. A marked path's twist increment is a sum of complete core
+cycles, possibly with integer winding counts at fixed rational-height
+marked endpoints. Evaluating delta gives0, so each such parabolic fixes
+x_1 and y_1 as MARKED relative cohomology classes.
+
+If a horizontal parabolic at r has derivative(x,y)->(x+a*y,y), then
+phi*omega_r=H_a*omega_r and phi*delta=delta. Consequently
+
+    phi*x_0=x_0+a*y_0+r*a*y_1,    phi*y_0=y_0,
+    phi*x_1=x_1,                 phi*y_1=y_1.          (28.1)
+
+For a vertical parabolic with derivative(x,y)->(x,y+b*x), similarly
+
+    psi*x_0=x_0,    psi*y_0=y_0+b*x_0+r*b*x_1,
+    psi*x_1=x_1,   psi*y_1=y_1.                        (28.2)
+
+The a,b may depend on r and the label-fixing powers. Nothing requires a
+common subgroup or common power at different parameters. These formulas
+show W_Q is invariant under EVERY one of these transported axis actions.
+Their module generated from the base differential and the actual slide
+is contained in W_Q, and the module generated from delta alone is fixed.
+
+Forgetting actual marks is INJECTIVE on W_Q, already after projecting
+to absolute periods. Evaluate the four cochains on the two fixed cycles
+A,B of periods(-2,0),(0,-2), the changing cycle C of Section17 with base
+period(p,q) and derivative(0,2), and its quarter-turn image R C. Physical
+copy quarter-turn symmetry persists throughout the polygon slice, so
+period(R C)=i*period(C) and its derivative is(-2,0). The evaluation matrix
+with columns x_0,y_0,x_1,y_1 is
+
+    [-2,  0,  0, 0]
+    [ 0, -2,  0, 0]
+    [ p,  q,  0, 2]
+    [-q,  p, -2, 0].
+
+Its determinant is16, independently of p,q. Thus no nonzero element of
+W_Q vanishes on all absolute cycles. In particular no finite combination
+of iterated axis affine images, even mixing arbitrarily many rational
+slice parameters, can produce the marked-only vector required by
+Section25.1 from these four starting cochains.
+
+This does NOT say V'=W_Q, that other affine directions preserve W_Q,
+or that the marks are periodic. It rules out the axis-pencil generated
+module as a freeness certificate. A new direction/action or a direct
+actual-event construction remains necessary. It also does not prevent
+a supplied event from pairing nontrivially with delta and being converted
+to both opening signs by the original base axis shears of Section5.

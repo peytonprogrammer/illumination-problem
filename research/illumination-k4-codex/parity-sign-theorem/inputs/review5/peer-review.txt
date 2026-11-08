@@ -1,0 +1,76 @@
+# Challenge of the conditional cylinder-twist argument
+
+I did not execute `twist-cylinders.py`. Everything below about it comes from reading the code, so the table values (112 squares, genus 28, core ranks 15/15) are **unverified** by me.
+
+## Verdict
+
+The core algebra is sound: the relative-class setup, the four-weight stress, the axis-seed reduction, the stress-to-negative-row lemma, and the rank-one cylinder argument. The weak points are a few unstated geometric premises in Section 2, and one claim in Section 5 that is wrong in the pessimistic direction while missing a real gap elsewhere.
+
+## Valid deductions
+
+**Relative class (§1).** ∂η = source + target − 2·corner, which lies in A, so η ∈ H₁(X,A;ℝ). Its holonomy is hol(η) = w − w = 0. Since A is finite, H₁(A) = 0, so H₁(X) → H₁(X,A) is injective. Absolute core classes therefore lose nothing when viewed relatively.
+
+**Signed-gradient transformation (§2).** An affine map f fixes A pointwise, so f(γ₁) runs from the same source lift to the same corner lift. Its holonomy is Pⁿw and its class is fₙ\*η. The framework's row for the image event is therefore −σ det(Pⁿw, δhol_v(fₙ\*η)). Under (F), this is the stated formula. Orientation preservation keeps σ. You correctly note that only the topological action is differentiated, not persistence of f under deformation. Since (F) for f implies (F) for f⁻¹ and all powers, the ±N and ±M images are covered.
+
+**Four weights.** Let α, β = ¼ ∓ p/(2A₀). The first pair contributes x = (α+β)p + (α−β)A₀ = p/2 − p = −p/2. The second pair contributes x = p/2, so the x-components sum to zero. The y-components cancel symmetrically. Positivity is exactly |A₀| > 2|p| and |B₀| > 2|q|, with A₀ and B₀ signed. Because rows are linear in w, (P^N w + P^{−N} w)/2 = w, so the seed row is in the span. This is correct.
+
+**Axis seeds.** Take w = (0,q) and replace it by P_hᵏw = (kaq, q). The class is unchanged under (F). Within each pair, the difference of the two rows is 2A₀·det(e₁, δhol(η)), and likewise 2B₀·det(e₂, ·) for the other pair. So the packet spans both component functionals of this η, which includes the original seed row. This is correct, but see gap 4: it composes two different twists.
+
+**Stress lemma.** If Σλᵢgᵢ(v) = 0 with every λᵢ > 0 and every gᵢ(v) ≥ 0, then every gᵢ(v) = 0. Full rank then gives v = 0. This is correct, and the seed rows are not needed in the family itself.
+
+**Rank-one argument (§3).** For a multitwist T on annuli avoiding A, T\*η − η = Σ nᵢ⟨η,cᵢ⟩cᵢ. Intersection numbers are well defined because the cᵢ avoid ∂η. If all cᵢ lie on one line λc, then hol(λc) = (P_h − I)hol(η) = 0, and hol(c) ≠ 0 forces λ = 0. This is correct. Your warning that a rank-one *holonomy image* does not imply a rank-one *homology span* is also right.
+
+**Twist construction.** Consider a power of f that fixes every cylinder and every point of A, including the cone points on boundaries. Since the derivative is P_h, f translates each boundary leaf horizontally. A translation fixing a point is the identity, so the boundaries are fixed pointwise. The twist on each subannulus is then integral when a·h/c ∈ ℤ, and fixed horizontal prongs fix the sectors. This is fine for square-tiled X with rational marked coordinates. Existence of both f_h and f_v uses the finite-index Veech group of a torsion-marked origami. That is a standard fact, but it should be cited.
+
+## Missing premises and gaps
+
+1. **A must contain every lift of every polygon vertex**, not just "forbidden" ones. Cone points are permuted by f, so paths avoiding them are preserved. A regular-point lift of a vertex (angle π/n) that is not in A is *not* preserved, and an image path could pass through it. Either state "all vertices are forbidden" or enlarge A.
+
+2. **Admissibility of images is only as strong as the framework's definition.** You check straightness, midpoint ratio, side, marked-point avoidance, and wall-parallel avoidance. If the framework also requires anything metric, such as an angle window at a reflex corner, minimality, isolation from other events with the same itinerary, or a length bound, it is not obviously affine-invariant. The proposal should list the framework's admissibility conditions explicitly and check each one.
+
+3. **Wall-parallel finiteness** holds for rational polygons. For an axis-parallel room the only bad directions are horizontal and vertical, which (p ± A₀, q) avoids. This deserves one line.
+
+4. **Composition in the axis-seed step.** The vertical packet applies f_v^{±M} to f_hᵏη. Full (F) handles this. Under the weaker evaluated condition proposed in §5, it does not follow. Writing d_j for the vertical cores:
+
+   ⟨f_hᵏη, d_j⟩ = ⟨η, d_j⟩ + k Σᵢ ⟨η, cᵢ⟩⟨cᵢ, d_j⟩
+
+   So the evaluated identity must be proved for f_v acting on the shifted class, not just on η. §5 does not mention this.
+
+5. **Hypotheses are restated, not discharged.** These include the seed rows spanning the full dual, the row identity, and the "negative row ⇒ negative derivative" step. That is honest, but the result is conditional on all three.
+
+## Section 5 correction
+
+The claim that "a single one-step equality without invariance under further powers is insufficient" is wrong for multitwists. Since T\*cᵢ = cᵢ,
+
+  Tⁿ\*η − η = n Σ nᵢ⟨η,cᵢ⟩cᵢ,
+
+so δhol_v(Tⁿ\*η − η) = n·δhol_v(T\*η − η). One-step evaluated equality therefore implies it for every integer power, negatives included. The real extra burden is the cross-twist composition in gap 4, not iteration.
+
+## A sharper per-event criterion
+
+The blanket rank-one test is much stronger than needed. Only cylinders with ⟨η,cᵢ⟩ ≠ 0 contribute. Two sufficient conditions follow:
+
+- **(F′)** For each seed η, the cores with nonzero intersection with η span one line in H₁(X). Then (F) holds for that η, by the same holonomy argument.
+- **Exact test.** The specific absolute class Σ nᵢ⟨η,cᵢ⟩cᵢ is exactly computable on the origami. Its vanishing is (F). Its pairing with the deformation chart gives the evaluated version.
+
+Neither needs direction search, so this fits the "productive next calculation" in §5.
+
+## Checker review (read, not run)
+
+**Correct:**
+- **Square corners and gluing.** Corners are numbered 0 = BL, 1 = BR, 2 = TR, 3 = TL. The gluings (1,0,r), (2,3,r), (3,0,u), (2,1,u) are correct.
+- **Edges.** Each square owns its bottom edge h_s (BL→BR) and its left edge v_s (BL→TL).
+- **Face row.** h_s + v_{r(s)} − h_{u(s)} − v_s is the counterclockwise boundary, and the zero-boundary assertion confirms it.
+- **Euler genus.** V − 2n + n = 2 − 2g gives h₁ = n + 2 − v. Face rank n − 1 and vertex-boundary rank v − 1 are the right closed-connected-surface checks.
+- **Elimination.** Each basis row's pivot is its minimum key, so subtracting it only touches larger indices. Reducing in sorted pivot order therefore yields a valid echelon form. A reduced row has zeros at all pivots, so its minimum is a new pivot. The arithmetic is exact `Fraction`.
+- **Core representatives.** A cycle of r gives the bottom-edge loop of a height-one strip. That loop is homotopic, within the closed strip's image, to the interior core. It may pass through cone points, but that is harmless for homology in closed X.
+- **Homology rank.** Reducing cores modulo the face basis gives the rank in H₁(X;ℝ). That is the quantity §3 needs.
+- **L control.** In the L control (r = [1,0,2], u = [2,1,0]), the intersection matrix [[1,1],[1,0]] is nonsingular, so rank 2 is the correct expectation. This control does distinguish rank from "always 1."
+
+**Weaknesses:**
+- **No duplicate-core control.** No control has more strips than homology rank, so deduplication of stacked strips is untested. Add a two-square vertical torus: r = [0,1], u = [1,0] should give horizontal rank 1 from 2 cycles.
+- **Room output is not pinned.** The script asserts nothing about the room's values. The table's 112, 28, and 15 are whatever it printed, so a builder regression would not fail. Consider asserting the expected values alongside the input SHA-256.
+- **Marked points are unused.** `lab` and `s0` are discarded, so marked points never enter the computation. That is fine for absolute core rank, but it means the checker says nothing about A, sectors, or the twist's existence on this room.
+- **Arithmetic control only.** The four-weight check is one rational instance. It is a sanity check, not a proof, and the algebra above already covers it.
+
+**Scope:** The conclusion "rank 15 ≠ 1, so §3 does not apply" follows if the printed output is as reported. As you say, it neither refutes (F) nor (F′) for the saved events.

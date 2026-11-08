@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "orthant_control": {
+    "rows": 12,
+    "rank": 3,
+    "separating_covector": [
+      1,
+      1,
+      1
+    ],
+    "growth": "norm=m, length=m^2"
+  },
+  "cases": [
+    {
+      "room": "room-illumination-search-simple-unrestricted",
+      "events": 168,
+      "half_endpoint_gcd": {
+        "1": 168
+      },
+      "non_A_noncorner_vertices": [],
+      "parity_premise": true
+    },
+    {
+      "room": "room-wolecki22-pinch",
+      "events": 403,
+      "half_endpoint_gcd": {
+        "1": 403
+      },
+      "non_A_noncorner_vertices": [],
+      "parity_premise": true
+    },
+    {
+      "room": "room-tokarsky34",
+      "events": 179,
+      "half_endpoint_gcd": {
+        "1": 179
+      },
+      "non_A_noncorner_vertices": [],
+      "parity_premise": true
+    },
+    {
+      "room": "room-jain28",
+      "events": 182,
+      "half_endpoint_gcd": {
+        "1": 182
+      },
+      "non_A_noncorner_vertices": [],
+      "parity_premise": true
+    }
+  ],
+  "total_midpoint_endpoint_checks": 932,
+  "known22": {
+    "non_A_noncorner_vertices": [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "parity_premise": false
+  },
+  "exported_sign_identity_checks": 48,
+  "identity": "d cross(A,C) = -cross(w, delta gamma2 - delta gamma1)",
+  "scope": "Finite endpoint/parity premises and exact algebra only. Event validity reused from accepted certificates; no homology growth, KZ or general-isolation conclusion."
+}

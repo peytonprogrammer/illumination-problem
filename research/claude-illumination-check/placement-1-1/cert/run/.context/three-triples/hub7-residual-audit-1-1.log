@@ -1,0 +1,20 @@
+{"event": "fan_replay", "tip_mask": 4, "status": "OPTIMAL"}
+{"event": "fan_replay", "tip_mask": 5, "status": "OPTIMAL"}
+{"event": "fan_replay", "tip_mask": 7, "status": "INFEASIBLE"}
+{"event": "fan_replay", "tip_mask": 23, "status": "INFEASIBLE"}
+{"event": "fan_replay", "tip_mask": 87, "status": "INFEASIBLE"}
+{"event": "fan_replay", "tip_mask": 215, "status": "INFEASIBLE"}
+{"event": "fan_replay", "tip_mask": 247, "status": "INFEASIBLE"}
+{"event": "geometry_fan_check", "tip_mask": 7, "base_geometry": "OPTIMAL", "midpoint_cover": "OPTIMAL"}
+{"event": "geometry_fan_check", "tip_mask": 23, "base_geometry": "OPTIMAL", "midpoint_cover": "OPTIMAL"}
+{"event": "geometry_fan_check", "tip_mask": 87, "base_geometry": "OPTIMAL", "midpoint_cover": "OPTIMAL"}
+{"event": "geometry_fan_check", "tip_mask": 215, "base_geometry": "INFEASIBLE", "midpoint_cover": "INFEASIBLE"}
+{"event": "geometry_fan_check", "tip_mask": 247, "base_geometry": "INFEASIBLE", "midpoint_cover": "INFEASIBLE"}
+{"event": "hub_replay", "mask": 175, "status": "OPTIMAL", "via": "fresh_fixed_hub_solve"}
+{"event": "hub_replay", "mask": 191, "status": "OPTIMAL", "via": "fresh_fixed_hub_solve"}
+{"event": "hub_replay", "mask": 239, "status": "OPTIMAL", "via": "fresh_fixed_hub_solve"}
+{"event": "hub_replay", "mask": 243, "status": "OPTIMAL", "via": "fresh_fixed_hub_solve"}
+{"event": "hub_replay", "mask": 247, "status": "OPTIMAL", "via": "fresh_fixed_hub_solve"}
+{"event": "hub_replay", "mask": 251, "status": "OPTIMAL", "via": "fresh_fixed_hub_solve"}
+{"event": "hub_replay", "mask": 255, "status": "INFEASIBLE", "via": "fresh_fixed_hub_solve"}
+{"status": "PASS", "source_sha256": "ff37231881f051a91a342ec1fff7bcbd6d8007af21e0efba730ac868600848fb", "positive_controls": [{"tip_mask": 4, "status": "ACCEPTED"}, {"tip_mask": 4, "status": "ACCEPTED"}, {"tip_mask": 4, "status": "ACCEPTED"}], "new_records": 30, "new_geometries": 30, "revisited_geometries": 0, "new_guards": 120, "total_guards": 3379, "mutations": 8, "corrupt_guards": 8, "max_new_reflections": 22, "fan_branches_excluded": 5, "complete_tip_fan_cover": false, "mark_stabilizer_closed": true, "geometry_only_hub191": "OPTIMAL", "seven_hub_family_excluded": false, "composed_parent": "OPTIMAL", "placement_excluded": false, "scope": "Complete seven-fan partition composition when every branch is INFEASIBLE; geometric symmetry and guard closure checked. Finite misses and caps unresolved; no formal UNSAT proof."}

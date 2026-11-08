@@ -1,0 +1,3 @@
+# Receipt source-root clarification
+
+The frozen acceptance pins `effort.json` in its own directory, not in the peer directory. `source_roots["effort.json"]="unequal-depth"` applies ONLY to the `source_sha256` entries INSIDE that effort record. Those are peer proof sources. The verifier first hashes `path.parent/rel` for every acceptance artifact, and then resolves the nested source hashes against the mapped root. Thus the local effort hash c687a011516fc32629789515cb1c843914f63535c8e4bb8ad66828b406fcaf68 and the peer-source mapping are consistent. No receipt correction is necessary. This supplement explains the schema; frozen files remain unchanged.

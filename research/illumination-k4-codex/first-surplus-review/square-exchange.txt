@@ -1,0 +1,61 @@
+Square-pocket exchange closes every outer-defect first-surplus L family
+4 November 2026 — Codex01a18403
+
+THEOREM AND STATUS
+For the fixed three interior A stars S=(0,0), U=(2,0), T=(2,2), every strictly simple Delta1 room whose unique excess fan is an outer two-triangle fan is illuminated between actual S and T, with at most13reflections. This is all14 outer orientations. Ten were already eliminated by the peer reduction (six noncritical, four omitting the critical cap); the argument here closes the remaining four active outer orientations.
+Hand proof and six exact fixed-path substitutions PASS. Separate-session peer independently HAND ACCEPTED sections1–6 with no corrections; independently recomputed all six substitutions and the four unchanged opposite-path mate checks, PASS. See first-surplus-L/square-exchange-review.txt/check.json. Together with the peer-reviewed earlier classification and optical reductions, the only first-layer residues are centered fans at B/E or L/T: four local patterns, TWO symmetry families. Full Delta1 and universal minimality remain open.
+
+1. Gap, new idea, and success criterion
+The old six-path cover fails because an extra triangle removes a reflection wall inside a triangular cap. Reusing more selected archived paths was retired after the previous two attempts. This is a different argument: replace the cap excursion analytically, retaining the exact portal exit and outgoing velocity, so all later path segments are unchanged. Success is a full four-family cover, not a new example.
+A quarter/outer two-triangle fan shares the diagonal A-B. The union is a unit square. For instance B+ plus its outer mate is [0,1] x [-2,-1]. This differs from a centered two-triangle fan, which is a larger right-angle triangle and has a different return map. Do not apply this exchange to centered fans.
+
+2. Local exchange lemma, with strict branch conditions
+Normalize the original triangular pocket to vertices (0,0),(1,0),(0,-1), portal y=0, and its square completion to [0,1] x [-1,0]. Enter at (u,0) with velocity (d,-1), where
+ 0<u<1, 0<u+2d<1.                              (2)
+These conditions imply |d|<1/2 and 0<u+d<1.
+In the triangle, the diagonal/vertical/diagonal reflection points are
+ ((u+d)/(1+d), (u-1)/(1+d)),
+ (0,u+d-1),
+ ((u+d)/(1-d), (u+d)/(1-d)-1).
+All lie strictly inside their sides by(2). The excursion returns to
+ (u+2d,0) with velocity(d,1).
+In the square, go straight to the far wall at (u+d,-1), reflect once, and return to the SAME (u+2d,0) with the SAME velocity(d,1).
+Both square legs remain inside the square: their horizontal coordinates interpolate between u, u+d, u+2d, all strictly in(0,1). No side or vertex is encountered. Reflection swaps/negates the indicated velocity components, so the formulas prove exact specularity. Translation/orthogonal reflection transports the lemma to each physical cap.
+This gives identical boundary data for the retained rest of the trajectory. It is not a claim of monotonic illumination under arbitrary enlargement.
+
+3. Substitutions into existing fixed actual-S/T paths
+Use the already proved one/four/thirteen paths in zero-surplus-L/optical-cover.txt, plus their sigma/reversed images, sigma(x,y)=(2-y,2-x). No new direction or word is searched.
+B square:
+ - In the old four-reflection path, replace its first three cap hits by (1/2,-2). The new actual path is
+   S ->(1/2,-2)->(7/4,3)->T.
+   It has2reflections and applies if T- is absent.
+   The normalized entry is u=1/4,d=1/4, exit3/4.
+ - In the old thirteen-reflection path, replace its three B cap hits (indices8,9,10 after S index0) by (6/11,-2). The new path has11reflections. Its normalized B entry is u=4/11,d=2/11, exit8/11.
+T square:
+ - In that old thirteen-reflection path, replace its last three cap hits (indices11,12,13) by (18/11,4). The new path has11reflections. Use local coordinate u=2-x and depth3-y: entryu=6/11,d=-2/11, exit2/11.
+E and L square paths are respectively the sigma/reversed B and T substitutions. The actual endpoints remain S and T after reversal. L's new far-wall hit is(-2,4/11), inside the vertical wall x=-2,0<y<1.
+Every substitution satisfies(2) strictly. The entry/exit equality proves all unchanged legs retain their prior containment. The added square's other new triangle is the unique extra outside the ordinary single-cap alphabet.
+
+4. Force the four reference caps even with one square
+The one-bounce implications force B+ and E- in any hypothetical dark room. A single cap uses the old four-bounce implication to force the opposite critical cap. If B is the square, use its modified TWO-bounce path instead to force T-. If E is the square, use the reflected TWO-bounce path to force L+.
+If L or T is the square, B/E are ordinary single caps, so the unchanged four-bounce implications force L+/T- as before. In all cases a putatively dark room contains
+ R={L+,B+,E-,T-}.
+The active square contains its corresponding critical triangle and its outer mate; it does NOT contain the opposite half-side cap L-/B-/E+/T+. Other reference cells are single. Thus every opposite half-side cap is absent. This argument imposes no smooth-B restriction.
+
+5. Two-path cover of every completion
+Starting with the old original13 and sigma13 paths:
+ - B square: replace the B trip in original13; leave sigma13 unchanged.
+ - E square: leave original13 unchanged; replace the E trip in sigma13.
+ - T square: replace the T trip in original13; leave sigma13 unchanged.
+ - L square: leave original13 unchanged; replace the L trip in sigma13.
+Each pair contains one11 and one13-reflection path. Their required caps are supplied by R and the unique square mate.
+After excluding the opposite half-side caps, the original-path variant can be blocked ONLY by {Nb-,Nb+}; the sigma-path variant ONLY by {Nr-,Nr+}. Their other required-absent triangles lie outside the single-cap alphabet and are different from the unique square mate. The substituted path no longer requires that mate to be absent; it requires it to be present. The unchanged path's forbidden outside-alphabet triangles are at the other two reference sites, so are absent as well.
+N has at most one triangle in this class. One N triangle cannot belong to both disjoint blocking sets. Therefore one of the two complete paths is legal. An N bridge would already make ST direct, but it cannot coexist with the unique outer defect at Delta1 unless it has zero slack; even allowing it merely gives illumination sooner.
+Hence all four active square families illuminate. The no-smooth-B rule can further eliminate N options, but is unnecessary for this proof. No W or k bound is used in the exchange argument itself.
+
+6. Exact static checks and provenance
+square-exchange-check.py reads only the six fixed zero-layer path records already in zero-surplus-L/cover-check.json. It makes the three explicit local replacements listed in section3 and their isometric reverses. It recomputes exact required/forbidden triangles using the existing rational checker, checks source/target, checks required caps + unique mate, checks absence of any forbidden core or mate triangle, verifies exact symmetry of universal requirements, and checks that after the forced R caps the only possible alphabet blockers are the two disjoint N pairs.
+All6fixedsubstitutions PASS (reflection counts2/2/11/11/11/11). The static receipt records every rational point and forbidden triangle and the source hash. No room/cap assignment, reflection word, direction or path was enumerated; these are analytic substitutions into fixed paths. No new archive lookup, solver, worker or expert/formal verification. The hand argument supplies all-family completeness; the existing checker is reused, not a new independent implementation.
+
+Peer challenge
+Please independently check the local exchange branch, force-to-R step, and two-path coverage for all four square sites. Inputs: this note and square-exchange-check.json. Full first-layer closure is NOT claimed. Universal goal stays paused.

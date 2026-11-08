@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "fixed_script_checks": {
+    "independent-review/guard-extension-check.py": "PASS",
+    "path-support-check.py": "PASS",
+    "healed-c-check.py": "PASS",
+    "healed-budget-check.py": "PASS",
+    "half-fan-check.py": "PASS",
+    "center-residue-check.py": "PASS",
+    "local-e2-residue-check.py": "PASS",
+    "local-two-unit-check.py": "PASS",
+    "local-three-unit-check.py": "PASS",
+    "local-mixed-check.py": "PASS",
+    "local-mixed-residue-check.py": "PASS"
+  },
+  "frozen_receipts": {
+    "healed-frozen.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 3,
+      "sha256": "cc309a3f73e3611948d355abf130f4db8e724fbcdf10957b0b1633d2a24e6dfd"
+    },
+    "half-fan-frozen.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 3,
+      "sha256": "6ff475c4b636eab70f2e17a4272884c3467f4a8a906079865c7a32455a2fde2f"
+    },
+    "center-half-project.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 51,
+      "sha256": "5116f5090fc1dc758e946cb578ddba2f332ebffe539f42a18e0ac901fc46aa93"
+    },
+    "center-residue-frozen.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 1,
+      "sha256": "032ae8982b875bf3d4855a1c518d6a3d922c7028542459736671e2711f5e022d"
+    },
+    "remote-B-project.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 13,
+      "sha256": "367d349b57a9bc61e19f8898d31c245b2106f64f127fe1a096667ae94ceb0f16"
+    },
+    "local-e2-project.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 74,
+      "sha256": "a8e7c261bb2d6bfee61eca4caa15d3c9d2e3f84d03929883d301bac1034c2807"
+    },
+    "local-e2-residue-frozen.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 5,
+      "sha256": "a810f56597a5712bcb56479b936e5702efc35254cc76ed852582f496b68a96ee"
+    },
+    "local-three-residue-project.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 1,
+      "sha256": "c02b60f073808546cc5a3e24f064732d12d7ce3a7d8011ec21360aec30ae9adc"
+    },
+    "local-mixed-project.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 34,
+      "sha256": "1e49b427db0cb87419f7be902480e70c3028bb479a349af6a64d27b2dd258c5c"
+    },
+    "local-mixed-residue-frozen.json": {
+      "status": "PASS",
+      "retained_paths_replayed": 1,
+      "sha256": "ca8a96160db4f134d6074777c5cd11ecc2966a5ea4f7cc90a314e0ee09c44c99"
+    }
+  },
+  "proof_hashes": {
+    "theorem.txt": "b90048a18da3a776ead886100fc50361540aef97f548e7e98e2932e346848524",
+    "remote-roots.txt": "28a98482d67a909206c63d01adc6a13f8a4e44ff5d9757ec34554cc369961458",
+    "remote-erasure.txt": "6cbcd205ce2e8edc246773b183b42dbb6fbaff1c0978981e7bc3fba68e15c5d8",
+    "healed-budget.txt": "79029a4bab42dd9b2f6450b17ed5d67d2f220cadadd18c67ba2f9c9ffd74ad10",
+    "half-fan.txt": "12a9374113e9bdb4bb3a4f47d66181ea558ee899cd05a9207923e955b274db82",
+    "center-half.txt": "4816f69adaf7fb3c27de62002f198f3c2ab30a7c22ec049825f79a0c7e56ccf0",
+    "remote-B.txt": "af1d99459959bcc2dcc9f1d2559eb6bd1443c5ba4f486a29e7665c66eacb503f",
+    "local-e2.txt": "4a89409c4b4aa50c8a86a6c535b8665dd4302a303e5e00c53c12a34062c94841",
+    "local-two-unit.txt": "951374a8c2f90431b190e4dac866de32372566e20f2441d3263317c5532fc7f2",
+    "local-three-unit.txt": "90313221a009cd4340658b524a0dfb0f386bcd4df12889fa0e695ab993a09fe8",
+    "local-mixed.txt": "207d6ee0bd451c908f0b17f583ea331bd5ddeb246f38c5973269ff0f7ebc9fd3"
+  },
+  "archive_hashes": {
+    "I3_00_01_10-pair0": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+    "I2_00_11-pair0": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41"
+  },
+  "scope": "All current explicit proof paths, guard equality, source hashes/lines/frames, and named fixed geometry checks. No room/direction/word/ray discovery or logical proof-coverage inference. Independent hand review and coverage audit remain separate."
+}

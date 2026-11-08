@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-11-07T20:06:57.031694+00:00",
+  "status": "PASS_PRESCRIBED_Q0_AND_Q100_TRIANGLE_CALIBRATIONS",
+  "method": "Exact first-wall arithmetic for prescribed u,v,u+v and corner turns only; no search or new orbit engine",
+  "calibrations": [
+    {
+      "stretch": 1,
+      "r": 9,
+      "u": [
+        1,
+        0
+      ],
+      "v": [
+        0,
+        1
+      ],
+      "mediant": [
+        1,
+        1
+      ],
+      "coordinate_determinant": 1,
+      "normalized_lattice_determinant": 1,
+      "base_lattice_basis": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "u_time1": "regular smooth-wall lift",
+      "u_endpoint": [
+        1,
+        0
+      ],
+      "v_time1": "genuine reflex cone",
+      "v_endpoint": [
+        0,
+        1
+      ],
+      "mediant_time1": "genuine reflex cone",
+      "mediant_endpoint": [
+        1,
+        1
+      ],
+      "v_from_exact_u_endpoint": "genuine cone at time1 along surface seam; no legal physical turn claimed",
+      "lemma_regular_terminal_hypothesis_met": false
+    },
+    {
+      "stretch": 100,
+      "r": 9,
+      "u": [
+        100,
+        0
+      ],
+      "v": [
+        0,
+        1
+      ],
+      "mediant": [
+        100,
+        1
+      ],
+      "coordinate_determinant": 100,
+      "normalized_lattice_determinant": 1,
+      "base_lattice_basis": [
+        [
+          100,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "u_time1": "regular smooth-wall lift",
+      "u_endpoint": [
+        100,
+        0
+      ],
+      "v_time1": "genuine reflex cone",
+      "v_endpoint": [
+        0,
+        1
+      ],
+      "mediant_time1": "genuine reflex cone",
+      "mediant_endpoint": [
+        100,
+        1
+      ],
+      "v_from_exact_u_endpoint": "genuine cone at time1 along surface seam; no legal physical turn claimed",
+      "lemma_regular_terminal_hypothesis_met": false
+    }
+  ],
+  "new_darkness_proof": false,
+  "nine_corner_necessity_proved": false,
+  "whole_goal_complete": false
+}

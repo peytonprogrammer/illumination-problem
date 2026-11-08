@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "source_sha256": "4c0a82a4a7c81bb5a38c7241d7c30cd6cf91bc1771e482fcb3a1d56841eee049",
+  "binary_sha256": "7502c38782e91104e87f68db7d345c3048707c1de994c42a6266a53dee48d86b",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
+  "build_argv": [
+    "clang",
+    "-O2",
+    ".context/illumination-k4-codex/folded-review/inputs/enum_base.c",
+    "-o",
+    ".context/illumination-k4-codex/folded-review/base-enum"
+  ],
+  "run_argv": [
+    ".context/illumination-k4-codex/folded-review/base-enum",
+    "12"
+  ],
+  "exit_code": 0,
+  "terminal_receipt": "WMAX 12 nodes 391531 closed 1930 found 412",
+  "raw_output_sha256": "e8c74370f779a7c1249820c235ab02c3e1fbb9270306398fad822e4da8ab29ae",
+  "saved_base_multiset_matches": true
+}

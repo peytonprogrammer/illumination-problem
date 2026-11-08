@@ -1,0 +1,17 @@
+{
+  "id": "A18-two-neck-irrational-ratio",
+  "started_utc": "2026-11-07T01:24:52.308764+00:00",
+  "aggregate_deadline_utc": "2026-11-07T01:38:52.308764+00:00",
+  "hypothesis": "For three fixed orthogonal chambers and two equal-width necks, exact source/target phase matching succeeds when both necks grow with an irrational limiting length ratio. Possible asymptotic failures reduce to finitely many bounded-denominator rational ratios determined by a fixed middle transit beam.",
+  "missing_implication": "Handle simultaneous divergent neck parameters without treating one growing side as fixed; retain exact endpoint images and intermediate phase.",
+  "success_criterion": "Prove the all-parameter sequence statement with rigorous middle first-transit beam, exact sign/period bookkeeping and elementary robust rotation-net lemma; otherwise identify exact countermechanism.",
+  "strongest_objection": "Independent local beams may be incompatible under target-phase rigidity (A17); arbitrary phase orbits and changing ratio cannot be treated as automatically dense.",
+  "scope": "Exactly three fixed orthogonal chambers, two straight horizontal equal-width necks, actual opposing fixed interior marks; no general room decomposition or diagonal extension.",
+  "outputs": [
+    "coupled-neck-irrational-effort.json",
+    "coupled-neck-irrational-proof.md",
+    "coupled-neck-irrational-coverage.json",
+    "coupled-neck-irrational-review-request.json"
+  ],
+  "kind": "Bounded hand proof synthesis; no room/ray/direction/word discovery, no implementation beyond proof receipts"
+}

@@ -1,0 +1,9 @@
+# UJ01-F1 correction and scope reconciliation
+
+The original third formula control is inadmissible and contributes no physical witness. The old checker asserted fold and target arithmetic but omitted its own theorem's interior-source domain. The independent peer identified the error before accepting the packet. All frozen originals remain preserved.
+
+For the replacement set only P=2, hence a4, keeping e2,N7,K2,L4 and b2,c3,h4,H12. The boundary is (4,2),(4,4),(10,4),(10,3),(6,3),(6,0),(14,0),(14,12),(0,12),(0,2). Its strict parameter orders hold. Source (2,4) has0<2<4 and y=h and is strictly interior; target (10,2) has6<10<14 and0<2<3 and is also strictly interior. Their even-even coordinates are actual native marks.
+
+At tau6 the actual cap phase at its descending h return is 2+16*6=98=7*14, so m3,z1=0. The right phase is6=8-2, giving k1,z2=-2. Final bottom phase4 folds in width8 to4, hence actual x14-4=10 at y2. The roof phase is2+8*6=50, not a multiple of14. The zero cap residual is a smooth actual outer-wall reflection, and the right residual is strict. Both endpoints and all portals satisfy the original proof. Other than the sole y=h source contact, the cap height is>h>v; the right height exceeds3>v and the bottom reaches2 at its end. Thus first actual target is reached with finite ordinary reflections at one common slope. No optical claim is made for the discarded corner source.
+
+The general UJ01 proof and its quantified cap-only family already included the required strict source inequality; no mathematical hypothesis changes. The correction repairs a calibration and checker validation, not a proof by continuity from a boundary mark. The corrected script explicitly rejects P1/S2,4 and validates domains for all four fixed controls. Repeated controls are rechecks, not additional room or discovery evidence. No new search/clock/engine/worker/git mutation occurs.

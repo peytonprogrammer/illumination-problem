@@ -1,0 +1,101 @@
+# Verdict: ACCEPT, scoped to diagonal-cylinder blindness in this one room
+
+I verified the prescribed room's local structure, the symbolic path, the reflection timings, the developed holonomy and the coverage claim by hand. Every load-bearing statement holds. The corrections below are documentation gaps, not errors. Any inference stronger than the Scope paragraph is rejected.
+
+## Class membership and pocket
+
+- **Template match.** The §33 pocket is the image of the §1 template under the reflection y ↦ 2−y:
+  - (1,1)→B, (2,2)→A=(2,0), (1,2)→C=(1,0).
+  - u=(0,−1) becomes (0,1).
+  - y−x=−t becomes x+y=2+t (D_t), and y=2−t becomes y=t (H_t).
+  
+  So the labels are consistent. Record this map explicitly.
+- **Angles.** The checker gives sector(1,1)=5, so B has 225°. It gives sector(1,0)=6, so C has 270°. A=(2,0) has a single sector, so 45°.
+- **Straight attachment.**
+  - x=1, 1<y<2 is the right wall of the [0,1]×[1,2] quadrant, with nothing to its right.
+  - x=1, −1<y<0 is T's right edge. The pocket lies only above y=0, so this edge is a wall.
+  - The portal is x=1, 0<y<1.
+- **Other counts.** Area is 28·½=14. Atomic faces 26 → 25 walls is consistent with merging the collinear y=0, −3<x<−1 boundary through M. M=(−2,0) is a 180° boundary A point, not a full star, so it does not violate the "only S,T" claim.
+- **Reliance.** I did not recount all 25 walls by hand; that count rests on the frozen checker.
+
+## Walls vs portals around T's square
+
+| Edge of [−1,1]² | Status |
+|---|---|
+| y=−1, −1<x<0 | wall (bottom leaf uses 0<x<1) |
+| x=−1, −1<y<0 | wall (M's half-star uses 0<y<1) |
+| y=1, 0<x<1 | portal to quadrant |
+| x=1, 0<y<1 | portal to pocket |
+
+The quadrant's walls x=1 (1<y<2), y=2 (0<x<1) and x=0 (1<y<2) are all genuine walls. The quadrant's interior diagonal (0,2)–(1,1) is transparent.
+
+## Path, hits and timings
+
+All of these were recomputed by hand:
+
+| Step | Velocity | Duration | Hit point | Mirror (endpoint corners) |
+|---|---|---|---|---|
+| d₀ on D_t: (2+t) ✓ | (−1,−1), normal ✓ | (3+t+a)/2 | (−a,−1) | y=−1, between (−1,−1) and (0,−1) |
+| | (−1,1) | 1−a | (−1,−a) | x=−1, between (−1,−1) and (−1,0) |
+| | (1,1) | 2 | (1,2−a) | x=1, quadrant right wall; crosses y=1 at (a,1) |
+| | (−1,1) | a | (1−a,2) | y=2 |
+| | (−1,−1) | 1−a | (0,1+a) | x=0 |
+| | (1,−1) | 1+a−t | (1+a−t,t) | H_t; recrosses (a,1) and (1,a) |
+| | (1,1) | (1+t−a)/2 | d₁ on D_t: (2+t) ✓, normal ✓ | |
+
+- **Total time.** The durations sum to 7, identically in a and t. The round trip has length 14√2.
+- **Containment.**
+  - d₀ and d₁ have x in (1,2).
+  - The H-hit has x in (1,2), and its x+y = 1+a < 2+t, so it stays inside the pocket.
+  - The portal crossing (1,a) requires t<a<1+t.
+- **Corner avoidance (checked by hand; the script does not check it).** The three lines through T's square are y=x+a−1, y=x+1−a and x+y=1+a. None of them passes through T=(0,0), (±1,0), (0,±1), (1,1) or (0,1), for 0<a<1. So the path also avoids the marks.
+
+## Developed period
+
+- **G_t.** G_t = R₁∘…∘R₆ is the correct unfolding order. Composing:
+  - x: −x → 2+x → −4−x
+  - y: 2t−y → 4−2t+y → −6+2t−y
+  
+  This matches the claimed G_t. G_t(d₁) = ((−11+t−a)/2, (−13+t+a)/2) = d₀ − (7,7) ✓.
+- **Full period.**
+  - R_D(x,y) = (2+t−y, 2+t−x).
+  - G R_D(x,y) = (y−6−t, x−8+t).
+  - (G R_D)² = translation by (−14,−14). This is t-free, with identity linear part.
+- **Moving-mirror cancellation.** Without the H_t bounce, the y-translation would carry an uncancelled t term. The cancellation is real.
+
+## Coverage of every diagonal cylinder touching a moving mirror
+
+- **Entry cases.** A diagonal trajectory enters through the vertical portal with v_x>0.
+  - With (1,1), it is normal to D and hits D in its interior.
+  - With (1,−1), it is parallel to D. It hits H at x=1+y₀ in (1,2), and turns to (1,1), normal to D.
+  - There is no H-only through passage.
+- **Uniqueness.** A normal D hit determines the whole orbit. At t=0, the family covers every point of D except the midpoint:
+  - d₀ sweeps the half toward B.
+  - d₁ sweeps the half toward A.
+  
+  So this is exactly one maximal billiard cylinder, a ∈ (0,1). Its boundaries are singular:
+  - a→0 passes through C (270°) and (0,−1).
+  - a→1 passes through B, (−1,−1) and (0,2).
+  
+  The claim is in fact stronger than stated: coverage holds up to reversal, and the D4 copies are only the unfolded images.
+- **Other cylinders.** Their cores hit only fixed walls, so their core holonomy is constant and Q=0.
+
+## Corrections (non-blocking)
+
+1. **Add complete periodicity.** "All cylinder loads vanish" needs the fact that diagonal directions are completely periodic. This holds because the vertices are integer and D4 preserves ℤ², so the unfolding is square-tiled. Without it, minimal components are not excluded.
+2. **Moving portal endpoints.** For "other cylinders", note that the moving portal endpoints B and C can change cylinder width and boundary saddle connections, but not core holonomy. The cores sit at positive distance from B and C.
+3. **Corner-avoidance gap in the script.** The script checks only closed affine inequalities and never checks that segments avoid corners or marks. Record the hand check above, or add the three line-avoidance assertions.
+4. **Strictness argument.** Strict interiority on the open rhombus follows from affinity. It holds because each inequality that is meant to be strict is not identically zero; the identically-zero ones are intentional equalities on D, H or a portal. State this.
+5. **Non-uniform t-range.** The t-range shrinks with a. Only the t=0 derivative of the core is claimed, so this is harmless, but say so.
+6. **Status line.** Update it: the topology and symbolic checks have now run, and independent review is complete for the claims above.
+
+## Rejected inferences
+
+This result does not show any of the following:
+
+- blindness in other rational directions;
+- zero response of an actual S/T one-corner event under any affine image;
+- non-existence of a detecting event;
+- any counterexample to universal one-corner S/T detection.
+
+The only thing it defeats is the shortcut "the AB-normal diagonal must carry a loaded cylinder through the literal pocket."

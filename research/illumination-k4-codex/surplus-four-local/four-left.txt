@@ -1,0 +1,116 @@
+Four left-pocket residues: shared continuation maps and two failed closures
+4 November 2026 — Codex01a1a00f
+
+STATUS: NO NEW ROOM CLOSED. The four L residues and the other three B
+residues remain unresolved. This note derives three valid partial transport
+maps and rejects two specified ways to complete them. It is not an exclusion
+of every trajectory using the source pockets, or evidence of darkness.
+
+The four rooms
+H + Louter3(sectors0/1/2) or Louter4(sectors0/1/2/3)
+  + ordinary B+,E-,T-,Nb+
+  + exactly D- OR exactly R-.
+All other partial cells are absent. Each room's geometry/budget was already
+validated in single-e2-check.json. Actual S=(0,0),T=(2,2).
+
+Both L prefixes have the same first portal state, for 0<d<1/5:
+ launch(-1,d) -> exit x-1 at y5d, velocity(1,d).
+The wide rectangle uses one source reflection, the trapezoid three.
+The same continuation therefore applies to both shapes as long as it does
+not reenter the left pocket. No direction/word/room/archive scan was used.
+
+1. Attempt1: two northwest/bottom exchanges, then the top cap
+Take 1/7<d<2/13. From the common state, the ray meets Nb+, the triangle
+conv{(0,1),(1,1),(0,2)}. Its incoming portal x coordinate is1/d-6.
+One diagonal reflection returns it through y1 at
+ x=2-7d, velocity(-d,-1).
+It then enters ordinary B+ through y-1 at x2-9d. Three B-cap reflections
+return it through y-1 at x2-11d, velocity(-d,1).
+
+The next S-roof coordinate is2-13d>0, so it enters Nb+ again. This input
+crosses the left unfolded phase: z=2-15d<0. FOUR physical reflections
+(left/diagonal/left/diagonal) return it at
+ (15d-2,1), velocity(d,-1).
+The second B entry at y-1 is17d-2; three cap reflections return it at
+ (19d-2,-1), velocity(d,1).
+
+The upward flight clears the inner elbow and reaches the T- portal y3
+at x23d-2. Three T-cap reflections return it at
+ (25d-2,3), velocity(d,-1).
+At y2 it has x26d-2. Thus actual T would require d2/13, EXACTLY the upper
+endpoint. Earlier in that limiting trajectory the S-roof point2-13d is0:
+(0,1) is a genuine270-degree corner because H supplies180 below and Nb+
+supplies90 above/right. The endpoint solution is invalid.
+
+All listed portal coordinates, cap phases, and finite-wall contacts are
+strict in the stated open interval. The path uses neither D nor R, so the
+same partial transport map holds for all four rooms. It uses15 physical
+reflections for the rectangle,17 for the trapezoid. It reaches an interior
+point of the horizontal target line, not actual T for any admissible d.
+This retires this particular closed continuation; it does not retire the
+whole common-prefix strategy.
+
+2. Attempt2: expose the extra side cap and turn the ray
+Take d>1/6. The common ray first hits the exposed negative-x S roof at
+ (1/d-6,1), then right wall (3,2-9d), then negative-y left wall
+ (-1,2-13d). These are actual walls in both remaining cap variants.
+The ray now moves right/down with velocity(1,-d).
+
+D- variant, 3/16<d<1/5:
+The floor crossing is x3/d-14 in(1,2), entering D-. Its two physical cap
+contacts are
+ (2,2-16d), ((18d-2)/(1+d),-(18d-2)/(1+d)).
+The first is on the strict vertical leg; the second on the strict diagonal
+x+y0. It returns through y-1 at
+ (17d-2,-1), velocity(d,1).
+At y2 its x coordinate is20d-2. Actual T would require d1/5, outside the
+open branch. At that limit its earlier floor entry is exactly(1,-1), a
+true270-degree corner: H180+B+45+D-45. Thus even though the displayed
+post-return line points toward T at the limiting parameter, the prefix
+cannot pass the corner.
+
+R- variant, 1/6<d<3/17:
+The next right crossing (3,2-17d) enters R-. One diagonal reflection at
+ ((6-14d)/(1+d),(6-14d)/(1+d)-4)
+returns to x3 at
+ (3,3/d-18), velocity(-d,1).
+The hypothetical direct crossing x2 has y4/d-18, giving d1/5 for actual T.
+This parameter is outside the branch; indeed the ray in the branch reaches
+the upper roof before any direct x2 crossing at height2. At d1/5 the
+EARLIER floor junction(1,-1) intercepts the ray before the proposed R cap.
+Its angle here is225degrees (H180+B+45), again a genuine corner.
+
+These are useful exact entrance/exit maps but not complete illumination
+paths. Adding an unspecified later circuit is not a proof. They show where
+a genuinely different continuation must begin if this approach is retained.
+
+3. Verification and a corrected endpoint identification
+four-left-check.py constructs only these predeclared mirror itineraries at
+three prescribed rational parameters: d3/20 for attempt1, d7/36 for the D
+return, and d6/35 for the R return. Eight named geometry applications cover
+the two L shapes and two cap variants. The actual earliest-wall, strict
+contact, specular, interior-leg and reversed-path checks all pass. Their
+terminal points are the stated TRANSPORT endpoints, not falsely labeled T.
+Full tile guards are also recomputed for those exact controls.
+
+The interval maps and endpoint exclusions above are hand-derived from the
+local triangle/rectangle return identities and strict inequalities. The
+script checks the prescribed exact controls, not a formal symbolic proof
+of the full intervals. No test of an unprescribed direction or word occurs.
+
+An initial working board note incorrectly called(-1,1) a corner. Direct
+angle bookkeeping corrects it: (-1,1) is SMOOTH,180degrees, in all four
+rooms. The relevant d1/5 obstruction is the EARLIER point(1,-1), with the
+angles stated above. The script independently checks all three points
+(0,1),(-1,1),(1,-1) in both variants. Do not reuse the incorrect explanation.
+
+4. Outcome and scope
+Two specified closure attempts have failed; no seven-case or full-surplus4
+completion is claimed. These failures do not justify another archive sweep
+or calling the rooms dark. The previously established new5/7/9 family paths
+and seven-case structural reduction remain unchanged.
+
+A future analytic attempt would need to complete the map AFTER the extra
+D-/R- turn, or change the entrance so its endpoint parameter lies strictly
+inside a finite-wall branch. Repeating the direct-target equations here
+will only reproduce the known corner solutions. No job remains running.

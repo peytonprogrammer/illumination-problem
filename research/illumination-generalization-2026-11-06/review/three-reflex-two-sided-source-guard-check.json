@@ -1,0 +1,63 @@
+{
+  "status": "PASS_ONE_PRESCRIBED_PREFIX_GUARD_PROFILE",
+  "scope": "One existing accepted ray, no parameter or room replay scan. Exact corner-root analysis of its fixed prefix; not universal source availability.",
+  "slope": "369232/1923",
+  "epsilon": "16/1923",
+  "first_target_time": "3846",
+  "path_sha256": "a4f18c0022a6ed0149887720e05bf978f25c69a9251a0b0e128d02b4bc706e12",
+  "reflections": 47748,
+  "final_negative_cap_time": "3364",
+  "final_negative_cap_x": "53864/1923",
+  "source_C": "56",
+  "alpha": "28",
+  "q_at_witness": "1/4",
+  "z_at_witness": "1923/16",
+  "full_gate_z_interval": [
+    "3365/28",
+    "3371/28"
+  ],
+  "prefix_reflections": 39844,
+  "qualified_corner_roots_inside_gate": 6,
+  "epsilon_component": [
+    "5/601",
+    "28/3365"
+  ],
+  "z_component": [
+    "3365/28",
+    "601/5"
+  ],
+  "q_component": [
+    "0",
+    "3/5"
+  ],
+  "lower_epsilon_obstruction": {
+    "kind": "developed_true_corner",
+    "physical_corner_index": 2,
+    "physical_corner": [
+      28,
+      4
+    ],
+    "prefix_reflections_before_copy": 20067,
+    "developed_corner": [
+      "461596",
+      "2408"
+    ],
+    "developed_time": "2404",
+    "slope": "115397/601",
+    "epsilon": "5/601",
+    "z": "601/5"
+  },
+  "upper_epsilon_obstruction": {
+    "kind": "future_gate_boundary"
+  },
+  "paired_target_max_gap": 4,
+  "source_component_theta_span": "24/35",
+  "SC01_sufficient_width_passes": false,
+  "source_pins": {
+    ".context/illumination-generalization-2026-11-06/review/resumed-exact-check.py": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a",
+    ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent-check.py": "be85b60c99a94668d5502dd8359ccd1597e7af8380e50ae54e99db1b6a8a04e2",
+    ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-return-independent.json": "ee822ffb919bdd31180541e44de3f9d2cabfb55cd62e687a92bb56ba33776bb1",
+    ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-source-crossing.md": "9071517b426861524b81de83a6f980b599e3cb6180c3695944829c00728a77fc"
+  },
+  "full_goal_complete": false
+}

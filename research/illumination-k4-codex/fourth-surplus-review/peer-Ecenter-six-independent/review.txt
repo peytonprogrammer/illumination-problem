@@ -1,0 +1,93 @@
+Independent centered-E / R+ six-path review
+Codex01a18403 — 4 November 2026
+
+VERDICT: ACCEPT centered-E-outside-C.txt's conditional optical lemma and
+ALL SIX listed conditional case inclusions, without corrections. The
+removal of two inward descriptions, eleven to nine, is justified RELATIVE
+TO the peer's earlier list. The original classification's completeness
+has not been independently proved by this review. No full surplus-four
+or universal-minimum theorem is established.
+
+1. Exact dependency and endpoint preservation
+
+Own previously accepted B-unit-six receipt supplies its entire path,
+required/forbidden sets and minimum/maximum support. Applying
+ sigma(x,y)=(2-y,2-x)
+to its REVERSED path gives the peer's new path exactly. Sigma sends old
+T to newS and oldS to newT, so reversal preserves the actual ordered
+endpoints. It maps B12 to E34, D2 to R3 and the N6 blocker to N7.
+The new minimum, maximum and complete required/forbidden sets equal
+their transformed old counterparts EXACTLY, not only by containment.
+Thus the claimed optical implication already follows from an accepted
+lemma and an isometry. No assumption that arbitrary pocket substitutions
+preserve a trajectory is needed.
+
+2. Independent direct finite-mirror check
+
+Launch(1,d) from S. The R3 cap receives the ray at(3,3d).
+Its three contacts, derived from x+y=4, y=0, x+y=4, are
+ A=(4/(1+d),4-4/(1+d)),
+ B=(4-4d,0),
+ C=((4-8d)/(1-d),4-(4-8d)/(1-d)).
+Outgoing velocities are respectively(-d,-1),(-d,1),(-1,d).
+It exits at(3,5d). The finite T-left mirror x=1 is hit at(1,7d),
+and reflects to(1,d). Entry into E34 is(3,9d).
+
+Intersect y=x-2 to get D=(c,c-2), c=(2+6d)/(1-d), outgoing(d,1).
+Intersect x+y=6 to get E=(e,6-e), e=(2+14d)/(1+d), outgoing(-1,-d).
+The E exit is(3,4-11d); at target x=2 the height is4-12d.
+Actual T forces d=1/6. The sufficient strict interval1/7<d<1/5
+places all finite contacts/ports in their intended side interiors.
+In particular the T-left contact is(1,7/6), not an endpoint.
+
+The resulting fixed SIX-reflection path is
+ S,(24/7,4/7),(10/3,0),(16/5,4/5),(1,7/6),
+ (18/5,8/5),(26/7,16/7),T.
+All strict finite contacts, positive specular travel, first actual T,
+reverse path and sigma/reversal pass. Actual T unfolds to(12,2), aligned
+positively with launch(6,1). Complete open-segment support is checked in
+addition to local reflection and unfolding, so an intermediate corner
+cannot be hidden by correct reflection coordinates.
+
+3. Complete conditional envelope and six applications
+
+All13 required triangles lie in H+E34+R3. All5 forbidden triangles
+are exactly R2,R4,E2,E5,N7. They miss the maximum consisting of that
+minimum plus full L/B/Tc/D and all N sectors except7. This is a support
+envelope, not an assertion that its full union is a valid model room.
+
+Every description below contains the minimum, and all its additional
+specified support lies in the maximum:
+ outside L012, EC, B1,Tc5,N5,R3;
+ outside L0123, EC, B1,Tc5,N5,R3;
+ outside L7012, EC, B1,Tc5,N5,D2,R3;
+ outside L7012, EC, B1,Tc5,N5,D1,R3;
+ inward L6701, EC, B1,Tc5,N5,D2,R3;
+ inward L701, EC, B1,Tc5,N6,D2,R3.
+Thus every VALID room with any of those descriptions has the same path.
+No validity census or new completed-room construction was needed.
+
+Each forbidden sector was checked separately as a negative control.
+In particular the remaining inward cases with N7 cannot use this path;
+neither can a case with ordinary R4 replacing R3. Full D support being
+permitted does not make full R support permissible. These distinctions
+are explicit in the peer's statement.
+
+4. Realignment and method limits
+
+Proved here: the centered-E/R3 optical family with N7 absent, four
+outside-C description inclusions and two inward description inclusions.
+The peer's nine-description remainder is not itself an independent
+completeness result. Original seven-L classification/count tables,
+remaining optical cases, other local charge partitions and remote
+attachments remain separate obligations. No whole Delta4 closure.
+
+Independent hand algebra and exact certificate checking reuse own local
+verification functions and the historical guard_checker helper. No peer
+checker executed. No new room/cap enumeration, ray/direction/reflection-
+word discovery, archive retrieval, solver, orbit or worker. This is AI
+review, not formal verification or expert refereeing.
+
+Reproduce:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/peer-Ecenter-six-independent/check.py
+Receipt check.json includes full guards and pinned source hashes.

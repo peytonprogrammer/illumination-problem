@@ -1,0 +1,153 @@
+Independent theory-only review. No tools, search, geometric enumeration, or optical discovery. We are trying to prove or refute a UNIVERSAL actual S/T one-corner midpoint event in a raw strictly simple canonical 45-degree mirrored polygon with a straight-attached sliding triangular leaf. Base lattice: A even-even, B odd-odd, C mixed; all occupied B/C are nonsmooth physical boundary corners, no interior B/C. Actual S,T are distinct full interior A stars. Eight-copy D4 unfolding X is an arithmetic translation surface; include every physical corner lift (even regular ones), every actual endpoint lift, and chosen prongs. A supplied legal midpoint event consists of equal straight half-vectors through exactly one physical corner with an embedded intrinsic pi sector; its relative class eta has zero holonomy, boundary T+S-2corner. A literal sliding leaf induces Q:marked relative H1->R2, nonzero on some absolute cycles, vanishing on every axis-cylinder core. Axis shear maps fix Q, so one detecting event would give both slide signs. Actual event existence is STILL OPEN.
+
+Review the NEW Section9.2 rigorously, including the correction to9.1. Do not infer actual event existence from abstract homology. Challenge: do marked-level refinements justify the relative twist formula; is the unit torus marked-arc countercontrol sound; is N(absolute ker hol)=C intersect ker hol correct with same-sign twists; does unequal normalized flux give exactly an abstract zero-period detectable increment; do one-cylinder and axis-conjugate exclusions follow? Identify any missing hypotheses and give precise fixes. All numerical fixtures are merely prescribed exact rational matrices, not surface constructions.
+
+After reviewing, try to advance the REAL missing step: can raw disk/fan-tree geometry force actual event classes to detect one of these core contrasts, or is there a concrete structural obstruction? Do not assert span, transitivity, generic illumination or arbitrary homology realization without proof. If no such argument is available, say so and identify the strongest rigorously supported geometric obligation.
+
+### 9.1 A precise non-axis transfer mechanism, conditional on a seed
+
+The theory-only existence review57928 supplies no universal seed or
+counterexample. Its useful remaining proposal can be stated without
+assuming that every affine map preserves the particular slide defect.
+Let e be an already supplied actual S/T one-corner event and eta its
+zero-holonomy relative class. Let phi be a pure multitwist, after a power
+fixing all physical-corner lifts, actual endpoint lifts and selected
+prongs. Refine its periodic cylinders at the closed leaves through EVERY
+actual marked endpoint and physical corner lift, and choose a further
+power fixing these refined boundary leaves pointwise. This refinement is
+necessary for the relative formula (Section9.2). Its pairwise disjoint
+parallel refined-cylinder cores are c_i, and the signed twist powers are m_i. Fix the intersection convention so that
+
+    phi_* eta = eta + N eta,
+    N eta = sum_i m_i <c_i,eta> c_i.
+
+The correction N eta is ABSOLUTE, even though eta is relative, and N^2=0
+because the cores are disjoint. Hence for every integer n,
+
+    phi_*^n eta = eta + n N eta,
+    Q(phi_*^n eta)=Q(eta)+n Q(N eta).
+
+Also hol(N eta)=0: both eta and phi_*eta have zero holonomy, since an
+affine image of the original event has zero holonomy. Thus the needed
+increment tests Q on a specific absolute zero-period cycle, not on an
+arbitrary core independently.
+
+If Q(N eta)!=0, at most one integer n makes the vector on the last line
+zero. The images remain admissible actual endpoint events by the fixed
+labels and prongs. A nonzero increment implies w is not parallel to the
+multitwist cores: a parallel event avoids all interior core circles and
+has every displayed intersection zero. Therefore only finitely many
+powers give wall-parallel image directions. Choose a power avoiding
+these exceptions and a possible zero vector. Section5 then supplies both
+opening signs using the original axis shears.
+
+This is a sufficient mechanism for obtaining detection even from a blind
+seed Q(eta)=0. It does not manufacture a seed. Nor does the existence of
+SOME absolute zero-period cycle detected by Q imply that one of these
+special increments N eta is detected. Two exact obligations remain:
+(1) a genuine actual S/T one-corner seed; (2) a pure non-axis multitwist
+with Q(N eta)!=0, unless the seed already detects. No such new event,
+cylinder or twist is discovered here.
+
+### 9.2 Marked-cylinder correction and an exact non-axis flux criterion
+
+**Status: new proof; independent review requested.** This section supplies
+necessary conditions and an absolute-homology equivalence for the proposed
+non-axis transfer. It does NOT construct an actual endpoint event.
+
+First refine the cylinder decomposition at every closed leaf through an
+actual regular mark or a physical corner lift, including regular physical
+corners. At an arithmetic base all these heights are rational. After a
+common power of the parabolic, each refined boundary leaf is fixed
+pointwise and each open strip is an integral Dehn twist relative to its
+boundary. The formula in Section9.1 then holds in ordinary marked relative
+homology, with intersection numbers taken against these refined cores.
+The refinement adds no singularity and does not alter the surface.
+
+Fixing interior marks after taking a power is insufficient to justify the
+UNREFINED relative formula. On the unit square torus, the affine shear
+(x,y)->(x+2y,y) fixes marks s=(0,0),t=(0,1/2). A vertical marked arc s->t
+acquires one horizontal core cycle. The unrefined annulus has twist number2,
+so twice an integer intersection number cannot give this increment. Cutting
+at the two marked horizontal leaves gives two strips of twist number1;
+the arc crosses just one. This is a prescribed relative-homology control,
+not a mirror room or a counterexample to the goal.
+
+Work now in absolute H=H_1(X;R). Orient the r refined core classes c_i in
+a common unit direction e and write
+
+    hol(c_i)=ell_i e,   ell_i>0,
+    C=span_R{c_i},      Z=C intersect ker hol.
+
+Let a!=0 be the signed shear coefficient and h_i>0 the refined heights.
+The twist coefficients satisfy m_i=a h_i/ell_i, so all m_i have the same
+sign. Write Nx=sum_i m_i <c_i,x> c_i, using the convention of Section9.1.
+Then the following exact identity holds:
+
+    N(ker hol in H) = Z.                              (9.2a)
+
+Proof of surjectivity onto C first. Choose coordinates on H and let T have
+columns c_i. Nondegeneracy of the intersection form identifies x-><.,x>
+with an invertible map H->H*. Therefore rank N equals rank(T M T^t), where
+M=diag(m_i). Since M is positive or negative definite, this rank equals
+rank T: after multiplying by the common sign, the kernel of T M T^t is
+exactly ker T^t. Hence im N=C, even if the listed cores are dependent.
+
+Affine holonomy covariance gives
+
+    hol(Nx)=(A-I)hol(x)=a hol_perp(x) e.
+
+Certainly N(ker hol) is contained in Z. Conversely take z in Z and choose
+x with Nx=z using im N=C. The displayed covariance forces hol_perp(x)=0.
+Choose any core c_0. Since Nc_0=0 and ell_0>0, subtracting
+hol_parallel(x)c_0/ell_0 from x preserves Nx and makes both holonomy
+components zero. This proves (9.2a). If the data are rational, all these
+choices can be made over Q and then multiplied to give an integral cycle.
+There is NO claim that the resulting cycle is an actual corner event.
+
+For the pocket-slide functional Q:H->R^2, (9.2a) yields
+
+    QN is nonzero on ker hol
+      iff Q is nonzero on Z
+      iff the vectors Q(c_i)/ell_i are not all equal. (9.2b)
+
+For the last equivalence, hol|C has one-dimensional image. Q vanishes on
+its kernel exactly when it factors through that one-dimensional image,
+i.e. Q(c_i)=ell_i v for a common v. Explicitly, unequal ratios at i,j give
+z=ell_j c_i-ell_i c_j in Z with Q(z)!=0. The surjectivity proof supplies
+an absolute zero-holonomy preimage under N.
+
+For a SUPPLIED actual event eta, let k_i=<c_i,eta>. The corresponding
+calculation is more restrictive:
+
+    sum_i h_i k_i=0,
+    Q(N eta)=a sum_i h_i k_i [Q(c_i)/ell_i].           (9.2c)
+
+Thus unequal normalized flux is necessary for this twist to change an
+actual zero-holonomy event, but it is not sufficient for a particular
+eta or for the existence of any actual event. Equation(9.2a) produces
+arbitrary absolute cycles; it does not prove that actual S/T event classes
+span them, or that their intersection vectors realize the required k_i.
+
+Two exclusions follow without computing a direction or trajectory.
+
+1. If C has dimension1, then Z=0 and this parabolic fixes EVERY zero-holonomy
+   relative class, not merely its defect. In particular, a direction with
+   one maximal unmarked cylinder cannot help: splitting it at marks gives
+   homologous oriented cores and still dim C=1. Several cylinders with
+   homologous cores have the same obstruction.
+2. Let G be the group generated by the established slide-blind axis twists,
+   so Q(gx)=Q(x) on marked relative homology for every g in G. A conjugate
+   g phi g^-1 of another Q-preserving twist still preserves Q. In particular
+   a direction obtained from an axis direction by these G actions supplies
+   no new detection. This includes non-axis slopes in those cusp orbits;
+   it is not a statement about every non-axis direction or the full affine
+   group.
+
+The remaining geometric target is consequently sharper: find a legal
+actual S/T event with a nonzero pairing against a multi-cylinder contrast,
+or prove it already detects directly. A detected absolute cycle, unequal
+normalized cylinder flux, a non-axis slope, or group transitivity alone
+is not that event. Universal existence and the96bounded portal implications
+remain open.
+

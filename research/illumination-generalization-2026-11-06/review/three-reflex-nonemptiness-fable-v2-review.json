@@ -1,0 +1,82 @@
+{
+  "created_utc": "2026-11-08T05:11:52.778576+00:00",
+  "decision": "CORRECT_REVISED_STRUCTURAL_ARGUMENT_BEFORE_USE",
+  "findings": [
+    {
+      "id": "F11",
+      "decision": "REJECT",
+      "finding": "Base endpoint displacement lies in Lambda, not necessarily 2Z\u00b2; unit torus primitive horizontal loop refutes universal torus vacuity."
+    },
+    {
+      "id": "F12",
+      "decision": "REJECT",
+      "finding": "A-only corner images do not self-block the 2Z\u00b2 torus; extra marks are optional, not forced."
+    },
+    {
+      "id": "F13",
+      "decision": "CORRECT",
+      "finding": "Use full regular even-even torus fiber, including smooth wall lifts; preserve true-corner and target-sheet guards."
+    },
+    {
+      "id": "F14",
+      "decision": "REJECT",
+      "finding": "LR01 section is not source-arm A subset; retain rational section position and non-target R-exit stopped outcome."
+    },
+    {
+      "id": "F15",
+      "decision": "REJECT",
+      "finding": "Cap-contact index bound does not bound primitive direction components or supply all-word darkness completeness."
+    },
+    {
+      "id": "F10 classification",
+      "decision": "OPEN",
+      "finding": "Degree necessity accepted conditionally; full-copy tiling and general intermediate-cover classification not proved."
+    }
+  ],
+  "inputs_before_after": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/fable/general-geometry-00-reconciliation.md",
+      "sha256": "153c1375f39d13ce81fa43da6b8deb542f5acbcd170eeacb9ef056af33f23a6d",
+      "actual": "153c1375f39d13ce81fa43da6b8deb542f5acbcd170eeacb9ef056af33f23a6d",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/fable/general-geometry-01-lifting.md",
+      "sha256": "c98db55e49dc679a5065ff7f016b4fd00adf14bd504982e066b6486c55a4c143",
+      "actual": "c98db55e49dc679a5065ff7f016b4fd00adf14bd504982e066b6486c55a4c143",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/fable/general-geometry-02-r3-shapes.md",
+      "sha256": "812d3608367d28598f0b8e6df05abb1f318657076ed35e68d2a821a4fe9be399",
+      "actual": "812d3608367d28598f0b8e6df05abb1f318657076ed35e68d2a821a4fe9be399",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/fable/general-geometry-03-reduction.md",
+      "sha256": "e49b7d426aae7c77dca187b3c8e0423381321b3d9dcbb24e97b5e28fdb1c2482",
+      "actual": "e49b7d426aae7c77dca187b3c8e0423381321b3d9dcbb24e97b5e28fdb1c2482",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/fable-frontier.md",
+      "sha256": "ab05fb276014e81c13a8a6a5424522884385dec3d94626bc1027b22d148351b3",
+      "actual": "ab05fb276014e81c13a8a6a5424522884385dec3d94626bc1027b22d148351b3",
+      "match": true
+    }
+  ],
+  "own_outputs": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-nonemptiness-fable-v2-review.md",
+      "sha256": "a54c1367729b372e097b611f29773b98fcd47488bcaa5085a39804895c4ea20d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-nonemptiness-rational-section.md",
+      "sha256": "3b764a8f4efdbfba044aee3a02a071b5ffcad06363a0dca573952d650c99b92b"
+    }
+  ],
+  "independent_evidence": "Hand primitive torus loops, endpoint-coset calculation, integer-reflection parity and exact accepted LR01 branch law.",
+  "rational_section_bound": "aq-1 if aq=ph mod2, otherwise aq; no denominator bound; no nonemptiness.",
+  "new_discovery": false,
+  "full_goal_complete": false
+}

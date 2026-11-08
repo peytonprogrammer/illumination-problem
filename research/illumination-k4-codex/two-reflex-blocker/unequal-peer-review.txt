@@ -1,0 +1,75 @@
+# Verdict: ACCEPT, with one real defect outside the main theorem
+
+**ACCEPT** for the main claim (§2): every condition in (U) is enough to give two corner-free paths whose boundary-contact sets are disjoint. §1 is also correct, provided its family is read as "a single crossing of the passage."
+
+**One real defect:** the scope statements in §3 and in "Next unresolved step" are false as written. Below is an exact counterexample in the §3 room.
+
+## Checks that passed
+
+I worked through each of these symbolically.
+
+- **§1 unfolding.**
+  - D = L+M+R, and q_s − q_t = Mβ.
+  - The left inner-encounter test: q_s + 2aβ > −c, so it must exceed +c.
+  - The right test is the mirror: q_t − 2aβ < c, so −q_t + 2aβ > c.
+  - Once an inner encounter exists, every outer encounter further back has developed height above c, so only the nearest one can be zero.
+  - Heights stay at or below max(y_s, y_t) < H, and portal height zero at (a,0) is a smooth bottom point.
+- **§2 algebra.**
+  - With R = L, β = y/(L+h), and q_s, q_t = δ ± w.
+  - L > B ⇔ w < c−d.
+  - L < U ⇔ y(h+2a)/(L+h) > c+d, which gives both inner tests.
+  - (U − B − 2a)(c²−d²) = 2[a(c−d)(y−c−d) − yhd], so (U) ⇔ U > B+2a.
+  - The expanded form a·c(y−c) − y(a+h)d + ad² is correct.
+- **Length choice.** B > 0 because y > c−d. So the first term above B in each phase lies in (B, B+2a]. The two terms are distinct because 2x ∉ 2aℤ, they differ by less than 2a, and both are below U.
+- **Outer positivity.** (h+a)/(h+2a) > 1/2 needs h > 0. Then (c+d)/2 > d needs d < c. Both hold.
+- **Physical location of the bottom hit.** The bottom hit lies after the last left vertical contact and before the first right one, so the path has positive horizontal velocity there. That gives x_B = a+h+δ(L+h)/y, and it also holds when L = a−x, where no contact exists. Since δ ≠ 0, the two bottom hits are distinct.
+- **Disjoint vertical contacts.**
+  - On the same wall, r₁−r₂ ∈ 2aℤ.
+  - The coefficient k = (h+r)/(L+h) lies in (0,1), because each contact occurs at u = L−r > 0.
+  - So 0 < |k(L₁−L₂)| < 2a, which rules out a shared contact.
+  - Distinct walls cannot share a point: inner-wall contacts are above c, the bottom is at height 0, and M > 0.
+- **Endpoint smoothing.** A portal zero is an ordinary reflection off the bottom wall, and (a,0) is not a corner.
+- **§3 arithmetic.**
+  - The single-crossing obstruction holds: R−2L is odd, so |Δ| ≥ 1/3, and the target interval (−1/300, 1/150) is far smaller.
+  - The L=115, R=231 construction checks out: β = 100/34601, q_s = 101/103803, q_t = 98/103803.
+  - Inner tests: 1301/103803 and 1102/103803. Outer tests: 701/103803 and −502/103803.
+
+## Real defect: paths that cross the passage several times
+
+When |h| < c, the bottom strip [0,A]×[0,c] is an ordinary rectangle. A path with exactly one bottom hit can therefore bounce off the outer walls x=0 and x=A below height c and cross the passage 2k+1 times. Its developed length is
+
+  D = L + R + M + 2kA.
+
+The family in §1 implicitly takes k = 0. §3 says it "forbids one bottom reflection in the passage with arbitrary vertical arm reflections," and the caveat it gives ("additional horizontal reflections") does not cover this case.
+
+**Counterexample in the §3 room** (a=2, x=1, c=1/1000, M=1/100, y_s=1/3, y_t=2/3):
+
+Take L = 133269 (minus phase), R = 266939 (plus phase), and k = 100. Then D = 40101001/100 and β = 100/40101001. Writing N = 120303003:
+
+| Quantity | Value | Test |
+|---|---|---|
+| q_s | 120301/N | 0 < q_s < c ✓ |
+| q_t | −120302/N | \|q_t\| < c ✓ |
+| q_s + 4β | 121501/N | > c ✓ |
+| −q_t + 4β | 121502/N | > c ✓ |
+| nearest outer encounters | +120901/N, −120902/N | nonzero ✓ |
+| start of the 101st crossing (j=100, rightward) | +1/N | |
+| end of that crossing | −2/N | |
+
+The developed height changes sign strictly inside the passage. Every crossing of x=a, x=a+M and every outer-wall bounce in the strip happens at height between 0 and c, so the path touches no corner and no roof. This is a valid strict path with a single bottom hit, located in the passage.
+
+**Fix:**
+- Restrict §3's claim to single-crossing paths.
+- Add the hypothesis "single passage crossing" to the converse sentence in §1.
+- In "Next unresolved step," note that the full matching problem includes the term 2kA, which adds one more integer parameter.
+
+None of this affects §2, which builds its paths explicitly.
+
+## Cosmetic clarifications
+
+- d < c is redundant: (U) together with y > c+d already forces it.
+- State B > 0 explicitly. The (B, B+2a] bracketing depends on it.
+- State r < L, i.e. the contact precedes s, when asserting k ∈ (0,1).
+- Note that inner-wall contact heights are at most y_s < H.
+- The references to the "earlier qualitative stability result," the "third notch path," and "fixtures" point outside this note and were not checked.
+- There are missing spaces in several places ("where0<x<a", "and0<|q_t|").

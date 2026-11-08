@@ -1,0 +1,368 @@
+{
+  "status": "PASS_EXACT_PRESCRIBED_OPTICAL_WITNESS",
+  "polygon": [
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      20
+    ],
+    [
+      20,
+      20
+    ],
+    [
+      20,
+      8
+    ],
+    [
+      12,
+      8
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      28,
+      0
+    ],
+    [
+      28,
+      28
+    ],
+    [
+      0,
+      28
+    ],
+    [
+      0,
+      4
+    ]
+  ],
+  "actual_source": [
+    2,
+    6
+  ],
+  "actual_target": [
+    14,
+    2
+  ],
+  "initial_velocity": [
+    1,
+    2
+  ],
+  "contacts": [
+    {
+      "contact": [
+        4,
+        10
+      ],
+      "time": 2,
+      "actual_wall_index": 0,
+      "actual_wall": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          20
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        1,
+        2
+      ],
+      "outgoing_velocity": [
+        -1,
+        2
+      ]
+    },
+    {
+      "contact": [
+        0,
+        18
+      ],
+      "time": 6,
+      "actual_wall_index": 8,
+      "actual_wall": [
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        -1,
+        2
+      ],
+      "outgoing_velocity": [
+        1,
+        2
+      ]
+    },
+    {
+      "contact": [
+        5,
+        28
+      ],
+      "time": 11,
+      "actual_wall_index": 7,
+      "actual_wall": [
+        [
+          28,
+          28
+        ],
+        [
+          0,
+          28
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        1,
+        2
+      ],
+      "outgoing_velocity": [
+        1,
+        -2
+      ]
+    },
+    {
+      "contact": [
+        9,
+        20
+      ],
+      "time": 15,
+      "actual_wall_index": 1,
+      "actual_wall": [
+        [
+          4,
+          20
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        1,
+        -2
+      ],
+      "outgoing_velocity": [
+        1,
+        2
+      ]
+    },
+    {
+      "contact": [
+        13,
+        28
+      ],
+      "time": 19,
+      "actual_wall_index": 7,
+      "actual_wall": [
+        [
+          28,
+          28
+        ],
+        [
+          0,
+          28
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        1,
+        2
+      ],
+      "outgoing_velocity": [
+        1,
+        -2
+      ]
+    },
+    {
+      "contact": [
+        17,
+        20
+      ],
+      "time": 23,
+      "actual_wall_index": 1,
+      "actual_wall": [
+        [
+          4,
+          20
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        1,
+        -2
+      ],
+      "outgoing_velocity": [
+        1,
+        2
+      ]
+    },
+    {
+      "contact": [
+        21,
+        28
+      ],
+      "time": 27,
+      "actual_wall_index": 7,
+      "actual_wall": [
+        [
+          28,
+          28
+        ],
+        [
+          0,
+          28
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        1,
+        2
+      ],
+      "outgoing_velocity": [
+        1,
+        -2
+      ]
+    },
+    {
+      "contact": [
+        28,
+        14
+      ],
+      "time": 34,
+      "actual_wall_index": 6,
+      "actual_wall": [
+        [
+          28,
+          0
+        ],
+        [
+          28,
+          28
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        1,
+        -2
+      ],
+      "outgoing_velocity": [
+        -1,
+        -2
+      ]
+    },
+    {
+      "contact": [
+        21,
+        0
+      ],
+      "time": 41,
+      "actual_wall_index": 5,
+      "actual_wall": [
+        [
+          12,
+          0
+        ],
+        [
+          28,
+          0
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        -1,
+        -2
+      ],
+      "outgoing_velocity": [
+        -1,
+        2
+      ]
+    },
+    {
+      "contact": [
+        17,
+        8
+      ],
+      "time": 45,
+      "actual_wall_index": 3,
+      "actual_wall": [
+        [
+          20,
+          8
+        ],
+        [
+          12,
+          8
+        ]
+      ],
+      "strict_wall_interior": true,
+      "incoming_velocity": [
+        -1,
+        2
+      ],
+      "outgoing_velocity": [
+        -1,
+        -2
+      ]
+    }
+  ],
+  "portal_crossings": [
+    {
+      "point": [
+        1,
+        20
+      ],
+      "time": 7,
+      "guard": "0<x<4"
+    },
+    {
+      "point": [
+        20,
+        26
+      ],
+      "time": 26,
+      "guard": "20<y<28"
+    },
+    {
+      "point": [
+        25,
+        8
+      ],
+      "time": 37,
+      "guard": "20<x<28"
+    }
+  ],
+  "first_actual_target_time": 48,
+  "final_velocity": [
+    -1,
+    -2
+  ],
+  "true_corner_contacts": 0,
+  "artificial_reflections": 0,
+  "all_wall_contacts_strict": true,
+  "method": "Hand-derived fixed word, independently check every finite wall intersection and specular velocity at each prescribed contact; no direction/word search.",
+  "coverage": "This one actual A-point pair in a uniformly scaled existing r3 spiral only.",
+  "whole_r3_theorem": false,
+  "whole_goal_complete": false,
+  "search_used": false
+}

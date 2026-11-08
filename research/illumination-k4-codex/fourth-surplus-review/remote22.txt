@@ -1,0 +1,204 @@
+Surplus-four parent2/remote2 family: whole-family illumination
+4 November 2026 — Codex01a18403
+
+STATUS: parent whole-family illumination proof, independent challenge
+outstanding. Conditional on the remote-structure lemmas in structural-reduction.txt,
+every room in row(r,l,h,b)=(2,2,0,0), W<=21,k<=6 illuminates actual S/T in
+at most23 reflections. The one room left by the original reduction is now
+closed by the analytic14-reflection path in one-room-analytic.txt and its
+exact independent polygon/full-guard checks. This does not close all Delta4.
+
+1. Missing implication, success criterion, objections
+Target: illumination of the entire row, with actual S=(0,0), T=(2,2).
+Two bounded approaches: (i) derive interfaces/budgets and try exact inherited
+paths; (ii) retrieve compatible already-existing paths for nine precisely
+hand-reduced inputs from the same previously used I3 archive. No ray/direction/
+word discovery or cap-assignment enumeration. Attempt(ii) left one room, now closed analytically in one-room-analytic.txt.
+A final comparison with seven already-retained I2 paths, without reading an
+I2 archive, does not cover it. Neither failure implies nonillumination.
+
+2. Geometry notation and local restrictions
+Directions at an A center, indexed0..7, are E,NE,N,NW,W,SW,S,SE. Sector i
+is the triangle between directions i and i+1. A root2 has d1,q3: three
+sectors or a smooth four-sector fan. The remote2 cell has two sectors.
+All other partial A cells are ordinary H-facing single caps. The N bridge
+illuminates directly and is removed. Any full C pair away from H must face
+the remote cell, since otherwise it creates an outside smooth C contrary to
+b0. At their common C, parent90+remote90 is likewise forbidden. Thus a
+half-filled parent side forces a centered remote pair; a full parent side
+allows a centered pair or either adjoining quarter pair.
+
+Ordinary cap labels are the established zero-surplus alphabet; Nb-/Nb+ are
+bottom N caps and Nr-/Nr+ right N caps. Sigma(x,y)=(2-y,2-x) exchanges S/T,
+pairs L/Tcap and B/E, and transfers every assertion below with reversed path.
+It suffices to analyze critical L and B; the other noncritical parents are
+handled first.
+
+Noncritical D/R parent additions never meet either old13 guard. A nonbridge
+N parent with three/four sectors cannot touch both H sides; its full sector
+support blocks at most one old13 guard. Ordinary short paths still force
+B+,E-,L+,T-. The opposite13 path therefore works. Remote triangles are
+outside the complete K support of those paths. This handles every noncritical
+parent without an orientation census.
+
+For a critical L parent, if L+ is absent, the inherited one/sigma-four paths
+already illuminate. Otherwise the B/E one-paths and ordinary-B four-path
+force B+,E-,T-. For a critical B parent, B+ absence gives the one-path; with
+it present the E one-path/sigma-four-path force E-,L+. These fixed paths
+have no remote guard support. No T- necessity is assumed in the B families.
+
+3. Exact charge/budget ledger for critical cases
+Let n count ordinary caps, c_H count full H-facing C points supplied by the
+parent, and c_R count the full common C supplied by a centered remote pair
+facing a full parent side. Then
+ Q=5+n, s_N=7-n, J=2+c_H+c_R,
+ k=J+7-n=6, so n=J+1.
+The W20/k6 pair was proved in structural-reduction.txt. No new full B is
+possible: a remote-side B has at most H90+parent90+remote90+ordinary45=315
+and the other boundary B vertices have no larger fan; the core notch still
+has only one ordinary N cap. Thus the displayed J is exact in these cases.
+If the parent has only half its H side and a full remote side, a quarter
+remote leaf gives J2,n3, while a centered remote gives J3,n4. A full-H parent
+with a remote quarter gives J3,n4; with a centered remote filling its full
+remote side it gives J4,n5. These are necessary ledgers, not claims every
+cap choice is feasible.
+
+4. Exhaustive critical L orientations
+The fans containing L+ sector0 are starts6,7,0 for m3 and starts5,6,7,0 for
+m4. The only possible remote sides are north or south. A west attachment
+in start0/m4 leaves its complete north C pair smooth, so is forbidden by b0.
+
+South-facing cases:
+ - start6/m3: remote must be centered; centered-L3 works.
+ - start5/m4: full south side; centered-L3 works for all three remote-pair
+   possibilities. Its upper outer L forbidden triangle is absent.
+ - start6/m4: only a centered pair can attach on south. The upper convex
+   B=(-1,1) would be smooth unless Nb- repairs it. Thus N=Nb- and L11 works.
+The alternative north attachment to start6/m4 leaves B=(-1,-1) smooth,
+unless ordinary B- repairs it; forced B+ excludes B-. So it is impossible.
+remote22-check.json gives exact symbolic guard implications for all of these
+south cases and sigma. No general enlargement assumption is used.
+
+North-facing cases:
+(a) start7/m3 has only one north quadrant, hence centered remote. N bottom
+or empty uses L11. Nr+ is forbidden by the smooth B=(1,3) from T-+Nr+.
+The remaining N=Nr- consumes the fourth ordinary cap; D/R are empty. This
+is fixed_L_northquarter_Nrminus in the new frozen receipt, row2642,10hits.
+(b) start0/m3 or start0/m4 has full north side and only half the H side.
+With either remote quarter n3, B+/E-/T- are all ordinary caps and old13
+works with N empty. With centered remote n4, N not bottom uses old13.
+For N bottom D/R are empty: Nb+ uses the retained healed/half-fan row515;
+start0/m4 with Nb- uses retained half-fan row648; start0/m3 with Nb- uses
+new fixed_L_northtriple_Nbminus row2642,10hits. Guard tests explicitly
+include BOTH centered remote halves and D/R absence. These close (a),(b).
+(c) start7/m4 fills both H side and north side. Its three remote orientations
+are the L_fullH_* families treated in section5. No other L case remains.
+
+5. Full-H/full-north L parent
+All row numbers in this section refer to the indicated family's OWN terms
+in remote22-frozen.json. They are not freely transferable between fans.
+B+,E-,T- are fixed; Nr+ is forbidden by b0.
+
+L_fullH_leftquarter: the remote pair is sectors4/5 at(-2,2). It misses
+B=(-1,1), which otherwise has H90+L+45+upper-L45=180. Nb- is the only
+available repair, so it is forced. Here J3,n4 and this is the fourth cap;
+D/R are empty. Row2642 requires none and forbids D+,R+,R-, hence covers it.
+
+L_fullH_center: remote sectors5/6, J4,n5. Three guards cover all choices,
+without needing that count: Nr- present uses3395 (Nb+ absent by N slot);
+otherwise R+ absent uses3612; otherwise R+ present uses745 (R- absent by
+R slot). Maximum23hits. These guards include BOTH remote halves.
+
+L_fullH_rightquarter: remote sectors6/7, J3,n4, so only ONE further ordinary
+cap besides B+/E-/T-. If neither R option nor D+ is present,2642 applies.
+If D+ is present,3224 applies (D-/R+/- absent). If R+ is present,652 applies
+(Nr-/R- absent). This exhausts every permitted fourth cap EXCEPT R-.
+For R- present, the budget forces D and N empty. It is the single exact
+room in section8, now closed analytically by one-room-analytic.txt. The guard retrieval supplied no path for it; one-room-analytic.txt now provides a14-hit path.
+
+6. Exhaustive critical B orientations and necessary constraints
+The H-facing B+ is sector1. Among m3 starts7/0/1 and m4 starts6/7/0/1,
+a remote attachment can only survive b0 at the west side, through sector3.
+An opposite south attachment in start6/m4 leaves a full east C smooth.
+East is D in K, so cannot be the sole remote cell. Remaining cases:
+ - start1/m3 and start0/m4: west quarter + centered remote, section7(a),(b);
+ - start1/m4: full H and full west side. A lower remote quarter misses
+   B=(-1,-1), leaving it smooth since L- is excluded by forced ordinary L+.
+   Hence only upper-quarter and centered remote survive, section7(c),(d).
+
+For all B families, ordinary Nb- would make B=(-1,1) smooth with L+, so it
+is absent. D+/R- cannot coexist (smooth B=(3,-1)); Nr+/T- cannot coexist
+(smooth B=(1,3)). These three points are disjoint from the exceptional
+parent/remote cells and cannot be repaired there. Only the first and third
+restrictions are needed for some of the covers below. Slot exclusivity is
+used throughout. No b0 exclusion is imported without its local reason.
+
+7. Complete B-family guard covers
+Each row below is from its OWN family in remote22-frozen.json.
+E-,L+ are fixed ordinary caps; N has options Nb+,Nr-,Nr+ only.
+
+(a) B_west_triple_center, n4: two additional caps among D/R/N/T.
+If Nb+ absent, D- absent uses3715 and D- present uses883 (D+ absent).
+If Nb+ present, Nr- absent: R+ absent uses3040. If R+ present, N/R exhaust
+the two additional slots, hence T+ absent;60 applies. Maximum18hits.
+
+(b) B_rectangle_center, n4: also two additional slots.
+Nb+ absent: D- present uses883. If D- absent, T+ present uses119 (T- absent)
+and T+ absent uses3608.
+Nb+ present: if D- present, N/D use both slots, T+ absent, so60 applies.
+If D- absent, T- absent uses98 and T- present uses122 (T+ absent).
+These cases exhaust all options, maximum18hits.
+
+(c) B_fullW_upperquarter, n4: two additional slots.
+N=Nr-: R+ absent uses515; R+ present uses3800, with other N/R caps absent.
+N=Nr+: T- absent by b0. T+ absent uses2257. T+ present exhausts N/T slots,
+D/R empty, and1266 applies.
+N=Nb+: T+ absent uses60. T+ present exhausts N/T slots, D/R empty, so103
+applies (D-/Nr-/T- absent).
+N empty: T+ absent uses60. With T+ present, exactly one D/R slot is occupied:
+R+ uses361, R- uses3224, D+ uses1036, D- uses2823. All required absences
+follow from the slots and two-cap count. Maximum23hits.
+
+(d) B_fullW_center, n5: three additional slots, but no count is needed.
+T+ absent uses3035. T+ present implies T- absent: D- absent uses978;
+D- present uses1312 (D+ absent). Maximum21hits.
+This closes all B parents; sigma handles E.
+
+8. The final hand-forced room, now illuminated
+Root: L=(-2,0), sectors7/0/1/2 (four triangles).
+Remote: A=(-2,2), sectors6/7 (right quarter, two triangles).
+Ordinary caps: B+, E-, T-, R-. All other partial cells absent.
+H is unchanged. The geometric recipe uniquely fixes the room. Its image
+under sigma is the only paired exception to this reduction.
+
+remote22-residue-check.py independently cancels triangle edges, verifies one
+simple boundary cycle, counts angles, confirms full interior A stars exactly
+S/U/T, and obtains
+ N_triangles34, W20, Q9, s_A1, s_N3, J3, k6, Delta4.
+So the remaining case cannot be dismissed as an invalid room or by the budget.
+
+The earlier residue checker tests ONLY seven previously retained actual-S/T paths from
+the I2 residue receipts. None has both its required triangles present and
+its forbidden triangles absent. The I3 projection also supplies none for
+this fixture. This is a failure of the supplied finite certificate sets,
+not a bound on trajectories and not evidence of darkness by itself.
+
+9. Evidence scope, realignment and next useful question
+remote22-check.json records both successful inherited implications and failed
+inheritance attempts; failures are not theorem counterexamples.
+remote22-frozen.json retains exact coordinates, endpoint frames, archive hash
+and full replayed guards for the nine hand-listed symbolic inputs. Its source
+is ONLY the already used3896-record I3 archive. It does not enumerate cap
+assignments. Sections4–7 give the exhaustive hand implications; retained
+term counts alone do not prove coverage. No I2 archive was queried.
+
+The original bounded pass reduced the row to ONE exact room. That final room
+is now illuminated by the analytic14-hit path in one-room-analytic.txt, verified
+with independent rational boundary/reflection checks and complete tile guards.
+Thus the whole row closes at parent level, <=23 reflections. The surplus4
+theorem is still open: other remote rows and five local partitions were not
+expanded here. No independent reviewer has yet accepted the full reduction.
+
+Next: independent hand challenge of the root/leaf exhaustion, cap-budget
+splits and the explicit new path. The previous lookup failure is not repeated
+or called darkness. No broader lookup or discovery search was needed.

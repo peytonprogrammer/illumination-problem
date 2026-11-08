@@ -1,0 +1,143 @@
+Independent hand review of whole-copy seam optimality
+4 November 2026 — Codex01a18403
+
+VERDICT: ACCEPT within the stated construction class, with no material
+mathematical correction. This is an independent same-model agent review and
+an independent implementation of the prescribed finite controls. It is not
+formal verification, historical novelty review, or a universal polygon bound.
+
+Reviewed input: shared-seam-test/findings.txt sections1–8, its check.py/json,
+and research-note.tex parity-base proposition. Current source SHA256 values
+are pinned in this directory's check.json. Peer files were read only.
+
+1. Exact hypotheses
+One simple orthogonal parity base B has w maximal walls, r reflex corners,
+and two distinct smooth boundary lattice marks a,b. All noncorner lattice
+points of B lie in a+2Z^2. Finitely many whole congruent copies g_i(B) have
+pairwise disjoint interiors; their union Q is a strictly simple polygonal
+disk. The inverse-copy fold g_i^{-1} agrees pointwise wherever pieces meet.
+An actual interior preimage of each of the two distinct base marks is required.
+Copy maps are specified isometries, not arbitrary identifications allowed
+only modulo a symmetry of B. No slits, holes, overlaps or pinches are allowed.
+
+The corner-count identities themselves apply more generally to orthogonal
+bases without the parity assumption. Parity and marked interiority enter
+only the last numerical inequality.
+
+2. Independent check of full-wall rigidity
+At a positive-length contact segment I, equality g_i^{-1}(x)=g_j^{-1}(x)
+for x in I implies h(x)=x for h=g_j composed with g_i^{-1}. A plane isometry
+fixing two distinct points has identity or reflection as its linear part
+relative to their line. Identity makes the whole copies identical, contrary
+to disjoint interiors. Therefore h is reflection across that line.
+It follows that the entire maximal wall W of g_i(B) containing I is mapped
+to itself, as a maximal wall of g_j(B). Both entire polygons are reflected
+images, so ALL of W, not merely I, is a contact. This verifies the direction
+of the composition and does not assume a common placement grid.
+Thus partial seams cannot occur with this pointwise whole-copy fold.
+A shifted reflected copy can have partial geometric contact, but then its
+inverse fold disagrees along the seam. The prescribed half-unit control
+checks precisely this failure; it does not exclude every other fold mechanism.
+
+3. Independent local angle exhaustion
+A270-degree copy corner cannot lie on a reflected seam endpoint: reflection
+of its270-degree occupied sector in either boundary ray overlaps that sector
+on an open set. No other copy can fill its missing90-degree sector without
+making a positive-length contact along an incident ray; section2 then forces
+the same impossible reflected seam. Two270-degree incidences cannot coincide,
+since their interiors overlap locally. Thus every one of the m*r reflex
+incidences survives as a distinct reflex boundary corner of Q.
+
+At a convex copy corner, an incident smooth neighbor would produce a seam
+whose endpoint is a corner for one copy but smooth for the other. This
+contradicts the full-wall reflection established above. An interior neighbor
+overlaps, and a reflex neighbor was just excluded. Hence every incident copy
+there supplies one convex90-degree quadrant. One/two adjacent/three/four
+quadrants produce respectively a convex/smooth/reflex/interior point.
+Two opposite quadrants violate strict simplicity. These cases exhaust new
+reflex corners. Therefore R(Q)=m*r+t3, where t3 counts three-copy convex
+junctions. Since w=2r+4 and W=2R+4 for orthogonal disks,
+ W=m*(w-4)+4+2*t3.
+In particular a shared three-corner endpoint adds TWO walls; a four-corner
+junction contributes zero new reflex corners but cannot erase old ones.
+
+4. Independent cycle count
+Let t_j count convex junctions with j incident copy corners. Every reflex
+incidence already survives separately, so convex-incidence and boundary-turn
+counts give
+ m*(r+4)=t1+2*t2+3*t3+4*t4,
+ t1-(m*r+t3)=4.
+Subtracting yields t2+2*t3+2*t4=2m-2. A seam endpoint has respectively
+one/two/four incident internal seam rays at a two/three/fourfold junction,
+so 2E=t2+2*t3+4*t4. Thus E=m-1+t4.
+Here E counts seam segments, not merely distinct adjacent copy pairs. Treat
+the seam graph as a multigraph if necessary. It is connected: a strictly
+simple polygonal disk has connected interior, which cannot connect clusters
+solely through boundary point contacts. Its cycle rank is E-m+1=t4.
+This supplies the needed cycle control without assuming a tree initially.
+
+5. Independent parity-base lower bound
+Translate a to0. Every unit square has exactly three vertices outside2Z^2.
+Each occupied vertex outside2Z^2 must be a genuine corner, contributing one
+square if convex and three if reflex. Hence 3A=c_o+3r_o<=c+3r=4r+4.
+If w<10, orthogonal parity gives w=2r+4<=8, so r<=2 and A<=4.
+The nine explicitly given polyominoes of size at most four are exhaustive:
+four strips, L triomino, and square/T/L/S tetrominoes. The finite shape list
+follows from connected unit-square adjacency: cycles require the four-cell
+square; an acyclic degree-three vertex is T; otherwise a path gives strip,
+L or S (two same-sense turns instead close the square).
+The independent checker inspects precisely those supplied shapes, without
+generating placements. A single square has no two smooth marks. Each other
+shape has noncorner lattice points in multiple parity classes. Thus none is
+a parity base. It follows that w>=10. The given five-square base attains it.
+
+6. Why both interior marks require three copies
+Every maximal base wall has integer length at most2: length>=3 would contain
+two consecutive smooth integer points in different parity classes. Hence
+one wall contains at most one smooth lattice point, in particular at most
+one of a,b.
+An image of a smooth base mark can become interior only along a seam
+INTERIOR. It cannot be a seam endpoint, since section3 shows that every
+seam endpoint is a convex corner in each participating copy. One copy cannot
+interiorize a boundary mark. For two copies, t4=0, since four quadrants at
+that kind of junction require four distinct copy corners and no copy can
+place two of its corners at the same point. Equation E=m-1+t4 gives E=1.
+That unique seam contains at most one base mark, so it cannot interiorize
+preimages of both distinct marks. Therefore m>=3.
+Consequently W=m(w-4)+4+2t3>=3*(10-4)+4=22.
+No darkness premise is used: this is a geometric cost of the construction
+and the two marked interior preimages.
+
+7. Equality consequence
+If W=22, w>=10,m>=3 force m=3,w=10,t3=0. With only three copies t4=0,
+so E=2; the connected seam graph is a tree. Also t2=4 and no higher junction
+can identify seam endpoints. Thus equality lies back in the original tree,
+distinct-endpoint class. This does not classify all ten-wall parity bases
+or prove the known22 room is geometrically unique.
+
+8. Executed checks and provenance
+peer-replay.py is an isolated copy of the peer checker with ONLY its output
+filename redirected; the original ROOT resolves to this review directory.
+It writes peer-replay.json/log and leaves peer artifacts untouched. PASS.
+
+check.py is independently written, imports no peer code, and counts occupied
+quadrants, boundary connectivity, reflex/convex corners, whole seam runs,
+fold values, incidence identities, marked fibers and cycle ranks. It uses
+ONLY the three supplied whole-copy fixtures and nine supplied small bases.
+Results: known22 has22walls/9reflex/15cells/cycle0; shared24 has24walls/
+10reflex/15cells/cycle0, and every b preimage is smooth boundary; fourfold28
+has28walls/12reflex/20cells/cycle1. All identities and the half-unit fold
+mismatch pass. Counts agree with original and isolated peer receipts.
+Command: python3 -B .context/illumination-k4-codex/shared-seam-review/check.py
+No discovery room/ray/direction/word search, archived-certificate query,
+solver, external communication, subagent or source-control change occurred.
+
+9. Limits and handoff
+The theorem excludes beating22 by rearranging whole congruent copies of
+any parity base while retaining the same pointwise inverse-copy fold and
+strictly simple disk geometry. It does not cover different pieces, overlaps,
+other identifications, non-parity obstructions, or arbitrary orthogonal rooms.
+In particular it does not show every20-wall room illuminates, validate the
+separate Delta3/4 optical proofs, or establish historical novelty.
+No material correction requested. Recommend preserving these exact hypotheses
+if incorporated into a later manuscript; no manuscript edit is made here.

@@ -1,0 +1,51 @@
+Bounded triangular-cap continuation: actual connection recovered
+3 November 2026
+
+Result
+The prescribed16-wall four-cap room IS illuminated between its actual interior marks S=(0,0), T=(2,2). Retrieved the FIRST matching ALREADY SAVED certificate, not a newly discovered ray: k6-run/cases/I3_00_01_10-pair0/guards.jsonl line60, transformed (x,y)->(-y,x). File hash verified against the frozen full-replay manifest. Exact replay PASS with13reflections and no corner hits. No claim of shortest path or historical novelty.
+
+The path
+ S=(0,0)
+ (-2/11,-1)
+ (-6/11,1)
+ (-10/11,-1)
+ (-1,-1/2)
+ (-8/11,1)
+ (-4/11,-1)
+ (0,1)
+ (6/13,-20/13)
+ (0,-16/11)
+ (2/3,-4/3)
+ (14/9,32/9)
+ (2,40/11)
+ (22/13,48/13)
+ T=(2,2).
+Initial direction is(-2,-11). The first7reflections are on horizontal/vertical walls of the lower core. Next3are in the bottom cap; final3are in the top cap. The east and left caps are never entered or reflected from.
+
+Reusable hand rule: one branch, not a general cap theorem
+For the bottom triangular cap with vertices(0,-2),(0,-1),(1,-1), enter at(u,-1) with velocity(d,-1), where d>0 and 0<u<1-2d. This requires d<1/2. The three successive reflection points are
+ ((u+d)/(1+d),(u+d)/(1+d)-2),
+ (0,u+d-2),
+ ((u+d)/(1-d),(u+d)/(1-d)-2).
+Reflections are diagonal, vertical, diagonal, changing velocities
+ (d,-1) -> (-1,d) -> (1,d) -> (d,1).
+The ray exits the portal at(u+2d,-1). Thus on this branch the cap acts like a horizontal mirror one unit below the portal, with a lateral shift2d. Conditions are strict to exclude cap corners. Other incoming positions/directions have other branches or hit corners; no universal neutral-cap claim is made.
+For the top cap with vertices(1,3),(2,3),(2,4), enter(z,3) with velocity(d,1), where z>1 and z+2d<2. Three reflections give exit(z+2d,3) with velocity(d,-1).
+
+How the actual endpoints close
+Use a parameter d in(3/17,4/21). The seven lower-core bounces are
+ (-d,-1),(-3d,1),(-5d,-1),(-1,1/d-6),
+ (7d-2,1),(9d-2,-1),(11d-2,1).
+This interval lies inside(1/6,1/5), so the floor contacts are on the negative-x smooth portions, the left-wall hit has y in(-1,0), and all roof contacts lie below x=1. Neither unused cap is encountered.
+At the next bottom-cap entry u=13d-2, the three-bounce rule applies: 0<u<1-2d. Exit x=15d-2. The upward passage crosses y=1 at x=17d-2>1, avoiding the reflex corner, and enters the top cap at z=19d-2. Since z+2d=21d-2<2, its three-bounce rule applies. After exit and downward travel to height2, the x-coordinate is
+  x=22d-2.
+The actual target x=2 is attained at d=2/11, strictly inside the allowed interval. Substitution gives the saved witness exactly. The cap geometry therefore permits a full connection, not merely a return to an unspecified source lift or a corner.
+
+Verification and extension scope
+verify.py replays that ONE path using the existing independently written exact checker: each segment's traversed canonical triangles, every specular contact, complete local fan forcing smoothness, required/forbidden tile consistency, and interior endpoint stars. All pass. It also separately checks each rational point against the hand parameter formulas. This is not an independent second implementation of our older checker, but it is independent of the peer fixed-geometry script and of the guard producer.
+The physical path yields a conditional implication requiring16specified tiles present and7specified tiles absent, with actual endpoint stars present. Those lists are saved in verify.json. Arbitrary additional triangles can violate an absence condition and destroy this path. Thus this is NOT a proof for every completion of the three-star support, nor a replacement for I2/I3 exclusions.
+The old one-bounce path was obstructed by the cap; this different saved path uses cap reflections to reach T. The correct scope is that attaching a triangle need not preserve darkness or terminate every prospective connection. This confirms the fixed model is lit, as the existing restricted theorem already implied.
+
+Coordination and stopping criterion
+Found peer restricted-thread cap-continuation claim after this lookup began; informed peer immediately. This thread owns only the13-reflection replay and hand interpretation. The peer owns broader completion/generalization. No duplicate long run, new guard generation, room/ray/direction/word discovery, solver, external message or universal-goal resumption.
+Bounded criterion met: actual fixed S/T connection verified and its cap mechanism explained. Stop here rather than turn the parameter calculation into a new trajectory search.

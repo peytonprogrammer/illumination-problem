@@ -1,0 +1,116 @@
+# Review of Section 26.12 and the combined opposite-pocket consequence
+
+**Verdict:**
+- **26.12 fixed construction: ACCEPT.** This is scoped to its stated hypotheses and the one rawW26 fixture.
+- **Combined connected-H opposite-pocket consequence through W26: CONDITIONAL.** It depends on 26.11 being accepted, and needs the three corrections in section 6.
+
+Everything below was checked by hand in exact arithmetic. I did not run the checker. Its `a.segment`, `a.bounce` and `geom.check` calls go into external modules, so I verified their content independently where it matters.
+
+## 1. Fixture (rawW26)
+
+Decoding the fans with the given ring:
+
+| Fan | Tiles | Portal |
+|---|---|---|
+| (0,0) 0,8 and (4,0) 0,8 | squares [-1,1]² and [3,5]×[-1,1] | n/a |
+| M (2,0) 0,4 | upper half [1,3]×[0,1] | n/a |
+| N (2,2) 5,1 | triangle (2,2),(1,1),(2,1) | y=1, 1<x<2 (left) |
+| (6,0) 4,2 | rectangle [5,6]×[-1,0] | x=5, −1<y<0 |
+| pocket (4,−2) 1,1 | triangle (4,−2),(5,−1),(4,−1) | y=−1, 4<x<5 |
+| upper (4,2) 4,2 | square [3,4]×[1,2] | y=1, 3<x<4 (left) |
+| S-side leaves | match 26.11's list | n/a |
+
+- **Tile count:** 8+8+4+1+2+1+2+1+1+1 = 29. With r=2 (the rectangle and the square), W = 24+r = 26, consistent with 26.7.
+- **Sector spot-checks (units of 45°):**
+  - (3,1) = M 2 + T 2 + square 2 = 6
+  - (4,1) = 4+2 = 6
+  - (2,1) = M 4 + N 2 = 6
+  - (1,1) = S 2 + M 2 + N 1 = 5
+  - (5,0) = 4+2 = 6
+  - (4,−1) = 4+2 = 6
+  - (5,−1) = T 2 + rectangle 2 + pocket 1 = 5
+  - (3,2) = 2, (5,1) = 2, (3,−1) = 2
+  - (0,−1) = 6, (±1,−1) = 3
+
+  All agree with the receipt, and there are no smooth 180° B/C points.
+- **Changes from 26.11's W25 list:** only the upper fan changes, from (4,2),5,1 to (4,2),4,2. This is as claimed.
+
+## 2. Path and endpoints
+
+**First half (unchanged from 26.11).**
+- S→(7/3,1)→(6,−4/7)→B with velocities (7,3), (7,−3), (−7,−3) and durations 7/21 + 11/21 + 3/21 = 1.
+- Hit (7/3,1) is on the wall y=1, 2<x<3. It is a wall because N's tiles lie in x≤2 and the upper portal is 3<x<4.
+- The path crosses x=3 at y=5/7, an interior M|T portal.
+- It crosses x=5 at y=−1/7, inside the rectangle portal.
+- Hit (6,−4/7) is interior to the rectangle's right wall.
+- Prefix V₆ then H₁ maps B to (7,−1) and then (7,3). So B′=(7,3)=w, which is primitive.
+
+**Second half.**
+
+| Segment | Duration | Check |
+|---|---|---|
+| B→(4,−10/7), v=(−7,−3) | 1/7 | x−y falls below 6, so it enters the pocket; interior of x=4, −2<y<−1 |
+| →(22/5,−8/5), v=(7,−3) | 2/35 | x−y=6 with 4<x<5, interior of diagonal; reflects (7,−3) to (−3,7) |
+| →(3,5/3), v=(−3,7) | 7/15 | exits pocket at (29/7,−1); crosses y=0 at x=26/7; enters square at (23/7,1); interior of x=3, 1<y<2 |
+| →(22/7,2), v=(3,7) | 1/21 | interior of y=2, 3<x<4 |
+| →T, v=(3,−7) | 2/7 | exits square at (25/7,1); reaches ACTUAL T |
+
+- Durations: (15+6+49+5+30)/105 = 1.
+- **Wall vs portal:**
+  - x=3, 1<y<2 is a wall, because [2,3]×[1,2] is empty: N-left tiles satisfy x≤2, and no other listed fan reaches it.
+  - y=2, 3<x<4 is a wall.
+  - The pocket's flanking segments y=−1, 3<x<4 (T bottom) and y=−1, 5<x<6 (rectangle bottom) are walls, so the slide is well-posed.
+- **Single corner:** I parametrized all eight open segments. None contains a lattice point; the only integer-coordinate crossings found are the noninteger-partner points listed above. All segments stay inside S, M, T, the rectangle, the pocket or the square.
+- **π-legality at B:** the link is [0,5π/4]. With α=atan(3/7)<π/4, the source germ is α and the outgoing germ is π+α, both inside the link. That gives an embedded π-sector in one physical copy, with no flank reflection.
+
+## 3. Moving-mirror derivatives and defect
+
+The moving mirrors and the rates of their translations:
+- x=4+t, with b′=(2,0)
+- x−y=6+t, given by (x,y)↦(y+6+t, x−6−t), with b′=(1,−1)
+
+Formula (1) with p=2:
+- L₂ = R_H1·R_V6 = −I, contributing −I·(2,0) = (−2,0).
+- L₃ = −I·diag(−1,1) = diag(1,−1), contributing (1,1).
+- The target velocity is therefore (−1,1).
+
+Corner velocity: L_p·u = −I·(1,0) = (−1,0).
+
+Defect: Q = (−1,1) − 2(−1,0) = (1,1), and det((7,3),(1,1)) = 4.
+
+As a direct check, (2,4) develops to (10+t,−4−t), then (−2+t,−4−t), then (14−t,−4−t), then (14−t,6+t). B′(t) = (7−t,3). Both agree with the formula, and Formula (2) reproduces Q=(1,1).
+
+w is non-axial and non-diagonal. Q is diagonal-parallel and nonzero.
+
+## 4. Target-specific equality
+
+- D₊V₅ acts as (x,y)↦(y+2, 8−x), with linear part a rotation by −90°.
+- V₃H₂ acts as (x,y)↦(6−x, 4−y), with linear part −I.
+
+These are different maps. Setting them equal gives x+y=4 and x−y=4, whose unique solution is (4,0)=T. Both send T to (2,4), and neither depends on t. The equality is correctly stated as target-specific, not whole-plane.
+
+## 5. Case split
+
+- **Opposite pocket at (4,−2):**
+  - B=(3,−1) gives only 135°, so it is not literal.
+  - B=(5,−1) needs 90° from the (6,0) leaf.
+  - m=1 there gives 180°, which is forbidden.
+  - The other m=2 fan with ring 3–5 has two portals and makes (5,0) an interior C point, which is forbidden.
+  - So the leaf is exactly the rectangle [5,6]×[−1,0]. This is correct.
+- **N-right (26.8):** that event uses only y=1, 1<x<2, the rectangle, T's walls, and the fixed walls y=−1, 3<x<4 and x=3, −1<y<0. It is independent of the upper leaf's m and of the S-side leaves, so it holds at W26.
+- **N-left:** rawness at (3,1) forces the upper leaf onto its left portal. Then m=1 is handled by 26.11 and m=2 by 26.12.
+
+## 6. Required corrections
+
+1. **Uniqueness of the m=2 shape.** State why the left-portal m=2 upper leaf must be [3,4]×[1,2]. The only other m=2 fan containing the left portal triangle is ring 5–7. That fan has both portals, which makes (4,1) a 360° interior C point, and that is excluded.
+2. **26.11 at W26.** 26.11's own consequence is stated only for W≤25. The combined claim needs its m=1 event at W26 as well, where the second m=2 leaf could be N's left square or an S-side leaf. Add a sentence saying the 26.11 event uses only:
+   - y=1, 2<x<3
+   - the rectangle
+   - the pocket
+   - the upper triangle
+   - x=5, 0<y<1
+
+   none of which change in those cases. I checked this and it holds. In 26.12 itself r=2 is saturated, so every other leaf is m=1.
+3. **Dependency labelling.** Mark the combined consequence as conditional on 26.11's pending review and on the 26.7 tree. For the symmetry and endpoint-exchange step, note that the reversed event's defect is −2L_p-transported. Nonzero defect and |det|=4 survive, but the source-frame expression changes.
+
+No universal or unbounded theorem follows from this. End pockets, disconnected H and W>26 remain open.

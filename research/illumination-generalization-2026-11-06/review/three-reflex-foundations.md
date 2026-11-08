@@ -1,0 +1,15 @@
+# One-time three-reflex foundations audit
+
+ACCEPT the eight-gap turn partition and the previously accepted r<=2/W<=8 base at their exact scopes. This prerequisite audit is not new optical progress.
+
+For a CCW strictly simple orthogonal polygon with ten maximal walls, total signed quarter-turn is4. Thus c-r=4 and c+r=10 imply r=3,c=7. The positive cyclic edge gaps between successive reflexes sum to10. Three-gap rotations and reversal generate S3, so the orbit is determined by the sorted positive triple. Independently enumerate the36 ordered positive compositions of10 into three parts; their sorted representatives are exactly the eight prescribed types. Counting10 choices of a starting labelled vertex and dividing by the three distinguished reflex choices gives10 or20 labelled words per type and120 in total. This is only a turn-word partition: metric closure, positive lengths, simplicity and realizability remain separate geometric requirements.
+
+The complete eight-wall optical theorem is independently accepted for ALL real metrics and ALL distinct actual real interior pairs in a finite strictly simple orthogonal polygon with <=8 maximal walls. All nine frozen source hashes in the final independent review, the independent review hand-proof hash, and the final acceptance receipt source hashes pass. The final budget-handoff superseding section explicitly closes the earlier staircase frontier. Historical 'unreviewed' wording in the frozen candidate and earlier frontier notes is superseded by the matching final independent acceptance, not silently edited.
+
+This base covers rectangles, L, U, unequal-floor T, offset corridor and staircase; diagonal-wall shapes and W>=10 are outside that corollary. An arbitrary eight-wall subroom inside a ten-wall room is not automatically an optical reduction. A base path might reflect at an artificial cut, and a mark on that cut need not be interior to the selected subroom. Any reuse must either keep every actual reflection wall valid in the ORIGINAL room or prove a new existential transfer with endpoint/corner guards.
+
+The accepted axis-only obstruction has ten walls, three reflexes and gap type(2,2,6), as independently reconstructed from its band boundary. It excludes every path using only x=0,y=0 for its specified actual A marks. It gives no darkness verdict and must not be repeated as a new theorem.
+
+The accepted C1-nonavailability spiral has gap type(1,1,8). Uniform scaling by2 preserves its strict simplicity and produces actual even-even stress marks S=(2,6), T=(14,2), both strictly interior. This placement uses the lower left arm and inner portion of the lower right arm, requiring the spiral's intervening corridors. It is a prescribed scaled existing control, not a newly searched room. No physical darkness or new full-r3 illumination assertion follows from this geometry check.
+
+All eight r3 types and their arbitrary metrics/endpoints remain uncovered by a NEW optical theorem at this checkpoint. The next task is the author's quantified original-room optical candidate; catalogue completion alone does not advance that theorem.

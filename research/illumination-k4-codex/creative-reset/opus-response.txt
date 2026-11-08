@@ -1,0 +1,72 @@
+# Assessment: the inverse reflection quotient is a seed construction
+
+**Bottom line.** Under the global-halfturn mechanism, the inverse quotient does not produce a new class of rooms. The deduction below shows that it places both dark points over one even mirror corner of a seed. That reduces the construction to seed tiling. Two narrow gaps remain.
+
+## 1. Sharpest fatal issue
+
+**Setup.**
+- X is a translation surface and G is a finite group of affine automorphisms, with room P = X/G.
+- Fix a lift p̃ of p and a lift q̃ of q.
+- Assume each pair (p̃, g·q̃), for g ∈ G, is obstructed by an affine involution h_g.
+- Each h_g has derivative −I, satisfies h_g(p̃) = g·q̃, and has fixed set inside the marked points.
+
+**Lemma (deduction).** Let j_g = h_g⁻¹ · g · h_e.
+- j_g fixes p̃ and has derivative D(g).
+- If D(g) is a reflection, then j_g² has derivative I and fixes the regular point p̃. On a connected X, that makes j_g² the identity.
+- So j_g is an involution, and near p̃ it fixes a segment in the mirror direction.
+
+**Consequences (deductions).**
+- **p is an isolated crossing point.** An orthogonal G contains elements with horizontal and with vertical reflection derivatives. So p̃ is an isolated intersection of two transverse fixed segments. This matches the finiteness you cite and explains why the continuum x ↦ ι(x) dies.
+- **p sits at an even mirror corner of a seed.** Let K = ⟨G, h_g⟩. For genus ≥ 2, K is finite, because derivatives lie in a finite group and translation automorphisms form a finite group. The stabilizer of p̃ in K contains a Klein four-group. So p maps to an even-order mirror corner of S = X/K.
+- **p and q have the same image.** The element h_e ∈ K maps p̃ to q̃, so p and q map to the same point of S. Both dark points are A marks over one seed vertex.
+- **No transparent halfturn centers are allowed.** Every fixed point of every h_g must be a room corner, so this mechanism permits zero transparent halfturn centers. That's stricter than your 45-degree class, which allows up to 6 transparent non-A points.
+
+**Conclusion.** The inverse quotient equals a seed construction with seed S. The only new freedom is that S can be something other than a triangle, and S can also carry interior cone points. Earlier I considered limiting S to the 17 Euclidean orbifolds. That fails, because χ(X) < 0 makes S a flat orbifold with genuine cone singularities.
+
+**Finite hand test.** For any proposed triple (X, G, {h_g}), write out the |G| maps j_g.
+- If a j_g with reflection derivative fixes p̃, compute S = X/K by orbifold Riemann–Hurwitz.
+- If S is a triangle with A = π/n, your screen applies.
+- If you can't exhibit all |G| halfturns, then halfturns aren't what makes the pair dark. In that case the construction has no proof route.
+
+## 2. Mechanisms
+
+### M1: a non-triangle seed with a right-angle A corner
+
+**Idea.** Use a rational seed S that is not a triangle and has A = π/2 (n = 2). If a triangle-style incidence count transfers to S, the I-term costs about 2 walls per interior mark instead of 2n − 2. That transfer is a conjecture.
+
+**Missing step.** You need midpoint closure in the unfolding X_S. Every A-to-A′ segment's midpoint must develop onto an S-vertex image. Each such vertex type must be either a room corner or an A-type point that allows descent.
+
+**Strongest objection.** The two n = 2 cases you already know don't help:
+- **Rectangle.** Closure holds, since the A-orbit is 2ℤ² and the midpoints are ℤ². However, orthogonal integer rooms already sit inside the 45-degree lattice class.
+- **Right angle of the 45-degree triangle.** Closure fails. The midpoint of (1,0) and (0,1) is (½,½), which isn't a vertex.
+
+I conjecture that most non-rectangular seeds with A = π/2 fail the same way, through half-lattice offsets.
+
+**Bounded hand test.**
+1. Take the trapezoid with vertices (0,0), (2,0), (1,1), (0,1). Its angles are π/2, π/4, 3π/4, π/2, and A = (0,0).
+2. Generate A-images through three reflection generations in the developing plane. The first images are (0,2) and (2,2), with midpoints (0,1) and (1,1). Both midpoints are vertices.
+3. Find the first midpoint that isn't a vertex. One counterexample kills this seed.
+
+**Comparison with retired routes.** This route isn't retired, because your screen covered triangle seeds only.
+
+### M2: the π/6 seed with transparent right-angle images
+
+**Idea.** In the 30-60-90 tiling, the A-orbit (6-fold centers) is a lattice L. The midpoints of A-orbit pairs lie in L/2, and those points are 6-fold or 2-fold centers. The 2-fold centers are right-angle vertex images. So midpoint closure holds, in the same way as the 45-degree case (deduction).
+
+Your screen, W ≥ 4n − 2 = 22, assumed that every non-A vertex is a true corner. Transparent right-angle images fall outside that assumption.
+
+**Missing step.** Redo the disk-incidence identity with t transparent non-A vertices.
+
+**Strongest objection.** Suppose the (2n − 2)·I term comes only from turning angle at the A marks. Then transparent points don't change it, and n = 6 stays at 22 or more. Even if the bound drops, each transparent midpoint needs its own exclusion. That's the same open problem as your 45-degree exceptions.
+
+**Bounded hand test.** Take one interior π/6 mark and one adjacent transparent right-angle image. Recompute the local incidence and check whether the I-coefficient changes.
+
+**Comparison with retired routes.** This is not the naive seed change you already screened, because the true-corner premise is dropped. It also isn't a direction-list or search argument.
+
+## 3. Recommended next move
+
+Do the M2 incidence recount. It takes about one page and has two clean outcomes:
+- **The I-term ignores transparent vertices.** Then n = 6 is closed at W ≥ 22, and with the lemma in section 1, the inverse-quotient line closes as well.
+- **The I-term drops.** Then you have a specific π/6 window below 22 walls. That window carries a stated exclusion obligation for each transparent midpoint.
+
+Separately, the lemma in section 1 is close to a complete, publishable negative statement. It still needs one written check: that K is finite when X has genus 1.

@@ -1,0 +1,93 @@
+# Review: k = 4 periodicity strengthening
+
+## Verdict
+
+The conclusion is correct: every lift of S and every lift of T is M-periodic. The last step is also not a vacuous restatement.
+
+The proposed justification, however, is not adequate as written. It relies on "the natural family of canonical minimal covers over the generic part of M". That family really does jump on M. For example, in M = H(2), square-tiled surfaces acquire torus quotients that generic surfaces lack. So the argument cannot simply transport a generic marking to X.
+
+The fix is to avoid the minimal-cover family altogether. Instead, use a closed GL₂ℝ-invariant fold condition whose fiber over the given X is computed directly. The only facts used about X are that X is not a torus cover and that M is the orbit closure of X. Below is a proof at the level of detail I think is needed.
+
+## 1. Earlier steps: confirmed, with small notes
+
+- **r⁴ = id.** We have r⁴(πz) = πz for all z and π is surjective, so r⁴ = id. Since r′ = i, the order is exactly 4, and s = r² has derivative −1. Lemma 3.3 says there is at most one negating involution on the minimal Y, so q is the quotient by s. ✓
+- **Case A.** Suppose some lift x₀ is periodic. All-to-all blocking plus the "one periodic ⇒ both" part of the proof of Thm 3.6 gives two things:
+  - every T-lift is periodic (pair each with x₀);
+  - every S-lift is periodic (pair each with any periodic T-lift). ✓
+- **Case B.** Suppose no lift is periodic. Every pair (ρᵏx, y) is finitely blocked and non-periodic, so qπρᵏx = qπy, which means q(rᵏp) = q(πy) for all k. The fibers of q have size ≤ 2, so the r-orbit of p has size ≤ 2, so r²p = p. ✓
+
+  Note that this absorbs Thm 3.10's separate exception: points fixed by a power of r are s-fixed, and those are exactly what the lemma below handles.
+- **Blocking hypotheses for Thm 3.6.**
+  - The blockers are the regular corner lifts, a finite set.
+  - The blockers are disjoint from the S- and T-lifts, because S and T are interior points.
+  - The S- and T-lifts are regular points.
+  - Every segment from an S-lift to a T-lift projects to a physical S→T path. Darkness means that path hits a corner, so the segment meets a corner lift. Singular lifts are excluded because surface geodesics do not pass through zeros.
+
+  So "all lifts to all lifts, finitely blocked by the regular corner lifts" is justified. ✓
+
+## 2. Lemma
+
+**Lemma.** Let X be a non-torus-cover surface with M = closure of GL₂ℝ·X. Let π: X→Y be the minimal translation quotient, of degree d. Let s be the negating involution of Y, if it exists. Then every regular x ∈ π⁻¹(Fix s) is M-periodic, meaning the orbit closure M′ of (X,x) in H(κ,0) has dimension dim M.
+
+The proof has four steps.
+
+### (a) The fold locus N
+
+Define N as the set of all (X′,x′) ∈ H(κ,0) with X′ ∈ M such that there exists a half-translation cover f: X′→(Q,q) satisfying:
+- f*q = ω′²,
+- deg f = 2d, where d is fixed as deg π **at X**,
+- f(x′+u) = f(x′−u) for small u in period charts at x′ (a "fold" at x′).
+
+N is GL₂ℝ-invariant, because −I is central, so g·f is again a half-translation cover and still folds at x′.
+
+Note that "minimal" is deliberately absent from this definition. Minimality is not a closed condition, and that is precisely the jump the original step ran into.
+
+### (b) The fiber of N over X is finite
+
+Take any such f on X itself. Because f*q has the global square root ω, f lifts to the orientation double cover Q̂ of Q, or else f is already a translation cover of degree 2d.
+
+- **Translation-cover case.** By Möller's factorization (the content of §3.1), every translation quotient of X maps onto Y. So d = deg(X→Y) would be divisible by 2d, which is impossible.
+- **Lifted case.** X→Q̂ is a translation cover of degree d. By factorization Q̂→Y has degree 1, so Q̂ = Y. The deck involution of Q̂→Q negates ω_Y, so it equals s by uniqueness. Hence f = q∘π.
+
+At a regular x′, π is a local translation. So qπ folds at x′ iff s(πx′+u) = πx′−u for small u, i.e. iff πx′ ∈ Fix s. Therefore the fiber N_X equals the set of regular points of π⁻¹(Fix s), which is finite.
+
+### (c) N is closed in H(κ,0)
+
+Take a sequence (Xₙ,xₙ) → (X′,x′) with xₙ ∈ N, folds fₙ, and x′ regular.
+
+1. Choose marking maps φₙ: X′→Xₙ that are (1+εₙ)-bi-Lipschitz, affine in period charts away from the zeros, and satisfy φₙ(x′) = xₙ.
+2. Pull back the relations Rₙ = {(z,w) : fₙφₙz = fₙφₙw}. These are closed subsets of X′×X′. Pass to a Hausdorff limit R.
+3. Fix a pair (z,w) of regular points that avoids the finitely many limit fold points. Near it, Rₙ consists of 2d branches, counted with multiplicity, each the graph of a map u ↦ ±u + c. The number of fold points is bounded by Gauss–Bonnet, since the cone data of Qₙ is bounded by that of X.
+4. **Branches do not merge in the limit.** Suppose two same-sign branches have offsets cₙ ≠ c′ₙ with v = cₙ − c′ₙ → 0. By the identity theorem, fₙ(w′) = fₙ(w′+v) on B(w, r), where r is a fixed radius from the distance to zeros. Iterating gives two incompatible area bounds on fₙ(B(w, r/4)):
+   - it lies in the image of a strip, so its area is ≤ C·r·|v| → 0;
+   - fₙ has degree 2d, so its area is ≥ area(B)/2d > 0.
+
+   This is a contradiction. Opposite-sign branches meet in at most one point, so they cannot merge either. Two nearby folds compose to a small translation and are excluded by the same estimate.
+5. So R is locally a 2d-sheeted half-translation relation off a finite set.
+   - Riemann extension (Remmert–Stein) extends it across the finite set.
+   - Transitivity in the limit follows by transporting along the converging local isometry branches.
+   - X′/R is therefore a compact half-translation surface Q, and f: X′→Q has degree 2d.
+6. **The fold at x′ survives.** The relation fₙ(xₙ+u) = fₙ(xₙ−u) holds on B(xₙ, r), with r uniform because x′ is regular. In the limit, f folds at x′.
+
+This area estimate is the crux. It is exactly what rules out the danger that the image pole f(x′) collides with another pole. Any such collision would lift to a nearby second fold, and then to a small invariant translation, which the area bound forbids.
+
+### (d) Dimension argument
+
+M′ is closed and invariant, and contains (X,x), so M′ ⊂ N. Write P for the preimage of M in H(κ,0). P is connected, with fibers X′∖Z.
+
+The standard dichotomy gives dim M ≤ dim M′ ≤ dim M + 1. Suppose dim M′ = dim M + 1. Then M′ is locally a linear subspace of P of full dimension, so it is open and closed in P, so M′ = P. That forces N_X ⊇ X∖Z, contradicting the finiteness in (b). Hence dim M′ = dim M. ∎
+
+With the lemma in hand, Case B contradicts itself, so Case A holds: **all lifts of S and T are M-periodic.**
+
+## 3. Exact dependencies to cite or verify
+
+1. **Möller's factorization**, in the strong form: every translation quotient of a non-torus-cover X maps onto Y_min. Uniqueness of Y_min alone is not enough. Please confirm that A-W §3.1 states, or cites, this strong form.
+2. **EMM for marked-point strata**: orbit closures are affine invariant submanifolds.
+3. **The dimension dichotomy** dim M ≤ dim M′ ≤ dim M + 1. This is standard and underlies the definition of periodicity in A-W.
+4. **The (c) compactness argument.** It is routine but should be written out. It does **not** need the minimal-cover family to extend over M, nor d to be constant on M.
+
+## 4. Scope
+
+- This narrows the remaining case to "S and T lifts are all periodic". That case is exactly what A-W's Remark 3.17 says can genuinely occur: periodic points that block each other, such as preimages of Fix s.
+- It says nothing about classifying periodic points.
+- It says nothing about whether such a dark configuration exists, and nothing beyond k = 4.

@@ -1,0 +1,174 @@
+Independently adversarially check this NEW conditional reduction, by hand with no tools/discovery. Verify reflected abstract double, degree-two diagonal-bit translation cover and all corner local monodromies, connectedness/sole-D case, actual source/target labels, primitive and physical-corner avoidance, embedded intrinsic pi-sector under projection, and final odd-defect transfer. Challenge any hidden replacement of a simple polygon by an overlapping development or of actual labels by arbitrary lifts. Accepted prior inputs Section4 mod2 identity and Section5 sign-transfer are supplied below. If a doubled event can project through a forbidden original corner that became smooth/interior in the double, identify it. State exact conditions and gaps, not broad existence.
+
+# A diagonal double turns seed existence into pocket detection
+
+[in progress] Conditional structural bridge; existence in the doubled object
+is unproved. This is not a new room, ray, word, direction or orbit search.
+
+## 1. The abstract reflected double
+
+Let P be the specified raw simple canonical room and let D be its literal
+pocket's moving diagonal wall, with endpoint angles A=pi/4 and B=5pi/4.
+Take two copies P0,P1 and identify their D edges by the mirror reflection.
+Equivalently, develop P0 as P and P1 as its reflected image in D, retaining
+both as separate sheets if their planar developments overlap. Call the
+result P_D. Gluing two topological disks along a full boundary interval
+gives a disk. Its metric is flat away from the usual boundary vertices.
+
+All remaining boundary angles are those of P, appearing twice, except
+
+    angle(A_D)=pi/2,       angle(B_D)=5pi/2=450degrees.
+
+There is thus exactly one boundary angle exceeding2pi. P_D is an abstract
+flat disk with boundary; it cannot be an embedded simple Euclidean polygon
+near B_D. In particular, a theorem requiring a simple planar room cannot
+be applied to it by ignoring its overlapping planar development.
+
+The diagonal edge has no integer point in its relative interior. All
+other non-A integer points remain nonsmooth boundary vertices; the seam
+endpoints remain corners. The two marked points we select are actual S
+in P0 and actual reflected T in P1. They remain regular interior points.
+In the reflected development the latter coordinate is r_D(T), which is
+still an even-even A point. We never replace T by another physical label.
+
+## 2. Its eight-copy unfolding is the diagonal-bit cover
+
+Describe the eight-copy unfolding X of P by copy labels g in D4. Define
+X_D from sixteen copies (g,b), b in F2, using the original gluings, but
+change b by1 exactly when the crossed physical wall is D. All other
+walls leave b fixed. Forgetting b gives a degree-two covering of X away
+from its corner lifts.
+
+At either endpoint of D, the two adjacent reflections generate D4. A
+small loop around its full lifted cone crosses the D seam four times,
+an even number. There is therefore no local branch at either endpoint.
+At all other corners there is no toggled seam. The map X_D->X extends
+as an UNRAMIFIED degree-two local translation covering, possibly with
+two connected components.
+
+In the unfolding of P_D, its second half in a frame g has original room
+frame g*r_D. Set its bit to1 and the first half's bit to0. The internal
+D seam then changes (h,b) to(h*r_D,b+1), while every external original
+wall E changes h to h*r_E and keeps the bit. This is precisely the
+sixteen-copy construction above. It is an intrinsic flat construction,
+not an embedding of P_D into the plane.
+
+If P has another diagonal wall, Section8's prescribed odd closed crossing
+loop makes X_D connected. If D is the only diagonal wall, the bit equals
+the endpoint copy-colour difference and X_D splits into two copies of X.
+Then P_D has only axis wall directions and its minimal unfolding uses
+four copies; the eight-copy construction is the corresponding redundant
+two-component unfolding. This exceptional case must not be silently
+called a connected sixteen-copy surface. In either case the component
+containing an initial source lift has appropriate lifts of the selected
+actual target in P1, by connectedness of the abstract disk P_D.
+
+## 3. A cross-copy seed would detect the original slide
+
+Suppose P_D admits a legal one-corner midpoint event from actual S in P0
+to actual reflected T in P1. Require equal primitive integer developed
+halves w, no other physical corner, and an embedded intrinsic pi-sector
+in its minimal unfolding. Use the bit0 initial source lift.
+
+Its target lies in a bit1 original-P copy. Hence its projected original
+P itinerary crosses D an odd number of times. At a corner on a seam,
+count the crossings on a push through the selected labeled pi-sector,
+exactly as in the accepted Section8 bit convention.
+
+The covering X_D->X is locally an isometry also at the lifted corners.
+It preserves the cone angle and the distinct angular germs of every
+embedded pi-sector. Projection therefore gives a legal one-corner event
+between ACTUAL S and ACTUAL T on X, retaining the same primitive halves.
+A sector that passes through the internal D seam merely projects to the
+corresponding fixed-flank or moving-flank continuation in the original
+room; it is not permission to substitute a3pi continuation.
+
+By accepted Section4's parity identity, the full original pocket-slide
+defect satisfies, in the integer source-copy frame,
+
+    Q_x(eta) = (# selected D factors) mod2 =1mod2.
+
+Thus Q(eta)!=0. Ordinary moving-mirror contributions and actual corner
+motion are included in that identity. It is not just a corner-velocity
+calculation. Section5's axis sign transfer then supplies an admissible
+actual event with nonzero opening determinant if the first event's
+nonzero vector happens to be parallel to w; it preserves Q and actual
+labels and avoids the finitely many wall directions. This last step is
+needed: an odd defect alone does not assert det(w,Q)!=0 for that first
+representative.
+
+## 4. Scope and value of the reduction
+
+A seed theorem for these particular doubled abstract disks would imply
+universal detection for the original literal pockets, rather than seed
+existence alone. It would simultaneously supply the required endpoint
+and an odd diagonal count. This is a sufficient extension, not a claim
+that every detecting event is odd or arises this way.
+
+The open obligation is substantial: extend actual seed existence to a
+flat topological disk whose one boundary corner has angle450degrees.
+Neither planarity of the original room, the nonzero bit character,
+ordinary topological connectivity, nor gonality supplies that seed.
+The redundant unfolding in the sole-diagonal case also needs the minimal
+component convention. No existing simple-room theorem has been extended
+here, and no in-class counterexample to the original goal is asserted.
+
+PRIOR PARITY/SIGN INPUTS
+## 4. A stronger cancellation-resistant parity criterion
+
+Equation (2) is integral. Reduce it coordinatewise modulo 2. Every D4 matrix permutes coordinates and changes signs, so it fixes (1,1) modulo 2. Consequently
+
+    L_j a_D = (1,1) mod 2,
+    L_j a_H = (0,0) mod 2,
+    2 L_p v_c = (0,0) mod 2.
+
+The sign distinguishing the two halves also disappears modulo 2. Thus, for EVERY admissible midpoint event in this family,
+
+    Q(eta) = (# hits on this moving diagonal D mod 2) (1,1) mod 2.      (3)
+
+In particular:
+
+**Odd-word criterion.** Any admissible actual S-to-T midpoint corner event whose limiting development word contains an ODD number of factors for the pocket's moving diagonal has Q(eta) nonzero (vector detection). It cannot be canceled by other pocket excursions, moving-horizontal-wall hits, transport through the rest of the room, or the motion of its sole corner.
+
+Count every diagonal factor in the chosen limiting development word, including any copy transition through the selected pi-sector at the corner. Such a corner transition is not a legal physical reflection at the vertex. If the corner lies outside the pocket, every counted diagonal factor is an ordinary transverse wall-interior hit. Equivalent coincident split positions must retain the same full development and the corresponding corner derivative in (2); (3) does not authorize arbitrary edits to the word.
+
+For a complete excursion the four bottom/top exit maps in the table have odd diagonal-hit count. The two right-side exit maps have even count. This gives a sufficient condition even when many excursions occur: an odd total number of bottom/top exits in these developed pocket squares guarantees detection, provided the corner lies outside the pocket so every encounter is complete.
+
+Nonzero vector defect alone need not make the ORIGINAL scalar row nonzero: w can be parallel to Q(eta). The axis-shear argument in Section 5 supplies the sign step rather than assuming it.
+
+D-parity is a well-defined character of the local dihedral group: D^2, H^2 and (DH)^4 all have even D count. Equivalently, it records whether R_G swaps the coordinate axes. Thus the odd/even counts assigned to the six maps are independent of their chronological representation.
+
+The converse is false locally: DHDH has even diagonal count but nonzero derivative (0,-2). Even-hit actual events require the full vector sum (2); they are not certified blind by parity.
+
+## 5. Conditional two-sided opening, without an additional sign hypothesis
+
+For the raw parity room, all continued base axis-core periods are constant under this slide. Hence Q(g eta)=Q(eta) for every g in the group generated by the two selected axis shears, as proved in `corner-rigidity.md`. Their shear parameters a,b are positive nonzero integers. Their affine maps fix the physical endpoint labels and preserve the selected intrinsic pi-sector.
+
+Suppose an admissible odd-word event has half-vector w=(p,q), defect v=Q(eta), and side sigma. Both components v_x,v_y are odd integers and therefore nonzero. Under the horizontal shear (x,y)->(x+a n y,y), its event row is
+
+    g_h,n = -sigma [p v_y-q v_x+n a q v_y].
+
+If q is nonzero, this has nonzero slope in n. Arbitrarily large positive and negative integer n produce rows of opposite signs. Only finitely many such powers are wall-parallel. If q=0, p is nonzero; the vertical powers give
+
+    g_v,n = -sigma [p v_y-n b p v_x],
+
+again with nonzero slope. Choose one admissible integer power for each sign. The reviewed local opening proposition then gives a legal actual S-to-T connection for every sufficiently small positive slide and another for every sufficiently small negative slide. The two neighborhoods may have different radii; take their minimum.
+
+Thus existence of ONE actual admissible odd-word seed would prove two-sided local destruction of darkness for this slide. It would not require proving the initial event's scalar determinant nonzero or favorable. This is a conditional consequence, not an event-existence proof. No new powers or optical paths are enumerated here.
+
+More generally, on ANY variation for which Q is zero on the axis-core span, nonzero v suffices without a parity condition. If q v_y or p v_x is nonzero, use the corresponding formula above. If both vanish while w,v are nonzero, the only possibilities are w vertical/v horizontal or w horizontal/v vertical. In the first case one horizontal shear makes p nonzero, then vertical powers give both signs; exchange axes in the second case. At most one preliminary shear is needed. The defect remains v throughout, and the intrinsic side remains sigma. Therefore vector seed detection on an axis-isoperiodic subspace is equivalent to signed separation by their two-shear orbits on that subspace. More precisely, for a linear subspace E of D0 let H_E be its intersection with the actual translation directions. Uniform scaling is not in D0 since the axis cores have nonzero periods. If the common vector-seed kernel on E equals H_E, take a linear complement E_0 to H_E. Compactness of the unit sphere in E_0 extracts a finite positively spanning family of orbit rows. For the independently parameterized fixed-mark pocket slides of Section 7, H_E is zero. This elementary restricted statement does not need the cylinder-mixing spectral argument used for general, non-isoperiodic variations.
+
+For clarity, the finite-family statement gives a uniform geometric neighborhood, not just a different interval for each direction. For each selected fixed word, the developed corner and target images are affine in delta. Its signed area is f_e(delta)=g_e(delta)+O(norm(delta)^2), with a uniform bound for that word. All noncorner crossing and vertex-avoidance conditions persist in a neighborhood; f_e<0 handles the sole corner as in the reviewed opening proposition. On the compact unit sphere, the finite rows have a margin c>0 such that some g_e(delta)<=-c norm(delta). With C the maximum of their quadratic bounds and epsilon the minimum of their legality neighborhoods, choose norm(delta)<min(epsilon,c/(2C)) (omit the second bound if C=0). The corresponding f_e is negative. This proves uniform local opening within E_0.
+
+## 8. A topological bit is available; straight event realization is the gap
+
+Let D_hat be the union of the lifts of this one moving diagonal wall in the eight-copy unfolding X. At both endpoints B_0,A_0, the adjacent mirror linear parts generate D4, so all eight sectors meet in one lift of that physical corner. Exactly four diagonal seam arcs meet there. Thus D_hat is a closed one-chain modulo2, and crossing it defines a character on closed paths. For a corner event, push its midpoint through the chosen pi-sector; its crossing count is precisely the diagonal-factor count in Section 4.
+
+There is an elementary dichotomy.
+
+*If this is the only physical diagonal wall*, colour copy g by 0 when g preserves the two coordinate-axis directions individually, and 1 when it swaps them. Axis-wall crossings preserve the colour; crossing this D wall changes it. Hence D_hat is the boundary modulo2 of the union of colour-0 copies. The bit of a path is determined by the colours of its endpoint copies. An odd actual S-to-T event would have to reach one of the four coordinate-swapped copies of T.
+
+*If another physical diagonal wall E exists*, its reflection linear part is either R_D or -R_D. In the first case the prescribed copy crossing sequence D,E returns to the original copy. In the second case D,E,H,V returns, where H is the pocket horizontal mirror and V is an available vertical wall of the attachment. Indeed R_D R_E is respectively I or -I, and R_H R_V=-I. Choose crossing points in the open walls, connect them by arbitrary interior paths in the successive copies, then return to the starting point in its copy. This is a closed topological path crossing D_hat exactly once, so D_hat is nonzero in homology modulo2. These interior connecting paths exist because P is a connected disk; they are NOT asserted straight billiard paths.
+
+In either case an odd continuous source-to-actual-target path exists. In the first case choose a swapped target copy; X is connected since R_D,R_H generate D4. In the second case append the odd closed path to any path to any chosen target lift if needed. Thus ordinary topological connectivity is not the missing obstruction. Replacing these paths by a straight midpoint connection through only one legal corner is an additional theorem and remains open.
+

@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "room": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "6",
+      "0"
+    ],
+    [
+      "6",
+      "3"
+    ],
+    [
+      "5",
+      "3"
+    ],
+    [
+      "5",
+      "4"
+    ],
+    [
+      "0",
+      "4"
+    ]
+  ],
+  "blocker": [
+    "3",
+    "4"
+  ],
+  "developed_core_period": [
+    "12",
+    "16"
+  ],
+  "minimum_squared_reflex_clearances": [
+    "5",
+    "1"
+  ],
+  "fixed_physical_controls": [
+    {
+      "source_core_parameter": "1/7",
+      "target_core_parameter": "3/8",
+      "source": [
+        "12/7",
+        "16/7"
+      ],
+      "target": [
+        "9/2",
+        "2"
+      ],
+      "source_torus_images": [
+        [
+          "2/7",
+          "2/7"
+        ],
+        [
+          "2/7",
+          "12/7"
+        ],
+        [
+          "12/7",
+          "2/7"
+        ],
+        [
+          "12/7",
+          "12/7"
+        ]
+      ],
+      "target_torus_images": [
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "3/2",
+          "0"
+        ]
+      ],
+      "blocker_torus_images": [
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "all_selected_core_arcs_blocked": true,
+      "torus_midpoint_for_any_lift": false,
+      "vertical_midpoint_residues_mod_two": [
+        "2/7",
+        "12/7"
+      ],
+      "ordinary_direct_bypass": true,
+      "bypass_reason": "Both marks are in convex open lower rectangle (0,6)x(0,3), disjoint from z."
+    },
+    {
+      "source_core_parameter": "2/5",
+      "target_core_parameter": "1/6",
+      "source": [
+        "24/5",
+        "8/5"
+      ],
+      "target": [
+        "2",
+        "8/3"
+      ],
+      "source_torus_images": [
+        [
+          "4/5",
+          "2/5"
+        ],
+        [
+          "4/5",
+          "8/5"
+        ],
+        [
+          "6/5",
+          "2/5"
+        ],
+        [
+          "6/5",
+          "8/5"
+        ]
+      ],
+      "target_torus_images": [
+        [
+          "0",
+          "2/3"
+        ],
+        [
+          "0",
+          "4/3"
+        ]
+      ],
+      "blocker_torus_images": [
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "all_selected_core_arcs_blocked": true,
+      "torus_midpoint_for_any_lift": false,
+      "vertical_midpoint_residues_mod_two": [
+        "4/15",
+        "14/15",
+        "16/15",
+        "26/15"
+      ],
+      "ordinary_direct_bypass": true,
+      "bypass_reason": "Both marks are in convex open lower rectangle (0,6)x(0,3), disjoint from z."
+    }
+  ],
+  "old_midpoint_positive_control": "PASS",
+  "third_abstract_blocker_is_interior": true,
+  "prescribed_open_family_controls": [
+    {
+      "source_parameter": "2/15",
+      "target_parameter": "1/3",
+      "midpoint": false
+    },
+    {
+      "source_parameter": "2/15",
+      "target_parameter": "3/8",
+      "midpoint": false
+    },
+    {
+      "source_parameter": "2/15",
+      "target_parameter": "5/12",
+      "midpoint": false
+    },
+    {
+      "source_parameter": "1/7",
+      "target_parameter": "1/3",
+      "midpoint": false
+    },
+    {
+      "source_parameter": "1/7",
+      "target_parameter": "3/8",
+      "midpoint": false
+    },
+    {
+      "source_parameter": "1/7",
+      "target_parameter": "5/12",
+      "midpoint": false
+    },
+    {
+      "source_parameter": "1/6",
+      "target_parameter": "1/3",
+      "midpoint": true
+    },
+    {
+      "source_parameter": "1/6",
+      "target_parameter": "3/8",
+      "midpoint": false
+    },
+    {
+      "source_parameter": "1/6",
+      "target_parameter": "5/12",
+      "midpoint": false
+    }
+  ],
+  "scope": "Physical local core separation without torus midpoint; both rooms are the SAME fixed L and both pairs have direct bypasses. No global essential blocker or darkness claim."
+}

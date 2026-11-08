@@ -1,0 +1,267 @@
+Review this mathematical note and checker critically. Do NOT attempt the full open global-existence conjecture. Verify only: six local map classification, exact deformation cocycle formula, odd-word mod-2 sufficient criterion, and conditional single-excursion criterion. Distinguish algebraic checking from previously audited optical admissibility of two frozen events. Check normalization, map composition, finite exceptions at center/portal endpoints, and factors in the intrinsic pi-sector at the sole corner. Need actual target retained. You have no tools. Identify errors or accept with precise limitations; do not claim numeric execution.
+
+# Detecting a sliding triangular pocket
+
+[in progress] Universal detection by an actual source-to-target corner event remains open.
+[done] Local six-map scattering classification and an odd-hit sufficient criterion derived below.
+
+## 1. Scope
+
+Let P be a strictly simple canonical grid-triangle room with distinct interior A marks S,T. Every noncorner integer point is A; in particular, there are no interior B/C points. Keep every wall direction and the rest of P fixed. The pocket has vertices
+
+    B=(1,1), A=(2,2), C=(1,2),
+
+and portal x=1, 1<y<2. Immediately above and below the portal the physical wall also lies on x=1. Move B,A,C by t u, where u=(0,-1), leaving both marks fixed. Thus the two moving mirror lines are
+
+    D_t: y-x=-t,       H_t: y=2-t.
+
+We seek an admissible event from a chosen source lift to a lift of the ACTUAL physical target T, through exactly one corner at the developed midpoint. The halves have equal displacement w; each avoids other physical corners. The selected intrinsic continuation at the corner bounds an embedded pi-sector. Wall-parallel directions are omitted when applying a physical opening inequality. These requirements cannot be replaced by reaching an arbitrary A point or by an arbitrary broken geodesic.
+
+The global existence assertion has not been proved. This note establishes local information that makes its missing premise more concrete. It does not infer existence from accessibility of the pocket.
+
+## 2. All local return maps
+
+Translate the original pocket by (-1,-1), so its vertices are (0,0),(1,1),(0,1). At t=0 write
+
+    D(x,y)=(y,x),       H(x,y)=(x,2-y).
+
+Eight reflected triangles tile the square [0,2]^2 centered at (1,1). Their outer edges are eight images of the open portal x=0,0<y<1. A legal ray enters at (0,e), 0<e<1, with velocity proportional to (1,m). Until it leaves the pocket, its unfolded development is exactly the straight line through that point in the square. There are no exterior walls of the rest of the room in this local development.
+
+It exits through the bottom, right, or top of the square. The images of the portal on these sides determine the following six return isometries. Composition AB means A after B. The displayed words specify the isometries, not a unique chronological itinerary; the two four-reflection words represent the same half-turn.
+
+|Developed exit|Slope interval|Portal image G|Linear part R_G|dG_t/dt=(I-R_G)u|
+|---|---|---|---|---|
+|bottom, 0<x<1|m<-e|D|(x,y)->(y,x)|(1,-1)|
+|bottom, 1<x<2|-e<m<-e/2|DH|(x,y)->(-y,x)|(-1,-1)|
+|right, 0<y<1|-e/2<m<(1-e)/2|DHD|(x,y)->(-x,y)|(0,0)|
+|right, 1<y<2|(1-e)/2<m<(2-e)/2|DHDH|(x,y)->(-x,-y)|(0,-2)|
+|top, 1<x<2|(2-e)/2<m<2-e|HDH|(x,y)->(-y,-x)|(-1,-1)|
+|top, 0<x<1|m>2-e|HD|(x,y)->(y,-x)|(1,-1)|
+
+Exclude equality cases, which hit a portal endpoint, and exclude m=1-e, which goes through the developed center, a lift of the physical tip A. Apart from these cases the straight segment avoids every physical corner lift in the square. Hence every interval, with that deletion, genuinely occurs locally. An individual interval need not have a single literal reflection word across the center-hit exclusion, but its return isometry is as stated.
+
+For any legal fixed local itinerary, translating both mirrors gives
+
+    G_t = tau_(t u) G_0 tau_(-t u).
+
+Its linear part stays R_G and its affine translation derivative is (I-R_G)u. Exactly one of the six maps has zero derivative: DHD, reflection in the unchanged vertical line. For that branch G_t=G_0 exactly. This is the branch used by the continued axis trajectories. The other five maps change to first order.
+
+This is a statement about the developed return map. It does not claim a ray at fixed entry and direction has fixed exit time or exit coordinate; for some branches these vary as well. The return-map derivative is the quantity entering a prescribed developed corner-event equation.
+
+## 3. The exact wall-load identity for the slide
+
+Write each fixed-direction physical reflection as
+
+    F_i,t(x)=R_i x+b_i(t).
+
+All R_i belong to D4. For the two moving pocket mirrors,
+
+    a_D := b_D'(0)=(1,-1),
+    a_H := b_H'(0)=(0,-2),
+
+and every other a_i is zero. These follow either from conjugation by tau_(t u), or directly from the equations of D_t,H_t. Let L_j be the product of the linear reflection parts strictly BEFORE hit j in the development from the source. Composition differentiation gives
+
+    derivative of accumulated affine translation = sum_j L_j a_j.       (1)
+
+Suppose an actual saved or constructed admissible midpoint event has n wall hits in its fixed word, with p hits before its corner c. Its physical corner velocity is v_c=u if c is B,A,C and zero otherwise. Both actual marks are fixed. With eta=gamma_second-gamma_first, the period defect derivative is
+
+    Q(eta) = sum_(j>=p) L_j a_j
+             - sum_(j<p) L_j a_j - 2 L_p v_c.                         (2)
+
+A corner can admit equivalent choices of the coincident split position. The identity uses the prefix matching the chosen labeled corner development. When comparing prefixes, differentiate the corner position too. Formula (2) follows from Q(eta)=T_image'-2 C_image'+S_image'; here S_image'=0. It therefore retains the actual target, the first-half transport and corner motion.
+
+For a corner outside the pocket, group complete pocket excursions. Each contributes its transported vector L(I-R_G)u with a minus sign before the midpoint and a plus sign afterward. This proves a conditional geometric result:
+
+**Single-excursion criterion.** If an admissible actual S-to-T event has its sole corner outside the pocket, makes exactly one complete excursion into the pocket, and that excursion uses any return map except DHD, then Q(eta) is nonzero. More generally it suffices that all other excursions use DHD.
+
+The proof is immediate from the table and invertibility of L. It applies with the remainder of the room arbitrary. It does NOT supply the event.
+
+## 4. A stronger cancellation-resistant parity criterion
+
+Equation (2) is integral. Reduce it coordinatewise modulo 2. Every D4 matrix permutes coordinates and changes signs, so it fixes (1,1) modulo 2. Consequently
+
+    L_j a_D = (1,1) mod 2,
+    L_j a_H = (0,0) mod 2,
+    2 L_p v_c = (0,0) mod 2.
+
+The sign distinguishing the two halves also disappears modulo 2. Thus, for EVERY admissible midpoint event in this family,
+
+    Q(eta) = (# hits on this moving diagonal D mod 2) (1,1) mod 2.      (3)
+
+In particular:
+
+**Odd-word criterion.** Any admissible actual S-to-T midpoint corner event whose limiting development word contains an ODD number of factors for the pocket's moving diagonal detects the slide. It cannot be canceled by other pocket excursions, moving-horizontal-wall hits, transport through the rest of the room, or the motion of its sole corner.
+
+Count every diagonal factor in the chosen limiting development word, including any copy transition through the selected pi-sector at the corner. Such a corner transition is not a legal physical reflection at the vertex. If the corner lies outside the pocket, every counted diagonal factor is an ordinary transverse wall-interior hit. Equivalent coincident split positions must retain the same full development and the corresponding corner derivative in (2); (3) does not authorize arbitrary edits to the word.
+
+For a complete excursion the four bottom/top exit maps in the table have odd diagonal-hit count. The two right-side exit maps have even count. This gives a sufficient condition even when many excursions occur: an odd total number of bottom/top exits in these developed pocket squares guarantees detection, provided the corner lies outside the pocket so every encounter is complete.
+
+The converse is false locally: DHDH has even diagonal count but nonzero derivative (0,-2). Even-hit actual events require the full vector sum (2); they are not certified blind by parity.
+
+## 5. Frozen control: one uncanceled two-mirror visit
+
+No new paths are needed to check the criterion against the existing control. Saved event1 has actual physical corner (-1,2), outside the pocket. Its recorded wall word includes exactly one pocket visit, the adjacent walls H,D (wall indices 3,2), before the corner, and no other hit on either pocket mirror. Its prefix transport sends a_HD=(1,-1) to (1,1). Therefore (2) gives
+
+    Q(eta_1)=(-1,-1).
+
+With w=(-12,5) and sigma=+1 its signed opening row is
+
+    -sigma det(w,Q(eta_1))=-17.
+
+Saved event0 has no hits on either pocket mirror, and its physical corner is outside the pocket. Equation (2) gives zero, agreeing with its whole two-axis-shear orbit being blind.
+
+The checker reconstructs both fixed affine developments directly from their physical wall reflections, compares them with the frozen corner/target forms, and evaluates (2) and (3). It performs no direction, word, ray or room search, and does not claim new optical validation of these previously audited events.
+
+## 6. The remaining global question
+
+The odd-word criterion reduces one sufficient route to a precise endpoint question: can one construct a legal midpoint corner continuation from actual S to actual T whose word toggles a bit an odd number of times at this one diagonal wall? Toggle no bit at any other wall.
+
+Connectivity of the fan tree does not answer that question. It supplies combinatorial routes to a pocket, but those routes need not be straight, need not put the sole corner at half-time, and need not return to the target's physical label. Likewise, generic rays can use the five moving return maps without giving any corner event for the chosen pair. Existence of an odd-hit event would prove the local detection lemma; failure to find one would not disprove it, because even-hit events can detect too.
+
+The selected two axis multitwists cannot fix this existence gap: on the pocket slide Q vanishes on all their core increments, so they preserve Q(eta) on every seed orbit. A proof must construct a new seed, use a genuinely different action with a justified effect, or supply a structural counterexample. No universal detection or counterexample in the required polygon class is claimed here.
+
+
+CHECKER
+"""Exact local pocket-map algebra and TWO frozen event-word developments; no search."""
+from pathlib import Path
+from fractions import Fraction as F
+import hashlib
+import json
+import sys
+
+if not __debug__:
+    raise SystemExit('Optimized Python disables proof assertions; rerun without -O.')
+B = Path(__file__).resolve().parent
+PIN = '9f81b7bf93b258958fa3d6347631e50f8165e57ad32166547431a3be9ed26bec'
+assert hashlib.sha256((B/'coupling.json').read_bytes()).hexdigest() == PIN
+I = ((F(1), F(0)), (F(0), F(1)))
+O = (F(0), F(0))
+u = (F(0), F(-1))
+
+def ap(A, v):
+    return tuple(sum(A[i][j]*v[j] for j in range(2)) for i in range(2))
+
+def mm(A, C):
+    return tuple(tuple(sum(A[i][k]*C[k][j] for k in range(2)) for j in range(2)) for i in range(2))
+
+def add(a, b): return tuple(x+y for x,y in zip(a,b))
+def sub(a, b): return tuple(x-y for x,y in zip(a,b))
+def times(k, a): return tuple(k*x for x in a)
+def det(a, b): return a[0]*b[1]-a[1]*b[0]
+
+def reflection(n, h, dh):
+    n = tuple(map(F, n)); den = sum(x*x for x in n)
+    R = tuple(tuple(I[i][j]-2*n[i]*n[j]/den for j in range(2)) for i in range(2))
+    return R, times(2*h/den, n), times(2*dh/den, n)
+
+def develop(mirrors):
+    L, b, db = I, O, O
+    for R, q, dq in mirrors:
+        b = add(b, ap(L,q)); db = add(db, ap(L,dq)); L = mm(L,R)
+    return L,b,db
+
+D = reflection((-1,1), F(0), F(-1))
+H = reflection((0,1), F(1), F(-1))
+assert D[2] == (1,-1) and H[2] == (0,-2)
+# At e=1/2 these prescribed slopes lie in the six derived open exit intervals.
+fixtures = [('D',F(-2),'bottom-left'),('DH',F(-3,8),'bottom-right'),
+            ('DHD',F(0),'right-lower'),('DHDH',F(2,5),'right-upper'),
+            ('HDH',F(6,5),'top-right'),('HD',F(2),'top-left')]
+expected = [(1,-1),(-1,-1),(0,0),(0,-2),(-1,-1),(1,-1)]
+local=[]
+for (word, m, side), want in zip(fixtures, expected):
+    R,b,db = develop([{'D':D,'H':H}[c] for c in word])
+    assert db == sub(u,ap(R,u)) == want
+    assert tuple(int(x)%2 for x in db) == (word.count('D')%2,)*2
+    e=F(1,2)
+    assert m != 1-e
+    if side.startswith('bottom'):
+        x,y=-e/m,F(0)
+        assert m < -e/2 and 0 < x < 2
+        assert (x < 1) == (side=='bottom-left')
+    elif side.startswith('top'):
+        x,y=(2-e)/m,F(2)
+        assert m > (2-e)/2 and 0 < x < 2
+        assert (x < 1) == (side=='top-left')
+    else:
+        x,y=F(2),e+2*m
+        assert -e/2 < m < (2-e)/2 and 0 < y < 2
+        assert (y < 1) == (side=='right-lower')
+    Rt=tuple(zip(*R))
+    portal = ap(Rt,sub((x,y),b))
+    assert portal[0] == 0 and 0 < portal[1] < 1
+    local.append(dict(map=word,side=side,slope=m,exit=(x,y),derivative=db,
+                      diagonal_count=word.count('D'),portal_image_check=True))
+assert sum(x['derivative']==O for x in local)==1
+
+saved=json.loads((B/'coupling.json').read_text())
+V=[tuple(map(F,p)) for p in saved['room']['vertices']]
+S,T=[tuple(map(F,p)) for p in saved['room']['marked']]
+W=len(V); normals=saved['offset_normals']; base=list(map(F,saved['offset_base_point']))
+delta=[F(0)]*len(base);delta[2]=F(-1);delta[3]=F(1)
+mirrors=[reflection(normals[i],base[i],delta[i]) for i in range(W)]
+assert mirrors[2][2]==(1,-1) and mirrors[3][2]==(0,-2)
+assert all(mirrors[i][2]==O for i in range(W) if i not in (2,3))
+
+def form_value(forms, point):
+    return tuple(sum(F(x)*y for x,y in zip(row,point)) for row in forms)
+
+records=[]
+for idx,want in [(0,O),(1,(F(-1),F(-1)))]:
+    e=saved['events'][idx]; assert e['index']==idx
+    word=e['word']; p=e['prefix_hits']; c=tuple(map(F,e['corner']))
+    vc=u if c in (V[2],V[3],V[4]) else O
+    L,b,db=develop([mirrors[i] for i in word[:p]])
+    C_image=add(ap(L,c),b); C_prime=add(ap(L,vc),db)
+    A,q,dq=develop([mirrors[i] for i in word])
+    T_image=add(ap(A,T),q); T_prime=dq
+    assert C_image==form_value(e['corner_image_forms'],base)
+    assert T_image==form_value(e['target_image_forms'],base)
+    assert C_prime==form_value(e['corner_image_forms'],delta)
+    assert T_prime==form_value(e['target_image_forms'],delta)
+    w=sub(C_image,S)
+    assert sub(T_image,C_image)==w and tuple(w)==tuple(e['direction'])
+    defect=sub(T_prime,times(2,C_prime))
+    # Independently sum signed wall loads, retaining the corner's physical velocity.
+    signed=O; linear=I; loads=[]
+    for j,i in enumerate(word):
+        load=ap(linear,mirrors[i][2])
+        signed=add(signed,times(-1 if j<p else 1,load))
+        if i in (2,3): loads.append(dict(position=j,wall=i,before_corner=j<p,transported=load))
+        linear=mm(linear,mirrors[i][0])
+    signed=sub(signed,times(2,ap(L,vc)))
+    assert signed==defect==want
+    odd=sum(i==2 for i in word)%2
+    assert all(x.denominator==1 for x in defect)
+    assert tuple(int(x)%2 for x in defect)==(odd,odd)
+    opening=-e['side']*det(w,defect)
+    assert opening==sum(F(a)*b for a,b in zip(e['offset_gradient'],delta))
+    records.append(dict(index=idx,physical_source=S,physical_target=T,physical_corner=c,
+                        prefix_hits=p,half_displacement=w,pocket_wall_loads=loads,
+                        defect=defect,diagonal_hit_parity=odd,signed_opening=opening,
+                        actual_saved_endpoint_forms_match=True))
+assert records[1]['signed_opening']==-17
+assert len(records[1]['pocket_wall_loads'])==2
+assert [q['wall'] for q in records[1]['pocket_wall_loads']]==[3,2]
+
+# Mod-2 transport argument: every D4 signed permutation preserves (1,1) mod 2.
+D4=[]
+for swap in [False,True]:
+    for a in [-1,1]:
+        for b in [-1,1]:
+            R=((F(0),F(a)),(F(b),F(0))) if swap else ((F(a),F(0)),(F(0),F(b)))
+            assert tuple(int(x)%2 for x in ap(R,D[2]))==(1,1)
+            assert tuple(int(x)%2 for x in ap(R,H[2]))==(0,0)
+            assert tuple(int(x)%2 for x in times(2,ap(R,u)))==(0,0)
+            D4.append(R)
+
+def clean(x):
+    if isinstance(x,F): return x.numerator if x.denominator==1 else str(x)
+    if isinstance(x,(tuple,list)): return [clean(a) for a in x]
+    if isinstance(x,dict): return {k:clean(v) for k,v in x.items()}
+    return x
+out=clean(dict(status='PASS',input_sha256=PIN,local_return_maps=local,
+               D4_transport_controls=len(D4),saved_events=records,
+               scope='Local exact mirror algebra and two frozen labeled developments only. No discovery or optical tracing; universal event existence remains open.'))
+(B/'pocket-check.json').write_text(json.dumps(out,indent=2)+'\n')
+print(json.dumps(out,indent=2))

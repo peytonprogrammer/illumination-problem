@@ -1,0 +1,128 @@
+Surplus-four illumination at the fixed three-star support
+Codex01a18403, 5 November 2026
+
+STATUS: parent final join; independent review requested. This file supersedes
+historical open-case sentences in the frozen component proofs, without
+changing their hypotheses or claiming an unreviewed component is accepted.
+Final review gates and source map are in manifest.json and coverage.txt.
+
+Theorem. Let P be a finite strictly simple canonical45 triangle room whose
+interior A points are exactly S=(0,0), U=(2,0), T=(2,2). Use the established
+fan weights Q, full non-A count J and smooth non-A count s_N, with
+Delta=Q+s_N-8=4. If P has at most21 maximal straight walls W and at most
+six transparent exceptions k=J+s_N, the actual interior marks S,T are
+joined by a finite corner-avoiding specular trajectory with at most32
+reflections. There is NO hypothesis confining P to the seven adjacent
+partial A cells. Such confinement is one branch of the proof, not assumed
+for all rooms. This theorem is restricted to the stated canonical model,
+fixed interior support and surplus, and does not prove the universal
+22-wall minimum.
+
+Notation. H is the union of the three full A stars at S,U,T. K consists of
+H and the seven partial A-cell stars centered at
+ L=(-2,0), B=(0,-2), D=(2,-2), R=(4,0), E=(4,2), Tc=(2,4), N=(0,2).
+Remote means outside K. Partial A fans are contiguous in a strictlysimple
+room. For a fan with m triangles let q=m, except q=3 for a smooth m4
+half-star. Let d be the number of occupied H-facing sides and e=q-d.
+Let M be the uncovered exposed H-side C midpoints and b=s_N-|M|. The
+established nonnegative charge identity is Delta=sum e+b. A zero-charge
+cell is an ordinary single H-facing cap and cannot transmit to another
+partial cell. Sigma(x,y)=(2-y,2-x), followed by reversing the path, retains
+the actual ordered S,T endpoints and transforms full triangle guards.
+
+1. Budget and global structure
+The wall identity W+2k=28+Delta=32, W<=21 and k<=6 force W20,k6.
+First handle rooms containing both N bridge sectors6,7 by the direct S/T
+segment. In all remaining rooms use structural-reduction.txt sections2–5,
+independently accepted in remote22-proof-review/review.txt. Its connecting-
+tree proof covers arbitrary finite rooms: there is at most one remote
+occupied A cell. If present it attaches directly to a unique root in K.
+Quarter-root/leaf joins and transmitting chains force extra smooth C
+points; every putative second remote cell exceeds charge4. Adjacencies
+outside a chosen connecting tree cannot heal the two-cell C obstructions.
+Thus there are exactly two branches below: wholly local, or a sole direct
+remote leaf with one of eight necessary charge rows. No assumed radius or
+search cutoff supplies this reduction.
+
+2. Wholly local branch, at most32
+Apply local-four-closure/theorem.txt with its independent acceptance in
+surplus-four-remote2110/local-join-review/review.txt. That complete ten-type
+join includes both roots and d0 leaves inside K, all mixed b1 cases and all
+fourunit cases. It derives its twelve weighted partitions from sum e+b=4,
+excludes solee3+b1 and solee4, and proves the remaining ten types with
+bounds13,13,32,13,14,13,13,19,13,13. The largest is32. No former incomplete
+seven-type partition list is used. The local theorem's locality hypothesis
+is established in this branch by the absence of a remote cell.
+
+3. Five parent1 remote rows, at most13
+Write (r,l,h,b) for the unique parent's excess, remote leaf's excess,
+other local excess and smooth surplus. The five parent1 rows are
+ (1,1,0,2), (1,2,0,1), (1,3,0,0), (1,1,1,1), (1,2,1,0).
+The r1 parent is a quarter two-triangle H-root with exactly ONE occupied
+outward BC edge. Its remote fan meets the rest of P along precisely this
+edge and its endpoints. No second shared edge is available by unique
+parenthood and the quarter geometry; no extra isolated common vertex is
+compatible with connected angular occupancy in a strictlysimple room.
+Delete the remote fan. It is a disk glued along that single boundary edge;
+replace its external boundary arc by the edge. The remaining region is a
+strictlysimple disk. At the C endpoint the parent90 sector remains. At the
+B endpoint the removed angular interval is at an end of the occupied fan:
+its other side borders a missing triangle in the same remote cell or a
+missing neighboring cell. The surviving angular sectors stay connected.
+All other remote vertices disappear. No interior A mark changes; H is
+intact and all remaining occupied cells lie in K.
+
+The resulting local room has one excess-one partial cell if h0, or exactly
+two if h1. Other cells remain ordinary H-facing caps. The accepted stronger
+all-single/ONEunit lemma (second-surplus-L/classification.txt section4) and
+TWOunit theorem (surplus-four-local/two-unit.txt, including its incorporated
+four-orientation d0leaf supplement) apply WITHOUT b,W,k restrictions and
+illuminate actual S/T within13. Therefore no claim that deletion preserves
+the original wall/exception budget or decreases Delta is required.
+
+All paths selected by these budget-free lemmas have complete required AND
+forbidden triangle sets inside K. The21 frozen path records in
+third-surplus-review/path-support-check.json include the one/four/thirteen
+routes, square exchanges, centeredL12/B6, FIVE and the centeredB3/outerB2
+forcing paths; their sigma transforms also stay in K. join-check.py refreshes
+this exact support fact from the21 named coordinates. Reinsert the original
+remote fan, outside K. It changes neither set for the selected path, so that
+same finite, corner-avoiding, actual S/T trajectory remains valid in P.
+This is guard-preserving restoration, not illumination monotonicity.
+This stronger proof replaces any budget-sensitive auxiliary-room inference
+in the older leaf-erasure.txt. Only its single-edge topology is reused.
+
+4. Three parent2 remote rows
+The remaining necessary rows, without additional hidden alternatives, are:
+ (2,2,0,0): whole proof fourth-surplus-review/remote22.txt, independently
+ reviewed in remote22-proof-review/review.txt, bound23. Its final hand-forced
+ room has a14reflection path; other branches give the overall23 bound.
+ (2,1,0,1): fourth-surplus-review/remote2101/theorem.txt, bound13. Its
+ noncritical D/R/N proof uses opposite guards directly, without erasure.
+ Critical L/B cases use18 necessary interfaces, exact b1/counting and a
+ hand dispatch; the two final B1234 descriptions have explicit FIVE/EIGHT
+ paths. Peer complete independent review is required in the final manifest.
+ (2,1,1,0): surplus-four-remote2110 parent-templates/noncritical-erasure,
+ critical-logic and B-frontier-join proofs, bound13. Independent reviews
+ cover44 interfaces:24 noncritical D/R/N,16 criticalL/Tc and4 criticalB/E.
+ The finite necessary labels overapproximate valid rooms; every label
+ contains a complete required guard and avoids its complete forbidden set.
+ The parent row has no remaining optical case. Longer20/22 witnesses are
+ independentlyvalid but unneeded; the selected whole-row bound is13.
+
+The eight rows exhaust r+l+h+b=4 after bridge removal and the structural
+fan/transmission restrictions. The local10types and remote8rows have bounds
+at most32, proving the theorem once the explicit final review gates clear.
+
+5. Evidence and scope
+All optical lemmas retain actualS/T, strict finite mirror-interior contacts,
+positive specular travel and absence of corner hits. Smooth wall contacts
+are legal only with the full connected180 sector; open-leg lattice crossings
+require a full360 star. Full U/Z guards protect both. Reflection images
+alone or a bounded failure to find a ray supply no illumination claim.
+
+This is an exact certificate-assisted mathematical proof with reciprocal AI
+reviews and shared accepted lower-layer foundations. It is not formally
+verified in a proof assistant or externallyrefereed. No historical novelty
+claim is made. Larger surplus, other interior A supports, more exceptions,
+other polygon classes and universal minimality are outside this theorem.

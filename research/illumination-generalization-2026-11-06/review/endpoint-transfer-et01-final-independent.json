@@ -1,0 +1,54 @@
+{
+  "status": "INDEPENDENT_ACCEPT_SCOPED_ET01_AND_A8_COUNTERCONTROL",
+  "author_request": "construction/endpoint-transfer-review-request-01.json",
+  "author_pins": {
+    "endpoint-transfer-prior-audit.md": "5cd2d2dda1b026bc0d7b14c84d2043e3c29506c467757f46662bc679b12f6caf",
+    "endpoint-transfer-candidate-01.md": "63ae6450ec1de9a4ecad056d6761ec6c570ca5a55d32ec1c0e2b5620f669c05f",
+    "endpoint-transfer-argument-01.md": "72de3e726e2ec28257e523fbacd0bcdbbd1180406b11f725c20e917272369428"
+  },
+  "pins_current_before": {
+    "endpoint-transfer-prior-audit.md": true,
+    "endpoint-transfer-candidate-01.md": true,
+    "endpoint-transfer-argument-01.md": true
+  },
+  "pins_current_after": {
+    "endpoint-transfer-prior-audit.md": true,
+    "endpoint-transfer-candidate-01.md": true,
+    "endpoint-transfer-argument-01.md": true
+  },
+  "own_evidence_pins": {
+    "endpoint-transfer-et01-independent.md": "78cae1ee80d13b96ea744ddc38f3c642c4d1d5a432c0ec8f21bba26258b8d09c",
+    "endpoint-transfer-et01-independent.py": "470b72feaf638cf205b0bcb4d367a935297123fd55cab37c1afd907e18b97683",
+    "endpoint-transfer-et01-independent.json": "8b45a0708884f51501ed9eb1fa1013a9e1f8fb86d7c3effefd5262b98516181e"
+  },
+  "claims": [
+    {
+      "claim": "Conditional finite-offset full-corridor one-flat-wall actual endpoint transfer",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "A8 universal availability fails at actual r2 while pair remains lit",
+      "decision": "ACCEPT_NEGATIVE_RESULT"
+    },
+    {
+      "claim": "Universal A8 availability itself",
+      "decision": "REJECT",
+      "not_final_author_claim": true
+    },
+    {
+      "claim": "r2/r4 smooth-root and original r9 corridor-hypothesis scope checks",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "Complete transfer graph or nine-distinct-corner force",
+      "decision": "OPEN",
+      "not_author_claim": true
+    }
+  ],
+  "method": "Independent actual target reflection and strict corridor proof, raw eight-wall first-hit check, actual r9 boundary/frame check; no author code",
+  "material_corrections_to_frozen_packet": [],
+  "global_transition_complete": false,
+  "nine_distinct_corner_bound_proved": false,
+  "whole_goal_complete": false,
+  "created_utc": "2026-11-07T18:55:48.944892+00:00"
+}

@@ -1,0 +1,247 @@
+{
+  "status": "PASS",
+  "scope": "One prescribed fixed room and one hand-derived path, plus exact branch interval identities. No room/ray/direction/word search; no independent review.",
+  "walls": 12,
+  "reflex_corners": 4,
+  "area": "4",
+  "vertices": [
+    [
+      "-9/10",
+      "0"
+    ],
+    [
+      "1/10",
+      "0"
+    ],
+    [
+      "1/10",
+      "2"
+    ],
+    [
+      "1",
+      "2"
+    ],
+    [
+      "1",
+      "3"
+    ],
+    [
+      "9/5",
+      "3"
+    ],
+    [
+      "9/5",
+      "4"
+    ],
+    [
+      "4/5",
+      "4"
+    ],
+    [
+      "4/5",
+      "3"
+    ],
+    [
+      "0",
+      "3"
+    ],
+    [
+      "0",
+      "2"
+    ],
+    [
+      "-9/10",
+      "2"
+    ]
+  ],
+  "source": [
+    "-2/5",
+    "1"
+  ],
+  "target": [
+    "47/50",
+    "7/2"
+  ],
+  "monotone_obstruction": {
+    "first_portal_x": [
+      "0",
+      "1/10"
+    ],
+    "reachable_second_level_x": [
+      "2/5",
+      "3/5"
+    ],
+    "second_portal_x": [
+      "4/5",
+      "1"
+    ],
+    "branches": [
+      {
+        "sign": 1,
+        "slope": "2",
+        "offset": "2/5",
+        "unfolded_range": [
+          "2/5",
+          "3/5"
+        ]
+      },
+      {
+        "sign": -1,
+        "slope": "-2",
+        "offset": "3/5",
+        "unfolded_range": [
+          "7/5",
+          "8/5"
+        ]
+      }
+    ],
+    "all_intervals_open": true
+  },
+  "connecting_path": {
+    "direction": [
+      11,
+      25
+    ],
+    "reflections": 10,
+    "path": [
+      [
+        "-2/5",
+        "1"
+      ],
+      [
+        "12/25",
+        "3"
+      ],
+      [
+        "23/25",
+        "2"
+      ],
+      [
+        "1",
+        "24/11"
+      ],
+      [
+        "16/25",
+        "3"
+      ],
+      [
+        "1/5",
+        "2"
+      ],
+      [
+        "0",
+        "27/11"
+      ],
+      [
+        "6/25",
+        "3"
+      ],
+      [
+        "17/25",
+        "2"
+      ],
+      [
+        "1",
+        "30/11"
+      ],
+      [
+        "4/5",
+        "35/11"
+      ],
+      [
+        "47/50",
+        "7/2"
+      ]
+    ],
+    "contacts": [
+      {
+        "point": [
+          "12/25",
+          "3"
+        ],
+        "edge": 8
+      },
+      {
+        "point": [
+          "23/25",
+          "2"
+        ],
+        "edge": 2
+      },
+      {
+        "point": [
+          "1",
+          "24/11"
+        ],
+        "edge": 3
+      },
+      {
+        "point": [
+          "16/25",
+          "3"
+        ],
+        "edge": 8
+      },
+      {
+        "point": [
+          "1/5",
+          "2"
+        ],
+        "edge": 2
+      },
+      {
+        "point": [
+          "0",
+          "27/11"
+        ],
+        "edge": 9
+      },
+      {
+        "point": [
+          "6/25",
+          "3"
+        ],
+        "edge": 8
+      },
+      {
+        "point": [
+          "17/25",
+          "2"
+        ],
+        "edge": 2
+      },
+      {
+        "point": [
+          "1",
+          "30/11"
+        ],
+        "edge": 3
+      },
+      {
+        "point": [
+          "4/5",
+          "35/11"
+        ],
+        "edge": 7
+      }
+    ],
+    "passage_crossings": [
+      {
+        "level": "2",
+        "point": [
+          "1/25",
+          "2"
+        ],
+        "segment": 0
+      },
+      {
+        "level": "3",
+        "point": [
+          "22/25",
+          "3"
+        ],
+        "segment": 9
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+Independent HAND challenge of the local two-e2/b0 reduction
+4 November 2026 — Codex01a18403
+
+VERDICT: ACCEPT the proposed reduction, with no corrections.
+This does NOT close the two-e2 partition. Remaining: eleven specified rooms
+and four symbolic B/E fan combinations (three sigma orbits), including their
+stated symmetry images. The new three-reflection composition is accepted.
+
+1. Scope and independence
+
+Read surplus-four-local/two-e2.txt and source checker; rebuilt its thirteen
+fixed/possible guard statements and the named angle/geometry controls in own
+check.py. No peer checker executed or peer receipt overwritten. Own physical
+boundary tests use rational segment intersections and direct reflection law,
+not the peer boundary_replay module. The canonical guard extractor and original
+lower-layer paths have common origins; this is independent hand/exact review,
+not formal verification or an independent derivation of all prerequisites.
+Only named retained inputs were used. No room/cap-assignment/direction/word
+discovery, archive sweep, solver or worker ran.
+
+2. Exhaustive local fan and connectivity split
+
+With exactly two positive cells, d0 cannot be silently excluded. An ordinary
+single cap cannot transmit to another A cell, so any d0/e2 cell must attach
+to the other positive cell directly. Only B-D and E-R are adjacent partial
+cell pairs in K. Two d0 cells cannot reach H.
+
+For a root, d1/e2 means q3, hence m3 or m4. N's d2 alternative requires q4,
+which is unavailable because m4 has q3; the direct N bridge is handled first.
+Without an outside-C join every complete C pair must face H, since a sole
+180degree outside-H pair contributes positive b. For each of L,B,D,R,E,T,
+there are precisely two triples and one centered four-sector rectangle facing
+its one H neighbor. At N the bottom triple4/5/6 and right triple7/0/1 remain;
+other windows either reach both H neighbors, contain the direct bridge or
+complete an outside-H C pair. Thus14triples and6rectangles is correct.
+This is a hand sector-window argument, not assembled-room enumeration.
+
+At a shared outside C, two90degree contributions either form a forbidden
+smooth180 point or a pinch. The only permitted b0 join totals are270 or360.
+This justifies separating nojoin, joined two roots, and root/d0 leaf.
+
+3. Cap forcing and the six critical site pairs
+
+The original one/onesigma complete guards force B+/E- regardless of other
+root additions. If B is ordinary, its four-path forces T-. If B=Beast,
+the two-reflection square path also forces T-: its only extra B blocker is
+sector7, absent from Beast; the other stars cannot affect its guard. The
+sigma argument gives the corresponding L+ forcing. Own full-triangle forcing
+checks pass, not just projected ordinary-cap labels.
+
+The exception for Bwest/Brectangle paired with Ewest/Erectangle is essential
+and is correctly retained. No universal L+/T- assumption is used there.
+For the six unordered critical pairs L+B,L+E,L+T,B+E,B+T,E+T, I checked the
+listed B-angle sums and repairs directly. Llower/rectangle against ordinaryB+
+and its sigma counterpart are impossible; Lupper+Beast has a smooth180 lower
+corner; Lrectangle+Beast uses the accepted L11/Nb- guard. Lupper+Eeast uses
+the new opposite-square3 path. Lupper+Tupper needs incompatible Nb-/Nr+ in
+one ordinary N slot. East B/E uses five/sigmafive. The remaining Llower+
+Beast case has J4/n4 and leaves exactly one D/R cap after E-/T-/Nb+, giving
+the stated four rooms. These branches cover all six site pairs.
+
+The four west/rectangle B/E combinations have ordinary L-/T+, J4/n4 and two
+occupied D/R/N slots. D+ together with R- creates the forbidden smooth B at
+(3,-1). Retaining possibly unrealizable additional choices is harmless for
+this necessary reduction; the theorem does not assert every choice is valid.
+
+4. Joined root/root dispatch
+
+With B+ present and a B-D join, B's90degree possibilities are Beast and
+Brectangle; the latter conflicts with ordinary L+ forced by E-. The180degree
+possibilities are exactly Bouter3, Bouter4 and BHeast4. For D the exhaustive
+contiguous q3 root list is1/2/3,0/1/2/3,2/3/4,1/2/3/4,2/3/4/5. A window
+reaching neither H-facing sector1/2 is not a root. Other complete outside
+pairs are forbidden. The Bouter4/Dwest4b bottom smooth point is correctly
+excluded. Dhalf4 needs R- to repair(3,-1), so cannot coexist with R+.
+
+Independently recomputed all fifteen listed B/D root J entries from45degree
+vertex-angle sums; all match4+Bh except Dwest4a, which gives5+Bh. Root/root
+Q=6+n, Delta4 gives sN=6-n, and k6 then gives n=J. Thus BHeast4/Dwest4a
+exceeds five ordinary slots. With Nr- absent the full-D uniform7 guard applies;
+with R+ absent joined515 applies. For the remaining R+ branch, the slot counts
+and the D+ membership distinguish joined165/2551 exactly as stated.
+The residual count is2 Dhalf3/Bouter rooms with T empty,4 Dwest4a/Bouter
+rooms with T+/-, and1 Dhalf3/BHeast4 with T+, hence seven. Their symmetry
+images are implicit; no joined family has been dropped by erasure.
+
+5. The d0/e2 leaf budget and closure
+
+Q=3+2+n=5+n, so Delta4 implies sN=7-n and k6 gives n=J+1. The corrected
+formula is necessary. Independently recomputed all five listed J values,
+matching centered leaves3/3/4 and quarter leaves2/3.
+
+A D root with a d0 B leaf omits B+ and illuminates by the one-path. With
+B the root, D's d0 attaching two-sector windows are centered3/4 and quarter
+4/5; including sector2 would touch H, and other windows miss the attachment.
+Beast/center is covered by five/sigma13. The quarter requires B's full pair;
+Bouter4/quarter creates the bottom smooth point and is impossible. The stated
+n=J+1 counts then force R/T occupancy exactly as listed. Joined515 needs no
+D triangle; joined165 also needs none; joined2551 needs none and only forbids
+D+. Both allowed leaf windows omit D+. Therefore all root/d0 cases close;
+there is no unverified claim that a smaller-room trajectory survives erasure.
+Own full actual-boundary replay of the supplied corrected18reflection leaf
+control passes forward/reverse with ledger W20,k6,Q10,J4,sN2,Delta4.
+
+6. Optical controls and remaining scope
+
+All thirteen complete U/Z implications and their sigma transforms pass in
+own checker. Independently reconstruct the eleven prescribed fixtures from
+listed fans/caps: triangle sets, boundary vertices, full A set S/U/T and all
+ledger entries match; every fixture is W20/k6/Delta4. These checks validate
+supplied controls; completeness rests on sections2-5 of this hand review.
+
+For the new three-path, direct gate states are source-square return
+(-1,3d),(1,d), then far E-square reflection(4,8d), inner wall(1,11d), and
+actual-target crossing(2,12d). At d1/6 its exact contacts(-2,1/3),(4,4/3),
+(1,11/6) lie strictly in the finite walls. Own actual-firstwall/specular/
+interior/forward/reverse/sigma checks pass on the prescribed control; full
+U/Z proves the stated conditional family. This accepts the new3path.
+
+Still open: all four symbolic B/E combinations and eleven residual rooms.
+This review supplies no illumination witness for them, no dark certificate,
+no full two-e2 theorem and no fullDelta4 or universal wall minimum.
+
+Run: python3 -B .context/illumination-k4-codex/fourth-surplus-review/two-e2-independent/check.py
+Receipt check.json; all parent files untouched.

@@ -1,0 +1,23 @@
+{
+  "input": "wrapped-neck-witness.md",
+  "sha256": "eb96006a71987d2399092b9c1a34bd0b96992fd687b4d0d4cced88c302614553",
+  "status": "FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "source_sha256": {
+    "../construction/long-neck-proof.md": "dd38605169a0395616fadab7eca4a51c0661b96dccfd099c1f622749a11e4991",
+    "../construction/perpendicular-neck-joint-proof.md": "3f30a0fcad8e9b97a4c1a0ad5c8970bc28b166fd1383f729b19192bbe8a0a16c"
+  },
+  "dependency_receipt_sha256": {
+    "long-neck-independent-acceptance.json": "9a56815ef2ca09b11c910fefed58a5686c3eefd84e928ceb181e51e61e397a9c",
+    "perpendicular-neck-independent-acceptance.json": "96606d65fccf58678967e7721d9917148f6c73263944c433e9dac9f923aea841"
+  },
+  "whole_goal_complete": false,
+  "review_targets": [
+    "local mouth sidedness follows from valid disjoint gluing, not global support",
+    "nonmouth chamber mirrors and neck sidewalls remain actual boundary",
+    "virtual source/target signs from unfolded positive travel time",
+    "exclude smooth mouth endpoints in generic beam selection before created corner gluing",
+    "independent separated tree fibers and first witness for ANYvalid2neckchain",
+    "finite lattice reduction without supporting cuts, but all positive orthant members admissible",
+    "effective R27 application explicitly conditional on its own acceptance"
+  ]
+}

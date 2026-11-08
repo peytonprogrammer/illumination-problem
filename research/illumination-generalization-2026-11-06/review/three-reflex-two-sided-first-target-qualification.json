@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-08T06:35:40.697Z",
+  "claim": "FT01",
+  "status": "HAND_FIRST_TARGET_QUALIFICATION_RECONCILED_WITH_PRESCRIBED_EVIDENCE",
+  "dependencies": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/target-access-independent-check.json",
+      "sha256": "5c6241897ef30902003a2651506c6c7bebb4b431077b2e7e9e543c314a3dd619"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/target-access-independent-inputs.json",
+      "sha256": "575c0b3f23535dcf15adb6810e32981ed641f66cc16181842090a6efd790d9ae"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-bottom-depth.md",
+      "sha256": "836101a7461aa7a4624738c0195b75915164e37353a249157d76f484e9ff8771"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-full-gate-continuity.md",
+      "sha256": "445121ec8aefa9b0590899d031ed6270937ae17294a281df23074db8b4ff3781"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-source-crossing.md",
+      "sha256": "9071517b426861524b81de83a6f980b599e3cb6180c3695944829c00728a77fc"
+    }
+  ],
+  "proof_sha256": "f25be250afe8d7ad84f1bde28b983878e37da1adbc6719f07a78fefcd0e021bd",
+  "finding": "Later postturn corner-invalid branch can share its incoming state with an earlier legal safe target hit. Keep the illuminating state; exclude only the invalid later itinerary.",
+  "main_FG01_conclusion_retained": true,
+  "GT01_SC01_unchanged": true,
+  "new_replay": false,
+  "full_goal_complete": false
+}

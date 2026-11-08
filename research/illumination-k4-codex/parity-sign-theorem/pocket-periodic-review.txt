@@ -1,0 +1,116 @@
+# Audit: §19 fixed-surface obstruction, §20.1 fold-persistence lemma, periodicity corollary
+
+**Verdict.**
+
+- **§20.1 lemma:** correct, given the standard inputs listed in section E.
+- **§19:** correct, given the imported Apisa–Wright inputs.
+- **Corollary:** the step "every lift of a dark pair is periodic" has one gap. It needs a form of the blocked-pair theorem that covers the mixed case, where some lifts are periodic and others are not (see C).
+- **Scope:** none of this touches the open universal S/T one-corner π-sector event.
+
+## A. §20.1 lemma (bounded-degree fold persistence)
+
+**Step 1: finitely many target strata. Correct.**
+
+- The pullback relation 2a+2 = e(k+2) is right.
+- If k ≥ 1, then a ≥ 1. So each target zero has only source zeros above it. That bounds the number and orders of target zeros.
+- If k = 0, then a = e−1. So regular branch values are images of source zeros, and there are boundedly many.
+- Riemann–Hurwitz gives genus(Q_n) ≤ genus(X_n). Then #poles = Σk₊ − 4g + 4 is bounded.
+- At a fold, a = 0 and e even. So e = 2 and k = −1. The target therefore has a pole and is not a global square.
+- Area(Q_n) = area(X_n)/D.
+
+**Step 2: a short target saddle connection lifts to a short source saddle connection or closed geodesic. Correct.** I checked each case.
+
+- **Interior points of γ.** These are regular target points.
+  - An unramified preimage there is a regular source point of valence 2. The two edges are collinear.
+  - A ramified preimage has a = e−1 > 0, so it is a source zero, and the chain is cut there.
+  - This covers regular branch values in the interior of γ.
+- **Endpoint at a target zero.** Every preimage is a source zero, so the chain stops.
+- **Endpoint at a simple pole.** Here e = 2a+2.
+  - If a > 0, the chain stops at a zero.
+  - If a = 0, the two preimage rays of the radial segment are opposite in the source flat chart, since angle π doubles to 2π. The chain continues straight.
+- **No backtracking.** At every valence-2 vertex the two directions are opposite.
+- **Pole-to-pole and loop cases.** A pole→pole connection gives a zig-zag lift, and a loop gives a chain that may close. Either way the result is a straight trajectory: a saddle connection, or a closed regular geodesic, possibly a multiple traversal. Its length is at most Dε.
+- **Source systole bound.** A closed regular geodesic has length at least the circumference of its maximal cylinder. That circumference is at least the length of any boundary saddle connection. A genus ≥ 2 surface has zeros, so the boundary is nonempty.
+- **δ along the sequence.** The source systole is bounded below along a convergent sequence. So (12) holds.
+- **Target compactness.** Masur's compactness criterion for a quadratic stratum with simple poles is the right import. It must be applied with saddle connections that include pole endpoints and loops, and the lift argument covers exactly those.
+
+**Step 3: limiting the maps. Correct.**
+
+- The maps f_n are 1-Lipschitz, being local isometries off a finite set.
+- Equicontinuity, Arzelà–Ascoli, and the surjectivity argument are all fine.
+- Degree is preserved because maps that are uniformly closer than the injectivity radius are homotopic, and holomorphic degree equals topological degree.
+- The local ±z+c argument and identity continuation are fine.
+
+The quasiregular normal-family import can be removed. An elementary route:
+
+1. The maps g_n have uniform path lifting: geodesics lift with the same length, and φ_n, ψ_n are near-isometric.
+2. Hence each point of f⁻¹(p) is a limit of points of g_n⁻¹(p). So |f⁻¹(p)| ≤ D, and f⁻¹(Sing Q) is finite.
+3. Off that finite set, together with the source zeros, f is locally ±z+c.
+4. f is continuous, so the singularities are removable. Thus f is holomorphic.
+
+**Step 4: the marked fold persists. Correct.**
+
+- The identity theorem applies to holomorphic maps between Riemann surfaces on a connected disk of fixed radius.
+- φ_n(x) = x_n, because x is a vertex of the triangulation.
+- φ_n(x+u) = x_n + u + o(1), and f_n is 1-Lipschitz. So the limit gives f(x+u) = f(x−u) exactly.
+- Evenness at a regular point forces e = 2. So x is a genuine fold over a simple pole.
+
+## B. Fixed-fiber and dimension checks (done independently)
+
+**The fiber over X is finite.**
+
+1. Let f be any degree-2d fold cover of X. Its target has a pole, so the orientation double cover Q̂ is connected.
+2. f*√q = ±ω selects a branch, so f lifts to X→Q̂. This lift is a translation cover of degree d.
+3. X covers no torus, so Q̂ is not a torus. Möller's factorization then gives Q̂→Y of degree 1, so Q̂ = Y.
+4. The negating involution is unique. If two existed, their composition would be a nontrivial translation automorphism, contradicting minimality. So the deck involution is j, and f = q∘π.
+5. For regular x, π is unramified at x. Then f folds at x exactly when π(x) ∈ Fix j.
+
+**The locus is GL⁺(2,R)-invariant**, because −I is central and the fold relation is preserved.
+
+**Dimension.** Let N be the orbit closure of (X,x).
+
+- N ⊂ F ∩ p⁻¹(M), which is closed by the lemma.
+- By Eskin–Mirzakhani–Mohammadi, N is a linear immersed submanifold.
+- Its projection is dense in M, so dim N ≥ dim M.
+- Suppose dim N = dim M + 1. Then some local sheet of N is open in the corresponding sheet of p⁻¹(M). It would contain (X, x+u) for all small u, giving an infinite fiber. Contradiction.
+- So dim N = dim M, which is periodicity in the Apisa–Wright sense. This local argument is enough; the "full free-point marking" phrasing is stronger than needed.
+
+## C. §19 checks, and the precise gap in the corollary
+
+**Arithmetic and structure: correct.**
+
+- Source zero orders are m/gcd(m,4) − 1, giving 0, 0, 2, 4, 2, 6 for m = 1, 2, 3, 5, 6, 7.
+- Lift counts are gcd(m,4). So m = 1, 5, 7 each have one ρ-fixed lift, and m = 6 has two order-2 zeros.
+- Target zeros must have even order.
+- With genus(X) ≤ 32 and deg π ≥ 16: 62 ≥ 16(2g_Y − 2), so g_Y = 2. Even order then forces H(2).
+- j is the hyperelliptic involution.
+- Riemann–Hurwitz for Y→Y/⟨r⟩: 2 = 4(2g′−2) + 3a + (6−a). This gives a = 2 − 4g′, hence a = 2.
+- Corners with m = 1, 5, 7 cannot map to the zero, since 3 does not divide 1, 5, or 7. So they lie over p.
+- Over the zero, a+1 = 3e forces a = 2 and e = 1. This gives (9).
+- I did not recheck the frozen genus values (27–29) or the counts for the 34 patterns.
+
+**Gap.** §19 assumes *none* of the 16 lifts is periodic. Combined with the lemma, it only yields "some lift is periodic". Periodicity is preserved by the D4 action, including the reflections: X is reflection-symmetric, so M is too, and conjugation preserves orbit-closure dimension. So the strongest conclusion is "all S lifts are periodic, or all T lifts are periodic". It does not follow that all 16 are periodic.
+
+To get "every lift is periodic", the imported Apisa–Wright blocked-pair theorem must state: if x, y are finitely blocked on a non-torus-cover surface and are *not both* periodic, then qπ(x) = qπ(y). With that form, the §19 argument runs unchanged for a non-periodic T lift and lands it in π⁻¹(Fix j), which is periodic by the lemma. That contradicts the assumption. Verify the exact hypothesis in the theorem statement. If it requires both points to be non-periodic, the mixed case stays open.
+
+## D. Physical darkness versus empty blocking
+
+- On X, lifts of convex corners with m = 1 (45°) and m = 2 (90°) are regular points, with cone angle 2π.
+- A billiard path through any corner is undefined. So physical darkness of S, T means: every segment s_g→t_h meets the zeros or B = {regular corner lifts}.
+- Since zeros terminate trajectories, this is *finite blocking with a nonempty finite B*. It is not non-illumination on X, which would mean B = ∅.
+- The implication runs one way: physical darkness ⇒ finite blocking. The converse fails, but the corollary only uses the forward direction.
+- All 8×8 pairs are blocked. Unfolding handles one fixed s-lift, and the D4 action carries B to itself.
+- Consequently the cited theorem must be the *finite-blocking* classification. An illumination-only (B = ∅) result would not cover physical darkness.
+
+## E. Standard inputs required
+
+1. Möller, Theorem 2.6: the minimal translation quotient, with factorization and equivariance. Its uniqueness gives the uniqueness of j.
+2. Apisa–Wright, §3: the quotient Y/j = Q_min (Lemma 3.3). Also the finite-blocking pair classification, in the "not both periodic" form for the full corollary.
+3. Masur's compactness criterion for quadratic strata with simple poles, with saddle connections that include poles.
+4. Eskin–Mirzakhani–Mohammadi linearity of orbit closures, or Apisa–Wright Lemma 2.1, for the dimension dichotomy.
+5. Comparison maps from persistent triangulations. This is the standard meaning of convergence in period coordinates.
+6. Optional: quasiregular normal families. The elementary route in A avoids it.
+
+## Scope
+
+Granting C, the corollary says only this: a dark physical interior pair on a non-torus-cover D4 unfolding has all lifts M-periodic. It does not classify the periodic pairs. It does not show they illuminate. It does not construct the one-corner midpoint event. The universal actual S/T one-corner π-sector event remains **OPEN**.

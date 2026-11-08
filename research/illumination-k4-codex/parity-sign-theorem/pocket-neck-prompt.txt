@@ -1,0 +1,348 @@
+Daniel asks us to collaborate on the universal pocket-detection proof. Tools-disabled independent rigorous adversarial review. No room/ray/direction/cylinder/orbit or optical discovery. Audit the new Section31 candidate, especially the ACTUAL material localized neighborhood U, C4 branching1,1,2 and genus1/four boundary topology, its halfturn quotient annulus and R^2 handle action, the PD/excision argument and inference from constant-area isotropy to antisymmetric boundary support, signs in (31.3), and the zero-period neck conclusion. Inputs12 and21.1 were separately reviewed but all NEW uses need checking. Try to break this claim: literal pocket slide absolute cochains are dual to the two antisymmetric boundary differences of an embedded genus1/four-boundary patch. Important: this is only absolute localization, NOT the actual universal event; relative endpoint corrections remain. If invalid, identify precise missing condition or counterexample, not a substitute outside class. If sound, give precise corrections/scope and whether it adds actual geometric content beyond an arbitrary detected zero-period cycle.
+
+## 1. Scope
+
+Let P be a strictly simple canonical grid-triangle room with distinct interior A marks S,T. Every noncorner integer point is A; in particular, there are no interior B/C points. Keep every wall direction and the rest of P fixed. The pocket has vertices
+
+    B_0=(1,1), A_0=(2,2), C_0=(1,2),
+
+and portal x=1, 1<y<2. Immediately above and below the portal the physical wall also lies on x=1. Move B_0,A_0,C_0 by t u, where u=(0,-1), leaving both marks fixed. Thus the two moving mirror lines are
+
+    D_t: y-x=-t,       H_t: y=2-t.
+
+We seek an admissible event from a chosen source lift to a lift of the ACTUAL physical target T, through exactly one corner at the developed midpoint. The halves have equal displacement w; each avoids other physical corners. The selected intrinsic continuation at the corner bounds an embedded pi-sector. Wall-parallel directions are omitted when applying a physical opening inequality. These requirements cannot be replaced by reaching an arbitrary A point or by an arbitrary broken geodesic.
+
+The global existence assertion has not been proved. The local return-map and single-excursion results do not need the grid or parity hypotheses on the rest of the room. The odd-word criterion only needs its wall reflection linear parts to lie in D4. The raw parity hypotheses matter for the proposed global existence and for the previously proved axis-twist transfer. No existence is inferred from accessibility of the pocket.
+
+
+## 12. The disk gives a low-degree sphere quotient
+
+A polygonal disk with wall directions in the four D4 directions has a stronger property than an arbitrary arithmetic cover. Its eight-copy unfolding X has a holomorphic order4 rotation action, induced by left multiplication of its copy labels by the quarter turn. The quotient X/C4 consists of two copies of P, distinguished by orientation, glued along their complete boundary. It is the double of a disk, hence a sphere. Thus X admits a degree4 holomorphic map to P^1, and its complex gonality is at most4. The pocket ensures the eight-copy unfolding is connected.
+
+Gonality means the least degree of a nonconstant meromorphic function. It cannot increase under a finite map X->Y. Here is the norm proof, to fix the direction of the implication. If f on X has pole divisor D of degree k, the coefficients of its characteristic polynomial over C(Y) have poles bounded by the pushforward of D, of the same degree k. At least one coefficient is nonconstant, or f would be algebraic over C and hence constant. That coefficient gives a function of degree at most k on Y. Therefore EVERY holomorphic curve covered by this X has gonality at most4, even if the covering is not equivariant for C4.
+
+This monotonicity and the Castelnuovo-Severi inequality used below are standard curve facts; see [Orlic, Proposition2.0.2 and the Castelnuovo-Severi section](https://web.math.pmf.unizg.hr/~petorli/index_files/Doctoral_dissertation.pdf). The disk-double argument and the application to our specific control are given explicitly here.
+
+
+## 21. Transcendental parameters share one arithmetic orbit closure
+
+A focused tools-disabled Opus review accepts this argument from the stated
+inputs. The rational-basis, orbifold-chart, absolute-period and involution
+qualifications requested by that review are included below. It refines the
+orbit-closure question without assuming a full quadratic stratum or
+deducing rank from the period Q-span.
+
+Work in one sufficiently small fixed relative-period chart about X_0,
+using a rational homology basis and a marked local cover if automorphisms
+make the chart an orbifold chart. Let Sigma consist ONLY of actual zeros;
+the freely moving interior S/T marks are not included in this stratum.
+The literal slide has period vector
+
+    v(t)=v_0+t*v_1,       v_0,v_1 in Q[i]^n.
+
+The same formula defines translation surfaces on a small complex parameter
+disk, even though nonreal parameters need not represent physical mirror
+polygons. This complex extension is used only for analytic continuation.
+Let M_tau be the GL^+(2,R) orbit closure for a real transcendental tau in
+the disk. By Wright's field-of-definition theorem, each local branch has
+homogeneous linear equations with coefficients in a real number field K.
+For such an equation L, the equality
+
+    L(v_0)+tau*L(v_1)=0
+
+has algebraic complex coefficients. Transcendence forces both terms
+L(v_0)=L(v_1)=0. Thus a neighborhood of tau in the parameter disk belongs
+to that branch of M_tau. The whole parameter disk then belongs to M_tau. To see this without
+following one immersion branch, let E be its closed preimage in the disk.
+Near any parameter t_1 in E, proper immersion makes M_tau a finite union
+of homogeneous linear subspaces in our period chart. An affine line meets
+each subspace in no points, one point, or the entire line. Thus E is locally
+either a finite set or a neighborhood of t_1. A boundary point of the
+nonempty interior of E would be a nonisolated point of E, so would also
+be interior. That interior is therefore closed as well as open in the
+connected disk; it is the whole disk. In particular M_tau contains every
+small real parameter and the square-tiled base X_0.
+
+For any second transcendental sigma, this yields X_sigma in M_tau, hence
+M_sigma subset M_tau by closed GL-invariance. Interchanging sigma and tau
+proves equality. There is one orbit closure M_* for ALL sufficiently small
+transcendental real parameters, and it contains the complete parameter disk.
+This statement does not assert the same orbit closure for all irrational
+algebraic parameters.
+
+Wright's Theorem1.1 and Example1.2 give k(M_*)=Q because M_* contains X_0.
+See [Wright, The field of definition of affine invariant submanifolds](https://websites.umich.edu/~alexmw/numfield.pdf).
+
+The original field argument gives rank at least2; Section21.1 strengthens
+this to rank at least3. If it had rank1, the absolute tangent space, defined
+over Q, would be the complexification of a rational real2-plane. The real
+and imaginary parts of omega belong to that plane and are independent.
+After choosing two rational basis vectors and clearing their finitely many
+denominators, all absolute periods would belong to the lattice generated
+by two independent complex numbers. Integration modulo that lattice would
+make X_tau a torus cover, contradicting Section17. That section rules
+out every translation cover of a torus by nondiscrete ABSOLUTE periods;
+it does not restrict branching to one point. This argument uses the
+rational tangent-space theorem; the period Q-span computation alone would
+not justify an orbit-closure rank statement. No upper rank bound follows.
+
+There is also no relative tangent direction in M_*. Every actual source
+zero is a corner lift fixed by the physical halfturn J. Under GL^+(2,R),
+J still has derivative -I. To take a smooth limit, transport J_n to a common
+source using the period-chart markings. These maps are near-isometries
+for a convergent family of flat path metrics. Arzela-Ascoli, J_n^2=1 and
+the differential relation J_n^*omega_n=-omega_n retain a nontrivial
+involution fixing every noncolliding labeled zero in the limit.
+
+On a fixed genus>=2 surface there are only finitely many automorphisms,
+so locally there are finitely many possible induced J-actions. M_* is
+locally contained in the union of their relative -1eigenspaces; each
+irreducible linear branch lies in one such eigenspace. But
+
+    ker[H^1(X,Sigma;C)->H^1(X;C)] = C^Sigma / C
+
+has J-action +1 because J fixes Sigma pointwise. Its intersection with
+the -1eigenspace is0. Hence rel(M_*)=0, and dim_C(M_*)=2*rank(M_*)>=4.
+Adding the interior S/T marks would invalidate this rel0 argument, since
+J exchanges those lifts rather than fixing them. No conclusion about
+marked relative directions is smuggled into the unmarked argument.
+
+**Remaining obstruction.** Including Section21.1, the conclusion is an arithmetic rank>=3,
+rel0 orbit closure, not the entire stratum of canonical quadratic covers.
+The generic full-stratum periodic-point classification cannot be applied
+without proving that equality. A proper arithmetic covering locus can
+still have periodic regular points away from Fix(J). The unmarked tangent
+argument alone says nothing about whether our actual fixed S/T lifts are
+among them. An analogous claim about their marked orbit closure requires
+an explicit marked field-of-definition input as well as a nonzero vertical
+marked tangent; neither is assumed here. Even excluding dark pairs at
+transcendental parameters would still require a separate argument to
+produce the original admissible one-corner midpoint event at t=0.
+
+
+### 21.1 Constant area and D4 symmetry force rank at least three
+
+**Status: accepted by independent tools-disabled Opus review (exit0).** For the
+literal straight-attached pocket slide of this paper, the common unmarked
+orbit closure M_* in Section21 has rank at least3, provided the established
+D4 unfolding and common local-branch hypotheses are retained. This uses a
+symplectic tangent theorem in addition to the prior field argument.
+
+Use absolute real cochains x_0,y_0,x_1,y_1 of Section28, with
+omega_t=x_0+i y_0+t(x_1+i y_1), and write B(u,v)=integral_X u wedge v.
+The four classes are independent in absolute cohomology by the determinant16
+period evaluation in Section28. The real underlying tangent V=p(T_R M_*)
+contains all four. Indeed the local complex line belongs to one branch of
+M_* by Section21; its derivative belongs to T_C M_*. This tangent is defined
+over R, so the derivative's real and imaginary parts belong to T_R M_*.
+Taking the real and imaginary parts of omega_t at two distinct real
+parameters in that same homogeneous local branch puts x_0,y_0 there too.
+This is the tangent of M_*, not the smaller orbit closure of X_0 itself.
+
+There are fixed topological copy symmetries R,K on the unfolding, with
+R orientation preserving of derivative rotation by90degrees and K
+orientation reversing of derivative reflection in the x axis. They persist
+for the real slide and give, for j=0,1,
+
+    R* x_j=-y_j,   R* y_j=x_j,
+    K* x_j=x_j,    K* y_j=-y_j.
+
+Here K is the copy-exchanging anti-affine symmetry; the physical room
+itself need not have reflection symmetry. Explicitly use copies (p,g),
+g in D4, with coordinate g(p), and identify (p,g) with (p,g r_s) along
+physical side s. Left multiplication (p,g)->(p,h g) respects every such
+identification and has derivative h. Choosing h to be quarter-turn or
+x-axis reflection gives R or K for every real t. Their mapping classes
+are locally constant, so their cohomology matrices are fixed in the common
+Gauss-Manin chart. Taking two real t values separates the j=0 and j=1
+formulas; no polygon symmetry at nonreal parameters is asserted.
+R preserves B and K reverses B. In particular
+
+    B(x_0,x_1)=B(y_0,y_1)=0,
+    B(x_1,y_0)=B(x_0,y_1).
+
+The physical room is a fixed remainder with one triangle translated along
+a straight wall. Its area, and hence the eight-copy unfolded area, is
+constant for all sufficiently small real t. Expanding gives
+
+    area(X_t)=B(x_0,y_0)
+      +t [B(x_1,y_0)+B(x_0,y_1)]
+      +t^2 B(x_1,y_1).
+
+Thus B(x_1,y_1)=0 and both equal cross terms vanish. Consequently for
+W=span_R{x_0,y_0,x_1,y_1},
+
+    B restricted to W =
+       [0,A,0,0; -A,0,0,0; 0,0,0,0; 0,0,0,0],
+    A=area(X_0)>0,
+    rad(B|W)=span_R{x_1,y_1},   dim W=4.             (21.1a)
+
+By [Avila-Eskin-Moeller, Theorem1.4](https://arxiv.org/pdf/1209.2854),
+B is nondegenerate on V. A symplectic vector space containing a
+four-dimensional subspace with a two-dimensional radical must have
+dimension at least6. For completeness, nondegeneracy makes the map
+V->rad(W)^*, v->B(.,v)|rad(W), surjective. Its restriction to W is zero,
+so V/W surjects onto a two-dimensional space. Hence
+
+    dim_R V >= 4+2=6,      rank(M_*)>=3.            (21.1b)
+
+This does not read rank from a period-span dimension: the cup-product
+radical forces TWO additional absolute tangent dimensions beyond the
+four-cochain pencil. Thus dim_C M_*>=6 even without rel0; the separately
+established rel0 result gives the equality dim_C M_*=2 rank(M_*).
+It remains an UNMARKED tangent statement. In particular the
+new companion directions need not be vertical motions of the actual marks,
+nor affine images available at a chosen rational slice. No actual midpoint
+event, normalized cylinder flux contrast at the base, full-stratum result,
+or illumination claim follows from this dimension bound alone.
+
+
+## 31. Literal-pocket localization at four zero-period necks
+
+**Status: candidate topological/cohomological proof; independent review
+requested.** This concerns ABSOLUTE slide cohomology and a specific pair
+of neck classes. It supplies neither an actual event nor a nonzero pairing
+for the actual event module. Actual relative endpoint terms remain separate.
+
+Let R be the persistent copy quarter-turn of Section12, so X/<R> is a
+sphere. The branch points are the physical polygon corners on its real
+oval. At a canonical corner of angle m*pi/4, the local monodromy exponent
+of the C4 cover is m mod4. One can see this directly from the quartic
+quotient differential: its order is m-4. In a local root coordinate its
+canonical fourth root has monodromy i^(m-4)=i^m. The cover has four sheets
+at odd m and two-sheet local ramification at m=2or6. All full interior A
+marks are regular nonbranch points of this sphere map.
+
+The literal pocket's consecutive physical corners B_0,A_0,C_0 have
+m=5,1,6 and therefore exponents1,1,2. Choose a disk D in the quotient
+sphere enclosing exactly these three branch points and a collar of the
+pocket, with boundary avoiding all actual marks and other branch points.
+It can be chosen as the double of a sufficiently small neighborhood of
+the polygonal pocket together with its three vertices, meeting the rest
+only in fixed charts. The preimage U is connected because its branch
+monodromies generate C4. Their sum is0mod4, so the preimage of boundary D
+has four components b_0,...,b_3, cyclically permuted by R. Orient them as
+boundaries of U. Riemann-Hurwitz for surfaces with boundary gives
+
+    chi(U)=4-(4-1)-(4-1)-(4-2)=-4,
+    2-2g(U)-4=-4,             g(U)=1.              (31.1)
+
+Thus U is a genus1 subsurface with four boundary circles. Its complement
+Y contains all actual S/T lifts. U and Y can be transported in the same
+material topological chart through the small pocket slide. Choose the
+collar boundaries away from the moving mirrors and their endpoints.
+Outside U all physical supporting mirrors crossed by a representative
+path are fixed. The material coordinates are fixed too. Consequently
+both slide cochains x_1,y_1 restrict to zero in H^1(Y;R): every closed
+period represented in Y has derivative0. This is a localization assertion
+about the literal slide, not arbitrary deformations with the same angles.
+
+By the long exact sequence, excision and Poincare-Lefschetz duality, their
+absolute Poincare duals xi,psi belong to image[H_1(U;R)->H_1(X;R)]. The
+persistent R action gives R_*xi=psi, R_*psi=-xi. Use Section21.1's
+independence and cup computation: xi,psi are linearly independent and
+have intersection0. These are established inputs, not a fresh inference
+from the period span alone.
+
+Write B for the span of the four oriented boundary circles in H_1(U).
+It has dimension3, with sole relation sum b_j=0. The quotient
+
+    H_1(U;R)/B
+
+is the two-dimensional symplectic handle space, and its induced R action
+squares to-Id. To justify the latter, U/<R^2> is the double cover of D
+with branch exponents1,1,0 modulo2. It is an annulus: chi=2-1-1=0 and its
+boundary has two components. Hence H_1(U)^(R^2) has dimension1, already
+accounted for by the invariant boundary class b_0+b_2=-(b_1+b_3).
+There is no invariant handle vector. The invariants statement uses the
+usual real transfer for a finite branched surface quotient; branch points
+can be included in an equivariant cellulation and averaging is exact.
+
+Choose an R-equivariant lift of xi,psi to H_1(U), possible by averaging
+over the finite group. More concretely, first project any lift of xi by
+(I-R_*^2)/2 and call it a; then R_*a lifts psi and R_*^2a=-a. On the
+handle quotient, a and R_*a are linearly independent unless a projects
+to0, because R_*^2=-Id there. In a two-dimensional symplectic space,
+independent vectors have nonzero intersection. But their intersection
+in U equals the intersection of xi,psi in X, which is0. Therefore a has
+zero handle projection and belongs to B. Its R-rotated lift does too.
+The slide duals therefore lie in the image of the antisymmetric neck plane
+
+    B_- = span{b_0-b_2, b_1-b_3}.                  (31.2)
+
+Since xi,psi are independent, the inclusion into H_1(X) is injective on
+this two-plane, and their span equals its image. No assertion of
+injectivity on the whole H_1(U) or its whole boundary space is needed.
+
+Let beta_0=b_0-b_2,beta_1=b_1-b_3 denote the included classes. With an
+intersection/Poincare-duality sign convention fixed once, there are real
+a,b, not both0, such that for every ABSOLUTE cycle z,
+
+    Q_x(z)=a<beta_0,z>+b<beta_1,z>,
+    Q_y(z)=-b<beta_0,z>+a<beta_1,z>.               (31.3)
+
+This follows from R beta_0=beta_1,R beta_1=-beta_0 and the same relations
+for xi,psi. The coefficient matrix has determinant a^2+b^2>0. In particular
+Q(z)!=0 iff z pairs nontrivially with at least one of these two SPECIFIC
+neck classes. It is not enough merely that z have zero holonomy.
+
+Every b_j has zero developed period, throughout the slide. Indeed the
+constant-area D4 cup computation of21.1 makes the tautological plane
+span{x_t,y_t} orthogonal to span{x_1,y_1} for every small real t. Equation
+(31.2)thus gives hol_t(beta_0)=hol_t(beta_1)=0. Since R has derivative i,
+
+    hol_t(b_2)=-hol_t(b_0),    hol_t(b_3)=-hol_t(b_1).
+
+Hence hol_t(beta_0)=2hol_t(b_0)and similarly for b_1. All four vanish.
+The boundary classes are nontrivial in the combinations(31.2), despite
+these zero holonomies; zero period is not zero homology.
+
+For a supplied actual seed eta and a supplied pure affine twist N,
+its increment Neta is absolute. Equations(31.3)therefore give a geometric
+reformulation of its detecting increment: at least one of
+
+    <beta_0,Neta>,          <beta_1,Neta>
+
+must be nonzero. The same applies to a mixed increment NHeta. Proving
+that pairing for the actual event remains open. Equation(31.3)is NOT
+asserted for Q(eta) itself without retaining its actual relative endpoint
+terms, particularly when its corner is moving or when Y is disconnected.
+The central-cap direct calculation of26.6 retains those terms separately.
+
+
+
+PRESCRIBED CONTROL
+"""Prescribed C4 pocket topology and cup-form controls, not a surface search."""
+from fractions import Fraction as F
+from pathlib import Path
+import json
+b=Path(__file__).resolve().parent
+D=5
+I=[[F(int(i==j)) for j in range(D)] for i in range(D)]
+R=[[F(x) for x in row] for row in [[0,-1,0,0,0],[1,0,0,0,0],
+    [0,0,0,0,-1],[0,0,1,0,-1],[0,0,0,1,-1]]]
+J=[[F(0) for _ in range(D)] for _ in range(D)];J[0][1]=1;J[1][0]=-1
+def mm(A,B):return [[sum(A[i][k]*B[k][j] for k in range(D)) for j in range(D)] for i in range(D)]
+def mv(A,x):return [sum(a*y for a,y in zip(row,x)) for row in A]
+def tr(A):return list(map(list,zip(*A)))
+R2=mm(R,R);assert mm(R2,R2)==I
+assert mm(mm(tr(R),J),R)==J
+assert mm(J,R)==[[F(int(i==j and i<2)) for j in range(D)] for i in range(D)]
+beta0=list(map(F,[0,0,1,0,-1]));beta1=list(map(F,[0,0,1,2,1]))
+assert mv(R,beta0)==beta1 and mv(R,beta1)==[-x for x in beta0]
+assert mv(J,beta0)==mv(J,beta1)==[0]*D
+# Exact RH and quotient topology for this ONE prescribed branch triple.
+chi_U=4-3-3-2;boundaries_U=4;genus_U=(2-boundaries_U-chi_U)//2
+chi_half=2-1-1;boundaries_half=2;genus_half=(2-boundaries_half-chi_half)//2
+assert (chi_U,boundaries_U,genus_U)==(-4,4,1)
+assert (chi_half,boundaries_half,genus_half)==(0,2,0)
+# The handle isotropy identity is the matrix JR=diag(1,1,0,0,0),
+# so <a,Ra>=a_handle_1^2+a_handle_2^2; no sample extrapolation.
+out=dict(status='PRESCRIBED_POCKET_NECK_TOPOLOGY_CUP_PASS',
+ branch_exponents=[1,1,2],U=dict(chi=chi_U,boundaries=boundaries_U,genus=genus_U),
+ halfturn_quotient=dict(chi=chi_half,boundaries=boundaries_half,genus=genus_half),
+ R_order_four=True,R_squared_minus_identity_on_handle=True,
+ exact_handle_quadratic_form=[1,1,0,0,0],antisymmetric_boundary_generators=[list(map(int,beta0)),list(map(int,beta1))],
+ scope='Prescribed topology and representation only. Material slide localization and absolute PD deduction require hand proof; actual event pairing remains open.',
+ optical_discovery_runs=0)
+(b/'pocket-neck.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2))

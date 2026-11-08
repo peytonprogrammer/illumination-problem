@@ -1,0 +1,25 @@
+{
+  "id": "A25",
+  "start_utc": "2026-11-07T04:36:07.230169+00:00",
+  "deadline_utc": "2026-11-07T04:50:07.230169+00:00",
+  "premises": "Finite tree of fixed orthogonal chambers and fixed-width rectangular necks, horizontal OR vertical, smooth mouths, actual S/T fixed in chamber coordinates; supplied finite legal path with nonzero rational velocity components (p,q). Geometry remains a strictly simple disk after specified length increases.",
+  "intended_implication": "Exact actual path persists at all nonnegative neck increments that insert an integer full transverse billiard period per neck traversal; handle mixed perpendicular neck orientations and repeated visits.",
+  "success_criterion": "A finite reflection-count exact transfer with actual target and no asymptotic/approximation premise, plus an explicit finite-residue criterion for a whole fixed-neck parameter family.",
+  "strongest_objection": "Entering different mouths or revisiting a neck may change realized copy shifts; fixed chambers must not be silently deformed when perpendicular strips intersect. Require independent fixed-chamber/neck parametrization and valid disk geometry, not arbitrary strip generators.",
+  "outputs": [
+    "mixed-neck-residue-effort.json",
+    "mixed-neck-residue-proof.md",
+    "mixed-neck-residue-review-request.json"
+  ],
+  "method": "Hand exact rectangle dynamics; no search or code needed",
+  "status": "all_authoring_terminal_pending_supplement_review",
+  "additional_outputs_same_original_deadline": [
+    "perpendicular-neck-joint-proof.md",
+    "perpendicular-neck-joint-review-request.json",
+    "mixed-tree-curvature-supplement.md",
+    "mixed-tree-curvature-review-request.json"
+  ],
+  "same_effort_sharpening": "Curved phase equidistribution (tau*DeltaL, DeltaK/tau) plus exact endpoint root may yield ALL jointly large lengths for fixed perpendicular two-neck chain, not just arithmetic progressions; retain original A25 deadline including initial setup.",
+  "finished_utc": "2026-11-07T04:44:25.677241+00:00",
+  "outcome": "Exact arithmetic mixed-neck transfer plus curvature-based all-jointly-large actual-path theorem and conditional finite lattice remainder; no universal W21 conclusion"
+}

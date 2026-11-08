@@ -1,0 +1,50 @@
+{
+  "status": "PASS_WITH_DOMAIN_RESTRICTION",
+  "shear_identities": 1234,
+  "relabeling_and_root_checks": 2421,
+  "builder_fixtures": [
+    {
+      "label": "square-interior-to-wall",
+      "squares": 32,
+      "start_component_squares": 16,
+      "target_lifts": 4
+    },
+    {
+      "label": "square-wall-to-interior",
+      "squares": 32,
+      "start_component_squares": 16,
+      "target_lifts": 8
+    },
+    {
+      "label": "diagonal-wall-marks",
+      "squares": 16,
+      "start_component_squares": 16,
+      "target_lifts": 4
+    },
+    {
+      "label": "L-interior",
+      "squares": 96,
+      "start_component_squares": 48,
+      "target_lifts": 8
+    },
+    {
+      "label": "L-wall-start",
+      "squares": 96,
+      "start_component_squares": 48,
+      "target_lifts": 8
+    }
+  ],
+  "unsupported_corner_target": {
+    "source": [
+      1,
+      1
+    ],
+    "target": [
+      0,
+      0
+    ],
+    "direct_visibility": true,
+    "target_labels": 0
+  },
+  "scope": "permutation identities, canonicalization covariance and fixed builder controls only; no darkness orbit run"
+}

@@ -1,0 +1,19 @@
+{
+  "paths": [
+    ".context/three-triples/cell-search-2-2.json",
+    ".context/three-triples/cell-2-2-bootstrap.json",
+    ".context/three-triples/audit.json",
+    ".context/three-triples/proof-inputs.json",
+    ".context/three-triples/connectivity-audit.json"
+  ],
+  "sha256": {
+    ".context/three-triples/cell-search-2-2.json": "3ee0e770289730369d7ff5b3fe453241096f299a808e70850146668f99990516",
+    ".context/three-triples/cell-2-2-bootstrap.json": "eeeb2f886374765a387c9222f485cb2998e374c28c552d8fa2ec7114fdae2603",
+    ".context/three-triples/audit.json": "8021f77e47429e7cf3dc9956803a51a4311e0f7b97f5f4f89402a311c0e28df7",
+    ".context/three-triples/proof-inputs.json": "3120f98a95de4335575accf3c4055eb21012843c7d5ee6f97e4738bf625be662",
+    ".context/three-triples/connectivity-audit.json": "95704ff97d14f250cad049fdaf6bf852148dedfd67cae546baffc90125cdf630"
+  },
+  "base_inputs_manifest": "proof-inputs.json",
+  "command": "python -B <copy>/audit_illumination_cell_sets.py",
+  "scope": "Supplemental complete forty-cell-set ray partition. Preserve current source snapshots; keep verification outputs in a separate claimed copy."
+}

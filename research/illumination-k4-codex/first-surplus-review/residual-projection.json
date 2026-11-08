@@ -1,0 +1,100 @@
+{
+  "status": "projection_complete",
+  "forced_caps": [
+    "B+",
+    "E-",
+    "L+",
+    "L-",
+    "Nr-",
+    "T-"
+  ],
+  "remaining_assumption": "not D- or R-",
+  "source_records": 52312,
+  "sources": [
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/learned.jsonl",
+      "sha256": "2820188c352871135e3a00e14e347557c8de57be3fabab2cdf4e7f59a0862891",
+      "records": 17868
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "records": 30548
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "records": 3896
+    }
+  ],
+  "distinct_terms": 10,
+  "undominated_terms": [
+    {
+      "required": [],
+      "absent": [],
+      "reflections": 3,
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 28534,
+      "frame": [
+        true,
+        1,
+        1
+      ],
+      "sigma_reversed": false,
+      "path": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            6,
+            7
+          ],
+          [
+            -8,
+            7
+          ]
+        ],
+        [
+          [
+            -10,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        [
+          [
+            -1,
+            4
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      ]
+    }
+  ],
+  "scope": "Symbolic conditions on optional D/R from fixed previously hashed archives; no occupancy assignments or rooms generated; no new directions or words."
+}

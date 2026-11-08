@@ -1,0 +1,205 @@
+{
+  "status": "PASS",
+  "distinct_rooms": 503,
+  "verified_paths": 1686,
+  "rebuilt_cuts": 1686,
+  "unrelated_mutations": 2730,
+  "runs": [
+    {
+      "run": "placement-22-simple-symmetric",
+      "records": 263,
+      "distinct_rooms": 263,
+      "verified_paths": 1052,
+      "rebuilt_cuts": 1052,
+      "unrelated_mutations": 572,
+      "max_reflections": 26,
+      "summary": {
+        "status": "INFEASIBLE",
+        "stop_reason": "exhausted",
+        "seeded_records": 249,
+        "model_path_cuts": 1052,
+        "new_screened": 14,
+        "screened": 263,
+        "illuminated": 263,
+        "exhausted": true,
+        "seconds": 64.62694129202282,
+        "args": {
+          "bounds": [
+            -2,
+            4,
+            -2,
+            4
+          ],
+          "target": [
+            2,
+            2
+          ],
+          "seconds": 180.0,
+          "slits": 0,
+          "max_tiles": 72,
+          "max_walls": 23,
+          "simple": true,
+          "out": "placement-22-simple-symmetric",
+          "hint": null,
+          "any_target": false,
+          "transparent_budget": 2,
+          "require_transparent": false,
+          "screen_candidates": 800,
+          "direction_bound": 32,
+          "path_cuts": true,
+          "seed_screen": [
+            ".context/placement-22-simple-screen.json"
+          ],
+          "symmetry_cuts": true
+        }
+      }
+    },
+    {
+      "run": "placement-42-simple-symmetric",
+      "records": 163,
+      "distinct_rooms": 163,
+      "verified_paths": 326,
+      "rebuilt_cuts": 326,
+      "unrelated_mutations": 418,
+      "max_reflections": 34,
+      "summary": {
+        "status": "OPTIMAL",
+        "stop_reason": "time_limit",
+        "seeded_records": 98,
+        "model_path_cuts": 326,
+        "new_screened": 65,
+        "screened": 163,
+        "illuminated": 163,
+        "exhausted": false,
+        "seconds": 120.46921758301323,
+        "args": {
+          "bounds": [
+            -2,
+            6,
+            -2,
+            4
+          ],
+          "target": [
+            4,
+            2
+          ],
+          "seconds": 120.0,
+          "slits": 0,
+          "max_tiles": 96,
+          "max_walls": 23,
+          "simple": true,
+          "out": "placement-42-simple-symmetric",
+          "hint": null,
+          "any_target": false,
+          "transparent_budget": 2,
+          "require_transparent": false,
+          "screen_candidates": 400,
+          "direction_bound": 32,
+          "path_cuts": true,
+          "seed_screen": [
+            ".context/placement-42-simple-screen.json"
+          ],
+          "symmetry_cuts": true
+        }
+      }
+    },
+    {
+      "run": "placement-44-simple-symmetric",
+      "records": 42,
+      "distinct_rooms": 42,
+      "verified_paths": 168,
+      "rebuilt_cuts": 168,
+      "unrelated_mutations": 1140,
+      "max_reflections": 28,
+      "summary": {
+        "status": "INFEASIBLE",
+        "stop_reason": "exhausted",
+        "seeded_records": 39,
+        "model_path_cuts": 168,
+        "new_screened": 3,
+        "screened": 42,
+        "illuminated": 42,
+        "exhausted": true,
+        "seconds": 34.917115583026316,
+        "args": {
+          "bounds": [
+            -2,
+            6,
+            -2,
+            6
+          ],
+          "target": [
+            4,
+            4
+          ],
+          "seconds": 100.0,
+          "slits": 0,
+          "max_tiles": 128,
+          "max_walls": 23,
+          "simple": true,
+          "out": "placement-44-simple-symmetric",
+          "hint": null,
+          "any_target": false,
+          "transparent_budget": 2,
+          "require_transparent": false,
+          "screen_candidates": 300,
+          "direction_bound": 32,
+          "path_cuts": true,
+          "seed_screen": [
+            ".context/placement-44-simple-screen.json"
+          ],
+          "symmetry_cuts": true
+        }
+      }
+    },
+    {
+      "run": "placement-22-slit-symmetric",
+      "records": 35,
+      "distinct_rooms": 35,
+      "verified_paths": 140,
+      "rebuilt_cuts": 140,
+      "unrelated_mutations": 600,
+      "max_reflections": 11,
+      "summary": {
+        "status": "FEASIBLE",
+        "stop_reason": "time_limit",
+        "seeded_records": 18,
+        "model_path_cuts": 140,
+        "new_screened": 17,
+        "screened": 35,
+        "illuminated": 35,
+        "exhausted": false,
+        "seconds": 100.18031229102053,
+        "args": {
+          "bounds": [
+            -2,
+            4,
+            -2,
+            4
+          ],
+          "target": [
+            2,
+            2
+          ],
+          "seconds": 100.0,
+          "slits": 2,
+          "max_tiles": 72,
+          "max_walls": 19,
+          "simple": false,
+          "out": "placement-22-slit-symmetric",
+          "hint": null,
+          "any_target": false,
+          "transparent_budget": 2,
+          "require_transparent": false,
+          "screen_candidates": 300,
+          "direction_bound": 32,
+          "path_cuts": true,
+          "seed_screen": [
+            ".context/placement-22-slit-screen.json"
+          ],
+          "symmetry_cuts": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+Third-surplus illumination: complete remote-attachment reduction
+4 November2026 — Codex01a18403
+
+RESULT: parent hand theorem, independent review pending. Every room in the
+active Delta3/W<=21/k<=6 class that has an occupied A cell outside H and its
+seven neighbors illuminates actual S/T within14reflections. This statement
+combines the following structural exhaustion with the previously written
+family proofs. Wholly local Delta3 rooms remain unresolved. No completion
+of the full active goal is asserted.
+
+1. Charge and connectivity, without an assumed radius
+Use the established charge identity Delta=sum(e)+b, e=q-d>=0,b>=0.
+Remove the N direct-bridge case first: it already illuminates S/T. Every
+remaining e0 partial A cell is an ordinary one-triangle cap, using its only
+BC cell-crossing edge toward H. Such a cell cannot transmit an edge-connected
+chain away from H. Strict simplicity makes the triangle dual edge-connected.
+
+Call a cell remote if it is outside K=H+the seven adjacent cells. Along a
+shortest occupied cell chain from H, the first partial root needs e>=1.
+A remote e1 cell is a single triangle with only one BC edge, so cannot
+transmit to a further remote cell. A transmitting remote cell needs e>=2.
+A chain with two remote stages would cost root1+transmitter2+leaf1>=4.
+A d0 cell inside K cannot evade this count as an intermediary: it must
+receive and transmit, hence q=e>=2, plus root1 and final leaf1 cost>=4.
+A remote cell touching two distinct K roots needs q=e>=2, while each
+transmitting root costs>=1, again total>=4. Thus every remote cell is
+directly next to exactly one K root.
+
+Two remote leaves attached to distinct roots cost at least4. A shared root
+with e1 is a quarter two-triangle fan, with only one outward neighbor after
+its H-facing edge; a centered pair has no outward edge. It cannot branch to
+two remote cells. A shared root with e>=2 plus two leaves costs at least4.
+Thus there is exactly one remote cell whenever a remote cell exists.
+The exceptional d2/e1 N fans already contain the direct bridge and were removed.
+More generally any contiguous N window of at most five45-degree sectors
+touching both H-facing bottom and right sides contains both sectors6and7,
+the direct bridge. This also covers the d2/q5 case used for a solitary e3.
+
+2. Exhaustive charge possibilities with a remote cell
+The remote cell has d0 and positive q=e. The possibilities are exactly:
+ A root e1, remote e1, b1;
+ B root e1, remote e2, b0;
+ C root e2, remote e1, b0.
+Why no third positive cell? Root e1+remote e1 is a quarter joined to a single
+triangle; their shared C is smooth, forcing b>=1. Another positive unit would
+exceed3. A zero-excess cell cannot independently join the remote cell. All
+larger remote/root charges exceed3 or fail attachment.
+
+A: the root is a quarter fan. A single remote triangle contributes one90-degree
+quadrant at the shared C; the root contributes one, making a smooth C. This is
+remote-erasure.txt§3, which erases to Delta<=2, including the possible newly
+smooth B, then reinserts the remote leaf without affecting the selected path.
+
+B: the root is again a quarter fan. At the shared C the remote pair must
+contribute180degrees: a90 contribution would make an extra smooth C with b0.
+Therefore it is centered on the parent-facing side. This is remote-erasure.txt§4,
+which erases to Delta<=2 and reinserts harmlessly. Other cells are ordinary.
+
+C: at the shared C the single leaf contributes90degrees, so the root must
+contribute180 to avoid a smooth C. Thus the root contains the complete outer-C
+pair. Its q=3,d1, so it has three triangles or a smooth four-triangle half-fan.
+A d2/q4 root is impossible, and d2/q3 is an already removed bridge case.
+This is the healed-C case; all remaining partial cells are ordinary.
+
+3. Exhaustive local orientations of a healed root
+At a fixed A center, triangles form a contiguous fan in eight cyclic45-degree
+sectors, with each C pair using two adjacent sectors. A remote-facing complete
+C pair and any H-facing sector can fit into three or four sectors only when
+the H side is adjacent to the remote side. Opposite sides require at least
+five sectors. This elementary angle-span fact bounds the orientations below.
+
+For three sectors the complete outer pair has one H-facing end sector. For
+four sectors either (i) both the H side and outer side are complete pairs,
+or (ii) the outer pair is centered and the H side contributes one end sector.
+These exhaust contiguous three/four-sector fans containing the required pair.
+
+At noncritical D/R roots, extra triangles affect neither original13path's
+forbidden tiles. The ordinary short paths force B+,E-,L+,T-. N is ordinary:
+if it is bottom-facing, Nr-/Nr+ are absent and sigma13 works; otherwise
+Nb-/Nb+ are absent and original13 works. The root and remote leaf lie outside
+all other forbidden guards.
+
+At N, a left remote side must attach through the bottom H side; all right-
+facing N caps are absent, so sigma13 works. A north remote side must attach
+through the right H side; all bottom-facing N caps are absent, so original13
+works. The short forcing paths still apply in the ordinary critical cells.
+
+4. Critical L/T roots
+Use L as representative. Its H side is east; only north or south is adjacent.
+If L+ is absent, E- absent gives the old one-bounce path, and E- present gives
+the old sigma four-bounce path. So only root fans containing L+ need analysis.
+
+For the north remote side, the sector list in§3 gives exactly three roots:
+ L+,l,c (three sectors), handled by healed-budget.txt;
+ L+,l,c,w (four sectors with a single H sector), handled by half-fan.txt;
+ L-,L+,l,c (four sectors with full H pair), handled by center-half.txt.
+Each has a proved bounded family cover with at most14reflections.
+Their explicitly defined leaf choices and possible extra ordinary caps are
+included in the proofs, not held fixed without justification.
+
+For a south remote side, a three-sector root and the outer-centered four-sector
+root omit L+ and were handled already. The four-sector root containing L+
+must have the full H pair L-/L+ plus the complete lower outer pair. Its upper
+outer L mate is absent. If B+ is absent, old one-bounce works; otherwise
+ordinary B has B- and both outer mates absent, and the centered-L three-path
+from residual-cover.txt works. Its only other outside forbidden tile is the
+UPPER outer L mate, which is absent. The lower L additions and remote leaf
+do not touch its full guards. Sigma transfers these statements to T.
+
+5. Critical B/E roots
+At B, H is north. A complete south pair is opposite and cannot fit; the east
+neighbor is D in K, so the only remote-facing side is west. A three-sector or
+outer-centered four-sector root has only the B- H cap and omits B+, hence
+old one-bounce illuminates directly.
+The remaining root has full H pair B-/B+ plus the complete west C pair.
+remote-B.txt proves illumination in at most13reflections for this whole family:
+E-/L+ forced, b0 forces the upper remote leaf and excludes Nb-, then three
+fixed guards cover all remaining ordinary choices. Sigma handles E.
+
+6. Optical guard support and verification boundary
+The erasure arguments use the exact support receipt path-support-check.json:
+all21specified inherited/forcing paths and their sigma images have their required and
+forbidden triangles inside K. Thus added remote triangles cannot spoil the
+chosen path. The healed-root proofs instead use explicit actual-path guards,
+since some inherited mirrors really are removed. Those mistakes are not hidden
+by a general enlargement claim.
+
+This is a hand structural proof plus exact inherited/frozen-path checks with
+a reused checker. No independent review has yet ACKed. In particular no claim
+that another agent is currently verifying these notes is made. The full active
+goal is incomplete until all wholly local Delta3 rooms are covered and required
+independent challenges are reconciled. No room/ray/direction/word discovery,
+solver, larger-surplus expansion or universal22claim occurred.

@@ -1,0 +1,116 @@
+# Review of Section 31: pocket-neck localization
+
+## Verdict
+
+**The claim is valid, and I found no counterexample.** For the literal slide, the absolute slide cochains are Poincaré dual to the two antisymmetric neck differences. I checked every new step and each one holds. An independent local computation confirms the result and also fixes the unknown coefficients:
+
+- **Coefficients:** (a,b) = (0,±1). The doc only proves "not both 0".
+- **Dependencies:** the direct proof needs neither 21.1 nor Section 28.
+- **Scope:** the "relative endpoint corrections" caveat is too pessimistic for endpoints at pocket corners.
+
+The geometric content is real but modest; see the last section.
+
+## Step-by-step audit
+
+**Exponents and branching.**
+- The interior angles are 5π/4, π/4 and 3π/2, giving m = 5, 1, 6. These are correct for a pocket to the right of the wall x=1 with the room on the left.
+- The quartic order m−4 gives monodromy i^m, so the exponents are 1, 1, 2.
+- In X, the point over B_0 is one zero of order 4 (cone angle 10π). The point over A_0 is a **regular point** (cone angle 2π). Over C_0 there are two zeros of order 2 (cone angle 6π each).
+- The A_0 fact is harmless here, but nothing should call that lift a zero.
+
+**The disk D.**
+- Take N ⊂ P to be the points within intrinsic distance ε of the closed pocket. For small ε, strict simplicity makes N a disk that meets ∂P in a single arc. That arc contains exactly B, A and C, plus wall x=1 just below and just above them.
+- The double of N is then a disk, and |t| ≪ ε is needed.
+- The portal and the pocket contain no integer points other than the corners, so the marks lie in Y.
+- **Correction:** state these conditions explicitly; the doc only asserts them.
+
+**Topology of U.**
+- U is connected, because exponent 1 generates C4.
+- The boundary monodromy is 1+1+2 ≡ 0, so ∂D lifts to four circles. R permutes them simply transitively, and since R preserves orientation, R b_j = b_{j+1} as oriented classes.
+- Riemann–Hurwitz gives χ = 4(1−3) + (1+1+2) = −4, so the genus is 1 and dim H_1(U;ℝ) = 5.
+
+**The halfturn quotient U/⟨R²⟩.**
+- U/⟨R²⟩ is a connected double cover with χ = 2(−2) + (1+1+2) = 0 and two boundary circles, so it is an annulus.
+- Transfer with real coefficients gives a 1-dimensional space of R²-invariants.
+- R² acts semisimply, so H = B ⊕ (an invariant complement). The invariant boundary class therefore exhausts the invariants, and R² = −Id on H/B. This is correct.
+
+**Excision and duality.**
+- The class x_1 restricts to zero on Y, so it lies in the image of H¹(X,Y) ≅ H¹(U,∂U) ≅ H_1(U) → H_1(X). Naturality of Lefschetz duality makes this valid.
+- One point needs saying: the Gauss–Manin marking agrees with the material marking, because the parameter interval is contractible.
+- **Correction:** give the material map h_t explicitly. Use the translation T_{tu} on a smaller neighbourhood N′ of the pocket, and a vertical shear (x,y)↦(x, y−tφ) on N∖N′. The shear preserves the line x=1 and is applied copywise as (p,g)↦(h(p),g). On Y it is the identity, and there h_t^*ω_t = ω_0 holds literally.
+
+**Equivariant lift and isotropy.**
+- Pushing the lift forward by (I−R²)/2 still lifts ξ, because R²_*ξ = −ξ.
+- If a lift a had a nonzero handle part, then a and Ra would be independent, because R² = −Id on H/B leaves no real eigenvector.
+- Independent vectors in a 2-dimensional symplectic space pair nontrivially. That would contradict ⟨ξ,ψ⟩ = 0, since intersection in U equals intersection in X.
+- So a lies in B with R²a = −a, which places it in B_−.
+- Injectivity of B_− follows from the independence of ξ and ψ. This step is correct.
+
+**Signs in (31.3).**
+- PD is natural under orientation-preserving maps. From R^*x = −y and R^*y = x we get (R^{-1})^*x = y and (R^{-1})^*y = −x. Hence R_*ξ = ψ and R_*ψ = −ξ, which matches the doc.
+- Complexified, (31.3) reads Q(z) = λ⟨Σ_j i^j b_j, z⟩ with λ = a − ib. This is the natural form, because Σ i^j b_j is the R_*-eigenvector with eigenvalue −i.
+
+**Zero period.**
+- The doc's argument for zero period is valid.
+- **Correction:** it is overkill. b_0 is the arc α_N in copy g followed by its reverse in copy g r_v. Both endpoints of α_N lie on the line x=1, so the step Δ between them is vertical and r_vΔ = Δ. The holonomy is then gΔ − g r_vΔ = 0 for every t.
+- This holds for **any** pocket attached along a straight wall. The zero-period property is built into the setup; it does not come from the constant-area condition.
+
+**Control script.**
+- It is algebraically consistent: β_0 = [0,0,1,0,−1], β_1 = b_0 + 2b_1 + b_2, R is symplectic, and JR = diag(1,1,0,0,0).
+- It is tautological, however. It hard-codes the block-diagonal R-representation and the handle rotation, so it verifies none of the geometry.
+- The opposite handle handedness would make the form negative definite instead, with the same conclusion.
+
+**Notation.** The letter B is used three ways: for the vertex B_0, for the cup form in 21.1, and for the boundary span in Section 31. Rename the boundary span.
+
+## Direct local proof
+
+The conjugation identity below gives an independent proof with explicit coefficients.
+
+Every reflection that matters inside U is in a pocket wall D_t or H_t, or in the fixed wall x=1. The vertical translation T_{tu} maps the line x=1 to itself. Therefore σ_{s,t} = T σ_{s,0} T^{-1} for all three walls, and the whole local reflection group is conjugated by T.
+
+Now take an excursion through U that enters in copy g and leaves in copy g′. Its developed displacement is g·T A_0 T^{-1}(p′) − g·p. Differentiating in t gives:
+
+  **d/dt = (g − g′)u.**
+
+Index the necks so that b_j lies in the copies ρ^j{e, r_v}. Since r_v u = u, the derivative depends only on the coset. Three checks against the reflection data:
+
+- Crossing D: u − r_D u = (1,−1) = c_D′.
+- Crossing H: u − r_H u = (0,−2) = c_H′.
+- Crossing D then H: c_D′ + r_D c_H′ = (−1,−1) = (I−ρ)u.
+
+All three agree with the formula below, which is a nontrivial confirmation of (31.2). Equivalently, h_t^*ω_t − ω_0 = t·η with η = −i Σ_j i^j dφ_j, where φ_j is a bump function across the collar annulus A_j next to b_j.
+
+Let ν_j(c) denote the net number of entries into U through neck b_j. Then
+
+  **(x_1 + i y_1)(c) = −i Σ_j i^j ν_j(c),**
+
+which in real form is **x_1 = ν_1 − ν_3** and **y_1 = ν_2 − ν_0**. With the convention ⟨b_j,z⟩ := ν_j(z), this gives PD(x_1) = β_1, PD(y_1) = −β_0, and (a,b) = (0,1). It is consistent with R^*x = −y and R^*y = x.
+
+Two consequences:
+
+**Independence without Section 28.**
+- Every other corner has a nonzero exponent, since m ≠ 4. So the subgroup generated by the remaining exponents contains {0,2}, and b_0 and b_2 lie in the same component of Y.
+- Take a loop that goes from b_0 through Y to b_2 and returns through U. It has Σ i^j ν_j = −2 ≠ 0. Applying R gives a second such loop, which makes x_1 and y_1 independent for **every** such room.
+- The identities in 21.1, B(x_1,y_1) = 0 and B(x_t, x_1) = B(x_t, y_1) = 0, also follow locally, which is independent corroboration.
+
+**Relative endpoints.**
+- The same formula holds for any chain whose endpoints avoid the collars, provided each endpoint either is a fixed point of Y (such as the S/T lifts) or moves with T_{tu} (such as the B, A, C lifts).
+- The reason is that η is supported in the collars, and an endpoint at a pocket corner contributes "no exit term".
+- For the halves-difference chain with boundary 2c − S − T at a pocket corner c, the correction relative to an absolute neck count is explicit: (g_in + g_out)u at that corner.
+- Whether Y is disconnected does not matter for this formula; it only affects which ν-vectors closed cycles can realize.
+- **Cross-check:** this should agree with the central-cap calculation in 26.6. Extra terms can only come from normalizing w or the direction, not from homology endpoints.
+
+## Scope and content
+
+**Statement to adopt.**
+For the literal slide, x_1 + iy_1 = −i·PD(Σ_j i^j b_j), where b_j is the neck in copy-coset ρ^j⟨r_v⟩. The image of B_− in H_1(X) is a 2-plane. On it the intersection form vanishes, and the periods vanish for all small t. The statement is absolute, and it extends to chains with fixed endpoints in Y or endpoints at pocket corners.
+
+**What it adds beyond an arbitrary detected zero-period cycle.**
+- The dual classes are canonical, R-equivariant and explicit.
+- Detection becomes a combinatorial test on the pocket-visit word: Q(Nη) ≠ 0 if and only if the net coset-weighted entry vector of Nη satisfies ν_0 ≠ ν_2 or ν_1 ≠ ν_3. Equivalently, the excursions of Nη have nonzero total Σ(g_in − g_out)u.
+
+**What it does not add.**
+- The content is exactly the translation-conjugation identity.
+- The genus-1, handle-quotient and isotropy route is correct but unnecessary, and the content does not come from there.
+- It does not use the grid or parity hypotheses.
+- It gives no event existence, and no nonvanishing for the actual Nη or NHη. Those remain open.

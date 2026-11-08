@@ -1,0 +1,831 @@
+{
+  "status": "PASS",
+  "paths_checked": 21,
+  "sources": {
+    "zero-surplus-L/cover-check.json": "92b37634e01aa8700e0f1d336f370421e8b15caa2c6e765227a336ac28f21c4d",
+    "first-surplus-review/square-exchange-check.json": "68be137dd44997265aa84b2ddfe5899711c31dccb2c03faf2b981b9b80eca53a",
+    "first-surplus-review/centered-left-check.json": "a5a638714b953fabcb02cd8336afc7e6b8ada8db0fb25f8127bd91af44bc3213",
+    "first-surplus-review/bottom-residual-check.json": "6408344b2c304f95ab3a9df64b0e04d4c2e0e33c2af9f41bb29521e56ebfb631",
+    "first-surplus-review/residual-cover-check.json": "a90643eab8114b606222a6c3ce6f8d9d8cda002370375d28c77e5f7b31b0ea85",
+    "second-surplus-review/five-path-check.json": "7c6cdcc85fbc7c2e019622b9e8cb72f8b3a9fde7100d66a3b2e01c3ae5ceae09",
+    "third-surplus-review/independent-review/guard-extension-check.json": "c4b577fadd611af6cb56d5b0d5b8ca60053510c48f617a8ae890efddd8e2eecc"
+  },
+  "paths": {
+    "zero-surplus-L/cover-check.json:one": {
+      "reflections": 1,
+      "required_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          0,
+          -2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "zero-surplus-L/cover-check.json:one_sigma": {
+      "reflections": 1,
+      "required_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "zero-surplus-L/cover-check.json:four": {
+      "reflections": 4,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "zero-surplus-L/cover-check.json:four_sigma": {
+      "reflections": 4,
+      "required_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "zero-surplus-L/cover-check.json:thirteen": {
+      "reflections": 13,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "zero-surplus-L/cover-check.json:thirteen_sigma": {
+      "reflections": 13,
+      "required_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/square-exchange-check.json:B_four": {
+      "reflections": 2,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/square-exchange-check.json:E_four": {
+      "reflections": 2,
+      "required_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/square-exchange-check.json:B_thirteen": {
+      "reflections": 11,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/square-exchange-check.json:E_thirteen": {
+      "reflections": 11,
+      "required_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/square-exchange-check.json:T_thirteen": {
+      "reflections": 11,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/square-exchange-check.json:L_thirteen": {
+      "reflections": 11,
+      "required_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/centered-left-check.json:left": {
+      "reflections": 12,
+      "required_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/centered-left-check.json:top": {
+      "reflections": 12,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/bottom-residual-check.json": {
+      "reflections": 6,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "first-surplus-review/residual-cover-check.json": {
+      "reflections": 3,
+      "required_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          -2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "second-surplus-review/five-path-check.json": {
+      "reflections": 5,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "third-surplus-review/independent-review/guard-extension-check.json:centeredB3": {
+      "reflections": 3,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "third-surplus-review/independent-review/guard-extension-check.json:outerB2": {
+      "reflections": 2,
+      "required_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          0,
+          -2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "status": "PASS"
+    },
+    "third-surplus-review/independent-review/guard-extension-check.json:sigma_centeredB3": {
+      "reflections": 3,
+      "required_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    },
+    "third-surplus-review/independent-review/guard-extension-check.json:sigma_outerB2": {
+      "reflections": 2,
+      "required_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "forbidden_cells": [
+        [
+          -2,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "status": "PASS"
+    }
+  },
+  "all_sigma_supports": "PASS",
+  "support": [
+    [
+      -2,
+      0
+    ],
+    [
+      0,
+      -2
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      2,
+      -2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      2
+    ]
+  ],
+  "scope": "Previously specified fixed paths only. Any added triangles in A cells outside this support leave all required/forbidden guards unchanged. Does not classify rooms or prove that deletion lowers surplus."
+}

@@ -1,0 +1,127 @@
+Independently challenge a short new theorem; tools disabled and no file edits. The normalized polygon P is a strictly simple canonical A-B-C triangular grid disk. No noncorner integer point is B or C. It has the straight-attached pocket with B0=(1,1), A0=(2,2), C0=(1,2), open portal x=1,1<y<2, fixed physical vertical wall portions immediately above/below the portal. Only the three pocket vertices slide by t*(0,-1), preserving simplicity for sufficiently small t. All other walls and marks are fixed. P prime, obtained by removing the pocket, is a connected bounded polygon with all its exterior walls fixed. D_t:y-x=-t and H_t:y=2-t are the two moving walls. The standard connected eight-copy D4 unfolding is meant. A closed-copy reflection word can be realized as a continuous homology loop by connecting wall crossings inside copies; no straight billiard realization is asserted. Previously established exact closed periods (-2,0) and (0,-2) stay constant for all t; these follow from V1 D_t H_t D_t and its conjugate by D_t. Review the claimed iff rational torus-cover dichotomy below. Is the variable closed-loop period actually realizable? Does a torus cover require a discrete absolute period group? Does rational t suffice for a coherent Gaussian tiling? Check every scope issue and the frozen-word algebra. Do not claim this proves seed existence or illumination. No discovery searches.
+
+## 17. An exact rational/irrational dichotomy for the slide
+
+For sufficiently small parameters preserving the stated polygon, the unfolding
+of the literal slide is a translation cover of a torus **if and only if t is
+rational** in the normalized coordinates of Section1.
+
+The two independent absolute periods (-2,0),(0,-2) from Section10 remain
+constant for every t. The moving pocket also has the exact halfturn
+
+    G_t=D_t H_t D_t H_t,
+    G_t(x,y)=(-x+4,-y+4-2t).
+
+Choose a word W using only fixed exterior walls of the remainder P' whose
+linear part is -I. Such a word exists by the two-nonparallel-wall argument
+in Section16. Its affine map is W(z)=-z+b, b in2Z^2. Consequently
+
+    W G_t(z)=z+b-(4,4)+(0,2t).                     (6)
+
+Its copy label closes. A continuous loop crossing the prescribed walls and
+joining the crossings through interiors of copies realizes this absolute
+period, just as in Section10. At small t this is the same material homology
+class. This is not a billiard itinerary or a straight corner event.
+
+Subtracting its base period b-(4,4), an integer combination of the two fixed
+periods, shows that the absolute period group contains (0,2t) as well as
+(2,0),(0,2). For irrational t it is nondiscrete: Z+ tZ has arbitrarily small
+nonzero elements, for example by the pigeonhole approximation argument.
+A translation torus cover would have every absolute period in its torus
+lattice, a discrete group. Thus no torus cover exists for irrational t.
+For rational t all polygon vertices have rational coordinates, so scaling
+the coherent canonical triangle tiling to a common denominator supplies a
+translation torus cover. This proves the dichotomy.
+
+For the saved room a fixed exterior word is W=V_1 H_0. Equation(6) is the
+period (-2,-4+2t). The prescribed symbolic reflection checker verifies its
+base period, derivative and exact values at three rational controls. The
+general result uses the displayed algebra and the elementary nondiscreteness
+argument, not extrapolation from those controls.
+
+This closes a specific loophole in using non-torus-cover illumination
+results along this family. It does not close the goal: at an irrational t,
+the exceptional periodic-point or minimal-quotient alternatives can still
+support a particular finitely blocked pair. At a rational t the torus-cover
+classification alone says nothing about darkness of this fixed pair.
+Nor does this argument produce the first-order midpoint seed required by
+the active goal.
+
+## 18. Literature boundary for the new quotient route
+
+The rotational quotient of a rational polygon unfolding as its doubled
+sphere is established background, not a novelty claim here. It appears
+explicitly in the proof of Proposition3.11 of
+[Apisa–Wright, Marked points on translation surfaces, Section3.2](https://websites.umich.edu/~alexmw/ApisaWright.pdf).
+Our use is the gonality test in Sections12-13 and the explicit halfturn and
+raw-fiber restrictions in Sections14-15.
+
+The same paper's Theorem3.6 retains periodic-point and minimal-quotient
+alternatives for finitely blocked pairs. Theorem3.10 gives finitely many
+exceptional pairs on a non-torus-cover rotational quotient. Neither proves
+that this fixed pair escapes the exceptions under the pocket slide.
+Regular lifts of physical convex corners must remain a finite marked
+blocking set when relating physical darkness to these surface statements.
+
+[Apisa's generic-stratum result](https://arxiv.org/abs/1601.07894) does not
+apply just because a curve has a hyperelliptic involution. The square-tiled
+base has a closed arithmetic orbit; a hyperelliptic underlying curve can
+also carry a differential outside a hyperelliptic connected component of a
+stratum. No claim of genericity for an irrational slide is made without
+identifying its orbit closure. The torus-twist constructions of
+[Johnson–Schmoll](https://ccjohnson.org/papers/involutions_2013_10_03.pdf)
+also do not supply an actual labeled midpoint connection. Their quotient
+and covering structure is useful context, not a solution to this event
+realization problem.
+
+
+Checker excerpt:
+"""Prescribed finite-group/period controls only. No origami orbit or ray search."""
+from pathlib import Path
+from fractions import Fraction as F
+from collections import deque
+import hashlib,json,sys
+if not __debug__:
+    raise SystemExit('Optimized Python disables proof assertions; rerun without -O.')
+B=Path(__file__).resolve().parent
+COUPLING_PIN='9f81b7bf93b258958fa3d6347631e50f8165e57ad32166547431a3be9ed26bec'
+assert hashlib.sha256((B/'coupling.json').read_bytes()).hexdigest()==COUPLING_PIN
+I=((F(1),F(0)),(F(0),F(1))); Z=(F(0),F(0))
+def ap(A,x):return tuple(sum(A[i][j]*x[j] for j in range(2)) for i in range(2))
+def mm(A,C):return tuple(tuple(sum(A[i][k]*C[k][j] for k in range(2)) for j in range(2)) for i in range(2))
+def add(a,b):return tuple(x+y for x,y in zip(a,b))
+def reflection(n,h,dh):
+ n=tuple(map(F,n));den=sum(x*x for x in n)
+ return tuple(tuple(I[i][j]-2*n[i]*n[j]/den for j in range(2)) for i in range(2)),tuple(2*h*x/den for x in n),tuple(2*dh*x/den for x in n)
+def develop(fs):
+ R,b,db=I,Z,Z
+ for M,q,dq in fs:
+  b=add(b,ap(R,q));db=add(db,ap(R,dq));R=mm(R,M)
+ return R,b,db
+saved=json.loads((B/'coupling.json').read_text());V=[tuple(map(F,p)) for p in saved['room']['vertices']]
+h=list(map(F,saved['offset_base_point']));normals=saved['offset_normals']
+dh=[F(0)]*len(V);dh[2]=-F(1);dh[3]=F(1)
+mirrors=[reflection(n,h[i],dh[i]) for i,n in enumerate(normals)]
+assert V[2:5]==[(1,1),(2,2),(1,2)]
+assert normals[1]==[-1,0] and h[1]==-1
+assert normals[2]==[-1,1] and h[2]==0
+assert normals[3]==[0,-1] and h[3]==-2
+# V_1 D H D = V_1 V_2, and D (V_1 D H D) D.
+wx=(1,2,3,2);wy=(2,)+wx+(2,)
+Rx,bx,dx=develop([mirrors[i] for i in wx]);Ry,by,dy=develop([mirrors[i] for i in wy])
+assert Rx==Ry==I and bx==(-2,0) and by==(0,-2) and dx==dy==Z
+# Every canonical reflection has an even integral translation at the grid base.
+assert all(all(x.denominator==1 and int(x)%2==0 for x in m[1]) for m in mirrors)
+
+# One prescribed exterior -I word, using fixed walls x=1 and y=0.
+# Composing it with the pocket half-turn gives an absolute period with
+# exact affine dependence (-2,-4+2t), not merely a nonzero derivative.
+assert normals[0]==[0,1] and h[0]==0 and dh[0]==dh[1]==0
+arithmetic_word=(1,0,2,3,2,3)
+Ra,ba,da=develop([mirrors[i] for i in arithmetic_word])
+assert Ra==I and ba==(-2,-4) and da==(0,2)
+for t in (F(-1,100),F(0),F(1,100)):
+ changed=[reflection(n,h[i]+t*dh[i],dh[i]) for i,n in enumerate(normals)]
+ Rt,bt,dt=develop([changed[i] for i in arithmetic_word])
+ assert Rt==I and bt==(-2,-4+2*t) and dt==da
+

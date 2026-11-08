@@ -1,0 +1,43 @@
+{
+  "status": "INDEPENDENT_ACCEPT_SCOPED_OR03",
+  "request": "construction/optical-routing-review-request-02.json",
+  "author_pins": {
+    "optical-routing-width-obstruction.md": "4fbf7d3bb99102767cf7aa23f192f2ec1ecb3a37cbc3935a0b82e65984665cf0"
+  },
+  "pins_current_before": {
+    "optical-routing-width-obstruction.md": true
+  },
+  "pins_current_after": {
+    "optical-routing-width-obstruction.md": true
+  },
+  "claim_decisions": [
+    {
+      "claim": "Necessary |a-b|<2h",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "All exterior words use horizontal image group sign*y+400n",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "Minimum depth difference98 for all words and all c in[0,2)",
+      "decision": "ACCEPT",
+      "qualification": "Retain outside-E_c guard; first encounter of the OPEN section alone is not a substitute."
+    },
+    {
+      "claim": "Dark room or G8 refutation",
+      "decision": "REJECT",
+      "author_claim": false
+    }
+  ],
+  "own_evidence_pins": {
+    "optical-routing-or03-independent.md": "214ec04c7d2758a205b85cbd77be07455fe97269f5a05b5b0b4d5fe734d2c5f4",
+    "optical-routing-or03-independent-replay.py": "47558d6bd40e7088716465ba9625a1f9a3185f78a42182660313aa7388ee427b",
+    "optical-routing-or03-independent-replay.json": "0457b87a385f81dd251b3ba67e647f1a6185d85a44693d3714b60694ea281282"
+  },
+  "all_actual_author_claims_accepted": true,
+  "global_G8_refuted": false,
+  "actual_dark_counterexample": false,
+  "whole_goal_complete": false,
+  "created_utc": "2026-11-07T18:17:21.976500+00:00"
+}

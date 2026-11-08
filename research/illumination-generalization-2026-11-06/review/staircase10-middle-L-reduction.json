@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-08T07:04:58.515Z",
+  "decision": "HAND_POSITIVE_REDUCTION_PENDING_RECIPROCAL_REVIEW",
+  "claim": "All actual pairs with y1<=u<y2<=v<=y3 illuminate by a genuine-vertical-only L lift, and transposed analogue.",
+  "exact_residual_within_previous_cross_placement": "(u<y1 OR v>y3) AND (t<w3 OR s>w1)",
+  "equivalent_residual_within_previous_cross_placement": "s>w1 OR v>y3 OR (u<y1 AND t<w3)",
+  "proof": {
+    "path": ".context/illumination-generalization-2026-11-06/review/staircase10-middle-L-reduction.md",
+    "sha256": "e4beb81154ba9950c36a04a83d10a2b72e384330279fb8fe8663ca89a1763faa"
+  },
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-L-dependency-review.md",
+      "sha256": "5ad9ecfde7282d4d69c6d3240399c2e42d7218520483f93463fd7a7d80efdc25"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
+      "sha256": "7ee8342244b36ac3505e6369c3087181b00c8a7ac672cfc48c108105a1f69708"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-placement-reduction.md",
+      "sha256": "6310a0041a3ffc264c4245d2cce8ce40a2fbc2d5737f3236ea26d6dc842f908d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-placement-independent.md",
+      "sha256": "173c47003b704deba26a21a9358ae6bffcc21ad0a2d796d0d9ef0f6c0abe7b99"
+    }
+  ],
+  "scope": "Arbitrary real four-band metrics and actual real interior endpoints; not universal residual existence",
+  "new_discovery": false,
+  "new_engine": false,
+  "full_goal_complete": false
+}

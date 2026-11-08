@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "implications": {
+    "centerL_centerB": {
+      "status": "PASS",
+      "path": "B6",
+      "reflections": 6,
+      "forced_caps": [
+        "B-",
+        "B+",
+        "L-",
+        "L+",
+        "T-"
+      ],
+      "absent_caps": [
+        "Nb-",
+        "T+"
+      ],
+      "only_outer_extras": []
+    },
+    "centerB_centerE_Nb_absent": {
+      "status": "PASS",
+      "path": "B6",
+      "reflections": 6,
+      "forced_caps": [
+        "B-",
+        "B+",
+        "E-",
+        "E+",
+        "T-"
+      ],
+      "absent_caps": [
+        "Nb-",
+        "T+"
+      ],
+      "only_outer_extras": []
+    },
+    "centerB_centerE_Nb_present": {
+      "status": "PASS",
+      "path": "sigma_B6",
+      "reflections": 6,
+      "forced_caps": [
+        "B-",
+        "B+",
+        "E-",
+        "E+",
+        "L+",
+        "Nb-"
+      ],
+      "absent_caps": [
+        "L-",
+        "Nb+",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": []
+    },
+    "centerB_outerL_Nb_absent": {
+      "status": "PASS",
+      "path": "B6",
+      "reflections": 6,
+      "forced_caps": [
+        "B-",
+        "B+",
+        "L+",
+        "T-"
+      ],
+      "absent_caps": [
+        "Nb-",
+        "T+",
+        "L-"
+      ],
+      "only_outer_extras": [
+        "l"
+      ]
+    },
+    "centerB_outerL_Nb_present": {
+      "status": "PASS",
+      "path": "L11",
+      "reflections": 11,
+      "forced_caps": [
+        "B-",
+        "B+",
+        "L+",
+        "E-",
+        "T-",
+        "Nb-"
+      ],
+      "absent_caps": [
+        "E+",
+        "T+",
+        "L-",
+        "Nb+",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "l"
+      ]
+    },
+    "centerB_outerE_Nb_absent": {
+      "status": "PASS",
+      "path": "B6",
+      "reflections": 6,
+      "forced_caps": [
+        "B-",
+        "B+",
+        "E-",
+        "T-"
+      ],
+      "absent_caps": [
+        "Nb-",
+        "T+",
+        "E+"
+      ],
+      "only_outer_extras": [
+        "e"
+      ]
+    },
+    "centerB_outerE_Nb_present": {
+      "status": "PASS",
+      "path": "E11",
+      "reflections": 11,
+      "forced_caps": [
+        "B-",
+        "B+",
+        "E-",
+        "L+",
+        "T-",
+        "Nb-"
+      ],
+      "absent_caps": [
+        "E+",
+        "L-",
+        "T+",
+        "Nb+",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "e"
+      ]
+    },
+    "centerB_outerT_Nb_present": {
+      "status": "PASS",
+      "path": "sigma13",
+      "reflections": 13,
+      "forced_caps": [
+        "B-",
+        "B+",
+        "E-",
+        "L+",
+        "T-",
+        "Nb-"
+      ],
+      "absent_caps": [
+        "E+",
+        "L-",
+        "T+",
+        "Nb+",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "t"
+      ]
+    },
+    "BD_join_Nbplus_absent": {
+      "status": "PASS",
+      "path": "five",
+      "reflections": 5,
+      "forced_caps": [
+        "B+",
+        "D-",
+        "E-",
+        "L+",
+        "T-"
+      ],
+      "absent_caps": [
+        "B-",
+        "D+",
+        "E+",
+        "L-",
+        "T+",
+        "Nb+"
+      ],
+      "only_outer_extras": [
+        "b",
+        "dw"
+      ]
+    },
+    "BD_join_Nbplus_present": {
+      "status": "PASS",
+      "path": "sigma13",
+      "reflections": 13,
+      "forced_caps": [
+        "B+",
+        "D-",
+        "E-",
+        "L+",
+        "T-",
+        "Nb+"
+      ],
+      "absent_caps": [
+        "B-",
+        "D+",
+        "E+",
+        "L-",
+        "T+",
+        "Nb-",
+        "Nr-",
+        "Nr+"
+      ],
+      "only_outer_extras": [
+        "b",
+        "dw"
+      ]
+    }
+  },
+  "scope": "Ten specified inherited path implications; no room assignments, trajectories, directions, words, archive retrieval or solver."
+}

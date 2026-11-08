@@ -1,0 +1,173 @@
+# Independent review of Sections 6–7 and `twist-action.py`
+
+I did not execute anything. Everything below comes from reading the argument and the code by hand.
+
+## Verdict
+
+- **The algebra in Section 6 is correct.** The affine-in-n row formula, both slope formulas, and the explicit stress certificate all check out.
+- **The checker's sign and orientation conventions for N agree with my independent hand derivation.**
+- **The 52-row stress is geometric only conditionally.** It rests on two points:
+  1. The image events are admissible events of the original room. This is argued abstractly and never replayed.
+  2. The framework's admissibility and the sign σ must be intrinsic to the translation surface X, not defined by physical wall sectors.
+- **Real blind spot:** no assertion in the checker can detect an error in N. Rank and positive stress would succeed for almost any slope vectors.
+
+## 1. Does aligned drift make rows affine in integer powers?
+
+**Yes, given the stated premises.**
+
+- **N² = 0.** Each twist annulus avoids A in its interior, so the twist acts on H1(X,A) as T = I + N with N η = Σ kᵢ⟨η,cᵢ⟩cᵢ. Horizontal cores are pairwise disjoint, so N cⱼ = 0 and N² = 0. Therefore fⁿ_* = I + nN for every integer n, negative powers included.
+- **Derivative powers.** Pⁿ = I + nL with L² = 0.
+- **Expansion.** The row of the n-th image is
+  −σ det(w + nLw, E + nH) = g₀ + n[det(Lw,E) + det(w,H)] + n² det(Lw,H).
+  - Lw = (aq, 0) is horizontal.
+  - Alignment says H(v) is horizontal.
+  - So the n² term vanishes identically in v. This holds for one twist acting on the original seed. No cross-twist composition is needed.
+- **Code check.** Write H = (Hₓ, 0) and E = (Eₓ, E_y).
+  - s_h = −σ[aqE_y − qHₓ] = σq(Hₓ − aE_y). This matches `hs=side*q*(H-ah*E[1])`.
+  - s_v = −σ[−bpEₓ + pZ_y] = σp(bEₓ − Z_y). This matches `vs`.
+- **Quotient.** Rows annihilate the similarity directions:
+  - Translation leaves every relative period unchanged.
+  - Scaling gives δhol(η) = hol(η) = 0 and δhol(Nη) = L·hol(η) = 0.
+  - So rank 26 = W+1 is the maximum possible. Full rank in the ambient 29 space therefore means spanning the quotient dual. The checker does not assert this vanishing; adding that one line would be cheap.
+
+## 2. Crossing counts, twist coefficients, and orientation
+
+I derived the convention without consulting the code.
+
+**Horizontal twist.**
+- Take a height-1 row annulus of width L and the map x ↦ x + 48y.
+- A segment crossing upward has an image that wraps +48/L times in the +x direction. So f(γ) = γ + (48/L)c, with c oriented rightward.
+- Downward crossings contribute the negative.
+- Since η = γ₂ − γ₁, the second half counts + and the first half counts −.
+- The code matches:
+  - `first_or_second` times `sign(delta[axis])`;
+  - `coeff = shear/len(c)·count`;
+  - `edge_forms` orients edges toward increasing coordinate, so cores are oriented +x.
+
+**Vertical twist.** With y ↦ y + 48x, a rightward crossing gives +48/L times a core oriented +y. Same structure, also correct.
+
+**Other points that hold:**
+- Bottom-edge sums of a row are homologous to that row's core.
+- Rows are separated only by horizontal edges, so the uniqueness assertion for row membership is sound.
+- Each half-integer level is crossed exactly once by a monotone straight segment.
+- τ ≠ ½ is guaranteed because the corner lies on an integer level.
+
+**Weak spot.** The two zero-sum assertions are tautologies:
+- `sum(counts)==0`
+- `sum(t·len(c))==0`
+
+Both segments have the same transverse displacement, so these sums always vanish. They do not validate the crossing data.
+
+**Relative E is correct.** hol(η) = (T′ − C) − (C − S), so E = dT′ − 2dC + dS, matching the `+unit(W+k)` term. E is also cross-checked against the previously audited `offset_gradient` through `factor`. The new N computation has no such cross-check.
+
+**Period derivative cochain is correct.**
+- The PL material deformation gives genuine developed-edge derivatives.
+- Vertex forms come from the inverse of the 2×2 supporting-line system. I checked both components.
+- Gauge changes at unmarked interior points add a coboundary, which absolute cores do not see.
+- Face closure validates consistency of the gluings.
+- Periods are linear in offsets. So "horizontal throughout the chart" correctly means the y-component of the linear functional vanishes. Cores then remain exactly horizontal on the whole chart, not just to first order.
+
+**Minor (corner forms).** `point_forms` checks V, then S, then T, then walls. A mark lying on a wall would be freed off the wall. Assert that the marks are interior.
+
+**Minor (shear value).** The code uses `ah = lcm(widths)` and `av = lcm(widths)`. The prose says 48 for both. Assert `ah == av == 48` or fix the text.
+
+## 3. Source, corner, and target lifts
+
+**These are sound in this room.**
+- S, T, and all vertices are integer points. The code asserts integrality of the relevant coordinates.
+- Their lifts are grid vertices on horizontal and vertical grid lines.
+- The row and column twists are the identity on annulus boundaries, and no grid vertex lies in an annulus interior. So f fixes every lift pointwise.
+- f is bijective with constant derivative, so each image segment:
+  - starts at the same S-lift and ends at the same T-lift;
+  - meets A only at the fixed corner, still at its midpoint;
+  - has distinct endpoint lifts.
+- Every straight segment on X projects to a billiard path, so no polygon-compatibility property of f is needed.
+- **Persistence under deformation.** The image path avoids A and is not wall-parallel, so its combinatorics persist under small deformation. Gauss–Manin transport of fⁿ_*η agrees with the class defined by its reflection word. The row identity therefore applies to the image class, even though f itself does not persist on the deformed room.
+
+## 4. Corner side and sector admissibility
+
+**What f does at the corner.**
+- f acts on the tangent cone at the corner by the lift of Pⁿ that fixes the horizontal (respectively vertical) separatrices.
+- A lifted linear map sends a ray at angle θ to the ray at angle φ(θ), with φ(θ+π) = φ(θ)+π.
+- So the condition "angle π on side σ" is preserved.
+- Orientation preservation keeps σ, as defined in the developed frame, unchanged. The code's reuse of `side` is consistent with this.
+
+**Inaccurate statement.** Section 7 says the maps fix all grid vertices "and their directional prongs." This is false: only the horizontal (or vertical) prongs are fixed, and every other direction moves by Pⁿ. Wall rays at the cone point are not f-invariant. So the physical wedge sector in which the image path approaches the vertex generally changes.
+
+Section 2's hypothesis "preserve local sector labels" is therefore impossible for Pⁿ ≠ I if labels mean physical wall sectors. Section 6 silently replaces it with intrinsic sidedness.
+
+**Consequences:**
+- If the earlier framework defines admissibility and σ intrinsically on X (straight through the cone point, angle π on side σ, smoothing to side σ), the transfer is valid.
+- If any step uses physical sector data, the transfer is unproved. Examples:
+  - σ measured against an incident wall;
+  - reflex-graze legality stated via polygon wedges;
+  - the negative-derivative implication using the copy index.
+
+**This is the key point to confirm against the framework.**
+
+**Other possible silent strengthenings or changes:**
+- **Event definition.** The images have words roughly 100× longer than the seeds. If the original row identity was proved only for events with a length window, minimality, or "first corner hit" condition, Section 6's claim of "no length bound" goes beyond the framework. Confirm that the framework had none.
+- **Wall-parallel exception.** The sentence "when [the twist] does not change the direction, the original seed direction is already nonparallel" is wrong as stated. L_h w = 0 only when q = 0, which is a horizontal, wall-parallel seed. It is harmless because that seed's s_h = 0, so it never contributes horizontal orbit rows. Fix the sentence.
+- **Seeds need not be legal events.** Seeds serve only as algebraic anchors; only image rows enter the stress. They do still need to be straight segments on X with a single A-contact at the midpoint.
+
+## 5. Explicit stress and rank
+
+These are verified by algebra, not by trusting the reported numbers.
+
+**The stress identity holds.**
+- Write gᵢ = Σⱼ Aᵢⱼ sⱼ, cⱼ = Σᵢ Aᵢⱼ, and λ± = (1 ∓ cⱼ/n)/2.
+- Then Σⱼ λ₊(gⱼ + nsⱼ) + λ₋(gⱼ − nsⱼ) = Σgⱼ − Σcⱼsⱼ = 0.
+- The weights are positive whenever n > |cⱼ|. The bound n > Σᵢ|Aᵢⱼ| suffices.
+
+**Rank.** Row differences recover every sⱼ, so the rank is d.
+
+**Code.**
+- The incremental elimination with sorted pivots is correct: later pivots never reintroduce entries at earlier ones.
+- `A` is reconstructed and asserted exactly.
+- Weights, the zero sum, and the rank are all asserted.
+- So the linear certificate is self-verifying.
+
+**Reported numbers.** These are plausible but I cannot confirm them:
+- min weight ≈ 0.402 means |cⱼ| ≤ 0.39 at n = 2;
+- the denominator is 2⁸·125867.
+
+**Section 6's sufficiency claim is correct.** For every v ≠ 0 some slope is nonzero, so g₀ + ns is negative for large |n| of one sign. Compactness on the quotient sphere then gives a finite family.
+
+## 6. Is the 52-row stress geometric or formal?
+
+**Geometric, conditionally.** Each row equals, by the identity above, the actual signed row of the image event f^{±2}(eᵢ) in the original room. This requires:
+- (a) the image events are framework-admissible (§4 above);
+- (b) N and H are computed correctly.
+
+**Formal in its current verification.**
+- Nothing traces the image paths.
+- Positive stress plus rank 26 would also pass if, for example, N had the wrong global sign. That error changes the relative sign of det(Lw,E) and det(w,H), yet generically keeps the slopes spanning.
+- I found no such error, but my hand check is not a machine certificate.
+
+**Decisive inexpensive test.** This involves no discovery, since the directions are prescribed.
+- Unfold the prescribed direction P^{±2}w from the same S-lift through the framework's existing word-replay code.
+- Confirm that it hits the same corner lift at its midpoint, avoids A, and ends at the same T-lift.
+- Compare its framework offset gradient (rescaled by the actual half-displacement) to g₀ ± 2s.
+- Doing this for a few events per twist, or all 52, independently validates N, H, alignment, and admissibility at once.
+
+## 7. Alignment: verified here, not structural
+
+The checker asserts that the vertical derivative of every row-core period vanishes. This is exact, and by linearity it holds on the whole chart. It is not automatic:
+- Physically, an axis-direction band in a 0°/45°/90°/135° room shifts its transverse coordinate by signed wall-offset differences at each 45° hit.
+- If the return map has linear part +1, alignment means every wall offset's total coefficient is identically zero. That is a combinatorial cancellation, not a consequence of closure at the base point.
+- Deck symmetry gives alignment for a core c with ρ(c) = c, where ρ has derivative diag(1,−1). If ρ(c) ≠ c, only the sum c + ρ(c) is forced to be horizontal.
+
+So alignment is a genuine property of this frozen room. A proof for a family must explain this cancellation.
+
+## Scope
+
+**Fixed-room theorem (computer-assisted, unverified by me).** For the frozen W25 room, the 26-dimensional deformation quotient dual is positively spanned by 52 affine-image event rows. This holds conditional on:
+1. the framework's event-row identity;
+2. intrinsic admissibility, together with no length or minimality hypothesis on events;
+3. correctness of the crossing and twist computation, which image replay would certify.
+
+**Universal claim: open conjecture.** For the intended family, two things remain unproved:
+- core-period alignment;
+- slope maps whose kernel is exactly the similarity directions.
+
+Neither the rank 26 nor the stress weight is evidence for either universal claim.

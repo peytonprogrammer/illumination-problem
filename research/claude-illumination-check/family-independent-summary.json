@@ -1,0 +1,210 @@
+{
+  "status": "EXCLUDED",
+  "results": [
+    {
+      "target_A_cell": [
+        1,
+        1
+      ],
+      "engine": "Glop solver v9.15.6755",
+      "status": "OPTIMAL",
+      "integer": false,
+      "variables": 5927,
+      "equations": 1442,
+      "seconds": 0.021,
+      "objective": 21.833333333333332,
+      "exact_dual_bound": "131/6",
+      "excludes_integer_walls_under24": false
+    },
+    {
+      "target_A_cell": [
+        1,
+        1
+      ],
+      "engine": "SCIP 10.0.0 [LP solver: SoPlex 8.0.0]",
+      "status": "OPTIMAL",
+      "integer": true,
+      "variables": 5927,
+      "equations": 1442,
+      "seconds": 0.373,
+      "objective": 29.0,
+      "excludes_integer_walls_under24": true
+    },
+    {
+      "target_A_cell": [
+        2,
+        0
+      ],
+      "engine": "Glop solver v9.15.6755",
+      "status": "OPTIMAL",
+      "integer": false,
+      "variables": 4269,
+      "equations": 1074,
+      "seconds": 0.024,
+      "objective": 22.000000000000004,
+      "exact_dual_bound": "22",
+      "excludes_integer_walls_under24": false
+    },
+    {
+      "target_A_cell": [
+        2,
+        0
+      ],
+      "engine": "SCIP 10.0.0 [LP solver: SoPlex 8.0.0]",
+      "status": "OPTIMAL",
+      "integer": true,
+      "variables": 4269,
+      "equations": 1074,
+      "seconds": 0.147,
+      "objective": 24.0,
+      "excludes_integer_walls_under24": true
+    },
+    {
+      "target_A_cell": [
+        2,
+        1
+      ],
+      "engine": "Glop solver v9.15.6755",
+      "status": "OPTIMAL",
+      "integer": false,
+      "variables": 2431,
+      "equations": 644,
+      "seconds": 0.01,
+      "objective": 22.000000000000014,
+      "exact_dual_bound": "22",
+      "excludes_integer_walls_under24": false
+    },
+    {
+      "target_A_cell": [
+        2,
+        1
+      ],
+      "engine": "SCIP 10.0.0 [LP solver: SoPlex 8.0.0]",
+      "status": "OPTIMAL",
+      "integer": true,
+      "variables": 2431,
+      "equations": 644,
+      "seconds": 0.226,
+      "objective": 25.0,
+      "excludes_integer_walls_under24": true
+    },
+    {
+      "target_A_cell": [
+        3,
+        0
+      ],
+      "engine": "Glop solver v9.15.6755",
+      "status": "OPTIMAL",
+      "integer": false,
+      "variables": 2637,
+      "equations": 704,
+      "seconds": 0.018,
+      "objective": 21.999999999999993,
+      "exact_dual_bound": "22",
+      "excludes_integer_walls_under24": false
+    },
+    {
+      "target_A_cell": [
+        3,
+        0
+      ],
+      "engine": "SCIP 10.0.0 [LP solver: SoPlex 8.0.0]",
+      "status": "OPTIMAL",
+      "integer": true,
+      "variables": 2637,
+      "equations": 704,
+      "seconds": 1.345,
+      "objective": 30.0,
+      "excludes_integer_walls_under24": true
+    },
+    {
+      "target_A_cell": [
+        2,
+        2
+      ],
+      "engine": "Glop solver v9.15.6755",
+      "status": "OPTIMAL",
+      "integer": false,
+      "variables": 2537,
+      "equations": 674,
+      "seconds": 0.011,
+      "objective": 21.999999999999993,
+      "exact_dual_bound": "22",
+      "excludes_integer_walls_under24": false
+    },
+    {
+      "target_A_cell": [
+        2,
+        2
+      ],
+      "engine": "SCIP 10.0.0 [LP solver: SoPlex 8.0.0]",
+      "status": "OPTIMAL",
+      "integer": true,
+      "variables": 2537,
+      "equations": 674,
+      "seconds": 0.193,
+      "objective": 27.0,
+      "excludes_integer_walls_under24": true
+    },
+    {
+      "target_A_cell": [
+        3,
+        1
+      ],
+      "engine": "Glop solver v9.15.6755",
+      "status": "OPTIMAL",
+      "integer": false,
+      "variables": 2611,
+      "equations": 706,
+      "seconds": 0.01,
+      "objective": 21.999999999999996,
+      "exact_dual_bound": "22",
+      "excludes_integer_walls_under24": false
+    },
+    {
+      "target_A_cell": [
+        3,
+        1
+      ],
+      "engine": "SCIP 10.0.0 [LP solver: SoPlex 8.0.0]",
+      "status": "OPTIMAL",
+      "integer": true,
+      "variables": 2611,
+      "equations": 706,
+      "seconds": 0.309,
+      "objective": 29.0,
+      "excludes_integer_walls_under24": true
+    },
+    {
+      "target_A_cell": [
+        4,
+        0
+      ],
+      "engine": "Glop solver v9.15.6755",
+      "status": "OPTIMAL",
+      "integer": false,
+      "variables": 2685,
+      "equations": 738,
+      "seconds": 0.01,
+      "objective": 21.999999999999996,
+      "exact_dual_bound": "22",
+      "excludes_integer_walls_under24": false
+    },
+    {
+      "target_A_cell": [
+        4,
+        0
+      ],
+      "engine": "SCIP 10.0.0 [LP solver: SoPlex 8.0.0]",
+      "status": "OPTIMAL",
+      "integer": true,
+      "variables": 2685,
+      "equations": 738,
+      "seconds": 3.487,
+      "objective": 33.0,
+      "excludes_integer_walls_under24": true
+    }
+  ],
+  "known24_exact_primal_verified": true,
+  "note": "LP bounds alone are insufficient; SCIP integer optima exclude <=23 in the bounded supports, not their higher objective values globally."
+}

@@ -1,0 +1,76 @@
+{
+  "status": "PASS_PRESCRIBED_OR02_CONTROL",
+  "all_n_hand_argument": "For 1<=j<=2n: 2<2+2*(8j-6)/(16n-2)<=4-8/(16n-2)<4. Top image4+16n folds to reflex4,4. Neighbor x-images \u00b11/2 keep 2n sides and straddle mouth endpoint.",
+  "prescribed_n": [
+    {
+      "n": 1,
+      "slope": "1/7",
+      "smooth_side_contacts": [
+        [
+          "8",
+          "16/7"
+        ],
+        [
+          "0",
+          "24/7"
+        ]
+      ],
+      "first_corner": [
+        4,
+        4
+      ],
+      "one_sided_top_probes": [
+        {
+          "slope": "4/27",
+          "top_x": "7/2",
+          "enters_mouth": true
+        },
+        {
+          "slope": "4/29",
+          "top_x": "9/2",
+          "enters_mouth": false
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slope": "1/15",
+      "smooth_side_contacts": [
+        [
+          "8",
+          "32/15"
+        ],
+        [
+          "0",
+          "8/3"
+        ],
+        [
+          "8",
+          "16/5"
+        ],
+        [
+          "0",
+          "56/15"
+        ]
+      ],
+      "first_corner": [
+        4,
+        4
+      ],
+      "one_sided_top_probes": [
+        {
+          "slope": "4/59",
+          "top_x": "7/2",
+          "enters_mouth": true
+        },
+        {
+          "slope": "4/61",
+          "top_x": "9/2",
+          "enters_mouth": false
+        }
+      ]
+    }
+  ],
+  "global_G8_refuted": false,
+  "illumination_target_refuted": false
+}

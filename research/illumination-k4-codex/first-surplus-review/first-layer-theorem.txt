@@ -1,0 +1,35 @@
+Full zero/first-surplus L-family illumination theorem
+4 November 2026 — proof consolidation, Codex01a18403
+
+THEOREM
+Let P be a finite strictly simple disk made from canonical45-degree triangles. Assume its interior A points are exactly S=(0,0), U=(2,0), T=(2,2). Let Q be the sum of partial A fan weights (m at a corner,3 at a smooth four-triangle point), and s_N the number of smooth non-A boundary points. If
+ Q+s_N<=9,
+then S and T illuminate with AT MOST13 REFLECTIONS. The other two distinct interior-A pairs are directly connected inside their adjacent full stars, so all three interior A points illuminate each other.
+No wall-count cap or exception cap is needed for this fixed-support theorem. Arbitrary interior marks, other supports, other I, larger surplus and the universal minimum are outside its scope.
+
+STATUS
+Parent hand proof and exact constituent fixed-path checks complete. Geometry, equality illumination, the noncritical first-layer reductions and all outer-fan closure have separate-session independent HAND ACCEPT with no corrections. The two final centered-family proofs now have independent HAND ACCEPT: centered-left-closure-review.txt and bottom-closure-review-check.json (PASS, explicit whole-family/full-layer conclusion). Reviewed proof hashes were checked against the exact current versions before this status update; the coverage retains them. No mathematical corrections were requested. Existing rational checker code reused throughout; no formal or external expert verification, no historical novelty claim.
+
+PROOF
+The side-charge identity gives Q+s_N>=8, integrally. Write Delta=Q+s_N-8. Thus only Delta0 or1 occurs.
+Delta0 is the independently accepted complete zero-surplus theorem: zero-surplus-L/optical-cover.txt, with independent hand proof in exception-geometry/zero-L-completion.txt. Maximum13reflections.
+For Delta1 use the complete, mutually checked hand classification in first-surplus-L/classification.txt sections1–4 and first-surplus-review/findings.txt sections1–7. Either an N bridge directly lights ST; all partial cells are single caps with one extra smooth B; or exactly one neighboring partial cell has a contiguous two-triangle fan and all others are single. No distant geometry or potentially dark smooth A half-star is possible.
+The following exhaustive partition then supplies illumination:
+ - All-single-cap branch: peer classification section5, independently accepted in findings.txt section9. Old1/4 paths force four reference caps; the two13path N blocker sets are disjoint. At most13reflections, regardless of which smooth B is present.
+ - Ten two-triangle fans at noncritical cells D/R/N: peer classification section6 and findings.txt section9. The critical caps remain single, force-to-R still works, and the fan cannot spoil both13paths. At most13reflections.
+ - Four orientations at B/E/L/T omitting their critical cap: peer classification section7. One- or four-reflection implications illuminate.
+ - Four active OUTER fans at B/E/L/T: square-exchange.txt. A one-reflection square excursion replaces a triangular three-reflection excursion with identical exit data. Force-to-R and disjoint N-blocker cover illuminate with at most13reflections. Independent peer HAND ACCEPT and exact independent supplied-path recomputation in first-surplus-L/square-exchange-review.txt/check.json.
+ - Two active CENTERED fans at L/T: residual-cover.txt. Missing B+/E- gives1reflection; present cap supplies the explicit3path exploiting the newly interior mouth midpoint. At most3reflections. Own exact path/sigma replay PASS; final peer HAND ACCEPT received, no corrections.
+ - Two active CENTERED fans at B/E: bottom-residual-cover.txt. The old1/4 paths and new3prefix force just the cap/mirror conditions for an explicit6path: source roof, centered bottom2hits, top3hits, actualT. At most6reflections. Own exact path/formula/sigma replay PASS; final peer HAND ACCEPT received, no corrections.
+The two-triangle counts are10+4+4+2+2=22, exactly the hand table's22potentially dark local fan orientations. Larger N defect fans contain the direct bridge and were separated first. This is a structural partition, not an assembled-room or cap-assignment census. All cases illuminate, proving the theorem, now independently hand-accepted at the stated separate-session review level.
+
+DARKNESS CONSEQUENCE AND LIMITS
+For this exact I3L support, any dark S/T pair must have
+ Q+s_N>=10,
+ Delta>=2,
+ W+2k=20+Q+s_N>=30.
+At k<=6 this yields W>=18. It does NOT establish W>=22, exclude all21wall rooms, or address allI2/I3 supports. Under W<=21,k<=6, the remaining possible L-support surplus layers are2,3,4,5; no theorem on them is supplied here. The existing general restricted computer-assisted exclusion remains separate.
+
+PROOF DISCOVERY AND REPRODUCIBILITY
+Two short final paths were retrieved by bounded symbolic projections of previously hashed frozen archives, with paired-cell conditions now permitted. Their source records are I2_00_11 line28534 (coordinate swap,3path) and line28781 (sigma/reversal,6path). The final proofs use only their explicit coordinates and elementary reflection/containment arguments; archive projection counts are not assumptions. Exact check receipts residual-cover-check.json and bottom-residual-check.json verify actual endpoints, complete required/forbidden triangles, source hashes, symmetry and critical midpoint/full-star conditions.
+No new room, ray, direction or word discovery search, solver, worker or external action occurred in this first-layer continuation. The universal arbitrary-polygon goal remains paused.

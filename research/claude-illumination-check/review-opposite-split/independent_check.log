@@ -1,0 +1,269 @@
+{
+  "cases": [
+    {
+      "name": "26.8 opposite, N right, fixed flank at B",
+      "w": [
+        "5",
+        "3"
+      ],
+      "developed_corner": [
+        "5",
+        "3"
+      ],
+      "developed_actual_T": [
+        "10",
+        "6"
+      ],
+      "moving_ordinary_mirrors": 0,
+      "corner_moves": true,
+      "Q": [
+        "-2",
+        "0"
+      ],
+      "det": "6",
+      "corner_angle_deg": 225,
+      "steps": 13
+    },
+    {
+      "name": "26.11 opposite, N left, T-up left m=1, straight pi",
+      "w": [
+        "7",
+        "3"
+      ],
+      "developed_corner": [
+        "7",
+        "3"
+      ],
+      "developed_actual_T": [
+        "14",
+        "6"
+      ],
+      "moving_ordinary_mirrors": 2,
+      "corner_moves": true,
+      "Q": [
+        "1",
+        "1"
+      ],
+      "det": "4",
+      "corner_angle_deg": 225,
+      "steps": 15
+    },
+    {
+      "name": "26.12 opposite, N left, T-up left m=2 square, straight pi",
+      "w": [
+        "7",
+        "3"
+      ],
+      "developed_corner": [
+        "7",
+        "3"
+      ],
+      "developed_actual_T": [
+        "14",
+        "6"
+      ],
+      "moving_ordinary_mirrors": 2,
+      "corner_moves": true,
+      "Q": [
+        "1",
+        "1"
+      ],
+      "det": "4",
+      "corner_angle_deg": 225,
+      "steps": 15
+    },
+    {
+      "name": "26.7 corridor, L upper rectangle, B=(5,1), midpoint C",
+      "w": [
+        "4",
+        "1"
+      ],
+      "developed_corner": [
+        "4",
+        "1"
+      ],
+      "developed_actual_T": [
+        "8",
+        "2"
+      ],
+      "moving_ordinary_mirrors": 0,
+      "corner_moves": true,
+      "Q": [
+        "-2",
+        "0"
+      ],
+      "det": "2",
+      "corner_angle_deg": 270,
+      "steps": 5
+    },
+    {
+      "name": "26.7 corridor, L upper triangle, B=(3,1), midpoint C",
+      "w": [
+        "4",
+        "1"
+      ],
+      "developed_corner": [
+        "4",
+        "1"
+      ],
+      "developed_actual_T": [
+        "8",
+        "2"
+      ],
+      "moving_ordinary_mirrors": 0,
+      "corner_moves": true,
+      "Q": [
+        "-2",
+        "0"
+      ],
+      "det": "2",
+      "corner_angle_deg": 270,
+      "steps": 9
+    },
+    {
+      "name": "26.7 corridor, L lower portal, midpoint B=(3,1)",
+      "w": [
+        "3",
+        "1"
+      ],
+      "developed_corner": [
+        "3",
+        "1"
+      ],
+      "developed_actual_T": [
+        "6",
+        "2"
+      ],
+      "moving_ordinary_mirrors": 0,
+      "corner_moves": true,
+      "Q": [
+        "-2",
+        "0"
+      ],
+      "det": "2",
+      "corner_angle_deg": 225,
+      "steps": 5
+    }
+  ],
+  "local_incidence": {
+    "B=(5,-1) angle by L option": {
+      "upper m1": 135,
+      "upper m2": 135,
+      "lower m1": 180,
+      "lower m2": 225
+    },
+    "B=(3,-1) angle, left-pointing opposite pocket": 135,
+    "(3,1) angle, N x T-up options": {
+      "N left m1 / Tup left m1": 225,
+      "N left m1 / Tup left m2": 270,
+      "N left m1 / Tup right m1": 180,
+      "N left m1 / Tup right m2": 180,
+      "N left m2 / Tup left m1": 225,
+      "N left m2 / Tup left m2": 270,
+      "N left m2 / Tup right m1": 180,
+      "N left m2 / Tup right m2": 180,
+      "N right m1 / Tup left m1": 270,
+      "N right m1 / Tup left m2": 315,
+      "N right m1 / Tup right m1": 225,
+      "N right m1 / Tup right m2": 225,
+      "N right m2 / Tup left m1": 315,
+      "N right m2 / Tup left m2": 360,
+      "N right m2 / Tup right m1": 270,
+      "N right m2 / Tup right m2": 270
+    }
+  }
+}
+{
+  "negative_controls": [
+    {
+      "control": "26.8 path with N LEFT (first bounce lands in a portal)",
+      "rejected": true,
+      "reason": "('far side of mirror not forced absent', (Fraction(5, 3), Fraction(1, 1)), [(1, 1), (2, 1), (2, 2)])"
+    },
+    {
+      "control": "26.11 path in the m=2 square case (D+ is not a wall)",
+      "rejected": true,
+      "reason": "('far side of mirror not forced absent', (Fraction(16, 5), Fraction(6, 5)), [(3, 1), (3, 2), (4, 2)])"
+    },
+    {
+      "control": "26.11 with pocket motion ignored (claimed Q must fail)",
+      "rejected": true,
+      "reason": "assert Q != (0, 0) and det != 0"
+    },
+    {
+      "control": "26.11 with endpoint replaced by C=(4,1), not actual T",
+      "rejected": true,
+      "reason": "assert S == (0, 0) and T == (4, 0) and second[0] == corner"
+    },
+    {
+      "control": "26.7 upper rectangle using the pocket side as flank",
+      "rejected": true,
+      "reason": "('flank is not a wall ray', (Fraction(4, 1), Fraction(1, 1)), (1, 0))"
+    },
+    {
+      "control": "withdrawn 26.8 end-leaf path under forced N right",
+      "rejected": true,
+      "reason": "('far side of mirror not forced absent', (Fraction(5, 2), Fraction(1, 1)), [(2, 1), (2, 2), (3, 1)])"
+    }
+  ],
+  "ablation_26_11": {
+    "all terms": [
+      "1",
+      "1"
+    ],
+    "drop moving vertical": [
+      "3",
+      "1"
+    ],
+    "drop moving diagonal": [
+      "0",
+      "0"
+    ],
+    "corner only (fixed-mirror shortcut)": [
+      "2",
+      "0"
+    ]
+  },
+  "fixtures": {
+    "26.11 W25 fixture": {
+      "tiles": 28,
+      "walls": 25,
+      "interior": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "smooth_nonA": [],
+      "interior_nonA": [],
+      "B": 225,
+      "C": 270,
+      "A": 45,
+      "at_3_1": 225
+    },
+    "26.12 W26 fixture": {
+      "tiles": 29,
+      "walls": 26,
+      "interior": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "smooth_nonA": [],
+      "interior_nonA": [],
+      "B": 225,
+      "C": 270,
+      "A": 45,
+      "at_3_1": 270
+    }
+  }
+}

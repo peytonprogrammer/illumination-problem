@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "pairs": [
+    {
+      "binary": "enum2",
+      "reconstructed": "rebuilt-pre-split",
+      "sections": {
+        "__TEXT.__text": {
+          "address": 4294968728,
+          "size": 3872,
+          "align": 2,
+          "flags": 2147484672,
+          "payload_sha256": "6086571ef4dd888174ef91b29c0aabfa878013a1443acf164075bb8b303f8fb2"
+        },
+        "__TEXT.__stubs": {
+          "address": 4294972600,
+          "size": 60,
+          "align": 2,
+          "flags": 2147484680,
+          "payload_sha256": "8038636da0cf4cbaf25e2530402a8c1f41496dac5b53ec290e3345293b957da9"
+        },
+        "__TEXT.__const": {
+          "address": 4294972660,
+          "size": 96,
+          "align": 2,
+          "flags": 0,
+          "payload_sha256": "a06406e2a77c28cd675b09b4c44695a94e7a44998e2a0856d71d29cdfa029a27"
+        },
+        "__TEXT.__cstring": {
+          "address": 4294972756,
+          "size": 84,
+          "align": 0,
+          "flags": 2,
+          "payload_sha256": "bb973be89121ad494f710f25714b3386a82513c04c0e5358e10ef0de917cc032"
+        },
+        "__TEXT.__unwind_info": {
+          "address": 4294972840,
+          "size": 96,
+          "align": 2,
+          "flags": 0,
+          "payload_sha256": "99a90b0c60b2d08fc931829f131e3c7ff530980e6623952d231dc512aaef839c"
+        },
+        "__TEXT.__eh_frame": {
+          "address": 4294972936,
+          "size": 72,
+          "align": 3,
+          "flags": 1744830475,
+          "payload_sha256": "7a17fbbb6a7bfd816f590b2b88f0a3cb2860fb5459842ccd499849cdd3d3f14a"
+        },
+        "__DATA_CONST.__got": {
+          "address": 4294983680,
+          "size": 56,
+          "align": 3,
+          "flags": 6,
+          "payload_sha256": "42d6d66260a8fa393b8ae8e29eca2b88f5c279960a4aeab9bc541c4cc16c00d7"
+        },
+        "__DATA.__bss": {
+          "address": 4295000064,
+          "size": 769728,
+          "align": 3,
+          "flags": 1,
+          "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "all_executable_and_data_sections_equal": true,
+      "indirect_symbol_bindings_equal": true,
+      "binary_sha256": "6f2eff437e75f5129ebdb0b7f45769dc79207a768647ec3433737b3aabb66e92",
+      "reconstructed_sha256": "df09e53ae1bb1c6e6cc846bae9629ee510c9411564daad0333a12e2989505d48"
+    },
+    {
+      "binary": "enum3",
+      "reconstructed": "rebuilt",
+      "sections": {
+        "__TEXT.__text": {
+          "address": 4294968728,
+          "size": 3892,
+          "align": 2,
+          "flags": 2147484672,
+          "payload_sha256": "de361eb1b779139b26adea6624bf35e2164d3699629cf70444d3d8697437e8af"
+        },
+        "__TEXT.__stubs": {
+          "address": 4294972620,
+          "size": 60,
+          "align": 2,
+          "flags": 2147484680,
+          "payload_sha256": "8038636da0cf4cbaf25e2530402a8c1f41496dac5b53ec290e3345293b957da9"
+        },
+        "__TEXT.__const": {
+          "address": 4294972680,
+          "size": 96,
+          "align": 2,
+          "flags": 0,
+          "payload_sha256": "a06406e2a77c28cd675b09b4c44695a94e7a44998e2a0856d71d29cdfa029a27"
+        },
+        "__TEXT.__cstring": {
+          "address": 4294972776,
+          "size": 84,
+          "align": 0,
+          "flags": 2,
+          "payload_sha256": "bb973be89121ad494f710f25714b3386a82513c04c0e5358e10ef0de917cc032"
+        },
+        "__TEXT.__unwind_info": {
+          "address": 4294972860,
+          "size": 96,
+          "align": 2,
+          "flags": 0,
+          "payload_sha256": "13dca85ba94222a30f3ad4fbb76fea9df56b177e814c6be1689156f278a941b3"
+        },
+        "__TEXT.__eh_frame": {
+          "address": 4294972960,
+          "size": 72,
+          "align": 3,
+          "flags": 1744830475,
+          "payload_sha256": "830093800871fbee4ac6b4dad800bd099d1ab31aef755cc0947d1ad4929c0218"
+        },
+        "__DATA_CONST.__got": {
+          "address": 4294983680,
+          "size": 56,
+          "align": 3,
+          "flags": 6,
+          "payload_sha256": "42d6d66260a8fa393b8ae8e29eca2b88f5c279960a4aeab9bc541c4cc16c00d7"
+        },
+        "__DATA.__bss": {
+          "address": 4295000064,
+          "size": 769728,
+          "align": 3,
+          "flags": 1,
+          "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "all_executable_and_data_sections_equal": true,
+      "indirect_symbol_bindings_equal": true,
+      "binary_sha256": "fe73dd122c41dd1ece914a9e911f0ee64728451725e763b66f38490fbf1c0306",
+      "reconstructed_sha256": "e1389dd39d1c338a96e1f5b5dfc5ef75d729b467fad90f748a7ac1e1aa07e81a"
+    }
+  ],
+  "scope": "Executable section bytes/layout and indirect bindings match. Mach-O UUID/signature/linkedit metadata may differ. Does not independently authenticate historical command arguments or logs."
+}

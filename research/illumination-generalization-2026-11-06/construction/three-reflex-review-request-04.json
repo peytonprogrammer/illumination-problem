@@ -1,0 +1,59 @@
+{
+  "id": "TR04",
+  "created_utc": "2026-11-07T22:15:29.168555+00:00",
+  "claim": "All actual pairs illuminate in stated non-overlapping spiral normal form under either explicit vertical or transposed horizontal threshold.",
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-04.md",
+      "sha256": "2e546c5ffcec6ed6fb70de05f29e2d9d8107128cbec3ae3e03df8f0720719247"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-04.md",
+      "sha256": "29471b33fd5b82c980ba2ec3501b18687c28d5fbe47a461f0353f2fb6d59ca05"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-extension-prescribed-check.py",
+      "sha256": "088560cc2528a10161b030cb77f8ab2aabe34f14e3dad9b3fc584133b62414f4"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-extension-prescribed-check.json",
+      "sha256": "6112e03317e4abb82e8e11b72af5ff896d499df09323c06e03384ec6a36571a9"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-03.md",
+      "sha256": "e1b1d0e474108ebec0d92e725962a12be643bb79d78cba5a9271e5dda157d97e"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-03.md",
+      "sha256": "e9bf0db0e814b685333cf85af27d298a4d9c570955d4aed8812ca6ded020a6ee"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-tall-prescribed-check.py",
+      "sha256": "fea4c50a4467f44b25eb16a497f18bfea12317bcddd81907ef355e1b65533f22"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.md",
+      "sha256": "bb80191dde8d22c482618f68c8f12f91b7908b6a0f85ebd0969885a585b8c357"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.json",
+      "sha256": "708ed66078cd1ebc90964be800eab3ad84291c9c5274ef9513f6b4ea070e5ec0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-01.md",
+      "sha256": "384d4f32e9eaaab9b76bf8886cf844924ac96e65b9404f39c56beb03b041f2a0"
+    }
+  ],
+  "review_questions": [
+    "Verify strict-simple geometry and true-wall status under a<l OR c<b, including equality a=l or b=c when the other separation is strict.",
+    "Check corrected G* left membership y>b, exact residual endpoint set, and all U/L extra-corner/artificial-cut guards.",
+    "Does the TR03 proof survive order changes, especially first actual T when t<s in bottom-left-of-source configurations?",
+    "Verify full transpose parameter tuple and resulting horizontal threshold with actual endpoint identity and label reversal.",
+    "Confirm new wide-room coverage is genuinely outside the old original tall criterion and that short/wide-complement metrics and full r3 remain open."
+  ],
+  "verification": "Six prescribed formula checks reuse the frozen TR03 implementation with ONLY the proved geometry precondition widened in memory; no assertions disabled; 1112 actual-reflection checks. Not an independent implementation or quantifier proof.",
+  "search_used": false,
+  "whole_turn_type_complete": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

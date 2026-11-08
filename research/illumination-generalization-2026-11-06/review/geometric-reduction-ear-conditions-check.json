@@ -1,0 +1,245 @@
+{
+  "status": "PASS_PRESCRIBED_EXACT_GEOMETRY",
+  "endpoint_on_mouth": {
+    "polygon": [
+      [
+        0,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "S": [
+      6,
+      4
+    ],
+    "T": [
+      2,
+      2
+    ],
+    "reflex": 1,
+    "area": 48,
+    "remaining_Q": [
+      [
+        0,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "ear_E": [
+      [
+        4,
+        4
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    "S_in_open_ear": false,
+    "S_in_closed_ear": true,
+    "S_interior_D": true,
+    "S_interior_Q": false,
+    "complexity_decreases": true,
+    "endpoint_domain_preserved": false
+  },
+  "r6_chamber_chain": {
+    "polygon": [
+      [
+        0,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        12,
+        8
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        16,
+        12
+      ],
+      [
+        16,
+        18
+      ],
+      [
+        12,
+        18
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        8,
+        14
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        0,
+        6
+      ]
+    ],
+    "rectangles": [
+      [
+        0,
+        4,
+        0,
+        6
+      ],
+      [
+        4,
+        8,
+        4,
+        10
+      ],
+      [
+        8,
+        12,
+        8,
+        14
+      ],
+      [
+        12,
+        16,
+        12,
+        18
+      ]
+    ],
+    "mouths": [
+      [
+        0,
+        1,
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      [
+        1,
+        2,
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      [
+        2,
+        3,
+        [
+          12,
+          12
+        ],
+        [
+          12,
+          14
+        ]
+      ]
+    ],
+    "S": [
+      2,
+      2
+    ],
+    "T": [
+      14,
+      16
+    ],
+    "reflex": 6,
+    "walls": 16,
+    "area": 96,
+    "dual_graph": "path on4chambers; terminal chamber deletion loses S or T",
+    "direct_path": [
+      [
+        2,
+        2
+      ],
+      [
+        14,
+        16
+      ]
+    ],
+    "strict_mouth_heights": [
+      "13/3",
+      "9",
+      "41/3"
+    ],
+    "limits": "No claim about every possible decomposition or all contained subrooms."
+  },
+  "new_discovery_or_search": false,
+  "whole_goal_complete": false
+}

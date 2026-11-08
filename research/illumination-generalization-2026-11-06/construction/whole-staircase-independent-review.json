@@ -1,0 +1,36 @@
+{
+  "status": "ACCEPTED_WHOLE_REAL_STAIRCASE_AND_ORTHOGONAL_W_LE_8",
+  "agent": "Codex01a18403",
+  "verification": "Independent complete hand proof; frozen source integrity only, no discovery or peer script replay",
+  "source_sha256": {
+    ".context/illumination-generalization-2026-11-06/review/whole-staircase-candidate.md": "e53cdd702d5b7f7ac197f31d8f09a8ff9bdc3b77d10f035db884d2e45bf08698",
+    ".context/illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json": "028ab2900048258bd084c385467e9f762a92846b344f7e64d59e2631c58a990b",
+    ".context/illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json": "222a06841733492383bf72735d941314e6ae6e204e67c02e30adf4f106184d6f",
+    ".context/illumination-generalization-2026-11-06/review/staircase-window-acceptance.json": "71d323c23175489ad12e41a5a327144006808adfa51a2fedf9d547c326a9c9e1",
+    ".context/illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json": "848abaadf6a2e13a9a652b6059a4c72c2456dfbda4c8b405f2e235a586f98d3c",
+    ".context/illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json": "7ee8342244b36ac3505e6369c3087181b00c8a7ac672cfc48c108105a1f69708",
+    ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json": "31cd407a59dfd1a16e834a67d61f847b5cbd78423363b411f48464d053ff22c6",
+    ".context/illumination-generalization-2026-11-06/review/uneven-T-acceptance.json": "05283ddbc034aaf3c8b4edce6e1073add2d2e6c47af0183a66f6d08095072057",
+    ".context/illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json": "ce985837e20ea61498d9e87fb076afa54990e154d3f0f76ba4ec5cd5748e0bbe"
+  },
+  "pin_checks": {
+    ".context/illumination-generalization-2026-11-06/review/whole-staircase-candidate.md": true,
+    ".context/illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/staircase-window-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/uneven-T-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json": true
+  },
+  "findings": [],
+  "whole_goal_complete": false,
+  "scope": "Every finite strictly simple orthogonal polygon with <=8 maximal straight walls; every distinct real interior pair",
+  "open_scope": [
+    "diagonal-wall rooms",
+    "orthogonal W>=10",
+    "uncapped canonical45 W<=21"
+  ],
+  "review_sha256": "cce86a198c003df0d0b3cf90aba6babed87d0e245f32d9662d54a5508956f673"
+}

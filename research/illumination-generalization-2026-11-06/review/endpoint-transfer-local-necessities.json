@@ -1,0 +1,97 @@
+{
+  "status": "PASS_PRESCRIBED_LOCAL_GERM_AND_HOLONOMY_CHECKS",
+  "one_sided_physical_scattering": [
+    {
+      "delta": "1/10",
+      "k": "41/20",
+      "first_local_wall": "positive vertical",
+      "point": [
+        "0",
+        "1/10"
+      ],
+      "outgoing": [
+        "-1",
+        "41/20"
+      ]
+    },
+    {
+      "delta": "-1/10",
+      "k": "39/20",
+      "first_local_wall": "positive horizontal",
+      "point": [
+        "2/39",
+        "0"
+      ],
+      "outgoing": [
+        "1",
+        "-39/20"
+      ]
+    }
+  ],
+  "limiting_exit_velocities": [
+    [
+      "-1",
+      "2"
+    ],
+    [
+      "1",
+      "-2"
+    ]
+  ],
+  "limits_are_antipodal": true,
+  "off_origin_corner_reflections": {
+    "C": [
+      "3",
+      "-5"
+    ],
+    "Q": [
+      "7",
+      "2"
+    ],
+    "Q_V": [
+      "-1",
+      "2"
+    ],
+    "Q_H": [
+      "7",
+      "-12"
+    ],
+    "Q_H_equals_2C_minus_Q_V": true
+  },
+  "two_word_cases": [
+    {
+      "lambda": "1",
+      "tau": "2",
+      "displacement": [
+        "-1",
+        "-2"
+      ],
+      "case": "opposite launch"
+    },
+    {
+      "lambda": "2",
+      "tau": "2",
+      "displacement": [
+        "0",
+        "0"
+      ],
+      "case": "zero flight"
+    },
+    {
+      "lambda": "3",
+      "tau": "2",
+      "displacement": [
+        "1",
+        "2"
+      ],
+      "case": "endpoint before declared corner"
+    }
+  ],
+  "cone_angle": "6*pi",
+  "outgoing_prongs_per_developed_direction": 3,
+  "actual_dark_pair_claimed": false,
+  "all_global_rerouting_refuted": false,
+  "local_positive_transfer_proved": false,
+  "nine_distinct_corners_proved": false,
+  "whole_goal_complete": false
+}

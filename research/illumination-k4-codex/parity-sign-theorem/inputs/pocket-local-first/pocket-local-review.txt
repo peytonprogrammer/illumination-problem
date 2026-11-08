@@ -1,0 +1,80 @@
+# Review: sliding triangular pocket note and checker
+
+**Verdict:** I accept the note, with one substantive correction to the odd-word criterion and several precision fixes. Everything below was checked by hand. I did not run the checker, and I have not re-audited the optical admissibility of the two frozen events; those remain imported from the earlier audit.
+
+## Verified algebraically
+
+**Six-map classification (§2).**
+- The dihedral group ⟨D,H⟩ has order 8 at the 45° tip, so eight copies tile [0,2]², and the eight unit boundary edges are the portal's images.
+- A ray from (0,e) with velocity (1,m) cannot exit through the left edge. That leaves exactly six exit edges, and I recomputed all six portal images:
+  - D maps the portal to the bottom edge, 0<x<1.
+  - DH = (2−y, x) maps it to the bottom edge, 1<x<2.
+  - DHD = (2−x, y) maps it to the right edge, 0<y<1.
+  - DHDH = (2−x, 2−y) maps it to the right edge, 1<y<2.
+  - HDH = (2−y, 2−x) maps it to the top edge, 1<x<2.
+  - HD = (y, 2−x) maps it to the top edge, 0<x<1.
+- The slope intervals are correct.
+- (I−R_G)u = (1,−1), (−1,−1), 0, (0,−2), (−1,−1), (1,−1), in that order. Only DHD, the reflection in the vertical line x=1 through A, is invariant.
+
+**Finite exceptions.** The five equality slopes hit (1,0), (2,0), (2,1), (2,2) and (1,2). These are lifts of C, B, C, B and C respectively, so they are portal endpoints. The only interior corner lift is the center, at slope m=1−e, and it lies inside the DHDH interval. On either side of it the chronological words are DHDH (diagonal hit first) and HDHD (horizontal hit first), which give the same half-turn. That matches the note's caveat, and the exception list is complete.
+
+**Composition and wall loads (§3).**
+- The development of chronological hits w₁…wₙ is F_{w₁}∘…∘F_{wₙ}, and the checker's `develop` computes exactly this. Equation (1) follows.
+- In physical coordinates the offsets are b_D = t(1,−1) and b_H = (0, 4−2t), so a_D = (1,−1) and a_H = (0,−2). Both equal (I−R)u.
+
+**Formula (2).**
+- Starting from Q = T′ − 2C′ with S′ = 0, I get Q = Σ_{j≥p} L_j a_j − Σ_{j<p} L_j a_j − 2L_p v_c. The factor 2 is correct.
+- The formula is invariant under moving a corner-incident mirror factor across the split. Moving an F_D factor at B changes the sums by −2L_p a_D and the corner term by 2L_p(I−R_D)u, and these cancel because a_D = (I−R_D)u. This confirms the note's warning about split positions.
+- The actual target T is retained. The checker builds T_image from the real T and asserts T_image − C_image = C_image − S = w.
+
+**Opening normalization.** With η(0) = 0,
+
+  d/dt [σ det(T_img − S, C_img − S)] = σ det(Q, w) = −σ det(w, Q).
+
+So the opening row is the corner's signed area against the S→T chord, a positive multiple (|2w|) of its signed offset. There is no stray factor from the π-sector. For event1, det((−12,5), (−1,−1)) = 17, so the row is −17. ✓
+
+**Mod-2 reduction (§4).** Signed permutation matrices fix (1,1) mod 2. Since a_H ≡ 0 and 2L_p v_c ≡ 0 mod 2, and signs do not matter mod 2, (3) follows for any fixed word.
+
+**Single-excursion criterion.** Q = ±L(I−R_G)u with L invertible, so Q ≠ 0 whenever G ≠ DHD. ✓
+
+**Checker fixtures (e = ½).** All six sample slopes lie in their intervals, avoid m = 1−e, and pull back to the open portal under Rᵀ(x−b). The six fixtures happen to be listed in the same order as the table, so the "in that order" derivative list above corresponds row for row.
+
+## Errors and required fixes
+
+1. **"Detects" overstates the odd-word criterion (substantive).**
+   - The odd-word criterion yields only Q(η) ≠ 0. The detection quantity used in §5 is −σ det(w, Q), and that can vanish when Q ∥ w.
+   - Odd parity forces Q ≡ (1,1) mod 2. That does not exclude non-wall-parallel directions: for example, an HD load plus a DHDH load can sum to (1,3), and nothing forbids w ∥ (1,3).
+   - **Fix:** state the criterion as "Q(η) ≠ 0, so the opening row is nonzero unless w ∥ Q", or add det(w, Q) ≠ 0 as a hypothesis.
+   - The single-excursion criterion does upgrade to a nonzero opening row. Every nonzero single-excursion load L(I−R_G)u is axis- or diagonal-parallel, and wall-parallel w are excluded by scope. Say this explicitly.
+   - If the opening inequality is one-sided in t, also state which sign of t the slide uses.
+
+2. **Indexing in (2).** The formula is correct only with 0-based hit indices j = 0…n−1, so that the p pre-corner hits are j < p and L_p is the full prefix linear part. Under 1-based indexing, "j ≥ p" is wrong. State the convention.
+
+3. **"AB means A after B."** This is true as function composition, but the left letter is the chronologically first hit (HD means H is hit first). Event1's wall order [3,2], i.e. H then D, relies on that reading. Say "words are read chronologically left to right; the developed map is their composition".
+
+4. **Word-independence of diagonal parity.** The note says local words are not unique, yet it assigns odd or even counts to exit maps. Justify this with one line: D-parity is a well-defined homomorphism on ⟨D,H⟩, because D², H² and (DH)⁴ all contain an even number of D's. It equals "the linear part swaps coordinates". Odd parity therefore holds exactly for the four bottom/top maps, independent of itinerary.
+
+5. **"Corner outside the pocket."**
+   - Define this as c ∉ {B, A, C}. The portal endpoints B and C lie on the pocket boundary and have v_c = u.
+   - Corner A is excluded anyway, since a 45° angle cannot hold a π-sector.
+   - Completeness of excursions also needs S, T ∉ closed pocket. That holds because the open triangle and the open portal contain no lattice points. State it.
+
+6. **Notation.** The point classes A/B/C collide with the vertex names B, A, C. Rename one set.
+
+## Checker limitations
+
+- **Local classification.** Each interval is sampled once, at e = ½. The general interval statements rest on the hand derivation, which I have confirmed above.
+- **Missing assertions that the saved room matches the claimed geometry:**
+  - V[2], V[3], V[4] = (1,1), (2,2), (1,2).
+  - Mirror lines i = 2, 3 pass through V[i] and V[i+1], and generally each line from `offset_normals`/`offset_base_point` contains its wall's endpoints.
+  - All room normals are D4 directions.
+  - Event corners belong to V.
+- **Missing assertions for the §5 claims:**
+  - Event0's load list is empty.
+  - Event1's two pocket hits occupy consecutive positions (a single complete visit). The defect assertion covers the net value but not this structure.
+- **Circularity.** The endpoint-form comparisons check consistency with saved data, not independent truth. Prefix position, admissibility and the π-sector side σ remain imported from the earlier audit, as the scope string says.
+- **Not checked here.** The §2 remark about "continued axis trajectories" and the §6 multitwist invariance claim.
+
+## Scope
+
+Accepted are the local six-map table with its exceptions, the deformation cocycle (2), the mod-2 identity (3) as a criterion for Q ≠ 0 (with fix 1 for the opening row), and the conditional single-excursion criterion, all as algebra on fixed labeled words. Nothing here supplies an admissible S→T event or bears on the global conjecture, which the note correctly leaves open.

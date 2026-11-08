@@ -1,0 +1,15 @@
+# Independent AP07 reciprocal review
+
+ACCEPT the stated coprime right-width whole native family. This does not establish unrestricted right-return selection.
+
+I read the full frozen proof and request. My unpublished hand analysis independently reached the same orbit mechanism before reading this packet, but the reviewer claimed and authored AP07 first. This is a reciprocal proof audit with shared accepted AP01/AP05/TR01/TR05 foundations, not independent rediscovery credit or formal verification.
+
+For a lower native source, X=h-u is positive and even. M0 divides lcm(P,N). The dyadic g=gcd(M0*d,L) divides M0 because d=c-v is odd. Therefore the positive source/cap null shifts XM0/P, CM0/N, FM0/g are integral. The half-open seed has strict source and cap windows from g<=P<K and the exact weighted metric. No right-corner assumption enters that seed.
+
+Coprimality gcd(K,P*N*g1)=1 implies gcd(K,g1*M0)=1. Independently check every prime in gcd(g1*M0,K*g): odd primes of K are absent from the numerator; the only other primes belong to dyadic g, and g divides M0. Hence the gcd is EXACTLY g, including the case where M0 has more powers of two than g. Bezout then makes the right-input orbit a full mesh of spacing 2eg modulo 2eKg. Nearest mesh choice leaves a residual of magnitude <=eg<eK, strictly inside the physical passage. Its unique centered right index is genuinely a multiple of g. Thus J=gj-Kk is g-divisible without assuming g|K.
+
+The same Bezout solution may initially have negative indices. Adding K*t to the null parameter and (g1*M0/g)*t to the target-aligned right index parameter preserves z2 exactly and increases every relevant index and slope by positive integral increments. The full period M=K*M0 changes J by Md while all three signed residuals stay fixed. Because K is odd and L dyadic, gcd(Md,L)=g. The final congruence is solvable; positive complete congruence periods retain all guards and supply one physical finite ray to E=z modulo TRUE2B. No orbit-density assumption, sheet projection or concatenation appears.
+
+All actual optical bands are the original AP01 bands at the FINAL slope. Strict h/c states exclude reflexes; the source/right h mouths are disjoint, so a lower roof corner would contradict the endpoints of its cap round trip. Zero residuals are smooth outer-wall reflections. Source points cannot reach T early because x<=a<l<t; cap/right are above v; final bottom descent first reaches actual T. Upper/mouth native sources use the accepted AP05 upper constructor with odd N,K and dyadic L, hence g=1<K. Protected TR01/TR05 plus reversal give all actual endpoint placements.
+
+All five source hashes match before and after. No new numerical control, physical replay, engine, census, discovery clock, worker or git mutation was used. The universal gap is explicit: with shared factors the mesh may be >=K, and a target-compatible right interval is not forced. In that regime the choices of source residual, target image and additional genuine returns must be controlled jointly. A failed mesh criterion alone is not darkness. The full ordered-spiral, r3 and r<=8 objectives remain open.

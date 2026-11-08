@@ -1,0 +1,90 @@
+# Review of §26.7: corridor-side literal leaves
+
+**Verdict: ACCEPT, scoped, with five required text corrections.** None of the corrections changes the conclusion. Two of them fill steps the hand proof currently leaves implicit (items 2 and 3), and one fixes an overstatement about frame signs (item 4).
+
+Everything below was re-derived by hand. Nothing was taken from the script.
+
+## What checks out
+
+**Sharper count, P_A = 8.**
+- If P_A = 9, equality in (26.2) forces q_A = d for every partial. The equality types are (1,1), (2,0) and (4,0).
+  - The m=3 types have charge 3 but degree at most 2, so they are excluded.
+  - (2,0) needs in = e = 2. (4,0) needs h = 1 and in = e = 2.
+- Every partial then has indegree at least 1, so Z = 0, and (24.3) gives exactly one indegree-2 vertex.
+- The other eight partials must be (1,1) leaves. The degree sum is at most 8 + 8 + 3 = 19, but 11 vertices need 20. This does not depend on whether H is connected.
+- In connected H, N = (2,2) is at distance (2,2) from S and (−2,2) from T. So it is not a portal-neighbor of either full fan and is distinct from the seven neighbors. Hence P_A ≥ 8.
+- The resulting 9-edge tree is exactly the eight full-incident edges plus M→N. The leaves are forced to have in = 1 and out = 0, so (m,q) is (1,1) or (2,0).
+- The charge totals hold: Q = 10 + r with r ≤ 2 for connected H, and Q = 11 + r with r ≤ 1 for disconnected H.
+
+**L shapes.**
+- If the portal at C = (5,0) is the upper one, (2,0) forces the square [5,6]×[0,1]. The alternative pair at (5,0) has q = 2 and out = 1, and it would make (5,0) interior.
+- (1,1) forces the triangle (6,0), (5,0), (5,1).
+
+**Corridor.** S square, M's upper half-square and T square are joined through the portals (1,0)–(1,1) and (3,0)–(3,1). The open strip (−1,5)×(0,1) has no lattice points. The legs S→(4,1) and S→(3,1) lie in it.
+
+**Trajectories, recomputed.**
+
+| Case | Path | Checks |
+|---|---|---|
+| Rectangle | (4,1) →(4,−1)→ (5,¾) → (6,½) on x=6 → (5,¼) → T | Elapsed time 1 |
+| Triangle | Bounces at (16/3,⅔), (11/2,0), (28/5,⅖); directions (4,−1)→(1,−4)→(1,4)→(−4,−1) | D H₀ D = reflection in x=6; elapsed 1/3+1/6+1/10+2/5 = 1 |
+| Lower | (3,1) → (5,⅓) → T | Segment x=5, 0<y<1 is a wall: only the absent A=(6,0) triangle could cover it |
+
+- All bounces lie strictly inside their mirror segments.
+- Developed targets: (8,2) for the two upper cases and (6,2) for the lower case. The halves (4,1) and (3,1) are equal and primitive.
+- Each path has exactly one corner, and both actual endpoints are attained.
+
+**Lower case B = (3,1).** The angle-count argument is correct: 90 + 45 = 135, not 225.
+
+**Cone sectors.**
+- At a 270° corner the cone angle is 6π; at a 225° corner it is 10π.
+- Each chosen arc has length π, crosses only the fixed horizontal flank once, and stays in lower-half physical angles. It never crosses a moving pocket leg, so it is a legal π continuation, not 3π.
+- Note: in the 225° case, and in the 270° case with the upper-left quadrant missing, the opposite π arc is also legal. It continues straight into the pocket. The proof correctly selects the flank side, and the word depends on that choice.
+
+**Defect in the normalized frame.**
+- p = 0, all used mirrors are fixed, S and T are fixed, and the corner velocity is u. So Q(η) = −2u.
+- If the corner split is placed after the flank instead, the result is −2·R_flank·u = −2u, since a horizontal u is fixed by that reflection.
+- det((4,1),(−2,0)) = 2 and det((3,1),(−2,0)) = 2.
+- No pocket excursion occurs, so the corner-outside-pocket criterion is correctly not invoked.
+
+## Required corrections
+
+1. **B is forced in each upper subcase; it is not a free choice.**
+   - Upper rectangle forces B = (5,1). If B were (3,1), the point (5,1) would receive 90° from T and 90° from L, a smooth boundary B, which rawness forbids. So the upper-left quadrant at c is missing.
+   - Upper triangle forces B = (3,1). B = (5,1) would give 90 + 45 + 45 = 180°, which is not literal and not raw. So the upper-right quadrant is missing.
+   - Replace "the choice of B … changes neither the construction" with this case split. Both cone computations are still needed, once each.
+
+2. **Lower case: justify that the flank is a wall.**
+   - Reflecting at b = (3,1) requires the left ray (2,1)–(3,1) to be a physical wall. That holds only if N's single triangle is [N,(2,1),(1,1)].
+   - This follows from the literal 225° at B. If N's triangle were on the right, (3,1) would have 270° and that segment would be a portal.
+   - State this explicitly. The link [π, 9π/4] depends on it.
+
+3. **Analogous upper-case flank check.**
+   - When B = (5,1), the left ray (3,1)–(4,1) is a wall because the other A=(4,2) triangle is absent (the leaf has one triangle).
+   - When B = (3,1), the same holds for (4,1)–(5,1).
+   - Add one line covering both.
+
+4. **Frame signs under symmetry.** "Q(η) = −2u, det = 2" holds only in the normalized orientation with p = 0.
+   - For the (0,2) leaf, obtained by x→4−x plus reversing the path, the fixed reflections x=−2, x=−1, or the D H₀ D composite now come before the corner. Then Q = −2·L_p·u = +2u in the source frame, with w = (−4,1) or (−3,1), giving det = −2.
+   - Vertical reflection keeps Q = −2u but flips det to −2.
+   - State the result as Q = −2·L_p·u ≠ 0 and |det(w,Q)| = 2, with the slide sign selected accordingly.
+
+5. **Notation collisions.**
+   - The charge sum "Q = 10 + r" and the defect Q(η) share a symbol. Rename the charge sum, for example to Σq_A.
+   - L's fixed mirrors "D, H₀" collide with §1's moving D_t, H_t and with the DHD excursion criterion. Rename them, for example to D_L and H_L.
+
+## Script scope
+
+The script only checks the prescribed arithmetic. It does not verify:
+- rawness, B-forcing, or wall-versus-portal status (including x=5 in the lower case and the flank rays);
+- the rectangle-case portal crossing at (5,¾);
+- whether open segments stay off the boundary (its convexity check tests vertices only; this needs the hand argument);
+- the cone sectors.
+
+The `90+45!=225` and degree-total asserts are tautological. The `PENDING` labels are appropriate.
+
+## Scope statement
+
+The result covers the two corridor-side leaves (4,2) and (0,2) in connected H with W ≤ 26, together with their D4 images. W ≤ 26 is used, through P_A = 8, to make L a leaf.
+
+It does not cover the opposite-side leaves (0,−2) and (4,−2), the end leaves (−2,0) and (6,0), disconnected H, W > 26, or universal detection. Those all remain open, as the section already says.

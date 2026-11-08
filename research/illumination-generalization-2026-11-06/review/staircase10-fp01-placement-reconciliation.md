@@ -1,0 +1,9 @@
+# Reconciliation of FP01 and the original-wall placement reduction
+
+Read construction/staircase10-five-programme-independent.md/json and staircase10-placement-reconciliation.json in full. ACCEPT and reconcile their scope decisions with the own pinned proofs. All eleven referenced receipt/proof/source pin occurrences match bytes at this read.
+
+FP01 is now reciprocally hand-reviewed as an exact native feasibility-period theorem for the entire declared five-programme class. The author independently reconstructs actual integer event travel, band entry at a seam source, signed forward fold germs, the downward widening reflex guard, ordinary smooth-left seam bounces, strict outer-corner exclusions and every actual-target-height test before later rejection. Its zero-residue proof correctly retains the direct vertical representative in the union. The gcd candidate set and native denominator condition remain only necessary arithmetic conditions before the physical tests. There is no claim that a candidate passes or that these programmes exhaust all billiard rays. No material discrepancy remains.
+
+The original bottom/top L lifts and their cross-placement complement are fully reconciled at arbitrary real metric/mark scope. This does not by itself reconcile the NEW own ML01 middle-strip strengthening; that separate packet remains pending reciprocal review. ST10-D independent acceptance has been handed off separately and should not be described as a full universal theorem.
+
+No numerical replay, discovery, engine, census or new clock was used for this reconciliation. The all-metric staircase10 and broad r<=8 targets remain OPEN; the actual remaining implication is a simultaneously guarded original-source/actual-target itinerary for every residual input, not finiteness of a candidate set.

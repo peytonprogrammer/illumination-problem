@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "abstract_incompatible_band_certificate": {
+    "A": [
+      [
+        "1"
+      ],
+      [
+        "1"
+      ]
+    ],
+    "b": [
+      "0",
+      "2"
+    ],
+    "c": [
+      "1",
+      "1"
+    ],
+    "lower_weights": [
+      "1",
+      "0"
+    ],
+    "upper_weights": [
+      "0",
+      "1"
+    ],
+    "cancelled_rhs": "-1"
+  },
+  "shared_endpoint_feasible": true,
+  "full_chart_rank_but_feasible": {
+    "rank": 3,
+    "normalized_witness": [
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  "reversal_controls": 108,
+  "rank_deficient_multiscale": [
+    {
+      "h": "1/10",
+      "epsilon": "1/100",
+      "x": "1/10",
+      "x_over_epsilon": "10"
+    },
+    {
+      "h": "1/100",
+      "epsilon": "1/10000",
+      "x": "1/100",
+      "x_over_epsilon": "100"
+    },
+    {
+      "h": "1/1000",
+      "epsilon": "1/1000000",
+      "x": "1/1000",
+      "x_over_epsilon": "1000"
+    }
+  ],
+  "rank_injective_scalar_controls": [
+    {
+      "epsilon": "1/100",
+      "x_over_epsilon": "1/2"
+    },
+    {
+      "epsilon": "1/100",
+      "x_over_epsilon": "1"
+    },
+    {
+      "epsilon": "1/1000",
+      "x_over_epsilon": "1/2"
+    },
+    {
+      "epsilon": "1/1000",
+      "x_over_epsilon": "1"
+    },
+    {
+      "epsilon": "1/10000",
+      "x_over_epsilon": "1/2"
+    },
+    {
+      "epsilon": "1/10000",
+      "x_over_epsilon": "1"
+    }
+  ],
+  "corrupt_certificates_rejected": [
+    "negative_multiplier",
+    "uncancelled_variable",
+    "nonnegative_dual_rhs"
+  ],
+  "scope": "Abstract exact algebra and existing local-step formula only. No actual room exclusion, dark deformation, new optical word, ray search or global minimum."
+}

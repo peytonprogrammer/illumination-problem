@@ -1,0 +1,88 @@
+Third-surplus illumination for the fixed three-star L support
+4 November2026 — parent proof assembled by Codex01a18403
+STATUS: bounded proof complete; independent AI review findings reconciled.
+Exact artifact audit and review limitations are recorded in completion-audit.txt.
+
+THEOREM
+Let P be a finite strictly simple canonical45-degree triangle room whose only
+interior A points are S=(0,0),U=(2,0),T=(2,2). Suppose Delta=Q+s_N-8=3,
+W<=21 maximal straight walls and k=J+s_N<=6. Then actual S and T are joined
+by a finite corner-avoiding specular billiard trajectory. The assembled cover
+uses at most37reflections.
+
+Established inputs (accepted before this goal)
+Canonical triangles have one even-even A vertex, one odd-odd B, and a mixed
+parity C, with vertex angles45/45/90degrees. A full A star has8triangles.
+I is the number of full interior A stars; J counts full interior B/C stars.
+s_A,s_N count smooth boundary A and non-A vertices. A partial contiguous A
+fan with m triangles has weightq=m, except m4/smooth A hasq3; Q sums q.
+The identities are
+ N_triangles=8I+Q+s_A;
+ W+2(J+s_N)=2+6I+Q+s_N.
+Here I3, so W+2k=28+Delta=31. The active budgets allow only(W,k)=(19,6),(21,5).
+H is the union of the full stars at the three marked A points; K adds its seven
+neighbor A cells L=(-2,0),B=(0,-2),D=(2,-2),R=(4,0),E=(4,2),Tcap=(2,4),N=(0,2).
+For each partial cell, d is the number of exposed H sides touched by an occupied
+triangle, e=q-d>=0. With M the uncovered exposed-H-side C midpoints and
+b=s_N-|M|>=0, the exact identity is Delta=sum(e)+b.
+The two central N bridge triangles make S/T directly visible and are removed
+as a directly illuminated case. In a nonbridge room, e0 partial cells are single
+ordinary caps. Layer0/1/2 illumination at this same fixed support was previously
+independently hand-accepted; its finite path constructions use at most13hits.
+
+Exhaustive proof map
+1. Some occupied A cell lies outside K:
+   remote-roots.txt gives the full charge/connectivity/sector exhaustion.
+   remote-erasure.txt covers e1 roots by deletion/inherited guard support.
+   The healed-C roots are covered by healed-budget.txt,half-fan.txt,
+   center-half.txt and remote-B.txt; remaining orientations use inherited
+   short/13paths. Maximum14reflections, actualW/kcaps preserved where used.
+2. All occupied partial cells lie in K:
+   Partition the integer charge3 as
+   (b3),(e1+b2),(e2+b1),(e1+e1+b1),(e3),(e2+e1),(e1+e1+e1).
+   a. b3/e1+b2 inherit accepted all-single/one-unit proofs with arbitrary
+      extra smooth B points, as explained in local-e2.txt§1.
+   b. A solitary e3 is impossible unless the central bridge is present:
+      d1 would needq4; d2/m5 at N contains the bridge (local-e2.txt§1).
+   c. e2+b1: local-e2.txt exhausts all local3/4fans, gives the full symbolic
+      covers and five hand-forced residue paths; maximum37reflections.
+   d. e1+e1+b1: local-two-unit.txt treats the only outside-C join and every
+      critical centered/outer pair; maximum13reflections.
+   e. e1+e1+e1: local-three-unit.txt exhausts critical-site/type patterns,
+      using composed square returns and one uniform9guard; maximum13.
+   f. e2+e1: local-mixed.txt exhausts no-join and B-D/R-E joined roots,
+      symbolic covers and one final hand-forced9path; maximum18.
+These alternatives exhaust finite strictly simple rooms with the stated charge.
+
+Optical evidence, actual endpoints and strict legality
+All inherited/symbolic/frozen paths start at actualS and end at actualT.
+Sigma transfers use(x,y)->(2-y,2-x) plus path reversal, not a symmetry assumption
+on the completed room. Local square exchanges preserve actual portal exit data.
+The exact rational path checker computes required and forbidden canonical
+triangles from every open leg, every intervening lattice crossing, and each
+bounce's complete incident fan. A positive guard requires its needed triangles
+and excludes all mirror-removing triangles. This checks finite specular paths
+and actual smooth boundary mirrors; it does not rely on a ray-length cutoff,
+absence of a found path, or an illegal continuation through a corner.
+Full coordinates, sufficient triangle guards and frozen provenance are retained
+in the per-proof JSON receipts and the specified scripts. The checker is reused,
+so these receipts alone are not independent formal verification.
+
+Independent review/completion gate
+Two independent read-only Sonnet5.5 reviews completed ACCEPT WITH FIXES. Their
+material findings were resolved in independent-review/reconciliation.txt:
+fifth single-e2 residue added, transferred row citations corrected, explicit
+short forcing paths and complete noncritical-support guards supplied, remote
+and N-unit omissions clarified. A bounded targeted re-review accepted the substantive corrections. Its two
+minor N-sector requests are resolved by exact triangle-identity/full-N-guard
+assertions. No material finding remains open.
+Both original reviews independently examined structural/case arguments and
+checker semantics; neither executed paths. Parent exact replay is separate.
+The existing peer's requested task never ACKed; no peer endorsement is claimed.
+Completion gate: substantive review findings and minor final checks are closed;
+completion-audit.txt and completion-check.json record the final current state.
+
+Research boundary
+This is a fixed-support, canonical45-degree, Delta3, W21/k6 theorem under review.
+It does not prove that arbitrary simple polygons with fewer than22walls illuminate,
+does not settle other supports, and starts no higher-surplus campaign.

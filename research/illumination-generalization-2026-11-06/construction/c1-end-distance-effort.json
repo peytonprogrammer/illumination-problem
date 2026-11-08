@@ -1,0 +1,10 @@
+{
+  "id": "A47",
+  "start": "2026-11-07T06:22:56.768851+00:00",
+  "deadline": "2026-11-07T06:36:56.768851+00:00",
+  "premises": "Integer two-sided rectangular-spine comb, unitwidth height2 teeth, <=21 maximal walls; actual same-seam A pair S=(seam,s),T=(seam,t), floor0/roofG, s<t. q=min(s,G-t)>=3 and h=(t-s)/2>=3.",
+  "implication": "Any darkness requires >=3 NONFLUSH opposite blockers plus2NONFLUSH selected teeth, henceW>=24; thus all such actual pairs illuminate, independent of c/parity/G. Residual c1 dark pairs must q1/2 orh2.",
+  "success": "Derive the >=3NF claim from all four levels and q>=3, including coincident middle levels and arbitrary d, without arithmetic divisibility or pruning attachments.",
+  "objection": "A single height2 tooth may cover the inner two levels when d2; must show outer levels need separate teeth and flush teeth cover none.",
+  "method": "Hand darkness-to-charge only; no computation/discovery."
+}

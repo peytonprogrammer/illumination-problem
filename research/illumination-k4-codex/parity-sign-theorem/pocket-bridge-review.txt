@@ -1,0 +1,190 @@
+# Section 26 review and the one-merger subclass
+
+## Verdict summary
+
+- **(A) Section 26 is correct**, with four sharpenings and two checks.
+  - The equal-half condition is automatic. Any one-corner π-connection S→T is primitive and equal-half.
+  - Σ_c-edges have holonomy exactly w or 2w.
+  - The cylinder "consecutive" condition is exactly the π-versus-(2j+1)π condition.
+  - Opening needs **w∧δ(η) ≠ 0**, not merely δ(η) ≠ 0. Shears cannot change this quantity.
+  - Check 1: a π-sector fold at a moving pocket corner carries a load that Section 3 must count.
+  - Check 2: the target should range over all eight lifts of T.
+- **(B) No universal theorem.** I prove:
+  - an exact load formula;
+  - a blindness lemma;
+  - a direction-transfer lemma;
+  - a pocket-corner detection criterion;
+  - one obstruction: parity can never certify opening at a B-corner event, and shears cannot repair this.
+  
+  I end with a target statement that would imply a detecting event.
+
+Notation: ŝ, t̂, ĉ are lifts on X. Π_B = (1,1) and Π_C = (1,2) are the moving pocket corners, which are 225° and 270° true zeros. The physical corner velocity is ċ = (0,−1).
+
+---
+
+## A. Section 26
+
+### A1. Primitive-midpoint lemma: correct, and sharper
+
+Class is position mod 2. Along p + ℤw the class therefore has period 2.
+
+**Lemma A1 (edge holonomy).** Let w be primitive. Every Σ_c-saddle connection in direction w has holonomy w or 2w. It has 2w exactly when its midpoint is a non-corner A point: a lift of S, a lift of T, or a 180° boundary A point.
+
+*Proof.* Start at a corner p. If p+w is a corner, the holonomy is w. Otherwise p+w is a non-corner, hence class A, by rawness. Then p ≡ w (mod 2) is not class A. So p+2w ≡ p is class B or C, which makes it a corner. ∎
+
+The doc's "shorter edges" are therefore exactly the holonomy-w edges.
+
+**Corollary A1′ (equal-half is automatic).** Take any generalized geodesic ŝ→ĉ→t̂ that has exactly one Σ_c point, straight halves, and angle π on one side. Then hol(ŝ→ĉ) = hol(ĉ→t̂) = w with w primitive.
+
+*Proof.*
+1. The halves are parallel, say in primitive direction w.
+2. The first lattice point after ŝ is ŝ+w, which is class B or C and hence a corner. So ĉ = ŝ+w.
+3. Along ĉ + jw, t̂ is class A, which forces j to be odd.
+4. j ≥ 3 is impossible, because ĉ+2w ≡ ĉ is a corner and blocks the path. ∎
+
+So "primitive equal-half one-corner event" just means "one-corner π-connection S→T". Section 26's restriction loses nothing. The corner ĉ ≡ w (mod 2): it is a C corner when w has mixed parity, and a B corner when w ≡ (1,1).
+
+### A2. Event ⇔ consecutive edges: correct
+
+At a zero of cone angle 2πk, the ±w prongs alternate at spacing π. The two arcs from α's arriving prong to β's leaving prong have lengths (2j+1)π and (2(k−j)−1)π. The following are equivalent:
+
+- one arc equals π;
+- β is the left or right continuation of α;
+- α and β are consecutive on that side's cylinder boundary.
+
+Embeddedness of the sector is automatic for small radius. The real content is "π, not 3π, 5π, …". Consecutiveness at ĉ is local, so it reads the same in the Σ_c and Σ_z decompositions.
+
+Physical folds of the π-sector across walls through c:
+
+| Corner angle | Folds possible |
+|---|---|
+| 225°, 270°, 315° | at most one |
+| 135° | up to two |
+
+Only the pocket corners (225° and 270°) can fold across a *moving* wall. That case matters for A5.
+
+### A3. Regular corners: correct, with two consequences
+
+A 45° or 90° corner has angle π/n with n even. The opposite sheet is the product of n reflections, which is rotation by π. So the continuation retraces, and the doc's S ≠ T argument holds.
+
+**Consequence 1.** Σ_z-saddle connections in direction w have holonomy w, 2w, or 4w. Holonomy 4w is the retrace pattern z → A → Q_reg → A → z′.
+
+**Consequence 2 (sharp form of 26.2).** ŝ lies on a nonsingular closed geodesic of X if and only if some primitive w has both beam corners S±w regular.
+
+*Proof.* Closed geodesics on an origami have rational directions. If both corners are regular, two π-rotations compose to the identity linear part, which gives a closed leaf of holonomy 4w through ŝ. If either corner is a zero, the leaf hits it. ∎
+
+So S is oblivious on X exactly when every direction has at least one zero at S±w. This depends on S's geometry alone and says nothing about T, which confirms 26.2's caution.
+
+### A4. Target lifts
+
+D4 deck transformations commute with the slide. With ŝ fixed, the target should be **any of the eight lifts of T**. Proving the result for one supplied t̂ is sufficient. An obstruction for one t̂, however, is not an obstruction to illumination.
+
+### A5. Identity (26.1): exact
+
+Simplify:
+
+    r_s = ½(hol(d→s) − hol(s→c))
+    r_t = ½(hol(c→t) − hol(t→e))
+
+δ(η) is intrinsic to [η] ∈ H₁(X, Σ_z ∪ {ŝ, t̂}), and the points d and e drop out. In load form:
+
+    δ(η) = Σ_{j∈(c,t)} A_{j−1} ℓ_j − Σ_{j∈(s,c)} A_{j−1} ℓ_j + A_in(ℓ_fold − 2ċ)        (★)
+
+The terms:
+
+- ℓ_D = (1,−1). This is the derivative of (x,y) ↦ (y+t, x−t).
+- ℓ_H = (0,−2).
+- Fixed walls, including the line x=1, have load 0.
+- A_{j−1} ∈ D4 is the linear part of the sheet before reflection j.
+- ċ = 0 unless c ∈ {Π_B, Π_C}.
+- ℓ_fold is the load of a π-sector fold at c itself.
+
+Derivation: developed t = F_n(T) with F_k = F_{k−1}∘R_{W_k}; differentiate and subtract the developed position of c_t.
+
+Evaluating the corner term A_in(ℓ_fold − 2ċ):
+
+| Corner and fold | Corner term |
+|---|---|
+| Π_C, fold across H | 0 (exact cancellation; check: equal halves for every h) |
+| Π_B, fold across D | A_in(1,1), odd-odd |
+| no fold, or fold across x=1 | −2A_in ċ, an axis vector |
+
+**Check for Section 3:** the fold at c is a reflection at the corner itself. A load formula that counts only open-segment reflections would miss it.
+
+**Parity is confirmed.** D4 preserves (1,1) mod 2, and ℓ_H and 2ċ are even. Hence δ ≡ N_D·(1,1) (mod 2), where N_D counts D-reflections including a D-fold at c.
+
+### A6. Opening criterion
+
+Write hol(ŝ→ĉ) = w + ta and hol(ĉ→t̂) = w + tb, so δ = b − a. The signed turning at ĉ is cross(w+ta, w+tb) = t·(w∧δ) + O(t²).
+
+- First-order opening happens iff **w∧δ ≠ 0**.
+- If δ ∥ w, the halves only rescale, and first order decides nothing.
+- Suppose φ is a label- and tangent-preserving affine map with Dφ = g. Then δ(φ_*η) = gδ, so w∧δ ↦ det(g)·(w∧δ).
+- Shears therefore preserve sign(w∧δ). Both opening signs come from t ↦ −t, and the slide is two-sided.
+- "Nonzero vector defect" must be read as "nonzero transverse defect".
+
+---
+
+## B. The one-merger I=2, Z=0 subclass
+
+**B1. Blindness (proved).** Suppose c ∉ {Π_B, Π_C} and the path makes no D or H reflection. Then hol_t(η) ≡ 0 for small t, so the event never detects. Tangent-preserving maps carry δ = 0 to δ = 0. Hence detection requires touching the pocket.
+
+**B2. Direction transfer (proved).** All marks are lattice points, so (X, labels) is a labeled origami. Here the labels are S, T, zero, regular corner, and ∂A.
+
+- Its SL₂(ℤ)-orbit is finite, so the stabilizer Γ_lab has finite index.
+- Γ_lab is realized by affine automorphisms. These preserve straightness, zeros, and the prong order, so they map one-corner π-connections S→T to one-corner π-connections S→T.
+- Every orbit Γ_lab·w is infinite.
+
+So **one event in any direction, wall-parallel included, gives infinitely many non-wall-parallel events.**
+
+Detection transfers only through Section 25's tangent-preserving subgroup, and through that subgroup blind events stay blind. As a theoretical remark, event existence in a single room is therefore a finite check. The universal question is purely about the room class.
+
+**B3. Pocket-corner criterion (proved).** Suppose:
+
+- c ∈ {Π_B, Π_C};
+- w is not wall-parallel;
+- the open halves make no D or H reflection;
+- it is not the case that c = Π_C with an H-fold.
+
+Then w∧δ ≠ 0. By (★):
+
+- With no fold or an x=1 fold, δ = ±2e_i, so w∧δ = ±2w_j ≠ 0.
+- With a D-fold at Π_B, δ = (±1,±1), so w∧δ = ±w₁ ± w₂ ≠ 0.
+
+**B4. Structural notes on the merger (proved, but not closing).**
+
+- The merger's incoming portals are chords, so every S→T path crosses both.
+- For the 90° merger (m=2), the portals are (c₁, b*) and (b*, c₂). The shared B corner b* has angle ≥ 180° and is a corner, so it is a zero.
+- These facts constrain topology, but the antipodal label condition at a corner depends on developments of length |w|, which is unbounded. Nothing in the fan tree controls it, so a merger-local argument does not close.
+
+### Proved obstruction: parity cannot certify opening at B-corner events
+
+**Proposition.** For an event at a B corner (w ≡ (1,1)), w∧δ ≡ 0 (mod 2) for every value of N_D. If φ preserves labels and the tangent, the transferred event also has even w∧δ. If it lands at a C corner, its N_D is forced to be even.
+
+*Proof.*
+1. δ ≡ N_D·(1,1), so w∧δ ≡ N_D(1 − 1) ≡ 0.
+2. Invariance holds up to the sign det(g).
+3. At C corners, w∧δ ≡ N_D (mod 2). ∎
+
+**Consequence.** The bridge "odd moving-D count + shears ⇒ opening" is valid only for C-corner events. Parity data cannot exclude δ ∥ w at B corners; for example, δ = ℓ_D + ℓ_H-type sums can equal w = (1,3). Π_B escapes this only because B3 computes δ exactly.
+
+### Target statement that would imply a detecting event
+
+**Target Theorem (unproved; it may fail in some rooms without refuting detection).** For every room in the subclass, there exist:
+
+- c ∈ {Π_B, Π_C}, a lift ĉ, a primitive non-wall-parallel w, and a side σ;
+
+such that:
+
+- the direction over −w first meets a lift of S;
+- its σ-continuation (θ + σπ) first meets a lift of T;
+- both open halves avoid D and H;
+- if c = Π_C, the σ-sector does not fold across H.
+
+**Implication chain (each step proved above):**
+
+1. A1′ and A2 give an actual primitive equal-half event.
+2. B3 gives w∧δ ≠ 0.
+3. A6 gives opening for the appropriate sign of t.
+
+The general form replaces the pocket-corner clause by "c is any true zero and w∧δ(η) ≠ 0 under (★)". Its parity-certifiable special case is "c is a C corner and N_D is odd".

@@ -1,0 +1,148 @@
+{
+  "status": "ILLUMINATED",
+  "certificate_screen": {
+    "status": "INCONCLUSIVE",
+    "all_directions_covered": false,
+    "method": "palindromic crossing-word endpoint relation on actual unfolded sheets",
+    "cover_squares": 96,
+    "palindrome_pairs": 6912,
+    "nonabsorbing_sectors": 20,
+    "source_sectors": 8,
+    "target_sectors": 8,
+    "reachable_regular_sectors": 20,
+    "potential_target_sectors": 8,
+    "axis_h_possible": false,
+    "axis_v_possible": false,
+    "seconds": 0.00372141704428941
+  },
+  "exact": {
+    "status": "ILLUMINATED",
+    "cover_squares": 96,
+    "primitive_cover_direction": [
+      5,
+      3
+    ],
+    "cover_witness": {
+      "source_square": 5,
+      "steps": 2,
+      "endpoint_square": 11
+    },
+    "witness": {
+      "status": "illuminated",
+      "direction": [
+        5,
+        3
+      ],
+      "bounces": 8,
+      "path": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            8,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "events": 19,
+      "corner_convention": "occupied-sector"
+    },
+    "seconds": 0.00994970800820738,
+    "processed_pairs": 10,
+    "discovered_pairs": 19,
+    "distinct_codes": 10
+  },
+  "corner_convention": "occupied-sector"
+}

@@ -1,0 +1,193 @@
+{
+  "status": "PASS_PRESCRIBED_PAIR_TRANSPORT_CONTROLS",
+  "uniform_source_target": [
+    8,
+    8
+  ],
+  "K": 1,
+  "valid_shear": 1,
+  "control_count": 4,
+  "total_wall_leg_guards": 72,
+  "controls": [
+    {
+      "source": [
+        26,
+        2
+      ],
+      "map": "V",
+      "seed_source": [
+        26,
+        4
+      ],
+      "seed_target": [
+        8,
+        0
+      ],
+      "wall_aligned_seed": false,
+      "launch_direction": [
+        -9,
+        7
+      ],
+      "path": [
+        [
+          "26",
+          "2"
+        ],
+        [
+          "164/7",
+          "4"
+        ],
+        [
+          "128/7",
+          "0"
+        ],
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "wall_leg_guards": 18,
+      "reflections": 2
+    },
+    {
+      "source": [
+        24,
+        2
+      ],
+      "map": "V",
+      "seed_source": [
+        24,
+        2
+      ],
+      "seed_target": [
+        8,
+        0
+      ],
+      "wall_aligned_seed": false,
+      "launch_direction": [
+        -8,
+        7
+      ],
+      "path": [
+        [
+          "24",
+          "2"
+        ],
+        [
+          "152/7",
+          "4"
+        ],
+        [
+          "120/7",
+          "0"
+        ],
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "wall_leg_guards": 18,
+      "reflections": 2
+    },
+    {
+      "source": [
+        22,
+        2
+      ],
+      "map": "V",
+      "seed_source": [
+        22,
+        0
+      ],
+      "seed_target": [
+        8,
+        0
+      ],
+      "wall_aligned_seed": true,
+      "launch_direction": [
+        -1,
+        1
+      ],
+      "path": [
+        [
+          "22",
+          "2"
+        ],
+        [
+          "20",
+          "4"
+        ],
+        [
+          "16",
+          "0"
+        ],
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "wall_leg_guards": 18,
+      "reflections": 2
+    },
+    {
+      "source": [
+        20,
+        2
+      ],
+      "map": "R_y V",
+      "seed_source": [
+        20,
+        2
+      ],
+      "seed_target": [
+        8,
+        0
+      ],
+      "wall_aligned_seed": false,
+      "launch_direction": [
+        -6,
+        7
+      ],
+      "path": [
+        [
+          "20",
+          "2"
+        ],
+        [
+          "128/7",
+          "4"
+        ],
+        [
+          "104/7",
+          "0"
+        ],
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "wall_leg_guards": 18,
+      "reflections": 2
+    }
+  ],
+  "additional_target_arithmetic_only": {
+    "target": [
+      6,
+      8
+    ],
+    "valid_shear": 4
+  },
+  "restricted_criterion_failure": {
+    "target": [
+      8,
+      6
+    ],
+    "gcd": 8,
+    "target_y": 6
+  },
+  "all_real_source_coverage": "Hand proof in pair-transport.md; four examples are controls, not the proof of the universal quantifier",
+  "all_target_coverage": false,
+  "ten_wall_or_universal_progress": false,
+  "search": false,
+  "checker_sha256": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+}

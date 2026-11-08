@@ -1,0 +1,11 @@
+# K1R01 independent hand review: one-roof failure and floor repair
+
+ACCEPT the stated whole-itinerary exclusion and actual floor-return repair. This is not darkness, and it does not refute K>=2 sufficient theorems.
+
+For the original ten-wall room a12,l20,w28,A32,b1,c3,h4,H5, the pair S8,4/T24,2 is interior and even-even. A trajectory whose only horizontal contact is the outer roof must start upward. It must descend through the right h mouth; the left mouth cannot reach the target without a new horizontal contact. Thus cap/right/bottom duration2+1+1=4 is forced. All vertical reflection words are encoded by the folds, with both initial signs sigma and final images epsilon retained.
+
+Elimination gives4*kappa=(2m+1)*32+8k+epsilon*8-sigma*8+24j. Every term is divisible8, so kappa is even. The strict cap interval has center16+32m-4sigma and radius2. Its only even integer is the center, giving z1=0 and Y=kappa=4 mod8. The point reached is the true right corner at(28,3). This excludes the ENTIRE one-roof/vertical-wall class with both signs, not merely a selected grid or winding cutoff. Roof/cap-only target coprimality cannot supply a seed.
+
+For the prescribed floor repair, kappa76/5 and durations floor3, h passage6, roof7, right h8, c9, target10 are exact. The floor coordinate isF12(268/5)=28/5, interior. At h, phase496/5 reduces by96 to16/5. Roof phase92/5 is strictly between0and32. At descending h, X168/5 gives z1=8/5; at c, Y84/5 reduces by16 to z2=4/5. Final E16 gives F12(E)=8 and actual x24. All strict band seams have matching signed derivatives and actual walls. The source/floor segments stay x<=12<24, and later pre-bottom heights exceed2, so target arrival is first. One ordinary floor and one ordinary roof contact are retained. I did not independently execute the peer's16-reflection/170-guard checker; the hand proof checks physical chart identities and exact contacts independently.
+
+All six request pins checked before/after this hand audit. The new author FR01 floor-prefix construction will handle a formal floor-corner by an EXACT-S suffix, rather than traverse it. That extension is separate and pending; no universal floor-return theorem is inferred from this example.

@@ -1,0 +1,234 @@
+{
+  "status": "AFFINE_HAND_TEN_CONTACT_DERIVATION_PASS",
+  "parameter": "launch(-d,1)",
+  "root": "3/4",
+  "strict_sufficient_finite_wall_gate": [
+    "749/1000",
+    "751/1000"
+  ],
+  "contact_mobius_rows": [
+    {
+      "contact": 1,
+      "x_numerator": [
+        "0",
+        "-2"
+      ],
+      "y_numerator": [
+        "2",
+        "0"
+      ],
+      "denominator": [
+        "2",
+        "0"
+      ],
+      "actual": [
+        "-3/4",
+        "1"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 2,
+      "x_numerator": [
+        "0",
+        "4"
+      ],
+      "y_numerator": [
+        "2",
+        "-2"
+      ],
+      "denominator": [
+        "-1",
+        "-1"
+      ],
+      "actual": [
+        "-12/7",
+        "-2/7"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 3,
+      "x_numerator": [
+        "6",
+        "-8"
+      ],
+      "y_numerator": [
+        "0",
+        "2"
+      ],
+      "denominator": [
+        "0",
+        "2"
+      ],
+      "actual": [
+        "0",
+        "1"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 4,
+      "x_numerator": [
+        "-8",
+        "4"
+      ],
+      "y_numerator": [
+        "-4",
+        "8"
+      ],
+      "denominator": [
+        "-1",
+        "-1"
+      ],
+      "actual": [
+        "20/7",
+        "-8/7"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 5,
+      "x_numerator": [
+        "8",
+        "-10"
+      ],
+      "y_numerator": [
+        "2",
+        "0"
+      ],
+      "denominator": [
+        "1",
+        "0"
+      ],
+      "actual": [
+        "1/2",
+        "2"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 6,
+      "x_numerator": [
+        "-8",
+        "10"
+      ],
+      "y_numerator": [
+        "6",
+        "-12"
+      ],
+      "denominator": [
+        "-1",
+        "-1"
+      ],
+      "actual": [
+        "2/7",
+        "12/7"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 7,
+      "x_numerator": [
+        "8",
+        "-10"
+      ],
+      "y_numerator": [
+        "0",
+        "2"
+      ],
+      "denominator": [
+        "0",
+        "1"
+      ],
+      "actual": [
+        "2/3",
+        "2"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 8,
+      "x_numerator": [
+        "-10",
+        "10"
+      ],
+      "y_numerator": [
+        "0",
+        "0"
+      ],
+      "denominator": [
+        "0",
+        "-1"
+      ],
+      "actual": [
+        "10/3",
+        "0"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 9,
+      "x_numerator": [
+        "14",
+        "-10"
+      ],
+      "y_numerator": [
+        "-10",
+        "14"
+      ],
+      "denominator": [
+        "1",
+        "1"
+      ],
+      "actual": [
+        "26/7",
+        "2/7"
+      ],
+      "finite_open_gate": true
+    },
+    {
+      "contact": 10,
+      "x_numerator": [
+        "-14",
+        "14"
+      ],
+      "y_numerator": [
+        "0",
+        "0"
+      ],
+      "denominator": [
+        "-1",
+        "0"
+      ],
+      "actual": [
+        "7/2",
+        "0"
+      ],
+      "finite_open_gate": true
+    }
+  ],
+  "final_line": {
+    "A": [
+      "1",
+      "0"
+    ],
+    "B": [
+      "0",
+      "1"
+    ],
+    "C": [
+      "14",
+      "-14"
+    ]
+  },
+  "target_equation_affine_coefficients": [
+    "12",
+    "-16"
+  ],
+  "limits": "Gate certifies finite contact intervals; complete openleg support/firstT are verified at exactroot independently. Not an interval-wide room claim.",
+  "source_sha256": {
+    "verification.json": "9cd0b45dc48ca13085d3457e943226712d5e04bb405072da0e6117576392440a",
+    "hand.py": "4f28eff9e4045e1a9f5e5690d1fd3bf4d9bcf0a965867d25aa66fc26afd8a348"
+  }
+}

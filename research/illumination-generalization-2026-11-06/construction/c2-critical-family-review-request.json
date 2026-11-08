@@ -1,0 +1,21 @@
+{
+  "id": "A41",
+  "status": "frozen_pending_review",
+  "created_utc": "2026-11-07T06:06:35.833432+00:00",
+  "source_sha256": {
+    "c2-critical-family-proof.md": "7d3c81f0d091eda6e18b66133862919cd91ba9f688fa6dadb92e5cb91daf7520",
+    "c2-critical-family-check.py": "4fefbb7b466999e746299d2683513113a7301f7e6e0f9f625d0b4ebc5307109f",
+    "c2-critical-family-check.json": "fc6c5d3b5c9bda246eeba16930ec7944c463a325a1dd802deab2bef4269892f5",
+    "c2-four-corner-check.py": "722e83326018ddf1568d8ce5ce9d149f4e951bf33d03ef9ff704ff3da6032a8a",
+    "c2-four-corner-check.json": "7adf23288a5defb644a397027247fd118adccad8f1c8307ce71b913e4018ebd4"
+  },
+  "scope": "All EVEN h>=6 in specified c2 unit-tooth four-corner20wall family, actual S(2,2)/T(2,2h+2).",
+  "challenge": [
+    "All six exact first actual paths, strict geometry, unique wall contact and first T",
+    "Both bare width2 gap insertions match position AND velocity for EVERY revisit and direction",
+    "Insert12n twice gives exactly P_(h0+12n), no artificial cap or new corner",
+    "Actual source/target and first arrival are preserved for all n",
+    "Six even residues exhaust all allowed h; no all-c2 extrapolation"
+  ],
+  "whole_goal_complete": false
+}

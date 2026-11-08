@@ -1,0 +1,124 @@
+Independent whole Beast012 branch review
+4 November 2026 — Codex01a1a00f
+
+[done] HAND ACCEPT, without corrections: the entire bounded all-root
+Beast012 branch of local e2 + two e1, b0 illuminates actual S=(0,0) and
+T=(2,2) within 13 reflections, for W<=21 and k<=6. The four final
+residual rooms share ONE four-reflection path. Sigma and time reversal
+transfer this result to the corresponding larger-E orientation.
+
+This extends mixed-critical-B-review/review.txt's earlier partial acceptance.
+The reviewed critical-B.txt sections10–12/17 and CURRENT preface of
+four-Beast-hand.txt are pinned by source_hashes in check.json. Historical
+open-R/20-path statements are superseded; this review does not audit the
+old20 path or critical-B section14's separate west/rectangle claims.
+
+1. Exhaustive hand dispatch
+
+Use the fixed three-star H and partial centers/caps defined in check.py.
+For a potentially dark room, the accepted short paths force E-, L+ and
+T-. Beast B012 contains the required bottom square01 and lacks sector7;
+its extra B2 does not obstruct the T- forcing path. At an E unit, use
+its centered/outer short forcing version. All six forcing guards,
+including the directly illuminated N67 bridge, were independently checked.
+The active critical e1 forms are L70/L01, E34/E45 and Tc56/Tc45.
+Active N units are precisely56,45,70,01: the two-sector67 bridge meets
+both H sides and already lights S/T directly, while other windows have
+no H attachment. Ordinary N has only its four named inward cap choices.
+
+If neither unit lies at L/E/Tc, the earlier accepted section8 split on
+Nb+ uses five or sigma13. Full D/R and the whole allowed N support are
+included in our two rechecked maxima.
+
+If L is a unit, L70 is impossible: H90+B2(45)+L7(45)=180 at(-1,-1),
+and only B/L could repair it. Thus L01. Its smooth point(-1,1) forces
+N5: ordinary Nb-, or a unit45/56. The entire N support fits456.
+With E ordinary, L11 covers ordinary/outer Tc; centered Tc uses T3.
+With the second unit at E45 use BOTH-square3; at E34 use sigmaB4,
+the established square-exchange version. Full support checks verify
+these specific witnesses, rather than assuming arbitrary mirror removal.
+These locations exhaust the second unit, including noncritical D/R/N.
+
+If L is ordinary and exactly one unit is at E/Tc, the other is D/R/N.
+For E34 or E45, split on Nb+: five when absent; E6 or E11 when present.
+A N unit containing6 is56; ordinary N is6. N456 is a valid larger
+envelope. Centered Tc uses T3 with ordinary E. Outer Tc45 forces N0
+to repair(1,3): ordinary Nr+, or a unit70/01. Hence Nb+ is absent
+and F3 applies. These guards explicitly allow the unit's outside mate.
+
+If both units are at E/Tc, centered34/56 is impossible: the angle at
+(3,3) is180 and no remaining center can repair it. For outer Tc45,
+N is ordinary Nr+ and F3 applies for either E form. The sole remaining
+form is E45/Tc56. Sigmafive covers Nr- absent. Therefore only
+B012+E45+Tc56 with ordinary L+ and Nr- survives the inherited cover.
+
+The seven checked angle clauses include both exclusions and both repair
+points. Cell-incidence checks establish that no unmentioned local center
+can repair those points. These arguments use the all-root local class;
+no remote-attachment or e1-leaf cases are silently included.
+
+2. Why the last form gives exactly four original rooms
+
+Its full non-A points are the two core C points, B's north C, and Tc's
+south C: J=4. Ordinary caps add no full point. With n ordinary caps,
+Q=7+n and Delta=Q+sN-8=4 gives sN=5-n and k=J+sN=9-n.
+The fixed-support identity W=32-2k, W<=21 and k<=6 forces k=6,W=20.
+Thus n=3. L+ and Nr- consume two ordinary cells. E/Tc are already
+units and B is the larger root, leaving exactly one D/R ordinary cap.
+The only four choices are D-,D+,R-,R+. No new completed rooms or
+cap assignments were generated: our checker reads these four predeclared
+fixtures and matches their exact triangle sets and maximal boundaries.
+Each independently passes strict simplicity and the exact ledger
+W20,k6,Q10,J4,sN2,Delta4; the shared ledger helper checks full A points.
+
+3. New four-path and actual endpoint
+
+The accepted five-path is
+ S,(1/6,1),(2/3,-2),(8/5,18/5),(2,11/3),(12/7,26/7),T.
+Filling Tc6 removes the late vertical mirror on x=2. Reflection across
+that LINE fixes the actual T even though T is outside the finite mirror.
+Omit the axis bounce and reflect only the remaining suffix. This gives
+ S,(1/6,1),(2/3,-2),(8/5,18/5),(16/7,26/7),T.
+The old axis contact lies strictly within the new straight segment and
+is interior to every one of the original four rooms.
+
+Independent algebra: launch(d,1), hit the source roof at(d,1), then
+B-square bottom at(4d,-2). Entry3d, bottom4d and exit5d are strict in(0,1).
+The later source-roof crossing requires7d>1. The roof-diagonal hits are
+(a,a+2), a=8d/(1-d), and(b,6-b), b=(4-8d)/(1+d).
+The outgoing velocity is(-d,-1). Its x at target height2 is
+(1+d)b-4d=4-12d. Requiring actual x=2 forces d=1/6,
+strictly inside(1/7,1/5). Finite mirror identities, strict contact
+parameters, positive specular direction and first actual T all pass.
+
+The complete required triangle set U fits
+ H+B012+E45+Tc56+L++Nr-.
+The forbidden set Z misses that support plus ALL FOUR ordinary D/R caps
+at once. This proves one whole support implication covering all four.
+The maximum is an envelope, not a newly assembled valid room claim.
+Our independent physical replay also checks each ORIGINAL maximal
+boundary, open-segment interior, finite first walls, corner avoidance,
+reversal and sigma. Reflecting actual T through its actual finite-wall
+lines gives(2,12), aligned positively with launch(1,6). Collinearity is
+supplemented by the physical checks; it is not the sole certificate.
+
+4. Evidence and limits
+
+check.json reports INDEPENDENT_WHOLE_BEAST_BRANCH_HAND_ACCEPT_CHECKS_PASS:
+14 inherited whole-support guards, six forcing/bridge guards, seven local
+angle clauses, and one new fixed four-path on four original fixtures.
+The checker reconstructs the new path from the accepted five-path and
+compares it with the peer's coordinates. It executes no peer checker.
+It reuses historical guard_checker, boundary_replay and geometry helpers;
+this is independent hand reasoning and certificate checking, not an
+independent implementation of those shared primitives, formal verification,
+or expert refereeing. Every pinned input matched at completion.
+
+Reproduce:
+ python3 -B .context/illumination-k4-codex/surplus-four-local/mixed-Beast-four-review/check.py
+
+Other mixed Bwest/Brectangle exceptions, joined/single-leaf rows, L/T
+optical residues, e2+e1+b1, four-e1 and remote gaps remain separate.
+No full mixed partition, Delta4 theorem or universal22-wall minimum is
+accepted. No room/cap discovery, ray/direction/reflection-word search,
+raw archive scan, solver, orbit run or workers were used.

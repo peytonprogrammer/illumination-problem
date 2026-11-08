@@ -1,0 +1,9 @@
+# Independent full hand acceptance of A47
+
+ACCEPT the stated q>=3,h>=3 all-parameter illumination theorem for integer unitwidth/height2 two-sided combs with W<=23. It is not a complete c1 class theorem.
+
+The already accepted A38 provides actual paths at every smooth opposite-wall or opposite-tooth-midpoint level in{h,mu,G-mu,G-h}. Source/target seam marks have equal depth0 and height2, so all A38 optical hypotheses apply. Translating an integer global floor changes named parity but not the actual points, and integer relative s,t with even difference ensure integer h and mu. Every integer level in a height2 band is an endpoint or its midpoint. Thus actual darkness forces all listed levels to mouth endpoints; no particular direction or template failure is substituted for darkness.
+
+Writing v=G-t, q=min(s,v), d=|s-v| gives the sorted levels h,h+q,h+q+d,h+2q+d. For d0 there are three distinct levels separated by q>=3. No height2 tooth can cover two. For d>0, only the central two can have difference2; each outer level requires a different tooth even if the central pair shares one. At least three opposite blockers are necessary in every case. Every level is in[3,G-3], excluding floor/roof-flush tooth endpoints0,2,G-2,G. Those three blockers are nonflush. The selected teeth are also nonflush since s>=q and G-t>=q. They lie on the other side and are distinct. The accepted full-room wall identity gives W>=4+4*5=24. Extra attachments only add cost. Opposite-side overlapping bands neither merge boundary walls across core interior nor identify a selected tooth with an opposite blocker.
+
+Same-side distinct height2 bands with positive gap force h>1, hence integer h>=2. Actual endpoint interiority gives integer q>=1. The exact logical complement within the class is q1/2 or h2. None of those residual cases is declared dark or illuminated by this receipt. No source files, finite searches, or peer optical execution were modified or run for this hand audit.

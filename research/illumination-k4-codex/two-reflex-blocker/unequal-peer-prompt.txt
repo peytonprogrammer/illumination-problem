@@ -1,0 +1,117 @@
+Independently challenge the following mathematical billiard proof. Look for a counterexample or real gap, especially in the claimed necessary/sufficient strict-path criterion, inequality algebra, endpoint smoothing, physical location of an arm bottom hit, and disjoint vertical contacts. Do not assume other results. Work symbolically, no tools or searches. Conclude ACCEPT, REJECT or UNRESOLVED and separate real defects from cosmetic clarifications. The claim is a sufficient unequal-height region, not a universal U-room theorem.
+
+# Unequal-height U-room connections
+
+[in progress] 2026-11-01. Theory and prescribed exact constructions only; no ray/direction/word/room discovery searches. Keep the room symmetric with arm width a, passage width M, lower height c and arm height H. Put A=2a+M and marks s=(x,y_s),t=(A-x,y_t), where0<x<a and c<y_s,y_t<H.
+
+## 1. Exact matching equations for strict one-bottom paths
+
+Choose arm phases independently, giving lengths
+
+    L=a +/- x + 2na, R=a +/- x + 2ma, n,m>=0.
+
+Unfold the sole bottom reflection by joining source height y_s to target height -y_t. Set
+
+    S=y_s+y_t, D=L+M+R, beta=S/D,
+    q_s=y_s-beta L, q_t=-y_t+beta R.
+
+Thus q_s-q_t=M beta>0. In the physical room the portal heights are |q_s| and |q_t|. A strict one-bottom path in this family exists exactly when:
+
+- 0<|q_s|<c and0<|q_t|<c;
+- if the left phase has an earlier inner-wall encounter, q_s+2a beta>c;
+- if the right phase has an earlier inner-wall encounter, -q_t+2a beta>c;
+- at every outer-wall encounter the developed height is nonzero. It suffices to check the closest outer encounter: q_s+a beta!=0 on the left, q_t-a beta!=0 on the right, when they exist.
+
+Proof. Before reaching its portal the left arm's nearest earlier inner encounter has developed height q_s+2a beta. Because q_s in(-c,c), this is greater than-c; for its absolute value to exceed c it must exceed+c. All earlier inner encounters are higher. The right arm has the reversed test. With an earlier inner encounter present, all outer encounters further back are positive on the left and negative on the right; only the closest outer encounter could otherwise coincide with the bottom. Within each arm the absolute developed height stays below its mark height or c, hence below H. In the passage the developed height runs monotonically from q_s to q_t inside(-c,c). Its zero may be in either arm or in the passage. The folds match at both strict portals and obey reflection. Conversely every strict path with these arm phases and exactly one bottom hit has this unfolding and must satisfy those collision tests.
+
+A portal zero q_s=0 or q_t=0 is omitted deliberately: the physical point(a,0) or(a+M,0) is smooth, so such cases may be valid but are outside this strict parameterization. This is not an exclusion of those paths.
+
+## 2. Quantitative unequal-height extension with disjoint paths
+
+Write
+
+    y=(y_s+y_t)/2, delta=(y_s-y_t)/2, d=|delta|, h=M/2.
+
+Assume d>0 and
+
+    d<c,
+    a(c-d)(y-c-d) > y h d.                         (U)
+
+The mark assumptions already imply y>c+d. Then there are two corner-free connections with disjoint boundary-contact sets. Every single boundary blocker is therefore avoidable. All parameters are real. This is a sufficient condition; its failure is not evidence of a dark pair or an essential blocker.
+
+### Choose two arm lengths
+
+Set
+
+    B=yh/(c-d)-h,     U=y(h+2a)/(c+d)-h.
+
+Condition(U) is equivalent to U>B+2a. Take the first length of each phase a-x+2na and a+x+2na strictly above B. Both belong to(B,B+2a], are distinct and differ by less than2a, so both are below U. For each chosen length use the same phase/length in the right arm: R=L.
+
+With beta=y/(L+h) and w=yh/(L+h), the developed portal heights are
+
+    q_s=delta+w,       q_t=delta-w.
+
+Since L>B, w<c-d, and both absolute portal heights are less than c. A zero portal is permitted for this theorem: it is a smooth bottom point in the physical U, and there is no vertical reflection there. Strict portal controls are used except where a fixture intentionally checks that smooth coincidence.
+
+### Validity and corners
+
+The nearest earlier inner encounters, when present, have signed left/right-backward heights
+
+    delta+y(h+2a)/(L+h),    -delta+y(h+2a)/(L+h).
+
+Both exceed c because L<U. Earlier inner encounters are higher. The nearest outer encounters have signed heights delta+y(h+a)/(L+h) and -delta+y(h+a)/(L+h). Both are positive, since
+
+    y(h+a)/(L+h) > ((h+a)/(h+2a))(c+d) > (c+d)/2 > d.
+
+Thus the bottom hit occurs after the last left outer-wall encounter and before the first right outer-wall encounter, with no bottom/outer-corner coincidence. Arm heights never exceed their corresponding mark heights or c, so no roof is touched. Each path is valid with exactly one horizontal reflection, at a smooth point of the bottom wall. If that bottom hit lies at a portal, both folding formulas produce the ordinary bottom-wall reflection, with no horizontal-velocity reversal; this partition endpoint is not a room corner.
+
+### No shared boundary contact
+
+At a left vertical contact the remaining arm length r is an odd multiple of a on the outer wall or a positive even multiple of a on the inner wall, and the height is
+
+    v=delta+y(h+r)/(L+h).
+
+On the right it is v=-delta+y(h+r)/(L+h). These are signed heights before the unique bottom hit in each arm's backward orientation; the preceding positivity proves they equal physical heights.
+
+If both paths hit the same left wall point, then
+
+    r1-r2=((v-delta)/y)(L1-L2).
+
+The coefficient is(h+r)/(L+h) in(0,1); r1-r2 belongs to2aZ, whereas0<|L1-L2|<2a. This is impossible. Replace delta by-delta for the right wall. Different physical walls cannot supply an identical point.
+
+The bottom hit has physical horizontal coordinate
+
+    x_B(L)=a+h+delta(L+h)/y.
+
+This formula is valid also when the bottom hit lies in an arm: the preceding outer-encounter positivity puts it within the central stretch with positive horizontal velocity. Since delta!=0 and L1!=L2, the two bottom hits are distinct. There are no other horizontal contacts. Thus their entire boundary-contact sets are disjoint.
+
+### Scope and size of the sufficient region
+
+Equivalently(U) reads
+
+    a c(y-c)-y(a+h)d+a d^2>0.
+
+At d=0 the left side is strictly positive; this gives an explicit range of unequal heights around every previous symmetric configuration. The extension works for every horizontal mark position0<x<a and every real room dimension satisfying(U), with no arithmetic restriction. It makes the earlier qualitative stability result constructive and gives two paths for genuinely unequal heights. Equal heights require the existing third notch path because both bottom hits coincide.
+
+## 3. A genuine obstruction to the narrower passage-bottom family
+
+Take a=2,x=1,H=1,c=1/1000,M=1/100,y_s=1/3,y_t=2/3. Every available L and R is a positive odd integer. A bottom hit strictly in the passage would require q_s>0>q_t. Let
+
+    Delta=R y_s-L y_t=(R-2L)/3.
+
+The two signs are equivalent to
+
+    -M y_s < Delta < M y_t.
+
+But R-2L is odd, so |Delta|>=1/3, while the interval is(-1/300,1/150). Impossible for every arm length, not just a bounded set. This forbids one bottom reflection in the passage with arbitrary vertical arm reflections. It does not forbid a bottom reflection in an arm or additional horizontal reflections.
+
+Indeed prescribe L=115 and R=231, both in the plus phase. Then
+
+    beta=100/34601,
+    q_s=101/103803,     q_t=98/103803.
+
+Both are positive and below1/1000; the unique bottom hit is inside the right arm. The earlier-inner and outer tests above are strict. This fixed exact construction avoids the passage-family obstruction without invoking roof or notch reflections. It is a prescribed formula evaluation, not a discovered-ray search.
+
+## Next unresolved step
+
+The full unequal-height problem is now a matching problem for independently chosen L and R, allowing the bottom hit to move into either arm. Prove two such choices have disjoint contacts outside condition(U), or identify parameter regimes needing more horizontal reflections. The current sufficient region does not establish universal unequal-height singleton removal.

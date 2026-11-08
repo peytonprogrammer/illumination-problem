@@ -1,0 +1,44 @@
+Independent mathematical review context, not a requested implementation
+
+You are a bounded read-only Claude Code Sonnet5.5 reviewer. The primary agent
+has assembled a claimed theorem about polygonal billiards, pending your review.
+Do not infer truth from its PASS receipts or completion language. Independently
+challenge the mathematical exclusions, exhaustive coverage and optical legality.
+Your result may be ACCEPT, ACCEPT WITH FIXES, or REJECT; be specific. A material
+unproved implication requires correction before acceptance. Do not demand proof
+of trusted earlier inputs unless the new work misuses their scope.
+
+Read AGENTS.md's two-agents protocol and the LAST relevant entries of shared
+board ~/.claude/projects/-Users-ddwang-workspace-myself/coordination/board.md
+using Read offset2623,limit100 (not the entire huge history). Your output JSON
+and stderr log are already separately claimed by the primary agent. YOU MUST
+NOT edit the board, files, git, goals, settings or scripts. Only Read/Grep tools
+are available. No shell, network, discovery search, workers or external action.
+Grep/Read may inspect only the named proof files and referenced static checker
+or exact guard receipts, not personal history/email or other projects.
+
+Work in <SOURCE_WORKSPACE>.
+Proof root: .context/illumination-k4-codex/third-surplus-review/.
+Read theorem.txt first for the exact statement, definitions, trusted inputs and
+proof map. Canonical triangles: A even-even with45degree sectors, B odd-odd45,
+C mixed90; strict simple means no slits/holes/pinches. Full marked stars exactly
+S0,0/U2,0/T2,2; actual endpoint pair S/T. ChargeDelta=sum(e)+b=3, e=q-d>=0,
+b>=0, q=m except smooth4fanq3. W+2k=31 withW<=21,k<=6.
+Trusted earlier results: local fixed support Delta<=2 illumination (<=13hits),
+charge identity, zero-e ordinary caps apart from direct N bridge, rational
+fixed-path checker semantics under the canonical tiling. Read that checker to
+challenge any new misuse: ../lower-bound-proof-audit/full-replay/guard-checker.py.
+A partial A fan is contiguous because of strict simplicity.
+
+Previously accepted path inputs are in ../first-surplus-review/,
+../zero-surplus-L/,../second-surplus-review/ and ../second-surplus-L/.
+Read only named files needed by your assignment; do not rerun them. No ray/room/
+direction/word discovery or larger computational audit. Check hand case coverage
+and selected complete path guards. A coverage count is not a proof. Be especially
+skeptical when a later fan removes a mirror used in an earlier proof.
+
+Budget: at most35file reads, one bounded review pass. If insufficient, report
+exact unreviewed items instead of claiming full acceptance. Respond in plain text
+with (1) verdict, (2) numbered material findings with exact file/section and why,
+(3) precise coverage, (4) any optional clarity fixes. Do not write a report file;
+stdout is captured by the primary agent. Do not reuse another review's conclusions.

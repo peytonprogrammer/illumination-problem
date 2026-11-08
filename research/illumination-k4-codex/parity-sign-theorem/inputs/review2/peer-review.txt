@@ -1,0 +1,136 @@
+# Independent review: Sections 7–10 of `coupling.md`
+
+## Bottom line
+
+The linear algebra in Sections 7–9 is correct, and the checker logic supports it. Two conclusions are stronger than the text currently says:
+
+1. **The 34 certificates already are the Section 6 sufficient finite form.** Each one gives full quotient rank plus a strictly positive balance. Adding more valid rows can never break a certificate. So for each of the 34 rooms, the linearized sign statement holds: every nonzero δ modulo symmetries makes some saved row strictly negative. This still assumes the saved rows are optically valid (inherited) and that the lit-side implication persists locally.
+2. **The 26/8 classification is the only thing that depends on which events were saved.**
+
+Two statements need narrowing:
+
+- Section 10's two-statement target is sufficient but stronger than necessary.
+- The rejection of the "local ear" explanation only covers a narrow triangular definition.
+
+Nothing in Sections 7–10 is mathematically false.
+
+## Per-claim verdicts
+
+**§7.1: 26 rays and 8 full-dimensional cones, quotient dimension 27 when W=26. ACCEPT.**
+- The quotient dimension is (W+4) − 3 = W+1. The gauge (source fixed, total primitive length fixed) is transverse to the 3-dimensional symmetry kernel. The 3×3 pairing matrix of the gauge against (x-translation, y-translation, scale) is triangular, with diagonal (1, 1, P), where P is the primitive perimeter, so it is invertible.
+- The forced-zero set Z is certified in both directions:
+  - A strictly positive exact stress on Z proves each row in Z is zero on the whole cone.
+  - An exact δ that is strictly positive on every axis row outside Z proves no other row is forced to zero.
+- So the cone is {v ∈ ker Z : the other rows ≥ 0}, δ is in its relative interior, and dim = (W+4) − rank Z − 3.
+- When Z is empty, the strictly feasible point proves the cone is full-dimensional.
+- Caveat to state explicitly: the theory (Stiemke/Gordan) guarantees that the implicit-equality set *always* has a strictly positive stress. An LP failure there would mean a numerical problem, not a structural one.
+
+**§7.2: the displacement table. ACCEPT as description only.** This is inherited data and has no explanatory content yet. "Up to D4" means sorted absolute values, which is correct.
+
+**§7.3: a positive stress on all axis rows plus one diagonal event, rank W+1, in all 34 rooms. ACCEPT, with one checker gap (see code review).**
+- This is genuinely stronger than §5: the stress is positive on *every* saved axis row, not just a 96-row subset.
+
+**§7.4: "repair-verify independently checks … in the W+6 chart." CORRECT the wording.**
+- The balance and rank checks do work purely in the old chart.
+- The relative-interior check uses `repair-verify.py`'s own reimplementation of the offset-to-vertex map. That is independent code, not freedom from the supporting-line chart. Say "reimplements".
+
+**§8 forward lemma. ACCEPT.**
+- The proof is correct and does not depend on the dimension of C.
+- Note: the spanning hypothesis is needed. Without it, d vanishes on the common kernel.
+
+**§8 converse. ACCEPT, with one simplification.**
+- The hypothesis "C pointed" is redundant. If d < 0 on C\{0}, then C contains no line: d(v) < 0 and d(−v) < 0 cannot both hold.
+- The standard fact int(C\*) = {f : f > 0 on C\{0}} for a closed pointed cone gives the argument directly.
+- Rationality of the weights follows because the strictly positive solution set is a nonempty, relatively open polyhedron defined over ℚ, so it contains a rational point.
+
+**§8 application: "axis rank W+1, d opposes all saved-axis-feasible motions, including the 27-dimensional cones." ACCEPT.**
+- The balance gives d ∈ span(a). So augmented rank W+1 forces the axis rank to be W+1.
+- Add the monotonicity point here. Since the axis rows alone have rank W+1 in all 34 saved packets, **Statement 1 of §10 is already true for the full admissible axis family of these 34 rooms.** More rows can only shrink the common kernel.
+
+**§9 lifting lemma. ACCEPT.**
+- H vanishes on K, so H ∈ K^⊥ = span Z (finite dimension).
+- Shifting by a large multiple of Z's positive stress keeps the identity exact and makes every coefficient positive.
+- The total kernel is K ∩ ker(r restricted to K), which is the symmetry kernel S.
+- §5 is the dim(K/S) = 1 case, with r = {a, d}.
+
+**§9: "reduces 26 holdouts to a 1-D sign check; nothing for the other 8." ACCEPT.**
+
+**§5/§10: "universal local-ear explanation tested and rejected." CORRECT.**
+- `single_triangular_ear_mode` is a narrow test: exactly two adjacent moving walls, flanked by collinear walls, with the marks fixed after removing scale.
+- Generators with more moving walls, or whose marks move, are counted as non-ears.
+- The audit rejects the *triangular* ear only. A "generator supported on a small wall patch away from the marks" explanation was not tested.
+
+**§10: Statements 1 + 2 imply the sign theorem. ACCEPT as sufficient. CORRECT the framing.**
+- The argument is right: if δ ∉ C, some axis row is negative; if δ ∈ C\{0}, Statement 2 applies.
+- But Statement 2 asks for a *single* event to be negative on all of C. That is equivalent (by the §8 converse) to −d ∈ int cone(a). The theorem only needs finitely many non-axis events whose open negative half-spaces cover C ∩ S¹, which compactness supplies.
+- Statement 1 is not necessary either.
+- Stated as targets, these risk aiming at something false while the theorem is true. Weaken Statement 2 to "finitely many admissible non-axis events cover C\{0}". The single-event version can be kept as the observed pattern.
+- Define "diagonal midpoint event". I read it as a parity event whose physical corner is at a (±1, ±1) offset from a mark, with the corner at the developed midpoint.
+
+**§7/coverage: "input selection not chosen after observing cone dimensions." Unverifiable procedural claim.** It is harmless either way, because the certificates are existential.
+
+## Code review: what I can verify and what is inherited
+
+### Verifiable by inspection, given that the scripts ran
+
+- **Exact arithmetic.** Every LP output is used only as a proposal, then reconstructed in `Fraction` and re-asserted:
+  - stress weights are positive and sum to exactly zero;
+  - δ satisfies the gauge and the axis inequalities;
+  - the zero set equals Z.
+- **Termination.** Facial reduction terminates: each step makes at least one row in Z strictly positive while keeping the other rows positive.
+- **Old-chart checks.**
+  - Each residual lies in span(closure). This is the right notion, since the tangent space is ker(closure).
+  - The rank is computed modulo closure.
+  - The independent h → (corner, lengths, marks) map reproduces Z exactly and gives strict positivity elsewhere.
+  - This makes the certificates independent of the transform T in `ear-family.py`.
+- **Index hygiene.** The `len(set(indices))` check catches a diagonal event that is also axis-adjacent to the other mark.
+
+### Gaps
+
+1. **(Real gap)** `repair-verify.py` never checks that the old rows annihilate translations and scale. Rank W+1 on a (W+4)-dimensional tangent space only means "full quotient rank" if the 3-dimensional kernel *is* the symmetry kernel. That fact currently comes from `ear-family.py`'s new-chart assertion. Fix by adding three old-chart vectors and asserting each row is zero on them:
+   - x-translation: corner (1,0), lengths 0, marks (1,0,1,0);
+   - y-translation: corner (0,1), lengths 0, marks (0,1,0,1);
+   - scale: corner c₀, lengths ℓᵢ, marks (s,t).
+
+   This is a few lines and makes the checker self-contained.
+2. **(Robustness only)** `solve(..., unique=True)` can fail on a degenerate LP vertex. That produces an assertion failure, never a false certificate.
+3. **(Inherited)** Several things come from the frozen packets, not from this phase:
+   - that each `funcs` row is the derivative of a genuinely admissible parity event;
+   - the exported side σ and the lit-side implication;
+   - the `corner` labels used to classify rows as axis or diagonal.
+
+   No phase-local optical replay was done for the 34 rooms. Every conclusion above is conditional on these.
+
+## Suggested next geometric lemma: the corner-frame midpoint form
+
+**Lemma.** Split an event's word at the actual corner contact.
+- Let Φ = F_r be the prefix map and Ψ = r_{i_(r+1)} ∘ … ∘ r_{i_m} the suffix map, so F_m = Φ ∘ Ψ.
+- Let S′ = Φ⁻¹(s) be the source unfolded backward into the corner's physical frame.
+- Let T′ = Ψ(t) be the target unfolded forward into the same frame.
+- Let w_c = O_Φ⁻¹ w.
+
+Then, exactly as affine functions of (h, s, t):
+
+E = O_Φ (2c − S′ − T′),  so  g = σ · det(O_Φ) · det(w_c, 2δc − δS′ − δT′).
+
+At the base point, c − S′ = T′ − c = w_c.
+
+**Proof.** Write Φ(x) = O_Φ x + b. Then
+
+E = 2Φ(c) − Φ(T′) − Φ(S′) = 2(O_Φ c + b) − (O_Φ T′ + b) − (O_Φ S′ + b) = O_Φ (2c − T′ − S′).
+
+The offsets b cancel. Also det(O_Φ w_c, O_Φ v) = det(O_Φ) · det(w_c, v), and O_Φ is constant.
+
+**Split independence.** Move a reflection r_i in a wall incident to c across the split. Then Φ becomes Φ ∘ r_i and Ψ becomes r_i ∘ Ψ, so S′ and T′ become r_i(S′) and r_i(T′). Because r_i(c) = c *identically in h*:
+
+2c − r_i(T′) − r_i(S′) = R_i (2c − T′ − S′),
+
+and the extra R_i is absorbed by O_Φ R_i. So E is unchanged. This proves the §2 remark that only the sum of local and wall terms is intrinsic.
+
+**Why this is the right next step.**
+- It replaces the convention-dependent split between local and wall-hit terms with one intrinsic geometric quantity: the first-order transverse drift of the *physical* corner off the chord between the two unfolded mark images S′ and T′.
+- It is symmetric in source and target. That yields an exact reversal test of the inherited side convention: σ_rev · det(O_rev) must equal −σ · det(O_Φ) for the reversed path to give the same row. This can be checked exactly on any saved event whose reverse is also in the packet.
+- In this frame, Statement 2 becomes a concrete geometric claim: every axis-feasible motion pushes the diagonal corner c_d to the dark side of its chord S′_d T′_d.
+- The next exact (non-search) computation is, for each of the 34 repairing events: express δS′_d and δT′_d through the walls of their two unfoldings, and compare those walls with the walls that appear in the axis-cone generators (26 cases) or the extreme rays (8 cases).
+
+Please check the lemma independently before relying on it. I derived it by hand, without running anything.

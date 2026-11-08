@@ -1,0 +1,140 @@
+You are a fresh independent mathematical adversary. Tools disabled; no files edited. Do NOT take the earlier review's acceptance as proof. Review the exact compactness lemma in Section20 and the alternative finite-degree proof in Section19 below. The user prohibits room/ray/direction/word discovery. Our universal pocket-detection goal remains OPEN.
+
+Question A: For a fixed degree D, is the locus of pointed translation surfaces (X,x) admitting a halftranslation cover of degree D with a fold at the regular x CLOSED in the smooth pointed stratum? Need a rigorous local-isometry correspondence proof, or a counterexample. Degree can jump under limits if not controlled; canonical MINIMALITY is not closed and cannot be assumed. The proposed nonmerging argument uses D+1 equally spaced points on a fixed disk to exclude a small invariant translation, but one must justify a uniform disk, bounded exceptional set, transitivity of the limit relation and extension across zeros. If exact-degree closedness fails, can degree<=D closedness plus de Franchis finite-quotient theory give the finite-fiber periodicity argument? Clearly distinguish proven steps from a plausible outline; don't call the lemma routine if there is a gap.
+
+Question B: Independently challenge Section19's degree bounds without using any family compactness lemma. Source is a NON-TORUS D4 disk unfolding with genus<=32. Distinct interior physical marks have16distinct regular lifts, all-to-all finitely blocked and all nonperiodic. Does this force a genus2 minimal translation quotient with degree>=16+n1+5n5+7n7 and <=n3+2n6? Check the unique regular quarter-turn fixed point, ramification at all corners, and zero orders. This would exclude only the nonperiodic case, not dark periodic pairs or event existence.
+
+Known inputs: Apisa-Wright Section3.1 Theorem3.6 and proof, Lemma3.3, Remark3.4; Moller minimal translation quotient factorization. Theorem3.6 says if both points are not periodic/zeros, they share a minimal halftranslation quotient image; its proof also establishes one periodic=>both for a blocked pair. The minimal translation quotient Y admits at most one negating involution. Covers and differentials obey omegaX=pi*omegaY. Quarter-turn rho^4=1 with derivative i descends to r on Y. Source is an exact8copy disk unfolding, X/rho is sphere. No finite-affine-orbit=>M-periodic shortcut is allowed.
+
+ A finite-degree obstruction to the nonperiodic alternative
+
+This section is a new proof candidate, not yet independently reviewed.
+It avoids assuming any extension of the canonical minimal-cover family over
+an orbit closure. It imports the fixed-surface Apisa-Wright quotient and
+blocked-pair classification explicitly.
+
+Let X be a connected non-torus D4 disk unfolding with two distinct interior
+physical marks S,T. Suppose all8S lifts are finitely blocked from all8T lifts,
+and suppose none of those16points is M-periodic. Let pi:X->Y be its canonical
+minimal translation quotient and let q:Y->Q be the minimal halftranslation
+quotient. The quarter turn rho descends to r on Y. Surjectivity of pi and
+rho^4=1 imply r^4=1; its derivative is i, so r has order4. Its square j=r^2
+negates the differential. Minimality makes j the unique such involution and
+q its degree2 quotient.
+
+The blocked-pair theorem identifies q pi(x) with q pi(y) for every source
+and target lift. In particular, the four points r^a pi(x) all belong to one
+q-fiber. That orbit has size at most2, hence j fixes pi(x). A q-fiber through
+a fixed point of j is a singleton. It follows that **all16marked lifts map
+to one regular point p of Y, and r fixes p**. Thus
+
+    deg(pi)>=16.                                  (7)
+
+The point p is regular because the pullback differential is regular at each
+mark; ramification or a target zero would give a source zero. Conversely
+all16marks are unramified over p.
+
+Write the physical angle counts as n_m for m in {1,2,3,5,6,7}. Every source
+zero has even order: its order is m/gcd(m,4)-1. Every target zero also has
+even order, since a target odd order would pull back to an odd source order
+by ord_x(omega_X)+1=e_x*(ord_y(omega_Y)+1).
+
+If genus(X)<=32, Riemann-Hurwitz and (7) force genus(Y)=2. Then Y has one
+zero of order2. Its hyperelliptic involution negates every1-form, so the
+uniqueness of the minimal negating involution makes it j. The quarter turn
+r has exactly two fixed points: the unique zero and one regular point p.
+For example, Riemann-Hurwitz for Y->Y/r (whose target is a sphere, since
+X/rho is a sphere) gives this count using the6fixed points of j.
+
+A source corner of type m=1,5,7 has a single rho-fixed lift and respective
+zero order0,4,6. It cannot map to the target zero: the respective numbers
+1,5,7 are not divisible by3. Therefore all these lifts map to p, contributing
+local degrees1,5,7. They are distinct from the16interior marked points, so
+
+    deg(pi)>=16+n_1+5n_5+7n_7.                    (8)
+
+Over the unique target zero, only source zeros of order2 can occur, and
+each must have local degree1. There are exactly n_3+2n_6 such source zeros.
+Consequently
+
+    deg(pi)<=n_3+2n_6.                            (9)
+
+Thus for genus(X)<=32, the strict inequality
+
+    16+n_1+5n_5+7n_7 > n_3+2n_6                  (10)
+
+excludes the nonperiodic all-to-all blocked-fiber alternative. This says a
+dark physical pair on a non-torus deformation with these angles must use
+the periodic-point case. It does not exclude that case, prove illumination,
+or construct a first-order event. The statement does not apply to the raw
+square-tiled base itself, which is a torus cover.
+
+The count-only implementation in `pocket-planar.py/json` satisfies(10) on
+33of the34frozen angle patterns. The remaining pattern is parity-W26-117,
+which has n_5=0 and therefore cannot contain the stated straight pocket
+(the pocket requires a225-degree B_0 corner). This does not assert that
+every pattern with n_5>0 actually has the required literal attachment.
+For the saved control, the lower bound is37and the upper bound is21.
+These are arithmetic checks of a necessary cover-degree condition, not
+optical exclusions or evidence of nonperiodicity of the actual marks.
+
+## 20. Toward a general periodicity reduction: the precise compactness step
+
+A separate tools-disabled Opus review agrees with the proposed conclusion:
+on a non-torus D4 disk unfolding, a dark interior physical pair should have
+M-periodic lifts. It rejects the shortcut of transporting a generic family
+of canonical minimal covers to the given surface. Such canonical families
+can jump. The replacement below isolates the technical lemma which still
+needs a fully audited compactness proof before we use the strengthening.
+
+**Fixed-surface part.** As in Section19, if no marked lift is periodic,
+all source and target lifts map through the canonical minimal translation
+cover pi:X->Y to one point p fixed by the descended halfturn j. Thus it is
+enough to establish that every regular point of pi^-1(Fix j) is M-periodic.
+The fixed-surface factorization and rotational descent are in
+[Apisa-Wright, Section3.1](https://websites.umich.edu/~alexmw/ApisaWright.pdf);
+the minimal translation quotient and equivariance are also proved in
+[Moller, Theorem2.6](https://arxiv.org/pdf/math/0410262).
+
+**Proposed fold-locus proof.** Put d=deg(pi), and consider pointed surfaces
+(X',x') over M carrying some halftranslation cover f of degree exactly2d
+which folds at the regular mark:
+
+    f(x'+u)=f(x'-u) for all sufficiently small u.
+
+No minimality is imposed on f. This condition is GL2R invariant, since
+-I is central. Its fiber over X is finite. Indeed a cover to a translation
+surface of degree2d contradicts the factorization of pi through every
+translation quotient. Otherwise f lifts to the orientation double of its
+target, giving a translation quotient of degree d. That quotient must be
+Y itself. The negating involution must be j, so f=q pi. Its regular folds
+are precisely pi^-1(Fix j).
+
+If this fold locus is closed in the smooth pointed stratum, the marked
+orbit closure of such an x lies in a closed invariant set with finite
+fiber over X. A1-point orbit closure can have dimension dim(M) or
+only dim(M)+1. The latter is the full free-point marking, incompatible
+with that finite fiber. Hence x is periodic.
+
+**Where compactness must be proved.** For convergent pointed source surfaces,
+pull back the degree2d covering equivalence relations to one compact
+source and take a subsequential limit. At regular points their branches
+are local maps u->+u+c or u->-u+c. The main local safeguard is elementary:
+if two same-sign branches approach each other, their composition gives a
+nonzero translation v_n->0 preserving the covering map on a fixed disk.
+For sufficiently small v_n, the2d+1points z,z+v_n,...,z+2d v_n stay in that
+disk and have the same image, contradicting degree2d. This replaces the
+review's less direct area estimate. Nearby distinct folds are similarly
+excluded because their composition is a small translation.
+
+A complete argument must still justify a uniform set of regular charts
+away from finitely many limiting exceptional points, prove that the limiting
+relation is transitive and has exactly2d sheets, extend it across the finite
+exceptional set, and show the regular fold at the mark persists. None of
+those points may be replaced by the mere assertion that the canonical
+minimal quotient varies continuously. The Opus review proposes a route,
+but the final compactness lemma is being independently challenged. Until
+that audit closes, Section19 is the separate fixed-surface candidate and
+this universal periodicity strengthening is not promoted to a proved
+input. Neither result would classify the periodic pairs or supply the
+actual midpoint event required by the active goal.

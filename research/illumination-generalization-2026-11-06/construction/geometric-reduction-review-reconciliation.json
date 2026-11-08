@@ -1,0 +1,35 @@
+{
+  "updated_utc": "2026-11-07T17:02:32.591507+00:00",
+  "receipts": {
+    "geometric-reduction-c1-independent.json": {
+      "sha256": "2ccc0822c36475a0685a7834c3ca04d7675bf7879d0085e1c2947f5087f8c67d",
+      "status": "SCOPED_INDEPENDENT_REVIEW_COMPLETE",
+      "verdict": "ACCEPT_SCOPED_GEOMETRIC_RESULT",
+      "all_stated_source_and_evidence_pins_current": true
+    },
+    "geometric-reduction-hull-independent.json": {
+      "sha256": "b161db0fada0388ee2fc616f699b8321d3802374f64d6e1a9320f8d8ad7c67ee",
+      "status": "SCOPED_INDEPENDENT_REVIEW_COMPLETE",
+      "verdict": "ACCEPT_SCOPED_GEOMETRIC_RESULT",
+      "all_stated_source_and_evidence_pins_current": true
+    }
+  },
+  "accepted": [
+    "C1 disk/actual endpoint preservation and r decrease",
+    "C1 r-independent existential countercontrol at originalr9, not a low-r counterexample",
+    "reciprocal prerequisite review at stated scopes",
+    "C2 global H/V/C1 geometric availability and strict-r termination",
+    "convex actual direct-segment base"
+  ],
+  "reviewer_alternative_proof": "Whole output horizontal walls inject into original non-RR horizontal walls, resolving coincident heights and cap reuse.",
+  "material_findings_open": [],
+  "optical_transfer": "OPEN",
+  "whole_goal_complete": false,
+  "new_wall_bound_proved": false,
+  "later_accepted_milestones": {
+    "cover_obstruction": "review/geometric-reduction-cover-independent.md/json ACCEPT; all3 source pins current",
+    "R3_and_HV_kernel": "construction/geometric-reduction-resonance-independent.md/json completes independent hand challenge of all4 pinned peer files",
+    "H_V_optical_controls": "construction/geometric-reduction-optical-controls-independent.py/json/md: own geometry/cell/actual-segment replay accepts both scoped original-r9 controls",
+    "orthogonal_frame": "construction/geometric-reduction-frame-independent.md/json: hand/matrix/parity review completes all3 pinned normalization inputs"
+  }
+}

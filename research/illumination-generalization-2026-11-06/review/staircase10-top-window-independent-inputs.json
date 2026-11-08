@@ -1,0 +1,232 @@
+{
+  "created_utc": "2026-11-08T06:57:27.848Z",
+  "status": "PREDECLARED_PRESCRIBED_PROOF_BOUNDARY_CHECKS",
+  "scope": "Eight fixed exact constructor/roof boundary checks, not discovery or metric/endpoint census.",
+  "author_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-top-window-candidate.md",
+      "sha256": "f270e4ca61d0442fab2aace9ee06032769a139dbc867df6bfce4275eceefb533"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-top-window-proof.md",
+      "sha256": "f25cd8639431242e8426ac6784b97e0c1d5eb7e9f268ea25681dda20b215f19c"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/nested-window-proof.md",
+      "sha256": "e3afba40bf31a93d515e200082c5cb76b14af2c917a3e623027a9c4b348894a9"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.md",
+      "sha256": "cce86a198c003df0d0b3cf90aba6babed87d0e245f32d9662d54a5508956f673"
+    }
+  ],
+  "geometry_source": ".context/illumination-generalization-2026-11-06/review/resumed-exact-check.py",
+  "geometry_sha256": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a",
+  "cases": [
+    {
+      "label": "transposed_frozen_bottom",
+      "w": [
+        40,
+        20,
+        16,
+        12
+      ],
+      "y": [
+        0,
+        4,
+        8,
+        12,
+        40
+      ],
+      "S": [
+        38,
+        2
+      ],
+      "T": [
+        2,
+        38
+      ]
+    },
+    {
+      "label": "source_y1_target_y3",
+      "w": [
+        40,
+        20,
+        16,
+        12
+      ],
+      "y": [
+        0,
+        4,
+        8,
+        12,
+        40
+      ],
+      "S": [
+        18,
+        4
+      ],
+      "T": [
+        2,
+        12
+      ]
+    },
+    {
+      "label": "source_y2_one_narrowing",
+      "w": [
+        40,
+        20,
+        16,
+        12
+      ],
+      "y": [
+        0,
+        4,
+        8,
+        12,
+        40
+      ],
+      "S": [
+        14,
+        8
+      ],
+      "T": [
+        2,
+        38
+      ]
+    },
+    {
+      "label": "top_seam_direct",
+      "w": [
+        40,
+        20,
+        16,
+        12
+      ],
+      "y": [
+        0,
+        4,
+        8,
+        12,
+        40
+      ],
+      "S": [
+        2,
+        12
+      ],
+      "T": [
+        10,
+        30
+      ]
+    },
+    {
+      "label": "B_exact_equality_target_seam",
+      "w": [
+        40,
+        12,
+        8,
+        4
+      ],
+      "y": [
+        0,
+        12,
+        16,
+        20,
+        "320/7"
+      ],
+      "S": [
+        38,
+        2
+      ],
+      "T": [
+        2,
+        20
+      ]
+    },
+    {
+      "label": "B_exact_equality_source_seam_near_roof",
+      "w": [
+        40,
+        12,
+        8,
+        4
+      ],
+      "y": [
+        0,
+        12,
+        16,
+        20,
+        "320/7"
+      ],
+      "S": [
+        11,
+        12
+      ],
+      "T": [
+        3,
+        "313/7"
+      ]
+    },
+    {
+      "label": "shallow_second_band",
+      "w": [
+        40,
+        12,
+        8,
+        4
+      ],
+      "y": [
+        0,
+        12,
+        "12001/1000",
+        20,
+        80
+      ],
+      "S": [
+        38,
+        2
+      ],
+      "T": [
+        2,
+        78
+      ]
+    },
+    {
+      "label": "forced_roof_corner_earlier_T",
+      "w": [
+        40,
+        12,
+        8,
+        4
+      ],
+      "y": [
+        0,
+        12,
+        16,
+        20,
+        48
+      ],
+      "S": [
+        38,
+        2
+      ],
+      "T": [
+        2,
+        46
+      ],
+      "prescribed_sigma": -1,
+      "prescribed_tau": 3,
+      "prescribed_C": [
+        0,
+        0,
+        0,
+        -16
+      ],
+      "nominated_eta": 50,
+      "actual_earlier_eta": 46
+    }
+  ],
+  "new_search": false,
+  "new_engine": false,
+  "prior_clocks_preserved": true
+}

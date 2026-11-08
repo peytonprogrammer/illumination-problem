@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-08T06:55:14.018Z",
+  "status": "CANDIDATE_SCOPE_AUDIT_NOT_THEOREM_ACCEPTANCE",
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-candidate.md",
+      "sha256": "7341f614af882924e3dd1604af776445a812655c8e8e00ea8dfba9b2a72c92d5"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-top-window-candidate.md",
+      "sha256": "f270e4ca61d0442fab2aace9ee06032769a139dbc867df6bfce4275eceefb533"
+    }
+  ],
+  "proof_sha256": "9f8a1e96ebefafcd176ade5f86baa8406888515444efe3be3aff48bd2d79715b",
+  "decisions": {
+    "ST10_A_programme_enumeration": "ACCEPT exact declared at-most-one-each outer bounce class; existence OPEN",
+    "ST10_B": "OPEN pending full pinned proof; direct inequality failure does not refute transposed union"
+  },
+  "frozen_control_metrics": {
+    "direct_E2": "12",
+    "direct_r": "15/2",
+    "direct_E3": "7/2",
+    "direct_terminal_span": "7",
+    "required": "8",
+    "transpose_E2": "32",
+    "transpose_r": "24",
+    "transpose_E3": "20",
+    "transpose_terminal_span": "200/3",
+    "transpose_required": "24"
+  },
+  "new_search": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,15 @@
+# Independent all-direction safe-twist normal-closure audit
+
+ACCEPT the stated method obstruction, not a full affine-group exclusion. The pinned source was read in full and matched before and after review. No numerical control, direction enumeration or orbit traversal was run.
+
+The exact intrinsic period lattice is 4Z² for the specified odd-d family. Every affine map sends the period group onto itself. With c the unique cone's quotient image, integration gives pi(Fz)=D pi(z)+b and D c+b=c. Hence pi(Fz)-c=D(pi(z)-c). This proves actual invariance of U=pi^-1(c), for every affine map and its inverse. It would not hold automatically for an arbitrary nonintrinsic torus factor.
+
+For a primitive integral direction (u,v), the closed base core has length 4 sqrt(s), s=u²+v². Torus area 16 gives perpendicular width 4/sqrt(s), so ell=s*w exactly. The previously audited finite annular-cover/regular-interface merger argument then gives maximal cylinders (m_j ell,v_j w). With L=lcm(m_j), shear tau=sL has upper displacement tau*v_j*w=L*v_j*ell, an integral multiple of m_j ell. Its common xy derivative is I+L[[-uv,u²],[-v²,uv]], determinant 1 and nontrivial nilpotent increment. The actual gluing and inverse are as in the accepted diagonal map. Regular marked corners require the accepted L symmetry result; cone preservation alone is insufficient to infer that marked condition.
+
+Every z over c lies at an integer transverse level r*w or on a genuine cylinder boundary. Its displacement is L*r*ell, a multiple of its FULL circumference m_j ell, so z itself is fixed, not merely its torus class. These formulas handle every signed primitive direction, including a zero coordinate; no finite direction cutoff is used.
+
+U invariance makes the pointwise-fixing group ker(rho), rho:Aff(M)->Sym(U), normal. All declared safe twists lie in that kernel, so their arbitrary full-affine conjugates, inverse powers and finite products do too. Thus Q is contained in ker(rho). No equality Q=ker(rho) or computation of the finite action image follows.
+
+Since Q is normal, adjoining the original copy/diagonal symmetry group N gives QN=NQ. Every such map acts on U exactly like some n in N. Source and all four target lifts are in U. Their images remain different copy interiors for g!=1, or the corner-hitting original segment up to whole-copy symmetry for g=1. Thus every map in QN fails the prescribed seed gate for this family. A successful map must act on these fibers differently from every n; the stronger necessary condition rho(F) not in rho(N) is valid as stated, but is not sufficient for success.
+
+The conclusion excludes this deliberately safe all-direction twisting method, not all compatible cylinder twists or all affine maps. The implication from new group elements to useful endpoint movement remains unproved. Arbitrarily large safe powers can fix every relevant mark, as the packet proves. Neither the existence of parabolics nor finite action/decidability yields global affine-seed availability. Full gate and broad goal remain open. Frozen files and all effort clocks are unchanged.

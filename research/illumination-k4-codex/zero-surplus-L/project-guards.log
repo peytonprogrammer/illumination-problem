@@ -1,0 +1,848 @@
+{
+  "sources": [
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/learned.jsonl",
+      "sha256": "2820188c352871135e3a00e14e347557c8de57be3fabab2cdf4e7f59a0862891",
+      "records": 17868
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "records": 30548
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "records": 3896
+    }
+  ],
+  "source_records": 52312,
+  "forced_caps": [
+    "B+",
+    "E-"
+  ],
+  "distinct_projected_terms": 114,
+  "undominated_terms": [
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 28527,
+      "frame": [
+        false,
+        1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 4,
+      "required": [],
+      "absent": [
+        "L+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 28527,
+      "frame": [
+        false,
+        1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 4,
+      "required": [],
+      "absent": [
+        "T-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 18038,
+      "frame": [
+        false,
+        1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 7,
+      "required": [
+        "L+"
+      ],
+      "absent": [
+        "Nr-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 28778,
+      "frame": [
+        false,
+        1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 4,
+      "required": [
+        "Nb+"
+      ],
+      "absent": [
+        "D-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 28683,
+      "frame": [
+        true,
+        1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 6,
+      "required": [
+        "Nb-"
+      ],
+      "absent": [
+        "L-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 28683,
+      "frame": [
+        true,
+        1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 6,
+      "required": [
+        "Nr+"
+      ],
+      "absent": [
+        "T+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 28778,
+      "frame": [
+        false,
+        1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 4,
+      "required": [
+        "Nr-"
+      ],
+      "absent": [
+        "R+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "source_sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41",
+      "line": 18038,
+      "frame": [
+        false,
+        1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 7,
+      "required": [
+        "T-"
+      ],
+      "absent": [
+        "Nb+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 3224,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 12,
+      "required": [
+        "D+",
+        "T-"
+      ],
+      "absent": [
+        "R+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1698,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 19,
+      "required": [
+        "D-",
+        "Nb+"
+      ],
+      "absent": [
+        "L-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 3224,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 12,
+      "required": [
+        "L+",
+        "R-"
+      ],
+      "absent": [
+        "D-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1698,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 19,
+      "required": [
+        "Nr-",
+        "R+"
+      ],
+      "absent": [
+        "T+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1139,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 15,
+      "required": [
+        "D+",
+        "Nb-",
+        "T-"
+      ],
+      "absent": []
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 2363,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 19,
+      "required": [
+        "D-",
+        "L-",
+        "Nb+"
+      ],
+      "absent": []
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 2367,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 14,
+      "required": [
+        "D-",
+        "Nr-",
+        "T+"
+      ],
+      "absent": []
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1139,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 15,
+      "required": [
+        "L+",
+        "Nr+",
+        "R-"
+      ],
+      "absent": []
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 2367,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 14,
+      "required": [
+        "L-",
+        "Nb+",
+        "R+"
+      ],
+      "absent": []
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 2363,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 19,
+      "required": [
+        "Nr-",
+        "R+",
+        "T+"
+      ],
+      "absent": []
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/learned.jsonl",
+      "source_sha256": "2820188c352871135e3a00e14e347557c8de57be3fabab2cdf4e7f59a0862891",
+      "line": 684,
+      "frame": [
+        true,
+        1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 6,
+      "required": [
+        "D-"
+      ],
+      "absent": [
+        "L-",
+        "Nb+",
+        "Nb-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 361,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 11,
+      "required": [
+        "D-"
+      ],
+      "absent": [
+        "Nb+",
+        "R-",
+        "T+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 2642,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 10,
+      "required": [
+        "L+"
+      ],
+      "absent": [
+        "D+",
+        "D-",
+        "R-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 12,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 15,
+      "required": [
+        "L-"
+      ],
+      "absent": [
+        "D-",
+        "Nb-",
+        "T+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/learned.jsonl",
+      "source_sha256": "2820188c352871135e3a00e14e347557c8de57be3fabab2cdf4e7f59a0862891",
+      "line": 904,
+      "frame": [
+        false,
+        1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 4,
+      "required": [
+        "L-"
+      ],
+      "absent": [
+        "Nb-",
+        "Nr-",
+        "R+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 361,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 11,
+      "required": [
+        "R+"
+      ],
+      "absent": [
+        "D+",
+        "L-",
+        "Nr-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/learned.jsonl",
+      "source_sha256": "2820188c352871135e3a00e14e347557c8de57be3fabab2cdf4e7f59a0862891",
+      "line": 684,
+      "frame": [
+        true,
+        1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 6,
+      "required": [
+        "R+"
+      ],
+      "absent": [
+        "Nr+",
+        "Nr-",
+        "T+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/learned.jsonl",
+      "source_sha256": "2820188c352871135e3a00e14e347557c8de57be3fabab2cdf4e7f59a0862891",
+      "line": 904,
+      "frame": [
+        false,
+        1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 4,
+      "required": [
+        "T+"
+      ],
+      "absent": [
+        "D-",
+        "Nb+",
+        "Nr+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 12,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 15,
+      "required": [
+        "T+"
+      ],
+      "absent": [
+        "L-",
+        "Nr+",
+        "R+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 2642,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 10,
+      "required": [
+        "T-"
+      ],
+      "absent": [
+        "D+",
+        "R+",
+        "R-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 3866,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 20,
+      "required": [
+        "D+",
+        "R+",
+        "T-"
+      ],
+      "absent": [
+        "Nr-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 3866,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 20,
+      "required": [
+        "D-",
+        "L+",
+        "R-"
+      ],
+      "absent": [
+        "Nb+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1036,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 14,
+      "required": [
+        "D+",
+        "T+"
+      ],
+      "absent": [
+        "Nr+",
+        "Nr-",
+        "R+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1036,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 14,
+      "required": [
+        "L-",
+        "R-"
+      ],
+      "absent": [
+        "D-",
+        "Nb+",
+        "Nb-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1826,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 13,
+      "required": [
+        "L-",
+        "T+"
+      ],
+      "absent": [
+        "D-",
+        "Nb+",
+        "Nb-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1826,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 13,
+      "required": [
+        "L-",
+        "T+"
+      ],
+      "absent": [
+        "Nr+",
+        "Nr-",
+        "R+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 2635,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 14,
+      "required": [
+        "D+",
+        "L+",
+        "R+"
+      ],
+      "absent": [
+        "Nb+",
+        "T+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1583,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 16,
+      "required": [
+        "D-",
+        "L-",
+        "Nb-"
+      ],
+      "absent": [
+        "R-",
+        "T+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 2635,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 14,
+      "required": [
+        "D-",
+        "R-",
+        "T-"
+      ],
+      "absent": [
+        "L-",
+        "Nr-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1583,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 16,
+      "required": [
+        "Nr+",
+        "R+",
+        "T+"
+      ],
+      "absent": [
+        "D+",
+        "L-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1260,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 12,
+      "required": [
+        "D-",
+        "L+",
+        "Nr+",
+        "T+"
+      ],
+      "absent": [
+        "R-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 1260,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 12,
+      "required": [
+        "L-",
+        "Nb-",
+        "R+",
+        "T-"
+      ],
+      "absent": [
+        "D+"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 3055,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": false,
+      "reflections": 13,
+      "required": [
+        "D-",
+        "L+",
+        "T+"
+      ],
+      "absent": [
+        "Nb+",
+        "Nr+",
+        "R+",
+        "R-"
+      ]
+    },
+    {
+      "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+      "line": 3055,
+      "frame": [
+        true,
+        -1,
+        1
+      ],
+      "reflected": true,
+      "reflections": 13,
+      "required": [
+        "L-",
+        "R+",
+        "T-"
+      ],
+      "absent": [
+        "D+",
+        "D-",
+        "Nb-",
+        "Nr-"
+      ]
+    }
+  ],
+  "scope": "Saved guard projection and syntactic dominance only. No room/cap-assignment enumeration, ray tracing, solving or uncovered-geometry generation."
+}

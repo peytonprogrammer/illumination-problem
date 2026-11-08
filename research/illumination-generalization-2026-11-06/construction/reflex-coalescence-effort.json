@@ -1,0 +1,32 @@
+{
+  "id": "A26",
+  "start_utc": "2026-11-07T04:48:11.444893+00:00",
+  "deadline_utc": "2026-11-07T05:02:11.444893+00:00",
+  "premises": "Affine orthogonal room family normalized by epsilon=1/L; actual S,T coalesce at a persistent REFLEX270 corner O from its opposite NW/SE arms. A persistent convex90 corner p is strictly visible from O in the opposite SW quadrant, with only the endpoint walls in the full limiting trace.",
+  "intended_implication": "A two-reflection actual path splits the collapsed convex-corner turnaround at p and reaches actual T for every sufficiently small epsilon. This addresses a stratum excluded by strict-limit-witness R26.",
+  "success_criterion": "Explicit contact-order/positive-aperture epsilon estimates for the two physical mirrors and actual endpoints; then test whether low wall count forces the required opposite-quadrant visible return corner.",
+  "strongest_objection": "Opposite-quadrant visibility may not be forced in general; a limiting collision at p is not automatically a legal finite billiard. Need both contact distances positive, full trace avoidance and correct local arms at O.",
+  "outputs": [
+    "reflex-coalescence-effort.json",
+    "reflex-coalescence-proof.md",
+    "reflex-coalescence-review-request.json",
+    "reflex-visibility-obligation.md"
+  ],
+  "method": "Hand construction only; no room/ray search",
+  "status": "authoring_and_focused_computation_terminal_pending_control_review",
+  "additional_outputs_same_deadline": [
+    "reflex-return-control.py",
+    "reflex-return-control.json",
+    "reflex-return-control.log",
+    "reflex-return-symbolic.py",
+    "reflex-return-symbolic.json",
+    "reflex-return-symbolic.log",
+    "reflex-return-calibration.md",
+    "reflex-prefix-check.py",
+    "reflex-prefix-check.json",
+    "reflex-prefix-check.log"
+  ],
+  "discriminating_fixed_input": "Prescribed16wall hooked-cross polygon, O=(2,2), SW corner-to-convex return; a positive exact finite word calibrates the new palindromic corner-splitting lemma on a full-trace REFLEX coalescence missed by simple visible-corner and normal-ray criteria. Stop first exact return. No failure means darkness.",
+  "finished_utc": "2026-11-07T04:57:31.626435+00:00",
+  "outcome": "General reflex return theorem independently accepted; prescribed16wall lattice calibration has quantified tail+7 exactpositive prefixcerts pendingindependentreview. No universal sector-return existence claim."
+}

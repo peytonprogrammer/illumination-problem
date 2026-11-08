@@ -1,0 +1,123 @@
+Sole R-plus two-e2 residue: exact nineteen-reflection illumination
+4 November 2026 — Codex01a18403
+
+Status: ONE bounded exact finite-orbit run found this witness; independent
+own rational physical replay PASS. Peer HAND review requested. This is not
+a hand-discovered direction; computation provenance is retained in run.py,
+result.json and run.log. No additional room or direction grid was run.
+
+1. Precise room and computational provenance
+
+The room is the ORIGINAL Llower_Beast_Nbplus_Rplus fixture from
+surplus-four-local/two-e2-check.json, copied unchanged to geometry.json:
+H+L(-2,0)sectors6/7/0+B(0,-2)sectors0/1/2+E-,T-,Nb+,R+.
+Actual interior endpoints are S=(0,0) and T=(2,2); the full A set is S/U/T.
+The independently reviewed ledger is W20,k6,Q10,J4,sN2,Delta4.
+
+Daniel's instruction to start followed the explicit proposal for ONE bounded
+exact Rplus computation; that narrow approval interpretation was stated in
+commentary and on the board before execution. The frozen-room run had a
+60second alarm and20000state cap. It explored141labeled surface states,
+found direction(-10,3) at shear-depth6 and stopped. Exactly that ONEdirection
+was then traced, with no direction-grid loop. Raw whole-run elapsed time is
+0.010034seconds on this machine; this is not a general runtime estimate.
+The old k6 archive had no declared exact-room lookup index; its guardfiles
+were not read or scanned. No other room, solver campaign or worker ran.
+
+2. Hand explanation after discovery
+
+Write the initial direction(-1,d), d=3/10. The new entrance visits the
+UPPER L diagonal first, then the LOWER square floor; this differs from
+our earlier lower-left launch whose first wall was the square's left edge.
+All following gates come from line intersections and ordinary mirror laws.
+Only the exact rational parameter is asserted; no full parameter interval
+or arbitrary ordinary-cap completion theorem is needed.
+
+First source/bottom circuit:
+ - Lupper diagonal y-x=2: (-2/(1+d),2d/(1+d)), change to(d,-1).
+ - LowerL floor y=-1: (3d-2,-1), change to(d,1).
+ - Source roof y=1: (5d-2,1), change to(d,-1).
+ - Bsquare bottom y=-2: (8d-2,-2), change to(d,1).
+Now enter Tminus across y3 atx13d-2. Its vertical/diagonal/vertical/diagonal
+four-contact branch returns through y3 atx6-15d, velocity(-d,-1).
+The subsequent innerleft wall is(1,18-5/d), then floor(19d-4,-1).
+Reflect upward; the flat right half of the roof is(23d-4,3), followed by
+right wall(3,26-7/d), then floor(10-27d,-1).
+After its upward reflection the next innerleft contact is(1,9/d-28),
+which equals(1,2) atd3/10. That is a smooth point of the actual vertical
+wall, not a polygon vertex: its local occupied angle is180degrees.
+
+The next Tminus entry is atx31d-8 on y3. This time its LEFTdiagonal/
+vertical/LEFTdiagonal three-contact branch returns through y3 atx33d-8,
+velocity(d,-1). Continue to lower-right wall(3,36-11/d), then floor
+(14-37d,-1). After its final upward reflection the y2 crossing is
+(14-40d,2). ActualT therefore requires14-40d=2, hence d3/10.
+
+This explains all nineteen contacts and the actual endpoint equation.
+The two different Tminus return branches, not an unchanged right-cap
+substitution, provide the needed position/direction coupling.
+
+3. Exact finite witness
+
+Start S=(0,0). Every intermediate point below is a reflection; the last
+point is actualT. The full strict wall parameters are stored in verify.json.
+
+ 0: (0, 0)
+ 1: (-20/13, 6/13)
+ 2: (-11/10, -1)
+ 3: (-1/2, 1)
+ 4: (2/5, -2)
+ 5: (2, 10/3)
+ 6: (24/13, 50/13)
+ 7: (2, 19/5)
+ 8: (12/7, 26/7)
+ 9: (1, 4/3)
+10: (17/10, -1)
+11: (29/10, 3)
+12: (3, 8/3)
+13: (19/10, -1)
+14: (1, 2)
+15: (10/7, 24/7)
+16: (2, 18/5)
+17: (22/13, 48/13)
+18: (3, -2/3)
+19: (29/10, -1)
+20: (2, 2)
+
+4. Exact proof checks and first arrival
+
+Own verify.py uses rational arithmetic and independent direct polygon
+predicates, without executing the orbit extractor or its tracer. It verifies:
+ - the triangle union gives the same simple maximal20wall boundary;
+ - full A set S/U/T and the complete Q/J/sN/k/Delta ledger;
+ - each reflection strictly within exactly one actual maximalwall;
+ - the exact specular law with a positive outgoing multiplier;
+ - no earlier boundary intersection or overlapping wall on any segment;
+ - every open segment interior, with actualS/T interior;
+ - NO earlier encounter with actualT before the final flight;
+ - forward, reverse and sigma/reversal physical replay;
+ - complete required/forbidden triangle guards in the supplied room.
+
+Independent backward reflection ofT across the ACTUAL nineteen contacted
+walls gives(-40,12), a positive multiple of(-10,3). No endpoint lift is
+substituted. The only integer contact(1,2) has occupied angle180, and is
+absent from the actual vertex list. Full complete guards and all nineteen
+strict finitewall parameters appear in verify.json.
+
+These finite rational coordinates plus the reflection/first-wall checks
+are a constructive illumination proof for the ONE room. The finite orbit
+method explains discovery, but its completeness is unnecessary once the
+physical witness is independently verified. The shared geometry/guard
+origins and pending peer review are disclosed; no formal verification.
+
+5. Scope and next step
+
+This closes soleRplus at parentproof level. Together with independently
+accepted FOURreflection paths for soleDminus/Dplus/Rminus, all four
+Llower/Beast/Nbplus residues have witnesses. Peer owns sevenjoinedB/D rooms;
+these remain open, and no further orbit run is authorized by this result.
+Other local/remote Delta4 gaps and universal minimum remain unresolved.
+
+Run discovery reproduction (do not repeat automatically): python3 -B run.py
+Run read-only fixed verification: python3 -B verify.py (use full siblingpaths).
+Only the latter is requested for peer review; use disjoint outputs.

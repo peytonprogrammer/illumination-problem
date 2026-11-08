@@ -1,0 +1,69 @@
+West-B / outer-E: two bounded hand attempts, neither closes a new case
+Codex01a18403 — 4 November 2026
+
+Scope: e2+two e1/b0, larger Bwest123, forced L70 and E45 units.
+Only named input: critical-B.txt14 and its existing L12E10 path in
+critical-B-check.json NEW_L12_Esquare_normal_composition.
+No new ray/word/direction search, archive retrieval, room/cap generation,
+parameter scan, checker execution, solver or worker.
+
+Current established conditional cover (no new theorem here):
+The existing ten-path permits full B/D/R, N456 and ordinary Tc5 or empty.
+West-B completions with Nright7/0 or Tc6 are not covered by that guard.
+The rectangular-B global argument cannot be imported: Bwest lacks B0,
+which is required for its short square-based forcing of Tc5.
+
+Attempt1: endpoint-fixed single-mirror suffix removal
+Missing implication: retain actual T when an added Nright or Tc6 cap
+removes one of the ten-path mirrors. Success criterion: its mirror LINE
+fixes T=(2,2), and reflecting only the remaining suffix gives a legal path.
+
+The ten-path has L lines x+y=-2 and x-y=-2, far E line x=4,
+left/right target-corridor lines x=1/x=3, and ceiling y=3.
+None contains actual T. In particular Nright removes x=1 reflections;
+reflection across that line sends T to(0,2). Tc6 removes the ceiling
+y=3 reflection; reflection across it sends T to(2,4).
+Thus the single-mirror suffix operation used successfully for Beast
+cannot be transferred directly. This is not an impossibility theorem
+for coordinated mirror changes. Retire this proposed direct transfer.
+
+Attempt2: replace the ten-path ceiling bounce by the forced Tc6 return
+Missing implication: close the Tc6-positive case with Nright absent.
+Success criterion: the endpoint equation's positive root lies within
+the strict interval of the prescribed continuation. No parameter search.
+
+Take the ten-path's unchanged initial L70 normal return, parameterized
+by launch(-1,-d) from S. The L pocket exits at(-1,3d), velocity(1,d).
+The E45 square receives it at(3,7d), reflects at(4,8d), and exits at
+(3,9d), velocity(-1,d). The same retained corridor prefix then hits
+ (1,11d), (3,13d), (1,15d),
+with alternating horizontal velocity. This is the already prescribed
+prefix, not a search among reflection words.
+
+From the last contact the upward-right line is y=d(x+14). With Tc6
+present, the bare ceiling y=3 is filled and the forced next diagonal
+is x+y=6. Its intersection has
+ x_C=(6-14d)/(1+d), y_C=6-x_C.
+The diagonal reflects(1,d) to(-d,-1). At height2, the final x coordinate
+would be (1+d)x_C-4d=6-18d. The ACTUAL target requires x=2, hence d=2/9.
+
+But the retained third corridor contact must be on x=1 strictly below
+y=3, so15d<3 and d<1/5. At2/9 its supposed height is10/3>3: the
+prescribed finite wall has already ended. The Tc6 diagonal-contact
+bounds additionally give3/17<d<1/4; they do not repair the contradiction.
+The candidate is invalid before its claimed suffix. No fixed-path replay
+was performed, and no claim about darkness follows.
+
+REALIGNMENT
+No additional west-B/Eouter room or subfamily was closed in these two
+attempts. Both approaches are retired for this input; longer versions
+of the same corridor loop would be repackaging. Do not count these
+calculations as progress toward the number of closed families.
+
+Beast remains independently accepted within13. Own independent centered-N
+and B-unit-six reviews stand. Remaining west/rectangle centered-E cases,
+west-B/Eouter exceptions, joined/leaf cases, L/T optical residues, the
+other local charge types and remote rows remain separate obligations.
+The full surplus-four theorem and universal22-wall minimum are unresolved.
+A new attempt on this branch needs a genuinely different geometric
+mechanism or a new structural restriction, not more check counts.

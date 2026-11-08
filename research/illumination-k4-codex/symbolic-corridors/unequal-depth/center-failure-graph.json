@@ -1,0 +1,41 @@
+{
+  "status": "CLASSIFIED_FINITE_CONTROLS",
+  "phase_denominator_max": 64,
+  "failing_center_pairs": 649,
+  "non_unit_difference_pairs": [
+    {
+      "a": "1/2",
+      "b": "1/2",
+      "q": 4,
+      "A": 1,
+      "C": 3
+    },
+    {
+      "a": "1/2",
+      "b": "1",
+      "q": 5,
+      "A": 1,
+      "C": 3
+    },
+    {
+      "a": "1",
+      "b": "1/2",
+      "q": 5,
+      "A": 2,
+      "C": 4
+    }
+  ],
+  "first_NE_rectangle": [],
+  "effort": {
+    "hypothesis": "four endpoint-cap sheets plus four vertical folding charts may cover full unequal-depth outer pairs",
+    "start": 1793988188.51892,
+    "deadline": 1793989028.51892,
+    "aggregate_limit_seconds": 840,
+    "outputs": [
+      "cap-chart-screen.py",
+      "cap-chart-screen.json"
+    ],
+    "success_criterion": "derive plausible finite-sheet covering mechanism or exact counterexample to THIS mechanism; not darkness"
+  },
+  "scope": "Exact all odd lifts for each rational control; no universal classification or darkness."
+}

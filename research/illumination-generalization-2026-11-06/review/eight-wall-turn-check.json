@@ -1,0 +1,312 @@
+{
+  "status": "EXACT_TURN_WORD_AND_FIXED_GEOMETRY_CONTROLS_PASS",
+  "labelled_words": 28,
+  "word_counts": {
+    "1": 8,
+    "2": 8,
+    "3": 8,
+    "4": 4
+  },
+  "representatives": [
+    {
+      "name": "U",
+      "separation": 1,
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "reflex_indices": [
+        4,
+        5
+      ]
+    },
+    {
+      "name": "staircase",
+      "separation": 2,
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "reflex_indices": [
+        3,
+        5
+      ]
+    },
+    {
+      "name": "unequalT",
+      "separation": 3,
+      "vertices": [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "reflex_indices": [
+        2,
+        7
+      ]
+    },
+    {
+      "name": "offset-overlap",
+      "separation": 4,
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "reflex_indices": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "offset-gap",
+      "separation": 4,
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "reflex_indices": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "offset-equal-x",
+      "separation": 4,
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "reflex_indices": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "offset-transpose",
+      "separation": 4,
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "reflex_indices": [
+        2,
+        6
+      ]
+    }
+  ],
+  "kind": "prescribed finite combinatorial controls, not optical search or universal metric proof",
+  "source_sha256": {
+    "eight-wall-frontier.md": "d1d60daf29e36ae1e80819451922a5bb6e883a93d15ec0706f811a6fed1e47e2",
+    "eight-wall-turn-check.py": "b0a68ba24bb2c03ca48f11611e85c957bdaf05f01ea7f37d7c3d053d120527cc"
+  },
+  "whole_goal_complete": false
+}

@@ -1,0 +1,51 @@
+Independent finite-certificate review: sole R+ room — 4 November 2026
+
+[done] ACCEPT the supplied nineteen-reflection actual S/T certificate for
+ORIGINAL Llower_Beast_Nbplus_Rplus. The path was discovered computationally
+by peer's one-room run, not by hand. This review does not rerun discovery.
+
+Direction(-10,3), nineteen smooth specular reflections, final actual T=(2,2).
+All actual finite-wall first hits, open interior flights, forward/reverse and
+sigma/reversal pass in our existing frozen boundary-replay implementation.
+That implementation rejects an earlier actual target, including a negative
+control which appends a loop after the supplied first arrival at T.
+A separate off-wall contact corruption is rejected.
+
+The supplied triangle set AND ordered maximal boundary match the ORIGINAL
+fixture exactly. Independent tile-angle geometry confirms strict simplicity,
+full A set S/U/T and ledger W20,k6,Q10,J4,sN2,Delta4. Oriented triangle-edge
+cancellation reconstructs the same maximal boundary. Every contact has a
+strict wall parameter between zero and one. Complete U/Z and sigma guards
+fit the original room, recomputed using our retained guard implementation.
+
+Actual contact(1,2) has local occupied angle180 degrees and is absent from
+the actual vertex list. This differs from the same coordinate in the joined
+B/D rooms, where it was a270-degree corner. Coordinate alone is insufficient
+to decide whether a contact is singular.
+
+Reflecting actual T backward across the nineteen ACTUAL contacted walls
+gives(-40,12), positively collinear with launch(-10,3). This checks the
+endpoint lift against physical walls.
+
+Peer's hand explanation, read after the path and checker source, agrees:
+upper L diagonal, lower L floor, source roof and B-square bottom; four-hit
+Tminus return; inner wall/floor/flat roof/right wall/floor; smooth inner wall
+point(1,2); three-hit Tminus return; lower right wall and floor; actual T.
+All stated intermediate gate coordinates agree at d=3/10. The final y=2
+crossing has x=14-40d, giving actual x=2 at d=3/10. This is a finite-witness
+acceptance. No whole parameter interval is asserted or required.
+
+Command:
+ python3 -B .context/illumination-k4-codex/surplus-four-local/two-e2-Rplus19-review.py
+Receipt: two-e2-Rplus19-review.json. Input hashes retained.
+
+Scope: original room only. No arbitrary cap-completion family, discovery
+rerun, archive lookup, other-room scan or worker. Geometry/guard routines
+have shared prior origins; this is an independent agent replay, not formal
+verification or expert refereeing.
+
+[done] All four Llower/Beast/Nbplus fixtures now have accepted witnesses:
+soleDminus,Dplus,Rminus <=4; soleRplus <=19 reflections.
+[in progress] The seven joined B/D exact residuals remain open within the
+two-e2 partition. Other local and remote Delta4 gaps remain separate; peer
+is also auditing the completeness of the broader local partition list.

@@ -1,0 +1,55 @@
+{
+  "kind": "prescribed exact geometry, not discovery",
+  "cases": [
+    {
+      "horizontal_stretch": 1,
+      "segment": "(N*t,t), 0<=t<=2",
+      "boundary_parameters": [
+        "1"
+      ],
+      "incident_wall_indices": [
+        7,
+        8
+      ],
+      "half_interval_samples_interior": true,
+      "middle_corner": [
+        1,
+        1
+      ],
+      "signed_turn_cross": -4,
+      "local_quadrants": {
+        "NE": true,
+        "NW": true,
+        "SW": true,
+        "SE": false
+      },
+      "endpoint_squared_distance": 8
+    },
+    {
+      "horizontal_stretch": 100,
+      "segment": "(N*t,t), 0<=t<=2",
+      "boundary_parameters": [
+        "1"
+      ],
+      "incident_wall_indices": [
+        7,
+        8
+      ],
+      "half_interval_samples_interior": true,
+      "middle_corner": [
+        100,
+        1
+      ],
+      "signed_turn_cross": -400,
+      "local_quadrants": {
+        "NE": true,
+        "NW": true,
+        "SW": true,
+        "SE": false
+      },
+      "endpoint_squared_distance": 40004
+    }
+  ],
+  "result": "PASS",
+  "limit": "Checks the named metric segment only; inherited all-word darkness and independent metric proof are separate dependencies."
+}

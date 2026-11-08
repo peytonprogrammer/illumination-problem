@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-07T01:30:35.561326+00:00",
+  "id": "A19",
+  "status": "CANDIDATE_PENDING_INDEPENDENT_REVIEW",
+  "dependency": "A18 Sections1-4 exact actual-target splice, still pending independent review",
+  "conclusion": "For three fixed orthogonal chambers and equal-width two necks, all sufficiently long possible failures lie in finitely many bounded-width affine strips with reduced q<=1/ell. Integer geometry reduces these to finitely many affine integer rays.",
+  "constants": {
+    "Q": "any integer >4/ell",
+    "C": "4wQ/delta",
+    "D0": "8w/delta",
+    "eta": "min(ell-1/j) for integers 1<=j<=Q,j>1/ell",
+    "D1": "max(D0,4C/eta,4w(Q+2)/delta)"
+  },
+  "hand_checks": [
+    "Pigeonhole gives q<=Q and error<1/Q with 0<=p<=q",
+    "Finite orbit mesh length <=q/gamma fits strict allowed integer window when affine deviation>C",
+    "Finite high-denominator rational grid removes q>1/ell once D>D1",
+    "Integer Diophantine residual has at most one primitive arithmetic ray per relation",
+    "Coverage includes rational limiting ratios with divergent sublinear absolute detuning"
+  ],
+  "not_covered": [
+    "Any residual arithmetic ray",
+    "Arbitrary moving chamber or endpoint data",
+    "Unequal/shrinking widths",
+    "Diagonal chambers",
+    "All canonical45 W<=21 rooms"
+  ],
+  "computational_checks": "None; elementary hand argument, no discovery or numerical evidence",
+  "original_aggregate_deadline_utc": "2026-11-07T01:42:58.405824+00:00",
+  "within_deadline": true,
+  "whole_goal_complete": false
+}

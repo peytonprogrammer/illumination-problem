@@ -1,0 +1,3692 @@
+Independently review this elementary mathematical argument for a mirror polygon with a dark interior pair. You have no tools. Challenge the logic; do not assume earlier acceptance. Report ACCEPT or REJECT separately for (1) base parity lemma, (2) folding event classification and corner census, (3) first-b/last-a argument, (4) four-copy extension. State any real gaps and precise corrections. No historical novelty claim is requested. Read the supplied exact geometry checker as supporting evidence, but verify reasoning independently. The second example adds P3={(-2-x,y):(x,y) in P}; adjacent seam is x=-1, -1<=y<=0. The triple junction (-1,0) is an actual concave corner, not a smooth reversal. Second room has four smooth seam endpoints (-1,-1),(1,0),(2,1),(2,3). Their folds are respectively (-1,-1),(1,0),(2,-1),(2,-3). S=(0,0), T=(2,2) remain interior. Need finite corner-avoiding paths, ordinary specular wall law; no diffraction. Especially challenge stopping at first b, starting at last a despite multiple physical preimages, and whether a reversal forces an interior return to a before first b.
+
+EXPANDED PROOF:
+# A 22-wall mirror room
+
+An expanded elementary proof, with the seam events shown explicitly.
+
+Statement. In the room below, S = (0,0) and T = (2,2) cannot be joined by any finite, corner-avoiding billiard path.
+
+The mirrors are the solid outside boundary. Dashed lines are open passages between copies; they are not mirrors. A path may reflect at a smooth point of a wall, but it may not pass through an actual corner.
+
+![room panel](room-panel.png)
+
+## Build the room from one five-square piece
+
+Let P be the union of the five closed unit squares with lower-left corners (-1,-1), (0,-1), (0,-2), (1,-2), (1,-3). Mark a = (0,0) and b = (2,-2) on its boundary. Both are smooth wall points, not corners.
+
+Take these three reflected copies:
+
+P0 and P1 meet on the horizontal interval [-1,1] x {0}. P1 and P2 meet on the vertical interval {2} x [1,3]. Their interiors are disjoint, and there are no other contacts. Their union Q is a simple polygon.
+
+S is the midpoint of the first seam and T is the midpoint of the second. Folding every copy back onto P sends S to a and T to b. We will show that a connecting path in Q would force an impossible connection in P.
+
+---
+
+# 1. The lattice obstruction in P
+
+First consider an ordinary billiard path in the five-square base P. The important fact is a complete list of its integer points.
+
+Integer-point census: only a and b are smooth; seven convex and three concave corners, no interior integer points.
+
+## Reflecting across an integer-coordinate wall preserves parity
+
+Reflection in a vertical wall x = c changes x to 2c - x. Reflection in a horizontal wall y = d changes y to 2d - y. Here c and d are integers. Thus both kinds of reflection preserve the integer lattice and each coordinate modulo two.
+
+Assume an ordinary path joined a to b. Unfold its reflections: reflect each successive copy of P instead of bending the ray. The path becomes a straight segment from a = (0,0) to an image V of b. Since b is even-even, V is even-even. Also V is nonzero: unfolding preserves the positive length of the proposed path.
+
+## An odd-coordinate integer point occurs before V
+
+Repeatedly divide V by two until the coordinates are still integers but at least one is odd. Call the resulting point z. At least one division was made, so z lies strictly between 0 and V on the unfolded segment.
+
+![parity panel](parity-panel.png)
+
+Fold z back along the proposed path. Its image is an integer point of P with at least one odd coordinate. It is therefore neither a nor b. By the census, it is an actual corner. That contradicts corner avoidance. If z is exactly at a join between unfolded copies, the same argument still identifies an actual boundary corner.
+
+Conclusion 1. No ordinary corner-avoiding billiard path in P joins a to b.
+
+---
+
+# 2. The two kinds of seam event
+
+Inside each copy, folding preserves straight motion and ordinary wall reflections. Two events need to be distinguished.
+
+## Crossing the interior of an open seam
+
+![fold panel](fold-panel.png)
+
+The two folding maps agree on the seam and reflect the normal velocity component. A straight crossing in Q therefore becomes an ordinary reflection in a smooth wall of P.
+
+## Hitting a seam endpoint on the outside wall
+
+![reversal panel](reversal-panel.png)
+
+For example, let E = (1,0). A ray approaching E through P1 has physical velocity (u,-v), with u,v > 0. Before the hit, folding by (x,y) -> (x,-y) gives velocity (u,v). The actual vertical mirror changes the physical velocity to (-u,-v), and the ray now enters P0. Its folded velocity is also (-u,-v). The folded path reverses exactly, along the line it just followed.
+
+The four endpoint images are (-1,0)->(-1,0), (1,0)->(1,0), (2,1)->(2,-1), (2,3)->(2,-3).
+
+The other three endpoints have the same reversal rule by symmetry or by interchanging x and y. All other base-corner preimages are actual corners of Q and cannot be hit. In particular, the three concave base corners give nine actual concave corners of Q. The 21 convex-corner incidences give 13 actual convex corners and two incidences at each of the four smooth points above. This accounts for all 30 corner incidences.
+
+---
+
+# 3. Why a reversal cannot help
+
+A projected path can revisit a or reach b before the physical ray reaches T. The following choice of subpath handles those possibilities.
+
+Step A. Suppose a finite valid path in Q joined S to T, and fold it onto P. Stop the folded path at its first arrival at b. Within that prefix, start at its last visit to a. Call this subpath gamma. It goes from a to b and has no interior visit to either mark.
+
+Step B. If gamma has a corner reversal of the kind shown on page 3, take the first one. Before it, gamma has only ordinary reflections at smooth walls of P. Those reflections are deterministic and reversible. After reversing, gamma must retrace that same route until it returns to its starting point a.
+
+This return occurs before any arrival at b: retracing visits no point that was not already on the preceding route. It gives an interior visit to a, contradicting Step A. Hence gamma has no corner reversal.
+
+Step C. Gamma is now an ordinary corner-avoiding a-to-b billiard path in P. Conclusion 1 says that no such path exists. Therefore the original S-to-T path in Q does not exist.
+
+## Why the first and last visits are well defined
+
+An axis-parallel path cannot connect S to T: reflection in an orthogonal wall cannot create a missing velocity component, while both coordinates of S and T differ. Every possible connecting path is therefore nonaxial. Each of its finitely many straight legs crosses each of the two seams at most once. Folding subdivides it into finitely many nonconstant straight pieces, so there are only finitely many visits to either mark.
+
+## The other preimages of the marks
+
+The extra preimages are smooth boundary points. Step A allows all their possible visits; it does not assume that a return to a must be a return to S.
+
+## Cyclic coordinates of the 22-wall boundary
+
+(-1,-1), (0,-1), (0,-2), (1,-2), (1,-3), (2,-3)
+(2,-1), (1,-1), (1,1), (3,1), (3,0), (5,0)
+(5,1), (4,1), (4,2), (3,2), (3,3), (1,3)
+(1,2), (0,2), (0,1), (-1,1)
+
+This proves the stated dark pair for every finite corner-avoiding billiard path. It makes no assumption about a bound on directions, path length or number of reflections.
+
+
+EXACT CHECKER:
+"""Exact checks of the prescribed 3-copy and 4-copy constructions. No ray search."""
+from pathlib import Path
+from collections import Counter,defaultdict
+from itertools import combinations,product
+import json,hashlib,shutil
+ROOT=Path(__file__).resolve().parent
+BASE=frozenset([(-1,-1),(0,-1),(0,-2),(1,-2),(1,-3)])
+MAPS=[(1,1,0,0),(1,-1,0,0),(-1,-1,4,0),(-1,1,-2,0)]
+S=(0,0);T=(2,2)
+
+def vertices(cells):return {v for x,y in cells for v in ((x,y),(x+1,y),(x+1,y+1),(x,y+1))}
+def cells_at(p):
+ x,y=p;return {(x-1,y-1),(x,y-1),(x-1,y),(x,y)}
+def angle(cells,p):
+ occupied=cells_at(p)&cells
+ if len(occupied)==4:return 4
+ if len(occupied)==2:
+  a,b=occupied;assert abs(a[0]-b[0])+abs(a[1]-b[1])==1,('pinch',p)
+ return len(occupied)
+def geometry(cells):
+ edge_count=Counter()
+ for x,y in cells:
+  v=((x,y),(x+1,y),(x+1,y+1),(x,y+1))
+  for i in range(4):edge_count[tuple(sorted((v[i],v[(i+1)%4])))]+=1
+ edges=[e for e,n in edge_count.items() if n==1];adj=defaultdict(list)
+ for a,b in edges:adj[a].append(b);adj[b].append(a)
+ assert all(len(n)==2 for n in adj.values()),'non-Jordan boundary fan'
+ start=min(adj);cycle=[start];prev=None;cur=start
+ while True:
+  nxt=next(p for p in sorted(adj[cur]) if p!=prev)
+  if nxt==start:break
+  cycle.append(nxt);prev,cur=cur,nxt;assert len(cycle)<=len(adj)
+ assert len(cycle)==len(adj),'multiple boundary cycles'
+ maximal=[p for i,p in enumerate(cycle) if (p[0]-cycle[i-1][0])*(cycle[(i+1)%len(cycle)][1]-p[1])!=(p[1]-cycle[i-1][1])*(cycle[(i+1)%len(cycle)][0]-p[0])]
+ actual={p for p in vertices(cells) if angle(cells,p) in (1,3)}
+ assert actual==set(maximal)
+ all_edges=set(edge_count);V=vertices(cells);assert len(V)-len(all_edges)+len(cells)==1
+ seen={next(iter(cells))};todo=list(seen)
+ for x,y in todo:
+  for q in ((x+1,y),(x-1,y),(x,y+1),(x,y-1)):
+   if q in cells and q not in seen:seen.add(q);todo.append(q)
+ assert seen==set(cells)
+ return dict(cells=sorted(cells),vertices=maximal,walls=len(maximal),corners=sorted(actual),convex=sorted(p for p in actual if angle(cells,p)==1),concave=sorted(p for p in actual if angle(cells,p)==3),smooth=sorted(p for p in V if angle(cells,p)==2),interior=sorted(p for p in V if angle(cells,p)==4),atomic_edges=edges,euler=1)
+
+def point(g,p):sx,sy,dx,dy=g;return (sx*p[0]+dx,sy*p[1]+dy)
+def inverse(g,p):sx,sy,dx,dy=g;return (sx*(p[0]-dx),sy*(p[1]-dy))
+def image(g,cells):
+ out=set()
+ for x,y in cells:
+  v=[point(g,p) for p in ((x,y),(x+1,y),(x,y+1),(x+1,y+1))]
+  out.add((min(p[0] for p in v),min(p[1] for p in v)))
+ return frozenset(out)
+
+def check(m):
+ copies=[image(g,BASE) for g in MAPS[:m]]
+ assert all(not(a&b) for a,b in combinations(copies,2)),'interior overlap'
+ room=frozenset().union(*copies);q=geometry(room);base=geometry(BASE)
+ assert angle(room,S)==angle(room,T)==4
+ seams=[];touches=[]
+ for i,j in combinations(range(m),2):
+  vi,vj=vertices(copies[i]),vertices(copies[j]);common=vi&vj
+  shared=[]
+  for edge in qedges(copies[i])&qedges(copies[j]):
+   assert all(inverse(MAPS[i],z)==inverse(MAPS[j],z) for z in edge),'discontinuous fold'
+   shared.append(edge)
+  if shared:seams.append(dict(copies=[i,j],edges=sorted(shared)))
+  elif common:touches.append(dict(copies=[i,j],points=sorted(common)))
+ incidences=defaultdict(list)
+ for i,g in enumerate(MAPS[:m]):
+  for c in base['corners']:incidences[point(g,c)].append((i,c))
+ reversal=[];true=[]
+ for p,inc in sorted(incidences.items()):
+  targets={inverse(MAPS[i],p) for i,c in inc};assert len(targets)==1
+  base_point=next(iter(targets));n=angle(room,p)
+  if n==2:
+   assert len(inc)==2 and angle(BASE,base_point)==1
+   tangents={('horizontal' if a[1]==b[1] else 'vertical') for a,b in q['atomic_edges'] if p in (a,b)}
+   assert len(tangents)==1
+   wall=next(iter(tangents));rw=(1,-1) if wall=='horizontal' else (-1,1)
+   for (i,_),(j,_) in (inc,inc[::-1]):
+    gi,gj=MAPS[i],MAPS[j]
+    assert (gj[0]*rw[0]*gi[0],gj[1]*rw[1]*gi[1])==(-1,-1)
+   reversal.append(dict(physical=p,base=base_point,copies=[i for i,c in inc],wall=wall,folded_velocity_factor=[-1,-1]))
+  else:
+   assert n in (1,3),'a base corner became interior'
+   true.append(dict(physical=p,base=base_point,copy_incidences=len(inc),angle_units=n))
+ assert sum(x['copy_incidences'] for x in true)+2*len(reversal)==10*m
+ assert len({tuple(x['physical']) for x in true})==q['walls']
+ for i,g in enumerate(MAPS[:m]):
+  for c in base['concave']:assert point(g,c) in set(q['corners'])
+ fibers={name:sorted({point(g,z) for g in MAPS[:m]}) for name,z in [('a',(0,0)),('b',(2,-2))]}
+ for name,ps in fibers.items():
+  for p in ps:
+   assert len({inverse(g,p) for g,cs in zip(MAPS[:m],copies) if p in vertices(cs)})==1
+ packet=dict(copies=m,copy_maps=MAPS[:m],base=base,room=q,marks=[S,T],seams=seams,point_contacts=touches,reversal_points=reversal,corner_incidence_locations=true,mark_fibers=fibers)
+ return packet
+
+def qedges(cells):
+ counts=Counter()
+ for x,y in cells:
+  v=((x,y),(x+1,y),(x+1,y+1),(x,y+1))
+  for i in range(4):counts[tuple(sorted((v[i],v[(i+1)%4])))]+=1
+ return {e for e,n in counts.items() if n==1}
+
+if __name__=='__main__':
+ base=geometry(BASE);assert set(base['smooth'])=={(0,0),(2,-2)} and not base['interior'];assert (len(base['convex']),len(base['concave']))==(7,3)
+ packets=[check(m) for m in (3,4)]
+ assert packets[0]['room']['walls']==22
+ (ROOT/'second-example.json').write_text(json.dumps(packets[1],indent=2)+'\n')
+ (ROOT/'inputs/room22.json').write_text(json.dumps(packets[0],indent=2)+'\n')
+ # Prescribed integer reflection parity controls. These support, not replace,
+ # the elementary identity x -> 2c-x preserving x modulo two.
+ parity_checks=0
+ for c,x in product(range(-6,7),repeat=2):assert (2*c-x-x)%2==0;parity_checks+=1
+ # Repeated halving for fixed even-even endpoint arithmetic controls.
+ halving_checks=0
+ for x,y in product(range(-16,17,2),repeat=2):
+  if (x,y)==(0,0):continue
+  z=(x,y);power=0
+  while z[0]%2==z[1]%2==0:z=(z[0]//2,z[1]//2);power+=1
+  assert power>=1 and z!=(0,0) and (z[0]%2 or z[1]%2);halving_checks+=1
+ out=dict(status='PASS',base=base,packets=packets,reflection_parity_controls=parity_checks,halving_controls=halving_checks,scope='Prescribed constructions, exact topology, complete corner incidence and reversal matrices. No ray searches or proof by bounded non-finding.')
+ (ROOT/'check.json').write_text(json.dumps(out,indent=2)+'\n')
+ for q in packets:print(json.dumps(dict(copies=q['copies'],walls=q['room']['walls'],convex=len(q['room']['convex']),concave=len(q['room']['concave']),reversal_points=q['reversal_points'],mark_fibers=q['mark_fibers'])))
+ print('PASS',parity_checks,'parity controls',halving_checks,'halving controls')
+
+
+CHECKER RESULTS:
+{
+  "status": "PASS",
+  "base": {
+    "cells": [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        1,
+        -2
+      ]
+    ],
+    "vertices": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -1
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        1,
+        -2
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "walls": 10,
+    "corners": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        1,
+        -2
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        2,
+        -1
+      ]
+    ],
+    "convex": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        2,
+        -1
+      ]
+    ],
+    "concave": [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -2
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "smooth": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        -2
+      ]
+    ],
+    "interior": [],
+    "atomic_edges": [
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      [
+        [
+          2,
+          -2
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      [
+        [
+          0,
+          -2
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      [
+        [
+          1,
+          -3
+        ],
+        [
+          2,
+          -3
+        ]
+      ],
+      [
+        [
+          2,
+          -3
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      [
+        [
+          1,
+          -3
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      [
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    ],
+    "euler": 1
+  },
+  "packets": [
+    {
+      "copies": 3,
+      "copy_maps": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          -1,
+          4,
+          0
+        ]
+      ],
+      "base": {
+        "cells": [
+          [
+            -1,
+            -1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ]
+        ],
+        "vertices": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "walls": 10,
+        "corners": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ]
+        ],
+        "convex": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ]
+        ],
+        "concave": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "smooth": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            -2
+          ]
+        ],
+        "interior": [],
+        "atomic_edges": [
+          [
+            [
+              -1,
+              -1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          [
+            [
+              -1,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              -1,
+              -1
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          [
+            [
+              2,
+              -2
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              1,
+              -2
+            ]
+          ],
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          [
+            [
+              1,
+              -3
+            ],
+            [
+              2,
+              -3
+            ]
+          ],
+          [
+            [
+              2,
+              -3
+            ],
+            [
+              2,
+              -2
+            ]
+          ],
+          [
+            [
+              1,
+              -3
+            ],
+            [
+              1,
+              -2
+            ]
+          ],
+          [
+            [
+              1,
+              -1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        ],
+        "euler": 1
+      },
+      "room": {
+        "cells": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "vertices": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "walls": 22,
+        "corners": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "convex": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "concave": [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "smooth": [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "interior": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "atomic_edges": [
+          [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ]
+          ],
+          [
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          [
+            [
+              -1,
+              -1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          [
+            [
+              -1,
+              -1
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          [
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          [
+            [
+              2,
+              -2
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              1,
+              -2
+            ]
+          ],
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          [
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              -3
+            ],
+            [
+              2,
+              -3
+            ]
+          ],
+          [
+            [
+              2,
+              -3
+            ],
+            [
+              2,
+              -2
+            ]
+          ],
+          [
+            [
+              1,
+              -3
+            ],
+            [
+              1,
+              -2
+            ]
+          ],
+          [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          [
+            [
+              1,
+              -1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        ],
+        "euler": 1
+      },
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "seams": [
+        {
+          "copies": [
+            0,
+            1
+          ],
+          "edges": [
+            [
+              [
+                -1,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "copies": [
+            1,
+            2
+          ],
+          "edges": [
+            [
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          ]
+        }
+      ],
+      "point_contacts": [],
+      "reversal_points": [
+        {
+          "physical": [
+            -1,
+            0
+          ],
+          "base": [
+            -1,
+            0
+          ],
+          "copies": [
+            0,
+            1
+          ],
+          "wall": "vertical",
+          "folded_velocity_factor": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "physical": [
+            1,
+            0
+          ],
+          "base": [
+            1,
+            0
+          ],
+          "copies": [
+            0,
+            1
+          ],
+          "wall": "vertical",
+          "folded_velocity_factor": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "physical": [
+            2,
+            1
+          ],
+          "base": [
+            2,
+            -1
+          ],
+          "copies": [
+            1,
+            2
+          ],
+          "wall": "horizontal",
+          "folded_velocity_factor": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "physical": [
+            2,
+            3
+          ],
+          "base": [
+            2,
+            -3
+          ],
+          "copies": [
+            1,
+            2
+          ],
+          "wall": "horizontal",
+          "folded_velocity_factor": [
+            -1,
+            -1
+          ]
+        }
+      ],
+      "corner_incidence_locations": [
+        {
+          "physical": [
+            -1,
+            -1
+          ],
+          "base": [
+            -1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            -1,
+            1
+          ],
+          "base": [
+            -1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            0,
+            -2
+          ],
+          "base": [
+            0,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            0,
+            -1
+          ],
+          "base": [
+            0,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            0,
+            1
+          ],
+          "base": [
+            0,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            0,
+            2
+          ],
+          "base": [
+            0,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            1,
+            -3
+          ],
+          "base": [
+            1,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            1,
+            -2
+          ],
+          "base": [
+            1,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            1,
+            -1
+          ],
+          "base": [
+            1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            1,
+            1
+          ],
+          "base": [
+            1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            1,
+            2
+          ],
+          "base": [
+            1,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            1,
+            3
+          ],
+          "base": [
+            1,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            2,
+            -3
+          ],
+          "base": [
+            2,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            2,
+            -1
+          ],
+          "base": [
+            2,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            3,
+            0
+          ],
+          "base": [
+            1,
+            0
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            3,
+            1
+          ],
+          "base": [
+            1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            3,
+            2
+          ],
+          "base": [
+            1,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            3,
+            3
+          ],
+          "base": [
+            1,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            4,
+            1
+          ],
+          "base": [
+            0,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            4,
+            2
+          ],
+          "base": [
+            0,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            5,
+            0
+          ],
+          "base": [
+            -1,
+            0
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            5,
+            1
+          ],
+          "base": [
+            -1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        }
+      ],
+      "mark_fibers": {
+        "a": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "b": [
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "copies": 4,
+      "copy_maps": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          -1,
+          4,
+          0
+        ],
+        [
+          -1,
+          1,
+          -2,
+          0
+        ]
+      ],
+      "base": {
+        "cells": [
+          [
+            -1,
+            -1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ]
+        ],
+        "vertices": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "walls": 10,
+        "corners": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ]
+        ],
+        "convex": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ]
+        ],
+        "concave": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "smooth": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            -2
+          ]
+        ],
+        "interior": [],
+        "atomic_edges": [
+          [
+            [
+              -1,
+              -1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          [
+            [
+              -1,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              -1,
+              -1
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          [
+            [
+              2,
+              -2
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              1,
+              -2
+            ]
+          ],
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          [
+            [
+              1,
+              -3
+            ],
+            [
+              2,
+              -3
+            ]
+          ],
+          [
+            [
+              2,
+              -3
+            ],
+            [
+              2,
+              -2
+            ]
+          ],
+          [
+            [
+              1,
+              -3
+            ],
+            [
+              1,
+              -2
+            ]
+          ],
+          [
+            [
+              1,
+              -1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        ],
+        "euler": 1
+      },
+      "room": {
+        "cells": [
+          [
+            -4,
+            -3
+          ],
+          [
+            -4,
+            -2
+          ],
+          [
+            -3,
+            -2
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "vertices": [
+          [
+            -4,
+            -3
+          ],
+          [
+            -4,
+            -1
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            -3,
+            0
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            -3,
+            -2
+          ],
+          [
+            -3,
+            -3
+          ]
+        ],
+        "walls": 30,
+        "corners": [
+          [
+            -4,
+            -3
+          ],
+          [
+            -4,
+            -1
+          ],
+          [
+            -3,
+            -3
+          ],
+          [
+            -3,
+            -2
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            -3,
+            0
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "convex": [
+          [
+            -4,
+            -3
+          ],
+          [
+            -4,
+            -1
+          ],
+          [
+            -3,
+            -3
+          ],
+          [
+            -3,
+            0
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "concave": [
+          [
+            -3,
+            -2
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "smooth": [
+          [
+            -4,
+            -2
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "interior": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "atomic_edges": [
+          [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          [
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ]
+          ],
+          [
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          [
+            [
+              -4,
+              -3
+            ],
+            [
+              -3,
+              -3
+            ]
+          ],
+          [
+            [
+              -3,
+              -3
+            ],
+            [
+              -3,
+              -2
+            ]
+          ],
+          [
+            [
+              -4,
+              -3
+            ],
+            [
+              -4,
+              -2
+            ]
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          [
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              -1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          [
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              -3
+            ],
+            [
+              2,
+              -3
+            ]
+          ],
+          [
+            [
+              2,
+              -3
+            ],
+            [
+              2,
+              -2
+            ]
+          ],
+          [
+            [
+              1,
+              -3
+            ],
+            [
+              1,
+              -2
+            ]
+          ],
+          [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          [
+            [
+              -4,
+              -1
+            ],
+            [
+              -3,
+              -1
+            ]
+          ],
+          [
+            [
+              -4,
+              -2
+            ],
+            [
+              -4,
+              -1
+            ]
+          ],
+          [
+            [
+              -3,
+              -2
+            ],
+            [
+              -2,
+              -2
+            ]
+          ],
+          [
+            [
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -1
+            ]
+          ],
+          [
+            [
+              -3,
+              0
+            ],
+            [
+              -2,
+              0
+            ]
+          ],
+          [
+            [
+              -3,
+              -1
+            ],
+            [
+              -3,
+              0
+            ]
+          ],
+          [
+            [
+              -1,
+              -1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          [
+            [
+              -2,
+              -1
+            ],
+            [
+              -1,
+              -1
+            ]
+          ],
+          [
+            [
+              -2,
+              0
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          [
+            [
+              2,
+              -2
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              1,
+              -2
+            ]
+          ],
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              0,
+              -1
+            ]
+          ]
+        ],
+        "euler": 1
+      },
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "seams": [
+        {
+          "copies": [
+            0,
+            1
+          ],
+          "edges": [
+            [
+              [
+                -1,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "copies": [
+            0,
+            3
+          ],
+          "edges": [
+            [
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "copies": [
+            1,
+            2
+          ],
+          "edges": [
+            [
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          ]
+        }
+      ],
+      "point_contacts": [
+        {
+          "copies": [
+            1,
+            3
+          ],
+          "points": [
+            [
+              -1,
+              0
+            ]
+          ]
+        }
+      ],
+      "reversal_points": [
+        {
+          "physical": [
+            -1,
+            -1
+          ],
+          "base": [
+            -1,
+            -1
+          ],
+          "copies": [
+            0,
+            3
+          ],
+          "wall": "horizontal",
+          "folded_velocity_factor": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "physical": [
+            1,
+            0
+          ],
+          "base": [
+            1,
+            0
+          ],
+          "copies": [
+            0,
+            1
+          ],
+          "wall": "vertical",
+          "folded_velocity_factor": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "physical": [
+            2,
+            1
+          ],
+          "base": [
+            2,
+            -1
+          ],
+          "copies": [
+            1,
+            2
+          ],
+          "wall": "horizontal",
+          "folded_velocity_factor": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "physical": [
+            2,
+            3
+          ],
+          "base": [
+            2,
+            -3
+          ],
+          "copies": [
+            1,
+            2
+          ],
+          "wall": "horizontal",
+          "folded_velocity_factor": [
+            -1,
+            -1
+          ]
+        }
+      ],
+      "corner_incidence_locations": [
+        {
+          "physical": [
+            -4,
+            -3
+          ],
+          "base": [
+            2,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            -4,
+            -1
+          ],
+          "base": [
+            2,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            -3,
+            -3
+          ],
+          "base": [
+            1,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            -3,
+            -2
+          ],
+          "base": [
+            1,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            -3,
+            -1
+          ],
+          "base": [
+            1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            -3,
+            0
+          ],
+          "base": [
+            1,
+            0
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            -2,
+            -2
+          ],
+          "base": [
+            0,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            -2,
+            -1
+          ],
+          "base": [
+            0,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            -1,
+            0
+          ],
+          "base": [
+            -1,
+            0
+          ],
+          "copy_incidences": 3,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            -1,
+            1
+          ],
+          "base": [
+            -1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            0,
+            -2
+          ],
+          "base": [
+            0,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            0,
+            -1
+          ],
+          "base": [
+            0,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            0,
+            1
+          ],
+          "base": [
+            0,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            0,
+            2
+          ],
+          "base": [
+            0,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            1,
+            -3
+          ],
+          "base": [
+            1,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            1,
+            -2
+          ],
+          "base": [
+            1,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            1,
+            -1
+          ],
+          "base": [
+            1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            1,
+            1
+          ],
+          "base": [
+            1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            1,
+            2
+          ],
+          "base": [
+            1,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            1,
+            3
+          ],
+          "base": [
+            1,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            2,
+            -3
+          ],
+          "base": [
+            2,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            2,
+            -1
+          ],
+          "base": [
+            2,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            3,
+            0
+          ],
+          "base": [
+            1,
+            0
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            3,
+            1
+          ],
+          "base": [
+            1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            3,
+            2
+          ],
+          "base": [
+            1,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            3,
+            3
+          ],
+          "base": [
+            1,
+            -3
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            4,
+            1
+          ],
+          "base": [
+            0,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 3
+        },
+        {
+          "physical": [
+            4,
+            2
+          ],
+          "base": [
+            0,
+            -2
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            5,
+            0
+          ],
+          "base": [
+            -1,
+            0
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        },
+        {
+          "physical": [
+            5,
+            1
+          ],
+          "base": [
+            -1,
+            -1
+          ],
+          "copy_incidences": 1,
+          "angle_units": 1
+        }
+      ],
+      "mark_fibers": {
+        "a": [
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "b": [
+          [
+            -4,
+            -2
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    }
+  ],
+  "reflection_parity_controls": 169,
+  "halving_controls": 288,
+  "scope": "Prescribed constructions, exact topology, complete corner incidence and reversal matrices. No ray searches or proof by bounded non-finding."
+}

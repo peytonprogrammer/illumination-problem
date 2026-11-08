@@ -1,0 +1,26 @@
+ANGLE-CHANGING LOCAL RIGIDITY — bounded screen, provisional
+
+Question: do the 147 already saved reflex-corner events certify local isolation of the known 22-wall dark room among all 22-vertex polygons with two moving interior marks?
+
+Chart: ordered vertices v0,...,v21 and S,T, 48 real coordinates. Strict simplicity, nonzero edges, interior marks and reflex/convex types are open conditions. Known dark family M has dimension 5: translations (2), common rotation (1), and two independent positive axis scalings (2). Independent axis scaling preserves orthogonal billiards, and common rotation preserves Euclidean billiards. No affine conjugacy is assumed for tilted polygons.
+
+Local event lemma to audit: fix a saved word with exactly one limiting reflex vertex, at most one reflection there, and strict transverse interior hits elsewhere. Unfold by the actual reflections in the varying edges. Let A be unfolded target minus source, C the corresponding unfolded corner minus source, and f=side*det(A,C), with side transported from the saved directional resolution. Near the base, f<0 gives a legal connection in that word. For a zero-reflection corner passage, the line avoids the missing convex wedge on precisely that side. For a one-reflection passage, the unfolded two-edge wedge has the corresponding open side and strict angular margins; the selected incident-wall hit moves into that edge. Edge tilts small enough preserve these strict directional margins. This needs independent checking; a determinant/rank alone is not an optical proof.
+
+Nonlinear step if the gradient cone is sufficient: each f_i vanishes on M. Suppose its gradients positively span the normal quotient at the base, meaning every unit normal n has some df_i(n)<-c. A smooth local nearest-point projection z -> m in M exists because M is an embedded smooth 5-manifold. Continuity of the finite gradient family and normal spaces gives the same estimate with c/2 at every nearby m. Taylor remainder is uniformly O(dist(z,M)^2). Thus every sufficiently near z outside M has f_i(z)<0 for some i and illuminates. This avoids applying anisotropic scaling to a tilted polygon. Reverse inclusion follows from the known dark family. No explicit neighborhood radius or global minimality follows.
+
+Computational success criterion: exact rank 43 plus a strict positive dependency or equivalent exact positive spanning on the 43-dimensional normal quotient. Failure criterion: an exact nonsymmetry tangent satisfying all 147 inequalities, or a local optical-criterion defect. No new event words or directions will be generated.
+
+
+RESULT — certificate extension fails; no general-polygon rigidity theorem proved.
+
+The full exact gradient matrix has rank 43 in 48 coordinates. Its kernel is exactly the five-dimensional tangent of the known dark family. Each of its 147 restrictions to the orthogonal chart matches the old row modulo the two closure equations.
+
+Rank does not establish the required signs. The LP proposing weights >=1 for a zero weighted sum was infeasible; this numerical answer is NOT the proof. The exact proof of failure is strict-escape.json: a rational nonsymmetry vector d with g_i.d > 0 for EVERY one of the 147 saved rows. A first rational vector had 106 positive and 41 zero responses. Those 41 rows have exact rank 41. Solving g_i.z=1 on those rows and choosing a sufficiently small positive rational eta gives d+eta*z with all 147 responses positive. Every inequality is verified exactly. This rules out any strictly positive zero dependency directly, independently of the optimizer's infeasibility report.
+
+The independent calculation in validate.py reflects dual-number points in the actual general lines, applying each frozen word in reverse. It does not use the analytic affine-matrix derivative recurrence of check.py. It checks all 147 events on three parameter vectors (441 derivatives): the initial survival vector, its strict perturbation, and a deterministic general coordinate vector. The strict vector and all 147 positive responses agree exactly. This is independent algebra inside Codex, not an independent Opus review.
+
+Because f_i(base)=0 and df_i(d)>0, smoothness alone gives f_i(base+epsilon*d)>0 for every i and all sufficiently small epsilon>0. Strict simplicity and interior marks persist by openness. Under the local one-sided event lemma, these are the nonconnecting sides of the saved words. Therefore higher-order terms cannot rescue THIS 147-word certificate along this direction. Actual darkness has not been shown: other paths may connect immediately. Local rigidity itself has NOT been refuted, nor has the existing fixed-angle theorem been weakened.
+
+The gradient method remains a possible general approach with genuinely different path constraints. This bounded extension is retired. Neither a larger event search nor second-order analysis of these same 147 functions is justified by this result. A new argument would need to account for paths absent from this certificate; no assertion is made that they must have multiple corner limits, or that one further single-corner path cannot suffice.
+
+Coordination: posted the inputs and reproduction commands for independent Opus review. No peer ACK or completed angle review has been received. Earlier singularity and attainment reviews are accepted; R5 sampling remains parked.

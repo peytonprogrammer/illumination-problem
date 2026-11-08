@@ -1,0 +1,95 @@
+Complete necessary marked-support census: orthogonal W<=20, k<=7
+4 November 2026 — authorized step1 only
+
+[done] Result:36 unmarked full-A support shapes,61 raw nonadjacent unordered marked pairs,56 marked-pair symmetry orbits. All supports have I=2 or3. The coarse I4 branch and all five normalized I2 distance8 placements are excluded by the orthogonal geometry arguments below. This is a complete NECESSARY support cover, not a feasibility classification of room completions and not an illumination result for k=7. No pilot or room/ray search was run.
+
+1. Exact class and coordinates
+The model is the fixed canonical45-degree integer triangulation from ../restricted-theorem-note/theorem.txt: A points are even/even, B odd/odd, C mixed parity. Each unit square has its A-B diagonal. A star is the eight-triangle square of side2 centered at A. A room is a finite union of these triangles with one strictly simple Jordan polygon boundary and connected interior. Marks are two distinct interior A points, and walls are maximal boundary segments.
+This task restricts the room to ORTHOGONAL boundaries. Hence either both triangles of every unit square occur or neither occurs: otherwise an exposed A-B diagonal would be a nonorthogonal boundary edge. Thus these rooms are unit-square unions on this fixed grid.
+Let I count ALL interior A points, not merely the two selected marks. Let J count interior B/C points, s_N smooth boundary B/C points, and k=J+s_N. Boundary A points are not included in k. Let s_A count smooth boundary A points. At a genuine boundary A corner let m_v count its incident triangles, and put Q=3s_A+sum m_v.
+Use A-CELL coordinates: an A point(2x,2y) has cell coordinate(x,y). The full-star set is F subset Z^2, |F|=I. All translations and D4 symmetries below preserve this fixed presentation. No assertion covers arbitrary real rooms/marks or unbounded k.
+The new tranche of interest has exactly k=7 since k<=6 is already excluded optically by the earlier theorem. All necessary bounds here use k<=7, a conservative cover of the exact-seven tranche.
+
+2. Existing counting and window lemmas
+Euler and A-incidence give
+  N=8I+Q+s_A,
+  W=2+6I+Q-2J-s_N,
+  Q+s_N=W+2k-2-6I.                         (1)
+The earlier support-sensitive charge gives Q+s_N>=b(F), where
+  R=F union its external axis neighbors,
+  b(F)=|R minus F|.
+In particular b(F)>=4, so W<=20,k<=7 implies I<=4. The prior triangle bound is
+  N<=floor(4(W-2+2k)/3)<=42.
+Orthogonality makes N even, so at most21 original unit squares may be selected. This bounds a room's size, not the larger finite universe of possible cells.
+Let U be all occupied A cells, P=|U minus F| the number of nonempty partial A fans, and m=|R minus U| the empty external neighbors. Empty external-neighbor cells inject into distinct smooth C midpoints, so m<=s_N. Also b<=P+m.
+The earlier degree count gives
+  P+m<=floor((W-4I+2k)/2),
+with coarse caps13,11,9 for I=2,3,4.
+H=U union R is axis-connected: U is connected by actual BC-edge contacts, and each extra cell of R attaches to its full cell in F. Moreover
+  |H|=I+P+m,
+  o:=|U minus R|=P+m-b.
+Thus with any valid cap C on P+m, every occupied outside cell is within C-b axis steps of R. Indeed an H-path from it to R uses distinct outside cells until first entering R, and there are at most C-b such cells. The safe finite A-cell universe is
+  Allowed(F)= {z : ManhattanDistance(z,R)<=C-b}.           (2)
+Cells in R are NOT all required occupied; some may be empty. The JSON deliberately calls R 'neighborhood', not a set of forced occupied cells.
+Sources for these reused lemmas: ../proofs/placement-enumeration.md, ../bounded-proof/support-proof.md, ../exception-geometry/argument.txt and ../restricted-theorem-note/theorem.txt.
+
+3. Stronger cap from orthogonality; I4 excluded
+At a partial A cell, an orthogonal boundary allows one, two or three consecutive occupied unit quadrants. These contain2,4,6triangles and respectively contribute2,3,6to Q. The middle case is a smooth boundary A point. In every case its contribution is at least2. Hence
+  Q>=2P.                                                (3)
+Using(1), m<=s_N and s_N<=k,
+  2(P+m)<=2P+2s_N<=Q+2s_N
+            =W+2k-2-6I+s_N<=W+3k-2-6I.
+Therefore
+  P+m<=floor((W+3k-2-6I)/2).                            (4)
+At W<=20,k<=7 the caps are
+  I2:13, I3:10, I4:7.
+Every four-point F has b(F)>=8, as hand-proved and peer-reviewed in ../exception-geometry/four-cell-hand-proof.txt (and its cited charge review). Since b<=P+m<=7, the entire I4 branch is impossible for this ORTHOGONAL tranche.
+This corrects the earlier assessment: I4 reopens in the coarser canonical45 model, but closes again after applying orthogonality. No I4 room assignments or SAT solves are needed.
+For reference only, the coarser bound(1) would force b<=8 at I4. Its three equality shapes O/T/S are explicitly reconstructed in count.json and independently by connected growth in verify.py. All are excluded by(4). The equality-pattern list is not needed for the all-I4 exclusion.
+
+4. I2: a complete displacement range, then exclude distance8
+If I=2 the full cells are the two marked cells. Distance1 pairs are directly illuminated: the union of their full stars contains the open marked segment. Translate one to0 and use D4/reversal to write the other as(x,y), x>=y>=0. Put d=x+y.
+Since H has at most I+C=15cells, d<=14 is a complete initial finite domain. For d>=3 the two radius-one full-cell neighborhoods have b=8 external cells. Connecting them requires at least d-3 occupied cells outside R. The outside budget is C-b=13-8=5. Thus d<=8. At d=2 both normalized offsets(1,1),(2,0) are included with their correct b=6,7.
+The d=8 cases are all impossible under orthogonality. Here is the complete geometric argument, rather than a direction or room search.
+Let e=|U intersect(R minus F)| be the occupied external cells and o=|U minus R|. The two full-cell neighborhoods are disjoint and far apart. Each full cell needs an occupied neighbor to connect to the rest of U, so e>=2. Any connecting path between the neighborhoods uses at least5outside cells, so o>=5. Since b=8,
+  P=e+o, m=8-e.
+By(1) with I=2, Q+s_N<=20. By(3) and m<=s_N,
+  Q+s_N>=2P+m=8+e+2o>=8+2+10=20.
+Every inequality is therefore equality. In particular e=2,o=5,P=7,m=6, and Q=2P. ALL seven partial A cells are single occupied UNIT QUADRANTS, with charge2; no other partial cells exist.
+A single occupied quadrant is one unit square in its A cell, with exactly one odd/odd B corner. Its two outer BC edges meet that same B corner. Two such partial A cells can connect across their common A-cell side only by sharing one of those BC edges; therefore their selected unit squares have the SAME global B corner. Every connected component made only of these quarter-fan partial cells consequently has one common B corner and contains at most FOUR A cells, the four around that B.
+But U contains only the two full cells and seven partial cells. A simple occupied-cell path between the full cells has at least d=8edges, hence at least seven intervening partial cells. They form one connected partial-only chain. Such a chain cannot fit in a component of at most four cells. Contradiction.
+Thus ALL five normalized d8 offsets(4,4),(5,3),(6,2),(7,1),(8,0) are excluded. No selected room or ray has been enumerated to obtain this exclusion.
+What remains is exactly every normalized displacement with2<=d<=7:
+  d2:(1,1),(2,0);
+  d3:(2,1),(3,0);
+  d4:(2,2),(3,1),(4,0);
+  d5:(3,2),(4,1),(5,0);
+  d6:(3,3),(4,2),(5,1),(6,0);
+  d7:(4,3),(5,2),(6,1),(7,0).
+There are18 I2 support/marked-pair cases. Their cell universes use C=13, one more than the old k6 universe cap12.
+
+5. I3: finite and complete even with disconnected full-star overlap
+For I=3, (4) gives C=10. H has at most13cells. Rooting ANY full cell at0 places the other two in the Manhattan-radius12diamond, since a simple H-path has at most12edges. count.py examines every unordered pair of other full cells in that diamond. It retains b<=10 and connected R.
+Why is connected R necessary here? Join full cells whose Manhattan distance is at most2. Different components have disjoint external-neighbor sets. A singleton needs4external neighbors, a pair at least6, and three singletons need12. If this full-cell overlap graph is disconnected and b<=10, it must be a pair plus a singleton with b=10. Then C-b=0 leaves no occupied cells outside R, so H=R must be connected. If the overlap graph is connected, its neighborhoods already overlap and R is connected automatically. Thus rejecting disconnected R loses no eligible room.
+This retains306rooted triples and18unmarked support shapes after translation/D4. Eight of the18 shapes have DISCONNECTED distance-two full-cell overlap graphs and must not be discarded. They still have connected R because radius-one neighborhoods can meet by an edge when full-cell distance is3.
+Every nonadjacent unordered pair among the three full cells is retained. This gives43raw pairs and38marked-pair symmetry orbits. No transitivity of illumination through the third full cell is assumed.
+An independently written reconstruction grows connected sets of full cells with link distance<=3, then applies b<=10 and connected R. It yields the same18 shapes without using the radius12 enumeration. Completeness follows since R is connected iff the graph on full cells with links of Manhattan distance<=3 is connected. A spanning-tree order permits building every such support one point at a time.
+
+6. Mark symmetry and output inventory
+Two supports are identified only by integer A-cell translations and D4 signed coordinate permutations. Marked cases additionally carry the unordered pair of actual marks; reversal is legitimate by billiard reversibility. A symmetry of the unmarked support may exchange equivalent pairs; pairs in different orbits remain separate.
+Counts:
+  I2:18 supports,18 raw pairs,18 marked orbits;
+  I3:18 supports,43 raw pairs,38 marked orbits;
+  I4:0 retained supports, entirely excluded by geometry;
+  total:36 supports,61 raw pairs,56 marked orbits.
+The primary canonicalizer translates by each full-cell anchor; the verification canonicalizer translates to bounding-box minima and uses rotation/reflection images. verify.py compares the resulting shape and marked-pair orbit sets, all raw pairs, orbit representatives/multiplicities and every universe cell from(2).
+count.json is the full machine-readable necessary cover, including allowed cells, raw actualmark pairs in A-cell and original coordinates, orbit representatives, bounds and geometric exclusions. marked-cases.json/tsv list the56 nonredundant marked cases, referring back to their support rows. supports.tsv lists all36 supports. findings.txt provides the compact human table and result.
+
+7. What is new, and what has NOT been established
+The36 support shapes and56 marked-pair orbits MATCH the previous W<=21,k<=6 canonical census. This was verified as equality of the actual marked geometry, not just matching counts. New work here is the orthogonal cap, exclusion of the five distance8 cases and reopened I4 branch, complete rederivation for the new tranche, and larger safe I2 completion universes.
+Matching supports does NOT prove k7 illumination or make the previous contradiction certificates applicable: k7 permits different room completions inside those supports. The selected geometry constraints must change in a separately authorized pilot. k is presentation-dependent; this does not cover arbitrary real20-gons, arbitrary marked points, nonorthogonal canonical45 rooms, or rational rooms after unrestricted rescaling.
+The list is a necessary cover, not a proof that every retained support has a W20/k7 orthogonal completion, and not the number of rooms or a runtime estimate. No actual candidate rooms, rays, reflection words, optical guard libraries or origami orbits were generated or tested. Step2/pilot remains unstarted.
+
+8. Validation and review
+count.py completes the root-diamond support enumeration; verify.py separately rebuilds supports by connected growth and checks all inventory fields. It also checks the12orthogonal partial-fan masks and64prescribed neighboring-quarter combinations, of which8share an edge; every connected pair has the same B corner. The four-cell hand bound and the all-room counting arguments remain mathematical inputs; local controls alone do not prove completeness or the distance8 theorem.
+verification.json reports PASS and binds the exact count.json hash. The baseline k6 JSON is frozen under inputs/ with SHA256 in the result. Both scripts use only the Python standard library and never import the SAT/optical runner. These are separately implemented same-agent checks, NOT an independent peer review. An optional peer HANDchallenge of the two new orthogonal arguments is requested on the board; no review is assumed running or accepted.

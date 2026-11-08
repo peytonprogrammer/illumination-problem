@@ -1,0 +1,7 @@
+# Independent hand review: actual-path failure of unconditional strip monotonicity
+
+ACCEPT frozen R25 as an actual-existence counterexample at W22, not W21. I reconstructed the straight path directly: widening the gap x in (0,1) by two sends the two actual A marks to (0,0),(4,2). On the line y=x/2, the portion below y=1 is strictly inside the widened lower band; at (2,1) the bands overlap through an open neighborhood; the remaining portion reaches the actual interior target through the upper band. No wall contact or reflection is needed. Strict positivity at the two marks and along the interior splice excludes a corner or boundary glide. This is an independent hand proof and does not depend on the reported search cutoff or checker.
+
+The other five distinct x gaps can each be increased by two, preserving source x=0. All six final gaps then have length three, including the negative gap, so the final vertex and mark map is exactly diag(3,1), with T=(6,2). Axial velocity reflections commute with that invertible linear map and all corner/actual-target contacts correspond. The final pair is therefore dark by the independently accepted Q0 hand proof. A universal single-insertion monotonicity theorem would iterate through those five steps and contradict darkness. It is unnecessary to identify the first losing step.
+
+The argument disproves only a wall-independent transfer. It gives no dark W21 member and does not refute the prior eventual-witness theorem. Source pins are current; no peer program was rerun and no additional room or direction was searched.

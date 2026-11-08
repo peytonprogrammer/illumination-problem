@@ -1,0 +1,128 @@
+Two D-minus L residues: a common 32-reflection connection
+4 November 2026, Codex01a18403
+
+Status: hand-derived path with exact rational actual-boundary checks PASS.
+Independent peer review requested; this is not a universal wall minimum.
+
+1. Claim and exact scope
+
+The two rooms below connect actual S=(0,0) to actual T=(2,2).
+These are precisely Louter3_Nbplus_Dminus and Louter4_Nbplus_Dminus
+from the accepted single-e2+b2 seven-residue reduction. Each consists of
+H plus its indicated L fan and B+, D-, E-, T-, Nb+.
+The room ledgers were independently accepted in single-e2-independent/.
+The claim includes sigma images via sigma(x,y)=(2-y,2-x) and path reversal.
+No arbitrary cap completion or other surplus-four partition is asserted.
+
+The polygon interiors are bounded by the following cyclic vertex lists:
+
+Louter3_Nbplus_Dminus:
+(-3, 1), (-2, 0), (-1, 0), (-1, -1), (0, -1), (0, -2), (1, -1), (2, -2), (2, -1), (3, -1), (3, 1), (4, 2), (3, 2), (3, 3), (2, 3), (2, 4), (1, 3), (1, 1), (0, 2), (0, 1)
+
+Louter4_Nbplus_Dminus:
+(-3, 0), (-1, 0), (-1, -1), (0, -1), (0, -2), (1, -1), (2, -2), (2, -1), (3, -1), (3, 1), (4, 2), (3, 2), (3, 3), (2, 3), (2, 4), (1, 3), (1, 1), (0, 2), (0, 1), (-3, 1)
+
+2. Geometric idea and derivation
+
+Launch down-left from S with velocity (-1,-d). This uses the lower-left
+source wall, avoiding the previously exhausted first-left-pocket launch.
+A B+ excursion and three source-wall hits feed the northwest Nb+ cap.
+The path then alternates between Nb+ and D- three times. Its last D-
+return feeds E-, a flat upper-left wall, and T-, finally reaching T.
+It never enters the L pocket, so the same physical path serves both rooms.
+
+All gate states listed here use positive rescalings of the actual velocity;
+gate crossings are not reflections. Each identity follows by intersecting
+straight lines and applying v -> v-2(n dot v)n/(n dot n) to its named mirror.
+
+After the first S-left reflection, B+ side return crosses y=-1 at
+(2-3d,-1), velocity(-d,1). Source roof, left wall, then floor lead to
+(7d-4,-1), velocity(d,1). The six successive cap returns across y=+/-1 are:
+ Nb+: (11d-4,1), (d,-1)
+ D- : (8-15d,-1), (-d,1)
+ Nb+: (19d-8,1), (d,-1)
+ D- : (12-23d,-1), (-d,1)
+ Nb+: (27d-12,1), (d,-1)
+ D- : (31d-12,-1), (d,1).
+The last E- entry is (3,15/d-32), velocity(d,1).
+E-'s horizontal/diagonal pair returns at (3,35d-14), velocity(-1,d).
+The upper left wall x=1 is hit at height37d-14; reflect to velocity(1,d).
+The T- portal entry is (17/d-36,3). Its vertical/diagonal pair returns at
+(39d-16,3), velocity(d,-1). Thus the last y=2 crossing has x=40d-16.
+Solving for actual T gives d=9/20, hence integer launch(-20,-9).
+These gate equations select the candidate only. Legality is established
+at this exact value in the finite polygons, as detailed next; no whole
+parameter interval is needed or asserted.
+
+3. Exact witness and finite verification
+
+Start P0=(0,0). The table lists every reflection, its supporting mirror,
+and its strict wall parameter u in the FIRST polygon's cyclic wall order:
+Pi=A+u(B-A). Every u lies in (0,1); no contact is a polygon vertex.
+ 1: (-1, -9/20); x=-1; u=9/20
+ 2: (22/29, -36/29); x-y=2; u=22/29
+ 3: (-1/4, 1); y=1; u=1/12
+ 4: (-1, -2/3); x=-1; u=2/3
+ 5: (-17/20, -1); y=-1; u=3/20
+ 6: (10/29, 48/29); x+y=2; u=19/29
+ 7: (0, 3/2); x=0; u=1/2
+ 8: (10/11, 12/11); x+y=2; u=1/11
+ 9: (2, -4/3); x=2; u=2/3
+10: (52/29, -52/29); x+y=0; u=23/29
+11: (2, -17/10); x=2; u=3/10
+12: (16/11, -16/11); x+y=0; u=5/11
+13: (0, 16/9); x=0; u=2/9
+14: (2/29, 56/29); x+y=2; u=27/29
+15: (0, 19/10); x=0; u=1/10
+16: (2/11, 20/11); x+y=2; u=9/11
+17: (20/11, -20/11); x+y=0; u=9/11
+18: (2, -19/10); x=2; u=1/10
+19: (56/29, -56/29); x+y=0; u=27/29
+20: (2, -16/9); x=2; u=2/9
+21: (6/11, 16/11); x+y=2; u=5/11
+22: (0, 17/10); x=0; u=3/10
+23: (6/29, 52/29); x+y=2; u=23/29
+24: (0, 4/3); x=0; u=2/3
+25: (12/11, -12/11); x+y=0; u=1/11
+26: (2, -3/2); x=2; u=1/2
+27: (48/29, -48/29); x+y=0; u=19/29
+28: (33/10, 2); y=2; u=7/10
+29: (102/29, 44/29); x-y=2; u=15/29
+30: (1, 53/20); x=1; u=7/40
+31: (2, 31/10); x=2; u=1/10
+32: (40/29, 98/29); x-y=-2; u=18/29
+End P33=(2,2). There are 32 reflections.
+
+The finite verification uses exact rational arithmetic, without tolerances:
+(a) S and T are strictly interior by horizontal crossing parity.
+(b) Each intermediate Pi is strictly within one maximal boundary wall.
+(c) Reflection across that wall takes Pi-P(i-1) to a positive multiple
+    of P(i+1)-Pi (cross product zero and dot product positive).
+(d) For each segment p->q and each wall a->b, set v=q-p, w=b-a.
+    If det(v,w) is nonzero, the intersection parameters are
+    t=det(a-p,w)/det(v,w), u=det(a-p,v)/det(v,w).
+    None has 0<t<1 and 0<=u<=1. Parallel collinear wall intervals have
+    no positive-length overlap with the segment. Each segment midpoint
+    is strictly interior. Thus every open segment is entirely interior,
+    and every listed reflection is the actual first boundary contact.
+
+The identical four tests pass in both polygons, in reverse, and after
+sigma plus reversal. The full canonical triangle required/forbidden
+sets are also stored and checked against each frozen room.
+The coordinate/first-wall argument alone proves these two finite claims;
+the canonical guard code is an additional consistency check and is shared
+infrastructure, not independent verification.
+
+4. Consequence and limitations
+
+Together with the accepted Bfullwest four-reflection theorem and the
+peer's R-minus 21/19-reflection result, these paths close all seven exact
+residues of the one-e2+b2 reduction, once independent reviews are complete.
+The resulting bound for this partition is at most32 reflections (the
+inherited nine already-closed cases have smaller bounds).
+Other local and remote Delta4 partitions remain open. No dark example,
+universal 22-wall minimum, or higher-surplus theorem follows.
+
+Reproduce: python3 -B .context/illumination-k4-codex/fourth-surplus-review/two-left-D/check.py
+Inputs geometry.json; output check.json. Only the single hand-derived
+path is evaluated on the two frozen supplied rooms; no discovery search.

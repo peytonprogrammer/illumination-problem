@@ -1,0 +1,36 @@
+Proof-hardening map for the at-most-six-exception lower bound
+
+[done] Initial dependency assessment, Codex,2026-11-02. No solving, guard discovery, room enumeration or trajectory search was run. This report does not upgrade any existing verification claim.
+
+Exact target
+No strictly simple slit-free room formed from the fixed canonical45-degree lattice triangles, with two distinct interior even-even A marks and at most six non-A lattice vertices that are interior or smooth boundary points, can be dark with at most21 maximal walls. The lattice presentation and mark restriction are essential. This is not universal22-wall minimality.
+
+Logical chain that needs independent justification
+1. Every eligible polygon obeys the counting bounds, has I=2,3 or4 full A stars, and admits an allowed full-star support/marked-pair normalization.
+2. Every eligible room is contained in the finite triangle universe for one listed support. Neither a coordinate cutoff, a hidden assumption on exception locations, nor symmetry normalization may remove it.
+3. Its triangle assignment extends to a satisfying assignment of all necessary geometry CNF clauses. This is the semantic direction that matters. It is acceptable for the formula to admit spurious rooms. Byte-identical regeneration alone cannot prove that the encoding includes every legal room.
+4. Every optical guard is a universally valid sufficient condition for an actual corner-avoiding connection between the physical marks. Thus a dark room satisfies each added negated guard. This includes smooth lattice hits, endpoint stars, U/Z triangle conditions, symmetry and mark reversal, and triangles outside the case universe.
+5. Every added CNF clause is derived from such a guard or from justified geometry. The saved CNF has no unexplained pruning, solver assumptions, timeout exclusions or unreconciled late clauses.
+6. A proof checker verifies a contradiction for that precise CNF, with frozen case/source/certificate hashes. The I4 cases and all symmetries/marked pairs must be accounted for.
+
+Existing evidence, not new results
+Coverage has a prior independent census:61 raw I2/I3 marked cases (18+43),56 symmetry orbits, plus3 I4 equality configurations. I4 proofs were all independently regenerated and replayed. The prior Codex k6 review checked every61 result hash and every full base-clause prefix; it compared the complete case multiset with the independent census. It freshly replayed3 DRAT samples and6 guard samples, with48 symmetry/reversal controls.
+
+Opus reports full replay of all61 contradiction proofs and all175601 k6 saved guards, plus prior k5 library validation. Its provenance pass covers875332 added clauses across61 cases, with zero unexplained and13 base-only cases. Codex inspected the full provenance receipts but has not independently reconstructed the entire guard/clause relation. These full checks exist; they must not be described as entirely unchecked. Independence is currently sampled on the Codex side.
+
+What this turn checked
+Read the frozen encoder source, prior mathematical placement/finite-support proof, independent k6 audit source, and peer provenance source. The source's local fan rows, exact full-A support, triangle/cell reachability, cardinality caps and Gauss--Bonnet condition have identifiable mathematical obligations. No evident contradiction was found in this bounded read-through, but that is not a completed semantic encoder proof or audit of the imported cardinality/PB libraries.
+
+Inventoried immutable files:61 CNFs total about300.65MiB; DRAT proofs total about8343.96MiB (about8.15GiB). Largest proofs are about1.25GB,1.39GB and1.71GB. One prior sampled replay took38.8seconds; this does not give a reliable total-runtime forecast. No large replay was launched just to produce another PASS count.
+
+Highest-value remaining work
+A. Independent semantic necessity audit: write down an extension assignment for every encoder auxiliary family starting from an arbitrary legal room, and prove each clause family. Prioritize finite universe, reachability depths and the P+missing bound over rereading solver logs. Include the true hypotheses and the exact kmax6 specialization. A stronger theorem requires a different reduction, not a larger SAT run.
+B. Independent complete premise reconstruction: mechanically regenerate every added clause from validated frozen guards, without importing the solver/discovery runner. Record exact source, guard and output hashes. The existing peer provenance implementation imports run and uses the complete live library, so a small frozen, solver-free replay improves reviewability.
+C. Full independent saved-certificate and saved-guard replay, with resumable per-file receipts. This closes sampling reliance but should come after A/B; a verified contradiction of an unjustified premise set proves the wrong statement. Reuse existing exact verifiers and frozen inputs. No new optical discovery is needed.
+D. A public, minimal reproducibility bundle: mathematical reduction, fixed input manifests, pure checker entrypoints, dependency versions and a command that fails on a missing or altered certificate. Discovery/search code must not be required to validate a finished theorem. This is packaging work only after the proof obligations above are clear.
+
+Decision
+There are meaningful proof-hardening tasks beyond writing a summary or asking an expert for significance. The next mathematical task is semantic necessity/coverage; the next computational task is complete premise reconstruction. Formalizing the entire project in a proof assistant, increasing k, or extending direction searches is not justified as the default next step. This assessment is complete; no full recheck or strengthened theorem has been claimed.
+
+Sources
+Existing Codex proofs/placement-enumeration.md; global-route-review/findings.md4; k6-support-census/count.json; k6-i4-review/findings.md; k6-final-review/{findings.md,audit.py}; frozen k5-proof-pilot/inputs/encode.py; peer k6-run/{findings.md,provenance.py}. Source files are read-only during this assessment.

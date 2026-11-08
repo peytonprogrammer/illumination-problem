@@ -1,0 +1,16 @@
+{
+  "id": "A20-unequal-mouth-two-neck",
+  "started_utc": "2026-11-07T01:32:35.561592+00:00",
+  "aggregate_deadline_utc": "2026-11-07T01:46:35.561592+00:00",
+  "hypothesis": "Unequal fixed neck widths admit the same actual-target mechanism using separate integer periods and a weighted rotation step. All sufficiently large failures lie in finitely many weighted affine strips.",
+  "missing_implication": "Remove equal-width assumption from simultaneous two-neck illumination without freeing actual endpoint phase.",
+  "success_criterion": "Derive all fold signs with two periods, fit exact n1 mesh into slope interval, reverse orientation to cover unbalanced lengths, obtain finite lattice residual lines.",
+  "strongest_objection": "Two incommensurate neck periods cannot be replaced by a shared integer N; middle entry phase and slope must be solved jointly.",
+  "outputs": [
+    "coupled-neck-unequal-effort.json",
+    "coupled-neck-unequal-proof.md",
+    "coupled-neck-unequal-coverage.json",
+    "coupled-neck-unequal-review-request.json"
+  ],
+  "kind": "Hand proof synthesis; no discovery or workers"
+}

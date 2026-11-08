@@ -1,0 +1,58 @@
+{
+  "source": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/surplus-four-local/L7012-D23-search/room.json",
+  "tiles": 34,
+  "interior_A": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "interior_exceptions": [
+    [
+      -1,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "boundary_exceptions": [
+    [
+      -2,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "boundary_A_weights": {
+    "(-2, 0)": 3,
+    "(0, 2)": 1,
+    "(0, -2)": 1,
+    "(2, -2)": 2,
+    "(2, 4)": 1,
+    "(4, 2)": 1
+  },
+  "Q": 9,
+  "W": 20,
+  "k": 6,
+  "delta": 4
+}

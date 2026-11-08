@@ -1,0 +1,338 @@
+{
+  "status": "PASS",
+  "cases": 61,
+  "raw_added_clauses": 875332,
+  "unique_added_clauses": 875332,
+  "matched_unique_clauses": 875332,
+  "unexplained": 0,
+  "failed_cases": [],
+  "guard_records_read": 193480,
+  "guard_files": [
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/learned.jsonl",
+      "records": 17868,
+      "new_clause_witnesses": 314816,
+      "sha256": "2820188c352871135e3a00e14e347557c8de57be3fabab2cdf4e7f59a0862891"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-continuation/peer-guards.json",
+      "records": 10,
+      "new_clause_witnesses": 202,
+      "sha256": "f6b20dac5cd5d1ce491bb791e906d4ebce6aeb18ae7c31c866267a0917f19a72"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k5-proof-pilot/orbit-guard.json",
+      "records": 1,
+      "new_clause_witnesses": 35,
+      "sha256": "2cf039e283bf94751d8867bf65c76c4c7438309f53d89f7c5e35fb115b3cb897"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube0.jsonl",
+      "records": 988,
+      "new_clause_witnesses": 3856,
+      "sha256": "ab229da16a1833d44c9723a765ea3013b0e26a52670904205ed43746de91cee1"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube1.jsonl",
+      "records": 583,
+      "new_clause_witnesses": 1422,
+      "sha256": "afcb61b96de9d60d192f82e91a9c8379cd7bd9e7f578dab44fc8d4964f5092df"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube2.jsonl",
+      "records": 1151,
+      "new_clause_witnesses": 2338,
+      "sha256": "0904f775c44b51a97e0761ff169cd8d454d84c9d3540fd46a8a5884537f56348"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube3.jsonl",
+      "records": 913,
+      "new_clause_witnesses": 1034,
+      "sha256": "c23f8e2f2abefbb7a1459cad4392802b6e4c5467c6ca39cd0e89e180c502225d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube4.jsonl",
+      "records": 878,
+      "new_clause_witnesses": 884,
+      "sha256": "6b74037adfdbce7ded24394c35763e012b2fb4e21c564fcaa1c25fca0108eba2"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube5.jsonl",
+      "records": 245,
+      "new_clause_witnesses": 212,
+      "sha256": "9692202086f8a178421e4c6240437773d9108739a18b8c212976dc44f4fa18b1"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube6.jsonl",
+      "records": 950,
+      "new_clause_witnesses": 648,
+      "sha256": "53c853d20e14ccc2ad6dd4cd114837fe7d12166f4836eeb100fbb120db30a22a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.cube7.jsonl",
+      "records": 696,
+      "new_clause_witnesses": 320,
+      "sha256": "d7ae8343796c6c12315354314c1c07f419b1e9feb880e4053fd3508ff8bbe51a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_02-pair0/guards.jsonl",
+      "records": 24451,
+      "new_clause_witnesses": 98016,
+      "sha256": "21f11e8d8ec62ef2ca7f49e491f7cc23e44ae696b91615350e1a34776eaeba55"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_03-pair0/guards.jsonl",
+      "records": 6243,
+      "new_clause_witnesses": 24966,
+      "sha256": "0b9b6b380291a07561882c6b6c293dae631d304c5f11ba442e006ae0338e7473"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl",
+      "records": 30548,
+      "new_clause_witnesses": 127029,
+      "sha256": "6d45992ee7eccb35f2f0df43230d506e2517410347308456f4937c183ca2ff41"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube0.jsonl",
+      "records": 5445,
+      "new_clause_witnesses": 10714,
+      "sha256": "b89fdfee32b49c9e8bc1ab442b26b1b6a5a8891e6ad60620278d86caac952cde"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube1.jsonl",
+      "records": 4620,
+      "new_clause_witnesses": 7310,
+      "sha256": "2cf4aba3b2667e1243763671352976e5dfa23daa72b45833f8fd055a2254ed4b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube16.jsonl",
+      "records": 14,
+      "new_clause_witnesses": 28,
+      "sha256": "0d5b8c11a192192e73c74b12a0207efa3ede8bf863d11d85e78cbf9b68e6522b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube2.jsonl",
+      "records": 6096,
+      "new_clause_witnesses": 8323,
+      "sha256": "c003912db8075982553b3a71ad437b9f8d964813a4057041f69cf34528f96430"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube24.jsonl",
+      "records": 3,
+      "new_clause_witnesses": 6,
+      "sha256": "622b6ea95a248a7b29ed8294f6e33443079cbf8f05c164c0b0cc65eadfb3a58f"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube3.jsonl",
+      "records": 4615,
+      "new_clause_witnesses": 5416,
+      "sha256": "0275ac1a3dbf731974001a9885fd1f048cf48953de05d86e51dc654824c3054e"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube32.jsonl",
+      "records": 6,
+      "new_clause_witnesses": 12,
+      "sha256": "381e59cb53907cce63e9f8d6971f8ba361f0b494881f6d3f36fc1c620ba24973"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube4.jsonl",
+      "records": 5451,
+      "new_clause_witnesses": 5619,
+      "sha256": "6ef5cee3ddaa9770d46cf716f48c41932dd11b6b66d91c41b197bf7263b2a625"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube40.jsonl",
+      "records": 6,
+      "new_clause_witnesses": 10,
+      "sha256": "71be5ae537e2dee11a657d19ec11b1bde88a8e933ac56d0910ef1d8a156d32cb"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube48.jsonl",
+      "records": 6,
+      "new_clause_witnesses": 4,
+      "sha256": "343c2e1e7d24c4f1f8ac89f61e5be8683032d99d77698d2ad0273203e6d06a1d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube5.jsonl",
+      "records": 2391,
+      "new_clause_witnesses": 2144,
+      "sha256": "5c73721f73393eb0fee6c6f6f86317b67cb57474dc7d56b81bac3a12d8f1e8b2"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube56.jsonl",
+      "records": 14,
+      "new_clause_witnesses": 8,
+      "sha256": "eb3a62240fe2c6a210725deea8e1f24c337ea3b25637c9d05e2ea758b2f3267b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube6.jsonl",
+      "records": 4362,
+      "new_clause_witnesses": 3728,
+      "sha256": "859b054e6a9c9300f36cbcde16d62ac1895e42c7d695b3cf373551a5ea6d55c9"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube7.jsonl",
+      "records": 3034,
+      "new_clause_witnesses": 2582,
+      "sha256": "972d829a8c86b88ade437808ae1f252d4b86dacb49061725f6a608f0e84a2ff5"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.cube8.jsonl",
+      "records": 11,
+      "new_clause_witnesses": 10,
+      "sha256": "78eb21bc8a04f0fc28dc6bb35e37a9b6fc47f4ed10b6f56485e64d5a3522edf7"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_12-pair0/guards.jsonl",
+      "records": 27853,
+      "new_clause_witnesses": 56008,
+      "sha256": "fbd7462da5ca5eaaa4ed29b3f086ce936ae262360d9a148426d6db030db4a620"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_13-pair0/guards.jsonl",
+      "records": 8059,
+      "new_clause_witnesses": 16124,
+      "sha256": "3448eaea714c87d4acc49a8552da3c7729406c7cc2181b3e21b9f6f22b0bed78"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_22-pair0/guards.jsonl",
+      "records": 12230,
+      "new_clause_witnesses": 49110,
+      "sha256": "65bc0572f3f67095819bd4f6d2d4e37376341dc9af78b3bd5de266a2b4e0994c"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_23-pair0/guards.jsonl",
+      "records": 3291,
+      "new_clause_witnesses": 6574,
+      "sha256": "20b312f076c45cdbbd21423c333f930cf0ae92353d3fa6b06c712ace49e671c6"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I2_00_33-pair0/guards.jsonl",
+      "records": 12,
+      "new_clause_witnesses": 48,
+      "sha256": "887fab4a50de4b3b5bd0ce8c0c5064dbbe5545106354bfcf57e26247c9a01b49"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_02-pair0/guards.jsonl",
+      "records": 3443,
+      "new_clause_witnesses": 26312,
+      "sha256": "6ea1bf879facc5c416bde1d7e05e6cae0aafe09f8ed3e969a44b2c68c52fcb85"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_03-pair0/guards.jsonl",
+      "records": 80,
+      "new_clause_witnesses": 292,
+      "sha256": "137697a27cb2e851a426f1b9a64372ffbd6dc3178873ef780b61bb71a26c9a7b"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_03-pair1/guards.jsonl",
+      "records": 171,
+      "new_clause_witnesses": 1228,
+      "sha256": "8696396bf639235bf216d7f1796d13d1d6d0aca3ee05e952466c205775adc047"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+      "records": 3896,
+      "new_clause_witnesses": 28340,
+      "sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_12-pair0/guards.jsonl",
+      "records": 4823,
+      "new_clause_witnesses": 18210,
+      "sha256": "6154274e8304ecef732cc665656caace11d1533f06d99cc531faa4717d03bf9a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_12-pair1/guards.jsonl",
+      "records": 3936,
+      "new_clause_witnesses": 27512,
+      "sha256": "bb43a1ee85a8dac60e066da3341a8f32ba42a2b29ad453ebdea0436815da2a1f"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_13-pair0/guards.jsonl",
+      "records": 21,
+      "new_clause_witnesses": 33,
+      "sha256": "1bddda65cd1bdc5c33b3b6d606243457b398108149af2232794e451d6b3bc004"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_13-pair1/guards.jsonl",
+      "records": 19,
+      "new_clause_witnesses": 34,
+      "sha256": "ad268589d7b774e882f04121b98450bc5a7ee47c960c474ad49a5fb6d1bf1904"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_20-pair0/guards.jsonl",
+      "records": 574,
+      "new_clause_witnesses": 4392,
+      "sha256": "27b765318aa340c1bd292ec2556f08b99be51b5ef00535fa43e797fc9b539989"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_20-pair1/guards.jsonl",
+      "records": 521,
+      "new_clause_witnesses": 1968,
+      "sha256": "b968ecee393f7d965edadb524b2dd090b0ffab2e3021f1b4c97bbedbdf5390e3"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_22-pair0/guards.jsonl",
+      "records": 24,
+      "new_clause_witnesses": 48,
+      "sha256": "d3105d7bee4affad3d76ce2a0b05e61e7489a98d775432f13bd986fa0aa9ac1d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_22-pair1/guards.jsonl",
+      "records": 14,
+      "new_clause_witnesses": 44,
+      "sha256": "39017a359cff5c11db0ebbbc19be2a24b2d751d24d2cd47950f4f467406eeaab"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair0/guards.jsonl",
+      "records": 782,
+      "new_clause_witnesses": 6000,
+      "sha256": "5558364c7fab30886eea189bf8282d7b39045054aed40254d1a32a7b65ea3544"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair1/guards.jsonl",
+      "records": 652,
+      "new_clause_witnesses": 5024,
+      "sha256": "764e286834e62ec8d9cdd94daff0d99c4cd7f69e36f77d2a00e02e95bcb6de4d"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_02_11-pair2/guards.jsonl",
+      "records": 564,
+      "new_clause_witnesses": 1560,
+      "sha256": "d27838ce24d7aef19ee6848be6eba2b210fca58d3d5fa59609edce899f05b71a"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair0/guards.jsonl",
+      "records": 311,
+      "new_clause_witnesses": 2068,
+      "sha256": "069686e41d3c16ac1325bd18f2db032d289ea177e4800a6541b5c7051bf80ccd"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair1/guards.jsonl",
+      "records": 240,
+      "new_clause_witnesses": 743,
+      "sha256": "ff72c67706d1da84b9360212d3381efd1dfe9c3a8759dc095892b69e94a510b6"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_11_22-pair2/guards.jsonl",
+      "records": 365,
+      "new_clause_witnesses": 1968,
+      "sha256": "84ee4726738e5ea61791660ece0d250e6013ddac7d27a398cc4d6b7386289a55"
+    }
+  ],
+  "transformation_attempts": 3150038,
+  "clause_candidates": 2900008,
+  "elapsed_seconds": 94.62,
+  "checker_sha256": "fcbc54a4c0dab3f2c1ff2492aa2dc7e80240303502555458c315bd4fb720197a",
+  "frozen_manifest_sha256": "4d72587400398214cbbb27f086a21a390318f3cc78d62df42d07a9613d3e7398",
+  "witnesses_sha256": "b49e1a25bba411a422be4b4690a04a4abd330aa01c4676e255e9cbf039326981",
+  "dependencies": [
+    "Prior independent geometry-prefix proof and CNF hash binding",
+    "Earlier full physical guard verification, not repeated here",
+    "Prior full peer DRAT verification with Codex sampled replay"
+  ],
+  "new_solver_calls": 0,
+  "new_optical_discovery": 0,
+  "peer_executable_imports": 0
+}

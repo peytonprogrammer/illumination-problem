@@ -1,0 +1,117 @@
+{
+  "status": "PRESCRIBED_NONAXIS_LINEAR_ALGEBRA_PASS",
+  "core_kernel_identity": "N(ker hol in absolute H)=span(cores) intersect ker hol",
+  "criterion": "Q N nonzero on absolute ker hol iff normalized core defects differ",
+  "controls": {
+    "two_independent_cores": {
+      "hol": [
+        [
+          "2",
+          "3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1"
+        ]
+      ],
+      "N": [
+        [
+          "0",
+          "0",
+          "3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "kernel_basis": [
+        [
+          "-3/2",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "increment_image": [
+        [
+          "0",
+          "-3"
+        ],
+        [
+          "0",
+          "2"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "detected_increment": [
+        "0",
+        "6"
+      ]
+    },
+    "equal_normalized_flux_is_blind": true,
+    "dependent_refined_core_rank": true,
+    "one_maximal_cylinder_has_zero_core_hol_kernel": true,
+    "marked_arc_requires_refinement": {
+      "unrefined_twist": 2,
+      "actual_increment": 1,
+      "refined_twists": [
+        1,
+        1
+      ]
+    },
+    "mixed_sign_rank_countercontrol": true,
+    "different_one_core_span_twists_fix_zero_holonomy_block": true,
+    "inherited_detected_kernel_cycle": {
+      "class": "C-A-2B",
+      "base_holonomy": [
+        0,
+        0
+      ],
+      "slide_defect": [
+        0,
+        2
+      ]
+    }
+  },
+  "scope": "Fixed exact rational matrices and one prescribed marked torus arc. No new mirror rooms, rays, directions, event words, cylinders, or surface orbits were generated. Abstract detected cycles are not actual endpoint events.",
+  "independent_review": "TOOLS_DISABLED_OPUS_ACCEPTED_EXIT0_WITH_PAIRING_REFINEMENT_AND_CUSP_CORRECTIONS; no independent code execution claimed",
+  "goal_complete": false,
+  "discovery_runs": 0
+}

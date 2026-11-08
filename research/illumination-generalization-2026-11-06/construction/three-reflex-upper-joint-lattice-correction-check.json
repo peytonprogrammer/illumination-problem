@@ -1,0 +1,167 @@
+{
+  "old_corner_source_rejected": true,
+  "status": "PASS_CORRECTED_FOUR_UJ01_PRESCRIBED_FORMULA_AND_BEZOUT_SELECTION_CHECKS",
+  "cases": [
+    {
+      "name": "power_two_K2",
+      "widths": {
+        "P": 1,
+        "K": 2,
+        "L": 4,
+        "N": 7
+      },
+      "n": 5,
+      "d": 6,
+      "g": 2,
+      "H0": 1,
+      "j": 4,
+      "m": 6,
+      "q": 50,
+      "seed_slope": "18",
+      "z1": "0",
+      "z2": "2",
+      "J": 4,
+      "p": 0,
+      "final_slope": "18",
+      "final_indices": [
+        6,
+        2
+      ],
+      "actual_target": [
+        10,
+        2
+      ],
+      "algorithm": {
+        "ell": -2,
+        "positive_shift": 0,
+        "q": 50,
+        "m": 6,
+        "j": 4,
+        "right_repair": false,
+        "final_slope": "18"
+      }
+    },
+    {
+      "name": "power_two_K4",
+      "widths": {
+        "P": 1,
+        "K": 4,
+        "L": 8,
+        "N": 11
+      },
+      "n": 5,
+      "d": 6,
+      "g": 4,
+      "H0": 1,
+      "j": 5,
+      "m": 10,
+      "q": 130,
+      "seed_slope": "46",
+      "z1": "0",
+      "z2": "-2",
+      "J": 8,
+      "p": 0,
+      "final_slope": "46",
+      "final_indices": [
+        10,
+        3
+      ],
+      "actual_target": [
+        10,
+        2
+      ],
+      "algorithm": {
+        "ell": -10,
+        "positive_shift": 5,
+        "q": 130,
+        "m": 10,
+        "j": 5,
+        "right_repair": false,
+        "final_slope": "46"
+      }
+    },
+    {
+      "name": "actual_mouth_equality_corrected_P2",
+      "widths": {
+        "P": 2,
+        "K": 2,
+        "L": 4,
+        "N": 7
+      },
+      "n": 8,
+      "d": 9,
+      "g": 2,
+      "H0": 1,
+      "j": 1,
+      "m": 3,
+      "q": 23,
+      "seed_slope": "6",
+      "z1": "0",
+      "z2": "-2",
+      "J": 0,
+      "p": 0,
+      "final_slope": "6",
+      "final_indices": [
+        3,
+        1
+      ],
+      "actual_target": [
+        10,
+        2
+      ],
+      "algorithm": {
+        "ell": -5,
+        "positive_shift": 0,
+        "q": 275,
+        "m": 35,
+        "j": 15,
+        "right_repair": false,
+        "final_slope": "118"
+      }
+    },
+    {
+      "name": "non_power_two_bottom_target_divisor3",
+      "widths": {
+        "P": 1,
+        "K": 3,
+        "L": 6,
+        "N": 9
+      },
+      "n": 4,
+      "d": 5,
+      "g": 3,
+      "H0": 3,
+      "j": 2,
+      "m": 3,
+      "q": 33,
+      "seed_slope": "78/5",
+      "z1": "4/5",
+      "z2": "22/5",
+      "J": 3,
+      "p": 1,
+      "final_slope": "258/5",
+      "final_indices": [
+        11,
+        4
+      ],
+      "actual_target": [
+        10,
+        2
+      ],
+      "algorithm": {
+        "ell": -1,
+        "positive_shift": 1,
+        "q": 33,
+        "m": 3,
+        "j": 2,
+        "right_repair": false,
+        "final_slope": "258/5"
+      }
+    }
+  ],
+  "discovery_search": false,
+  "physical_ray_replay": false,
+  "independent_acceptance": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

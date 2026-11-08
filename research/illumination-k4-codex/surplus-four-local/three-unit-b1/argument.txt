@@ -1,0 +1,275 @@
+Three local excess-one cells and one smooth non-A point
+4 November 2026 — Codex01a1a00f
+
+STATUS: Complete proposed hand cover; exact checks PASS. Independent peer
+challenge pending. This is not an independently accepted theorem yet.
+
+Statement. Let P be a finite strictly simple canonical 45-degree triangle
+room with exactly the full interior A stars S=(0,0), U=(2,0), T=(2,2).
+Let H be those full stars, and confine every other occupied A cell to
+K={L=(-2,0), B=(0,-2), D=(2,-2), R=(4,0), E=(4,2), Tc=(2,4), N=(0,2)}.
+For each partial cell write e=q-d, where d counts exposed H sides touched
+by any occupied triangle, and q=m except that a smooth-A four-sector fan
+has q=3. Suppose exactly three partial cells have e=1, every other partial
+cell has e=0, and b=1 counts extra smooth non-A boundary points.
+Then actual S and T are joined by a legal corner-avoiding specular path
+with at most 13 reflections. No additional bound on W or k is needed.
+In particular this covers the local Delta=sum(e)+b=4 partition three e1+b1
+under the research bounds W<=21, k<=6.
+
+Conventions. Sectors 0,...,7 start E,NE,N,NW,W,SW,S,SE. Sigma sends
+(x,y) to (2-y,2-x). On paths, apply sigma and reverse their order, so the
+actual endpoint order remains S to T. Sigma interchanges L/Tc, B/E, D/R;
+N is fixed. The ordinary caps are
+ L-:7,L+:0; B-:2,B+:1; D-:2,D+:1; R-:4,R+:3;
+ E-:4,E+:3; T-:5,T+:6; Nb-:5,Nb+:6,Nr-:7,Nr+:0.
+Each ordinary slot contains at most one cap. Path names below refer to
+already fixed paths, with exact coordinates and full guards in check.json
+or its pinned dependencies. T in a path name means the Tc partial cell,
+never a change of the actual target T=(2,2).
+
+1. Exhaustive root/leaf split
+
+Handle the directly illuminating N bridge sectors6/7 first. Otherwise an
+e1 root (a partial cell touching H) has d=1,q=2 and exactly two consecutive
+sectors. N can touch two H sides only through a fan containing the bridge
+when e=1: the d=2,q=3 three-sector or smooth four-sector alternatives
+cannot span its sides {5,6} and {7,0} without6/7. An e1 cell with d=0 is
+one triangle, since q=1.
+
+Ordinary e0 caps have no onward side edge. Within K the only side-adjacent
+partial-cell pairs are B-D and E-R. This graph is a matching. A d0 cell
+therefore attaches directly to an e1 root; with three positive cells there
+can be at most one such leaf, and the remaining positive cell is a root.
+Vertex-only attachment cannot connect a strictly simple room.
+
+The four root/single-leaf orientations, as in the accepted two-unit
+supplement, are exactly
+ B sectors0/1 with D leaf3;
+ D sectors2/3 with B leaf0;
+ E sectors4/5 with R leaf2;
+ R sectors2/3 with E leaf5.
+The last two follow by sigma. The parent quarter has one non-H side edge;
+the leaf must occupy its opposite triangle and avoid its own H side.
+This proves the list without a room or cap-assignment census.
+
+For Droot/Bleaf, B+ is absent. The old one-reflection path needs only H
+and that absence, even if all other K triangles are allowed. Thus the
+third root cannot spoil it. Sigma handles Rroot/Eleaf.
+
+For Broot/Dleaf, the leaf F is the triangle with vertices
+(2,-2),(1,-1),(1,-2). Its intersection with all remaining possible support
+is precisely the segment [(1,-1),(1,-2)]. In particular L/E/Tc/N and R
+introduce no other leaf contact. Deleting F changes the angles at its
+attaching endpoints from315 to270 and from180 to90, respectively.
+Replacing its outer boundary arc by this attaching segment leaves a
+strictly simple disk. Both remaining e1 cells attach directly to H and
+remain roots, and the full A stars remain exactly S/U/T.
+
+Apply the accepted arbitrary-b/W/k two-ROOT theorem in two-unit.txt to
+the auxiliary room. Every source, forcing, fallback and composed path in
+that theorem avoids the entire D and R stars in BOTH its required and
+forbidden triangle sets. Reinserting D3 therefore preserves the selected
+path and its mirrors. The bound is13. Sigma handles the active R leaf.
+This use does not assume that billiard illumination is monotone under
+arbitrary additions, or that deletion preserves the original b/W/k.
+
+2. All roots with a positive D or R cell
+
+Erase one D two-sector root; use sigma for R. Its north-facing windows
+are exactly0/1,1/2,2/3. Its intersection with H consists of edge
+ [(2,-1),(3,-1)] if sector1 is present,
+ [(1,-1),(2,-1)] if sector2 is present,
+or both joined at(2,-1). A B unit can extend the intersection only along
+[(1,-2),(1,-1)] through its0/1 quarter and D3. If D3 is in a short root,
+D2 is present, so that edge extends the same H attaching arc. An ordinary
+B cap reaches only its H endpoint. No B root reaches(1,-3).
+
+A diagonal R contact can occur only at(3,-1). If D0 reaches this point,
+D1 is also present; thus this contact is already on the occupied H edge.
+All other K diamonds are disjoint from D. The intersection with the actual
+remaining room is consequently one nonempty proper embedded arc, with
+no detached edge or isolated point. Checking against maximum support
+makes this assertion stronger than checking one completed room.
+
+Erasure replaces one outer boundary arc by the attaching arc. The rest
+remains connected because every remaining cap/root still attaches to H.
+The newly exposed endpoint fans are contiguous: at(1,-1), H180 plus B
+contributes at most90; at(3,-1), H90 plus R contributes at most90. At the
+north C, H180 remains; a retained west C has its single B quadrant.
+No slit, pinch or hole results. This is the short-window extension of the
+independently accepted noncritical-erasure argument for m3/m4 fans.
+The auxiliary room has exactly two e1 roots. Apply two-unit.txt and
+reinsert using the same complete D/R support avoidance as in section1.
+This closes all-root D/R cases within13, including a possible outside-C
+join between B and D (or E and R).
+
+3. Reference forcing and the remaining shapes
+
+With no positive D/R cell and no leaf, the three roots are either N plus
+two distinct critical sites in {L,B,E,Tc}, or three distinct critical sites.
+Short forcing makes a missing required cap an already illuminated branch:
+ B+ absent -> one; E- absent -> sigma one;
+ T- absent with B ordinary -> four;
+ T- absent with B centered1/2 -> centerB3;
+ T- absent with B outer0/1 -> outerB2;
+ and the sigma versions force L+.
+The one paths first eliminate inactive B/E quarters. The remaining T-/L+
+forcing then eliminates inactive Tc/L quarters. Each forcing guard permits
+all other K triangles, except the explicitly prescribed B/E slot. Hence
+neither the extra root nor b1 invalidates it. Eight implications PASS.
+
+The surviving critical root forms, written C (centered) or O (active outer),
+are L:C7/0,O0/1; B:C1/2,O0/1; E:C3/4,O4/5; Tc:C5/6,O4/5.
+Unoccupied positive-site choices remain ordinary forced reference caps
+L+,B+,E-,T-. Empty ordinary slots are already handled by the short paths.
+
+4. N unit plus two critical roots
+
+The four nonbridge N forms are bottom-centered5/6, SW4/5,
+right-centered7/0 and NE0/1. The first two are bottom-facing; the last two
+right-facing. A bottom form has neither right inward cap; a right form
+has neither bottom inward cap. Both inward caps ON its occupied side may
+be present. The outside mates4 and1 are included explicitly in the checks.
+
+The following tables choose one fixed path for every pair and every N
+form. In each row the two entries are bottom-facing / right-facing N.
+
+Both critical roots centered:
+ L,B  -> L12 / B6
+ L,E  -> L3 / L3
+ L,Tc -> L3 / L3
+ B,E  -> E6 / B6
+ B,Tc -> T3 / T3
+ E,Tc -> E6 / T12
+The first and last rows replace the old b0 centered-pair exclusions.
+They use optical fallbacks, with no smooth-point exclusion here.
+
+Both roots outer:
+ L,B  -> L11 / B11
+ L,E  -> LE9 / 13
+ L,Tc -> L11 / T11
+ B,E  -> E11 / B11
+ B,Tc -> sigma13 / BT9
+ E,Tc -> E11 / T11
+
+One centered, one outer, with ordered sites (center,outer):
+ L,E  -> L3 / L3
+ L,Tc -> L3 / L3
+ L,B  -> L12 / five
+ B,L  -> L11 / B6
+ B,E  -> E11 / B6
+ B,Tc -> sigma13 / B4
+The six sigma images supply the other six ordered pairs, interchanging
+N's bottom and right orientation and reversing the actual path.
+
+For every entry check.py uses minimum support H + the exact N unit +
+the two exact critical fans + the other two reference caps. Its maximum
+adds the entire D and R stars. It recomputes the complete required set U
+and forbidden set Z, and proves U is in the minimum and Z avoids the
+maximum. Thus these are whole-family implications, including both inward
+N caps when present. All96 entries PASS (24 CC,24 OO,48 CO); none exceeds13.
+
+5. Three critical roots: inherited branches and the b1 repair
+
+N is now ordinary. A present N cap excludes its other three alternatives.
+It suffices to give the two missing-site representatives; sigma supplies
+the other two. The fourth critical site is its ordinary reference cap.
+The path names and alternatives here are those explicitly checked in
+local-three-unit.txt, with its b0-only exclusions replaced below.
+
+B missing, sites (L,E,Tc):
+ If L=C, L3 works for any C/O choices at E and Tc (four patterns).
+ Otherwise L=O:
+ E=O,Tc=O: neither Nb cap -> T11; a bottom N cap -> sigmaBT9.
+ E=C,Tc=O: Nr+ absent -> sigmaB4; Nr+ present -> T11.
+ E=O,Tc=C: sigma of centerL/outerB/outerTc's fiveTop3/L12 dichotomy.
+ E=C,Tc=C: the NEW b1 argument below gives Nr+ absent -> sigmaB4.
+
+L missing, sites (B,E,Tc):
+ E=C,Tc=C: the NEW b1 argument gives Nr+ absent -> sigmaB6,
+            for either C or O at B (two patterns).
+ B=O,E=O,Tc=O: neither Nb cap -> BT9; bottom N cap -> E11.
+ B=C,E=O,Tc=O: Nb- absent -> B4; Nb- present -> E11.
+ B=C,E=C,Tc=O: Nb- absent -> B4; Nb- present -> sigmaB6.
+ B=O,E=C,Tc=O: Nr+ absent -> sigmaB6; Nr+ present -> BT9.
+ B=O,E=O,Tc=C: sigma of centerL/outerB/outerE's five/L10 dichotomy.
+ B=C,E=O,Tc=C: sigma of centerL/centerE/outerB's five/retained9 dichotomy.
+
+Explicit unsymmetrized inherited dichotomies used in the last entries:
+ centerL+outerB+outerTc: Nb+ absent -> fiveTop3; present -> L12.
+ centerL+outerB+outerE: Nb+ absent -> five; present -> L10.
+ centerL+centerE+outerB: Nb+ absent -> five; present -> retained9.
+Ordinary N exclusivity justifies their fallback mirror absences. None of
+these alternatives relies on b0. N is not treated as ordinary in section4.
+
+NEW b1 argument. If E and Tc are centered, B-point(3,3) has the occupied
+angle H90+E45+Tc45=180. It is one smooth non-A boundary point. Neither the
+third critical root, ordinary N, nor ordinary D/R can add a sector there.
+If ordinary Nr+ were also present, B-point(1,3) would have occupied angle
+H90+Tc45+Nr+45=180. This is a SECOND distinct smooth non-A boundary point.
+All possible other occupied cells in each of the three stated patterns
+miss both points; their contiguous fans cannot heal either boundary angle.
+This would require b>=2, contradicting b=1. Therefore Nr+ is absent.
+
+With Nr+ absent, sigmaB4 covers Louter/Ecenter/Tcenter, and sigmaB6 covers
+Bouter/Ecenter/Tcenter and Bcenter/Ecenter/Tcenter. These three exact
+whole-support implications and their sigma images all PASS. The sigma
+argument excludes Nb- for the corresponding L/B centered pair. A single
+centered pair is permitted: only the second smooth point is excluded.
+
+The generic Lcenter/missingB branch, the17 old named conditional branches,
+and the one retained9 implication supply38 guards including sigma. The
+three new implications supply six more. The hand tables cover all32
+choices (four missing sites times eight C/O patterns); the checker also
+compares these labels with the full32-element set. This label comparison
+checks bookkeeping, not geometric completeness or a room census.
+
+6. Fixed paths, provenance, and support limitations
+
+The13 paths, their square exchanges, L3/T3, B6/E6, L12/T12 and five are
+inherited accepted paths. B4 replaces B6's three-contact Tc excursion by
+its prescribed one-contact square return (5/3,4). BT9 replaces both the
+B and Tc excursions of13; LE9 is its sigma image. fiveTop3 and L10 are
+also previously checked square compositions. Strict portal inequalities
+and unchanged exit point/velocity justify these substitutions. No new
+ray, direction or reflection word was discovered in this work.
+
+The9-reflection path is ONLY the single stored term in
+third-surplus-review/local-three-residue-project.json, source_line800.
+It was originally archive-discovered in the earlier Delta3 project; this
+proof reuses the retained actual-endpoint path. Its exact U/Z is recomputed
+and matched to that record, and no earlier leg reaches actual T. Its raw
+source guards.jsonl was NOT read. This path forbids D sector3, so the
+whole-family envelope for this branch permits ORDINARY D/R caps only.
+That is sufficient because all three positive cells here are critical.
+It must not be included in the full-D/R avoidance assertion for the
+separate two-root deletion theorem; that theorem does not use this path.
+
+Deletion inherits the independently accepted two-root inventory:21 pinned
+catalog records plus two fixed square compositions, all with sigma. Their
+full D/R U-and-Z avoidance is preserved in mixed-leaf-review/check.json;
+source hashes are pinned by third-surplus-review/path-support-check.json.
+The N-unit and three-critical guards are newly checked here against their
+stated complete support envelopes, rather than inferred from path names.
+
+7. Reproduction and coverage limits
+
+Run:
+ python3 -B .context/illumination-k4-codex/surplus-four-local/three-unit-b1/check.py
+Receipt: check.json, with input hashes and all complete U/Z sets.
+PASS: three local short-root deletion templates and one single-leaf
+template;96 N-unit guards;38 inherited three-critical guards;six new b1
+guards;eight forcing guards;the32 critical C/O labels;two distinct smooth
+B-point identities for each new centered-pair pattern and sigma.
+These are local topology identities and explicitly named fixed-path
+implications. Global root/leaf completeness, boundary surgery and the
+b1 contradiction are hand arguments, not formally verified conclusions.
+The helper geometry/guard routines have shared historical origins.
+
+Proposed closure: the entire local three-e1+b1 partition, <=13 reflections.
+Independent peer review remains pending. No complete Delta4 theorem,
+remote-family closure, universal22-wall minimum, or expert endorsement
+is claimed. Other local types remain separate: e2+e1+b1; e2+twoe1;
+four e1. The peer retains the mixed and remote work. No new room/cap
+assignment scan, ray/word/direction search, solver, orbit run or worker.

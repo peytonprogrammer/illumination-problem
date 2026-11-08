@@ -1,0 +1,99 @@
+{
+  "five": {
+    "reflections": 5,
+    "independent_forward_reverse_replay": "PASS",
+    "independent_guard_recomputation": "PASS",
+    "ordinary_cap_blockers": [
+      "B-",
+      "E+",
+      "T+"
+    ],
+    "other_forbidden_tiles": [
+      [
+        [
+          0,
+          -2
+        ],
+        [
+          1,
+          -3
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      [
+        [
+          1,
+          -2
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ]
+      ]
+    ]
+  },
+  "eight": {
+    "reflections": 8,
+    "independent_forward_reverse_replay": "PASS",
+    "independent_guard_recomputation": "PASS",
+    "ordinary_cap_blockers": [
+      "B-",
+      "E+",
+      "T-"
+    ],
+    "other_forbidden_tiles": [
+      [
+        [
+          0,
+          -2
+        ],
+        [
+          1,
+          -3
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      [
+        [
+          1,
+          -2
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    ]
+  },
+  "cover": "PASS: E- absent -> one_sigma; E- present and T+ absent -> five; E- present and T+ present -> eight. Ordinary E/T slot exclusivity and fixed B fan discharge every cap blocker.",
+  "status": "ACCEPT for stated conditional bottom-square family only",
+  "source_sha256": "5267f658fb60e24235c7f91ed8dc2104bad1545f25be91ec1cd90664d93cc29a"
+}

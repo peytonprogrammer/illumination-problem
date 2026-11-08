@@ -1,0 +1,56 @@
+E4 SIX closes the mixed R23 row and two L70 subfamilies
+Codex01a1a00f, 5 November 2026
+
+STATUS: Parent exact/hand proof PASS; independent review requested.
+One authorized fixedpattern H+B7012+D3+R23+L0+E4+N7,Tcempty. Geometryfirst
+simple20walls,34tiles,J3,sN3,Q9,k6,Delta4/fullA SUT. STOP firstcandidate
+(4,5),SIX after78vectors/75corners/2reflection-bound stops, about0.0056s.
+No replacementroom, extra pattern, capproduct or unused-budget reuse.
+
+Hand proof: launch(d,1). Sourceceiling(d,1), Ufloor(3d,-1), lowerUright
+(3,3/d-4), upperTleft(1,5/d-4), leftTroof(7d-4,3), lowerE4diagonal
+(c,c-2), c=(12d-4)/(1+d). Directions after the firstfive contacts are
+(d,-1),(d,1),(-d,1),(d,1),(d,-1); lastdiagonal gives(-1,d).
+At x2 the final height is10d-6. ActualT forces10d-6=2,d4/5.
+
+Sufficient strict interval7/9<d<5/6 places ceiling in0<x<1, floor2<x<3,
+lowerUright -1<y<0, upperTleft2<y<3, leftroof1<x<2, Ediag3<x<4
+and finalE-to-Tportal x3 at1<y=9d-6<2. Exact openleg incidence is checked
+in addition. The crossing(2,1) on the central ascending leg is full360
+H interior, never a bounce. No other hidden boundary/corner encountered.
+
+Exact SIX:
+ S,(4/5,1),(12/5,-1),(3,-1/4),(1,9/4),(8/5,3),(28/9,10/9),T.
+U19 lies in minimumH+E4. Z6=D1,R4,N0,N6,Tc5,E5.
+FullL/B are allowed; no R2/R3 or D2/D3/D4 restrictions. No remote blocker.
+Five contacts are barecore mirrors; the last is the E4lowerdiagonal.
+ActualT image(8,10), aligned(4,5). Own separateFraction engine verifies
+strictfinitewalls, positive specularity, firstactualT/noSrevisit, complete
+U/Z, reversal/sigma, frozenpolygon firstwall replay and simplegeometry.
+Six blocker-filling controls reject. No second room was constructed.
+
+Whole-support transfers:
+1. ENTIRE mixedRupper23 row: B=H4, Dsingleleaf3or4, ordinaryL0,E4,N7,
+   Tcempty. ONE upper permitsB7012,BOTH D3/D4,R23 andallreferences;
+   it fits the same maximum. Therefore the FULL stated R23row<=6.
+   D4 also already fit acceptedH4three, but no exception is needed here.
+2. MixedLcenter70, B=O3/O4, ordinaryR3,N7, Tcempty, eitherDleaf<=6.
+3. MixedLcenter70, B=O3/O4, ordinaryR3,Tc6,Nempty, eitherDleaf<=6.
+   B6701 is a single upper forO3/O4; L70 andallleafsupport are harmless.
+
+These are table-family implications, not a roomcount. They depend on the
+accepted local mixedroot/singleleaf classification. The new rowjoin and
+optics still need independent challenge.
+
+Remaining named singleleaf forms after this andseparatependingfour:
+ L70 with O3/O4,ordinaryN0,R3,Tcempty,eitherDleaf;
+ N70 with O3/O4,ordinaryR3,Tcempty,eitherDleaf.
+They share a filled upperTleft N0 mirror, which blocks THIS six.
+Other all-rootL/T mixedfixtures, West/four-unit/remoteDelta4 remain separate.
+No fullmixed/surplus4 or universalminimum claim.
+
+[done parent] ExactSIX19U6Z/firstwalls/firstT/reverse/sigma PASS.
+[done parent] WholeR23<=6 andL70N7/Tc6 subfamilies<=6.
+[waiting on Codex01a18403] Independentsix/strictgates/wholeinclusions.
+[in progress] Two remaining N0/R3 singleleaf forms andotherDelta4gaps.
+Next move: sharedN0/R3 mechanism, preserve newproofs frozen.

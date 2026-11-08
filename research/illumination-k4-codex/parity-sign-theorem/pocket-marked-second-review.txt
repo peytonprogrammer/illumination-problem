@@ -1,0 +1,118 @@
+# Review of §25: auxiliary branched cover, uniqueness, and descent
+
+## Verdict
+
+The main §25 argument is sound for what it claims. It establishes three things:
+
+- **Field of definition.** The common marked orbit closure M'_* of the actual marked slice is defined over Q.
+- **Containment.** M'_* contains the actual marked slice at every small parameter.
+- **Tangent stability.** At rational parameters, the branch tangent that contains the slide direction is preserved by a finite-index subgroup of the affine group that fixes the actual marks.
+
+I found no genuine mathematical gap. Five bookkeeping items should be written out, because as stated r is not well defined on D. None of them changes the conclusion. §25.1 is correctly scoped, and its remaining obligations are honestly marked as open.
+
+## (1) Stabilizer of a simple zero and uniqueness of the deck involution: correct
+
+- **Normalized coordinate.** At a simple zero p one can choose w with ω = w dw, taking w² = 2∫_p ω.
+- **Stabilizer.** If φ fixes p and φ\*ω = ω, then φ(w)² = w² + c. Since φ fixes p, c = 0, so φ(w) = ±w.
+- **The +1 case.** φ agrees with the identity on an open set, so φ = id because Y is connected. The stabilizer therefore injects into {±1}.
+- **Deck involution.** The deck involution satisfies τ\*ω = ω because ω = p\*ω_X. It acts by −1 at each branch point.
+- **Uniqueness.** If τ₁ and τ₂ both act by −1 at the same p, then τ₁τ₂ acts by +1 there, so τ₁ = τ₂. One labeled simple zero is enough. This also covers the 16-lift version.
+- **Injectivity on points.** Suppose ψ: Y_χ → Y'_χ' is a label-preserving isomorphism. Then ψτ'ψ⁻¹ is a translation involution acting by −1 at a labeled simple zero, so it equals τ. Hence ψ descends to (X,s,t) → (X',s',t'), pulling χ back to χ'. This gives injectivity on isomorphism classes, including across different characters.
+
+## (2) r as a proper closed embedding: correct, with the following points made explicit
+
+**(a) Old-zero sheet labels (needed for r to be defined at all).** In an upstairs stratum where every zero is labeled individually, the cover data must include a choice of sheet over each old zero. The labelings L_σ and L_{−σ} are identified by τ, which preserves the labels of the simple zeros.
+
+- So r is defined on D̃ = D × {±}ⁿ / ±1. This is a finite cover of D, possibly disconnected.
+- r is injective on D̃, not on D.
+- Run the orbit-closure argument on a component of D̃ and descend through the finite map D̃ → D. This is the "clearly finite" part. It is fine, but state it this way rather than as a local choice.
+
+**(b) Orbifold compatibility.** A proper, injective local immersion of orbifolds is a closed embedding only if the automorphism groups also match. They do, by the same argument as in (1):
+
+- Every automorphism of (Y,L) conjugates τ to itself, so it commutes with τ and descends.
+- Conversely, automorphisms of the D̃-point are by definition the descended ones.
+
+Either say this, or pass to a torsion-free level structure where both strata are manifolds.
+
+**(c) Convergence step in properness.** After constructing τ_∞, add one sentence:
+
+- Close isometries are homotopic, so for large k, τ_k represents the same mapping class as τ_∞ in a marked chart near Y_∞.
+- Hence Y_k lies in the fixed subspace of τ_∞ acting on that chart.
+- That fixed subspace is r(neighbourhood of d_∞).
+- By injectivity, d_k → d_∞.
+
+The other steps of the limit argument are correct:
+
+- τ_∞ is an involution, being a limit of involutions.
+- τ_∞ acts by −1 at the limiting simple zeros, since the normalized coordinates converge.
+- **Even orders are used here.** At an old zero of order a, an involution with λ² = 1 and λ^(a+1) = 1 must have λ = 1, because a+1 is odd.
+- Riemann–Hurwitz gives quotient genus g: 4g − 2 = 2(2g − 2) + 2.
+- ω descends to a nonvanishing differential at the images of the fixed points.
+
+## (3) A_τ = r⁻¹(N_τ), with number-field separation and continuation before descent: correct
+
+**Image of the orbit closure.** r is GL-equivariant, continuous and closed. Therefore r(cl(orbit)) = cl(r(orbit)) = N_τ, and since r is injective, A_τ = r⁻¹(N_τ).
+
+**Rational transfer.** The identity H¹(Y,Σ_Y;Q)^τ = p\*H¹(X,Σ∪{s,t};Q) holds:
+
+- p\*p_! = 1 + τ\* and p_!p\* = 2.
+- Σ_Y = p⁻¹(Σ∪{s,t}).
+- The dimensions agree: 2g + n + 1 on both sides.
+
+**The zero-period cycle.** The difference of the two lifts of the s-to-t path is closed and anti-invariant. It has period zero, as it must, since ω is τ-invariant.
+
+**Separation at transcendental τ.** Pulling back Wright's k(N_τ)-equations through the rational map p\* keeps their coefficients in k(N_τ). For such an equation,
+
+c·v̂₀ + τ·c·v̂₁ = 0, with c·v̂₀ and c·v̂₁ in k(i).
+
+Since τ is transcendental, both terms vanish. This puts the line in **every** branch of A_τ through d_τ, which is stronger than needed.
+
+**Continuation over the disk.** The preimage of A_τ under the holomorphic slide map is a closed, locally analytic subset of the disk with nonempty interior. So it is the whole disk. This is presumably the content of §21.
+
+**Mutual inclusion.** A_σ ⊆ A_τ and A_τ ⊆ A_σ, so A_τ = A_σ.
+
+All of this happens in D̃, before descent.
+
+**External inputs to state as dependencies.**
+- The marked slide is exactly v₀ + t·v₁ in an integral basis of H₁(X,Σ∪{s,t}), with v₀, v₁ in Q[i].
+- s(t) and t(t) stay regular, distinct, and away from Σ on the disk.
+
+**Citation check.** Confirm the exact statement you are using from Wright. You need "k(N) is contained in the holonomy field of **every** surface in N," which must apply even at special or self-crossing points such as Y₀. My recollection is that Theorem 1.1 says k(N) is the intersection of the holonomy fields, which suffices, but verify the numbering. Y₀ has all periods in Q[i], so its holonomy field is Q.
+
+## (4) q proper gives the common marked closure over Q: correct
+
+- q is a finite unbranched 2^(2g)-sheeted cover, so it is a closed map, and q(A_*) = cl(orbit of q(d_τ)) = M'_*.
+- The result is independent of the choice of χ.
+- q is the identity in period charts. Branches of M'_* at a point are the finitely many branches of A_* over it, each cut out by Q-linear equations.
+- Strictly, these are preimages under p\*, or images under the rational left inverse p_!/2. They are not "images" of N_* branches as written.
+
+## (5) Tangent stability at rational parameters: correct
+
+At a rational r, X_r is square-tiled and the marks are rational, hence periodic for Aff(X_r). Their stabilizer, together with a further finite-index subgroup fixing the zero labels and each local branch, has finite index.
+
+- **The slide lies in one branch.** The slide is a connected holomorphic line inside a finite union of linear branches, so it lies in a single branch L.
+- **The branch is preserved.** An affine map φ with derivative g identifies g·x with x. Because M'_* is GL-invariant, this preserves the germ of M'_* at x, and so permutes its branches.
+- **The real structure is needed.** Branch tangents have the form V'_R ⊗ C, which they inherit from N_* through rational p\*. Since g acts only on the C ≅ R² factor, φ\* itself preserves V'_R.
+
+## Remaining genuine gaps
+
+None in main §25. Two smaller items:
+
+- **16-lift version.** You also need all 16 S/T lifts to be regular and pairwise distinct over the whole disk. This is not stated.
+- **n = 0 edge case.** If n = 0 (a torus base), the relative-basis bookkeeping in §25.1 needs a different base point.
+
+## §25.1, assessed separately
+
+**Kernel description.** It is correct. The kernel of H¹(X,Σ∪{s,t}) → H¹(X,Σ) is spanned by the duals of the paths to s and t, provided n ≥ 1.
+
+**Combining parameters.** This is legitimate, but only under one condition. The whole disk must sit in a single period chart around d₀, in which A_* is a finite union of linear subspaces and L is one of them. Then the chart itself supplies the Gauss–Manin identification, and each affine action at d_r must be transported into that chart. Outside a single chart, the caution in the draft is warranted.
+
+**Rank obligation.** This is lighter than the draft suggests:
+
+- A branch is an open piece of a linear subspace, and the forgetful map is linear, so its rank is constant on the branch.
+- Each branch is an open sheet of the immersed manifold, so it contains generic points.
+- So if the generic fibers of a periodic joint marking are finite, the kernel vanishes on every branch, including at rational special points.
+
+You can keep it as an obligation, but it is close to immediate.
+
+**Scope.** The final paragraph is correct. A nonzero marked kernel gives neither equal primitive half-vectors nor an embedded π-sector. The actual midpoint event remains open, and the marks are not claimed to be free. I see no implicit claim that forgetting maps onto M_*.

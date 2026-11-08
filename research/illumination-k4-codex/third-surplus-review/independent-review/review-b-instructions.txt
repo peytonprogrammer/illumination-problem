@@ -1,0 +1,17 @@
+Read common.txt in this same directory and follow it.
+Assignment B: independent hand challenge of ALL INTERACTING-FAN partitions.
+Read these proof-root files in full: theorem.txt,local-two-unit.txt,
+local-three-unit.txt,local-mixed.txt. Also read named checker scripts
+local-two-unit-check.py,local-three-unit-check.py,local-mixed-check.py and
+../lower-bound-proof-audit/full-replay/guard-checker.py as needed.
+Audit: outside-C join exhaustion, b0 smooth-B exclusions and possible repairs,
+critical cap forcing when another fan is present, C/O tables with actual missing
+site, all N-cap fallback cases, slot/budget counts, and no unjustified T- forcing.
+In local-mixed.txt independently challenge the join-root classification and
+sections7–9's complete ordinary-slot covers. In local-three-unit.txt verify the
+extension to a noncritical third N fan and the four square substitutions, rather
+than assuming the third fan is harmless. Inspect corresponding JSON guards
+selectively if a particular implication is doubtful.
+You may assume accepted earlier Delta<=2 lemmas and the remote/single-e2 proofs
+as separate inputs, but not your assigned new multi-fan claims. Do not read
+review A. Return verdict and precise findings, not a paraphrase of the proof.

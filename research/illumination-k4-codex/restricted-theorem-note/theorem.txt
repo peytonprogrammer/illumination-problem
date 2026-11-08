@@ -1,0 +1,81 @@
+A computer-assisted lower bound for a restricted lattice family
+Working theorem note — 2 November 2026
+
+Result: within the fixed canonical45-degree lattice model, two distinct interior A marks always illuminate each other if the room has at most21 maximal walls and at most6 transparent non-A lattice points. The finite reduction is mathematical; the remaining contradictions are checked computer certificates. Historical novelty is under review. This is not a universal22-wall minimum.
+
+1. Exact statement
+
+Tile the integer plane as follows. Split every unit square along its diagonal joining an even-even point A to an odd-odd point B. The other triangle vertex C has mixed coordinate parity. Thus each triangle has angles45degrees at A and B,90degrees at C. An A star comprises the eight triangles in the square of side2 centered at A.
+
+Let R be a finite edge-to-edge union of these closed triangles. Require R to be a closed topological disk with a strictly simple polygon boundary: no holes, slits, pinches, crossings or boundary self-contacts. Count W after merging every pair of consecutive collinear boundary edges, so W is the number of genuine corners as well as maximal straight walls.
+
+Call an occupied B or C lattice point transparent if it is interior to R or a smooth point of the boundary. Let k be the total number of these points. Boundary A points are not counted in k. These definitions refer to the fixed lattice presentation.
+
+THEOREM (computer-assisted). If W<=21 and k<=6, every pair of distinct interior A points S,T in R is joined by a finite billiard trajectory with specular reflections at smooth walls and no contact with a polygon corner.
+
+Equivalently, a dark pair of interior A marks in this family requires at least22 maximal walls or at least7 transparent non-A points.
+
+SHARPNESS. The previously hand-proved22wall orthogonal room belongs to this exact class: it has30canonical triangles, interior A marks(0,0),(2,2), no interior B/C points, and four smooth non-A boundary points. Thus k=4. Combining that example with the theorem,22 is the minimum wall count for a dark pair of distinct interior A marks within the stated k<=6 class. The fixed-geometry ledger is in attainment-check.txt; its new membership count is awaiting independent peer review. This sharp restricted minimum is not universal minimality or a new upper-bound construction.
+
+2. Why the case list is finite
+
+Write I for the number of ALL interior A points, J for interior B/C points, s_A for smooth boundary A points, and s_N for smooth boundary B/C points. Hence k=J+s_N and I>=2. If an A corner has m incident triangles, define
+ Q=3s_A+sum over A corners of m.
+Let N be the number of selected triangles.
+
+Euler's formula for the triangulated disk and incidence at A give
+ N=2(I+J)+W+s_A+s_N−2,
+ N=8I+Q+s_A,
+ W=2+6I+Q−2J−s_N,             3s_A<=Q.                   (1)
+
+Use cell coordinates A/2. Each full A star is one full cell. Let F be the I full cells, P the number of occupied partial A fans, and R_F the union of F with all its external axis-neighbor cells. Write b=|R_F−F| and let m count empty cells in R_F−F. This m is unrelated to the corner incidence above.
+
+Every nonempty finite F has at least4 external neighbors. Occupied external neighbors contribute at least one unit each to Q; an empty neighbor produces a distinct smooth C midpoint at a full-star side. Therefore Q+s_N>=4. Equation(1) yields
+ W>=6+6I−2k,   so I<=4.
+Also
+ N<=floor(4(W−2+2k)/3)<=41.                              (2)
+Neither41 nor the eventual coordinate window is an empirical cutoff.
+
+The occupied-cell graph joins cells when their triangles share a full BC edge. It is connected. A partial contiguous A fan touches no more cell sides than its Q charge; a full cell has degree at most4 minus its empty neighbors. Counting graph edges gives
+ 2(I+P−1)<=4I−m+Q.
+The distinct missing-neighbor C midpoints give m<=s_N. Combining with(1),
+ P+m<=floor((W−4I+2k)/2).
+For I=2,3,4, respectively, the right-hand side is12,10,8.
+
+In particular b<=P+m, and at most P+m−b occupied cells lie outside R_F. Every such cell has a shortest occupied-cell path to R_F, so its Manhattan distance from R_F is at most this outside-cell budget. Thus each proposed F determines a finite universe containing every eligible R with that F. The formula can allow extra tile sets; completeness requires including eligible rooms, not describing them exactly.
+
+3. Coverage of supports and marked pairs
+
+Translate and apply a signed coordinate permutation; these preserve the tiling, wall count, exception count and illumination. Adjacent marked full cells are already illuminated by their direct connecting segment. Keep every other unordered marked pair.
+
+For I=2, b and the outside-cell budget imply that the cell-coordinate Manhattan separation of the marks is at most7. The normalized nonadjacent offsets give18 support/pair cases.
+
+For I=3, the occupied cells together with R_F form a connected set of at most13 cells. Rooting any full cell puts the other full cells within Manhattan radius12. A complete finite support census, using the external-neighbor budget and necessary connectivity, leaves18 support shapes and43 raw marked-pair cases. Five duplicate marked cases could be removed by symmetry; all43 are retained in the certificate packet. The raw I2/I3 total is61 cases, representing56 marked-pair symmetry orbits.
+
+For I=4, a separate complete finite boundary classification gives b>=8, with equality in exactly3 support shapes up to translation and grid symmetry. The budget forces equality and zero occupied cells outside R_F. Each universe then contains12 cells/96 possible triangles. Necessary geometry clauses alone exclude all3 cases.
+
+The two finite support classifications are computer-assisted parts of the proof, with saved code, complete finite-domain arguments and independent reconstructions. Their exact inventories and review receipts are identified in the appendix. They are not optical searches.
+
+4. What the contradiction certificates prove
+
+For each case, a Boolean variable records whether each universe triangle is occupied. Necessary geometry clauses encode the full-star support, legal local fans, wall/exception/triangle budgets, reachability and turning-angle conditions. Starting from any eligible room, its actual fans, distances, corner bits and exception bits supply an extension satisfying these clauses. The extension direction of the emitted arithmetic encodings has also been proved and bound to the actual formulas.
+
+An optical guard consists of an exact rational path and two finite sets of triangles U,Z. If R contains every triangle in U and contains none in Z, with the marked endpoint stars present, the path is a legal corner-avoiding S/T connection. Consequently every dark room satisfies
+ (OR over u in U of NOT x_u) OR (OR over z in Z of x_z).    (3)
+
+An independent rational checker verifies each saved path, its reflections, its smooth-wall contacts, and the universal tile conditions that make the same path legal in every matching completion. Smooth lattice-point hits are allowed only when the required/forbidden incident triangles force a smooth physical wall. Symmetry images and endpoint reversal preserve this implication.
+
+Every optical clause in each final formula is matched exactly to a saved guard. The finite universe is handled explicitly: an out-of-universe required tile makes an implication vacuous; an out-of-universe absent tile is already absent. No unexplained pruning clause or temporary solver assumption is part of the final contradiction.
+
+Suppose an eligible dark room existed. Sections2–3 place it in one of the64 cases. In an I2/I3 case its triangle assignment would satisfy every necessary geometry clause and every guard clause(3). In an I4 case it would satisfy every necessary geometry clause. But a saved DRAT contradiction certificate for each precise formula is verified by a proof checker. Therefore no such room exists, proving the theorem.
+
+5. Verification and limits
+
+The frozen packet contains61 I2/I3 refutations and3 I4 geometric refutations. All64 have independent proof-checker executions. All193480 saved guard records across52 files passed a complete independently written exact optical checker. All875332 added I2/I3 optical clauses have matched provenance;13 of those61 formulas need no optical clauses. The arithmetic extension proof and the geometry/provenance arguments have separate peer hand reviews. Details and distinctions between independent implementations and copied-code reproduction are in the appendix.
+
+These checks support a computer-assisted theorem under the stated model. They do not formalize the entire argument in a proof assistant or eliminate trust in the checker code/runtime. The records have not yet been packaged as a portable public supplement.
+
+No step proves that an arbitrary dark polygon has this lattice, these marks, or a presentation with k<=6. Integer dilation can increase k without adding a physical wall. The theorem therefore does not exclude all rooms with21 walls or fewer, and it does not settle the minimum among arbitrary polygons. The historical novelty of this restricted exclusion is separate from the known22-wall construction and remains unestablished.
+
+Review map
+Read certificate-appendix.txt for exact local files and reproduction stages. Existing source arguments are proofs/placement-enumeration.md, bounded-proof/support-proof.md, persisted-replay/findings.md (counting argument), k6-support-census/findings.md and global-route-review/findings.md section4. Their older numerical caps/status paragraphs are superseded here only where the later k6 audits explicitly do so.

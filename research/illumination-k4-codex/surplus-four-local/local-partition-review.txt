@@ -1,0 +1,77 @@
+Independent review of repaired wholly local surplus-four frontier
+4 November 2026 — Codex01a1a00f
+
+[done] HAND ACCEPT peer local-partition-audit.txt: TEN necessary local charge
+types, plus the e3+e1 optical cover within13 reflections. No correction.
+The old seven-type list omitted three arithmetic types. This repair restores
+two OPEN types (e2+e1+b1 and three e1+b1), and closes the third (e3+e1).
+It does not invalidate previously verified subfamily witnesses.
+
+1. Arithmetic and solitary exclusions
+Delta=sum(e)+b=4 with all positive e integral gives p(0)+...+p(4)=12
+weighted partitions, grouped by b with counts1,1,2,3,5. The supplied twelve
+are distinct and complete. Only solitary e3+b1 and e4 can be excluded at
+this step; the remaining ten need geometric/optical treatment.
+
+A sole positive cell must be a root: ordinary zero caps cannot transmit.
+An e3 root with d1 requires nonexistent q4. With d2 only N is available;
+q5/m5 touching both H-facing C sides necessarily contains sectors6/7, the
+directly illuminated bridge. Here touching means ANY incident triangle,
+not a complete180-degree pair: N sides have sector sets{5,6} and{7,0}.
+The independent eight-window check confirms this distinction.
+
+An e4,d1 root has m5/q5 and at least two complete C pairs. At most one is
+H-facing. The other is an outside-H smooth C, since no second positive cell
+can heal it; this contradicts b0. An e4,d2 root is N,m6. Of all eight m6
+windows, the sole one touching both H sides without the bridge is0..5.
+Its full top pair1/2 and left pair3/4 face outside K, so both corresponding
+C points remain smooth, again contradicting b0. q=m for m6; no q reduction
+is used except at m4/smooth-A. Thus these two exclusions are sound.
+
+2. e3+e1 root/leaf completeness
+The e3 cell cannot be a root by the same q4/N-bridge argument; hence it is
+a d0,q3 leaf, with m3 or smooth-A m4. The other positive cell is a d1,q2
+two-sector root. Ordinary caps have no onward edge. All cells lie in K,
+whose partial-cell side-adjacencies are only B-D and E-R. Connectivity
+therefore makes this exactly one directly attached root/leaf pair.
+
+For B-root/D-leaf, the attaching root quarter must be B0/1: sector0 provides
+the B-D connection and sector1 touches H. D must contain sector3 across
+that edge and omit its H-facing sectors1/2. The only q3 contiguous windows
+are D3/4/5 and D3/4/5/6. The latter completes its south C via5/6; its other
+neighbor is outside K and cannot heal the smooth point, forbidden by b0.
+Thus the sole active orientation is B0/1 with D3/4/5.
+For D-root/B-leaf, the leaf omits H-facing B sectors1/2, so B+ is absent.
+The already accepted one-reflection path applies. Sigma exchanges B-D/E-R.
+These steps cover both choices of root and the two spatial orientations.
+
+3. Optical dispatch and fixed guard checks
+For active B-root/D-leaf, all other cells are ordinary. Split in order:
+ E- absent -> one_sigma;
+ E- present,L+ absent -> sigma_four;
+ L+/E- present,T- absent -> B-square two-path;
+ L+/E-/T- present,Nb+ absent -> five;
+ L+/E-/T-/Nb+ present -> sigma13, since ordinary N excludes other N caps.
+Every logical alternative is included. The opposite-root case uses one.
+Our local-partition-review.py independently rebuilds all six envelopes and
+computes full U/Z using our retained checker, plus sigma/reversal identities.
+The five active cases even allow the ENTIRE D star as possible additional
+support. All forbidden sets avoid it and all required tiles fit the specified
+minimum; the actual D leaf therefore removes no mirror. The opposite-root
+one-path requires only H and absence of B+, stronger than a fixed fan control.
+All six implications PASS; the largest supplied path has13 reflections.
+No deletion/erasure or monotonicity assumption is needed for this cover.
+
+4. Verification and scope
+Command: python3 -B .../surplus-four-local/local-partition-review.py
+Receipt: local-partition-review.json, input hashes and six U/Z pairs retained.
+Checks include only the twelve named arithmetic partitions, sixteen named
+N-window identities, complete-C-pair identities and six existing fixed paths.
+These are local identities, not room/cap-assignment or optical discovery.
+Completeness is the hand argument, not a count of computational controls.
+
+[done] Repaired necessary-type list and new e3+e1 cover independently accepted.
+[in progress] Other local and remote Delta4 gaps remain. Peer's NEW mixed
+centered-e2-leaf erasure/support-inheritance result is a separate request
+not independently reviewed by this artifact. No endorsement is implied.
+No fullDelta4 or universal-minimum claim, new discovery run or worker.

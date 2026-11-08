@@ -1,0 +1,84 @@
+# Review of §26.10: **ACCEPT** (scoped), with three non-blocking corrections
+
+Tools were disabled, so I did not run anything. Every claim below was re-derived by hand from the §26.10 text and the one W25 fixture. I treated the pasted script output as a transcript, not as evidence. I did no direction, word, path, room, cylinder or orbit scans, and I did not use the broad response's interval-family exclusions.
+
+## 1. Fixture: raw, simple, nonempty, matches the hypotheses
+
+**Fan decoding** (using the script's `ring`):
+
+| Leaf | Triangles | Portal | Matches |
+|---|---|---|---|
+| N (2,2), start 6, count 1 | (2,2),(2,1),(3,1) | y=1, 2<x<3 | N right portal ✓ |
+| (6,0), start 3, count 1 | (6,0),(5,1),(5,0) | x=5, 0<y<1 | upper end pocket A,C,B ✓ |
+| (4,2), start 6, count 2 | square [4,5]×[1,2] | y=1, 4<x<5 | forced upper-right m=2 ✓ |
+| (4,-2), start 2, count 1 | (4,-2),(4,-1),(3,-1) | y=-1, 3<x<4 | lower leaf LEFT ✓ |
+| (-2,0), start 7, count 1 | (-2,0),(-1,-1),(-1,0) | x=-1, -1<y<0 | S-left LOWER ✓ |
+| (0,2), start 6, count 1 | (0,2),(0,1),(1,1) | y=1, 0<x<1 | ✓ |
+| (0,-2), start 1, count 1 | (0,-2),(0,-1),(1,-1) | y=-1, 0<x<1 | ✓ |
+
+- **Size:** 28 tiles. There is one m=2 leaf, so r=1 and W=24+r=25, consistent with §26.7.
+- **Sectors:** I recomputed all 26 boundary sectors by hand, including (1,0)=6, (1,1)=5, (3,1)=5, (3,-1)=3, (-1,-1)=3, (4,±1)=6, (5,-1)=2, (5,0)=6 and (5,1)=5. Each matches the receipt.
+- **Rawness:** No B/C point has sector 4 or 8. The only smooth boundary point is (2,0), which is an A point. So W = 26 atomic faces − 1 = 25.
+- **Simplicity:** Every link is a single interval. For example, at (5,1) the link is [π/2, 7π/4], contiguous through T.
+
+## 2. Wall-vs-portal conditions (all six hits)
+
+| Hit | Segment | Why it is a wall |
+|---|---|---|
+| (-1, 2/7) | x=-1, 0<y<1 | S-left leaf is lower. Its only possible second triangle with an x=-1 edge would add a second portal, so it would not be a leaf. Nothing else in §26.7's centre list reaches this segment. ✓ |
+| (3/2, 1) | y=1, 1<x<2 | N right is forced by §26.8. The (0,2) leaf in either m stays at x≤1. Note this is not the withdrawn §26.8 point (5/2,1), which lies in N's portal. ✓ |
+| (3, -4/7), (3, -2/7) | x=3, -1<y<0 | M has no lower part. No listed leaf reaches here. ✓ |
+| (9/2, -1) | y=-1, 4<x<5 | Lower leaf is LEFT. A second triangle (4,-2),(4,-1),(5,-1) would be a second portal, so it is excluded. ✓ |
+| (5, -6/7) | x=5, -1<y<0 | The end pocket is upper. This stays a wall for small \|t\| because the portal moves with C=(5,t). ✓ |
+
+**Open segments and corners:**
+- None of the open segments meets a lattice point. The crossings are at x=0, 1, 2, 3, 4 with y = 4/7, 6/7, 6/7, 4/7, 2/7 on the first half, and at x=4 with y = -2/7, -6/7, -4/7 on the second half.
+- No segment touches T before the end, and none touches (2,1), (3,±1) or (4,-1).
+- The x=1 and x=3 crossings for 0<y<1 are interior portals between S/M and M/T.
+
+## 3. Path, target and equal halves
+
+- **First half durations:** 1/7 + 5/14 + 1/2 = 1. The endpoints are (-1,2/7), (3/2,1) and C=(5,0).
+- **Corner reflection:** In the fixed x=5 flank, (7,-2) becomes (-7,-2).
+- **Second half durations:** 2/7 + 3/14 + 1/14 + 2/7 + 1/7 = 1. The final point is (4,0), the **actual T**, not a boundary A point.
+- **Developed corner:** C reflected in H(1) then V(-1) gives (5,2) and then C'=(-7,2).
+- **Developed target:** T is reflected in reverse order through V3, V5, H-1, V3, then the flank V5, then H1, V-1:
+  (4,0) → (2,0) → (8,0) → (8,-2) → (-2,-2) → (12,-2) → (12,4) → **(-14,4) = 2C'**.
+- **Halves:** Both are (-7,2), which is primitive since gcd = 1. The direction is neither axial nor diagonal.
+
+## 4. Intrinsic π at C (not 3π)
+
+- **Link:** At C the link is [0, 3π/2]. Its flanks are the moving ray 0 (H_t) and the fixed ray 3π/2 (x=5, pointing down).
+- **Germs:** The source germ is π−β and the physical outgoing germ is π+β, with β = atan(2/7).
+- **Development:** Reflecting across 3π/2 gives 3π − (π+β) = 2π−β.
+- **Sector:** The interval [π−β, 2π−β] has length π. Its part [π−β, 3π/2] lies in the original link. Its part [3π/2, 2π−β] lies in the adjacent copy's link [3π/2, 3π].
+- **Embedding:** The interval crosses only the fixed flank, never H_t. The complementary side is 5π ≥ π in the 6π cone.
+- **Velocity check:** The developed outgoing velocity is (7,-2), which equals the incoming velocity.
+
+This is a different continuation from both §26.9 (midpoint B, moving diagonal flank) and the withdrawn §26.8 (midpoint C, failing at an earlier portal).
+
+## 5. Defect and prefix sign
+
+- **No moving mirror terms:** Every supporting line is fixed. The x=5 flank slides along itself, so T' is constant.
+- **Prefix:** The linear part of H then V is −I. So C'(t) = (-7, 2−t) and C'_derivative = (0,−1).
+- **Defect:** Q = 0 − 2(0,−1) = **(0,2)**, and det((−7,2),(0,2)) = **−14** ✓.
+- **Sign trap:** Using the physical −2u = (0,−2) would wrongly flip the sign to +14. The text and the script both correctly apply the source prefix.
+
+## Corrections (non-blocking)
+
+1. **"The lower leaf may have one or two triangles" is looser than necessary.** Rawness forces m=1. The other possible second triangle, (4,−2),(3,−1),(3,−2), would make (3,−1) equal 90+45+45 = 180°, which is smooth and forbidden. Similarly, the S-left leaf is forced to m=1 by (−1,−1). The proof does not need either fact, but the sentence should say "rawness forces one triangle; the used flank is a wall in any case."
+2. **Checker coverage should be stated honestly.**
+   - The `a.bounce` triples run only within each half, so the corner-flank reflection at C is not tile-checked. Only `sectors['(5, 0)']==[6]` is asserted.
+   - `dot(n,p)==c` checks the supporting line, not interiority of the wall. That relies on the semantics of `audit.py`, which I could not inspect.
+   - The π-sector is not machine-checked.
+   
+   The hand checks above cover all three gaps. The status should say they are hand-verified.
+3. **The §1 scope block uses a different normalization** (B₀=(1,1), u=(0,−1)). §26.10 inherits §26.9's u=(0,1), D_t: x+y=6+t, H_t: y=t. A single cross-reference sentence would prevent conflation.
+
+## Scope
+
+This verdict accepts only one event: the upper end pocket with N right (forced), lower leaf LEFT and S-left LOWER. It says nothing about the S-left UPPER case, lower-pointing end pockets, disconnected-H cases, or universal detection. The fixture shows that this hypothesis set is nonempty. It does not show that other orientation assignments are feasible.
+
+Suggested status line:
+
+> **Focused independent review: ACCEPT (scoped), corrections 1–3 incorporated; universal goal OPEN.**

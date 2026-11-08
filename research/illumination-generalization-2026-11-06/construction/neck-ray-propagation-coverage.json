@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-11-07T01:38:29.790535+00:00",
+  "id": "A21",
+  "status": "CANDIDATE_PENDING_INDEPENDENT_REVIEW",
+  "scope": "Fixed three orthogonal chambers, two equal-width necks, actual opposing fixed interior marks, nonnegative integer-affine length growth ray.",
+  "quantified_conclusion": "One legal finite S-to-T witness at any parameter, with arbitrary finite repeated passages, implies illumination at every sufficiently large real parameter.",
+  "core_identities": [
+    "D=q*lambda+C, X_i=r_i*lambda+d_i with integer q>0,r_i>=0",
+    "Target integer N=N0 modq gives slope error<=wq/D",
+    "Every intermediate displacement difference is 2w*r_i*(N-N0)/q+(d_i-r_i*C/q)*(tau_N-tau0)"
+  ],
+  "critical_guards": [
+    "Fixed buffer cuts avoid all smooth-seam horizontal reflections at reference witness",
+    "All complete neck traversals maintain horizontal velocity sign locally",
+    "Initial actual-S word and backwards actual-T word retained",
+    "Finite phase and slope guards realize actual intermediate chamber blocks inductively",
+    "Actual final target equality checked beyond modulo agreement"
+  ],
+  "verification": "Hand proof only; no search, numerical samples, formal verification or independent acceptance yet",
+  "not_covered": [
+    "Existence of any illuminated parameter on a residual ray",
+    "Threshold uniformity",
+    "Finite pre-threshold parameter checks",
+    "Unequal widths",
+    "Changing chamber/mark geometry",
+    "Arbitrary W<=21 room reduction"
+  ],
+  "original_aggregate_deadline_utc": "2026-11-07T01:50:40.511391+00:00",
+  "completed_before_deadline": true,
+  "whole_goal_complete": false
+}

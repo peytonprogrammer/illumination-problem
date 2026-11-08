@@ -1,0 +1,32 @@
+{
+  "status": "PASS_ONE_PREDECLARED_ACTUAL_PATH",
+  "source": [
+    8,
+    4
+  ],
+  "target": [
+    24,
+    2
+  ],
+  "slope": "369232/1923",
+  "epsilon": "16/1923",
+  "actual_first_target_time": "3846",
+  "actual_reflections": 47748,
+  "bottom_floor_reflections": 176,
+  "right_down_entries": 97,
+  "right_up_entries": 96,
+  "first_right_x": "53848/1923",
+  "first_right_overshoot": "4/1923",
+  "first_10_right_circuit_phase_checks": "PASS",
+  "path_sha256": "a4f18c0022a6ed0149887720e05bf978f25c69a9251a0b0e128d02b4bc706e12",
+  "source_pins": {
+    ".context/illumination-generalization-2026-11-06/review/resumed-exact-check.py": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a",
+    ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent-check.py": "be85b60c99a94668d5502dd8359ccd1597e7af8380e50ae54e99db1b6a8a04e2",
+    ".context/illumination-generalization-2026-11-06/construction/weighted-return-argument-01.md": "724e9af5211c9285dfd8e9b66956785a8dd5d61d80ff61e5eb0593d7298fda86",
+    ".context/illumination-generalization-2026-11-06/review/weighted-return-wr01-independent.md": "e951dd67351e97f54c40212b036c9ae253ee106503973051ce671beabbd8442a",
+    ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-left-return-proof.md": "0fcfc5c99fe86378660668a51d7bd91754c56587521df554387f7e7beca84fec",
+    ".context/illumination-generalization-2026-11-06/review/three-reflex-nonemptiness-control-union.md": "cb5e4b34ca20c98068f8ae3f42dcae7f0dd78ed3562e7d76fed2d6ed5bd99773"
+  },
+  "extraction_change": "Removed only the assertion len(roofs)==len(horizontal)==1; all first-wall, corner, exact-first-target-time and full path_check guards retained. Historical main code not executed.",
+  "scope": "One previously illuminated room/pair and one exactly prescribed affine-image direction; no new room coverage or universal existence."
+}

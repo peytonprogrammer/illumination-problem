@@ -1,0 +1,404 @@
+% Dark rooms: a worksheet for Peyton Wang.
+% Build with `python3 build.py`. It checks every answer, draws the figures into figs/, and runs
+% LuaLaTeX in the florilegium-tex Docker image. The margin is florilegium's grown margin with the
+% rooms theme (florilegium-theme-rooms.lua): lattice rooms and light rays instead of flowers.
+\documentclass[11pt]{article}
+\usepackage[letterpaper, left=1.75in, right=0.65in, top=0.85in, bottom=1in, footskip=0.4in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[skins, breakable]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{array, tabularx}
+\usepackage[grown, sections, theme=rooms, density=0.4, intensity=0.2]{florilegium}
+
+\definecolor{wall}{HTML}{1E3A8A}
+\definecolor{body}{HTML}{1F2937}
+\definecolor{muted}{HTML}{475569}
+\definecolor{amber}{HTML}{D97706}
+\definecolor{ideabg}{HTML}{F5F7FF}
+\definecolor{idearule}{HTML}{6366F1}
+\definecolor{rulecol}{HTML}{CBD5E1}
+
+\setlength\parindent{0pt}
+\setlength\parskip{5pt plus 1pt}
+\color{body}
+\setlist{nosep, leftmargin=1.6em}
+\setlist[enumerate,1]{label=(\alph*)}
+
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-1ex \@plus -.5ex}{1.4ex \@plus .2ex}{\sffamily\bfseries\LARGE\color{wall}}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-2ex \@plus -.5ex}{.6ex}{\sffamily\bfseries\large\color{muted}}}
+\renewcommand\@seccntformat[1]{\csname the#1\endcsname.\enspace}
+\makeatother
+
+\DeclareCaptionFont{muted}{\color{muted}}
+\captionsetup{font={small, sf, muted}, labelfont=bf, labelsep=period, skip=3pt}
+
+% difficulty: one to three amber stars
+\newcommand\st{\ensuremath{\scriptstyle\bigstar}}
+\newcommand\lvl[1]{{\color{amber}\ifcase#1\or\st\or\st\,\st\or\st\,\st\,\st\fi}\enspace}
+
+% a question, kept on one page: \begin{q}{number}{stars} ... \end{q}
+\newcommand\qragged{}
+\newenvironment{q}[2]{\par\addvspace{6pt}\noindent\begin{minipage}{\linewidth}\qragged
+  \setlength\parskip{4pt}{\sffamily\bfseries\color{wall}#1}\enspace\ifnum#2>0 \lvl{#2}\fi}%
+  {\end{minipage}\par}
+% space to work: a gap and a dotted line
+\newcommand\work[1][0.38in]{\par\vspace{#1}\noindent{\color{rulecol}\leaders\hbox to 4pt{\hss.\hss}\hfill\kern0pt}\par}
+\newcommand\worktall{\work[0.68in]}
+\newenvironment{keep}{\par\noindent\begin{minipage}{\linewidth}\setlength\parskip{5pt}}{\end{minipage}\par}
+
+\newtcolorbox{idea}{enhanced, breakable, frame hidden, sharp corners, colback=ideabg,
+  borderline west={3pt}{0pt}{idearule}, left=10pt, right=8pt, top=3pt, bottom=3pt,
+  before skip=6pt, after skip=8pt, before upper={\setlength\parskip{5pt}}}
+\newtcolorbox{infobox}[1]{enhanced, colback=white, colframe=rulecol, boxrule=0.6pt, arc=3pt,
+  left=10pt, right=10pt, top=4pt, bottom=6pt, before skip=10pt, after skip=10pt,
+  before upper={{\sffamily\bfseries\large\color{muted}#1\par}\smallskip}}
+
+% figures: figs/<key>.tex from build.py, labeled fig:<key>
+\newcommand\figref[1]{Figure~\ref{fig:#1}}
+\newcommand\fig[2]{\par\addvspace{6pt}\noindent\begin{minipage}{\linewidth}\centering
+  \input{figs/#1}\par\captionsetup{width=.92\linewidth}\captionof{figure}{#2}\label{fig:#1}\end{minipage}\par\addvspace{6pt}}
+% \sidefig{key}{caption}{material}: the material at left, the figure and its caption at right
+\newsavebox\figbox
+\newcommand\sidefig[3]{\par\addvspace{6pt}\noindent\sbox\figbox{\input{figs/#1}}%
+  \begin{minipage}[c]{\dimexpr\linewidth-\wd\figbox-16pt}\raggedright\let\qragged\raggedright#3\end{minipage}\hfill
+  \begin{minipage}[c]{\wd\figbox}\centering\usebox\figbox\par\captionof{figure}{#2}\label{fig:#1}\end{minipage}\par\addvspace{6pt}}
+% one panel of a figure, bottom-aligned, with a label under it
+\newsavebox\panelbox
+\newcommand\panel[2]{\sbox\panelbox{#1}\begin{tabular}[b]{@{}c@{}}\usebox\panelbox\\[1pt]%
+  \parbox[t]{\wd\panelbox}{\centering\sffamily\footnotesize\color{muted}#2}\end{tabular}}
+
+\newcommand\ans[1]{\par\textbf{\color{wall}#1.}\enspace}
+
+\begin{document}
+
+% ---------------------------------------------------------------- cover
+\vspace*{0.5in}
+{\sffamily\bfseries\fontsize{30}{34}\selectfont\color{wall}Dark rooms\par}
+\vspace{6pt}
+{\sffamily\large\color{muted}A worksheet for Peyton Wang \textperiodcentered{} November 2026\\
+Building intuition for your 22-wall room and the proofs around it\par}
+\vspace{0.3in}
+
+This worksheet walks you through the ideas behind your 22-wall dark room, one small step at a time. Each part starts with a short idea and a picture. Then it asks you questions.
+\begin{itemize}
+\item \lvl{1}questions are warm-ups.
+\item \lvl{2}questions ask you to explain why something is true.
+\item \lvl{3}questions are challenges. If one stops you, skip it and come back later.
+\end{itemize}
+Use a pencil, and draw on the figures. Grid paper helps. Hints and answers are at the end. Try each question for a few minutes before you look.
+
+\begin{infobox}{The parts}
+\begin{enumerate}[label=\arabic*.]
+\item Light in a room
+\item Unfolding: bend the room, not the light
+\item The lattice: A, B, and C points
+\item The halving trick
+\item From the staircase to your room
+\item Counting walls
+\item Neighbor cells: the four-cell bound
+\item What's proved, and what's open
+\end{enumerate}
+\end{infobox}
+
+\begin{infobox}{Words you'll need}
+\renewcommand\arraystretch{1.25}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{1in}X@{}}
+Room & A polygon whose walls are mirrors. In this project, rooms have no holes, and the boundary never touches itself.\\
+Wall & A longest straight piece of the boundary. The number of walls, $W$, equals the number of corners.\\
+Light path & Light that travels in straight lines, bounces off walls, and stops if it hits a corner.\\
+Dark pair & Two points $S$ and $T$ where no light path from $S$ reaches $T$.
+\end{tabularx}
+\end{infobox}
+
+% ---------------------------------------------------------------- part 1
+\clearpage
+\section{Light in a room}
+\sidefig{rules}{A $6 \times 3$ room. The red path leaves $S$, bounces twice, and reaches $T$. The gray path from $S$ runs into the corner (0, 0) and stops.}{%
+\begin{idea}
+Light travels in straight lines. When it hits a wall, it bounces so that the angle in equals the angle out. If it hits a corner, it stops: a corner has no single wall to bounce off.
+
+Two points $S$ and $T$ are a \textbf{dark pair} if no light path from $S$ reaches $T$, however many times it bounces.
+\end{idea}}
+
+\sidefig{blank}{Draw the light path from Question 1 here.}{%
+\begin{q}{1}{1}The room in \figref{blank} is the rectangle with corners (0, 0) and (4, 2). Light leaves (1, 1) going up and to the right, in direction (1, 1). Where does it first hit a wall? Which direction does it travel next? Where does it end up?\end{q}}
+
+\begin{q}{2}{1}When light bounces off a horizontal wall, which part of its direction changes sign? What about a vertical wall? Check your rule on the red path in \figref{rules}. Its directions are (2, 1), then (2, −1), then (−2, −1).\work\end{q}
+
+\begin{q}{3}{2}A room is \textbf{convex} if the straight segment between any two of its points stays inside it. A rectangle is convex. Explain why a convex room has no dark pairs.\work\end{q}
+
+\sidefig{lroom}{An L-shaped room. The two red rays start very close together.}{%
+\begin{q}{4}{2}\figref{lroom} shows an L-shaped room. The gray ray aims exactly at the inner corner, where the room turns. Each red ray starts a little to one side of it. Which wall does each red ray bounce off, and where does it go next? Why does ``light stops at a corner'' make sense here?\work\end{q}}
+
+% ---------------------------------------------------------------- part 2
+\clearpage
+\section{Unfolding: bend the room, not the light}
+\begin{idea}
+This is the most useful trick in the whole subject. When light bounces off a wall, reflect the room across that wall instead. In the mirror copy, the light keeps going straight.
+
+A path with $n$ bounces becomes one straight segment through $n$ mirror copies of the room. The segment ends at a mirror image of $T$.
+\end{idea}
+\fig{unfold}{Unfolding one bounce. The dashed rectangle is the room's mirror image across its right wall, and $T'$ is the mirror image of $T$. The straight segment from $S$ to $T'$ crosses the wall at the same point where the real path bounces.}
+
+\begin{q}{5}{1}Use the $4 \times 2$ room from Question 1, and put $T = (3, 1)$. \figref{mirrors} shows the room and three mirror copies. Mark the mirror image of $T$ in each copy, and write its coordinates:
+\begin{enumerate}
+\item across the top wall, $y = 2$;
+\item across the bottom wall, $y = 0$;
+\item across the top wall, and then across the line $x = 4$.
+\end{enumerate}\end{q}
+\fig{mirrors}{The $4 \times 2$ room, with $S = (1, 1)$ and $T = (3, 1)$. Copy (a) is its reflection across $y = 2$, and copy (b) is its reflection across $y = 0$. Copy (c) is copy (a), reflected again across $x = 4$.}
+
+\begin{q}{6}{1}In \figref{mirrors}, draw the segment from $S$ to your answer to 5(a). Where does it cross the line $y = 2$? That's where the real light bounces. Then do the same for 5(b).\work\end{q}
+
+\begin{q}{7}{2}In \figref{mirrors}, draw the segment from $S$ to your answer to 5(c). It crosses two walls. Find the two points where the real light path bounces. Check that the real path ends at $T$.\worktall\end{q}
+
+\begin{q}{8}{2}Reflection across the line $x = c$ sends $(x, y)$ to $(2c - x, y)$. \figref{numline} shows why on the $x$-axis: the mirror image sits as far past $c$ as $x$ sits before it. Suppose $c$ is a whole number. Explain why the reflection never changes whether $x$ is even or odd. What happens with reflection across $y = c$? You'll use this fact in Part 4.\work\end{q}
+\fig{numline}{Reflection across $c = 3$ sends $x = 1$ to $2c - x = 5$.}
+
+% ---------------------------------------------------------------- part 3
+\clearpage
+\section{The lattice: A, B, and C points}
+\begin{idea}
+All the rooms in this project are built from one tiling. Split every unit square along the diagonal that joins its even-even corner to its odd-odd corner. Name the lattice points by parity:
+\begin{itemize}
+\item \textbf{A point:} both coordinates even, like (2, 4).
+\item \textbf{B point:} both coordinates odd, like (1, 3).
+\item \textbf{C point:} one even and one odd, like (2, 1).
+\end{itemize}
+The 8 tiles around an A point fill a $2 \times 2$ square. That square is the A point's \textbf{star}.
+\end{idea}
+\fig{tiling}{The tiling. Filled dots are A points, open circles are B points, and small squares are C points. The shaded square is the star of the A point (2, 2).}
+
+\begin{q}{9}{1}Name each point as A, B, or C: (4, 2), (3, 5), (2, 7), (0, 0), (−1, −3), (6, −1).\work\end{q}
+
+\begin{q}{10}{1}In \figref{tiling}, check that every tile has exactly one A, one B, and one C corner. What angle does a tile have at each kind of corner?\work\end{q}
+
+\sidefig{latticeqs}{(a) The mirror line $x + y = 2$ on the tiling. (b) The segment from (0, 0) to (4, 8).}{%
+\begin{q}{11}{2}Reflection across the tiling line $x + y = 2$ sends $(x, y)$ to $(2 - y, 2 - x)$. In \figref{latticeqs}(a), the C point (3, 2) goes to the C point (0, −1). Reflect two more points by eye, and check them with the formula. Then show that it sends A points to A points, B points to B points, and C points to C points.\work\end{q}
+
+\begin{q}{12}{2}\figref{latticeqs}(b) shows the segment from (0, 0) to (4, 8). List the lattice points on it, and name each one A, B, or C. What pattern do you see?\work\end{q}}
+
+% ---------------------------------------------------------------- part 4
+\clearpage
+\section{The halving trick}
+\sidefig{stair}{The staircase $P$, made of five unit squares. The points $a$ and $b$ sit on its boundary.}{%
+\begin{idea}
+This part is the heart of why your room is dark. Start with a smaller room: the five-square staircase $P$ in \figref{stair}. Put $a = (0, 0)$ and $b = (2, -2)$ on its boundary.
+
+You'll show that no light path in $P$ goes from $a$ to $b$, however many times it bounces. Checking paths one at a time could never finish, since there are infinitely many. You'll need one argument that covers them all.
+\end{idea}}
+
+\begin{q}{13}{1}List every lattice point in $P$, including points on its boundary. Which of them are corners of $P$? You should find that every one except $a$ and $b$ is a corner.\work\end{q}
+
+\begin{q}{14}{1}\figref{unfoldp} shows unfolding in $P$, for one light path from $a$. Now suppose a light path goes from $a$ to $b$. Unfold it. You get a straight segment from $a = (0, 0)$ to a mirror image $B$ of $b$. Every wall of $P$ lies on a line $x = c$ or $y = c$, where $c$ is a whole number. Use Question 8 to explain why both coordinates of $B$ are even.\work\end{q}
+\fig{unfoldp}{(a) Light leaves $a$ in direction (3, −4). It bounces off $x = 2$, then off $y = -3$, and stops at the corner (1, −2). (b) Unfolded, the path is one straight segment from $a$ to (3, −4). Copy 1 is $P$ reflected across $x = 2$. Copy 2 is copy 1 reflected across $y = -3$.}
+
+\begin{q}{15}{1}Halve $B$ again and again until at least one coordinate is odd. Call the result $z$. \figref{halving} shows this for $B = (12, -8)$. Find $z$ for $B = (12, -8)$, $B = (4, 8)$, and $B = (0, -16)$. Why does $z$ lie on the segment, strictly between $a$ and $B$?\work\end{q}
+\fig{halving}{Halving $B = (12, -8)$ twice gives $z = (3, -2)$. Each halving lands on the segment from $a$ to $B$.}
+
+\begin{q}{16}{2}In \figref{unfoldp}(b), fold (3, −4) back into $P$: reflect across $y = -3$, then across $x = 2$. Check that you land on the corner (1, −2). Now fold $z$ back into $P$ the same way, by undoing the reflections. Explain why the folded point is a lattice point with an odd coordinate. Then use Question 13 to explain why it must be a corner of $P$.\work\end{q}
+
+\begin{q}{17}{2}Put Questions 14 to 16 together. Explain why every light path from $a$ hits a corner before it can reach $b$. Notice that the argument never asked how many times the light bounced.\work\end{q}
+
+\begin{q}{18}{3}Where did the argument use the fact that $P$ has no lattice points inside it? Describe a room where the halving trick would fail.\work\end{q}
+
+% ---------------------------------------------------------------- part 5
+\clearpage
+\section{From the staircase to your room}
+\begin{idea}
+Your room is three copies of $P$, glued along two seams:
+\begin{itemize}
+\item $P$0 is $P$ itself.
+\item $P$1 is $P$ reflected across the $x$-axis, by $(x, y) \mapsto (x, -y)$.
+\item $P$2 is $P$ turned halfway around the point (2, 0), by $(x, y) \mapsto (4 - x, -y)$.
+\end{itemize}
+The \textbf{folding map} sends each copy back onto $P$. It sends $S = (0, 0)$ to $a$ and $T = (2, 2)$ to $b$. The seams aren't walls: light crosses them freely.
+\end{idea}
+\fig{copies}{How the copies are made. The letter F shows what each map does: the reflection flips it upside down, and the half turn turns it all the way around.}
+\fig{room}{Your room. The three colors are the copies $P$0, $P$1, and $P$2. Dashed lines are seams, not walls. $E$1 to $E$4 are the four points where a seam meets the outer wall.}
+
+\begin{q}{19}{1}Count the walls of your room, and count its unit squares. How many corners point outward (convex), and how many point inward (reflex)?\work\end{q}
+
+\begin{q}{20}{1}Check that the folding map sends $T = (2, 2)$ to $b = (2, -2)$. Which copy is $T$ on?\work\end{q}
+
+\begin{q}{21}{2}Try three light paths from $S$ toward $T$. For each one, draw the segment in \figref{tries} and find the corner that stops the light.
+\begin{enumerate}
+\item The straight segment from $S$ to $T$.
+\item One bounce off the left wall, $x = -1$. Aim at $T'$, the mirror image of $T$ in the dashed copy.
+\item One bounce off the top wall, $y = 3$. Aim at $T'$ again.
+\end{enumerate}\end{q}
+\fig{tries}{Three tries. In (b) and (c), the dashed outline is your room's mirror image across the purple wall.}
+
+\begin{q}{22}{3}The points $E$1 to $E$4 are on straight walls of your room, but they fold onto corners of $P$. So light that bounces there needs care. In \figref{turn}(a), light in $P$1 arrives at $E$2 = (1, 0) with direction (1, −1). It bounces off the wall $x = 1$ and leaves into $P$0.
+\begin{enumerate}
+\item What is its direction after the bounce?
+\item Fold both directions into $P$. $P$1 folds by $(x, y) \mapsto (x, -y)$, and $P$0 doesn't move. Draw both folded directions in \figref{turn}(b). What does the folded path do at the corner?
+\end{enumerate}\end{q}
+\fig{turn}{(a) Light arriving at the seam point $E$2. (b) The same spot after folding: $E$2 lands on the corner (1, 0) of $P$.}
+
+\begin{keep}
+\begin{q}{23}{3}Suppose a folded path starts at $a$ and turns around for the first time at some corner. Explain why it must retrace its whole route back to $a$. Then use \figref{timeline} to explain why turning around can't help light get from $a$ to $b$. Together with Part 4, this proves that $S$ and $T$ are a dark pair.\work\end{q}
+\fig{timeline}{A folded path, drawn as a timeline. Each turnaround sends the path back to $a$.}
+\end{keep}
+
+% ---------------------------------------------------------------- part 6
+\clearpage
+\section{Counting walls}
+\begin{idea}
+Now switch from light to counting. For a room built from tiles, name these numbers:
+\begin{itemize}
+\item $N$: tiles. $W$: walls.
+\item $I$: A points inside the room. Each one has its whole star in the room.
+\item $J$: B and C points inside the room.
+\item $s_N$: B and C points on a straight part of the boundary. Then $k = J + s_N$ counts the \textbf{transparent points}.
+\item $Q$: add 3 for each A point on a straight part of the boundary. Add the number of tiles at each A corner.
+\end{itemize}
+These numbers always satisfy
+\[ W = 2 + 6I + Q - 2J - s_N, \qquad\text{or equivalently}\qquad W + 2k = 2 + 6I + Q + s_N. \]
+\end{idea}
+\fig{small}{Two small rooms, with their tiles. Filled dots are A points, open circles are B points, and small squares are C points.}
+
+\begin{q}{24}{1}For room (a) in \figref{small}, find $N$, $W$, $I$, $J$, $s_N$, and $Q$. Check the formula.\work\end{q}
+
+\begin{q}{25}{1}Do the same for room (b).\work\end{q}
+
+\clearpage
+\fig{roomtiles}{Your room, with its 30 tiles.}
+
+\begin{q}{26}{2}Do the same for your room, using \figref{roomtiles}. You should get $W = 22$. Hint: 5 A points lie on the boundary.\worktall\end{q}
+
+\begin{q}{27}{3}Prove the formula in three steps. Write $s_A$ for the A points on straight parts of the boundary.
+\begin{enumerate}
+\item Each tile has exactly one A corner. Count tiles by their A corner to show $N = 8I + Q + s_A$.
+\item Euler's formula for a tiled region without holes says $V - E + N = 1$, where $V$ counts points and $E$ counts edges. Show that $N = 2(I + J) + W + s_A + s_N - 2$.
+\item Set the two expressions for $N$ equal, and solve for $W$.
+\end{enumerate}\worktall\end{q}
+
+% ---------------------------------------------------------------- part 7
+\clearpage
+\section{Neighbor cells: the four-cell bound}
+\begin{idea}
+Cut the plane into A stars, and shrink each star to one grid cell: the star of $(2x, 2y)$ becomes cell $(x, y)$. \figref{shrink} does this for your room. A \textbf{full cell} is the star of an inside A point, so there are $I$ full cells. An \textbf{outside neighbor} shares a side with a full cell but isn't full itself. Write $b$ for the number of outside neighbors.
+
+Each outside neighbor costs the room something:
+\begin{itemize}
+\item If it's partly in the room, its A point is on the boundary, so it adds at least 1 to $Q$.
+\item If it's empty, the midpoint of the side it shares with a full cell is a C point on a straight wall. It adds 1 to $s_N$.
+\end{itemize}
+So $Q + s_N \ge b$, and the formula from Part 6 gives $\boldsymbol{W + 2k \ge 2 + 6I + b}$.
+\end{idea}
+\fig{shrink}{(a) Purple lines cut your room into stars. The two dark stars are full. (b) The same stars as cells. Your room has $I = 2$ full cells and $b = 6$ outside neighbors, marked with orange dots. Three neighbors are partly in the room, so their A corners add to $Q$. Three are empty, so they add the orange C points $E$1 to $E$4 in (a) to $s_N$.}
+
+\begin{q}{28}{1}Mark the outside neighbors of each shape in the first row of \figref{shapes}, and count them.\end{q}
+\fig{shapes}{Shapes of full cells. First row: one, two, and three cells. Second row: the five four-cell shapes.}
+
+\begin{q}{29}{1}Do the same for the five four-cell shapes in the second row. Which ones have exactly 8 outside neighbors?\work\end{q}
+
+\begin{q}{30}{1}Try to draw four cells, touching or not, with only 7 outside neighbors. You won't manage it. The next two questions show why.\work\end{q}
+
+\begin{q}{31}{2}Color the cells like a checkerboard. Explain why every neighbor of a dark cell is light, and every neighbor of a light cell is dark.\work\end{q}
+
+\begin{q}{32}{2}Use this fact: $m$ cells of one color always have at least 4, 6, 8, or 9 neighbors, for $m = 1$, 2, 3, or 4. Fill in the table for four full cells. Some neighbors might be full cells themselves, so the third column removes them.
+
+\begin{center}\small\renewcommand\arraystretch{1.5}
+\begin{tabular}{|c|>{\centering}p{1.15in}|>{\centering}p{1.25in}|>{\centering\arraybackslash}p{1.2in}|}
+\hline
+\sffamily\bfseries Colors & \sffamily\bfseries Neighbors, at least & \sffamily\bfseries Full cells among them, at most & \sffamily\bfseries Outside neighbors, at least\\ \hline
+4 + 0 & 9 & & \\ \hline
+3 + 1 & 8 + 4 = 12 & 4 & \\ \hline
+2 + 2 & & & \\ \hline
+\end{tabular}
+\end{center}
+Why does the 4 + 0 row remove nothing?\end{q}
+
+\begin{q}{33}{2}Put it together. A room with $I = 4$ has $W + 2k \ge 2 + 24 + 8 = 34$. Show that if $k \le 6$, then $W \ge 22$. You've ruled out every room with four inside A points, at most 6 transparent points, and at most 21 walls, without tracing a single ray.\work\end{q}
+
+\begin{q}{34}{3}Prove the fact in Question 32 in two steps.
+\begin{enumerate}
+\item Suppose a set $S$ of $m$ cells uses $r$ rows and $c$ columns. Show that $S$ together with its copies shifted right, up, and up-right covers at least $m + r + c + 1$ cells. \figref{expansion}(a) shows the two shifts for the L of 3.
+\item In \figref{expansion}(b), the four neighbors of a dark cell form a tilted $2 \times 2$ block. Use the tilted directions $u$ and $v$ as new rows and columns, and finish the proof with part (a).
+\end{enumerate}\work\end{q}
+\fig{expansion}{(a) The L of 3 grows by one cell per row, then by one cell per column. $3 + 2 + 3 = 8 = m + r + c + 1$. (b) Dashed: the four neighbors of a dark cell, a $2 \times 2$ block in the tilted directions $u$ and $v$.}
+
+\begin{q}{35}{3}Now try $I = 2$. Show that counting gives only $W \ge 20 - 2k$. Your room has $I = 2$ and $k = 4$. What does the counting bound say about it? What does that tell you about where the hard part of the problem is?\work\end{q}
+
+% ---------------------------------------------------------------- part 8
+\clearpage
+\section{What's proved, and what's open}
+\subsection*{Where your room fits}
+George Tokarsky built the first polygon with a dark pair in 1995. It came from the same 45° tiling and had 26 walls. In 1997, David Castro found one with 24. \figref{history} shows both next to yours.
+
+Their proofs rest on one rule: every B or C point in the room is a corner, so only A points sit inside or on a straight wall. Your room breaks that rule, because $E$1 to $E$4 are C points on straight walls. So their argument doesn't cover your room, and it needed the halving trick instead.
+
+\fig{history}{Three dark rooms from the 45° tiling, at the same scale. In each one, no light path from $S$ reaches $T$. Rooms (a) and (b) are redrawn from Cmglee's diagram on Wikimedia Commons.}
+
+\subsection*{Proved}
+\begin{itemize}
+\item \textbf{Your room is dark.} The halving trick in Part 4 and the turnaround argument in Part 5 prove it by hand. Two separate computer checks agree.
+\item \textbf{22 is the minimum in the lattice class.} Take a room built from the tiling in Part 3 with no holes, a boundary that never touches itself, and at most 6 transparent points. If it has 21 or fewer walls, then any two inside A points light each other. Your room has 22 walls, so it reaches the minimum.
+\begin{itemize}
+\item Four inside A points: the counting proof in Part 7.
+\item Five or more: the same counting, with the simpler bound $b \ge 4$.
+\item Two or three: computer-checked proofs, one for each of 61 cases. Nobody has a hand proof for these yet.
+\end{itemize}
+\end{itemize}
+
+\subsection*{Open}
+\begin{itemize}
+\item \textbf{Rooms outside the lattice class.} Rooms with any angles, and points anywhere, aren't covered. Nobody knows whether some room with fewer than 22 walls has a dark pair.
+\item \textbf{A question from experts.} A 2026 paper by de Winter and Tokarsky asks whether any simple polygon with fewer than 24 sides has two inside points that can't light each other. If experts accept your room's proof, it answers that question with 22.
+\end{itemize}
+
+\clearpage
+\subsection*{Questions to think about}
+These have no answer key.
+
+\begin{q}{36}{0}To look for a dark room with 20 walls, which assumptions in this worksheet would you have to give up?\work\end{q}
+
+\begin{q}{37}{0}The open cases have two or three inside A points. Question 35 shows that counting alone can't settle them. What would a hand proof need to use that Part 7 doesn't?\work\end{q}
+
+% ---------------------------------------------------------------- answers
+\clearpage
+\section*{Hints and answers}
+\small
+\ans{1}It first hits the top wall at (2, 2). Then it travels in direction (1, −1). It reaches (4, 0), a corner, and stops.
+\ans{2}A horizontal wall flips the second number: (2, 1) becomes (2, −1) at the top wall. A vertical wall flips the first number: (2, −1) becomes (−2, −1) at the right wall.
+\ans{3}The straight segment from $S$ to $T$ stays inside the room. It touches no wall and no corner, so it's a light path with zero bounces.
+\ans{4}The upper ray bounces off the vertical wall and heads up and to the left. The lower ray bounces off the horizontal wall and heads down and to the right. They leave in opposite directions. No single direction is the right one, so the rule stops the light.
+\ans{5}(a) (3, 3). (b) (3, −1). (c) (5, 3).
+\ans{6}The segment to (3, 3) crosses $y = 2$ at (2, 2), so the real path is $(1, 1) \to (2, 2) \to (3, 1)$. The segment to (3, −1) crosses $y = 0$ at (2, 0).
+\ans{7}The segment from (1, 1) to (5, 3) crosses $y = 2$ at (3, 2), then $x = 4$ at (4, 2.5). Fold (4, 2.5) back across $y = 2$ to get (4, 1.5). The real path is $(1, 1) \to (3, 2) \to (4, 1.5) \to (3, 1)$.
+\ans{8}$2c$ is even, so $2c - x$ is even exactly when $x$ is. Reflection across $y = c$ works the same way for $y$.
+\ans{9}A, B, C, A, B, C.
+\ans{10}$45^\circ$ at A, $45^\circ$ at B, and $90^\circ$ at C.
+\ans{11}The new first coordinate has the parity of $y$, and the new second coordinate has the parity of $x$. Both even stays both even, both odd stays both odd, and one of each stays one of each.
+\ans{12}(0, 0) A, (1, 2) C, (2, 4) A, (3, 6) C, (4, 8) A. A points alternate with one other kind of point.
+\ans{13}There are 12: $a$, $b$, and the corners (−1, −1), (−1, 0), (0, −1), (1, 0), (1, −1), (0, −2), (1, −2), (2, −1), (1, −3), and (2, −3). No lattice point is strictly inside $P$.
+\ans{14}$b$ has both coordinates even. Each reflection keeps both parities, so $B$ does too.
+\ans{15}$(12, -8) \to (6, -4) \to (3, -2)$. $(4, 8) \to (2, 4) \to (1, 2)$. $(0, -16) \to (0, -8) \to (0, -4) \to (0, -2) \to (0, -1)$. You halve at least once, so $z$ is $B$ divided by 2, 4, 8, and so on. That puts it on the segment, strictly between $a$ and $B$. $B$ isn't $a$, because the path has positive length.
+\ans{16}In \figref{unfoldp}, (3, −4) goes to (3, −2), then to (1, −2). In general, undoing the reflections means reflecting across whole-number lines again, which keeps lattice points and parities. So the folded point is a lattice point of $P$ with an odd coordinate. It isn't $a$ or $b$, since those are even-even. By Question 13, it's a corner.
+\ans{17}The straight segment passes through $z$ before it reaches $B$. So the real path passes the folded point, a corner, before it reaches $b$, and it stops there.
+\ans{18}Question 16 needs every lattice point of $P$ other than $a$ and $b$ to be a corner. Suppose $P$ had a lattice point with an odd coordinate inside it, or on a straight wall. Then $z$ could fold onto that point, and light passes such a point without stopping.
+\ans{19}22 walls and 15 unit squares. 13 corners are convex and 9 are reflex. Any room with only right-angle corners has exactly 4 more convex corners than reflex ones.
+\ans{20}$T$ lies on the seam between $P$1 and $P$2. Using $P$2's rule: $(4 - 2, -2) = (2, -2) = b$. $P$1's rule gives the same point, which is why the copies fit together.
+\ans{21}(a) The segment passes (1, 1), a corner. (b) The mirror image of $T$ is (−4, 2), and the segment crosses $x = -1$ at (−1, 0.5). The real path then heads toward (2, 2) and hits the corner (0, 1). (c) The mirror image of $T$ is (2, 4). The segment hits the corner (1, 2) before it reaches the top wall.
+\ans{22}(a) (−1, −1). (b) The arriving direction folds to (1, 1), and the leaving direction stays (−1, −1). The folded path turns exactly around and retraces its route.
+\ans{23}Before the first turnaround, the path follows ordinary bounces, and ordinary bounces can be run backward. After it turns around, it must run its whole route backward, all the way to $a$. So start the path at its last visit to $a$, and stop it at its first visit to $b$. That shorter path can't turn around at all, so it's an ordinary light path from $a$ to $b$, and Part 4 rules that out.
+\ans{24}$N = 8$, $W = 4$, $I = 1$, $J = 0$, $s_N = 4$ (the C points $(\pm 1, 0)$ and $(0, \pm 1)$), and $Q = 0$. Check: $2 + 6 + 0 - 0 - 4 = 4$.
+\ans{25}$N = 16$, $W = 4$, $I = 2$, $J = 1$ (the C point (1, 0)), $s_N = 8$, and $Q = 0$. Check: $2 + 12 + 0 - 2 - 8 = 4$.
+\ans{26}The A corners (0, 2), (4, 2), and (0, −2) have 2 tiles each. (4, 0) and (2, −2) are on straight walls. So $Q = 3 \cdot 2 + 2 + 2 + 2 = 12$. $I = 2$, $J = 0$, and $s_N = 4$: the points $E$1 to $E$4. Check: $2 + 12 + 12 - 0 - 4 = 22$. Also, $N = 30$.
+\ans{27}(a) An inside A point has 8 tiles, a straight-boundary A point has 4, and an A corner has its own count. $4s_A = 3s_A + s_A$. (b) Each tile has 3 edges. Inside edges border 2 tiles and boundary edges border 1, and the boundary has as many edges as points. Combine this with Euler's formula to get $N = 2\,(\text{inside points}) + (\text{boundary points}) - 2$. Inside points number $I + J$, and boundary points number $W + s_A + s_N$. (c) $8I + Q + s_A = 2I + 2J + W + s_A + s_N - 2$.
+\ans{28}One cell: 4. Domino: 6. Diagonal pair: 6. Line of 3: 8. L of 3: 7.
+\ans{29}I: 10. O: 8. T: 8. S: 8. L: 9. The O, T, and S shapes have exactly 8.
+\ans{30}See Question 32.
+\ans{31}A step to a neighbor changes $x + y$ by 1, so it switches color.
+\ans{32}4 + 0: 9, remove 0, at least 9. 3 + 1: $12 - 4 = 8$. 2 + 2: $6 + 6 = 12$, remove 4, at least 8. In the 4 + 0 row, every neighbor has the other color, so none of them is a full cell. You can add the two colors' counts because their neighbors have different colors and never overlap.
+\ans{33}$W \ge 34 - 2k \ge 34 - 12 = 22$.
+\ans{34}(a) Add the right shift first. Each row gains a cell just past its rightmost cell, so you have at least $m + r$ cells. The result spans at least $c + 1$ columns. Adding the up shift gives each column a new cell above its top, for at least $m + r + c + 1$. (b) Give dark cells the coordinates $u = (x + y)/2$ and $v = (x - y)/2$. Give light cells $u = (x + y - 1)/2$ and $v = (x - y - 1)/2$. Then the dark cell $(u, v)$ has the light neighbors $(u, v)$, $(u - 1, v)$, $(u, v - 1)$, and $(u - 1, v - 1)$. So the neighbors of $S$ are $S$ shifted by a $2 \times 2$ block, and part (a) counts them. Finally, $m \le rc$, so $r + c$ is at least 2, 3, 4, and 4 for $m = 1$, 2, 3, and 4. That gives 4, 6, 8, and 9.
+\ans{35}Two cells always have at least 6 outside neighbors, so $W + 2k \ge 2 + 12 + 6 = 20$. With $k = 4$, that gives only $W \ge 12$, far below your room's 22. With two or three inside A points, counting alone can't reach 22. A proof has to use darkness, meaning light paths. That's why those cases still rely on computer-checked proofs.
+
+\end{document}

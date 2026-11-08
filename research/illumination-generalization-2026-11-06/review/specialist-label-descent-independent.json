@@ -1,0 +1,67 @@
+{
+  "status": "INDEPENDENT_SIX_CLAIM_SCOPED_REVIEW_COMPLETE",
+  "reviewer": "Codex01a1a00f",
+  "updated_utc": "2026-11-07T15:55:32.575361+00:00",
+  "decisions": [
+    {
+      "claim": "reflection_conjugation",
+      "decision": "ACCEPT",
+      "reason": "Distinct conjugated derivatives survive a closed coarse T^48 loop; translation equivalence cannot identify them."
+    },
+    {
+      "claim": "closed_word_12_steps",
+      "decision": "ACCEPT",
+      "reason": "Exact coarse triple restored; zero and target permutations agree with the pinned output; all four sources fixed."
+    },
+    {
+      "claim": "zero_label_transport_orbits",
+      "decision": "ACCEPT",
+      "reason": "Alternate spanning tree, all20736 existing edges and separately replayed merger loops give exactly the same3+6 partition."
+    },
+    {
+      "claim": "finite_explicit_id_refinement",
+      "decision": "ACCEPT",
+      "reason": "At most r!*(4!)^2 for zero/source/target IDs only; sectors or other extra data need their own bound."
+    },
+    {
+      "claim": "regular_root_halfturn",
+      "decision": "ACCEPT",
+      "reason": "At most four actual source-image choices on this connected component. Regular root, actual cover point and preserved complete source fiber are essential."
+    },
+    {
+      "claim": "orthogonal_shear_scope",
+      "decision": "ACCEPT",
+      "reason": "Transported reflection ceases to be Euclidean; explicit full marked square-torus control after shear is not an orthogonal-room unfolding."
+    }
+  ],
+  "findings": [],
+  "required_qualifications": [
+    "Connected component and regular source root; image is an actual point of the cover, not only its torus projection.",
+    "The factorial bound covers only the named zero/source/target IDs, not separately named zero sectors or full reflection derivatives.",
+    "The3+6 transport partition is certificate-specific; disagreement edge counts depend on spanning tree.",
+    "Half-turn uniqueness gives an upper bound; extension, label preservation and order two must still be checked."
+  ],
+  "source_sha256": {
+    "../../codex-proof-verification/specialist-ideas/label-descent-argument.txt": "8743f828030a4b649d2ba2c23cea5391bc9ae3b6ead45b284878970dc8569e80",
+    "../../codex-proof-verification/specialist-ideas/label-descent-audit.py": "900c0dc76ac92c7dbbdc3df9aeb87c5bd8aadd66fbd82edc077b0b67327fcc79",
+    "../../codex-proof-verification/specialist-ideas/label-descent-audit.json": "ab238980030062b18cbf7d63af44f97adb3bb35b80a5ef74849dc5f01c45b5ee"
+  },
+  "local_evidence_sha256": {
+    "specialist-label-descent-independent.md": "1eaf89055b4568024b31c446e6ec5e9f19425afb522b63b44f112831d9f784c0",
+    "specialist-label-descent-independent-replay.py": "7f7bef1d91ada25fb4c3bcef66d3a48350033b856eb5422f16d3c10c5f1c2c11",
+    "specialist-label-descent-independent-replay.json": "c2dfa91c98c2b458ec3c1fec3225377f5884b1edacbd6931a5715865fa75a72e"
+  },
+  "saved_certificate": {
+    "compressed_sha256": "293d07a2ed94caea14fadfe89370fc387cd9b47cc26688342d97658786dc0db0",
+    "raw_sha256": "2f5540623e3d0a7c08b2d1bbe4487d607e9024cef82263de175c30bec7b7a346",
+    "existing_states": 10368,
+    "existing_edges": 20736
+  },
+  "author_checker_executed": false,
+  "new_discovery_or_census": false,
+  "refined_orbit_enumerated": false,
+  "whole_goal_complete": false,
+  "positive_illumination_theorem_proved": false,
+  "new_wall_bound_proved": false,
+  "native_goal_or_budget_changed": false
+}

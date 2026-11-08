@@ -1,0 +1,71 @@
+{
+  "status": "ALL_SIGN_AND_UNBOUNDED_IMAGE_RESIDUES_PROVED_BY_COEFFICIENTS",
+  "whole_goal_complete": false,
+  "discovery": false,
+  "rows": [
+    {
+      "signs": [
+        -1,
+        -1
+      ],
+      "X_constant": -28,
+      "Y_constant": -30,
+      "X_mod4": 0,
+      "X_mod3": 2,
+      "Y_mod3": 0,
+      "Y_mod4": 2
+    },
+    {
+      "signs": [
+        -1,
+        1
+      ],
+      "X_constant": -28,
+      "Y_constant": 6,
+      "X_mod4": 0,
+      "X_mod3": 2,
+      "Y_mod3": 0,
+      "Y_mod4": 2
+    },
+    {
+      "signs": [
+        1,
+        -1
+      ],
+      "X_constant": 4,
+      "Y_constant": -30,
+      "X_mod4": 0,
+      "X_mod3": 1,
+      "Y_mod3": 0,
+      "Y_mod4": 2
+    },
+    {
+      "signs": [
+        1,
+        1
+      ],
+      "X_constant": 4,
+      "Y_constant": 6,
+      "X_mod4": 0,
+      "X_mod3": 1,
+      "Y_mod3": 0,
+      "Y_mod4": 2
+    }
+  ],
+  "direct_actual_path": {
+    "wall_leg_guards": 4,
+    "reflections": 0
+  },
+  "primitive_direct_direction": [
+    2,
+    3
+  ],
+  "excluded_entire_families": [
+    "(n,1)",
+    "(1,n)"
+  ],
+  "all_n_proof": "Xnonzero mod3 andY0mod3 excludesX=nY; Y2mod4 andX0mod4 excludesY=nX",
+  "source_sha256": {
+    "resumed-exact-check.py": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+  }
+}

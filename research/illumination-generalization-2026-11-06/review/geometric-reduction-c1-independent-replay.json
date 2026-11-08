@@ -1,0 +1,284 @@
+{
+  "status": "PASS_INDEPENDENT_PRESCRIBED_C1_REPLAY",
+  "rows": {
+    "known22": {
+      "walls": 22,
+      "reflex": 9,
+      "area": "15",
+      "perimeter": 28,
+      "interior_points": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "smooth_boundary_points": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "J": 0,
+      "s_N": 4,
+      "k": 4
+    },
+    "C1_corner_filled": {
+      "walls": 20,
+      "reflex": 8,
+      "area": "16",
+      "perimeter": 28,
+      "interior_points": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "smooth_boundary_points": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "J": 1,
+      "s_N": 5,
+      "k": 6
+    },
+    "peer_ear_pruned": {
+      "walls": 20,
+      "reflex": 8,
+      "area": "14",
+      "perimeter": 26,
+      "interior_points": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "smooth_boundary_points": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "J": 0,
+      "s_N": 5,
+      "k": 5
+    }
+  },
+  "fill_union_slabs": [
+    {
+      "x_interval": [
+        -1,
+        0
+      ],
+      "D": [
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "filled": [
+        [
+          "-2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "x_interval": [
+        0,
+        1
+      ],
+      "D": [
+        [
+          "-2",
+          "2"
+        ]
+      ],
+      "filled": [
+        [
+          "-2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "x_interval": [
+        1,
+        2
+      ],
+      "D": [
+        [
+          "-3",
+          "-1"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ],
+      "filled": [
+        [
+          "-3",
+          "-1"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "x_interval": [
+        2,
+        3
+      ],
+      "D": [
+        [
+          "1",
+          "3"
+        ]
+      ],
+      "filled": [
+        [
+          "1",
+          "3"
+        ]
+      ]
+    },
+    {
+      "x_interval": [
+        3,
+        4
+      ],
+      "D": [
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "filled": [
+        [
+          "0",
+          "2"
+        ]
+      ]
+    },
+    {
+      "x_interval": [
+        4,
+        5
+      ],
+      "D": [
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "filled": [
+        [
+          "0",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "isolation_new_sides_verified": true,
+  "author_r4_availability_control_verified": true,
+  "author_checker_executed": false,
+  "author_source_sha256_snapshot": {
+    "geometric-reduction-candidate-01.md": "2c04bd5f87fe21ce809e9d807779bd9a2d05049ba60e6ff3c2a634ed5005249a",
+    "geometric-reduction-check-01.py": "a5753cac0e82f7bee99d9f4a64e58600393f706bd18c6e1dc8358d8dde96691e",
+    "geometric-reduction-check-01.json": "c9549a4a64f67391208dd91ccaddafa5c1a0dffb489e721145400bbd1790b104",
+    "geometric-reduction-check-01.log": "273d4e50d8ff7006bf58f7e17c8a81580e6e4c792cb12fa4f15e461552a3f185"
+  },
+  "reviewer_pure_functions_sha256": "a14f784a067cd685e3d44981a5a0e0686ca26d35a65e929d3e9fb96a02ae81dd",
+  "source_is_frozen_review_packet": false,
+  "r_le_8_optical_transfer": "OPEN",
+  "new_search_or_census": false,
+  "whole_goal_complete": false
+}

@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "method": "fixed rational constructions and complete finite sign residues; no search",
+  "no_monotone_case": {
+    "source_y": "1/3",
+    "target_y": "2/3",
+    "minimum_invariant_distance": "1/3",
+    "window_bound": "1/5"
+  },
+  "forced_blocker_case": {
+    "source_y": "2/5",
+    "target_y": "2/5",
+    "portal_height": "1/15",
+    "central_k_parity": "odd",
+    "blocker": [
+      "5/2",
+      "1/10"
+    ]
+  },
+  "monotone_path": [
+    [
+      "1",
+      "2/5"
+    ],
+    [
+      "11/5",
+      "0"
+    ],
+    [
+      "5/2",
+      "1/10"
+    ],
+    [
+      "14/5",
+      "0"
+    ],
+    [
+      "4",
+      "2/5"
+    ]
+  ],
+  "bypass_path": [
+    [
+      "1",
+      "2/5"
+    ],
+    [
+      "0",
+      "2/7"
+    ],
+    [
+      "5/2",
+      "0"
+    ],
+    [
+      "5",
+      "2/7"
+    ],
+    [
+      "4",
+      "2/5"
+    ]
+  ],
+  "wall_incidence_checks": 12,
+  "symmetric_controls": [
+    {
+      "n": 1,
+      "portal": "2/55",
+      "reflections": 5,
+      "wall_incidence_checks": 10
+    },
+    {
+      "n": 50,
+      "portal": "2/2015",
+      "reflections": 201,
+      "wall_incidence_checks": 402
+    },
+    {
+      "n": 0,
+      "portal": "1/32",
+      "reflections": 1,
+      "wall_incidence_checks": 2
+    },
+    {
+      "n": 7,
+      "portal": "441/9820",
+      "reflections": 29,
+      "wall_incidence_checks": 58
+    }
+  ],
+  "three_path_controls": [
+    {
+      "label": "ordinary",
+      "bottom_lengths": [
+        "5",
+        "3"
+      ],
+      "notch_phase": "minus",
+      "notch_length": "1",
+      "discarded_resonance": false,
+      "reflections": [
+        5,
+        3,
+        3
+      ],
+      "wall_incidence_checks": 22
+    },
+    {
+      "label": "thin-passage",
+      "bottom_lengths": [
+        "201",
+        "203"
+      ],
+      "notch_phase": "minus",
+      "notch_length": "101",
+      "discarded_resonance": false,
+      "reflections": [
+        201,
+        203,
+        103
+      ],
+      "wall_incidence_checks": 1014
+    },
+    {
+      "label": "notch-minus-resonance",
+      "bottom_lengths": [
+        "1",
+        "3"
+      ],
+      "notch_phase": "plus",
+      "notch_length": "3",
+      "discarded_resonance": true,
+      "reflections": [
+        1,
+        3,
+        5
+      ],
+      "wall_incidence_checks": 18
+    },
+    {
+      "label": "notch-plus-resonance",
+      "bottom_lengths": [
+        "5",
+        "3"
+      ],
+      "notch_phase": "minus",
+      "notch_length": "5",
+      "discarded_resonance": false,
+      "reflections": [
+        5,
+        3,
+        7
+      ],
+      "wall_incidence_checks": 30
+    },
+    {
+      "label": "near-passage-height",
+      "bottom_lengths": [
+        "3/5",
+        "7/5"
+      ],
+      "notch_phase": "minus",
+      "notch_length": "3/5",
+      "discarded_resonance": false,
+      "reflections": [
+        1,
+        3,
+        3
+      ],
+      "wall_incidence_checks": 14
+    },
+    {
+      "label": "short-notch",
+      "bottom_lengths": [
+        "3/4",
+        "5/4"
+      ],
+      "notch_phase": "minus",
+      "notch_length": "3/4",
+      "discarded_resonance": false,
+      "reflections": [
+        1,
+        3,
+        3
+      ],
+      "wall_incidence_checks": 14
+    },
+    {
+      "label": "long-notch",
+      "bottom_lengths": [
+        "4763/14",
+        "4771/14"
+      ],
+      "notch_phase": "minus",
+      "notch_length": "2411/14",
+      "discarded_resonance": false,
+      "reflections": [
+        453,
+        455,
+        231
+      ],
+      "wall_incidence_checks": 2278
+    },
+    {
+      "label": "rational-offset",
+      "bottom_lengths": [
+        "311/14",
+        "319/14"
+      ],
+      "notch_phase": "minus",
+      "notch_length": "143/14",
+      "discarded_resonance": false,
+      "reflections": [
+        29,
+        31,
+        15
+      ],
+      "wall_incidence_checks": 150
+    }
+  ]
+}

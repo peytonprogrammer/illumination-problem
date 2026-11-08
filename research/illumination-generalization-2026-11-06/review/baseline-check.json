@@ -1,0 +1,44 @@
+{
+  "status": "BASELINE_ACCEPTED_DEPENDENCY_RECEIPTS_RECONCILED",
+  "guard_receipts": 52,
+  "guard_records": 193480,
+  "I2_I3_verified_receipts_and_logs": 61,
+  "I4_verified_receipts": 3,
+  "arithmetic_call_receipts": 291,
+  "optical_clauses_accounted_for": 875332,
+  "counts": {
+    "checked": 193480,
+    "reflections": 3363038,
+    "vertex_bounces": 160831,
+    "room_checks": 17879,
+    "vacuous": 0
+  },
+  "current_checker_hashes_verified": [
+    "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/lower-bound-proof-audit/full-replay/guard-checker.py",
+    "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/bounded-proof/drat-trim",
+    "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py"
+  ],
+  "source_sha256": {
+    "illumination-k4-codex/restricted-theorem-note/theorem.txt": "f70d1c608646eedcfe0027b9cac2c67ab7941c77a2f7b5ab82cebebb82a3124b",
+    "illumination-k4-codex/restricted-theorem-note/certificate-appendix.txt": "8691fb8c9bae174f73f18f20061f65eac57bd4ae1d234a78e5b58307bafdcba3",
+    "illumination-k4-codex/restricted-theorem-note/attainment-check.txt": "2928b1059cb6c0a6422dd2efaed5efb82ba86b6a351fbd2f51e3620c6b1751be",
+    "illumination-k4-codex/lower-bound-proof-audit/hardening-status.txt": "28a34e7d7e591abb39ba96c8be59d33066a834a7e121d4a73fe62c6421394812",
+    "illumination-k4-codex/lower-bound-proof-audit/full-replay/manifest.json": "1ef94bce8b1cc4995875447aae5122cecb230044b9d23880dfd5074b6733499e",
+    "illumination-k4-codex/lower-bound-proof-audit/full-replay/final-binding.json": "0ccffbe396d2bd33ecbb052af6e83fd8287f025899af2d9806070757c53041ec",
+    "illumination-k4-codex/lower-bound-proof-audit/full-replay/summary.json": "36bf946894084d6277dd6610e74e24884f60380afd3a0ba3d478466a16612f64",
+    "illumination-k4-codex/lower-bound-proof-audit/arithmetic/receipts.json": "816e2d2fa0188c665fda0bd46af5b8ab8bfe20171d6a9a3c1da70e404173198a",
+    "illumination-k4-codex/lower-bound-proof-audit/provenance/summary.json": "72ef9de0701ab20c97b9e31ec11aa2cc6c98d22edaab4af9f78b9aac66357b5d",
+    "illumination-k4-codex/k6-support-census/count.json": "b48a230d6d50c4306dfce26bcfd4e97167404ad75972a89db7463fe246f6f775",
+    "illumination-k4-codex/k6-i4-review/check.json": "17e2979bdd9fe8dda1335ba8a9f5c2b34ab9ea612c84942c9990c561294452a1",
+    "claude-illumination-check/encoder-necessity-audit/findings.md": "a9bbd80717946bc9f6abc08e68d0d5c0b290d8ffb64f1b4e3eb52db1819aac80",
+    "claude-illumination-check/arithmetic-review/findings.md": "658a998674eac9547ebb7840f6701a4af5f777af793c43ce839c3fffa8512593",
+    "claude-illumination-check/provenance-review/findings.md": "26ab7440864f6d2790797b61ea8ed81f06606aa235b658461cf755fbb86bad84",
+    "claude-illumination-check/attainment-review/findings.md": "8d626dadc32c6a3662ef0e1cfe757ccbe229a92de1efbe2e2589bc1c6b1b8fb0",
+    "claude-illumination-check/review-preprint-v02/findings.md": "8e0105d1caab18f8892fc0f326c32331bfeb0b0a6373aa96ba4d88426b420add"
+  },
+  "personally_done_this_goal": "Read and reconcile hand arguments and later superseding findings; verify all receipt identities/bindings/log outcomes and current checker hashes.",
+  "accepted_prior_execution": "Full optical replay, all DRAT replays, complete arithmetic binding and provenance reconstruction as historically accepted.",
+  "not_done_this_goal": "No fresh rerun or rehash of8.75GB proof inputs, no new SAT/census/optical discovery, no formalization.",
+  "baseline_scope": "W<=21,k<=6,all distinct interior A pairs/supports; attainment22walls,k4 separately hand-accepted.",
+  "uncapped_theorem_accepted": false
+}

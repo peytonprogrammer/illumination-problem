@@ -1,0 +1,119 @@
+Analytic14-reflection connection for the last remote22 room
+4 November 2026 — Codex01a18403
+
+RESULT: actual S=(0,0) and T=(2,2) illuminate in the prescribed remote22
+residue. Initial direction(10,-13), fourteen reflections, all legal. This
+closes the last optical case in remote22.txt at parent level; independent
+hand review of the case reduction and this path is requested. It does NOT
+close the remaining remote/local surplus4 partitions or universal minimum.
+
+1. Exact room and endpoint conventions
+Use the single room in remote22-residue-check.json: core full S/U/T stars;
+L=(-2,0) sectors7/0/1/2; remote(-2,2) sectors6/7; ordinary B+,E-,T-,R-.
+Its single boundary has vertices (cyclic order)
+ (-3,1),(-1,-1),(0,-1),(0,-2),(1,-1),(3,-1),(4,0),(3,0),
+ (3,1),(4,2),(3,2),(3,3),(2,3),(2,4),(1,3),(1,1),
+ (-1,1),(-1,2),(-2,2),(-2,1).
+The remote pair is the complete square [-2,-1]x[1,2]. The lower-left
+mirror is x+y=-2, from(-3,1) to(-1,-1). The core is the L-shaped union
+[-1,3]x[-1,1] union [1,3]x[1,3]. The upper chamber's wall x=1 stops at y=1;
+its continuation below that height is an open passage, not a mirror.
+
+2. New geometric step
+Use the square's four-contact return, then circulate through the upper
+chamber. On descent, pass through the open elbow at x=1,y<1. The next
+lower-left diagonal reflection swaps the velocity components. Two subsequent
+horizontal reflections send the ray to the right wall, after which it hits
+the target. This changes the endpoint equation. Treating x=1 as a mirror
+below y=1 is the invalid shortcut that misses this continuation.
+
+For a symbolic launch(d,-1), the strict branch interval is
+ 13/17 < d < 7/9.
+The hand-derived contact positions are:
+ 1 bottom cap: (2d/(1+d), -2/(1+d));
+ 2 square left: (-2,4d-2);
+ 3 square right: (-1,5d-2);
+ 4 square top: (4-4/d,2);
+ 5 square left: (-2,6-6d);
+ 6 core bottom: (7/d-8,-1);
+ 7 right lower vertical: (3,11d-8);
+ 8 upper left: (1,13d-8);
+ 9 upper roof: (11/d-12,3);
+10 upper right: (3,14-15d);
+11 lower-left diagonal: ((18d-16)/(1+d),(14-20d)/(1+d));
+12 source roof: (21d-16,1);
+13 core bottom: (23d-16,-1);
+14 right lower vertical: (3,19/d-24).
+Then at height2 the horizontal coordinate is 22-26d.
+
+Derivation of the critical continuation: extend the segment after contact10
+with velocity(-1,-d). Its crossing at x=1 has y=14-17d, strictly below1
+on the chosen interval, and its crossing of y=1 has x=18-13/d>1. Thus it
+leaves the upper chamber through the genuine opening. Its next intersection
+with x+y=-2 is contact11 above. Reflection in that line sends(-1,-d) to
+(d,1). At y1 its x is21d-16 (contact12); reflection downward reaches y=-1
+at x23d-16 (contact13). Reflect upward to x3 (contact14), then reverse the
+horizontal component. Direct substitution gives x=22-26d at y2.
+
+Solving 22-26d=2 gives d=10/13. It is STRICTLY in the branch interval:
+10*17>13*13 and 10*9<7*13. This parameter was solved algebraically, not
+selected from a direction or reflection-word search.
+
+3. Rational path, sufficient independently of the symbolic interval claim
+Starting at S, use these fourteen reflection points in order:
+ (20/23,-26/23),
+ (-2,14/13),
+ (-1,24/13),
+ (-6/5,2),
+ (-2,18/13),
+ (11/10,-1),
+ (3,6/13),
+ (1,2),
+ (23/10,3),
+ (3,32/13),
+ (-28/23,-18/23),
+ (2/13,1),
+ (22/13,-1),
+ (3,7/10),
+then T=(2,2).
+The contact(1,2) is smooth on the maximal wall from(1,1) to(1,3), so hitting
+that integer point is legal. None of the listed contacts is a polygon corner.
+The upper-to-lower leg passes x=1 at y12/13 and x=-1 at y-8/13; neither
+is a wall contact. These explicit fractions prevent a fictitious continuation
+through a missing mirror or a corner.
+
+4. Exact verification
+one-room-check.py performs two separate checks of this SINGLE fixed path:
+(a) independent rational polygon geometry: every contact lies strictly within
+one maximal wall; specular reflection follows from tangent projection;
+no open leg intersects any boundary segment or overlaps it; every leg has
+an interior midpoint, and both actual endpoints are interior;
+(b) the reused full canonical-triangle guard checker: all required triangles
+are in the actual room and none of the forbidden triangles is present.
+Both pass. No approximate tolerance or reflection cutoff is used. Method(a)
+is independent of the triangle guard checker, not a second call to it.
+
+The JSON retains the exact path, contacted wall indices, complete triangle
+guards, source input hashes and initial direction. Reproduce with
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/one-room-check.py
+No ray/direction/word discovery, archive lookup, solver or worker was used.
+
+5. Result scope and previous negative checks
+The earlier limited I3 and saved-I2 path tests did not cover this room.
+Those receipts remain unchanged as historical failed inheritance/lookup
+checks. Their failure is superseded by this positive analytic certificate.
+Together with the exhaustive remote22.txt hand reduction, this supplies
+actual illumination for the whole (parent2,leaf2,other0,b0) surplus4 row,
+under W20/k6, within23 reflections. The maximum23 comes from other family
+branches; this final room needs14. Independent review remains outstanding.
+
+6. Separate-session independent path acceptance received
+Restricted Codex01a1a00f independently traced ONLY the supplied direction in
+the actual boundary, matched all14 contacts exactly, replayed in reverse,
+rejected four deliberate corruptions, and independently verified the34-tile
+simple room/full A support/atomic boundary. Its current path equals our
+current exact path coordinate for coordinate. Evidence:
+ remote22-witness/findings.txt and check.json (updated09:30).
+This ACCEPT applies to the SINGLE physical trajectory. The full parameter
+interval and remote22 structural reduction are expressly outside its review;
+those do not acquire independent acceptance from this path check.

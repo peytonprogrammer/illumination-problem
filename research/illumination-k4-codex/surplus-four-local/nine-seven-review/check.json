@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "nine": {
+    "reflections": 9,
+    "required_count": 21,
+    "forbidden_count": 6,
+    "segment_internal_edge_events": [
+      1,
+      0,
+      0,
+      5,
+      0,
+      0,
+      6,
+      2,
+      4,
+      0
+    ],
+    "unfolded_target": [
+      "4",
+      "16"
+    ],
+    "forward_reverse_sigma": "PASS"
+  },
+  "seven": {
+    "reflections": 7,
+    "required_count": 15,
+    "forbidden_count": 5,
+    "segment_internal_edge_events": [
+      1,
+      0,
+      0,
+      5,
+      7,
+      3,
+      4,
+      0
+    ],
+    "unfolded_target": [
+      "4",
+      "14"
+    ],
+    "forward_reverse_sigma": "PASS"
+  },
+  "frozen_room": {
+    "boundary_walls": 20,
+    "J": 4,
+    "s_N": 2,
+    "interior_A": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "physical_replay_forward_reverse_sigma": "PASS",
+    "E_inlet_3_2_interior": "PASS"
+  },
+  "whole_family_implications": [
+    {
+      "B": "Bwest",
+      "D": 2,
+      "R": "arbitrary",
+      "reflections": 9
+    },
+    {
+      "B": "Bwest",
+      "D": 1,
+      "R": "arbitrary",
+      "reflections": 7
+    },
+    {
+      "B": "Brectangle",
+      "D": 2,
+      "R": "arbitrary",
+      "reflections": 9
+    },
+    {
+      "B": "Brectangle",
+      "D": 1,
+      "R": "arbitrary",
+      "reflections": 7
+    }
+  ],
+  "local_angle_exclusions": "PASS",
+  "independence": "Standalone Fraction geometry, no peer/helper imports, no peer checker execution. Support extrema are conditional envelopes, not newly constructed rooms. Only frozen original room reconstructed.",
+  "limits": "Does not reprove upstream critical-B classification/forcing/budget, count validity of six descriptions, discover paths, or close Delta4. Broad parameter interval global support not computed: exact endpoint witnesses suffice.",
+  "source_sha256": {
+    "fourth-surplus-review/single-room-search/findings.txt": "3eef5f8a5e84d6606bd7ef5370df32d1cf3bc4ca6c32b37dd16095f9c42204fa",
+    "fourth-surplus-review/single-room-search/room.json": "b100aef3995d3f18299a08ef54250e0b7aefafd910861d8c99f6b37a4bf678f2",
+    "fourth-surplus-review/single-room-search/result.json": "f1e771dbd2a5a7f55aad3dbc242ed61e207a850c60d1f53091ec9c296493cda2",
+    "fourth-surplus-review/single-room-search/verification.json": "d19459a08137233217143125e8089e0dc83d02558c400af7b6745f2baf534c9a",
+    "fourth-surplus-review/single-room-search/verify.py": "d1363d224bf890c9a33b1e23d69dc8d6a7a55ea93875bb0381a8ba88462f2d6b",
+    "fourth-surplus-review/mixed-e2-e1/seven-path-floor.txt": "5d7ecf0275c4dbdf9138b247ba3cc3078e25d4d41ef7d6799f050bdba09cde3c",
+    "fourth-surplus-review/mixed-e2-e1/seven-path-floor-check.py": "50ad87db5e2d351e3924e43ea83ca486fbac9287c2ab5b3945583909efc8913f",
+    "fourth-surplus-review/mixed-e2-e1/seven-path-floor-check.json": "67c9c6ba72c575af5e253dbab925eb314525bb4ec6f12077429aebfcf7781d80",
+    "fourth-surplus-review/mixed-e2-e1/nine-path-transfer.txt": "0cf7b7312e5759f2a4799b5a67eede8a8a3984c940cc0b7c87e637fea001d461",
+    "fourth-surplus-review/mixed-e2-e1/nine-path-transfer-check.py": "4860bef22cb6e6061ed35b60ad5b027394daa40c9932b6bb7b45c11fffe1672c",
+    "fourth-surplus-review/mixed-e2-e1/nine-path-transfer-check.json": "34cda4f4a7c25ac0739dcbba8e7fecc4eb1257b1a284439469029752c6453b52",
+    "fourth-surplus-review/mixed-e2-e1/critical-B.txt": "51a3d48b0b996c713cea1f15d4de1e71ba31d360e77e6a691a740aeb6b92b2f9"
+  },
+  "checker_sha256": "c01554d24d3bf27241902928f8fc79597264954679a80c646f6d9c5517d94a94"
+}

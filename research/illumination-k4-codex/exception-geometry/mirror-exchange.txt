@@ -1,0 +1,182 @@
+A structural two-path cover at zero boundary-charge surplus
+4 November 2026
+
+Result
+Every strictly simple canonical room with exactly the three full A stars
+S=(0,0), U=(2,0), T=(2,2), containing all four caps of the fixed16-wall
+reference room R, and satisfying Q+s_N=8, illuminates S and T.
+This closes an entire FAMILY of extensions, without a separate connecting
+path lookup for each room. It does not require W<=21 or k<=6, although it
+covers those budgets within the stated family. The full zero-surplus L
+class without all four reference caps remains open to this hand argument.
+General positive-surplus I2/I3 rooms remain outside this result.
+
+Origin and independent check
+The other Codex session derived the structural classification and the
+reflected-path cover in ../zero-surplus-L/classification.txt. This session
+independently reconstructed and challenged the proof, ACCEPT with no
+corrections. The boundary-charge inequality used by that classification
+originated in this session; the work is a same-model separate-session
+review, not an unrelated origin for every ingredient or a formal proof.
+Reviewed classification SHA256: 9dd5a12294cc151993b86f8c64f6e9d2ce8c0ad4c065444162924620c4f89aaf.
+The exact path-set transformation and half-side incidence were separately
+recomputed in mirror-exchange-check.py/json, without peer executable code.
+
+Definitions
+Use exactly the canonical45-degree triangle disk model in
+../restricted-theorem-note/theorem.txt. I counts all full interior A stars;
+J interior non-A points; s_A/s_N smooth boundary A/non-A points; k=J+s_N.
+Q assigns3 to a smooth boundary A fan and m to an A corner with m triangles.
+The three full cells have8 exposed sides, p(F)=4I-2e(F)=8.
+The reference R contains, beyond these stars, the four single triangles
+ L+ = {(-2,0),(-1,0),(-1,1)},
+ B+ = {(0,-2),(0,-1),(1,-1)},
+ E- = {(4,2),(3,2),(3,1)},
+ T- = {(2,4),(2,3),(1,3)}.
+The assumption Q+s_N=p(F)=8 is called zero surplus below. It is essential,
+and is stronger than merely W<=21,k<=6.
+
+1. The equality rule is structural
+For each occupied partial A cell v, let d(v) count its sides leading to a
+full cell that have at least one occupied triangle. Let G be the set of
+exposed full-cell sides having neither opposite triangle occupied. Their
+midpoints are distinct smooth C points. Thus
+ p(F)=sum_v d(v)+|G|.
+For each partial fan q(v)>=d(v), by the already proved side-charge lemma.
+Every point counted by G is counted by s_N, so
+ Q+s_N-p(F)=sum_v(q(v)-d(v))+(s_N-|G|).          (1)
+All terms are nonnegative. Equality forces them all to vanish.
+
+Consequences, independently checked:
+- There are no occupied partial cells outside the full-cell neighborhood:
+  they would have d=0 but q>0.
+- The neighborhood has seven external A centers:
+  (-2,0),(0,-2),(2,-2),(4,0),(4,2),(2,4),(0,2).
+  Only the northwest cell centered at(0,2) has two full neighbors; all
+  others have one. Hence q=d<=1 outside that cell and q=d<=2 inside it.
+- A nonempty partial fan has q=1 only when it is a single triangle; q=2
+  only when it has two triangles. All larger fans, including smooth
+  half-stars with q=3, are excluded here.
+- The unique two-triangle fan allowed in the northwest cell is its
+  southeast quarter: one triangle touches the bottom full side and the
+  other touches the right full side. Other two-triangle contiguous fans
+  there either touch just one full side or violate contiguity.
+- Equality also prohibits EVERY smooth B point, because G contains only C.
+
+Thus, except for a directly illuminating bridge handled below, every room
+has at most one cap triangle in each of seven specified cells. The two
+half-side choices at six cells and four choices at the northwest cell give
+sixteen possible individual triangles. This is a necessary and exhaustive
+reduction, not a list of sampled rooms.
+
+If both northwest bridge triangles are occupied, B_mid=(1,1) gains the
+missing90-degree quadrant. The other three quadrants are in the full
+stars already. The whole segment ST is then interior, including B_mid,
+so direct illumination follows immediately.
+
+2. Four reference caps protect the mirror walls of two fixed paths
+Take the previously verified13-reflection path p from the saved guard
+line60, with initial direction(-2,-11). Its detailed hand construction
+and parameter interval are in ../cap-return-review/findings.txt.
+Outside the full stars it requires exactly B+ and T-.
+Among the16 possible cap triangles, its forbidden ones are
+ B-, L-, Nb-, Nb+, T+.
+Its other two forbidden triangles cannot occur in the equality reduction.
+Here the four northwest options are
+ Nb- = {(-1,1),(0,1),(0,2)},
+ Nb+ = {(0,1),(0,2),(1,1)},
+ Nr- = {(0,2),(1,1),(1,2)},
+ Nr+ = {(0,2),(1,2),(1,3)}.
+
+Because R is contained in the room, L+,B+,E-,T- are already present.
+Putting B-,L-,T+ in their respective occupied cells would require at
+least two triangles in a cell with only one full neighbor; this violates
+q=d. In addition, L+ together with Nb- would make B=(-1,1) smooth, which
+violates equation(1). Therefore p can be spoiled within this family only
+by the single triangle Nb+.
+
+Now reflect p by
+ sigma(x,y)=(2-y,2-x),
+and reverse its direction. The resulting path p_sigma still starts at
+actual S and ends at actual T. The map preserves the canonical tiling and
+permutes the full stars and four reference caps. Outside the full stars,
+p_sigma requires exactly E- and L+, which are present.
+Its forbidden cap options are E+,L-,Nr+,Nr-,T+. The first, second and last
+are excluded by the occupied-cell condition. Nr+ is excluded because with
+T- it would make the B point(1,3) smooth. Consequently p_sigma can be
+spoiled only by Nr-.
+
+This does NOT assume that the extended room is symmetric. The two fixed
+paths have separately established occupied/absent tile implications;
+R supplies their required tiles. Symmetry is used to construct the second
+fixed path and its implication, not to identify the entire unknown room.
+
+3. Blocking both makes a direct path
+The only remaining blockers Nb+ and Nr- are in the SAME northwest cell.
+A potentially dark equality room can have at most one triangle in that
+cell, unless it has the unique two-triangle southeast bridge.
+There are therefore only these possibilities for an eligible superroom:
+ - no northwest cap: both reflected paths remain legal;
+ - Nb+ alone: p_sigma remains legal;
+ - Nr- alone: p remains legal;
+ - both: the direct segment ST is legal.
+The other northwest single caps are excluded by the smooth-B condition
+with the already present reference caps. Thus every room in the stated
+family illuminates S,T. No room enumeration or direction search is needed.
+
+This is the useful exchange rule in this scope: removing both specified
+reflection routes requires an addition that opens a direct route.
+It is stronger than a claim that an unspecified new smooth point must help.
+The proof keeps the actual source and target throughout.
+
+4. Review of the wider geometry classification
+I also checked the other session's full zero-surplus geometric reduction,
+without assuming containment of R. The two initially smooth B points at
+(1,-1),(3,1) require (B+ OR D-) and (R+ OR E-). At the five initially
+convex B corners, the forbidden smooth-making pairs are
+ (L-,B-),(D+,R-),(E+,T+),(T-,Nr+),(L+,Nb-).
+The cap definitions and corner fans give exactly these conditions.
+Single-cap attachments meeting these rules are strictly simple disks:
+each attaches along a full exposed half-edge; different cells' caps meet
+only at already occupied B endpoints; their fans extend the old fan
+contiguously. Triangle collapse preserves the core's topology, with no
+hole or pinch. No new interior B/C points arise in the single-cap branch.
+If n caps are occupied, the exact ledger is
+ Q=n, J=2, s_N=8-n, k=10-n, W=8+2n.
+Under W<=21,k<=6 this gives n=4,5,6 and (W,k)=(16,6),(18,5),(20,4).
+The previously proved one-reflection paths force B+ and E- for darkness.
+None of this forces L+ and T-, so it does not extend the theorem here to
+all the other zero-surplus cap patterns. That optical gap remains real.
+
+5. Why the general mirror-exchange ledger alone does not prove darkness
+For completeness, adding a single canonical triangle to a disk, when the
+result is again a strictly simple disk, obeys
+ Delta W = 1-2Delta I-2Delta J-Delta s_A-Delta s_N,
+ Delta(W+2k)=1-2Delta I-Delta s_A+Delta s_N.      (2)
+These follow from the existing Euler identity with Delta N=1. They are
+exact local bookkeeping, not a new optical invariant.
+At B, the corner-to-smooth and corner-to-interior transitions increase k;
+at C the same is true. Smooth-to-corner transitions decrease k. The old
+examples of cheap shared extensions obey(2). These point counts do not
+say which source/target lifts become joined. A legal reflection point can
+support only a return toward the source; the known dark22room already
+contains reachable smooth seam endpoints. Thus a bare count of new legal
+points is insufficient. Section3 works because the geometric classification
+forces the specific midpoint B_mid to become interior and exposes ST itself.
+
+Verification and scope
+mirror-exchange-check.py independently generates the16 half-side triangles
+from the eight exposed full-cell sides; checks the seven external centers;
+checks the source guard's frozen hash and exact path; constructs sigma plus
+reversal; recomputes both universal required/forbidden sets and their exact
+transformation; confirms the only admissible blockers; verifies that the
+bridge occupies the entire midpoint star and makes ST legal. PASS.
+It compares finite fixed sets, not cap assignments or assembled rooms.
+The all-room completeness and the general transition equations are hand
+proofs above. No fresh independent expert or formal verification is claimed.
+
+No additional path lookup, ray/direction/word/room discovery, solver,
+worker, or paused universal-goal resumption was performed. This theorem
+covers exact-zero-surplus superrooms of one reference room with the exact
+three-star support. It is not the full I2/I3 illumination theorem, not an
+unbounded-exception statement and not the universal22-wall minimum.

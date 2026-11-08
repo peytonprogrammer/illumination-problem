@@ -1,0 +1,59 @@
+{
+  "expected_full_extension": 31,
+  "pilot_cases": 2,
+  "verified_unsat": 1,
+  "residuals": 1,
+  "cases": [
+    {
+      "tag": "I2_1_1-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "variables": 84507,
+      "clauses": 332219,
+      "tiles": 784,
+      "guards": 5356,
+      "positive_control": {
+        "known_dark22_allowed_at_W22_k5": true,
+        "guards": 5568
+      },
+      "seconds": 1.922,
+      "solver_stats": {
+        "restarts": 13,
+        "conflicts": 1764,
+        "decisions": 14201,
+        "propagations": 4296771
+      },
+      "cnf_sha256": "6cdf31125c175766a2e0f97717fe15cec93149007f17f468b5fea4c47b8371eb",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "This one fixed full-star/marked-pair case only. Frozen universally validated guards; no new optical discovery."
+    },
+    {
+      "tag": "I2_6_0-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "variables": 66148,
+      "clauses": 253426,
+      "tiles": 616,
+      "guards": 355,
+      "positive_control": null,
+      "seconds": 1.169,
+      "solver_stats": {
+        "restarts": 8,
+        "conflicts": 893,
+        "decisions": 3124,
+        "propagations": 1554409
+      },
+      "cnf_sha256": "f1a7b8072955757cffdbb83374cbca5413236fe699850c801a82ab1eeecfc0d6",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "This one fixed full-star/marked-pair case only. Frozen universally validated guards; no new optical discovery.",
+      "proof_sha256": "ccd8605be06c4be4d94797e012c9175232e292ab271e2a99ca8456bbe2b1837e"
+    }
+  ],
+  "scope": "Two-case pilot only. Full k5 exclusion and residual darkness not established."
+}

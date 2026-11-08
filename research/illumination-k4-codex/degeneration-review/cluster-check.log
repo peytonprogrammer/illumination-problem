@@ -1,0 +1,262 @@
+{
+  "status": "PASS",
+  "model": {
+    "corridor": "0<x<epsilon, -1<y<0; open mouth y=0",
+    "source": "(epsilon/10, -1/2)",
+    "exterior_target": "(1,10)",
+    "epsilon_sequence": "1/(40n+24), n>=0",
+    "physical_depths": [
+      "1/2",
+      "3/2"
+    ]
+  },
+  "symbolic_residues": {
+    "depth_1/2": [
+      "11/10",
+      "13/10"
+    ],
+    "depth_3/2": [
+      "3/2",
+      "17/10"
+    ],
+    "required_bounds": [
+      "21/20",
+      "23/20"
+    ],
+    "reason_for_all_n": "Increasing n adds 2n or 6n to the phase, so these residues are independent of n."
+  },
+  "exact_controls": [
+    {
+      "n": 0,
+      "epsilon": "1/24",
+      "valid_depths": [
+        {
+          "depth": "1/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "11/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "13/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        },
+        {
+          "depth": "3/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "3/2",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "17/10",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 1,
+      "epsilon": "1/64",
+      "valid_depths": [
+        {
+          "depth": "1/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "11/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "13/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        },
+        {
+          "depth": "3/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "3/2",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "17/10",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "epsilon": "1/104",
+      "valid_depths": [
+        {
+          "depth": "1/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "11/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "13/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        },
+        {
+          "depth": "3/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "3/2",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "17/10",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "epsilon": "1/424",
+      "valid_depths": [
+        {
+          "depth": "1/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "11/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "13/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        },
+        {
+          "depth": "3/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "3/2",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "17/10",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 100,
+      "epsilon": "1/4024",
+      "valid_depths": [
+        {
+          "depth": "1/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "11/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "13/10",
+              "required_upper_bound": "21/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        },
+        {
+          "depth": "3/2",
+          "phases": [
+            {
+              "sign": -1,
+              "residue_mod_2": "3/2",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            },
+            {
+              "sign": 1,
+              "residue_mod_2": "17/10",
+              "required_upper_bound": "23/20",
+              "all_integer_k_excluded": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "strict_height_repair_controls": {
+    "end_reflection": 2400,
+    "no_end_fallback": 1
+  },
+  "explicit_fallback_example": {
+    "ell": "1",
+    "d": "1/2",
+    "Y": "1",
+    "X_over_epsilon": "-1/2",
+    "source_x_over_epsilon": "5/8",
+    "end_candidates": [
+      {
+        "image_x": "11/8",
+        "mouth": "1/4",
+        "end_x": "1"
+      },
+      {
+        "image_x": "21/8",
+        "mouth": "3/4",
+        "end_x": "2"
+      }
+    ],
+    "no_end_image_x": "5/8",
+    "no_end_mouth": "1/4"
+  },
+  "unavailable_depth_invents_crossing": {
+    "n": 0,
+    "depth": "5/2",
+    "residue": "1/10",
+    "upper_bound": "19/9"
+  },
+  "scope": "Exact diagnostics and constructive strict-height repair. The Y=10 counterexample concerns the prescribed corridor-to-plain-exterior transfer outside the strict-height regime. The open half-plane local model has no external reflections. A bounded room may have other exterior reflection words, which are not tested or excluded. No counterexample to global polygon illumination or dark-sequence theorem."
+}

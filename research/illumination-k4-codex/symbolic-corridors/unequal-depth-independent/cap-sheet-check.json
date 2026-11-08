@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "prescribed_actual_paths": 4,
+  "wall_contacts": 6,
+  "early_target_prefix_fixture": true,
+  "source_sha256": {
+    "unequal-depth/cap-chart-screen.py": "90b07374f4fa8d7c5921990356f34e795c1e6247341759f58538851a2ed3cf60",
+    "unequal-depth/cap-chart-screen.json": "e69c08e8cb924253b682e8cd50497af6b69599f6d2788f4109d4174af6bd3636",
+    "arbitrary-endpoints-independent/check.py": "c8c0e8c99f2c4513f0568288d6fcfa0ff4c142a8134760b06db479b0423f2b95",
+    "unequal-depth-independent/cap-sheet-check.py": "b28e968910a64c22d717c0ba988c3182de689ac164b02462d19f810cc8b4c110"
+  },
+  "records": [
+    {
+      "name": "original",
+      "path": [
+        [
+          "1",
+          "-1/4"
+        ],
+        [
+          "3",
+          "1/2"
+        ],
+        [
+          "1",
+          "5/4"
+        ]
+      ],
+      "contacts": 1,
+      "trimmed_at_earlier_target": false,
+      "period": 6
+    },
+    {
+      "name": "upper",
+      "path": [
+        [
+          "1",
+          "-1/2"
+        ],
+        [
+          "2",
+          "5/4"
+        ],
+        [
+          "8/7",
+          "11/4"
+        ],
+        [
+          "1",
+          "5/2"
+        ]
+      ],
+      "contacts": 2,
+      "trimmed_at_earlier_target": false,
+      "period": 14
+    },
+    {
+      "name": "lower",
+      "path": [
+        [
+          "1",
+          "-3/2"
+        ],
+        [
+          "8/7",
+          "-7/4"
+        ],
+        [
+          "2",
+          "-1/4"
+        ],
+        [
+          "1",
+          "3/2"
+        ]
+      ],
+      "contacts": 2,
+      "trimmed_at_earlier_target": false,
+      "period": 14
+    },
+    {
+      "name": "both-first-target",
+      "path": [
+        [
+          "3/2",
+          "-1/2"
+        ],
+        [
+          "3/2",
+          "-3/4"
+        ],
+        [
+          "3/2",
+          "5/2"
+        ]
+      ],
+      "contacts": 1,
+      "trimmed_at_earlier_target": true,
+      "period": 16
+    }
+  ],
+  "limits": "Conditional cap-sheet sufficiency controls and rational-period identities only. No exhaustive coverage, discovery, darkness or peer-code execution."
+}

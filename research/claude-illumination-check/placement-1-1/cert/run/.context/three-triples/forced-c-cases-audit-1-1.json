@@ -1,0 +1,581 @@
+{
+  "status": "PASS",
+  "source_sha256": "26e99ab78027e13f72895540b81ec490a977a2f2d5c5d11b1415bf027e7b73a3",
+  "provenance": {
+    "manifest_sha256": "7674811f1d9f386437ff90340585c616f9d89273611ffb1144a73c9d1031edee",
+    "projection_audit_sha256": "2a1618ff7b1c1d5b40f8ea205b77cb9d2089d58fe195d84594c94bd211700bb3"
+  },
+  "positive_controls": [
+    {
+      "case_number": 1,
+      "status": "ACCEPTED"
+    },
+    {
+      "case_number": 2,
+      "status": "ACCEPTED"
+    },
+    {
+      "case_number": 3,
+      "status": "ACCEPTED"
+    },
+    {
+      "case_number": 4,
+      "status": "ACCEPTED"
+    },
+    {
+      "case_number": 5,
+      "status": "ACCEPTED"
+    },
+    {
+      "case_number": 6,
+      "status": "ACCEPTED"
+    }
+  ],
+  "new_records": 8,
+  "new_geometries": 3,
+  "revisited_geometries": 5,
+  "new_guards": 32,
+  "total_guards": 3411,
+  "mutations": 8,
+  "corrupt_guards": 8,
+  "max_new_reflections": 21,
+  "pair_cases": [
+    {
+      "case_number": 1,
+      "pair": [
+        [
+          -1,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "case_number": 2,
+      "pair": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "case_number": 3,
+      "pair": [
+        [
+          1,
+          -1,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "case_number": 4,
+      "pair": [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "case_number": 5,
+      "pair": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "case_number": 6,
+      "pair": [
+        [
+          1,
+          -2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "status": "INFEASIBLE"
+    }
+  ],
+  "cases_excluded": 6,
+  "fresh_remainder_status": "INFEASIBLE",
+  "remainder_proved_infeasible": true,
+  "prior_remainder_audit_sha256": "2a1618ff7b1c1d5b40f8ea205b77cb9d2089d58fe195d84594c94bd211700bb3",
+  "complete_six_case_cover": true,
+  "tip5_parent_status": "INFEASIBLE",
+  "tip5_excluded": true,
+  "geometry_only_tip5_midpoint": "OPTIMAL",
+  "fan_cases": [
+    {
+      "tip_mask": 4,
+      "status": "OPTIMAL",
+      "via": "fresh_tip_fan_replay"
+    },
+    {
+      "tip_mask": 5,
+      "status": "INFEASIBLE",
+      "via": "six_case_composition"
+    },
+    {
+      "tip_mask": 7,
+      "status": "INFEASIBLE",
+      "via": "fresh_tip_fan_replay"
+    },
+    {
+      "tip_mask": 23,
+      "status": "INFEASIBLE",
+      "via": "fresh_tip_fan_replay"
+    },
+    {
+      "tip_mask": 87,
+      "status": "INFEASIBLE",
+      "via": "fresh_tip_fan_replay"
+    },
+    {
+      "tip_mask": 215,
+      "status": "INFEASIBLE",
+      "via": "fresh_tip_fan_replay"
+    },
+    {
+      "tip_mask": 247,
+      "status": "INFEASIBLE",
+      "via": "fresh_tip_fan_replay"
+    }
+  ],
+  "mark_stabilizer_closed": true,
+  "composed_parent": "OPTIMAL",
+  "survivor": {
+    "triangles": [
+      [
+        [
+          -3,
+          -1
+        ],
+        [
+          -2,
+          -2
+        ],
+        [
+          -2,
+          -1
+        ]
+      ],
+      [
+        [
+          -2,
+          -2
+        ],
+        [
+          -2,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      [
+        [
+          -2,
+          -2
+        ],
+        [
+          -1,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      [
+        [
+          -1,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          -2
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ]
+    ],
+    "marked": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "require_simple": true
+  },
+  "scope": "Complete six-case partition plus previously audited complement; all new guards exact sufficient rays. Geometry-only midpoint implication separate from historical-cut model. Finite misses/UNKNOWN unresolved; no formal UNSAT proof."
+}

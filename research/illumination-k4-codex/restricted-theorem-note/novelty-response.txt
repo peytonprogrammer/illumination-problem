@@ -1,0 +1,66 @@
+I couldn't assess prior art for this result: the session denied both web tools. No searches or page reads happened, so I have no primary sources to cite.
+
+## What I tried
+
+All 5 calls were rejected automatically because the session has no way to grant tool permissions. The tools said every later call would be denied the same way, so I didn't retry.
+
+| Call | Target | Result |
+|---|---|---|
+| WebSearch (standard) | Wolecki, "Illumination in rational billiards", 22 sides, minimality | Permission denied |
+| WebSearch (extended) | Lower bounds on the fewest sides of an unilluminable room (Tokarsky, Castro) | Permission denied |
+| WebSearch (standard) | Lelièvre–Monteil–Weiss, "Everything is illuminated" | Permission denied |
+| WebFetch | `https://arxiv.org/abs/1905.09358v3` | Permission denied |
+| WebFetch | `https://arxiv.org/pdf/1905.09358v3` (Theorem 1.3 and §3) | Permission denied |
+
+As a result, I can't confirm:
+- what Theorem 1.3 or §3 of arXiv:1905.09358v3 says;
+- whether Wolecki proves or conjectures minimality for any class of rooms;
+- any theorem numbers beyond the ones you supplied.
+
+## Unverified recollections (not sources)
+
+These come from memory. I didn't retrieve or check any of them this session. Treat titles, venues and years as leads to check.
+
+1. **Tokarsky (1995), *Amer. Math. Monthly* 102**, "Polygonal rooms not illuminable from every point." I recall a 26-sided room built from right-isosceles triangles. It contains a point pair with no billiard path between them. I recall a construction and an upper bound only, with no lower bound on the number of sides.
+2. **D. Castro (1997), *Quantum***. I recall a 24-sided version of the same kind of room. Again, this is a construction, not a minimality proof.
+3. **Lelièvre, Monteil and Weiss (2016), "Everything is illuminated," *Geometry & Topology* 20**. I recall this result: in a rational polygon, each point illuminates all but finitely many points. This is a finiteness result and gives no wall-count bounds.
+4. **Hubert, Schmoll and Troubetzkoy (around 2008), "Modular fibers and illumination problems," *IMRN***. I recall that it covers illumination in Veech or lattice-surface polygons, including square-tiled cases. I don't recall any minimum-wall or enumeration result in it.
+5. **Wolecki, arXiv:1905.09358**. You gave the 22-wall construction and Theorem 1.3 as known. I can't confirm whether §3 states that 22 is minimal within its seed-tiling class. My unverified impression is that it presents a construction and leaves the minimum number of sides open.
+6. **Boshernitzan and Monteil**. I have no recollection of a published Boshernitzan 1986 source, and Monteil's example is unpublished by your account. Neither can be checked from here.
+
+To my knowledge, the minimum number of sides of a polygon with a non-illuminating pair is an open problem. I'm not aware of any published lower bound on it, computer-assisted or not. This is recollection only, not a literature scan.
+
+## How this relates to your restricted lower bound
+
+Your result needs four restrictions together:
+- right-isosceles lattice rooms with the canonical A–B diagonal;
+- a strictly simple disk boundary;
+- marks at two distinct interior A points;
+- at most 6 occupied non-A points (k ≤ 6) and at most 21 maximal walls.
+
+None of the works I recall states an exclusion with this many conditions. All of them, as I remember them, give constructions, finiteness results, or illumination results for whole classes of surfaces.
+
+An upper-bound construction such as Wolecki's 22-wall room doesn't imply that rooms with 21 or fewer walls illuminate. If Wolecki §3 claims minimality within its seed tiling, check two things:
+- whether that seed class contains every room with k ≤ 6;
+- whether it uses the same wall count, meaning maximal straight walls.
+
+I couldn't check either point.
+
+## Conclusion
+
+**Status: uncertain, possibly new.** No primary source was retrieved, so this isn't evidence of novelty. It's an unchecked gap. I don't claim the search was exhaustive.
+
+To settle it, a search would need, at minimum:
+1. The full text of arXiv:1905.09358v3, especially §3 and any remarks on minimality or open questions.
+2. The Tokarsky (1995) and Castro (1997) papers, checked for any lower-bound claim.
+3. A citation search on Wolecki and on Lelièvre–Monteil–Weiss for later papers on minimal side counts or computer enumerations.
+
+## One question for an expert
+
+For Wolecki or Troubetzkoy:
+
+> "Is there any published or circulated lower bound on the number of walls of a simple polygon with a non-illuminating pair, even restricted to right-isosceles lattice rooms or to Wolecki's §3 seed class? Does any source claim that 22 is minimal there?"
+
+## Sources
+
+I retrieved none, because every tool call was denied. To rerun this check, grant WebSearch and WebFetch access. The first reads would be `https://arxiv.org/abs/1905.09358v3` and its PDF.

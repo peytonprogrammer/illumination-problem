@@ -1,0 +1,224 @@
+{
+  "status": "SIX_PRESCRIBED_EXACT_JOINT_PERIOD_CONTROLS_PASS",
+  "rows": [
+    {
+      "n": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "m": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "K": 16,
+      "source": [
+        "2",
+        "2"
+      ],
+      "target": [
+        "2",
+        "14"
+      ],
+      "walls": 20,
+      "inserted_port_nodes": 0,
+      "path_sha256": "915d44f3f5d2ad01444eec89230e2d3cd898c11d312f8762f4a71dd0e8cbcdbd",
+      "wall_leg_guards": 640,
+      "reflections": 31
+    },
+    {
+      "n": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "m": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "K": 240,
+      "source": [
+        "2",
+        "16"
+      ],
+      "target": [
+        "2",
+        "28"
+      ],
+      "walls": 20,
+      "inserted_port_nodes": 0,
+      "path_sha256": "73334c192d8eaeff0efe60b2c78db9ab6d78f99e069cb7b2617fa0bc184a5e96",
+      "wall_leg_guards": 640,
+      "reflections": 31
+    },
+    {
+      "n": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "K": 4080,
+      "source": [
+        "2",
+        "30"
+      ],
+      "target": [
+        "2",
+        "140"
+      ],
+      "walls": 20,
+      "inserted_port_nodes": 46,
+      "path_sha256": "8fcbbccd7b06cfcd6a8238075b632547e45ef4afd2fc6c6e3d4309112e422918",
+      "wall_leg_guards": 7000,
+      "reflections": 303
+    },
+    {
+      "n": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "m": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "K": 16,
+      "source": [
+        "1154",
+        "2"
+      ],
+      "target": [
+        "1154",
+        "14"
+      ],
+      "walls": 20,
+      "inserted_port_nodes": 96,
+      "path_sha256": "80ef6452397c0a421afd3cd132a3f1cb8ea815fa28a4eb0391b0859c52ab1dc4",
+      "wall_leg_guards": 63040,
+      "reflections": 3055
+    },
+    {
+      "n": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "m": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "K": 240,
+      "source": [
+        "5762",
+        "16"
+      ],
+      "target": [
+        "5762",
+        "28"
+      ],
+      "walls": 20,
+      "inserted_port_nodes": 8,
+      "path_sha256": "3d2d9a31a78abaa090f9150d360b962b0d990b113c33188081c6fca851861011",
+      "wall_leg_guards": 135200,
+      "reflections": 6751
+    },
+    {
+      "n": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "m": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "K": 30,
+      "source": [
+        "722",
+        "2"
+      ],
+      "target": [
+        "722",
+        "28"
+      ],
+      "walls": 20,
+      "inserted_port_nodes": 98,
+      "path_sha256": "225fcace871726490d36f57497d5b47b8ab65ff1ab8b8163afe4a6857d7333ee",
+      "wall_leg_guards": 16520,
+      "reflections": 727
+    }
+  ],
+  "reflections": 10898,
+  "wall_leg_guards": 223040,
+  "whole_goal_complete": false,
+  "discovery": false,
+  "source_sha256": {
+    "four-corner-critical-check.json": "358e9413fdb8c520d5a7d25b4f764aa6c0dbd5faa0ed892029ee74260224c3d3",
+    "resumed-exact-check.py": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+  },
+  "scope": "Exact all-wall controls for explicit period family; hand proof covers all parameter vectors, not all gap residues."
+}

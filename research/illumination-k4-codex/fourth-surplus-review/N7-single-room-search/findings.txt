@@ -1,0 +1,125 @@
+Two reflections close the entire west/rectangular bottom-fan branch
+Codex01a18403, 5 November 2026. Parent proof; independent review requested.
+
+RESULT
+The single searched room has a legal two-reflection S/T path. More strongly,
+EVERY valid canonical room containing H+B123, with support confined to the
+seven established K cells and B4 absent, inherits that same path. All other
+six K stars may be fully occupied. In particular both Bwest123 and
+Brectangle0123 work with arbitrary allowed completions at L/D/R/E/Tc/N.
+No wall, surplus, exception or ordinary-cap budget is needed for this
+conditional geometric lemma. Sigma/time reversal gives its east counterpart.
+
+1. Scope and search record
+
+Daniel approved one new five-minute search on one remaining N7 configuration.
+Only H+B123+L70+E34+Tc5+N7+D2+R4 was assembled and searched. Its boundary
+is strictly simple, with full interior A stars exactly S=(0,0), U=(2,0),
+T=(2,2), and ledger W20,I3,J5,sN1,Q11,k6,Delta4. No hole/slit/contact.
+
+The exact integer-affine tracer retained finite bounds: primitive integer
+directions maxcomponent512, all signs, at most400 reflections, hard300s.
+It stopped at FIRST candidate, after27 directions:26 hit corners, then
+(-2,-3) reached actual T with TWO reflections. Search-loop time was about
+0.0004s, excluding setup. No other room or unused time budget was searched.
+The runtime does not imply an optimization proof or a darkness decision.
+
+2. Exact path
+
+ S=(0,0)
+ A=(-1,-3/2)
+ B=(-2/3,-2)
+ T=(2,2).
+
+A lies strictly inside the vertical left wall of the common bottom-left
+square, x=-1, -2<y<-1. B lies strictly inside its horizontal floor,
+y=-2, -1<x<0. Reflecting direction(-2,-3) at x=-1 gives(2,-3);
+reflecting at y=-2 gives(2,3). The final displacement T-B=(8/3,4)
+is a positive multiple of(2,3).
+
+3. Elementary geometric proof, including the integer crossing
+
+The full core H is the union of the three squares centered at S,U,T:
+[-1,1]x[-1,1], [1,3]x[-1,1], [1,3]x[1,3]. Adding B123 supplies the
+ENTIRE square [-1,0]x[-2,-1] and the triangle with vertices(0,-2),
+(0,-1),(1,-1). Brectangle0123 also includes these pieces.
+
+The first segment follows y=3x/2 from S. It crosses the bottom edge
+of the source square at(-2/3,-1), enters the common bottom-left square,
+and reaches A. The second segment stays strictly in that square until B.
+The vertical wall across A has its other-side triangle owned by remote
+A=(-2,-2), which is outside K and absent. Thus no other K cell can remove
+this mirror. The floor across B has other-side triangle B4; B4 is absent.
+
+The third segment is y=3x/2-1. It reaches(0,-1), then traverses the core's
+bottom rectangle until(4/3,1), where it enters the target square and reaches
+actual T. Its ONLY intermediate integer point is(0,-1). That point is
+INTERIOR, not a corner: H provides its entire upper half-neighborhood,
+and B1+B2 provide the entire lower half-neighborhood. This is exactly the
+support difference that makes the passage legal. All open pieces of the
+three segments are strictly interior, all bounces strictly within the two
+finite mirrors, and there is no earlier visit to T.
+
+Adding any other K-cell triangles cannot destroy interior segments. The
+only issue under addition is removal of a used mirror, so check both:
+none of the other six cells touches the exterior side of A or B. B4 is
+precisely the forbidden lower-floor mate. Optional B0/B5/B6/B7 likewise
+remove neither mirror. This explicitly justifies the broad envelope;
+it is not an unqualified illumination-monotonicity assertion.
+
+4. Parameter derivation
+
+Launch(-d,-1). Left-wall contact is(-1,-1/d), then floor contact
+(2d-2,-2), then the outgoing velocity is(d,1). At height2, the final
+abscissa is6d-2. Actual T forces6d-2=2, so d=2/3.
+A sufficient strict interval for this prescribed route until height2 is
+ 3/5<d<3/4.
+It keeps the first contact between heights-2 and-1, the second contact
+strictly between x=-1 and0, and the final crossing of y=1 at5d-2>1
+strictly within the base of the target square. The root2/3 is strictly
+inside. The new direction is substantially different from the retired
+small-d left-bottom route, whose first reflection was the bottom floor.
+Here the first reflection is the VERTICAL bottom-left wall. Neither of
+the two retired corner-gated routes has been revived.
+
+5. Exact verification and broader implications
+
+verify.py independently replays the frozen candidate against the actual
+maximal polygon boundary with exact Fractions. First finite wall, specular
+law, intermediate boundary/corner exclusion, first actual T, reverse and
+sigma/time reversal all PASS. Actual target unfolds to(-4,-6).
+The complete guard calculation requires U inside
+ minimum=H+B123,
+and Z disjoint from
+ maximum=H+B(0,1,2,3,5,6,7)+fullL+fullD+fullR+fullE+fullTc+fullN.
+Exactly two named whole-family applications are verified: Bwest123 and
+Brectangle0123, all other six K cells unrestricted. These are support
+implications, not additional completed-room construction or a census.
+
+Consequently the ENTIRE Bwest/rectangle part of the mixed e2+two-e1/b0
+all-root branch closes within2, assuming the previously accepted fan
+classification. No Ecenter, Eouter, N6 or N7 exception remains there.
+In particular ALL SIX necessary N7 descriptions from nine-path-transfer.txt
+are covered, as are the earlier Bwest/Eouter Nright/T+ exceptions.
+The former12/10/9/7 conditional covers remain valid but are unnecessary
+for these particular B-fan shapes. This does NOT invalidate their distinct
+applications elsewhere, such as the earlier b1 L701/N6 nine-path.
+
+With the independently accepted Beast012 result, all NO-outside-C-join
+critical-B forms in critical-B.txt section6 now have parent optical covers:
+Beast012<=13; west123/rectangle0123<=2. Joined O3/O4/H4 with D23, their
+six row forms and corresponding single-leaf rows remain separate and open.
+The eleven L/T fixtures, other local partitions and remote gaps are not
+claimed closed. No full Delta4 theorem or universal22-wall minimum follows.
+The same broad two-bounce lemma may help peer-owned b1 families; application
+to them belongs to the peer and is not counted here.
+
+6. Independent review request and reproduction
+
+Inputs: findings.txt,room.json,result.json,verification.json,verify.py.
+Run only frozen verification, adapting output to a reviewer's owned files:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/N7-single-room-search/verify.py
+Review especially intermediate interior C=(0,-1), the actual first vertical
+mirror and broad max support. Parent verification shares historical helper
+primitives; independent peer challenge is still pending. This is not formal
+verification or expert refereeing. Search STOPPED at first candidate.

@@ -1,0 +1,24 @@
+{
+  "author": "Codex01a18403",
+  "status": "FROZEN_FOR_INDEPENDENT_REVIEW",
+  "created_utc": "2026-11-07T18:12:33.442245+00:00",
+  "source_pins": {
+    "optical-routing-candidate-01.md": "3f4ef69649d3b8868551e91431b9d11e5246934a858f8e442a2ab1b1f7b649a9",
+    "optical-routing-proof-01.md": "58ea59f6460c7760cbf43d5dfa05dad20d0ab925a9b372278c2583ffa16305b4",
+    "optical-routing-reflex-reuse.md": "c2a6ffaf30dc30132a31fb22e3069818da695eca41956eab44604ba38fe327b2"
+  },
+  "claims": [
+    "OR01 conditional actual-room shooting lemma including integer-choice positivity and convex-corner retrace removal",
+    "OR02 single-reflex infinite guard-boundary obstruction"
+  ],
+  "global_r_le_8_forcing_proved": false,
+  "whole_goal_complete": false,
+  "review_questions": [
+    "Does the folding strip enforce BOTH exact return position and signed velocity on the entire guarded interval?",
+    "Does L*length(J)>2w guarantee a root strictly within the same branch component?",
+    "Does topcorner removal yield the ORIGINAL actual pair without treating a convex contact as legal?",
+    "Is OR02 correct for all integers n>=1, with first-hit/corner guards?",
+    "Do any of these facts force the hypotheses from r<=8? Author currently has NO such implication."
+  ],
+  "method": "Independent hand verification; no discovery or ray census required"
+}

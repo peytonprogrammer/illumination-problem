@@ -1,0 +1,148 @@
+INDEPENDENT HAND ACCEPT received: fourth-surplus-review/two-e2-BE-independent/
+review.txt/check.json accepts the entire ten-reflection family without
+corrections. Later four-prefix review closes three original specific rooms;
+current remaining count is EIGHT, in two-e2-progress.json. Earlier pending
+review/eleven-open language below records the original proof checkpoint.
+
+B/E west and rectangle fans: common ten-reflection illumination lemma
+4 November 2026 — Codex01a1a00f
+
+STATUS: parent hand proof and exact checks PASS; independent HAND challenge
+requested. This closes the four listed symbolic B/E combinations (three
+sigma types) in two-e2.txt section4. Eleven exact two-e2 candidates still
+remain, and the classification reduction has independent HAND ACCEPT without
+corrections in fourth-surplus-review/two-e2-independent/review.txt.
+No full two-e2, Delta4, or universal wall-minimum theorem is claimed.
+
+1. Scope and geometric idea
+
+Let H be the full canonical triangle stars centered at S=(0,0),U=(2,0),
+T=(2,2). At B=(0,-2) include sectors1,2,3; optionally include sector0.
+At E=(4,2) include sectors2,3,4; optionally include sector5. These are
+respectively Bwest/Brectangle and Ewest/Erectangle. Every other partial
+cell is an arbitrary valid ordinary cap at L,D,R,Tcap,N. The geometric
+claim does NOT need b0, W20 or k6, and does not need L-/T+ present.
+
+The common B fan contains the square [-1,0]x[-2,-1] and the B+ triangle.
+The common E fan contains the square [3,4]x[2,3] and the E- triangle.
+The path alternates between the far walls of these two square portions,
+using two reflections at each of FIVE excursions. Its last rising leg
+passes below the inner elbow (1,1), then reaches actual T.
+
+All mirror lines, source parameter and target equation were hand-derived
+and declared on the shared board BEFORE execution. The checker evaluates
+one fixed direction and mirror word, not an optical discovery search.
+
+2. Hand derivation by the five excursions
+
+Launch from S with direction(-d,-1). Gate crossings are not reflections;
+listed velocities may be multiplied by a positive scalar. Use the usual
+reflection formula v -> v-2(n dot v)n/(n dot n).
+
+First B excursion: left wall x=-1, then floor y=-2.
+ Contacts (-1,-1/d), (2d-2,-2).
+ Return through y=-1 at (3d-2,-1), direction(d,1).
+
+First E excursion: right wall x=4, then roof y=3.
+ Contacts (4,6/d-4), (10-7d,3).
+ Return through x=3 at (3,10-7/d), direction(-d,-1).
+
+Second B excursion: left wall x=-1, then floor y=-2.
+ Contacts (-1,10-11/d), (12d-12,-2).
+ Outgoing rising line: x=d*y+14d-12, direction(d,1).
+
+Second E excursion: roof y=3, then right wall x=4.
+ Contacts (17d-12,3), (4,20-16/d).
+ Return through x=3 at (3,20-17/d), direction(-d,-1).
+
+Third B excursion: floor y=-2, then left wall x=-1.
+ Contacts (20-22d,-2), (-1,21/d-24).
+ Outgoing rising line: x=d*y+24d-22, direction(d,1).
+
+Consequently at x=2 the height is24/d-24. Requiring actual T=(2,2)
+gives d=12/13, or integer source direction(-12,-13).
+
+A convenient safe range for the displayed square-portal branches is
+23/25<d<15/16, containing12/13. These inequalities are a HAND branch
+check, not an independently recertified whole-interval result. The theorem
+only needs the exact fixed parameter, fully checked below. No maximal
+validity interval is asserted or needed.
+
+3. Exact finite witness and why the other caps cannot interfere
+
+Start S=(0,0), then the ten reflection points in order:
+ 1 (-1,-13/12)     B left wall
+ 2 (-2/13,-2)      B floor
+ 3 (4,5/2)         E right wall
+ 4 (46/13,3)       E roof
+ 5 (-1,-23/12)     B left wall
+ 6 (-12/13,-2)     B floor
+ 7 (48/13,3)       E roof
+ 8 (4,8/3)         E right wall
+ 9 (-4/13,-2)      B floor
+10 (-1,-5/4)       B left wall
+End T=(2,2).
+
+Every point lies strictly within its named finite wall:
+ B left: x=-1,-2<y<-1;
+ B floor: y=-2,-1<x<0;
+ E right: x=4,2<y<3;
+ E roof: y=3,3<x<4.
+Thus none of the ten contacts is a room corner or a wall endpoint.
+
+The five cross-core flights meet x=1 at heights
+ -3/4, 1/4, 1/12, -7/12, 11/12,
+all below1. This avoids the inner corner and the entire N-cap opening.
+Every bottom crossing y=-1 stays between x=-1 and1, avoiding D; every
+right crossing x=3 occurs above y=1, avoiding R. No L or Tcap portal is
+used. The extra B sector0 and E sector5 do not change any used mirror.
+The exact full triangle-guard proof below makes these observations complete.
+
+4. Whole-family guard certificate
+
+two-e2-BE-check.py recomputes the entire required set U and forbidden set Z
+from all open segments, tiling crossings and specular contacts. It proves
+ U subset H+B(1,2,3)+E(2,3,4);
+ Z disjoint H+B(0,1,2,3)+E(2,3,4,5)+ENTIRE ordinary-cap alphabet.
+There are18 required and4 forbidden canonical triangles. The forbidden
+triangles are exactly:
+ {(-2,-2),(-1,-2),(-1,-1)}  exterior of B left wall;
+ {(-1,-3),(-1,-2),(0,-2)}   exterior of B floor;
+ {(3,3),(4,3),(4,4)}       exterior of E roof;
+ {(4,2),(4,3),(5,3)}       exterior of E right wall.
+The first and third lie in cells outside K; the second is B sector4 and
+the fourth E sector1. They are absent throughout the stated family.
+
+This establishes the same actual S/T path for every valid ordinary-cap
+completion. It does not rely on checking finitely many cap assignments.
+Sigma followed by reversal gives the corresponding exact guard identities.
+
+5. Prescribed physical controls and verification limits
+
+Four explicit controls, declared before execution, use each B/E combination
+with ordinary L-,T+,D-,Nr- and R empty. These are controls inside the original
+budget: each is strictly simple with full A set exactly S/U/T, W20,k6,
+Delta4. Complete triangle sets, maximal-wall vertices and ledgers are saved
+in two-e2-BE-check.json. No cap-assignment enumeration occurs.
+
+In ALL FOUR controls our frozen rational physical checker verifies actual
+first-wall intersections, strict contacts, interior open segments, specular
+law, actual S/T endpoints, reversed traversal, and sigma/reversal. Every
+check PASS. The whole-family proof is section4's U/Z inclusion; the controls
+also verify that the family is nonempty under the target budget.
+
+Run:
+ python3 -B .context/illumination-k4-codex/surplus-four-local/two-e2-BE-check.py
+Receipt two-e2-BE-check.json includes every contact, guard and fixed control.
+This is a hand proof supported by exact computation, not formal verification
+or an independent expert review. Peer HAND challenge is pending.
+
+6. Consequence
+
+The three B/E symmetry types of the parent two-e2 reduction are now closed
+at parent-proof level with at most10 reflections, without any cap budget.
+The eleven explicit rooms in two-e2.txt section6 are the current remaining
+optical candidates up to sigma, under the independently accepted classification reduction.
+Other local partitions e2+two-e1/four-e1 and the remaining remote cases are
+unchanged. No direction, word or room discovery scan, source archive,
+solver campaign, workers, or running jobs belong to this result.

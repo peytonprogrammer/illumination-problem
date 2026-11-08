@@ -1,0 +1,206 @@
+The full zero-surplus three-star L family is illuminated
+4 November 2026
+
+THEOREM
+Let P be a finite canonical45-degree triangle union with strictly simple
+polygon boundary, no holes/slits/contacts, and exactly the three interior
+A stars centered at S=(0,0), U=(2,0), T=(2,2). Assume
+  Q+s_N=8,
+using the exact boundary-charge definitions in restricted-theorem-note.
+Then S illuminates T by a corner-avoiding specular path with AT MOST
+THIRTEEN reflections. No wall-count or exception-count cap is required
+within this fixed-support equality class.
+The other two pairs of interior A points are adjacent and directly
+illuminated, so every pair of distinct interior A points in this class
+illuminates.
+This is the full zero-surplus L-support class, not just extensions of the
+four-cap reference room. It does not cover positive-surplus L rooms,
+other nonadjacent I3 supports, arbitrary interior marks, or the universal
+22-wall minimum.
+
+Contribution / provenance
+The other Codex session supplied the complete hand equality classification
+and the13-path symmetry cover for reference-room extensions. Its subsequent
+projection of already frozen guard archives identified a four-reflection
+condition forcing the previously missing reference caps. This session
+independently checked the selected original record, derived its hand
+formula and portal inequalities, checked the exact reflected implication,
+and assembled the full-family decision proof below. No fresh room, ray,
+direction, reflection word, Boolean assignment census or solver was used.
+No priority or expert-acceptance claim is made.
+
+1. Existing structural reduction (independently accepted)
+Write H for the three full A squares. Their exposed side count is8.
+The exact nonnegative slack decomposition
+ Q+s_N-8 = sum_partial_cells(q(v)-d(v)) + (s_N-|M|)
+forces every partial cell into the seven external neighbors of H. Every
+occupied one is a SINGLE triangle, except possibly the unique two-triangle
+fan in the northwest cell A=(0,2). Smooth B points are prohibited.
+The two-triangle fan, if present, fills the missing quadrant at(1,1),
+opening the direct segment ST. Handle it immediately and assume henceforth
+that every occupied external cell contains at most one triangle.
+Thus every additional triangle is one of the16 half-side cap options in
+../zero-surplus-L/classification.txt. The reduction includes all rooms,
+not just the four-cap reference fixture. Its proof and independent review
+are in that note and mirror-exchange.txt.
+
+Use four labels:
+ B+ = conv{(0,-2),(0,-1),(1,-1)},
+ E- = conv{(4,2),(3,1),(3,2)},
+ L+ = conv{(-2,0),(-1,0),(-1,1)},
+ T- = conv{(2,4),(1,3),(2,3)}.
+One-triangle-per-cell means B+ excludes the opposite bottom cap B-, and
+E- excludes the opposite east cap E+. This fact protects cap mirrors.
+No smooth B points further forbids L+ with Nb- and T- with Nr+ at the
+northwest slot. These are geometric consequences of exact equality.
+
+2. The first two caps are forced by one-reflection paths
+If B+ is absent, the previously hand-proved route
+ (0,0)->(1/2,-1)->(2,2)
+is legal. All its open legs lie in H, and its only required mirror is
+exposed precisely when B+ is absent.
+If E- is absent, the route
+ (0,0)->(3,3/2)->(2,2)
+is legal by the same argument.
+Therefore any hypothetical dark equality room must contain BOTH B+,E-.
+
+3. The four-reflection path forces T-
+Assume B+ is present and T- is absent. Take
+ (0,0)
+ ->(2/5,-8/5)
+ ->(0,-3/2)
+ ->(2/3,-4/3)
+ ->(7/4,3)
+ ->(2,2).
+Initial direction is(1,-4). The first three reflections are on the bottom
+cap's diagonal, vertical, diagonal walls. The last is on the exposed top
+wall of the target star. No point is a genuine room corner.
+
+Why the mirrors are compulsory under these cap conditions:
+- The two nonportal edges of B+ cannot have occupied triangles across
+  them: these would be additional triangles in the same bottom A cell,
+  contradicting the single-cap reduction. The opposite bottom B- is also
+  excluded by that rule.
+- The target-top bounce is at x=7/4 in the LEFT half of y=3. Its unique
+  exterior triangle is T-, which is absent by assumption. The right-half
+  top option T+ cannot cover that bounce.
+- The other open legs lie in the three full stars H or the interior of
+  B+. Other allowed cap additions cannot remove an interior segment.
+Hence the path works for every equality completion with B+ present and
+T- absent, not merely a particular room.
+
+Hand formula, including an open beam
+Launch(d,-1) with
+  1/5<d<2/7.
+The entry to B+ is(d,-1). The three-reflection cap formula, already derived
+in cap-return-review/findings.txt, gives exit(3d,-1) with velocity(d,1).
+Its three mirror hits are
+  (2d/(1+d), -2/(1+d)),
+  (0,2d-2),
+  (2d/(1-d),(4d-2)/(1-d)).
+The hypothesis3d<1 gives three strictly interior cap hits and no corner.
+After exiting, the ray crosses x=1 at height1/d-4, in(-1,1), then y=1
+at x=5d>1. Thus it passes through the source/elbow stars into the target
+star without touching the reflex corner(1,1).
+It reaches y=3 at x=7d in(1,2), the uncovered left half-side. After this
+reflection it reaches height2 at x=8d, still inside the target star.
+At d=1/4 it reaches actual T=(2,2), giving the coordinates above exactly.
+This is a geometric construction, not an assertion from ray sampling.
+
+The same path is the already saved guard
+ k6-run/cases/I2_00_11-pair0/guards.jsonl, line28527.
+Its exact replay confirms that outside H it requires only B+. Among the
+16 possible cap triangles, the forbidden choices are B- and T-. The former
+is automatically excluded once B+ is present, leaving T- as the sole
+possible blocker. The other forbidden triangle is not in the equality
+alphabet and cannot occur. These conditions were independently recomputed.
+Consequently darkness with B+ present forces T- to be present.
+
+4. A reflected four-reflection path forces L+
+Apply sigma(x,y)=(2-y,2-x) to the fixed d=1/4 path and reverse its order.
+It becomes the actual S-to-T route
+ (0,0)
+ ->(-1,1/4)
+ ->(10/3,4/3)
+ ->(7/2,2)
+ ->(18/5,8/5)
+ ->(2,2).
+It requires only E- outside H and forbids only E+,L+ within the16 options.
+E+ is excluded by the occupied E- cell. Hence whenever E- is present and
+L+ absent, this four-reflection path is legal. Darkness forces L+.
+The room itself need not be symmetric: symmetry constructs a fixed path
+whose tile requirements hold separately in the arbitrary completion.
+The formula reflection uses d=1/4; no claim that time-reversing the whole
+variable-endpoint beam keeps its source at S for every d is needed.
+
+5. The remaining case is the already closed family
+A hypothetical dark equality room must now contain all four caps
+ B+,E-,T-,L+.
+These are precisely the four caps of the reference room R. The whole
+reference-extension family was independently proved illuminated in
+mirror-exchange.txt, as follows:
+- The fixed13-reflection path requires B+,T- and can be blocked only by
+  the northwest bottom cap Nb+.
+- Its sigma-reflected/reversed13-path requires E-,L+ and can be blocked
+  only by the northwest right cap Nr-.
+- Those blockers occupy the same A cell. Both together form the unique
+  two-triangle bridge, opening direct ST illumination. If at most one is
+  present, at least one13-path survives.
+Thus the supposed dark room is illuminated in every case, contradiction.
+
+This is a finite hand decision proof with six fixed reflected paths:
+ absence of B+ or E- -> one reflection;
+ B+ with T- absent, or E- with L+ absent -> four reflections;
+ all four reference caps -> one of two13-paths, or a direct segment.
+No listing of all cap selections or assembled rooms is required.
+
+6. Verification and precise payoff
+zero-L-completion-check.py reads only the TWO specified frozen guard
+records, verifies their source hashes against the prior full-replay
+manifest, and replays their universal path requirements exactly. It also
+checks the two hand one-reflection paths and both sigma/time-reversed
+paths, giving the six fixed implications above. It independently generates
+the16 fixed half-side triangle options, checks the required/forbidden sets
+of each decision step and the midpoint bridge, and matches the d=1/4 hand
+formula to the saved four-bounce path exactly. PASS.
+The geometry reduction, interval validity and decision proof are written
+hand arguments. The check is static fixed-set verification, not cap/room
+assignment enumeration, numerical ray tracing or solving. The checker
+reuses the independently written Codex exact implication checker; it is
+not a new independent third implementation or formal proof assistant.
+
+For the original W<=21,k<=6 application, equality rooms have n=4,5,6 caps,
+with(W,k)=(16,6),(18,5),(20,4). All these zero-surplus L cases are now
+covered analytically. The exact family theorem also covers equality rooms
+outside those caps, with the same fixed full-star support.
+
+Positive surplus Q+s_N>8 remains open to this hand strategy. For example,
+the previously checked single shared roof extension has Q+s_N=9, and its
+newly smooth B point is excluded by the present equality hypothesis.
+Do not use this theorem to eliminate that or any other positive-surplus
+case. The general I2/I3 proof still depends on its existing certificates.
+
+Darkness-dependent corollary
+For the fixed I3 L support, Q+s_N>=8 follows from the side-charge lemma.
+The theorem excludes equality for darkness. All quantities are integers,
+so any dark pair in this support must have
+  Q+s_N>=9,  W+2k=20+Q+s_N>=29.
+This proves at least one positive unit of charge surplus is necessary.
+At k<=6 it yields only W>=17, not W>=22.
+
+Separate-session review completed
+Read the other session's final zero-surplus-L/optical-cover.txt in full and
+checked its short-cap mirror preservation, all open-leg portal inequalities,
+symmetry/reversal endpoint labels, and the force-to-reference-room logic.
+ACCEPT with no corrections. All six exact paths in its cover-check.json
+match this session's independently recomputed paths. The hand/implementation
+independence limits stated above remain in force.
+Reviewed optical-cover SHA256: 6d9c528d54b94efe8eb849fb46eb7c49ad39f9cc4ecf1132bbf33f9a3b16eba1.
+
+Remaining target
+For this L support at W<=21,k<=6, the exact identity gives Q+s_N<=13.
+Equality8 is now handled; the remaining possible surplus is1 through5.
+Other nonadjacent full-star supports also remain. Extending the structural
+reduction to the first surplus layer is a more concrete next target than
+new fixed-room path discovery. No such extension is claimed here, and no
+automatic larger campaign has been launched.

@@ -1,0 +1,177 @@
+Independently review this mathematical working note. No tools, edits, ray searches or outward actions. Check the geometric proof, the retracing argument at boundary marks, projection at smooth seam endpoints, the polyomino completeness argument, and scope of the restricted lower bound. Identify concrete errors or gaps. Distinguish theoretical review from executing certificates or verifying historical priority. Return concise findings and proposed corrections, then ACCEPT or REVISE with scope.
+
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,graphicx,booktabs,array,xcolor,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\setlength{\parskip}{4pt}\setlength{\parindent}{0pt}
+\title{A simple orthogonal mirror room with 22 walls}
+\author{Working research note\thanks{Construction discovered by a Claude/Opus-assisted search and checked by Codex using a separately written unfolding implementation. A separate Opus consultation reviewed the hand argument. These are AI-assisted checks; no human mathematical review or historical-priority claim is asserted.}}
+\date{31 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give coordinates for a strictly simple orthogonal polygon with 22 maximal straight walls and two distinct interior points that do not illuminate one another. The room comprises three reflected copies of a five-square staircase. A lattice-parity argument and the retracing property of convex right-angle corners give a self-contained proof. We also prove that 22 walls is optimal within a precisely restricted three-copy construction class. This restricted result is not a lower bound for general orthogonal rooms. The example matches the known general 22-edge upper bound; historical priority of this orthogonal realization remains unresolved.
+\end{abstract}
+
+\section{Conventions and construction}
+A \emph{wall} is a maximal straight segment of the polygon boundary. A simple room has a single Jordan boundary, with no holes, slits, or boundary point contacts. A billiard path is a finite positive-length polygonal path reflecting specularly at wall interiors; it stops upon reaching an actual polygon corner. A grid point lying inside a straight wall is an ordinary reflecting point, not a corner. To connect two interior points, the path must reach the target before reaching a corner.
+
+\begin{theorem}\label{thm:room}
+Let $Q$ have the following cyclic boundary vertices:
+\begin{align*}
+&(-1,-1),(0,-1),(0,-2),(1,-2),(1,-3),(2,-3),\\
+&(2,-1),(1,-1),(1,1),(3,1),(3,0),(5,0),\\
+&(5,1),(4,1),(4,2),(3,2),(3,3),(1,3),\\
+&(1,2),(0,2),(0,1),(-1,1).
+\end{align*}
+Then $Q$ is a simple orthogonal room with 22 walls. The points $S=(0,0)$ and $T=(2,2)$ lie in its interior and are not joined by a billiard path.
+\end{theorem}
+
+The coordinates are integers; their absolute scale is immaterial. In particular, the result concerns an ideal point source and target under geometrical optics. It makes no claim about a positive-area dark region or a physical wave cavity.
+
+\begin{figure}[ht]
+\centering\includegraphics[width=\textwidth]{three-copy-proof.png}
+\caption{The five-square base and the three-copy room. Dashed seams are open passages in the room, not reflecting walls. The four seam endpoints are smooth points of the final boundary.}
+\label{fig:copies}
+\end{figure}
+
+\section{The base obstruction}
+Let $P$ be the union of the five closed unit squares with lower-left corners
+\[
+(-1,-1),\quad(0,-1),\quad(0,-2),\quad(1,-2),\quad(1,-3).
+\]
+Its two marked smooth boundary points are $a=(0,0)$ and $b=(2,-2)$. The ten genuine corners, in cyclic order, are
+\[
+(-1,-1),(-1,0),(1,0),(1,-1),(2,-1),(2,-3),
+(1,-3),(1,-2),(0,-2),(0,-1).
+\]
+Directly inspecting the five squares gives the following complete lattice census: seven convex corners, three concave corners, the two smooth points $a,b$, and no interior lattice points. In particular, every integer point in $P$ other than $a,b$ is an actual corner.
+
+\begin{lemma}[Parity]\label{lem:parity}
+There is no ordinary billiard path from $a$ to $b$ in $P$.
+\end{lemma}
+\begin{proof}
+Unfold any proposed path by reflecting across the walls it encounters. Each wall lies on an integer horizontal or vertical line. Its reflection preserves integer coordinates and their two parities. The unfolded path is therefore a straight segment from $(0,0)$ to an even-even integer point. Its endpoint is nonzero because the unfolded segment has positive length.
+
+Write that endpoint as $k(p,q)$, where $k>0$ and $p,q$ are coprime integers. Since both endpoint coordinates are even, $k$ is even and at least two. The point $(p,q)$ lies strictly inside the segment and has at least one odd coordinate. Fold that point back along the proposed path. Its image is an integer point of $P$ with at least one odd coordinate, so it is neither $a$ nor $b$. By the census it is an actual corner. The path would encounter that corner before its target, a contradiction.
+\end{proof}
+
+No rational-direction assumption is imposed on the initial path. Rationality follows from its integer unfolded endpoint. This distinction is essential: no sampled directions or reflection cutoff are used.
+
+\begin{lemma}[Retracing]\label{lem:retrace}
+Allow a path in $P$ to continue at convex right-angle corners by reversing its velocity and retracing its incoming path. Keep concave corners forbidden. This continuation still cannot connect $a$ to $b$.
+\end{lemma}
+\begin{proof}
+Suppose a finite generalized path connects the marks. Restrict it to the portion after its last visit to $a$ and before its first arrival at $b$. If this portion has a corner continuation, consider the first one. It reverses the velocity; reversibility of every preceding ordinary reflection then returns the path to $a$ before reaching any new point. It cannot pass through $b$ on that return, since it did not pass through $b$ on the outward portion. This contradicts the choice of the last visit to $a$. The restricted path therefore has no corner continuation and contradicts Lemma~\ref{lem:parity}.
+\end{proof}
+
+Smooth boundary visits, including visits to $a$ or $b$, obey the usual reversible reflection law. For an arriving direction with two nonzero components, continuation through a removable right-angle corner reverses both components. This standard observation is also discussed in Wolecki's Remark~2.2~\cite{wolecki}.
+
+\section{Folding the room onto the base}
+Form the three copies
+\[
+ P_0=P,\qquad P_1=\{(x,-y):(x,y)\in P\},\qquad
+ P_2=\{(4-x,-y):(x,y)\in P\}.
+\]
+Their interiors are pairwise disjoint. $P_0$ and $P_1$ share exactly the wall $[-1,1]\times\{0\}$; $P_1$ and $P_2$ share exactly $\{2\}\times[1,3]$. There are no other contacts between the copies. Their union is the 15-square room in Theorem~\ref{thm:room}.
+
+Both seam midpoints become interior points: $S=(0,0)$ and $T=(2,2)$. Starting with three ten-wall boundaries, removing the two glued wall pairs subtracts four walls. At each of the four distinct seam endpoints, the two remaining exterior walls are collinear and merge. Thus
+\[
+ W(Q)=3\cdot10-4-4=22.
+\]
+The displayed cyclic boundary has no crossings or repeated vertices, and hence establishes simplicity independently of this count.
+
+Fold the copies onto $P$ by
+\[
+ f_0(x,y)=(x,y),\qquad f_1(x,y)=(x,-y),\qquad
+ f_2(x,y)=(4-x,-y).
+\]
+The maps agree pointwise on each seam. They send $S$ to $a$ and $T$ to $b$. Crossing a seam becomes an ordinary wall reflection downstairs, and an exterior-wall reflection projects to an ordinary reflection except at a seam endpoint.
+
+The four exceptional endpoints are
+\[
+(-1,0),\quad(1,0),\quad(2,1),\quad(2,3).
+\]
+Each is smooth upstairs and maps to a convex right-angle corner downstairs. A transverse reflection there switches between the adjacent copies. Composing the reflection in the actual wall with the reflection across the perpendicular seam gives $-I$, so the projected path reverses velocity. These events are precisely the continuations allowed in Lemma~\ref{lem:retrace}. Every preimage of a concave base corner is an actual room corner; a valid path cannot encounter it.
+
+The smooth boundary points $(4,0)$ and $(2,-2)$ are additional preimages of $a$ and $b$. A visit to either projects to an ordinary visit to the corresponding mark. An arrival at $b$ before arrival at $T$ would already give a forbidden path prefix.
+
+An axis-parallel path in $Q$ cannot join $S$ to $T$: horizontal and vertical wall reflections preserve its zero velocity component. All remaining directions have two nonzero components, so seam crossings are transverse and the preceding local analysis applies. A hypothetical $S$--$T$ path therefore projects to a finite generalized $a$--$b$ path in $P$. Lemma~\ref{lem:retrace} excludes it. This proves Theorem~\ref{thm:room}.
+
+\section{A restricted optimality result}\label{sec:restricted}
+The following result explains the wall cost of this particular mechanism. It does not classify all dark rooms, all parity proofs, or all reflected-copy constructions.
+
+\begin{definition}
+A \emph{parity-census base} is a simple polyomino $B$ with exactly two integer points that are not genuine polygon corners. These points must be distinct smooth boundary points in the same residue class modulo $2\mathbb Z^2$. Thus $B$ has no interior integer points. Lattice coordinates are fixed as part of this certificate.
+\end{definition}
+Translation by one of its marks reduces such a base to the parity argument in Lemma~\ref{lem:parity}. Convex-corner retracing remains harmless by Lemma~\ref{lem:retrace}.
+
+\begin{proposition}\label{prop:base}
+Every parity-census base has at least ten maximal walls. The five-square staircase $P$ attains ten.
+\end{proposition}
+\begin{proof}
+Let $w$ be the number of maximal walls, $b_\partial$ the number of lattice points on the boundary, and $A$ the number of unit squares. By definition $b_\partial=w+2$ and there are no interior lattice points. Pick's formula gives
+\[
+ A=\frac{b_\partial}{2}-1=\frac w2.
+\]
+The number $w$ is even for a simple orthogonal polygon. If $w<10$, then $A\le4$.
+
+For completeness, the connected polyominoes with up to four cells are obtained as follows, up to translation, rotation and reflection. With one or two cells there is only the square or domino. With three cells there is a straight strip or an L. With four cells, the cell-adjacency graph either contains a cycle, giving the $2\times2$ square, or is a tree. A degree-three vertex gives the T shape. Otherwise the graph is a four-vertex path. Its three successive unit steps give a straight strip, one turn (the L), two same-sense turns (the excluded square cycle), or two opposite-sense turns (the S). This exhausts the five tetrominoes.
+
+Among these shapes the only ones satisfying both $A=w/2$ and the absence of interior lattice points are the domino, the L triomino, and the T and S tetrominoes. Their smooth boundary points can be chosen as in Table~\ref{tab:bases}. In every case their residue classes differ. Integer translations and lattice isometries preserve the property of equality or inequality of these classes. None is a parity-census base. The stated census of $P$ supplies the attaining example.
+\end{proof}
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}lcll@{}}\toprule
+Base & $w$ & Smooth integer points & Residues modulo 2\\\midrule
+Domino & 4 & $(1,0),(1,1)$ & $(1,0),(1,1)$\\
+L triomino & 6 & $(0,1),(1,0)$ & $(0,1),(1,0)$\\
+T tetromino & 8 & $(1,0),(2,0)$ & $(1,0),(0,0)$\\
+S tetromino & 8 & $(1,0),(2,2)$ & $(1,0),(0,0)$\\\bottomrule
+\end{tabular}
+\caption{The possible bases with $w<10$ after Pick's reduction. Standard representatives are specified in the accompanying checker.}\label{tab:bases}
+\end{table}
+
+\begin{corollary}\label{cor:restricted}
+Consider a construction using three congruent reflected copies of one parity-census base, with disjoint interiors, exactly two full-wall seams, four distinct seam endpoints, and exactly one straight exterior-wall merge at each endpoint. Assume no other contacts or boundary identifications. Every resulting room has at least 22 maximal walls. The construction of $Q$ attains this bound.
+\end{corollary}
+\begin{proof}
+If the base has $w$ walls, removal of the two glued pairs and the four distinct straight merges gives $3w-8$. Apply Proposition~\ref{prop:base}.
+\end{proof}
+
+The hypotheses are substantive. In particular, a base with additional harmless lattice points, a different gluing pattern, or a proof using a different obstruction is outside the corollary. Arbitrary orthogonal polygons also need not admit a common unit-square grid.
+
+\section{Verification, prior work, and the open bound}
+The cell and seam identities, lattice census, wall count, and corner fibers are checked using exact integer arithmetic in \texttt{geometric-proof-check.py}. The frozen room has SHA-256
+\begin{center}\scriptsize\ttfamily
+c7838dfe640932458e6853af7171396af05df71067658ee8f78f9ca3d91cab20.
+\end{center}
+A separate finite proof reconstructs the physical four-orientation unfolding as 60 squares and supplies a closed set of 2,592 labelled states under the elementary integral shears and their inverses. An independent readback verifies 10,368 closure transitions and 10,368 horizontal source-sector checks, with no connecting path. These counts concern the physical unfolding. A separate 20-square quotient has a 72-state certificate; it is not needed for the hand proof above. Neither proof samples rays or imposes a reflection bound. The small-base table is checked by \texttt{lower-bound-check.py}, which only evaluates the explicitly listed shapes.
+
+Polygonal nonillumination and reflected-copy methods originate in earlier work, notably Tokarsky~\cite{tokarsky}, Castro~\cite{castro}, and Tokarsky--Boese~\cite{boese}. Wolecki~\cite{wolecki} gives a general 22-edge upper bound and acknowledges an independent unpublished 22-gon by Monteil. This example matches that bound. Historical priority of the present strictly simple orthogonal realization remains unresolved.
+
+An exact reconstruction of Wolecki's published vector figure finds a point contact in its boundary. O'Rourke's public orthogonal example~\cite{orourke} has 34 walls. Those comparisons distinguish specific displayed examples; they do not establish the previous best wall count over every strictly simple orthogonal construction.
+
+For a general simple orthogonal room let $r$ and $c$ be the numbers of reflex and convex corners. Turning angle gives $c-r=4$, hence
+\[
+ W=c+r=2r+4.
+\]
+Our room has $r=9$ and $c=13$. A global lower bound of 22 would require showing that every such room with $r\le8$ connects every pair of distinct interior points. Nothing in Corollary~\ref{cor:restricted} supplies that assertion.
+
+Moreover, wall count cannot bound area, side-length ratios, or the number of lattice exceptions in an arbitrary chosen subdivision. Integer dilation preserves wall count and darkness while increasing subdivision complexity. Even fixing a primitive grid does not by itself give a finite bound on side-length ratios. A complete lower bound must therefore use an invariant of the room and its reflected paths, or a justified reduction covering all lengths and marked points. Establishing such a reduction is the next open problem.
+
+\begin{thebibliography}{9}\small
+\bibitem{tokarsky} G. W. Tokarsky, \emph{Polygonal Rooms Not Illuminable from Every Point}, Amer. Math. Monthly 102(10) (1995), 867--879. \href{https://doi.org/10.1080/00029890.1995.12004679}{doi:10.1080/00029890.1995.12004679}. Original full text was not recovered in this audit; attribution is corroborated by later primary accounts.
+\bibitem{castro} D. Castro, reader letter, \emph{Quantum} 7(3) (January/February 1997), 42. \href{https://static.nsta.org/pdfs/QuantumV7N3.pdf\#page=44}{Original letter}.
+\bibitem{boese} G. W. Tokarsky and F. G. Boese, \emph{Invisible Points in a House of Mirrors}, Mathematics Magazine 73(5) (2000), 364--369. \href{https://doi.org/10.1080/0025570X.2000.11996877}{doi:10.1080/0025570X.2000.11996877}. Relevant text checked in a public scan; original figure comparison remains incomplete.
+\bibitem{wolecki} A. Wolecki, \emph{Illumination in Rational Billiards}, arXiv:1905.09358, v1 (2019), v3 (30 November 2024). \url{https://arxiv.org/html/1905.09358v3}.
+\bibitem{orourke} J. O'Rourke, \emph{Art Gallery Visibility Theorems: An Introduction}, author page and public Fig.9.14, forthcoming-book materials labelled 2026/2027. \url{https://www.science.smith.edu/~jorourke/AGVT/}.
+\end{thebibliography}
+\end{document}

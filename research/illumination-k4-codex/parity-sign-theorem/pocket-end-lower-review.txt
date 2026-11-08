@@ -1,0 +1,106 @@
+# Hand review of §26.14 (lower-end pocket, upper-left square cap)
+
+**Verdict: ACCEPT** the square-cap event as a prescribed, scoped strict-raw W26 control. Every coordinate, first hit, moving-mirror term and the π-sector check out by hand. I found no gap that breaks the event. Five wording and scope corrections are listed at the end. The triangular suffix stays **WITHDRAWN**, and its rejection is actually stronger than the text states. Universal pocket detection stays **OPEN**.
+
+## 1. Room and wall count
+
+Tiles from the fan list:
+
+- **S:** the square [-1,1]².
+- **T:** the square [3,5]×[-1,1].
+- **M:** the upper corridor [1,3]×[0,1].
+- **N:** the triangle (2,1),(3,1),(2,2). Its portal is y=1, x∈[2,3], which is the RIGHT portal.
+- **Pocket:** (5,0),(6,0),(5,-1).
+- **Lower leaf:** [4,5]×[-2,-1].
+- **Cap:** [3,4]×[1,2].
+- **Single triangles** at (-2,0), (0,2) and (0,-2).
+
+The boundary traced counterclockwise from A has these corners:
+
+(6,0) (5,0) (5,1) (4,1) (4,2) (3,2) (3,1) (2,2) (2,1) (1,1) (0,2) (0,1) (-1,1) (-1,0) (-2,0) (-1,-1) (0,-1) (0,-2) (1,-1) (1,0) (3,0) (3,-1) (4,-1) (4,-2) (5,-2) (5,-1).
+
+- That gives **26 walls**.
+- There are 29 tiles. With 27 boundary vertices (the 26 corners plus (2,0)) and 2 interior vertices, 27 + 2·2 − 2 = 29, which matches `tiles == walls + 3`.
+- (3,1) has angle 315°: the interior covers 135°→90° going through 180°/270°/0°, leaving a 90°–135° gap. It is a single wedge, not a pinch, so the polygon is simple.
+- **Sectors:** C = 90 (T) + 90 (T) + 90 (pocket) = 270°. B = [π/4, 3π/2] = 45 (pocket) + 90 (T) + 90 (leaf) = 225°. Both match the receipt.
+- **Interior integer points:** the only ones are the marks (0,0) and (4,0). Every other candidate is a boundary corner.
+
+## 2. Forcing at B
+
+T supplies [90°,180°] and the pocket supplies [45°,90°]. The missing [180°,270°] must come from (4,-2), and it needs both j=0 and j=1, which is the RIGHT quadrant.
+
+This is correct **provided the A-fan is the single triangle j=4**. If the A-fan also had j=5, its tile (6,0),(5,-1),(6,-1) would add [0°,45°] at B. Combined with (4,-2) j=1, that gives a contiguous [0°,225°], which also totals 225°. In that configuration D is no longer a boundary flank, so the alternative falls outside the stated pocket. The text should say this explicitly (see correction c).
+
+## 3. First half: S → (5/3,1) → B
+
+- **Leg 1, velocity (5,3) for 1/3:**
+  - It leaves S at (1, 3/5), interior to the x=1 portal.
+  - It hits y=1 at x=5/3 ∈ (1,2). That stretch is a fixed wall because N is RIGHT.
+  - It passes no vertex and has no earlier hit.
+- **Leg 2, velocity (5,−3) for 2/3:**
+  - It crosses x=3 at y=1/5 ∈ (0,1) and never reaches the corridor floor.
+  - Inside T it passes x=4 at y=−2/5, so it does **not** touch the target T early.
+  - It reaches y=−1 and x=5 at the same moment, which is the corner B.
+
+## 4. Second half: B → (16/5,2) → (3,5/3) → T
+
+- **Departure:** the direction (−3,5) is at 121°, which lies in T's local sector [90°,180°] at B.
+- **Into the cap:** it crosses y=1 at 19/5 ∈ (3,4), the left portal. It passes x=4 at y=2/3, not at T.
+- **First mirror:** it hits y=2 at 16/5. That point is interior to the wall (3,2)–(4,2).
+- **Second mirror:** it then travels (−3,−5) for 1/15 and hits x=3 at 5/3 ∈ (1,2). Just left of that point is outside N, because x+y≈4.67>4, so this is a real wall.
+- **Return:** it then travels (3,−5) for 1/3. It crosses y=1 at 17/5 ∈ (3,4) and ends exactly at (4,0).
+- **Durations and speeds:** 3/5 + 1/15 + 1/3 = 1. Both halves have speed √34.
+- **Clearances:** every ordinary hit and crossing has positive clearance from vertices.
+
+## 5. Development and moving-mirror terms
+
+- **Fixed suffix:** V₃(4,0) = (2,0), then H₂ gives (2,4).
+- **Moving flank:** D_t: x−y = 6+t maps (2,4) to (2,4) + (8+t)(1,−1) = (10+t, −4−t).
+- **Prefix:** H₁ maps that to **T′(t) = (10+t, 6+t)**.
+- **Corner:** B(t) = D_t ∩ {x=5} = (5, −1−t). Its physical velocity is (0,−1), and H₁ maps it to **B′(t) = (5, 3+t)**.
+- **Collinearity:** at t=0, S, B′ and T′ are collinear with B′ as the midpoint. The half-vector w = (5,3) is primitive.
+- **Defect:** Q = d/dt(T′ − 2B′) = (1,1) − 2(0,1) = (1,−1). det(w,Q) = −5 − 3 = **−8 ≠ 0**.
+- **Deformation:** D_t is the only moving mirror. The deformation keeps 225° at B(t) and 26 walls for small |t|.
+
+## 6. π-sector
+
+With α = atan(3/5) ≈ 30.96° < 45°:
+
+- The backward germ is π−α ≈ 149°.
+- The outgoing germ is π/2+α ≈ 121°.
+- Reflecting the outgoing germ across the π/4 ray gives π/2 − (π/2+α) = −α.
+
+The sector [−α, π−α] has length exactly π. It splits into two pieces:
+
+- **Physical piece:** [π/4, π−α], which lies in the link.
+- **Copy piece:** [−α, π/4], which is the physical [π/4, π/2+α] in the adjacent copy.
+
+Neither piece reaches 3π/2, so the sector is embedded and crosses D once. A physical sanity check agrees: an incoming ray shifted slightly to the pocket side enters the x=5 portal, reflects off D, and leaves as (−3,5). The legality holds, and the fixed prefix transports it.
+
+## 7. Rejected triangular suffix: confirmed invalid
+
+- **Formal path:**
+  - B + s(−3,5) crosses y=1 at x=3.8.
+  - It hits x−y=2 at (7/2, 3/2) when s=1/2.
+  - It reflects to (5,−3).
+  - The formal path would then reach (5, 3/5) and finally T.
+- **Wall count:** the W25 count is correct. The three cap walls are replaced by (4,1)–(4,2) and (4,2)–(3,1).
+- **Where it fails:** the segment reaches x=4 at y=6/5 and crosses y=1 at x=13/3. In between it passes through (4,1),(4,2),(5,1), the tile the checker reports, since x+y<6 there.
+
+## Corrections and gaps
+
+**(a) Naming.** The retained tile (3,1),(4,1),(4,2) is the lower-**right** half of [3,4]×[1,2], below the line x−y=2. Calling it the "left triangle" is misleading. Write "the j=5 triangle of the (4,2) fan."
+
+**(b) Rejection mechanism.** In the W25 room, x=4 with 1<y<2 is a **wall**: the triangle's right leg. The formal ray therefore has an earlier first hit at (4, 6/5). The text should say the itinerary is broken by that wall hit. "Absent tile" is the tile-level symptom of the same failure.
+
+**(c) Scope of the forcing.** State that the 225° forcing assumes the A-fan is the single pocket triangle (j=4), so that D is a boundary flank. The j=4,5 alternative described in §2 is excluded by that definition, not by the angle count.
+
+**(d) Raw rule at (2,0).** (2,0) is the room's only smooth unmarked integer point. Under "raw forbids non-A smooth integer points," this fixture passes only if (2,0) falls under the "A" exemption. Since "upper M2,0" is mandated for every connected-H W≤26 room, it presumably does. State this explicitly; I could not confirm it from the section alone.
+
+**(e) Checker scope.**
+- It never runs `geom.check` on the W25 triangle room, so "W25" is a hand count. I confirmed it above.
+- `a.bounce` is only applied within each half, so the corner event at B (first[−2], B, second[1]) is not machine-checked. That step rests entirely on the hand π-sector argument in §6, which I confirm. The JSON `scope` line already says so; the prose should too.
+
+**(f) "Necessarily W26."** This rests on the r-ledger, which the section doesn't prove. I checked one obvious escape: making the (0,2) fan two triangles would drop one wall, but it makes (0,1) an interior integer point, which raw forbids. So the claim is plausible, but it is still asserted rather than shown here.
+
+**Not promoted:** the triangular suffix, other lower-end orientations, disconnected H, and universal pocket detection.

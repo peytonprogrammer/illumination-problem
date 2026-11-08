@@ -1,0 +1,714 @@
+{
+  "status": "EXACT_WIDE_MIDDLE_CONSTRUCTOR_AND_ACTUAL_WALLS_PASS",
+  "fixed_fixtures": 4,
+  "checks": 160,
+  "reflections": 36,
+  "fixtures": [
+    {
+      "name": "thin-offset",
+      "input_keys": [
+        "A",
+        "B",
+        "a",
+        "Hs",
+        "g",
+        "Ht",
+        "xs",
+        "xt"
+      ],
+      "input": [
+        "3",
+        "1",
+        "2",
+        "1/2",
+        "1",
+        "1/2",
+        "1/2",
+        "5/2"
+      ],
+      "k": 0,
+      "n": 1,
+      "m": 0,
+      "slope": "5/2",
+      "source_gate": "-1/4",
+      "target_gate": "-3/4",
+      "reflections": 3,
+      "checks": 17,
+      "S": [
+        "1/2",
+        "1/2"
+      ],
+      "T": [
+        "5/2",
+        "5/2"
+      ],
+      "vertices": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "3",
+          "1"
+        ],
+        [
+          "3",
+          "3"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "path": [
+        {
+          "point": [
+            "1/2",
+            "1/2"
+          ],
+          "wall": null,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "1",
+            "7/10"
+          ],
+          "wall": 1,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "1/4",
+            "1"
+          ],
+          "wall": null,
+          "transparent_portal": true
+        },
+        {
+          "point": [
+            "0",
+            "11/10"
+          ],
+          "wall": 7,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "9/4",
+            "2"
+          ],
+          "wall": null,
+          "transparent_portal": true
+        },
+        {
+          "point": [
+            "3",
+            "23/10"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "5/2",
+            "5/2"
+          ],
+          "wall": null,
+          "transparent_portal": false
+        }
+      ]
+    },
+    {
+      "name": "both-smooth-portals",
+      "input_keys": [
+        "A",
+        "B",
+        "a",
+        "Hs",
+        "g",
+        "Ht",
+        "xs",
+        "xt"
+      ],
+      "input": [
+        "3",
+        "1",
+        "2",
+        "1/2",
+        "1",
+        "1/6",
+        "1/2",
+        "5/2"
+      ],
+      "k": 0,
+      "n": 1,
+      "m": 0,
+      "slope": "3",
+      "source_gate": "0",
+      "target_gate": "0",
+      "reflections": 3,
+      "checks": 13,
+      "S": [
+        "1/2",
+        "1/2"
+      ],
+      "T": [
+        "5/2",
+        "13/6"
+      ],
+      "vertices": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "3",
+          "1"
+        ],
+        [
+          "3",
+          "8/3"
+        ],
+        [
+          "2",
+          "8/3"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "path": [
+        {
+          "point": [
+            "1/2",
+            "1/2"
+          ],
+          "wall": null,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "1",
+            "2/3"
+          ],
+          "wall": 1,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "0",
+            "1"
+          ],
+          "wall": 7,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "3",
+            "2"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "5/2",
+            "13/6"
+          ],
+          "wall": null,
+          "transparent_portal": false
+        }
+      ]
+    },
+    {
+      "name": "rounding-tie-and-target-boundary",
+      "input_keys": [
+        "A",
+        "B",
+        "a",
+        "Hs",
+        "g",
+        "Ht",
+        "xs",
+        "xt"
+      ],
+      "input": [
+        "3",
+        "1",
+        "2",
+        "5/6",
+        "1",
+        "1/2",
+        "1/2",
+        "5/2"
+      ],
+      "k": 0,
+      "n": 2,
+      "m": 1,
+      "slope": "27/7",
+      "source_gate": "-2/7",
+      "target_gate": "4/7",
+      "reflections": 7,
+      "checks": 33,
+      "S": [
+        "1/2",
+        "1/2"
+      ],
+      "T": [
+        "5/2",
+        "17/6"
+      ],
+      "vertices": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "4/3"
+        ],
+        [
+          "3",
+          "4/3"
+        ],
+        [
+          "3",
+          "10/3"
+        ],
+        [
+          "2",
+          "10/3"
+        ],
+        [
+          "2",
+          "7/3"
+        ],
+        [
+          "0",
+          "7/3"
+        ]
+      ],
+      "path": [
+        {
+          "point": [
+            "1/2",
+            "1/2"
+          ],
+          "wall": null,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "1",
+            "17/27"
+          ],
+          "wall": 1,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "0",
+            "8/9"
+          ],
+          "wall": 7,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "1",
+            "31/27"
+          ],
+          "wall": 1,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "2/7",
+            "4/3"
+          ],
+          "wall": null,
+          "transparent_portal": true
+        },
+        {
+          "point": [
+            "0",
+            "38/27"
+          ],
+          "wall": 7,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "3",
+            "59/27"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "17/7",
+            "7/3"
+          ],
+          "wall": null,
+          "transparent_portal": true
+        },
+        {
+          "point": [
+            "2",
+            "22/9"
+          ],
+          "wall": 5,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "3",
+            "73/27"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "5/2",
+            "17/6"
+          ],
+          "wall": null,
+          "transparent_portal": false
+        }
+      ]
+    },
+    {
+      "name": "unequal-widths",
+      "input_keys": [
+        "A",
+        "B",
+        "a",
+        "Hs",
+        "g",
+        "Ht",
+        "xs",
+        "xt"
+      ],
+      "input": [
+        "10",
+        "7",
+        "8",
+        "2/3",
+        "3/5",
+        "4/7",
+        "5/3",
+        "9"
+      ],
+      "k": 1,
+      "n": 3,
+      "m": 7,
+      "slope": "10430/193",
+      "source_gate": "-831/193",
+      "target_gate": "-363/193",
+      "reflections": 23,
+      "checks": 97,
+      "S": [
+        "5/3",
+        "1/2"
+      ],
+      "T": [
+        "9",
+        "491/210"
+      ],
+      "vertices": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "7",
+          "0"
+        ],
+        [
+          "7",
+          "7/6"
+        ],
+        [
+          "10",
+          "7/6"
+        ],
+        [
+          "10",
+          "298/105"
+        ],
+        [
+          "8",
+          "298/105"
+        ],
+        [
+          "8",
+          "53/30"
+        ],
+        [
+          "0",
+          "53/30"
+        ]
+      ],
+      "path": [
+        {
+          "point": [
+            "5/3",
+            "1/2"
+          ],
+          "wall": null,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "7",
+            "18733/31290"
+          ],
+          "wall": 1,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "0",
+            "11393/15645"
+          ],
+          "wall": 7,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "7",
+            "26839/31290"
+          ],
+          "wall": 1,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "0",
+            "15446/15645"
+          ],
+          "wall": 7,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "7",
+            "6989/6258"
+          ],
+          "wall": 1,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "831/193",
+            "7/6"
+          ],
+          "wall": null,
+          "transparent_portal": true
+        },
+        {
+          "point": [
+            "0",
+            "19499/15645"
+          ],
+          "wall": 7,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "10",
+            "22394/15645"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "0",
+            "25289/15645"
+          ],
+          "wall": 7,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "1567/193",
+            "53/30"
+          ],
+          "wall": null,
+          "transparent_portal": true
+        },
+        {
+          "point": [
+            "10",
+            "28184/15645"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "8",
+            "4109/2235"
+          ],
+          "wall": 5,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "10",
+            "29342/15645"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "8",
+            "29921/15645"
+          ],
+          "wall": 5,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "10",
+            "6100/3129"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "8",
+            "31079/15645"
+          ],
+          "wall": 5,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "10",
+            "31658/15645"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "8",
+            "32237/15645"
+          ],
+          "wall": 5,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "10",
+            "4688/2235"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "8",
+            "6679/3129"
+          ],
+          "wall": 5,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "10",
+            "33974/15645"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "8",
+            "34553/15645"
+          ],
+          "wall": 5,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "10",
+            "35132/15645"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "8",
+            "35711/15645"
+          ],
+          "wall": 5,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "10",
+            "7258/3129"
+          ],
+          "wall": 3,
+          "transparent_portal": false
+        },
+        {
+          "point": [
+            "9",
+            "491/210"
+          ],
+          "wall": null,
+          "transparent_portal": false
+        }
+      ]
+    }
+  ],
+  "whole_goal_complete": false,
+  "kind": "prescribed exact fixture verification; arbitrary-real theorem remains a hand proof awaiting independent review",
+  "source_sha256": {
+    "wide-middle-onepass.md": "3c4deaacbecad241d19ffb034f0959cc30ea23e05c7ecce58d0ce25c0fe3b357",
+    "wide-middle-constructor-check.py": "16dbfec2b507abb2be87bfd3ed7a65ad8ede1d2d0360c310d39f2dfc460a8074"
+  }
+}

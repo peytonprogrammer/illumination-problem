@@ -1,0 +1,93 @@
+Two-e2 specific residues: THREE rooms illuminate in FOUR reflections
+4 November 2026 — Codex01a18403, corrected after independent peer review
+
+STATUS: independent HAND ACCEPT and strengthening received in
+surplus-four-local/two-e2-D8-review.txt/json. Original bound<=8 was true,
+but missed an earlier actual target encounter. Four reflections suffice in
+THREE original fixtures: soleDminus, soleDplus and soleRminus. SoleRplus is
+still open. Sevenjoined B/D cases belong to peer Codex01a1a00f.
+
+1. Rooms and actual endpoints
+
+H has full canonical stars S=(0,0),U=(2,0),T=(2,2).
+Each of the three rooms is
+ H+L(-2,0)sectors6/7/0+B(0,-2)sectors0/1/2+E-,T-,Nb+
+ plus exactly one of D-, D+, R-.
+Original fixtures in surplus-four-local/two-e2-check.json are frozen in
+geometry.json. Their W20/k6/Delta4 ledgers were independently accepted.
+No claim is made for arbitrary enlargements or the soleR+ fixture.
+
+2. Hand derivation
+
+Launch(-1,-d). For1/3<d<1/2, the lowerL square reflects on x=-2 at
+(-2,-2d), then y=-1 at(1/d-4,-1). It exits through x=-1 at
+(-1,3d-2), velocity(1,d). The next wall is the right corewall at
+(3,7d-2), which lies strictly between y0and1. Reflect left/up,
+hit innerleft(1,9d-2), reflect right/up. On the next crossing ofx2,
+y=10d-2. Setting the height to2 gives d=2/5, integerlaunch(-5,-2).
+
+S ->(-2,-4/5)->(-3/2,-1)->(3,4/5)->(1,8/5)->T=(2,2).
+
+The path reaches T before any later roof or floor excursion. It does not
+use the mirrors removed by Dplus or Rminus, so both variants inherit it.
+Rplus removes the first rightcorewall contact(3,4/5) and remains outside
+this certificate. Its cap cannot be treated as the same reflecting wall.
+
+3. Exact verification and independent review
+
+Each of four contacts lies strictly within one actual maximal wall. Own
+rational segment/wall intersection checks verify no earlier boundary
+intersection, open interior segments, and positive specular continuation.
+The first-arrival check explicitly rejects any earlier intersection with
+actual T before the final segment. Forward/reverse/sigma and complete
+canonical U/Z pass on all THREE ORIGINAL fixtures.
+
+Peer independently detected the earlier arrival, replayed the truncated
+path using separate physical code, and checked complete guards against the
+three original fixtures. Its first-arrival checker rejects the old longer
+itinerary while accepting the four-prefix. This strengthens coverage and
+reflection count; it does not refute the original Dminus illumination.
+
+Our checker now includes a first-arrival assertion, verifies that the old
+eight-contact list is rejected for 'earlier target', and keeps that original
+list in check.json as superseded provenance. No new direction or reflection
+word was discovered: this is the supplied path stopped at its first target.
+
+4. Remaining soleRplus gap and retired cap substitutions
+
+The soleRplus fixture is not covered because its triangular cap occupies
+x3,y0..1. One bounded hand cap-substitution approach has not closed it.
+After the same lowerLsquare prefix, Rplus gives these alternative returns:
+ (3,3/d-8),(-d,1), for1/3<d<3/8, usingdiagonal+horizontal;
+ (3,8-3/d),(-d,-1), for3/8<d<3/7, usingonediagonal.
+The first direct actualT height4/d-8 requiresd2/5, outsideitsbranch.
+For the second, a flatfloor return and innerleft wall reach Tminus. On
+its three-contact roof branch5/13<d<2/5, finalx at y2 is16d-4;
+on its four-contact branch2/5<d<3/7, finalx is8-16d. Both targetequations
+required3/8 outside those branches. These are failed specific continuations,
+not exhaustive statements about this room or evidence of darkness.
+
+Longer cap/source loops considered by hand did not supply a verified actual
+endpoint. Repeatedly extending these same routes is not a new approach.
+No additional optical run or discovery search was made after the peer's
+four-prefix correction. A different target/source coupling is still needed
+for Rplus; no claim of imminent closure is justified.
+
+5. Combined frontier
+
+Whole B/E symbolic families independently closed<=10. Three of11specific
+fixtures now independently closed<=4. Remaining EIGHT specific cases:
+soleRplus here, plus7joinedB/D assigned to peer. Other surplusfourlocal
+partitions and remainingremoteclasses stayopen. No universalminimum result.
+
+Run python3 -B .context/illumination-k4-codex/fourth-surplus-review/two-e2-residuals/check.py
+Outputs check.json; no direction/word/room/capassignment discovery, archive
+sweep, worker or peerfile edit.
+
+Update: soleRplus parentclosure after separatelyscoped computation
+The remaining Rplus room now has a computationally discovered19reflection
+witness and independentown exact physical replay, firstarrival andunfolding
+checks PASS. See ../rplus-exact-one/findings.txt for explicit discovery
+provenance, actual19coordinates and subsequent handgateexplanation. Peer
+reviewrequested. This supersedes the openRplusstatus above, not its failed
+handbranches. No other room was searched; sevenjoinedBDremainpeerownedopen.

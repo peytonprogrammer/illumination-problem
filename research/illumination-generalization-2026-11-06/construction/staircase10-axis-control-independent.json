@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-11-08T06:56:23.490Z",
+  "decision": "ACCEPT_ONE_FROZEN_ACTUAL_OBLIQUE_PATH",
+  "peer_receipt": {
+    "path": ".context/illumination-generalization-2026-11-06/review/staircase10-axis-control.json",
+    "sha256": "dabc66c7f3c0d3dd25c54fb5357bca046c16076cf6562e5e0b0fe691c3905c8b"
+  },
+  "peer_proof": {
+    "path": ".context/illumination-generalization-2026-11-06/review/staircase10-axis-control.md",
+    "sha256": "0c5d3d91dc8240fa5b183d98799c3cb49da58d87fa615faccd45d997a1014fdb"
+  },
+  "checks": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-axis-control-check.py",
+      "sha256": "d2ab2186f17e13fb94b7c6efe86883e6289912947179a3940857143c3491bddd",
+      "current_sha256": "d2ab2186f17e13fb94b7c6efe86883e6289912947179a3940857143c3491bddd",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-axis-control-check.json",
+      "sha256": "c77550f3529f2a87ef9b115363e78a2b577838ec784f7d20041f61fd7f017c55",
+      "current_sha256": "c77550f3529f2a87ef9b115363e78a2b577838ec784f7d20041f61fd7f017c55",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/axis-only-obstruction.md",
+      "sha256": "2441e420d53f4f2b881509559c80dc9d97b8a0e9516cc146a617474ce4299192",
+      "current_sha256": "2441e420d53f4f2b881509559c80dc9d97b8a0e9516cc146a617474ce4299192",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/axis-only-independent.md",
+      "sha256": "5cf807aebf6952388948ff065580d1e0ddaf9e45023c8e568c5a461613c83edd",
+      "current_sha256": "5cf807aebf6952388948ff065580d1e0ddaf9e45023c8e568c5a461613c83edd",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/axis-only-independent-acceptance.json",
+      "sha256": "0afba04d219dc8b98efd4bd361258af0530e4d243c370b17eb320b8acae5a167",
+      "current_sha256": "0afba04d219dc8b98efd4bd361258af0530e4d243c370b17eb320b8acae5a167",
+      "match": true
+    }
+  ],
+  "own_hand_proof": {
+    "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-axis-control-independent.md",
+    "sha256": "e0012a6db95e0e9f511f2d8589497ba4e5fb3dbd76da999946e99ab44842cd28"
+  },
+  "independent_method": "Explicit segment equations and finite-wall/source-target ordering; no checker reuse",
+  "all_metric_theorem": false,
+  "full_goal_complete": false
+}

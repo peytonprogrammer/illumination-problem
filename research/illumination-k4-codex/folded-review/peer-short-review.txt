@@ -1,0 +1,122 @@
+# Independent review: folded-parity 22-wall reduction
+
+I checked everything by hand. I ran no tools or ray searches, and I did not rely on any prior acceptance. Inputs 1–3 are assumed, as you instructed.
+
+**Overall verdict: ACCEPT, conditional only on inputs 1–3.** I found no counterexample or logical gap. The class is covered completely. A few justifications are compressed and should be written out; the minimum corrections are listed at the end.
+
+## Preliminary check of the setup
+
+The canonical tiling has its diagonals on the lines x ± y ≡ 0 (mod 2). For example, the unit square [0,1]² is cut by the diagonal from (0,0) to (1,1).
+
+- Each triangle has one A vertex, one mixed vertex and one odd-odd vertex, with angles π/4, π/2 and π/4.
+- Stars have 8 triangles at A points, 4 at mixed points and 8 at odd-odd points.
+- Every line through an A point that carries tiling edges is either axial (x = even or y = even) or has slope ±1 (x ± y = even).
+- Reflection in any such line preserves the tiling and each parity class. This fact is needed in Lemma 3 and is never stated.
+
+## Lemma 1 — ACCEPT
+
+**Angle identity.** A simple polygon has W corners and interior-angle sum (W−2)π, which is 4(W−2) in units of π/4. Every mixed and odd-odd vertex of every triangle in P is a corner. Each triangle therefore contributes 2 + 1 = 3 units at corners. A vertices contribute only when they are corners, which gives E_A. So 4(W_P−2) = 3N + E_A is correct, and reflex angles are handled correctly.
+
+**Interior a.** The star at a contributes exactly two contiguous right-angle sectors at each axial mixed neighbor m = a ± e_i. That point is non-A and lies in P, so it must be a corner:
+- two sectors would make it smooth, which is forbidden;
+- four sectors would make it interior, which is forbidden;
+- so it has exactly three sectors.
+
+The extra triangles at the four neighbors are distinct, because each triangle has exactly one mixed vertex. None of them lies in the star. So N ≥ 12 from a alone.
+
+**b interior.** The two stars are disjoint because each triangle has a unique A vertex. Then N ≥ 16, so 4(W−2) ≥ 48 and W ≥ 14. ✓
+
+**b smooth.** Angle π at b means a contiguous half-star of 4 triangles.
+
+The cleaner way to state the overlap argument is this. The extra triangle at m is one of the two triangles at m whose A vertex is 2m − a. It can lie in b's half-star only if b = 2m − a. The four values 2m − a = a ± 2e_i are distinct, so at most one requirement can be met by b's half-star. At most one triangle can serve that requirement, since two would fill all four sectors at m. This agrees with your common-neighbor argument.
+
+So N ≥ 8 + 4 + 3 = 15, giving 4(W−2) ≥ 45, so W − 2 ≥ 12 and W ≥ 14. ✓
+
+**Case coverage.** A noncorner A point is either interior or smooth, so the case split is complete. The corollary actually holds for W_P ≤ 13.
+
+## Lemma 2 — ACCEPT
+
+Let S be an interior lift of a, with S in copy i. Then g_i⁻¹(S) = f(S) = a. So every copy containing S has S at its smooth boundary point, and each contributes exactly angle π.
+
+Copies not containing S are closed sets at positive distance from S. So a neighborhood of S is covered by the half-disks of the copies that contain S. Because their interiors are disjoint, there are exactly two copies, and they are complementary along the line g_i(l).
+
+The mirror condition then forces g_j = R ∘ g_i. This also follows from coherence alone: g_j g_i⁻¹ fixes the shared segment pointwise, and it is not the identity because the interiors are disjoint.
+
+**Disk argument.** This is correct. If x ∈ l ∩ int P, a disk D around x inside int P satisfies R_l(D) = D. Then D lies in int R_l(P) as well, so the interiors overlap.
+
+**Supporting line.** int P is connected and avoids l, so it lies in one open half-plane. P is the closure of int P, so P lies in the corresponding closed half-plane. ✓
+
+## Lemma 3 — ACCEPT
+
+**Bound on W_P.** From 2(W_P − 4) + 4 ≤ 21 we get W_P ≤ 12. Lemma 1 then makes both marks smooth.
+
+**Same reflection line.** With m = 2 and copies {P, g(P)}, each interior lift must lie in both copies. In P-coordinates, S = a and T = b.
+
+Lemma 2's argument gives g = R_{l_a} as maps, and likewise g = R_{l_b}. Hence l_a = l_b. ✓
+
+**The intersection K.** K ⊆ H ∩ H′ = l, so K ⊆ P ∩ l. For the reverse inclusion, note that R_l fixes l pointwise, so P ∩ l ⊆ R_l(P). Therefore K = P ∩ l. That reverse inclusion should be stated.
+
+**Euler inclusion–exclusion.** This is valid because R_l preserves the tiling. P, R_l(P), Q and K are therefore all subcomplexes of one cell complex, and χ is additive on subcomplexes; Mayer–Vietoris gives the same result.
+
+Each component of K is a closed interval or a point, so χ(K) = c. Q is a closed simple polygon, so χ(Q) = 1. Then 1 = 1 + 1 − c, so c = 1. Since a ≠ b, K is a nondegenerate interval containing [a, b]. ✓
+
+**Angle π between a and b.** This needs one sentence of justification. Because int P ∩ l = ∅, we have K ⊆ ∂P. Since ∂P is a simple closed curve, near a point x of the open segment (a, b) the boundary arc is exactly that segment of l. P lies on one side of it, so the angle at x is π.
+
+**The forbidden smooth point.** The open segment (a, b) contains a non-A lattice point:
+- a mixed point if l is axial;
+- an odd-odd point if l has slope ±1.
+
+That point is a smooth point of P that is not A, which the parity-base condition forbids. ✓
+
+The closing remark is correct. With m = 2, every possible contact is contained in K, and connectedness of K was derived, not assumed.
+
+## Lemma 4 — ACCEPT
+
+I verified the representative directly. It is the union of:
+- the bar [−1,1]×[1,2];
+- the rectangle [1,2]×[1,3];
+- the canonical triangle (0,0),(0,1),(1,1).
+
+**Size.** The area is 9/2, so N = 9.
+
+**Corner angles** (units of π/4):
+
+| Corner | (0,0) | (1,1) | (2,1) | (2,3) | (1,3) | (1,2) | (−1,2) | (−1,1) | (0,1) |
+|---|---|---|---|---|---|---|---|---|---|
+| Angle | 1 | 5 | 2 | 2 | 2 | 6 | 2 | 2 | 6 |
+
+The sum is 28 = 4·7. This matches the identity with E_A = 1, coming from the corner (0,0).
+
+**Parity-base condition.**
+- There are no interior lattice points.
+- The only smooth lattice points are (0,2) and (2,2), and both are A points.
+- Every non-A lattice point is a corner.
+
+Because the base has exactly two noncorner A points, the mark pair is forced regardless of labeling.
+
+**The obstruction.** The line y = 2 contains (3/2, 2), which lies in the interior of the rectangle. By Lemma 2, (0,2) has no interior lift for any m. (The line x = 2 does support P, but that is irrelevant.)
+
+**Transfer to the other W9 listings.** The obstruction is invariant under any Euclidean isometry carrying the marks, so the transfer is sound given input 3's normalization of geometries together with marks.
+
+## Conclusion — ACCEPT
+
+Assume W_Q ≤ 21. Input 3 gives W_P ≥ 9, and the wall inequality gives 5m + 4 ≤ 21, so m ≤ 3.
+
+- **m = 1:** excluded by input 2.
+- **m = 2:** excluded by Lemma 3.
+- **m = 3:** 3(W_P − 4) + 4 ≤ 21 gives W_P ≤ 9, so W_P = 9. Lemma 4 excludes this.
+
+Every case is covered within the stated class. Distinct marks are part of the definition, so the case a = b does not arise.
+
+## Minimum corrections (presentation only)
+
+1. **Setup:** state the tiling orientation (diagonals on x ± y even). Note that lines through A points carrying edges are axial or slope ±1, and that reflection in them preserves the tiling and the parity classes.
+2. **Lemma 1:** replace the common-neighbor phrasing with the "A vertex of the extra triangle is 2m − a" argument. Also note that angle π at b gives a contiguous 4-triangle half-star.
+3. **Lemma 2:** add that a neighborhood of S is covered only by the copies containing S, since the copies are finitely many closed sets.
+4. **Lemma 3:**
+   - add the inclusion P ∩ l ⊆ R_l(P);
+   - justify inclusion–exclusion by the common-subcomplex structure;
+   - add the sentence showing that K ⊆ ∂P with ∂P simple, which gives angle π on (a, b).
+5. **Lemma 4:** optionally include the angle table above as an internal consistency check.
+
+None of these changes the logic. The reduction stands, given inputs 1–3. As the write-up itself says, it establishes nothing about general mirror rooms.

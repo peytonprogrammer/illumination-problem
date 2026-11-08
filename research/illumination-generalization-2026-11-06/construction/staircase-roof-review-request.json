@@ -1,0 +1,19 @@
+{
+  "status": "REQUEST_INDEPENDENT_WHOLE_HAND_REVIEW",
+  "source_sha256": {
+    ".context/illumination-generalization-2026-11-06/construction/staircase-roof-proof.md": "47ae4917212c5e1ca18c1e2ea95d370137d6f513cf2cb6628dcd63b1a7e2c21b",
+    ".context/illumination-generalization-2026-11-06/construction/staircase-roof-check.py": "e3bfdbadbaf64df7d01c1f9afb19614e0ca14eb30bb2c0ac21ab4c1005f0c591",
+    ".context/illumination-generalization-2026-11-06/construction/staircase-roof-check.json": "c2f153b62bb3989be1cfe179ac1caede44f9882a395b5c615b51e2826c405563",
+    ".context/illumination-generalization-2026-11-06/construction/staircase-window-proof.md": "7b2a14e41e8d9183ddf46b915c85483a2bad0a91106d38c2af2ee0e006c2bd6b",
+    ".context/illumination-generalization-2026-11-06/review/staircase-window-acceptance.json": "71d323c23175489ad12e41a5a327144006808adfa51a2fedf9d547c326a9c9e1"
+  },
+  "claim": "All arbitrary-real staircase pairs if H>=3d or A>=3b; stronger per-pair condition2(H-d)-(yt-d)>=2(d-ys)",
+  "review_targets": [
+    "partial overlap ell>a without whole-window assumptions",
+    "two true target images in Zinterval>3a",
+    "avoid BOTHroofcorners via beta<1 and gap<=a",
+    "source/targetseams and roof turning velocity",
+    "allpair L transfer and transposition"
+  ],
+  "whole_goal_complete": false
+}

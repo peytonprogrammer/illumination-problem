@@ -1,0 +1,71 @@
+Independent tools-disabled theory review. We study a strictly simple raw parity room made of canonical45-45-90 triangles with two distinct actual full interior A marks and a literal attached triangle B=(1,1),A=(2,2),C=(1,2) sliding down by t along its straight vertical attachment. The rest of the physical polygon stays fixed; triangle area is constant. No enumeration or rays are permitted. Accepted prior inputs: (1) standard8copy D4 unfolding X_t in a fixed zero stratum for small t, genus>=2; its relative periods are omega_t=omega0+t delta, coefficients rational at0; (2) all small transcendental t share one arithmetic orbit closure M_* containing the entire small complex period line on a fixed local branch, by field-of-definition/coefficient separation and branch continuation; (3) relative-free unmarked tangent, rel0; (4) four real ABSOLUTE classes x0,y0,x1,y1 independent, since evaluations on4fixed cycles give matrix [-2,0,0,0;0,-2,0,0;p,q,0,2;-q,p,-2,0] of determinant16. (5) D4 copy rotations/reflections persist for the whole physical family. The physical polygon itself need not be symmetric.
+
+The imported theorem is Avila-Eskin-Moeller1209.2854v2 Theorem1.4: the intersection form is nondegenerate on the projection to real absolute cohomology of an affine manifold's real tangent. Check the new proposed rank>=3 proof below carefully. In particular verify the existence/actions of copy-exchanging anti-affine K for a nonsymmetric room, fixed Gauss-Manin action, all four cochains lying in the SAME local tangent, area constancy, all cup pairings, and dimension count. Reject if any step is unsupported; do not assume the conclusion. The previously established rank>=2 result is weaker and remains available if this fails. State exact scope. No claim about actual marked point freedom, cylinder existence or original midpoint goal is supplied.
+
+### 21.1 Constant area and D4 symmetry force rank at least three
+
+**Status: candidate strengthening; independent review requested.** For the
+literal straight-attached pocket slide of this paper, the common unmarked
+orbit closure M_* in Section21 has rank at least3, provided the established
+D4 unfolding and common local-branch hypotheses are retained. This uses a
+symplectic tangent theorem in addition to the prior field argument.
+
+Use absolute real cochains x_0,y_0,x_1,y_1 of Section28, with
+omega_t=x_0+i y_0+t(x_1+i y_1), and write B(u,v)=integral_X u wedge v.
+The four classes are independent in absolute cohomology by the determinant16
+period evaluation in Section28. The real underlying tangent V=p(T_R M_*)
+contains all four. Indeed the local complex line belongs to one branch of
+M_* by Section21; its derivative belongs to T_C M_*. This tangent is defined
+over R, so the derivative's real and imaginary parts belong to T_R M_*.
+The same holds for omega_0 by the GL action and homogeneous local equations.
+
+There are fixed topological copy symmetries R,K on the unfolding, with
+R orientation preserving of derivative rotation by90degrees and K
+orientation reversing of derivative reflection in the x axis. They persist
+for the real slide and give, for j=0,1,
+
+    R* x_j=-y_j,   R* y_j=x_j,
+    K* x_j=x_j,    K* y_j=-y_j.
+
+Here K is the copy-exchanging anti-affine symmetry; the physical room
+itself need not have reflection symmetry. These formulas are differentiated
+in a common marked chart, not assumed only at the square-tiled base.
+R preserves B and K reverses B. In particular
+
+    B(x_0,x_1)=B(y_0,y_1)=0,
+    B(x_1,y_0)=B(x_0,y_1).
+
+The physical room is a fixed remainder with one triangle translated along
+a straight wall. Its area, and hence the eight-copy unfolded area, is
+constant for all sufficiently small real t. Expanding gives
+
+    area(X_t)=B(x_0,y_0)
+      +t [B(x_1,y_0)+B(x_0,y_1)]
+      +t^2 B(x_1,y_1).
+
+Thus B(x_1,y_1)=0 and both equal cross terms vanish. Consequently for
+W=span_R{x_0,y_0,x_1,y_1},
+
+    B restricted to W =
+       [0,A,0,0; -A,0,0,0; 0,0,0,0; 0,0,0,0],
+    A=area(X_0)>0,
+    rad(B|W)=span_R{x_1,y_1},   dim W=4.             (21.1a)
+
+By [Avila-Eskin-Moeller, Theorem1.4](https://arxiv.org/pdf/1209.2854),
+B is nondegenerate on V. A symplectic vector space containing a
+four-dimensional subspace with a two-dimensional radical must have
+dimension at least6. For completeness, nondegeneracy makes the map
+V->rad(W)^*, v->B(.,v)|rad(W), surjective. Its restriction to W is zero,
+so V/W surjects onto a two-dimensional space. Hence
+
+    dim_R V >= 4+2=6,      rank(M_*)>=3.            (21.1b)
+
+This does not read rank from a period-span dimension: the cup-product
+radical forces TWO additional absolute tangent dimensions beyond the
+four-cochain pencil. Combined with the separately established rel0 result,
+dim_C M_*>=6. It remains an UNMARKED tangent statement. In particular the
+new companion directions need not be vertical motions of the actual marks,
+nor affine images available at a chosen rational slice. No actual midpoint
+event, normalized cylinder flux contrast at the base, full-stratum result,
+or illumination claim follows from this dimension bound alone.
+

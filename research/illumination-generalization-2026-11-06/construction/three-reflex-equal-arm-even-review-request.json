@@ -1,0 +1,62 @@
+{
+  "id": "EA01_EQUAL_ARM_EVEN_N",
+  "created_utc": "2026-11-08T03:25:58.650Z",
+  "claim": "LJ03 whole native equal-arm family extends to arbitrary N with nu2(N)<=nu2(P), retaining K=P<L,L power2,h even,c odd and original ordered geometry.",
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-even-candidate.md",
+      "sha256": "1455e2c6dbcb90476f68b140d527eae90c558a526d1a95897f0d309438f3064e"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-even-proof.md",
+      "sha256": "256a2e04629bba31b67187fe85ac51be00ddeaa37ffe609d8893215de4f1e0fa"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-lower-equal-arm-proof.md",
+      "sha256": "7537aa96ef3f28473f06d91cecb4995c23869417e3fb9ef893c2794895148897"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-lower-equal-arm-independent.md",
+      "sha256": "0fd34aad40ff265cc0783901af5fc92ba1cfd0f1d54e417e313de6b28f636889"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-lower-equal-arm-independent.json",
+      "sha256": "054d0a431a82213af3aad5f1a932564f9282c4d831ddb48d6be427a6aa43881c"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-even-proof.md",
+      "sha256": "cff95dce4c91f3208b82a9c7dffd04d8366a893cc63bf38d335395538eaf8b28"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-joint-lattice-even-independent.md",
+      "sha256": "1b576fcf829e73bfd16af6889c1541e541f1acfbd37eb3250ec2f4b7f2ba5ba6"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-joint-lattice-even-independent.json",
+      "sha256": "1902e7bfa9a2cf5503b2018a1c20e4e4f77b41051860de94e4124a2aa0085648"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-joint-lattice-correction-independent.json",
+      "sha256": "7eab2f2b852695e1a7507665212a97c5fee2749574a218cc7fc4f356747163d3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent.md",
+      "sha256": "bdfd57c1521ff4efe32adbc238cc732c5d85850995f793dcba9035c0c80cdceb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.md",
+      "sha256": "0d57019acc0b9d30a8031c1f0eea6ce2887b03a16f53303a2810104be0897983"
+    }
+  ],
+  "review_questions": [
+    "Every parity use in LJ03 audited; nu2H0>=nu2N makes right full-period ratio nonintegral",
+    "Gamma=2^nu2P divides P despite even N; full actual target attained",
+    "Half-open joint cover and positivity unchanged",
+    "Actual true-wall/corner/firstT guards and upper UJ02/TR01/TR05 native join",
+    "Hand calibration 376/9 with actual endpoints; no new replay claimed"
+  ],
+  "discovery_search": false,
+  "independent_acceptance": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

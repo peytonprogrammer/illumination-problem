@@ -1,0 +1,3 @@
+# R26 openness clarification
+
+The equality S0=T0 is not open in the full leading-data space. The supplement sentence "The condition is open in the leading data" is to be replaced by: the DIRECT-PATH certificate persists on an open neighborhood of leading data, because both nearby marks lie in the same fixed trace-free ball; alternatively, the coalescence premise may be read relatively on its equality stratum. This corrects the wording without changing the direct-path theorem or the compact-cover conclusion. Frozen source text is preserved. The independent reviewer explicitly supplied and accepted this interpretation in construction/joint-growth-limit-independent.md.

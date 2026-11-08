@@ -1,0 +1,13 @@
+# LR01 candidate: genuine return scattering and an exact blind-period obstruction
+
+Use an arbitrary original ordered integral spiral, a<R not required,0<a<l<w<A,0<b<c<h<H. Put beta=H-h,V=h-b,R=A-w,B=A-l,G=h-c. Fix actual native terminal S=(s,u),T=(t,v), and tau=|vx|/|vy|>0. Use signed mouth phase xi in(-a,a) encoding BOTH physical position |xi| and horizontal velocity via the right derivative of F_a; xi0 is a smooth outer-wall bounce with its outgoing convention.
+
+Prerequisite to prove: first genuine cap scattering has all intermediate h contacts in(a,w), every roof phase ordinary, and final L or R exit with exact signed phase. A real left-floor excursion maps downward xi_d to upward center2a(xi_d+2V tau), only when the FLOOR phase xi_d+V tau NOTin aZ and return h is strict. Thus each legal full left return has branch form xi'=xi+2(n beta+V)tau-2Am-2ai. The floor corner at a generic mouth point CANNOT be removed by the original-S suffix lemma.
+
+Precise existence obligation: one same tau and actual source injection whose legal return iterates reach a cap R-exit state z1 with the genuine right/direct-or-floor target relation F_B(center2R(z1+Gtau)+d tau)=A-t, d=c-v orc+v. A conditional map alone proves no such intersection.
+
+New proposed NEGATIVE implication to test by hand: set P=2*lcm(a,A,R,B). For EITHER tail d, F=G+d, ANY nonzero epsilon with |epsilon|<1/(2beta+F), at tau=P+epsilon the COMPLETE class allowing ANY NUMBER of genuine left-floor/cap returns, then FIRST R exit and that direct/floor target tail, misses EVERY integer horizontal point at target heightv. Last cap rotation incrementmod2A is2beta epsilon; first R overshootxi_exit is in(0,2beta|epsilon|). Exact physical tail should put the endpoint x_v in(w,w+1), regardless of all earlier left-return choices. Native actualt is integer, so it is not hit. Upper native terminal S must first descend into L near this P and is included.
+
+Success/failure criterion: prove the claimed signed blind stripe for ALL admitted returns and BOTH epsilon signs, with original first-hit/corner guards; or find a sign/phase/earlier-cap-entry counterargument. It refutes only the attempted near-common-period escape-family strategy, NOT the full all-tau route union or illumination. It is not a new room/family search. No numeric check/discovery clock/engine/census/worker/git is opened. Universal nonemptiness remains open.
+
+This new assignment reopens substantive hand work after the previous two no-progress audits. No native goal reset is requested. The coordinator supplied the concrete scattering task; the exact-root existence implication remains unresolved. The only proposed new theorem here is the stated general blind-period obstruction, not a fabricated universal intersection.

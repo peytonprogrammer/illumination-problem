@@ -1,0 +1,629 @@
+{
+  "status": "PASS",
+  "source_sha256": "3b01028279ea9ef378ee7124cb926591f857613c065a7a04703b9b7247d6e25b",
+  "midpoint_audit_sha256": "19ddd9880f80d862c79a210f2d76d9838f5a8d5caa7314f828aa03c60b3cd52d",
+  "base_provenance": {
+    "parent": {
+      "parent": {
+        "parent": {
+          "seed": {
+            "source_file": "three-two-star/case-2-1.json",
+            "source_sha256": "fd0671ff0eb1f4cd208b7669de3ffd3a42a2a13a05b3be06135d1a76ac144eae",
+            "prior_audit_sha256": "79e760579e08e1c040356519df3e776f2c6d080e02175e374ec60c89e3238e0c",
+            "triangle_index_sha256": "b2f41cbc2221177e6f46bebf5031d1c39d44096a33d6b2964073e7a3cf5b9386",
+            "seed_cuts": 859
+          },
+          "bootstrap_sha256": "e7219d6188c46680008fb5247dcf12eff463618d6cfcadd82c7e3bc52835f64c",
+          "connectivity_audit_sha256": "95704ff97d14f250cad049fdaf6bf852148dedfd67cae546baffc90125cdf630"
+        },
+        "cell_search_sha256": "0187c19ccf85e3f946138e16c7d09c4253d912912f0eaf0dd9e8b6fbf16968c4",
+        "cell_audit_sha256": "ef3a5af31523187c3dcc58f2f3df2a0098aab3bd762efe5ea6d2e2deb7a57297"
+      },
+      "fan_search_sha256": "8c94b91b3440c3e76fdd3910dca98ee72dceca6871f385bac6628aba1a0ace37",
+      "fan_audit_sha256": "dc8cb39836c32fc06aa22df10c6b342f430377265ba98bf8dd46dd41a16cd620"
+    },
+    "probe_sha256": "789ed069e3dfccd374e0a09d21810bd5219c2ebee7103350fa7eec3fc5081c47"
+  },
+  "double_search_sha256": "2734c9ead4032beb6ca40aa9707898ef8703448cefd9bcaf9f7aa1a71697ebcb",
+  "prior_guards": 3207,
+  "new_unique_midpoint_guards": 586,
+  "total_guards": 3793,
+  "guard_set_half_turn_closed": true,
+  "unrestricted_parent": "OPTIMAL",
+  "survivor": {
+    "triangles": [
+      [
+        [
+          -2,
+          0
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      [
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      [
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      [
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      [
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    ],
+    "marked": [
+      [
+        0,
+        0
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "require_simple": true
+  },
+  "cases": [
+    {
+      "neck_type": 1,
+      "pattern": [
+        [],
+        12,
+        82
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 2,
+      "pattern": [
+        [],
+        12,
+        83
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 3,
+      "pattern": [
+        [],
+        12,
+        210
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 4,
+      "pattern": [
+        [],
+        13,
+        83
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 5,
+      "pattern": [
+        [],
+        15,
+        83
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 6,
+      "pattern": [
+        [],
+        32,
+        83
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 7,
+      "pattern": [
+        [],
+        40,
+        83
+      ],
+      "status": "INFEASIBLE",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 8,
+      "pattern": [
+        [
+          [
+            1,
+            -1
+          ]
+        ],
+        83,
+        64
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 9,
+      "pattern": [
+        [
+          [
+            1,
+            -1
+          ]
+        ],
+        83,
+        80
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 10,
+      "pattern": [
+        [
+          [
+            1,
+            -1
+          ]
+        ],
+        83,
+        128
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 11,
+      "pattern": [
+        [
+          [
+            1,
+            -1
+          ]
+        ],
+        211,
+        0
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    },
+    {
+      "neck_type": 12,
+      "pattern": [
+        [
+          [
+            1,
+            -1
+          ]
+        ],
+        211,
+        64
+      ],
+      "status": "OPTIMAL",
+      "via": "fixed_neck"
+    }
+  ],
+  "neck_classes_excluded": 1,
+  "outside_cases": [
+    {
+      "outside_cells": [],
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "status": "OPTIMAL"
+    },
+    {
+      "outside_cells": [
+        [
+          1,
+          2
+        ]
+      ],
+      "status": "OPTIMAL"
+    }
+  ],
+  "cumulative_outside_sets_excluded": 102,
+  "placement_excluded": false,
+  "scope": "Composition of historical positive-ray exclusions and newly audited one-pass guards. Fixed-neck negatives need not prove a universal single-pass lemma without the historical cuts. Caps unresolved."
+}

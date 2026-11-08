@@ -1,0 +1,5 @@
+# Reciprocal independent hand review: GSE03 bounds are not universal
+
+ACCEPT the exact criterion-limitation claim. I independently substituted a2P,A10K,R2K,B4P,C2,G1, X2/4, d1/5,F2/6. In h0, the last three entries have gcd2X using gcd(K,2P)=1; the first is divisible by2X. In Z2 the first three entries have gcd8P, and adjoining20K^2X reduces it to4X (X2/4, p>=5); the last entry retains that gcd. In Z3 the middle pair gives16P^2K, and the first reduces it to8PK since gcd(2P,5Kd)=1. The last entry preserves it. Therefore the first flag bound holds and the last is exactly P<X, false here.
+
+Source/target image signs change only affine offsets. The three substituted floor charts are audited as arithmetic extensions, not silently accepted optical compositions. No claim of empty exact lattice intersection is licensed. GSE02's accepted swap reaches the SAME actual target for every p>=5, so this is not a counterexample to illumination or the complete accepted route union. It prevents using the new strict flag bounds as automatic ten-wall geometry. All source/argument pins match before and after; no new numerical case, replay or discovery.

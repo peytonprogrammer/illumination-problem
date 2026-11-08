@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_AWAITING_EXISTING_PEER_INDEPENDENT_REVIEW",
+  "claims": [
+    "All actual interior pairs in nested m-band stairs, m<=9, under G_j, finite vertical-only paths",
+    "All actual interior pairs under bounding-triangle B_j, at most two axis reflections or direct"
+  ],
+  "sha256": {
+    "nested-window-proof.md": "e3afba40bf31a93d515e200082c5cb76b14af2c917a3e623027a9c4b348894a9",
+    "nested-window-check.py": "efb019ed2f676ba169bc981adb23a59a844b85334a646414a0d0b9ef4531be74",
+    "nested-window-check.json": "5cbce463d6d86c44c784a2946a4373bc2af35ee4edcefbde5c67fa4d2b341b32",
+    "staircase-axis-triangle-proof.md": "18f0f60d0d6ad74fb71da8ec3fdcec74488a42fa04ff19bbbc2fcc3eb77f7da1",
+    "staircase-axis-triangle-check.json": "e464e80dde9fd33f2af7ffbeb2b8110738c7b96e029853c46b9a585f03c39787"
+  },
+  "review_targets": [
+    "one launch slope preserved under induction; full windows never replaced by independently chosen paths",
+    "actual seam endpoints and both step corners",
+    "bounding-triangle containment and down-set incoming/outgoing segments",
+    "collinear special case avoids origin; smooth actual axis contacts and exact finite specular path"
+  ],
+  "peer_availability": "Latest board reports native-budget-configuration blocker; no acceptance inferred.",
+  "whole_goal_complete": false,
+  "no_novelty_claim": true
+}

@@ -1,0 +1,91 @@
+Independent rigorous review, no tools. Challenge this candidate extension of a real number-field theorem for ACTUAL ZERO strata to two regular marked points by an auxiliary degree2 branched cover. Context: X_t has genus>=2 and every zero even order; actual marks are distinct regular and their periods plus all base relative periods are v0+t*v1 over Q[i]. Base at0 squaretiled with marks rational. Ordinary zero-stratum GL orbit closures have homogeneous number-field equations (Wright); an upstairs affine rational period disk is consequently in the common orbit closure for all transcendental real parameters by coefficient separation and local finite-branch continuation. Need independently check finite covering locus closedness, decorated orbit closure, rational period descent, properness over smooth marked base, and whether these imply the asserted common marked orbit closure, fieldQ and finite-index rational parameter affine stabilizer. Identify any missing theorem or counterexample. Do not claim periodic=>extra fold, generic rank2 classification, free marks, illumination or actual event. If candidate is sound, give an explicit relative-period cochain formulation for the remaining kernel-of-forgetting criterion.
+
+
+
+## 25. Candidate marked-period argument via an auxiliary branched cover
+
+**Status: candidate under independent review.** This addresses the marked
+field-of-definition prerequisite in Section23. It does not classify
+periodic points or construct the required event.
+
+Take two distinct labeled actual regular lifts s(t),t(t) on X_t, over a
+small complex period disk about the raw room. All actual zero orders of
+X_t are even. Topologically choose a connected double cover branched at
+exactly s(t),t(t). A character of the punctured surface group sends each
+of their meridians to1 in Z/2, and arbitrary handle generators to0.
+The surface relation holds because the two meridian values sum to0.
+Transport this choice on the disk. The pulled-back differential defines
+Y_t of genus2g(X_t). It has two simple zeros at the branch points; every
+other zero is an unramified lift of an even-order zero. Thus these two
+new zeros are distinguished among its actual zeros by their odd order.
+No artificial order0 markings are used upstairs.
+
+In a fixed topological chart the relative periods of Y_t are rational
+linear functions of the periods of X_t marked at Sigma union {s,t}:
+project a relative path and integrate downstairs. Conversely transfer
+and division by2 recover downstairs periods. In particular a downstairs
+path a from s to t lifts to a closed cycle obtained by traversing one
+lift of a and returning on the other, with period2int_a omega. Paths
+from old zeros to marks lift to relative paths between actual upstairs
+zeros. The local covering locus and the quotient period map therefore
+have rational homogeneous linear descriptions. Along the original slide
+all upstairs coordinates are vhat_0+t*vhat_1 with coefficients in Q[i].
+
+The local covering construction is finite over the marked base stratum:
+there are2^(2g) characters with the prescribed meridians. Include the
+covering involution as finite discrete data and, where necessary, pass
+to a local labeled/level cover. On a smooth upstairs limit, the
+involution persists as a nonidentity holomorphic involution. One can
+see nonidentity at a distinguished simple zero: its local multiplier
+is-1. Its quotient retains the two distinct regular branch marks and
+the downstairs zero orders; fixed points cannot collide in the smooth
+upstairs family. The marked covering locus is consequently closed in
+the relevant smooth upstairs stratum. Conversely finite covers over a
+compact subset of the smooth marked base cannot degenerate: after local
+trivialization there are finitely many topological covers, whose lifted
+flat metrics vary continuously. Thus the covering map is proper over
+the smooth marked base.
+
+Let N_tau be the GL orbit closure of Y_tau at a transcendental real tau.
+The actual-zero-stratum theorem applies to N_tau. Wright Theorem1.1
+supplies homogeneous local equations over a number field. Coefficient
+separation and the disk-continuation argument of Section21 imply that
+N_tau contains the whole small cover disk. By symmetry the orbit closure
+N_* is common to all small transcendental parameters. It contains the
+square-tiled Y_0, so Wright Example1.2 gives fieldQ.
+
+Keep the finite choice of involution and branch labels while taking
+orbit closure; if needed work with its finite decorated lift, whose
+local tangent branches agree with those of N_*. Taking the quotient
+sends this decorated orbit closure onto the orbit closure of the actual
+marked pair (X_tau,s(tau),t(tau)). Inclusion in one direction follows
+from continuity. For the other direction, any sequence of marked-base
+orbit points converging to a smooth marked base has a convergent lift
+by the preceding properness statement; a subsequence retains the finite
+cover decoration. Thus no unsupported marked orbit-closure theorem is
+being invoked. In local period charts the image branches are rational
+linear images of the upstairs branches, hence are defined overQ.
+
+**Candidate consequence.** For the two selected actual lifts, all small
+transcendental pocket slides have the same marked orbit closure M'_*,
+containing the actual marked slice and every small rational parameter.
+Its local tangent is defined overQ; forgetting marks projects it onto
+M_*. At each rational X_r, a finite-index stabilizer of the two rational
+marks and the local branch acts on that tangent. The physical marked
+slide tangent is therefore available to a multi-direction affine-module
+argument with those ACTUAL labels. Repeat with each desired pair of
+lifts, or use a cover branched at all16actual lifts if simultaneous
+labels are needed; the latter has genus2g+7 and16simple zeros, with the
+same finite-cover argument.
+
+The last conclusion supplies only a valid domain for the proposed marked
+multitwist cancellation criterion. It does not show a nonzero direction
+in the kernel of forgetting marks. Even a free marked tangent would
+still need a separate bridge to an admissible one-corner midpoint event
+at the raw base. No covering-involution symmetry of s,t under the
+physical halfturn is assumed or needed for this auxiliary construction.
+
+Primary input: [Wright, The field of definition of affine invariant
+submanifolds, Theorem1.1 and Example1.2](https://websites.umich.edu/~alexmw/numfield.pdf).
+The covering descent/properness and branch qualifications above are our
+proof obligations, not statements attributed to that theorem.

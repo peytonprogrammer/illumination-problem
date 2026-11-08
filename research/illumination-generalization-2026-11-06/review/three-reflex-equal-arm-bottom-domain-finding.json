@@ -1,0 +1,73 @@
+{
+  "id": "EA02-F1",
+  "decision": "REJECT_FIRST_PHYSICAL_CALIBRATION_ONLY",
+  "created_utc": "2026-11-08T03:29:20.839333+00:00",
+  "request_pin": {
+    "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-bottom-review-request.json",
+    "sha256": "51b9014ff97d98f6fa68eb0141122b6eb5efabbda8091de5c3f0077015a99487"
+  },
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-bottom-candidate.md",
+      "sha256": "6940b808897401a37da640ead0bfab85ae2d61f8b8c3b1e658e17c390142ee12"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-bottom-proof.md",
+      "sha256": "96026dcc9c446ae42595dcfa0ab4d5ce1b4191539fd0fd66507b45987ae22a45"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-even-proof.md",
+      "sha256": "256a2e04629bba31b67187fe85ac51be00ddeaa37ffe609d8893215de4f1e0fa"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-lower-equal-arm-proof.md",
+      "sha256": "7537aa96ef3f28473f06d91cecb4995c23869417e3fb9ef893c2794895148897"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-lower-equal-arm-independent.json",
+      "sha256": "054d0a431a82213af3aad5f1a932564f9282c4d831ddb48d6be427a6aa43881c"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-proof.md",
+      "sha256": "1e2fef09a0030d246cc3fb924041731a8d6e61ef0f91f206ed0e8beeb20e586a"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-joint-lattice-independent.json",
+      "sha256": "b713c589fcfb1dfdc138021ca42f855fd4794d8ffe14d0cd1ef1fe3136555f94"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-joint-lattice-correction-independent.json",
+      "sha256": "7eab2f2b852695e1a7507665212a97c5fee2749574a218cc7fc4f356747163d3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent.md",
+      "sha256": "bdfd57c1521ff4efe32adbc238cc732c5d85850995f793dcba9035c0c80cdceb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.md",
+      "sha256": "0d57019acc0b9d30a8031c1f0eea6ce2887b03a16f53303a2810104be0897983"
+    }
+  ],
+  "parameters": {
+    "e": 2,
+    "P": 1,
+    "K": 1,
+    "L": 3,
+    "N": 11,
+    "b": 1,
+    "c": 3,
+    "h": 6,
+    "H": 12
+  },
+  "S": [
+    2,
+    4
+  ],
+  "reason": "s=Pe=2 and b<u<h, so S lies on an open reflecting wall, not the interior",
+  "theorem_refuted": false,
+  "finding_pin": {
+    "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-equal-arm-bottom-domain-finding.md",
+    "sha256": "8deed5944f134f984d28fa1164f48f368004e0e0e0fca9876c3a88335cbe3b4c"
+  },
+  "whole_goal_complete": false
+}

@@ -1,0 +1,112 @@
+Noncritical excess-two root erasure in the all-root mixed branch
+4 November2026 — Codex01a18403
+
+RESULT: parent hand proof; independent challenge requested. Every wholly
+local e2+two-e1/b0 room in which all three positive cells touch H and the
+e2 root is D or R illuminates actual S/T within13 reflections. No W/k cap
+is needed for the optical inheritance; no full mixed-partition closure.
+
+Gap: justify a LEGAL deletion, not an unsupported monotonicity assertion.
+Success criterion: remove the e2 fan leaving a strictly simple two-unit ROOT
+room, then prove the selected actual S/T path survives reinsertion.
+Strongest objection: deletion could make a pinch or detach a chamber,
+especially where the fan heals a formerly interior B point.
+
+1. Fixed geometry and allowable contacts
+Use D=(2,-2); sigma sends this to R=(4,0) and reverses actual endpoint order.
+Its e2 root has d1,q3, so F consists of m3 consecutive sectors or a smooth
+m4 half-fan in its A diamond. Its H-facing side is NORTH, sectors1/2.
+The other two positive cells are e1 ROOTS, each a two-sector H-facing fan.
+Every other occupied partial cell is one ordinary H-facing cap.
+
+The only partial cell with a side adjacent to D inside K is B=(0,-2).
+The R cell at(4,0) can meet the closed D diamond at the POINT(3,-1) only.
+All other K cells are disjoint from the D diamond. D's east and south
+side-neighbors are outside K and empty. Its intersection with H is the
+one or two occupied north BC edges, belonging to D sectors1/2. If both
+are present those edges meet at Cnorth=(2,-1), so form one embedded arc.
+If only one is present it is a single edge. In all cases the intersection
+with H is nonempty and connected.
+
+2. B contact cannot make a second attaching arc
+If B is ordinary, its cap reaches at most the shared vertex(1,-1).
+If B is a unit root, the only way it can share a BC EDGE with D is the
+quarter B0/1. That quarter meets D along the upper west BC edge
+ (1,-1)--(1,-2), corresponding to D sector3.
+The other H-facing B unit forms are centered1/2 and inactive quarter2/3;
+they add no D-side edge. In particular a two-sector B ROOT cannot reach
+(1,-3): reaching both that lower vertex and an H-side triangle would require
+at least three sectors. Thus no isolated lower-west attachment is possible.
+
+Whenever F contains D3 and also an H-facing sector1 or2, contiguity and
+m<=4 force D2 to be present. Reaching3 from1 the long way around the cyclic
+fan would take seven sectors. Hence the upper-west attaching edge meets
+the occupied H-facing edge D2 at(1,-1). It EXTENDS the same attaching arc;
+it never forms a disconnected second component. Even a point-only contact
+at(1,-1) lies on the occupied H edge: if F reaches that vertex through3,
+then2 is present; if through2, this is immediate.
+
+3. The diagonal R contact is already on the H arc
+If F touches(3,-1) it contains D0 orD1. If it contains0 and touches the
+H north side, its short contiguous window must also contain1: going from0
+to2 without1 needs seven sectors. If1 is present, (3,-1) lies on the
+occupied H-facing BC edge D1. Thus an ordinary or unit R fan adds no
+isolated D contact. It can only meet the attaching arc at that endpoint.
+This handles diagonal partial-cell contacts rather than ignoring them.
+
+4. Deletion preserves a strictly simple disk
+Let P0 be P with the entire D fan F erased, retaining shared edges as usual.
+All remaining caps and both unit roots still attach directly to H, so P0
+is connected. Sections1–3 show F intersects P0 along exactly ONE proper
+embedded boundary arc: one/two north H edges, possibly extended by the
+upper-west B-quarter edge. The D center itself and the open outer fan arc
+are not in P0. Thus the remainder of F's boundary is one outer-boundary
+arc of P. Erasing F replaces that outer arc by the connected attaching arc.
+There are no other remaining contacts on this replacement, by sections2–3.
+
+The potential junction angles are also nonsingular as boundary geometry:
+at(1,-1), remaining H180 plus B contributes at most90, in contiguous sectors;
+at(3,-1), H90 plus R contributes at most90, in contiguous sectors.
+At Cnorth only H180 remains. At Cwest, if it remains occupied, B supplies
+one90-degree quadrant. None is a pinch or a zero-width slit. A former full
+B point may become a genuine270-degree boundary corner; this is permitted
+in the auxiliary room, and does not invalidate its strict simplicity.
+Consequently P0 is a strictly simple disk with exactly the same full A
+stars S/U/T, exactly two e1 ROOTS and all other partial cells ordinary.
+No assertion that b, W, k, or Delta remains fixed is made or needed.
+
+5. Budget-free theorem plus exact support inheritance
+Apply surplus-four-local/two-unit.txt to P0. Its two-ROOT proof permits
+arbitrary b, W and k and supplies a legal actual S/T path within13.
+It has two genuine roots here, so its distinct d0-single-leaf supplement
+is not being substituted for this proof.
+
+Every fixed source/forcing/fallback path used in that two-root cover lies
+in the pinned21-path catalog and sigma images checked in support-check.json.
+Both required and forbidden triangle sets avoid the ENTIRE D and R stars.
+The accepted double square substitutions preserve exit point and outgoing
+velocity and change only the corresponding B/E/L/T critical cells; their
+composed certificates also do not acquire D/R support. The later arbitrary-b
+centered-L12 fallback is included explicitly in the fixed catalog.
+Thus reinserting F changes none of the selected path's complete requirements
+or mirror absences. It is a legal actual S/T trajectory in P as well.
+
+This argument proves a specific support-preserving inheritance. It does NOT
+assert billiard illumination is monotone under arbitrary enlargement.
+The auxiliary room may have k7 or a different surplus; using the arbitrary-
+budget two-unit theorem is essential. Sigma plus reversal gives the R case.
+
+6. Coverage and evidence limits
+Closed at parent level: ALL THREE-ROOT mixed rooms with e2 at D or R.
+Remaining all-root e2 positions: L,B,E,Tcap,N, with sigma pairing L/T and B/E.
+The six previously listed e2-root/single-leaf configurations remain open.
+No new room/cap-assignment/ray/direction/word generation, archive lookup,
+or optical discovery was used. The new component is the hand deletion
+lemma; the optical support receipt was already established and not rerun.
+
+Independent challenge requested especially for: point contacts at diagonal
+R; the connected attaching-arc argument; newly exposed B corners; complete
+inventory of the unrestricted two-root theorem and composed square paths.
+Sources: argument.txt§4 for the analogous centered leaf; support-check.py/json;
+surplus-four-local/two-unit.txt; third-surplus-review/local-two-unit.txt with
+reconciled forcing/N clauses. No expert or formal verification claimed.

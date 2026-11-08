@@ -1,0 +1,134 @@
+# Review of §9.1 and §9.2, and what can be proved about the missing step
+
+**Verdict.** §9.2 is essentially correct. Every load-bearing claim survives, but five statements need a stated hypothesis or a sharper wording; the fixes are below. I also prove several new facts: a refinement-free form of (9.2c), an exact local detection criterion, and the exclusion of regular corners as event midpoints. None of this produces an actual event. I could not find a forcing argument, and I explain why the obvious routes fail. Nothing below asserts span, transitivity, generic illumination or homology realization.
+
+---
+
+## A. Review of §9.2 (and the correction to §9.1)
+
+### A1. Do marked refinements justify the relative twist formula? Yes, with three clarifications.
+
+1. **What the pairing means.** For a relative class η ∈ H₁(X,P), the expression ⟨c_i, η⟩ is only defined through the Lefschetz pairing H₁(X∖P) × H₁(X,P) → ℤ. That pairing needs c_i to be a class in X∖P, so the core must be fixed as a class in the complement of the marks. The refined cores provide this. Say it explicitly, because it is exactly what fails in the unrefined case.
+2. **Leaves through cone points.** A "closed leaf through a physical corner lift" is wrong wording when the lift is a cone point. Leaves through cone points are saddle connections, which already lie in cylinder boundaries. Refinement only cuts at closed leaves through *regular* marks, including regular corner lifts.
+3. **The extra power is automatic.** Suppose a power of φ preserves each maximal cylinder and fixes its boundary. In cylinder coordinates it is then (x,y) ↦ (x + ay + b, y). So it maps every leaf to itself by a rotation, rational at rational height, and one more power fixes any finite set of leaves pointwise. The twist numbers m_i are then automatically integers, because the top of each strip moves by a multiple of ℓ_i relative to its fixed bottom.
+
+**Fix for "heights are rational".** The heights are not literally rational. X develops onto ℝ²/ℤ²: D4 and the reflections in horizontal, vertical and diagonal lattice lines all preserve ℤ². So X is square-tiled, and every mark (A, B and C points) lies over the torus origin. In a primitive direction v ∈ ℤ², the refined heights lie in (1/|v|)ℤ and the circumferences in |v|ℤ. What is rational is the moduli. Write that instead (see B1 for the stronger consequence).
+
+**Missing hypothesis.** State that ∂η is supported on refined leaves. That is why the endpoints S̃, T̃ and p̃ must be among the cut leaves.
+
+### A2. Is the unit-torus countercontrol sound? Yes. One sentence should change.
+
+The check:
+- (0,½) ↦ (1,½) ≡ (0,½), so t is fixed.
+- The image of the vertical arc ends at displacement (1,½) instead of (0,½). The increment is one horizontal core.
+
+The unrefined formula does not "give twice an integer". It is **ill-defined**:
+- A core at height ¼ pairs to 1 with the arc s→t in H₁(T²∖{s,t}).
+- A core at height ¾ pairs to 0.
+- The unrefined formula therefore predicts 2c or 0, never c.
+
+Say that. It is the precise reason refinement is necessary, not merely sufficient. Calling it a prescribed relative-homology control, not a room, is correct.
+
+### A3. Is N(ker hol) = Z correct with same-sign twists? Yes.
+
+- **Rank argument.** Writing ⟨u,x⟩ = uᵗJx gives N = T M Tᵗ J with J invertible. If T M Tᵗ y = 0, then (Tᵗy)ᵗ M (Tᵗy) = 0, and definiteness gives Tᵗy = 0. So im N = C even when the cores are dependent.
+- **What is actually needed.** The hypotheses used are a ≠ 0 and h_i, ℓ_i > 0, which make M definite. Same sign is essential: mixed signs could drop rank. For a geometric parabolic, same sign is automatic because all cores are parallel and share one orientation convention.
+- **Covariance and correction step.** Covariance gives hol∘N = (A−I)∘hol = a·hol_⊥ e. The correction by a multiple of c₀ works because N c₀ = 0, since the cores are disjoint and so C is isotropic.
+
+Two fixes:
+- **Integrality.** Scaling produces an integral preimage of a *multiple* of z, not of z. Correct statement: N(ker hol ∩ H₁(X;ℤ)) has finite index in Z ∩ H₁(X;ℤ).
+- **The relative version also holds.** N(ker hol_rel) = Z, since the relative kernel contains the absolute one and its image still lies in C ∩ ker hol. Stating this is useful because η lives there.
+
+**Missing hypothesis, now proved.** (9.2b) is only interesting if Q ≠ 0 on *absolute ker hol*, and "Q nonzero on some absolute cycles" does not say that. It does follow. If Q vanished on absolute ker hol, then Q|abs = L∘hol for some linear L. X has cylinders in both axis directions, and Q vanishes on their cores, whose holonomies span ℝ². So L = 0, contradicting the hypothesis. Add this lemma.
+
+### A4. Does unequal normalized flux give exactly an abstract zero-period detectable increment? Yes.
+
+- The ratios Q(c_i)/ℓ_i are constant on each maximal cylinder. Refined cores in one cylinder are absolutely homologous, and H₁(X) → H₁(X,P) is injective because H₁(P) = 0.
+- So (9.2b) is a condition on maximal cylinders. It is equivalent to: there exists an absolute (or relative) x with hol x = 0 and Q(Nx) ≠ 0.
+- It says nothing about event classes. That is stated correctly in the text.
+
+### A5. Do the exclusions follow?
+
+**Exclusion 1: correct.** If dim C = 1, then Z = 0, so N η ∈ Z vanishes for every zero-holonomy relative η.
+
+**Exclusion 2: correct, but it needs a lemma the text does not state.** "Direction g(axis) supplies no detection" must cover *every* pure multitwist in that direction, not just g ψ g⁻¹. Proof:
+- The Veech group is discrete, so two pure multitwists ψ₁, ψ₂ in one direction have powers with equal derivative.
+- Both powers fix the regular mark S̃.
+- Two affine maps with equal derivative that agree at a regular point differ by a translation automorphism fixing that point, which must be the identity.
+- So ψ₁^p = ψ₂^q.
+- Since N² = 0, we have ψ^k_* = I + kN. So Q∘ψ^k = Q forces Q∘N = 0, and ψ itself is Q-blind.
+
+**Two remarks to add:**
+- *The two given facts are one fact.* Q(N_axis x) = Σ m_i ⟨c_i,x⟩ Q(c_i). So "Q vanishes on axis cores" is equivalent to "axis twists fix Q on marked relative homology".
+- *Possible extension.* If Q is the derivative of developed holonomy (as "induced by a literal slide" suggests), then Q(g_*γ) = Dg·Q(γ) for the D4 deck group. In that case D4 conjugation also preserves Q-blindness, so G can be enlarged by the deck group. This is conditional on that equivariance.
+
+---
+
+## B. New rigorous results toward the missing step
+
+### B1. A refinement-free flux formula
+
+Group (9.2c) by maximal cylinder. Each full crossing of strip i contributes ±h_i, so Σ_{i⊂Cyl} h_i k_i = K_Cyl, the signed transverse measure of η inside that cylinder. This gives
+
+```
+Q(Nη) = a · Σ_Cyl r_Cyl · K_Cyl,   with r_Cyl = Q(c_Cyl)/ℓ_Cyl and Σ_Cyl K_Cyl = 0.
+```
+
+Now write η = (p̃→S̃) + (p̃→T̃) as two straight segments with holonomies −w and +w. Let λ^X_Cyl be the fraction of the length of the half ending at X that lies in that cylinder. Then
+
+```
+Q(Nη) = ± a · |det(e,w)| · Σ_Cyl r_Cyl (λ^T_Cyl − λ^S_Cyl).
+```
+
+**Detection by direction v therefore holds if and only if the two half-trajectories have different r-weighted cylinder occupancy.** Refinement is needed to *prove* the twist formula, but the final quantity is intrinsic. It is also φ-invariant, consistent with N² = 0.
+
+### B2. An exact local criterion
+
+Suppose w is primitive and det(w,v) = ±1, which holds for infinitely many v. Refine at all lattice leaves; all heights are then 1/|v|. Each half is a lattice-to-lattice segment with no lattice point in its interior, so its interior lies in a single open strip.
+
+Then Q(Nη) ≠ 0 holds **if and only if** the maximal v-cylinders containing the two open halves have different values r.
+
+### B3. Regular corners cannot be event midpoints
+
+Let ι be the deck element −I. It is central in D4, and it lies in every corner stabilizer ⟨r₁, r₂⟩: for a corner of angle kπ/4, the rotation r₁r₂ by kπ/2 generates a group containing π. So ι fixes **every** physical corner lift.
+
+**At a regular lift (45° and 90° corners, cone angle 2π):**
+- ι is rotation by π, so it maps ray_S onto ray_T.
+- It is an isometry, so ι(S̃) = T̃.
+- Projecting to the polygon gives S = T, a contradiction.
+
+This is the corner-reflector retro-reflection. Midpoints must therefore be singular lifts:
+
+| Corner angle | Cone angle of lift | Rotation by ι |
+|---|---|---|
+| 135° | 6π | 3π |
+| 225° | 10π | 5π |
+| 270° | 6π | 3π |
+| 315° | 14π | 7π |
+
+In each case ι rotates by half the cone angle.
+
+### B4. The ι-reduction (conditional on D4-equivariance of Q)
+
+- ι commutes with every pure multitwist. The commutator is a translation automorphism that fixes S̃.
+- ι maps v-cylinders to v-cylinders while reversing their cores, so r_{σ(Cyl)} = r_Cyl.
+- The projection of ι(ray_S) equals the projection of ray_S.
+
+Consequence: detection compares ray_T with ι(ray_S). These are two +w rays from the same cone point p̃, separated by intrinsic angle (c−1)π ≥ 2π.
+
+---
+
+## C. Can disk/fan-tree geometry force detection? I have no proof.
+
+**The structural obstruction.** By B1 and B2, detection depends on which *maximal* cylinders contain the germ-strips leaving p̃ on two different sheets. That identification is global gluing data of X: it depends on how the strips close up after wrapping. Local star or fan visibility at S, T and p controls only the germs. Cylinders are global, so a half far from the leaf can lie in a cylinder that passes through the leaf, and vice versa. I see no mechanism by which disk or tree combinatorics of P controls this gluing. I state this as an obstruction to the *method*, not as a theorem that detection fails.
+
+Two other possible routes also fail:
+- The ι symmetry relates the S-half to a different +w ray, not to ray_T. It does not force equality.
+- The twist ψ_w in the event's own direction fixes η pointwise. It permutes the directions v_n = v₀ + nw only up to Q-changes on cores, so it gives periodicity only when ψ_w is itself Q-blind.
+
+**The strongest rigorously supported obligation.** Exhibit an actual S/T one-corner event through a *singular* corner lift p̃ (B3), together with one of:
+
+- (a) Q(η) ≠ 0 directly; or
+- (b) a rational direction v whose two half-trajectories have different r-weighted occupancy, Σ r_Cyl (λ^T − λ^S) ≠ 0. When w is primitive and det(w,v) = ±1, this is the finite local check of B2: the cylinder containing p̃→T̃ and the cylinder containing p̃→S̃ must have Q(c)/ℓ unequal.
+
+Either (a) or (b), combined with §9.1 and §5, yields both slide signs. The existence of any actual event, universal existence and the 96 bounded portal implications all remain open.

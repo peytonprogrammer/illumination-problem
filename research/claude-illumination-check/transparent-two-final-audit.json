@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "run": "transparent-simple-two-symmetric",
+  "solver_status": "INFEASIBLE",
+  "exhausted": true,
+  "stop_reason": "exhausted",
+  "records": 500,
+  "distinct_geometries": 500,
+  "transparency_counts": {
+    "1": 165,
+    "2": 335
+  },
+  "wall_counts": {
+    "22": 268,
+    "23": 219,
+    "21": 13
+  },
+  "independent_exact_paths_verified": 2000,
+  "path_cuts_rebuilt": 2000,
+  "unrelated_tile_mutations_preserving_paths": 2932,
+  "smallest_cut_facts": 46,
+  "largest_cut_facts": 77,
+  "max_reflections": 31,
+  "max_direction_coordinate": 17,
+  "zero_exception_control": "INFEASIBLE",
+  "matching_24_wall_control": "PASS",
+  "bounded_minimum": 24,
+  "scope": {
+    "bounds": [
+      -2,
+      6,
+      -2,
+      2
+    ],
+    "source": [
+      0,
+      0
+    ],
+    "target": [
+      4,
+      0
+    ],
+    "max_transparent_vertices": 2,
+    "simple": true
+  }
+}

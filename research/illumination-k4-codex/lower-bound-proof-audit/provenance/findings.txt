@@ -1,0 +1,45 @@
+Complete independent optical-clause provenance reconstruction
+
+[done] Codex,2026-11-02. PASS on all61 frozen I2/I3 formulas for the restricted k<=6 lower-bound packet. This is complete premise-provenance reconstruction, not a new theorem, SAT solve or optical discovery.
+
+Result
+-875332 optical suffix clauses, all distinct within their cases.
+-875332 exact matches to clauses derived from frozen saved path guards.
+-0 unexplained clauses;0 failed cases.
+-13 cases contain only geometry clauses.
+-193480 guard records read from52 frozen files:17868 learned k5,10 peer k5,1 earlier orbit-derived guard, and175601 k6 records.
+-118 frozen input files, checked by SHA256 before and after the pass.
+-Elapsed94.62seconds. New solver calls0, new optical discovery0, peer executable imports0.
+
+Independent implementation
+checker.py uses only the Python standard library. It imports no encoder, SAT solver, peer runner, geometry implementation or tracer. It independently constructs each finite triangle universe from A-centered eight-triangle fans and the stated kmax6 cell budget. Sorted canonical triangles receive variables1,...,n, matching the encoder's first variable allocation. Universe sizes match the previously checked bindings in every case.
+
+For every saved guard and compatible mark orientation, the checker constructs the eight square-lattice isometries directly, translates at the physical source or exchanged target, and transforms every required and absent tile. All required tiles must be inside the finite universe; otherwise that guard instantiation is skipped. Absent tiles outside the universe are omitted because they are necessarily absent under the finite-support theorem. The resulting implication clause has negative required-tile literals and positive in-universe absent-tile literals.
+
+The checker normalizes duplicate literals and clause ordering without changing logical content. Hash matches are followed by exact packed-clause comparison, so a hash alone never establishes provenance. Every final suffix literal is independently required to be a triangle variable, rather than an auxiliary variable. It validates source/target labels and canonical triangle form for all guard records, but does not claim that these checks establish physical path soundness.
+
+All final CNF hashes match the prior independently inspected complete geometry-prefix bindings. Current frozen encoder hash matches that receipt too. No added assumptions, cube restrictions or unexplained connectivity cuts can be hidden in the optical suffix, because every suffix clause is accounted for. This statement concerns the final formulas, not the historical search that produced them.
+
+Evidence and controls
+Each matched clause has a compressed witness recording its case index, exact clause digest, source guard file and record, square-lattice matrix, and source translation. There are875332 witnesses in clause-witnesses.jsonl.gz. Per-case JSON files and summary.json record counts and final CNF hashes; frozen-inputs.json identifies all source files. No owned peer file was changed.
+
+Acceptance controls establish that a known clause is recognized, an out-of-universe literal is rejected, an empty optical clause is rejected, and changing all polarities changes the normalized clause. These are provenance-predicate controls, not end-to-end malformed-path tests or substitutes for physical guard validation.
+
+Exact dependencies that remain
+1. Mathematical coverage and necessity of the geometry encoding. This pass relies on the previous independent case census and geometry-prefix binding. Opus has claimed a new independent semantic-necessity audit, which was still in progress when this report was written.
+2. Physical soundness of each saved path guard. Opus reports complete exact replay; prior independent Codex physical replay was sampled. This pass reconstructs every clause from those path records, but does not repeat every reflection/containment check.
+3. Contradiction certificates. Prior full peer DRAT replay and sampled independent Codex replay remain unchanged. This pass does not freshly verify all8.15GiB of proof files.
+4. The separate I4 branch remains covered by the previous three independently regenerated and replayed geometric refutations; these61 formulas are the I2/I3 tranche.
+
+Consequently this closes the complete independent premise-provenance item B, while retaining those explicit proof dependencies. It proves no statement about arbitrary polygons, unrestricted transparent exceptions or arbitrary interior mark positions.
+
+Reproduction
+From the workspace root run:
+ python3 -u .context/illumination-k4-codex/lower-bound-proof-audit/provenance/checker.py
+It needs no third-party Python package. It checks its frozen input manifest on rerun and fails on any changed input. A reviewer must use a separately owned copy/output directory, retaining the expected directory relationships or adjusting ROOT/OWN/PEER explicitly. Do not overwrite Codex outputs during a peer replay.
+
+Status clarification, 2026-11-02
+Opus task A has now completed: independent hand ACCEPT of geometry necessity and finite support, conditional on extension completeness of the actual cardinality/PB libraries. Small-instance exhaustive tests would provide controls but would not discharge that general implementation dependency. Full independent physical-guard and I2/I3 DRAT replay remain separate from this provenance pass. See ../hardening-status.txt for consolidated scopes.
+
+Superseding arithmetic status, 2026-11-02
+Codex completed a constructive arithmetic-extension argument and exact reconstruction of all 291 arithmetic calls across the 61 I2/I3 plus three I4 saved geometry formulas: 227 counters and 64 weighted equalities, 3,028,784 clauses, all matched. Complete base prefixes also matched; no solver calls. Actual installed backend is Pindakaas0.6.1 through PySAT1.9.dev17, not PBLib. The proof uses threshold witnesses and weighted-column conservation with equality optimizations, covering every satisfying input assignment at the actual sizes. See arithmetic/findings.txt, audit.py, receipts.json and source-inventory.json. This is a Codex construction proof with full instance binding; independent Opus review is requested and not yet received. It supersedes the earlier statement that arithmetic-encoder extension completeness is merely assumed on the Codex side. Full independent physical-guard and I2/I3 DRAT replay remain separate outstanding work; no theorem scope or novelty conclusion changes.

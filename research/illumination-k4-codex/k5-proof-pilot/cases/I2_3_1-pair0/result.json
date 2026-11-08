@@ -1,0 +1,168 @@
+{
+  "tag": "I2_3_1-pair0",
+  "status": "RESIDUAL",
+  "W_cap": 21,
+  "exception_cap": 5,
+  "N_cap": 38,
+  "partial_or_missing_cap": 11,
+  "full": [
+    [
+      0,
+      0
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "marks": [
+    [
+      0,
+      0
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "variables": 54598,
+  "clauses": 210445,
+  "tiles": 512,
+  "guards": {
+    "old": 710,
+    "new": 0,
+    "total": 710
+  },
+  "seconds": 0.956,
+  "solver_stats": {
+    "restarts": 32,
+    "conflicts": 5041,
+    "decisions": 25345,
+    "propagations": 10431523
+  },
+  "geometry_receipt": {
+    "simple_polygon": true,
+    "tile_complex_euler": 1,
+    "tiles": 32,
+    "walls": 21,
+    "interior_A": [
+      [
+        0,
+        0
+      ],
+      [
+        6,
+        2
+      ]
+    ],
+    "transparent_vertices": [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "slit_edges": 0,
+    "boundary_contacts": [],
+    "atomic_boundary_faces": 26,
+    "sectors": {
+      "(-1, -1)": [
+        2
+      ],
+      "(-1, 0)": [
+        4
+      ],
+      "(-1, 1)": [
+        3
+      ],
+      "(0, -1)": [
+        4
+      ],
+      "(0, 2)": [
+        2
+      ],
+      "(1, -1)": [
+        2
+      ],
+      "(1, 0)": [
+        6
+      ],
+      "(1, 1)": [
+        5
+      ],
+      "(2, 0)": [
+        4
+      ],
+      "(2, 1)": [
+        4
+      ],
+      "(3, -1)": [
+        1
+      ],
+      "(3, 0)": [
+        6
+      ],
+      "(3, 1)": [
+        5
+      ],
+      "(4, 0)": [
+        4
+      ],
+      "(4, 2)": [
+        3
+      ],
+      "(5, 1)": [
+        6
+      ],
+      "(5, 2)": [
+        6
+      ],
+      "(5, 3)": [
+        2
+      ],
+      "(6, 0)": [
+        1
+      ],
+      "(6, 1)": [
+        6
+      ],
+      "(6, 3)": [
+        6
+      ],
+      "(6, 4)": [
+        1
+      ],
+      "(7, 1)": [
+        3
+      ],
+      "(7, 2)": [
+        6
+      ],
+      "(7, 3)": [
+        3
+      ],
+      "(8, 2)": [
+        1
+      ]
+    },
+    "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+  },
+  "cnf_sha256": "2e2034c02a10768d8f3b5e3b8fbddb071412c8f727d857191d0c6158566389bd",
+  "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+  "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+}

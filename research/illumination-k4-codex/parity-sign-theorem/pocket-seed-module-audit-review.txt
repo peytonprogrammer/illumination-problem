@@ -1,0 +1,98 @@
+# Verdict: mixed-twist lemma, supplied-generator closure, and prescribed control
+
+**Summary.** The algebra checks out: (M1), the control arithmetic, and the finite-generator closure are all correct. The escape claim does not survive as written. When the first map is an axis twist with QH=0, the mixed coefficient Q(NHη) is a difference of two first-stage contrasts, one for N and one for a conjugate twist in another rational direction. So the mechanism escapes only single-direction blindness. It does not escape first-stage blindness taken over all rational directions. Three smaller corrections are also needed: the holonomy remark, the "any nonzero b" quantifier, and a holonomy-factorization condition in the control. Nothing here supplies a nonzero mixed coefficient for an actual seed. That remains open.
+
+## 1. Mixed-twist lemma
+
+**Verified.**
+- H²=N²=0 gives f^a = I+aN and h^b = I+bH for every integer a, b, including negative ones.
+- Expanding (I+aN)(I+bH)η gives (M1) exactly.
+- QH=0 gives Q(Hη)=0, and Qη=0 by hypothesis. So Q(f^a h^b η) = a[Q(Nη) + bQ(NHη)], as stated.
+- The increments bHη, aNη and abNHη lie in the span of the core classes, which is absolute. So the relative boundary s+t−2p is preserved.
+- The order remark is right. h^b is applied first, and Q(h^b f^a η) = Q(f^a η).
+
+**Correction A (decisive): the axis-preconditioning reduces to first stage.**
+Since QH=0, Qh^{±1}=Q. Therefore
+
+    Q(N h^b η) = Q(h^{-b} N h^b η) = Q(N'_b η),   N'_b := h^{-b} N h^b.
+
+I+N'_b = h^{-b} f h^b is a product of supplied pure, label- and prong-fixing affine maps. It is a pure multitwist in the rational direction D_H^{-b} θ_N. Its cores are h^{-b}(cores of N), and h preserves both the form and isotropy. Hence
+
+    Q(NHη) = Q(N'_1 η) − Q(Nη).
+
+The mixed coefficient is a difference of two **first-stage** contrasts, for N and for N'_1. Consequences:
+- Suppose first-stage blindness (Section 9.4) covers the pure multitwist in every rational direction. Then Q(N'_b η)=0 for all b, which forces Q(NHη)=0, and the "concrete next obligation" is impossible for that pocket.
+  - Caveat: this needs the conjugate to be a power of the primitive pure twist in its direction θ'. If label-fixing translation automorphisms exist, the conjugate is that power times such a translation T, and Q∘T must also be checked.
+- The same applies to the final Section 5 axis action. It is Q-preserving, so it neither helps nor hurts.
+- The remark about conjugating an axis map by a Q-preserving element is true but beside the point. The relevant identity is the reverse one: conjugating f by the Q-preserving axis map.
+
+What the lemma genuinely shows: blindness of one direction's twist on η does not imply blindness of the group orbit. A real escape from all-direction first-stage blindness needs depth ≥2 with **both** factors non-axis, i.e. Q(N₂N₁η) ≠ 0 where neither N₁ nor N₂ is Q-preserving.
+- If N₂ is an axis twist, Q(N₂·)=0.
+- If N₁=H is an axis twist, Q(N₂Hη) = Q(N₂hη) − Q(N₂η), which is a difference of first-stage terms.
+
+More generally, any word in {f_i, h^{±1}} can have all its h-letters removed by conjugating the later letters:
+
+    w₁ h^b w₂ = h^b (h^{-b} w₁ h^b) w₂,
+
+and the leading h^b drops out under Q. So the Q-values of the orbit under ⟨f_i, h⟩ are exactly the Q-values of the orbit under ⟨h^k f_i h^{-k}⟩. Axis twists contribute no depth.
+
+**Correction B: quantifier on b.** "Set a=1 and choose any nonzero b" holds only under Q(Nη)=0. In general Q(Nη) + bQ(NHη) vanishes for at most one b, and only when Q(Nη) is parallel to Q(NHη). Correct statement: if Q(NHη) ≠ 0, then (a=1, b) detects for all but at most one integer b.
+
+**Correction C: holonomy claim is false in general.** "Since affine maps preserve holonomy 0, Hη and NHη have zero holonomy" is wrong. The correct formulas are
+
+    hol(Hη) = (D_H − I) hol(η),   hol(NHη) = (D_N − I)(D_H − I) hol(η).
+
+These vanish iff hol(η)=0, or under the appropriate eigenline conditions. In the control, (D_N−I)(D_H−I) = [0,−4; 0,−4] ≠ 0, so the control does not show zero holonomy either. Either add hol(η)=0 as an explicit hypothesis (justify it for intrinsic-π events, where the two arms need not have equal length) or replace the sentence with these formulas. Neither M1 nor the detection argument depends on this sentence.
+
+**Minor points.**
+- The transfer theorem is invoked for the composite f^a h^b and for inverses (negative a, b). State that it applies to the group they generate.
+- The Section 5 handoff needs vector Q ≠ 0 plus the event hypotheses, which transfer supplies. The text correctly avoids inferring a scalar opening from a nonzero vector.
+
+## 2. Prescribed control
+
+**Verified by hand.**
+- ⟨h+f, h−f⟩ = 0 and ⟨h+v+e, h+v−e⟩ = 1−1 = 0. So H²=N²=0, and I+H, I+N are symplectic on the 6-block, with r fixed.
+- Holonomy increments: 2⟨h,x⟩(1,0) = 2x_v(1,0) gives [1,2; 0,1]. 2⟨h+v,x⟩(1,1) = 2(x_v−x_h)(1,1) gives [−1,2; −2,3], which has trace 2 and det 1.
+- Hη = −(h+f) + (h−f) = −2f.
+- Nη = 0.
+- NHη = −2[(h+v+e) − (h+v−e)] = −4e.
+- Q of the composite image is (−4,0).
+- QH=0 because im H = span{h,f}.
+- Q(f^a h^b η) = −4ab, matching the code's assertions.
+
+**Corrections.**
+1. "Same nonzero holonomy within each pair" is not sufficient for the holonomy action to factor through hol. It also needs the sum of the cores to pair through the period form. Here the sums are 2h and 2(h+v), both in span{h,v}. Add that condition.
+2. **By Correction A, this control has a first-stage detecting direction.** N'_1 = h^{-1}Nh has core holonomy D_H^{-1}(1,1) = (−1,1), and Q(N'_1 η) = Q(NHη) = −4. So the control shows only single-direction nonimplication. It is not even an abstract model of all-direction first-stage blindness. The existing disclaimer ("not proof that all first-stage unimodular directions can vanish") should say this explicitly.
+3. Composite derivative: tr(D_N^a D_H^b) = 2 − 4ab. This is −parabolic at ab=1 and hyperbolic for ab ∉ {0,1}. That is harmless abstractly, but in an actual Veech group an ab=1 image is ± a parabolic, which again falls under first-stage analysis.
+4. Code:
+   - Q is scalar (x-component only), while the note states vector values. This is consistent only because Q's second component is defined to be 0.
+   - `boundary_r` is recorded but not asserted. Add `assert result[-1]==1`.
+   - The 7×7 J is degenerate on r, so ⟨core, r⟩ = 0 holds by fiat. That is acceptable for a "split" model, as stated.
+
+The labels "abstract, not a surface/room/corner event" are correctly maintained.
+
+## 3. Finite supplied-generator closure
+
+**Correct.**
+- The orbit span W is invariant under each N_i = f_i − I, so every V_j ⊆ W.
+- The stable V is N_i-invariant, so it is invariant under f_i and f_i^{-1}. Hence W ⊆ V.
+- Dimension strictly increases until stabilization, so depth ≤ D−1 with D = dim H₁(X,P;R).
+- Q ≠ 0 on V implies Q ≠ 0 on some word N_w η with |w| ≤ D−1. Expanding ∏(f_i − I) gives ≤2^l signed subwords, each of length ≤ l, and one of them detects.
+- The converse is correct: if Q kills V, the entire orbit under this subgroup is blind.
+- The scope disclaimers about non-generation and the Bezout-residue certificate are accurate.
+
+**Refinements.**
+- N_i²=0 is not needed for inverse-invariance. By Cayley–Hamilton, f_i^{-1} is a polynomial in f_i.
+- η ≠ 0 requires s+t−2p ≠ 0 in H₀(P), i.e. not s=t=p. This holds given distinct marked lifts, but say so.
+- Optional sharpening: V ⊆ Rη + C, where C is the span of all supplied core classes. So depth ≤ dim C.
+- Add the axis-elimination statement from Correction A: Q-preserving generators can be removed by conjugation and contribute no depth.
+
+## 4. Corrected next obligation
+
+For the reviewed seed and a specified literal pocket, assume first-stage blindness in all rational directions. Prove one of the following:
+- **(i)** Q(N₂N₁η) ≠ 0 for two justified **non-axis** pure twists, both Q-non-preserving, possibly conjugated by axis powers.
+- **(ii)** A longer non-axis module pairing.
+
+Option (i) as originally stated, using an axis H, is equivalent to first-stage detection in direction D_H^{-1}θ_N. It is only useful if Section 9.4's blindness does not cover that direction.
+
+The universal nonzero mixed (or depth-≥2) coefficient remains **unsupplied and open**. Neither the control nor the stopping bound provides it.

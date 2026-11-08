@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "residual_audit_sha256": "4414674be5be6a8ebd4d35d2a7b0cd1186878848f07bef932fcf7135ed9b0596",
+  "cases": [
+    {
+      "tip_mask": 4,
+      "gate": [
+        1,
+        0
+      ],
+      "incident_triangle_indices": [
+        266,
+        267,
+        303,
+        306
+      ],
+      "incident_bits": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "occupied_right_triangles": 3,
+      "angle_degrees": 270,
+      "interior": false,
+      "exceptional_BC_vertex": false,
+      "remaining_BC_exceptions": 3
+    },
+    {
+      "tip_mask": 5,
+      "gate": [
+        1,
+        0
+      ],
+      "incident_triangle_indices": [
+        266,
+        267,
+        303,
+        306
+      ],
+      "incident_bits": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "occupied_right_triangles": 4,
+      "angle_degrees": 360,
+      "interior": true,
+      "exceptional_BC_vertex": true,
+      "remaining_BC_exceptions": 2
+    }
+  ],
+  "scope": "Exact implication of forced marked stars, hub191 and tip mask4/5. Every incident triangle at C(1,0) is fixed. No room enumeration, illumination claim or global exclusion."
+}

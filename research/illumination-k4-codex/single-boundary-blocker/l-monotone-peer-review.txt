@@ -1,0 +1,73 @@
+# Verdict: ACCEPT
+
+I checked every step and found no counterexample or logical gap. There are three cosmetic corrections, listed at the end, but none affects validity.
+
+## Case reduction
+
+- **Interior points of P** fall into a few kinds: points of open H, points of open V, points on the open portal (0,a)×{c}, and points on the segment {a}×(0,c), which lie inside H.
+- **Points with y = c and 0 < x < a** belong to both H and V. **Points with x = a and y < c** belong to V.
+- **If s and t share a convex piece**, the segment between them stays in the open piece, apart from possibly an endpoint on the portal or on x = a. It can only run along x = a when both points are on x = a below c, and that line is interior to H. So it never touches ∂P or the corner (a,c).
+- **Otherwise**, s ∉ V forces x_s > a and 0 < y_s < c. Here y_s = c is excluded because those points are boundary when x_s > a. Similarly t ∉ H forces 0 < x_t < a and c < y_t < C. The stated normalization is exhaustive.
+
+## Selecting the image when h ∈ E
+
+- **Gaps.** Sorted, E = {…, −x_t, x_t, 2a−x_t, 2a+x_t, …}. The gaps alternate between 2x_t and 2(a−x_t). Both are positive and strictly less than 2a.
+- **h ∉ E.** h lies in a gap of width less than 2a, so its nearest point is within distance less than a.
+- **h ∈ E.** The nearer distinct neighbor is at distance min(2x_t, 2(a−x_t)) ≤ a. Equality occurs at x_t = a/2, and it is harmless.
+- **Result.** 0 < |x−h| ≤ a, so q ∈ (0, a/(1+r)] ⊂ (0, a).
+
+## Sign change
+
+The segment crosses y = c at parameter λ = D_s/(D_s+D_t) = 1/(1+r).
+
+- **x > h.** q = (r·x_s + x)/(1+r) = (x − h)/(1+r).
+- **x < h.** q = (−r·x_s − x)/(1+r) = (h − x)/(1+r).
+- **Validity of the image.** −x ∈ E because E is symmetric under negation, so X_t is a legitimate image.
+
+Both formulas are correct.
+
+## Lower fold
+
+- **X_s = x_s.** x runs linearly between x_s and q, with x_s ∈ (a, A) and q ∈ (0, a). It stays in (0, A) while y < c, so there is no wall contact. It meets y = c only at the portal.
+- **X_s = −x_s.** x runs from −x_s ∈ (−A, 0) to q > 0. It has exactly one zero, at a height strictly between y_s and c. The fold x ↦ |x| gives one bounce at (0, y*) with y* ∈ (0, c). The corners of the left wall are at (0,0) and (0,C), so this point is smooth.
+- **Bottom wall.** It is never reached, because y > y_s > 0 throughout.
+
+## Upper fold
+
+- **No crossing at y = c.** q ∈ (0, a), so no multiple of a is crossed exactly at y = c.
+- **No crossing at y = y_t.** X_t ≡ ±x_t (mod 2a) with x_t ∈ (0, a), so no multiple of a is crossed exactly at y = y_t.
+- **Location of crossings.** All crossings occur at heights in (c, y_t) ⊂ (c, C). The walls x = 0 and x = a over (c, C) contain no corners. In particular they avoid both the reflex corner (a, c) and the corners (0, C) and (a, C).
+- **Endpoint.** The triangular wave maps X_t to x_t.
+- **Finiteness.** The segment is finite, so there are finitely many crossings.
+- **Vertical segment.** A vertical upper segment is possible. It sits at x = q ∈ (0, a), which is interior.
+
+## Continuity at the portal
+
+Near q ∈ (0, a), both folds are the identity. So the velocity is continuous and the portal is crossed transversally, exactly once, because y is monotone.
+
+## Transpose
+
+- **Shape.** Hᵀ = [0,c]×[0,A] and Vᵀ = [0,C]×[0,a], so Pᵀ = ([0,C]×[0,a]) ∪ ([0,c]×[a,A]). This gives (A′, a′, c′, C′) = (C, c, a, A). The hypotheses 0 < a′ < A′ and 0 < c′ < C′ reduce to c < C and a < A, which hold.
+- **tᵀ = (y_t, x_t)** satisfies a′ = c < y_t < C = A′ and 0 < x_t < a = c′. So it is the lower-arm source.
+- **sᵀ = (y_s, x_s)** satisfies 0 < y_s < c = a′ and a = c′ < x_s < A = C′. So it is the upper-arm target.
+- **Wall orientation.** Reflections only at vertical walls of Pᵀ correspond to reflections only at horizontal walls of P. Reversal preserves validity.
+
+## Blocker consequence
+
+- **Corner blockers.** Neither path touches any corner. So blocker sets in closed horizontal walls are avoided by the vertical-only path, even if they include corners, and vice versa.
+- **Smooth points.** A smooth boundary point lies in exactly one orientation, so it is never essential for interior pairs.
+
+## Corrections (cosmetic only)
+
+1. **Unused symbol.** K = a(1+r) is defined but never used. Delete it, or use it to state the equivalent bound q ≤ a²/K.
+2. **Interior points on the portal.** State explicitly that interior points include portal points and points of {a}×(0,c). Both are handled by the convex-piece case, and saying so makes the case split visibly exhaustive.
+3. **Blocker scope.** In the blocker statement, say "closed horizontal walls (corners included)" so the scope matches the proof, which already supports that stronger reading.
+
+## Scope caveats
+
+These are correctly stated in the proposal, and I endorse them:
+
+- The result is for interior marks only.
+- There is no uniform reflection bound.
+- There is no claim about blocker sets of mixed orientation.
+- It covers a single reflex corner only.

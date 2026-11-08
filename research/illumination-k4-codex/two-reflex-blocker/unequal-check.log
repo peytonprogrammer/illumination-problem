@@ -1,0 +1,182 @@
+{
+  "status": "PASS",
+  "method": "fixed formula evaluations, exact polygon intersections and complete parity argument; no search",
+  "disjoint_pair_fixtures": [
+    {
+      "label": "right-arm-bottom",
+      "inequality_margin": "9/400",
+      "paths": [
+        {
+          "length": "5",
+          "beta": "1/11",
+          "q_source": "21/220",
+          "q_target": "1/220",
+          "bottom_x": "61/20",
+          "reflections": 5,
+          "wall_incidence_checks": 10,
+          "portal_bottom": false
+        },
+        {
+          "length": "7",
+          "beta": "1/15",
+          "q_source": "1/12",
+          "q_target": "1/60",
+          "bottom_x": "13/4",
+          "reflections": 7,
+          "wall_incidence_checks": 14,
+          "portal_bottom": false
+        }
+      ]
+    },
+    {
+      "label": "left-arm-bottom",
+      "inequality_margin": "9/400",
+      "paths": [
+        {
+          "length": "5",
+          "beta": "1/11",
+          "q_source": "-1/220",
+          "q_target": "-21/220",
+          "bottom_x": "39/20",
+          "reflections": 5,
+          "wall_incidence_checks": 10,
+          "portal_bottom": false
+        },
+        {
+          "length": "7",
+          "beta": "1/15",
+          "q_source": "-1/60",
+          "q_target": "-1/12",
+          "bottom_x": "7/4",
+          "reflections": 7,
+          "wall_incidence_checks": 14,
+          "portal_bottom": false
+        }
+      ]
+    },
+    {
+      "label": "wide-passage",
+      "inequality_margin": "61/100",
+      "paths": [
+        {
+          "length": "5/2",
+          "beta": "4/7",
+          "q_source": "47/70",
+          "q_target": "-33/70",
+          "bottom_x": "87/40",
+          "reflections": 5,
+          "wall_incidence_checks": 10,
+          "portal_bottom": false
+        },
+        {
+          "length": "3/2",
+          "beta": "4/5",
+          "q_source": "9/10",
+          "q_target": "-7/10",
+          "bottom_x": "17/8",
+          "reflections": 3,
+          "wall_incidence_checks": 6,
+          "portal_bottom": false
+        }
+      ]
+    },
+    {
+      "label": "thin-passage",
+      "inequality_margin": "3940001/5000000000",
+      "paths": [
+        {
+          "length": "205",
+          "beta": "4/2055",
+          "q_source": "40411/41100000",
+          "q_target": "-39589/41100000",
+          "bottom_x": "200411/80000",
+          "reflections": 205,
+          "wall_incidence_checks": 410,
+          "portal_bottom": false
+        },
+        {
+          "length": "203",
+          "beta": "4/2035",
+          "q_source": "40407/40700000",
+          "q_target": "-39593/40700000",
+          "bottom_x": "200407/80000",
+          "reflections": 203,
+          "wall_incidence_checks": 406,
+          "portal_bottom": false
+        }
+      ]
+    },
+    {
+      "label": "long-notch",
+      "inequality_margin": "12363003/200000000",
+      "paths": [
+        {
+          "length": "4805/14",
+          "beta": "7/2825",
+          "q_source": "56113/1130000",
+          "q_target": "-55887/1130000",
+          "bottom_x": "60313/2800",
+          "reflections": 457,
+          "wall_incidence_checks": 914,
+          "portal_bottom": false
+        },
+        {
+          "length": "4771/14",
+          "beta": "63/25255",
+          "q_source": "2525051/50510000",
+          "q_target": "-2514949/50510000",
+          "bottom_x": "2714051/126000",
+          "reflections": 455,
+          "wall_incidence_checks": 910,
+          "portal_bottom": false
+        }
+      ]
+    },
+    {
+      "label": "smooth-portal-bottom",
+      "inequality_margin": "159/6050",
+      "paths": [
+        {
+          "length": "5",
+          "beta": "4/55",
+          "q_source": "4/55",
+          "q_target": "0",
+          "bottom_x": "3",
+          "reflections": 5,
+          "wall_incidence_checks": 10,
+          "portal_bottom": true
+        },
+        {
+          "length": "3",
+          "beta": "4/35",
+          "q_source": "36/385",
+          "q_target": "-8/385",
+          "bottom_x": "31/11",
+          "reflections": 3,
+          "wall_incidence_checks": 6,
+          "portal_bottom": false
+        }
+      ]
+    }
+  ],
+  "passage_obstruction_bypass": {
+    "beta": "100/34601",
+    "q_source": "101/103803",
+    "q_target": "14/14829",
+    "bottom_x": "701/300",
+    "reflections": 173,
+    "wall_incidence_checks": 346,
+    "portal_bottom": false
+  },
+  "repeated_crossing_control": {
+    "L": "133269",
+    "R": "266939",
+    "k": 100,
+    "beta": "100/40101001",
+    "bottom_x": "601/300",
+    "outer_contact_checks": 200,
+    "passage_crossing_checks": 201,
+    "status": "PASS"
+  },
+  "total_wall_incidence_checks": 3066
+}

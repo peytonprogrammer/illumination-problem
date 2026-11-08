@@ -1,0 +1,36 @@
+{
+  "status": "PASS_KNOWN_SOURCE_PREFIX_CUT_AND_WIDTH_UPPER_BOUND",
+  "ray": "369232/1923",
+  "first_target_time": "3846",
+  "reflections": 47748,
+  "wall_leg_guards": 477490,
+  "source_cap_time": "3364",
+  "source_cap_x": "53864/1923",
+  "alpha": "28",
+  "prefix_reflections": 39844,
+  "qualified_known_corner_occurrences": [
+    {
+      "copy_after_reflections": 20067,
+      "image": [
+        461596,
+        2408
+      ],
+      "entry_time_at_corner_slope": "277397560/115397",
+      "corner_time": "2404",
+      "exit_time_at_corner_slope": "277416792/115397"
+    }
+  ],
+  "geometric_gate_z_interval": [
+    "3365/28",
+    "3371/28"
+  ],
+  "witness_z": "1923/16",
+  "known_forbidden_z": "601/5",
+  "source_component_theta_span_upper_bound": "24/35",
+  "SC01_required_strict_span": "4",
+  "scope": "The connected fixed-word source component through the known witness is contained in (3365/28,601/5), so its span cannot meet SC01. Full maximal interval completeness is not claimed from this one cut. No other source word or ray excluded.",
+  "input_pins_unchanged": true,
+  "new_direction_executed": false,
+  "shared_dependency": "Existing exact reviewer replay/path_check reused; independent selected-corner unfolding and component upper-bound proof.",
+  "serialization_note": "The first identical run passed every mathematical assertion but failed to serialize integer-valued Fraction image coordinates; converted those coordinates to integers and reran the same prescribed input."
+}

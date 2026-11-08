@@ -1,0 +1,43 @@
+2026-10-31 13:36 — Research note delivered locally, no public submission.
+
+Artifacts: research-note.pdf (7 pages), research-note.tex, lower-bound-theory.md.
+Final hashes/layout receipt: note-render/qa.json.
+
+Established in note: explicit strictly simple orthogonal22-wall room; geometric
+parity + convex-corner retracing proof; a broader parity-base lower bound10;
+full-wall tree-of-copies minimum22 for any m with the stated distinct-seam
+endpoint, no-extra-contact, straight-merge, and interior-mark hypotheses.
+The broadened base bound allows extra harmless smooth/interior lattice points.
+Counting: 3A=c_o+3r_o<=4r+4. For w<10, r<=2 and A<=4; nine shapes fail.
+The tree needs m>=3 because each wall has length<=2 and interiorizes at most
+one smooth lattice mark. W=m(w-4)+4>=22. No global minimum claimed.
+
+Validation: checker PASS (nine small bases + staircase,40 parity-incidence
+identities); final TeX compile without warnings; PDF text bounds/references
+and all7 final rendered pages checked. Earlier geometry/closed-orbit inputs
+remain frozen; no ray or room searches were run during this continuation.
+
+Review: research-note-review.json accepts supplied original note's mathematics;
+presentation fixes incorporated: all corner fibers, half-plane disjointness,
+grazing convention, explicit shape representatives, hash-file specification.
+research-note-review-supplement.json accepts broader incidence theorem;
+its simplicity/wall/parity concerns are explicit; its composite-tightness
+concern arose because the short prompt omitted the supplied3-copy construction.
+lower-bound-opus.json independently derives stricter-census arc parity and the
+tree count. Its speculative global dichotomy and direct-census28 bound were
+NOT adopted. Its claimed attainable wall values22,34,46,... omit m=4,w=10
+from its own tree formula (which yields28), so that summary claim is not used.
+No tool-disabled review constitutes certificate execution or literature audit.
+Latest broader-base/tree combination remains pending independent Claude review.
+All three consultation processes finished. Peer enumeration processes untouched.
+
+Next theory move: characterize partial-wall seams or shared seam endpoints,
+and prove which can preserve blocking. Cycles with pairwise-disjoint seams may
+create holes; do not assume a cyclic gluing is a simple-room construction.
+Do not restart ray searches without the established theory gate.
+
+Priority: historical novelty remains unresolved.
+No duplicate outward communication, sharing, publication, commit or branch
+operation. AGENTS.md is Claude-owned and unchanged by Codex.
+
+2026-10-31 bounded proof update:31 direct CNF/DRAT cases all independently VERIFIED. See bounded-proof/findings.md and proof-manifest.json. At-most4/W<=21 only; do not replace older k<=3/W<=23 claims with this narrower proof. Claude encoder review requested before paper integration. Zero-charge reduction findings in proofs/zero-charge-reduction.md: net is ordinary corner-angle mass; axis-stretched orthogonal22 gives scalar-primitive unbounded k. No global minimum or priority.

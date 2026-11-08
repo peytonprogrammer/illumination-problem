@@ -1,0 +1,53 @@
+{
+  "hypothesis": "Four fixed-point first-inner-wall phase choices always avoid both genuine outer-mouth corners AND artificial spine-cut reflections at M>=2max(a,b). Requires es<a and et<b, not merely inequality.",
+  "status": "exact_mechanism_counterexample",
+  "patterns": 4,
+  "phase_runs": 16,
+  "started": 1794028290.405504,
+  "deadline": 1794028999.076208,
+  "inputs": {
+    "c": "1",
+    "a": "1",
+    "b": "1",
+    "ds": "1/2",
+    "dt": "1/2",
+    "bs": "1/3",
+    "xt": "1/3",
+    "M": "5"
+  },
+  "four_results": [
+    {
+      "tau": "10/3",
+      "es": "1",
+      "et": "2/3",
+      "bad_source": true,
+      "bad_target": false,
+      "steps": 3
+    },
+    {
+      "tau": "28/9",
+      "es": "10/9",
+      "et": "1/9",
+      "bad_source": true,
+      "bad_target": false,
+      "steps": 3
+    },
+    {
+      "tau": "32/9",
+      "es": "14/9",
+      "et": "5/9",
+      "bad_source": true,
+      "bad_target": false,
+      "steps": 4
+    },
+    {
+      "tau": "4",
+      "es": "4/3",
+      "et": "5/3",
+      "bad_source": true,
+      "bad_target": true,
+      "steps": 4
+    }
+  ],
+  "elapsed_seconds": 0.0005388259887695312
+}

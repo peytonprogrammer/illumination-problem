@@ -1,0 +1,211 @@
+{
+  "status": "PASS",
+  "saved_witness_file": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/exception-geometry/shared-extensions-check.json",
+  "saved_witness_sha256": "9259eb5aaddd96afb909a02013814e3ec92f6a3cd9bfdd95c35e6c9f6fedd980",
+  "frozen_guard_source_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+  "frozen_guard_line": 167,
+  "reflections": 10,
+  "required_caps": [
+    "B+",
+    "B-",
+    "D-"
+  ],
+  "forbidden_caps": [
+    "D+",
+    "Nb+",
+    "R-",
+    "T+"
+  ],
+  "forbidden_outside_cap_alphabet": [
+    [
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -2
+      ]
+    ],
+    [
+      [
+        0,
+        -2
+      ],
+      [
+        1,
+        -2
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        1,
+        -2
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -2
+      ]
+    ]
+  ],
+  "parameter_interval": [
+    "3/17",
+    "3/16"
+  ],
+  "actual_target_parameter": "2/11",
+  "target_expression": "(6-22r,2)",
+  "bottom_two_hit_map": "(u,-1),(d,-1) -> (-u-2d,-1),(-d,1)",
+  "bottom_two_hit_hypotheses": "-1<u<1, -1<u+2d<1, u+d!=0",
+  "bottom_family_new_path": "D- and not Nb+ and not R- and not T+",
+  "bottom_combined_sufficient": "not T+ and (N not in {Nr-,Nr+} or (D- and not R-))",
+  "previous_necessary_residue_superseded": "T+ or (N in {Nr-,Nr+} and (not D- or R-))",
+  "analytic_substitution_three_bounce": {
+    "parameter": "1/4",
+    "interval": [
+      "1/5",
+      "2/7"
+    ],
+    "reflections": 3,
+    "required_caps": [
+      "B-",
+      "B+"
+    ],
+    "forbidden_caps": [
+      "T-"
+    ],
+    "forbidden_outside_cap_alphabet": [
+      [
+        [
+          -1,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          -2
+        ]
+      ],
+      [
+        [
+          0,
+          -2
+        ],
+        [
+          1,
+          -2
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    ],
+    "path": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          -2,
+          5
+        ],
+        [
+          -8,
+          5
+        ]
+      ],
+      [
+        [
+          2,
+          3
+        ],
+        [
+          -4,
+          3
+        ]
+      ],
+      [
+        [
+          7,
+          4
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    ],
+    "sigma_required_caps": [
+      "E-",
+      "E+"
+    ],
+    "sigma_forbidden_caps": [
+      "L+"
+    ]
+  },
+  "bottom_forced_for_possible_darkness": [
+    "B-",
+    "B+",
+    "E-",
+    "L+",
+    "T-",
+    "Nr-"
+  ],
+  "bottom_necessary_residue": "N=Nr- and (not D- or R-), after the forced caps",
+  "east_necessary_residue": "N=Nb+ and (not R+ or D+), after sigma-transformed forced caps",
+  "northwest_first_upper_pass": {
+    "interval": [
+      "1/7",
+      "2/13"
+    ],
+    "roof_split": "3/20",
+    "left_roof_height2_x": "22r-2; target needs r=2/11 outside interval",
+    "right_roof_target_condition": "4/r even integer; 26<4/r<80/3<28, impossible",
+    "conclusion": "This specified cap-return branch misses T on first upper passage; later passages unanalysed."
+  },
+  "east_sigma_required_caps": [
+    "E+",
+    "E-",
+    "R+"
+  ],
+  "east_sigma_forbidden_caps": [
+    "D+",
+    "L-",
+    "Nr-",
+    "R-"
+  ],
+  "peer_left_hand_review": "ACCEPT paired-left.txt sections 1-5 as read before its second bounded attempt; shared tail independently derived here",
+  "scope": "Fixed line167/reflected13 plus analytic two-for-three local substitution in old4beam. One bounded Nr- cap-return/first-upper-pass hand attempt; no assignments, parameter search, solver or archive lookup. Full paired-family closure remains open."
+}

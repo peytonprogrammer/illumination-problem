@@ -1,0 +1,223 @@
+Independently challenge this conditional mathematical argument. Do not assume any general illumination theorem. Check the marked relative homology, signed gradient transformation, four positive weights, treatment of axis seeds, geometric admissibility of affine images, and rank-one cylinder-core sufficient hypothesis. Separate valid deductions from missing premises. Also review the cellular rank checker. You have no tools: say that you did not execute it. Under 1400 words.
+
+# A conditional signed-spanning mechanism from cylinder twists
+
+[in progress] Mathematical proposal; independent challenge requested.
+[done] Prescribed horizontal/vertical homology test on the frozen ear surface.
+
+This is a sufficient criterion, not the parity-room sign theorem. Its strong cylinder hypothesis fails on the frozen test room. The arguments below explain exactly which weaker geometric premise could still make this route useful.
+
+## 1. Event classes and the missing sign
+
+Let X be a translation surface obtained by unfolding a polygon. Mark a finite set A containing every lift of a forbidden polygon corner and all lifts of the source and target. A legal path avoids corners even at a reflex graze. For a strict one-corner midpoint event, let gamma1 run from its source lift to its corner lift, and gamma2 from that corner to its target lift. Both have the same developed half-displacement w. Set
+
+    eta = gamma2 - gamma1 in H1(X,A;R),    hol(eta)=0.
+
+The signed event row for an allowed polygon deformation v is
+
+    g_e(v) = -sigma det(w, delta_hol_v(eta)).
+
+Use actual half-displacements, not independently normalized primitive directions. Positive rescaling of rows does not change positive spanning, but it changes stress weights.
+
+Assume that the chosen event has an admissible local continuation on its stated side, and every other point of its itinerary avoids A. The event-row identity and its implication for a negative derivative are the geometric inputs from the existing corner-event framework. No homology statement alone supplies those inputs.
+
+## 2. Two twists fixing the event classes suffice
+
+Suppose orientation-preserving affine maps f_h and f_v fix A pointwise and preserve the local sector labels used by the events. Their derivatives are
+
+    P_h = [[1,a],[0,1]],    P_v = [[1,0],[b,1]],    ab != 0.
+
+Most importantly, assume for each event in a finite seed family that
+
+    (f_h)_* eta_e = eta_e,    (f_v)_* eta_e = eta_e.          (F)
+
+Suppose the seed rows span the full dual of the chosen deformation quotient. Then affine images of these events admit a finite strictly positive zero stress with full quotient rank.
+
+**Proof.** An affine map takes a straight segment to a straight segment, preserves midpoint ratios and orientation, and takes the marked set to itself. Thus its images retain the sole forbidden corner contact and its admissible local side. A finite choice of powers avoids the finitely many projected wall-parallel directions. Under (F), the image rows are
+
+    g_(h,n)(v) = -sigma det(P_h^n w, delta_hol_v(eta)),
+    g_(v,m)(v) = -sigma det(P_v^m w, delta_hol_v(eta)).
+
+This formula does not assert that the affine maps persist on the deformed surface: their action on the fixed topological classes is what is differentiated.
+
+First take w=(p,q) with pq != 0. Choose positive integers N,M large enough that
+
+    |A0|=|Naq| > 2|p|,    |B0|=|Mbp| > 2|q|.
+
+Choose them also to avoid wall-parallel directions. The four image directions are
+
+    (p+A0,q), (p-A0,q), (p,q+B0), (p,q-B0).
+
+Give these four events weights
+
+    1/4-p/(2A0), 1/4+p/(2A0), 1/4-q/(2B0), 1/4+q/(2B0).
+
+All weights are positive, sum to one, and their weighted directions sum to zero. Bilinearity of the determinant gives a positive zero stress on the four event rows. The average of the first two rows equals the original seed row, so the packet span contains the seed row.
+
+If p=0 or q=0, first apply a nonzero power of the other shear to make both components nonzero. Condition (F) still holds for the resulting event. Its four-row packet spans both determinant component functionals for this eta (differences of the horizontal and vertical row pairs give them separately), hence includes the original seed row too.
+
+Repeat for each seed and add the packet stresses. The union has full quotient rank because it contains the span of all seed rows. A strictly positive zero stress on full-rank rows implies that every nonzero quotient deformation has at least one negative row: if all evaluations were nonnegative, their positive weighted sum being zero forces every evaluation to vanish, contradicting rank. This proves the conditional claim.
+
+Duplicate events may be merged by adding their positive weights. The conclusion concerns a finite event family; it makes no uniform assertion about the size or length of the necessary powers.
+
+## 3. A strong sufficient geometric condition for (F)
+
+Suppose all horizontal cylinder core classes span a single nonzero line in H1(X;R). A horizontal affine multitwist that fixes A can be represented as a product of Dehn twists on annuli avoiding A. If a regular marked point lies in a cylinder, cut at its closed horizontal leaf and choose a sufficiently large common shear so that the twist is integral on every resulting subannulus. Square-tiled coordinates make these finitely many moduli and marked heights rational. Cylinder boundaries are pointwise fixed; a further power fixes all finite labels and sectors.
+
+For a relative class eta, the twist difference is an absolute class in the span of the annulus cores:
+
+    f_*eta - eta = sum_i n_i intersection(eta,c_i) c_i.
+
+All c_i are homologous up to scalar under the one-dimensional hypothesis. On the other hand, affineness gives
+
+    hol(f_*eta-eta) = (P_h-I)hol(eta) = 0
+
+when hol(eta)=0. A nonzero horizontal core has nonzero horizontal holonomy, so holonomy is injective on that one-dimensional span. Therefore f_*eta=eta. The vertical argument is identical.
+
+This uses one-dimensional **absolute homology span of cylinder cores**. A statement about Teichmuller rank, rational moduli, or one-dimensional holonomy images does not imply it. In particular, every horizontal cylinder period is horizontal, even when the cores represent many independent homology classes.
+
+The twist construction is only asserted here for square-tiled surfaces and rational marked coordinates; no existence claim is made for arbitrary marked translation surfaces.
+
+## 4. Exact applicability check: the strong condition fails
+
+`twist-cylinders.py` builds only the frozen parity-W25-24 surface, using the previously audited square builder copied to `inputs/twist_origami.py`. It never calls a darkness decider or explores a shear orbit. For permutations r,u on n squares, the oriented cellular face row is
+
+    h_s + v_(r(s)) - h_(u(s)) - v_s.
+
+A cycle of r gives the sum of its horizontal edge rows; a cycle of u gives the corresponding vertical sum. These are homology representatives of core curves at an interior height. Stacked rows may duplicate a cylinder's core; including all of them does not change their span. Exact rational elimination computes
+
+    rank(face rows + core rows) - rank(face rows).
+
+Checks include permutation validity, connectivity, zero boundary of face/core chains, face rank n-1, vertex boundary rank, and Euler genus. Two prescribed controls are a one-square torus and a three-square genus-two L surface. The script also checks one rational instance of the four-weight formula.
+
+|Surface|Squares|Genus|Horizontal core rank|Vertical core rank|
+|---|---:|---:|---:|---:|
+|Frozen ear example|112|28|15|15|
+|One-square torus control|1|1|1|1|
+|Three-square L control|3|2|2|2|
+
+Thus Section3 cannot justify (F) for our test room. This does not prove (F) false for particular event classes; it invalidates using the blanket rank-one-core shortcut here.
+
+## 5. The remaining useful target
+
+The weaker necessary input for Section2 is that the chosen event classes are fixed by both twists. One could weaken it further to equality after evaluation by every allowed polygon-deformation period derivative, provided this equality is proved for every integer power used by the packets. A single one-step equality without invariance under further powers is insufficient.
+
+We have not computed that action on the saved event classes. Full absolute homology has dimension56 in the test room, whereas allowed room deformations have a much smaller image. Core rank15 therefore neither proves nor refutes the weaker evaluated-action condition.
+
+A productive next calculation would reconstruct the actual relative chains of the already-saved events, their twist actions and their evaluations on the polygon deformation chart. It must account for corner sector labels and all regular marked lifts. It would use fixed event data and topological algebra, with no direction discovery. Until that premise is proved, the four-weight identity is a conditional mechanism, not a general illumination result.
+
+
+CHECKER
+"""Exact cellular homology of two prescribed origami foliations; no orbit search."""
+import sys
+if not __debug__:
+    raise RuntimeError('Run without -O: exact certificate checks are required')
+from pathlib import Path
+from fractions import Fraction as F
+from collections import Counter
+import importlib.util
+import json, hashlib
+B=Path(__file__).resolve().parent
+spec=importlib.util.spec_from_file_location('twist_origami',B/'inputs/twist_origami.py')
+m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+
+def cycles(p):
+    assert sorted(p)==list(range(len(p)))
+    unseen=set(range(len(p))); out=[]
+    while unseen:
+        x=min(unseen); c=[]
+        while x in unseen:
+            unseen.remove(x); c.append(x); x=p[x]
+        assert x==c[0]
+        out.append(c)
+    return out
+
+def add(row,k,v):
+    row[k]=row.get(k,F(0))+v
+    if not row[k]: del row[k]
+
+def reduce(row,basis):
+    row={k:F(v) for k,v in row.items() if v}
+    for k,b in sorted(basis.items()):
+        if k in row:
+            a=row[k]
+            for j,v in b.items(): add(row,j,-a*v)
+    return row
+
+def span(rows,basis=None):
+    basis={} if basis is None else dict(basis)
+    for row in rows:
+        row=reduce(row,basis)
+        if row:
+            k=min(row); a=row[k]
+            basis[k]={j:v/a for j,v in row.items()}
+    return basis
+
+def inspect(r,u):
+    n=len(r); assert n==len(u)
+    cycles(r); cycles(u)
+    todo=[0]; connected={0}
+    for s in todo:
+        for t in (r[s],u[s]):
+            if t not in connected: connected.add(t); todo.append(t)
+    assert len(connected)==n
+    parent=list(range(4*n))
+    def root(x):
+        while parent[x]!=x: parent[x]=parent[parent[x]]; x=parent[x]
+        return x
+    def union(x,y): parent[root(x)]=root(y)
+    for s in range(n):
+        for a,b,t in ((1,0,r[s]),(2,3,r[s]),(3,0,u[s]),(2,1,u[s])):
+            union(4*s+a,4*t+b)
+    edges=[(root(4*s),root(4*s+1)) for s in range(n)]+[(root(4*s),root(4*s+3)) for s in range(n)]
+    def boundary(row):
+        out={}
+        for e,a in row.items():
+            p,q=edges[e]; add(out,p,-a); add(out,q,a)
+        return out
+    faces=[]
+    for s in range(n):
+        row={}
+        for e,a in ((s,1),(n+r[s],1),(u[s],-1),(n+s,-1)): add(row,e,F(a))
+        assert not boundary(row)
+        faces.append(row)
+    fb=span(faces); assert len(fb)==n-1
+    v=len({root(i) for i in range(4*n)}); h1=n+2-v
+    assert h1%2==0
+    assert len(span([{p:-F(1),q:F(1)} for p,q in edges if p!=q]))==v-1
+    result={'squares':n,'vertices':v,'face_rank':len(fb),'genus':h1//2,'H1_dimension':h1}
+    for name,p,offset in (('horizontal',r,0),('vertical',u,n)):
+        cs=cycles(p); cores=[{offset+s:F(1) for s in c} for c in cs]
+        assert all(not boundary(c) for c in cores)
+        basis=span(cores,fb)
+        result[name]={'row_cycle_count':len(cs),'row_cycle_lengths':sorted(map(len,cs)),
+            'core_homology_rank':len(basis)-len(fb),
+            'rank_one_sufficient_condition':len(basis)-len(fb)==1,
+            'reduced_core_rows':[{str(k):str(a) for k,a in sorted(reduce(c,fb).items())} for c in cores]}
+    return result
+
+room=json.loads((B/'inputs/room.json').read_text())
+r,u,lab,s0=m.build(list(map(tuple,room['vertices'])),*map(tuple,room['marked']))
+main=inspect(r,u)
+# Prescribed cellular controls: torus and a three-square genus-two L origami.
+torus=inspect([0],[0]); assert torus['genus']==1
+assert all(torus[d]['core_homology_rank']==1 for d in ('horizontal','vertical'))
+lshape=inspect([1,0,2],[2,1,0]); assert lshape['genus']==2
+assert all(lshape[d]['core_homology_rank']==2 for d in ('horizontal','vertical'))
+# Four-direction convex balance, exact arithmetic; one prescribed nonaxis vector.
+p,q,a,b=F(5),F(11),F(12),F(12)
+A=a*q; C=b*p
+weights=[F(1,4)-p/(2*A),F(1,4)+p/(2*A),F(1,4)-q/(2*C),F(1,4)+q/(2*C)]
+directions=[(p+A,q),(p-A,q),(p,q+C),(p,q-C)]
+assert min(weights)>0 and sum(weights)==1
+assert all(sum(t*w[j] for t,w in zip(weights,directions))==0 for j in (0,1))
+result={'status':'EXACT_STRUCTURAL_PASS','scope':'Single frozen room; only horizontal/vertical cellular core ranks. No lighting, shear-orbit or ray searches.',
+    'input_sha256':{str(f.relative_to(B)):hashlib.sha256(f.read_bytes()).hexdigest() for f in (B/'inputs/room.json',B/'inputs/twist_origami.py')},
+    'room':main,'controls':{'one_square_torus':torus,'three_square_L':lshape},
+    'positive_balance_control':{'directions':[[str(x) for x in w] for w in directions],'weights':list(map(str,weights))},
+    'criterion_applies':all(main[d]['rank_one_sufficient_condition'] for d in ('horizontal','vertical'))}
+(B/'twist-cylinders.json').write_text(json.dumps(result,indent=2)+'\n')
+print(json.dumps({k:v for k,v in result.items() if k not in ('room','controls')},indent=2))
+for name,data in [('room',main),('torus',torus),('L',lshape)]:
+    print(name, {k:v for k,v in data.items() if k not in ('horizontal','vertical')},
+        {d:{k:v for k,v in data[d].items() if k!='reduced_core_rows'} for d in ('horizontal','vertical')})

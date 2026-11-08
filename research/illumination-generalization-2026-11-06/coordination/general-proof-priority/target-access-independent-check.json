@@ -1,0 +1,158 @@
+{
+  "status": "PASS_EIGHT_PRESCRIBED_CONTROLS_WITH_POSTTURN_EARLIER_TARGET_QUALIFICATION",
+  "rows": [
+    {
+      "label": "safe_down",
+      "status": "EXACT_FIRST_TARGET_AND_ALL_ORIGINAL_WALL_GUARDS_PASS",
+      "epsilon": "1/16",
+      "target": [
+        24,
+        2
+      ],
+      "x_h": "113/4",
+      "incoming_vx_sign": -1,
+      "m": 11,
+      "actual_first_target_time": "68",
+      "reflections": 1142,
+      "finite_wall_leg_guards": null,
+      "bottom_floor_contacts": 11,
+      "path_sha256": "94444e6fe30b811886a22f3045c0b37477072462133a2dac19ace58b64e26db4"
+    },
+    {
+      "label": "down_alignment_other_up",
+      "status": "EXACT_FIRST_TARGET_AND_ALL_ORIGINAL_WALL_GUARDS_PASS",
+      "epsilon": "4/43",
+      "target": [
+        24,
+        2
+      ],
+      "x_h": "1224/43",
+      "incoming_vx_sign": -1,
+      "m": 7,
+      "actual_first_target_time": "48",
+      "reflections": 815,
+      "finite_wall_leg_guards": null,
+      "bottom_floor_contacts": 8,
+      "path_sha256": "44637e4f7fd8b863809340bca7b76aa711934666a24e1964363ce45bd080c2b7"
+    },
+    {
+      "label": "up_alignment_other_down",
+      "status": "EXACT_FIRST_TARGET_AND_ALL_ORIGINAL_WALL_GUARDS_PASS",
+      "epsilon": "4/47",
+      "target": [
+        24,
+        2
+      ],
+      "x_h": "1328/47",
+      "incoming_vx_sign": -1,
+      "m": 8,
+      "actual_first_target_time": "50",
+      "reflections": 848,
+      "finite_wall_leg_guards": null,
+      "bottom_floor_contacts": 8,
+      "path_sha256": "67013e68ae74c9ae1da0cac41b5ccc601003c2b41e75af4fcbdf3556d5da05b3"
+    },
+    {
+      "label": "equal_w_floor",
+      "status": "EXACT_FIRST_TARGET_AND_ALL_ORIGINAL_WALL_GUARDS_PASS",
+      "epsilon": "1/16",
+      "target": [
+        28,
+        2
+      ],
+      "x_h": "227/8",
+      "incoming_vx_sign": -1,
+      "m": 0,
+      "actual_first_target_time": "6",
+      "reflections": 129,
+      "finite_wall_leg_guards": null,
+      "bottom_floor_contacts": 1,
+      "path_sha256": "ee59a6330a49abd6ce9ffb0556c51023e5fa235bc1bcaf0d27d8ae889713cade"
+    },
+    {
+      "label": "right_positive_floor",
+      "status": "EXACT_FIRST_TARGET_AND_ALL_ORIGINAL_WALL_GUARDS_PASS",
+      "epsilon": "1/16",
+      "target": [
+        30,
+        2
+      ],
+      "x_h": "237/8",
+      "incoming_vx_sign": 1,
+      "m": 0,
+      "actual_first_target_time": "6",
+      "reflections": 129,
+      "finite_wall_leg_guards": null,
+      "bottom_floor_contacts": 1,
+      "path_sha256": "8dec57f5807d16d2b798d06c51748a8dbf056ef571c83f0941d0319606ffa440"
+    },
+    {
+      "label": "right_negative_floor",
+      "status": "EXACT_FIRST_TARGET_AND_ALL_ORIGINAL_WALL_GUARDS_PASS",
+      "epsilon": "1/16",
+      "target": [
+        30,
+        2
+      ],
+      "x_h": "243/8",
+      "incoming_vx_sign": -1,
+      "m": 0,
+      "actual_first_target_time": "6",
+      "reflections": 129,
+      "finite_wall_leg_guards": null,
+      "bottom_floor_contacts": 1,
+      "path_sha256": "e5b7fd791be0d56d8a86e5abec2eee9293b8ee81d0a60dbb906c4742d5b40578"
+    },
+    {
+      "label": "postturn_legal_up",
+      "status": "EXACT_FIRST_TARGET_AND_ALL_ORIGINAL_WALL_GUARDS_PASS",
+      "epsilon": "1/16",
+      "target": [
+        24,
+        2
+      ],
+      "x_h": "227/8",
+      "incoming_vx_sign": -1,
+      "m": 32,
+      "actual_first_target_time": "198",
+      "reflections": 3266,
+      "finite_wall_leg_guards": null,
+      "bottom_floor_contacts": 33,
+      "path_sha256": "d1d4739009efdb25aa3503184270f38f6dec25fcd37018d80e9f78d3e2a867ab"
+    },
+    {
+      "label": "postturn_corner_down",
+      "status": "EARLIER_LEGAL_TARGET_RETAINED_LATER_POSTTURN_CORNER_CONFIRMED",
+      "epsilon": "1/16",
+      "target": [
+        24,
+        2
+      ],
+      "x_h": "225/8",
+      "actual_first_target_time": "66",
+      "first_target_reflections": 1109,
+      "excluded_later_continuation_corner": [
+        20,
+        0
+      ],
+      "actual_corner_time_from_gate": "130",
+      "nominated_later_target_time": "194",
+      "clarification": "Only the literal later postturn branch is corner-invalid. The same incoming state already succeeds via a safe branch; do not discard that entry state."
+    }
+  ],
+  "scope": "One existing integral room, eight predeclared symbolic boundary controls. Universal claims rest on independent hand proof, not samples.",
+  "input_pins_unchanged": true,
+  "shared_computational_dependency": "Existing reviewer pure exact earliest-wall and path_check functions; only their obsolete one-roof assertion omitted. Whole y-reflection is a genuine isometry. Historical main blocks and coordinator prior checker not run.",
+  "geometry_pin": {
+    "path": ".context/illumination-generalization-2026-11-06/review/resumed-exact-check.py",
+    "sha256": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+  },
+  "replay_pin": {
+    "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-independent-check.py",
+    "sha256": "be85b60c99a94668d5502dd8359ccd1597e7af8380e50ae54e99db1b6a8a04e2"
+  },
+  "new_search": false,
+  "new_room": false,
+  "new_engine": false,
+  "harness_correction": "The last predeclared ray first reaches T at66, then its continued trajectory reaches the predicted corner at130 before the nominated later T at194. Initial exact-D194 assertion failed because it ignored the earlier success; same eight inputs retained, with one same-ray continuation check."
+}

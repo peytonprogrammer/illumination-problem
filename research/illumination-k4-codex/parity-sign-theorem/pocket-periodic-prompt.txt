@@ -1,0 +1,290 @@
+You are an independent mathematical adversary. Tools disabled. Audit the compact-target proof below; do not defer to earlier reviews. No room/ray/event-word discovery is authorized. Focus on whether a short target saddle connection lifts to a short source saddle connection or closed geodesic, INCLUDING branching over regular interior points, poles of degree2 at regular points, loops, possible graph backtracking, and target stratum compactness. Check degree preservation and marked-fold persistence. If correct, say which standard inputs are needed; if a step fails, give a precise failure. The periodicity corollary needs independent minimal-quotient and orbit-closure dimension checks. Also distinguish physical darkness (finitely blocked by regular convex-corner lifts as well as zeros) from empty blocking on the translation surface. The universal actual S/T one-corner pi-sector event remains OPEN; this corollary would not prove it.
+
+## 19. A finite-degree obstruction to the nonperiodic alternative
+
+A second tools-disabled Opus review accepts this fixed-surface argument,
+subject to the explicit hypotheses and genus check recorded below.
+It avoids assuming any extension of the canonical minimal-cover family over
+an orbit closure. It imports the fixed-surface Apisa-Wright quotient and
+blocked-pair classification explicitly.
+
+Let X be a connected D4 disk unfolding that is not a translation cover
+of any torus, with two distinct interior physical marks S,T. Here and in
+Section20, "non-torus" always means this stronger no-torus-cover condition. Suppose all8S lifts are finitely blocked from all8T lifts,
+and suppose none of those16points is M-periodic. Let pi:X->Y be its canonical
+minimal translation quotient and let q:Y->Q be the minimal halftranslation
+quotient. The quarter turn rho descends to r on Y. Surjectivity of pi and
+rho^4=1 imply r^4=1; its derivative is i, so r has order4. Its square j=r^2
+negates the differential. Minimality makes j the unique such involution and
+q its degree2 quotient. Apisa-Wright Lemma3.3, including its proof,
+identifies this Y/j with Q_min; this identification is an imported theorem,
+not a consequence inferred merely from the existence of one quotient.
+
+The blocked-pair theorem identifies q pi(x) with q pi(y) for every source
+and target lift. In particular, the four points r^a pi(x) all belong to one
+q-fiber. That orbit has size at most2, hence j fixes pi(x). A q-fiber through
+a fixed point of j is a singleton. It follows that **all16marked lifts map
+to one regular point p of Y, and r fixes p**. Thus
+
+    deg(pi)>=16.                                  (7)
+
+The point p is regular because the pullback differential is regular at each
+mark; ramification or a target zero would give a source zero. Conversely
+all16marks are unramified over p.
+
+Write the physical angle counts as n_m for m in {1,2,3,5,6,7}. Every source
+zero has even order: its order is m/gcd(m,4)-1. Every target zero also has
+even order, since a target odd order would pull back to an odd source order
+by ord_x(omega_X)+1=e_x*(ord_y(omega_Y)+1).
+
+If genus(X)<=32, Riemann-Hurwitz and (7) force genus(Y)=2. Then Y has one
+zero of order2. Its hyperelliptic involution negates every1-form, so the
+uniqueness of the minimal negating involution makes it j. The quarter turn
+r has exactly two fixed points: the unique zero and one regular point p.
+Indeed, if a is the number of r-fixed points and g_prime is the genus
+of Y/r, Riemann-Hurwitz gives
+
+    2 = 4*(2*g_prime-2) + 3*a + (6-a),
+    a = 2-4*g_prime.
+
+The unique zero is r-fixed, so a>=1; therefore g_prime=0 and a=2.
+This particular genus2 count does not need the disk-sphere hypothesis.
+
+A source corner of type m=1,5,7 has a single rho-fixed lift and respective
+zero order0,4,6. It cannot map to the target zero: the respective numbers
+1,5,7 are not divisible by3. Therefore all these lifts map to p, contributing
+local degrees1,5,7. They are distinct from the16interior marked points, so
+
+    deg(pi)>=16+n_1+5n_5+7n_7.                    (8)
+
+Over the unique target zero, only source zeros of order2 can occur, and
+each must have local degree1. There are exactly n_3+2n_6 such source zeros.
+Consequently
+
+    deg(pi)<=n_3+2n_6.                            (9)
+
+Thus for genus(X)<=32, the strict inequality
+
+    16+n_1+5n_5+7n_7 > n_3+2n_6                  (10)
+
+excludes the nonperiodic all-to-all blocked-fiber alternative. This says a
+dark physical pair on a non-torus deformation with these angles must use
+the periodic-point case. It does not exclude that case, prove illumination,
+or construct a first-order event. The statement does not apply to the raw
+square-tiled base itself, which is a torus cover.
+
+The count-only implementation in `pocket-planar.py/json` satisfies(10) on
+33of the34frozen angle patterns. Each frozen source genus is also checked
+separately: all lie between27and29, hence all satisfy the required<=32
+hypothesis. The remaining pattern is parity-W26-117,
+which has n_5=0 and therefore cannot contain the stated straight pocket
+(the pocket requires a225-degree B_0 corner). This does not assert that
+every pattern with n_5>0 actually has the required literal attachment.
+For the saved control, the lower bound is37and the upper bound is21.
+These are arithmetic checks of a necessary cover-degree condition, not
+optical exclusions or evidence of nonperiodicity of the actual marks.
+
+## 20. Toward a general periodicity reduction: the precise compactness step
+
+A separate tools-disabled Opus review agrees with the proposed conclusion:
+on a non-torus D4 disk unfolding, a dark interior physical pair should have
+M-periodic lifts. It rejects the shortcut of transporting a generic family
+of canonical minimal covers to the given surface. Such canonical families
+can jump. The replacement below isolates the technical lemma which still
+needs a fully audited compactness proof before we use the strengthening.
+
+**Fixed-surface part.** As in Section19, if no marked lift is periodic,
+all source and target lifts map through the canonical minimal translation
+cover pi:X->Y to one point p fixed by the descended halfturn j. Thus it is
+enough to establish that every regular point of pi^-1(Fix j) is M-periodic.
+The fixed-surface factorization and rotational descent are in
+[Apisa-Wright, Section3.1](https://websites.umich.edu/~alexmw/ApisaWright.pdf);
+the minimal translation quotient and equivariance are also proved in
+[Moller, Theorem2.6](https://arxiv.org/pdf/math/0410262).
+
+**Proposed fold-locus proof.** Put d=deg(pi), and consider pointed surfaces
+(X',x') over M carrying some halftranslation cover f of degree exactly2d
+which folds at the regular mark:
+
+    f(x'+u)=f(x'-u) for all sufficiently small u.
+
+No minimality is imposed on f. This condition is GL2R invariant, since
+-I is central. Its fiber over X is finite. A fold at a regular source point forces a
+simple pole on the target, by the local pullback-order equation; hence
+the target differential is not a global square. Its orientation double
+is connected, and f lifts to a translation quotient of degree d. That quotient must be
+Y itself. The negating involution must be j, so f=q pi. Its regular folds
+are precisely pi^-1(Fix j).
+
+If this fold locus is closed in the smooth pointed stratum, the marked
+orbit closure of such an x lies in a closed invariant set with finite
+fiber over X. A1-point orbit closure can have dimension dim(M) or
+only dim(M)+1. The latter is the full free-point marking, incompatible
+with that finite fiber. Hence x is periodic.
+
+**Where compactness must be proved.** For convergent pointed source surfaces,
+pull back the degree2d covering equivalence relations to one compact
+source and take a subsequential limit. At regular points their branches
+are local maps u->+u+c or u->-u+c. The main local safeguard is elementary:
+if two same-sign branches approach each other, their composition gives a
+nonzero translation v_n->0 preserving the covering map on a fixed disk.
+For sufficiently small v_n, the2d+1points z,z+v_n,...,z+2d v_n stay in that
+disk and have the same image, contradicting degree2d. This replaces the
+review's less direct area estimate. Nearby distinct folds are similarly
+excluded because their composition is a small translation.
+
+A complete argument must still justify a uniform set of regular charts
+away from finitely many limiting exceptional points, prove that the limiting
+relation is transitive and has exactly2d sheets, extend it across the finite
+exceptional set, and show the regular fold at the mark persists. None of
+those points may be replaced by the mere assertion that the canonical
+minimal quotient varies continuously. The Opus review proposes a route,
+but the final compactness lemma is being independently challenged. Until
+that audit closes, Section19 is the separate fixed-surface candidate and
+this universal periodicity strengthening is not promoted to a proved
+input. Neither result would classify the periodic pairs or supply the
+actual midpoint event required by the active goal.
+
+
+### 20.1. Compact-target proof candidate for the fold-locus lemma
+
+The second review proposes this shorter route. The argument below includes
+an independent audit of the lifted graph, including branch values that are
+regular points of the target. It is under a further focused challenge;
+its periodicity corollary is not yet adopted as a proved input.
+
+**Lemma (bounded-degree fold persistence).** Fix a connected Abelian stratum
+of genus at least2 and an integer D. Let (X_n,omega_n,x_n) converge to
+(X,omega,x) in the smooth pointed stratum, with x regular. Suppose each
+X_n admits a holomorphic map f_n to a connected finite-area quadratic
+differential (Q_n,q_n), of degree exactly D, with
+
+    f_n^* q_n = omega_n^2,
+    f_n(x_n+u)=f_n(x_n-u) near u=0.
+
+Then X admits such a map of the same degree D, folding at x. The target
+stratum is allowed to depend on n. No target or source minimality is assumed.
+
+**1. Finitely many target strata.** If a target singularity has order k,
+and a point over it has source zero order a and local degree e, then
+
+    2*a+2 = e*(k+2).                              (11)
+
+Target zeros have k>=1 and only source-zero preimages, so their number
+and orders are bounded in terms of the fixed source stratum. Also genus(Q_n)
+<=genus(X_n) by Riemann-Hurwitz. Since the only target poles are simple,
+
+    number_of_poles = sum_of_positive_zero_orders - 4*genus(Q_n)+4.
+
+This bounds their number as well. Pass to one target stratum. The area
+is area(X_n)/D, bounded above and away from zero. A fold at a regular
+source point has a=0 and e>=2, so (11) forces e=2,k=-1; the target is
+strictly halftranslation and has a singularity.
+
+**2. Short target segments force short source geodesics.** Smooth convergence
+in a fixed source stratum supplies near-identity piecewise-affine comparison
+maps from one fixed triangulation. Consequently there is delta>0 such that,
+for all large n, every source saddle connection and every nonconstant
+closed regular source geodesic has length at least delta. For closed
+geodesics one can either use the source flat systole, or extend the
+geodesic to a maximal cylinder and use a saddle connection on its boundary.
+A genus>=2 translation surface cannot consist of just that cylinder.
+
+Let gamma be any target saddle connection of length epsilon. Away from
+the finitely many branch values its inverse image has total edge length
+D*epsilon. Split the inverse image at every source zero, including zeros
+lying over regular branch values in the interior of gamma.
+
+At a preimage of a target zero, (11) implies a>0, so the chain stops at a
+source zero. At a preimage of a simple pole, (11) gives e=2*a+2. If a>0,
+stop again. If a=0, e=2: exactly two incident lifts of gamma meet there,
+and in the source flat coordinate they are opposite radial segments.
+They join as one straight trajectory. No other regular preimage branches.
+
+Thus the nonempty lifted finite graph, after continuing through its
+regular valence2 vertices and stopping at zeros, is a union of source
+saddle connections and closed regular geodesics. Each has positive length
+at most its total length D*epsilon. There is no backtracking at the
+regular vertices, because the two tangent directions are opposite.
+Therefore
+
+    systole_saddle(Q_n) >= delta/D.                (12)
+
+This argument includes target segments ending at two poles, loops with
+the same endpoint, and regular branch values in the segment interior.
+It does not assume that preimages of simple poles are always zeros.
+
+The compactness criterion for a fixed finite-area quadratic stratum says
+that bounded normalized area and a positive lower bound on saddle lengths
+give a compact set in that stratum. Applying it to (12), and normalizing
+and then undoing the bounded area factors, gives a subsequence
+
+    (Q_n,q_n) -> (Q,q)
+
+in a smooth target stratum. This is a standard imported stratum-compactness
+result, distinct from the compactness of the canonical minimal quotient.
+
+**3. Limit the maps.** Choose near-identity piecewise-affine comparison maps
+phi_n:X->X_n and psi_n:Q_n->Q from persistent triangulations, including x
+in the source triangulation. Their flat Lipschitz constants and inverse
+constants tend to1; their quasiconformal dilatations tend to1, also across
+the finitely many cone points by removable-singularity extension. Each
+f_n is1-Lipschitz for the flat path metrics: every path image has at most
+the original length. Hence
+
+    g_n = psi_n o f_n o phi_n : X -> Q
+
+is equicontinuous and surjective. Arzela-Ascoli gives a uniform limit f,
+and compactness of X shows f is surjective. It is nonconstant. Normal
+family compactness for asymptotically conformal quasiregular maps makes
+f holomorphic. Alternatively this follows in local holomorphic charts
+from the corresponding variable-domain normal-family theorem.
+
+Uniformly close maps to the fixed smooth compact underlying surface Q
+are homotopic, using any auxiliary smooth Riemannian metric on Q and its
+positive injectivity radius. Thus deg(f)=deg(g_n)=D; no degree is lost.
+On a regular source disk whose image avoids the finitely many target
+singularities, f_n is a flat local map z->+z+c_n or z->-z+c_n. The sign
+is constant on a sufficiently small such disk after taking a subsequence.
+Passing to the limit proves f^*q=omega^2 there; holomorphic/meromorphic
+identity continuation gives equality everywhere. This also verifies the
+halftranslation nature of the limiting cover independently of the topology.
+
+**4. Retain the marked fold.** Pick a fixed embedded flat disk about the
+regular x, small enough that the corresponding disks about x_n persist.
+On its flat coordinate disk the two holomorphic maps
+
+    u -> f_n(x_n+u),     u -> f_n(x_n-u)
+
+agree near0. The identity theorem extends that equality to the whole
+fixed disk, even if its images contain a target pole. Uniform convergence
+then gives f(x+u)=f(x-u) on the limiting disk. In particular its central
+point is a regular fold, not merely a limiting pair of distinct points.
+This proves the claimed exact-degree closedness subject to the explicitly
+imported compactness and quasiregular normal-family theorems.
+
+**Conditional consequence for periodicity.** Let pi:X->Y be the canonical
+minimal translation cover of degree d for a surface that covers no torus,
+and let j be the unique negating involution of Y. Put D=2d. The closed
+fold locus of the lemma is invariant under GL^+(2,R), because -I is central.
+Over this particular X every fold cover of degree2d lifts to a degree d
+translation cover of its orientation double. Minimal factorization makes
+that double Y, and uniqueness of the negating involution makes its fold
+set precisely the finite set of regular points in pi^-1(Fix j).
+
+The marked orbit closure N of such a point therefore has finite fiber
+over X. If its complex dimension were dim(M)+1, it would be the full
+free-point marking over M (or use the equal-fiber-dimension statement in
+Apisa-Wright Lemma2.1 at this X). That has a one-dimensional fiber, a
+contradiction. Hence dim(N)=dim(M), which is M-periodicity.
+
+Combined with the fixed-surface quarter-turn argument in Section19, this
+would force every lift of a dark interior physical pair on a non-torus
+D4 unfolding to be M-periodic. This is a reduction of the exceptional
+case, not a proof that these periodic pairs illuminate, nor any construction
+of the actual one-corner midpoint event required by the active goal.
+
+**Audit status.** Second Opus review accepted the fixed-source fiber and
+dimension steps and proposed the compact-target route; the present expanded
+lift argument is a separate derivation awaiting focused review. The
+analytic-correspondence approach is no longer needed if this proof passes.

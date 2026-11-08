@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "reviewed_receipt_sha256": "7c6cdcc85fbc7c2e019622b9e8cb72f8b3a9fde7100d66a3b2e01c3ae5ceae09",
+  "reviewed_optical_proof_sha256": "b8c0289ccd893c23356560f8e5de39868155412b7b77965f2053812c17c29efe",
+  "reviewed_structural_audit_sha256": "a34fd85e4f6cdd748625ed2b40b143bac8e725189008a76b43c87fa597ac5606",
+  "five_path_whole_interval": [
+    "1/7",
+    "2/11"
+  ],
+  "target_equation": "12d=2",
+  "target_parameter": "1/6",
+  "branch_checks": [
+    {
+      "branch": "L triple",
+      "reflections": 11,
+      "status": "PASS"
+    },
+    {
+      "branch": "centered B / outer L",
+      "reflections": 11,
+      "status": "PASS"
+    },
+    {
+      "branch": "B triple / roof open",
+      "reflections": 5,
+      "status": "PASS"
+    },
+    {
+      "branch": "B triple / roof blocked",
+      "reflections": 13,
+      "status": "PASS"
+    },
+    {
+      "branch": "centered L / outer B / roof open",
+      "reflections": 5,
+      "status": "PASS"
+    },
+    {
+      "branch": "centered L / outer B / roof blocked",
+      "reflections": 12,
+      "status": "PASS"
+    }
+  ],
+  "mandatory_Nbminus_repair": "PASS",
+  "all_four_paths_sigma_transfer": "PASS",
+  "conclusion": "Independent HAND ACCEPT of entire second-surplus L-family closure; no corrections. Combined Q+s_N<=10 implies actual S/T illumination within13 reflections.",
+  "limits": "Reused exact checker; no formal/expert verification, archive lookup/search or new independent boundary implementation."
+}

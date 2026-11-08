@@ -1,0 +1,232 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+Local third surplus: one e2 root, one e1 fan, b0
+4 November2026 — Codex01a18403
+
+RESULT: parent hand proof; independent review pending. Every local room in the
+active class with e2+e1,b0 illuminates actualS/T. The covers here use at most18
+reflections. This is the last mathematical charge partition, not a declaration
+that the goal's independent-review requirement is complete.
+
+1. Geometry and whether the two cells meet an outside C
+Exclude the directly illuminating N bridge. The e1 cell is a d1/q2 centered
+or quarter fan. The e2 cell has d1/q3: a contiguous3fan or smooth4half-fan.
+No other partial cell has positive excess. A d2/q4 root is impossible.
+At a C away from H, no smooth point is allowed. If the e2 fan has a full180-
+degree outside pair, the e1 fan MUST contribute an adjacent90-degree quadrant,
+turning it into270degrees. Conversely this is the only possible outside-C join:
+two single quadrants would be smooth; opposite quadrants are a pinch; the e1
+centered pair uses its full C toward H. Only adjacent partial cells B-D or
+R-E can make the join inside K. Section6 treats them exhaustively.
+
+Without such a join, every complete C pair in the e2 fan faces H. Therefore
+its local forms are exactly the14three-fans and6rectangles from the accepted
+Delta2 classification. This does not reuse its old b0 optical exclusions where
+the new unit fan can repair the old corner: those repairs are handled below.
+
+2. Noncritical positions
+If the e2 root is D/R/N and the unit fan is noncritical too, the ordinary short
+paths force the four reference caps and the opposite original/sigma13 path
+works. An N root or N unit fan has only one inward blocking set without the
+central bridge; D/R changes affect neither13guard.
+If only the unit fan is critical, its single-unit cover survives the noncritical
+root: centered L/T three-paths have no such forbidden mirrors; B/E six-paths or
+outer-square paths use the opposite13fallback if the N roof is removed. For a
+nonbridge3/4N root, presence of Nb- or Nb+ implies Nr-/Nr+ absent, and conversely
+for a right-facing root. The old guard implications use exactly those absences.
+If the e2 root is critical but the unit fan is not, the critical-root arguments
+in section3 apply with the other critical cells ordinary. No additional cases
+are concealed by noncritical geometric freedom.
+
+3. Critical e2 root at L (T follows by sigma)
+Ordinary or unit B/E short routes force B+,E-,T-,L+ for potential darkness.
+The e2 root is one of:
+ L_lower: L-,L+ plus its lower outer mate;
+ L_upper: L-,L+ plus its upper outer mate l;
+ L_rectangle: L-,L+,l and the lower outer mate.
+These are precisely the two H-centered3fans and H-centered4rectangle.
+
+L_lower: if B is ordinary, centered-L3 works; a non-B unit fan is harmless.
+If the unit is B outer, B- absent leaves B=(-1,-1) smooth, impossible at b0.
+If B is centered, B- repairs that corner, but Nb- would create another smooth
+B=(-1,1). Hence Nb- absent and B6 works. All lower L extras are harmless to
+its full guards.
+
+L_rectangle: B=(-1,-1) is smooth unless B- repairs it. Potential darkness
+already forces B+, so B must be the centered unit fan; an ordinary B or outer
+B unit cannot repair it. The upper B=(-1,1) then requires ordinary Nb-.
+N is bottom-facing and Lsquare11 works, allowing both lower L extras and B-.
+
+L_upper: B=(-1,1) requires a repair reaching it. If N is the unit cell, its
+nonbridge2fan must contain Nb- and is bottom-facing. Otherwise N is ordinary
+Nb-. In either case Nr-/Nr+ absent. For a noncritical unit, Lsquare11 works.
+For a critical unit, list its site/type:
+ B centered: impossible, since B=(-1,-1) becomes smooth and cannot be repaired;
+ B outer: Lsquare11 works; its B outer mate is harmless;
+ E outer: sigmaBT9 (both L/E squares) works, allowing extra L-;
+ E centered: symbolic family Lupper_Ecenter, section5;
+ T centered: centered-T sigma3 works, E ordinary;
+ T outer: Lsquare11 works, since the T outer mate affects none of its guards.
+This exhausts the critical unit choices. The N repair cannot come from D/R.
+
+4. Critical e2 root at B (E follows by sigma)
+Old E one-bounce/short returns force E-,L+, even when E/L are themselves unit
+fans. The e2 root is:
+ B_east: B-,B+ plus active east outer mate b;
+ B_west: B-,B+ plus west upper mate u;
+ B_rectangle: B-,B+,b,u.
+If the unit cell is noncritical, B_west and B_rectangle have an unrepairable
+smooth B=(-1,-1): ordinary L+ excludes its only repair L-. Thus only B_east
+can remain; its usual five/Nb+sigma13 cover survives a noncritical unit N,
+because Nb+ in a nonbridge N fan leaves both right-facing caps absent.
+
+For critical units:
+B_east with L centered is impossible: B=(-1,-1) is smooth. With L outer,
+ordinary Nb- repairs L's upper corner and Lsquare11 works, allowing b and B-.
+With E centered, Nb+ absent gives five; Nb+ present gives a bottom-facing N
+and sigmaB6. With E outer, use five or E-square11 under the same Nb+ split.
+With T centered, centered-T sigma3 works (E ordinary); with T outer, use F3
+when Nb+ absent, otherwise sigma13. The B square's short route forces ordinary
+T- when the unit is not T; for a unit T its critical cap is directly forced.
+
+B_west: its smooth B=(-1,-1) requires L-; if the unit is not L, ordinary L+
+excludes that repair. A unit outer L also lacks L-. Thus the unit must be
+centered L. The upper source corner then excludes ordinary Nb-. T is NOT
+assumed forced for this root. The whole family Bwest_Lcenter in section5 has
+an unconditional12path, including all ordinary D/R/N/T choices.
+
+B_rectangle likewise requires centered L to repair B=(-1,-1), and Nb- is
+absent. Here the B far horizontal square wall does give the short route forcing
+ordinary T-. If N is bottom-facing or empty, centered-L12 works; its guards
+allow both B outer mates. If N is right-facing, Nr+ with T- would create a
+smooth B=(1,3), so N=Nr-. Family Brectangle_Lcenter_Nrminus in section5 has
+an unconditional12path.
+
+5. Exact covers for the three no-join exceptions
+All source lines refer to the indicated family's stored frame/guards in
+local-mixed-project.json, obtained from one already used frozen I3 archive.
+Lupper_Ecenter has fixed H+L-/L++l+E-/E++B++T-+Nb-, ordinary D/R variable.
+Since b0, D+ and R- cannot coexist: H90+D+45+R-45 would make B=(3,-1) smooth.
+An exhaustive guard split is:
+ D+ present: line2997 (D-,R- absent);
+ D+ absent,R- absent: line2823;
+ R- present,D- absent: line2240 (R+ absent);
+ R- present,D- present: line2224 (D+,R+ absent).
+All paths have at most13hits.
+Bwest_Lcenter has one unconditional12path, line664, with T/N/D/R ordinary and
+Nb- absent. Brectangle_Lcenter_Nrminus also has one unconditional12path,
+line664 in its own full guard. These are whole-family implications, not fixed
+room checks. Actual S/T coordinates and all mirror absences are retained.
+
+6. Outside-C join: exhaust the orientations
+Use B-D; sigma gives R-E. Each H side is north, so a complete shared outside
+pair can be adjacent to it only on the facing B-east/D-west sides. The same
+3/4sector argument as remote-roots.txt gives three orientations for the e2
+root: full shared pair plus one H end triangle, the outer-centered4half-fan,
+or shared full pair plus full H pair. The e1 root is the unique H-facing
+quarter sharing the upper BC half-edge at C=(1,-2).
+
+If D is the e2 root, B is the active square B++b. Old short paths force E-,L+
+and T-. If Nb+ absent, five works; if Nb+ present, N is ordinary bottom-facing
+and sigma13 works. Every possible D triangle is harmless to both complete
+guards; this support implication is exactly checked. Thus all three D-root
+orientations are covered with no need to list rooms.
+
+If B is the e2 root, D is the quarter D-+dw, where
+ dw=conv{(2,-2),(1,-2),(1,-1)}.
+The three B roots are sectors7/0/1 (Bouter3),6/7/0/1 (Bouter4), and7/0/1/2
+(BHeast4), using the sector convention of local-e2.txt. E-,L+ are forced; their
+ordinary slots exclude E+,L-. Nb- is absent, since L++Nb- would create a smooth
+B=(-1,1). Nr+ and T- cannot coexist, since their corner B=(1,3) would be smooth.
+Ordinary R/N/T remain variable, with no unjustified T- necessity imposed.
+
+Bouter3/4 have J3,Q5+n,k9-n,W13+2n, so n3or4. E-/L+ are two ordinary caps,
+leaving one or two additional occupied slots among R/N/T.
+BHeast4 has J4 and n4or5, so two or three additional occupied slots. The guards
+below often cover larger domains; the counts are used only where stated.
+
+7. Joined Bouter3: hand cover and one exact residue
+N=Nb+: line545, forbidding only Nr-.
+N=Nr-: if R+ absent,515. If R+ present, N/R consume both allowed extra slots,
+so T is empty and2551 applies.
+N=Nr+: T- absent. If R- absent,1590. If R- present, N/R consume both extra
+slots and T is empty: this is the single fixed residue of section10.
+N empty: if R- absent,1590. If R- present and T- absent,243. If T- present,
+T+ absent and60 applies (Nr-/Nr+ also absent). These cases exhaust N/R/T.
+Source lines here belong to BDjoin_Bouter3's own projection.
+
+8. Joined Bouter4
+N=Nb+:545.
+N=Nr-: R+ absent gives515; R+ present forces T empty by the same two-slot
+budget, and1589 applies (Nb+,T- absent).
+N=Nr+: R- absent gives1590; R- present gives1147, which only forbids Nb+.
+N empty: T+ absent gives60; T+ present implies T- absent and gives1589.
+This is exhaustive, maximum15hits. Source rows are in BDjoin_Bouter4.
+
+9. Joined BHeast4
+N=Nr-: R+ absent gives515. If R+ present, T+ absent gives165; otherwise T-
+absent and2551 applies. N exclusivity supplies other required absences.
+N=Nr+: R- absent gives1590; R- present gives2181 (Nb+,Nr-,R+ absent).
+N=Nb+: R- absent gives1590; R- present with T+ absent gives60; R- present
+with T+ gives311 (Nr+,R+,T- absent).
+N empty: R- absent gives1590; R- present gives2181.
+This exhausts N/R/T. Its longest selected path is18hits (165); optimizing is
+irrelevant to illumination. Source rows are in BDjoin_BHeast4.
+
+10. Last exact residue and validation
+The section7 residue is exactly
+ H+{B root sectors7/0/1}+{D-,dw}+{L+,E-,Nr+,R-}, with T empty.
+local-mixed-residue-check.json verifies strict simplicity, actual three interior
+A marks, N33,Q9,J3,s_N2,s_A0,Delta3,W21,k5. Its frozen I2line6428 provides
+an actual S/T path with9reflections, exactly replayed; full coordinates, frame,
+hash and guards are in local-mixed-residue-frozen.json. This single fixed case
+was forced by the hand reduction, not found by a room search.
+
+local-mixed-check.json checks13 specified inherited guard implications, including
+the lower/rectangular L repairs, sigmaBT9 with extra L-, B-root mixed variants,
+and the entire D-root support. local-mixed-project.json checks actual guards
+for six explicitly specified symbolic families. The exhaustive case coverage
+comes from sections1–9, not projection counts. No assembled room assignments,
+new rays, directions, words or solver were generated. Independent review is
+still pending; this is not formal verification or expert endorsement.
+
+All mathematical partitions of the bounded Delta3 objective now have parent
+proofs. Do not mark the goal complete until these proofs are assembled and
+independently challenged, all findings reconciled, and the objective's full
+coverage audited. The universal22-wall minimum remains outside this theorem.
+
+
+Review reconciliation: explicit short forcing and noncritical support
+The two universally forced caps B+/E- follow from the old one-bounce paths.
+T-/L+ require the following extra local statements; they are not assumptions.
+If B is ordinary, the old four-path works when T- is absent. If B is centered,
+with its two outer mates absent, the exact three-reflection path is
+ S -> (-2/5,-8/5) -> (2/3,-4/3) -> (7/4,3) -> T.
+It needs only H+B-/B+ and forbids only those two B outer mates and T-.
+If the B active east quarter or B_east/B_rectangle is present and the lower
+south-east mate bse is absent, the exact two-reflection path is
+ S -> (1/2,-2) -> (7/4,3) -> T.
+It needs H+B+ plus its east upper mate b, and forbids only bse and T-.
+Sigma and reversal give L+ forcing. A west-reaching or joined B fan with
+bse present is not subject to this forcing; no such implication is used.
+These four paths, full guards, and all39named fallback guard sets appear in
+independent-review/guard-extension-check.json. Exact replay verifies that every
+fallback's complete forbidden set avoids the FULL D/R cell stars and both
+nonbridge N outside mates. This enlarges the symbolic check universe beyond
+ordinary cap labels. It does not permit the two N bridge triangles.
+
+For a nonbridge N unit fan the four possible forms are the bottom centered
+pair {Nb-,Nb+}, SW quarter {Nb-,nw}, right centered pair {Nr-,Nr+}, and NE
+quarter {Nr+,ne}. The SE quarter contains the direct bridge. Consequently:
+ - B/E centered pair uses B6 if Nb- absent, otherwise sigmaB6; bottom-facing
+   N may have BOTH Nb caps, and neither fallback forbids the other Nb cap.
+ - Centered L/outer B uses five if Nb+ absent, otherwise L12; L12 allows both
+   Nb caps. Its sigma gives the corresponding endpoint-reversed case.
+ - Remaining centered/outer pairs use L11/E11/sigma13 when N is bottom-facing;
+   these forbid no Nb cap. Opposite N orientation uses the stated short path.
+N's outside mates were checked harmless against the complete forbidden sets,
+not omitted from an alphabet. With all critical sites occupied, N is ordinary,
+as in the original tables. Thus the N-unit extension adds no untested mirror.

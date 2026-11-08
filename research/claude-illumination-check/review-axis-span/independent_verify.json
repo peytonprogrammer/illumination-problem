@@ -1,0 +1,319 @@
+{
+  "room_area": "14",
+  "pocket_walls": {
+    "wall1": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "wall4": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "wall20": [
+      [
+        -1,
+        3
+      ],
+      [
+        -2,
+        2
+      ]
+    ],
+    "normals_1_4_20": [
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "c1_c4_c20": [
+      "-1",
+      "-1",
+      "-4"
+    ]
+  },
+  "neck_b0_x_form_lower_to_upper": {
+    "1": "2",
+    "4": "-2"
+  },
+  "neck_b0_x_form_upper_to_lower_31_1": {
+    "1": "-2",
+    "4": "2"
+  },
+  "b0_direction_in_identity_copy_per_31_1": "south: upper flank (wall 4) to lower flank (wall 1)",
+  "scalar_rows": 80,
+  "col4_equals_col20_all_80": true,
+  "identically_zero_scalar_rows": 40,
+  "horizontal_y_rows_and_vertical_x_rows_all_zero": true,
+  "mark_columns_25_28_zero_in_all_rows": true,
+  "cores_with_nonzero_col4_or_col20": [
+    {
+      "core": 0,
+      "orientation": "horizontal",
+      "row": {
+        "4": "-2",
+        "20": "-2",
+        "21": "-2"
+      }
+    },
+    {
+      "core": 1,
+      "orientation": "horizontal",
+      "row": {
+        "4": "-2",
+        "20": "-2",
+        "21": "-2"
+      }
+    },
+    {
+      "core": 20,
+      "orientation": "vertical",
+      "row": {
+        "4": "-2",
+        "20": "-2",
+        "21": "-2"
+      }
+    },
+    {
+      "core": 21,
+      "orientation": "vertical",
+      "row": {
+        "4": "-2",
+        "20": "-2",
+        "21": "-2"
+      }
+    }
+  ],
+  "base_x_periods_of_horizontal_cores": [
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    16,
+    16
+  ],
+  "twist_pf_row_widths": [
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    16,
+    16
+  ],
+  "base_y_periods_of_vertical_cores": [
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    16,
+    16
+  ],
+  "twist_pf_column_lengths": [
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    16,
+    16
+  ],
+  "periods_match_ledger": true,
+  "ledger_square_total": 112,
+  "rank_vector_forms_R58": 20,
+  "rank_scalar_rows_R29": 10,
+  "rank_horizontal_x_rows": 10,
+  "rank_vertical_y_rows": 10,
+  "horizontal_and_vertical_row_spaces_equal": true,
+  "target_in_vector_period_image": {
+    "b0_sec6": false,
+    "b1_sec6": false,
+    "b0_31_1": false,
+    "b1_31_1": false
+  },
+  "neck_x_row_in_scalar_span": false,
+  "scalar_kernel_dimension": 19,
+  "sparse_delta_kills_all_80_rows": true,
+  "sparse_delta_in_computed_kernel": true,
+  "dhol_b0_delta_sec6_orientation": [
+    "2",
+    "0"
+  ],
+  "dhol_b0_delta_31_1_orientation": [
+    "-2",
+    "0"
+  ],
+  "dhol_a_beta0_b_beta1_delta_31_1": "(-4a, -4b)",
+  "neck_functional_nonzero_on_kernel": true,
+  "deformation_checks": {
+    "-1/2": {
+      "edges_same_direction_positive_length": true,
+      "simple": true,
+      "S_winding": 1,
+      "T_winding": 1,
+      "moved_vertices": {
+        "4": [
+          "1/2",
+          "2"
+        ],
+        "5": [
+          "1/2",
+          "5/2"
+        ],
+        "20": [
+          "-3/2",
+          "3"
+        ],
+        "21": [
+          "-5/2",
+          "2"
+        ]
+      }
+    },
+    "-1/10": {
+      "edges_same_direction_positive_length": true,
+      "simple": true,
+      "S_winding": 1,
+      "T_winding": 1,
+      "moved_vertices": {
+        "4": [
+          "9/10",
+          "2"
+        ],
+        "5": [
+          "9/10",
+          "29/10"
+        ],
+        "20": [
+          "-11/10",
+          "3"
+        ],
+        "21": [
+          "-21/10",
+          "2"
+        ]
+      }
+    },
+    "1/10": {
+      "edges_same_direction_positive_length": true,
+      "simple": true,
+      "S_winding": 1,
+      "T_winding": 1,
+      "moved_vertices": {
+        "4": [
+          "11/10",
+          "2"
+        ],
+        "5": [
+          "11/10",
+          "31/10"
+        ],
+        "20": [
+          "-9/10",
+          "3"
+        ],
+        "21": [
+          "-19/10",
+          "2"
+        ]
+      }
+    },
+    "1/2": {
+      "edges_same_direction_positive_length": true,
+      "simple": true,
+      "S_winding": 1,
+      "T_winding": 1,
+      "moved_vertices": {
+        "4": [
+          "3/2",
+          "2"
+        ],
+        "5": [
+          "3/2",
+          "7/2"
+        ],
+        "20": [
+          "-1/2",
+          "3"
+        ],
+        "21": [
+          "-3/2",
+          "2"
+        ]
+      }
+    }
+  }
+}

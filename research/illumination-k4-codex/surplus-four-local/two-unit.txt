@@ -1,0 +1,124 @@
+Two local unit fans: removal of the smooth-surplus restriction
+4 November 2026 — Codex01a1a00f
+
+RESULT (peer-reviewed extension with incorporated geometry supplement): Every strictly simple finite canonical45 room
+with precisely full A stars S=(0,0),U=(2,0),T=(2,2), confined to H and its
+seven neighboring A cells, with exactly two excess-one partial cells and
+all other partial cells ordinary H-facing caps, illuminates actual S/T
+within13 reflections. No restriction on b, W or k is required.
+Consequently the entire local surplus-four partition two e1+b2 is closed.
+Codex01a18403 independently accepted the new optical implication and
+budget exclusion, but found an inherited missing d0-in-K geometry. Its
+four-orientation supplement is independently checked here and incorporated
+below. Review independence has limits: that reviewer authored the inherited
+lower-layer argument; this is not expert refereeing or formal verification.
+
+0. Spatial-local completeness: roots versus single leaves
+Spatial confinement to K does NOT imply every positive cell touches H.
+With two e1 cells, either both are d1/q2 roots (sections1–2), or one is a
+d1/q2 quarter root and the other a d0/q1 single-triangle leaf. Two d0 cells
+cannot attach to H; ordinary e0 caps cannot transmit, and there is no third
+positive cell. The sole leaf attaches directly to the root. A vertex-only
+contact is forbidden by strict simplicity.
+
+Within K the only side-adjacent partial-cell pairs are B-D and R-E. Thus the
+only single-leaf possibilities are:
+ B root sectors0/1, D leaf3;
+ D root sectors2/3, B leaf0;
+ E root sectors4/5, R leaf2 (sigma of first);
+ R root sectors2/3, E leaf5 (sigma of second).
+A quarter has only one non-H edge, which forces the displayed single leaf;
+a centered root has none. The N direct bridge illuminates before this split.
+
+For Droot/Bleaf, B+ is absent, so the old one-reflection path works. Sigma
+handles Rroot/Eleaf. For Broot/Dleaf:
+ E- absent -> one_sigma;
+ otherwise L+ absent -> sigma_four (E+ absent by slot exclusivity);
+ otherwise T- absent -> the B-square TWO path;
+ otherwise Nb+ absent -> the retained FIVE path;
+ otherwise N=Nb+ -> sigma13.
+The D single leaf removes none of these mirrors. Full required/forbidden
+sets are checked against every remaining ordinary cap choice; sigma and
+reversal preserve actual S/T. The maximum is13.
+
+The hand-prescribed control H+B0/1+D3+L+/E-/T-/Nb-/R+ is a valid simple
+W20/k6/Delta4/b2 room with charges (q,d,e)=(2,1,1) at B and(1,0,1) at D.
+Our two-unit-leaf-check.py independently confirms its geometry, ledger,
+actual five-path replay/reverse, and six named whole-family implications.
+It does NOT run the peer checker or generate assignments. Peer source:
+fourth-surplus-review/two-unit-independent/review.txt section4. This
+supplement is essential to the theorem's full spatial-local scope, and
+repairs the same omission in the inherited Delta3 predecessor.
+
+1. Dependency and exhaustive TWO-ROOT inheritance audit
+Use third-surplus-review/local-two-unit.txt with its final explicit forcing
+and noncritical support reconciliation. Its proof is already independently
+reviewed for b1. Read sections1–6 in full and check EVERY use of b0/b1,
+smooth-point exclusion, and wall/exception budget.
+
+Sections1–2 classify and close the only outside-C joins (B-D and sigma R-E)
+without an upper bound on smooth points. The classification follows only
+from the two unit fans and adjacency. Section3's noncritical and short-path
+forcing argument uses actual local return guards, not a budget exclusion.
+Section4's two-outer exchange likewise has no smooth-point premise.
+Section5's centered L+E, L+T, B+T and B+E cases already use direct paths or
+an N-cap dichotomy. Section6's twelve ordered centered/outer pairs already
+replace all former smooth-B exclusions by explicit fallbacks. The final
+reconciliation treats full noncritical D/R stars and all four nonbridge
+N unit forms, so no hidden ordinary-cap-only assumption is introduced.
+
+For the two-root cases, the SOLE remaining use of b1 is section5 centered L+B (plus sigma E+T):
+it declares Nb- absent because two distinct smooth B points would exceed b1.
+Delete precisely that inference and replace its optical step as follows.
+
+2. Replacement centered-L/centered-B branch
+The prescribed fans are L sectors7/0 and B sectors1/2. Ordinary E/T short
+forcing gives E- and T- in any room not already illuminated. In particular,
+E+ and T+ are absent by ordinary-slot exclusivity.
+
+If Nb- is absent, use the existing centered-B six-reflection path exactly
+as in the previous proof. If Nb- is present, N is an ordinary slot (the two
+positive cells are L and B). Hence Nb+,Nr-,Nr+ are absent. Apply the existing
+centered-L twelve-reflection path from
+ first-surplus-review/centered-left-check.json, paths.left.
+
+Its full required triangles are contained in H+L-+L++E-. Its ordinary
+blockers are exactly E+,T+,Nr-,Nr+. Its other forbidden triangles are
+outside the possible set H+all16ordinary caps; adding B- in the centered B
+fan changes none of its mirrors. Thus the actual path remains valid for
+ALL ordinary D/R cap choices, and for the prescribed Nb-.
+Sigma followed by path reversal gives the E+T case with actual endpoint
+order S to T. This closes the sole omitted branch.
+
+3. Exact checks and a useful budget observation
+check.py recomputes the complete required/forbidden triangle sets using our
+frozen guard implementation, proves the symbolic implication against the
+whole remaining ordinary alphabet, and verifies sigma. One prescribed
+room H+centerL+centerB+Nb-+E-+T-+D-+R+ is checked for simple boundary and
+actual full A set. The12path passes separate physical-boundary replay
+forward and backward. Its ledger is W18,k7,Delta4. It is a control for the
+stronger W/k-free implication, NOT a control inside the requested k6 bound.
+
+Indeed the new centered-L/B+Nb- branch cannot meet W20/k6 at Delta4:
+J=4 (two core interior C points plus the two centered H-facing C points).
+Writing n for the number of ordinary caps, Q=4+n and Delta4 forces
+sN=8-n. Hence k=J+sN=12-n. There are only five ordinary slots, D/R/E/T/N,
+so n<=5 and k>=7. The same applies after sigma. The new12path nevertheless
+explains the excluded branch and proves the stronger two-unit lemma.
+
+4. Failed analytic approaches retained honestly
+Before checking the inherited12path, tried an Nb- triangular excursion
+with the Bcenter/T- tail. The direct endpoint solution d1/7 hits the true
+corner(1,-1), so is invalid. Adding one lower-chamber return also fails:
+correct endpoint slopes d1/10 (plain floor) and d1/11 (D- cap) do not clear
+the inner passage after the B return, which requires d>1/9. Initial working
+estimates d1/9 and d1/10 on the board omitted two units of travel; they were
+not valid computed witnesses. Neither approach contributes to the proof.
+The successful extension uses only an already established prescribed path.
+
+5. Coverage boundary
+This closes ONE of five previously open wholly local partitions. Still open:
+one e2+b2; two e2; e2+two e1; four e1. Remote rows remain a separate obligation;
+peer owns centered-top interaction and own fourth-surplus-review files.
+No new room/cap/direction/word scan, archived-certificate retrieval, solver,
+worker, global surplus-five step or universal wall-minimum claim.

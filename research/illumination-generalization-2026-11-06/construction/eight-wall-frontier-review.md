@@ -1,0 +1,11 @@
+# Independent acceptance: orthogonal eight-wall metric classification
+
+ACCEPT the four normal forms and the stated open/closed distinction. This is a hand classification at unbounded positive real lengths, not a finite room census.
+
+Independent derivation: total signed turn4 and W8 force two reflex and six convex corners. Up to cyclic shift and reversal their edge distance is1,2,3 or4. For each distance the signed quarter-turn word uniquely fixes all edge directions up to an isometry. Closing those eight directed edges gives the displayed U, nested staircase, unequal-floor T and offset forms. The positivity conditions in the first three forms enforce the nested coordinate inequalities stated in the source. Neither the turn word nor metric closure forces the two T-wing floors to agree.
+
+For the fourth form, I independently checked all nonadjacent intersections. A crossing can occur only when the low x=B side reaches y=c AND the top x=a side reaches y=b. Both express a>=B and b>=c. Equality gives a contact or repeated vertex and is also invalid. Their negation is exactly a<B OR b<c. The remaining nonadjacent pairs have disjoint coordinate spans under this guard. If b>=c, swap x,y. The transformed parameters A'=C,B'=c,a'=b,b'=a,c'=B,C'=A satisfy the required strict widths and b'<c' because a<B. Thus every strictly simple fourth-type polygon has a positive-height wide-middle normal form, including original equality b=c. The arm projections a and B need not overlap.
+
+No other orthogonal polygon with at most8 maximal walls exists except a rectangle or L: c-r=4 and W even give r=0 or1 for W4 or6. Their direct/all-real L illumination is already accepted. U8 has its recovered all-real acceptance. The new independent T-whole-review accepts the complete unequal-floor T type. Consequently exactly two metric types remain outside those accepted results at W8: the staircase and the wide-middle offset corridor. This does not classify arbitrary diagonal-wall rooms or prove the larger target.
+
+The finite28 labelled turn counts are a consistency observation; this review does not substitute representative fixtures for the positive-length argument. No discovery run or additional computation was used.

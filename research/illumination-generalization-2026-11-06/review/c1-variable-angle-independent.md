@@ -1,0 +1,9 @@
+# Independent acceptance of the entire R37 odd-h critical family
+
+ACCEPT A46's all-parameter proof and its join with independently replayed h5/h7 certificates. This is one critical family, not an exhaustive c1 comb theorem.
+
+I recomputed each of the four displayed legs: horizontal length1, vertical rise h/2 and alternating horizontal velocity. Hence all three turns obey ordinary vertical reflection. For h>=9, the first right contact2+h/2<h, so it lies below BOTH right mouths. The second right contact2+3h/2>h+6, so it lies above BOTH mouths. The left contact2+h lies strictly in(3,2h+1) for h>1. Every open leg is in0<x<1, all heights increase strictly from2 to2h+2, and both endpoints are actual interior left seams. No global end, mouth corner, removed mirror or earlier actual target is used. Five prescribed formula controls, including h9,h11 and a large h, pass15 reflections and400 all-wall guards.
+
+I read the peer's independent prefix checker in full. It reconstructs each full20-wall polygon directly, compares the stored cyclic boundary, checks every finite wall on every leg, rejects tied or endpoint contacts, checks axial reflection and first actual T. The h5 and h7 certificates are the frozen own R37 files, and their hash matches. The peer's separate implementation verified20+11=31 reflections and420+240=660 guards, with no own optical-code import. This is valid independent review of those two existing prefixes. I have not represented my own original prefix generation as its own independent review.
+
+Odd h>=5 splits into5,7 and odd h>=9, so the join is complete with no omitted residue. The premature exception list was corrected before the frozen proof; unnecessary h9/h11 orbit searches play no role in acceptance. The original failed q1/3 pack remains failed and no darkness inference is adopted. This acceptance retires R37's family gap without changing its earlier frozen incomplete report.

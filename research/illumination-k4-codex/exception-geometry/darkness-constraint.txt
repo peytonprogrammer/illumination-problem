@@ -1,0 +1,174 @@
+Darkness-dependent constraints for the remaining two-/three-A branches
+3 November 2026
+
+Outcome
+Two bounded hand approaches yield a sharper general boundary-charge bound
+and explicit optical necessary conditions. They do NOT yield a new wall
+minimum or replace the remaining I2/I3 certificates. A fixed strictly simple
+16-wall, k=6, I=3 completion satisfies all optical conditions derived here,
+so those conditions together are insufficient for the desired contradiction.
+This completion is not claimed dark. The existing restricted theorem would
+imply that it is illuminated; no new connecting path search was performed.
+
+Scope
+Exactly the canonical 45-degree triangle disk class and notation of
+../restricted-theorem-note/theorem.txt. I counts all interior A points,
+J interior B/C points, s_N smooth boundary B/C points, k=J+s_N. Q charges
+3 at smooth boundary A points and m at genuine A corners with m triangles.
+Use physical coordinates for explicit paths; use A/2 cell coordinates for F.
+Existing Euler identity:
+  W+2k = 2+6I+Q+s_N.                            (1)
+The current task is a bounded hand investigation. All geometry below is
+specified explicitly; no room, direction, reflection-word or ray-discovery
+run, solver, census expansion or worker was used.
+
+1. Approach one: charge full-cell SIDES rather than neighboring cells
+Let p(F) be the number of cell sides with a full A cell on precisely one
+side. If e(F) counts shared sides between full cells, then
+  p(F)=4I-2e(F).
+Claim:
+  Q+s_N >= p(F),
+  W+2k >= 2+10I-2e(F).                         (2)
+Proof. For each exposed full-cell side, inspect the adjacent nonfull cell.
+If at least one triangle in that cell touches the common side, assign one
+charge from its A center. A proper m-triangle fan touches at most m cell
+sides; a smooth four-triangle fan touches at most three sides and has Q
+charge three. Hence each partial cell can pay for every touched side leading
+to a full cell. If neither triangle touches the common side, its midpoint C
+is smooth boundary and contributes one to s_N. Different sides have distinct
+midpoints, and A-center charges and C-midpoint charges are disjoint.
+This proves (2), including disconnected full-cell supports.
+
+For I=3 at W<=21,k<=6, equation (1) gives Q+s_N<=13. Thus:
+  e(F)=0: p=12, at most one surplus unit above (2);
+  e(F)=1: p=10, at most three surplus units;
+  e(F)=2: p=8, at most five surplus units.
+These are geometric restrictions, not consequences of darkness. They leave
+feasible rooms. They do not supply a new optical contradiction.
+For a dark I2 pair, e(F)=0 (adjacent full cells already give direct light),
+but its bound Q+s_N>=8 is far below the possible budget Q+s_N<=19.
+
+2. A physical corner forced by a dark DIAGONAL pair
+Normalize a diagonal pair to S=(0,0), T=(2,2). Their full stars are the
+squares [-1,1]^2 and [1,3]^2. The entire segment ST is in their union and
+its only potentially noninterior point is B=(1,1).
+If B is interior, ST is a legal direct path. Darkness therefore forces B
+to be a genuine corner. The two full stars force opposite 90-degree sectors
+at B. Strict simplicity requires a single contiguous fan. A proper fan
+containing those sectors has six or seven canonical triangles, hence angle
+270 or 315 degrees. Eight would be interior and four cannot contain both
+opposite sectors contiguously. Thus a dark diagonal pair forces an ACTUAL
+reflex corner at its midpoint, with one of these two angles.
+This does not justify charging different unfolded copies as distinct
+physical corners. It concerns this one fixed physical point only.
+
+3. Smooth bridge centers give one-reflection connections
+For the same pair, consider A_NW=(0,2). Suppose its occupied fan is exactly
+the half-star on the side y<=x+2. It is smooth boundary with mirror y=x+2.
+Then
+  (0,0) -> (0,2) -> (2,2)
+is a legal one-reflection connection: vertical velocity reflects to
+horizontal velocity. Except for the bounce, the first leg is inside the
+S star and this half-star; the second is inside the half-star and T star.
+At their shared side midpoints both sides of the path are occupied, so
+these crossings are interior points, not corner hits.
+Likewise the southeast bridge A_SE=(2,0), if smooth with occupied half-star
+y>=x-2, gives
+  (0,0) -> (2,0) -> (2,2).
+A dark diagonal pair forbids both specified smooth bridge fans. Merely
+saying that a bridge center is smooth without specifying its orientation
+and occupied side is insufficient.
+
+4. Approach two: two explicit reflection guards for the L support
+Assume all three stars centered at
+  S=(0,0), U=(2,0), T=(2,2)
+are full. U is an interior A point, not a reflection point.
+
+Bottom route:
+  S -> q=(1/2,-1) -> T.
+Incoming velocity (1/2,-1) reflects in y=-1 to (1/2,1), and T-q is three
+times that reflected velocity. The outgoing leg y=2x-2 passes successively
+through the S, U and T stars, crossing at (1,0) and (3/2,1). Those crossings
+are interior to the union. The only needed mirror is the open half-side
+between C=(0,-1) and B=(1,-1), containing q.
+There is exactly one canonical triangle across that half-side:
+  tau_bottom = conv{(0,-2),(0,-1),(1,-1)}.
+If tau_bottom is absent, q is a smooth physical boundary point, so this
+route illuminates T. Therefore darkness forces tau_bottom to be present.
+Other external triangles cannot cover an interior point of this edge.
+
+East route:
+  S -> r=(3,3/2) -> T.
+Incoming velocity (3,3/2) reflects in x=3 to (-3,3/2), and T-r is one
+third of that reflected velocity. The first leg y=x/2 passes through the
+S, U and T stars at (1,1/2) and (2,1); the last leg is in T's full star.
+The needed mirror is the open half-side between B=(3,1) and C=(3,2).
+Its unique opposite triangle is
+  tau_east = conv{(4,2),(3,2),(3,1)}.
+Darkness forces tau_east to be present as well.
+
+These implications are exact universal completion conditions. They need
+no restriction on triangles elsewhere in the room. They give a compact
+hand explanation of two optical guard clauses, not an assertion that such
+guards were absent from the historical machine-generated library.
+
+5. Fixed countermodel to sufficiency / surplus charging
+Start with the three full stars in section 4 and add precisely four
+triangles, all in distinct external A cells:
+  tau_bottom = {(0,-2),(0,-1),(1,-1)},
+  tau_east   = {(4,2),(3,2),(3,1)},
+  tau_top    = {(2,4),(2,3),(1,3)},
+  tau_left   = {(-2,0),(-1,0),(-1,1)}.
+Each is a single triangular attachment along an exposed half-side. The
+four attachments are disjoint, with distinct attachment endpoints; the
+boundary remains a strictly simple single cycle. All are canonical.
+
+Exact ledgers from the independent, standalone fixed-geometry script:
+                         N   W   I  J  s_A  s_N   Q   k
+  Three full stars      24   6   3  2   0    10   0  12
+  Plus required caps    26  12   3  2   0     6   2   8
+  Plus all four caps    28  16   3  2   0     4   4   6
+
+The final completion satisfies W<=21,k<=6 and ALL optical necessary
+conditions obtained above: midpoint B has six triangles (270-degree
+reflex corner); the northwest bridge cell is empty; the southeast bridge
+is the full U star; both required cap triangles are present.
+Moreover e(F)=2, p(F)=8 and Q+s_N=4+4=8. Thus it SATURATES the sharpened
+perimeter inequality. Interrupting the two explicit short paths does not
+force any surplus in (2).
+
+Why the counts change: the bottom/east caps each turn a smooth C and a
+smooth B into genuine corners, adding an A corner. The top/left caps each
+turn a smooth C into a corner, add an A corner, and modify an existing B
+corner without changing its corner status. Thus the exception budget can
+fall while the boundary charge remains at its minimum. Calling each cap
+an additional independent wall obstruction would count the wrong cost.
+
+For clarity, in this fixed completion the old bottom ray, continued into
+its cap instead of reflected at q, hits (2/3,-4/3) on the diagonal cap wall
+and then reaches the actual C corner (0,-1). The old east ray continues
+to the cap's A corner (4,2). This explains how those particular paths fail.
+Neither calculation blocks every other trajectory.
+
+Verification
+Ran darkness-fixed-check.py on exactly the three specified triangle unions.
+It independently builds canonical triangles, cancels oriented edges,
+checks one simple boundary cycle, matches exact polygon area to tile area,
+classifies all interior/smooth/corner lattice points, checks the full A
+stars, checks both Euler/incidence identities and the midpoint fan, and
+checks exact reflection laws plus the prescribed square containment of
+the two hand-derived paths. No peer implementation is imported.
+The smooth-bounce and physical-corner implications are hand arguments
+above, not a claim that the script proves optical completeness.
+This is author verification, not a fresh independent peer review.
+Receipts: darkness-fixed-check.json. Diagram: darkness-local-paths.png/svg.
+
+Decision / next useful target
+The bounded local-charge approach has reached a concrete limit: even the
+combined corner, bridge and two-path constraints admit the W16/k6 model
+at zero perimeter surplus. Do not turn these necessary conditions into a
+22-wall claim or launch a larger search on their strength.
+The next meaningful proof would control the complete light path after it
+enters an added cap, or another global coupling that all directions must
+obey. No such global implication is established here. Existing I2/I3
+certificates remain necessary to the current proof.

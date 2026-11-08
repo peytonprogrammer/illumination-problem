@@ -1,0 +1,13 @@
+# Independent full hand and literal-table acceptance of R46
+
+ACCEPT the entire stated h2 B/C minimal-depth family, joined to R45: all D0/1/2, every positive integer central width, every allowed mu, and arbitrary independent positive real flush widths. Other comb patterns remain separate.
+
+I parsed the97 literal Markdown rows, rather than trusting the author's JSON discovery coverage. They cover exactly D0w1..12, D1w1..19, D2w1..66 without repetition or omissions. With my own Fraction arithmetic, every row passes both strict mouth phases, both strict central portals, all340 protected core mirrors, the correct upward/downward central return equation, actual endpoint phase identities, and both kinds of far-corner exclusion. This executes no author optical code and does not replay its388 controls.
+
+For a normal source arm, reverse development from its strict mouth ends at phase1+2n_s and depthD. For a far source arm e_s=D+2, folding at actual depthD+1 maps the end to originalD; all intermediate horizontal contacts have positive physical depth. Its far phase is1+2n_s+tau. The target far phase is1+2n_t-sigma*tau. Odd integral tau is precisely the forbidden selected-tooth far-corner condition; the table excludes it whenever a far arm is present. At D0 an e0 arm is empty and an e2 arm returns to the actual interior seam only at its endpoint. No fictitious mouth reflection is introduced.
+
+The source leaves its strict mouth up-left; each of the2m listed core turns is a real smooth mirror under (C). The central phase starts strictly in(0,2). Under (M), its exit derivative is up for sigma+ and down for sigma-, matching the final core leg and actual target arm. In the central tooth the only possible simultaneous far/horizontal collision is an even integral P1+w*tau; all97 rows exclude it. Strict portals exclude mouth-corner contacts, and every remaining horizontal contact lies strictly inside the real tooth walls. Earlier actual arrival can be truncated.
+
+After subtractingmu, floor-flush teeth end at2-mu<=-2 and roof-flush teeth begin atG-mu-2>=3. Every left core mirror is strictly in(-2,0), every right core mirror strictly in(-1,1), and all core segments lie between heights-3 and3. They stay strictly inside every allowed B/C core. Therefore varying either flush width or mu cannot change any used contact; this is a direct geometric proof of the quantifiers. It is not an assumption of illumination monotonicity.
+
+All requested source hashes are current, and the independent checker also verifies the R45 tail inequalities. The97-row finite cover plus R45 exhaust all positive central integer widths. Independent AI hand/exact arithmetic review is complete; no arbitrary canonical45 minimum-wall result or formal verification is claimed.

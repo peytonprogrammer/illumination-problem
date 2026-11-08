@@ -1,0 +1,19 @@
+{
+  "id": "A44-variable-angle",
+  "status": "frozen_pending_review",
+  "created_utc": "2026-11-07T06:18:04.437663+00:00",
+  "original_deadline": "2026-11-07T06:27:19.007644Z",
+  "source_sha256": {
+    "c2-A1-variable-angle-proof.md": "444714d3aa46350065e9e51fa267ac46b9ba0fe4667a1cf4108521ca4b58b5c4",
+    "c2-A1-below-check.py": "3514f9751bc74ee6cd36a3e73474812cbf0882fea5cd68b01795c4e26f5d8c99",
+    "c2-A1-below-check.json": "0643981b432084953fcc47eb229b0c7455729590e72319bc6295a32be7d19a9e"
+  },
+  "scope": "ALL A1 even h>=4, even d>=2; h2 excluded",
+  "challenge": [
+    "Strict three/seven-reflection guards for all parameters and equality strip",
+    "Actual floor path for entire h4 row",
+    "Independently replay only five stored exceptional actual paths",
+    "Exhaustion with no finite-prefix or residue gap"
+  ],
+  "whole_goal_complete": false
+}

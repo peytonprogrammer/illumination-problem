@@ -1,0 +1,61 @@
+# Verdict: accept, with wording changes
+
+I found no logical gap in the proof. The comparison is accurate, with one omission. The mathematical comparison needs the clarifications below.
+
+## 1. The proof
+
+I checked the geometry by hand.
+
+**Setup**
+- P has 12 integer points, and 10 of them are corners.
+- a=(0,0) lies inside the top side, and b=(2,-2) lies inside the side x=2.
+- The maps f agree on both seams.
+- P0 and P2 don't meet, so the only overlaps are the two seams. No pinch points add corners to Q.
+
+**Exceptional points**
+- E1 to E4 are smooth wall points of Q: walls x=-1, x=1, y=1, and y=3.
+- At each one, two copies share a corner. 30 − 8 = 22 corners of Q is correct.
+- I checked the velocity at E3. Incoming (p,q) in P1 folds to (p,−q). Outgoing (p,−q) in P2 folds to (−p,q). That's an exact reversal, and the same holds at E1 and E2.
+
+**Endpoint preimages**
+- a comes from S and from (4,0), a smooth point on the bottom wall of P2.
+- b comes from T and from (2,−2), a smooth point on the wall of P0.
+- None of these four points is a corner. The truncated path η can start physically at (4,0) or end at (2,−2), and the argument still holds because every contradiction happens in P.
+- State these four preimages explicitly in section 3, since a reviewer will want to see them.
+
+**Time intervals**
+- Before time t, η(0,t) meets no corner of P. Any corner hit is either a reversal at a preimage of E1–E4 or a forbidden Q-corner.
+- So no second reversal can occur at t+u, because η(t−u) is never a corner. The prefix also contains no a or b in its interior.
+- If L<2t: 0 < 2t−L < t, so b is visited at an interior time.
+- If L=2t: a=b, which is false.
+- If L>2t: 2t lies in (0,L), so a is revisited at an interior time.
+- All three cases are sound. First arrival and last visit exist because the path has finitely many legs.
+
+**One missing justification.** "After t it must retrace that prefix" needs its reason stated. Add: "At every noncorner point of P, the folded motion is straight travel or specular reflection, whichever copy of Q the physical point is in. So the folded dynamics depend only on folded position and velocity." This sentence is what makes an identity without σ legitimate. It's true, but the note currently assumes it.
+
+**Parity step**
+- Unfolding is valid because η has no reversals, so it meets no corner.
+- B is even-even and nonzero, and z = B/2^r lies strictly inside the segment because 2^r ≥ 2.
+- z has an odd coordinate, folds to a point other than a or b, and is therefore a corner. That gives the contradiction.
+- Add that a corner hit with no reversal is impossible by section 2. That closes the loop explicitly.
+
+**Minor points**
+- "Convex" is accurate but not used anywhere. You can drop it.
+- Define "nonsingular" in the last line, or replace it with "corner-avoiding."
+
+## 2. Comparison with Theorem 7.4
+
+The comparison is correct on the main points:
+- The theorem uses a global σ; your argument uses no σ.
+- Your stopping-time choice replaces the shortest-ray choice and needs no discreteness argument.
+- The theorem doesn't apply to Q.
+
+Add one fact: **Theorem 7.4 doesn't apply to P either.**
+- Its U and V must be *interior* points of R. Your a and b lie on sides.
+- Its exceptional points F are non-corner points of Λ∖2Λ, where the ray continues past F. Your exceptions are corners of P, where the path reverses.
+
+So the shared idea is only reversal under a deterministic flow. Your "related precedent" wording fits that. Also check that "7.4" and lines 602–612 match the compiled numbering. The source I saw shows only the label `thm:symmetry`.
+
+## 3. Standalone exposition
+
+State the folded marks a=(0,0), b=(2,-2), their physical preimages and the deterministic retracing rule explicitly. Distinguish the physical path from its folded coordinates. The related theorem requires interior endpoints and noncorner exceptions; it does not apply directly to the staircase or assembled room.

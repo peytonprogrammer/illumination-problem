@@ -1,0 +1,140 @@
+# Review of §25: auxiliary double-cover descent for two actual marks
+
+## Verdict
+
+The strategy is sound once the fixes below are made. There is **one false statement** (a period computation). There are **three gaps** that are fixable with standard arguments: the order of continuation versus descent, the branch identification, and the forgetful projection. No counterexample to the stated candidate consequence turned up. With the corrections, the conclusion follows: a common marked orbit closure M'_* defined over Q, containing the marked slice at every small parameter, with a finite-index branch-preserving affine stabilizer at rational X_r. It supplies only the domain for the kernel criterion, as the section itself says.
+
+## 1. Construction checks
+
+- **Characters.** H_1(X∖{s,t}) has m_s + m_t = 0. The characters with χ(m_s) = 1 form an affine F_2-space of size 2^{2g}. Each is nontrivial, so each cover is connected. Correct.
+- **Genus.** 2g_Y − 2 = 2(2g − 2) + 2 gives g_Y = 2g. With 16 branch points, 2g_Y − 2 = 2(2g − 2) + 16 gives g_Y = 2g + 7. Both correct, and 16 is even as required.
+- **Zero orders.**
+  - A regular branch point becomes a simple zero.
+  - An even-order zero of order 2k downstairs becomes two unramified zeros of order 2k.
+  - So odd order singles out the new zeros. The even-order hypothesis is used here and in the closedness argument below.
+- **False statement: "closed cycle … with period 2∫_a ω".**
+  - Both lifts of a run from ŝ to t̂. The loop lift₁ − lift₂ is ι-anti-invariant, and ω̂ = π*ω is ι-invariant, so its period is **0**.
+  - ∫_a ω appears upstairs as the **relative** period ŝ → t̂ of either lift, not as an absolute period.
+  - More generally, absolute periods of Y see only H_1(Y;Q)^+ ≅ H_1(X;Q). The mark positions enter upstairs only through rel.
+  - The linear-descent claim survives:
+    - Upstairs periods are π^*-images of downstairs periods (integer matrix).
+    - (½)·transfer inverts this.
+    - The covering locus is locally the ι-invariant subspace H^1(Y,Σ̂)^+ ≅ H^1(X, Σ∪{s,t}).
+  - Delete or correct the sentence.
+
+## 2. Closedness of the covering locus (r-properness)
+
+The conclusion is right, but the stated reason is incomplete. "Fixed points cannot collide" needs an argument. Two clean ones:
+
+- **(a) Parity lemma.** A limit of translation automorphisms ι_n of Y_n → Y (Arzelà–Ascoli on flat isometries) is a translation automorphism ι. It is nonidentity because it acts by −1 at a limit simple zero.
+  - At a zero of order m, a translation involution fixing it acts as w ↦ −w on ω̂ = w^m dw. This needs (−1)^{m+1} = 1, so m is odd.
+  - Regular points (m = 0) and even-order zeros therefore cannot be fixed.
+  - So Fix(ι) is exactly the two simple zeros.
+  - Riemann–Hurwitz gives quotient genus g. The free pairing of the even zeros gives quotient stratum κ.
+- **(b) Chart argument.** Near Y, only finitely many mapping classes have fixed points (proper discontinuity). The fixed locus of each in period coordinates is the linear eigenspace {φ*v = v}. A finite union of these is closed.
+
+Either way, the upstairs stratum must label the simple zeros, or the decoration must carry the labels.
+
+## 3. Properness and descent: two different maps
+
+The text conflates two maps:
+
+- **D → marked base.** Write D = {(X, s, t, χ)}. The map q: D → H(κ,0,0) is a finite covering map, so it is trivially proper.
+  - This is what the text's "finite covers over a compact subset cannot degenerate" proves.
+  - It gives M' = q(N_dec): one inclusion by continuity, the other by lifting g_n·d_τ.
+- **D → upstairs stratum.** The map r: D → H(κ̂) is locally an injective rational-linear map in period charts. It is proper by §2.
+  - It gives r(N_dec) = N_*. This is what links the decorated orbit closure to Wright's theorem.
+
+## 4. Branch identification (gap)
+
+"Local tangent branches agree with those of N_*" is overstated. Near d, r^{-1}(N_*) includes branches coming from other decorations d' over the same Y. What is true, and sufficient:
+
+1. Generic points of N_* lie on a single branch. Baire's theorem then gives an open subset O of one pulled-back sheet with O ⊂ N_dec, and O is relatively open in N_dec.
+2. Density gives g·d_τ ∈ O. GL-equivariance and linearity then give d_τ a full-sheet neighbourhood in N_dec, and hence so does every orbit point.
+3. Taking closures, N_dec near any point is a union of some of the r-pullbacks of N_* branches. These have pure dimension, since dim N_dec = dim N_*.
+
+So every branch of N_dec, and hence of M' = q(N_dec), is a rational-linear image of an N_* branch. This needs no marked-stratum EMM.
+
+## 5. Continuation: do it in D, not upstairs (gap)
+
+Y_r ∈ N_* does **not** give (X_r, s_r, t_r) ∈ M'. Y_r could lie in N_* only through another involution or decoration. Corrected order:
+
+1. **Wright on N_*.** Wright Thm 1.1 applied to N_* gives a real number field k.
+2. **Branches at d_τ.** By §4, the branches of N_dec at d_τ are k-defined.
+3. **Coefficient separation.** L(u₀) + τ·L(u₁) = 0 with L(u_j) ∈ k(i) ⊂ Q̄ and τ ∉ Q̄ forces L(u₀) = L(u₁) = 0. So the line lies in **every** branch through d_τ.
+4. **Identity principle.** EMM gives N_dec locally as a finite union of linear pieces, hence closed analytic. The preimage of N_dec under the holomorphic disk t ↦ d_t is analytic and contains an open set, so it is the whole disk.
+   - This replaces "finite-branch continuation".
+   - It needs every disk point to stay in the stratum: marks distinct and regular, including t = 0.
+5. **Common closure.** d_0 ∈ N_dec. For transcendental τ, τ′ in the disk, N_τ = N_{τ′}.
+
+## 6. Field Q
+
+- **Y_0 is square-tiled.** The marks are rational, so the relative periods of (X_0, s, t) lie in Q[i]. Hence the absolute and relative periods of Y_0 lie in Q[i], and Y_0 is square-tiled after scaling.
+- **The needed input** is "k(M) ⊂ holonomy field of every surface in M." Check the exact wording and number in Wright before citing "Example 1.2". N_* is **not** the orbit closure of Y_0; it only contains it.
+- **Consequence.** N_* is defined over Q. q and r are given by integer and ½-integer matrices, so the branches of M' are defined over Q.
+- **Possible shortcut, not relied on.** If Wright's theorem (k(M) determined by p(TM)) is stated for strata with marked points, M' would inherit k from M_* directly. The cover argument avoids needing that.
+
+## 7. Remaining claims
+
+- **"Forgetting marks projects it onto M_*" is false set-theoretically.** Marks can collide or hit zeros in limits, so the forgetful map F is not proper and F(M') ≠ M_* in general. The true and needed statement is p(T_x M') = T_{F(x)} M_* at points where both are defined. That needs either:
+  - an Apisa–Wright marked-points lemma (cite it), or
+  - the measure argument: F_* of the affine measure on M' is ergodic and supported densely in M_*. It therefore equals M_*'s affine measure, which cannot charge a countable union of lower-dimensional pieces.
+
+  Also, M_* here must be the orbit closure of X_τ.
+- **Branch continuity to X_r.** The linear subspace L containing the slide near τ is a branch at X_r. This follows from an open–closed argument in one chart over the disk, using pure dimension. So V at X_r is V at τ.
+- **Stabilizer.**
+  - (X_r, s_r, t_r) is square-tiled on a finer lattice, so its Veech group is finite index in SL₂Z.
+  - Passing to a finite-index Γ_r that fixes s, t and each branch at X_r: since T M' = V⊗C is invariant under GL₂R and under the composite derivative, ρ(φ) preserves V_Q.
+  - The slide tangent v₁ = x + iy with x, y ∈ H^1(X_r, Σ′; Q), and x, y ∈ V_Q.
+- **Unchanged.** No halfturn symmetry is used. This does not claim free marks, a periodic extra fold, an illumination event, or a generic rank-2 classification. The 16-point variant works identically: 16 fixed simple zeros, odd parity.
+
+## 8. Kernel-of-forgetting criterion: explicit cochain form
+
+**Setup at rational X_r.**
+
+- Σ = {p_1, …, p_n} (nonempty since g ≥ 2) and Σ′ = Σ ∪ {s, t}.
+- Integral basis of H_1(X, Σ′):
+  - absolute cycles α_1, …, α_{2g};
+  - paths β_j from p_1 to p_j, for j ≥ 2;
+  - a path γ_s from p_1 to s, and a path γ_t from p_1 to t.
+- Coordinates c ↦ (c(α), c(β), z_s, z_t).
+
+**Kernel of forgetting.**
+
+- p: H^1(X, Σ′) → H^1(X, Σ) drops (z_s, z_t).
+- From the exact sequence of the triple, ker p = δ(H^0(Σ′, Σ)) = span{δe_s, δe_t}, where (δe_s)(γ) = e_s(∂γ).
+- In coordinates, ker p = {(0, 0, u, w)}.
+- Under Lefschetz duality H^1(X, Σ′) ≅ H_1(X ∖ Σ′), δe_s ↔ ±[∂D_s], the small loop around s.
+
+**Exact criterion.**
+
+- Let V_Q ⊂ H^1(X_r, Σ′; Q) be the slide branch, with T M' = V_Q ⊗ C, cut out by rational functionals ℓ_1, …, ℓ_m.
+- K := V_Q ∩ ker p ≠ 0 ⇔ rank[ ℓ_j(δe_s) ℓ_j(δe_t) ]_j ≤ 1 ⇔ dim V − dim p(V) > 0.
+
+**Computable sufficient criterion (multitwist cancellation).**
+
+- For a periodic direction θ of the marked surface, the cylinders C_i are those of X_r ∖ Σ′.
+  - A mark on a leaf splits a cylinder into C′, C″.
+  - Their cores are homologous in X ∖ Σ, and c′ − c″ = ±∂D_s in H_1(X ∖ Σ′).
+- Let φ_θ ∈ Γ_r be the affine multitwist with twist numbers k_i ∈ Q (rational moduli ratios, powered so it fixes the marks and branches). Then, for ξ ∈ V_Q:
+
+  (ρ(φ_θ) − I) ξ = Σ_i k_i ξ(c_i) η_i, with η_i := ⟨·, c_i⟩ ∈ H^1(X, Σ′; Z).
+
+- Since ∂D_s bounds a disk, ξ(c′) = ξ(c″). A split pair therefore contributes
+
+  ξ(c) [ ((k′ + k″)/2)(η′ + η″) + ((k′ − k″)/2)(η′ − η″) ],
+
+  and η′ − η″ = ±δe_s.
+- **Criterion.** K ≠ 0 if there are finitely many (θ, ξ), with ξ ranging over W := Q[Γ_r]·{x, y} (iterate generators until the span stabilizes), and rationals a_{θ,ξ}, such that
+
+  Σ_{θ,ξ} a_{θ,ξ} Σ_i k_{θ,i} ξ(c_{θ,i}) [c_{θ,i}] ∈ span_Q{[∂D_s], [∂D_t]} ∖ {0} in H_1(X_r ∖ Σ′; Q).
+
+  Equivalently, the combination vanishes on every α_k and β_j but not on (γ_s, γ_t).
+- This is **sufficient only**. W ∩ ker p = 0 does not prove K = 0. The exact test is the rank condition, which needs equations for V_Q.
+
+**Missing theorems to cite or prove:**
+
+- EMM local finiteness and pure dimension (upstairs only);
+- Wright Thm 1.1 together with the holonomy-field inclusion;
+- the forgetful tangent-surjectivity lemma;
+- the parity or chart argument for closedness.

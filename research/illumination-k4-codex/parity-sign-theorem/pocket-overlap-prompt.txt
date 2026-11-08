@@ -1,0 +1,1191 @@
+Daniel asks Codex and Opus to collaborate. Tools-disabled independent focused adversarial review; no optical, room, direction, cylinder or orbit discovery. Audit NEW Section32 only: zero-mean cylinder loads from cup orthogonality, exact signed intersection=determinant*overlap area (including annulus covers), precise normalized coefficients/signs in32.3, and the four ACTUAL event certificate. Try to break the assertion that generic two cores cross each lifted torus face exactly once. Inputs9/21.1/26 were previously reviewed but any new use needs scrutiny. No universal strip separation is claimed; actual labels, pi sectors and relative-versus-absolute distinction must remain. Do not assume cylinder cores span homology. Return a precise verdict and corrections.
+
+## 9. The remaining global question
+
+The odd-word criterion reduces one sufficient route to a precise endpoint question: can one construct a legal midpoint corner continuation from actual S to actual T whose word toggles a bit an odd number of times at this one diagonal wall? Toggle no bit at any other wall.
+
+Connectivity of the fan tree does not answer that question. It supplies combinatorial routes to a pocket, but those routes need not be straight, need not put the sole corner at half-time, and need not return to the target's physical label. Likewise, generic rays can use the five moving return maps without giving any corner event for the chosen pair. Existence of an odd-hit event would prove the local detection lemma; failure to find one would not disprove it, because even-hit events can detect too.
+
+The selected two axis multitwists cannot fix this existence gap: on the pocket slide Q vanishes on all their core increments, so they preserve Q(eta) on every seed orbit. A proof must construct a new seed, use a genuinely different action with a justified effect, or supply a structural counterexample. No universal detection or counterexample in the required polygon class is claimed here.
+
+### 9.1 A precise non-axis transfer mechanism, conditional on a seed
+
+The theory-only existence review57928 supplies no universal seed or
+counterexample. Its useful remaining proposal can be stated without
+assuming that every affine map preserves the particular slide defect.
+Let e be an already supplied actual S/T one-corner event and eta its
+zero-holonomy relative class. Let phi be a pure multitwist, after a power
+fixing all physical-corner lifts, actual endpoint lifts and selected
+prongs. Refine its periodic cylinders at the closed leaves through EVERY
+actual regular marked endpoint and regular physical corner lift; singular
+corner separatrices already lie on cylinder boundaries. Choose a further
+power fixing these refined boundary leaves pointwise. This refinement is
+necessary for the relative formula (Section9.2). Its pairwise disjoint
+parallel refined-cylinder cores are c_i, and the signed twist powers are m_i. Fix the intersection convention so that
+
+    phi_* eta = eta + N eta,
+    N eta = sum_i m_i <c_i,eta> c_i.
+
+The correction N eta is ABSOLUTE, even though eta is relative, and N^2=0
+because the cores are disjoint. Hence for every integer n,
+
+    phi_*^n eta = eta + n N eta,
+    Q(phi_*^n eta)=Q(eta)+n Q(N eta).
+
+Also hol(N eta)=0: both eta and phi_*eta have zero holonomy, since an
+affine image of the original event has zero holonomy. Thus the needed
+increment tests Q on a specific absolute zero-period cycle, not on an
+arbitrary core independently.
+
+If Q(N eta)!=0, at most one integer n makes the vector on the last line
+zero. The images remain admissible actual endpoint events by the fixed
+labels and prongs. A nonzero increment implies w is not parallel to the
+multitwist cores: a parallel event avoids all interior core circles and
+has every displayed intersection zero. Therefore only finitely many
+powers give wall-parallel image directions. Choose a power avoiding
+these exceptions and a possible zero vector. Section5 then supplies both
+opening signs using the original axis shears.
+
+This is a sufficient mechanism for obtaining detection even from a blind
+seed Q(eta)=0. It does not manufacture a seed. Nor does the existence of
+SOME absolute zero-period cycle detected by Q imply that one of these
+special increments N eta is detected. Two exact obligations remain:
+(1) a genuine actual S/T one-corner seed; (2) a pure non-axis multitwist
+with Q(N eta)!=0, unless the seed already detects. No such new event,
+cylinder or twist is discovered here.
+
+### 9.2 Marked-cylinder correction and an exact non-axis flux criterion
+
+**Status: accepted by independent tools-disabled Opus review (exit0),
+with its relative-pairing and refinement corrections incorporated.** This section supplies
+necessary conditions and an absolute-homology equivalence for the proposed
+non-axis transfer. It does NOT construct an actual endpoint event.
+
+First refine the cylinder decomposition at every closed leaf through an
+actual regular mark, including regular physical corner lifts. Cone-point
+separatrices already lie on cylinder boundaries. At an arithmetic base
+the transverse heights are rational multiples of a common unit and the
+cylinder moduli are commensurable; the heights need not be rational real
+numbers in Euclidean unit normalization. After a
+common power of the parabolic, each refined boundary leaf is fixed
+pointwise and each open strip is an integral Dehn twist relative to its
+boundary. The formula in Section9.1 then holds in ordinary marked relative
+homology, with intersection numbers taken against these refined cores.
+The refinement adds no singularity and does not alter the surface. Every
+point in the support of boundary(eta) lies on the refined boundaries.
+For relative eta the core in <c_i,eta> is fixed in H_1(X minus P), where P
+is the finite marked set; use its Lefschetz pairing with H_1(X,P). Its
+image in ordinary absolute homology is used for C, hol and Q below.
+
+Fixing interior marks after taking a power is insufficient to justify the
+UNREFINED relative formula. On the unit square torus, the affine shear
+(x,y)->(x+2y,y) fixes marks s=(0,0),t=(0,1/2). A vertical marked arc s->t
+acquires one horizontal core cycle. The unrefined annulus has twist number2,
+so an unrefined core below t pairs to1 and predicts2cycles, while one
+above t pairs to0 and predicts0. The unrefined relative prescription is
+ill-defined and neither choice gives the correct one-cycle increment. Cutting
+at the two marked horizontal leaves gives two strips of twist number1;
+the arc crosses just one. This is a prescribed relative-homology control,
+not a mirror room or a counterexample to the goal.
+
+Work now in absolute H=H_1(X;R). Orient the r refined core classes c_i in
+a common unit direction e and write
+
+    hol(c_i)=ell_i e,   ell_i>0,
+    C=span_R{c_i},      Z=C intersect ker hol.
+
+Let a!=0 be the signed shear coefficient and h_i>0 the refined heights.
+The twist coefficients satisfy m_i=a h_i/ell_i, so all m_i have the same
+sign. Write Nx=sum_i m_i <c_i,x> c_i, using the convention of Section9.1.
+Then the following exact identity holds:
+
+    N(ker hol in H) = Z.                              (9.2a)
+
+Proof of surjectivity onto C first. Choose coordinates on H and let T have
+columns c_i. Nondegeneracy of the intersection form identifies x-><.,x>
+with an invertible map H->H*. Therefore rank N equals rank(T M T^t), where
+M=diag(m_i). Since M is positive or negative definite, this rank equals
+rank T: after multiplying by the common sign, the kernel of T M T^t is
+exactly ker T^t. Hence im N=C, even if the listed cores are dependent.
+
+Affine holonomy covariance gives
+
+    hol(Nx)=(A-I)hol(x)=a hol_perp(x) e.
+
+Certainly N(ker hol) is contained in Z. Conversely take z in Z and choose
+x with Nx=z using im N=C. The displayed covariance forces hol_perp(x)=0.
+Choose any core c_0. Since Nc_0=0 and ell_0>0, subtracting
+hol_parallel(x)c_0/ell_0 from x preserves Nx and makes both holonomy
+components zero. This proves (9.2a). If the data are rational, all these
+choices can be made over Q. Clearing denominators gives an integral
+preimage of a MULTIPLE of z, not necessarily of z itself. Thus the
+integral image has finite index in the integral zero-holonomy core
+lattice. Since absolute cycles are also relative cycles, (9.2a) also holds
+with the relative holonomy kernel on the left. Neither statement makes
+the preimage an actual corner event.
+
+For the pocket-slide functional Q:H->R^2, (9.2a) yields
+
+    QN is nonzero on ker hol
+      iff Q is nonzero on Z
+      iff the vectors Q(c_i)/ell_i are not all equal. (9.2b)
+
+For the last equivalence, hol|C has one-dimensional image. Q vanishes on
+its kernel exactly when it factors through that one-dimensional image,
+i.e. Q(c_i)=ell_i v for a common v. Explicitly, unequal ratios at i,j give
+z=ell_j c_i-ell_i c_j in Z with Q(z)!=0. The surjectivity proof supplies
+an absolute zero-holonomy preimage under N.
+
+For a SUPPLIED actual event eta, let k_i=<c_i,eta>. The corresponding
+calculation is more restrictive:
+
+    sum_i h_i k_i=0,
+    Q(N eta)=a sum_i h_i k_i [Q(c_i)/ell_i].           (9.2c)
+
+Thus unequal normalized flux is necessary for this twist to change an
+actual zero-holonomy event, but it is not sufficient for a particular
+eta or for the existence of any actual event. Equation(9.2a) produces
+arbitrary absolute cycles; it does not prove that actual S/T event classes
+span them, or that their intersection vectors realize the required k_i.
+
+Two exclusions follow without computing a direction or trajectory.
+
+1. If C has dimension1, then Z=0 and this parabolic fixes EVERY zero-holonomy
+   relative class, not merely its defect. In particular, a direction with
+   one maximal unmarked cylinder cannot help: splitting it at marks gives
+   homologous oriented cores and still dim C=1. Several cylinders with
+   homologous cores have the same obstruction. Since every affine map
+   preserves ker hol, the group generated by ALL such one-core-span
+   parabolics at this base fixes ker hol pointwise, even when their
+   directions differ. Their products cannot change a blind event either.
+2. Let G be the group generated by the established slide-blind axis twists,
+   so Q(gx)=Q(x) on marked relative homology for every g in G. A conjugate
+   g phi g^-1 of another Q-preserving twist still preserves Q. In particular
+   a conjugated axis twist supplies no new detection. To cover any other
+   pure twist in that same direction, use discreteness of the Veech group:
+   their derivatives have equal nonzero powers. Both maps fix the actual
+   regular source lift, so their equal-derivative powers differ by a
+   translation automorphism fixing a regular point, hence are equal.
+   Since powers act as I+nN, blindness of a nonzero power implies blindness
+   of the original twist. Thus these non-axis slopes in the axis cusp orbits
+   supply no new detection;
+   it is not a statement about every non-axis direction or the full affine
+   group.
+
+There is already a definite detected ABSOLUTE zero-holonomy cycle; its
+existence need not be assumed. If Q vanished on the entire absolute
+holonomy kernel it would factor as L composed with hol. Q vanishes on
+horizontal and vertical core classes whose periods span R^2, forcing L=0,
+contrary to the established nonzero absolute slide period. More explicitly,
+Section17 supplies a cycle C with period(p,q+2t), where p,q are even
+integers, while fixed cycles A,B have periods(-2,0),(0,-2). Use the same
+side-crossing topological loop in the persistent copy cellulation for small
+t: interior connecting arcs can be transported continuously, so this C
+is locally constant in the homology chart. Then
+
+    z=C+(p/2)A+(q/2)B,   hol_0(z)=0,   Q(z)=(0,2).
+
+In the SAVED control p=-2,q=-4, this is z=C-A-2B; those two numerical
+values are not asserted for every room.
+
+These are previously supplied cycles, not a newly found optical word.
+No prescribed multitwist or actual event is proved to realize z.
+
+The remaining geometric target is consequently sharper: find a legal
+actual S/T event with a nonzero pairing against a multi-cylinder contrast,
+or prove it already detects directly. A detected absolute cycle, unequal
+normalized cylinder flux, a non-axis slope, or group transitivity alone
+is not that event. Universal existence and the96bounded portal implications
+remain open.
+
+### 9.3 Actual-event occupancy and the unimodular strip criterion
+
+**Status: accepted by tools-disabled Opus review (exit0), after the
+relative-pairing, sign and blind-seed scope corrections below.** Retain a
+SUPPLIED legal actual S/T one-corner event, with primitive equal half-vector
+w and class eta=(p->s)+(p->t), whose two summands have holonomies -w,+w.
+Let Q be the pocket-slide functional on ordinary H_1(X,P), with values
+in R^2, and use its restriction on absolute cycles. Fix a nonparallel
+rational cylinder direction e of unit length. Let phi be a pure multitwist
+with nonzero signed shear coefficient a, refining at all
+marked endpoint levels as in Section9.2. For a maximal cylinder D, put
+
+    r_D=Q(c_D)/ell_D,
+    lambda_D^X=fraction of the half p->X inside D, X=s,t.
+
+Orient the core c_D along e and choose the intersection convention so
+upward transverse crossings of that core are positive, matching the
+convention that positive a moves higher transverse points in the +e
+direction. Because the halves
+are not parallel to e, boundary contacts occupy zero parameter length,
+and sum_D lambda_D^s=sum_D lambda_D^t=1. Group the refined-strip formula
+by maximal cylinder. A net k_i signed crossings of strip i contribute
+h_i k_i to transverse displacement. A single upward crossing adds
+m_i c_i, with m_i=a h_i/ell_i, and hence defect a h_i r_D. Refined
+cores inside D are homologous in ordinary H_1(X), though their punctured
+classes can differ by peripheral loops around marks. Those loops die
+before evaluating Q, so Q(c_i)/ell_i=r_D within D.
+The two halves have constant transverse velocities -det(e,w),+det(e,w)
+in normalized parameter0..1. Therefore
+
+    Q((phi_*-I)eta)
+      = a det(e,w) sum_D r_D (lambda_D^t-lambda_D^s). (9.3a)
+
+No absolute value or unstated sign choice is used in this convention.
+A pure twist changes only the coordinate parallel to e; it preserves
+transverse coordinates and cylinder membership, so these occupancies
+are invariant under that same twist. This also agrees with N^2=0.
+
+There is a particularly sharp version when det(w,v)=1 for a primitive
+integer vector v and e=v/|v|. Use the base torus map pi:X_0->R^2/Z^2
+provided by the integer developing charts. Every physical corner and
+actual A mark maps to0. Refine at ALL points of pi^-1(0), including any
+auxiliary regular points, and their complete v-leaves. If the marked set
+is enlarged for this punctured intersection pairing, eta is included in
+the larger relative group. Only its absolute twist increment is evaluated
+by Q, so no velocity or extension of Q for auxiliary endpoints is assumed.
+The complement of
+the closed torus v-geodesic through0 is an open cylinder of height1/|v|.
+Its preimages are unbranched annulus covers, each of the same height and
+with circumference n_D |v| for an integer n_D>0. These are refined strips
+inside the maximal v-cylinders; no new trajectory is selected here.
+
+Along either open half of the supplied event, the torus transverse
+coordinate runs strictly between two successive integer levels because
+|det(v,w)|=1. It never crosses the removed v-leaf in its interior.
+Consequently each open half lies in ONE refined strip and hence in one
+maximal cylinder, denoted D_s,D_t. Formula(9.3a) becomes
+
+    Q((phi_*-I)eta)=a det(v,w)/|v| (r_Dt-r_Ds).       (9.3b)
+
+Thus the supplied event's defect CHANGES under this nonzero twist iff the
+two containing maximal cylinders have unequal normalized slide flux. If
+Q(eta)=0, this is exactly when the image event becomes detecting.
+Finding those maximal cylinders is GLOBAL gluing information; the last
+statement is not a local visibility proof. Nor does it supply a seed.
+The regular-midpoint exclusion already established in Section26 applies;
+no new regular-corner existence argument is being assumed.
+
+### 9.4 Finite residue reduction of all unimodular transfer directions
+
+**Status: accepted by tools-disabled Opus review (exit0), with the
+pure-twist, fixed-source and integral-lift qualifications below.** This is a
+finite algebraic criterion for transferring a SUPPLIED blind event. It
+is not a finite search run and does not supply an actual S/T seed.
+
+Assume Q(eta)=0; otherwise the seed already detects. Choose a symbolic
+Bezout partner v_0 with det(w,v_0)=1. Every integer v with det(w,v)=1 is
+v_0+jw for a unique integer j. Unoriented directions with determinant-1
+are represented by reversing v, so no additional case is needed.
+
+All rational directions of this arithmetic base admit pure affine
+multitwists fixing pi^-1(0) pointwise: in the annulus-cover decomposition
+of Section9.3, choose a common multiple L of the finitely many n_D and
+use derivative z->z+L det(v,z)v. Each strip twists an integral number of
+times and its boundary is fixed pointwise; the maps glue to an affine
+map of X. Pointwise fixation of the origin-fibre graph gives the actual
+endpoint/corner-label and sector properties required here. No additional
+immersed orbit-closure branch condition is used. For direction w choose
+such a map g, with derivative
+
+    A_w z=z+K det(w,z)w,    K a positive integer,
+    g_*=I+N_w,             N_w^2=0.
+
+The entire event lies in the preimage of the closed w-geodesic through0.
+The chosen g fixes that boundary graph pointwise, including both halves,
+so g_*eta=eta. This is a geometric fixed-path statement, not an inference
+from hol(eta)=0 alone. In particular N_w eta=0.
+
+For each SYMBOLIC residue j=0,...,K-1 let v_j=v_0+jw and choose one pure
+twist tau_j in direction v_j, BUILT BY THIS TORUS-LIFT CONSTRUCTION. Put
+
+    z_j=(tau_j*-I)eta,
+    b_j=Q(z_j),       d_j=Q(N_w z_j).
+
+The z_j and N_w z_j are absolute zero-holonomy classes. Do not infer that
+every absolute zero-holonomy cycle has this form. Define the conjugate
+phi_j,n=g^n tau_j g^-n, in direction v_j+nK w. Since g fixes eta and
+N_w^2=0, for EVERY integer n,
+
+    (phi_j,n*-I)eta = g_*^n z_j = z_j+n N_w z_j,
+    Q(phi_j,n*eta)=b_j+n d_j.                      (9.4a)
+
+Consequently some pure twist in a det(w,v)=1 direction turns this blind
+seed into a detecting event iff at least one of the FINITELY MANY vector
+pairs (b_j,d_j) is nonzero. For necessity for arbitrary pure twists in a
+residue direction, apply the same-direction commensurability argument of
+Section9.2: both pure twists fix the actual regular source lift. After
+nonzero powers they agree, and taking a power multiplies the increment
+by a nonzero integer. Q takes values in torsion-free R^2, so vanishing
+of an increment is equivalent to vanishing of that multiple.
+This criterion concerns all unimodular directions relative to THIS w;
+it does not classify every rational direction or every actual seed.
+The equivalence excludes non-pure parabolics, maps with finite cylinder
+or label permutations, and products of twists in different directions.
+
+If b_j or d_j is nonzero, at most one integer n kills its defect. Also
+write the derivative of tau_j as
+
+    A_j z=z+L_j det(v_j,z)v_j,   L_j a nonzero integer.
+
+The image half-vector of the actual event under phi_j,n is
+
+    A_w^n A_j w=(1-n K L_j)w-L_j v_j.              (9.4b)
+
+It is nonzero and for a fixed wall-direction line at most one integer n
+makes it parallel to that line: w and v_j are independent. The canonical
+room has at most FOUR unoriented wall directions. Thus among ANY SIX
+distinct integer n, at least one gives a non-wall-parallel detecting
+actual event, retaining the supplied endpoints and legal intrinsic pi
+sector by the reviewed affine-event theorem. The six-image bound is a
+conditional symbolic guarantee; no image directions or words are generated
+or traced in this work. Axis sign transfer then gives both slide signs.
+
+This reduces the proposed infinite family of near-event directions to
+2K vector coefficient tests and six images after a successful test. It
+leaves two exact obligations: obtain an actual S/T event, and prove some
+(b_j,d_j)!=0 for it (or prove direct Q(eta)!=0). The known detected absolute
+cycle and rank>=3 tangent bound establish neither. Section9.5 gives a bound on K as a function of the cover degree; it is
+not an absolute bound independent of room size.
+
+### 9.5 A common twist coefficient bounded by the cover degree
+
+**Status: accepted by independent tools-disabled Opus review (exit0),
+with derivative-versus-chart wording corrected below.** In the raw
+canonical base made of N triangles of area1/2, the eight-copy surface X
+has area4N. Its integer-chart map to R^2/Z^2 is a branched translation
+cover of degree d=4N, ramified only over0. Define
+
+    K(d)=lcm(1,2,...,d).
+
+For ANY primitive integer v, remove the entire inverse image of the closed
+torus v-geodesic through0. The remaining components D_i are connected
+unbranched finite covers of its open cylinder. If their degrees are n_i,
+then sum_i n_i=d, each n_i<=d, their heights are1/|v|, and their
+circumferences are n_i |v|. On each D_i use the shear of coefficient
+
+    a=K(d)|v|^2,    twist number m_i=K(d)/n_i.
+
+At the bottom boundary its displacement is0, and at the top it is
+K(d)|v|, an integer multiple of that component's circumference. Thus
+each completed boundary leaf is fixed pointwise. These maps extend as
+identity on the removed graph and glue to an affine homeomorphism of X
+with the SAME derivative in every chart. Denote this surface map Phi_v
+and the corresponding linear torus map f_v. Precisely,
+
+    D Phi_v = M_v = I+K(d) v det(v,.),
+    pi composed Phi_v = f_v composed pi,
+    Phi_v|pi^-1(gamma_v) = identity.                (9.5)
+
+In arbitrary local charts the affine formula also has a chart-dependent
+translation term. The displayed linear matrix is the derivative, not a
+pointwise formula with translation0 in every chart.
+
+Across an ordinary graph edge the two affine formulas agree on the edge
+and have identical derivative, so they give one affine formula locally.
+At a zero they extend continuously, preserve each incident v-sector and
+are affine on its punctured sectors. The inverse uses -a; this proves
+bijectivity as well. No base room symmetry or extra point permutation
+is assumed. The construction fixes the entire fibre pi^-1(0), including
+all actual marks/corner labels and the v-prong graph.
+
+Accordingly Section9.4 may take K=K(d) and L_j=K(d) for all residues,
+without any geometric direction computation. These maps already have
+the endpoint and sector properties needed by the affine-event theorem;
+no claim that they fix a chosen immersed orbit-closure branch is needed.
+The finite transfer criterion has at most2K(d) vector coefficient tests
+per supplied seed, followed by six images after a successful coefficient
+pair. The size is deliberately crude; it is not a practical algorithm or
+a bound independent of N. For a particular direction the exact minimal coefficient for a lift fixing
+the ENTIRE graph pointwise is lcm_i n_i: fixing a bottom boundary forces
+the shear translation there to0 modulo the component circumference,
+and its top boundary is fixed iff n_i divides the integer coefficient.
+This uses the annulus gluing argument, not merely fixation of its vertex
+labels. No such decomposition or smaller coefficient is computed here.
+
+This corollary does NOT prove that one coefficient pair is nonzero, does
+not construct the supplied actual event, and does not permit replacing
+that event by an arbitrary zero-holonomy cycle. No directions or optical
+words have been enumerated or searched.
+
+
+## 21. Transcendental parameters share one arithmetic orbit closure
+
+A focused tools-disabled Opus review accepts this argument from the stated
+inputs. The rational-basis, orbifold-chart, absolute-period and involution
+qualifications requested by that review are included below. It refines the
+orbit-closure question without assuming a full quadratic stratum or
+deducing rank from the period Q-span.
+
+Work in one sufficiently small fixed relative-period chart about X_0,
+using a rational homology basis and a marked local cover if automorphisms
+make the chart an orbifold chart. Let Sigma consist ONLY of actual zeros;
+the freely moving interior S/T marks are not included in this stratum.
+The literal slide has period vector
+
+    v(t)=v_0+t*v_1,       v_0,v_1 in Q[i]^n.
+
+The same formula defines translation surfaces on a small complex parameter
+disk, even though nonreal parameters need not represent physical mirror
+polygons. This complex extension is used only for analytic continuation.
+Let M_tau be the GL^+(2,R) orbit closure for a real transcendental tau in
+the disk. By Wright's field-of-definition theorem, each local branch has
+homogeneous linear equations with coefficients in a real number field K.
+For such an equation L, the equality
+
+    L(v_0)+tau*L(v_1)=0
+
+has algebraic complex coefficients. Transcendence forces both terms
+L(v_0)=L(v_1)=0. Thus a neighborhood of tau in the parameter disk belongs
+to that branch of M_tau. The whole parameter disk then belongs to M_tau. To see this without
+following one immersion branch, let E be its closed preimage in the disk.
+Near any parameter t_1 in E, proper immersion makes M_tau a finite union
+of homogeneous linear subspaces in our period chart. An affine line meets
+each subspace in no points, one point, or the entire line. Thus E is locally
+either a finite set or a neighborhood of t_1. A boundary point of the
+nonempty interior of E would be a nonisolated point of E, so would also
+be interior. That interior is therefore closed as well as open in the
+connected disk; it is the whole disk. In particular M_tau contains every
+small real parameter and the square-tiled base X_0.
+
+For any second transcendental sigma, this yields X_sigma in M_tau, hence
+M_sigma subset M_tau by closed GL-invariance. Interchanging sigma and tau
+proves equality. There is one orbit closure M_* for ALL sufficiently small
+transcendental real parameters, and it contains the complete parameter disk.
+This statement does not assert the same orbit closure for all irrational
+algebraic parameters.
+
+Wright's Theorem1.1 and Example1.2 give k(M_*)=Q because M_* contains X_0.
+See [Wright, The field of definition of affine invariant submanifolds](https://websites.umich.edu/~alexmw/numfield.pdf).
+
+The original field argument gives rank at least2; Section21.1 strengthens
+this to rank at least3. If it had rank1, the absolute tangent space, defined
+over Q, would be the complexification of a rational real2-plane. The real
+and imaginary parts of omega belong to that plane and are independent.
+After choosing two rational basis vectors and clearing their finitely many
+denominators, all absolute periods would belong to the lattice generated
+by two independent complex numbers. Integration modulo that lattice would
+make X_tau a torus cover, contradicting Section17. That section rules
+out every translation cover of a torus by nondiscrete ABSOLUTE periods;
+it does not restrict branching to one point. This argument uses the
+rational tangent-space theorem; the period Q-span computation alone would
+not justify an orbit-closure rank statement. No upper rank bound follows.
+
+There is also no relative tangent direction in M_*. Every actual source
+zero is a corner lift fixed by the physical halfturn J. Under GL^+(2,R),
+J still has derivative -I. To take a smooth limit, transport J_n to a common
+source using the period-chart markings. These maps are near-isometries
+for a convergent family of flat path metrics. Arzela-Ascoli, J_n^2=1 and
+the differential relation J_n^*omega_n=-omega_n retain a nontrivial
+involution fixing every noncolliding labeled zero in the limit.
+
+On a fixed genus>=2 surface there are only finitely many automorphisms,
+so locally there are finitely many possible induced J-actions. M_* is
+locally contained in the union of their relative -1eigenspaces; each
+irreducible linear branch lies in one such eigenspace. But
+
+    ker[H^1(X,Sigma;C)->H^1(X;C)] = C^Sigma / C
+
+has J-action +1 because J fixes Sigma pointwise. Its intersection with
+the -1eigenspace is0. Hence rel(M_*)=0, and dim_C(M_*)=2*rank(M_*)>=4.
+Adding the interior S/T marks would invalidate this rel0 argument, since
+J exchanges those lifts rather than fixing them. No conclusion about
+marked relative directions is smuggled into the unmarked argument.
+
+**Remaining obstruction.** Including Section21.1, the conclusion is an arithmetic rank>=3,
+rel0 orbit closure, not the entire stratum of canonical quadratic covers.
+The generic full-stratum periodic-point classification cannot be applied
+without proving that equality. A proper arithmetic covering locus can
+still have periodic regular points away from Fix(J). The unmarked tangent
+argument alone says nothing about whether our actual fixed S/T lifts are
+among them. An analogous claim about their marked orbit closure requires
+an explicit marked field-of-definition input as well as a nonzero vertical
+marked tangent; neither is assumed here. Even excluding dark pairs at
+transcendental parameters would still require a separate argument to
+produce the original admissible one-corner midpoint event at t=0.
+
+
+### 21.1 Constant area and D4 symmetry force rank at least three
+
+**Status: accepted by independent tools-disabled Opus review (exit0).** For the
+literal straight-attached pocket slide of this paper, the common unmarked
+orbit closure M_* in Section21 has rank at least3, provided the established
+D4 unfolding and common local-branch hypotheses are retained. This uses a
+symplectic tangent theorem in addition to the prior field argument.
+
+Use absolute real cochains x_0,y_0,x_1,y_1 of Section28, with
+omega_t=x_0+i y_0+t(x_1+i y_1), and write B(u,v)=integral_X u wedge v.
+The four classes are independent in absolute cohomology by the determinant16
+period evaluation in Section28. The real underlying tangent V=p(T_R M_*)
+contains all four. Indeed the local complex line belongs to one branch of
+M_* by Section21; its derivative belongs to T_C M_*. This tangent is defined
+over R, so the derivative's real and imaginary parts belong to T_R M_*.
+Taking the real and imaginary parts of omega_t at two distinct real
+parameters in that same homogeneous local branch puts x_0,y_0 there too.
+This is the tangent of M_*, not the smaller orbit closure of X_0 itself.
+
+There are fixed topological copy symmetries R,K on the unfolding, with
+R orientation preserving of derivative rotation by90degrees and K
+orientation reversing of derivative reflection in the x axis. They persist
+for the real slide and give, for j=0,1,
+
+    R* x_j=-y_j,   R* y_j=x_j,
+    K* x_j=x_j,    K* y_j=-y_j.
+
+Here K is the copy-exchanging anti-affine symmetry; the physical room
+itself need not have reflection symmetry. Explicitly use copies (p,g),
+g in D4, with coordinate g(p), and identify (p,g) with (p,g r_s) along
+physical side s. Left multiplication (p,g)->(p,h g) respects every such
+identification and has derivative h. Choosing h to be quarter-turn or
+x-axis reflection gives R or K for every real t. Their mapping classes
+are locally constant, so their cohomology matrices are fixed in the common
+Gauss-Manin chart. Taking two real t values separates the j=0 and j=1
+formulas; no polygon symmetry at nonreal parameters is asserted.
+R preserves B and K reverses B. In particular
+
+    B(x_0,x_1)=B(y_0,y_1)=0,
+    B(x_1,y_0)=B(x_0,y_1).
+
+The physical room is a fixed remainder with one triangle translated along
+a straight wall. Its area, and hence the eight-copy unfolded area, is
+constant for all sufficiently small real t. Expanding gives
+
+    area(X_t)=B(x_0,y_0)
+      +t [B(x_1,y_0)+B(x_0,y_1)]
+      +t^2 B(x_1,y_1).
+
+Thus B(x_1,y_1)=0 and both equal cross terms vanish. Consequently for
+W=span_R{x_0,y_0,x_1,y_1},
+
+    B restricted to W =
+       [0,A,0,0; -A,0,0,0; 0,0,0,0; 0,0,0,0],
+    A=area(X_0)>0,
+    rad(B|W)=span_R{x_1,y_1},   dim W=4.             (21.1a)
+
+By [Avila-Eskin-Moeller, Theorem1.4](https://arxiv.org/pdf/1209.2854),
+B is nondegenerate on V. A symplectic vector space containing a
+four-dimensional subspace with a two-dimensional radical must have
+dimension at least6. For completeness, nondegeneracy makes the map
+V->rad(W)^*, v->B(.,v)|rad(W), surjective. Its restriction to W is zero,
+so V/W surjects onto a two-dimensional space. Hence
+
+    dim_R V >= 4+2=6,      rank(M_*)>=3.            (21.1b)
+
+This does not read rank from a period-span dimension: the cup-product
+radical forces TWO additional absolute tangent dimensions beyond the
+four-cochain pencil. Thus dim_C M_*>=6 even without rel0; the separately
+established rel0 result gives the equality dim_C M_*=2 rank(M_*).
+It remains an UNMARKED tangent statement. In particular the
+new companion directions need not be vertical motions of the actual marks,
+nor affine images available at a chosen rational slice. No actual midpoint
+event, normalized cylinder flux contrast at the base, full-stratum result,
+or illumination claim follows from this dimension bound alone.
+
+
+## 26. Primitive midpoint events as adjacent MARKED cylinder edges
+
+**Status: event/cylinder formulation and midpoint-offset identity
+accepted by focused review93263, with the corrections below.** This
+reformulates the actual event; it does not prove one exists. Distinguish Sigma_z, the actual zero
+set, from Sigma_c, all physical corner lifts, including regular lifts of
+45/90degree physical corners. The cylinder decomposition in this section
+is relative to Sigma_c, not merely to Sigma_z. In a rational direction,
+a regular marked corner on a closed leaf also cuts that leaf into
+boundary saddle connections. This marked decomposition is finite because
+the base is square-tiled and all these corner marks are rational.
+
+In fact the equal-half and primitive conditions follow from a one-corner
+intrinsic-pi connection between the actual A marks. Its first developed
+half runs from an even-even integer to an integer corner, so has rational
+direction; write its displacement k*w with primitive integer w. If k>1,
+the earlier first integer point is B/C and a physical corner. Hence k=1.
+After the corner, the endpoint A has displacement l*w with l a positive
+odd integer. If l>=3, the point at displacement2w after the corner has
+that corner's B/C class and is another physical corner. Thus l=1. This
+removes a separate LENGTH-matching obligation once corner-free halves,
+the actual endpoint and the intrinsic-pi continuation are established.
+Aligning their direction/prong and reaching that endpoint remain hard.
+
+For a primitive integer vector w and an actual regular A lift s, the
+open segments from s to developed displacements +w and-w contain no
+integer point. Reflection development preserves the canonical integer
+lattice and the A/B/C classes. Thus neither segment meets a physical
+corner earlier. Its endpoint belongs to B or C and is a physical corner
+by rawness. Together they form a marked saddle connection alpha, of
+holonomy2w, with midpoint s. Its endpoints may be regular as points of
+the unmarked translation surface; stopping at ALL physical corner marks
+is essential. This marked saddle connection is unique for the chosen s
+and oriented direction w.
+
+An admissible actual s-to-t primitive midpoint event through corner c
+is equivalent to the following data: the marked saddle connection alpha
+with midpoint s ends at c; a marked saddle connection beta with midpoint
+t starts at c, has the same oriented holonomy2w, and is adjacent to
+alpha on one boundary side of a w-cylinder. The local intervening sector
+has anglepi and is embedded. Conversely those data give the two
+half-edges s->c and c->t, each of holonomyw, with no other physical
+corner. The target is the supplied actual lift t, not any regular A
+midpoint on the boundary. Wall-parallel directions remain excluded for
+the opening proposition. A cylinder boundary can contain shorter edges
+between physical corners; one must require alpha,beta to be consecutive,
+not merely both appear somewhere on that boundary.
+
+A regular midpoint corner c cannot connect distinct physical S,T here:
+its folded continuation reverses and retraces, so after the equal second
+half it reaches the physical source S. Thus for S!=T the shared corner
+is a TRUE zero, although the other endpoints of alpha,beta can be regular
+physical corner marks. In particular it is wrong to conclude that every
+A mark is a midpoint of a saddle connection between ACTUAL zeros of
+length2w. That claim is only valid for the Sigma_c-marked decomposition.
+
+### 26.1 The derivative contains marked midpoint offsets
+
+Orient alpha:d->c and beta:c->e, with holonomy2w at the base. Transport
+these classes and the paths d->s and c->t through the material deformation,
+without claiming their geodesic representatives stay straight. Define
+relative period offsets
+
+    r_s(t)=hol_t(d->s)-hol_t(alpha)/2,
+    r_t(t)=hol_t(c->t)-hol_t(beta)/2.
+
+They vanish at0. With eta=path(c->t)-path(s->c), the exact period identity
+is
+
+    hol_t(eta)=(hol_t(beta)-hol_t(alpha))/2+r_s(t)+r_t(t),
+    delta(eta)=delta(beta-alpha)/2+r'_s(0)+r'_t(0).       (26.1)
+
+This follows by subtracting hol(s->c)=hol(alpha)-hol(d->s).
+One may compute it in relative homology with Sigma_c union {s,t}; the
+auxiliary d/e boundary coefficients cancel in the displayed combination.
+Since c is a true zero, eta itself lies in relative homology with only
+Sigma_z union {s,t}, which is the setting of Section25. Fixed PHYSICAL
+marks need not stay affine midpoints of the transported whole saddle
+connections, so the two r-derivatives cannot be discarded. Moving corner
+terms are retained by this identity; they agree with Section3's full
+reflection-load formula when all paths use the same material labels.
+
+Thus a corner-only cylinder-edge calculation omitting r_s,r_t is not an
+actual-mark detection proof. Section25 supplies a valid common marked
+period setting, but does not force the two required adjacent edges or
+a nonzero right side of (26.1).
+
+### 26.2 Oblivious-point literature does not supply the missing adjacency
+
+An oblivious point lies on no nonsingular closed geodesic. The primary
+papers [Nguyen-Pan-Su](https://arxiv.org/pdf/1712.09066) and
+[Adelstein-Desai-Ji-Zdeblick](https://arxiv.org/pdf/2008.08494) concern this
+unmarked flat-metric condition. Our parity argument stops at physical
+corner lifts, some regular; it therefore does NOT show actual A lifts
+are oblivious on X. A path through a regular physical corner can be a
+perfectly nonsingular geodesic on X. Branching over all such corner
+marks would turn them into actual zeros, but changes the surface and
+requires a new descent argument for the selected pi-sector and actual
+endpoint labels. Even obliviousness on that different cover would not
+by itself say that s and t are consecutive midpoints on one cylinder
+boundary. Those papers are relevant background, not an event-existence
+theorem for this room class.
+
+The34frozen rooms all have I=2 full fans, no boundary indegree0 sources,
+and exactly one merger in Section24's directed tree. This is an exact
+read of existing pocket-fan.json, not a search over rooms. Even this
+one-merger case needs the actual cylinder adjacency just described;
+the cut obstruction of Section24.1 prevents applying the same raw-room
+hypothesis independently on the two sides.
+
+
+### 26.3 Review correction: tangent stability is not slide equivariance
+
+Review93263 accepts the event equivalence and(26.1), but its claim that
+shears preserve the scalar opening determinant is NOT adopted. Preserving
+the marked tangent SUBSPACE does not assert phi*delta=Dphi*delta for the
+particular pocket variation. For the selected base axis multitwists the
+reviewed flux/twist proof gives phi*delta=delta instead. Thus
+
+    delta(phi_*eta)=delta(eta),
+    hol(phi_*first_half)=Dphi*w,
+
+and the relevant determinant is det(Dphi*w,delta(eta)), which need not
+keep its sign or remain zero. The saved seed w=(-12,5),v=(-1,-1) gives
+signed rows-17and223after the prescribed horizontal shear48; this is an
+existing exact control, no new path. The review's equation with BOTH
+vectors transformed would compute a different variation.
+
+Its mod2 observation det(w,v)=0mod2 for odd-odd w,v says EVEN, not ZERO.
+An even determinant can become nonzero or change sign under an even
+integer shear. Therefore its claim that odd-D detection plus axis
+transfer works only at C corners is false. Section5's reviewed
+vector-detection-to-both-signs theorem remains valid for B and C events.
+
+The source lift may be fixed by D4 symmetry, but the target ranges over
+ALL eight actual T lifts. One successful target lift suffices; failure
+for one supplied lift is not a counterexample. Intrinsic-sector corner
+fold factors remain counted in Section3, including the moving D/H loads.
+
+
+### 26.4 Bounded actual-seed existence from the fan tree
+
+**Status: hand proof accepted by independent tools-disabled Opus review
+(exit0); local algebra and prescribed segment controls pass.** Let P be a
+raw strictly simple canonical room with distinct interior A marks S,T and
+W<=26 physical walls. Then there is an admissible connection between the
+ACTUAL marks with exactly one physical C corner at its midpoint. Its two
+developed halves have the same primitive integer displacement, and its
+chosen continuation bounds an embedded intrinsic pi-sector. The direction
+is not parallel to a physical wall. This theorem asserts existence of a
+seed only: its pocket-slide defect may be zero. No assumption of darkness
+or choice of a pocket is needed for this bounded assertion.
+
+Use the fan tree and the charge convention of Sections24 and27.4.
+Section27.4 gives W>=10I+2. The two interior marks imply I>=2; W<=26
+therefore forces I=2, with S,T the only full A fans. Write P_A for the
+number of partial A fans, to distinguish this count from the room P.
+The raw identity is W=14+Q, so Q<=12. The partial degree sum gives
+
+    Q>=2P_A-6,                  P_A<=9.                 (26.2)
+
+Keep just the eight full-incident tree edges, their two full vertices,
+and all b distinct partial neighbors. This subforest H has c=1or2
+components. As in27.4, b=6+c. The two cases are handled below.
+
+**Connected H.** The two full vertices have a common partial neighbor M;
+otherwise this two-source forest would be disconnected. There is exactly
+one such shared neighbor, since two would create a tree cycle. Portal
+neighbors' A centers differ by2 times a cardinal unit vector. The full
+spacing lemma27.1 excludes perpendicular incoming center offsets.
+Consequently, up to a grid symmetry and translation,
+
+    S=(0,0),        M=(2,0),        T=(4,0).
+
+The two incoming portals must enter M at its opposite endpoint C points,
+(1,0)and(3,0). Its contiguous partial fan therefore has m=4,q=0: it is
+one of the two half-stars on the S/T line. Reflect vertically if necessary
+so that it is the upper half-star. Its internal C is c_0=(2,1).
+Rawness forces exactly one portal there, to a partial A fan centered at
+(2,2). The three local C quadrants comprise both lower quadrants and
+exactly one upper quadrant. Thus c_0 is a physical270degree corner.
+
+The physical broken path is
+
+    S -> c_0 -> T,
+
+with no ordinary mirror hits on either open leg. The first leg lies in
+the full S star and the upper-left quadrant of M's half-star; the second
+lies in its upper-right quadrant and the full T star. Neither open leg
+contains an integer point: their coordinate displacement is(2,1)or(2,-1).
+Every physical corner is an integer point, so neither leg hits one.
+
+At c_0 select reflection in its horizontal boundary flank. This flank is
+a wall RAY, with direction right if the upper-right quadrant is missing,
+and left if the upper-left quadrant is missing. Reflecting T in y=1 gives
+T'=(4,2); the developed broken path is S,c_0,T', with both halves(2,1).
+The sector must be checked in the actual cone, since this is a boundary
+corner reflection, not a straight physical traversal. If the upper-right
+quadrant is missing, develop the original physical link as angles
+[pi/2,2pi]. The S germ has angle pi+atan(1/2); the T germ in the adjacent
+copy across the horizontal ray has angle2pi+atan(1/2). The intervening
+arc has lengthpi and stays within the original link plus that adjacent
+copy. If the upper-left quadrant is missing, use the horizontal ray atpi
+and the adjacent copy on the other side; the analogous interval goes
+from atan(1/2)to pi+atan(1/2). It again has lengthpi. Both intervals embed
+in the270degree-corner cone of total angle6pi, and preserve the labeled
+horizontal-flank gluing. This proves an admissible intrinsic continuation.
+The lower-half-star case is its reflection.
+
+**Disconnected H: P_A=9 is impossible.** Here b=8, so P_A is8or9.
+If P_A=9, (26.2)and Q<=12 give equality Q=12, with every partial
+charge equal to its actual degree. The complete local list of such
+partial types is
+
+    m=1,q=1:  in=1, out=0, charge=degree=1;
+    m=2,q=0:  in=2, out=0, charge=degree=2;
+    m=4,q=0:  in=2, out=1, charge=degree=3.
+
+These follow directly from(24.1)and q_A=m except q_A=3 when m=4.
+All partial vertices have positive indegree. Thus the boundary-source
+count Z is0 and(24.3)gives exactly I+Z-1=1 vertex of indegree2.
+Every partial vertex with an outgoing edge has indegree2, so an incoming
+neighbor of this unique merger cannot be partial: that neighbor would
+be a second merger. Its two incoming neighbors are therefore the two
+full vertices. They share a partial neighbor, contradicting disconnected H.
+This rules out P_A=9 without geometric or trajectory enumeration.
+
+**Disconnected H: P_A=8 gives a turning bridge.** All partial vertices
+are already neighbors of a full vertex. The full tree has9 edges and H
+has8. Its sole additional edge joins a neighbor M of S to a neighbor R
+of T. All other six partial vertices have degree1; M,R have degree2.
+Orient this bridge M->R, interchanging S,T for this argument if needed.
+M has indegree1,outdegree1. Formula(24.1)forces its fan type to be
+m=3,q=1 or m=4,q=0. In both types its incoming endpoint C and outgoing
+internal C lie on perpendicular cardinal radii. R has indegree2,outdegree0,
+so it has m=2,q=0: its endpoint C radii are perpendicular too.
+
+Write the three center displacements as
+
+    M-S=2a,      R-M=2b,      T-R=2d,
+
+with cardinal unit vectors a,b,d. The local facts give b perpendicular
+to a and d perpendicular to b, hence d=a or d=-a. The second alternative
+would put T-S=2b, forbidden by27.1. Thus d=a. Normalize by a grid symmetry:
+
+    S=(0,0), M=(2,0), R=(2,2), T=(4,2).
+
+M includes its two upper-left triangles, and both triangles at its
+internal C c_0=(2,1). R is its lower-right two-triangle quadrant.
+The following six FORCED triangles contain the whole segment S->T:
+
+    [S,(1,0),(1,1)],
+    [(2,0),(1,0),(1,1)],
+    [(2,0),(2,1),(1,1)],
+    [(2,2),(2,1),(3,1)],
+    [(2,2),(3,1),(3,2)],
+    [T,(3,2),(3,1)].
+
+They are portions of the given room, not a claim that their union alone
+is a complete raw room. At c_0 the two M triangles occupy both lower
+quadrants and the R triangle occupies the upper-right quadrant. The
+missing quadrant is upper-left, so c_0 is a physical270degree corner.
+The S germ points southwest and the T germ northeast. The angular interval
+from pi+atan(1/2)to2pi+atan(1/2), contained in the physical link[pi,5pi/2],
+is an embedded pi-sector entirely within one physical copy.
+
+The actual straight segment S->c_0->T has primitive equal halves(2,1)
+and no other integer point. Thus it has exactly one physical corner and
+no other wall hit. Reversing this segment if the marks were interchanged
+retains the actual original S and T. All grid symmetries preserve these
+properties. This finishes the bounded seed construction.
+
+**Scope and remaining obligation.** The direction(2,1), and its grid
+images, is neither horizontal, vertical nor diagonal. Both constructions
+satisfy the one-corner and actual-endpoint requirements of Section1.
+They do not imply Q(eta)!=0. In particular a fixed local construction
+can avoid the chosen pocket entirely. The universal goal for arbitrary W,
+and even detection for W<=26, remain open. No seed is inferred merely
+from abstract connectivity: the final two local configurations above
+supply the physical or developed segments and the cone sectors explicitly.
+
+
+### 26.5 Direct actual-endpoint construction from adjacent strips
+
+**Status: conditional hand lemma accepted by independent tools-disabled
+Opus review (exit0), with the qualifications below.** This is
+an explicit sufficient construction without assuming a pre-existing seed.
+It does not assert that the required strip incidences exist in every room.
+Use the integer-torus map of Sections9.3-9.5. Choose a primitive integer
+vector v and an integer vector u with det(v,u)=1. Cut X_0 along the full
+inverse image of the torus v-leaf through0. Each open component is an
+annulus covering the base open annulus. In coordinates x*v+y*u its height
+is1 and circumference an integer m>0. Boundary walks can visit a singular
+vertex several times; retain the specified boundary OCCURRENCES/prongs.
+
+At a specified actual true corner lift p, choose an upper half-plane sector
+and a consecutive lower half-plane sector sharing one v-prong. Their union
+is an embedded2pi wedge in the local cone. Let their open strips be D_+,D_-,
+of respective circumferences m_+,m_-. Use a local lift of p as(0,0)on
+each strip. The upper far boundary has y=1; the lower has y=-1. Suppose
+a specified actual T lift occurs on the upper far boundary at phase
+x=a_t modulo m_+, and a specified actual S lift occurs on the lower far
+boundary at x=a_s modulo m_-. The phases are integers because all these
+points map to0 in the integer torus. Their physical labels are part of
+the premise; an arbitrary A occurrence cannot replace either of them.
+
+For an integer n the two straight halves from p in directions
+
+    -w_n to S,       +w_n to T,       w_n=u+n*v
+
+reach these occurrences exactly when
+
+    -n = a_s mod m_-,           n = a_t mod m_+.       (26.3)
+
+Put g=gcd(m_-,m_+)and L=lcm(m_-,m_+). The congruences have a solution iff
+
+    a_s+a_t = 0 mod g.                               (26.4)
+
+If compatible, all solutions are n=n_0+kL, k in Z. The two open halves
+stay strictly between consecutive integer transverse levels. They meet
+no point over0, and therefore no other physical corner. Their endpoints
+are the specified actual s,t. Since det(v,w_n)=1, w_n is primitive.
+The two chosen half-plane sectors contain these opposite germs; their
+pi arc across the common v-prong is embedded in the supplied2pi wedge.
+Thus reversing the lower half gives an actual admissible one-corner
+S->p->T event with equal developed halves w_n.
+
+This local wedge condition is substantive. Arbitrary two strips incident
+to the same cone point need not be consecutive; their opposite germs
+can be separated by3pi instead ofpi. The selected adjacent occurrences
+avoid that mistake. For a regular physical corner the same construction,
+if compatible, would return to the same physical source by Section26;
+we require a true corner and distinct actual S,T here.
+
+Orient the ordinary absolute strip core classes c_+,c_- along v. They have
+periods m_+*v,m_-*v. Let eta_k be the zero-holonomy relative event class
+(p->s)+(p->t)for n=n_0+kL, transporting the same material labels for Q.
+Increasing n by L adds L/m_+ positive core turns to the upper half and
+L/m_- negative turns to the lower half. Consequently
+
+    eta_(k+1)-eta_k = (L/m_+)*c_+ - (L/m_-)*c_-,
+    Q(eta_k) = Q(eta_0) + k*D,
+    D=L*[Q(c_+)/m_+ - Q(c_-)/m_-].                   (26.5)
+
+The difference is absolute and has zero holonomy. More explicitly take
+Sigma'=pi^-1(0), a finite set including p,s,t, and compute first in
+H_1(X,Sigma'). Its long exact sequence makes H_1(X)->H_1(X,Sigma')
+injective because H_1(Sigma')=0. The closed annulus winding difference
+therefore identifies the displayed ordinary absolute class uniquely.
+Homotopies on a closed strip may pass through its singular boundary
+points; that is permitted for this homology calculation. No auxiliary
+boundary point velocity is assigned. Q is evaluated on these ordinary absolute
+classes and on the actual relative event with p,s,t labels. Both halves
+are allowed to wind within their supplied annuli; this is an exact annulus
+homotopy calculation, not an optical search.
+
+If the two normalized fluxes differ, D!=0. At most one k has zero vector
+defect. For each of the at most four physical wall-direction lines, at
+most one k makes w_(n_0+kL)parallel to that line, since u,v are independent.
+Therefore among any six distinct k at least one gives a non-wall-parallel
+actual event with nonzero vector defect. Section5's separately reviewed
+axis transfer then gives both scalar opening signs. This last step uses
+that transfer theorem, rather than claiming the determinant of w_k and
+Q(eta_k)cannot vanish for all k on the present single affine line.
+
+Changing the Bezout partner to u+h*v shifts a_t to a_t-h and a_s to a_s+h,
+so (26.4)is unchanged. It only reindexes n. Thus the compatibility test is
+independent of this coordinate choice.
+
+**Qualifications.** The two selected sectors are allowed to belong to
+the SAME annulus.
+Then m_+=m_- and c_+=c_- in ordinary absolute homology, so D=0; this
+case cannot supply flux contrast. The identity(26.5)is vector-valued in
+R^2. Its eta_0 includes the material velocity of p if p is a moving
+pocket corner; the absolute increment is unchanged by that fact.
+
+A single actual source lift suffices for physical existence. If a
+prescribed source copy is required, the persistent D4 copy automorphism
+moves the WHOLE configuration to it and takes Q to its D4 image. If this
+symmetry reverses orientation, use v'=-g*v,u'=g*u to restore det(v',u')=1;
+this preserves upper/lower and sends n to-n. No actual S/T label is lost.
+
+**What remains universal.** One must prove the existence of an adjacent
+strip pair with actual far-boundary S/T occurrences, compatible phases,
+and either unequal normalized flux or an already nonzero base defect.
+The fan tree does not yet provide these three facts. This is a direct
+construction criterion, not a proof of universal seed existence or pocket
+detection. When a seed is already supplied and det(v,w)=1, it recovers the
+transfer mechanism of Section9.3 in explicit endpoint coordinates.
+
+
+### 26.6 The shared-neighbor cap pocket is detected directly
+
+**Status: accepted by focused independent tools-disabled Opus review
+(exit0); eight prescribed D4 algebra controls pass.**
+In the connected-H configuration of26.4, suppose the specified literal
+straight-attached one-triangle pocket is exactly the cap attached to M's
+internal C c_0. Its A fan is the fan centered at(2,2)in the normalization
+there. This extra hypothesis requires that fan to have one triangle and
+the literal45/225/270 pocket angles and straight flanks. It is not
+asserted for every cap or for another leaf pocket elsewhere in the room.
+The local conclusion below needs no wall bound once this configuration
+and literal cap are supplied.
+
+The portal of this cap lies on y=1, from c_0 to one of(1,1),(3,1).
+A literal slide translates the cap tangent to that line, with velocity
+u=(1,0)or its negative, after choosing unit parameter normalization.
+The admissible seed in26.4 reflects at c_0 in its HORIZONTAL boundary
+flank, collinear with the portal. This supporting line remains y=1
+throughout the slide. The vertical cap leg at c_0 is the moving pocket
+mirror H; selecting the horizontal flank is essential. The actual
+source and target marks remain fixed. Developing the target across this
+fixed flank gives T'=(4,2), which is fixed as well; the developed midpoint
+is c_0(t)=(2,1)+t*u. The full reflection-load formula of Section3 gives
+
+    Q(eta)=T'_derivative - 2*c_0_derivative = -2*u != 0.
+
+There are no ordinary mirror hits on the two base legs, so there is no
+other mirror-load contribution to cancel this value. Splitting the
+coincident horizontal-flank reflection on the other side of the midpoint
+makes no difference: that reflection has zero translation derivative
+and fixes the horizontal velocity u. The target is the ACTUAL T lift in
+that adjacent copy, not a newly selected lattice point.
+
+With w=(2,1)and u=(1,0), det(w,Q(eta))=2. Thus the base seed itself has
+a nonzero scalar opening row for one sign of the slide. The separately
+reviewed axis-transfer theorem supplies the other sign if required,
+retaining this nonzero vector defect and the actual endpoint fibers. In the upper-left-missing case, one may instead
+develop S across that same fixed flank to S'=(0,2); with T fixed and
+corner image velocity u this also gives Q=-2u. The canonical slide direction
+maps to the direction from c_0 toward the cap's B; both unit signs are
+covered above. All reflected/rotated configurations follow by D4 covariance.
+
+This proves detection for the CENTRAL literal cap pocket of the shared
+neighbor configuration. It does not prove detection for a different
+literal pocket in the same room, the turning-bridge configuration, or
+an arbitrary room. Such a different pocket can leave this short seed
+entirely fixed; that is a limitation of this seed, not a counterexample
+to the existence of another detecting event. The remaining universal
+question is unchanged.
+
+
+
+## 32. Zero-mean cylinder loads and exact overlap detection
+
+**Status: hand derivation prompted by broad Opus theory review;
+independent focused proof review requested.** These are exact identities
+and a conditional test on SUPPLIED strips. There is no cylinder, direction,
+room or event discovery. No universal nonzero test is asserted.
+
+### 32.1 The slide load has mean zero in every rational direction
+
+Let e be a unit rational direction, with maximal cylinders D of heights
+h_D and positively oriented core classes c_D. For either component alpha
+of the absolute pocket slide cochain Q, the closed transverse form
+beta=det(e,hol) is a real linear combination of x_0,y_0. In cylinder
+coordinates(s,tau), beta=d tau. The integral of a closed representative
+of alpha on each parallel core is constant. Consequently
+
+    integral_D beta wedge alpha = -h_D*alpha(c_D),
+    sum_D h_D Q(c_D)=0.                            (32.1)
+
+The second equality follows by summing over the full-measure cylinders
+and using the established21.1 orthogonality of x_1,y_1 to x_0,y_0.
+This is valid in ANY rational direction of the fixed arithmetic base,
+not merely in the two slide-blind axes.
+
+For the integer-torus refined strips in primitive direction theta, write
+n_E for the annulus cover degree. Each has area n_E, circumference
+n_E*|theta|and height1/|theta|. Define the vector-valued step function
+
+    f_theta = Q(c_E)/n_E on E.
+
+Equation(32.1)becomes sum_E Q(c_E)=0, or integral_X f_theta dA=0.
+For maximal cylinder ratios r_D=Q(c_D)/ell_D, it equivalently says
+sum_D Area(D)*r_D=0. Thus the9.2b criterion "normalized fluxes not all
+equal" simplifies here to "at least one core has nonzero flux."
+This detects SOME abstract zero-holonomy cycle; it does not replace the
+actual event obligation. Any nonzero real component of f_theta has both
+positive and negative values, but that does not make any selected pair
+of strips have different averages.
+
+### 32.2 Core intersection is exactly signed overlap area
+
+Let theta,phi be nonparallel primitive integer vectors. Let E,D be
+SUPPLIED refined strips in these respective directions, with cores
+oriented along theta,phi and intersection convention matching the signed
+planar determinant. Then
+
+    <c_E,c_D> = det(theta,phi)*Area(E intersect D).    (32.2)
+
+Proof. Put F(z)=(det(theta,z),det(phi,z)). Its linear determinant is
+m=det(theta,phi), not necessarily positive. The torus leaves through0
+pull back to the integer lines of the two F coordinates. Their complement
+consists of |m| open parallelograms on the torus, each of area1/|m|:
+F(Z^2)has index|m|in Z^2. These faces are simply connected and avoid0,
+so their preimages are isometric open faces. Each lifted face lies in
+one theta strip and one phi strip. E intersect D is the union of exactly
+those faces assigned to both.
+
+Choose generic core levels in E and D. On each such face the two F
+coordinates vary independently over one open unit square; the chosen
+core levels select exactly one intersection. Its sign is sign(m).
+Thus the signed core intersection equals sign(m)times the number of
+common faces, whereas their total area is that number divided by|m|.
+This proves(32.2), including annulus covers of degree larger than1.
+The boundaries have area0. No claim is made that an arbitrary overlap
+matrix satisfying the resulting arithmetic is realizable by a surface.
+
+### 32.3 Four actual event images certify a nonzero average contrast
+
+Retain a SUPPLIED actual one-corner primitive seed eta of half-vector w.
+Choose a symbolic primitive v with epsilon=det(v,w)=+1or-1. Its two open
+halves occupy supplied refined v-strips D_s,D_t. Let their areas/cover
+degrees be n_s,n_t. Fix the common torus-leaf twist coefficient
+kappa=K(d)from9.5 and let tau_v be that pure twist. Its absolute increment is
+
+    z=(tau_v*-I)eta=epsilon*kappa*(c_Dt/n_t-c_Ds/n_s).  (32.3)
+
+This is the9.3 formula with a fixed sign convention. Let gamma be any
+SUPPLIED pure orientation-preserving affine automorphism fixing the
+actual marks and selected prongs. Its derivative A_gamma lies in SL2(Z),
+and it preserves area. It maps these strips to refined A_gamma*v strips
+of the same areas. Choose a supplied theta twist Phi_theta with the same
+kappa, and write N_theta=Phi_theta*-I. For theta nonparallel to A_gamma*v,
+(32.2)and the pure twist formula give
+
+    Q(N_theta gamma_* z)
+       =epsilon*kappa^2*det(theta,A_gamma*v)
+          *[ Avg_(gamma D_t) f_theta - Avg_(gamma D_s) f_theta ]. (32.4)
+
+Indeed N_theta x=sum_E(kappa/n_E)<c_E,x>c_E. Substitute(32.3)and then
+(32.2); summing f_theta over the overlap faces gives the two averages.
+Areas n_s,n_t, not their square roots or circumferences, normalize them.
+The prefactor has a nonzero signed determinant, so a nonzero vector
+average contrast is exactly a nonzero Q value of this SPECIFIC absolute
+increment.
+
+The increment is a signed sum of FOUR actual event classes:
+
+    N_theta gamma_* z
+       =Phi_theta* gamma_* tau_v* eta - gamma_* tau_v* eta
+          -Phi_theta* gamma_* eta + gamma_* eta.       (32.5)
+
+If(32.4)is nonzero, at least one of those four actual images has nonzero
+Q. All retain the supplied actual endpoint labels and embedded intrinsic
+pi continuation by the previously reviewed affine-event transfer. If its
+direction is wall-parallel, the established axis transfer makes it
+non-wall-parallel and supplies either opening sign, without changing Q.
+Thus this is an actual-event sufficient test, not just an arbitrary
+absolute-cycle existence statement.
+
+Conversely, if every actual image of eta in the supplied pure affine
+group is Q-blind, all these averages agree, for every supplied v,theta,
+gamma. This is a necessary separation obstruction, not a proof that any
+particular contrast is nonzero. The finite9.4 family tests much less:
+it keeps the original half-vector's unimodular directions and selected
+conjugacies. General two-step/transported tests require this wider scope.
+
+The broad review's assertion that cylinder cores/twists span the relevant
+absolute tangent at this special arithmetic base is not adopted. Nor is
+its proposed hidden translation symmetry an actual room counterexample.
+What is proved here is zero mean, exact overlap, and the four-event
+certificate CONDITIONAL on a supplied nonzero contrast. Proving that an
+actual bounded seed separates an arbitrary specified pocket remains open.
+
+
+
+PRESCRIBED ALGEBRA CONTROL
+"""Prescribed overlap-margin and four-term arithmetic; no surface discovery."""
+from fractions import Fraction as F
+from pathlib import Path
+import json
+b=Path(__file__).resolve().parent
+# These are formal positive-area tables, not asserted surface data.
+# Each has integer strip areas and a prescribed signed determinant m.
+tables=[(2,[[F(1,2),F(1,2)],[F(1,2),F(1,2)]]),
+        (1,[[F(2),F(0)],[F(0),F(2)]]),
+        (-2,[[F(3,2),F(1,2)],[F(1,2),F(3,2)]])]
+rows=[]
+for m,A in tables:
+ nE=[sum(r) for r in A];nD=[sum(A[i][j] for i in range(2)) for j in range(2)]
+ assert all(x.denominator==1 and x>0 for x in nE+nD)
+ # Scalar x loads chosen to have exact zero area mean; y component is zero.
+ Qcore=[F(1),F(-1)]
+ flux=[Qcore[i]/nE[i] for i in range(2)]
+ assert sum(nE[i]*flux[i] for i in range(2))==0
+ intersections=[[m*A[i][j] for j in range(2)] for i in range(2)]
+ assert all(x.denominator==1 for r in intersections for x in r)
+ averages=[sum(A[i][j]*flux[i] for i in range(2))/nD[j] for j in range(2)]
+ kappa=12;epsilon=-1
+ # z=epsilon*kappa*(core_Dt/n_t-core_Ds/n_s).
+ left=epsilon*kappa*kappa*sum(Qcore[i]/nE[i]*(intersections[i][1]/nD[1]-intersections[i][0]/nD[0]) for i in range(2))
+ right=epsilon*kappa*kappa*m*(averages[1]-averages[0])
+ assert left==right
+ rows.append(dict(signed_determinant=m,areas=[[str(x) for x in r] for r in A],
+  flux_means=[str(x) for x in averages],contrast=str(averages[1]-averages[0]),
+  tested_increment=str(left)))
+assert rows[0]['contrast']=='0' and rows[1]['contrast']!='0'
+# Symbolic four-image coefficient identity, represented on basis {eta,Nveta,Nthetaeta,NthetaNveta}.
+eta=[1,0,0,0];tau=[1,1,0,0];phi=[1,0,1,0];phitau=[1,1,1,1]
+assert [phitau[i]-tau[i]-phi[i]+eta[i] for i in range(4)]==[0,0,0,1]
+out=dict(status='PRESCRIBED_OVERLAP_LOAD_ALGEBRA_PASS',controls=rows,
+ four_event_identity=True,zero_mean_does_not_force_selected_contrast=True,
+ scope='Formal margin/intersection arithmetic only; no overlap table is asserted realizable and no cylinders are computed.',
+ universal_actual_strip_separation='OPEN',optical_discovery_runs=0)
+(b/'pocket-overlap.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2))

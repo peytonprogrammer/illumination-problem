@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "degree_lemma": {
+    "partial_fan_masks_checked": 56,
+    "maximum_partial_cells": 9,
+    "maximum_partial_plus_missing": 9,
+    "maximum_mark_distance": 4,
+    "target_cases": 7
+  },
+  "three_star_patterns": {
+    "checked": 138,
+    "patterns": [
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "independent_three_star": {
+    "status": "PASS",
+    "solutions": 0,
+    "partial_cells": [
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "full_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "local_constraints": 57,
+    "search_nodes": 257,
+    "method": "Independent fan tables and exhaustive singleton-cell CSP"
+  }
+}

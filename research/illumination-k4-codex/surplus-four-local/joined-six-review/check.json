@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "four": {
+    "reflections": 4,
+    "required_count": 15,
+    "forbidden_count": 3,
+    "segment_internal_edge_events": [
+      3,
+      0,
+      0,
+      8,
+      0
+    ],
+    "unfolded_target": [
+      "2",
+      "-10"
+    ],
+    "forward_reverse_sigma": "PASS"
+  },
+  "six": {
+    "reflections": 6,
+    "required_count": 14,
+    "forbidden_count": 4,
+    "segment_internal_edge_events": [
+      3,
+      0,
+      0,
+      11,
+      0,
+      0,
+      1
+    ],
+    "unfolded_target": [
+      "2",
+      "-12"
+    ],
+    "forward_reverse_sigma": "PASS"
+  },
+  "intermediate_corners": "four passes interior(1,-1) requiringD2; six passes interior(1,0) entirelyH",
+  "whole_family_applications": [
+    {
+      "B": "O3",
+      "condition": "D23,Tc5 absent",
+      "reflections": 4
+    },
+    {
+      "B": "O3",
+      "condition": "D23,Tc5 present and Tc4/6 absent",
+      "reflections": 6
+    },
+    {
+      "B": "O3",
+      "condition": "b1 ordinaryTc5, ANY partner awayTc; D4 absent",
+      "reflections": 6
+    },
+    {
+      "B": "H4",
+      "condition": "D23,Tc5 absent",
+      "reflections": 4
+    },
+    {
+      "B": "H4",
+      "condition": "D23,Tc5 present and Tc4/6 absent",
+      "reflections": 6
+    },
+    {
+      "B": "H4",
+      "condition": "b1 ordinaryTc5, ANY partner awayTc; D4 absent",
+      "reflections": 6
+    }
+  ],
+  "source_sha256": {
+    "fourth-surplus-review/mixed-e2-e1/joined-four-check.json": "2a5204d9c577c5d2038a26effbd3ec71010ea35bf299ba6bf158fc05206ab572",
+    "fourth-surplus-review/mixed-e2-e1/joined-four-check.py": "45ce0779e15f6464aad3151b7fddeca52a25af395684d5999026c7e9e100e9bd",
+    "fourth-surplus-review/mixed-e2-e1/argument.txt": "f6473d058e884f5e31589ab3c44826670cb7d4f63b3829df0ac1ee3983131eb0",
+    "fourth-surplus-review/mixed-e2-e1/critical-B.txt": "c124b5d4b529e52fdd191e8e851d5be829869520df959ea70531aa2171100289",
+    "surplus-four-local/mixed-critical-B-review/review.txt": "cf15c0539290a70a8306e7be730ad627ae1d77bbcdd9a8b6c479bd0174ef74ce",
+    "fourth-surplus-review/mixed-e2-e1/joined-four.txt": "c02f5dd428b521af99ba876b2d2d0c3568ea6e2bd4bb3d47459ace80ace9a731"
+  },
+  "checker_sha256": "e46f2a19f259e3f60d9c385e44d631f537a015c5e89262017942ee1a9063b5b3",
+  "limits": "Two supplied fixed paths and conditional support transfer only. Reuses own helper-free engine; no peer checker execution, new room, search or mixed classification review. Four/six ordinaryTc split assumes Tc ordinary or absent, not arbitrary Tc unit."
+}

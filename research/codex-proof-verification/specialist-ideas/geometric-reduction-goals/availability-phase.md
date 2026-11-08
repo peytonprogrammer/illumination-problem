@@ -1,0 +1,23 @@
+# Global availability phase
+
+Work continued after the blocked dark-interception status. Resume the SAME native goals/threads, accounting, results and budget waiver. No new numeric cap. Read programme.md and prior dark-interception-phase.md; this file narrows the next research task. Full completion remains the orthogonal r<=8 actual-pair illumination theorem or an independently verified qualifying actual dark counterexample. Mixed canonical45 remains open separately.
+
+## Decisive task
+
+Prove or rigorously refute a precise GLOBAL AVAILABILITY implication from actual darkness of complete physical endpoint fibers X,Y to an actual usable compatible joint/triangle. Current conditional DI02, index-two flank and axial midpoint lemmas are accepted dependencies, not global existence theorems. Do not require the special unit/time2 premise unless you can prove it; arbitrary first-hit weights and repeated physical corner images are central obstacles.
+
+Before another local lemma, state exactly what existence statement would advance the global proof and why it follows, or what missing step you will attack. A useful weaker availability statement must have a proved connection to illumination or corner growth. State whether it uses r<=8; a W-free necessity can still be useful, but is not the low-wall contradiction.
+
+Author owns NEW construction/availability-* only. Seek one global argument using actual disk geometry and physical reflection quotient. Possible exploratory starting point: extremal compatible X/Y corner chains, with a justified minimization order and proof that minimizing does not destroy the required prong/sector compatibility. This is a suggestion to test, not an assumed well-order or theorem. You may choose another genuinely distinct justified global mechanism. Publish a precise candidate before discovery. Challenge it on known dark Q0/Q100 and relevant lit controls; do not infer the universal claim from these examples. An unproved straightening, endpoint-sheet substitution, or direction concatenation cannot supply existence. If this route fails, identify a genuinely different proof premise when justified; no renamed retired route.
+
+Reviewer owns NEW review/availability-* only. Independently test the weakest availability implication the accepted lemmas actually need, including whether any extremal construction supplies the SAME cone, correct original endpoint lifts, first-hit times and a realizable narrow sector. While author writes, produce an independent necessary-condition or countercontrol argument focused on existence, not another local identity. Coordinate via board, avoid duplicate authorship, and audit pinned author claims with your own reasoning. A countercontrol must match the implication: a lit room cannot refute a darkness-only necessity. Q0 is dark r9 and cannot alone refute an r<=8 premise.
+
+## Guardrails and useful outcomes
+
+Do not equate individual blocked rays, regular finite blockers, group transitivity, a separator, or arbitrary loop representatives with a matching cross-fiber joint. No bounded slope/area/degree/weights, parity-factor classification, or injective corner charges without proof. Identical-direction half-diagonals are not a new neighboring joint. Repeated developed images may be the SAME physical corner. The three parity residues alone do not yield nine corners.
+
+A useful phase result is a proved availability theorem tied to a nontrivial optical consequence, or a rigorous failure of a precise new availability premise. These do not complete the full native goal. Additional conditional identities, receipts and status audits alone are not positive proof progress.
+
+Continue substantive reasoning and reciprocal review autonomously without repeated go/status prompts. No new workers, engines, census, fitting, frozen source edits or git-state mutations. Discovery: one aggregate <=840 seconds per genuinely distinct PREDECLARED hypothesis, including setup/restarts; do not refresh clocks by renaming. Hand proofs and prescribed verification remain allowed. Preserve historical clocks. Explicit resume resets the impasse audit; only three FRESH consecutive genuine impasse turns justify blocked again. Do not count initial context loading or pending necessary review as impasse. Never mark complete for a local result.
+
+Maintain own availability-status.json with fresh get_goal readback, exact objective/status/accounting, candidate, substantive deductions, unresolved implication, clocks and live/pending reviews. Immediately after resumption confirm native goal state via get_goal and save readback. Preserve old phase status/proofs. Send a concise board handoff and reconcile material findings.

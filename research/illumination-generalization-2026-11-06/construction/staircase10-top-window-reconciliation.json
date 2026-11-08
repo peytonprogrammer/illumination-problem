@@ -1,0 +1,129 @@
+{
+  "created_utc": "2026-11-08T07:03:49.320Z",
+  "decision": "ACCEPTED_ST10_B_AND_TRANSPOSE_RECONCILED",
+  "peer_receipt": {
+    "path": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-independent.json",
+    "sha256": "b61b1b9112fc1dc592d1ac0259ec8a81fbfc54a014778da834828cf2ba940224"
+  },
+  "checks": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-top-window-candidate.md",
+      "sha256": "f270e4ca61d0442fab2aace9ee06032769a139dbc867df6bfce4275eceefb533",
+      "current_sha256": "f270e4ca61d0442fab2aace9ee06032769a139dbc867df6bfce4275eceefb533",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-top-window-proof.md",
+      "sha256": "f25cd8639431242e8426ac6784b97e0c1d5eb7e9f268ea25681dda20b215f19c",
+      "current_sha256": "f25cd8639431242e8426ac6784b97e0c1d5eb7e9f268ea25681dda20b215f19c",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/nested-window-proof.md",
+      "sha256": "e3afba40bf31a93d515e200082c5cb76b14af2c917a3e623027a9c4b348894a9",
+      "current_sha256": "e3afba40bf31a93d515e200082c5cb76b14af2c917a3e623027a9c4b348894a9",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.md",
+      "sha256": "cce86a198c003df0d0b3cf90aba6babed87d0e245f32d9662d54a5508956f673",
+      "current_sha256": "cce86a198c003df0d0b3cf90aba6babed87d0e245f32d9662d54a5508956f673",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-top-window-review-request.json",
+      "sha256": "1843d006e75032f486ddc7713b6ebbd5f4ed43f2dc46205b295c9734d6e0e1cb",
+      "current_sha256": "1843d006e75032f486ddc7713b6ebbd5f4ed43f2dc46205b295c9734d6e0e1cb",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-independent-inputs.json",
+      "sha256": "793ed91d072ddff206031c8c9e752e0ecfc8255e479cc4a54245bef7e3e25b38",
+      "current_sha256": "793ed91d072ddff206031c8c9e752e0ecfc8255e479cc4a54245bef7e3e25b38",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-independent-check.py",
+      "sha256": "1ae94792611be246eb51007c492fd1566b4ecb4606e6ae4c08435c97ca332a2c",
+      "current_sha256": "1ae94792611be246eb51007c492fd1566b4ecb4606e6ae4c08435c97ca332a2c",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-independent-check.json",
+      "sha256": "ca03e2251ebd43faf1507d0e73b1c88f4c651c4c9cb8b4c333daba44809e68a8",
+      "current_sha256": "ca03e2251ebd43faf1507d0e73b1c88f4c651c4c9cb8b4c333daba44809e68a8",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-partial-input.json",
+      "sha256": "86fc0608bc1be92cbe87c6d978c332bbab74b0daf64e47d11c0693357422fd5f",
+      "current_sha256": "86fc0608bc1be92cbe87c6d978c332bbab74b0daf64e47d11c0693357422fd5f",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-partial-check.py",
+      "sha256": "daf4cb595a75af265f069582598338392d7a9dc708e382b4fa3d19e756877d18",
+      "current_sha256": "daf4cb595a75af265f069582598338392d7a9dc708e382b4fa3d19e756877d18",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-partial-check.json",
+      "sha256": "f215d3e6802c6f189578f28899bc2b0a4415c4a9539385814740016370c5617a",
+      "current_sha256": "f215d3e6802c6f189578f28899bc2b0a4415c4a9539385814740016370c5617a",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-independent.md",
+      "sha256": "ab9fff0164d619b28fb8039601dc9e3b8114b036e8691f2a7640cd1f437fb869",
+      "current_sha256": "ab9fff0164d619b28fb8039601dc9e3b8114b036e8691f2a7640cd1f437fb869",
+      "match": true
+    }
+  ],
+  "verified_scope": "All-real top-band endpoint pairs under B; transposed right-overhang pairs under dual B; all source bands/seams/strict actual target and original-wall guards",
+  "prescribed_controls": {
+    "cases": 9,
+    "reflections": 464,
+    "wall_guards": 4920
+  },
+  "review_limit": "Internal AI hand proof and prescribed exact physical checks with shared existing geometry/path checker; not formal or external expert verification.",
+  "coverage_receipt": {
+    "path": ".context/illumination-generalization-2026-11-06/review/staircase10-coverage-independent.json",
+    "sha256": "280f30bf3eaf7a57e9ad15fb77521f159a27aa526ef15c364cde6d4adf73a8d7"
+  },
+  "coverage_checks": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-coverage.md",
+      "sha256": "8a7a4f70c4d2143fc48fe59eb19a7d69f0abf2d5f71dac0d28abb4417b9626d1",
+      "actual_sha256": "8a7a4f70c4d2143fc48fe59eb19a7d69f0abf2d5f71dac0d28abb4417b9626d1",
+      "current_sha256": "8a7a4f70c4d2143fc48fe59eb19a7d69f0abf2d5f71dac0d28abb4417b9626d1",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/staircase10-top-window-proof.md",
+      "sha256": "f25cd8639431242e8426ac6784b97e0c1d5eb7e9f268ea25681dda20b215f19c",
+      "actual_sha256": "f25cd8639431242e8426ac6784b97e0c1d5eb7e9f268ea25681dda20b215f19c",
+      "current_sha256": "f25cd8639431242e8426ac6784b97e0c1d5eb7e9f268ea25681dda20b215f19c",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/axis-only-obstruction.md",
+      "sha256": "2441e420d53f4f2b881509559c80dc9d97b8a0e9516cc146a617474ce4299192",
+      "actual_sha256": "2441e420d53f4f2b881509559c80dc9d97b8a0e9516cc146a617474ce4299192",
+      "current_sha256": "2441e420d53f4f2b881509559c80dc9d97b8a0e9516cc146a617474ce4299192",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-coverage-independent.md",
+      "sha256": "dbf99b8e94e5cc15265cc43d0e4cf00235854bf48164d8bd832372b3804edcc9",
+      "current_sha256": "dbf99b8e94e5cc15265cc43d0e4cf00235854bf48164d8bd832372b3804edcc9",
+      "match": true
+    }
+  ],
+  "coverage_calibration_typo": {
+    "peer_text": "B compares397/4 against160",
+    "correct": "B compares1985/16 against160",
+    "effect": "Both fail; symbolic thresholds and nonexhaustion claim unaffected",
+    "peer_correction_requested": true
+  },
+  "full_goal_complete": false
+}

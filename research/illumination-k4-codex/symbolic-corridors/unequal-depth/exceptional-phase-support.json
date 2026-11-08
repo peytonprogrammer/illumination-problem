@@ -1,0 +1,94 @@
+{
+  "status": "COMPLETE_FINITE_EXCEPTIONAL_PHASE_SUPPORT",
+  "progress": {
+    "phase_pairs_checked": 115408,
+    "q_completed": 100,
+    "max_residual_pieces": 50,
+    "guard_clauses_applied": 1970473
+  },
+  "exceptional_phase_count": 2,
+  "exceptions": [
+    {
+      "phase": [
+        5,
+        6,
+        14
+      ],
+      "depths": [
+        "5",
+        "8"
+      ],
+      "closed_failure_pieces": [
+        [
+          [
+            "2/3",
+            "0"
+          ],
+          [
+            "3/4",
+            "0"
+          ],
+          [
+            "33/47",
+            "3/47"
+          ]
+        ]
+      ],
+      "exact_failure_representatives": [
+        [
+          "1195/1692",
+          "1/47"
+        ]
+      ],
+      "axis_boundaries_excluded": true
+    },
+    {
+      "phase": [
+        8,
+        9,
+        14
+      ],
+      "depths": [
+        "8",
+        "5"
+      ],
+      "closed_failure_pieces": [
+        [
+          [
+            "0",
+            "3/4"
+          ],
+          [
+            "0",
+            "2/3"
+          ],
+          [
+            "3/47",
+            "33/47"
+          ]
+        ]
+      ],
+      "exact_failure_representatives": [
+        [
+          "1/47",
+          "1195/1692"
+        ]
+      ],
+      "axis_boundaries_excluded": true
+    }
+  ],
+  "effort": {
+    "start": 1793993542.072184,
+    "deadline": 1793994382.072184,
+    "limit_seconds": 840,
+    "question": "Complete the FINITE exceptional phase support classification outside all l1<=4 relation lines, q<=100, justified by lattice-sampling lemma. Retain every uncovered continuous endpoint cell and prove all other endpoint cells covered. This replaces the disproved stronger norm4 premise with a lines-plus-finite-points reduction.",
+    "q_max": 100,
+    "outputs": [
+      "exceptional-phase-support.py",
+      "exceptional-phase-support.json"
+    ],
+    "state": "active"
+  },
+  "frozen_helper_sha256": "5f396c07f70e9398af03d0c3fca17bb4f5afe72a5d16dd650d7acb3610f2f3c1",
+  "scope": "Finite q<=100 outside short relation lines. Combine ONLY with independently reviewed lattice-sampling lemma for unbounded conclusion. Full room remainsopen."
+}

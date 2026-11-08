@@ -1,0 +1,95 @@
+Independent review: centered-N three-reflection path and six-path complement
+Codex01a18403 — 4 November 2026
+
+VERDICT: ACCEPT critical-L-continuation.txt sections1–3 as a conditional
+optical family lemma, without corrections. This accepts the centered-N
+partner cover when N is exactly56, D is ordinary/empty, and B is ordinary
+B+. It does NOT independently accept the underlying global classification
+of seven L roots or its count/repair tables. No conclusion about the full
+surplus-four layer or universal minimality follows.
+
+1. Independent hand derivation
+
+With actual S=(0,0), launch(-d,1) into roof N56 through(-d,1).
+Intersection with y=x+2 gives A=(-2d/(1+d),2-2d/(1+d)).
+Reflection in that line sends(-d,1) to(1,-d). Intersection with y=-x+2
+then gives B=(2d/(1-d),2-2d/(1-d)); its reflection sends(1,-d) to(d,-1).
+The exit at height1 is(3d,1). For0<d<1/3 both bounces and the exit
+are strict inside the roof sides/base; d=0 would hit the apex and d=1/3
+the right base corner, so neither boundary value is permitted.
+
+The next floor point is(5d,-1). To use the ordinary U-floor segment we
+also need1<5d<2, so the combined gate is1/5<d<1/3. With D2 absent,
+this floor reflects(d,-1) to(d,1). At target height2, x=8d.
+The actual target T=(2,2) therefore forces d=1/4, strictly within that
+gate. The precise path is
+ (0,0),(-2/5,8/5),(2/3,4/3),(5/4,-1),(2,2).
+The three finite mirrors are [(-1,1),(0,2)],[(0,2),(1,1)],
+[(1,-1),(2,-1)]. All reflection points are strict interior points.
+Reverse reflection of actual T gives(-2,8), a positive multiple of the
+initial direction. This endpoint computation is supplemented by the
+physical whole-support check; collinearity alone is insufficient.
+
+2. Support and why no first-wall or corner gap remains
+
+The exact checker independently reconstructs all11 required and3 forbidden
+triangles from the declared path. The required set lies in H+N56.
+The forbidden set misses the maximum H+N56+full L/B/E/Tc/R +
+(D sectors0,1,3,4,5,6,7). Thus every support between that minimum and
+maximum preserves the path. The maximum is a support envelope, not an
+assertion that filling all those cells gives a valid model room.
+
+Every open segment is partitioned at canonical edge-line crossings;
+all triangles incident to each crossing and interval midpoint are
+required occupied. This makes the open segment interior and rules out
+an earlier wall/corner. At each bounce the occupied half-neighborhood
+and absent half-neighborhood give the declared finite mirror. This
+uses the historically shared guard_checker helper, read for this review;
+it is not a second implementation of that helper. Local reflection
+arithmetic, finite mirror identity, strict contacts, first actual target,
+reversal, sigma and endpoint unfolding were rechecked independently.
+No new room was assembled and no discovery search ran.
+
+3. Exhaustive ordinary-D complement
+
+An ordinary D cell is empty, sector1(D+) or sector2(D-). If sector2 is
+absent, the new three-path maximum includes the entire possible D cell.
+If sector2 is present, ordinary exclusivity leaves exactly sector2, so
+use the independently accepted six-path from critical-L.txt7b.
+I recomputed its15 required/5 forbidden triangles here. Its minimum is
+H+N56+D2; its maximum also permits full L/E/Tc/R and B1. Hence all
+allowed L shapes and ordinary R choices are harmless. The lower B2
+triangle is absent under ordinary B+, preserving its first source-floor
+mirror. D1/D3 are absent under ordinary D-, preserving the cap mirrors.
+
+This is an exhaustive split only because D is ordinary/empty. It does
+not prove a statement with arbitrary D-root fans when D2 is present.
+The first path's broader D envelope must not be applied to the second.
+The peer makes this restriction explicitly. Likewise N must remain
+exactly56; adding N4 or N7 destroys roof mirrors. Negative controls
+confirm D2 spoils three, and B2 or D1 spoils six.
+
+The peer uses an earlier forcing lemma to assume ordinary B+. This
+review need not reprove that lemma: if B1 is absent, the inherited
+one-reflection path S,(1/2,-1),T stays in H with its single mirror
+preserved. Thus the centered-N optical dispatch can also start with
+that accepted case, then assume B1. No replay or new discovery of that
+inherited path was undertaken here.
+
+4. Result and remaining obligations
+
+Every stated centered-N partner connects actual S/T within six reflections;
+the D2-absent subfamily needs only three. Sigma with time reversal
+transfers the same conditional result to the corresponding orientation.
+This accepts a whole conditional family, not merely one example.
+
+Not reviewed: continuation section4's B-unit-six path; section5's updated
+count of eleven inward descriptions; critical-L global seven-form/count
+classification and its two531 exchanges; root/leaf/noncritical claims.
+The peer's Beast review remains independent and separate.
+
+Reproduce:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/peer-roof-three-independent/check.py
+Receipt: check.json. No peer checker execution, completed-room construction,
+cap-assignment enumeration, archive retrieval, solver, worker, ray/direction/
+reflection-word discovery or formal/expert verification.

@@ -1,0 +1,61 @@
+# Audit: elementary angle lemma and quantifier scope
+
+**Verdict:** The lemma is correct, given one implicit hypothesis it should state. The quantifier section is correct. Small corrections are listed at the end.
+
+## 1. Turning identity
+
+For a strictly simple polygon, the exterior turnings sum to 2π:
+
+Σ (π − α_i) = 2π.
+
+With α = mπ/4, each corner contributes (4−m)π/4. Multiplying by 4/π gives
+
+3n₁ + 2n₂ + n₃ − n₅ − 2n₆ − 3n₇ = 8.
+
+The coefficients are correct.
+
+- Smooth π points (m=4) contribute 0, so omitting them is valid.
+- m=0 and m=8 are excluded by strict simplicity.
+
+**Implicit hypothesis:** every physical corner of the room must have angle in (π/4)ℤ. If the room's other corners can have different rational angles, the identity has extra terms and the case split is incomplete. State this as an explicit assumption on the room class.
+
+## 2. Case analysis
+
+**Case n₃ ≥ 1.** Take the pocket 45° corner and any 135° corner. They are distinct because their angles differ. The sum is π = (2−1)π. ✓
+
+**Case n₂ ≥ 2.** Two distinct 90° corners sum to π. ✓
+
+**Case n₃ = 0 and n₂ ≤ 1.**
+- Using n₅ ≥ 1 and n₆ ≥ 1: 3n₁ + 2n₂ = 8 + n₅ + 2n₆ + 3n₇ ≥ 11.
+- Since 2n₂ ≤ 2, this gives 3n₁ ≥ 9, so n₁ ≥ 3. ✓
+- Take two distinct 45° corners and the 270° corner. They are distinct because n₁ ≥ 2 suffices and the 270° corner has a different angle. The sum is 2π = (3−1)π. ✓
+
+**Coverage.** The three cases are exhaustive: either n₃ ≥ 1, or n₃ = 0 with n₂ ≥ 2, or n₃ = 0 with n₂ ≤ 1. Multiplicity is counted by physical corners, and every chosen S is a set of distinct corners.
+
+**Properness of S.** S is never the whole polygon. The full angle sum is (n−2)π, not (n−1)π. Also, the pocket's 225° corner is never in S.
+
+**Consistency with Theorem 1.2's genus-0 clause.** Write k = 4 and α_i = πa_i/k, so the order is a_i − k. Then
+
+Σ_S (a_i − k) = −k ⇔ Σ_S α_i = (|S|−1)π.
+
+So the corollary's hypothesis is exactly the subset-sum −k condition. The 225° corner gives a = 5 with gcd(5, 4) = 1, so the differential is primitive with k = 4. Since k is even, "as big as possible" means the quadratic-double locus. Your text already says this.
+
+## 3. Precise answers
+
+| Question | Answer |
+|---|---|
+| Is any literal pocket room missing its 45/225/270 angles? | **No**, under the stated assumptions. This requires the pocket's three vertices to be distinct physical corners with exactly those angles, not merged with adjacent room vertices. Strict simplicity plus the straight-flank assumption should guarantee this. If the room-class definition allows a pocket vertex to coincide with a room corner, the n₁, n₅, n₆ ≥ 1 premise needs restating. |
+| Does Corollary 1.3 apply to the full angle family? | **Yes**, for each angle family realized by a room in the class, given the corollary's other hypotheses as stated in the source. |
+| Does it apply to this chosen line? | **No.** |
+| Does "almost every" imply anything for all transcendental parameters on a rational period line? | **No.** A measure-zero exceptional set can contain the entire line. Transcendence of the parameter does not help if the whole line lies inside an exceptional invariant subvariety. |
+
+## 4. Corrections and tightenings
+
+1. **State the (π/4)ℤ assumption** on all room corners explicitly. This is the only real gap in the lemma.
+2. **Case 3 needs only n₁ ≥ 2.** Saying n₁ ≥ 3 is fine, but the weaker bound is what is used.
+3. **Say "a 270° corner" rather than "the pocket 270° corner"** in case 3. Any 270° corner works, so the argument does not depend on which one is picked.
+4. **The final paragraph's framing is correct and should stay as written.** The missing ingredient is a proof that this specific line is not contained in a proper invariant subvariety, or a direct endpoint construction.
+   - Do not replace it with "rank ≥ 3 ⇒ full locus" or "generic ⇒ line."
+   - Do not suggest that transcendental parameters avoid exceptions. No such argument is supplied here, and none is implied by Corollary 1.3.
+
+No geometric enumeration or periodic-point claims were used in this review.

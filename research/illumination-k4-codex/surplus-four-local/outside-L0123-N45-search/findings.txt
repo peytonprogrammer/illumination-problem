@@ -1,0 +1,65 @@
+Core THREE and sigma: closes L0123's last outside-C row
+Codex01a1a00f, 5 November 2026
+
+STATUS: Parent exact/hand proof PASS, independent challenge requested.
+One bounded search ONLYH+L0123+N45+B1+E4+Tc5,D/Rempty. Geometryfirst
+simple20walls,33tiles,J2,sN4,Q8,k6,Delta4, interiorA exactlyS/U/T.
+STOP firstcandidate(2,3), THREE after30directions/29cornerstops, about0.0004s.
+No replacement room, second pattern or unused-budget reuse. Earlier two
+N45square/rectangle direct prescriptions failed and are not used.
+
+1. Direct core trajectory
+
+Launch(d,1), reflect on the positive source ceiling at(d,1), then on the
+bare Ufloor at(3d,-1), then on the bare Uright at(3,3/d-4). The final
+up-left line reaches height2 atx=6-6d. ActualT requires6-6d=2,d=2/3.
+The sufficient interval3/5<d<3/4 gives strict0<d<1,1<3d<3,
+0<3/d-4<1, and1<6-5d<3 at the final U/T crossing y1.
+
+Exact path S,(2/3,1),(2,-1),(3,1/2),T.
+At(2,-1) the contact is SMOOTH180, strictly inside the actual maximal
+floor(1,-1)--(3,-1). It is not a corner and is not an interior portal.
+The absence of BOTH D1/D2 is required to keep this straight floor.
+Own frozen polygon replay verifies the strict mirror and every firstwall.
+ActualT unfolds to(4,6), aligned with launch(2,3); firstT/noSrevisit/
+reverse/sigma and complete open-leg incident support PASS.
+
+U10 lies entirely inside H. Z4=D1,D2,R3,N6.
+FullL/B/E/Tc and all otherD/R/N sectors are allowed, with no remote blocker.
+This is a whole support implication, not a claim that its maximum is a
+valid room. Four separate blocker-filling controls reject.
+The path never enters N45 or L0123. The original N45 partner matters only
+by omitting the N6 ceiling blocker and satisfying the structural table.
+
+2. Sigma core three
+
+Sigma with time reversal also has minimumH. Its blockers are
+D2,R3,R4,N7. Exact path and full support are separately recomputed; actual
+image(6,-4). The transformed path is legal with all extraL/B/E/Tc support
+and the specified D/R/N omissions. No second room or search is constructed.
+
+3. Five exact outside-C transfers
+
+ - L0123+N45+B1+E4+Tc5,D/Rempty fits directthree.
+ - L7012+N45+B1+E4+Tc5+R4 fits directthree.
+ - L7012+N45+B1+E4+Tc5+D1 fits sigmathree.
+ - L7012+E45+B1+Tc5+N5+R4 fits directthree.
+ - L7012+E45+B1+Tc5+N5+D1 fits sigmathree.
+These are necessary table descriptions, not counted valid rooms.
+
+The other L7012 E45/N45 One-DR options D2 andR3 remain blockers in BOTH
+orientations and are NOT covered. The Ecenter D2/R4, D12/R3, D23/Rempty,
+R23/Dempty rows likewise remain separate. See the new static frontier
+reconciliation for the complete local outside-C bookkeeping.
+
+Combining the first transfer with the new D12/R34 two paths and earlier
+accepted B/E/T/centeredN covers gives a PARENT wholeL0123 bound<=8.
+Independent review of the new two/three is still required before counting
+that whole result as accepted. L012 is covered by the older<=15 routes
+and accepted centeredB/E additions. No fullcriticalL or Delta4 theorem.
+
+[done parent] Corethree/sigma,10U4Z, smoothfloor/firstT/reverse/sigma PASS.
+[done parent] FIVE exact outside-C transfers.
+[waiting on Codex01a18403] Independent three/smoothfloor/five transfers.
+[in progress] Remaining outside-C L7012 andotherlocal/mixed/remoteDelta4gaps.
+Next move: independent review; remainingL7012 proof scope separatelyclaim.

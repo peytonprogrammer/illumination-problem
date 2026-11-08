@@ -1,0 +1,43 @@
+Full independent replay of the frozen k<=6 certificate packet
+
+[done] Codex, 2026-11-02. PASS: all 193,480 saved guards and all 61 final I2/I3 contradiction proofs. Zero failures. Final receipt identities and every input hash were rechecked after all replays. See final-binding.json and summary.json.
+
+Scope
+All 52 guard source files named in the complete provenance pass (193,480 saved records), plus all 61 final I2/I3 contradiction certificates. The three separate I4 geometric contradiction proofs already have full independent replay receipts in k6-i4-review/check.json. No new trajectory, direction, word, room, optical guard or SAT solution is sought. Source inputs are read-only.
+
+What is independently checked
+The frozen guard-checker.py is a copy of Codex's previously independently written persisted-replay/audit.py, not Opus's tracer or guard checker. It uses exact rational arithmetic. For each supplied segment it partitions at every canonical edge-line crossing and forces all triangles incident to interior crossings and interval midpoints. For each supplied bounce it verifies specular reflection in exactly one allowed wall direction, requires both adjacent path arms on the same wall side, requires every incident triangle on that side, and forbids every incident triangle on the opposite side. This makes the hit a smooth wall point and excludes true corners. Endpoint A stars are forced full. The required/forbidden sets must follow from the saved guard and those stars. If a forbidden tile belongs to an endpoint star, the guard premise is impossible and its implication is vacuously sound; this is reported explicitly. Whenever a generating room is present, its agreement with the guard and path is additionally checked.
+
+The two path workers reuse those pure functions with bounded memoization caches. This changes memory use, not arithmetic or acceptance rules. Four malformed controls (wrong target, missing required tiles, missing forbidden tiles, invalid reflection) must be rejected before the library replay proceeds.
+
+DRAT checks invoke the standard drat-trim binary independently on each saved final CNF/proof pair, requiring both successful exit and s VERIFIED. These are independent executions of an existing proof checker, not a separately implemented second proof checker. Neither a producer log nor an UNSAT solver status is accepted as the replay outcome.
+
+Binding and interruption
+manifest.json fixes each guard file hash and record count, each CNF/proof hash, both checker hashes, and the runner hash. Per-file guard checkpoints record the verified prefix count; a PASS requires the full expected count and a post-run input hash check. Existing checkpoints are reused only under the same input/checker/runner binding. Proof receipts record the precise CNF/proof/checker hashes and are saved only after replay and post-run hash verification. Guard and DRAT logs are separate, so the independent processes do not write the same log.
+
+Limits
+These replays do not independently prove the mathematical finite-case census, geometry necessity, arithmetic completeness or guard-to-clause transformation. Those have separate audits. Full replay does not enlarge the restricted theorem, establish universal 22-wall minimality or establish historical novelty.
+
+Guard replay completed
+All52 files passed, covering193480/193480 records, with zero failures. Totals: {"checked": 193480, "reflections": 3363038, "room_checks": 17879, "vacuous": 0, "vertex_bounces": 160831}. Contradiction replay subsequently completed too; see the final result below.
+
+Final result
+All 52 guard files passed: 193,480 records, 3,363,038 reflections and 160,831 integer-point wall hits. All 17,879 records containing a generating room passed the additional room-agreement check. No implication was accepted by the vacuous endpoint-star case. All four malformed guard controls were rejected.
+
+All 61 final I2/I3 CNF/DRAT pairs were independently replayed with successful exit and s VERIFIED. Total proof input: 8,749,278,597 bytes. The separate three I4 geometric refutations retain their earlier complete independent replay at k6-i4-review/check.json. There are no remaining sampled physical-guard or sampled I2/I3 contradiction replays in this frozen packet.
+
+The final large proofs were scheduled by finish-proofs.py on distinct files. Only the serial Python coordinator was temporarily paused; its active verifier continued. Three companion workers used unchanged replay.py on disjoint pending entries. The coordinator resumed, recorded its completed proof, and skipped companion-completed entries. Both coordinators exited successfully. No proof was weakened or changed; the standard checker and all input hashes remained fixed. Summed per-proof wall durations are not total elapsed duration because the final jobs overlapped.
+
+Final reconciliation matched every expected guard/proof receipt by identity, checked its input/checker binding and full expected record count, read every proof's VERIFIED log and rehashed every guard/CNF/proof input. All matched. See final-binding.json.
+
+The optical checker is independently written relative to Opus's guard checker. The contradiction checks are independent executions of the standard drat-trim implementation, not an independently implemented second DRAT checker. Python, exact integer/rational arithmetic, the checker programs and file/hash transport remain trusted.
+
+What this closes
+Combined with the separate full clause provenance reconstruction, arithmetic extension proof accepted by Opus, and earlier mathematical coverage/geometry audits, this removes the earlier reliance on sampled independent path/proof replay. It strengthens validation of the restricted k<=6 exclusion, not its mathematical scope or historical novelty. Opus's requested hand review of the complete provenance checker remains pending; this replay does not impersonate that review.
+
+Reproduction
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py init
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py guards
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py drat
+ python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py status
+Existing matching receipts are reused. An independent fresh replay requires an owned output copy with adjusted paths, retaining the frozen source inputs. The scheduling helper is optional and unnecessary to verify the result.

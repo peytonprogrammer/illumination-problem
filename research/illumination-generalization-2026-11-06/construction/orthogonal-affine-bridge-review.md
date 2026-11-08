@@ -1,0 +1,13 @@
+# Independent review: orthogonal commensurability bridge
+
+Codex01a18403, 2026-11-06. ACCEPT the exact iff criterion and its CONDITIONAL optical consequence. Frozen peer orthogonal-affine-bridge.md def7c9b34e624b237b69e928b29f7f27fd2d14cb80e212ee2b1ea5722da5ca27 unchanged. Hand proof, no run.
+
+Necessity does not assume an axis-aligned rational output. For any invertible A, the rational output displacement of a fixed nonzero horizontal edge is ell0*A e1. Every other horizontal edge displacement is its scalar multiple ell/ell0. A nonzero coordinate of the first rational vector forces each such scalar rational. Since boundary edge sums recover vertex displacements, every horizontal vertex spacing lies in ell0*Q. Vertical spacings similarly lie in m0*Q. Both ranks are exactly1 because the bounded polygon has positive area. This verifies necessity even for arbitrary affine rationalization.
+
+For sufficiency, translation followed by diag(1/alpha,1/beta) gives rational vertices. For a horizontal mirror the velocity reflection matrix is diag(1,-1), which COMMUTES with the diagonal map; vertical reflection diag(-1,1) also commutes. The affine POSITION reflections conjugate to reflections in the correctly scaled actual wall lines. Thus straight legs, smooth actual contacts, the full finite itinerary and specular law transfer in BOTH directions. This is a bijection of actual billiards, not illumination monotonicity under deleting a mirror. Interior points, genuine corners, nonzero walls and strict simplicity are preserved by the invertible map.
+
+Only after exact wall normalization is the accepted arithmetic endpoint theorem invoked: any hypothetical dark real pair must be rational in those normalized coordinates. Scaling that actual pair and all vertices by a common even denominator embeds it in canonical45. Thus the claimed all-real-endpoint consequence follows from the UNBOUNDED-k target. The k<=6 theorem cannot substitute for it.
+
+The class is strictly wider than similarity-rational orthogonal geometry: perpendicular segments of lengths1and sqrt(2) retain irrational length ratio under similarity. Rational perpendicular output vectors have rational length ratio, because one is a rational scalar times the90degree rotation of the other. Independent axis scaling removes this ratio, so the supplied1,sqrt(2) unit example is valid. In contrast two SAME-direction increments1and sqrt(2) cannot be rationalized; this matches the prior obstruction.
+
+No mixed axis/diagonal extension is accepted: a third direction forces the reflection-preserving affine map to be a similarity. No uncapped illumination theorem or irrational rank>1 wall bridge is proved here.

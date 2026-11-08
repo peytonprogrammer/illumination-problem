@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "kind": "prescribed exact constructor and actual-wall checks; not discovery",
+  "fixtures": [
+    {
+      "regime": "round_source",
+      "tau": "95/3",
+      "z": "25/6",
+      "w": "-1/6",
+      "n": 2,
+      "K": "36",
+      "Ht": "1",
+      "segments": 26,
+      "contacts": 25,
+      "all_actual_wall_guards": "PASS"
+    },
+    {
+      "regime": "round_exit",
+      "tau": "318/17",
+      "z": "-5/34",
+      "w": "-41/34",
+      "n": 1,
+      "K": "132",
+      "Ht": "1",
+      "segments": 33,
+      "contacts": 32,
+      "all_actual_wall_guards": "PASS"
+    },
+    {
+      "regime": "round_source",
+      "tau": "67/5",
+      "z": "2/5",
+      "w": "-9/10",
+      "n": 2,
+      "K": "8",
+      "Ht": "1",
+      "segments": 21,
+      "contacts": 20,
+      "all_actual_wall_guards": "PASS"
+    },
+    {
+      "regime": "round_exit",
+      "tau": "19/4",
+      "z": "-5/4",
+      "w": "-1/2",
+      "n": 1,
+      "K": "4",
+      "Ht": "0",
+      "segments": 4,
+      "contacts": 3,
+      "all_actual_wall_guards": "PASS"
+    },
+    {
+      "regime": "round_exit",
+      "tau": "81/4",
+      "z": "-7/8",
+      "w": "-5/8",
+      "n": 1,
+      "K": "20",
+      "Ht": "1/2",
+      "segments": 22,
+      "contacts": 21,
+      "all_actual_wall_guards": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/staircase-window-check.py": "70be2af11e78c7f0b2a69f829a7396ffc61513d27440d9484a439118c5454ba6",
+    "<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/staircase-window-proof.md": "7b2a14e41e8d9183ddf46b915c85483a2bad0a91106d38c2af2ee0e006c2bd6b",
+    "<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/T-whole-check.py": "b3df428299a752a900ac63514b70fe04d3ef9d02e474309315608b31341ae613"
+  },
+  "within_original_A11_deadline": true,
+  "ended_utc": "2026-11-06T22:48:11.743086+00:00",
+  "whole_goal_complete": false
+}

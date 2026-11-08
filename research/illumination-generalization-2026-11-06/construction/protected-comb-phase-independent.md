@@ -1,0 +1,13 @@
+# Independent hand acceptance: strict inner-mouth phase repair
+
+ACCEPT the full sufficient class in protected-comb-phase-supplement.md: any two selected teeth with equal heights and equal horizontal actual-mark depths, arbitrary interior vertical offsets, and the stated depth inequality. Extra teeth may be anywhere. This is hand review plus source-pin validation; the five reported numerical controls were not rerun here.
+
+Let delta=|b_s-b_t|<u. The sufficient depth bound makes Z_minus positive: D*(H-delta)/2 exceeds c*(u+delta)*(u-delta/2)/(u-delta), which is at least c*u and strictly exceeds c*max(b_s,b_t). Also 0<Z_plus-Z_minus=c*(b_s+b_t)<2u*c. Thus both cannot have zero residue modulo2u*c. The chosen sign therefore produces a strictly positive residue, while the floor gives residue strictly below the period. Substitution into the matching equation yields min(r_s,r_t)=(residue)/(c+D) and |r_s-r_t|=delta. The same depth bound gives max(r_s,r_t)<u. Both portals are genuine strict mouth interiors, not just allowable smooth outer endpoints.
+
+For the minus sign, the initial unfolded source ordinate is -b_s and the unfolded velocity is up/left. Folding produces the actual down/left launch, then the j=0 floor reflection after strictly positive horizontal travel b_s/tau. Contacts j=0..2k give an odd2k+1 reflection count and end with the required up/left velocity. Every contact has actual x>c since the final strict portal residual remains positive. The formula is valid at k=0, with one positive-time floor contact. The plus branch has2k contacts and the previously verified sign. All contacts lie before the actual far tooth wall.
+
+The spine path has only the actual x=0 reflection and stays strictly at x<c otherwise. Its left contact has ordinate between l and l+H, hence strictly between the global spine ends. Its two portals lie strictly inside their actual teeth. No artificial horizontal spine cut is used. The reflected reverse upper path supplies the exact target and matching velocities, with4k+1 or4k+3 total reflections. Any other teeth are avoided, including every genuine reflex vertex created at their mouths.
+
+For the sixteen-wall control, c=D=u4,H44,b_s=b_t2 gives Z_plus96 (zero residue mod32), Z_minus80 (residue16), k2,tau5 and r_s=r_t2. Thus the new path has eleven smooth reflections and the actual target; the original zero-portal path remains invalid. This proves the claimed repair by direct arithmetic, not by accepting a near-corner limit.
+
+The hypothesis on depths is essential to this proof. Neither arbitrary independent depths nor arbitrarily shallow equal depths, unequal tooth heights, all comb pairs or the universal W21 theorem is accepted. All six frozen source hashes are current.

@@ -1,0 +1,11 @@
+# Independent full hand acceptance: A37 actual seam extension
+
+ACCEPT the frozen A37 D0 supplement. Actual midpoint seams are interior points, and no seam is treated as a mirror. The original D>0 packet remains unchanged.
+
+With normal depth0 its floor is identically0 and its residue exactly1. Thus the stationary map is Phi=(h+floor(w*tau+1/2))/(w+c). Positive start, bound and finite-output monotone termination follow exactly as in A32; the first stationary value is not a jump of the only varying floor. The far residual is strictly in(0,2) and m=w*tau-n is strictly in(-1/2,1/2). Integral w*tau gives m integral, hence0, and the converse follows from its formula. The swapped charts have the same slope and opposite offsets, as in the original proof.
+
+A far-only virtual start at c+2w folds to the actual interior source seam c. Its physical initial motion is rightward into the selected tooth, at its strict middle ordinate. The normal source's empty arm starts leftward into the core. The empty target arm simply terminates at its actual strict seam. No division by D, outside initial direction or boundary-gliding path is introduced. Every far-corner event would require w*tau odd integral and is excluded by nonintegrality; the source and target remain the exact original points. Any earlier target can be used by truncation along already smooth contacts.
+
+At resonance the stationary identity gives c*tau=h. Integral w*tau then requires c|hw for integer parameters. Hence c not dividing hw is a sound sufficient illumination condition, although divisibility itself proves neither resonance of the first chosen slope nor darkness. In particular c even,w1,h odd satisfies it. Vertical reflection exchanges the two protected sides of a mouth endpoint. No global room symmetry is required.
+
+The previously executed own exact checker includes three explicitly separated D0 cases at c2,4,6. It confirms the nonresonant actual far-wall path, initial seam direction, smooth corner guards and actual target. Its full six-row counts are42 reflections and912 wall-leg guards; this supplement adds no invented replay count. The all-real proof is this hand argument and the accepted midpoint foundation, not finite sampling.

@@ -1,0 +1,417 @@
+Independently challenge this restricted illumination proof and its interval checker. No tools. Keep the review under1400words. Check both explicit reflection products, source/target images, the positive-epsilon corner-clearance formula and interior wedge, the negative-epsilon intended reflection near a270degree corner, the whole-word continuity argument, the finite polynomial inequalities guaranteeing first-hit order and no other-wall intersections, the simplicity/interior proofs, and the general q>2p rule. Distinguish the hand proof for sufficiently small parameters from the machine-certified explicit radius. Find any missing optical assumption or unnoticed contact. Check the base parity argument. The geometry and two words are specified, so do not interpret this as a ray search. Assess how much this actually advances the general sign theorem. State ACCEPT/CORRECT/REJECT and separate verified algebra from unexecuted numerical replay.
+
+FILE ear-hand-proof.md
+# A hand opening mechanism for one ear family
+
+[done] Explicit unfolding argument and exact interval certificate.
+[in progress] Independent mathematical review.
+
+## The family and the claim
+
+Use the counterclockwise polygon with the following vertices, numbered 0 through 24:
+
+```text
+0:(0,0)    1:(1,0)    2:(1,1)    3:(2,2)    4:(1,2)
+5:(1,3)    6:(2,4)    7:(1,4)    8:(1,5)    9:(2,6)
+10:(1,6)   11:(1,7)   12:(0,8)   13:(0,7)   14:(-1,7)
+15:(-2,6)  16:(-1,6)  17:(-1,5)  18:(0,5)  19:(0,3)
+20:(-1,3)  21:(-2,2)  22:(-1,2)  23:(-1,1)  24:(0,1)
+```
+
+Keep the marks S=(0,2), T=(0,6). Move only vertices 5,6,7 to
+
+    C_e=(1,3+2e),  U_e=(2-e,4+e),  V_e=(1,4+e).
+
+Every other vertex stays fixed. Equivalently, the two changed supporting lines are
+
+    wall5: y-x=2+2e,    wall6: y=4+e.
+
+Wall i joins vertex i to vertex i+1, modulo25. The family is strictly simple for -1/2<e<1: the changed boundary remains a right-hand protrusion between heights2 and5, its edges have positive length, and it meets no other boundary arc. Both marks remain interior.
+
+**Claim.** At e=0 the marks are dark by the parity obstruction. For every sufficiently small nonzero e they illuminate each other. The exact interval checker proves the quantitative statement for
+
+    0<|e|<=1/1000.
+
+The opening mechanism below is a hand argument using two specified reflection words. The stated numerical interval additionally uses the accompanying exact inequality certificate.
+
+## The two moving mirrors have a simple effect
+
+Write H_b for reflection in y=b, V_a for reflection in x=a, D_d for reflection in y-x=d, and A_c for reflection in x+y=c:
+
+    H_b(x,y)=(x,2b-y),       V_a(x,y)=(2a-x,y),
+    D_d(x,y)=(y-d,x+d),      A_c(x,y)=(c-y,c-x).
+
+Composition is written XY=X composed with Y. Direct substitution gives
+
+    H_(b+e) D_(d+2e)(x,y)=(y-d-2e,2b-d-x).
+
+Thus this consecutive mirror pair shifts its developed image by exactly (-2e,0). This is the source of the sign in the proof. No gradient or linear-program calculation is used.
+
+## Positive e: the line passes above the moving corner
+
+Use the word
+
+    23,20,2,3,0,24 | 6,5,18,7,16,10,12,11.
+
+The bar marks passage through C_0 in the limiting path; it is not a reflection there. The prefix and suffix developments are
+
+    Phi_+=H_1 D_4 D_0 H_2 H_0 V_0,
+    Psi_+=H_(4+e) D_(2+2e) V_0 V_1 V_(-1) V_1 V_0 A_8.
+
+Multiplication gives
+
+    Phi_+(x,y)=(-x-4,-y-6),
+    Psi_+(x,y)=(6-2e-x,20-y).
+
+In the physical corner frame, the source and target images are therefore
+
+    S'=Phi_+^(-1)(S)=(-4,-8),
+    T'=Psi_+(T)=(6-2e,14).
+
+The chord S'T' crosses x=1 at height
+
+    y=-8+110/(10-2e).
+
+Its height above C_e is exactly
+
+    y-(3+2e)=e(1+2e)/(5-e)>0              for 0<e<1.
+
+Its slope is 11/(5-e)>1. Locally the exterior of the polygon at C_e is the sector to the right of x=1 and below y=x+2+2e. The chord crosses x=1 above C_e and continues more steeply upward than that diagonal wall, so it avoids this exterior sector.
+
+At e=0 every other reflection in this word is in a wall interior, and every other intervening segment stays in the room away from vertices; the limiting bounce points are listed below. These finitely many strict conditions persist for small e. Thus the chord folds to a legal connection for all sufficiently small positive e.
+
+The full target image is (-10+2e,-20). The initial direction is therefore (-10+2e,-22); the path is aimed at the moved target image, rather than keeping the old direction fixed.
+
+## Negative e: a corner reflection becomes an ordinary reflection
+
+Use the shorter word
+
+    6,5,18,7 | 16,11,17,14.
+
+Its limiting corner is the fixed point K=(-1,6). This time wall16 is an intended reflection whose limiting contact is K. The developments are
+
+    Phi_-=H_(4+e) D_(2+2e) V_0 V_1,
+    Psi_-=V_(-1) A_8 H_5 D_8,
+
+so
+
+    Phi_-(x,y)=(y-2-2e,8-x),
+    Psi_-(x,y)=(-x-8,16-y).
+
+The corner-frame source and target images are
+
+    S'=(6,2+2e),    T'=(-8,10).
+
+Their chord crosses x=-1 at exactly
+
+    (-1,6+e).
+
+For -1<e<0 this point lies strictly inside wall16, which runs from (-1,6) to (-1,5). Folding at this vertical mirror reflects the path back toward the room interior. The potentially forbidden corner passage has become a legal smooth-wall reflection.
+
+All other contacts in this word are strict at e=0 and persist for small e. Hence sufficiently small negative e also gives a connection. The full developed target is (8-2e,16), so the initial direction is (8-2e,14).
+
+## The reusable local opening rule
+
+Suppose an analogous ear corner moves from c to c+(0,2e). Assume a limiting one-corner itinerary has fixed prefix image of the source c-(p,q), while its suffix begins with the moving H,D pair above and then uses fixed supporting lines. If its target image at e=0 is c+(p,q), the moving target image is c+(p-2e,q).
+
+At the vertical line through c, the chord clears the moved corner by
+
+    e(q-2p+2e)/(p-e).
+
+For q>2p>0 this is positive for sufficiently small positive e, and the chord is steeper than the diagonal ear wall. Provided the remaining limiting itinerary is strict away from that corner, this constructs an actual connecting path. The example has p=5,q=11.
+
+This rule explains the sign from mirror geometry. It does not prove that an arbitrary ear in an arbitrary parity room admits the required return itinerary or the slope q>2p. That existence step remains open.
+
+## Base-path arithmetic and the quantitative interval
+
+Substituting the e=0 polygon into the two developments gives these physical bounce points:
+
+|Positive-e word: wall and point|Negative-e word: wall and point|
+|---|---|
+|23: (-5/11,1)|6: (8/7,4)|
+|20: (-5/4,11/4)|5: (16/11,38/11)|
+|2: (3/2,3/2)|18: (0,30/7)|
+|3: (14/11,2)|7: (1,34/7)|
+|0: (4/11,0)|16: (-1,6), the limiting corner|
+|24: (0,4/5)|11: (10/11,78/11)|
+|6: (16/11,4)|17: (-2/7,5)|
+|5: (13/8,29/8)|14: (-14/11,74/11)|
+|18: (0,48/11)||
+|7: (1,53/11)||
+|16: (-1,63/11)||
+|10: (1,73/11)||
+|12: (0,78/11)||
+|11: (5/8,59/8)||
+
+The positive-e limiting path additionally passes through C_0=(1,3) between its contacts with walls24 and6. No other vertex occurs. In the negative-e word K is its only vertex contact. These facts and the strict wall-interior contacts can be checked against the listed polygon edges.
+
+`ear-hand-check.py` certifies the complete intervals 0<e<=1/1000 and -1/1000<=e<0, not sampled parameters. It uses the two fixed words, unfolds the moved target, and proves:
+
+- Positive time between consecutive contacts and the final target arrival.
+- Every intended reflection lies strictly inside its wall.
+- No segment intersects any other wall before the next intended contact.
+- The polygon stays simple and both marks stay interior.
+
+All conditions reduce to rational polynomials. A polynomial with first nonzero term a_r u^r is positive on 0<u<=rho when a_r exceeds the sum of the absolute higher coefficients times their powers of rho. This coefficient bound proves each inequality, including arbitrarily near u=0. The output contains 578 segment/wall exclusions and 275 nonadjacent-edge separation certificates for each parameter sign.
+
+At e=0, reflections preserve the even-even lattice class and every other integer point in the closed polygon is a corner. Unfolding a connection would force an intermediate non-even-even integer point, hence a corner. This is the original parity obstruction. The result here is a concrete two-sided opening of that dark parameter value within this one-parameter family; it is not the general sign theorem.
+
+FILE ear-hand-check.py
+"""Uniform exact verification of two fixed words in an ear deformation family.
+
+No directions or reflection words are searched. Every inequality is proved on
+0 < u <= 1/1000 by a rational coefficient bound, including u arbitrarily near 0.
+"""
+from pathlib import Path
+from fractions import Fraction as F
+import json
+import hashlib
+
+if not __debug__:
+    raise RuntimeError('Exact verification requires assertions; do not use -O.')
+
+ROOT = Path(__file__).resolve().parent
+RHO = F(1, 1000)
+ROOM = json.loads((ROOT/'inputs/room.json').read_text())
+SAVED = json.loads((ROOT/'coupling.json').read_text())
+WORDS = {
+    1: (50, [23, 20, 2, 3, 0, 24, 6, 5, 18, 7, 16, 10, 12, 11]),
+    -1: (105, [6, 5, 18, 7, 16, 11, 17, 14]),
+}
+
+
+def poly(a):
+    a = list(map(F, a))
+    while len(a) > 1 and not a[-1]:
+        a.pop()
+    return tuple(a)
+
+
+P0 = poly([0])
+P1 = poly([1])
+add = lambda a, b: poly([(a[i] if i < len(a) else 0)+(b[i] if i < len(b) else 0) for i in range(max(len(a), len(b)))])
+scale = lambda c, a: poly([c*x for x in a])
+sub = lambda a, b: add(a, scale(-1, b))
+
+
+def mul(a, b):
+    c = [F(0)]*(len(a)+len(b)-1)
+    for i, x in enumerate(a):
+        for k, y in enumerate(b):
+            c[i+k] += x*y
+    return poly(c)
+
+
+def positive(a, strict=True):
+    """A proof on (0,rho], never a sampled sign test."""
+    leading = next((i for i, x in enumerate(a) if x), None)
+    if leading is None:
+        return None if strict else {'coefficients': a, 'identically_zero': True}
+    remainder = sum(abs(a[i])*RHO**(i-leading) for i in range(leading+1, len(a)))
+    if a[leading] > remainder:
+        return {'coefficients': a, 'leading_order': leading,
+                'leading_coefficient': a[leading], 'tail_bound': remainder}
+    return None
+
+
+def rational(num, den):
+    if positive(den):
+        return num, den
+    assert positive(scale(-1, den)), ('denominator not bounded away from zero', den)
+    return scale(-1, num), scale(-1, den)
+
+
+def difference(a, b):
+    return sub(mul(a[0], b[1]), mul(b[0], a[1]))
+
+
+def mm(A, B):
+    return tuple(tuple(sum(A[i][k]*B[k][j] for k in (0, 1)) for j in (0, 1)) for i in (0, 1))
+
+
+def mv(A, v):
+    return tuple(add(scale(A[i][0], v[0]), scale(A[i][1], v[1])) for i in (0, 1))
+
+
+I = ((F(1), F(0)), (F(0), F(1)))
+NORMALS = [tuple(map(F, n)) for n in SAVED['offset_normals']]
+BASE = [tuple(map(F, v)) for v in ROOM['vertices']]
+assert ROOM['vertices'] == SAVED['room']['vertices'] and ROOM['marked'] == SAVED['room']['marked']
+assert len(BASE) == 25 and ROOM['marked'] == [[0, 2], [0, 6]]
+SOURCE, TARGET = [tuple(poly([x]) for x in p) for p in ROOM['marked']]
+DOT = lambda a, b: sum(x*y for x, y in zip(a, b))
+NORMAL_CHOICES = [(1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (-1, -1), (1, -1), (-1, 1)]
+
+
+def separation(A, B):
+    for n in NORMAL_CHOICES:
+        receipts = [positive(add(scale(n[0], sub(b[0], a[0])), scale(n[1], sub(b[1], a[1])))) for a in A for b in B]
+        if all(receipts):
+            return {'normal': n, 'inequalities': receipts}
+    raise AssertionError(('no uniform strict separator', A, B))
+
+
+def inside(point):
+    winding = 0
+    x, y = point
+    for a, b in zip(BASE, BASE[1:]+BASE[:1]):
+        cross = (b[0]-a[0])*(y-a[1])-(b[1]-a[1])*(x-a[0])
+        if a[1] <= y < b[1] and cross > 0:
+            winding += 1
+        elif b[1] <= y < a[1] and cross < 0:
+            winding -= 1
+    return winding != 0
+
+
+def on_boundary(point):
+    x, y = point
+    for a, b in zip(BASE, BASE[1:]+BASE[:1]):
+        if ((b[0]-a[0])*(y-a[1]) == (b[1]-a[1])*(x-a[0])
+                and min(a[0], b[0]) <= x <= max(a[0], b[0])
+                and min(a[1], b[1]) <= y <= max(a[1], b[1])):
+            return True
+    return False
+
+
+def parity_control():
+    closed = []
+    for x in range(-2, 3):
+        for y in range(9):
+            if inside((x, y)) or on_boundary((x, y)):
+                closed.append((x, y))
+                if x % 2 or y % 2:
+                    assert (x, y) in BASE
+    for n, a, b in zip(NORMALS, BASE, BASE[1:]+BASE[:1]):
+        d = (b[0]-a[0], b[1]-a[1])
+        assert DOT(n, d) == 0 and n[0]*d[1]-n[1]*d[0] < 0
+        nn = DOT(n, n)
+        shift = [2*DOT(n, a)*v/nn for v in n]
+        assert all(v.denominator == 1 and int(v) % 2 == 0 for v in shift)
+        R = [F(i == k)-2*n[i]*n[k]/nn for i in (0, 1) for k in (0, 1)]
+        assert all(v.denominator == 1 for v in R)
+    assert all(inside(p) and not on_boundary(p) for p in ROOM['marked'])
+    return {'closed_integer_points': len(closed),
+            'non_even_even_points_all_corners': sum(x % 2 != 0 or y % 2 != 0 for x, y in closed),
+            'even_even_preserving_reflections': len(NORMALS)}
+
+
+def check(sign):
+    index, word = WORDS[sign]
+    assert SAVED['events'][index]['word'] == word
+    W = len(BASE)
+    offsets = [poly([DOT(n, v), sign*(2 if i == 5 else -1 if i == 6 else 0)]) for i, (n, v) in enumerate(zip(NORMALS, BASE))]
+    vertices = []
+    for i in range(W):
+        a, b = NORMALS[(i-1)%W], NORMALS[i]
+        det = a[0]*b[1]-a[1]*b[0]
+        vertices.append((scale(1/det, sub(scale(b[1], offsets[(i-1)%W]), scale(a[1], offsets[i]))),
+                         scale(1/det, sub(scale(a[0], offsets[i]), scale(b[0], offsets[(i-1)%W])))))
+    directions = [(n[1], -n[0]) for n in NORMALS]
+    lengths = [scale(1/DOT(d, d), add(scale(d[0], sub(vertices[(i+1)%W][0], vertices[i][0])),
+                                     scale(d[1], sub(vertices[(i+1)%W][1], vertices[i][1])))) for i, d in enumerate(directions)]
+    assert all(positive(length) for length in lengths)
+    assert vertices[5] == (poly([1]), poly([3, 2*sign]))
+    assert vertices[6] == (poly([2, -sign]), poly([4, sign]))
+    assert vertices[7] == (poly([1]), poly([4, sign]))
+    assert all(vertices[i] == tuple(poly([x]) for x in BASE[i]) for i in range(W) if i not in (5, 6, 7))
+    topology = []
+    for i in range(W):
+        for k in range(i+1, W):
+            if k == i+1 or (i == 0 and k == W-1):
+                continue
+            topology.append({'edges': [i, k], **separation([vertices[i], vertices[(i+1)%W]], [vertices[k], vertices[(k+1)%W]])})
+    marks = []
+    for point in ROOM['marked']:
+        assert inside(point)
+        form = tuple(poly([x]) for x in point)
+        marks.append([separation([form], [vertices[i], vertices[(i+1)%W]]) for i in range(W)])
+    reflectors = []
+    for n, h in zip(NORMALS, offsets):
+        nn = DOT(n, n)
+        R = tuple(tuple(F(a == b)-2*n[a]*n[b]/nn for b in (0, 1)) for a in (0, 1))
+        shift = tuple(scale(2*n[a]/nn, h) for a in (0, 1))
+        reflectors.append((R, shift))
+    O, B = I, (P0, P0)
+    states = [(O, B)]
+    for wall in word:
+        R, shift = reflectors[wall]
+        mapped = mv(O, shift)
+        B = tuple(add(B[k], mapped[k]) for k in (0, 1))
+        O = mm(O, R)
+        states.append((O, B))
+    target_image = tuple(add(mv(O, TARGET)[k], B[k]) for k in (0, 1))
+    A = tuple(sub(target_image[k], SOURCE[k]) for k in (0, 1))
+    expected = (poly([-10, 2*sign]), poly([-20])) if sign == 1 else (poly([8, -2*sign]), poly([16]))
+    assert target_image == expected
+    current = (P0, P1)
+    hits = []
+    exclusion_count = 0
+    for stage, (O, B) in enumerate(states):
+        Ot = tuple(zip(*O))
+
+        def intersection(wall):
+            n, h, d = NORMALS[wall], offsets[wall], directions[wall]
+            N = tuple(sum(O[k][a]*n[a] for a in (0, 1)) for k in (0, 1))
+            numerator = add(h, add(scale(N[0], sub(B[0], SOURCE[0])), scale(N[1], sub(B[1], SOURCE[1]))))
+            denominator = add(scale(N[0], A[0]), scale(N[1], A[1]))
+            tau = rational(numerator, denominator)
+            num, den = tau
+            global_point_num = tuple(add(mul(sub(SOURCE[k], B[k]), den), mul(A[k], num)) for k in (0, 1))
+            physical_num = mv(Ot, global_point_num)
+            along = scale(1/DOT(d, d), add(scale(d[0], sub(physical_num[0], mul(vertices[wall][0], den))),
+                                           scale(d[1], sub(physical_num[1], mul(vertices[wall][1], den)))))
+            remaining = sub(mul(lengths[wall], den), along)
+            return tau, along, remaining, physical_num
+
+        intended = word[stage] if stage < len(word) else None
+        if intended is not None:
+            next_tau, along, remaining, point_num = intersection(intended)
+            at_start, at_end = positive(along), positive(remaining)
+            assert at_start and at_end, ('bounce not strictly inside edge', sign, stage, intended, along, remaining)
+            hits.append({'stage': stage, 'wall': intended, 'tau': next_tau,
+                         'physical_point_numerators': point_num,
+                         'edge_start_clearance': at_start, 'edge_end_clearance': at_end})
+        else:
+            next_tau = (P1, P1)
+        order = positive(difference(next_tau, current))
+        assert order, ('nonpositive segment length', sign, stage)
+        checks = []
+        for wall in range(W):
+            if wall == intended:
+                continue
+            tau, along, remaining, _ = intersection(wall)
+            options = [('at_or_before_start', scale(-1, difference(tau, current)), False),
+                       ('at_or_after_end', difference(tau, next_tau), False),
+                       ('outside_before_edge', scale(-1, along), True),
+                       ('outside_after_edge', scale(-1, remaining), True)]
+            for reason, condition, strict in options:
+                proof = positive(condition, strict=strict)
+                if proof is not None:
+                    checks.append({'wall': wall, 'reason': reason, 'proof': proof})
+                    break
+            else:
+                raise AssertionError(('unexcluded wall', sign, stage, wall, options))
+        exclusion_count += len(checks)
+        if intended is not None:
+            hits[-1]['segment_order'] = order
+            hits[-1]['other_wall_exclusions'] = checks
+        else:
+            terminal = {'segment_order': order, 'wall_exclusions': checks}
+        current = next_tau
+    return {'sign': sign, 'saved_index': index, 'word': word, 'target_image': target_image,
+            'rho': RHO, 'bounces': hits, 'terminal': terminal,
+            'uniform_segment_wall_exclusions': exclusion_count,
+            'nonadjacent_edge_separations': len(topology), 'topology_receipts': topology,
+            'marks_stay_interior_receipts': marks}
+
+
+out = {'status': 'EXACT_UNIFORM_PASS', 'parameter_interval': '-1/1000 <= epsilon <= 1/1000, epsilon nonzero',
+       'base_parity_control': parity_control(),
+       'cases': [check(1), check(-1)],
+       'input_hashes': {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+                        for name in ('inputs/room.json', 'coupling.json')},
+       'scope': 'Two prescribed saved words, exact inequalities over complete open parameter intervals, no sampled directions or trajectory discovery. No general parity sign theorem.'}
+(ROOT/'ear-hand-check.json').write_text(json.dumps(out, indent=2, default=str)+'\n')
+for case in out['cases']:
+    print(json.dumps({k: case[k] for k in ('sign', 'saved_index', 'word', 'target_image', 'rho', 'uniform_segment_wall_exclusions', 'nonadjacent_edge_separations')}, default=str))
+print(out['status'])

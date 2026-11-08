@@ -1,0 +1,327 @@
+{
+  "status": "ODD_SPINE_AND_TOOTH_END_ACTUAL_REPAIRS_PASS",
+  "odd_target_branch": {
+    "witness": {
+      "sigma_s": 1,
+      "sigma_t": 1,
+      "tau": "40/9",
+      "k_s": 1,
+      "k_t": 1,
+      "j": 1,
+      "r_s": "5/9",
+      "r_t": "5/9",
+      "target_branch": -1,
+      "period_slope": "8",
+      "residue_count_per_sign": 12
+    },
+    "path": [
+      [
+        "3/2",
+        "7/3"
+      ],
+      [
+        "27/20",
+        "3"
+      ],
+      [
+        "9/8",
+        "2"
+      ],
+      [
+        "1",
+        "23/9"
+      ],
+      [
+        "0",
+        "7"
+      ],
+      [
+        "9/40",
+        "8"
+      ],
+      [
+        "1",
+        "41/9"
+      ],
+      [
+        "9/8",
+        "4"
+      ],
+      [
+        "27/20",
+        "5"
+      ],
+      [
+        "3/2",
+        "13/3"
+      ]
+    ],
+    "polygon": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "4",
+        "0"
+      ],
+      [
+        "4",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "2"
+      ],
+      [
+        "4",
+        "2"
+      ],
+      [
+        "4",
+        "3"
+      ],
+      [
+        "1",
+        "3"
+      ],
+      [
+        "1",
+        "4"
+      ],
+      [
+        "4",
+        "4"
+      ],
+      [
+        "4",
+        "5"
+      ],
+      [
+        "1",
+        "5"
+      ],
+      [
+        "1",
+        "7"
+      ],
+      [
+        "4",
+        "7"
+      ],
+      [
+        "4",
+        "8"
+      ],
+      [
+        "0",
+        "8"
+      ]
+    ],
+    "source": [
+      "3/2",
+      "7/3"
+    ],
+    "target": [
+      "3/2",
+      "13/3"
+    ],
+    "wall_leg_guards": 144,
+    "reflections": 6
+  },
+  "tooth_end_repair": {
+    "witness": {
+      "sigma_s": 1,
+      "sigma_t": 1,
+      "tau": "42/29",
+      "k_s": 4,
+      "k_t": 1,
+      "j": 0,
+      "r_s": "111/145",
+      "r_t": "354/145",
+      "target_branch": 1,
+      "effective_source_depth": "11/2",
+      "effective_target_depth": "5"
+    },
+    "path": [
+      [
+        "5/2",
+        "14/5"
+      ],
+      [
+        "277/105",
+        "3"
+      ],
+      [
+        "233/70",
+        "2"
+      ],
+      [
+        "422/105",
+        "3"
+      ],
+      [
+        "989/210",
+        "2"
+      ],
+      [
+        "5",
+        "351/145"
+      ],
+      [
+        "23/5",
+        "3"
+      ],
+      [
+        "821/210",
+        "2"
+      ],
+      [
+        "338/105",
+        "3"
+      ],
+      [
+        "177/70",
+        "2"
+      ],
+      [
+        "2",
+        "401/145"
+      ],
+      [
+        "0",
+        "821/145"
+      ],
+      [
+        "2",
+        "1241/145"
+      ],
+      [
+        "129/35",
+        "11"
+      ],
+      [
+        "5",
+        "1319/145"
+      ],
+      [
+        "373/105",
+        "7"
+      ],
+      [
+        "3",
+        "39/5"
+      ]
+    ],
+    "polygon": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "5",
+        "0"
+      ],
+      [
+        "5",
+        "1"
+      ],
+      [
+        "2",
+        "1"
+      ],
+      [
+        "2",
+        "2"
+      ],
+      [
+        "5",
+        "2"
+      ],
+      [
+        "5",
+        "3"
+      ],
+      [
+        "2",
+        "3"
+      ],
+      [
+        "2",
+        "7"
+      ],
+      [
+        "5",
+        "7"
+      ],
+      [
+        "5",
+        "11"
+      ],
+      [
+        "2",
+        "11"
+      ],
+      [
+        "2",
+        "15"
+      ],
+      [
+        "5",
+        "15"
+      ],
+      [
+        "5",
+        "16"
+      ],
+      [
+        "0",
+        "16"
+      ]
+    ],
+    "source": [
+      "5/2",
+      "14/5"
+    ],
+    "target": [
+      "3",
+      "39/5"
+    ],
+    "wall_leg_guards": 256,
+    "reflections": 13
+  },
+  "scaled_A_control": {
+    "source": [
+      50,
+      56
+    ],
+    "target": [
+      60,
+      156
+    ],
+    "wall_leg_guards": 256,
+    "reflections": 13
+  },
+  "restricted_no_tooth_end_exhaustion": {
+    "period_tau": "8",
+    "slope_residues_per_sign": 22,
+    "checks": 176,
+    "rejection_counts": {
+      "target_portal": 44,
+      "spine_image": 44,
+      "source_portal": 88
+    }
+  },
+  "whole_goal_complete": false,
+  "discovery": false,
+  "source_sha256": {
+    "comb-spine-end-prefix-check.py": "118b5253cab8b4d73e93994d8ad21c501707289bd317a8bd07b743352be27092",
+    "comb-spine-end-both-branches.py": "1300973efd2caee8a5990421aa6cc08a4199f63ca4150cb92596c3421021f03d",
+    "resumed-exact-check.py": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+  },
+  "limits": "Prescribed positive repairs and exact restricted arithmetic criterion rejection, not all-comb theorem or darkness."
+}

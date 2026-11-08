@@ -1,0 +1,97 @@
+# Review of §24 (directed fan tree), plus what can and cannot be pushed further
+
+## Verdict
+
+The section is correct under its raw hypotheses, with three implicit assumptions that should be written down. The identities (24.1)–(24.3) and the merger argument check out. The section's closing disclaimers are accurate: nothing in §24 constrains half-vectors, development, or the slide derivative.
+
+## 1. Local cases and counting
+
+I use the convention where all of A, B and C are integer points: legs AC and BC are unit and axis-parallel, AB is diagonal, A = 2ℤ², B = (2ℤ+1)², and C is the set of mixed-parity points. This matches "diagonal AB walls". The geometry is the tetrakis tiling. Every wall line (x=k, y=k, x±y=k) is a symmetry of the labelled tiling, so reflection development preserves the A/B/C labels.
+
+**C analysis.** Around a C point the four triangles alternate between two diagonal A's, call them A₁ and A₂. A fan contributes 1 or 2 triangles at C. Count the triangles present at a C in the room:
+
+- **1 triangle:** a 90° corner. Allowed.
+- **2 triangles:** a half-plane, so C is smooth, which is forbidden. This holds whether the two triangles share AC (one fan) or BC (two fans). If they are opposite, C is a pinch point, and only the simple-polygon assumption excludes that.
+- **3 triangles:** a 270° corner. Allowed.
+- **4 triangles:** C is interior, which is forbidden.
+
+So every portal's C endpoint has exactly three triangles, split 2+1 between the fans. The orientation is well-defined and the section's argument is right.
+
+**(24.1).** A boundary fan has m+1 radial edges alternating AB/AC. Each triangle has exactly one C vertex, so m = 2h + e. The endpoint C's are exactly the boundary AC radials, so e = 2−q. Hence h = (m−2+q)/2, and m ≡ q (mod 2).
+
+Outdegree = h holds because every internal C has three triangles, hence exactly one outgoing portal. Indegree ≤ e holds because an endpoint C gives an in-portal exactly when it has three triangles; the singleton triangle's BC edge is then forced to be the portal. The outdegree-0 cases (1,1) and (2,0) are right. The 45° leaf is a sink with indegree 1 when V > 1.
+
+**(24.2).** Σ h = (T−8I)/2 − (V−I) + D/2 + 4I. Setting this equal to V−1 gives T + D + 2I = 4V − 2. ✓
+
+Each boundary AB edge has a unique A end and is a boundary radial edge of that A's fan, so D = Σq is right. Small check: a square containing 3 of its 4 triangles has T=3, D=3, I=0, V=2, and 6 = 6. ✓
+
+**(24.3).** V = I + Z + N₁ + M and N₁ + 2M = V − 1, so M = I + Z − 1. ✓
+
+**Merger argument.** This is correct. The merger is internal because S and T are sources, and its indegree is exactly 2 with both in-edges on the path.
+
+**Assumptions to state explicitly:**
+1. The room is a closed topological disk with no pinch vertices. This gives one fan per A and rules out opposite-triangle configurations at C.
+2. The tree property E = V−1 is imported. Under the raw condition there are no interior B or C points, which kills the obvious cycles; an interior C would give a double edge between the same pair of fans.
+3. "AB unit segments" means single lattice edges of length √2 in these coordinates.
+
+**Two free strengthenings:**
+- **Steiner subtree.** Restrict to the subtree spanned by the full fans. In it, every full fan is still a source and subtree indegrees are ≤ 2, so that subtree alone contains ≥ I−1 mergers, not just the whole tree. On the S–T path, the number of mergers equals the number of "splits" (both path edges outgoing) plus one.
+- **Reflex C ↔ portal bijection.** Reflex C points (270°) correspond bijectively to portals. In particular each merger's endpoints C₁ and C₂, the pocket's C₀, and the four C-neighbours of each interior mark are all 270° corners.
+
+## 2. New lemmas I can prove
+
+**Lemma A (corner-freeness is automatic; midpoint parity).**
+Let S be an A point and v a primitive integer vector. The open developed segment (S, S+v) contains no integer point, and since every corner is an A, B or C lattice point and labels are preserved, it meets no corner. The point S+v is:
+- a B point if a and b are both odd,
+- a C point if a and b have mixed parity,
+- never an A point, since A−A vectors are even and so not primitive.
+
+The same holds from P for the second half. Consequences:
+- The condition "no other physical corners" is automatic for primitive half-vectors.
+- Under the raw condition, the first corner met from S in direction v is reached at exactly developed displacement v.
+- The midpoint corner of any admissible event is a B or C point. For it to have an embedded π-sector:
+  - a B point must have angle 225°, 270° or 315° (180° is excluded by the raw condition);
+  - a C point must be a 270° portal endpoint, and the event line must avoid the open missing quadrant, which confines v to a 90° cone of directions.
+
+**Corollary.** The merger's natural π-sector (smooth A when m=4, reflex A when m=6) can never be the event's midpoint corner.
+
+**Lemma B (forced passages).**
+Every portal separates the room. An admissible event is a continuous curve from S to T whose only corner is P. Therefore:
+- It crosses every portal on the S–T tree path, at a point in the open portal or at P itself if P is that portal's endpoint.
+- In particular it passes through every merger fan on the path, entering and leaving through that merger's two in-portals.
+- For a leaf pocket, S and T lie on the same side of the pocket portal B₀C₀. A trajectory that enters the pocket therefore crosses B₀C₀ an even number (≥ 2) of times, unless P ∈ {B₀, C₀}. Inside a 45° wedge it makes at most 4 wall hits.
+
+**Lemma C (raw-preserving portal cuts).**
+Cut a simple room at a portal p = BC. The two pieces share only B and C.
+- Keeping the **upstream** (internal-C) piece leaves 2 triangles at C, a half-plane. The raw condition always fails.
+- Keeping the **downstream** piece leaves 1 triangle at C, a 90° corner, which is fine. The raw condition then holds if and only if the angle remaining at B is not 180°.
+- The deleted upstream piece receives no edge from the kept side, so it contains a source: a full fan or a Z-source.
+
+Consequences:
+- **(i)** Sinks are never deletable, and that includes every triangular leaf pocket.
+- **(ii)** A merger X on the S–T path cannot be cut away. Both its in-edges lie on the path, so deleting either upstream side removes S or T. Its out-branches are downstream of X, so cutting them leaves X with a smooth C.
+- **(iii)** No raw-preserving reduction lowers the number of S–T-path mergers. The allowed reductions only remove off-path branches that hang off with their edge pointing into the kept part.
+
+**Lemma D (conditional slide criterion).**
+Measure the endpoint mismatch as the developed endpoint vector, and suppose the slide moves walls but not P, S or T. Each hit on a wall displaced by δ along its normal n contributes 2δ·R·n to the first derivative, where R is the composite of the later reflections. If the event meets slid walls exactly once, the derivative is nonzero. With 2–4 pocket hits, cancellation is possible. I can't go further without the exact definition of the "literal pocket slide", in particular whether P = C₀ moves.
+
+## 3. Can separating off an indegree-2 merger give an induction?
+
+**No, within the raw class.** These are the precise obstructions.
+
+1. **Separation.** By Lemma B, every S–T-path merger separates S from T. Any subroom containing both marks contains X. Separating X therefore produces S–X and X–T problems, where X is a boundary fan rather than a mark. Any recombination at X is a broken path with an extra turn, not a straight event.
+
+2. **Raw is not hereditary at exactly the wrong pieces.** X is downstream of both in-portals. By Lemma C, the pieces containing S and T are the upstream ones, and each acquires a smooth C. So the induction hypothesis does not apply to them.
+
+3. **Capping does not repair it.** To restore the raw condition one could append X's endpoint triangle ABC₁ to the S-side piece. That turns the triangle into a 45° leaf pocket with a new AB wall that is not physical in the original room. Events in the capped room may reflect off that wall and do not lift. Worse, the induction would "detect" this artificial pocket. A trajectory of the subroom lifts only if it never touches the cut walls, and with S and T on opposite sides of X that is impossible.
+
+4. **Wrong corner type.** The only π-sector a merger supplies is at A, which Lemma A excludes as a midpoint.
+
+5. **Missing information.** (24.1)–(24.3) are pure incidence counts. An induction would need data that survives the cut: the window of developed directions from the lifted S that pass through the open portal chain up to C₁, and the matching window into T past C₂, together with the lift labels and the reflection word. The fan tree does not determine these windows. A usable inductive statement would have to transport direction intervals across a merger, not events across subrooms. Even the base case (I=2, one merger, Z=0) is open and already contains the whole difficulty.
+
+## 4. What remains open
+
+- **Existence** of a primitive v whose folded S+v is a reflex B, or a 270° portal C with v in the admissible cone, and whose folded S+2v is the correct lift of T. Lemma A reduces "corner-free" to these conditions; it does not supply such a v.
+- **Pocket involvement.** Whether such an event must, or can, enter a given leaf pocket. Promising candidates are P at the pocket's C₀, or P at a merger endpoint C₁ or C₂, but neither is proved.
+- **The slide derivative,** pending an exact definition of the slide and a non-cancellation argument when there are multiple pocket hits.
+- **Any inductive scheme.** Per §3, it would have to be stated on direction windows through portal chains with lift labels. Nothing in §24 supplies that.

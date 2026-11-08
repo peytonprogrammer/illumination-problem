@@ -1,0 +1,31 @@
+Why the four smooth seam endpoints do not create a connection
+
+Work with finite corner-avoiding billiard trajectories. Let P be the union of the five closed unit squares with lower-left corners
+(-1,-1), (0,-1), (0,-2), (1,-2), (1,-3).
+Its only noncorner integer points are a=(0,0) and b=(2,-2).
+Let Q=P0 union P1 union P2, where P0=P, P1={(x,-y):(x,y) in P}, and P2={(4-x,-y):(x,y) in P}.
+The physical interior marks are S=(0,0), T=(2,2).
+
+1. Folding.
+Define f on P0, P1, P2 by f(x,y)=(x,y), (x,-y), (4-x,-y), respectively. These maps agree on the shared seams [-1,1] x {0} and {2} x [1,3]. Thus f is continuous, f(S)=a and f(T)=b.
+A seam crossing becomes an ordinary specular reflection in P. Away from seam endpoints, a smooth exterior-wall reflection does too. A proposed S-to-T trajectory is nonaxial, since S and T differ in both coordinates and horizontal/vertical reflections preserve a zero velocity component. Thus it crosses the seams transversely and folds into finitely many legs.
+
+2. The four exceptional reflections.
+The only smooth points of Q folding to corners of P are
+E1=(-1,0), E2=(1,0), E3=(2,1), E4=(2,3).
+They fold respectively to (-1,0), (1,0), (2,-1), (2,-3), all convex right-angle corners.
+At E1,E2, physical reflection in a vertical wall negates the horizontal velocity component. Switching between P0 and P1 negates the vertical component in folding coordinates. The combined action on folded velocity is (p,q) -> (-p,-q).
+At E3,E4, physical reflection in a horizontal wall and switching between P1 and P2 again negate the two different components. The folded velocity again reverses exactly.
+All remaining base-corner incidences are actual corners of Q; a valid trajectory cannot meet them. The 30 base-corner incidences lose 8 incidences at these four smooth points, leaving the 22 corners of Q.
+
+3. Why a reversal cannot help, with the stopping times explicit.
+Suppose a folded connection exists. Stop at its first arrival at b, and begin at its last visit to a before that arrival. Parametrize this subpath eta:[0,L]->P by arc length. Its interior contains neither a nor b. This truncation occurs in P, so ALL physical preimages of each mark count: f^{-1}(a)={S,(4,0)} and f^{-1}(b)={T,(2,-2)}. The two additional preimages are smooth boundary points of Q.
+If eta has a reversal, let t be its first reversal time. At every noncorner point of P, the folded motion is straight travel or ordinary specular reflection, independently of which physical copy is occupied. Thus its future ordinary motion depends only on folded position and velocity. Up to t it follows this deterministic, reversible motion. After t it must retrace that prefix:
+eta(t+u)=eta(t-u), 0<=u<=min(t,L-t).
+No intervening reversal can interrupt this equality: it would revisit a corner on the reversal-free incoming prefix.
+If L<2t, then b=eta(L)=eta(2t-L), an earlier arrival at b, impossible. If L=2t, then b=eta(L)=eta(0)=a, impossible. If L>2t, then eta(2t)=a is an interior return to a, impossible.
+Consequently eta contains no reversals. Section 2 also excludes any other corner contact, so eta is an ordinary corner-avoiding path in P.
+
+4. The remaining ordinary path is impossible by parity.
+Unfold eta in P to a positive-length segment from a=(0,0) to an even-even image B of b. Every reflection in an integer horizontal or vertical line preserves each coordinate parity. Write B=2^r z, with r>=1 maximal. Then z is an intermediate integer point with an odd coordinate. Folding z back preserves its parity, so it gives an integer point of P other than a,b. Every such point is a corner, contradicting that eta is an ordinary corner-avoiding path.
+Therefore Q has no finite corner-avoiding connection from S to T.

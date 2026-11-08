@@ -1,0 +1,35 @@
+Support-sensitive exception charge
+3 November 2026
+
+Target and success criterion
+Replace a meaningful group of existing W<=21,k<=6 exclusions with a geometric counting argument, without finding new trajectories or enlarging a census.
+Result: the entire I=4 branch follows from the existing four-cell external-boundary lemma and one charging inequality. This replaces the three O/T/S geometry-CNF contradictions in the logical proof. The four-cell boundary lemma itself still has the existing computer-assisted proof. No universal lower bound or novelty claim follows.
+
+Class and notation
+Use exactly the strictly simple canonical 45-degree triangle disk class in ../restricted-theorem-note/theorem.txt. I counts ALL interior A points, not only selected marks. J counts interior non-A integer points; s_N counts smooth boundary non-A integer points; k=J+s_N. At smooth boundary A points put charge3, and at A corners charge their positive incident triangle count. The sum is Q. Interior A stars have eight triangles and charge0 in Q.
+The existing exact identity is
+  W = 2 + 6I + Q - 2J - s_N
+    = 2 + 6I + (Q+s_N) - 2k.                 (1)
+Use cell coordinates A/2. Let F be the I full cells, and let B(F) be the external axis neighbors of F; b(F)=|B(F)|.
+
+Lemma: Q+s_N >= b(F).
+Partition B(F) into occupied partial cells and empty cells.
+An occupied external cell cannot be full, by definition of F. Its A vertex is a boundary point with a nonempty contiguous proper fan. If it is smooth, its Q contribution is3; otherwise its Q contribution is the positive fan size. It therefore supplies at least one charge. Different cells supply charges at different A vertices.
+For each empty external cell choose one of its axis-adjacent full cells. The midpoint C of their common cell side is a smooth physical boundary point: the full cell fills its two incident quadrants on one side and the empty cell fills neither quadrant on the other. Thus it contributes one to s_N. Different empty cells give different chosen side midpoints. A midpoint identifies a unique unordered cell pair; that pair has exactly one empty cell and one full cell, so two empty cells cannot be assigned to the same midpoint.
+The A charges and C smooth-point charges lie in separate ledgers. Summing gives the lemma. This retains the actual external boundary size in the prior Q+s_N>=4 argument; it is a strengthening of that argument, not a new optical mechanism.
+
+Corollary: W+2k >= 2+6I+b(F).                (2)
+Substitute the lemma into (1).
+For I=4, the existing audited four-cell lemma gives b(F)>=8, with no assumption that F is connected. Consequently
+  W+2k >= 34.
+If k<=6, then W>=22. Hence W<=21,k<=6 cannot have I=4.
+This is a geometric impossibility; darkness and marked-pair choice are unnecessary. It excludes every such support directly, without O/T/S equality classification or their CNF contradiction certificates.
+
+Dependency and independent verification
+The existing four-cell boundary lemma and its complete finite-domain proof are in ../global-route-review/findings.md section4 and check.py/check.json. It was independently reconstructed by the peer. This note does NOT replace that proof with a hand isoperimetric theorem. The new charging/algebra argument has been hand-checked by its author; a fresh peer check is requested on the board and is pending.
+Logical simplification: the existing coarse bound already forces I<=4. Equation(2) removes I=4; the existing 61 I2/I3 cases still require their certificates. No theorem statement or eligible class is enlarged.
+
+Retirement screen and next gap
+Read the peer research-comparison/comparison.txt before this attempt. Its weighted wing identity is not being rediscovered here; its I4 consequence JC>=5 still leaves cases, whereas (2) removes I4 using the support boundary.
+A bounded text check found no displayed version of (2) in the named support/I4/review/comparison notes; this is not a literature novelty audit.
+Further purely local counting cannot generally identify darkness. For I2/I3 the remaining gap is to infer an actual connecting trajectory from a low-charge exception arrangement. Neither (2) nor the weighted wing ledger supplies that. Do not launch a larger k census or return to retired pocket-detection reformulations on the strength of this simplification.

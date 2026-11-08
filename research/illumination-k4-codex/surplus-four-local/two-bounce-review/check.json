@@ -1,0 +1,253 @@
+{
+  "status": "PASS",
+  "optical_lemma": {
+    "reflections": 2,
+    "required_count": 10,
+    "forbidden_count": 2,
+    "segment_internal_edge_events": [
+      2,
+      0,
+      7
+    ],
+    "unfolded_target": [
+      "-4",
+      "-6"
+    ],
+    "forward_reverse_sigma": "PASS"
+  },
+  "frozen_room": {
+    "walls": 20,
+    "J": 5,
+    "s_N": 1,
+    "interior_A": "S,U,T",
+    "physical_first_wall_forward_reverse_sigma": "PASS"
+  },
+  "interior_C_0_minus1": "PASS all incident triangles required/present",
+  "whole_families": {
+    "Bwest": "ALL other six K stars allowed",
+    "Brectangle": "ALL other six K stars allowed"
+  },
+  "b1_named_B_windows": {
+    "701": {
+      "required_present": false,
+      "forbidden_present": false,
+      "covered": false
+    },
+    "012": {
+      "required_present": false,
+      "forbidden_present": false,
+      "covered": false
+    },
+    "123": {
+      "required_present": true,
+      "forbidden_present": false,
+      "covered": true
+    },
+    "6701": {
+      "required_present": false,
+      "forbidden_present": false,
+      "covered": false
+    },
+    "7012": {
+      "required_present": false,
+      "forbidden_present": false,
+      "covered": false
+    },
+    "0123": {
+      "required_present": true,
+      "forbidden_present": false,
+      "covered": true
+    },
+    "1234": {
+      "required_present": true,
+      "forbidden_present": true,
+      "covered": false
+    }
+  },
+  "b1_critical_L_eight_inward": "No new removal: B1/B12/B01 and E4/E34 lack required support",
+  "sigma_correspondence": "B123->E234; B0123->E2345",
+  "required": [
+    [
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -2
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  ],
+  "forbidden": [
+    [
+      [
+        -2,
+        -2
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        -3
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        0,
+        -2
+      ]
+    ]
+  ],
+  "source_sha256": {
+    "fourth-surplus-review/N7-single-room-search/findings.txt": "6b401f7366ac586ae98bf79dedc5fd38e4eadad295b8e9e2021127d737e9e647",
+    "fourth-surplus-review/N7-single-room-search/room.json": "12636239d8fc95e8f72e9e2aaa48658d3b4a6d975eea3508bf8fda569c1b80ff",
+    "fourth-surplus-review/N7-single-room-search/result.json": "4193b9f08d5b3bf4d3ae5e45bc8016212e1febf351221dfd834c60aff140ac67",
+    "fourth-surplus-review/N7-single-room-search/verification.json": "9c1adc7ba54a0b66cb803c1f72c05a296c49d9021902b976bc15837ead048884",
+    "fourth-surplus-review/N7-single-room-search/verify.py": "ada8467f9d745fda9d679a2bea33a1db4bdca4a6fae941698e5ba27cfa27bbe2",
+    "surplus-four-local/e2-e1-b1/argument.txt": "0a90842bac2d1a4059ae4c903b4df2cc5531384028a0cd2c31d2a0fee2f7c383",
+    "surplus-four-local/e2-e1-b1/critical-L.txt": "e98f0423553e3674990d98b3b90f8ef297ced7db891101c5ac046d7efaacbf3a",
+    "surplus-four-local/nine-seven-review/check.py": "c01554d24d3bf27241902928f8fc79597264954679a80c646f6d9c5517d94a94"
+  },
+  "checker_sha256": "dbf8faf58a3afa48beda19a6e87128eed033bb14253afecf5ac9a05b2d0fb107",
+  "limits": "No classification completeness re-audit, no new room, no discovery, no peer checker execution. Same own geometry engine as preceding review."
+}

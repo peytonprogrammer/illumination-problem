@@ -1,0 +1,166 @@
+Independent proof review, no tools/discovery. Check Sections29-30 new finite sealed-room reduction and possible multi-corner mechanism. Context: originalstrict raw canonicalD4room, Aeven-even,Bodd-odd,Cmixed, allnoncornerintegerpointsA. InteriorS/TdistinctA. Literal straightleaf pocketB1,1 A2,2 C1,2 translatedbytu,u0,-1; D:y-x=-t,H:y2-t; Bangle225(one10pi zero),Cangle270(two6pi zeros),A45regular. Allreflectiontranslationseven, diagonaloffsetseven. Baseaxis shearsH_a,V_b positiveintegerpowersfixallphysicalcorner/marklabels/prongs and preserve pocket derivativecohomdelta because EVERYaxiscore haszero flux. They preserve INTRINSIC embeddedpi-sectors, notnecessarilyphysicalcopysectors; preservingtangentsubspace doesNOT implyphi*delta=A*delta. In factaxisphi*delta=delta, soholw changeswhileQ unchanged; this isalreadyreviewed and savedseedrows-17,223 showbothsigns. Do not repeat earlierwrongclaimdet(w,Q) affineinvariant for thisfixedvariation.
+
+Aims: proveorbreak smoothC<=1 / smoothB<=2 afterlastSbeforefirstT; sealedB/Cparitysplit; necessaryportalavoidance; exactB225coneshortcut1pi vs3pi table; then independentlyaudit candidateTWOcorneropening viaorthogonaldefectvectors andtwoaxesquadrantselection, includingtwo visits SAMEcone/finitewordlegality. This doesNOTredefineonecornergoal and isnotanexistencetheorem. Iftwo-cornerextensionvalid, statepreciselywhatitprovesandnot. Ifanygap, isolateexactfailure. Allfinitegeometryalgebraprescribed, no ray/word/direction/room discovery ororbit enumeration.
+
+
+
+## 29. Sealing the pocket: a one/two-visit reduction
+
+**Status: new theory candidate under focused review.** Let P^- be the
+room obtained by deleting the triangular leaf and sealing its portal
+with the vertical segment B_0C_0. The remainder is connected. Both marks
+stay interior. The only new smooth non-A lattice points are B_0 and C_0;
+all other B/C points in P^- remain physical corners. All mirror lines
+still have the canonical even integral reflection translations.
+
+Consider a finite ordinary billiard connection in P^- from S to T,
+with no physical corners and non-wall-parallel direction. Stop at its
+first T and start at its last preceding S. This gives a connection
+without internal occurrences of either endpoint. A smooth boundary point
+q in ANY D4-direction room can then occur at most twice. To prove this,
+record its incoming physical velocities. They lie in the8-element D4
+orbit of the initial velocity. Exactly four point towards the wall.
+The involution
+
+    K_q(v)=-R_wall v
+
+pairs those four incoming states in two pairs. If a later q visit has
+the SAME incoming state as an earlier one, deterministic billiard flow
+is periodic from there and cannot first reach T later. If it has the
+K_q state, the reflected outgoing velocity is exactly minus the earlier
+incoming velocity. Its subsequent path reverses the earlier S-to-q
+history and reaches S before T, also impossible. Thus at most one state
+from each of the two pairs occurs, proving the bound2. No interior
+source recurrence or corner ambiguity is allowed in this argument.
+
+There is a sharper canonical-grid bound at a smooth C point q. Write
+the developed S-to-T vector as2n*w with primitive integer w; the factor
+2 follows because both marks are even-even and every reflection has
+even integral translation. A q hit is at an integer multiple of w,
+necessarily an ODD multiple, with C parity. Consequently all developed
+images of this particular q have the SAME coordinate-parity subtype.
+Since q is mixed-parity, their copy matrices all have the same
+axis-swap bit. Physical incoming velocities at q therefore have only
+one assignment of |w_x|,|w_y| to horizontal/vertical components. At a
+fixed axis wall, the inward states are just one K_q pair. Hence q occurs
+at most ONCE. A C point cannot lie on a canonical even-offset diagonal
+wall; this covers all its possible smooth walls.
+
+Apply this to P^-. Its ordinary connection must pass a transparent
+endpoint: every ODD developed integer step is B or C. If w is odd-odd,
+all those steps are B and must hit B_0; the connection cannot visit C_0.
+If w has mixed parity, they are C and must hit C_0; it cannot visit B_0.
+There are n such odd steps before the developed target2n*w. Therefore:
+
+- A C_0-using reduced connection has n=1, one C_0 hit, and total vector2w.
+- A B_0-using reduced connection has n=1or2, one or two B_0 hits, and
+  total vector2w or4w. In the two-hit case the hits occur at w and3w;
+  the intermediate A point is at2w.
+
+This is a reduction of SUPPLIED ordinary connections, not an existence
+theorem for them. If I=2, the intermediate A in the two-hit case is a
+smooth boundary A point: it cannot be an interior A other than S,T,
+and those were removed from the path interior. If Z=0, it lies on an
+axis wall, since a smooth diagonal A fan has q=2 and is a forbidden
+boundary indegree0 source.
+
+### 29.1 The necessary portal-avoidance condition
+
+Sealing changes the billiard map on the OPEN portal, not just at its
+endpoints. Thus a P^- connection does NOT automatically give a path in P.
+For the following consequences require that the supplied path has no
+reflection on the open segment B_0C_0. All its reflections then use
+common actual walls, except its hits at the selected endpoint. This
+portal-avoidance assumption is a real remaining obligation. An affine
+map of the sealed unfolding need not preserve the portal cut arcs and
+cannot silently be used to remove this condition.
+
+If such a path has only one endpoint hit, it becomes an admissible
+one-corner event in P. Its corner pi-sector crosses the fixed vertical
+flank (the original smooth-wall reflection), not the moving D/H wall.
+The developed full word uses only fixed mirrors, so
+
+    Q(eta)=-2*L*u,       u=(0,-1),
+
+an axis vector. It is nonzero; the non-wall-parallel direction makes its
+scalar row nonzero as well. Section5 gives both opening signs by base
+axis transfer. This includes EVERY C_0-using portal-avoiding connection.
+
+For B_0 two-hit connections, simply identifying the two occurrences of
+B_0 and deleting the intervening loop does not always give a legal
+pi-sector. The two reduced incoming states must have swapped coordinate
+assignments: equal/opposite-K states were excluded above. Normalize the
+first sheet toI and let its physical incoming vector be(p,q), p>0,
+q!=0, |p|!=|q|. The second incoming vector is(|q|,eps*p), eps=+1or-1.
+The cone at B_0 has angle10pi. Put its I-copy physical wedge between
+pi/4and3pi/2. Its8copies have width5pi/4 each, alternating orientation,
+with sheet labels I,V,VD,VDV,-I,-V,(VD)^3,(VD)^3V.
+An exact local angular computation for the would-be shortcut gives:
+
+| sign(q) | eps | directed arc / pi | smaller arc / pi |
+|---|---|---|---|
+| + | + | 7 | 3 |
+| + | - | 3 | 3 |
+| - | + | 9 | 1 |
+| - | - | 3 | 3 |
+
+Thus only the(-,+)case supplies an intrinsic pi shortcut in this
+normalization. It crosses the moving D seam at B_0. Its two open halves
+still use only common fixed walls; the load is
+
+    Q(eta)=L*(a_D-2u)=L*(1,1),
+
+which detects in a non-wall-parallel direction. The other cases give
+3pi/7pi sectors, explicitly excluded by the goal. Their equal vectors
+and actual endpoint are not enough. The table is local cone algebra,
+not a discovered optical path or an in-class counterexample.
+
+A portal-avoiding B_0 path still opens for small NEGATIVE t even in a
+3pi-shortcut case: B_0(t) moves up, so all old endpoint reflection points
+lie below it on the unchanged vertical flank. The fixed P^- polyline
+is then an ordinary legal P_t path. The analogous C_0 single-hit path
+opens for positive t. Finitely many other reflection points have positive
+clearance from the old closed portal and stay legal for small parameters.
+This one-sided argument alone does not satisfy the one-corner goal.
+
+## 30. Candidate two-corner opening mechanism for the remaining B case
+
+**Status: candidate, distinct from the active one-corner objective.** A
+portal-avoiding two-hit B_0 connection becomes a generalized P path with
+two intrinsic pi continuations at the SAME B_0 zero, at developed times
+w and3w, and actual target at4w. It has no other physical corners.
+Each continuation uses the fixed vertical-flank fold. Define relative
+zero-holonomy classes
+
+    E_1=gamma-4*gamma_1,      E_3=3*gamma-4*gamma_3,
+
+where gamma ends at actual T and gamma_j ends at the j-th developed
+corner occurrence. With the all-fixed-mirror word,
+
+    delta(E_1)=-4*L_1*u,     delta(E_3)=-4*L_3*u.
+
+The two incoming states swap coordinate assignments, so these are
+nonzero ORTHOGONAL axis vectors. Base axis multitwist powers fixing all
+corner/actual endpoint labels preserve delta on ALL relative classes
+by the axis-core flux argument, while taking w to A*w. Each local
+opening row, up to a fixed positive factor, is
+
+    ell_j(A*w)=-sigma_j*det(A*w,delta(E_j)).
+
+These two forms are independent coordinate forms. Any prescribed
+quadrant for A*w is attained by a horizontal power followed by a
+vertical power: first choose the sign of the horizontal component, then
+that of the vertical component. Avoid the finitely many wall-parallel
+choices. Thus both rows can be made to have the opening sign for
+positive t, and both can also be made to have the opening sign for
+negative t, with two supplied affine-image generalized paths.
+
+To complete this conditional argument one must justify the finite-word
+opening proposition for TWO selected pi-sector visits to the same cone:
+strict local inequalities at both visits should suffice, since all
+noncorner crossings have positive clearance and the prong sectors are
+distinct. If that extension is valid, it gives two-sided local illumination
+from a two-corner certificate even when deleting its loop gives3pi.
+It still does NOT construct the required one-corner event or refute its
+universal existence. Keep the original goal open. No sealed connection,
+affine word, direction or ray is discovered or enumerated here.

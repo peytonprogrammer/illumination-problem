@@ -1,0 +1,13 @@
+# UDPT01 reciprocal independent hand acceptance
+
+ACCEPT the single fixed physical illumination witness and its complete-target-grid/period identities. This review does not independently rerun or certify the peer's exhaustive 3,136-row computation or its physical replay counts.
+
+For the original ten-wall polygon and actual S=(2,10), T=(20,2), use tau=121/14. Initial cap descent from y10 to h4 has duration6: 2+6tau-56=-15/7, with actual full-cap index1. The left excursion has duration4: -15/7+4tau-32=3/7, index4. The outer cap has duration16: 3/7+16tau-5*28=-9/7, index2. The right leg has duration1: -9/7+tau-8=-9/14, index1. Each centered residual lies strictly in (-4,4); the triangular folds therefore match both actual position and signed horizontal velocity at each transparent portal. Every phase uses the same tau.
+
+At the left floor, elapsed8, the coordinate is F4(-15/7+2tau)=6/7 in (0,4); the floor reflection is ordinary. At the actual outer roof the phase is 3/7+8tau=487/7, not a multiple of28, so neither roof endpoint is hit. The open bands have only their genuine vertical walls: full cap x0/28 above4, left arm x0/4 between2 and4, right arm x24/28 between3 and4, and bottom x12/28 below3. The four strict portals exclude the remaining reflex corners. Each genuine vertical-wall crossing away from these heights is smooth and specular. Source and target are strict actual interior points.
+
+The final bottom phase is -9/14+tau=8; F16(8)=8, hence final x=28-8=20 at y2. The initial cap and outer cap stay above y2; the left loop touches y2 only at x6/7<4<20; the right band lies above3. The final bottom descent reaches y2 only at time28. Thus the path reaches first actual T legally and finitely. This is a hand proof of existence independent of the peer's ray checker.
+
+Telescoping the signed charts forces tau=(28+eta*8-sigma*2+8q)/28. The nominated positive-positive case has q26. The proposed sufficient q period784 gives Delta_tau224. Multiplication by band durations6,4,16,1 gives1344,896,3584,224: respectively full-period multiples24 of56,112 of8,64 of56,28 of8. The bottom change224 is a multiple of32. Thus the stated repetition identity is correct for each fixed sign pair. I accept that algebra; the claimed number of rows actually executed remains the peer's evidence.
+
+All four frozen source hashes were independently checked before and after this hand review. No discovery, ray engine, worker, or new clock was used. The peer's effort stays closed at its original deadline. This proves one previously uncovered near-roof pair, not arbitrary upper depths, every room, r3 or r<=8. UC01 is a separate proposed quantified theorem under independent review.

@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-11-08T06:22:08.274658+00:00",
+  "status": "NEW_HAND_TARGET_ACCESS_LEMMA_PENDING_INDEPENDENT_REVIEW",
+  "id": "GT01",
+  "statement": "For EVERY native integer bottom target l<t<A,0<v<c in every integral ordered spiral, and EVERY real 0<epsilon<1/(2H), at least one exact regular downward R cap state reaches ACTUAL T by an original-wall legal ray at tau=P+epsilon. No prior illumination assumed.",
+  "cases": {
+    "l<t<w": "At least one negative thin c-gate state from safe unbounded-bottom branches; lift backward through actual right strip to x_h=x_e+(h-c)epsilon.",
+    "t=w": "Two explicit negative cap states x_h=w+(h-v)epsilon or w+(h+v)epsilon; actual target interior, no limiting argument.",
+    "w<t<A": "Four explicit cap states x_h=t-sigma*(h-v)epsilon or t-sigma*(h+v)epsilon, sigma=+/-; strict period/floor/corner guards."
+  },
+  "geometry_and_target_scope": "Integral ordered original spiral, integer/native bottom targets. Epsilon may be real; successful native S/T matching would still require rational direction.",
+  "dependencies": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-bottom-depth.md",
+      "sha256": "836101a7461aa7a4624738c0195b75915164e37353a249157d76f484e9ff8771"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-bottom-depth.json",
+      "sha256": "9140b9bd2b2a541c612ca6fa131254f10e66f5b9ba927e7b1fb512e3b463bef6"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/two-sided-return-test.md",
+      "sha256": "96983f3998dda94bd15087765d12270375944dc4d8edfdde5fb31270d9365b79"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-return-independent.md",
+      "sha256": "d7e1485dcadc1dbc9a3dd6fd4dba2e55bb8dd149eb5c3d15bf1879c918a0f013"
+    }
+  ],
+  "new_dependency_status": "BD01/NG01/BT01-BT03 are OWN hand arguments pending independent review, not assumed peer-accepted. GT01 left-case proof includes their safe-branch reasoning.",
+  "proof_sha256": "e16ce407d36f8f87d7bbc7db835b14056dfc9639d425eecbea490b185b36121f",
+  "review_questions": [
+    "Check every strict alignment and nonnegative unbounded m in the t<w construction, including both missing-alignment cases.",
+    "Check left-turn corner avoidance before target and all genuine underside/floor/vertical-wall guards.",
+    "Check backward right-strip sign/phase from c to h and the uniform epsilon<1/(2H) bound.",
+    "Check t=w as a transparent interior line and both literal m0 tails.",
+    "Check all right-target margins, source/target sheet conventions and integer-height period cancellations.",
+    "Do not infer originalS access merely from a nonempty target-bound cap set."
+  ],
+  "review_request_to": "Existing author/coordinator via board; no new worker/direct outward communication.",
+  "original_S_to_T_proved": false,
+  "all_ordered_proved": false,
+  "all_r3_proved": false,
+  "full_goal_complete": false,
+  "new_discovery": false,
+  "numerical_run": false,
+  "prior_clocks_preserved": true
+}

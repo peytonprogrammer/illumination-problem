@@ -1,0 +1,78 @@
+# Verdict: Accept, with three corrections to the surrounding claims
+
+The inequality W ≥ 10I+2 holds for raw k=0 rooms, given the stated inputs. I found no inconsistency in those inputs. The forest step is correct but unnecessary. Two of the corollaries need rewording, and the sealed-core sentence is misleading. Details follow.
+
+## 1. Full-fan degree and adjacency: correct
+
+Around an A point, the eight link vertices are four C points on the axes and four B points on the diagonals.
+
+Take an axis C of a full fan at A₀. A₀ already supplies two of C's four 90° triangles. The other two come from the opposite A₂.
+- With 0 of them, C is interior to the fan, but its total angle is 180°, so it would be a smooth boundary point. That is forbidden.
+- With 2 of them, C is interior. That is forbidden.
+- With exactly 1, C has 270° and is a nonsmooth corner, giving exactly one interior BC edge.
+
+Every BC edge has a C endpoint, and each C belongs to exactly one fan of A₀. So the full fan has exactly four tree edges, all outgoing, and in-degree 0.
+
+The four neighbours are fans at four different A points, so they are distinct. That also follows from the tree being simple.
+
+**Full-full adjacency is impossible.** The A₂ fan has exactly one triangle at that C, so it cannot be full.
+
+## 2. The H subgraph: correct, but you don't need it
+
+- Every kept edge has exactly one full endpoint, because there are no full-full edges. So the 4I edges are distinct.
+- The vertex set has I+b elements by the definition of b.
+- H is a subgraph of a tree, so it is a forest with 4I = I+b−c, and b = 3I+c ≥ 3I+1.
+
+The same bound follows more directly from counting edges in the whole tree. The tree has I+P−1 edges, of which at least 4I are full-incident, so P ≥ 3I+1. That is the only fact the rest of the proof uses.
+
+## 3. Degree bound and charge ≥ degree: correct
+
+A fan of m triangles has m+1 radial edges, alternating between C-type and B-type.
+
+**Count of internal Cs:**
+
+| Case | Number of internal Cs |
+|---|---|
+| q=2 (m even) | m/2 |
+| q=0 (m even) | (m−2)/2 |
+| q=1 (m odd) | (m−1)/2 |
+
+In all three cases this equals (m−2+q)/2.
+
+**Out-edges.** An internal C carries the fan's two triangles at that point. By the same 2-vs-4 exclusion as in §1, it has exactly one outgoing portal.
+
+**In-edges.** An endpoint C carries one triangle of the fan. Its total triangle count is 1 (a convex 90° corner, no portal) or 3 (exactly one incoming portal). Two triangles is impossible: it would be smooth, or a pinch if they share no edge. So in ≤ 2−q.
+
+**The ten fan types:** m=1,3,5,7 with q=1, and m=2,4,6 with q ∈ {0,2}. That is ten types, and q_A ≥ d holds in every one.
+- m=4: d ≤ 3 when q=0, and d ≤ 2 when q=2. Either way, the smooth charge of 3 still dominates d.
+- m=8 cannot be partial in a strictly simple room.
+
+**Global sum:**
+
+Σ_partial d = 2(I+P−1) − 4I = 2P−2I−2 ≥ 4I.
+
+Adding W = 2+6I+Q gives **W ≥ 10I+2**.
+
+## 4. Equality restrictions (add these to the theorem)
+
+W = 10I+2 requires both of the following:
+
+1. **P = 3I+1.** There are no partial-partial edges, so every tree edge touches a full fan. Equivalently, c=1 and b=P.
+2. **q_A = d for every partial fan.** This is only possible in three cases:
+   - an m=1 leaf with d=1;
+   - an m=2, q=0 fan with d=2, meaning both endpoint Cs receive portals;
+   - a smooth m=4, q=0 fan with d=3.
+
+   The smooth m=4 case has out = 1. Its out-edge must go to a partial fan, because full fans have in-degree 0. That is a partial-partial edge, which condition 1 excludes.
+
+So equality rooms are exactly: I full fans joined in a tree by I−1 two-triangle q=0 connectors, plus 2I+2 single-triangle leaves.
+
+**Equality is attained at I=1.** Take a full star with one triangle at each C, arranged as a pinwheel. Every B has 135°, every C has 270°, Q=4, and W=12.
+
+## 5. Corrections to the corollaries and closing remarks
+
+**(a) "Two interior marks and W ≤ 31 ⇒ I=2."** The theorem gives only I ≤ 2 when W ≤ 31. Getting I = 2 exactly needs the separate premise I ≥ 2. Make sure the "two interior A marks" really are two full A fans, which are the only interior A points in a raw room. Also note that I = 2 forces W ≥ 22.
+
+**(b) The scope is raw k=0 only, as you stated.** None of this transfers to the k ≤ 3 setting, where smooth or interior B/C exceptions can break both the one-portal rule and the identity W = 2+6I+Q.
+
+**(c) Sealed core of a literal leaf.** It is true that I is unchanged: the neighbouring full fan keeps all 8 triangles. But removing the m=1 triangle drops its C from 3 triangles to 2, making C a smooth boundary point. So the sealed core is **not raw**, and W ≥ 10I+2 cannot be applied to the core. It applies only to the original room. If the guard audit uses the bound on the core, that step needs the exception-budget version instead.

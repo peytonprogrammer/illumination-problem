@@ -1,0 +1,303 @@
+{
+  "status": "PASS",
+  "scope": "Frozen local34 rigidity sources, dependencies, inputs and receipts. Digests are integrity records, not a substitute for certificate verification.",
+  "python": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "solver_for_construction": "Glop v9.15.6755; not required by certificate-check.py",
+  "frozen_manifest_inputs_verified": 7,
+  "checks": {
+    "certificate-check.json": {
+      "status": "PASS",
+      "room_sha256": "4c6bc1b1dbef066872e810b4a93e1baeb13de1628cc627f0d2e016530b477ef7",
+      "events": 86,
+      "quadratic_derivative_coordinates_checked": 3440,
+      "rank_on_closure": 34,
+      "closure_dimension": 38,
+      "common_kernel_dimension": 4,
+      "strict_positive_coefficients": 86,
+      "one_corner_geometry_verified": true,
+      "corruptions_rejected": [
+        "missing_coefficient",
+        "negative_coefficient",
+        "reversed_row",
+        "wrong_gradient"
+      ],
+      "scope": "Checks a finite local rigidity certificate, not historical priority or a global minimum. No LP, direction search or peer executable used."
+    },
+    "validate.json": {
+      "status": "PASS",
+      "checks": {
+        "event_specific_descents": 86,
+        "further_predictions": 341,
+        "predicted_word_invalid": 157,
+        "predicted_lit": 184,
+        "tangent_skipped": 3
+      },
+      "mismatches": [],
+      "scope": "Individual prescribed words only. A failed word is not a claim of room darkness."
+    },
+    "peer-replay.json": {
+      "status": "PASS",
+      "supplied_events": 179,
+      "matched_events": 179,
+      "supplied_directions": 175,
+      "sides_replayed": 350,
+      "other_limits": {
+        "SECOND_CORNER": 171
+      },
+      "rank_on_closure": 34,
+      "kernel_dimension": 4,
+      "axis_affine_symmetry_dimension": 4,
+      "strict_positive_coefficients": 179,
+      "dependency_verified_exactly": true,
+      "parameter_chart": "Peer positive edge lengths reversed; gradients compared modulo the two closure equations",
+      "scope": "Fixed179-event peer certificate replay with independent geometry; not a new direction scan."
+    },
+    "parity-check.json": {
+      "status": "PASS",
+      "darkness": "CERTIFIED_BY_PRIMITIVE_STEP_PARITY",
+      "checks": {
+        "non_A_vertices_checked": 27,
+        "basis_states": 6,
+        "generator_transitions": 12
+      },
+      "corruptions_rejected": [
+        "missing_blocker",
+        "missing_basis_state",
+        "wrong_geometry_hash"
+      ],
+      "scope": "All directions and arbitrary finite reflection words, no sampled rays. Finite six-state parity-basis certificate; not a completed orbit of the full physical76-square unfolding."
+    }
+  },
+  "files": [
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/adaptive-cone-history.json",
+      "sha256": "8546d6510890b9f6c5fafe385d4363a629fe8dbeee26a0b4ab0ac83559163ca1",
+      "bytes": 365
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/adaptive-cone.json",
+      "sha256": "af43c4f2209e10f06b07b00e7e69ea528d813917ffbd9107f7dbada30f494799",
+      "bytes": 1691
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/certificate-check.json",
+      "sha256": "15ea4cbb47d539c243f52818a812a6baee98bd1bd79cc61e1e7d8e7c8563ace6",
+      "bytes": 619
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/certificate-check.py",
+      "sha256": "3fcbe1e6b2d828aaa94bf89b205fa329a07ddebbdf0bb9305256adc43d12b393",
+      "bytes": 4558
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/cone-witness.json",
+      "sha256": "536d172aeaa7256b2f59ae15b34158e1a3453699a1c37c4f33d973438d858c8e",
+      "bytes": 1687
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/cone-witness.py",
+      "sha256": "fc6498f9685eaee0d748ec5acba0055e69842b54d21437df936f56dbea889759",
+      "bytes": 2660
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/controls.json",
+      "sha256": "be449eca0bd9eaa247e03af93e73552d73cf548bb062640a491c2ff962b66ad8",
+      "bytes": 228
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/coverage.md",
+      "sha256": "aba2ec17d41fc7addc4f1fd9bc5e7c6152b8dc4b0e0bd4a1a0e4f37d6af6c683",
+      "bytes": 2288
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/events-R12.json",
+      "sha256": "55aab6ef598641ec0e2dbbc6947358b4a6a04965bf59f5dccaef972cd90fb0f5",
+      "bytes": 104832
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/events-R6.json",
+      "sha256": "a299c29b01758eadbe3b17f4845859c579fb7e65b46b9498b4a15650cdd77e73",
+      "bytes": 17302
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/events-targeted.json",
+      "sha256": "ec70c507cce0b3fe57f19dbfe8f1c097e322349858499df590faf50d05059ce2",
+      "bytes": 107605
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/events.json",
+      "sha256": "ec70c507cce0b3fe57f19dbfe8f1c097e322349858499df590faf50d05059ce2",
+      "bytes": 107605
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/extend-certificate.py",
+      "sha256": "13f3bc92fee514d255125946934629eda1c902ff075e8503a4b32d92349b82fa",
+      "bytes": 2676
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/findings.md",
+      "sha256": "a8e64d18dd559bffae4cfea2b46f01c9409ece0020c748fb4e176c7bb9ff44ae",
+      "bytes": 10861
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/inputs/events-room-tokarsky34-R18.json",
+      "sha256": "0b84f9ff6b2be3ebd719844ffafe88f5be94d97f2828934cefeca49d755a3a2d",
+      "bytes": 29686
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/inputs/funcs-room-tokarsky34-R18.json",
+      "sha256": "24eb6ecf9b0c4bb976a1d845c020b6130bd63cdcc67dd62a5a9204bb5d2d89e5",
+      "bytes": 43599
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/inputs/literature-ortho.jpg",
+      "sha256": "4f525f9c65d7ec9b8f622d8e42faaa07e0adebbf8ab263889816322eabb533f1",
+      "bytes": 45810
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/inputs/novelty-geometry-check.json",
+      "sha256": "ea854cd60b6b6b11721dda674e2e4b63a2e29bb35d5a97d8d616e06ffa5cd324",
+      "bytes": 10775
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/inputs/orourke-orthogonal.pdf",
+      "sha256": "57eb1bbabd7f6da18f62e90942225d472e4b448b178654b06aa7b95c8786bfb3",
+      "bytes": 257158
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/inputs/posspan-room-tokarsky34-R18.json",
+      "sha256": "469261c2d1963df023996fd903b8c270aa8da73366c4267045428ad88b90c499",
+      "bytes": 5000
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/inputs/room-tokarsky34.json",
+      "sha256": "4c6bc1b1dbef066872e810b4a93e1baeb13de1628cc627f0d2e016530b477ef7",
+      "bytes": 5152
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/manifest.json",
+      "sha256": "a1220c733d8c4f0190bd49db1eb7ee453d67cb0962d93dd068958e7516c85214",
+      "bytes": 3903
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/orbit-build.json",
+      "sha256": "488e540f7f5e8d5b617f5cf80d3152e1acb1c19a6169eb8a014ca1f4e5742dfe",
+      "bytes": 136
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/orbit-build.py",
+      "sha256": "76853a17ca50f11fae515b9e863e7123c436a48c67af3c0bce16d7edadcd8237",
+      "bytes": 1841
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/parity-certificate.json",
+      "sha256": "4e4459e5df609c7d679910b99d7e13254dae99055f1344d764a0b9142c20f690",
+      "bytes": 811
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/parity-check.json",
+      "sha256": "cbd5f4ac79daa76cd711133333f6013853043c60a7ef562a8a670228b735671a",
+      "bytes": 483
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/parity-check.py",
+      "sha256": "b2333e6c64c0812e95085d74e38fa1d06845317369d58a8308170e39bd449211",
+      "bytes": 3326
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/peer-replay.json",
+      "sha256": "01598e565d064e4ce28771af26f2b1aecf6a291a062186263158f5c35e5c9a9d",
+      "bytes": 565
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/peer-replay.py",
+      "sha256": "6835339001b2ed33cb70c97d38cec3ee73d0241a00e422520f7303356632438c",
+      "bytes": 2986
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/positive-span-R12.json",
+      "sha256": "9581250da5f6eb6687ada635309b996e1bc66773c896dd2f37d251471322ca5f",
+      "bytes": 290
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/positive-span.json",
+      "sha256": "438ffb66a4083e08d5696b2f6a93aef2aa3b9e3688bd96c9820a1b1b2af0e22e",
+      "bytes": 2904
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/positive-span.py",
+      "sha256": "79de69496476e0d38ea61fcc2f4a200e4dd7c4d59207c4f1f1df127cf7afdb17",
+      "bytes": 2701
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/reconstruct.json",
+      "sha256": "ac77a53d82db0440aa85e43e90da9ec18f2ce46c19712808d0eccfde5a95c4d1",
+      "bytes": 3980
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/reconstruct.py",
+      "sha256": "bd6dab9258aa3c0013bef71ee9ed93c52edcf77650fda293121436f3f011ae64",
+      "bytes": 2296
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/rigidity-R12.json",
+      "sha256": "665d0d9ec39fee3480afcc7ac511112b3557f5c973afb0a119293428c8117101",
+      "bytes": 564
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/rigidity-R6.json",
+      "sha256": "df8dc520510bf085f0bc7fabd92e18a0b866e7eed3604f779b89e8ff5c2e8721",
+      "bytes": 562
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/rigidity-extended.json",
+      "sha256": "388f93ce45e5fed5f593161942210dcb59eb9189e00cbc120a05e6e6a9e81d72",
+      "bytes": 376
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/rigidity.json",
+      "sha256": "665d0d9ec39fee3480afcc7ac511112b3557f5c973afb0a119293428c8117101",
+      "bytes": 564
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/rigidity.py",
+      "sha256": "6a464429f9dce31f7130a55463165fde9f61850a6403defe4e66384da40fe513",
+      "bytes": 3153
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/room.json",
+      "sha256": "4c6bc1b1dbef066872e810b4a93e1baeb13de1628cc627f0d2e016530b477ef7",
+      "bytes": 5152
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/sources.json",
+      "sha256": "5913da6a88b7e9658114e4674be8ff7fd9515f342cfbcf7d15e71b2b3399f628",
+      "bytes": 558
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/validate.json",
+      "sha256": "579379db1ae377b88e014cd4cc41632a7165f2cd5dc7f23d500458bfa20c3879",
+      "bytes": 310
+    },
+    {
+      "path": ".context/illumination-k4-codex/historical-rigidity34/validate.py",
+      "sha256": "1d4319a6fadb197533794e4c201e9cd2529a01aeff3e5a07e9b0ce2c60c3da19",
+      "bytes": 4628
+    },
+    {
+      "path": ".context/illumination-k4-codex/rigidity-review/check.py",
+      "sha256": "b77d857bed843004c90e36ebf99814f77cacde7e99d5626db083b72aa166ae8e",
+      "bytes": 9898
+    },
+    {
+      "path": ".context/illumination-k4-codex/rigidity-review/event_geometry.py",
+      "sha256": "2d7eaad6861ed3ebca0e72f78c181a498ba44ade30323e57716f58ca64069118",
+      "bytes": 6461
+    },
+    {
+      "path": ".context/illumination-k4-codex/rigidity-review/inputs/cand-2_2-1.json",
+      "sha256": "c7838dfe640932458e6853af7171396af05df71067658ee8f78f9ca3d91cab20",
+      "bytes": 853
+    }
+  ]
+}

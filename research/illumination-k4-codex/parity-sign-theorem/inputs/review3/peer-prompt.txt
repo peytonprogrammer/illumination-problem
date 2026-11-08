@@ -1,0 +1,481 @@
+Independently challenge the following elementary holonomy-rigidity theorem. No tools are available. Keep the review under1300words. Verify: (1) every wall return word yields a genuine absolute period of the standard unfolded polygon, (2) finite Schreier generators suffice, (3) covariance forces the common map A to commute with the finite reflection group, (4) averaging removes the residual cocycle, (5) exact versus infinitesimal statements, (6) marked-point profile assumptions and the gap darkness=>preservation. Inspect the check code; do not claim numerical execution. Distinguish standard material/new presentation from a novel illumination result. Also check the bidirectional reversal determinant sign; its paired rows are literal positive sums of already-valid original rows, so no newly traced optical-side record is assumed. State ACCEPT/CORRECT/REJECT per substantive issue.
+
+FILE holonomy-rigidity.md
+# Conditional rigidity from absolute periods
+
+[done] Elementary wall-reflection argument and exact checks on 34 frozen rooms.
+[in progress] Independent mathematical review.
+
+This proves a conditional rigidity statement, not the sign theorem. The missing premise is that darkness forces the period relations to persist.
+
+## Statement
+
+Fix the directions of the labeled walls of a strictly simple polygon. Their reflections generate a finite linear group G. In the canonical 45-degree case with horizontal, vertical and diagonal walls, G is D4, the order-eight symmetry group of a square.
+
+Write the reflection in wall i as
+
+    r_i(x)=R_i x+b_i,   b_i=2h_i n_i/|n_i|².
+
+For a wall word w, composition gives
+
+    r_w(x)=O_w x+b_w,
+    b_(uv)=b_u+O_u b_v.
+
+Call a word a return word if O_w=I. Its translation vector b_w is an absolute period of the unfolded surface. Assume these vectors span R².
+
+Suppose a deformation, with the wall directions held fixed, changes every return-word vector by one common linear map A:
+
+    delta b_w=A b_w    whenever O_w=I.                 (P)
+
+Then A commutes with G. If G=D4, A=lambda I, and there is a vector a such that
+
+    delta h_i=lambda h_i+n_i dot a,
+    delta c_i=lambda c_i+a.
+
+Thus the wall motion consists only of translation and uniform scale.
+
+For an orthogonal family, G is the order-four reflection group, its commuting matrices are diagonal in the wall axes, and independent horizontal and vertical scaling remain possible. This is the expected larger family symmetry.
+
+## Why return words are genuine periods
+
+Use the usual unfolded surface with one polygon copy for each orientation in G. Every wall crossing changes the copy label by R_i. For any prescribed sequence of crossings, choose paths through each polygon copy joining wall-interior points and avoiding the vertices. These paths need not be straight. Such choices exist because the polygon interior is path-connected.
+
+A return word ends in the original copy. Close the path to its starting point inside that copy. Its developed displacement is b_w, since the final orientation is I. It therefore represents an absolute period. No proposed billiard trajectory or new optical event is being introduced.
+
+Conversely, a closed path avoiding the finitely many vertex lifts can be split at its wall crossings. Its developed displacement is the return-word translation. This also explains why the finite return generators below capture the period information needed here. Relations coming from vertex loops have zero translation.
+
+## Proof
+
+### 1. The common map must commute with the reflection group
+
+Let k be a return word, and let w have orientation g. The conjugate w k w^(-1) is another return word. Its translation is
+
+    b_(wkw^(-1))=g b_k.
+
+Because g is fixed during the deformation, its variation is g delta b_k. Apply (P) to both return words:
+
+    A g b_k=g A b_k.
+
+The b_k span R², so A g=g A for every g in G.
+
+In D4, commuting with the horizontal reflection makes A diagonal. Commuting also with reflection in a diagonal makes its two diagonal entries equal. Therefore A=lambda I.
+
+### 2. Remove that common linear change
+
+Define
+
+    z(w)=delta b_w-A b_w.
+
+The composition formula and A O_w=O_w A give
+
+    z(uv)=z(u)+O_u z(v).
+
+Condition (P) says z vanishes on every return word. Therefore z depends only on the orientation g=O_w: if O_u=O_v, the return word uv^(-1) gives z(u)-z(v)=0.
+
+Hence z is a vector-valued cocycle on the finite group G. It is a translation change. To see this directly, set
+
+    a=(1/|G|) sum_(g in G) z(g).
+
+For any h in G, summing z(hg)=z(h)+h z(g) over g yields
+
+    a=z(h)+h a,
+    z(h)=a-h a.
+
+Apply this to each wall reflection:
+
+    delta b_i-A b_i=(I-R_i)a.
+
+When A=lambda I, substituting b_i and I-R_i gives
+
+    2(delta h_i-lambda h_i)n_i/|n_i|²
+       =2(n_i dot a)n_i/|n_i|².
+
+Thus delta h_i=lambda h_i+n_i dot a. The intersection of two adjacent supporting lines then has velocity delta c_i=lambda c_i+a. This proves the statement.
+
+The averaging argument is standard finite-group linear algebra. No novelty claim is made for that ingredient or for rigidity of fixed-angle torus-cover diagrams.
+
+## Finite generators for an exact check
+
+Choose one wall word P_g for each orientation g, with affine representative F_g(x)=g x+B_g. For each g and each wall i, let g'=g R_i. The return word P_g i P_(g')^(-1) has period
+
+    L_(g,i)=B_g+g b_i-B_(g').
+
+There are at most |G| W such periods, including zeros and duplicates. Their words generate the return-word subgroup: follow a wall word and insert the chosen representatives at each intermediate orientation; adjacent representatives cancel. Translation vectors add for return words. Therefore it is enough to impose delta L=A L on this finite list.
+
+The implementation solves these equations exactly in the unknowns (delta h,A). It also verifies that their base periods span R².
+
+## Marked points need an additional premise
+
+Absolute periods do not determine the two interior marks. If their relative periods from the first vertex obey the same linear map,
+
+    delta(s-c_0)=A(s-c_0),
+    delta(t-c_0)=A(t-c_0),                             (M)
+
+then the theorem gives delta s=lambda s+a and delta t=lambda t+a. Consequently the entire marked configuration changes only by similarity.
+
+A continuously marked torus-cover diagram with fixed winding numbers supplies (P). Fixed rational torus profiles for the two marks supply (M), including fixed local choices of their integer lifts. Merely having some torus cover at each configuration is not being used as a substitute for this continuously identified data.
+
+## Exact finite version
+
+The same argument compares two wall systems, rather than their derivatives. If
+
+    b_w(new)=A b_w(old)
+
+for every return word and an invertible A, the conjugation argument again gives A g=g A. Define z(w)=b_w(new)-A b_w(old), average over G, and conclude
+
+    h_i(new)=lambda h_i(old)+n_i dot a
+
+in the D4 case. For nearby configurations lambda is positive. Corresponding exact relative-profile equations place the two marks under the same similarity.
+
+## Checks and limits
+
+`holonomy-rigidity.py` uses only the 34 frozen polygon geometries. Every one has orientation group D4 and period span rank two. In each case the exact kernel of (P), including the four unknown entries of A, has dimension three. Adding the four marked-profile equations leaves dimension three. The explicitly checked kernel is the two translations and uniform scale.
+
+This is a check of the conditional theorem, not evidence that all dark deformations satisfy its premises. A dark deformation could change the cover, or leave the torus-cover locus, or move the marks outside fixed rational profiles. Excluding these possibilities is open.
+
+Even actual local isolation would not by itself prove the stronger first-order sign theorem. An isolated zero set may have a degenerate linearization, as x²+y²=0 illustrates. This route could instead supply local isolation directly if the missing cover-preservation theorem were proved.
+
+FILE holonomy-rigidity.py
+"""Absolute-period rigidity of frozen wall systems, without billiard trajectories."""
+from pathlib import Path
+from fractions import Fraction as F
+from collections import deque
+import json
+
+ROOT = Path(__file__).resolve().parent
+INP = ROOT/'inputs/holdouts'
+dot = lambda a, b: sum(x*y for x, y in zip(a, b))
+add = lambda a, b: tuple(x+y for x, y in zip(a, b))
+sub = lambda a, b: tuple(x-y for x, y in zip(a, b))
+scale = lambda a, v: tuple(a*x for x in v)
+mm = lambda A, B: tuple(tuple(sum(A[i][k]*B[k][j] for k in (0, 1)) for j in (0, 1)) for i in (0, 1))
+mf = lambda A, v: tuple(tuple(sum(A[i][k]*v[k][j] for k in (0, 1)) for j in range(len(v[0]))) for i in (0, 1))
+I = ((F(1), F(0)), (F(0), F(1)))
+
+
+def rank(rows):
+    basis = {}
+    for row in rows:
+        a = list(map(F, row))
+        for p, b in sorted(basis.items()):
+            if a[p]:
+                x = a[p]
+                a = [v-x*w for v, w in zip(a, b)]
+        p = next((i for i, v in enumerate(a) if v), None)
+        if p is not None:
+            x = a[p]
+            basis[p] = [v/x for v in a]
+    return len(basis)
+
+
+def check(room):
+    v = room['vertices']
+    W = len(v)
+    normals = []
+    for a, b in zip(v, v[1:]+v[:1]):
+        dx, dy = b[0]-a[0], b[1]-a[1]
+        # Any nonzero normal scaling is valid for the supporting-line chart.
+        normals.append((-dy, dx))
+    h = tuple(F(dot(n, p)) for n, p in zip(normals, v))
+    unit = lambda i: tuple(F(k == i) for k in range(W))
+    reflect = []
+    for i, n in enumerate(normals):
+        R = tuple(tuple(F(a == b)-F(2*n[a]*n[b], dot(n, n)) for b in (0, 1)) for a in (0, 1))
+        shift = tuple(scale(F(2*n[a], dot(n, n)), unit(i)) for a in (0, 1))
+        reflect.append((R, shift))
+    # One affine representative for each orientation. These are chamber-chart
+    # paths, NOT straight billiard paths. Only reflection matrices are explored.
+    zero = (F(0),)*W
+    representatives = {I: (zero, zero)}
+    tree = {I: []}
+    queue = deque([I])
+    while queue:
+        O = queue.popleft()
+        B = representatives[O]
+        for i, (R, b) in enumerate(reflect):
+            P = mm(O, R)
+            if P not in representatives:
+                representatives[P] = tuple(add(B[k], mf(O, b)[k]) for k in (0, 1))
+                tree[P] = tree[O]+[i]
+                queue.append(P)
+    assert len(representatives) in (4, 8)
+    periods = []
+    for O, B in representatives.items():
+        for i, (R, b) in enumerate(reflect):
+            P = mm(O, R)
+            L = tuple(sub(add(B[k], mf(O, b)[k]), representatives[P][k]) for k in (0, 1))
+            periods.append({'sheet': O, 'wall': i, 'forms': L,
+                            'value': tuple(dot(row, h) for row in L)})
+    assert rank([p['value'] for p in periods]) == 2
+    isoperiodic_kernel = W-rank([row for p in periods for row in p['forms']])
+    assert isoperiodic_kernel == 2
+    eq = []
+    for p in periods:
+        x, y = p['value']
+        eq.append(list(p['forms'][0])+[-x, -y, F(0), F(0)])
+        eq.append(list(p['forms'][1])+[F(0), F(0), -x, -y])
+    # Unknowns are (delta h, A11,A12,A21,A22).
+    tx = [F(n[0]) for n in normals]+[F(0)]*4
+    ty = [F(n[1]) for n in normals]+[F(0)]*4
+    uniform = list(h)+[F(1), F(0), F(0), F(1)]
+    kernel_dimension = W+4-rank(eq)
+    assert all(dot(row, z) == 0 for row in eq for z in (tx, ty, uniform))
+    assert rank([tx, ty, uniform]) == 3
+    if len(representatives) == 8:
+        assert kernel_dimension == 3
+        # Prescribing a nonscalar A must be inconsistent, not merely yield a
+        # different dimension. This tests the commuting-map restriction.
+        fixed = [[F(k == W+a) for k in range(W+4)] for a in range(4)]
+        augmented = [row+[F(0)] for row in eq]+[row+[F(a == 0)] for a, row in enumerate(fixed)]
+        assert rank(augmented) == rank(eq+fixed)+1
+    # Independently derive the centralizer constraints A R = R A.
+    commutator = []
+    matrices = [((1, 0), (0, 0)), ((0, 1), (0, 0)), ((0, 0), (1, 0)), ((0, 0), (0, 1))]
+    for R in representatives:
+        for a in (0, 1):
+            for b in (0, 1):
+                commutator.append([mm(M, R)[a][b]-mm(R, M)[a][b] for M in matrices])
+    centralizer_dimension = 4-rank(commutator)
+    assert kernel_dimension == centralizer_dimension+2
+    # Add marked relative-period equations from the first physical vertex.
+    n, m = normals[-1], normals[0]
+    det = n[0]*m[1]-n[1]*m[0]
+    vertex0 = (scale(1/F(det), sub(scale(m[1], unit(W-1)), scale(n[1], unit(0)))),
+               scale(1/F(det), sub(scale(n[0], unit(0)), scale(m[0], unit(W-1)))))
+    marked_eq = [row+[F(0)]*4 for row in eq]
+    for mark, p in enumerate(room['marked']):
+        x, y = p[0]-v[0][0], p[1]-v[0][1]
+        for a in (0, 1):
+            A = [-F(x), -F(y), F(0), F(0)] if a == 0 else [F(0), F(0), -F(x), -F(y)]
+            row = [-z for z in vertex0[a]]+A+[F(0)]*4
+            row[W+4+2*mark+a] = F(1)
+            marked_eq.append(row)
+    marked_kernel = W+8-rank(marked_eq)
+    translations = [tx+[F(1), F(0), F(1), F(0)], ty+[F(0), F(1), F(0), F(1)]]
+    marked_scale = uniform+[F(x) for p in room['marked'] for x in p]
+    assert all(dot(row, z) == 0 for row in marked_eq for z in translations+[marked_scale])
+    assert marked_kernel == kernel_dimension
+    return {'tag': room['tag'], 'walls': W, 'orientation_group_size': len(representatives),
+            'period_generators': len(periods), 'period_span_rank': 2,
+            'fixed_period_kernel_dimension': isoperiodic_kernel,
+            'affine_period_kernel_dimension': kernel_dimension,
+            'linear_centralizer_dimension': centralizer_dimension,
+            'marked_profile_kernel_dimension': marked_kernel}
+
+
+cases = []
+for selection in json.loads((INP/'selection.json').read_text()):
+    result = check(json.loads((INP/(selection['tag']+'.json')).read_text()))
+    cases.append(result)
+    print(json.dumps(result), flush=True)
+rectangle = check({'tag': 'prescribed-rectangle-control',
+    'vertices': [[0, 0], [3, 0], [3, 2], [0, 2]], 'marked': [[1, 1], [2, 1]]})
+assert rectangle['orientation_group_size'] == 4
+assert rectangle['affine_period_kernel_dimension'] == 4
+assert rectangle['linear_centralizer_dimension'] == 2
+print(json.dumps(rectangle), flush=True)
+out = {'status': 'EXACT_PASS', 'rooms_checked': len(cases), 'cases': cases, 'prescribed_control': rectangle,
+       'scope': 'Conditional affine-period/profile rigidity only. Does not prove darkness preserves periods or the cover, and does not prove the sign theorem. No billiard tracing.'}
+(ROOT/'holonomy-rigidity.json').write_text(json.dumps(out, indent=2)+'\n')
+
+FILE cover-rigidity.md
+# Does darkness preserve the covering structure?
+
+[in progress] Candidate route. The central preservation statement is unproved.
+
+## What can now be proved conditionally
+
+The wall-reflection argument in [holonomy-rigidity.md](holonomy-rigidity.md) proves: if all absolute loop displacements change by one common linear map, the fixed D4 reflection symmetry forces that map to be scalar. Finite-group averaging then shows that every wall moves by the same translation and scale. Fixed relative profiles make the marked points follow as well. This is independent of optical event enumeration.
+
+Thus a structural preservation theorem could establish local isolation without first constructing a signed positive balance of corner-event gradients. That is an alternative to the first-order sign theorem, not a proof of it.
+
+## What the primary literature supplies
+
+Apisa–Wright classify finitely blocked pairs on non-torus covers using periodic points and minimal half-translation quotients (Theorem 3.6). Their Proposition 3.11 characterizes rational polygons whose unfoldings cover tori as Gaussian, Eisenstein, or rectangle-tiled. Its proof relates relative and absolute periods through rotational symmetry. These results do not say that a moving dark pair preserves a fixed torus-cover diagram. [Primary paper](https://arxiv.org/html/1708.03411v3).
+
+Lelièvre–Monteil–Weiss characterize torus covers by blocking of all pairs, or an open set of pairs, on a fixed surface. They explicitly describe non-torus surfaces with infinitely many dark pairs. One dark pair is therefore insufficient to invoke their torus-cover characterization. Their fixed-surface illumination theorem also does not classify changes of room shape. [Theorem 1, Theorem 2 and introduction](https://msp.org/gt/2016/20-3/gt-v20-n3-p11-s.pdf).
+
+These are the relevant primary results checked in this pass. Neither provides the missing preservation theorem.
+
+## Necessary distinctions
+
+1. A single tracked dark pair is weaker than an open set of finitely blocked pairs on one surface.
+2. Regular lifts of convex polygon corners must be retained as marked forbidden points. They cannot silently be replaced by zeros of the differential.
+3. A continuously identified covering diagram and fixed marked rational profiles are stronger data than the existence of an unspecified cover for each shape.
+4. Actual isolation of dark configurations is weaker than strict first-order separation by one-corner event gradients.
+5. A fixed-polygon finiteness theorem for dark pairs does not establish isolation while the polygon changes. Finiteness alone also does not imply a nondegenerate first-order certificate.
+
+## The concrete missing theorem
+
+For a neighborhood of a chosen parity room, show that every dark marked configuration has the same continuously marked torus-cover period diagram and the same rational relative profiles, up to one common linear map. The exact rigidity theorem would then force similarity.
+
+No proof currently rules out nearby dark configurations on non-torus covers, or on different covering diagrams. The periodic-point and quotient alternatives in Apisa–Wright must be handled, rather than omitted.
+
+## Consequence for research priorities
+
+The period theorem is a useful endpoint for a classification argument. It is not a replacement name for the missing sign argument. The next theoretical work must either derive preservation from darkness, or identify a geometric family that defeats it. More affine rank checks cannot decide that issue.
+
+FILE bidirectional-loops.py
+"""Forward/reverse pairing of frozen affine events. No ray tracing or discovery."""
+from pathlib import Path
+from fractions import Fraction as F
+from collections import defaultdict
+import importlib.util
+import json
+import numpy as np
+from scipy.optimize import linprog
+
+ROOT = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location('repair_structure', ROOT/'repair-structure.py')
+repair = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(repair)
+solve, dot = repair.solve, repair.dot
+j = json.loads((ROOT/'coupling.json').read_text())
+W, dim = j['walls'], j['offset_dimension']
+unit = lambda i: tuple(F(k == i) for k in range(dim))
+add = lambda a, b: tuple(x+y for x, y in zip(a, b))
+scale = lambda a, v: tuple(a*x for x in v)
+sub = lambda a, b: add(a, scale(-1, b))
+mv = lambda A, v: tuple(sum(A[a][b]*v[b] for b in (0, 1)) for a in (0, 1))
+mf = lambda A, v: tuple(tuple(sum(A[a][b]*v[b][k] for b in (0, 1)) for k in range(dim)) for a in (0, 1))
+matmul = lambda A, B: tuple(tuple(sum(A[a][c]*B[c][b] for c in (0, 1)) for b in (0, 1)) for a in (0, 1))
+cross = lambda a, b: a[0]*b[1]-a[1]*b[0]
+fcross = lambda w, v: tuple(w[0]*v[1][k]-w[1]*v[0][k] for k in range(dim))
+source = (unit(W), unit(W+1))
+target = (unit(W+2), unit(W+3))
+theta = tuple(map(F, j['offset_base_point']))
+normal = list(map(tuple, j['offset_normals']))
+I = ((F(1), F(0)), (F(0), F(1)))
+reflect = [tuple(tuple(F(a == b)-F(2*n[a]*n[b], dot(n, n)) for b in (0, 1)) for a in (0, 1)) for n in normal]
+forms = lambda x: tuple(tuple(map(F, row)) for row in x)
+records = []
+for e in j['events']:
+    O = I
+    for wall in e['word']:
+        O = matmul(O, reflect[wall])
+    Ot = tuple(zip(*O))
+    det = cross(O[0], O[1])
+    T, C = forms(e['target_image_forms']), forms(e['corner_image_forms'])
+    b = tuple(sub(T[k], mf(O, target)[k]) for k in (0, 1))
+    reverse_target = mf(Ot, tuple(sub(source[k], b[k]) for k in (0, 1)))
+    reverse_corner = mf(Ot, tuple(sub(C[k], b[k]) for k in (0, 1)))
+    wr = tuple(-v for v in mv(Ot, tuple(e['direction'])))
+    sr = -e['side']*det
+    Ar = tuple(sub(reverse_target[k], target[k]) for k in (0, 1))
+    Cr = tuple(sub(reverse_corner[k], target[k]) for k in (0, 1))
+    Er = tuple(sub(scale(2, Cr[k]), Ar[k]) for k in (0, 1))
+    row = tuple(map(F, e['offset_gradient']))
+    assert scale(sr, fcross(wr, Er)) == row
+    assert tuple(dot(v, theta) for v in Ar) == tuple(2*x for x in wr)
+    assert tuple(dot(v, theta) for v in Cr) == wr
+    # Exact quadratic identity: f_rev == f_original on arbitrary affine inputs.
+    # A_rev=-O^T A and C_rev=O^T(C-A), hence the scalar multiplier is -sr*det.
+    assert -sr*det == e['side']
+    records.append({'index': e['index'], 'corner': tuple(e['corner']),
+                    'forward': {'w': tuple(e['direction']), 'side': e['side'], 'C': C, 'T': T},
+                    'reverse': {'w': wr, 'side': sr, 'C': reverse_corner, 'T': reverse_target},
+                    'row': row})
+
+
+def paired(which):
+    groups = defaultdict(dict)
+    for r in records:
+        f = r[which]
+        key = (f['w'], r['corner'], f['C'])
+        assert f['side'] not in groups[key], ('duplicate', which, r['index'])
+        groups[key][f['side']] = r
+    result = []
+    for key, sides in groups.items():
+        if set(sides) != {-1, 1}:
+            continue
+        plus, minus = sides[1], sides[-1]
+        Tp, Tm = plus[which]['T'], minus[which]['T']
+        g = add(plus['row'], minus['row'])
+        assert g == fcross(key[0], tuple(sub(Tm[k], Tp[k]) for k in (0, 1)))
+        lost = (W, W+1) if which == 'forward' else (W+2, W+3)
+        assert all(g[k] == 0 for k in lost)
+        result.append({'indices': [plus['index'], minus['index']], 'row': g,
+                       'direction': key[0], 'corner': key[1], 'family': which})
+    return result
+
+
+forward, reverse = paired('forward'), paired('reverse')
+allpairs = forward+reverse
+rank = lambda rows: solve(list(zip(*rows)), [F(0)]*dim)[1] if rows else 0
+nonzero = [p for p in allpairs if any(p['row'])]
+stress = repair.positive_stress([p['row'] for p in nonzero]) if nonzero else None
+out = {'status': 'EXACT_IDENTITIES_PASS', 'tag': j['tag'], 'events_reversed_algebraically': len(records),
+       'forward_pairs': len(forward), 'reverse_pairs': len(reverse),
+       'forward_rank': rank([p['row'] for p in forward]),
+       'reverse_rank': rank([p['row'] for p in reverse]),
+       'combined_rank': rank([p['row'] for p in allpairs]), 'required_rank': W+1,
+       'positive_stress': list(map(str, stress)) if stress else None,
+       'pairs': [{**p, 'row': list(map(str, p['row'])), 'direction': list(map(str, p['direction']))} for p in allpairs],
+       'scope': 'Exact affine reversal and paired-loop algebra on167frozen events. A failed floating stress proposal is not an exact exclusion.'}
+if stress is None and nonzero:
+    # Produce an exact dual separator if possible; unlike an LP failure, this is a proof.
+    scales = [max(map(abs, p['row'])) for p in nonzero]
+    R = [tuple(v/s for v in p['row']) for p, s in zip(nonzero, scales)]
+    M = np.array(R, dtype=float)
+    proposal = linprog(-M.sum(axis=0), A_ub=-M, b_ub=np.zeros(len(R)),
+                      bounds=[(-1, 1)]*dim, method='highs')
+    assert proposal.success
+    active = [i for i, value in enumerate(M@proposal.x) if abs(value) < 1e-8]
+    bounds = [i for i, value in enumerate(proposal.x) if abs(abs(value)-1) < 1e-8]
+    eq = [R[i] for i in active]+[unit(i) for i in bounds]
+    rhs = [F(0)]*len(active)+[F(1 if proposal.x[i] > 0 else -1) for i in bounds]
+    delta, _ = solve(eq, rhs, unique=True)
+    values = [dot(p['row'], delta) for p in allpairs]
+    assert all(v >= 0 for v in values) and any(v > 0 for v in values)
+    out['exact_separator'] = list(map(str, delta))
+    out['separator_pair_values'] = list(map(str, values))
+    out['positive_stress_impossible_for_all_listed_pairs'] = True
+    candidates = [e['index'] for e in j['events'] if any(
+        sorted(abs(e['corner'][k]-p[k]) for k in (0, 1)) == [1, 1] for p in j['room']['marked'])]
+    out['single_diagonal_repair'] = None
+    for index in candidates:
+        original = tuple(map(F, j['events'][index]['offset_gradient']))
+        weights = repair.positive_stress([p['row'] for p in nonzero]+[original])
+        if weights is not None:
+            original_weights = [F(0)]*len(records)
+            for pair, weight in zip(nonzero, weights[:-1]):
+                for k in pair['indices']:
+                    original_weights[k] += weight
+            original_weights[index] += weights[-1]
+            assert all(v >= 0 for v in original_weights)
+            assert all(sum(v*r['row'][k] for v, r in zip(original_weights, records)) == 0 for k in range(dim))
+            used = [i for i, v in enumerate(original_weights) if v]
+            assert rank([records[i]['row'] for i in used]) == W+1
+            out['single_diagonal_repair'] = {'index': index,
+                'pair_indices': [p['indices'] for p in nonzero], 'weights': list(map(str, weights)),
+                'original_event_indices': used, 'original_event_weights': [str(original_weights[i]) for i in used]}
+            break
+    out['single_diagonal_attempts'] = candidates.index(out['single_diagonal_repair']['index'])+1 if out['single_diagonal_repair'] else len(candidates)
+    out['single_diagonal_failure_scope'] = 'No proposal succeeded; not an exact impossibility result.' if out['single_diagonal_repair'] is None else None
+# Both pairing relations are matchings, so their union consists of alternating paths/cycles.
+adj = defaultdict(list)
+for p in allpairs:
+    a, b = p['indices']
+    adj[a].append((b, p['family']))
+    adj[b].append((a, p['family']))
+assert all(len(edges) <= 2 for edges in adj.values())
+seen = set()
+components = []
+for start in range(len(records)):
+    if start in seen:
+        continue
+    todo = [(start, 1)]
+    colors = {}
+    while todo:
+        a, color = todo.pop()
+        if a in colors:
+            assert colors[a] == color
+            continue
+        colors[a] = color
+        seen.add(a)
+        todo.extend((b, -color) for b, _ in adj[a])
+    components.append({'vertices': list(colors), 'bipartition': colors,
+                       'edges': sum(len(adj[a]) for a in colors)//2})
+out['pair_graph'] = components
+(ROOT/'bidirectional-loops.json').write_text(json.dumps(out, indent=2)+'\n')
+print(json.dumps({k: v for k, v in out.items() if k not in ('pairs', 'exact_separator', 'separator_pair_values', 'pair_graph')}, indent=2))

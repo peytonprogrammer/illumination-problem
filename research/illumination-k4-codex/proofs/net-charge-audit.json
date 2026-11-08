@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "legal_A_fans": 58,
+  "flag_assignments_per_fan": 256,
+  "local_inequalities": 14848,
+  "zero_net_cases": {
+    "empty": 256,
+    "smooth": 64,
+    "full": 1
+  },
+  "saved_rooms": [
+    {
+      "input": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/peer-fast-inputs/cand-2_2-1.json",
+      "walls": 22,
+      "E": 4,
+      "sum_net": "20",
+      "minimum_net": "2",
+      "marked_net": {
+        "[0, 0]": "4",
+        "[2, 2]": "4"
+      }
+    },
+    {
+      "input": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/persisted-replay/inputs/claude-k4-w21-learned-L2,2.jsonl:1",
+      "walls": 14,
+      "E": 4,
+      "sum_net": "12",
+      "minimum_net": "1",
+      "marked_net": {
+        "[0, 0]": "3",
+        "[2, 2]": "5"
+      }
+    },
+    {
+      "input": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/persisted-replay/inputs/claude-k4-w21-learned-L4,0.jsonl:1",
+      "walls": 19,
+      "E": 4,
+      "sum_net": "17",
+      "minimum_net": "1",
+      "marked_net": {
+        "[0, 0]": "3",
+        "[4, 0]": "5"
+      }
+    },
+    {
+      "input": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/persisted-replay/inputs/claude-k4-w21-learned-L4,2.jsonl:1",
+      "walls": 19,
+      "E": 4,
+      "sum_net": "17",
+      "minimum_net": "1",
+      "marked_net": {
+        "[0, 0]": "3",
+        "[4, 2]": "5"
+      }
+    },
+    {
+      "input": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/persisted-replay/inputs/claude-k4-w21-learned-L4,4.jsonl:1",
+      "walls": 19,
+      "E": 4,
+      "sum_net": "17",
+      "minimum_net": "1",
+      "marked_net": {
+        "[0, 0]": "3",
+        "[4, 4]": "5"
+      }
+    },
+    {
+      "input": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/persisted-replay/inputs/claude-k4-w21-learned-L6,0.jsonl:1",
+      "walls": 21,
+      "E": 4,
+      "sum_net": "19",
+      "minimum_net": "1",
+      "marked_net": {
+        "[0, 0]": "4",
+        "[6, 0]": "5"
+      }
+    },
+    {
+      "input": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/persisted-replay/inputs/claude-k4-w21-learned-L6,2.jsonl:1",
+      "walls": 21,
+      "E": 4,
+      "sum_net": "19",
+      "minimum_net": "1",
+      "marked_net": {
+        "[0, 0]": "4",
+        "[6, 2]": "4"
+      }
+    }
+  ],
+  "scope": "Exhaustive local flag super-relaxation, not planar-room enumeration; seven saved physical controls; no optics searches."
+}

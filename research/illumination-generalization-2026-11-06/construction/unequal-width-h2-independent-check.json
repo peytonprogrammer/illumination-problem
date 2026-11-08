@@ -1,0 +1,46 @@
+{
+  "status": "INDEPENDENT_PRESCRIBED_REPAIR_CHECKS_PASS",
+  "source_pins_current": {
+    "unequal-width-h2-proof.md": true,
+    "unequal-width-h2-check.py": true,
+    "unequal-width-h2-check.json": true,
+    "unequal-width-h2-seeds.py": true,
+    "unequal-width-h2-seeds.json": true,
+    "unequal-seam-phase-acceptance.json": true,
+    "unequal-seam-phase-proof.md": true,
+    "resumed-exact-check.py": true
+  },
+  "rows": [
+    {
+      "source_ratio": "1/3",
+      "c": "3/2",
+      "target_width": "1/37",
+      "wall_leg_guards": 100,
+      "reflections": 4
+    },
+    {
+      "source_ratio": "1/3",
+      "c": "11",
+      "target_width": "1001",
+      "wall_leg_guards": 100,
+      "reflections": 4
+    },
+    {
+      "source_ratio": "1",
+      "c": "3/2",
+      "target_width": "1/37",
+      "wall_leg_guards": 220,
+      "reflections": 10
+    },
+    {
+      "source_ratio": "1",
+      "c": "11",
+      "target_width": "1001",
+      "wall_leg_guards": 220,
+      "reflections": 10
+    }
+  ],
+  "validator_reuse": "<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/resumed-exact-check.py",
+  "author_code_executed": false,
+  "whole_goal_complete": false
+}

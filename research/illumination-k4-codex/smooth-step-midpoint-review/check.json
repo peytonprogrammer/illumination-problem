@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "fixed_obstructions": [
+    {
+      "source": "1/7",
+      "target": "3/8",
+      "blocker": "1/4",
+      "all_source_images": [
+        "1/7",
+        "6/7"
+      ],
+      "all_target_images": [
+        "3/8",
+        "5/8"
+      ],
+      "both_blockers": [
+        "1/4",
+        "3/4"
+      ],
+      "every_source_target_arc_meets_a_blocker": true,
+      "has_midpoint_for_any_lift_sign": false,
+      "midpoint_residuals_mod_one": [
+        "1/56",
+        "15/56",
+        "41/56",
+        "55/56"
+      ]
+    },
+    {
+      "source": "2/5",
+      "target": "1/6",
+      "blocker": "1/4",
+      "all_source_images": [
+        "2/5",
+        "3/5"
+      ],
+      "all_target_images": [
+        "1/6",
+        "5/6"
+      ],
+      "both_blockers": [
+        "1/4",
+        "3/4"
+      ],
+      "every_source_target_arc_meets_a_blocker": true,
+      "has_midpoint_for_any_lift_sign": false,
+      "midpoint_residuals_mod_one": [
+        "1/15",
+        "4/15",
+        "11/15",
+        "14/15"
+      ]
+    },
+    {
+      "source": "2/5",
+      "target": "1/6",
+      "blocker": "3/8",
+      "all_source_images": [
+        "2/5",
+        "3/5"
+      ],
+      "all_target_images": [
+        "1/6",
+        "5/6"
+      ],
+      "both_blockers": [
+        "3/8",
+        "5/8"
+      ],
+      "every_source_target_arc_meets_a_blocker": true,
+      "has_midpoint_for_any_lift_sign": false,
+      "midpoint_residuals_mod_one": [
+        "1/60",
+        "11/60",
+        "19/60",
+        "29/60",
+        "31/60",
+        "41/60",
+        "49/60",
+        "59/60"
+      ]
+    }
+  ],
+  "six_wall_midpoint_control": "PASS",
+  "scope": "Abstract invariant-cylinder core circles only; no polygon-realization or globally essential blocker claim; no ray search."
+}

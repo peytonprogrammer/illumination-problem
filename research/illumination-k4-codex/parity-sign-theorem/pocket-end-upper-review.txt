@@ -1,0 +1,90 @@
+# Review of §26.13 (hand only, no tools)
+
+**Verdict: I accept §26.13 in its stated scope.** I found no substantive gap in the forcing, the path, the development, the defect or the π-sector. Several statements need correcting before the status changes. The most important are a mislabeled point, a dependency on the withdrawn §26.8, and an overstated coverage sentence. Universal detection stays open.
+
+## 1. Forcing chain
+
+I re-derived each angle sum by hand. Each leaf is assumed to have exactly one unit portal.
+
+| Point | Contributions | Total without the forced choice | Conclusion |
+|---|---|---|---|
+| (5,1) | T 90°, pocket 45°, Tup right m1 45° / right m2 90° / left 0° | 180° / 225° / 135° | Literal B225 forces Tup = right m2, the square [4,5]×[1,2] |
+| (3,1) | T 90°, M 90°, Tup m2 0°; N left 0° | 180° | Raw forces N right (45° or 90°) |
+| (1,1) | S 90°, M 90° (45°+45° from M's two upper triangles), N right 0° | 180° | Raw forces Sup right ({6} or {6,7}) |
+| (-1,1) | S 90°, Sup right 0°, Sleft upper m1 45° / m2 {0,1} 90° | 135° / 180° | Raw forces Sleft = [(-2,0),(-1,0),(-1,1)] |
+
+The chain is correct. Forcing Sleft to m1 is genuinely needed: with m2, D_L would be an internal diagonal, not a mirror.
+
+Two hidden premises should be stated explicitly:
+
+- **Single portal.** A two-triangle leaf such as {5,6} at (0,2) uses both unit sides. It would contribute 45° at (1,1) and break the left/right dichotomy. The census premise "one portal along a full unit side" excludes it and must be cited.
+- **(1,1) and (-1,1) are non-A.** In the fixture, the only smooth boundary lattice point is M=(2,0). So A must include M, and the forcing needs these two points outside A. §26.9 makes the analogous statement for (5,-1).
+
+## 2. First half
+
+- **Leg 1.** S to (-9/5,1/5). It crosses x=-1 at y=1/9, inside the upper portal. The hit satisfies x−y=−2 with x=−1.8, strictly inside the hypotenuse (−2,−1).
+- **Leg 2.** Velocity (1,−9), duration 1/45, ending at (−16/9,0). That point is on the bottom wall of the leaf, strictly inside (−2,−1). This edge is a wall because the lower-portal triangle j=7 is absent.
+- **Leg 3.** Velocity (1,9), duration 1/36, ending at (−7/4,1/4). That point is on D_L, strictly interior.
+- **Leg 4.** Velocity (9,1), duration 3/4, ending at (5,1).
+  - It crosses x=−1 at 1/3, x=0 at 4/9, x=1 at 5/9, x=3 at 7/9 and x=4 at 8/9.
+  - It stays at y<1 before B and meets no lattice point.
+- **Durations.** (36+4+5+135)/180 = 1.
+- **Development.** D_L·H_0·D_L = V_{−2}, because D_L maps the line y=0 to the line x=−2. Then V_{−2}(5,1) = (−9,1) = S + w.
+
+## 3. Corner and second half
+
+- **Link at B.** The Tup square occupies [π/2, π], the T square [π, 3π/2] and the pocket [3π/2, 7π/4]. The link is 225°, with flanks along x=5 (fixed) and D_t (moving).
+- **Reflection at B.** (9,1) reflects across normal (1,1) to (−1,−9).
+- **Legs.** The hits are (43/9,−1), (40/9,2), (37/9,−1), ending at (4,0).
+  - Upward crossings of y=1 occur at 41/9 and 13/3, both inside the Tup portal.
+  - The legs cross y=0 at x = 44/9, 42/9 and 38/9, so T is reached only at the end.
+- **Walls.** y=−1 on (4,5) is a wall under a LEFT Tdown for both m1 and m2 {2,3}. y=2 on (4,5) is the top edge of the Tup square.
+- **Durations.** (2+3+3+1)/9 = 1.
+
+## 4. Development and defect
+
+- **Suffix.** H_{−1}H_2H_{−1}(4,0) = (4,−8) = B + (−1,−9). ✓
+- **Moving flank.** R_{D_t}(4,−8) = (14+t, 2+t); its derivative is (1,1).
+- **Prefix.** Applying the prefix gives T′ = (−18−t, 2+t) and B′ = (−9, 1+t).
+- **Defect.** Q = Ṫ′ − 2Ḃ′ = (−1,1) − 2(0,1) = (−1,−1).
+- **Determinant.** det((−9,1),(−1,−1)) = 9 + 1 = 10, nonzero.
+- **Slide.** The slide keeps the 225° link at B(t). For t>0 it opens (5,1) into the interior; for t<0 it flattens (5,1) into the wall. No ordinary mirror moves.
+
+## 5. π-sector
+
+- The incoming germ is π+α and the outgoing germ is 3π/2−α, both in the T sector.
+- Reflecting the outgoing germ across 7π/4 gives 7π/2 − 3π/2 + α = 2π+α.
+- The reflected copy covers [7π/4, 3π], which contains 2π+α. Exactly one flank is crossed.
+
+This is the same sector as in §26.9. ✓
+
+## 6. Nonvacuity
+
+I traced the fixture's boundary by hand and found 25 vertices:
+
+(−1,−1), (0,−2), (0,−1), (1,−1), (1,0), (3,0), (3,−1), (4,−2), (4,−1), (5,−1), (5,0), (6,0), (5,1), (5,2), (4,2), (4,1), (3,1), (2,2), (2,1), (1,1), (0,2), (0,1), (−1,1), (−2,0), (−1,0).
+
+- The polygon is simple, with 28 tiles, a 225° angle at (5,1) and 270° at (5,0).
+- The only smooth lattice point is (2,0), which is M.
+- The fixture matches every hypothesis: Tdown LEFT, Sleft UPPER m1, Sup right m1, N right m1, Tup right m2.
+
+## Required corrections
+
+1. **Mislabeled point.** "At B=(1,1)" should read "At (1,1)", since B=(5,1) throughout.
+2. **Dependency on withdrawn §26.8.** Don't rely on it for N's right portal. Inline the (3,1) count: T 90 + M 90, plus 0 for a left N, gives a forbidden 180°.
+3. **Unstated premises.** State the single-portal premise and that (±1,1) are non-A, as described in §1.
+4. **Defect formula.** Write Q = Ṫ′ − 2·L_P u, where L_P = diag(−1,1). It equals u here only by coincidence, so writing "2(0,1)" as 2u invites exactly the frame error §26.9 warned about.
+5. **"The prefix is essential" is overstated.** The prefix is an isometry, so |det| is the same in the corner's local frame: det((9,1),(1,−1)) = −10. What is essential is frame consistency. Mixing frames gives det((−9,1),(1,−1)) = 8.
+6. **Coverage claim needs two scope fixes.**
+   - Left-end pockets: add that they follow by the reflection x→4−x with S/T exchange. This reflection preserves M's upper half-star.
+   - m2 end leaves: scope the claim to the literal m1 triangle pocket. The m2 {2,3} end leaf (the square [5,6]×[0,1]) is not covered unless the census excludes it.
+   - The three-way partition (Tdown R; L with Sleft LOWER; L with Sleft UPPER) is complete only under correction 3.
+7. **Minor text fixes.** Mention the first-half entry at (−1,1/9) and the crossing heights. The legs pass through the S and T squares, not just the "corridor".
+8. **Checker.**
+   - Q is computed from literals, not from the asserted affine derivatives. Derive it from T′(±1/100) and B′(±1/100).
+   - developed_actual_target is hard-coded in the output.
+   - Strict interior hits and wall-ness are delegated to audit.py's `segment` and `bounce`, which I could not inspect.
+   - The corner sector and forcing are unchecked, as the script itself admits.
+   - None of these change the hand result.
+
+**Suggested status:** "Independent hand review accepts scoped, with corrections 1–7." Together with §26.9 and §26.10, this covers literal upper end pockets at either end of connected-H W≤26. Lower-pointing pockets, disconnected H and universal detection remain open.

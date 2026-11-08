@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "epsilon": "1/2",
+      "walls": 8,
+      "area": "3",
+      "simple": true,
+      "approximant_pair": "DIRECTLY_LIT"
+    },
+    {
+      "epsilon": "1/4",
+      "walls": 8,
+      "area": "5/2",
+      "simple": true,
+      "approximant_pair": "DIRECTLY_LIT"
+    },
+    {
+      "epsilon": "1/8",
+      "walls": 8,
+      "area": "9/4",
+      "simple": true,
+      "approximant_pair": "DIRECTLY_LIT"
+    },
+    {
+      "epsilon": "1/16",
+      "walls": 8,
+      "area": "17/8",
+      "simple": true,
+      "approximant_pair": "DIRECTLY_LIT"
+    },
+    {
+      "epsilon": "1/32",
+      "walls": 8,
+      "area": "33/16",
+      "simple": true,
+      "approximant_pair": "DIRECTLY_LIT"
+    },
+    {
+      "epsilon": "1/64",
+      "walls": 8,
+      "area": "65/32",
+      "simple": true,
+      "approximant_pair": "DIRECTLY_LIT"
+    }
+  ],
+  "limit": "[-1,0]^2 union [0,1]^2",
+  "collapse_blocker": [
+    0,
+    0
+  ],
+  "limit_interior_components": 2,
+  "marked_points": [
+    [
+      "-1/2",
+      "-1/2"
+    ],
+    [
+      "1/2",
+      "1/2"
+    ]
+  ],
+  "upper_bound_on_weight": 8,
+  "conclusion": "Every connecting continuous path in the limit crosses the blocked contact, yet it has8-wall strictly simple approximants. This disproves a lower weight bound over all blocked limits; it is NOT a limit of dark approximants or a sub22 dark simple room."
+}

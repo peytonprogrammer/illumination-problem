@@ -1,0 +1,104 @@
+Independent theory-only task, no tools or searches. Main goal is universal pocket detection in raw room, NOT generic illumination or marked freeness. Please (A) rigorously check new Section26 event/cylinder equivalence and exact derivative with marked midpoint offsets; the distinction between all physical corner lifts and actual zeros is essential. Check all endpoint, regular-corner and pi-sector subtleties. (B) Try to prove an actual detecting event or identify a structural obstruction even in the one-merger I=2,Z=0 subclass described below, with arbitrary remaining fan tree. Do not invent a theorem or discard actual target labels. A negative result outside the room class is only a scope control. If no universal theorem emerges, give one proved obstruction to a tempting bridge and a precise theorem statement that WOULD imply actual event existence. No room/ray/direction/event-word discovery or orbit enumeration.
+
+ROOM: canonical unit triangles A even-even,B odd-odd,C mixed, AC/BC unit axis legs, AB hypotenuse. Strict simple disk union; every noncorner latticepoint isA, so allB/C are actual boundary corners. Two actual interior A points S,T. Literal pocket B=(1,1),A=(2,2),C=(1,2), portal x1 y1..2 straight vertical wall above/below. Slide allthree by t(0,-1), D:y-x=-t, H:y=2-t. Six return maps: D,DH,DHD,DHDH,HDH,HD, and onlyDHD has zero derivative. Odd countmovingD factors implies bothcoordinates of actualevent defect odd; notnecessary. Given ANY actual onecorner equalhalf event with nonzero vector defect, selected label/prong-fixing axis shears preservedefect and give both opening signs. Primitive half-vector means noother physical corners. Intrinsic embeddedpi-sector required; notarbitrary coneprong jump. Merger A isneverprimitiveeventmidpoint.
+FAN THEOREM: cutBCportal graph treeofA fans. Orienteachportal fromfancontaining2trianglesatC tofancontaining1. Fullfan8tri issourceout4. Boundaryfan mtri qABradialendpoints hasout=(m-2+q)/2,in<=2-q. indeg2merger q0 angle90/180/270. IfI2,Z0 exactlyonemerger, S/Tpathpassesit. Removingupstreamsideportal leavesupstreamC smooth so notraw. No naivecutinduction.
+CURRENT: Section25 main actual-mark common orbitclosure argument reviewed: all smalltranscendental slides lieinone markedclosure overQ whichcontainsentireactualmarkedline, finiteindexactual-label-fixing affine stabilizers at rationalr preservetangent. Provedusingdoublecoverbranchedactuals,t; sourceoldzerosalleven, newzeros1, unique translationdeckinvolutionfixingasimplezero. This doesNOT showverticalmarkedtangent, free marks, oranyactualbaseevent. Abstract fullperiodlattice controlsdonotsupplyprimitiveevent (SL2F7perfectregularcover outsideclass). Disk class has X/C4 sphere, gonality<=4, so thatcontrolnotaroom.
+
+
+
+## 26. Primitive midpoint events as adjacent MARKED cylinder edges
+
+**Status: candidate under focused review.** This reformulates the actual
+event; it does not prove one exists. Distinguish Sigma_z, the actual zero
+set, from Sigma_c, all physical corner lifts, including regular lifts of
+45/90degree physical corners. The cylinder decomposition in this section
+is relative to Sigma_c, not merely to Sigma_z. In a rational direction,
+a regular marked corner on a closed leaf also cuts that leaf into
+boundary saddle connections. This marked decomposition is finite because
+the base is square-tiled and all these corner marks are rational.
+
+For a primitive integer vector w and an actual regular A lift s, the
+open segments from s to developed displacements +w and-w contain no
+integer point. Reflection development preserves the canonical integer
+lattice and the A/B/C classes. Thus neither segment meets a physical
+corner earlier. Its endpoint belongs to B or C and is a physical corner
+by rawness. Together they form a marked saddle connection alpha, of
+holonomy2w, with midpoint s. Its endpoints may be regular as points of
+the unmarked translation surface; stopping at ALL physical corner marks
+is essential. This marked saddle connection is unique for the chosen s
+and oriented direction w.
+
+An admissible actual s-to-t primitive midpoint event through corner c
+is equivalent to the following data: the marked saddle connection alpha
+with midpoint s ends at c; a marked saddle connection beta with midpoint
+t starts at c, has the same oriented holonomy2w, and is adjacent to
+alpha on one boundary side of a w-cylinder. The local intervening sector
+has anglepi and is embedded. Conversely those data give the two
+half-edges s->c and c->t, each of holonomyw, with no other physical
+corner. The target is the supplied actual lift t, not any regular A
+midpoint on the boundary. Wall-parallel directions remain excluded for
+the opening proposition. A cylinder boundary can contain shorter edges
+between physical corners; one must require alpha,beta to be consecutive,
+not merely both appear somewhere on that boundary.
+
+A regular midpoint corner c cannot connect distinct physical S,T here:
+its folded continuation reverses and retraces, so after the equal second
+half it reaches the physical source S. Thus for S!=T the shared corner
+is a TRUE zero, although the other endpoints of alpha,beta can be regular
+physical corner marks. In particular it is wrong to conclude that every
+A mark is a midpoint of a saddle connection between ACTUAL zeros of
+length2w. That claim is only valid for the Sigma_c-marked decomposition.
+
+### 26.1 The derivative contains marked midpoint offsets
+
+Orient alpha:d->c and beta:c->e, with holonomy2w at the base. Transport
+these classes and the paths d->s and c->t through the material deformation,
+without claiming their geodesic representatives stay straight. Define
+relative period offsets
+
+    r_s(t)=hol_t(d->s)-hol_t(alpha)/2,
+    r_t(t)=hol_t(c->t)-hol_t(beta)/2.
+
+They vanish at0. With eta=path(c->t)-path(s->c), the exact period identity
+is
+
+    hol_t(eta)=(hol_t(beta)-hol_t(alpha))/2+r_s(t)+r_t(t),
+    delta(eta)=delta(beta-alpha)/2+r'_s(0)+r'_t(0).       (26.1)
+
+This follows by subtracting hol(s->c)=hol(alpha)-hol(d->s).
+One may compute it in relative homology with Sigma_c union {s,t}; the
+auxiliary d/e boundary coefficients cancel in the displayed combination.
+Since c is a true zero, eta itself lies in relative homology with only
+Sigma_z union {s,t}, which is the setting of Section25. Fixed PHYSICAL
+marks need not stay affine midpoints of the transported whole saddle
+connections, so the two r-derivatives cannot be discarded. Moving corner
+terms are retained by this identity; they agree with Section3's full
+reflection-load formula when all paths use the same material labels.
+
+Thus a corner-only cylinder-edge calculation omitting r_s,r_t is not an
+actual-mark detection proof. Section25 supplies a valid common marked
+period setting, but does not force the two required adjacent edges or
+a nonzero right side of (26.1).
+
+### 26.2 Oblivious-point literature does not supply the missing adjacency
+
+An oblivious point lies on no nonsingular closed geodesic. The primary
+papers [Nguyen-Pan-Su](https://arxiv.org/pdf/1712.09066) and
+[Adelstein-Desai-Ji-Zdeblick](https://arxiv.org/pdf/2008.08494) concern this
+unmarked flat-metric condition. Our parity argument stops at physical
+corner lifts, some regular; it therefore does NOT show actual A lifts
+are oblivious on X. A path through a regular physical corner can be a
+perfectly nonsingular geodesic on X. Branching over all such corner
+marks would turn them into actual zeros, but changes the surface and
+requires a new descent argument for the selected pi-sector and actual
+endpoint labels. Even obliviousness on that different cover would not
+by itself say that s and t are consecutive midpoints on one cylinder
+boundary. Those papers are relevant background, not an event-existence
+theorem for this room class.
+
+The34frozen rooms all have I=2 full fans, no boundary indegree0 sources,
+and exactly one merger in Section24's directed tree. This is an exact
+read of existing pocket-fan.json, not a search over rooms. Even this
+one-merger case needs the actual cylinder adjacency just described;
+the cut obstruction of Section24.1 prevents applying the same raw-room
+hypothesis independently on the two sides.

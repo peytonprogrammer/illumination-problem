@@ -1,0 +1,8 @@
+phase	decision	evidence	result
+reduction	Use actual-mirror L subroom when either endpoint is strictly in common core	proof.md section1; ../../single-boundary-blocker/l-monotone-proof.md	Parent hand proof; external L dependency retained
+phase cover	Treat irrational ratios, even denominator and q>=9 by explicit compatible charts	proof.md sections2-5	Parent hand proof; strict portal clearance and actual target
+small denominators	Extract hand cover from exact affine coverage	check.py; check.json; effort.json; proof.md sections6-7	Five affine cases covered; hand inequalities remove CAD dependency
+physical validation	Validate prescribed formulas on actual polygon with exact rational arithmetic	physical-check.py; physical-check.json	PASS400 paths,2610 contacts; control maximum17 is not theorem bound
+review	Request independent challenge through shared board	coverage.md review challenge	Pending; no reviewer acceptance or running-worker claim
+scope	Stop this extension at full equal-depth outer pairs in the specified family	proof.md statement and conclusion	Unequal depths/all placements/universal minimum remain outside this result
+acceptance reconciliation	Read full independent hand review and coverage; verified four receipt source hashes	../equal-depth-independent/acceptance.json; review.md; check.json	INDEPENDENT ACCEPT; all equal-depth hypotheses preserved; frozen inputs unchanged

@@ -1,0 +1,77 @@
+Independent hand review of the rectangle and triangle portal maps
+4 November 2026 — Codex01a18403
+
+VERDICT: ACCEPT both local maps in remote22-proof-review/pocket-return.txt.
+No material correction. This independently checks the mathematical maps,
+not the peer's whole enlarged-room family or actual-endpoint composition.
+
+1. Rectangle
+Assume w,h,b>0, 0<x<w. Horizontal unfolding gives X(t)=x+at.
+The vertical flight has its single top reflection at h/b and its first
+bottom return at tau=2h/b. Fold X by the triangular wave of period2w.
+Since x is in its initial open strip, the final strip index floor(X(tau)/w)
+counts signed vertical-side crossings. Its parity gives the horizontal
+velocity sign and its absolute value gives the number of side hits.
+Thus exit=(F_w(x+2ha/b),0), outgoing=((-1)^floor((x+2ha/b)/w)*a,-b).
+Only top/bottom corners can be vertices: reject x+ha/b in wZ or
+x+2ha/b in wZ. There is no intermediate bottom visit. For a0 neither
+condition holds and the one top bounce returns vertically.
+
+For a nonzero and h'=h+n*w*b/|a|, the exit phase shifts by
+2n*w*sign(a) and the top phase by n*w*sign(a). Exit position, velocity,
+and the truth of both singularity exclusions are unchanged. The strip
+index keeps its sign or is zero before the shift, since a and X(t)-x
+have the same sign. The absolute crossing count therefore increases by
+exactly2n. This proves the periodicity assertion without finite sampling.
+
+2. Triangle: why the reflected square really represents the same billiard
+D is x>=0,y>=0,x+y<=w; only its bottom leg is a portal.
+Reflect D across x+y=w. The copy covers the other half of [0,w]^2.
+Its left wall maps to the square's top, and its portal to the right.
+Therefore left/top reflect and bottom/right exit. Crossing the diagonal
+changes the coordinate chart by the physical hypotenuse reflection.
+All four square vertices correspond to physical triangle vertices.
+
+In the square, X(t)=|x+at| until the first right exit: a<0 allows exactly
+one left reflection; a>=0 allows none. Its first right-exit time is
+tx=(w-x)/a for a>0, (w+x)/(-a) for a<0, infinity for a0.
+Likewise Y(t)=bt up to w/b, then2w-bt; the first bottom exit is
+ty=2w/b. Hence the first portal exit is at min(tx,ty), always finite.
+
+If ty<tx, |x+2wa/b|<w and folding back leaves bottom coordinates unchanged:
+exit=(|x+2wa/b|,0), outgoing=(sign(x+2wa/b)*a,-b).
+
+If tx<ty, set z=w-b*tx. At the square right exit, y=w-|z| and
+velocity=(|a|,sign(z)*b). Inverting the diagonal chart sends (w,y) to
+(w-y,0) and velocity(vx,vy) to(-vy,-vx). Thus the physical exit is
+(|z|,0), outgoing=(-sign(z)*b,-|a|), as stated by the peer.
+
+3. Exact singularities and the five-hit bound
+The square corners are exhausted by: bottom-left (bottom-branch z0),
+top-right (right-branch z0), bottom-right (tx=ty), and top-left
+(simultaneous left/top hit). The last is equivalently a<0 and
+x+a*w/b=0; this event indeed precedes the exit, since then tx>ty.
+There is no other physical vertex in the square or on its diagonal.
+Thus the peer's exclusions are necessary and sufficient, for strict
+triangle-vertex avoidance. A smooth endpoint in a larger room might admit
+more inputs; no such relaxation is used by this lemma.
+
+At most one left and one top reflection occur. The square path has at
+most three straight legs, each meeting the folding diagonal at most once.
+A leg lying along that diagonal would have to start at its endpoint on
+the square boundary, already excluded as a vertex. Thus at most two square
+wall hits plus three diagonal hits give five physical reflections.
+This bound is sufficient; no sharpness assertion is needed.
+
+4. Executable control and remaining limitation
+Own pocket-return-check.py imports no peer tracer or geometry code. It
+reflects directly at x0 and x+y1 and exits at y0 using exact rational
+first intersections. All five peer-prescribed controls agree exactly in
+exit point, outgoing velocity, and total flight time; all have <=5 hits.
+The receipt pins the reviewed source hash. These controls support the
+implementation check; the complete proof is sections1–3 above.
+
+This local result does not imply that any prescribed source can enter
+the pocket with a useful state, or that the returned ray reaches T.
+Peer triangle-composition/ owns that next global argument. No new search,
+archive read, worker, room census, or historical novelty claim is made.

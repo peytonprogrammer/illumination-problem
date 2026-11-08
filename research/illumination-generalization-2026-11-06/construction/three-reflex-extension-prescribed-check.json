@@ -1,0 +1,244 @@
+{
+  "status": "PASS",
+  "method": "Reused frozen prescribed formula and ALL physical guards; replaced only its geometry precondition in memory with the explicitly proved TR04 guard. No author source was modified or assertion disabled.",
+  "frozen_dependency_sha256": "fea4c50a4467f44b25eb16a497f18bfea12317bcddd81907ef355e1b65533f22",
+  "old_geometry_guard": "0 < a < ell < w < A and 0 < b < c < h < H",
+  "new_geometry_guard": "0 < a < w < A and 0 < ell < w and 0 < b < h < H and 0 < c < h and (a < ell or c < b)",
+  "prescribed_cases": [
+    {
+      "geometry": [
+        "4",
+        "12",
+        "20",
+        "28",
+        "12",
+        "8",
+        "20",
+        "680"
+      ],
+      "source": [
+        "2",
+        "14"
+      ],
+      "target": [
+        "14",
+        "2"
+      ],
+      "tau": "211/168",
+      "n": 1,
+      "k": 1,
+      "m": 29,
+      "delta": "1/12",
+      "selected_component": [
+        "5/4",
+        "5/3"
+      ],
+      "singular_roof_discarded": false,
+      "legal_start_eta": "14",
+      "reflections": 64,
+      "finite_wall_checks": 680,
+      "status": "PASS",
+      "label": "b-above-c"
+    },
+    {
+      "geometry": [
+        "12",
+        "4",
+        "20",
+        "28",
+        "12",
+        "8",
+        "20",
+        "680"
+      ],
+      "source": [
+        "10",
+        "14"
+      ],
+      "target": [
+        "6",
+        "2"
+      ],
+      "tau": "439/168",
+      "n": 1,
+      "k": 2,
+      "m": 61,
+      "delta": "1/10",
+      "selected_component": [
+        "31/12",
+        "37/12"
+      ],
+      "singular_roof_discarded": false,
+      "legal_start_eta": "14",
+      "reflections": 130,
+      "finite_wall_checks": 1340,
+      "status": "PASS",
+      "label": "bottom-left-of-source"
+    },
+    {
+      "geometry": [
+        "8",
+        "8",
+        "20",
+        "28",
+        "12",
+        "8",
+        "20",
+        "680"
+      ],
+      "source": [
+        "6",
+        "14"
+      ],
+      "target": [
+        "10",
+        "2"
+      ],
+      "tau": "27/14",
+      "n": 1,
+      "k": 1,
+      "m": 45,
+      "delta": "1/10",
+      "selected_component": [
+        "23/12",
+        "7/3"
+      ],
+      "singular_roof_discarded": false,
+      "legal_start_eta": "14",
+      "reflections": 96,
+      "finite_wall_checks": 1000,
+      "status": "PASS",
+      "label": "equal-a-l-disjoint-heights"
+    },
+    {
+      "geometry": [
+        "4",
+        "12",
+        "20",
+        "28",
+        "8",
+        "8",
+        "20",
+        "680"
+      ],
+      "source": [
+        "2",
+        "10"
+      ],
+      "target": [
+        "14",
+        "2"
+      ],
+      "tau": "424/337",
+      "n": 2,
+      "k": 1,
+      "m": 29,
+      "delta": "1/12",
+      "selected_component": [
+        "5/4",
+        "7/4"
+      ],
+      "singular_roof_discarded": false,
+      "legal_start_eta": "10",
+      "reflections": 66,
+      "finite_wall_checks": 700,
+      "status": "PASS",
+      "label": "equal-b-c-disjoint-columns"
+    },
+    {
+      "geometry": [
+        "12",
+        "4",
+        "20",
+        "28",
+        "12",
+        "8",
+        "20",
+        "680"
+      ],
+      "source": [
+        "20",
+        "679"
+      ],
+      "target": [
+        "6",
+        "7"
+      ],
+      "tau": "4827/337",
+      "n": 0,
+      "k": 10,
+      "m": 169,
+      "delta": "1/10",
+      "selected_component": [
+        "57/4",
+        "190/13"
+      ],
+      "singular_roof_discarded": false,
+      "legal_start_eta": "679",
+      "reflections": 360,
+      "finite_wall_checks": 3630,
+      "status": "PASS",
+      "label": "upper-cut-new-order"
+    },
+    {
+      "geometry": [
+        "8",
+        "4",
+        "20",
+        "28",
+        "12",
+        "4",
+        "20",
+        "680"
+      ],
+      "source": [
+        "2",
+        "14"
+      ],
+      "target": [
+        "6",
+        "2"
+      ],
+      "tau": "95/12",
+      "n": 3,
+      "k": 8,
+      "m": 186,
+      "delta": "1/7",
+      "selected_component": [
+        "71/9",
+        "17/2"
+      ],
+      "singular_roof_discarded": false,
+      "legal_start_eta": "14",
+      "reflections": 396,
+      "finite_wall_checks": 4000,
+      "status": "PASS",
+      "label": "new-wide-room-via-transposition",
+      "original_geometry": [
+        "4",
+        "12",
+        "20",
+        "680",
+        "4",
+        "8",
+        "20",
+        "28"
+      ],
+      "original_source": [
+        "2",
+        "6"
+      ],
+      "original_target": [
+        "14",
+        "2"
+      ],
+      "old_tall_condition": false,
+      "transposed_tall_condition": true,
+      "label_order_reversed": true
+    }
+  ],
+  "independent_implementation": false,
+  "search_used": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

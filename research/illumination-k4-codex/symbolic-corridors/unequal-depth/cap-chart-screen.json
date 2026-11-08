@@ -1,0 +1,24 @@
+{
+  "status": "ALL_PRESCRIBED_RATIONAL_CONTROLS_COVERED",
+  "effort": {
+    "hypothesis": "four endpoint-cap sheets plus four vertical folding charts may cover full unequal-depth outer pairs",
+    "start": 1793988188.51892,
+    "deadline": 1793989028.51892,
+    "aggregate_limit_seconds": 840,
+    "outputs": [
+      "cap-chart-screen.py",
+      "cap-chart-screen.json"
+    ],
+    "success_criterion": "derive plausible finite-sheet covering mechanism or exact counterexample to THIS mechanism; not darkness"
+  },
+  "tested_parameter_pairs": 1350,
+  "arithmetic_chart_tests": 17853,
+  "first_selected_sheet_counts": {
+    "(0, 0)": 1116,
+    "(0, 1)": 204,
+    "(1, 1)": 7,
+    "(1, 0)": 23
+  },
+  "failures": [],
+  "scope": "Discovery controls only, NOT a continuous-parameter proof."
+}

@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-11-08T06:58:54.492Z",
+  "reason": "New coverage concern after eight passing controls: every realized ell2/ell3 was full. This fixed hand-derived case exercises BOTH partial overlaps and exact B equality with integral geometry/native marks; no search.",
+  "case": {
+    "label": "B_exact_equality_two_partial_overlaps",
+    "w": [
+      40,
+      12,
+      8,
+      4
+    ],
+    "y": [
+      0,
+      84,
+      112,
+      140,
+      320
+    ],
+    "S": [
+      8,
+      28
+    ],
+    "T": [
+      2,
+      140
+    ]
+  },
+  "expected": {
+    "E2": "12",
+    "r": "15/2",
+    "E3": "7/2",
+    "criterion_span": "8",
+    "ell2": "14",
+    "ell3": "20/3",
+    "tau_with_last_image_selector": "327/236"
+  },
+  "base_checker": ".context/illumination-generalization-2026-11-06/review/staircase10-top-window-independent-check.py",
+  "base_checker_sha256": "1ae94792611be246eb51007c492fd1566b4ecb4606e6ae4c08435c97ca332a2c",
+  "new_search": false,
+  "new_engine": false
+}

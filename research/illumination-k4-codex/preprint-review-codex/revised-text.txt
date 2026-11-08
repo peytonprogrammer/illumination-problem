@@ -1,0 +1,294 @@
+A Simple Orthogonal 22-Gon with
+Two Non-Illuminating Interior Points
+Daniel Wang
+
+Peyton Wang
+
+Citizen Health
+
+Francis Parker High School
+
+Working draft v0.2 for discussion — 2 November 2026
+Not submitted or peer reviewed
+
+Abstract
+We give exact coordinates for a strictly simple orthogonal polygon with 22 maximal sides and
+two distinct interior points that cannot be joined by any ﬁnite billiard trajectory avoiding polygon
+vertices. The room is assembled from three reﬂected copies of a ﬁve-square staircase. Folding
+a hypothetical trajectory onto the staircase reduces the problem to an elementary lattice-parity
+obstruction. Four smooth boundary points of the assembled room project to staircase corners;
+we show explicitly that reﬂection at these exceptional points produces only trajectory reversal and
+cannot evade the obstruction. The construction uses neither interior mirror partitions nor boundary
+self-contacts. We make no claim that 22 sides is minimal.
+
+1
+
+Introduction
+
+In the polygonal illumination problem, light rays travel in straight lines and reﬂect specularly from
+the sides of a polygonal room. A ray that reaches a vertex is terminated. Two interior points are said
+to illuminate each other if some ﬁnite trajectory with these reﬂection rules connects them.
+Tokarsky gave a polygonal example with a non-illuminating pair of points using 26 sides [1]. Castro
+exhibited a 24-sided example, as noted in [2]. Wolecki presented a 22-sided example and established
+the upper bound of 22 sides for the unrestricted polygonal setting [2, Theorem 1.3]. Wolecki also
+mentions an independent, unpublished 22-sided example due to Thierry Monteil. Thus the present
+note does not improve the known numerical upper bound.
+Our purpose is to describe an explicit strictly simple, orthogonal 22-gon with a short elementary proof.
+“Strictly simple” means that the boundary is a Jordan polygonal curve: it has no repeated vertices,
+crossed edges, or self-contacts. Only the exterior boundary reﬂects light; the dashed segments in the
+construction are open passages, not mirrors. The argument is self-contained and requires no general
+theory of translation surfaces.
+Theorem 1 (Main result). There exists a strictly simple orthogonal polygon Q with exactly 22 maximal
+sides, without holes or interior mirror partitions, containing two distinct points S, T ∈ int(Q) such
+that no ﬁnite billiard trajectory avoiding the vertices of Q connects S to T .
+
+2
+
+The construction
+
+Let P be the union of ﬁve closed unit squares with lower-left corners
+(−1, −1),
+
+(0, −1),
+
+(0, −2),
+1
+
+(1, −2),
+
+(1, −3).
+
+(1)
+
+Mark two smooth points of its boundary,
+b = (2, −2).
+
+a = (0, 0),
+
+(2)
+
+Take the following isometric copies of P :
+P0 = P,
+
+P1 = {(x, −y) : (x, y) ∈ P },
+
+P2 = {(4 − x, −y) : (x, y) ∈ P }.
+
+(3)
+
+Their interiors are pairwise disjoint. The ﬁrst two meet exactly along H = [−1, 1] × {0}, and the latter
+two meet exactly along V = {2} × [1, 3]. There are no further contacts. Set
+Q = P0 ∪ P1 ∪ P2 ,
+
+S = (0, 0),
+
+T = (2, 2).
+
+Both S and T are midpoints of open passages between copies and consequently are interior points of
+Q.
+a
+
+T
+P1
+P2
+
+b
+
+S
+
+Five-square base P
+
+P0
+
+Figure 1: The ﬁve-square base P and the 22-sided room Q. The bold exterior outline is reﬂective. The
+dashed segments are open seams, not partitions. The two marked points S and T lie in the interior of
+Q.
+For reproducibility, the counterclockwise sequence of all 22 vertices of Q is
+(−1, −1), (0, −1), (0, −2), (1, −2), (1, −3), (2, −3),
+(2, −1), (1, −1), (1, 1), (3, 1), (3, 0), (5, 0),
+(5, 1), (4, 1), (4, 2), (3, 2), (3, 3), (1, 3),
+
+(4)
+
+(1, 2), (0, 2), (0, 1), (−1, 1).
+Every successive edge is horizontal or vertical and nonzero, with successive edges meeting at right
+angles. The union description (or a direct check of the vertex cycle) shows that the boundary does
+not self-intersect or self-touch. There are 13 convex vertices and nine reﬂex vertices, and the area is
+15.
+The folding map f : Q → P is deﬁned copywise by
+f |P0 (x, y) = (x, y),
+
+f |P1 (x, y) = (x, −y),
+
+f |P2 (x, y) = (4 − x, −y).
+
+(5)
+
+These formulas agree on the seams, so f is well deﬁned and continuous. In particular, f (S) = a and
+f (T ) = b.
+
+3
+
+The lattice obstruction on the staircase
+
+The next lemma concerns ordinary billiard motion in P , reﬂecting only at smooth boundary points
+and never touching a vertex. Paths have ﬁnitely many nonzero straight legs. At each intermediate
+smooth-wall contact the incoming and outgoing legs satisfy the specular reﬂection rule.
+2
+
+Lemma 1 (Parity obstruction). There is no ﬁnite corner-avoiding billiard path in P from a = (0, 0)
+to b = (2, −2).
+Proof. First inspect the integer points in P . There are no interior integer points. Its only integer
+boundary points that are not vertices are a and b. More explicitly, its seven convex corners are
+(−1, −1), (−1, 0), (0, −2), (1, −3), (1, 0), (2, −3), (2, −1),
+and its three reﬂex corners are
+(0, −1), (1, −2), (1, −1).
+Suppose an ordinary billiard path from a to b exists. Unfold its ﬁnitely many reﬂections, reﬂecting the
+staircase instead of bending the path. The result is a single straight segment starting at a = (0, 0) and
+ending at an image B of b. Reﬂection across any wall x = c or y = d, where c, d ∈ Z, preserves both
+coordinate parities. Since b has even coordinates, B ∈ (2Z)2 . Further, B 6= (0, 0) because unfolding
+preserves the positive length of the path.
+Write B = 2r z, where r ≥ 1 and z ∈ Z2 has at least one odd coordinate; choose r maximal. Then
+z is a lattice point strictly between 0 and B on the unfolded segment. Fold z back to P along the
+proposed itinerary. All inverse unfolding maps are compositions of reﬂections in integer-coordinate
+lines and therefore preserve integrality and coordinate parities. The image of z is an integer point of
+P with an odd coordinate. It is neither a nor b, hence must be a vertex of P . This would make the
+original path hit a vertex, a contradiction.
+Remark 1. The lemma is valid for arbitrary ﬁnite path length, direction, and number of reﬂections. The
+obstruction arises from the parity of an unfolded endpoint, not from a bounded search over directions.
+
+4
+
+What happens at the seams?
+
+A billiard trajectory in Q need not fold into an ordinary billiard trajectory in P at every instant.
+The exceptions are precisely the smooth boundary points of Q lying at the ends of open seams. It is
+important to account for them rather than treating them as forbidden corners of Q.
+Away from the seams, each branch of f is an isometry. A reﬂection at a smooth exterior wall of
+Q thus becomes an ordinary reﬂection at a smooth wall of P , unless that point is a seam endpoint.
+A straight passage across the interior of either seam also becomes an ordinary reﬂection in P : the
+adjacent folding maps agree at the seam and reverse the normal component of velocity.
+The four seam endpoints are
+E1 = (−1, 0),
+
+E2 = (1, 0),
+
+E3 = (2, 1),
+
+E4 = (2, 3).
+
+(6)
+
+Each Ej is smooth on the external boundary of Q, yet folds to a convex right-angle corner of P :
+smooth point of Q vertex of P
+(−1, 0)
+(−1, 0)
+(1, 0)
+(1, 0)
+(2, 1)
+(2, −1)
+(2, 3)
+(2, −3)
+
+exterior mirror in Q
+vertical
+vertical
+horizontal
+horizontal
+
+Lemma 2 (Seam-endpoint reversal). If a corner-avoiding billiard trajectory in Q reﬂects at a seam
+endpoint Ej , its folded trajectory in P instantaneously reverses its entire velocity at the corresponding
+convex corner and retraces its incoming route.
+3
+
+Proof. For example, consider E2 = (1, 0). A ray approaching from P1 with physical velocity (u, −v)
+(u, v > 0) folds via (x, y) 7→ (x, −y) to incoming velocity (u, v) in P . At E2 , the actual exterior mirror
+is vertical, so the physical outgoing velocity becomes (−u, −v) and the ray travels into P0 . Folding
+this outgoing segment by the identity gives (−u, −v), the negative of the incoming folded velocity.
+Reversing the time orientation gives the same conclusion for arrivals from P0 .
+At E1 the same two reﬂections occur in the opposite horizontal direction. At E3 and E4 , interchange
+the horizontal and vertical coordinates: the physical exterior reﬂection negates the vertical component,
+while switching copies across the vertical seam negates the horizontal component. In every case, the
+combined eﬀect is (p, q) 7→ (−p, −q).
+In Q
+
+After folding into P
+
+P1
+
+f (E2 )
+
+E2
+P0
+return along the
+incoming line
+
+Figure 2: The exceptional event at the horizontal seam endpoint E2 . A normal mirror reﬂection in
+Q switches copies and becomes an exact retracing at a convex vertex of P . The diagrams show local
+geometry, not a possible complete connecting path.
+Every original corner of P gives one corner incidence in each of P0 , P1 , P2 . Of these 30 incidences, two
+meet at each of the four smooth endpoints Ej (eight incidences total). All remaining 22 incidences are
+actual vertices of Q. In particular, no reﬂex corner of P is the image of a smooth point of Q. It follows
+that a valid Q-trajectory can fold only to ordinary billiard motion in P , occasionally interrupted by
+the corner reversals of Lemma 2.
+
+5
+
+Why reversals do not create a connecting path
+
+Lemma 3 (Reversals do not help). There is no ﬁnite path from a to b in P obtained by ordinary
+billiard reﬂections at smooth walls together with the additional rule that a path may reverse its velocity
+and retrace itself at a convex corner. Reﬂex corners remain forbidden.
+Proof. Suppose such a path exists. Stop it at its ﬁrst arrival at b, and retain only the subpath beginning
+at its last visit to a before that arrival. The resulting path γ starts at a, ends at b, and contains no
+interior occurrence of either marked point. There are ﬁnitely many such visits because the path has
+ﬁnitely many nonzero straight legs. This truncation takes place in P : a visit to a counts regardless of
+which preimage of a the original path visits in Q.
+Assume γ has a corner reversal, and choose the ﬁrst one. Up to that event, motion consists entirely
+of ordinary billiard reﬂections. Ordinary billiard motion is deterministic and reversible. Once the
+ﬁrst reversal takes place, the path must retrace the entire preceding route in reverse order, ultimately
+reaching a. It cannot reach b during this retracing, since the corresponding point would already have
+occurred before the reversal, contradicting the ﬁrst-arrival choice of b. Thus the path revisits a before
+reaching b, contradicting the last-visit choice of a.
+Hence γ has no reversals and is an ordinary corner-avoiding billiard path from a to b, contrary to
+Lemma 1.
+4
+
+Proof of Theorem 1. The explicit construction and boundary cycle establish that Q is a strictly simple
+orthogonal polygon with 22 maximal sides, no holes, and S, T ∈ int(Q).
+Suppose a ﬁnite billiard trajectory joins S to T in Q. It cannot be axis-parallel: reﬂecting in a
+horizontal or vertical wall preserves the property that one velocity component vanishes, whereas S
+and T diﬀer in both coordinates. Consequently every straight leg meets either seam transversely, if at
+all. Since the trajectory has ﬁnitely many legs and each leg crosses each seam at most once, its folding
+by f splits into ﬁnitely many straight segments and events.
+By the seam analysis, the image is a ﬁnite path from a = f (S) to b = f (T ) following the rules of
+Lemma 3. That lemma forbids such a path. Therefore no ﬁnite corner-avoiding billiard trajectory
+joins S and T .
+
+6
+
+Discussion and scope
+
+This example uses a connected, simply connected, axis-aligned room whose 22 boundary edges are
+all genuine exterior mirrors. The two marked points are interior points, rather than points of the
+reﬂective boundary. The proof’s key components are a mod-2 obstruction after unfolding and an
+explicit treatment of the four points where a smooth wall of the assembled room maps to a corner of
+the base staircase.
+The theorem provides an explicit construction, not a new upper bound on the unrestricted illumination
+problem: a 22-side upper bound was already given in [2]. A complete historical claim about priority among strictly simple orthogonal examples would require checking other constructions, including
+unpublished work. The proof is independent of the computational searches that helped identify the
+example. The reversal principle is consistent with the usual continuation through removable corners;
+see [2, Remark 2.2]. The claimed contribution here is the explicit orthogonal construction and its
+self-contained proof, rather than a new general reversal principle.
+Acknowledgements and AI assistance. The authors used the AI systems ChatGPT (OpenAI)
+and Claude (Anthropic) extensively while exploring candidate geometries, developing explanations,
+and reﬁning the proof. The authors take responsibility for the mathematical content of any eventual
+submitted version.
+
+References
+[1] G. W. Tokarsky, “Polygonal Rooms Not Illuminable from Every Point,” The American Mathematical Monthly 102 (1995), no. 10, 867–879. https://doi.org/10.1080/00029890.1995.12004679.
+[2] A. Wolecki, “Illumination in Rational Billiards,” arXiv:1905.09358v3 (2024), Theorem 1.3, Figure 1, and Acknowledgements. https://arxiv.org/abs/1905.09358v3.
+
+5
+
+

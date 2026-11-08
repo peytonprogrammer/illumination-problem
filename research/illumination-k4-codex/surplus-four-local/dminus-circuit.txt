@@ -1,0 +1,111 @@
+CURRENT STATUS UPDATE: the later independently checked peer D-minus32
+witness closes both D-minus residues. Together with accepted R and B paths,
+all seven cases are closed; see single-e2.txt section8. Open-status statements
+in this earlier derivation describe its original checkpoint.
+
+Two D-minus residues: new downward transport, no new illumination closure
+4 November 2026 — Codex01a1a00f
+
+Outcome: both D-minus Louter3/4 rooms remain unresolved. A new, physically
+valid downward-source circuit reaches y=2 on the wrong side of T throughout
+its hand-derived branch. Its exact fixed rational control passes in both
+rooms. The unchanged upward circuit still fails at the earlier (1,1) corner.
+These failures concern the specified circuits, not all paths in the rooms.
+
+Scope: H+Louter3 or Louter4+B+,E-,T-,Nb+,D-, R absent. Actual S=(0,0),
+T=(2,2). Fixtures and geometry definitions are in single-e2-check.json.
+This work owns only dminus-circuit*, coverage and targeted continuity notes.
+No direction, reflection-word, cap-assignment or room discovery scan;
+no source archives, solver campaign, workers, or peer-file changes.
+
+1. New source prefix
+
+Launch from S in direction(d,-1), with
+    5/33 < d < 2/13.
+B+ has three contacts (diagonal x-y=2, x=0, diagonal) and returns through
+y=-1 at (3d,-1), direction(d,1). Nb+ then has two contacts (x+y=2, x=0)
+and exits y=1 at (1/d-6,1), direction(1,-d).
+
+The right wall at (3,2-9d) reflects left/down. At x=-1 its height is
+2-13d>0, so it enters the L pocket. It meets the pocket bottom at
+    (12-2/d,0),
+which lies strictly between x=-2 and x=-1, a shared actual wall of both
+pockets. The reflection changes direction(-1,-d) to(-1,d).
+
+From there Louter4 reflects once at (-3,15d-2). Louter3 instead has the
+three-contact sequence diagonal x+y=-2, roof y=1, same diagonal. Both
+return at
+    (-1,17d-2), direction(1,d).
+The downward prefix uses8 reflections for Louter4,10 for Louter3.
+
+This has the same ALGEBRAIC exit as the previous upward source prefix.
+Their physical entrance branches differ: the upward one requires its L
+entry13d-2>0; the new downward one requires2-13d>0. The fixed control
+below is in the new branch only. Do not call both prefixes physically
+valid at that control or infer a common legal parameter interval.
+
+2. Complete prescribed continuation
+
+The shallow up/right ray enters E- at (3,21d-2). Its three-reflection
+return leaves x=3 at (3,23d-2), direction(-1,d).
+
+Four upper-chamber wall contacts follow:
+    (1,25d-2), (3,27d-2), (1,29d-2), (3,31d-2).
+The next roof crossing is (34-5/d,3), strictly inside the T- portal.
+There is ONE diagonal T- reflection on x-y=-2. It returns through y=3 at
+    (33d-4,3), direction(d,-1).
+This is a different T-cap branch from the failed upward circuit, whose
+roof contact lay in the exposed interval2<x<3.
+
+At y=-1 the downward ray enters D- at (37d-4,-1). Three contacts on
+x+y=0, x=2, x+y=0 return it at
+    (39d-4,-1), direction(d,1).
+The crossing of y=2 is consequently
+    (42d-4,2).
+Total contacts:19 for Louter4 and21 for Louter3.
+
+The actual T equation is42d-4=2, givingd=1/7. But
+    1/7 < 5/33 < d < 2/13.
+Indeed the terminal x runs strictly between26/11 and32/13, both greater
+than2. Therefore this prescribed branch never reaches actual T. Its valid
+transport is not an illumination certificate for the marked pair.
+
+An earlier crossing is also informative: after the first inner-wall
+reflection, height at x=2 is26d-2. It would equal2 atd2/13, exactly
+when the initial L entry becomes the true270-degree corner(-1,0). Thus
+the route approaches T there but cannot use the limiting parameter.
+
+The interval bounds in this note are HAND derivations from the displayed
+portal/contact inequalities. No full symbolic interval partition was run.
+
+3. Exact checks and corrected failed draft
+
+dminus-circuit-check.py checks ONLY the prescribed control d=153/1000.
+Both full continuations terminate at (1213/500,2), not T. Actual finite-wall
+first contact, strict contact, interior-segment and specular checks pass,
+as do reverse traversal and complete required/forbidden triangle guards.
+The receipt pins the source room fixtures by SHA256 and stores every
+exact control contact. No sigma or entire-interval check is claimed here.
+
+An earlier hand draft incorrectly flipped both direction components on
+the first L-bottom reflection. The fixed-word check rejected it at that
+excursion. Its proposed later endpoint(92d-12,2) was never validated and
+is retired. The corrected prefix preserves the negative horizontal
+component, then makes the additional L-pocket reflections in section1.
+
+The previous upward route with endpoint(2,8-38d) still requiresd3/19 and
+hits the actual315-degree corner(1,1) earlier. New downward-source paths
+do not repair that failed branch merely by sharing an algebraic gate.
+
+4. Current result and next move
+
+The original seven-case single-e2+b2 reduction still has five cases closed:
+three by the independently accepted Bfullwest4 path and two by the new
+R-minus19/21 paths (independent R-minus review remains pending).
+The two D-minus rooms remain open, as do other surplus-four partitions.
+
+The useful new ingredient is the exact downward-source gate together with
+the one-reflection T-minus return. A successful continuation must change
+where this route leaves the caps or how it reaches T; adding the displayed
+D-minus three-contact return forces an excluded target slope.
+Do not repeat this endpoint solve or the retired92d-12 draft. No job runs.

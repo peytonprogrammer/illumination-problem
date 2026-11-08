@@ -1,0 +1,5 @@
+# Immediate second thin-cap corollary (separate, unreviewed addendum)
+
+The frozen core packet is unchanged. After its main proof audit, the same terminal lemma also gives the whole even-even family with H=h+2 and h even, still c odd and N odd>=5. Here G=4 is coprime to N. The only integer height strictly between h and H is h+1, which is odd, so no native even-even mark lies in the cap interior. Every remaining terminal source still has u<=h and every bottom target still has odd c-v. The identical protected U/L join therefore applies.
+
+Together, the core H=h+1 case and this H=h+2/h-even case are precisely the integer cap intervals (h,H) containing no even integer. This is an immediate endpoint-grid corollary of the same proposed terminal lemma, not a claim about arbitrary real marks or arbitrary cap heights. The two-unit-cap fixture in the frozen nine-case replay already verifies a prescribed terminal pair in this extra case; the general corollary relies on the hand proof and remains pending independent review.

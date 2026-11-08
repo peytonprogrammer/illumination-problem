@@ -1,0 +1,22 @@
+Attempt 3 — global visibility-frontier charging screen
+3 November 2026. No new lower-bound theorem.
+
+Gap and success criterion
+Try to associate a distinct physical corner with each obstruction to expansion of the source-visible region, handling arbitrarily many reflections. Success requires a specified nonzero global invariant and a proved bound on the contribution of each physical corner. The strongest objections are isolated dark targets and repeated use of one physical corner in many itineraries.
+
+Retirement comparison
+Read ../parity-sign-theorem/pocket-geometric-brainstorm.md section1 before developing this idea. That already proposed a full source/target wavefront index and explicitly identified index absorption at singularities and boundary endpoints. Merely calling it visibility expansion supplies no different mechanism. No new wavefront implementation or experiment is justified.
+
+Precise obstruction to the separating-frontier premise
+For fixed interior source S, let U_S comprise interior targets reached by finite corner-avoiding specular paths. U_S is open: a particular legal finite itinerary unfolds to a straight segment, and sufficiently small target perturbations preserve its transverse wall contacts, corner clearance and itinerary. Fold the perturbed segment back to get nearby connections. This does not imply a uniform clearance over all paths or a bound on path length/reflection count.
+For a rational polygon with connected interior, the published finiteness theorem implies D_S=int(P) minus U_S is finite. In a room with a dark interior target T, choose a disk B(T,epsilon) contained in int(P) meeting D_S only at T. Then
+  U_S intersect B(T,epsilon) = B(T,epsilon) minus {T}.
+The local topological boundary of U_S in this disk is the single point T. The visible set is connected around the target; indeed an open connected planar polygon interior stays path connected upon deletion of a finite set. There need not be a nontrivial shadow region separated from U_S by a curve carrying a list of physical-corner obstructions.
+Thus a proof premised on a shadow boundary with accumulating corner charges does not apply even to the rational subcase already containing dark rooms. Counting isolated punctures or assigning an index directly at T is a different possibility, but no invariant with controlled per-physical-corner contributions has been supplied. Finiteness alone does not produce the number22.
+
+Source and hypotheses
+A. Wolecki, Illumination in Rational Billiards, arXiv:1905.09358v3, 30 November2024, Theorem1.2(i). Primary text checked at https://arxiv.org/html/1905.09358v3 . It states finite nonilluminating pairs for rational polygons with connected interior, using the corner-stopping billiard convention. No rational-polygon theorem is extended here to irrational angles. The fixed-source corollary alone suffices for this obstruction. This use is exposition of a published result, not a new discovery.
+
+Decision and goal realignment
+Retire this unquantified visibility-frontier proposal as a duplicate without a supplied invariant. Together with attempts1–2, it leaves no currently justified direct method for forcing22 distinct corners. The universal theorem is unresolved, neither established nor refuted. Exact missing step: a global geometric necessity of darkness, valid for arbitrary wall data and endpoints, whose obstruction complexity cannot be carried by repeated images/visits of the same physical corners.
+No credible new argument is currently identified. Per the explicit goal rule, stop resource spending on these approaches rather than initiate another equivalent reformulation, scan, model consultation or infrastructure project. This is a research impasse, not an external dependency and not a reason to mark the theorem complete or externally blocked. The goal remains active/unachieved in the tool; any future continuation must first supply or discover a genuinely new mechanism, not rerun this assessment.

@@ -1,0 +1,23 @@
+{
+  "paths": [
+    ".context/search_illumination_cell_partitions.py",
+    ".context/audit_illumination_cell_partitions.py",
+    ".context/three-triples/cell-2-1-bootstrap.json",
+    ".context/three-triples/cell-search-2-1.json",
+    ".context/three-triples/audit.json",
+    ".context/three-triples/connectivity-audit.json",
+    ".context/three-triples/proof-inputs.json"
+  ],
+  "sha256": {
+    ".context/search_illumination_cell_partitions.py": "642d3daef8775729e547820f161420f5bee42bfb43d4a3be88abae5f44da9c58",
+    ".context/audit_illumination_cell_partitions.py": "e386a2277814afc311b75a4aa1c01d3c8ab0a6d17fa25123a282d599d80a968f",
+    ".context/three-triples/cell-2-1-bootstrap.json": "e7219d6188c46680008fb5247dcf12eff463618d6cfcadd82c7e3bc52835f64c",
+    ".context/three-triples/cell-search-2-1.json": "0187c19ccf85e3f946138e16c7d09c4253d912912f0eaf0dd9e8b6fbf16968c4",
+    ".context/three-triples/audit.json": "8021f77e47429e7cf3dc9956803a51a4311e0f7b97f5f4f89402a311c0e28df7",
+    ".context/three-triples/connectivity-audit.json": "95704ff97d14f250cad049fdaf6bf852148dedfd67cae546baffc90125cdf630",
+    ".context/three-triples/proof-inputs.json": "3120f98a95de4335575accf3c4055eb21012843c7d5ee6f97e4738bf625be662"
+  },
+  "base_inputs_manifest": "proof-inputs.json",
+  "command": "python -B <copy>/audit_illumination_cell_partitions.py --target 2 1",
+  "scope": "Complete105-set positive-ray search and fresh branch replay. The generic fork parameterizes the frozen diagonal scripts; its audit additionally replays unclaimed branches at20s."
+}

@@ -1,0 +1,106 @@
+Hand work only; I ran no tools and searched no rooms.
+
+**Summary**
+- The counting observation and Codex's Tup detection both check out.
+- **Tdown (H1):** detected when N's portal is on the right, by the event w=(5,3) at the moving B. Two natural families provably fail when N's portal is on the left.
+- **Tright partnered by Tup (H2a):** closed in two leaf-orientation subcases, open in three.
+- **Tright partnered by Tdown (H2b):** open.
+
+The explicit events came from a hand first-contact analysis over the whole slope interval of a narrow symbolic family (the S-leg either crosses the corridor without touching it, or bounces once off the corridor ceiling). That analysis is also what gives the in-class obstructions. If you count that as a parameter scan under your rule, the events below are the part to discount. All of this still needs an independent check.
+
+## 1. Counting observation: confirmed
+
+**P_A=9 is impossible globally.**
+- Q≤12 and Q≥2P_A−6 force Q=12, with every partial charge equal to its degree.
+- The only types allowed are m1 (in=1), m2 with q=0 (in=2) and m4 with q=0 (in=2, out=1).
+- So Z=0 and there is exactly one merger. The other 8 partials are m1 leaves.
+- The degree sum is then at most 8+8+3=19, but the tree has 10 edges, so it must be 20.
+
+**P_A=7 with connected H is impossible.**
+- The tree equals H. M's outgoing neighbor at (2,2) is not a cardinal distance-2 neighbor of S or T, so it is not in H.
+
+**P_A=8 with connected H.**
+- The leaves are the 7 listed fans. A degree-1 neighbor of a full fan has in=1 and out=0, so h=0, which forces (m,q)=(1,1) or (2,0). Each leaf is therefore m1 or m2.
+- Q=10+r. Disconnected H gives Q=11+r. Both bounds on r follow.
+
+## 2. Codex's Tup detection: confirmed, with one refinement
+
+I checked every computation:
+- the corridor leg S→(4,1);
+- the intrinsic π arcs for both B sides (the arc crosses the W flank when B=(5,1) and the E flank when B=(3,1));
+- the composition r_d r_y r_d = reflection in x=6;
+- the wall-x=5 variant via (5,1/3).
+
+**Refinement:** a literal Tup with B=(5,1) needs a 90° SE quadrant at (5,1). That forces Tright to be m2 upper. So the m1 triangular-cap subcase only occurs with B=(3,1). This is harmless.
+
+## 3. Uniform principle
+
+**Sealed-core lemma.** Seal the pocket portal, so that B and C become smooth points of a straight wall. Suppose a core billiard ray from S, in primitive direction w:
+- has c∈{B,C} as its first lattice hit and T as its second;
+- meets neither moving pocket mirror.
+
+Then it is an admissible event. The π arc at c is the one that crosses the flank ray, and specular reflection at c is exactly that flank continuation. Its slide defect is
+
+  Q = −2·g₁u ≠ 0,
+
+where g₁ is the linear part of the first-half development. This holds because S\* and T\* are developed only through fixed mirrors, and the flank reflection fixes u. Section 26.6 and Codex's construction are both instances.
+
+The lemma has a useful equivalent form. Viewed from c, the event is a pair of core rays mirror-symmetric about the flank normal, of length |w| each, ending at S and at T respectively.
+
+## 4. New result for H1 (literal Tdown, B=(5,−1), Tright m2 lower), N portal on the right
+
+Use corner B and w=(5,3). The physical path is:
+
+> S → (5/3, 1) [corridor ceiling, left half] → (3, 1/5) → **B(5,−1)** → (6, −2/5) [x=6] → (16/3, 0) [Tright top] → (5, −1/5) → (11/3, −1) [C-flank] → (3, −3/5) [x=3 lower] → **T(4,0)**
+
+**Checks.**
+- Horizontal travel on each half is 5 and vertical travel is 3, so each half has developed displacement (5,3).
+- No bounce point is a lattice point.
+- The path never goes below y=−1, so it avoids both moving mirrors.
+- It never reaches the T top, the N fan or any S leaf.
+- The only non-forced wall it uses is the ceiling segment (1,1)–(2,1). That segment is a wall exactly when N's portal is (2,1)–(3,1).
+
+**Sector at B.** The physical link is [0°, 225°]. The S germ is at 149°. The arc runs clockwise across the E flank to an intrinsic −31°, which is physical (5,3).
+
+**Defect.** g₁ = diag(1,−1), so Q = −2u. Then det(w,Q) = 6 ≠ 0.
+
+## 5. H1 with N portal on the left: in-class obstructions
+
+**Corridor-straight S-leg (slope s<1/3).** Track the first-contact map over the four sub-intervals (0,1/7], (1/7,1/5), (1/5,2/7] and (2/7,1/3). In every case the ray re-enters the corridor before it touches y=−1 at x=4 or x=5. Its only bottom contacts are in the open interval x∈(5,6) inside Tright. This holds for every leaf configuration.
+
+**One ceiling bounce on the right half (s∈(1/3,1/2)).** Only two candidates reach c:
+- (8,3) at C;
+- (7,3) at B, approaching from the Tright side.
+
+Their second halves land on A corners, at (6,0) and (2,0) respectively.
+
+So any H1 event with N on the left must use the S-square walls, the N or Tup leaves, or several corridor passes.
+
+## 6. H2a (literal Tright, B=(5,1), Tup m2 right box): partial closure
+
+Both events use corner C(5,0), and the flank is x=5 below C.
+
+**w=(5,2), valid when N's portal is on the left and Tdown's portal is on the right.**
+
+> S → (5/2, 1) → (3, 4/5) → **C** → (3, −4/5) → (7/2, −1) → (5, −2/5) → **T**
+
+Q = 2u and det(w,Q) = 10.
+
+**w=(7,2) (developed (−7,2)), valid when N's portal is on the right, Tdown's portal is on the left, and Sleft's portal is lower.**
+
+> S → (−1, 2/7) → (1, 6/7) → (3/2, 1) → (3, 4/7) → **C** → (3, −4/7) → (9/2, −1) → (5, −6/7) → (3, −2/7) → **T**
+
+g₁ = −I and det(w,Q) = −14.
+
+**Still open in H2a:**
+- N left with Tdown left;
+- N right with Tdown right;
+- N right with Tdown left and Sleft upper.
+
+**H2b.** The analogous (5,2) T-half would cross x=5 below C, which is the pocket portal in that case, so it fails there. H2b is open.
+
+## 7. A stronger lemma to target
+
+The T-side is not the obstruction. In the bare T square, any primitive (even, odd) vector from C, or (odd, even) vector from C(5,0), reaches T at parameter 1, provided each fold crossing lands on a wall half. Every failure above happens on the S side.
+
+So the lemma to prove is a **corridor-mouth transfer**: describe, symbolically in the S-leaf and N orientations, which mouth heights and slopes at x=3 the core ray carries to S at a prescribed developed length. Combined with the mirror-pair form in §3, that would decide each remaining subcase uniformly, instead of one closed-form event per subcase.

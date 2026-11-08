@@ -1,0 +1,146 @@
+Independent focused review with no tools. First review accepted an auxiliary branched-cover marked-field strategy subject to period correction and branch/descent gaps. The corrected candidate below uses UNIQUENESS of translation deck involution at a simple zero to replace the ambiguous finite-decoration argument. Check specifically: (1) stabilizer of simple zero order<=2 and deck uniqueness; (2) does this make r from cover data to labeled actual-zero stratum a proper closed embedding, modulo clearly finite old-zero labels? (3) A_tau equals unique inverse image of actual-zero orbit closure, so number-field coefficient separation and disk continuation happen BEFORE descent; (4) q finite proper gives actual common marked closure and fieldQ. No marked-field theorem assumed. (5) tangent at rational parameters stable under finite-index actual-mark branch stabilizers. Identify any remaining genuine gap; do not infer global forgetting surjectivity. Goal still actual midpoint event, neither free marks nor event claimed. You may critique Section25.1 separately without withholding verdict on main Section25 if main proof is sound.
+
+## 25. Actual marked periods via an auxiliary branched cover
+
+**Status: corrected candidate under focused second review.** The first
+review accepts the strategy but found a zero-period error and a descent
+ambiguity. The relative-period correction and uniqueness argument below
+replace those parts. No marked freeness or actual-event claim is made.
+
+Take two distinct labeled actual regular lifts s(t),t(t) on X_t, over a
+small complex period disk about the raw room. All actual zero orders of
+X_t are even. Choose a connected double cover branched at exactly s,t.
+A character of the punctured surface group sends each branch meridian
+to1 in Z/2 and chosen handle generators to0; the surface relation holds
+since1+1=0. There are2^(2g) choices, transported over the disk. The
+pullback differential on Y_t has genus2g, two SIMPLE zeros at the branch
+points, and two unramified even-order zeros over each old zero. Label
+the two simple zeros to retain the actual source/target labels.
+
+**Uniqueness removes the decoration ambiguity.** A translation
+automorphism fixing a simple zero acts in a normalized uniformizer
+omega=w*dw as w->w or w->-w. In the first case it is locally, hence
+globally, the identity. Thus the stabilizer of a simple zero in the
+translation automorphism group has order at most2. Any deck involution
+of the required kind fixes BOTH simple zeros. If two such involutions
+existed, their product would act as w->w at the first simple zero and
+would be the identity. They are equal. Consequently Y with its two
+labeled simple zeros determines a UNIQUE quotient (X,s,t). There is no
+other involution through which the same upstairs surface can silently
+lose the actual mark labels. Label old zeros compatibly with the deck
+pairing, working in the usual finite labeled zero-stratum chart.
+
+**Rational period identification.** Project any relative path upstairs
+to X marked at Sigma union {s,t}. Its period is the corresponding
+integer linear combination of marked downstairs periods. Conversely a
+path from an old zero to a branch mark, or from s to t, lifts to a
+relative path between ACTUAL upstairs zeros with the same period.
+In particular the difference of the two lifted s-to-t paths is a closed
+anti-invariant cycle of period ZERO, not twice the marked displacement.
+The displacement is a relative period, never that absolute period.
+Rational transfer divided by2 gives
+
+    H^1(Y,Sigma_Y;Q)^tau = p*H^1(X,Sigma union {s,t};Q).
+
+If X has n zeros, the invariant absolute dimension is2g, and its relative
+kernel has dimension(n+2)-1=n+1, from n paired zero orbits and two fixed
+simple zeros. Total dimension2g+n+1 agrees downstairs. Hence the cover
+locus and quotient map have rational homogeneous linear period charts.
+The actual lifted slide is vhat(t)=vhat_0+t*vhat_1 over Q[i].
+
+**The two proper maps.** Let D consist of (X,s,t,chi), with compatible
+zero labels. The map q:D->the marked base stratum is the finite2^(2g)
+cover of characters and is proper. The map r:D->the labeled upstairs
+ACTUAL-ZERO stratum is locally a rational linear embedding and, by
+uniqueness, is injective. It is also proper onto a closed locus. For this
+last assertion, take a smooth convergent sequence upstairs. Its deck
+involutions are flat isometries; Arzela-Ascoli gives a limit isometry,
+locally a translation off the zeros and holomorphic across them. It is
+nonidentity since at a labeled simple zero it acts as w->-w. It cannot
+fix a regular point or an even-order zero: at a zero of even order a,
+its multiplier must satisfy lambda^2=lambda^(a+1)=1, hence lambda=1,
+forcing identity. It therefore fixes exactly the two simple zeros.
+Riemann-Hurwitz gives quotient genus g, the two fixed zeros descend to
+distinct regular marks, and the other zeros descend in free pairs of
+the original orders. The quotient is the required smooth marked base.
+This proves closedness and recovery of the cover data on upstairs limits.
+Equivalently r is a proper injective local embedding, so a closed
+embedding. Compatible old-zero label choices only introduce a finite
+ordinary label cover and can be fixed locally.
+
+Let A_tau be the decorated GL orbit closure in D. Since r is a closed
+embedding, r(A_tau) is EXACTLY the actual-zero-stratum orbit closure
+N_tau of Y_tau. The inverse quotient is unique. Thus A_tau inherits
+N_tau's finite local branches and number-field homogeneous period
+equations by the rational chart identification. This bypasses the first
+review's finite-decoration branch-identification argument entirely.
+It uses no marked-stratum field-of-definition theorem.
+
+Apply Wright Theorem1.1 upstairs. At transcendental real tau, every local
+number-field equation on A_tau separates its rational coefficients at
+v_0+tau*v_1; both coefficients vanish. Therefore the ACTUAL decorated
+slide disk lies locally in A_tau. The closed finite-branch line argument
+of Section21 extends this to the whole disk in D; this continuation is
+done BEFORE descent and retains the same actual marks throughout.
+Mutual inclusion now shows A_tau=A_sigma for all small transcendental
+real tau,sigma. This common A_* contains the rational/square-tiled base
+cover Y_0. Wright Theorem1.1 and Example1.2 give k(N_*)=Q.
+
+Since q is proper, q(A_*) is exactly the marked orbit closure M'_* of
+(X_tau,s(tau),t(tau)): limits downstairs lift to convergent subsequences
+in D. Its local branches are rational linear images of N_* branches.
+Thus M'_* is defined overQ and contains the actual marked slice at EVERY
+small parameter. This includes rational slices. At each rational slice,
+a finite-index affine subgroup fixes the rational actual marks and the
+finitely many tangent branches, so its cohomology action preserves the
+marked tangent containing the physical slide direction.
+
+Do NOT assert that forgetting marks maps M'_* onto the entire unmarked
+M_* set-theoretically: marked points can collide or hit zeros in limits.
+For the argument below define V as the IMAGE of the marked tangent V'
+under forgetting, rather than assuming a surjectivity theorem. This
+avoids the unnecessary global projection claim flagged by the review.
+
+The simultaneous16-lift version branches at all16actual S/T lifts and
+has genus2g+7. All16new simple zeros are labeled and fixed by its deck
+involution; uniqueness follows from the stabilizer of ANY one of them.
+The same proof applies, and retains the whole physical endpoint fibers.
+
+Primary field input: [Wright, The field of definition of affine invariant
+submanifolds, Theorem1.1 and Example1.2](https://websites.umich.edu/~alexmw/numfield.pdf).
+The covering construction, uniqueness and period descent above are
+separate proof obligations, not statements attributed to Wright.
+
+### 25.1 What this would enable, and what it still does not prove
+
+Let V' be a local branch tangent of the common marked orbit closure and
+V its image after forgetting marks. In a rational relative-homology
+basis, split marked cochains into
+
+    (absolute cycles, old-zero paths, path to s, path to t).
+
+The forgetting kernel consists exactly of cochains(0,0,u,w). Therefore
+a finite exact certificate that a combination of branch-preserving,
+actual-label-fixing affine images of the slide tangent has zero first
+two blocks but a nonzero last block would prove V' has a nonzero marked
+kernel. All classes must be Gauss-Manin transported in the SAME local
+system before combining parameters; no arbitrary tangent subtraction is
+allowed. Existence of this certificate remains OPEN.
+
+If the marks are both M_*-periodic, their joint marking lies in a
+fiberwise union of periodic1-point markings. Its generic fiber dimension
+is0. To use zero kernel at a specified branch, one must retain the local
+projection-rank assertion for periodic markings (a local linear forgetful
+map has locally constant rank on the smooth marking component). The
+introductory point-marking definitions and fiberwise-union description in
+[Apisa-Wright](https://websites.umich.edu/~alexmw/ApisaWright.pdf) give
+the relevant setting. No set-theoretic surjectivity of forgetting is
+needed. A full application at rational special branches is retained as
+a separate verification obligation, rather than inferred just from
+generic finite fibers.
+
+Even successful exclusion of periodic marked pairs along transcendental
+slides does not construct a one-corner midpoint event at t=0. Neither
+equal primitive half-vectors nor an embedded intrinsic pi-sector follows
+from a marked tangent vector. The original actual-event goal remains
+open independently of this marked-field reduction.

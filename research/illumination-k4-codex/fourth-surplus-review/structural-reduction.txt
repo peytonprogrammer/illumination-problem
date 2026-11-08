@@ -1,0 +1,119 @@
+Surplus four: bounded structural reduction
+4 November 2026 — Codex01a18403
+
+STATUS: corrected local partition list after parent completeness audit; new
+e3+e1 optical supplement awaits independent challenge. Remote reductions
+were previously independently accepted. These are
+necessary structural reductions, not a full illumination theorem.
+Scope: strictly simple canonical45 triangle disks, precisely the three full
+A stars S=(0,0), U=(2,0), T=(2,2), Delta=4, W<=21, k<=6.
+Definitions and lower-layer optical results are inherited unchanged.
+
+1. Budget
+W+2k=28+Delta=32. Since W<=21 and k<=6, W>=20. The identity also
+makes W even. Consequently the ONLY budget pair is W=20,k=6.
+This neither constructs a room nor shows one is dark.
+
+2. Root and transmission facts
+Remove the directly illuminating N bridge sectors6/7. Write H for the full
+three-star core and K for H plus its seven neighboring A cells. A positive
+cell has e=q-d>0. Zero cells are ordinary single H-facing caps and cannot
+transmit beyond H: their sole BC edge already faces H.
+A root touches H (d>0); a d0 cell has e=q. At these budgets a root with a
+remote descendant has d1. Indeed d2 occurs only at N; q3/e1 and q5/e3 fans
+with both H sides contain the bridge, q4 does not occur, and q>=6/e>=4
+leaves no charge for a remote descendant. A root of e1 is a two-sector fan:
+a centered pair has no outward side, and a quarter has exactly one outward
+side, contributing90 degrees at that side's C midpoint.
+A d0/e1 cell is a single triangle and has exactly one BC edge; it has graph
+degree at most one. A d0/e2 transmitter must be a quarter pair (a centered
+pair only faces one neighboring cell); it contributes90 degrees at each
+of its two different C sides.
+At any outside-H C only the two adjacent A cells can supply triangles.
+Two attached90-degree contributions give a smooth180-degree C and force
+one unit of b. No third cell can repair that C.
+
+3. At most one remote cell at Delta4
+Use the edge-connected occupied A-cell graph, with H contracted. Every
+connection to a remote cell must pass through positive cells; ordinary caps
+cannot transmit. There are at most four positive cells since sum(e)<=4.
+A d0 cell of e1 cannot be an internal vertex of a connecting graph.
+
+If there are at least two remote cells, choose a connecting tree spanning H
+and two of them; do not assume that tree has no other occupied adjacencies.
+With three positive cells and sum(e)<=4, the only potentially connecting
+charge patterns are:
+(a) root2 with two remote1 leaves;
+(b) root1, remote2 transmitter, remote1 leaf.
+A root1 with two remote1 leaves cannot branch. In (a), the root has q3 and
+three or four sectors and must meet THREE distinct sides: H plus two remote
+sides. Three sectors meet at most two sides. A four-sector fan meeting three
+sides has contributions90,180,90. At most one side faces H, so at least one
+remote leaf joins a90-degree contribution and gives a smooth C. Thus
+sum(e)+b>=4+1=5. In (b), the quarter transmitter joins a quarter root at one
+C and a single leaf at another, giving TWO distinct smooth C points and
+sum(e)+b>=6.
+
+With four positive cells, each e=1. All d0 cells are graph leaves. Roots1
+have at most one non-H neighbor, so two remote leaves require two distinct
+roots; each pair creates a smooth C, giving sum(e)+b>=6. Three remote
+leaves with only one root are impossible. Extra adjacencies cannot heal
+these C points: both incident A fans are already fixed. Additional positive
+cells or larger charges exceed four. This exhausts every connecting tree.
+Therefore at most ONE remote cell exists.
+
+4. A sole remote cell has one direct K parent
+An intervening d0 cell inside K must transmit. The minimum chain is then
+root1, transmitter2, remote1, exactly the quarter-chain case of section3,
+with two smooth C points: impossible. Thus the remote cell is directly
+adjacent to a root in K.
+If it joined two roots, it would need q>=2. The only charge-four possibility
+is two roots1 and a remote2 quarter. Again both C joins are90+90 and force
+b>=2. A single remote triangle cannot join two roots; q>=3 costs at least
+five with two roots. Thus the parent is unique.
+
+5. Necessary remote charge list
+Write (r,l,h,b) for parent excess, remote excess, total excess of other
+local positive cells, and smooth surplus. The entire necessary list is:
+ (1,1,0,2); (1,2,0,1); (1,3,0,0);
+ (2,1,0,1); (2,2,0,0);
+ (1,1,1,1); (1,2,1,0); (2,1,1,0).
+In each h1 row, there is exactly one additional local unit fan. All other
+partial cells are ordinary caps. This is a list of charge partitions, not
+an assertion that all orientations or cap choices are realizable.
+To see exhaustion: r>=1,l>=1; r3 would require nonexistent d1/q4 or an
+N bridge; l4/q4 is impossible. An r1/l1 join necessarily has b>=1, so h2
+is excluded. All remaining sums r+l+h+b=4 give the eight displayed rows.
+For r1/l2 with b0 the leaf is centered toward the parent. For r2/l1 with
+b0 the parent has a full180-degree pair at the common C. Larger rows need
+further angle and optical analysis.
+
+6. Necessary wholly local charge list
+All occupied cells now lie in K. After the direct bridge is removed, the
+only possible charge partitions are
+ b4; e1+b3; e2+b2; two e1+b2;
+ e2+e1+b1; three e1+b1;
+ e3+e1; two e2; e2+two e1; four e1.
+The earlier seven-type list omitted e2+e1+b1, three e1+b1 and e3+e1.
+local-partition-audit.txt gives the complete arithmetic split and closes
+e3+e1 by an explicit in-K root/leaf cover. The other two omissions remain
+open. Earlier lower-layer b0 proofs do not automatically cover their b1.
+A solitary e3 (with b1) is impossible: d1 requires q4, and the d2/q5 fan
+contains the bridge. A solitary e4 at d1 is m5/q5 and has at least two
+complete C pairs, only one of which can face H. Its other complete pair
+makes a smooth outside C, contradicting b0. At d2 it is the N m6 fan.
+The only length-six N window meeting both H sides without containing the
+bridge is sectors0..5; its complete left and top C pairs are outside H,
+and each is smooth unless another positive cell supplies a triangle.
+No such other positive cell is affordable. Thus this case also violates b0.
+No remote q4 cell exists. The displayed local partitions are exhaustive
+necessary types, not optical closure of their interacting configurations.
+
+7. What is and is not established
+The charge-four pass still has only a single remote cell; there is no new
+long chain, remote fork, or multiply attached remote cell at this layer.
+The eight remote and TEN local necessary charge types are the corrected
+input to optical work. See local-partition-audit.txt for current local coverage.
+The corrected local exhaustion/supplement needs independent hand challenge.
+No classification enumeration,
+room/ray/direction/word discovery or archived-certificate retrieval was used.

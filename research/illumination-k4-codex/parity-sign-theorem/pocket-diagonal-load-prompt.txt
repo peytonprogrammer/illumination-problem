@@ -1,0 +1,772 @@
+Independently challenge a NEW analytic negative control. Tools disabled. No room/ray/direction/word/cylinder/orbit discovery scans. Section33 prescribes ONE fixed actual raw25wall room with two specified interior A marks and one literal straight-attached triangular pocket, plus an explicit symbolic periodic45degree path family. Exact geometry and affine-polynomial controls have run. Check whole-class membership, literal225/270flanks, each wall vs portal, all symbolic path coordinates and reflection timings, movingH_t cancellation, full unfolded period derivative, and especially the claim that EVERY base45degree cylinder touching a moving mirror is covered up to D4/reversal. It is NOT a counterexample to universal one-corner actualS/T detection. Reject any stronger inference. State ACCEPT/REJECT/CONDITIONAL and corrections.
+
+## 1. Scope
+
+Let P be a strictly simple canonical grid-triangle room with distinct interior A marks S,T. Every noncorner integer point is A; in particular, there are no interior B/C points. Keep every wall direction and the rest of P fixed. The pocket has vertices
+
+    B_0=(1,1), A_0=(2,2), C_0=(1,2),
+
+and portal x=1, 1<y<2. Immediately above and below the portal the physical wall also lies on x=1. Move B_0,A_0,C_0 by t u, where u=(0,-1), leaving both marks fixed. Thus the two moving mirror lines are
+
+    D_t: y-x=-t,       H_t: y=2-t.
+
+We seek an admissible event from a chosen source lift to a lift of the ACTUAL physical target T, through exactly one corner at the developed midpoint. The halves have equal displacement w; each avoids other physical corners. The selected intrinsic continuation at the corner bounds an embedded pi-sector. Wall-parallel directions are omitted when applying a physical opening inequality. These requirements cannot be replaced by reaching an arbitrary A point or by an arbitrary broken geodesic.
+
+The global existence assertion has not been proved. The local return-map and single-excursion results do not need the grid or parity hypotheses on the rest of the room. The odd-word criterion only needs its wall reflection linear parts to lie in D4. The raw parity hypotheses matter for the proposed global existence and for the previously proved axis-twist transfer. No existence is inferred from accessibility of the pocket.
+
+
+
+## 33. An actual raw two-mark room can be blind in both diagonal directions
+
+**Status: proposed analytic control; prescribed topology and symbolic
+reflection checks must be recorded separately; focused review pending.**
+The attempted shortcut "the AB-normal diagonal direction must contain a
+loaded cylinder through the literal pocket" is false even with two full
+interior A marks. This is not a counterexample to universal one-corner
+S/T detection. It only defeats that proposed diagonal-cylinder shortcut.
+
+Use the following FIXED fan assembly, prescribed analytically rather than
+found by a room or trajectory search. Full A stars are centered at
+S=(-4,0), T=(0,0). The shared M=(-2,0) is its upper half-star. The seven
+leaf fans are:
+
+| Center | Specified fan |
+|---|---|
+|(-2,2)|one triangle [(-2,2),(-2,1),(-1,1)]|
+|(2,0)|one triangle [(2,0),(1,0),(1,1)] -- specified pocket|
+|(0,2)|the two-triangle quadrant [0,1] x[1,2]|
+|(0,-2)|one triangle [(0,-2),(0,-1),(1,-1)]|
+|(-6,0)|one triangle [(-6,0),(-5,0),(-5,1)]|
+|(-4,2)|one triangle [(-4,2),(-4,1),(-3,1)]|
+|(-4,-2)|one triangle [(-4,-2),(-4,-1),(-5,-1)]|
+
+The room has28canonical triangles, area14, exactly25physical walls, no
+slits, no boundary contacts and no transparent B/C point. Its only full
+interior A stars are S,T. The prescribed topology checker verifies these
+facts directly for this single assembly. The selected pocket has
+A=(2,0), C=(1,0), B=(1,1), with angles45/270/225degrees. Its portal is
+x=1,0<y<1. The adjacent fixed vertical wall continues above B along the
+right edge of the(0,2)quadrant, and below C along T's right edge. Thus it
+is the required straight-attached literal pocket. Translate it by t*u,
+u=(0,1). Its moving mirrors are D_t:x+y=2+t and H_t:y=t; the portal's
+supporting line and both actual marks stay fixed.
+
+**A prescribed entire normal-return family.** Fix0<a<1. For sufficiently
+small |t| compared with min(a,1-a), define normal-collision endpoints
+
+    d_0(t)=((3+t-a)/2, (1+t+a)/2),
+    d_1(t)=((3+a-t)/2, (1+3t-a)/2).
+
+They are interior points of D_t. The physical path between them is
+
+    d_0(t) -> (-a,-1) -> (-1,-a) -> (1,2-a)
+      -> (1-a,2) -> (0,1+a) -> (1+a-t,t) -> d_1(t).
+
+The successive ordinary mirrors are
+
+    y=-1, x=-1, x=1, y=2, x=0, y=t.
+
+The first five are FIXED supporting lines, all at actual wall points.
+Specifically the lower-T hit(-a,-1) is on the fixed half-BC segment
+-1<x<0 because the bottom leaf uses its right portal. The left-T hit
+(-1,-a) is below the shared M's upper portal. The next three bounces
+are the right, top and left AC walls of the fixed upper-right quadrant.
+The last bounce(1+a-t,t) lies on the MOVING pocket leg H_t. This moving
+hit cannot be dropped from the derivative calculation.
+
+The path starts with velocity(-1,-1); after each mirror it has the
+appropriate diagonal sign. Its positive durations are
+
+    (3+t+a)/2, 1-a, 2, a, 1-a, 1+a-t, (1+t-a)/2.
+
+Their sum is7, identically in both a and t. It crosses the original right
+portal at(1,a) twice, with different velocities; it also enters and exits
+the upper quadrant through its lower portal. All those crossings are
+interior. Every ordinary mirror hit stays strictly interior to its segment
+for each fixed a and sufficiently small |t|. The prescribed open segments
+stay inside T's square, that fixed upper quadrant or the moving pocket.
+The trajectory never enters the shared M or the other full star S.
+
+At both d_0 and d_1 the path is normal to D_t. Reflecting at d_1 reverses
+it exactly; it retraces to d_0, where another normal reflection closes
+the billiard state. Thus it is a corner-free periodic physical path of
+length14sqrt(2), independent of t. This argument retains the actual
+periodic path; it is not the period of an arbitrary abstract cycle.
+
+**Exact developed period.** The product of the six ordinary reflections
+in encounter order, acting on endpoint coordinates, is
+
+    G_t(x,y)=(-x-4, -y-6+2t).
+
+It sends d_1(t) to d_0(t)-(7,7). Moreover G_t is an involution and
+
+    (G_t R_Dt)^2(x,y)=(x-14,y-14).
+
+Its linear part is the identity and its translation has derivative zero.
+The closed lifted path is a positive integer multiple of its containing
+cylinder core, so Q(core)=0. A source-frame D4 change preserves zero.
+The cancellation is between the moving diagonal endpoints and the
+moving horizontal-leg bounce; treating all intervening AC walls as fixed
+would give a false nonzero result.
+
+At t=0, d_0(a) traverses the first open half of D and d_1(a) the other
+open half, excluding the middle separating trajectory and the physical
+endpoints. Every diagonal-direction path that enters this triangular
+pocket either meets D normally directly or first reflects at H and then
+meets D normally. There is no through passage via H alone: H cannot
+reverse the horizontal component toward the sole vertical portal. A path
+parallel to D can only reach D after H changes its diagonal sign. Hence
+all nonsingular base diagonal cylinders meeting a moving mirror are
+represented by this family, up to reversal and D4 copy. The other
+cylinders avoid both moving mirrors and have zero period derivative.
+Consequently ALL cylinder-core slide loads in the two primitive diagonal
+directions(1,1)and(1,-1) vanish in this actual room.
+
+**Scope.** The normal family does not join S and T; it is a cylinder
+control only. It does not show that other rational directions are blind,
+that a supplied actual S/T event has zero response under every affine
+image, or that no detecting one-corner event exists. In particular it is
+not an in-class counterexample to the full goal. It rules out a tempting
+universal direction choice and makes the missing multiple-direction or
+actual-event realization step explicit. The room and all formulas are
+prescribed once; verification does no room, ray, direction, word,
+cylinder or origami discovery scan.
+
+
+"""One analytically prescribed room and symbolic periodic path family.
+No room, direction, word, cylinder or trajectory discovery scan.
+"""
+from pathlib import Path
+from fractions import Fraction as F
+import importlib.util,json
+base=Path(__file__).resolve().parent
+ring=[(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
+def fan(a,start,count):
+ return [tuple(sorted((a,(a[0]+ring[j%8][0],a[1]+ring[j%8][1]),
+             (a[0]+ring[(j+1)%8][0],a[1]+ring[(j+1)%8][1]))))
+         for j in range(start,start+count)]
+room=[]
+for args in [((-4,0),0,8),((0,0),0,8),((-2,0),0,4),
+             ((-2,2),6,1),((2,0),3,1),((0,2),6,2),((0,-2),1,1),
+             ((-6,0),0,1),((-4,2),6,1),((-4,-2),2,1)]:
+ room+=fan(*args)
+data={'triangles':room,'marked':[(-4,0),(0,0)],'require_simple':True}
+source=base.parent/'k5-proof-pilot/inputs/illumination_geometry.py'
+spec=importlib.util.spec_from_file_location('frozen_geometry',source);geom=importlib.util.module_from_spec(spec);spec.loader.exec_module(geom)
+receipt=geom.check(data,strict=True)
+assert receipt['tiles']==28 and receipt['walls']==25
+assert set(map(tuple,receipt['interior_A']))=={(-4,0),(0,0)}
+assert receipt['sectors']['(1, 1)']==[5] and receipt['sectors']['(1, 0)']==[6]
+# Affine polynomials c + a*A + t*T, stored exactly as triples.
+def poly(c=0,a=0,t=0):return tuple(map(F,(c,a,t)))
+def plus(f,g):return tuple(x+y for x,y in zip(f,g))
+def neg(f):return tuple(-x for x in f)
+def minus(f,g):return plus(f,neg(g))
+def scale(k,f):return tuple(F(k)*x for x in f)
+def point(x,y):return (x,y)
+def constpoint(x,y):return (poly(x),poly(y))
+def psub(p,q):return tuple(minus(x,y) for x,y in zip(p,q))
+def padd(p,q):return tuple(plus(x,y) for x,y in zip(p,q))
+def pscale(k,p):return tuple(scale(k,f) for f in p)
+def ref(p,n,c):
+ value=minus(plus(scale(n[0],p[0]),scale(n[1],p[1])),c)
+ return tuple(minus(p[i],scale(F(2*n[i],sum(x*x for x in n)),value)) for i in range(2))
+D=((1,1),poly(2,0,1))
+mirrors=[((0,1),poly(-1)),((1,0),poly(-1)),((1,0),poly(1)),
+         ((0,1),poly(2)),((1,0),poly(0)),((0,1),poly(0,0,1))]
+d0=point(poly(F(3,2),F(-1,2),F(1,2)),poly(F(1,2),F(1,2),F(1,2)))
+d1=point(poly(F(3,2),F(1,2),F(-1,2)),poly(F(1,2),F(-1,2),F(3,2)))
+points=[d0,point(poly(0,-1),poly(-1)),point(poly(-1),poly(0,-1)),
+ point(poly(1),poly(2,-1)),point(poly(1,-1),poly(2)),
+ point(poly(0),poly(1,1)),point(poly(1,1,-1),poly(0,0,1)),d1]
+times=[poly(F(3,2),F(1,2),F(1,2)),poly(1,-1),poly(2),poly(0,1),
+       poly(1,-1),poly(1,1,-1),poly(F(1,2),F(-1,2),F(1,2))]
+v=(-1,-1)
+for i,tau in enumerate(times):
+ assert psub(points[i+1],points[i])==tuple(scale(vv,tau) for vv in v)
+ if i<len(mirrors):
+  n,c=mirrors[i];hit=points[i+1]
+  assert plus(scale(n[0],hit[0]),scale(n[1],hit[1]))==c
+  v=tuple(v[k]-F(2*sum(v[j]*n[j] for j in range(2))*n[k],sum(z*z for z in n)) for k in range(2))
+assert tuple(sum(t[k] for t in times) for k in range(3))==poly(7)
+assert v==(1,1) and ref(d0,*D)==d0 and ref(d1,*D)==d1
+# All affine inequalities hold on |t|<=min(a,1-a)/8 by checking its four
+# vertices. This is a prescribed convex-domain identity, not a parameter scan.
+domain=[(F(0),F(0)),(F(1,2),F(1,16)),(F(1),F(0)),(F(1,2),F(-1,16))]
+def evaluate(f,a,t):return f[0]+f[1]*a+f[2]*t
+def nonnegative(f):assert all(evaluate(f,a,t)>=0 for a,t in domain),f
+def rectangle(p,x0,x1,y0,y1):
+ for f in [minus(p[0],poly(x0)),minus(poly(x1),p[0]),minus(p[1],poly(y0)),minus(poly(y1),p[1])]:nonnegative(f)
+def pocket(p):
+ for f in [minus(p[0],poly(1)),minus(p[1],poly(0,0,1)),minus(poly(2,0,1),plus(*p))]:nonnegative(f)
+Y=point(poly(1),poly(0,1));U=point(poly(0,1),poly(1))
+for p in [d0,Y,points[6],d1]:pocket(p)
+for p in [Y,points[1],points[2],U]:rectangle(p,-1,1,-1,1)
+for p in [U,points[3],points[4],points[5]]:rectangle(p,0,1,1,2)
+for tau in times:nonnegative(tau)
+# Portal split points are on the prescribed segments, by identical diagonal
+# slope and coordinate order; convexity gives containment on each subsegment.
+assert psub(Y,d0)[0]==psub(Y,d0)[1]
+assert psub(U,points[2])[0]==psub(U,points[2])[1]
+assert psub(U,points[5])[0]==neg(psub(U,points[5])[1])
+assert psub(Y,U)[0]==neg(psub(Y,U)[1])
+assert psub(points[6],Y)[0]==neg(psub(points[6],Y)[1])
+def G(p):
+ for mirror in reversed(mirrors):p=ref(p,*mirror)
+ return p
+gd=G(d1)
+assert gd==padd(d0,constpoint(-7,-7))
+# Three affine basis points prove the full plane-isometry identity for all t.
+for p in [constpoint(0,0),constpoint(1,0),constpoint(0,1)]:
+ assert G(p)==point(minus(poly(-4),p[0]),minus(poly(-6,0,2),p[1]))
+ assert G(G(p))==p
+ assert G(ref(G(ref(p,*D)),*D))==padd(p,constpoint(-14,-14))
+out=dict(status='PRESCRIBED_RAW_ROOM_AND_SYMBOLIC_DIAGONAL_BLINDNESS_PASS',
+ geometry=receipt,room=data,symbolic_bracket_time=7,full_period_vector=[-14,-14],period_derivative=[0,0],
+ parameter_domain='0<a<1; sufficiently small |t|<min(a,1-a)/8',
+ fixed_mirror_count=5,moving_AC_bounce='H_t:y=t',
+ normal_family_formula=[str(p) for p in points],
+ independent_review='PENDING',universal_goal_counterexample=False,
+ scope='One prescribed actual raw25wall two-mark room; all-diagonal-cylinder coverage needs the hand proof.',discovery_runs=0)
+(base/'pocket-diagonal-load.json').write_text(json.dumps(out,indent=2)+'\n')
+print(json.dumps({k:v for k,v in out.items() if k not in ['room','geometry','normal_family_formula']},indent=2))
+print('geometry',receipt['walls'],'walls',receipt['tiles'],'triangles; strictraw PASS')
+
+
+{
+  "status": "PRESCRIBED_RAW_ROOM_AND_SYMBOLIC_DIAGONAL_BLINDNESS_PASS",
+  "geometry": {
+    "simple_polygon": true,
+    "tile_complex_euler": 1,
+    "tiles": 28,
+    "walls": 25,
+    "interior_A": [
+      [
+        -4,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "transparent_vertices": [],
+    "slit_edges": 0,
+    "boundary_contacts": [],
+    "atomic_boundary_faces": 26,
+    "sectors": {
+      "(-6, 0)": [
+        1
+      ],
+      "(-5, -1)": [
+        3
+      ],
+      "(-5, 0)": [
+        6
+      ],
+      "(-5, 1)": [
+        3
+      ],
+      "(-4, -2)": [
+        1
+      ],
+      "(-4, -1)": [
+        6
+      ],
+      "(-4, 1)": [
+        6
+      ],
+      "(-4, 2)": [
+        1
+      ],
+      "(-3, -1)": [
+        2
+      ],
+      "(-3, 0)": [
+        6
+      ],
+      "(-3, 1)": [
+        5
+      ],
+      "(-2, 0)": [
+        4
+      ],
+      "(-2, 1)": [
+        6
+      ],
+      "(-2, 2)": [
+        1
+      ],
+      "(-1, -1)": [
+        2
+      ],
+      "(-1, 0)": [
+        6
+      ],
+      "(-1, 1)": [
+        5
+      ],
+      "(0, -2)": [
+        1
+      ],
+      "(0, -1)": [
+        6
+      ],
+      "(0, 1)": [
+        6
+      ],
+      "(0, 2)": [
+        2
+      ],
+      "(1, -1)": [
+        3
+      ],
+      "(1, 0)": [
+        6
+      ],
+      "(1, 1)": [
+        5
+      ],
+      "(1, 2)": [
+        2
+      ],
+      "(2, 0)": [
+        1
+      ]
+    },
+    "certificate": "PASS: reflection tiling, connected interior, two interior A points, all B/C sectors absorbing corners"
+  },
+  "room": {
+    "triangles": [
+      [
+        [
+          -4,
+          0
+        ],
+        [
+          -3,
+          0
+        ],
+        [
+          -3,
+          1
+        ]
+      ],
+      [
+        [
+          -4,
+          0
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          -3,
+          1
+        ]
+      ],
+      [
+        [
+          -5,
+          1
+        ],
+        [
+          -4,
+          0
+        ],
+        [
+          -4,
+          1
+        ]
+      ],
+      [
+        [
+          -5,
+          0
+        ],
+        [
+          -5,
+          1
+        ],
+        [
+          -4,
+          0
+        ]
+      ],
+      [
+        [
+          -5,
+          -1
+        ],
+        [
+          -5,
+          0
+        ],
+        [
+          -4,
+          0
+        ]
+      ],
+      [
+        [
+          -5,
+          -1
+        ],
+        [
+          -4,
+          -1
+        ],
+        [
+          -4,
+          0
+        ]
+      ],
+      [
+        [
+          -4,
+          -1
+        ],
+        [
+          -4,
+          0
+        ],
+        [
+          -3,
+          -1
+        ]
+      ],
+      [
+        [
+          -4,
+          0
+        ],
+        [
+          -3,
+          -1
+        ],
+        [
+          -3,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      [
+        [
+          -2,
+          0
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      [
+        [
+          -3,
+          1
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          -2,
+          1
+        ]
+      ],
+      [
+        [
+          -3,
+          0
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          -2,
+          0
+        ]
+      ],
+      [
+        [
+          -2,
+          1
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      [
+        [
+          -6,
+          0
+        ],
+        [
+          -5,
+          0
+        ],
+        [
+          -5,
+          1
+        ]
+      ],
+      [
+        [
+          -4,
+          1
+        ],
+        [
+          -4,
+          2
+        ],
+        [
+          -3,
+          1
+        ]
+      ],
+      [
+        [
+          -5,
+          -1
+        ],
+        [
+          -4,
+          -2
+        ],
+        [
+          -4,
+          -1
+        ]
+      ]
+    ],
+    "marked": [
+      [
+        -4,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "require_simple": true
+  },
+  "symbolic_bracket_time": 7,
+  "full_period_vector": [
+    -14,
+    -14
+  ],
+  "period_derivative": [
+    0,
+    0
+  ],
+  "parameter_domain": "0<a<1; sufficiently small |t|<min(a,1-a)/8",
+  "fixed_mirror_count": 5,
+  "moving_AC_bounce": "H_t:y=t",
+  "normal_family_formula": [
+    "((Fraction(3, 2), Fraction(-1, 2), Fraction(1, 2)), (Fraction(1, 2), Fraction(1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(2, 1), Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1)), (Fraction(2, 1), Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)))",
+    "((Fraction(3, 2), Fraction(1, 2), Fraction(-1, 2)), (Fraction(1, 2), Fraction(-1, 2), Fraction(3, 2)))"
+  ],
+  "independent_review": "PENDING",
+  "universal_goal_counterexample": false,
+  "scope": "One prescribed actual raw25wall two-mark room; all-diagonal-cylinder coverage needs the hand proof.",
+  "discovery_runs": 0
+}

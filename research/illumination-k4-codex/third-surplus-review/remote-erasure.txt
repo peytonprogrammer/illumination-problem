@@ -1,0 +1,122 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+Third-surplus remote leaves: erasure and optical inheritance
+4 November 2026 — Codex01a18403
+
+Status: parent hand argument; independent review requested. Conditional geometric
+families below are covered. This is not a complete Delta3 classification.
+
+1. Missing implication and bounded target
+A remote attachment might remove a mirror from a lower-layer path. Prove a
+support-preserving erasure for the charge-compatible remote cases. Success is
+family-wide illumination for the removable cases, not a new illuminated example.
+Main objection: removing a leaf can CREATE smooth boundary vertices and thus
+fail to reduce Delta. All such vertices must be charged explicitly.
+
+Notation: H is the union of the three full stars at (0,0),(2,0),(2,2).
+K is H plus the seven adjacent A cells L,B,D,R,E,Tcap,N. A remote cell has
+d=0. Work in the nonbridge case; the N bridge directly connects S and T.
+Use Delta=sum e+b and the preliminary charge/connectivity bounds in loe.txt.
+The reductions in sections3–4 require those bounds, pending peer challenge.
+
+2. Fixed-path support lemma (independent of any locality classification)
+Every path used in the accepted layers0–2 proofs has BOTH its required and
+forbidden canonical triangles in K. This includes the six zero-layer paths,
+six square-substituted paths, two centered-L twelve-paths, centered-L three-path, centered-B six-path and
+positive-source-roof five-path. Their endpoint-exchanging sigma images also
+have this property. Exact recomputation: path-support-check.py/json, seventeen
+original specified paths plus their sigma images, PASS. Review reconciliation
+also includes the four fixed forcing variants (two plus sigma) in
+independent-review/guard-extension-check.json; path-support-check now checks21
+paths plus sigma. The name centeredB3path in the accepted Delta2 closure means
+S -> (-2/5,-8/5) -> (2/3,-4/3) -> (7/4,3) -> T. It is distinct from the
+centered-L three-path and centered-B six-path. Its complete guard is now explicit.
+No path was discovered here.
+
+Consequently, adding triangles in A cells outside K cannot spoil any of these
+paths. Required open-leg containers, reflection mirrors and corner-avoidance
+conditions are all preserved. No monotonicity under general polygon enlargement
+is asserted: this conclusion holds because the complete forbidden guard support
+is explicitly disjoint from the added cells.
+
+3. Quarter parent plus one remote triangle: whole-family illumination
+Suppose the only positive e cells are a d1/e1 quarter parent and a d0/e1
+single-triangle remote leaf. Their shared C has two adjacent occupied right-angle
+quadrants, hence is smooth and lies outside M. Therefore b>=1. Delta3 forces
+b=1 and no other positive e cell. All other partial cells are ordinary caps.
+
+Erase the remote triangle. The shared C changes from180 to90 degrees, losing
+one smooth non-A vertex. The remote A vertex disappears, reducing Q by1.
+Only one other vertex can affect s_N: the B endpoint of the attached BC edge.
+The A endpoint disappears; its status is accounted for in Q. At B, removal
+subtracts45 degrees from an end of its occupied angular fan, and can create
+at most one smooth vertex. Write delta_B for the change in its smooth indicator;
+delta_B<=1. Thus
+ Delta_after = 3 - 1 - 1 + delta_B <= 2.
+It is not legitimate to assert Delta_after=1 without checking B.
+
+Erasure preserves a strictly simple disk: the triangle has just one shared
+edge, and at its C and B endpoints the removed angular sector is at an end
+of the contiguous occupied fan. Removing it cannot split that fan; the tip
+is unique to the leaf. The boundary replaces a two-edge detour with the shared
+edge. No holes or new boundary contacts arise. The full S/U/T stars survive,
+and no new interior A can be created by deleting triangles.
+
+The resulting room is in the fixed-support Delta<=2 theorem. Its illumination
+path is one of section2's fixed paths. Reinsert the remote triangle: its A cell
+is outside K, so the path remains legal. This proves illumination of every
+valid room in this remote family, with at most13reflections, independently
+of W/k. The actual endpoints remain S and T.
+
+4. Quarter parent plus centered remote pair: whole-family illumination
+Suppose the sole positive e cells are the same d1/e1 quarter parent and a
+remote d0/e2 centered two-triangle fan facing the parent. Delta3 forces b=0.
+The parent occupies only ONE half of the common A-cell side. At its C midpoint
+it contributes90 degrees; the remote pair contributes180, for a270 corner.
+Erasing the remote pair leaves90 degrees; no smooth C is gained or lost.
+Q decreases by2. At the B endpoint of the attached half-edge, erasure may
+create at most one smooth B. At the OTHER B endpoint the parent has no
+triangle and no other occupied partial cell can reach the remote cell:
+ordinary caps use their sole BC edge toward H, while no further positive e
+cell is affordable. That endpoint belongs solely to the remote pair and
+disappears. It cannot create a new smooth B. Hence
+ Delta_after = 3 - 2 + delta_B <= 2.
+
+Disk/simplicity preservation follows also by deleting the unshared remote
+triangle first, then the attached triangle as an ear. Both removed sectors
+are endpoints of the corresponding boundary fans. S/U/T remain interior.
+Apply the same lower-layer theorem and fixed-path support lemma. All rooms
+in this second remote family illuminate within13reflections.
+
+A remote quarter pair instead contributes only90 degrees at the attached C;
+with the quarter parent it would force b>=1, beyond e1+e2=3. A centered pair
+facing elsewhere cannot attach along the required BC edge without this same
+extra-smooth-C cost. These observations concern this one-root configuration;
+they do not replace the pending global classification.
+
+5. Why erasure alone does NOT close every remote family
+A d1/e2 parent may have a complete180-degree pair at its outer C. A remote
+single triangle changes that C to270 degrees, avoiding an extra smooth point.
+Their charges total3 and b=0. After erasure, Q falls by1 but C becomes smooth,
+raising s_N by1. These changes cancel. At the B endpoint a new smooth B may
+add another unit. Thus Delta_after can be3 or4, rather than<=2.
+Whether each local pattern can be extended to a valid W<=21/k<=6 room is a
+separate structural question; no existence claim is made here.
+
+This is the precise unclosed remote mechanism: an e2 parent whose outside
+smooth C is healed by its e1 remote leaf. To close it, prove an optical cover
+for the relevant parent fans using paths supported in K, or show the required
+parent/leaf/cap configurations violate the room or budget hypotheses.
+Do not call this family illuminated just because the remote leaf lies outside
+all existing path guards: existence of a surviving path is still needed.
+
+6. Realignment
+New substantive reduction: both remote families with an e1 quarter root inherit
+proved illumination; they need no new return itinerary. Remains: remote e2-root
+families, and the unclassified Delta3 geometry wholly inside K. Initial1–3hour
+range still concerns classification+first serious optical pass only, not promised
+proof completion. Peer classification/independent challenge has not ACKed yet.
+No discovery searches, archive retrieval, solver, workers, or peer edits used.

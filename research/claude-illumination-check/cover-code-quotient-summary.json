@@ -1,0 +1,110 @@
+{
+  "status": "completed_bounded_pilot",
+  "method": "color-preserving simultaneous conjugacy of neighboring direction-code permutations",
+  "runs": [
+    {
+      "status": "UNKNOWN",
+      "reason": "state_limit",
+      "all_directions_covered": false,
+      "cover_squares": 88,
+      "processed_pairs": 20000,
+      "discovered_pairs": 39996,
+      "queued_pairs": 19996,
+      "distinct_codes": 20000,
+      "merged_pairs": 5,
+      "quotient": true,
+      "seconds": 5.35739195800852,
+      "room": ".context/illumination-20.json"
+    },
+    {
+      "status": "UNKNOWN",
+      "reason": "state_limit",
+      "all_directions_covered": false,
+      "cover_squares": 96,
+      "processed_pairs": 20000,
+      "discovered_pairs": 39990,
+      "queued_pairs": 19990,
+      "distinct_codes": 20000,
+      "merged_pairs": 11,
+      "quotient": true,
+      "seconds": 5.761778499989305,
+      "room": ".context/illumination-22.json"
+    },
+    {
+      "status": "UNKNOWN",
+      "reason": "state_limit",
+      "all_directions_covered": false,
+      "cover_squares": 108,
+      "processed_pairs": 20000,
+      "discovered_pairs": 40001,
+      "queued_pairs": 20001,
+      "distinct_codes": 20000,
+      "merged_pairs": 0,
+      "quotient": true,
+      "seconds": 3.6310800000210293,
+      "room": ".context/illumination-search-simple-unrestricted.json"
+    }
+  ],
+  "audit": {
+    "status": "PASS",
+    "brute_force_colored_systems": 972,
+    "small_system_closures": [
+      {
+        "raw_pairs": 9,
+        "quotient_pairs": 9
+      },
+      {
+        "raw_pairs": 12,
+        "quotient_pairs": 12
+      },
+      {
+        "raw_pairs": 6,
+        "quotient_pairs": 3
+      }
+    ],
+    "real_cover_relabelings": 140,
+    "positive_controls": [
+      {
+        "room": "transparent-one-exhaust-survivor",
+        "status": "ILLUMINATED",
+        "direction": [
+          -4,
+          -11
+        ],
+        "bounces": 13,
+        "processed_pairs": 36
+      },
+      {
+        "room": "transparent-simple-screen-survivor",
+        "status": "ILLUMINATED",
+        "direction": [
+          -2,
+          -9
+        ],
+        "bounces": 9,
+        "processed_pairs": 33
+      },
+      {
+        "room": "cover-mixed-sector-1",
+        "status": "ILLUMINATED",
+        "direction": [
+          5,
+          3
+        ],
+        "bounces": 8,
+        "processed_pairs": 10
+      },
+      {
+        "room": "cover-mixed-sector-2",
+        "status": "ILLUMINATED",
+        "direction": [
+          5,
+          3
+        ],
+        "bounces": 8,
+        "processed_pairs": 10
+      }
+    ]
+  },
+  "new_smaller_dark_room": false
+}

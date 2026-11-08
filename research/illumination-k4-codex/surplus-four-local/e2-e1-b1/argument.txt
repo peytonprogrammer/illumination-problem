@@ -1,0 +1,210 @@
+Local e2+e1+b1: root/leaf and noncritical larger-root covers
+4 November 2026 — Codex01a1a00f
+
+STATUS: NEW complete proposed covers of two subfamilies; exact named
+checks PASS, independent peer challenge pending. The ENTIRE e2+e1+b1
+partition remains OPEN. Critical larger roots with a second root are
+explicitly retained; no missing case is called illuminated.
+
+Class. Finite strictly simple canonical45 triangle rooms with exactly
+full A stars S=(0,0),U=(2,0),T=(2,2), all other occupied cells in
+K={L(-2,0),B(0,-2),D(2,-2),R(4,0),E(4,2),Tc(2,4),N(0,2)}.
+Exactly two cells have positive excess, e2 and e1; all others are ordinary
+H-facing single caps. b=1 counts smooth non-A points beyond the uncovered
+H-side C midpoints M. Delta=sum(e)+b=4. H is the three full stars.
+Sectors0..7 start E,NE,N,NW,W,SW,S,SE. Sigma=(2-y,2-x), with path reversal,
+swaps L/Tc,B/E,D/R and keeps actual source S and target T in that order.
+
+PROPOSED RESULT. Every room in this class which has a d0 positive leaf,
+OR has both positives roots and its e2 root at D,R or N, illuminates
+actual S/T within13 reflections. These subfamily covers need no extra
+W/k bounds. Under the active W<=21,k<=6 bounds, the remaining obligation
+is only two-root rooms with e2 at L,B,E or Tc.
+
+1. Skeleton and the budget we must not silently preserve
+
+Handle the directly illuminating N bridge6/7 first. Otherwise every root
+has d1: d2/e1 gives N/q3 fans spanning the two H sides through the bridge;
+d2/e2 would require nonexistent q4. e1 roots have two consecutive sectors,
+e2 roots have m3 or smooth m4/q3. A d0/e1 is one triangle; d0/e2 is two
+consecutive triangles. Ordinary e0 caps cannot transmit beyond their H
+edge. The K side-adjacency graph is only B-D plus E-R, a matching.
+Thus with TWO positive cells there are either two roots or exactly one
+root/one directly attached leaf. Both cannot have d0. A vertex-only
+connection is forbidden by strict simplicity.
+
+At the active bounds W=32-2k at Delta4 forces k6/W20. For r roots and n
+ordinary caps, Q=3+r+n; sN=12-Q=9-r-n and k=J+sN. Hence
+ n=J+3-r: TWO roots give n=J+1; ONE root/leaf gives n=J+2.
+These are different from the e2+twoe1/b0 mixed budgets. Auxiliary erasure
+is not asserted to preserve any of them. The accepted single-unit theorem
+is budget-free, so none is needed in the erasure covers below.
+
+2. Entire e2-LEAF branch
+
+Use B-D; sigma gives E-R. If the root is D and the leaf B, B+ is absent,
+so the old one-reflection actual S/T path works irrespective of other K
+support. For the active orientation, the e1 B root must be quarter0/1.
+It offers exactly the upper shared BC edge, whose opposite D triangle is3.
+A d0 two-sector D leaf must contain3 and omit H-facing sectors1/2.
+The only such consecutive pair is D3/4. Thus the same centered leaf used
+in the already accepted mixed-leaf proof is exhaustive here as well;
+no quarter leaf containing D2 can be treated as d0.
+
+Delete D3/4. The closed flap intersects the remaining support only along
+[(1,-1),(1,-2)], even against the stronger maximum support from the accepted
+mixed-leaf review. Its endpoint angles change315->270 and270->90.
+Boundary-arc surgery therefore leaves a strictly simple disk with the
+same full A stars and exactly ONE e1 ROOT at B. Every other partial cell
+is ordinary. second-surplus-L/classification.txt section4 proves actual
+illumination for this geometry with arbitrary smooth B points and no W/k
+bound, including the centered-B fallback when Nb- is present.
+
+The complete one-unit optical inventory is a subset of the accepted
+pinned catalog (one/four/13, centered and outer returns and sigma).
+The accepted support receipt recomputes BOTH U and Z as disjoint from
+entire D/R stars. Reinserting D3/4 preserves whichever path the theorem
+selects, within13 reflections. The two-root theorem is not being invoked
+on a one-root room; its stronger inventory audit is used only for support.
+All e2-as-leaf orientations and sigma are now covered.
+
+3. Entire e2-ROOT/e1-LEAF branch
+
+If D is the root and B the single leaf, B+ is absent and one works.
+For B root/D leaf, one forces B+ before considering the pair. The seven
+q3 cyclic B windows containing1 are701,012,123,6701,7012,0123,1234.
+A D leaf can attach only across B's east side. Root123 or1234 offers no
+such edge. The active candidates are
+ B012 +D3;
+ B701 +D3 or4;
+ B6701 +D3 or4;
+ B7012 +D3 or4;
+ B0123 +D3.
+These are individually named local attachment templates, not completed
+room assignments. E- and L+ are forced by the existing one_sigma and
+ordinary-E sigma_four guards allowing full B/D/R/T/N support.
+
+The last candidate B0123+D3 makes smooth180 at outside C(1,-2) and at
+B(-1,-1). Only L- could repair the latter; L is ordinary and forced L+,
+so it is absent. The two distinct points are not in M. Thus b>=2,
+excluding this candidate at b1.
+
+B012+D3 contains the active B square01 and lacks B7. Its accepted two-path
+forces ordinary T-. If Nb+ absent, five works; if Nb+ present, ordinary
+N is exactly Nb+, so sigma13 works. Full guards allow the entire D/R
+stars, hence adding the single D leaf does not change these paths.
+This cover also applies to an e1 D ROOT23 paired with B012, although
+that additional two-root subfamily is not needed for this skeleton split.
+
+For the remaining SIX templates O3=701,O4=6701,H4=7012 with D3 or4,
+the shared outside C is270, not smooth. No other outside C pair is
+completed. Smooth A at an m4 fan is not counted in b. All other C points
+are H-side points accounted for by M. With ordinary L+ and E-, the only
+possible extra smooth B points are
+ (-1,1): fixed135 +45*indicator(Nb-),
+ (1,3): fixed90 +45*indicator(T-) +45*indicator(Nr+).
+D+ is absent because D is a d0 single leaf, so the usual D+/R- smooth
+point cannot arise at(3,-1). At(1,-1), the fixed angle is315 for D3
+and270 for D4; no other K cap touches it. All remaining B-point angle
+coefficients are either at least225 already or remain below180 even if
+all available ordinary cap contributions are added. The exact local
+coefficient tables in check.json validate these bounds, without choosing
+or assembling ordinary-cap completions.
+
+Consequently the EXACT extra-smooth count is
+ b=indicator(Nb-)+indicator(Nr+)*indicator(T-).
+Ordinary N has one cap at most. At b1 it must be Nb- or Nr+ with T-.
+In particular Nr- is ABSENT. The accepted uniform7 path requires only
+H+L++E- and avoids FULL B/D/R/T stars plus all N triangles except Nr-.
+Its complete U/Z implies it for every one of the six templates and every
+remaining ordinary completion. Actual S/T connect within7 reflections.
+This closes the entire e2-root/single-leaf branch and its sigma images.
+
+4. All roots with e2 at D or R
+
+The independently accepted mixed noncritical-erasure proof applies with
+one fewer e1 root: its geometric maximum already allowed a B unit, R
+unit and all other K stars. Each of the nine m3/m4 D-root windows meets
+the actual remainder in one proper connected H arc, possibly extended
+by the upper-west B-quarter edge. Short-window contiguity forces D2 if
+D3 reaches that extension, and D1 if D0 reaches the diagonal R contact.
+The latter point(3,-1) is already on the occupied H attaching edge.
+There is no isolated second attachment or lower-west B contact.
+
+Erasing D leaves a connected strictly simple disk; remaining endpoint
+fans are contiguous and the same full A stars survive. Exactly ONE e1
+root remains, all other partial cells ordinary. Invoke the budget-free
+single-unit theorem in section2, not a bounded lower-layer theorem on
+an altered budget. Its whole catalog avoids D/R in U AND Z, so reinsertion
+preserves a legal <=13 path. Sigma covers e2 at R. This is a specific
+support-preserving surgery, not general monotonicity of illumination.
+
+5. All roots with e2 at N: eight forms, not just the b0 triples
+
+An N e2 root has d1/q3 and m3 or smooth m4. The nonbridge possibilities
+are exactly the following EIGHT windows:
+ bottom-facing:345,456,2345,3456;
+ right-facing:012,701,0123,7012.
+The m3/m4 cyclic-window check computes d from ANY touched H-side triangle,
+not complete side pairs. Every form has just ONE inward blocking side;
+none contains bridge6/7. The outward pairs at sectors1/2 or3/4 can make
+one extra smooth outside C, now allowed by b1. They cannot be discarded
+using the earlier b0-only classification. Checking just N456/701 would
+have missed six forms.
+
+B+/E-, then T-/L+ as applicable, follow from the eight accepted short
+forcing guards with full other-cell support. A critical e1 root is C or
+active O. If the other root is D/R, all four critical cells are ordinary.
+For a bottom-facing N fan, choose:
+ e1 Lcenter ->L3; Bcenter ->sigma13; Ecenter ->E6; Tcenter ->T3;
+ e1 Louter ->L11; Bouter ->five if Nb+ absent, otherwise sigma13;
+ e1 Eouter ->E11; Touter ->sigma13;
+ e1 noncritical D/R ->sigma13.
+For a right-facing N fan choose:
+ Lcenter ->L3; Bcenter ->B6; Ecenter ->13; Tcenter ->T3;
+ Louter ->13; Bouter ->five; Eouter ->13; Touter ->T11;
+ noncritical D/R ->13.
+The right-facing choice for Bouter always lacks Nb+. Sigma gives the
+corresponding alternatives; the named Eouter choice here simply uses
+one successful inherited13 member and does not need a new exchange.
+
+For every N form, check.py builds eight critical C/O min/max envelopes,
+plus one noncritical envelope allowing FULL D/R. The latter covers every
+possible D/R unit without a unit-window census. Each critical minimum is
+H+the EXACT N fan+the e1 fan+the other three reference caps; its maximum
+adds FULL D/R. No unknown ordinary N-slot exclusion is substituted.
+All72 full U/Z implications PASS, as do eight short forcing guards.
+The complete N outside sectors2/3 are included where present, beyond the
+previously treated outside mates1/4. Thus ALL eight N-root forms with any
+second root illuminate within13, independent of W/k caps.
+
+6. Exactly what remains and what was checked
+
+Closed at parent level: the ENTIRE one-root/one-leaf branch, all-root e2
+at D/R/N, and the mentioned Beast012+Dunit23 subfamily. Every stated
+closed branch has a bound of13 or less and needs no extra W/k premise.
+The matching split plus d-count argument exhaust the remaining geometry:
+only TWO ROOTS with the e2 root at a critical site L/B/E/Tc remain.
+Both positives are still local. This is not a whole-partition closure.
+
+No b0-only restriction on the critical root is imported: after forcing
+its reference cap, L has m3 starts6/7/0 and m4 starts5/6/7/0;
+B has m3 starts7/0/1 and m4 starts6/7/0/1. Sigma pairs L/Tc and B/E.
+All these seven-per-representative forms remain candidates until their
+new b1 geometry and second-root interactions are addressed. Some complete
+outside C pairs now consume b1, and the other root can repair a B point.
+That remaining case work must be proved rather than inferred from the
+older mixed e2+e1/b0 or one-e2+b2 theorems.
+
+Exact check:72 N envelopes,8 forcing,2 Beast guards,1 missing-Bplus guard,
+6 joined-root/single-leaf uniform7 envelopes,16 local N windows and six
+B-angle coefficient tables. Prior deletion and support receipts are
+explicit dependencies with source hashes. We do not execute peer checkers
+or rerun their original rooms. Mathematical completeness of the skeleton,
+local angle interpretation, one-unit applicability and topology inheritance
+are hand arguments here; exact implication counts alone do not prove them.
+
+Independent peer challenge pending. No new completed room or cap-assignment
+scan, ray/direction/reflection-word discovery, raw archive, orbit run,
+solver or worker. This continuation does not close the whole Delta4 layer
+or the universal22-wall minimum.

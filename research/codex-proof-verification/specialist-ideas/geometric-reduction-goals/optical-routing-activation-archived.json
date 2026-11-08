@@ -1,0 +1,33 @@
+{
+  "verified_utc": "2026-11-07T18:09:16.425335+00:00",
+  "status": "BOTH_EXISTING_NATIVE_GOALS_RESUMED_ACTIVE",
+  "method": "Conductor Edit goal / Save goal, matching Pursuing goal banners and peer acknowledgement, then fresh peer get_goal state files. No Clear goal or create_goal used.",
+  "peers": {
+    "construction": {
+      "native_status": "active",
+      "tokens_used": 982582,
+      "accounting_note": "Fresh get_goal readback differs from first resumption readback; recorded as observed, no reset or adjustment performed.",
+      "status_file": ".context/illumination-generalization-2026-11-06/construction/optical-routing-status.json"
+    },
+    "review": {
+      "native_status": "active",
+      "tokens_used": 301184,
+      "accounting_note": {
+        "same_thread": true,
+        "tokens_delta_from_saved": 14443,
+        "time_delta_seconds_from_saved": 40,
+        "accounting_reset_observed": false
+      },
+      "status_file": ".context/illumination-generalization-2026-11-06/review/optical-routing-status.json"
+    }
+  },
+  "objective_sha256": {
+    "improvement-goal.txt": "eebdc6120a0e576651d424b37f43c0d06dd4d83f1d1deca94d0317bfdb3d333c",
+    "proof-goal.txt": "ac769cd103ba24c2a0cb3bef463b6f3b665087b28b0bef3c502b4655319b7e15",
+    "optical-routing-phase.md": "76bdf3973291e54e271a876669a0eeb2d969bbf45a913af7e72129f113666e31"
+  },
+  "prior_accounting_snapshot": "resume-before-2026-11-07.json",
+  "new_numeric_token_limit": false,
+  "search_cap_seconds": 840,
+  "theorem_proved": false
+}

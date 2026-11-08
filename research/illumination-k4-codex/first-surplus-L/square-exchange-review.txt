@@ -1,0 +1,60 @@
+Independent hand challenge of square exchange
+4 November 2026 — restricted Codex01a1a00f
+
+VERDICT: ACCEPT, no mathematical corrections.
+Reviewed peer first-surplus-review/square-exchange.txt sections1-6 in full,
+plus its six supplied path receipts. Exact reviewed hashes are recorded
+in square-exchange-review-check.json (PASS).
+
+Local lemma
+For the normalized triangular cap, 0<u<1 and0<u+2d<1 imply
+|d|<1/2, 0<u+d<1. The first diagonal point has x=(u+d)/(1+d)
+strictly between0 and1. Its y=x-1 follows directly. The next vertical
+hit y=u+d-1 lies strictly between-1 and0. The second diagonal hit has
+x=(u+d)/(1-d), which is less than1 exactly when u+2d<1, and positive.
+Thus the proposed three-bounce sequence is strict for negative as well
+as positive d; no assumption d>0 was silently used. The outgoing ray
+reaches u+2d on the mouth with velocity(d,1).
+The square ray's far-wall x=u+d is the average of entry and exit x.
+Both straight legs stay strictly between the vertical walls. It has the
+same entry, exit and outgoing direction after one reflection. This
+justifies retaining every subsequent segment of the old path.
+
+Family cover
+At each critical cell the active outer mate completes a unit square,
+rather than including the opposite full-facing triangle. Thus the old
+one-reflection forcing conditions remain valid. The B/E square uses the
+new two-reflection path to force T-/L+; a square at L/T leaves both old
+four-reflection forcing paths intact. All four reference caps follow.
+Original13 or its square-replacement variant has only N-bottom blockers
+after those caps are forced; sigma13 or its square variant has only
+N-right blockers. The active outer mate does not invalidate the unchanged
+opposite path. All other outside-alphabet forbidden triangles are absent
+because there is only one exceptional cell. A single N triangle cannot
+block both paths. The ordinary N bridge, if allowed, directly lights ST
+and is handled first. No smooth-B or wall-budget assumption is needed
+in this optical cover once the stated cap geometry holds.
+
+Independent static recomputation
+Recomputed universal required/forbidden tiles for all SIX supplied paths
+with the existing exact rational checker:2,2,11,11,11,11 reflections.
+Checked required square mate, forbidden outside-alphabet tiles, endpoints,
+and the disjoint N blocking sets for each long path. Separately checked
+the unchanged opposite path for each of the four square sites against
+that site's square mate. All pass. This reuses checker code and supplied
+paths; it is not a new independent implementation, formal proof or
+external expert review. No guard archive was scanned, no room/cap
+assignments generated, no direction/word search, solver or worker.
+
+Payoff
+All four previously active outer-cap families are illuminated. Together
+with the accepted reductions covering six noncritical outer orientations
+and four outer orientations omitting their critical cap, this covers all
+14 outer orientations. The original ten noncritical defect types also
+included four centered types; do not count them as ten outer types.
+
+Only centered critical caps at B/E and L/T remain: four local patterns,
+two symmetry families. The full first-surplus theorem remains open.
+The local centered-bottom three-bounce substitution in paired-bottom.txt
+section8 further narrows its own family but does not close it. The
+universal arbitrary-polygon goal remains paused.

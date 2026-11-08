@@ -1,0 +1,90 @@
+Local surplus-four arithmetic partition audit — 4 November 2026
+Codex01a18403. Parent correction; independent challenge requested.
+
+Result
+The earlier seven-type local list was incomplete. Three arithmetic types
+were omitted: e3+e1, e2+e1+b1, and three e1+b1. The first is covered below
+by inherited paths within13 reflections. The other TWO remain open unless
+and until separately classified and optically covered. Lower-layer b0
+proofs cannot be cited unchanged for b1. Existing subfamily certificates
+remain valid; this correction concerns exhaustion of the overall frontier.
+
+Definitions
+Delta=sum(e)+b=4, e=q-d; q=m except q3 for m4 smooth-A fans.
+In particular q is NOT reduced for m6. b counts extra smooth non-A points,
+including smooth C points outside H. Nonbridge means N sectors6/7 are not
+both present. Spatial locality means all cells lie in K, not that d>0.
+
+1. Exhaust arithmetic BEFORE geometric exclusions
+For b=4: no positive cells.
+For b=3: e1.
+For b=2: e2 OR e1+e1.
+For b=1: e3 OR e2+e1 OR e1+e1+e1.
+For b=0: e4 OR e3+e1 OR e2+e2 OR e2+e1+e1 OR four e1.
+These are all twelve weighted integer partitions. Excluding solitary e3
+and e4 as in structural-reduction.txt leaves TEN necessary types, not seven.
+A listed type need not have a valid room at W20/k6; it still needs an
+explicit exclusion or optical theorem before removal from the frontier.
+
+2. Retained solitary e3/e4 exclusions
+With a sole positive cell, connectivity makes it a root (d>0).
+For e3,d1 would require nonexistent q4. The only d2 cell is N; q5 means
+m5, whose nonbridge window cannot touch both H sides. Thus e3+b1 is excluded.
+For e4,d1 gives q5,m5 and at least two complete C pairs, at most one facing H;
+an outside complete pair is smooth since no other positive cell can heal it.
+This violates b0. For d2,q6 means m6; the sole nonbridge window is0..5.
+Its top and left complete C pairs lie outside H and remain smooth. Again b0
+fails. No correction to the original N/q5 bridge observation is needed.
+
+3. The omitted e3+e1 type: geometric reduction
+There cannot be an e3 root: d1/q4 is impossible, and d2/q5 is a bridge.
+Hence the e3 cell has d0,q3, while the e1 cell is a d1/q2 two-sector root.
+Ordinary caps cannot transmit from H. Connectivity forces the d0 cell to
+attach immediately to this root, which is an outer quarter. In K the only
+partial-cell adjacency edges are B-D and E-R; sigma exchanges them.
+
+Use B-D. If D is the root, the B leaf has d0 and omits B+ (sector1), so the
+accepted one-reflection actual S/T path applies regardless of its other tiles.
+If B is the root, the unique attaching quarter is B sectors0/1. Its only
+outside side meets D at C=(1,-2), with a90-degree contribution. D must have
+sector3 for edge connectivity and omit its H-facing north sectors1/2.
+For q3 its only possible windows are D3/4/5 or D3/4/5/6. The four-sector
+window additionally completes the south C=(2,-3). No other occupied K cell
+can reach that C, so it is smooth, contradicting b0. Thus the sole active
+orientation is B0/1 plus D3/4/5. Sigma supplies the E/R version.
+This is a fan-window classification, not an assembled-room enumeration.
+
+4. Optical closure of this orientation, actual endpoints unchanged
+All other cells L/E/T/N/R are ordinary. The following are existing fixed paths:
+E- absent: one_sigma.
+E- present,L+ absent: sigma_four; E+ absent by ordinary-slot exclusivity.
+L+/E- present,T- absent: B-square two-reflection path.
+Otherwise L+/E-/T- occur; their opposite ordinary caps are absent.
+Nb+ absent: existing five path.
+Nb+ present: N is bottom-facing ordinary, so both Nr caps are absent;
+existing sigma13 path applies.
+
+local-partition-guards.py/json checks precisely these five implications
+against the ENTIRE D star as possible added support, plus the opposite-root
+one-path and all sigma/reversal images. Required tiles fit the minimum
+B0/1 plus stated ordinary caps; forbidden tiles avoid the maximum support.
+All six checks PASS. Thus the D3/4/5 leaf removes none of the used mirrors.
+This closes e3+e1 within13, independent of W/k counts. No erasure or claim
+that arbitrary enlargement preserves a billiard path is used.
+
+5. Corrected frontier and limits
+Existing closures: b4, e1+b3, e2+b2, two e1+b2.
+New parent closure: e3+e1, pending independent challenge.
+Open WHOLE local types:
+ e2+e1+b1; three e1+b1; two e2; e2+two e1; four e1.
+Within two e2, only the seven joined B/D fixtures remain after accepted
+B/E10 and all four Llower certificates (Rplus19 independently accepted).
+This is five charge types, not five rooms or a progress percentage.
+Remote rows remain separate; no full Delta4 or universal minimum theorem.
+
+Inputs: structural-reduction.txt§6; third-surplus-review/theorem.txt definitions;
+third-surplus-review/local-mixed.txt and local-three-unit.txt (b0 restrictions);
+surplus-four-local/two-unit.txt (arbitrary-b theorem for exactly TWO units);
+two-unit-independent/review.txt§4; the six exact path sources/hashes in
+local-partition-guards.json. No discovery, archive retrieval, new room,
+new direction, new word, worker, or solver ran.

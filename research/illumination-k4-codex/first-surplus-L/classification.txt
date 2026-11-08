@@ -1,0 +1,305 @@
+First positive-surplus L layer: complete classification and illumination
+4 November 2026
+
+CURRENT RESULT: CLOSED, independently checked.
+Every strictly simple canonical45-degree triangle room with exactly the
+three interior A stars S=(0,0),U=(2,0),T=(2,2) and Q+s_N<=9 illuminates
+actualS/T with at most13reflections. The other two interiorA pairs are
+adjacent and directly connected. No W/k cap is needed for this support.
+
+The complete first-layer geometry below reduces Delta1 to all-single
+caps or one local two-triangle fan. Subsequent square and centered-cap
+arguments close all22 local fan orientations. Final independent review
+ACCEPTS both centered L/T and B/E whole-family closures; exact supplied
+path/interval/sigma receipts PASS. See section12 and
+bottom-closure-review.txt/check.json/coverage for the final audit.
+
+For darkness this support now requires Q+s_N>=10 and W+2k>=30, hence
+W>=18 at k<=6. No universal22claim, other-support theorem or larger-
+surplus theorem follows. The universal goal remains paused.
+
+Sections1–9 preserve the original classification proof and its then-open
+residue; sections10–12 record the subsequent closures. Earlier statements
+of an open residue are superseded as current status by section12.
+
+1. Exact scope and slack
+Use the definitions in zero-surplus-L/classification.txt and
+exception-geometry/zero-L-completion.txt. I=3 is fixed; no additional
+interior A point may be supplied. H is the union of the three full stars.
+There are eight exposed full-cell sides. Let d(v) be the number of these
+sides touched by triangles of a partial A cell v, q(v) its Q contribution,
+and M the set of smooth C midpoints with neither opposite triangle occupied.
+Then
+ Delta = sum_v(q(v)-d(v)) + (s_N-|M|).          (1)
+Each summand is a nonnegative integer. Delta1 therefore means E or F:
+ E: all q=d, and exactly one smooth non-A point outside M;
+ F: exactly one cell has q=d+1, all others q=d, and s_N=|M|.
+This is a mathematical dichotomy, not a computational sample.
+
+2. No remote geometry at unit surplus
+Every q=d cell has positive d and is in the seven-cell neighborhood of H.
+The ordinary possibilities are a single triangle touching one full side,
+or the two-triangle northwest bridge touching both adjacent full sides.
+The bridge already makes ST directly visible.
+
+Suppose the one F defect has d=0. Then q=1, hence exactly one triangle.
+Such a triangle has just one cell-crossing edge, its BC edge. Every ordinary
+single cap already uses its sole BC edge toward H. The ordinary northwest
+bridge uses both its cell-crossing edges toward H. None can connect the
+defect across a side away from H. The defect cannot attach directly to H
+without d>0, and there is no second defect available. This contradicts the
+edge-connected triangle dual graph of a strictly simple polygonal disk.
+A vertex-only attachment is not a permitted substitute.
+Thus the exceptional cell too must have d>=1. All occupied partial geometry
+is in the seven neighboring A cells:
+ (-2,0),(0,-2),(2,-2),(4,0),(4,2),(2,4),(0,2).
+This is stronger than an unsupported finite-radius assumption.
+
+3. Complete local fan list
+Six neighboring cells have only one full neighbor. The northwest cell N,
+centered at(0,2), has two, below and right.
+For d=1, unit excess means q=2, so the fan has exactly TWO contiguous
+triangles. At a one-full-neighbor cell there are three orientations:
+ one centered fan whose two triangles face the full side, or two quarter
+ fans extending around its two B endpoints. These give6*3=18 local types.
+At N there are four d1 two-triangle fans. Thus there are22 local types.
+
+The d2 defect case is possible only at N and requires q=3: a three-triangle
+fan or a smooth four-triangle fan. All such contiguous fans touching both
+full sides contain the two central bridge triangles Nb+,Nr-. Hence ST is
+directly illuminated. There are two length3 and three length4 local fans
+in this direct-bridge category; none can support darkness.
+
+Among the22 potentially dark types:
+ P: eight CENTERED two-triangle fans, one per exposed full side. The
+    shared C midpoint becomes interior, increasing J by one.
+ O: fourteen QUARTER fans. One triangle faces a full side and the other
+    faces a nonfull cell. Their new outer C is a90-degree corner; no
+    additional interior non-A point is created.
+All other partial cells are ordinary single caps. No smooth A appears.
+
+4. Exact boundary conditions and ledgers
+In E the extra smooth non-A point must be B: every C of every single cap
+is already a full-side midpoint, so no extra smooth C is available. It can
+be an originally flat B left unrepaired, not only a newly flattened convex
+corner. In the sixteen-cap labels, the seven smooth-B indicators are
+ not(B+ or D-), not(R+ or E-),
+ (L- and B-), (D+ and R-), (E+ and T+),
+ (T- and Nr+), (L+ and Nb-).
+E requires their sum to equal ONE.
+
+In F every B must remain nonsmooth. A centered fan contributes one triangle
+at each of two old B endpoints; an O fan contributes TWO at its common B
+endpoint. The remaining ordinary caps contribute one each. Add these to
+H's B fan sizes (2 at its five convex B corners,4 at two flat B points,
+6 at the central reflex B). A B fan of4 is forbidden in F. A full central
+B would contain the bridge and has already been illuminated.
+This is a complete local boundary test, rather than assuming that adding
+a cap always reduces the exception count. All fans extend H contiguously;
+under these tests the attachments form a strictly simple disk, since each
+single/paired/quarter attachment collapses onto its connected attaching
+edge in H and distinct external cells meet only at old B vertices.
+
+Let n count ordinary single-cap cells, EXCLUDING the exceptional cell in
+P/O. Then the exact ledgers are:
+ type     N        Q    J    s_N    k       W         n at W21/k6
+ E       24+n      n    2    9-n   11-n    7+2n      5,6,7
+ P       26+n     n+2   3    7-n   10-n    9+2n      4,5,6
+ O       26+n     n+2   2    7-n    9-n   11+2n      3,4,5
+Here E has no exceptional cell and n counts all single caps. s_A=0 in
+all three cases. Every row obeys
+ W+2k=29,
+so the only budget pairs are(17,6),(19,5),(21,4). These are necessary
+arithmetic possibilities, not a claim that every n/fan/cap combination
+satisfies topology or the required B conditions.
+
+5. The entire single-cap branch E is illuminated
+The zero-surplus optical argument actually applies to the whole single-cap
+alphabet even when smooth B points are allowed.
+First, missing B+ or E- gives one-reflection illumination. With both present,
+their cap walls are intact because at most one triangle occupies each cell.
+Thus missing T- or L+ gives the four-reflection paths already proved.
+Any hypothetical dark single-cap room must therefore contain all four
+reference caps B+,E-,T-,L+.
+
+The original13-path then can be blocked only by a northwest BOTTOM cap
+Nb- or Nb+, and its reflected/reversed path only by a northwest RIGHT cap
+Nr- or Nr+. Opposite caps in the four occupied reference cells cannot occur;
+forbidden triangles outside the single-cap alphabet cannot occur either.
+The northwest cell can hold only one cap, so it cannot block both paths.
+If it contains the ordinary two-triangle bridge, ST is directly visible.
+No no-smooth-B condition was used in this last cover: allowing Nb- and Nr+
+merely gives two alternatives in each of two disjoint blocking sets.
+Therefore all E rooms illuminate, with at most13reflections.
+More generally this proves illumination whenever EVERY partial cell has
+q=d for the fixed L support, without restricting the number of smooth B
+points or imposing W/k caps. This strengthens the zero-surplus theorem's
+optical scope, not a theorem for arbitrary double-cap rooms.
+
+6. Defects outside the four reference cells also illuminate
+Suppose the exceptional two-triangle fan is at D=(2,-2), R=(4,0), or
+N=(0,2). The B+,E-,L+,T- cells themselves remain single-cap cells.
+The same one/four-bounce implications therefore force all four reference
+caps in any putatively dark room.
+
+A defect at D or R touches NONE of the forbidden triangles of either fixed
+13-path. Any remaining northwest cap is single, so it cannot block both.
+A potentially dark N defect has one of these four fans:
+ a southwest quarter extending a bottom cap away from the notch;
+ a centered bottom pair;
+ a centered right pair;
+ a northeast quarter extending a right cap away from the notch.
+Each can intersect only the bottom blocking set or only the right blocking
+set, never both. Its one extra triangle outside the single-cap alphabet is
+at N, whereas the other forbidden tiles outside that alphabet in the fixed
+13-paths lie in the four reference cells. Thus at least one13-path remains
+legal. All larger N defect fans contain the direct bridge already handled.
+This proves illumination for all ten noncritical local defect types.
+
+7. Remaining eight active-cap fan patterns
+The exceptional cell must be one of
+ B=(0,-2), E=(4,2), L=(-2,0), Tcap=(2,4).
+The fan must also contain the named B+,E-,L+,T- cap of its own cell.
+For B/E this follows from the one-bounce paths. For L/T, the B/E cells
+are still ordinary and the four-bounce implication forces the corresponding
+L+/T- triangle. One of the three orientations at each such cell omits that
+triangle and is consequently illuminated, removing four more local types.
+
+Exactly two orientations remain at each of the four sites:
+ - the CENTERED fan containing the critical cap and the other half-side
+   cap of the same cell;
+ - the QUARTER fan containing the critical cap and the triangle across
+   its diagonal AB edge.
+The full triangle coordinates are in local-fans.json. Thus8 local types
+remain, paired by sigma into4 types: bottom/east centered, bottom/east
+quarter, left/top centered, left/top quarter. Other cap selections are
+still free subject to the B constraints and budget; this is NOT eight
+fully specified rooms.
+For a left-upper quarter fan, avoiding a smooth B at(-1,1) requires Nb-.
+For the reflected top-left quarter, avoiding smooth B at(1,3) requires Nr+.
+These cases already occupy at least five external cells, so their quarter
+ledger requires W>=19 under this layer. The other active types retain the
+necessary table ranges; no optical exclusion of the full four families
+is claimed.
+
+8. The old six paths genuinely do not close the residue
+Use the PREVIOUSLY verified fixed room R+A+D from
+exception-geometry/shared-extensions.txt. It has a centered L defect and
+ledger W17,k6,Q6,s_N3, hence Delta1. It is one of the remaining types.
+Its new lower-left cap triangle lies in the required-absent sets of both
+13-paths; the one- and four-reflection paths are also invalidated by present
+reference caps. All six previous path implications fail in this room.
+It is NOT dark: the previously saved11-reflection replacement at source
+line361 has already passed independent exact actual-boundary verification.
+That old fixed example demonstrates that the existing six-path cover
+cannot simply be asserted to work at Delta1. Closing a whole remaining
+family requires an additional structural path argument, not the claim
+that every such room is dark or a repeated fixed-room lookup.
+
+9. Verification and scope
+local-fans.py verifies the complete hand local table using only contiguous
+fans in the eight-triangle stars at the seven forced cells. It checks:
+ 17 zero-excess local fans:16singlecaps plus1bridge;
+ 40 unit-excess d0 local fans in these seven cells, excluded by the hand
+    connectivity argument (farther cells are excluded by that argument too);
+ 5 unit-excess bridge-containing fans, directly illuminated;
+ 22 potentially dark two-triangle local fans (8centered,14quarter);
+ 8 active-cap types,4reflectionorbits, and10noncritical static13-path covers.
+It also rechecks only the ONE already verified R+A+D fixture against all
+six fixed paths and its existing11bounce replacement. PASS.
+This is a local fan table and a prescribed saved-fixture check. It is not
+an assembled-room/cap-assignment enumeration, direction/word discovery,
+ray search or occupancy solver. The all-room completeness and optical
+reductions are the hand arguments above.
+
+Current result (updated after section10): a complete necessary geometric
+classification of Delta1, with all outer-fan branches and centered L/T
+illuminated. Only the centered B/E symmetry family remains (section11). A full Delta1 illumination theorem and the universal
+22-wall minimum remain unresolved by this work. The universal goal remains
+paused. No further campaign has been launched automatically.
+
+
+10. Subsequent analytic exchanges and reviewed reduction
+The peer square-pocket exchange proves every active outer/quarter family
+illuminated. A quarter pair is a unit square; the appropriate old triple
+cap reflection and one reflection on its far wall have the same strict
+entry/exit/direction data. In the old1/4/13 decision proof, substitute one
+far-wall reflection at the unique square site. The force-to-four-reference-
+caps step survives, and the two long paths retain disjoint N-bottom and
+N-right blocking sets. All14 outer orientations are therefore covered.
+Independent hand review in this session ACCEPTS sections1-6 of peer
+first-surplus-review/square-exchange.txt with no corrections. Owned
+square-exchange-review.txt and square-exchange-review-check.json record
+six exact substituted paths plus four unchanged-opposite-path checks,
+all PASS. This reuses the rational checker; no formal/expert claim.
+
+Only the FOUR centered critical patterns remain: B/E and L/T, two sigma
+families. Noncritical centered patterns were already covered in section6.
+The former statement of eight active patterns/four symmetry types is
+therefore superseded as the current unresolved count.
+
+For centered B, paired-bottom.txt section8 gives a second local exchange:
+launch(-d,-1) through the pair has two bounces and the same outgoing state
+as old single-cap launch(d,-1) with three bounces. The old4beam tail gives
+a THREE-reflection actual S/T path at d1/4 whenever T- is absent. Thus
+T- is forced for possible darkness; T+ and Nr+ are absent, and old13
+forces N=Nr-. Combined with the10path, the remaining necessary condition
+is (D- absent OR R- present) after B-,B+,E-,L+,T-,Nr- are forced.
+Its east image follows by sigma. This is a conditional reduction, not a
+full centered-family theorem. Exact fixed substitution/interval checks PASS.
+
+The bounded L+/E-/Nr- cap-return branch in paired-bottom.txt section9
+enters the upper chamber for1/7<r<2/13, but neither first roof branch
+hits T at its first height2 descent. Later passages remain unclassified.
+No inference of darkness follows. No room/cap-assignment census, direction
+or word search, archive lookup, solver, worker or universal-goal resumption.
+
+
+11. Centered left/top closure independently accepted
+Peer first-surplus-review/residual-cover.txt proves the entire centered
+L family by a three-reflection path: S ->(6/7,-8/7)->(-10/7,4/7)
+->(-1/4,-1)->T. It needs only B+,L+,L-, forbids B- and the outer B/L
+mates, and passes through the newly interior C=(-1,0). If B+ is absent,
+the old1path applies. Sigma/reversal covers centeredT. The proof does
+not depend on N/D/R choices or wall/exception budget.
+Independent hand review ACCEPTS the corrected peer note in full, with
+no corrections. Exact fixed-path/C-star/sigma checks PASS in owned
+centered-left-closure-review-check.json. See the corresponding review
+note for full containment and independence limits.
+ONLY the centered B/E symmetry family is now open: two reflected local
+patterns, with ordinary-cap choices still variable. This supersedes
+section10's previous count of two centered symmetry families. Full
+Delta1 remains unproved. No universal-goal resumption follows.
+
+Own bounded later-pass continuation of the B/E residual is complete in
+later-passes.txt/check.py/json/coverage. It supplies strict1/2/3/4-hit
+return maps and five prescribed second/third-height2 formulas, none at
+T on its valid interval. The remaining branch's optionalR+ produces
+different source-side contacts. No additional B/E family exclusion was
+obtained. Next geometric target: use the newly interior bottom midpoint
+C=(0,-1) with a target leg contained in the actual L support; the direct
+x/y swap of the peerLshortpath needs the northwest bridge and fails as
+a new residual cover. No archive lookup or direction/word search used.
+
+
+12. Final centered B/E closure: first-surplus theorem complete
+Peer bottom-residual-cover.txt gives a6path: S->(-1/6,1)
+->(-4/7,-10/7)->(4/5,-6/5)->(8/5,18/5)->(2,11/3)
+->(12/7,26/7)->T. Launch(-d,1), d1/6; wholebeam1/7<d<2/11.
+One roof bounce, two bottom-pair bounces and three T- cap bounces give
+endpoint(12d,2). Required caps areONLY B-,B+,T-; forbiddenNb-/T+
+andouterB/Tmates are forced absent after old1/4 andnew3necessities.
+No N=Nr- or optionalD/R conditions are needed.
+Independent HAND review ACCEPTS peer entire bottom-residual-cover.txt
+and first-layer-theorem.txt with no corrections. Owned
+bottom-closure-review.txt/check.py/json/coverage record the full interval,
+actualtargetequation, fixedpathrequirements and sigmaPASS. Source hashes
+of reviewed notes/receipt retained; no archive lookup or projection here.
+
+Together with the previously independently accepted L/T and outer covers,
+ALL first-surplus branches illuminate. The full fixedI3L/Q+s_N<=9
+class connects actualS/T within13reflections, and all3interiorA points
+mutuallyilluminate. A dark pair therefore needsDelta>=2,Q+s_N>=10,
+W+2k>=30, onlyW>=18atk<=6. Larger surplus and other supports remain
+unproved in this hand continuation. Longlaterpass/sourcemidpoint ideas
+are superseded for this layer's exclusion; no further campaign starts.

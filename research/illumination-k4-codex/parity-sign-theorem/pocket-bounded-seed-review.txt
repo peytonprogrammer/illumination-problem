@@ -1,0 +1,92 @@
+# Verdict on Section 26.4: sound, within its stated scope
+
+I found no logical or geometric failure. I checked every new deduction against the stated inputs: the fan tree with raw C incidence (24), equation (24.1), equation (24.3), spacing (27.1), and the wall bound with W=2+6I+Q (27.4). Each item you asked about is covered below. The objections are only presentational.
+
+## (1) Ruling out P_A=9, and the use of M=I+Z-1
+
+- **Equality.** W≤26 and W=14+Q give Q≤12. Equation (26.2) gives Q≥2·9−6=12. So Q=12, and every partial vertex has q_A=d.
+- **Table of equality types.** Equation (24.1) needs m+q even. Equality d=(m+2−q)/2=q_A then leaves only three types:
+  - m=1, q=1, with in=1 and out=0;
+  - m=2, q=0, with in=2 and out=0;
+  - m=4, q=0, with in=2 and out=1.
+  - The others fail: m=2,q=2 gives d≤1; m=3,q=1 gives d≤2<3; m=4,q=2 gives d≤2<3; m≥5 gives d<m.
+  - A tacit point checks out. Indegree equals e only if every endpoint C is an incoming portal. A 90° endpoint C with no portal is possible, but it lowers d, so it never occurs at equality.
+- **Counting mergers.** The sum of indegrees is E=V−1, which gives M=I+Z−1. Here Z=0, so there is exactly one merger. Any partial vertex with outdegree>0 has indegree 2, so the merger's incoming neighbors must both be full. Then S and T share a neighbor, which contradicts c=2.
+- **A shorter contradiction exists.** Eight partials would be m=1 leaves and one would be the merger. The degree sum is 20=8+8+d_merger, which forces d_merger=4>3.
+- **Notation.** "M" is used both for the merger count in (24.3) and for the vertex. Rename one of them.
+
+## (2) The P_A=8 bridge and the local radii
+
+- **Structure.** b=P_A=8 and c=2, and each component of H contains exactly one full vertex. The extra tree edge (9th edge versus 8) must therefore join the two components.
+- **Type of M.** M has in=1 and out=1. Then h=1 gives m+q=4, and e≥1 gives q≤1. So M is (4,0) or (3,1); the case (2,2) is correctly excluded because it has e=0.
+- **Type of R.** R has in=2 and out=0. Then h=0 and e=2 give (2,0).
+- **Perpendicularity.** M's incoming radius is −a and its internal radius is b, so b⊥a. R's endpoint radii are −b and d, and they are perpendicular. So d=±a.
+- **Spacing.** d=−a would give T−S=2b. That makes their common C interior, so 27.1 excludes it.
+- **Normalized placement.** With d=a: S=(0,0), M=(2,0), R=(2,2), T=(4,2).
+- **Contiguity forces M's upper-left triangles.** Point (1,0) is an endpoint C and (2,1) is internal. M must therefore contain sectors [135°,180°], [90°,135°] and [45°,90°].
+- **R's fan is the lower-right quadrant.** Triangles [R,(2,1),(1,1)] and [R,(2,1),(3,1)] share the edge R–(2,1). By strict simplicity (no slits), the first triangle cannot be in the room without belonging to R's fan, and R has m=2. So the upper-left quadrant at c₀ is missing, and c₀ is a 270° corner.
+
+## (3) Shared-neighbor half-star and the cone continuation
+
+- **Placement.** H is connected and edges in H join full to partial vertices. So the path in H is S–M–T, and 27.1 forces T−S=4a.
+- **M's fan.** Both of M's endpoint Cs at (1,0) and (3,0) are endpoints, so the arc is exactly a half-star with m=4, q=0. Its internal point c₀=(2,1) has exactly one portal, which gives a 270° corner.
+- **Legs.** Both legs lie in c₀'s two lower quadrants. These are M's triangles, so they are present whichever upper quadrant is missing.
+- **Case: upper-right quadrant missing.**
+  - The link is [π/2, 2π], and the east ray is a horizontal wall edge c₀–(3,1).
+  - Reflection maps the germ at 2π−atan(1/2) to 2π+atan(1/2).
+  - The interval [π+atan(1/2), 2π+atan(1/2)] spans two consecutive copies within a 3π developed span. The cone angle is 6π: the local group {horizontal, vertical} has order 4, giving 4·3π/2, and there are 2 lifts.
+- **Case: upper-left quadrant missing.**
+  - The link is [π, 5π/2], and the reflection across the west ray is θ↦2π−θ.
+  - This maps the T germ to atan(1/2). The interval is [atan(1/2), π+atan(1/2)].
+- **Result.** The arc is embedded and has length exactly π. T′=(4,2) is a genuine lift of T in the adjacent reflected sheet, and the second half is the image of the corner-free physical leg.
+
+## (4) The six-triangle straight segment
+
+I traced the line y=x/2 through the six triangles in order:
+
+1. It starts in [S,(1,0),(1,1)].
+2. It crosses the portal (1,0)–(1,1) at (1, 1/2).
+3. It crosses M's internal edge x+y=2 at (4/3, 2/3).
+4. It reaches c₀.
+5. It crosses R's internal edge x+y=4 at (8/3, 4/3).
+6. It crosses the portal (3,1)–(3,2) at (3, 3/2) and reaches T.
+
+Every crossed edge is shared by two room triangles, so none is a wall. The π-side [π+atan(1/2), 2π+atan(1/2)] lies inside the physical link [π, 5π/2]. This is the strong one-copy condition of 27.2. The other side has physical angle π/2 and developed angle 5π.
+
+## (5) Endpoint labels and primitive halves
+
+- The halves are (2,1) and (2,1), up to D4. Both are primitive, and their open segments contain no integer points, so they contain no physical corners.
+- The midpoint (2,1) is a C point and a true zero.
+- The endpoints are the actual S and an actual lift of T. Reversing the path if the labels were swapped preserves π and the labels.
+- The direction is not parallel to any wall.
+
+## (6) Tacit assumptions beyond raw strict simplicity
+
+These are all supplied by the stated inputs:
+
+- one contiguous fan per A point, with no pinches;
+- room triangles that share an edge make that edge interior, with no slits;
+- the edge-count identity is valid because H has no multi-edges;
+- the walls are only horizontal, vertical or diagonal.
+
+The wall identity W=2+6I+Q, used at zero exceptions, is the only other external input.
+
+## Exactly what is proved
+
+Assume P is a raw, strictly simple canonical room with two distinct interior A marks S, T and W≤26, and accept the inputs listed above. Then I=2, and up to a grid symmetry and swapping S and T, exactly one of two local configurations holds:
+
+- **(i) T−S=(4,0).** A shared half-star neighbor has a 270° C corner c₀=(2,1). The admissible event S→c₀→T′ goes through one boundary-flank reflection, with developed halves (2,1) and (2,1).
+- **(ii) T−S=(4,2).** A bridge M→R has a 270° C corner c₀=(2,1). The event is a physically straight segment S→c₀→T, and its π-sector lies in one copy.
+
+In both cases the event is an actual source-to-target, one-corner, intrinsic-π seed. Its halves are equal, primitive and corner-free, and its direction is not wall-parallel.
+
+A byproduct of the proof: for every such room, the two marks are at Chebyshev distance exactly 4.
+
+## What is not proved
+
+The theorem does not establish any of the following:
+
+- a nonzero pocket-slide defect, so Q(η)≠0 is not shown;
+- that the event visits the pocket;
+- detection, even for W≤26;
+- anything for W>26.

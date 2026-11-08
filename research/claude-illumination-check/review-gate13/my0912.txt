@@ -1,0 +1,1847 @@
+                                         THE ACTION OF THE AFFINE DIFFEOMORPHISMS ON THE RELATIVE
+                                           HOMOLOGY GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC
+                                                                 ORIGAMIS
+
+
+                                                              CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+
+
+arXiv:0912.1425v2 [math.DS] 6 Oct 2010
+                                                A BSTRACT. We compute explicitly the action of the group of affine diffeomorphisms on
+                                                the relative homology of two remarkable origamis discovered respectively by Forni (in
+                                                genus 3) and Forni-Matheus (in genus 4). We show that, in both cases, the action on
+                                                the non trivial part of the homology is through finite groups. In particular, the action on
+                                                some 4-dimensional invariant subspace of the homology leaves invariant a root system of
+                                                D4 type. This provides as a by-product a new proof of (slightly stronger versions of) the
+                                                results of Forni and Matheus: the non trivial Lyapunov exponents of the Kontsevich-Zorich
+                                                cocycle for the Teichmüller disks of these two origamis are equal to zero.
+
+
+
+
+                                                                                      C ONTENTS
+                                         1. Introduction                                                                                       2
+                                         1.1. The Teichmüller flow and the Kontsevich-Zorich cocycle                                           2
+                                         1.2. The affine group of a translation surface                                                        3
+                                         1.3. Veech surfaces and square-tiled surfaces                                                         5
+                                         1.4. Degenerate SL(2, R)-orbits                                                                       6
+                                         1.5. Statement of the results                                                                         7
+                                         Acknowledgements                                                                                      9
+                                         2. Proof of Theorem 1.15                                                                              9
+                                         2.1. The square-tiled surface (M3 , ω(3) )                                                            9
+                                         2.2. Irreducible representations of Q                                                                10
+                                         2.3. Action of Aut(M3 , ω(3) ) on H1 (M3 , Σ(3) , Z)                                                 10
+                                         2.4. The affine group Aff (1) (M3 , ω(3) )                                                           12
+                                                            S, Te on H1 (M3 , Σ(3) , Z)
+                                         2.5. The action of e                                                                                 13
+                                         2.6. The subspaces H1st and Hrel                                                                     14
+                                                                                   (0)
+                                         2.7. The action of Aff(M3 , ω(3) ) on H1                                                             15
+                                         3. Proof of Theorem 1.17                                                                             18
+                                         3.1. The square-tiled surface (M, ω)                                                                 18
+                                         3.2. Action of Aut(M, ω) on H1 (M, Σ, Z)                                                             23
+                                         3.3. Action of Aff(M, ω) on H1 (M, Σ, Z)                                                             24
+                                         3.4. The subspaces H1st and Hrel                                                                     25
+                                         3.5. The subspace Hτ                                                                                 25
+                                         3.6. The subspace H̆                                                                                 26
+                                         3.7. The subspace H̆ for q = 3                                                                       26
+                                         Appendix A. Parity of the spin structure                                                             28
+                                         Appendix B. Aff(M, ω)-invariant supplements to H1 (M, R)                                             30
+
+                                         Date: October 26, 2018.
+                                                                                            1
+2                       CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+    References                                                                               32
+
+
+
+
+                                     1. I NTRODUCTION
+   Our main objective is the explicit description of the action on homology of the affine
+group of the square-tiled translation surfaces constructed by Forni [7] and Forni- Matheus
+[8], characterized by the total degeneracy of the so-called Kontsevich-Zorich cocycle. Be-
+fore going to the statements of our results, let us briefly recall some basic material about
+these notions.
+
+1.1. The Teichmüller flow and the Kontsevich-Zorich cocycle. Let M be a closed ori-
+ented surface of genus g ≥ 1, and Σ be a finite subset of M . We denote by Diff+ (M, Σ) the
+group of orientation-preserving homeomorphisms of M which preserve Σ, by Diff+     0 (M, Σ)
+                                                   +                  +
+the connected component of the identity in Diff (M, Σ) (i.e., Diff0 (M, Σ) is the sub-
+set of homeomorphisms in Diff+ (M, Σ) which are isotopic to the identity rel. Σ) and
+by Γ(M, Σ) := Diff+ (M, Σ)/Diff+    0 (M, Σ) the mapping class group of (M, Σ). When
+Σ is empty, we just write Diff+ (M ), Diff+                        +              +
+                                            0 (M ), Γ(M ) for Diff (M, Σ), Diff0 (M, Σ),
+Γ(M, Σ).
+Definition 1.1. A translation surface structure on M is a complex structure on M together
+with a non-zero holomorphic 1-form ω w.r.t. this complex structure. The Teichmüller
+space Q(M ) (resp. the moduli space M(M )) is the space of orbits for the natural action
+of Diff+                    +
+       0 (M ) (resp. of Diff (M )) on the space of translation surface structures. We have
+thus M(M ) = Q(M )/Γ(M ).
+   The group SL(2, R) acts naturally on M(M ) by postcomposition on the charts defined
+by local primitives of the holomorphic 1-form. The Teichmüller flow Gt is the restriction
+of the action to the diagonal subgroup diag(et , e−t ) of SL(2, R) on M(M ). For later
+reference, we recall some of the main structures of the Teichmüller space Q(M ) and the
+moduli space M(M ):
+      • M(M ) is stratified into analytic spaces M(M, κ) = Mκ obtained by fixing the
+        multiplicities κ = (k1 , . .P . , kσ ) of the set of zeros Σ = {p1 , . . . , pσ } of the
+        holomorphic 1-form (here ki = 2g − 2); the corresponding Teichmüller space
+        Q(M, Σ, κ) is the space of orbits for the natural action of Diff+0 (M, Σ) on the set
+        of translation surface structures with prescribed zeroes in Σ. One has M(M, κ) =
+        Q(M, Σ, κ)/Γ(M, Σ);
+      • The total area function A : M(M ) → R+ , A(ω) = 2i M ω ∧ ω is SL(2, R)-
+                                                                     R
+
+        invariant so that the unit bundle M(1) (M ) := A−1 (1) and its strata M(1) (M, κ) :=
+        M(M, κ) ∩ M(1) (M ) are SL(2, R)-invariant (and, a fortiori, Gt -invariant);
+      • the Teichmüller space Q(M, Σ, κ) has a locally affine structure modeled on the
+        complex vector space H 1 (M, Σ, C): the local charts are given by the period map
+        defined by integrating the holomorphic 1-form against the homology classes in
+        H1 (M, Σ, Z);
+      • the Lebesgue measure on the Euclidean space H 1 (M, Σ, C) induces an absolutely
+        continuous SL(2, R)-invariant measure µκ on M(M, κ) such that the conditional
+                    (1)
+        measure µκ induced on M(1) (M, κ) is invariant by the SL(2, R)-action (and
+        hence Gt -invariant).
+                 THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                          3
+
+
+See Veech [16], [18], and the surveys of Yoccoz [20] and Zorich [23] for more details.
+                                                              (1)
+    Once we get the existence of a natural invariant measure µκ for the Teichmüller flow,
+                              (1)                         (1)
+it is natural to ask whether µκ has finite mass and/or µκ is ergodic with respect to the
+Teichmüller dynamics. In this direction, we have the following result:
+                                                                                 (1)
+Theorem 1.2 (Masur [14], Veech [16]). The total volume of µκ is finite and the Teich-
+müller flow Gt = diag(et , e−t ) is ergodic on each connected component of M(M, κ) with
+            (1)
+respect to µκ .
+Remark 1.3. Veech [18] showed that the strata are not always connected. More recently,
+Kontsevich and Zorich [12] gave a complete classification of the connected components
+of all strata of the moduli spaces of holomorphic 1-forms (see Lanneau [13] for the same
+result for quadratic differentials).
+   The Kontsevich-Zorich cocycle GKZ   t   is the quotient of the trivial cocycle Gt × id :
+Q(M ) × H 1 (M, R) → Q(M ) × H 1 (M, R) by the action of the mapping class group
+Γ(M ). As the action is symplectic, the Lyapunov exponents of GKZ    t    with respect to any
+Gt -invariant ergodic probability µ are symmetric w.r.t. 0:
+                           1 = λµ1 ≥ . . . λµg ≥ −λµg ≥ · · · ≥ −λµ1 = −1.
+It turns out that the g non-negative exponents 1 = λµ1 ≥ λµ2 ≥ · · · ≥ λµg determine
+the Lyapunov spectrum of the Teichmüller flow1. Indeed, the Lyapunov exponents of the
+Teichmüller flow with respect to a Gt -invariant ergodic probability µ on M(M, κ) are
+                                                                        σ−1
+                                                        z   }|      {
+     2 = (1 + λµ1 ) ≥ (1 + λµ2 ) ≥ · · · ≥ (1 + λµg ) ≥ 1 = · · · = 1 ≥ (1 − λµg ) ≥
+                                                                                         σ−1
+                                                                                 z        }|       {
+      · · · ≥ (1 − λµ2 ) ≥ 0 ≥ −(1 − λµ2 ) ≥ · · · ≥ −(1 − λµg ) ≥ −1 = · · · = −1
+                           ≥ −(1 + λµg ) ≥ · · · ≥ −(1 + λµ2 ) ≥ −(1 + λµ1 ) = −2.
+See [21] and [11] for further details. On the other hand, Zorich and Kontsevich conjec-
+tured that the Lyapunov exponents of GKZ  t    for the canonical absolutely continuous mea-
+       (1)
+sure µκ are all non-zero (i.e., non-uniform hyperbolicity) and distinct (i.e., all Lyapunov
+exponents have multiplicity 1). After the fundamental works of G. Forni [6] (showing
+the non-uniform hyperbolicity of GKZt   ) and Avila-Viana [1] (proving the simplicity of the
+Lyapunov spectrum), it follows that the Zorich-Kontsevich conjecture is true. In other
+                                                  (1)
+words, the Lyapunov exponents of GKZ  t     at a µκ -generic point are all non-zero and they
+have multiplicity 1.
+
+1.2. The affine group of a translation surface. Let (M, ω) be a translation surface, i.e
+let ω be a non-zero holomorphic 1-form w.r.t. some complex structure on M . We denote
+as above by Σ the set of zeros of ω.
+Definition 1.4. The affine group Aff(M, ω) of (M, ω) is the group of orientation preserv-
+ing homeomorphisms of M which preserve Σ and are given by affine maps in the charts
+defined by local primitives of ω. In these charts, the differential of an affine map is an ele-
+ment of SL(2, R). We obtain in this way a homomorphism from Aff(M, ω) into SL(2, R).
+The automorphism group Aut(M, ω) of (M, ω) is the kernel of this homomorphism.
+
+   1In fact, this is one of the motivation of the introduction of the Kontsevich-Zorich cocycle.
+4                      CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+Definition 1.5. The image of this homomorphism is called the Veech group of (M, ω) and
+denoted by SL(M, ω). It is a discrete subgroup of SL(2, R), equal to the stabilizer of
+(M, ω) for the action of SL(2, R) on M(M ).
+    One has thus an exact sequence
+(1.1)           1 −→ Aut(M, ω) −→ Aff(M, ω) −→ SL(M, ω) −→ 1.
+   For a nice account on affine and Veech groups see the survey of Hubert and Schmidt [10].
+   In genus g ≥ 2, the affine group Aff(M, ω) injects into Γ(M ) (and a fortiori into
+Γ(M, Σ)): for elements with non trivial image in SL(M, ω), this can be viewed from the
+period map (see Veech [19]); for elements in Aut(M, ω), this is a consequence of the
+Lefschetz fixed point theorem, as fixed points then have index 1.
+   Consider the natural surjective map:
+                               H 1 (M, Σ, R) → H 1 (M, R)
+                                                                                  1
+between the relative and absolute cohomology groups of (M, Σ). We denote by Hst     (M, Σ, R)
+                  1                                                             1
+the subspace of H (M, Σ, R) spanned by dx = <(ω) and dy = =(ω) and by Hst its image
+in H 1 (M, R). The subspace Hst 1                       1
+                                  (and therefore also Hst (M, Σ, R)) is 2-dimensional: this
+can be seen either as a standard fact from Hodge theory or more concretely from Veech’s
+                                                                         1
+zippered rectangles construction (see [17], [20], [23]). We denote by H(0)  the orthogonal
+     1                                          1
+of Hst with respect to the exterior product in H (M, R). We have
+                                H 1 (M, R) = Hst
+                                              1     1
+                                                 ⊕ H(0) ,
+because the 2-form dx ∧ dy defines a non-zero element in H 2 (M, R).
+   The intersection form defines a non-degenerate pairing between the homology groups
+H1 (M − Σ, R) and H1 (M, Σ, R), and also between H1 (M, R) and itself.
+         (0)                                          1          (0)
+   Let H1 ⊂ H1 (M, R) be the annihilator of Hst          and H1 (M, Σ, R) ⊂ H1 (M, Σ, R)
+                        1
+be the annihilator of Hst (M, Σ, R). Both are codimension 2 subspaces. We also introduce
+                   st                                           (0)
+the orthogonal H1 (M − Σ, R) ⊂ H1 (M − Σ, R) of H1 (M, Σ, R) ⊂ H1 (M, Σ, R)
+with respect to the intersection form between H1 (M − Σ, R) and H1 (M, Σ, R), and the
+                                     (0)
+orthogonal H1st ⊂ H1 (M, R) of H1 for the intersection form on H1 (M, R).
+   Observe that H1st is the annihilator of H(0)
+                                            1
+                                                , and also the image of H1st (M −Σ, R) under
+the map from H1 (M −Σ, R) to H1 (M, R). Both H1st and H1st (M −Σ, R) have dimension
+2.
+    One has
+                                                          (0)
+                                H1 (M, R) = H1st ⊕ H1 ,
+                                                    (0)
+                         H1 (M, Σ, R) = H1st ⊕ H1 (M, Σ, R).
+
+
+   These decompositions only depend on the image of the translation surface structure in
+Teichmüller space; they are constant along SL(2, R)-orbits, invariant under the action of
+Aff(M, ω), and covariant under the action of the mapping class groups. The same is true
+for the decompositions of the cohomology groups. In particular, the decomposition
+                                H 1 (M, R) = Hst
+                                              1     1
+                                                 ⊕ H(0)
+is invariant under the Kontsevich-Zorich cocycle GKZ
+                                                  t
+                                                                      1
+                                                     . The subbundle Hst correspond to
+                                KZ
+the extreme exponents ±1 of Gt .
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                   5
+
+
+Definition 1.6. The restriction of the Kontsevich-Zorich cocycle GKZ
+                                                                  t   to the invariant sub-
+         1
+bundle H(0)  is called the reduced Kontsevich-Zorich cocycle and is denoted by GKZ,red
+                                                                                  t      .
+
+
+Remark 1.7. In general, H1 (M, R) doesn’t have a Aff(M, ω)-invariant supplement inside
+H1 (M, Σ, R): see Appendix B.
+1.3. Veech surfaces and square-tiled surfaces. Let (M, ω) be a translation surface.
+Definition 1.8. (M, ω) is a Veech surface if SL(M, ω) is a lattice in SL(2, R). This
+happens iff the SL(2, R)-orbit of (M, ω) in M(M ) is closed (see [10] and [23]).
+   The stabilizer of this SL(2, R)-orbit in Γ(M ) is exactly the affine group Aff(M, ω). We
+can thus view the reduced Kontsevich-Zorich cocycle GKZ,red
+                                                          t       over this closed SL(2, R)-
+orbit as the quotient of the trivial cocycle
+                diag(et , e−t ) × id : SL(2, R) × H(0)
+                                                   1                 1
+                                                       → SL(2, R) × H(0)
+by the action of the affine group Aff(M, ω).
+
+   The two examples that we will consider belong to a special kind of Veech surfaces.
+Definition 1.9. (M, ω) is a square-tiled surface if the integral of ω over any path joining
+two zeros of ω belongs to Z + iZ. Equivalently, there exists a ramified covering π : M →
+R2 /Z2 unramified outside 0 ∈ R2 /Z2 such that ω = π ∗ (dz). Every square-tiled surface
+is a Veech surface. One says that the square-tiled surface (M, ω) is primitive if the relative
+periods of ω span the Z-module Z + iZ. In this case the Veech group SL(M, ω) is a
+subgroup of SL(2, Z) of finite index (see [10], [23]).
+   In a square-tiled surface (M, ω), the squares are the connected components of the in-
+verse image π −1 ((0, 1)2 ), with π : M → R2 /Z2 as above. The set Sq(M, ω) of squares
+of (M, ω) is finite and equipped with two one-to-one self maps r (for right) and u (for up)
+which associate to a square the square to the right of it (resp. above it). The connectedness
+of the surface means that the group of permutations of Sq(M, ω) generated by r and u acts
+transitively on Sq(M, ω). Conversely, a finite set S, equipped with two one-to-one maps
+r and u such that the group of permutations generated by r and u acts transitively on S,
+defines a square-tiled surface. See [23].
+                                                                            (0)
+   For a square-tiled surface, it is easy to identify the factors H1st and H1 in the decom-
+position of the homology groups, and to see that in this case they are defined over Q.
+   Let Σ0 ⊃ Σ be the inverse image of {0} under the ramified covering π. For each square
+i ∈ Sq(M, ω), let σi ∈ H1 (M, Σ0 , Z) be the homology class defined by a path in i from
+the bottom left corner to the bottom right corner; let ζi be the homology class defined by
+a path in i from the bottom left corner to the upper left corner. Let σ (resp. ζ) be the sum
+over Sq(M, ω) of the σi (resp. of the ζi ). It is clear that both σ and ζ belong to H1 (M, Z).
+Let σ
+    e (resp., ζ)e be the class in H1 (M − Σ, Z) obtained from σ (resp., ζ) by shifting each
+σi (resp., ζi ) slightly upwards (resp., to the right).
+                                               (0)         (0)
+Proposition 1.10.     (1) The subspace H1 (resp., H1 (M, Σ, R)) is the kernel of the
+       homomorphism from H1 (M, R) (resp., H1 (M, Σ, R)) to H1 (R2 /Z2 , R) (resp.,
+       H1 (R2 /Z2 , {0}, R)) induced by the ramified covering π.
+   (2) One has
+                             H1st (M − Σ, R) = Re  σ ⊕ Rζ,
+                                                         e
+6                       CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+                                      H1st = Rσ ⊕ Rζ.
+         Moreover, the action of the affine group on H1st is through the homomorphism from
+         the affine group to SL(M, ω) ⊂ SL(2, R) and the standard action of SL(2, R)
+         on Rσ ⊕ Rζ.
+                                                                             (0)     (0)
+Proof. The P            an immediate consequence of the definitions of H1 and H1 (M, Σ, R).
+           first part isP
+  Let θ =      ai σi + bi ζi be a class in H1 (M, Σ, R). For the intersection form between
+H1 (M − Σ, R) and H1 (M, Σ, R), we have
+                                                X
+                                      he
+                                       σ , θi =    bi ,
+                                                 X
+                                       hζ,
+                                        e θi =       ai .
+                                       (0)              P         P
+   On the other hand, we have θ ∈ H1 (M, Σ, R) iff ai =              bi = 0. This shows that
+e and ζe belong to H1st (M − Σ, R). As this subspace is 2-dimensional and σ
+σ                                                                            e, ζe are linearly
+                                  st
+independent, we conclude that H1 (M −Σ, R) = Re     σ ⊕Rζ. It follows that H1st = Rσ⊕Rζ.
+                                                          e
+The last assertion of the proposition follows from a direct verification.                    
+                         (0)
+    We will denote by H1 (M, Σ, Q) the kernel of the homomorphism induced by π from
+                                                (0)                    (0)
+H1 (M, Σ, Q) to H1 (R2 /Z2 , {0}, Q). We have H1 (M, Σ, R) = R ⊗Q H1 (M, Σ, Q).
+       (0)
+For H1 and H1 , we omit the coefficients to keep the notation simple: H1st designates
+                  st
+                                                                (0)
+Qσ ⊕ Qζ or Rσ ⊕ Rζ (the context should remove the ambiguity); H1 is the kernel of the
+homomorphism between the first absolute homology groups of M and R2 /Z2 with real or
+rational coefficients.
+
+1.4. Degenerate SL(2, R)-orbits. Veech has asked how “degenerate” the Lyapunov spec-
+trum of GKZ
+         t  can be along a non-typical SL(2, R)-orbit, for instance along a closed orbit.
+    This question was first answered by G. Forni [7] who exhibited a beautiful example
+of a square-tiled surface (M3 , ω(3) ) of genus g = 3 such that the Lyapunov exponents of
+GKZ
+  t   for the SL(2, R) -invariant measure µ supported on the SL(2, R)-orbit of (M3 , ω(3) )
+verify λµ2 = λµ3 = 0.
+   Subsequently, Forni and Matheus [8] constructed a square-tiled surface (M4 , ω(4) ) of
+genus 4 such that the Lyapunov exponents (with respect to GKZ
+                                                            t  ) of the SL(2, R)-invariant
+measure µ supported on the SL(2, R)-orbit of (M4 , ω(4) ) verify λµ2 = λµ3 = λµ4 = 0.
+   More precisely, Forni’s example (M3 , ω(3) ) is the Riemann surface of genus 3
+                                                                 4
+                                                                 Y
+(1.2)           M3 = M3 (x1 , x2 , x3 , x4 ) = {(z, w) : w4 =        (z − xµ )}
+                                                                 µ=1
+
+equipped with the Abelian differential ω(3) = dz/w2 . This example was independently
+discovered, for different reasons, by Herrlich, Möller and Schmithüsen [9].
+    Similarly, Forni and Matheus’ example (M4 , ω(4) ) is the Riemann surface of genus 4
+                                                                 3
+                                                                 Y
+                                                       6     3
+(1.3)           M4 = M4 (x1 , x2 , x3 ) = {(z, w) : w = z ·            (z − xµ )}
+                                                                 µ=1
+
+equipped with the Abelian differential ω(4) = zdz/w3 .
+                 THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                                7
+
+
+Remark 1.11. Actually, these formulas for (M3 , ω(3) ) and (M4 , ω(4) ) are the description
+of entire closed SL(2, R)-orbits. The corresponding square-tiled surfaces (in the sense of
+the previous definition) belonging to these orbits are obtained by appropriate choices of the
+points xµ . Also, we point out that these examples are particular cases of a more general
+family studied by I. Bouw and M. Möller [5].
+Remark 1.12. In the sequel, Σ(3) denotes the set of zeroes of ω(3) and Σ(4) denotes the
+set of zeroes of ω(4) . Note that #Σ(3) = 4 and #Σ(4) = 3, so that ω(3) is an Abelian
+differential in the stratum M(1,1,1,1) and ω(4) is an Abelian differential in the stratum2
+M(2,2,2) .
+Remark 1.13. An unpublished work of Martin Möller [15] indicates that such examples
+with totally degenerate KZ spectrum are very rare: they don’t exist in genus g ≥ 6, Forni’s
+example is the unique totally degenerate SL(2, R)-orbit in genus 3 and the Forni-Matheus
+example is the unique totally degenerate SL(2, R)-orbit in genus 4; also, the sole stratum
+in genus 5 possibly supporting a totally degenerate SL(2, R)-orbit is M(2,2,2,2) , although
+this isn’t probably the case (namely, Möller pursued a computer program search and it
+seems that the possible exceptional case M(2,2,2,2) can be ruled out).
+Remark 1.14. Forni’s version of Kontsevich formula for the sum of the Lyapunov ex-
+ponents reveals the following interesting feature of the Kontsevich-Zorich cocycle over a
+totally degenerate SL(2, R): it is isometric with respect to the Hodge norm on the co-
+homology H 1 (M, R) on the orthogonal complement of the subspace associated to the
+exponents ±1. For more details see [6] and [7]. Observe that this fact is far from trivial
+in general since the presence of zero Lyapunov exponents only indicates a subexponential
+(e.g., polynomial) divergence of the orbits (although in the specific case of the KZ cocycle,
+Forni manages to show that this “subexponential divergence” suffices to conclude there is
+no divergence at all).
+1.5. Statement of the results. We start with (M3 , ω(3) ). For this square-tiled surface,
+the Veech group is the full group SL(2, Z) and the automorphism group is the 8-element
+quaternion group Q := {±1, ±i, ±j, ±k}: see F. Herrlich and G. Schmithüsen [9] (and
+also Figure 1 below). We have tried to summarize the main conclusions of the computa-
+tions of the next section.
+Theorem 1.15.            (1) One has a decomposition
+                                                                   (0)
+                              H1 (M3 , Σ(3) , Q) = H1st ⊕ H1 ⊕ Hrel
+          into Q-defined Aff(M3 , ω(3) )-invariant subspaces. The action of Aff(M3 , ω(3) ) on
+          Hrel is through the group S4 of permutations of the zeros of ω(3) .
+                                                                            (0)
+     (2) There exists a root system R of D4 type spanning H1 which is invariant under
+                                                                          (0)
+         the action of Aff(M3 , ω(3) ). The action of Aff(M3 , ω(3) ) on H1 is thus given by
+         a homomorphism Z of Aff(M3 , ω(3) ) to the automorphism group A(R) of R. The
+         image of this homomorphism is a subgroup of A(R) of order 96.
+     (3) The inverse image in Aff(M3 , ω(3) ) of the Weyl group W (R) is equal to the inverse
+         image of the principal congruence subgroup Γ(2) by the canonical morphism from
+         Aff(M3 , ω(3) ) to SL(M3 , ω(3) ) = SL(2, Z). The morphism from Aff(M3 , ω(3) ) to
+         A(R)/W (R) = S3 induced by Z is onto.
+    2This stratum has two connected components distinguished by the parity of the spin structure (see [12]). In
+particular, one can ask about the connected component of Forni-Matheus’s surface. In the Appendix A below,
+we’ll use a square-tiled representation of this example to show that its spin structure is even.
+8                      CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+    (4) The intersection of the image of Z with W (R) is the subgroup of order 16 formed
+                                                                                (0)
+        by those elements of W (R) which preserve the intersection form on H1 .
+    (5) The intersection of the kernel of Z with the kernel of the action of Aff(M3 , ω(3) )
+        on Hrel is sent isomorphically onto the principal congruence subgroup Γ(4) by
+        the canonical morphism from Aff(M3 , ω(3) ) to SL(2, Z).
+
+Remark 1.16. Avila and Hubert communicated to the authors that they checked that the
+                                              (0)
+action of generators of Aff(M3 , ω(3) ) on H1 was through matrices of finite order. One
+of the referees also brought our attention to the PhD thesis of Oliver Bauer [2], who does
+some computations on the action of the affine group similar to ours.
+
+   We now consider (M4 , ω(4) ). For this square-tiled surface, we will see that the Veech
+group is the full group SL(2, Z) and the automorphism group is the cyclic group Z/3.
+
+Theorem 1.17.        (1) One has decompositions
+                                                         (0)
+                        H1 (M4 , Σ(4) , Q) = H1st ⊕ H1 ⊕ Hrel ,
+
+                                       (0)
+                                     H1      = Hτ ⊕ H̆
+        into Q-defined Aff(M4 , ω(4) )-invariant subspaces. The action of Aff(M4 , ω(4) ) on
+        Hrel is through the group S3 of permutations of the zeros of ω(4) .
+    (2) The subspace Hτ is 2-dimensional and the action of Aff(M4 , ω(4) ) on it is through
+        a homomorphism to the cyclic group Z/6 (acting by rotations).
+    (3) The subspace H̆ is 4-dimensional and it splits over C into two Aff(M4 , ω(4) )-
+        invariant subspaces of dimension 2.
+    (4) There exists a root system R of D4 type spanning H̆ which is invariant under
+        the action of Aff(M4 , ω(4) ). The action of Aff(M4 , ω(4) ) on H̆ is thus given by a
+        homomorphism Z of Aff(M4 , ω(4) ) to the automorphism group A(R) of R. The
+        image of this homomorphism is a subgroup of A(R) of order 72.
+    (5) The inverse image in Aff(M4 , ω(4) ) of the Weyl group W (R) is sent isomorphically
+        onto the Veech group SL(M4 , ω(4) ) = SL(2, Z) by the canonical morphism from
+        the affine group to the Veech group. The image of the morphism from Aff(M4 , ω(4) )
+        to A(R)/W (R) = S3 is the cyclic subgroup of index 2.
+    (6) The intersection of the image of Z with W (R) is the subgroup of order 24, iso-
+        morphic to SL(2, Z/3), formed by those elements of W (R) which preserve the
+        intersection form on H̆.
+    (7) The kernel of Z is sent isomorphically onto the principal congruence subgroup
+        Γ(3) by the canonical morphism from the affine group to the Veech group.
+
+   Actually, in Section 3, we study a family of square-tiled surfaces parametrized by an
+odd integer q ≥ 3, the surface (M4 , ω(4) ) corresponding to q = 3. Some of the computa-
+tions are valid for all q ≥ 3, but the stronger statements only hold for q = 3.
+
+   In view of the observation following Definition 1.8 (in Subsection 1.3), an immediate
+consequence of the theorems is that, for the two square-tiled surfaces considered above, all
+Lyapunov exponents of the reduced Kontsevich-Zorich cocycle are equal to zero.
+                                                                                   (0)
+   Conversely (and less trivially), Möller has shown ([15]) that the action on H1 for a
+totally degenerate square-tiled surface has to be through a finite group.
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                   9
+
+
+Acknowledgements. This research has been supported by the following institutions: the
+Collège de France, French ANR (grants 0863 petits diviseurs et resonances en géométrie,
+EDP et dynamique 0864 Dynamique dans l’espace de Teichmüller). We thank the Collège
+de France, IMPA (Rio de Janeiro), the Max-Planck Institute für Mathematik in Bonn and
+the Mittag-Leffler Institute for their hospitality. We are also grateful to the referees for
+suggestions that greatly improved the presentation of the paper.
+
+                              2. P ROOF OF T HEOREM 1.15
+   This section is organized as follows. In Subsection 2.1, we recall the description of
+(M3 , ω(3) ) as a square-tiled surface. Also, the automorphism group is identified with the
+quaternion group. In order to understand the action of this group on the homology, we
+recall in Subsection 2.2 the list of irreducible representations of the quaternion group. In
+Subsection 2.3, we introduce generators for H1 (M3 , Σ(3) , Z), compute the action of the
+quaternion group on homology and break the homology into invariant subspaces. Gener-
+ators for the affine group are chosen in Subsection 2.4, and their action on homology are
+computed in Subsection 2.5. This allows to identify in Subsection 2.6 a subspace Hrel
+which complements H1 (M3 , Q) in H1 (M3 , Σ(3) , Q) and is invariant under the action of
+                                                               (0)
+the affine group. Finally, the action of the affine group on H1      is analyzed in Subsection
+2.7.
+
+2.1. The square-tiled surface (M3 , ω(3) ). We follow here F. Herrlich and G. Schmithüsen
+[9]. The set Sq(M3 , ω(3) ) is identified with the quaternion group Q = {±1, ±i, ±j, ±k}.
+We denote by sq(g) the square corresponding to g ∈ Q. The map r (for right) is sq(g) 7→
+sq(gi) and the map u (for up) is sq(g) 7→ sq(gj). The automorphism group Aut(M3 , ω(3) )
+is then canonically identified with Q, the element h ∈ Q sending the square sq(g) on the
+square sq(hg). See Figure 1 below.
+
+
+
+
+                      F IGURE 1. Forni’s Eierlegende Wollmilchsau.
+
+   Here, it is shown the horizontal and vertical cylinder decompositions, and the right and
+top neighbors of each square, so that the (implicit) side identifications are easily deduced.
+  We will denote by Q the quotient of Q by its center {±1}. It is isomorphic to Z2 × Z2 .
+We denote by 1, i, j, k the images of ±1, ±i, ±j, ±k in Q.
+10                      CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+  For g ∈ Q, the lower left corners of sq(g) and sq(−g) correspond to the same point of
+Σ(3) . We will identify in this way Σ(3) with Q.
+     The map π : M3 → R2 /Z2 factors as
+                               M3 → R2 /(2Z)2 → R2 /Z2 .
+Here, the first map π1 is a two fold covering ramified over the four points of order 2 in
+R2 /(2Z)2 , and may be viewed as the quotient map by the involution −1 ∈ Q of M3 , the
+four squares of R2 /(2Z)2 being naturally labelled by Q.
+2.2. Irreducible representations of Q. The group Q has 5 distinct irreducible represen-
+tations, 4 one-dimensional χ1 , χi , χj , χk and one 2-dimensional χ2 . The character table
+is
+                                     1   −1    ±i   ±j    ±k
+                              χ1     1    1    1     1       1
+                              χi     1    1    1    −1    −1
+                              χj     1    1   −1     1    −1
+                              χk     1    1   −1    −1       1
+                             tr χ2   2   −2    0     0       0
+
+   In the regular representation of Q in Z(Q), the submodules associated to these repre-
+sentations are generated by
+
+                  χ1    [1] + [−1] + [i] + [−i] + [j] + [−j] + [k] + [−k]
+                  χi    [1] + [−1] + [i] + [−i] − [j] − [−j] − [k] − [−k]
+                  χj    [1] + [−1] − [i] − [−i] + [j] + [−j] − [k] − [−k]
+                  χk    [1] + [−1] − [i] − [−i] − [j] − [−j] + [k] + [−k]
+                  χ2     [1] − [−1], [i] − [−i], [j] − [−j], [k] − [−k]
+
+
+2.3. Action of Aut(M3 , ω(3) ) on H1 (M3 , Σ(3) , Z). We consider the direct sum Z(Q) ⊕
+Z(Q) of two copies of Z(Q). We denote by (σg )g∈Q the canonical basis of the first copy
+and by (ζg )g∈Q the canonical basis of the second copy. We define a homomorphism p from
+Z(Q) ⊕ Z(Q) onto H1 (M3 , Σ(3) , Z) by sending σg on the homology class defined by the
+lower side of sq(g) (oriented from left to right) and ζg on the homology class defined by
+the left side of sq(g) (oriented from upwards) (see Figure 2 below). The homomorphism
+p is compatible with the actions of Q on Z(Q) ⊕ Z(Q) (by the regular representation) and
+on H1 (M3 , Σ(3) , Z) (identifying Q with Aut(M3 , ω(3) )).
+   The kernel of the homomorphism p is the submodule Ann of Z(Q) ⊕ Z(Q) generated
+by the elements
+(2.1)                          g := σg + ζgi − ζg − σgj .
+             P
+  We have       Q g   = 0, hence Ann has rank 7. Observe that, for g, h ∈ Q we have
+h.g = hg .
+               THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS            11
+
+
+
+
+                F IGURE 2. Generators and relations for H1 (M(3) , Σ(3) , Z).
+
+
+  Recall that Σ(3) is identified with Q. The boundary map ∂ : H1 (M(3) , Σ(3) , Z) →
+Z(Q) is induced by
+                                  ∂(p(σg ))    = gi − g,
+                                  ∂(p(ζg ))    = gj − g.
+Let
+
+               wi   =    p(ζ1 + ζ−1 + ζi + ζ−i − ζj − ζ−j − ζk − ζ−k ),
+               wj   =    p(σ1 + σ−1 + σj + σ−j − σi − σ−i − σk − σ−k ),
+               wk   =    p(ζ1 + ζ−1 + ζk + ζ−k − ζj − ζ−j − ζi − ζ−i ),
+                    =    p(σ1 + σ−1 + σk + σ−k − σi − σ−i − σj − σ−j ).
+
+
+We note that
+                0   =   p(ζ1 + ζ−1 + ζj + ζ−j − ζi − ζ−i − ζk − ζ−k ),
+                    =   p(σ1 + σ−1 + σi + σ−i − σj − σ−j − σk − σ−k ).
+
+
+   We have ∂(wi ) = 4(j + k − i − 1) and
+(2.2)                                   g.wi = χi (g)wi
+for g ∈ Q. Similar statements hold for wj and wk . Let Hrel = Qwi ⊕ Qwj ⊕ Qwk be the
+subspace of H1 (M3 , Σ(3) , Q) spanned by wi , wj , wk . The formulas imply the following
+lemma:
+Lemma 2.1. The subspace Hrel is invariant under the action of Aut(M3 , ω(3) ) and com-
+plements H1 (M3 , Q) in H1 (M3 , Σ(3) , Q).
+Proof. The first part is clear. The second part follows from the fact that the images of
+wi , wj , wk under ∂ are linearly independent.                                        
+   Let
+                                              X
+                                    σ     = p(  σg ),
+                                                 Q
+                                              X
+                                    ζ     = p(  ζg ).
+                                                 Q
+
+   From Subsection 1.3, we have H1st = Qσ ⊕ Qζ.
+12                         CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+     We have ∂(σ) = ∂(ζ) = 0 and
+(2.3)                                          g.σ    = σ,
+(2.4)                                          g.ζ    = ζ,
+for all g ∈ Q.
+
+     We set, for g ∈ Q,
+                                 σ
+                                 bg     = p(σg − σ−g ),
+                                 ζbg    = p(ζg − ζ−g ),
+                                  εg      bg − σ
+                                        = σ    bgj = ζbg − ζbgi
+We have ∂(b                                                                  bg , ζbg , g ∈ Q
+            σg ) = ∂(ζbg ) = 0. The subspace of H1 (M3 , Q) generated by the σ
+                                 (0)
+has rank 4 and it is the kernel H1 of the homomorphism π∗ : H1 (M3 , Q) → H1 (R2 /Z2 , Q)
+(see Subsections 1.2, 1.3).
+   For g ∈ Q, we have
+(2.5)                                        σ
+                                             b−g     = −b
+                                                        σg ,
+(2.6)                                        ζb−g    = −ζbg ,
+(2.7)                                        ε−g     = −εg ,
+and
+                                                     1
+(2.8)                                  σ
+                                       bg      =       (εg + εgj ),
+                                                     2
+                                                     1
+(2.9)                                  ζbg     =       (εg + εgi ).
+                                                     2
+                     (0)
+   The subspace H1         is Q-invariant, being (in many ways) sum of two copies of χ2 . One
+has, for g, h ∈ Q,
+(2.10)                                       h.b
+                                               σg = σ
+                                                    bhg ,
+                                             h.ζg = ζbhg ,
+                                                b
+                                             h.εg = εhg .
+  At this stage, we have written the homology group H1 (M3 , Σ(3) , Q) as the direct sum
+ st      (0)
+H1 ⊕ H1 ⊕ Hrel of Aut(M3 , ω(3) )-invariant summands.
+
+2.4. The affine group Aff (1) (M3 , ω(3) ). Let Aff(1) (M3 , ω(3) ) be the stabilizer of 1 ∈
+Σ(3) in Aff(M3 , ω(3) ).
+Lemma 2.2. The subgroup Aff(1) (M3 , ω(3) ) has index 4 in Aff(M3 , ω(3) ). Moreover, its
+intersection with Q = Aut(M3 , ω(3) ) is the center Z = {±1} of Q and is contained in the
+center of Aff(M3 , ω(3) ). The subgroup Aff(1) (M3 , ω(3) ) is thus a central extension
+        1 −→ Z = {±1} −→ Aff(1) (M3 , ω(3) ) −→ SL(M3 , ω(3) ) = SL(2, Z) −→ 1 .
+Proof. The group Aff(M3 , ω(3) ) acts transitively on Σ(3) , hence Aff(1) (M3 , ω(3) ) has in-
+dex 4. The intersection of Aff(1) (M3 , ω(3) ) with Q is clearly the center Z = {±1} of Q.
+Let f ∈ Aff(M3 , ω(3) ) and g := −1; then, f −1 g −1 f g belongs to Aut(M3 , ω(3) ) and fixes
+each point of Σ(3) , hence is equal to id or g; but the second possibility would imply that
+f −1 g −1 f = id. Thus, −1 belongs to the center Aff(M3 , ω(3) ).
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                 13
+
+
+   Finally, the sequence is exact because the intersection of Q with Aff(1) (M3 , ω(3) ) is
+precisely Z.                                                                             
+Remark 2.3. We will see below that the center of Aff(M3 , ω(3) ) is cyclic of order 4.
+
+   We choose as generators of SL(2, Z)
+                                                                  
+                              1 0                             1 1
+                      S=                   and       T =               .
+                              1 1                             0 1
+   We denote by S,e Te the elements of Aff(1) (M3 , ω(3) ) with derivatives S, T respectively
+such that sq(1) intersects e
+                           S(sq(1)) and Te(sq(1)). We have
+                                          (SeTe−1 S)
+                                                  e 4 = −1
+
+and therefore S,
+              e Te form a system of generators for Aff(1) (M3 , ω(3) ).
+
+2.5. The action of S,
+                   e Te on H1 (M3 , Σ(3) , Z). One easily checks that
+                                  
+                                      p(ζg ) if g ∈ {±1, ±j},
+(2.11)                S(p(ζg )) =
+                       e
+                                     p(ζjg ) if g ∈ {±i, ±k},
+                                     
+                                          p(σg + ζgi ) if g ∈ {±1, ±j},
+(2.12)                S(p(σ
+                      e     g )) =
+                                         p(σjg + ζgk ) if g ∈ {±i, ±k},
+                                         
+                                              p(σg ) if g ∈ {±1, ±i},
+(2.13)                   Te(p(σg )) =
+                                              p(σig ) if g ∈ {±j, ±k},
+                                     
+                                          p(ζg + σgj )  if g ∈ {±1, ±i},
+(2.14)                Te(p(ζg )) =
+                                         p(ζig + σ−gk ) if g ∈ {±j, ±k}.
+   From these formulas, we deduce
+(2.15)               S(σ) = σ + ζ,
+                      e                                       S(ζ) = ζ,
+                                                               e
+                         Te(ζ)     = σ + ζ,                   Te(σ) = σ,
+
+and also
+
+(2.16)        S(w
+              e i ) = wk ,                   S(w
+                                             e j ) = wj ,              S(w
+                                                                       e k ) = wi ,
+
+              Te(wi ) = wi ,                 Te(wj ) = wk ,            Te(wk ) = wj .
+
+   Finally, we have
+                                         (
+                                              ζbg   if g ∈ {±1, ±j},
+(2.17)                       S(
+                             e ζbg ) =
+                                              ζjg
+                                              b     if g ∈ {±i, ±k},
+                                     (
+                                         σbg + ζbgi    if g ∈ {±1, ±j},
+(2.18)                   S(b
+                         e σg ) =
+                                         σ
+                                         bjg + ζbgk    if g ∈ {±i, ±k},
+                            1
+                                 2 (εg + εgi + εgj + εgk )    if g ∈ {±1, ±j},
+(2.19)          S(ε
+                e g) =           1
+                                 2 (εg − εgi − εgj + εgk )    if g ∈ {±i, ±k},
+14                       CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+
+                                          
+                                              σ
+                                              bg    if g ∈ {±1, ±i},
+(2.20)                       Te(b
+                                σg ) =
+                                              σ
+                                              big   if g ∈ {±j, ±k},
+                                     (
+                                          ζbg + σ
+                                                bgj    if g ∈ {±1, ±i},
+(2.21)                  Te(ζbg ) =
+                                         ζig + σ
+                                         b     b−gk    if g ∈ {±j, ±k},
+                              1
+(2.22)           Te(εg ) =     2 (εg + εgi + εgj − εgk )     if g ∈ {±1, ±i},
+                               1
+                               2 (εg − εgi − εgj − εgk )     if g ∈ {±j, ±k}.
+
+
+2.6. The subspaces H1st and Hrel . As mentioned in Subsection 1.3, the action on H1st of
+the affine group is through the homomorphism from the affine group to SL(M3 , ω(3) ) =
+SL(2, Z) and the standard action of SL(2, Z) on Qσ ⊕ Qζ.
+
+     The formulas (2.16) show that Hrel is invariant under Se and Te.
+     We introduce the congruence subgroup of SL(2, Z)
+                                     
+                            Γ(2) := M ≡ IdSL(2,Z) mod 2 ,
+              Γ(2) the inverse image of Γ(2) in Aff (1) (M3 , ω(3) ). We introduce also
+and denote by e
+                                   w(1)
+                                   b       =    wi + wj + wk ,
+                                   w(i)
+                                   b       = wi − wj − wk ,
+                                   w(j)
+                                   b       = −wi + wj − wk ,
+                                   w(k)
+                                   b       = −wi − wj + wk .
+These four points are the vertices of a regular tetrahedron in Hrel .
+Lemma 2.4.          (1) The sequence
+                        1 −→ Γ(2)
+                             e    −→ Aff(M3 , ω(3) ) −→ S4 −→ 1
+          is exact, where the morphism from Aff(M3 , ω(3) ) to S4 is through the action of
+          Aff(M3 , ω(3) ) on Σ(3) .
+      (2) The subspace Hrel is invariant under the action of Aff(M3 , ω(3) ). The subgroup
+          Γ(2)
+          e     is exactly the kernel of the representation of Aff(M3 , ω(3) ) in GL(Hrel , Q).
+          The affine group acts on Hrel through the symmetry group of the tetrahedron with
+          vertices { b
+                     w(1), bw(i), b
+                                 w(j), bw(k)}.
+Proof. We first prove that the homomorphism from Aff(M3 , ω(3) ) to S4 is onto. Indeed, Se
+fixes 1 and j and exchanges i and k, while Te fixes 1 and i and exchanges j and k; therefore,
+Aff (1) (M3 , ω(3) ) acts by the full permutation group of i, j, k. As Q = Aut(M3 , ω(3) ) acts
+transitively on Σ(3) , the claim follows.
+   We now prove that the kernel of the morphism from Aff(M3 , ω(3) ) to S4 is Γ(2). e        In-
+         2    2           −1   2
+deed, Se , Te and (SeTe e    S) act trivially on Σ(3) . These elements generate e
+                                                                                Γ(2), which is
+therefore contained in the kernel. On the other hand, the index of Γ(2)e    in Aff(M3 , ω(3) ) is
+24 which is also the cardinality of S4 . This proves the first part of the lemma.
+   We have already noted that Hrel is invariant under Se and Te. As Aff(M3 , ω(3) ) is gener-
+ated by Q and these two elements, the first assertion of the second part follows. In fact, the
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                 15
+
+
+formulas (2.2) and (2.16) show that S, e Te and Q preserve the set { b
+                                                                    w(1), b
+                                                                         w(i), b
+                                                                              w(j), b
+                                                                                   w(k)}
+and act on this set as on Σ(3) . This completes the proof of the lemma.               
+   It is worth mentioning that the group S4 through which Aff(M3 , ω(3) ) acts on Hrel is
+the Weyl group W (A3 ) of an A3 root system.
+
+                                            (0)
+2.7. The action of Aff(M3 , ω(3) ) on H1 . In order to get a nice description of this ac-
+tion, we briefly recall the main features of Dl root systems (see [4] for proofs and further
+details). They are typically obtained from Lie algebras isomorphic to so(2l).
+   Let l ≥ 4 and V be a l-dimensional space equipped with a scalar product; let (εm )1≤m≤l
+be an orthonormal basis of V .
+   The set R = {±εm ± εn , 1 ≤ m < n ≤ l} is a root system of type Dl .
+   For every α ∈ R, let sα be the orthogonal symmetry with respect to the hyperplane
+orthogonal to α. Then, sα (R) = R. The subgroup of O(V ) generated by the sα is the
+Weyl group W (R). It is isomorphic to the semi-direct product of the symmetric group Sl
+                                                      l−1
+      Q by permutation of the εm ) by the group (Z/2)
+(acting                                                    (acting by εm 7→ (±1)m · εm
+with (±1)m = 1).
+     m
+   The finite subgroup of O(V ) preserving R is the automorphism group of R and is
+denoted by A(R). It contains W (R).
+   A basis for R is a family {α1 , . . . , αl } ⊂ R such that, for every α ∈ R, either α or
+−α is a combination of the αm with nonnegative integer coefficients. One can for instance
+take
+               α1 = ε1 − ε2 , α2 = ε2 − ε3 , . . . , αl−1 = εl−1 − εl , αl = εl−1 + εl .
+   When l > 4, the quotient A(R)/W (R) is isomorphic to Z/2. When l = 4, with
+α1 , . . . , α4 as above, the quotient A(R)/W (R) is isomorphic to the permutation group S3
+of {1, 3, 4} in the following way: for every a ∈ A(R), there exists a unique w ∈ W (R)
+and a unique permutation τ of {1, 3, 4} such that a(α2 ) = w(α2 ) and a(αm ) = w(ατ (m) )
+for m = 1, 3, 4.
+                                                            (0)
+   In our case, we will have l = 4 and V = H1 with the scalar product making
+{ε1 , εi , εj , εk } an orthonormal basis. We take R = {εg + εh ; g, h ∈ Q, g 6= ±h } =
+{±εg ± εh ; g, h ∈ {1, i, j, k}, g 6= h }; they form a root system of D4 -type. Our preferred
+basis of R is α1 = ε1 − εi , α2 = εi − εj , α3 = εj − εk and α4 = εj + εk .
+                                                                                       (0)
+   From the description of the Weyl group and (2.10) it follows that Q acts on H1 by
+some explicit elements of the Weyl group W (R).
+   From (2.19), (2.22), S,   e Te act on H0 by elements of A(R):
+
+
+                                                    Se            Te
+                            α1 = ε1 − εi          εj + εk    ε1 − εk
+                            α2 = εi − εj          ε1 − εj    εi − ε1
+                            α 3 = εj − εk         εj − εk    εj − εi
+                            α 4 = εj + εk         εi − ε1    ε1 + εk
+
+                                      (0)
+   The action of Aff(M3 , ω(3) ) on H1      is therefore given by a homomorphism
+                                Z : Aff(M3 , ω(3) ) → A(R)
+16                         CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+for which we obtain in the sequel an explicit description. Let p be the canonical projection
+p : A(R) → A(R)/W (R) ≃ S3 ; consider
+                                 π : Aff(M3 , ω(3) ) → A(R)/W (R)
+given by π = p ◦ Z.
+Lemma 2.5. The homomorphism π is surjective. Its kernel is the inverse image Γ∗ (2) of
+Γ(2) under the natural homomorphism from Aff(M3 , ω(3) ) to SL(2, Z).
+Proof. Define wS , wT ∈ W (R) by
+               wS (ε1 ) = εi ,     wS (εi ) = ε1 ,   wS (εj ) = εj ,       wS (εk ) = εk ,
+            wT (ε1 ) = εj , wT (εj ) = ε1 ,          wT (εi ) = εi ,       wT (εk ) = εk .
+We have then
+  wS ◦ S(α
+        e 1 ) = α4 , wS ◦ S(αe 2 ) = α2 ,            wS ◦ S(α
+                                                          e 3 ) = α3 ,          wS ◦ S(α
+                                                                                     e 4 ) = α1 ,
+
+     wT ◦ Te(α1 ) = α3 , wT ◦ Te(α2 ) = α2 , wT ◦ Te(α3 ) = α1 , wT ◦ Te(α4 ) = α4 .
+  This shows that the images of S,e Te by π are the transpositions (1, 4), (1, 3) respectively.
+Therefore π is onto.
+  Denote by ef  iπ the element (S eTe−1 e
+                                       S)2 of Aff(1) (M3 , ω(3) ); its image in SL(2, Z) is
+                                          iπ on H (0) are given by
+−Id ∈ Γ(2). The actions of Se2 , Te2 and ef                1
+
+                                              Se2    Te2        iπ
+                                                               ef
+                                        ε1    εi     εj        εk
+                                        εi    ε1     εk        −εj
+                                        εj   −εk     ε1        εi
+                                        εk   −εj     εi        −ε1
+
+   Therefore Se2 , Te2 and ef
+                            iπ belong to Ker(π). But it is well-known that Γ(2) is generated
+
+by S 2 , T 2 and −Id. As the kernel of π contains Q, it contains Γ∗ (2). Finally, as the
+quotient Aff(M3 , ω(3) )/Γ∗ (2) ≃ SL(2, Z)/Γ(2) is isomorphic to S3 , the kernel of π is
+equal to Γ∗ (2).                                                                          
+
+Remark 2.6. The element ef                   iπ )2 = −1 ∈ Q. It is easily checked that
+                              iπ satisfies (ef
+
+it commutes with S, T and the elements of Q. Therefore, it belongs to the center of
+                   e  e
+Aff(M3 , ω(3) ). The center of Aff(M3 , ω(3) ) is in fact equal to the cyclic subgroup of
+                      iπ . Indeed, the center of Aff(M , ω
+order 4 generated by ef                                       ) has to be contained in the
+                                                        3            (3)
+inverse image in Aff(M3 , ω(3) ) of the center {±Id} of SL(2, Z). This inverse image is the
+subgroup of order 16 (isomorphic to the subgroup Q  e below) whose center is generated by
+ iπ
+e (see also [9]).
+ f
+
+
+     We finally study the restriction
+                                        Z : Γ∗ (2) → W (R).
+     Let                                
+                                 Γ(4) := M ≡ IdSL(2,Z) mod 4 .
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                   17
+
+
+   Then Γ(2)/Γ(4) is isomorphic to (Z/2)3 , generated by the images of S 2 , T 2 and −Id.
+Let s ∈ W (R) be the element defined by
+                s(ε1 ) = ε1 ,   s(εi ) = −εi ,     s(εj ) = −εj ,     s(εk ) = εk .
+Identify Q with its image in W (R).
+Lemma 2.7.       (1) One has s2 = 1, is = −si, js = −sj, ks = sk.
+   (2) The subgroup Q e of W (R) generated by Q and s has order 16 and is formed of the
+       elements ±1, ±i, ±j, ±k, ±s, ±is, ±js, ±ks.
+   (3) There is a unique morphism from Q e to (Z/2)3 ≃ Γ(2)/Γ(4) sending is, js, ks to
+                       2   2
+       the images of S , T , −Id in Γ(2)/Γ(4) respectively; the sequence
+                                 e → (Z/2)3 ≃ Γ(2)/Γ(4) → 1
+                      1 → {±1} → Q
+        is exact.
+Proof. The first part is a direct calculation; it shows that the elements
+                            ±1, ±i, ±j, ±k, ±s, ±is, ±js, ±ks
+form a subgroup of W (R); as s ∈  / Q, these elements must be distinct. This proves the
+second part of the lemma. The subgroup {±1} is contained in the center of Q;    e and the
+         Q/{±1} is abelian with every element of order ≤ 2, hence isomorphic to (Z/2)3 .
+quotient e
+Moreover, the image of is, js, ks clearly generate this quotient. This proves the third part
+of the lemma.                                                                             
+   The formulas for the actions of Se2 , Te2 and ef
+                                                  iπ on the ε , g ∈ Q, show that the images
+                                                             g
+of these elements in W (R) are respectively equal to is, js, ks.
+Lemma 2.8. The image Z(Γ∗ (2)) is equal to Q,   e which is also equal to the image Z(Γ(2)).
+                                                                                     e
+                        −1
+                                    Te
+The inverse image Z ({±1}) Γ(2) is equal to the inverse image Γ(4) of Γ(4) in
+                                                                            e
+                                                          Γ(2) → Γ(2) to the kernel of Z
+Aff(1) (M3 , ω(3) ). The restriction of the canonical map e
+in Γ(2) is an isomorphism onto Γ(4).
+   e
+
+Proof. The first assertion follows from the fact that the images by Z of the generators Se2 ,
+Te2 and efiπ of e
+                Γ(2) are the generators is, js, ks of e
+                                                      Q. The second assertion follows from
+the exact sequence just before the statement of the lemma. The third assertion follows from
+the fact that the kernel of the morphism Γ(4)
+                                           e     → Γ(4) is sent isomorphically by Z onto
+{±1}.                                                                                     
+Remark 2.9. It is not difficult to determine explicitly the kernel of Z in e    Γ(2). One first
+observes, looking at the action of Γ(4) in the upper half plane, that Γ(4) is the free subgroup
+generated by
+                                                                           
+                      1 0                    1 4                        13 8
+            S4 =               , T4 =                 , (T S)3 =                   ,
+                      4 1                    0 1                        8 5
+                                                                        
+                                    3 4                             9 4
+                 −(S 2 T )2 = −                , S2T 4S2 =                    .
+                                    8 11                           20 9
+   Then, from the action of S,e Te on the αi , 1 ≤ i ≤ 4, one checks that the corresponding
+generators for the kernel of Z in eΓ(2) are
+
+                       Se4 , Te4 , (−1).(Te e
+                                           S)3 , ef   e2 Te)2 , Se2 Te4 Se2 .
+                                                  iπ (S
+18                      CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+Lemma 2.10. The subgroup Q     e ⊂ W (R) is exactly the subgroup of symplectic elements
+                                                                         (0)
+of W (R) w.r.t. the symplectic form induced by the intersection form on H1 .
+                                                                              bg , g ∈
+Proof. A direct inspection reveals that the intersection form on the elements σ
+{1, i, j, k}, is given by
+
+                               (., .)   σ
+                                        b1   σ
+                                             bi     σ
+                                                    bj    σ
+                                                          bk
+                                σ
+                                b1      0    +2     0     0
+                                σ
+                                bi      −2    0     0     0
+                                σ
+                                bj      0     0     0    −2
+                                σ
+                                bk      0     0    +2     0
+
+                           bg − σ
+Using the definition εg := σ    bgj , we obtain the following intersection table:
+
+                               (., .)   ε1    εi    εj    εk
+                                ε1      0     0     0    +4
+                                εi      0     0    −4     0
+                                εj      0    +4     0     0
+                                εk      −4    0     0     0
+
+In particular, since any symplectic transformation sends symplectic planes into symplectic
+planes, we conclude that symplectic elements of W (R) either fix or exchange the subsets
+{±ε1 , ±εk } and {±εj , ±εi }. It follows that the subgroup of symplectic elements of W (R)
+                                Q.
+has order 16, so it is equal to e                                                        
+
+     The proof of Theorem 1.15 is now complete.
+
+                              3. P ROOF OF T HEOREM 1.17
+    The outline of this section is the following. In Subsection 3.1, we introduce a family of
+square-tiled surfaces parametrized by an odd integer q ≥ 3 such that the one featuring in
+Theorem 1.17 corresponds to q = 3. The Veech group is computed, as well as a represen-
+tation of these surfaces as algebraic curves. We then compute in Subsection 3.2 the action
+of the automorphism group (cyclic of order q) on homology, and then in Subsection 3.3
+the action of generators of the affine group. This allows in Subsection 3.4 to determine an
+                                                                               (0)
+invariant complement Hrel of H1 (M, Q) in H1 (M, Σ, Q). The subspace H1 breaks into
+invariant subspaces Hτ and H̆ which are analyzed in Subsections 3.5, 3.6 respectively (for
+any odd q ≥ 3). The special case q = 3 (corresponding to a larger Veech group equal to
+SL(2, Z)) is further analyzed in Subsection 3.7.
+
+3.1. The square-tiled surface (M, ω). Let q be an odd integer (for the surface referred
+to in Theorem 1.17, q is equal to 3). Let (M, ω) be the square-tiled surface such that
+       • The set Sq(M, ω) is identified with Z/q × Z/2 × Z/2; we denote as before by
+         sq(g) the square associated to g;
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                    19
+
+
+      • The map r (for right) is
+                              
+                              
+                                sq(i, µ + 1, ν) for µ = 1,
+                              
+                              
+              sq(i, µ, ν) 7→     sq(i + 1, µ + 1, ν) for µ = 0, ν = 0,
+                              
+                              
+                              
+                                 sq(i − 1, µ + 1, ν) for µ = 0, ν = 1.
+                              
+
+      • The map u (for up) is
+                                
+                                
+                                 sq(i, µ, ν + 1) for ν = 1,
+                                
+                                
+                 sq(i, µ, ν) 7→   sq(i + 1, µ, ν + 1) for ν = 0, µ = 1,
+                                
+                                
+                                
+                                  sq(i − 1, µ, ν + 1) for ν = 0, µ = 0.
+                                
+
+                                si+1      s'i!1
+
+                                                  '
+                          z' sq(i,1,0) sq(i,0,0) zi+1        = Ai
+                           i
+                                                             = A 1,0
+                                                             =    1,1
+                           z sq(i,1,1) sq(i,0,1) z
+                            i                     i!1        = A 0,1
+                                 si        si'
+
+                F IGURE 3. Description of sq(i, µ, ν), i ∈ Z/q, µ, ν ∈ Z/2.
+   The commutator uru−1 r−1 maps sq(i, µ, ν) to sq(i, µ, ν) if (µ, ν) = (0, 0),
+to sq(i − 2, µ, ν) if (µ, ν) = (1, 0) or (0, 1), to sq(i + 4, µ, ν) if (µ, ν) = (1, 1). As q is
+odd, this shows that, for (µ, ν) 6= (0, 0), the lower left corners of the q squares sq(i, µ, ν),
+i ∈ Z/q, coincide and define a point Aµ,ν of Σ of ramification index q, i.e., a zero of
+ω of order q − 1. On the other hand, the lower left corners A0,0,i =: Ai of the squares
+sq(i, 0, 0) are regular points of (M, ω). We have thus Σ = {A0,1 , A1,0 , A1,1 }. The form ω
+has a zero of even order q − 1 at each point of Σ and the genus g of M is 3q−1   2 . Compare
+with Figure 3.
+   In Figures 4 and 5 below, we illustrate the square-tiled surfaces corresponding to the
+cases q = 3 and q = 5.
+   The automorphism group Aut(M, ω) is Z/q, acting by translations of the i variable. It
+fixes each point of Σ.
+
+  Let us denote by Aff (1) (M, ω) the stabilizer of A0 in the affine group Aff(M, ω).
+Taking the differential defines an isomorphism from Aff (1) (M, ω) onto the Veech group
+SL(M, ω).
+
+  When q is odd ≥ 5, i − 2 is not equal to i + 4 in Z/q and therefore every element of
+Aff(M, ω) must fix A1,1 . On the other hand, one sees easily that the matrices
+                                                                    
+             2       1 0            2       1 2                  0 −1
+            S =                , T =                , J=                    ,
+                     2 1                    0 1                  1 0
+belong to SL(M, ω). We have thus (as Γ(2) is generated by S 2 , T 2 , J 2 )
+             SL(M, ω) = {M ∈ SL(2, Z); M ≡ Id or M ≡ J mod 2 } .
+20                 CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+                                  s1            s2'    s2        s0'    s0          s1'
+                        z'                                                                    z'
+                         0                                                                     0
+
+                                           A0               A1                A2
+                                           A2               A1                A0
+                        z                                                                     z
+                         2                                                                     2
+
+                                  s2            s2'    s1        s1'    s0          s0'
+                                                s0                      s2'
+                                  z'                                           z'
+                                       2                                            1
+                                                      A2          A0
+                                  z                                            z
+                                       2                                            2
+
+                                  z'                                           z'
+                                       1                                            2
+                                                      A1          A1
+                                  z                                            z
+                                       1                                            0
+
+                                  z'                                           z'
+                                   0                                                0
+                                                      A0          A2
+                                  z                                            z
+                                   0                                                1
+                                                s0                      s2'
+
+
+     F IGURE 4. Horizontal and vertical cylinder decompositions when q = 3.
+
+
+
+                       s1 s4' s2 s0' s3 s1' s4 s2' s0 s3'
+                  z'                                                                               z'
+                   0                                                                                0
+                        A0                  A1              A2           A3                   A4
+                        A4                  A3              A2           A1                   A0
+                  z                                                                                z
+                   4                                                                                4
+                       s4 s4' s3 s3' s2 s2' s1 s1' s0 s0'
+
+                                       s0                                     s4'
+                             z'                                                         z'
+                              4
+                                                 A4                    A0                 1
+                             z                                                          z
+                              4                                                           4
+                             z'                                                         z'
+                              3                  A3                    A1                 2
+                             z                                                          z
+                              3                                                           0
+                             z'                                                         z'
+                              2                  A2                    A2                 3
+                             z                                                          z
+                              2                                                           1
+                             z'                                                         z'
+                              1                  A1                    A3                 4
+                             z                                                          z
+                              1                                                           2
+                             z'                                                         z'
+                              0
+                                                 A0                    A4                 0
+                             z                                                          z
+                              0                                                           3
+                                       s0                                     s4'
+
+     F IGURE 5. Horizontal and vertical cylinder decompositions when q = 5.
+                 THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                    21
+
+
+   When q = 3, it is easy to see that S, T ∈ SL(M, ω). The Veech group in this case is
+equal to SL(2, Z).
+
+   In all cases, by considering generators of SL(M, ω), one checks that any element of
+Aff (1) (M, ω) actually fixes all the Ai . It follows that Aut(M, ω) is contained in the
+center of Aff(M, ω), and that Aff(M, ω) is the direct product of Aut(M, ω) ≃ Z/q by
+SL(M, ω).
+
+
+Remark 3.1. Let t ∈ Aff(M, ω) be the element whose linear part is −Id ∈ SL(2, Z)
+and such that t(sq(i, µ, ν)) = sq(i + 1, µ + 1, ν + 1) for all i, µ, ν. It has order 2q, fixes
+each point in Σ and permutes cyclically the A0,0,i . The quotient (M, ω)/hti is by the
+Riemann-Hurwitz formula of genus 0.
+   Although we do not need it in the following, let us give formulas associated to this
+cyclic covering.
+   We claim that M is isomorphic to the desingularization of the algebraic curve
+                                    w2q = z q−2 (z 2 − 1),
+with the holomorphic form
+                                                     q−3
+                                       ∗      −1 z
+                                                      2dz
+                                     ω =c                 ,
+                                                     wq
+and the automorphism t given by
+                                                        
+                                                  πi
+                               (w, z) 7→    exp −      w, z .
+                                                  q
+Here, c is the elliptic integral
+                           Z ∞              Z 1
+                                    dx             dx      (Γ(1/4))2
+                      c=         √        =     √        =    √
+                            1      x3 − x    0    x − x3     2 2π
+(cf. [3], thm. 1.7).
+   Indeed, let M ∗ be the curve {w2q = z q−2 (z2 − 1)},
+                                                        desingularized in order to have
+                                                       2πij
+q distinct points at infinity given by z = exp          q     w2 + O(1), j ∈ Z/q. Observe
+that (cω ∗ )2 is the pull-back by the projection (z, w) 7→ z of the quadratic differential
+                      (dz)2                               2
+with simple poles z(z   2 −1) . The elliptic curve E = {y   = z(z 2 − 1)} is isomorphic to
+                                       0
+C/2Z + 2iZ. More precisely, let E = {(y, z) ∈ E : z ∈    / [−1, 1]}; the formula
+                                              Z P
+                                                      dz
+                                         P 7→     c−1
+                                               ∞      y
+(with the path of integration contained in E 0 ) provides a biholomorphism Φ from E 0 onto
+(−1, 1)2 , such that Φ−1 extends continuously from [−1, 1]2 to E with
+                                    Φ−1 (±1, 0) = (0, 1),
+                                   Φ−1 (0, ±1) = (0, −1),
+                                   Φ−1 (±1, ±1) = (0, 0).
+Similarly, let
+                                                                            
+       0                  ∗                                   ∗          1
+    M = {(w, z) ∈ M : z ∈
+                        / [−1, 1]} = {(w, z) ∈ M :                    1− 2       / {0} ∪ R− }.
+                                                                                 ∈
+                                                                        z
+22                      CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+Then, M 0 has q connected components indexed naturally by Z/q, with
+                                                              
+                      0                0       z     2πj     π
+                    Mj = (w, z) ∈ M : arg 2 −             <      .
+                                              w       q      q
+
+Each connected component Mj0 contains one point at infinity; the formula
+                                               Z P
+                                        P 7→         ω∗
+                                                ∞
+
+(with the path of integration contained in Mj0 ) provides a biholomorphism Φj from Mj0
+onto (−1, 1)2 , such that Φ−1                                   2     ∗
+                           j extends continuously from [−1, 1] to M with
+
+                                    Φ−1
+                                     j (±1, 0) = (0, 1),
+
+
+                                   Φ−1
+                                    j (0, ±1) = (0, −1),
+
+
+                                   Φ−1
+                                    j (±1, ±1) = (0, 0).
+
+One also sees that, for 0 ≤ s ≤ 1, j ∈ Z/q,
+
+                                 Φ−1          −1
+                                  j (1, s) = Φj+1 (−1, s),
+
+
+                               Φj−1 (1, −s) = Φ−1
+                                               j−1 (−1, −s),
+
+
+                                 Φ−1          −1
+                                  j (s, 1) = Φj−1 (s, −1),
+
+
+                               Φ−1           −1
+                                j (−s, 1) = Φj+1 (−s, −1).
+
+This completes the justification of our claim that (M ∗ , ω ∗ ) is isomorphic to (M, ω). The
+q points at infinity on M ∗ correspond to the A0,0,j , the points (0, 1), (0, −1), (0, 0) of M ∗
+correspond to the points A0,1 , A1,0 , A1,1 of Σ ⊂ M . The sides of the squares correspond
+to the locus on M ∗ where the function z is real. See Figure 6 below. The claim about t is
+easily checked.
+    When q = 3, one recovers the equation of Subsection 1.4 (except that z = 0 has been
+sent to infinity).
+
+
+
+                           Im z > 0 Im z < 0                 z=!1
+                                                             z=0
+                                                             z=1
+                           Im z < 0 Im z > 0                 z= 8
+
+
+
+                                         F IGURE 6.
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                                       23
+
+
+3.2. Action of Aut(M, ω) on H1 (M, Σ, Z). We consider the direct sum of four copies
+of Z(Z/q); the canonical bases of the four copies are respectively denoted by (σi )i∈Z/q ,
+(σi0 )i∈Z/q , (ζi )i∈Z/q , (ζi0 )i∈Z/q . We define a homomorphism p from this direct sum onto
+H1 (M, Σ, Z) by sending
+        • σi on the bottom side of sq(i, 1, 1), oriented rightwards;
+        • σi0 on the bottom side of sq(i, 0, 1), oriented rightwards;
+        • ζi on the left side of sq(i, 1, 1), oriented upwards;
+        • ζi0 on the left side of sq(i, 1, 0), oriented upwards.
+    See Figure 3 above.
+    The homomorphism p is compatible with the actions of Z/q on Z(Z/q) ⊕ Z(Z/q) ⊕
+Z(Z/q) ⊕ Z(Z/q) (by the regular representation) and H1 (M, Σ, Z) (identifying Z/q with
+Aut(M, ω)). The kernel of the homomorphism p is the submodule Ann of Z(Z/q) ⊕
+Z(Z/q) ⊕ Z(Z/q) ⊕ Z(Z/q) generated by the elements
+(3.1)             i := σi + σi0 + ζi−1 + ζi+1
+                                           0      0
+                                               − σi−1 − σi+1 − ζi0 − ζi .
+             P
+  We have i i = 0, hence Ann has rank q−1. The boundary map ∂ : H1 (M, Σ, Z) →
+Z(Σ) is induced by
+                                 ∂(p(σi ))      = A0,1 − A1,1 ,
+                                 ∂(p(σi0 ))     = A1,1 − A0,1 ,
+                                 ∂(p(ζi ))      = A1,0 − A1,1 ,
+                                 ∂(p(ζi0 ))     = A1,1 − A1,0 .
+
+
+   We introduce
+                                                 X               X
+                                 σ       := p(           σi +           σi0 ),
+                                                     i              i
+                                                 X               X
+                                  ζ      := p(           ζi +           ζi0 ),
+                                                     i            i
+                                                 X               X
+                                 σ   [
+                                         := p(           σi −           σi0 ),
+                                                     i              i
+                                                 X               X
+                                 ζ[      := p(           ζi −           ζi0 ).
+                                                     i            i
+   We have
+                    g.σ = σ, g.ζ = ζ, g.σ [ = σ [ ,                         g.ζ [ = ζ [ ,
+for all g ∈ Z/q ≃ Aut(M, ω). We have also
+             ∂σ = ∂ζ = 0,       ∂σ [ = 6(A0,1 − A1,1 ),                 ∂ζ [ = 6(A1,0 − A1,1 ).
+   Let
+ ai := p(σi − σi+1 ),    a0i := p(σi0 − σi+1
+                                         0
+                                             ),              bi := p(ζi − ζi+1 ),           b0i := p(ζi0 − ζi+1
+                                                                                                            0
+                                                                                                                ).
+   We have
+                          X              X           X                X
+                                ai =         a0i =           bi =           b0i = 0,
+                            i            i               i              i
+
+                                 ∂ai = ∂a0i = ∂bi = ∂b0i = 0,
+   and
+24                          CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+
+
+                 g.ai = ai+g ,          g.a0i = a0i+g ,            g.bi = bi+g ,            g.b0i = b0i+g ,
+     for i, g ∈ Z/q. From the formula for i , we have, for i ∈ Z/q,
+
+                                        ai − a0i−1 + bi−1 − b0i = 0.
+     We define
+             τi := ai − a0i−1 = b0i − bi−1 ,                σ̆i := ai + a0i−1 ,               ζ̆i := b0i + bi−1 .
+     We have
+                                       X             X               X
+                                             τi =           σ̆i =           ζ̆i = 0
+                                         i              i             i
+and
+
+                         g.τi = τi+g , g.σ̆i = σ̆i+g , g.ζ̆i = ζ̆i+g .
+                                                                          (0)
+     We observe that {τi , σ̆i , ζ˘i ; i ∈ Z/q, i 6= 0} form a basis for H (M, Q). It will also       1
+be clear in the next subsection that σ, ζ form a basis for H1st (M, Q), and that σ [ , ζ [ form
+a basis for a subspace of H1 (M, Σ, Q) complementing H1 (M, Q) and invariant under the
+affine group Aff(M, ω).
+
+3.3. Action of Aff(M, ω) on H1 (M, Σ, Z). When q = 3, we denote by S,           e Te the elements
+of Aff (1) (M, ω) with linear part S, T respectively. When q ≥ 5, we denote by Se2 , Te2 , Je
+the elements of Aff (1) (M, ω) with linear part S 2 , T 2 , J respectively (although S,
+                                                                                      e Te are not
+defined in this case).
+
+     When q = 3, one has
+
+                  p(σi )                      p(σi0 )                        p(ζi )                         p(ζi0 )
+                         0
+        Se   p(σi ) + p(ζi−1 )         p(σi0 ) + p(ζi−1 )                     0
+                                                                           p(ζi−1 )                         p(ζi )
+                    0                                                           0
+        Te       p(σi+1 )                     p(σi )                p(ζi ) + p(σi+1 )                 p(ζi0 ) + p(σi+1 )
+
+                                         σ            ζ              σ[                  ζ[
+                             Se        σ+ζ            ζ            σ[ − ζ [              −ζ [
+                             Te          σ          ζ +σ            −σ [           ζ [ − σ[
+
+                                  ai                 a0i                   bi                   b0i
+                     Se     ai + b0i−1            a0i + bi−1              b0i−1                 bi
+                     Te       a0i+1                  ai             bi + a0i+1             b0i + ai+1
+
+                                             τi              σ̆i                   ζ˘i
+                                  Se    −τi+1           σ̆i + ζ̆i−1               ζ̆i+1
+                                  Te    −τi−1               σ̆i−1           ζ̆i + σ̆i+1
+               THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                                      25
+
+
+   When q ≥ 5, one has
+
+
+                p(σi )                         p(σi0 )                             p(ζi )                   p(ζi0 )
+                        0
+ Se2     p(σi + ζi−1 + ζi−1 )     p(σi0 + ζi−1 + ζi+1
+                                                  0
+                                                      )                       p(ζi−1 )                        0
+                                                                                                           p(ζi−1 )
+                                              0                                   0
+ Te2           p(σi+1 )                    p(σi+1 )                p(ζi + σi+1 + σi+1 )             p(ζi0 + σi+1 + σi−1
+                                                                                                                    0
+                                                                                                                        )
+                                              0
+  Je           p(ζi−1 )                    p(ζi+1 )                            −p(σi0 )                    −p(σi )
+
+
+                                           σ               ζ       σ[        ζ[
+                                Se2    σ + 2ζ              ζ       σ[        ζ[
+                                Te2        σ             ζ + 2σ    σ[        ζ[
+                                Je         ζ              −σ       ζ[        σ[
+
+
+                  ai                       a0i                          bi                          b0i
+   Se2    ai + bi−1 + b0i−1      a0i + bi−1 + b0i+1                  bi−1                         b0i−1
+   Te2          ai+1                    a0i+1                  bi + ai+1 + a0i+1            b0i + ai+1 + a0i−1
+   Je           bi−1                    b0i+1                        −a0i                         −ai
+
+
+                                 τi                σ̆i                       ζ̆i
+                          Se2   τi−1   σ̆i + ζ̆i + ζ̆i−1                 ζ̆i−1
+                          Te2   τi+1              σ̆i+1           ζ̆i + σ̆i + σ̆i+1
+                          Je    −τi                ζ̆i                   −σ̆i
+
+
+3.4. The subspaces H1st and Hrel . The subspace H1st of H1 (M, Σ, Q) is spanned by σ
+and ζ. The action of Aff(M, ω) on this subspace is given by the homomorphism from
+Aff(M, ω) to SL(M, ω) ⊂ SL(2, Z) and the standard action of SL(2, Z) on Zσ ⊕ Zζ.
+
+    The subspace Hrel spanned by σ [ and ζ [ supplements H1 (M, Q) in H1 (M, Σ, Q) and
+is invariant under the action of Aff(M, ω). The action of Aff(M, ω) on Hrel is given by
+the permutation group of Σ = {A0,1 , A1,0 , A1,1 } when q = 3, and by the permutation
+group of {A0,1 , A1,0 } when q ≥ 5. In both cases, the kernel of the action is the subgroup
+Z/q × Γ(2) of Aff(M, ω).
+
+
+3.5. The subspace Hτ . Denote by Hτ the P (q − 1)-dimensional subspace of H1 (M, Σ, Q)
+spanned by the τi , i ∈ Z/q (recall that i τi = 0). The formulas above show that Hτ is
+invariant under the action of Aff(M, ω) and that Aff(M, ω) acts on this subspace through
+the finite cyclic group Z/2q. The generator 1 of Z/2q acts by τi 7→ −τi+ q+1 . The homo-
+                                                                          2
+morphism from Aff(M, ω) ≃ Z/q × SL(M, ω) to Z/2q is given by
+                          (g, Id) 7→ 2g,         (0, Te) 7→ 1,         e 7→ −1,
+                                                                   (0, S)
+26                       CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+when q = 3 and
+               (g, Id) 7→ 2g,     (0, Te2 ) 7→ 2,     (0, Se2 ) 7→ −2,          e 7→ q,
+                                                                            (0, J)
+when q ≥ 5.
+
+3.6. The subspace H̆. We denote by H̆ the (2q − 2)-dimensional subspace of H1 (M, Q)
+spanned by the σ̆i , ζ̆i , i ∈ Z/q. We have thus
+                             H1 (M, Σ, Q) = Hrel ⊕ H1 (M, Q),
+
+                                 H1 (M, Q) = H1st ⊕ Hτ ⊕ H̆ .
+   In this subsection, we discuss general considerations valid for all q ≥ 3. The special
+case q = 3 is treated in the next subsection.
+   Let ρ be a q-th root of unity different from 1. Let σ̆(ρ), ζ̆(ρ) the elements of H̆ ⊗ C
+defined by
+                                 X                       X
+                        σ̆(ρ) :=      ρ−i σ̆i , ζ̆(ρ) :=    ρ−i ζ̆i ,
+                                     Z/q                         Z/q
+
+and let H̆(ρ) the subspace of H̆ ⊗ C spanned by σ̆(ρ)and ζ̆(ρ). From the formulas above,
+we have, for g ∈ Z/q
+                            g.σ̆(ρ) = ρg σ̆(ρ),       g.ζ̆(ρ) = ρg ζ̆(ρ).
+     When q = 3, we have
+              S(σ̆(ρ))
+              e        = σ̆(ρ) + ρ−1 ζ̆(ρ),                S(
+                                                           e ζ̆(ρ)) = ρ ζ̆(ρ),
+
+              Te(σ̆(ρ)) = ρ−1 σ̆(ρ),                       Te(ζ̆(ρ)) = ζ̆(ρ) + ρ σ̆(ρ),
+while for q ≥ 3, we have
+        Se2 (σ̆(ρ)) = σ̆(ρ) + (1 + ρ−1 )ζ̆(ρ),            Se2 (ζ̆(ρ)) = ρ−1 ζ̆(ρ),
+        Te2 (σ̆(ρ)) = ρ σ̆(ρ),                            Te2 (ζ̆(ρ)) = ζ̆(ρ) + (1 + ρ) σ̆(ρ),
+        J(σ̆(ρ))
+        e        = ζ̆(ρ),                                  e ζ̆(ρ)) = −σ̆(ρ).
+                                                           J(
+
+   Each of the (q − 1) 2-dimensional subspaces H̆(ρ) is thus invariant under the action of
+the affine group, and their direct sum is equal to H̆ ⊗ C. Over R, H̆ ⊗ R splits into the q−1
+                                                                                           2
+4-dimensional subspaces induced by the H̆(ρ) ⊕ H̆(ρ−1 ).
+
+Remark 3.2. The determinant of the restriction to H̆(ρ) of Se2 Te2 is equal to 1 and its
+trace is equal to 2(1 + ρ + ρ−1 ). When ρ = exp 2iπq and q ≥ 5, the trace is > 2. In
+                                                    (0)
+particular, the affine group does not act on H1 through a finite group. Therefore, by [15],
+the square-tiled surface is not totally degenerate for q ≥ 5.
+3.7. The subspace H̆ for q = 3. We assume in this subsection that q = 3. The formulas
+of Subsection 3.3 show that the set of 24 vectors in H̆:
+
+                 R = {±σ̆i , ±ζ̆i , ±(σ̆i + ζ̆i−1 ), ±(σ̆i − ζ̆i+1 ) ; i ∈ Z/q}
+is invariant under the action of Aff(M, ω). More precisely, we have
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                 27
+
+
+                        σ̆i           ζ̆i            σ̆i + ζ̆i−1       σ̆i − ζ̆i+1
+              g       σ̆i+g          ζ̆i+g        σ̆i+g + ζ̆i−1+g   σ̆i+g − ζ̆i+1+g
+              Se    σ̆i + ζ̆i−1      ζ̆i+1           σ̆i − ζ̆i+1           σ̆i
+             Te       σ̆i−1       ζ̆i + σ̆i+1       ζ̆i+2 − σ̆i+1        −ζ̆i+1
+   The set R is a root system of D4 type. More precisely, let V be the set of nonzero
+vectors in (Z/3)2 . Define a map ε : V → H̆ by
+                                         1
+                             ε(1, 0) =     (−σ̆2 + ζ̆0 − ζ̆1 ),
+                                         2
+                                         1
+                             ε(1, 1) =     (−σ̆2 − ζ̆2 ),
+                                         2
+                                         1
+                             ε(1, 2) =     (−σ̆2 + ζ̆2 ),
+                                         2
+                                         1
+                             ε(0, 1) =     (−σ̆0 + σ̆1 − ζ̆2 ),
+                                         2
+and ε(−v) = −ε(v) for v ∈ V.
+   One has then
+                          R = {ε(v) + ε(v 0 ) ; v, v 0 ∈ V, v 6= ±v 0 }.
+  The action of the affine group on H̆ is therefore given by a homomorphism Z from
+Aff(M, ω) to the automorphism group A(R). This last group and the Weyl group W (R) ⊂
+A(R) have been described in Subsection 2.7. We will now describe Z.
+
+   Denote by S, T the images of S, T in SL(2, Z/3). This group acts on V. One checks
+that, for all v ∈ V, one has
+
+                      S(ε(v)) = ε(S(v)),
+                      e                               Te(ε(v)) = ε(T (v)).
+   On the other hand, one has
+                                             1
+          Z(1).ε(1, 0) = 1.ε(1, 0) =           (−ε(1, 0) + ε(1, 1) − ε(1, 2) + ε(0, 1)).
+                                             2
+   We obtain thus
+Lemma 3.3.      (1) The inverse image by Z of W (R) in the affine group is the subgroup
+       ≃ SL(2, Z) fixing the Ai .
+   (2) The kernel of Z is the congruence subgroup
+                                   
+                           Γ(3) := M ≡ IdSL(2,Z) mod 3 .
+    (3) The image of Z is the product of Z/3 ⊂ A(R)/W (R) ≃ S3 by SL(2, Z/3), this
+        last group acting in the natural way on {ε(v); v ∈ V }.
+Proof. The formulas above show that the images by Z of S,e Te belong to W (R), but that
+the image by Z of the generator 1 of Z/3 does not belong to W (R). This proves the first
+assertion of the lemma. The other assertions of the lemma then follow from the formulas
+for S,
+    e Te.                                                                             
+Lemma 3.4. The intersection of the image of Z with the Weyl group W (R) is exactly the
+subgroup of symplectic elements of W (R) with respect to the restriction of the intersection
+form to H̆.
+28                          CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+Proof. We begin by computing the intersection form on the vectors ε(v). We write σ̆i =
+γi − γi+1 and ζ˘i = δi−1 − δi where γi := σi + σi−1  0                   0
+                                                       and δi := ζi + ζi+1 . A direct
+calculation (with Figure 3) shows that, for i ∈ Z/3:
+
+                                      (γi , γi+1 ) = (δi , δi+1 ) = 2 ,
+                             (γi , δi ) = (γi , δi+1 ) = −(γi , δi−1 ) = 1 .
+     It follows that, for i ∈ Z/3:
+
+                                      (σ̆i , σ̆i+1 ) = (ζ̆i , ζ̆i+1 ) = 6 ,
+                        (σ̆i , ζ̆i ) = −4 , (σ̆i , ζ̆i+1 ) = (σ̆i , ζ̆i−1 ) = 2 .
+     From this, we see that, for v, v 0 ∈ V, v 6= ±v 0 :
+
+                                              2         if det(v, v 0 ) = 1 mod 3,
+                                          (
+                                  0
+                      (ε(v), ε(v )) =
+                                     −2      if det(v, v 0 ) = −1 mod 3.
+   As expected, the action of SL(2, Z/3) preserves the symplectic form. We want to show
+that no other element of W (R) does so. We have the exact sequences (see Subsection 2.7):
+                             1 −→ (Z/2)3 −→ W (R) −→ S4 −→ 1 ,
+                       1 −→ Z/2 −→ SL(2, Z/3) −→ A4 −→ 1 .
+   Thus, it is sufficient to see that, if g ∈ W (R) preserves the symplectic form and
+g(ε(1, 0)) = ε(1, 0), g(ε(0, 1)) = η ε(0, 1), η = ±1, then g = 1. Indeed, as g pre-
+serves the symplectic form, we must have η = 1, g(ε(1, 1)) = ε(1, 1), g(ε(1, −1)) =
+ε(1, −1).                                                                          
+     The proof of Theorem 1.17 is now complete.
+
+                        A PPENDIX A. PARITY OF THE SPIN STRUCTURE
+   After the work of Kontsevich and Zorich [12] on the complete classification of the
+connected components of the strata of the moduli space of Abelian differentials, we know
+that the stratum H(1, 1, 1, 1) of (M3 , ω(3) ) is connected, but the stratum H(2, 2, 2) of
+(M4 , ω(4) ) has exactly two connected components distinguished by a topological invariant
+called the parity of the spin structure. After recalling the definition of the parity of the spin
+structure , we will show that the parity of spin of (M4 , ω(4) ) is even.
+   Let (M, ω) be a translation surface such that the zeros p1 , . . . , pn of ω have even orders
+2l1 , . . . , 2ln . For an oriented smoothly immersed closed curve γ avoiding the zeros of
+ω, the index indω (γ) ∈ Z is the integer such that the total change of angle between the
+tangent vector of γ and the rightwards horizontal direction determined by ω is 2π ·indω (γ).
+Because the zeros of ω have even order, the parity of indω (γ) depends only on the class [γ]
+of γ in H1 (M, Z) and will be denoted by indω ([γ]) ∈ Z/2.
+   In this context, fix (αi , βi )i=1,...,g a symplectic basis of the integral homology group
+H1 (M, Z). Let
+                                 g
+                                 X
+                      φ(ω) :=          (ind(αi ) + 1) · (ind(βi ) + 1)        (mod 2).
+                                 i=1
+The quantity φ(ω) ∈ Z/2 is called the parity of the spin structure of ω. It can be shown
+that φ(ω) doesn’t depend on the choice of the symplectic basis (αi , βi )i=1,...,g (in fact it
+depends only on the spin structure κ(ω) = l1 ·p1 +· · ·+ln ·pn ∈ Pic(M ) of ω). For further
+                THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                                  29
+
+
+details and alternative definitions of the parity of the spin structure (giving the motivation
+for the name “parity of the spin structure” of φ(ω)), see [12].
+   We now compute the parity of the spin structure of (M4 , ω(4) ). Consider the following
+picture describing the oriented paths σi , ζi , σi0 , ζi0 (i ∈ Z/3) and their relative positions,
+when one makes a counter-clockwise 6π turn around the singularity A1,1 (see Figure 7
+below).
+
+                                                       z'
+                                                        1
+                                             s2                        s2'
+
+
+                                   z                                         z
+                                    2                                         1
+
+
+
+
+                             s0'                                                  s1
+
+
+
+
+                                   z'                                        z'
+                                    2                                         0
+
+
+                                             s0                        s1'
+                                                       z
+                                                        0
+
+
+         F IGURE 7. Ingoing and outgoing separatrix rays nearby the singularity A1,1 .
+
+    Here, the singularity A1,1 is located at the center of the figure; it is linked to A0,1 by the
+σi , σi0 and to A1,0 by the ζi , ζi0 .
+
+   A similar picture can be depicted nearby the other two singularities A1,0 and A0,1 .
+
+                                        z'
+                                         1                       s2'         s1
+                        z                         z
+                         2                         1
+
+                                                            s2                     s1'
+
+                        z'                        z'
+                         2                         0
+                                                                 s0'         s0
+                                        z
+                                         0
+
+
+           F IGURE 8. Separatrix diagrams nearby the singularities A1,0 and A0,1 .
+
+   Here, A1,0 and A0,1 (resp.) are located at the center of the left-hand side and right-side
+of the picture (resp.).
+
+   Let
+  α1 := p(σ1 + σ10 ),         α2 := p(σ2 + σ20 ),            α3 := p(σ0 + σ00 ),         α := p(σ2 + σ00 ),
+  β1 := p(ζ0 + ζ00 ),         β2 := p(ζ1 + ζ10 ),            β3 := p(ζ2 + ζ20 ),         β := p(ζ1 + ζ00 ).
+30                         CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+   It is easy to check that (α1 , α2 , α3 , α, β1 , β2 , β3 , β) is an integral basis of H1 (M, Z).
+From Figure 7, the intersection pairing is given by
+
+                     (., .)   α1    α2     α3     α     β1    β2     β3    β
+                      α1       0     0      0     0      1     0     0      1
+                      α2       0     0      0    −1      0     1     0      0
+                      α3       0     0      0     1      0     0     1      0
+                      α        0     1    −1      0      0     0     1      0
+                      β1      −1     0      0     0      0     0     0     −1
+                      β2       0    −1      0     0      0     0     0      1
+                      β3       0     0    −1     −1      0     0     0      0
+                       β      −1     0      0     0      1    −1     0      0
+
+     We define
+                   α4 := α − α3 + β2 − β3 ,        β4 := β − α1 + α2 − β1 .
+Then (αi , βi )i=1,...,4 is a symplectic basis of H1 (M4 , Z).
+   It is clear that indω (αi ) = indω (βi ) = 0 for i = 1, 2, 3. Furthermore, if we follow a
+path close to −σ0 , −ζ20 , −ζ2 , ζ1 , ζ10 and σ2 (in this order) avoiding the zeroes of ω(4) , we
+see that indω (α4 ) = 0. If we follow a similar path close to ζ1 , −ζ0 , −σ10 , −σ1 , σ2 , σ20 , (in
+this order), we see that indω (β4 ) = 0.
+   We conclude that the parity of the spin of (M4 , ω(4) ) is even.
+Remark A.1. Another way to compute the parity of the spin structure could have been to
+determine the Rauzy class of an interval exchange map obtained as the first return map of a
+nearly vertical linear flow of (M, ω) on an appropriate transversal. See Appendix C of [22]
+for a detailed explanation of this method (including basic definitions and main technical
+steps). For sake of convenience of the reader, we compute below some combinatorial data
+associated to (M4 , ω(4) ) needed to perform the arguments of [22].
+   Fix a small angle θ; we consider, as shown on Figure 9 below, the first return of the
+upwards vertical flow for eiθ ω(4) on a transverse interval L which is horizontal for eiθ ω(4) .
+   Here, the interval L starts at the singularity and ends at the black diamond dot. Also,
+we indicated the "top" partition of L (corresponding to the domain of the return map) into
+10 intervals (named A, B, C, D, E, F , G, H, I and J) and their images by the return map
+(the "bottom" partition of L). The combinatorial data of the return map is thus
+                                                                      
+                          A B C D E F G H I J
+                          F J A E I D H C G B
+
+           A PPENDIX B. A FF(M, ω)- INVARIANT SUPPLEMENTS TO H1 (M, R)
+   We have seen that, for both (M3 , Σ(3) , ω(3) ) and (M4 , Σ(4) , ω(4) ), the absolute homol-
+ogy group H1 (M, R) admits a Aff(Mk , ω(k) )-invariant supplement Hrel within the relative
+homology group H1 (M, Σ, R). This appendix shows a simple example of a square-tiled
+surface of genus 2 with two simple zeros where this does not hold.
+              THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                    31
+
+
+
+
+           F IGURE 9. The transverse interval L and the associated return map
+
+   We consider the square-tiled surface (M, ω) obtained from the polygon P with vertices
+A0 = (0, 0), At1 = (1, 2), At2 = (2, 3), At3 = (3, 3), At4 = (4, 2), A5 = (5, 1), Ab4 =
+(4, −1), Ab3 = (3, −2), Ab2 = (2, −2), Ab1 = (1, −1) by identifying parallel opposite sides
+(this sides are also symmetric w.r.t. the center of symmetry ( 25 , 12 ) of the polygon, but the
+identifications are through translations). The two simple zeros on the surface are Aeven =
+A0 = At2 = At4 = Ab4 = Ab2 and Aodd = At1 = At3 = A5 = Ab3 = Ab1 . We have thus
+Σ = {Aeven , Aodd }. The reader can find a pictorial description of (M, ω) in Figure 10
+below:
+
+
+
+
+                        F IGURE 10. Square-tiled surface of M(1,1) .
+
+
+Proposition B.1. There is no Aff(M, ω)-invariant supplement of the absolute homology
+H1 (M, R) inside the relative homology H1 (M, Σ, R).
+32                           CARLOS MATHEUS AND JEAN-CHRISTOPHE YOCCOZ
+
+
+Proof. Let Aff+ (M, ω) be the subgroup of Aff(M, ω) of index ≤ 2 formed by the elements
+which fix each of the two zeros Aodd and Aeven . It acts trivially on H0 (Σ, R), and therefore
+also on any Aff(M, ω)-invariant supplement of H1 (M, R) inside H1 (M, Σ, R). Denote
+by ζa , ζb , ζc , ζd , ζe the relative homology classes represented respectively by the orienred
+sides [A0 At1 ] (or [Ab4 A5 ]),[At1 At2 ] (or [Ab3 Ab4 ]), [At2 At3 ] (or [Ab2 Ab3 ]), [At3 At4 ] (or [Ab1 Ab2 ]),
+[At4 A5 ] (or [A0 Ab1 ]) of P . They form a basis of H1 (M, Σ, Z). We have ∂ζa = −∂ζb =
+∂ζc = −∂ζd = ∂ζe = Aodd − Aeven .
+  The classes ζ0 := 2(ζa − ζe ) − 3(ζb − ζd ), ζ1 := ζa − 3ζc + 2ζe form a basis of
+ (0)
+H1 R(M, Q). Denote also by ζ ∗ the class ζe −ζd with boundary 2(Aodd −Aeven ), satisfying
+also ζ ∗ ω = 0. We have to show that there is no absolute class ζ ∈ H1 (M, R) such that
+ζ ∗ + ζ is invariant under Aff+ (M, ω). Assume that such a ζ exists. Obviously, we must
+     R                           (0)
+have ζ ∗ +ζ ω = 0, hence ζ ∈ H1 (M, R). We write ζ = s0 ζ0 +s1 ζ1 , for some s0 , s1 ∈ R.
+   To derive a contradiction, we will consider parabolic elements of the Veech group asso-
+ciated to three distinct cusps of the Teichmüller curve associated to (M, ω).
+      • vertical decomposition: the surface splits into three cylinders of height 1, respec-
+         tive widths 3, 8, 5, whose associated homology classes are respectively ζa − ζe ,
+         2(ζa − ζe ) + ζb − ζd , ζa − ζe + ζb − ζd
+                                                   . There is therefore an element Avert of
+                                            1 0
+         Aff+ (M, ω) with linear part                .
+                                           120 1
+            One checks that
+      (Avert − Id)(ζ ∗ ) = 5ζ0 ,          (Avert − Id)(ζ0 ) = 0,          (Avert − Id)(ζ1 ) = 24ζ0 .
+       • horizontal decomposition: the surface splits into two cylinders of height 1, re-
+         spective widths 4, 12, whose associated homology classes are respectively ζb +
+         2ζc + ζd , 3(ζb + ζc + ζd ) +ζa + 2ζe. There is therefore an element Ahor of
+                                        1 12
+         Aff+ (M, ω) with linear part            .
+                                        0 1
+            One checks that
+        (Ahor − Id)(ζ ∗ ) = −ζ1 ,          (Ahor − Id)(ζ0 ) = 6ζ1 ,          (Ahor − Id)(ζ1 ) = 0.
+      • main diagonal (slope 1) decomposition: the surface splits into two cylinders of
+          respective (normalized) heights 1, 2, respective (normalized) widths 4, 6, whose
+          associated homology classes are respectively ζa + 2ζb + ζc , 2(ζa + ζb + ζc ) +
+          ζd − ζe . There
+                         is therefore an element Adiag of Aff+ (M, ω) with linear part
+              −11 12
+                           .
+              −12 13
+              One checks that
+                                               2                               4
+(Adiag − Id)(ζ ∗ ) = 0, (Adiag − Id)(ζ0 ) = (ζ1 − 2ζ0 ), (Adiag − Id)(ζ1 ) = (ζ1 − 2ζ0 ).
+                                               3                               3
+   If ζ ∗ + s0 ζ0 + s1 ζ1 was killed by Avert − Id, Ahor − Id and Adiag − Id, we would
+have s1 = − 24  5
+                  , s0 = 16 , s0 + 2s1 = 0, a contradiction which concludes the proof of the
+proposition.                                                                              
+
+                                                R EFERENCES
+ [1] A. Avila and M. Viana, Simplicity of Lyapunov Spectra: Proof of the Zorich-Kontsevich conjecture, Acta
+     Math., v. 198 (2007), 1–56.
+ [2] O. Bauer, Familien von Jacobivarietäten über Origamikurven, PhD thesis available at
+     http://digbib.ubka.uni-karlsruhe.de/volltexte/1000011870, 2009.
+                  THE AFFINE GROUP OF CERTAIN EXCEPTIONALLY SYMMETRIC ORIGAMIS                                    33
+
+
+ [3] J. Borwein and P. Borwein, Pi and the AGM, Canadian Math. Soc. Series of Monographs and Advanced
+     Texts, John Willey and Sons, New York, 1987.
+ [4] N. Bourbaki, Groupes et algèbres de Lie. Chapitre VI: systèmes de racines., Hermann, Paris, 1960.
+ [5] I. Bouw and M. Möller, Teichmüller curves, triangle groups, and Lyapunov exponents, to appear in Annals
+     of Math.
+ [6] G. Forni, Deviation of ergodic averages for area-preserving flows on surfaces of higher genus, Ann. of
+     Math., v.155 (2002), no. 1, 1–103.
+ [7]         , On the Lyapunov exponents of the Kontsevich-Zorich cocycle, Handbook of Dynamical Systems v.
+     1B, B. Hasselblatt and A. Katok, eds., Elsevier (2006), 549–580.
+ [8] G. Forni and C. Matheus, An example of a Teichmuller disk in genus 4 with degenerate Kontsevich-Zorich
+     spectrum, preprint 2008, http://arxiv.org/abs/0810.0023.
+ [9] F. Herrlich and G. Schmithüsen, An extraordinary origami curve, Math. Nachr., v. 281 (2008) no. 2, 219–
+     237.
+[10] P. Hubert and T. Schmidt, An introduction to Veech surfaces, Handbook of Dynamical Systems v. 1B,
+     B. Hasselblatt and A. Katok, eds., Elsevier (2006), 501–526.
+[11] M. Kontsevich, Lyapunov exponents and Hodge theory, in ‘The mathematical beauty of physics’, Saclay,
+     1996. Adv. Ser. Math. Phys. v. 24,318–332, World Scientific, River Edge, NJ, 1997.
+[12] M. Kontsevich and A. Zorich, Connected components of the moduli spaces of Abelian differentials with
+     prescribed singularities, Invent. Math. v. 153 (2003) no. 3, 631–678.
+[13] E. Lanneau, Connected components of the strata of the moduli spaces of quadratic differentials, Ann. Sci.
+     ENS, v. 41 (2008), 1-56.
+[14] H. Masur, Interval exchange transformations and measured foliations, Ann. of Math., v. 115 (1982), 169–
+     200.
+[15] M. Möller, Shimura and Teichmüller curves, preprint, 2005, http://arxiv.org/math.AG/0501333
+[16] W. Veech, Teichmüller Geodesic Flow, Ann. of Math., v. 124 (1986), 441–530.
+[17]         , Gauss measures for transformations on the space of interval exchange maps, Ann. of Math., v.
+     115, 201–242, 1982.
+[18]         , Moduli spaces of quadratic differentials, J. Anal. Math., v. 55 (1990), 117–171.
+[19]         , Teichmüller curves in moduli space, Eisenstein series and an application to triangular billiards,
+     Inv. Math., v. 97 (1989), 553–583.
+[20] J. C. Yoccoz, Interval exchange maps and translation surfaces, Clay Math. Inst. Summer School on
+     Homogenous Flows, Moduli Spaces and Arithmetic, Pisa (2007), available at http://www.college-de-
+     france.fr/media/equ_dif/UPL15305_PisaLecturesJCY2007.pdf
+[21] A. Zorich, Asymptotic flag of an orientable measured foliation on a surface, in ‘Geometric Study of Folia-
+     tions’, World Scientific (1994), 479–498.
+[22]         , Explicit Jenkins-Strebel representatives of all strata of Abelian and quadratic differentials, Journal
+     of Modern Dynamics, v. 2 (2008), 139–185.
+[23]         , Flat Surfaces, Frontiers in number theory, physics, and geometry, Springer (2006), 437–583.
+
+   C OLLÈGE DE F RANCE , 3 RUE D ’U LM , 75005, PARIS , F RANCE
+   E-mail address: [redacted-email], [redacted-email].
+

@@ -1,0 +1,165 @@
+# Existence gap for the one-corner pocket event
+
+## 0. Bottom line
+
+- I have neither a proof nor an in-class counterexample.
+- Sealing is not a bridge. Theorem 4 shows that sealed connections are a sub-case of the goal, plus a two-event chain. A universal sealed-illumination theorem would therefore be at least as strong as the goal restricted to two specific corners.
+- No invariant-type obstruction can exist (Proposition 5). Any counterexample has to be "accidental", not forced by a colour, character or quotient.
+- I propose a bridge that splits the problem in two (Section 7). The nonzero-defect requirement becomes a topological or flux condition under label-preserving affine maps. That leaves one clean, defect-free existence lemma, HAL0, which is the true core.
+
+Everything marked *Proof* is a complete hand argument. Everything marked *Open* is unresolved.
+
+---
+
+## 1. The event conditions collapse
+
+**Proposition 1.** Let a generalized S-to-T connection meet physical corners only at one point c, turning through an intrinsic pi-sector there. Then, automatically:
+
+- c is a B/C point, never an A corner (including A_0);
+- both halves are first-hit primitive segments with equal developed vector w;
+- neither half meets any other lattice point.
+
+*Proof.* Developing preserves Z^2 and parity classes, up to the C-subtype swap, because all reflections have canonical even translations.
+
+1. Write the first half as v = k·w0 with w0 primitive. Then w0 is not ≡ 0 mod 2, so the points j·w0 with odd j < k are non-A lattice points on the open half.
+2. By the raw hypothesis, every non-A lattice point of the room is a corner, and the halves avoid other corners. Hence k = 1.
+3. If c were A, v would be ≡ 0 mod 2, forcing k ≥ 2. That is a contradiction.
+4. The same holds for the second half. The pi-turn makes the two halves parallel and co-oriented, and both are primitive, so they are equal. ∎
+
+Two more facts follow:
+
+- An irrational ray from S never meets a lattice point.
+- Every rational ray from S stops at a corner after exactly its primitive step.
+
+So the target is precisely: two first-hit rays, one from S and one from T, ending at a common B/C corner with pi-adjacent germs, plus a nonzero defect.
+
+## 2. Exact combinatorial models of the event set
+
+**(a) Triangle-group model.** P is a branched folding cover of the canonical triangle Delta. Delta's vertices are A (angle pi/4), B (pi/4) and C (pi/2), and its sides are:
+
+- α: the side BC;
+- β: the side AC;
+- γ: the side AB.
+
+The free Coxeter group W = ⟨α, β, γ⟩ acts on the triangles of P on the right. Boundary edges are fixed points.
+
+A Delta-straight segment from A to vertex V in direction w has a crossing word g. The pi-continuation at V sweeps four triangles at B or two at C. In Delta it retraces the segment, because −I ∈ D4. Let
+
+    ρ_B^± = (αγ)^{±2},     ρ_C^± = (αβ)^{±1}.
+
+**Proposition 2.** A one-corner event S→T exists iff there are a triangle τ ∈ fan(S), a straight word g = g_w from A, and a sign such that
+
+    τ · g ρ_V^± g^{-1} ∈ fan(T).
+
+In the plane group p4m, every element h_w = g ρ g^{-1} is the half-turn about the point w.
+
+*Proof.* Lift the Delta path, the corner sweep (bouncing at the fixed boundary edges), and the reversed path. Proposition 1 supplies legality. ∎
+
+**(b) Cylinder model.** In direction w, the singular lines of X lie over two lines of T^2 = R^2/2Z^2:
+
+- L0, through 0 and w̄, carrying alternating A, V marks;
+- L1, carrying the other two types alternating.
+
+Every cylinder has exactly one boundary circle over L0. A pi-turn at ĉ is exactly passage along a cylinder boundary circle. Hence:
+
+**Proposition 2′.** An event exists iff, for some primitive w, some lifts Ŝ and T̂ are consecutive A-marks on the L0-boundary circle of a common direction-w cylinder.
+
+Equivalently, let c_w^± be the two simple curves of slope w on T^2 minus T[2] that sandwich L0. The event exists iff the monodromy of some c_w^± carries an S-germ to a T-germ.
+
+The events from S therefore form a union of single permutation images, indexed by curves. This is **not** a group orbit.
+
+## 3. Defect localization
+
+**Proposition 3.** Suppose an event's itinerary never reflects on D_t or H_t, and its corner is not B_0 or C_0. Then its pocket-slide defect is 0.
+
+*Proof.* The defect is the t-derivative of the developed target and corner data along the fixed itinerary, as in Section 30.1. Under the stated conditions every reflection and the corner are t-independent. Reflections on the fixed flank keep positive clearance from the moving portal. ∎
+
+So every goal event is one of two types:
+
+- **Type I:** the corner is B_0 or C_0 (either sector, possibly entering the pocket).
+- **Type II:** another corner, with an itinerary that enters the pocket.
+
+## 4. Question 1: sealing is a specialization
+
+**Theorem 4.** For the sealed room P^-, portal-avoiding reduced connections S→T are exactly the following:
+
+1. goal-type events at C_0 or B_0 whose pi-sector is on the flank side and whose itinerary never crosses the portal;
+2. two-hit B_0 chains. Each is a composition of two flank-sided B_0 events S→B_0→a→B_0→T through an A-point a at developed position 2w. When I = 2, a is a smooth boundary A.
+
+*Proof.*
+
+- Section 29 gives n = 1 for C_0-using paths and n ∈ {1, 2} for B_0-using paths.
+- At a smooth P^- point on x = 1, a specular reflection equals the flank-side pi-sweep in P. At C_0, P's room interval is [pi/2, 2pi] and the pocket occupies [3pi/2, 2pi]. The analogous statement holds at B_0.
+- No reflection on the open seal is equivalent to the P path never crossing the portal.
+- Proposition 1 gives the converse: such a P event has no other corners. ∎
+
+**Answer to Q1.** Universal sealed illumination with portal avoidance is equivalent to universal existence of a specific Type-I sub-case of the goal, or of a two-event chain.
+
+It cannot be obtained more cheaply than the goal, and nothing makes it plausible a priori:
+
+- S and T are periodic points, lying over 0 in T^2.
+- On a square-tiled (Veech) surface, general illumination theory (Hubert–Schmoll–Troubetzkoy, Lelièvre–Monteil–Weiss) explicitly permits non-illumination for periodic pairs.
+- P^- is a Tokarsky configuration with exactly two holes, B_0 and C_0.
+
+I do **not** claim a room where sealing fails.
+
+## 5. No invariant obstruction exists (proved)
+
+**Proposition 5.** Let Z be a W-equivariant image of the triangles of P on which every element of the event set Ξ = {g ρ_V^± g^{-1}} acts trivially. Then Z is a single point. Consequently no colour, character, cohomology class or monodromy-quotient invariant can separate fan(S) from fan(T) for all events.
+
+*Proof.*
+
+1. The kernel K of W → Sym(Z) is normal and contains one conjugate of each ρ. So K contains the normal closure N = ⟨⟨(αγ)^2, αβ⟩⟩.
+2. W/N ≅ V4 = ⟨α, γ⟩, with β = α.
+3. Z is transitive because P is connected. V4 is abelian, so stabilizers are constant on Z.
+4. P has an α boundary edge: each C corner of S's 2×2 fan square has a BC wall. P also has a γ boundary edge: the pocket hypotenuse.
+5. Hence α and γ fix a point, so they act trivially, and |Z| = 1. ∎
+
+This also shows why connectivity, transitivity or generated-group arguments cannot give a single edge. They only see ⟨Ξ⟩, not membership in Ξ.
+
+## 6. Finite reduction and affine transfer (proved, standard inputs)
+
+The Veech group of square-tiled X has finite index in SL2(Z). The subgroup Γ″ fixing all lattice lifts and all prongs also has finite index.
+
+Take any φ ∈ Aff(X) that preserves the fibers over S and over T. It maps events to events:
+
+- straightness is preserved;
+- Mw stays primitive;
+- φ preserves the cyclic order of germs, so consecutive ±w germs go to consecutive ±Mw germs and the pi-sector survives;
+- every non-A lattice lift is a corner (raw hypothesis), so φ(ĉ) is a legal corner.
+
+Hence, for each room, event existence (ignoring the defect) is decided by finitely many cusp representatives. The defect is **not** Γ″-invariant in general; only axis twists are known to preserve it.
+
+## 7. A genuinely different bridge: separate the seed from the defect
+
+Let ξ ∈ H^1(X, Σ; R^2) be the slide class, so that δ = ξ on relative event classes η = γ − 2γ_1. Note that hol(η) = 0.
+
+**Proposition 7 (mod-2 transfer).** Let E be any seed event, of any defect. Let φ preserve the S- and T-fibers, and let p_E be the path of E pushed through its sector. Then
+
+    (E · D̂) + (φE · D̂) ≡ p_E · (D̂ + φ^{-1}D̂)   (mod 2).
+
+If the right side is odd, then E or φE is an odd event, and so has nonzero defect by the established odd-word criterion.
+
+- If D is the only diagonal wall, then D̂ = ∂R0 and the right side equals colour(Ŝ) + colour(φŜ) + colour(T̂) + colour(φT̂).
+- So in that case the criterion holds exactly when the label-preserving affine group changes the relative copy-colour of the S and T lifts.
+
+*Proof.* Mod-2 intersection with the closed chain D̂ is a homotopy invariant rel endpoints, and φ commutes with pushing into the sector. ∎
+
+**Proposition 8 (real flux).** Let φ be a multitwist in Γ″ along cores γ_i with powers m_i. Then
+
+    δ(φ^n E) = δ(E) + n · Σ m_i ⟨γ_i, E⟩ ξ(γ_i).
+
+The increment lies in ξ(ker hol ∩ H_1). It therefore vanishes identically if ξ restricted to H_1 equals A∘hol. This is consistent with the known vanishing for axis twists.
+
+Non-axis multitwists are not covered by earlier results, and they are the natural candidate for a nonzero increment.
+
+## 8. Exact open lemmas
+
+**HAL0 (open, defect-free).** In every room of the class, there exist a non-wall-parallel primitive w and a side such that S and T are consecutive A-marks on a direction-w cylinder circle, as in Proposition 2′.
+
+**FLUX (open).** For some seed event E, one of the following holds:
+
+- some fiber-preserving φ makes p_E · (D̂ + φ^{-1}D̂) odd; or
+- some non-axis multitwist has Σ m_i ⟨γ_i, E⟩ ξ(γ_i) ≠ 0.
+
+HAL0 together with FLUX implies the actual goal, with both opening signs coming from Section 5. Proposition 5 shows that HAL0 can only fail accidentally, never because of an invariant. Proposition 1 shows that HAL0 involves no hidden half-vector, primitivity or sector conditions.

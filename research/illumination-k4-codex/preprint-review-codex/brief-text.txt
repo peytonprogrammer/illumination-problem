@@ -1,0 +1,96 @@
+An open pocket-detection question in rational billiards
+Daniel Wang and Peyton Wang
+Research note, 2 November 2026. Conjectural statements are identiﬁed below.
+The question we would value help with
+Does every room in the class below have a nonsingular periodic billiard trajectory with nonzero response
+to the speciﬁed pocket slide? Is there an existing theorem that forces this response, or an obstruction
+that can occur in this planar room class?
+This question is separate from the attached elementary construction of an orthogonal 22-wall room with a
+non-illuminating pair. That construction asserts existence and makes no minimality or historical-priority
+claim.
+The question here arose while attempting a reduction toward a lower bound; that reduction
+remains unﬁnished.
+Room class and deformation
+Use the ﬁxed lattice triangulation whose triangles are
+conv{c, c + uj, c + uj+1},
+c ∈(2Z)2,
+where (u0, . . . , u8) = ((1, 0), (1, 1), (0, 1), (−1, 1), (−1, 0), (−1, −1), (0, −1), (1, −1), (1, 0)). A room P is a
+ﬁnite union of these triangles with connected interior and strictly simple polygonal boundary. It has
+no holes or internal mirror partitions. Require every integer point of P outside (2Z)2 to be a physical
+boundary corner. We call this the raw condition. The room contains two speciﬁed distinct interior points
+S, T ∈(2Z)2.
+Require the triangle with vertices A = (2, 0), B = (1, 1), C = (1, 0) to be a leaf pocket, attached through
+the open portal BC. Immediately above B and below C, the boundary lies on the same line x = 1.
+Translate the pocket by t(0, 1) for suﬃciently small t. The adjoining vertical ﬂanks change length along
+their ﬁxed supporting line; all other mirror supporting lines stay ﬁxed. The moving mirrors are
+Dt : x + y = 2 + t,
+Ht : y = t.
+The two marked points stay ﬁxed. Only the base room at t = 0 is required to lie in the lattice triangulation.
+Precisely what “response” means
+Fix a nonsingular periodic trajectory at t = 0 that closes with its unfolding frame. Let Rj be its successive
+linear reﬂection matrices and set L0 = I, Lj = R1 · · · Rj. For its ﬁxed reﬂection word deﬁne
+Q(γ) =
+m
+∑
+j=1
+Lj−1aj,
+aj =
+
+
+
+
+
+
+
+(1, 1)
+on D,
+(0, 2)
+on H,
+(0, 0)
+on a ﬁxed mirror.
+Up to an overall sign, Q is the derivative of the unfolded period displacement under this slide. The
+question is whether some γ has Q(γ)̸ = 0. We do not assert that the trajectory remains closed after
+sliding, or that nonzero Q alone proves illumination of S by T.
+1
+
+What has been checked, and what has failed
+• A raw 25-wall room is blind in both direction classes (1, 1) and (2, 1), but has nonzero response in
+class (3, 2). It is obtained by ﬂipping one distant triangular leaf in a previously studied room. Exact
+independent polygon checks cover every relevant strip in these directions.
+• The cancellation has a hand explanation. Before the ﬂip, two pocket visits contribute (1, −1) and
+(−1, −1). The changed exterior return adds a visit contributing (0, 2), cancelling their total. An
+eight-reﬂection (3, 2) witness stays in the unchanged part of both rooms. This explanation has an
+independent hand audit.
+• A separate raw 37-wall room with 40 canonical triangles has Q = 0 in every primitive direction
+class with p2 + q2 < 41. Class (5, 4) has nonzero response. The geometry and complete ﬁxed-strip
+coverage have independent exact veriﬁcation. Directions are grouped under the reﬂection group D4,
+with representatives 0 ≤q ≤p and gcd(p, q) = 1.
+Thus the previously proposed two-direction list, and the seven-class list through squared norm 25, fail.
+These examples do not exclude a larger ﬁxed ﬁnite list or establish an unbounded ﬁrst-detecting norm.
+Their novelty relative to the literature has not been assessed.
+A parity shortcut is insuﬃcient. For any closed core,
+Q(γ) ≡#{D hits} (1, 1)
+(mod 2).
+The pocket seam determines a nonzero mod-2 cohomology class under the additional-diagonal-wall hy-
+pothesis. A nonzero class, however, need not be nonzero on a cylinder core of a general square-tiled
+surface. Abstract surface examples therefore prevent using connectedness of its double cover as a proof.
+They do not give a counterexample in the raw planar class.
+The further gap concerning the actual marks
+Even a positive answer about periodic cores leaves an additional question. We seek a broken billiard path
+between the actual interior marks S, T through exactly one physical corner at its developed midpoint. Its
+two developed half-vectors must be equal and primitive, all other contacts must avoid physical corners,
+and the selected continuation must bound an embedded intrinsic angle of π in the unfolded surface. Its
+transverse opening response under the slide must be nonzero.
+A loaded periodic core does not automatically provide that marked event. Conditional aﬃne-transfer
+formulas preserve an already supplied event, but require a nonzero geometric overlap contrast that is
+not known in general. Neither universal periodic-core detection nor this coupling to the actual marks is
+proved. No general lower bound of 22 walls follows from the present work.
+Speciﬁc requests for mathematical input
+Is the planar raw condition strong enough to force a cylinder on which the pocket-slide class evaluates non-
+trivially? If so, what theorem or geometric invariant could supply this fact? Separately, what additional
+hypothesis could turn such a cylinder into the required event between the speciﬁed marked points?
+Exact polygons and contact certiﬁcates are available for the two examples above. Related published context is
+A. Wolecki, Illumination in Rational Billiards, arXiv:1905.09358v3 (2024), Theorem 1.3 and Remark 2.2, https://
+arxiv.org/abs/1905.09358v3. That work establishes the known unrestricted 22-edge upper bound; no implication
+for the deformation question above is claimed.
+2

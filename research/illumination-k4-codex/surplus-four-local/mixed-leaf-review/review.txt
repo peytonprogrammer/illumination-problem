@@ -1,0 +1,130 @@
+Independent HAND review: mixed e2-as-leaf inheritance
+4 November 2026 — Codex01a1a00f
+
+[done] ACCEPT without correction peer mixed-e2-e1/argument.txt sections1–4.
+Every wholly local e2+twoe1,b0 room in which e2 is a d0 leaf illuminates
+actual S=(0,0) and T=(2,2) within13 reflections. The proof uses a strictly
+simple auxiliary room and the already accepted budget-free two-unit theorem.
+This accepts the whole stated subfamily, not just a fixed room example.
+
+1. The root/leaf reduction covers every stated configuration
+Handle the directly illuminating N bridge first. Within K the only partial
+cell side-adjacencies are B-D and E-R. Their induced graph is a matching;
+ordinary zero caps cannot transmit. A d0 positive cell therefore attaches
+directly to a positive root, and with three positive cells the remaining
+unit is an independent root. Neither quarter e1/e1 attachment nor a quarter
+e2 leaf is allowed at b0: the shared outside-H C would have90+90=180,
+forcing positive smooth surplus. No third A cell can repair this C.
+Thus e2 as a d0,q2 leaf is centered on its common C, contributing180,
+while its e1 parent contributes90.
+
+For B-root/D-leaf the only attaching rooted quarter is B0/1, and the leaf
+is D3/4. For D-root/B-leaf, B's H-facing sector1 is absent, hence B+ is
+absent. The accepted one-reflection path applies regardless of the third
+unit's position; our check even allows every other K triangle as possible
+support. Sigma/reversal supplies both E/R orientations. Thus no root/leaf
+orientation or independent unit position is silently omitted.
+
+2. Exact deletion geometry and preservation of a simple room
+D3/4 is the closed triangle F with vertices(1,-1),(1,-3),(2,-2), subdivided
+at C=(1,-2). Its intersection with the remaining room is exactly the
+attaching segment A=[(1,-1),(1,-2)]. This is checked against the MAXIMUM
+possible remaining support: H+B0/1 and full stars at L,E,Tcap,R,N. The
+intersection calculation uses exact closed triangle predicates and segment
+intersections, not sampled points. No other partial-cell star meets F.
+The whole A is shared with the B0 triangle; no positive-area overlap occurs.
+
+The independent local fan calculations give
+ at(1,-1):315 degrees before deletion,270 afterward;
+ at(1,-2):270 degrees before deletion,90 afterward.
+No other leaf vertex remains. The minimal attached and erased templates
+both have simple boundaries and exactly full A marks S/U/T. These templates
+check the local identities; they are not full mixed-budget room controls.
+
+For an arbitrary original strictly simple room, replace F's outer boundary
+arc by A. Since no other remaining part meets F except A, the new boundary
+cannot cross or touch itself away from the two endpoints. The endpoint
+angles above preserve a single boundary sector there. Every remaining root
+and ordinary cap still attaches directly to H, so connectivity is retained;
+there is no new hole, slit or component. Full S/U/T stars are unchanged,
+and deletion cannot create another full A star. This proves global strict
+simplicity, not merely that the triangle set got smaller.
+
+3. Applicability of the inherited theorem
+After deleting D3/4, exactly TWO positive partial cells remain: B0/1 and the
+original independent e1 root. Each remains a d1,q2 root; d refers only to H,
+which was not changed. Every other partial cell is an ordinary H-facing cap.
+The auxiliary room therefore satisfies surplus-four-local/two-unit.txt.
+That accepted theorem assumes no restriction on b,W,k. No claim that deletion
+preserves k6, and no bounded Delta3 theorem, is needed.
+The auxiliary room has two ROOTS, so the later single-leaf supplement of the
+two-unit theorem is not being invoked as a substitute for the root proof.
+
+4. Audit of the complete path inventory
+Read the entire accepted two-unit extension and local-two-unit predecessor,
+including the final short-forcing/noncritical-N reconciliation. Match their
+branches to the pinned catalog, rather than assuming that a support-check
+count proves completeness:
+ - one/four/thirteen and sigma: zero-surplus-L/cover-check.json;
+ - B/E short-square and all four single-square13 replacements:
+   first-surplus-review/square-exchange-check.json;
+ - centered L/T three-path: first-surplus-review/residual-cover-check.json
+   and sigma;
+ - centered B/E six-path: first-surplus-review/bottom-residual-check.json
+   and sigma;
+ - five/Nb+ dichotomy: second-surplus-review/five-path-check.json;
+ - centered-L12 and sigma, INCLUDING the arbitrary-b centered-L/B fallback:
+   first-surplus-review/centered-left-check.json;
+ - four explicit centered/outer short-forcing paths:
+   third-surplus-review/independent-review/guard-extension-check.json.
+
+All21 pinned records are present, their seven source hashes agree, and our
+OWN retained checker recomputes complete required AND forbidden sets. Each
+avoids BOTH D and R cells, as do all sigma/reversed paths. Checking only
+required tiles would have missed a possible removed mirror; both are checked.
+
+Two derived constructions also require attention beyond the literal catalog:
+(a) two critical OUTER squares can modify one or both13 paths. If both affect
+one member, this is B+T or its sigma L+E. We explicitly check the double B/T
+replacement (far contacts(6/11,-2),(18/11,4)), giving9reflections, plus sigma.
+For the other four unordered site pairs, each member has one replacement,
+already present in the catalog. Disjoint local replacements compose because
+the accepted exchange lemma preserves the same portal point and velocity.
+(b) centered B plus outer T uses the six-path's T trip replaced by(5/3,4),
+giving4reflections; its sigma covers centered E plus outer L. This extra
+fixed path and sigma also avoid complete D/R support.
+
+The normalized exchange requires0<u<1 and0<u+2d<1. These ensure the far
+contact u+d and both square legs are strict inside the square; the contact
+cannot move to a D/R-adjacent corner. Each exchange stays in its critical
+B/E/L/T cell, with unchanged portal data. Hence no composition introduces
+D/R required or forbidden triangles absent from the fixed catalog. The
+three fixed port controls used here satisfy the strict inequalities.
+This supplements the hand composition argument; it is not a direction or
+word search. Counts:21 catalog paths plus2 fixed compositions, each also
+checked under sigma/reversal. The longest inherited bound stays13.
+
+5. Reinsertion and actual endpoints
+For whichever path the accepted two-root theorem selects, its required set
+fits the auxiliary room and its forbidden set is absent. Adding D3/4 cannot
+remove a mirror or change any flight: no selected fixed or composed path's
+required/forbidden support contains a D triangle. Its actual endpoints,
+corner avoidance and reflection count are preserved. This is a specific
+support-preservation proof, not an assumption that enlargement helps rays.
+The opposite-root one-path and sigma complete the stated e2-leaf cover.
+
+6. Reproduction and limits
+Command:
+ python3 -B .context/illumination-k4-codex/surplus-four-local/mixed-leaf-review/check.py
+Receipt: check.json, including local angles, catalog hashes,23support checks,
+sigma checks and exact fixed exchange parameters.
+Peer support-check.py was read but NOT executed. No peer files were edited.
+Geometry and guard routines have shared historical origins; independent agent
+review is not formal verification or expert refereeing.
+
+[done] Entire mixed e2-as-leaf subfamily accepted within13 reflections.
+[in progress] The all-three-roots and e2-root/e1-leaf mixed cases remain.
+Peer's NEW root-leaf partial classification/ten-guard/six-hard-row result
+in sections6–8 is outside this review; no acceptance is implied.
+Other local types and remote gaps remain. No new discovery run, room/cap
+assignment scan, direction/word generation, archive sweep or worker.

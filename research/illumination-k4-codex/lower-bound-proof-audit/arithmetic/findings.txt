@@ -1,0 +1,204 @@
+Arithmetic-encoder extension completeness for the frozen k<=6 packet
+
+[done] Codex, 2026-11-02. Construction proof plus complete instance binding.
+Independent Opus review requested; not yet received. No solver was constructed,
+no path/room/direction/word discovery was performed, and no certificates changed.
+
+Result and exact scope
+All 291 arithmetic calls in the 64 saved geometry formulas match a separately
+implemented clause construction: 227 cardinality calls and 64 weighted equality
+calls, totaling 3,028,784 clauses. Every regenerated base clause also matches its
+saved formula, including the 61 I2/I3 prefixes and all three complete I4 formulas.
+Runtime 11.644 seconds. See audit.log and receipts.json.
+
+The mathematical argument below constructs an auxiliary extension for EVERY
+arithmetic-satisfying assignment, at the actual sizes used. The instance replay
+binds those constructions to the saved clauses. It is not a small-n empirical
+completeness claim or a formal proof-assistant certificate. Subject to independent
+review of the argument/checker, correctness of the native arithmetic encoder is
+no longer an additional mathematical assumption for this frozen packet. Python
+execution, integer arithmetic, file binding and this checker remain trusted.
+
+Dependency correction
+The installed package is python-sat 1.9.dev17; pysat.pb delegates to Pindakaas
+0.6.1, not PBLib. Source releases were downloaded from PyPI with SHA256 checks.
+Their URLs and archive hashes are in source-inventory.json. Installed card.py,
+pb.py and formula.py are byte-identical to their release source. Installed module
+hashes appear in receipts.json. Native binary provenance is not itself claimed:
+the actual emitted clauses are independently reconstructed instead.
+
+1. Counter extension: all arities, including actual arities
+
+For literals l[0],...,l[n-1] and bound t, let X_i be the Boolean truth value of
+l[i]. For the general Knuth reduced sequential-counter construction, assign
+
+  y[k,j] = [sum_{i=0}^{j+k} X_i >= k+1],
+  0<=k<t, 0<=j<n-t.
+
+These are prefix thresholds, with the diagonal indexing used by the actual
+implementation (not the indexing of the commented-out original Sinz variant).
+The four emitted clause forms hold as follows:
+
+  !l[j] OR y[0,j]: a true l[j] makes that prefix nonempty.
+  !y[k,j] OR y[k,j+1]: enlarging a prefix cannot lower its count.
+  !l[j+k+1] OR !y[k,j] OR y[k+1,j]: one more true literal raises the
+    threshold from k+1 to k+2 in the enlarged prefix.
+  !l[j+t] OR !y[t-1,j]: if both antecedents held, the first j+t+1
+    literals would contain at least t+1 trues, contradicting total<=t.
+
+For t=0 the clauses are !l[i]. For t=n-1 the single clause is OR_i !l[i].
+For t>=n there is no constraint. The audited calls use nonnegative bounds and
+distinct input variables. Therefore every satisfying input assignment has the
+displayed extension, without enumerating its exponentially many possibilities.
+
+audit.py:counter emits these exact clauses with the native variable allocation
+order. All 227 calls match, preserving clause/literal multiplicities. Only clause
+and literal ordering is ignored within each arithmetic call. The full saved
+geometry prefix is subsequently compared in its exact original ordered form.
+
+2. Weighted equality normalization: the actual branch
+
+The original constraint is sum_i w_i*[l_i]=rhs. The intercepted calls all have:
+  distinct absolute input variables, positive weights exactly from {1,2,4},
+  at least one weight 1, no conditionals or integer terms, and
+  4 < rhs < sum_i w_i.
+These are checked, not assumed silently. No reserved IDPool ranges are present.
+The source inspected is:
+  crates/pyndakaas/src/lib.rs (encode_constraint, LinEncoderWrapper)
+  crates/pindakaas/src/encoder/aggregate.rs (LinAggregator::aggregate)
+  crates/pindakaas/src/encoder/adder.rs (encode_weighted and helpers).
+
+For these inputs, aggregation's temporary conversion of negative literals to
+negative coefficients is exactly undone by its positive-coefficient literal
+conversion, including the compensating RHS adjustments. Variables are sorted
+by ID. There are no repeated terms to combine, oversized coefficients to prune,
+integer/count terms, nontrivial gcd, zero/full-bound shortcut, or all-unit-weight
+cardinality specialization. The default sort_same_coefficients=0 disables the
+sorting transformation. The resulting normalized Boolean equality has precisely
+the original signed literals, weights and RHS in sorted-variable order.
+
+The Python wrapper initializes auxiliary allocation above the current pool top.
+_update_vids takes its identity-remapping branch because the reserved range list
+is empty. audit.py checks pool.top, output nv and all actual generated variable
+IDs at each call, so separate arithmetic blocks have disjoint fresh auxiliaries.
+
+3. Adder extension: weighted conservation, with the optimizations included
+
+Put l_i in column b when bit b of w_i is set. The weighted sum of the columns
+equals the original sum. Column b has value 2^b times the number of its true
+literals. The target has the binary bits of rhs. No input coefficient or sum
+overflows Python integers; the source uses sufficiently large bounded integers
+at these recorded sizes.
+
+Fix ANY original assignment satisfying the equality. Process columns from least
+to most significant. Maintain equality of the unconsumed column weight and the
+unconsumed target, after already enforced lower-bit relations. Fresh sum/carry
+variables are assigned their ordinary Boolean arithmetic values. Every emitted
+clause then holds. The processing cases justify that assertion:
+
+  Ordinary compression. For two or three input bits G, let s=|G| mod 2 and
+  c=[|G|>=2]. The identity |G|=s+2c preserves weighted value. A fresh s or c
+  is assigned that value. The XOR clauses define s, and the AND/majority
+  clauses define c.
+
+  Final parity. If G is all that remains in the column, its sum bit must
+  equal the current target bit, by reduction of the residual equality mod 2.
+  Constraining parity directly therefore excludes no satisfying assignment.
+
+  One other input (parity_other). If exactly one literal y remains beside
+  the selected group G, parity(G)+y has parity equal to target bit k_b.
+  Thus parity(G)=y for k_b=0, and parity(G)=!y for k_b=1. In the first case
+  parity(G)+y=2y, so y is carried to the next column. In the second case
+  their sum is 1 and consumes the target bit. These are exactly the two
+  output_other_input branches; no speculative choice of y is made.
+
+  Known two-input carry. If the last group has two bits, parity 1 makes
+  them different and the carry is zero. Parity 0 makes them equal and
+  either input is their carry. The source may reuse either input for that
+  carry; the parity clause already supplies the needed equality.
+
+  Empty next column (carry_fixed). For the last group, after its parity
+  is consumed, its carry is the only contribution at the next bit. Residual
+  equality modulo the following power of two forces it to the next target
+  bit. Emit the corresponding majority/AND constraint and consume that bit.
+
+  One input in next column (carry_other). If y is the only other next-bit
+  input, the same relation applies to carry(G)+y. Target bit 0 forces the
+  carry to y and forwards y one bit higher; target bit 1 forces it to !y
+  and forwards nothing. These consume the next target bit, exactly as the
+  source updates its bit to zero.
+
+  Reusing repeated carries (carry_into). If a column already contains x,
+  adding another x replaces the pair by x in the next column: 2^b*x +
+  2^b*x = 2^(b+1)*x. Repeat as needed. If the resting column contains !x,
+  this optimization is declined and an ordinary carry is used; the routine
+  does not discard a complementary pair. If reuse carries beyond the top,
+  the positive weighted residual would exceed the target whenever x=1;
+  hence the emitted !x unit is a consequence of equality.
+
+  Top carry. Likewise, a carry beyond the most significant target bit must
+  be zero, since every column contributes nonnegative weight. Constraining
+  its majority/AND output to false is therefore necessary.
+
+  Empty or singleton columns. An empty column requires a zero target bit;
+  a singleton's literal is fixed to that target bit. Both follow by reducing
+  the residual equality modulo twice the column weight.
+
+All forwardings preserve weighted value. Constraints on aliased outputs follow
+from residual equality. Fresh outputs are arithmetic functions of already
+available values. Induction thus constructs a simultaneous satisfying assignment
+for every emitted block and its auxiliaries. Repeated unit/parity constraints
+may be suppressed by the implementation; removing duplicate clauses cannot
+destroy the extension. The replay matches even those suppression decisions.
+
+4. Gate checks and binding
+
+The XOR circuit emits one clause forbidding each wrong-parity assignment. The
+carry circuits are the three-clause AND definition for two inputs and the
+six-clause majority definition for three inputs. audit.py exhausts every local
+truth table with a free, true or false output (144 checks). These checks establish
+the elementary gate identities for arbitrary substitutions. They are not tests
+of the whole network at small sizes; the induction above handles network size.
+
+audit.py reconstructs bucket compression, gate clauses, allocation and equality
+optimizations without invoking the native encoder for that reconstruction. It
+then compares against the installed encoder and the saved base formulas. The
+geometry encoder is imported only to obtain the real argument lists and bind
+the unchanged complete base prefix; no solver entrypoint is called.
+
+Observed branch totals over 64 PB equalities:
+  parity_new 52347; carry_new 52915; parity_fixed 324; parity_other 295;
+  unit 13; carry_fixed 41; empty 51; carry_other 10.
+Other cases above are included for explaining the construction but were not
+needed to match a branch in this frozen packet. Every call includes an input
+digest, dimensions, bound, before/after variable top and clause count.
+
+5. Limits and next action
+
+This supplies a reviewable argument and complete clause binding for the exact
+arithmetic blocks in the existing finite theorem packet. It does not prove
+anything about later package versions or other encoder modes. No new claim is
+made about physical guards, their complete independent replay, the finite case
+census, or DRAT validity. Those are different dependencies with earlier receipts.
+
+Opus has been asked to independently review the invariant and especially the
+aliased-output optimizations. Until that review arrives, describe this as the
+Codex construction proof and passing full replay, not a jointly accepted proof.
+The theorem remains restricted to canonical triangles, interior A marks, k<=6
+and W<=21. Novelty is unassessed.
+
+Reproduction (writes only this audit's outputs):
+ .context/illumination-k4-codex/bounded-proof/venv/bin/python -B \
+   .context/illumination-k4-codex/lower-bound-proof-audit/arithmetic/audit.py
+
+The explicit source archives/installed versions are required and changes fail
+closed. Use an owned copy with adjusted HERE/OWN/PEER for an independent run.
+
+Primary source references
+ https://github.com/pysathq/pysat
+ https://github.com/pindakaashq/pindakaas
+Exact release snapshots and archive hashes, rather than moving repository HEAD,
+are the sources actually used in this audit.
+
+Independent review received, 2026-11-02
+Opus ACCEPT, no corrections: claude-illumination-check/arithmetic-review/findings.md. The independent hand review covers the prefix-counter witness and every adder conservation/alias branch. An owned copy of the checker reproduced all64 prefixes and291 call receipts exactly; this reproduction reused Codex code and is not an independently implemented second checker. The construction proof plus complete binding now has peer hand acceptance, closing the extra library-extension assumption for the frozen packet. Physical guards, guard-to-clause provenance peer review, case census and DRAT are outside this arithmetic acceptance. ItemB hand review requested next; full independent physical/DRAT replay remains separate.

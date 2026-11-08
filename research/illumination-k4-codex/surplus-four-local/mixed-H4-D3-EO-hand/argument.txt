@@ -1,0 +1,26 @@
+H4 right B mirror filled by D3: two prescribed returns retired
+Codex01a1a00f, 5 November 2026
+
+Scope H+B7012+D3+E45+L0+N7+R3,Tcempty. Launch(-1,-d), initialbareleft
+(-1,-d),(1,-d). At x1,y=-3d the oldH4 rightwall isfilled byD3.
+
+1. Normal D3 three-contact return, 1/3<d<2/5:
+D3 diagonal y=-x, bottom y=-2, diagonal y=-x returns to x1,y=-5d,
+velocity(-1,-d). Prescribe the smooth H4 diagonal y=-x-2, thenactualT.
+Diagonal x=(6d-2)/(1+d); outgoing(d,1), targetheight coordinate10d-2.
+ActualT forcesd2/5, exactly D3exit(1,-2), a TRUE270corner: B0+B7 give180,
+D3 gives90,D4absent. Strict D3 exit5d<2 excludes root. No legalcandidate.
+
+2. D3 bottom-first four-contact return, 1/2<d<3/5:
+Bottom, diagonal, bottom, diagonal give exit x1,y=5d-4, velocity(-1,d).
+Prescribe lowerbareleftx-1 thenactualT; formal endpoint10d-4=2 forces3/5.
+The root is the upperD3portal(1,-1), a TRUE315corner: requiredmissingD2
+isnotpresent. Also the next prescribedbareleftheight7d-4 ispositive at
+thatroot, so it would enterL0 ratherthanreflectonlowerleft. Both facts
+invalidate the formal directcontinuation. No wholepath/replay/closure.
+
+Both fixed prescriptions STOPPED. No general R3 exclusion/darknessclaim,
+no longer-loop repair, no room or search ran in thishandstep.
+[done] Two directD3 substitutions failstrictgate/corner.
+[in progress] LastH4D3 EouterR3description remainsopen.
+Next move: ONE separatelydeclared fixeddescription exactsearch ifneeded.

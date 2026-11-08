@@ -1,0 +1,165 @@
+# Audit verdict: NEW31.1 (explicit collar cochain and actual relative endpoints)
+
+**Verdict: correct. Accept with the technical corrections in §9.** None of the corrections changes (31.4), (31.5), the iff criterion, or (a,b)=(0,1). Most of them pin down conventions that the text leaves implicit.
+
+The claim stays exactly as scoped: for the actual relative event η, Q(η)=0 iff ν₀=ν₂ and ν₁=ν₃. The audit does not establish that any admissible event with unequal counts exists.
+
+---
+
+## 1. The cutoff map respects mirrors: verified
+
+- **Moving walls.** φ≡1 on N′, and N′ contains the closed pocket. So D and H are rigidly translated by tu. Their images are y−x=−t and y=2−t, which are D_t and H_t.
+- **Flanks.** u=(0,−1) is parallel to x=1, so h_t keeps each flank point on x=1. Along a flank, y ↦ y−tφ has derivative 1−t∂_yφ>0, which gives a monotone bijection onto the new flank. B₀ goes to B₀+tu, and the far flank corners are fixed because φ=0 there. This uses positive flank lengths with |t| below them.
+- **Gluings.** Copy g and copy gR_e are identified along edge e by the identity map in polygon coordinates. h_t acts by the same polygon map in every copy, and directions are fixed, so every R_e is unchanged. Gluings are therefore respected.
+- **Cone points.** h_t is well defined at cone points, since every copy sends B₀ to B₀+tu. φ lifts D4-invariantly, so h_t commutes with R.
+
+**Correction 1 (minor).** "Lipschitz φ on N ⊂ P" must mean Lipschitz in the **planar** (Euclidean) metric for the bound |t|·Lip(φ)·|u|<1 to give injectivity. Near the reflex corners B₀ and C₀, intrinsic distance exceeds Euclidean distance across the exterior wedges. The constants then differ by a bounded factor, so the flaw is harmless, but it should be stated correctly.
+
+The cleanest fix is to take φ smooth on ℝ², equal to 1 on a Euclidean neighborhood of the closed pocket, with small support. Then:
+- h_t is a global planar diffeomorphism for small t.
+- h_t(P)=P_t follows directly from where it sends boundary pieces.
+- For small ε, positive separation of non-adjacent edges makes the Euclidean and intrinsic ε-neighborhoods coincide on P.
+
+## 2. Eight rectangles glue into four annuli by cosets g{I,V}: verified
+
+Q = N∖int N′ is bounded by the outer crosscut, the inner crosscut, and two flank pieces. It contains no other walls or corners.
+
+The key fact, worth stating explicitly, is that **both flank pieces lie on the same mirror x=1 with linear part V.** This is exactly where the hypothesis "the physical wall also lies on x=1 immediately above and below the portal" is used. Because of it, copy g's two flank sides both glue to copy gV, and nothing else. Two rectangles glued along a pair of opposite sides form a cylinder. It cannot be a Möbius band because X is orientable.
+
+The crosscut sides adjoin the interior of the same copy. So the result is exactly four annuli, indexed by the left cosets {g, gV}. The list R^j{I,V}, j=0..3, exhausts D4={R^j, R^jV}.
+
+Cross-check with Section 31: the outer circles of these annuli are the preimage of ∂D (the doubled crosscut), so they are the four b_j. This agrees with Riemann–Hurwitz. Direct cone-angle counts agree as well:
+- B₀ has ⟨V,D⟩=D4, giving 1 preimage.
+- A₀ has ⟨H,D⟩=D4, giving 1 preimage with cone angle 8·π/4=2π. It is a regular point of X but a branch point of X→X/R.
+- C₀ has ⟨V,H⟩={±I,V,H}, giving 2 preimages, each with cone angle 6π.
+
+## 3. The coefficient on each annulus: verified
+
+In copy g, ω_t = g(dp). Then h_t*(g dp) = g dp + t·g(u)·dφ. Across a flank gluing the coefficient is gV(u)=g(Vu)=g(u), so it is constant on A_j and equals R^j u.
+
+Write u=(0,−1). Then Ru=(1,0), R²u=−u, and R³u=−Ru.
+
+## 4. δω is a legitimate pulled-back differential: yes, with one clarification
+
+- h_t*ω_{X_t} = ω₀ + t·Σ_j R^j u·dφ_j holds **exactly**, not only to first order.
+- Each dφ_j·1_{A_j} is locally d of a function that is constant near both collar levels. It is therefore closed. Flatness is needed only for smoothness.
+- Integrals over chains ending at cone points are fine because ω₀ is bounded in the flat metric.
+
+**Clarification 2.** δω is a closed ℝ²-valued 1-form. It is not a holomorphic differential for X₀'s complex structure. Only its de Rham class and its integrals over relative chains are used, so this is legitimate. "Differential" should be read in that sense.
+
+**Strengthening.** For the fixed relative homotopy class, the material identity gives hol_t(z) = hol₀(z) + t·Q(z) exactly. This matches Section 3, where b_i(t) is affine and all linear parts are fixed, so accumulated translation is linear in t.
+
+The material marking h_t is a homeomorphism continuous in t, so it agrees with Gauss–Manin. h_t(η) passes through the same copies in the same order. Its integral therefore equals the Section 3 development through the fixed word with mirrors at time t, using the same endpoints h_t(S)=S, h_t(T)=T and h_t(p)=p+tu (or p, if p is fixed).
+
+## 5. Moving-corner velocity and minus signs: verified against Section 3
+
+**Loads.** a_i = (I−R_i)u for the moving mirrors:
+- (I−D)u = (0,−1)−(−1,0) = (1,−1) = a_D.
+- (I−H)u = (0,−1)−(0,1) = (0,−2) = a_H.
+
+Flanks give a_i=0, and so does any flank reflection inside N′, since Vu=u.
+
+**Telescoping.** For pocket hits G₁…G_k after a prefix g:
+
+  Σ_i g·G₁…G_{i−1}(I−G_i)u = gu − gGu.
+
+This is the entry weight minus the exit weight, so it equals Σ_j ν_j R^j u for one complete crossing.
+
+**Moving corner.** Section 3's −2L_p v_c splits as −L_p u per arm.
+
+*Second arm* (p→t): the Section 3 term is (in-pocket loads) − L_p u = (gu − g′u) − gu = −g′u. The collar gives the same: the arm leaves U′ in sheet g′, with ∫dφ = −1.
+
+*First arm*: η contains −γ₁ = (p→s). Suppose γ₁ last enters the pocket in sheet h and reaches the corner in sheet g. Then:
+- Section 3 gives −(hu − gu) − gu = −hu.
+- The collar gives (p→s) exiting U′ in sheet h, which is −hu. ✓
+
+So corner motion is included automatically and must not be added again. The text is correct on this point.
+
+**Complete excursions** in η orientation contribute gu − g′u. Read in γ₁'s orientation, this is Section 3's "−L(I−R_G)u before the midpoint". ✓
+
+**Split-position ambiguity.** At a corner, inserting or removing a degenerate wall hit changes Section 3's prefix. The collar formula is independent of this choice, because δω vanishes on U′ and only exits are counted. Consistency check: an inserted D-hit at the corner adds g(u−Du), and the corner term changes from −gu to −gDu. The two changes cancel. "Initial sheet g" is therefore bookkeeping only.
+
+**Correction 3 (frame).** (31.5) is written in X's absolute copy frame. Section 3's L_j are normalized from the source development, so
+
+  Q_Sec3 = g_S⁻¹ · Q_collar,
+
+where g_S is the copy of the chosen source lift. The nonvanishing criterion is unaffected. But the statement "central-cap total = −2u" means −2g_p u, with g_p=I in the canonical normalization. Say so.
+
+**Single-excursion criterion recovered.** Q≠0 iff the coset changes, i.e. iff Gu≠u, i.e. iff G∉{I,V}. Among the six maps:
+
+| Map G | Gu |
+|---|---|
+| D | (−1,0) |
+| DH | (1,0) |
+| DHD | (0,−1) = u |
+| DHDH | (0,1) |
+| HDH | (1,0) |
+| HD | (−1,0) |
+
+Indeed DHD = V exactly. This matches Section 3's "except DHD".
+
+## 6. The iff statement for actual endpoints: verified
+
+The endpoints are S and T (fixed, in Y), moving corners (in U′), and other corners (fixed, in Y). This requires ε to be chosen so that no endpoint lies in the closed collar, which the text states.
+
+For each j, ∫_z dφ_j is an integer that depends only on the relative class. Since u and Ru are independent:
+
+  Q(z)=0 ⟺ ν₀=ν₂ and ν₁=ν₃.
+
+**Correction 4 (wording).** "Unequal opposite-neck entry counts" should read "signed net entry counts with (ν₀,ν₁) ≠ (ν₂,ν₃)". One unequal pair suffices.
+
+Unlike (31.3) applied to Q(η), this criterion does not depend on Y being connected or on the corner being fixed.
+
+## 7. The absolute coefficient (a,b)=(0,1): verified, conditional on conventions that must be stated
+
+From (31.5):
+- Q_x = ν₁−ν₃
+- Q_y = ν₂−ν₀
+
+Put ⟨β_j,z⟩ := ν_j − ν_{j+2}. Then (31.3) holds with a=0, b=1.
+
+R-equivariance checks out:
+- R maps A_j to A_{j+1}, so ν_j(Rz) = ν_{j−1}(z).
+- Hence Q(Rz) = Ru(ν₀−ν₂) − u(ν₁−ν₃) = R·Q(z). ✓
+
+**Correction 5.** State all of the following explicitly:
+- b_j := the outer circle of A_j, the annulus of coset R^j{I,V}, so that b_{j+1} = R b_j. This fixes Section 31's arbitrary starting label.
+- Orient b_j as ∂U.
+- Use the convention ⟨a,c⟩ = sign(a′, c′).
+
+With U on the left of b_j, an entering z gives +1, so ⟨b_j,z⟩ = ν_j and (a,b)=(0,1). The opposite intersection convention gives (0,−1).
+
+Also note that (31.5) re-derives (31.3) without the genus-1 symplectic argument. Nondegeneracy of the β's in H₁(X) still uses 21.1's independence, but the relative criterion does not need it.
+
+## 8. The zero-period neck crosscut argument: verified
+
+b_j = α (in copy g) followed by α reversed (in copy gV). The endpoints of α are (1, 1−ε) and (1, 2+ε), so Δ is vertical and VΔ=Δ. Hence
+
+  hol(b_j) = gΔ − gVΔ = 0.
+
+The outer crosscut has φ=0 and is fixed, so this holds for all small t. The same holds for the inner circles: their translation by tu is common to both copies.
+
+This is stronger than Section 31's statement. It gives zero period for each individual b_j directly, not only for β₀ and β₁. It also asserts nothing about straight representatives.
+
+## 9. Required corrections, collected
+
+1. **Cutoff metric.** Make φ Euclidean-Lipschitz, preferably a smooth planar cutoff (§1).
+2. **"Differential".** Call δω a closed ℝ²-valued 1-form. Optionally add the exact identity hol_t = hol₀ + tQ (§4).
+3. **Frame.** State Q_collar = g_S·Q_Sec3, and read "−2u" at the central cap as −2g_p u with g_p=I (§5).
+4. **Signed counts.** Use the "(ν₀,ν₁)≠(ν₂,ν₃), signed net counts" wording (§6).
+5. **Labels and signs.** Fix b_j to coset R^j{I,V}, the ∂U orientation, and the intersection convention for (a,b)=(0,1) (§7).
+6. **Name the essential hypothesis.** Both flank pieces share the mirror x=1 (V), and Vu=u. Without this, the rectangles would not close into annuli and the coefficients would not match.
+
+## 10. The prescribed control
+
+The arithmetic is consistent. Each assertion holds by construction once the entry neck is identified with the index of gu, which is valid because Stab(u) = {I,V}. So the control verifies **only weight-index bookkeeping**. It does not verify:
+- the annulus topology,
+- the material marking,
+- the 26.6 central-cap geometry, which I could not independently check here,
+- that the six words are the actual return maps.
+
+Its own scope string says as much. One optional addition would make it substantive: assert that among the six words, Gu=u only for DHD, and that product(DHD)==V.
+
+## 11. Remaining open
+
+Existence of an admissible actual S→T midpoint event with (ν₀,ν₁)≠(ν₂,ν₃) remains open. Section 31.1 correctly reduces detection to that realization condition, retaining actual endpoints and corner motion, and claims nothing beyond it.

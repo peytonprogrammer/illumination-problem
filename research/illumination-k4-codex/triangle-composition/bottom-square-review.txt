@@ -1,0 +1,38 @@
+Independent review of peer bottom-square closure — 4 November 2026
+
+Verdict: ACCEPT the stated conditional family theorem, at most 8 reflections.
+Peer source: fourth-surplus-review/bottom-square.txt sections 2–5.
+
+Read the hand derivation. The alternative square exit avoids the remote
+excursion entirely. The five-path endpoint equation gives d=3/4; the
+additional top-cap return gives d=4/5 and unfolded target (6,6).
+Both lie strictly inside the stated itinerary intervals. Reverse image
+calculation: (2,2)->(4,2)->(0,2)->(4,6)->(0,6)->(6,6).
+
+Independent checks used our frozen boundary_replay.py and guard_checker.py,
+without running or importing the peer checker. Both supplied paths pass
+exact first-boundary, interior-segment, noncorner, specular, actual-target
+and reversed-path checks on the two supplied polygons. Recomputed full U/Z
+sets match peer sets exactly. Requirements lie in H plus B square and,
+for eight reflections, T+ alone.
+
+Whole-family argument checked without cap-assignment enumeration:
+E- absent: inherited one_sigma has U contained in H, Z exactly E-.
+E- present: ordinary E-slot excludes E+. If T+ absent, five-path blockers
+B-/E+/T+ are absent. If T+ present, eight-path blockers B-/E+/T- are absent.
+Fixed B0/1 excludes B-; ordinary T-slot excludes T-. All noncap forbidden
+tiles lie outside the permitted fixed fans and ordinary cap options.
+Therefore arbitrary remaining ordinary caps preserve the assigned path.
+The fixed L parent and remote leaf are disjoint from all forbidden tiles.
+
+Scope: acceptance of this conditional bottom-square interaction; no whole
+remote-row, full surplus-four, or universal minimum claim. Two prescribed
+fixtures were independently replayed; their ledgers were not independently
+recomputed here. Universal validity follows from the full guards and cap
+argument, not the fixtures. The full continuous parameter intervals were
+read and hand checked, not independently symbolically partitioned; the
+theorem requires only the two fixed rational paths validated above.
+
+Next useful target: centered Tcap sectors5/6 in the same oriented subfamily.
+No new trajectory discovery, archive lookup, room scan, or workers used.
+Receipt: bottom-square-review.json.

@@ -1,0 +1,191 @@
+{
+  "status": "ALL_ELEVEN_FAILURE_UNIONS_INDEPENDENTLY_RECONCILED",
+  "phase_pairs": 11,
+  "complete_admissible_relative_cells": 1192,
+  "source_sha256": {
+    "unequal-depth/exceptional-phase-support.json": "8418bbf0e62d6df29a9c6197d034f418d04a020e52ca072803467762080ec075",
+    "unequal-depth/short-line-finite.json": "76803bbc3f04ccec3532c3d588a2cbf18aaefc66176b0f49a4cbb40b3a50fee0",
+    "unequal-depth-independent/phase-lines-check.py": "5f92d2484b274f194c7a6e7cc3b47a6f7c4392855574807d652e08c3d10c9530",
+    "unequal-depth-independent/finite-support-audit/result.json": "cadee9d777548cd260cb5ae37d656ee2a75b193d0f33ad117fee654d06b30181",
+    "unequal-depth-independent/finite-support-audit/failure-unions.py": "d7d7f2c6f57428de7669d0d4339bedc8abdd181b76c26cfc114e61f288c34777"
+  },
+  "records": [
+    {
+      "phase": [
+        5,
+        6,
+        14
+      ],
+      "depths": [
+        "5",
+        "8"
+      ],
+      "parent_pieces": 1,
+      "own_pieces": 1,
+      "admissible_relative_cells": 50,
+      "failure_cells": 6,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        8,
+        9,
+        14
+      ],
+      "depths": [
+        "8",
+        "5"
+      ],
+      "parent_pieces": 1,
+      "own_pieces": 1,
+      "admissible_relative_cells": 50,
+      "failure_cells": 6,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        1,
+        3,
+        4
+      ],
+      "depths": [
+        "1/2",
+        "1/2"
+      ],
+      "parent_pieces": 1,
+      "own_pieces": 1,
+      "admissible_relative_cells": 4,
+      "failure_cells": 1,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        1,
+        6,
+        9
+      ],
+      "depths": [
+        "1/5",
+        "3/5"
+      ],
+      "parent_pieces": 3,
+      "own_pieces": 3,
+      "admissible_relative_cells": 134,
+      "failure_cells": 20,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        3,
+        4,
+        9
+      ],
+      "depths": [
+        "3",
+        "5"
+      ],
+      "parent_pieces": 2,
+      "own_pieces": 2,
+      "admissible_relative_cells": 48,
+      "failure_cells": 6,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        3,
+        8,
+        9
+      ],
+      "depths": [
+        "3/5",
+        "1/5"
+      ],
+      "parent_pieces": 3,
+      "own_pieces": 3,
+      "admissible_relative_cells": 134,
+      "failure_cells": 20,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        5,
+        6,
+        9
+      ],
+      "depths": [
+        "5",
+        "3"
+      ],
+      "parent_pieces": 1,
+      "own_pieces": 2,
+      "admissible_relative_cells": 48,
+      "failure_cells": 6,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        1,
+        4,
+        11
+      ],
+      "depths": [
+        "1/3",
+        "7/3"
+      ],
+      "parent_pieces": 1,
+      "own_pieces": 1,
+      "admissible_relative_cells": 50,
+      "failure_cells": 6,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        1,
+        8,
+        11
+      ],
+      "depths": [
+        "1/7",
+        "3/7"
+      ],
+      "parent_pieces": 4,
+      "own_pieces": 4,
+      "admissible_relative_cells": 312,
+      "failure_cells": 66,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        3,
+        10,
+        11
+      ],
+      "depths": [
+        "3/7",
+        "1/7"
+      ],
+      "parent_pieces": 3,
+      "own_pieces": 4,
+      "admissible_relative_cells": 312,
+      "failure_cells": 66,
+      "all_memberships_and_direct_chart_results_match": true
+    },
+    {
+      "phase": [
+        7,
+        10,
+        11
+      ],
+      "depths": [
+        "7/3",
+        "1/3"
+      ],
+      "parent_pieces": 1,
+      "own_pieces": 1,
+      "admissible_relative_cells": 50,
+      "failure_cells": 6,
+      "all_memberships_and_direct_chart_results_match": true
+    }
+  ],
+  "limits": "Complete finite failure-union equivalence on0<s,t<=1, including edges/vertices; no four-cap rectangle or full optical room closure."
+}

@@ -1,0 +1,136 @@
+{
+  "status": "PASS_THREE_PRESCRIBED_UC01_FORMULA_AND_EXPLICIT_SELECTOR_CHECKS",
+  "cases": [
+    {
+      "name": "A_near_roof",
+      "n": 5,
+      "d": 6,
+      "G": 1,
+      "Q": 42,
+      "seed": [
+        "17/6",
+        "7/3",
+        "-17/6",
+        "0",
+        "1",
+        "-1"
+      ],
+      "cap_return": [
+        "185/6",
+        "7/3",
+        "7/6",
+        "5",
+        "4",
+        "3"
+      ],
+      "selected_q": 0,
+      "p": 3,
+      "final_slope": "1025/6",
+      "final_indices": [
+        30,
+        22
+      ],
+      "final_J": 20,
+      "residuals": [
+        "7/3",
+        "-17/6"
+      ],
+      "ordinary_roof": true,
+      "actual_target": [
+        20,
+        2
+      ],
+      "nearest_algorithm_q": 8,
+      "nearest_algorithm_final_slope": "49/6"
+    },
+    {
+      "name": "B_active_right_corner_repair",
+      "n": 4,
+      "d": 5,
+      "G": 1,
+      "Q": 45,
+      "seed": [
+        "2",
+        "0",
+        "-2",
+        "0",
+        "1",
+        "-1"
+      ],
+      "cap_return": [
+        "20",
+        "0",
+        "0",
+        "4",
+        "5",
+        "4"
+      ],
+      "selected_q": 45,
+      "p": 0,
+      "final_slope": "20",
+      "final_indices": [
+        4,
+        5
+      ],
+      "final_J": 4,
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "ordinary_roof": true,
+      "actual_target": [
+        14,
+        2
+      ],
+      "nearest_algorithm_q": 45,
+      "nearest_algorithm_final_slope": "20"
+    },
+    {
+      "name": "C_nontrivial_G",
+      "n": 7,
+      "d": 8,
+      "G": 7,
+      "Q": 8,
+      "seed": [
+        "17/8",
+        "15/4",
+        "-17/8",
+        "0",
+        "1",
+        "-1"
+      ],
+      "cap_return": [
+        "49/8",
+        "15/4",
+        "15/8",
+        "1",
+        "1",
+        "0"
+      ],
+      "selected_q": 0,
+      "p": 3,
+      "final_slope": "1361/8",
+      "final_indices": [
+        42,
+        22
+      ],
+      "final_J": 20,
+      "residuals": [
+        "15/4",
+        "-17/8"
+      ],
+      "ordinary_roof": true,
+      "actual_target": [
+        20,
+        2
+      ],
+      "nearest_algorithm_q": 7,
+      "nearest_algorithm_final_slope": "45/8"
+    }
+  ],
+  "discovery_search": false,
+  "physical_ray_replay": false,
+  "independent_acceptance": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

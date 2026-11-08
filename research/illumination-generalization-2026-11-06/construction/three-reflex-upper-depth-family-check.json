@@ -1,0 +1,65 @@
+{
+  "status": "PASS_TWO_UDPA01_PRESCRIBED_FORMULA_CONTROLS",
+  "cases": [
+    {
+      "N": 7,
+      "target_r": 4,
+      "k": 5,
+      "q": 75,
+      "seed_slope": "317/12",
+      "seed_J": "2",
+      "p": 2,
+      "final_slope": "1661/12",
+      "final_J": "16",
+      "residuals": [
+        "-7/6",
+        "1/2",
+        "19/6",
+        "-29/12"
+      ],
+      "indices": [
+        5,
+        69,
+        39,
+        18
+      ],
+      "floor_x": "11/3",
+      "actual_target": [
+        "20",
+        2
+      ]
+    },
+    {
+      "N": 9,
+      "target_r": 2,
+      "k": 3,
+      "q": 115,
+      "seed_slope": "479/14",
+      "seed_J": "4",
+      "p": 0,
+      "final_slope": "479/14",
+      "final_J": "4",
+      "residuals": [
+        "-11/7",
+        "-5/7",
+        "-3/7",
+        "25/14"
+      ],
+      "indices": [
+        1,
+        17,
+        9,
+        4
+      ],
+      "floor_x": "20/7",
+      "actual_target": [
+        "32",
+        2
+      ]
+    }
+  ],
+  "unfrozen_hand_calibration_correction": "N7 final nleft is69, not41: general proof increment4Np was correct; corrected the hand-control typo before checker/freeze.",
+  "discovery_search": false,
+  "physical_ray_replay": false,
+  "independent_acceptance": false
+}

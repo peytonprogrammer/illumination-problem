@@ -1,0 +1,235 @@
+Independent mathematical challenge. Tools disabled. Review the NEW Sections10-13 below, especially the proposed positive disk-topology obstruction in Sections12-13. Please be adversarial and precise, without claiming numerical execution.
+
+Context: our goal is a universal detecting one-corner midpoint path for actual interior marks in a canonical raw parity D4 polygonal DISK with a sliding pocket. Earlier local parity/sign-transfer facts are already separately reviewed. We must not infer actual endpoint/prong realization from arbitrary continuous paths. No discovery scans are being run.
+
+We have constructed a marked translation-surface counterexample to a BROADER realization claim using SL2(F7), but do NOT claim it is a polygonal room. New idea: every D4 room unfolding X has a degree4 holomorphic sphere quotient X/C4=double(P), and therefore all curves covered by X have gonality<=4 (norm argument). Prove or find a gap in the argument that a one-branch regular torus cover Y with perfect group, g>9,n/m>8 has gonality>4. If valid, this EXCLUDES our exact obstruction from all actual room unfoldings, even as a nonequivariant intermediate quotient. It is not a universal event-realization proof.
+
+Check all these separately:
+- full absolute lattice from actual continuous wall-crossing loops, not rays;
+- six-square imprimitive full-period negative control;
+- SL2(F7) perfect/central/odd branching/full period control;
+- projected midpoint event detours are primitive F2 loops, preserving actual target;
+- C4 quotient really is the double of P and genus zero;
+- norm proof of gonality monotonicity (pole-degree direction is critical);
+- uniqueness/bielliptic alternative for g>9 and degree<=4 via Castelnuovo-Severi;
+- G-invariant ramification divisor orbit-size divisibility;
+- perfect group cannot act nontrivially on an elliptic curve;
+- limitations: this rules out a family of obstructions, not every one, and supplies no seed.
+
+If the gonality argument fails, give a specific correction or counterexample rather than a generic warning.
+
+NEW NOTE
+## 10. The pocket forces the full base absolute-period lattice
+
+At the raw grid base, every physical mirror has an even integral affine translation. Axis mirrors x=k,y=k contribute 2k in their normal coordinate; diagonal mirrors x+y=d or y-x=d have even d because they follow canonical A-B edges. Consequently every closed developed period belongs to 2Z^2.
+
+Let V_1 be an actual vertical wall of the straight attachment. The already-proved pocket identity gives
+
+    V_1 D_0 H_2 D_0 = V_1 V_2 = translation(-2,0).
+
+Its linear copy label is the identity. This prescribed wall-crossing sequence can be realized by a continuous closed path in X: cross at open wall points and connect consecutive crossings through interiors of copies, then return to the starting point in the original copy. No straight billiard realization is asserted. Conjugating the sequence by D_0 gives period (0,-2). Thus the full absolute-period lattice is EXACTLY 2Z^2. Both displayed periods remain constant during the pocket slide.
+
+This excludes a larger torus-lattice obstruction, but not a nontrivial branched intermediate cover. In particular it does not imply primitive action of the sheet permutations.
+
+Here is an explicit algebraic warning. The six-square origami with zero-based permutation images
+
+    r=(0,1,5,4,2,3),    u=(2,3,0,1,4,5)
+
+is a connected unramified double cover of the three-square L, via square i mapping to floor(i/2). Its three two-element blocks are invariant. Nevertheless r fixes square0 and u fixes square4, giving absolute periods (1,0),(0,1), so its full period lattice is Z^2. Its two commutator cycles have length3; the base has one length3 cycle. These give genera3 and2 and show the intermediate cover is unramified. This is not a raw-room counterexample. It disproves the shortcut from full period lattice to primitive permutation action.
+
+Terminology varies between authors, so this note uses the explicit properties. The distinction between monodromy primitivity and period data is discussed in [Shrestha, Sections1.2 and2](https://www.numdam.org/item/10.5802/ambp.392.pdf). The examples here are independently specified and verified finite controls.
+
+## 11. A genuine obstruction outside the room class
+
+The following marked translation surface shows that full lattice and odd ramification alone cannot ensure an admissible midpoint event between every two regular A points.
+
+Let G=SL(2,F_7), and define
+
+    r = [[1,1],[0,1]],   u = [[1,0],[2,1]],   z=-I.
+
+The elementary matrices r,u generate G of order336. Their commutator has order3. Let E=R^2/2Z^2, with B=(1,1), and take the connected regular cover Y->E branched only at B specified by monodromy r,u for horizontal and vertical torus generators based at0. The branch order is3 and g(Y)=113. Mark every preimage of the three nonzero two-torsion points as forbidden; these are the B/C points. All points above0 are regular A points. Choose source s above0 with sheet label1 and target t with sheet labelz.
+
+The group is perfect, and its period lattice is full. This can be proved without a search over primitive words. Put d=diag(2,4). Direct matrix calculation gives
+
+    [d,r^5]=r,     [d,u]=u.
+
+Thus both generators lie in the commutator subgroup. In the punctured-torus group F_2=<a,b>, choose any word delta mapping to d. The kernel contains
+
+    a [delta,a^5]^-1,    b [delta,b]^-1,
+
+whose exponent vectors are respectively (1,0),(0,1). Therefore the compact cover has full absolute lattice 2Z^2. The loop fillings at its branch points have zero torus displacement and do not change that conclusion.
+
+**No admissible one-corner midpoint event connects s to t.** Any such event has integral half-displacement w. If w=k w_0 with k>=2 and w_0 primitive, it meets a forbidden B/C point already at displacement w_0, before its midpoint. Hence w must be primitive.
+
+Its projected full chord on E is then the simple essential closed torus curve 0->2w. If its midpoint is B, push it through the selected embedded pi-sector: its projection makes a small semicircular detour around B. If its midpoint is one of the C points, no B detour is needed. In both cases the resulting loop on E minus B is still a simple essential nonseparating loop. It therefore represents a primitive element of F_2 (up to conjugacy, which preserves primitivity).
+
+The image of a primitive element under a surjection F_2->G can be completed by one other element to a generating pair of G. It cannot equal z: z is nontrivial and central, so z and ANY one other element generate an abelian subgroup. G is nonabelian. Thus the selected pi-sector lift cannot end at t, a contradiction.
+
+This proof retains the actual target label. It rules out every primitive direction by a group argument, not by enumeration. The construction is an arithmetic marked translation-surface control, NOT asserted to be a simple polygonal room or to possess the required literal pocket. It is not a counterexample to the active goal. It shows why an all-cover realization theorem would be false.
+
+## 12. The disk gives a low-degree sphere quotient
+
+A polygonal disk with wall directions in the four D4 directions has a stronger property than an arbitrary arithmetic cover. Its eight-copy unfolding X has a holomorphic order4 rotation action, induced by left multiplication of its copy labels by the quarter turn. The quotient X/C4 consists of two copies of P, distinguished by orientation, glued along their complete boundary. It is the double of a disk, hence a sphere. Thus X admits a degree4 holomorphic map to P^1, and its complex gonality is at most4. The pocket ensures the eight-copy unfolding is connected.
+
+Gonality means the least degree of a nonconstant meromorphic function. It cannot increase under a finite map X->Y. Here is the norm proof, to fix the direction of the implication. If f on X has pole divisor D of degree k, the coefficients of its characteristic polynomial over C(Y) have poles bounded by the pushforward of D, of the same degree k. At least one coefficient is nonconstant, or f would be algebraic over C and hence constant. That coefficient gives a function of degree at most k on Y. Therefore EVERY holomorphic curve covered by this X has gonality at most4, even if the covering is not equivariant for C4.
+
+This monotonicity and the Castelnuovo-Severi inequality used below are standard curve facts; see [Orlic, Proposition2.0.2 and the Castelnuovo-Severi section](https://web.math.pmf.unizg.hr/~petorli/index_files/Doctoral_dissertation.pdf). The disk-double argument and the application to our specific control are given explicitly here.
+
+## 13. The perfect-central control cannot hide as an intermediate quotient
+
+There is a short obstruction that excludes not just Y itself, but any translation cover of Y as the unfolding of a room in this class.
+
+Consider a regular cover Y->E with perfect deck group G of order n, branched over exactly one torus point with common ramification order m. Suppose
+
+    genus(Y)>9,      n/m>8.
+
+Then Y has gonality greater than4.
+
+First suppose a degree k<=4 pencil is unique (all degree-k maps differ by an automorphism of P^1). The deck group G then preserves it and acts on P^1. Its ramification divisor R_f is G-invariant. Every G-orbit on Y has length either n (away from the branch fiber) or n/m (in that fiber). Therefore n/m divides degree(R_f). Riemann-Hurwitz for Y->E and f:Y->P^1 gives
+
+    degree(R_f)=2g(Y)-2+2k = n(1-1/m)+2k.
+
+It follows that n/m divides 2k. This is impossible since 0<2k<=8<n/m. No classification of finite subgroups of PGL2 is needed.
+
+It remains to justify that a low-degree pencil is unique, or handle its only exception. Degree2 is unique at genus>1, and degree3 is unique at genus>4 by Castelnuovo-Severi. For degree4, two distinct pencils either jointly generate C(Y), giving genus<=9, or have a common factor of degree2. In the latter case the intermediate curve has two independent degree2 maps to P^1 and therefore genus at most1. A genus0 intermediate would make Y hyperelliptic, already excluded. The only remaining possibility is a degree2 map Y->E' with E' elliptic.
+
+At genus>5 this bielliptic involution is unique: two distinct degree2 elliptic maps would, by Castelnuovo-Severi, give genus<=5. Hence G acts on E'. Every finite subgroup of Aut(E') is an extension of an abelian translation group by a cyclic group, and is solvable. A perfect group has trivial image in a solvable group. Thus every element of G would be a deck transformation of a degree2 map, forcing |G|<=2, impossible here. This excludes the degree4 exception and proves the claim.
+
+For the control in Section11, n=336,m=3,genus113 and n/m=112. It therefore has gonality>4. Section12 rules out ANY finite holomorphic map from a D4 polygonal-disk unfolding onto this Y. This closes the proposed way of importing that perfect-central obstruction into our rooms. It does not prove general midpoint-event existence: other endpoint obstructions might not arise from such a regular intermediate quotient.
+
+Sections10-13 are new theory under independent review. `pocket-monodromy.py/json/log` checks only the prescribed reflection identities, six-square cover, and SL(2,F7) matrix control. It does not search for rooms, directions, primitive words or origami orbits. The universal pocket-detection goal remains active.
+
+
+PRESCRIBED CHECKER
+"""Prescribed finite-group/period controls only. No origami orbit or ray search."""
+from pathlib import Path
+from fractions import Fraction as F
+from collections import deque
+import hashlib,json,sys
+if not __debug__:
+    raise SystemExit('Optimized Python disables proof assertions; rerun without -O.')
+B=Path(__file__).resolve().parent
+COUPLING_PIN='9f81b7bf93b258958fa3d6347631e50f8165e57ad32166547431a3be9ed26bec'
+assert hashlib.sha256((B/'coupling.json').read_bytes()).hexdigest()==COUPLING_PIN
+I=((F(1),F(0)),(F(0),F(1))); Z=(F(0),F(0))
+def ap(A,x):return tuple(sum(A[i][j]*x[j] for j in range(2)) for i in range(2))
+def mm(A,C):return tuple(tuple(sum(A[i][k]*C[k][j] for k in range(2)) for j in range(2)) for i in range(2))
+def add(a,b):return tuple(x+y for x,y in zip(a,b))
+def reflection(n,h,dh):
+ n=tuple(map(F,n));den=sum(x*x for x in n)
+ return tuple(tuple(I[i][j]-2*n[i]*n[j]/den for j in range(2)) for i in range(2)),tuple(2*h*x/den for x in n),tuple(2*dh*x/den for x in n)
+def develop(fs):
+ R,b,db=I,Z,Z
+ for M,q,dq in fs:
+  b=add(b,ap(R,q));db=add(db,ap(R,dq));R=mm(R,M)
+ return R,b,db
+saved=json.loads((B/'coupling.json').read_text());V=[tuple(map(F,p)) for p in saved['room']['vertices']]
+h=list(map(F,saved['offset_base_point']));normals=saved['offset_normals']
+dh=[F(0)]*len(V);dh[2]=-F(1);dh[3]=F(1)
+mirrors=[reflection(n,h[i],dh[i]) for i,n in enumerate(normals)]
+assert V[2:5]==[(1,1),(2,2),(1,2)]
+assert normals[1]==[-1,0] and h[1]==-1
+assert normals[2]==[-1,1] and h[2]==0
+assert normals[3]==[0,-1] and h[3]==-2
+# V_1 D H D = V_1 V_2, and D (V_1 D H D) D.
+wx=(1,2,3,2);wy=(2,)+wx+(2,)
+Rx,bx,dx=develop([mirrors[i] for i in wx]);Ry,by,dy=develop([mirrors[i] for i in wy])
+assert Rx==Ry==I and bx==(-2,0) and by==(0,-2) and dx==dy==Z
+# Every canonical reflection has an even integral translation at the grid base.
+assert all(all(x.denominator==1 and int(x)%2==0 for x in m[1]) for m in mirrors)
+
+# Explicit connected six-square unramified double cover of the three-square L.
+# Square labels 2*i+epsilon, i a base square and epsilon in {0,1}.
+r=(0,1,5,4,2,3);u=(2,3,0,1,4,5)
+r0=(0,2,1);u0=(1,0,2)
+def comp(a,b):return tuple(a[b[i]] for i in range(len(a)))
+def inv(a):
+ q=[0]*len(a)
+ for i,j in enumerate(a):q[j]=i
+ return tuple(q)
+def cycles(a):
+ seen=set();out=[]
+ for i in range(len(a)):
+  if i in seen:continue
+  c=[];j=i
+  while j not in seen:seen.add(j);c.append(j);j=a[j]
+  assert j==i;out.append(tuple(c))
+ return out
+assert sorted(r)==sorted(u)==list(range(6))
+assert all(r[i]//2==r0[i//2] and u[i]//2==u0[i//2] for i in range(6))
+# Connectedness of this prescribed six-state graph, not a surface search.
+seen={0};todo=deque([0])
+while todo:
+ x=todo.popleft()
+ for y in (r[x],u[x]):
+  if y not in seen:seen.add(y);todo.append(y)
+assert len(seen)==6
+blocks=[frozenset((2*i,2*i+1)) for i in range(3)]
+for perm in (r,u):
+ assert all(frozenset(perm[x] for x in block) in blocks for block in blocks)
+comm=comp(u,comp(r,comp(inv(u),inv(r))))
+comm0=comp(u0,comp(r0,comp(inv(u0),inv(r0))))
+assert sorted(map(len,cycles(comm)))==[3,3] and sorted(map(len,cycles(comm0)))==[3]
+# Each upstairs cone cycle projects bijectively onto the base cone cycle: no new ramification.
+for c in cycles(comm):assert len({x//2 for x in c})==3
+assert r[0]==0 and u[4]==4
+# A horizontal core in square0 has period(1,0); vertical core in square4 period(0,1).
+# All square-tiled periods are integral, so the absolute period lattice is exactly Z^2.
+assert (6-len(cycles(comm)))%2==0
+up_genus=1+(6-len(cycles(comm)))//2
+base_genus=1+(3-len(cycles(comm0)))//2
+assert up_genus==3 and base_genus==2 and 2-2*up_genus==2*(2-2*base_genus)
+
+# Prescribed SL(2,F7) regular-cover obstruction to a BROADER realization claim.
+# This is matrix algebra, not a search over polygon rooms or primitive words.
+mod=7
+J=(1,0,0,1)
+def gm(a,b):
+ return ((a[0]*b[0]+a[1]*b[2])%mod,(a[0]*b[1]+a[1]*b[3])%mod,
+         (a[2]*b[0]+a[3]*b[2])%mod,(a[2]*b[1]+a[3]*b[3])%mod)
+def gi(a):return (a[3]%mod,-a[1]%mod,-a[2]%mod,a[0]%mod)
+def gp(a,n):
+ if n<0:return gp(gi(a),-n)
+ ans=J
+ for _ in range(n):ans=gm(ans,a)
+ return ans
+def gc(a,b):return gm(gm(gm(a,b),gi(a)),gi(b))
+r7=(1,1,0,1);u7=(1,0,2,1);z7=(6,0,0,6);diag=(2,0,0,4)
+all_sl2={(a,b,c,d) for a in range(7) for b in range(7) for c in range(7) for d in range(7) if (a*d-b*c)%7==1}
+assert len(all_sl2)==336
+# Fixed finite generator graph verifies this prescribed group, retaining no words.
+seen7={J};todo7=deque([J])
+while todo7:
+ x=todo7.popleft()
+ for y in (gm(x,r7),gm(x,u7)):
+  if y not in seen7:seen7.add(y);todo7.append(y)
+assert seen7==all_sl2
+assert gm(gm(gp(r7,2),gp(u7,5)),gp(r7,2))==(0,2,3,0)
+assert gm(gm(gp(r7,6),gp(u7,4)),gp(r7,6))==(0,6,1,0)
+dword=gm(gm(gm(gp(r7,2),gp(u7,5)),gp(r7,2)),gm(gm(gp(r7,6),gp(u7,4)),gp(r7,6)))
+assert dword==diag
+assert gc(diag,gp(r7,5))==r7 and gc(diag,u7)==u7
+# Hence both group generators are commutators, so this entire group is perfect.
+assert z7!=J and gp(z7,2)==J and all(gm(z7,x)==gm(x,z7) for x in all_sl2)
+comm7=gc(r7,u7)
+assert comm7==(0,5,4,6) and gp(comm7,3)==J and comm7!=J
+# Cover periods: a commutator word has zero exponent sums. The following
+# matrix identities prove that r*[d,r^5]^-1 and u*[d,u]^-1 lie in the kernel;
+# their exponent sums are (1,0),(0,1), respectively.
+assert gm(r7,gi(gc(diag,gp(r7,5))))==J
+assert gm(u7,gi(gc(diag,u7)))==J
+regular_degree=336;ramification_order=3
+regular_genus=1+(regular_degree-regular_degree//ramification_order)//2
+assert regular_genus==113
+
+def clean(x):
+ if isinstance(x,F):return int(x) if x.denominator==1 else str(x)
+ if isinstance(x,(tuple,list)):return [clean(y) for y in x]
+ if isinstance(x,dict):return {k:clean(v) for k,v in x.items()}
+ return x
+out=clean(dict(status='PASS',coupling_sha256=COUPLING_PIN,
+ pocket_period_controls=dict(x_word=wx,y_word=wy,periods=[bx,by],slide_derivatives=[dx,dy],base_mirror_translations_even=True),
+ perfect_central_obstruction=dict(modulus=7,degree=regular_degree,genus=regular_genus,r=r7,u=u7,central_target=z7,commutator=comm7,ramification_order=ramification_order,diagonal_commutator_witness=diag,full_period_kernel_basis=[(1,0),(0,1)],scope='General marked translation-surface control, not a raw-parity polygon. Primitive free-group element cannot map to nontrivial central target in a nonabelian two-generated quotient.'),
+ full_period_imprimitive_control=dict(r=r,u=u,base_r=r0,base_u=u0,connected_squares=6,blocks=[sorted(x) for x in blocks],cone_cycles=cycles(comm),base_cone_cycles=cycles(comm0),genus=up_genus,base_genus=base_genus,period_basis=[(1,0),(0,1)],unramified_degree=2),
+ scope='Two prescribed reflection-loop identities, one prescribed six-square control, and one prescribed SL2(F7) regular-cover control. The control is not asserted to be a raw parity room or a counterexample to pocket detection. No rays, directions, event words or surface orbits searched.'))
+(B/'pocket-monodromy.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2))

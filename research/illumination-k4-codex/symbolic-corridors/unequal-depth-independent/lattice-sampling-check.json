@@ -1,0 +1,1026 @@
+{
+  "status": "INDEPENDENT_FINITE_ORBIT_SAMPLING_CONTROLS_PASS",
+  "prescribed_phase_triples": 9,
+  "exact_orbit_points": 2147,
+  "components_verified": 73,
+  "strict_translated_box_controls": 36,
+  "sufficient_bound_controls": 1649,
+  "source_sha256": {
+    "unequal-depth/lattice-sampling.md": "a58b485b479128d6ec0a032fc31dc00eecca9df3a9d2f9c56ed1f80efef0401f",
+    "unequal-depth-independent/vertical-completeness-review.md": "cc7f3122dde7a62813edb2e6c294a9cf7589da0f2e2fadbb2b421553a4d2e8a6",
+    "unequal-depth-independent/lattice-sampling-check.py": "f39eb1a835b28e592117770274d4ebeccc42282d71786d54bc9829b61e5a1e92"
+  },
+  "phase_records": [
+    {
+      "phase": [
+        1,
+        4,
+        101
+      ],
+      "minimum_l1": 5,
+      "minimizer": [
+        -4,
+        1,
+        0
+      ],
+      "components": 1,
+      "points_per_component": 101,
+      "primitive_tangent": [
+        -1,
+        -4
+      ],
+      "sampling_inequality_slack": "1"
+    },
+    {
+      "phase": [
+        1,
+        13,
+        101
+      ],
+      "minimum_l1": 11,
+      "minimizer": [
+        -3,
+        8,
+        1
+      ],
+      "components": 1,
+      "points_per_component": 101,
+      "primitive_tangent": [
+        -8,
+        -3
+      ],
+      "sampling_inequality_slack": "223/7"
+    },
+    {
+      "phase": [
+        1,
+        17,
+        103
+      ],
+      "minimum_l1": 7,
+      "minimizer": [
+        -1,
+        -6,
+        -1
+      ],
+      "components": 1,
+      "points_per_component": 103,
+      "primitive_tangent": [
+        6,
+        -1
+      ],
+      "sampling_inequality_slack": "113/3"
+    },
+    {
+      "phase": [
+        1,
+        11,
+        121
+      ],
+      "minimum_l1": 11,
+      "minimizer": [
+        0,
+        -11,
+        -1
+      ],
+      "components": 11,
+      "points_per_component": 11,
+      "primitive_tangent": [
+        1,
+        0
+      ],
+      "sampling_inequality_slack": "363/7"
+    },
+    {
+      "phase": [
+        3,
+        11,
+        127
+      ],
+      "minimum_l1": 13,
+      "minimizer": [
+        -2,
+        -11,
+        -1
+      ],
+      "components": 1,
+      "points_per_component": 127,
+      "primitive_tangent": [
+        11,
+        -2
+      ],
+      "sampling_inequality_slack": "467/9"
+    },
+    {
+      "phase": [
+        1,
+        12,
+        144
+      ],
+      "minimum_l1": 12,
+      "minimizer": [
+        0,
+        -12,
+        -1
+      ],
+      "components": 12,
+      "points_per_component": 12,
+      "primitive_tangent": [
+        1,
+        0
+      ],
+      "sampling_inequality_slack": "72"
+    },
+    {
+      "phase": [
+        1,
+        13,
+        169
+      ],
+      "minimum_l1": 13,
+      "minimizer": [
+        0,
+        -13,
+        -1
+      ],
+      "components": 13,
+      "points_per_component": 13,
+      "primitive_tangent": [
+        1,
+        0
+      ],
+      "sampling_inequality_slack": "845/9"
+    },
+    {
+      "phase": [
+        5,
+        31,
+        257
+      ],
+      "minimum_l1": 15,
+      "minimizer": [
+        -8,
+        -7,
+        -1
+      ],
+      "components": 1,
+      "points_per_component": 257,
+      "primitive_tangent": [
+        7,
+        -8
+      ],
+      "sampling_inequality_slack": "1927/11"
+    },
+    {
+      "phase": [
+        1,
+        32,
+        1024
+      ],
+      "minimum_l1": 32,
+      "minimizer": [
+        0,
+        -32,
+        -1
+      ],
+      "components": 32,
+      "points_per_component": 32,
+      "primitive_tangent": [
+        1,
+        0
+      ],
+      "sampling_inequality_slack": "6144/7"
+    }
+  ],
+  "box_records": [
+    {
+      "phase": [
+        1,
+        4,
+        101
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 0,
+      "M": 35,
+      "distance_squared": "833/255025",
+      "rho_squared": "1/100",
+      "strict_lifted_hit": [
+        "140/101",
+        "156/101"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        4,
+        101
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 0,
+      "M": 97,
+      "distance_squared": "3457394057/604817290000",
+      "rho_squared": "1/100",
+      "strict_lifted_hit": [
+        "2817/707",
+        "-603/1111"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        4,
+        101
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 0,
+      "M": 0,
+      "distance_squared": "2873/1334025",
+      "rho_squared": "1/100",
+      "strict_lifted_hit": [
+        "15/7",
+        "20/11"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        4,
+        101
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 0,
+      "M": 60,
+      "distance_squared": "1168591577/295481390724",
+      "rho_squared": "1/100",
+      "strict_lifted_hit": [
+        "-2055/2323",
+        "2885/1313"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        13,
+        101
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 0,
+      "M": 34,
+      "distance_squared": "16425/1234321",
+      "rho_squared": "49/484",
+      "strict_lifted_hit": [
+        "136/101",
+        "152/101"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        13,
+        101
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 0,
+      "M": 6,
+      "distance_squared": "78254034913/2927315683600",
+      "rho_squared": "49/484",
+      "strict_lifted_hit": [
+        "3097/707",
+        "-911/1111"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        13,
+        101
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 0,
+      "M": 94,
+      "distance_squared": "1218167425/65864602881",
+      "rho_squared": "49/484",
+      "strict_lifted_hit": [
+        "1319/707",
+        "2460/1111"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        13,
+        101
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 0,
+      "M": 58,
+      "distance_squared": "7199607553/295481390724",
+      "rho_squared": "49/484",
+      "strict_lifted_hit": [
+        "-2239/2323",
+        "3353/1313"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        17,
+        103
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 0,
+      "M": 45,
+      "distance_squared": "592/519841",
+      "rho_squared": "9/196",
+      "strict_lifted_hit": [
+        "180/103",
+        "176/103"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        17,
+        103
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 0,
+      "M": 11,
+      "distance_squared": "4178525773/1232854915600",
+      "rho_squared": "9/196",
+      "strict_lifted_hit": [
+        "3295/721",
+        "-733/1133"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        17,
+        103
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 0,
+      "M": 91,
+      "distance_squared": "7626292/27739235601",
+      "rho_squared": "9/196",
+      "strict_lifted_hit": [
+        "1209/721",
+        "2148/1133"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        17,
+        103
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 0,
+      "M": 57,
+      "distance_squared": "3781099597/15057674898084",
+      "rho_squared": "9/196",
+      "strict_lifted_hit": [
+        "-2481/2369",
+        "3111/1339"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        11,
+        121
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 7,
+      "M": 48,
+      "distance_squared": "441/58564",
+      "rho_squared": "49/484",
+      "strict_lifted_hit": [
+        "192/121",
+        "16/11"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        11,
+        121
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 3,
+      "M": 8,
+      "distance_squared": "284089/11478544",
+      "rho_squared": "49/484",
+      "strict_lifted_hit": [
+        "3733/847",
+        "-1"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        11,
+        121
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 10,
+      "M": 111,
+      "distance_squared": "11449/25826724",
+      "rho_squared": "49/484",
+      "strict_lifted_hit": [
+        "1535/847",
+        "24/11"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        11,
+        121
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 6,
+      "M": 71,
+      "distance_squared": "57600/7745089",
+      "rho_squared": "49/484",
+      "strict_lifted_hit": [
+        "-2543/2783",
+        "359/143"
+      ]
+    },
+    {
+      "phase": [
+        3,
+        11,
+        127
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 0,
+      "M": 16,
+      "distance_squared": "2000/2725801",
+      "rho_squared": "81/676",
+      "strict_lifted_hit": [
+        "192/127",
+        "196/127"
+      ]
+    },
+    {
+      "phase": [
+        3,
+        11,
+        127
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 0,
+      "M": 43,
+      "distance_squared": "866322845/258580386064",
+      "rho_squared": "81/676",
+      "strict_lifted_hit": [
+        "3739/889",
+        "-1413/1397"
+      ]
+    },
+    {
+      "phase": [
+        3,
+        11,
+        127
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 0,
+      "M": 82,
+      "distance_squared": "1046904500/145451467161",
+      "rho_squared": "81/676",
+      "strict_lifted_hit": [
+        "1681/889",
+        "3112/1397"
+      ]
+    },
+    {
+      "phase": [
+        3,
+        11,
+        127
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 0,
+      "M": 109,
+      "distance_squared": "48624591125/78955344605124",
+      "rho_squared": "81/676",
+      "strict_lifted_hit": [
+        "-2809/2921",
+        "4055/1651"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        12,
+        144
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 8,
+      "M": 52,
+      "distance_squared": "1/324",
+      "rho_squared": "1/9",
+      "strict_lifted_hit": [
+        "13/9",
+        "4/3"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        12,
+        144
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 3,
+      "M": 9,
+      "distance_squared": "1/49",
+      "rho_squared": "1/9",
+      "strict_lifted_hit": [
+        "123/28",
+        "-10/11"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        12,
+        144
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 11,
+      "M": 133,
+      "distance_squared": "1/63504",
+      "rho_squared": "1/9",
+      "strict_lifted_hit": [
+        "463/252",
+        "71/33"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        12,
+        144
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 7,
+      "M": 77,
+      "distance_squared": "10201/685584",
+      "rho_squared": "1/9",
+      "strict_lifted_hit": [
+        "-929/828",
+        "92/39"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        13,
+        169
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 8,
+      "M": 57,
+      "distance_squared": "2601/114244",
+      "rho_squared": "81/676",
+      "strict_lifted_hit": [
+        "228/169",
+        "20/13"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        13,
+        169
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 3,
+      "M": 10,
+      "distance_squared": "375769/22391824",
+      "rho_squared": "81/676",
+      "strict_lifted_hit": [
+        "5181/1183",
+        "-119/143"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        13,
+        169
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 12,
+      "M": 157,
+      "distance_squared": "32761/50381604",
+      "rho_squared": "81/676",
+      "strict_lifted_hit": [
+        "2199/1183",
+        "304/143"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        13,
+        169
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 7,
+      "M": 97,
+      "distance_squared": "18496/15108769",
+      "rho_squared": "81/676",
+      "strict_lifted_hit": [
+        "-3751/3887",
+        "33/13"
+      ]
+    },
+    {
+      "phase": [
+        5,
+        31,
+        257
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 0,
+      "M": 20,
+      "distance_squared": "7232/1651225",
+      "rho_squared": "121/900",
+      "strict_lifted_hit": [
+        "400/257",
+        "424/257"
+      ]
+    },
+    {
+      "phase": [
+        5,
+        31,
+        257
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 0,
+      "M": 205,
+      "distance_squared": "6003635873/3916045210000",
+      "rho_squared": "121/900",
+      "strict_lifted_hit": [
+        "7369/1799",
+        "-2823/2827"
+      ]
+    },
+    {
+      "phase": [
+        5,
+        31,
+        257
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 0,
+      "M": 100,
+      "distance_squared": "146339972/31719966201",
+      "rho_squared": "121/900",
+      "strict_lifted_hit": [
+        "3463/1799",
+        "5844/2827"
+      ]
+    },
+    {
+      "phase": [
+        5,
+        31,
+        257
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 0,
+      "M": 28,
+      "distance_squared": "95288777873/17218532828484",
+      "rho_squared": "121/900",
+      "strict_lifted_hit": [
+        "-6395/5911",
+        "7357/3341"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        32,
+        1024
+      ],
+      "offset": [
+        "0",
+        "0"
+      ],
+      "origin": [
+        "1",
+        "1"
+      ],
+      "component": 20,
+      "M": 396,
+      "distance_squared": "9/4096",
+      "rho_squared": "49/256",
+      "strict_lifted_hit": [
+        "99/64",
+        "3/2"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        32,
+        1024
+      ],
+      "offset": [
+        "1/7",
+        "1/11"
+      ],
+      "origin": [
+        "15/4",
+        "-7/5"
+      ],
+      "component": 8,
+      "M": 24,
+      "distance_squared": "9/50176",
+      "rho_squared": "49/256",
+      "strict_lifted_hit": [
+        "949/224",
+        "-10/11"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        32,
+        1024
+      ],
+      "offset": [
+        "-13/7",
+        "20/11"
+      ],
+      "origin": [
+        "4/3",
+        "11/7"
+      ],
+      "component": 30,
+      "M": 930,
+      "distance_squared": "24025/7225344",
+      "rho_squared": "49/256",
+      "strict_lifted_hit": [
+        "1591/896",
+        "91/44"
+      ]
+    },
+    {
+      "phase": [
+        1,
+        32,
+        1024
+      ],
+      "offset": [
+        "17/23",
+        "9/13"
+      ],
+      "origin": [
+        "-3/2",
+        "17/9"
+      ],
+      "component": 18,
+      "M": 590,
+      "distance_squared": "16641/8667136",
+      "rho_squared": "49/256",
+      "strict_lifted_hit": [
+        "-2815/2944",
+        "127/52"
+      ]
+    }
+  ],
+  "limits": "Allq theorem proved separately by area/component/spacing/strict-segment hand argument. Prescribed finite controls do not replace that proof, claim q<=100coverage, or prove universal rational room illumination."
+}

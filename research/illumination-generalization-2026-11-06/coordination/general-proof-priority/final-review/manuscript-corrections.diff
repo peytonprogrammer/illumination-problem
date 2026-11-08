@@ -1,0 +1,76 @@
+--- packet before review
++++ packet corrected after review
+@@ -14,6 +14,12 @@
+ in a proof assistant, and no human mathematician has refereed it. The exact
+ checks listed in `reproduce.md` evaluate the formulas on fixed inputs; they
+ are controls, not proofs. No novelty claim is made; see `cover-note.md`.
++
++A subsequent coordinator hand review corrected the partial-window transcription
++and made the U-room seam case and smooth-wall contact bounds explicit. The
++underlying research proofs and their original acceptance records are unchanged.
++The review and exact scope are recorded in
++`../../coordination/general-proof-priority/final-review/eight-wall-review.md`.
+ 
+ ## 0. Conventions and statement
+ 
+@@ -102,7 +108,7 @@
+ corners.
+ 
+ *Proof.* W = 4 forces a rectangle. For W = 6 there is one reflex corner; the
+-turn word is one minus sign and five plus signs, which fixes the eight edge
++turn word is one minus sign and five plus signs, which fixes the six edge
+ directions up to rotation and reflection. Positivity of the six edge lengths
+ with two closure relations leaves four free parameters, and the displayed L
+ realizes all of them.
+@@ -288,9 +294,10 @@
+ x = a moving right after n' full round trips, at height u. Every earlier contact with x = a is
+ at least 2a developed units before the exit, at height at least
+ u + 2a/tau = c + (2a - l_s)/tau > c. Every contact with x = 0 is at a height
+-strictly between u and y_s. All these contacts are on the walls x = 0
+-(0 < y < H_L) and x = a (c < y < H_L), at heights strictly below y_s < H_L
+-and strictly above c, so none is a corner and the roof is never touched.
++strictly between u and y_s. All contacts with x = 0 lie at heights strictly between u > 0 and y_s < H_L.
++All earlier contacts with x = a lie strictly above c and below y_s < H_L.
++Thus every contact is on a genuine smooth wall, none is a corner, and the
++roof is never touched.
+ When y_s = c, the path goes directly from s to (a, u) with no contact. The
+ path leaves the left arm through the open passage {a} x (0, c) at (a, u),
+ moving right and down.
+@@ -332,9 +339,8 @@
+ [0,a] x (0,H_L) or (a+M, A) x (0,H_R), they see each other. If at least one
+ point has y < c and both have y <= c, both lie in the bottom rectangle and the
+ segment between them is interior, because a point with y = c is interior only
+-over an open mouth. If both have y = c and lie over opposite mouths, Theorem
+-3.1 applies with y_s = y_t = c. If both have y > c and lie in different arms,
+-Theorem 3.1 applies. The remaining case is one point with y > c in one
++over an open mouth. If both have y >= c and lie in different arms, Theorem 3.1 applies, including
++one or both heights equal to c. The remaining case is one point with y > c in one
+ arm, say the left, and the other with y < c. Then both are interior points of
+ the L subroom Q = ([0,A] x [0,c]) union ([0,a] x [c,H_L]). Every vertical
+ wall of Q is a wall of P. The only part of the boundary of Q that is not on
+@@ -462,8 +468,9 @@
+ The contacts of the lower piece are on x = 0 or x = B at heights in
+ (y_s, b); the seam point (|z|, b) avoids the reflex corner (B, b) by (5.2).
+ The contacts of the middle piece are on x = 0 or x = A at heights in (b, c).
+-The seam point (A - |w|, c) satisfies a < A - |w| < A by (5.3), so it avoids
+-the reflex corner (a, c) and the convex corner (0, c). The contacts of the
++The seam point (A - |w|, c) satisfies a < A - |w| <= A by (5.3), so it avoids
++the reflex corner (a, c) and the convex corner (0, c). If w = 0, this point is
++the smooth wall contact (A, c) already handled above. The contacts of the
+ upper piece are on x = a or x = A at heights in (c, y_t), below C. The final
+ point is (A - F_W(Z(tau)), y_t) = (x_t, y_t) = T. The y coordinate increases
+ strictly, so no horizontal wall is touched and T is reached first at its own
+@@ -690,7 +697,12 @@
+     Z(tau) = x_s + D tau - 2A - K = w + v tau
+ 
+ runs over an open interval of length L = ell D/T_0. Since H_s < c one has
+-T_0 < d and, by (6.3), ell >= a min(2, 1 + bg/c) = a Q_v. Hence
++T_0 < d and, by (6.3),
++
++    ell >= min(2a, a + bg/H_s) >= min(2a, a + bg/c)
++        = a min(2, 1 + bg/(ac)) = a Q_v.
++
++Hence
+ 
+     L = ell (1 + v/T_0) > a Q_v (1 + h/d) = a Q_v H/d >= 2a
+ 

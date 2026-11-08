@@ -1,0 +1,57 @@
+# Review of Section 26.6: central literal cap detection
+
+**Verdict: Accepted with the stated scope.** I found no mathematical flaw. Four editorial clarifications are suggested at the end. None of them changes the result.
+
+## Checks performed
+
+**1. Configuration and pocket identification**
+- In the 26.4 normalization (S=(0,0), M=(2,0), T=(4,0), c_0=(2,1)), the classes are: A = even-even, B = odd-odd, C = mixed parity. This is consistent with 26.4's labeling of (1,0) and (3,0) as C.
+- A one-triangle fan at (2,2) is the triangle [(2,2),(2,1),(1,1)] or [(2,2),(2,1),(3,1)]. Its right angle is at c_0, so c_0 is the image of the canonical C_0.
+- The portal is the leg from c_0 to B on y=1. This matches the canonical portal B_0C_0, rotated.
+- The 270° angle at c_0 follows automatically from 26.4. The extra "literal" hypothesis does real work only at B (225°, straight flank) and at A (45°). That hypothesis is correctly stated as an extra premise.
+
+**2. Fixed horizontal flank (the key point)**
+- At c_0 the two wall rays both bound the missing upper quadrant:
+  - the vertical ray x=2 up to A. This is the cap leg, the moving mirror H.
+  - the horizontal ray on y=1, pointing away from the cap.
+- The horizontal ray is collinear with the portal. It is exactly the c_0-side straight flank of the pocket.
+- The slide is tangent to y=1, so this reflection line is invariant and its translation derivative is a=0.
+- 26.4 selects this horizontal flank, not the vertical one. Choosing the vertical flank would put the moving H into the word. The construction correctly does not do that.
+
+**3. Midpoint corner velocity**
+- c_0 is a moving pocket vertex, so v_c = u = ±(1,0).
+- The canonical u=(0,−1) points from C_0 to B_0. It maps to the direction from c_0 toward the cap's B. Both signs are covered anyway.
+
+**4. Target development and Q**
+- T' = (4,2) is the reflection of the fixed T in the fixed line y=1, so T' is fixed. S' = 0.
+- Collinearity of (0,0), (2,1), (4,2) holds, so both halves equal (2,1).
+- This gives Q = T'' − 2c' + S' = −2u.
+- Formula (2) agrees:
+  - Corner placed before the reflection (p=0): Q = −2·I·u.
+  - Corner placed after it (p=1): Q = −0 − 2·R·u = −2u, because R = diag(1,−1) fixes (1,0).
+- 26.4 develops the T side in the upper-right-missing case. In the upper-left-missing case it can equivalently be read as developing the S side, giving S' = (0,2). That image is also fixed, and c_0's image still has velocity u. So Q = −2u in every variant.
+- The base legs contain no ordinary hits, in particular none on D or H, so there are no other load terms.
+
+**5. Scalar opening**
+- det((2,1), −2(±1,0)) = ±2 ≠ 0.
+- w=(2,1) is not wall-parallel.
+- The other slide sign rests on the separately reviewed axis transfer. I did not re-audit that transfer.
+
+**6. Corner type**
+- The 270° corner has cone angle 6π, so it is a true zero. This is consistent with S≠T, as required in Section 26.
+
+## Suggested clarifications (non-blocking)
+
+- State explicitly that the horizontal flank used in 26.4 is collinear with the portal in both orientations. This is the fact that makes T' fixed.
+- Note that the vertical wall at c_0 is the moving H, so the choice of the horizontal flank in the word is essential.
+- In the upper-left-missing case, add one line saying that developing S instead of T still gives −2u.
+- Say "u = ±(1,0); the canonical u maps to the direction toward the cap's B."
+
+## Scope affirmed
+
+This detects only the central literal cap in the connected-H configuration. It says nothing about:
+- other pockets in the same room,
+- the turning-bridge case,
+- arbitrary rooms or universal detection.
+
+These limits match the section's own disclaimers. I did not review 26.5.

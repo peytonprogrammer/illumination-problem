@@ -1,0 +1,34 @@
+{
+  "id": "FABLE03_COVER_CYLINDER_COMPLETENESS_DRAFT_AUDIT",
+  "created_utc": "2026-11-08T04:39:04.862878+00:00",
+  "source_observation": {
+    "path": ".context/illumination-generalization-2026-11-06/fable/general-geometry-03-reduction.md",
+    "sha256": "897c606451a41805eb95f789c05c7fcc82a07bf26fc1240ada567f3c0dc78e3c"
+  },
+  "draft_not_frozen_review": true,
+  "findings": [
+    {
+      "id": "F7",
+      "decision": "REJECT_NECESSITY_PROOF",
+      "topic": "fixed target is not an open direction set; finite legal arc need not extend to a bad-free closed leaf"
+    },
+    {
+      "id": "F8",
+      "decision": "CORRECT_QUANTIFIERS",
+      "topic": "leaf versus entire cylinder and unmarked-cylinder count"
+    },
+    {
+      "id": "F9",
+      "decision": "CORRECT",
+      "topic": "accepted all-L base and degree-three-only nontrivial genus-two cover"
+    },
+    {
+      "id": "F10",
+      "decision": "PROOF_GAP",
+      "topic": "room-compatible classification versus all covers and exact bad sets"
+    }
+  ],
+  "all_findings_pending_reconciliation": true,
+  "new_discovery": false,
+  "whole_goal_complete": false
+}

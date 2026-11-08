@@ -1,0 +1,400 @@
+Independently challenge the NEW Sections6-7 of this argument and its full checker. Main questions: does aligned core period drift really make signed event rows affine in integer powers? Is the52rowstress geometric or merely formal? Are the annulus crossing counts, period derivative cochains, and action on relative eta correct? Check source/corner/target lifts, corner side/sector admissibility after affine maps, and whether any original event hypothesis is silently strengthened. Check rank/stress bounds without trusting the reported numbers. You have no tools: do not claim execution. Distinguish fixed-room theorem from universal conjecture. Under1800words.
+
+# A conditional signed-spanning mechanism from cylinder twists
+
+[done] Initial conditional fixation lemma accepted by independent tools-disabled Opus review, with clarifications incorporated.
+[in progress] Stronger aligned-core slope mechanism under independent review; exact fixed-room calculation passes.
+[done] Prescribed horizontal/vertical homology test on the frozen ear surface.
+
+This is a sufficient criterion, not the parity-room sign theorem. Its strong cylinder hypothesis fails on the frozen test room. The arguments below explain exactly which weaker geometric premise could still make this route useful.
+
+## 1. Event classes and the missing sign
+
+Let X be a translation surface obtained by unfolding a polygon. Mark a finite set A containing every lift of every polygon vertex, all of which are forbidden to a ray and all lifts of the source and target. A legal path avoids corners even at a reflex graze. For a strict one-corner midpoint event, let gamma1 run from its source lift to its corner lift, and gamma2 from that corner to its target lift. Both have the same developed half-displacement w. Set
+
+    eta = gamma2 - gamma1 in H1(X,A;R),    hol(eta)=0.
+
+The signed event row for an allowed polygon deformation v is
+
+    g_e(v) = -sigma det(w, delta_hol_v(eta)).
+
+Use actual half-displacements, not independently normalized primitive directions. Positive rescaling of rows does not change positive spanning, but it changes stress weights.
+
+Assume that the chosen event has an admissible local continuation on its stated side, and every other point of its itinerary avoids A. The event-row identity and its implication for a negative derivative are the geometric inputs from the existing corner-event framework. No homology statement alone supplies those inputs.
+
+## 2. Two twists fixing the event classes suffice
+
+Suppose orientation-preserving affine maps f_h and f_v fix A pointwise and preserve the local sector labels used by the events. Their derivatives are
+
+    P_h = [[1,a],[0,1]],    P_v = [[1,0],[b,1]],    ab != 0.
+
+Most importantly, assume for each event in a finite seed family that
+
+    (f_h)_* eta_e = eta_e,    (f_v)_* eta_e = eta_e.          (F)
+
+Suppose the seed rows span the full dual of the chosen deformation quotient. Then affine images of these events admit a finite strictly positive zero stress with full quotient rank.
+
+**Proof.** An affine map takes a straight segment to a straight segment, preserves midpoint ratios and orientation, and takes the marked set to itself. Thus its images retain the sole forbidden corner contact and its admissible local side. A finite choice of powers avoids the finitely many projected wall-parallel directions. Under (F), the image rows are
+
+    g_(h,n)(v) = -sigma det(P_h^n w, delta_hol_v(eta)),
+    g_(v,m)(v) = -sigma det(P_v^m w, delta_hol_v(eta)).
+
+This formula does not assert that the affine maps persist on the deformed surface: their action on the fixed topological classes is what is differentiated.
+
+First take w=(p,q) with pq != 0. Choose positive integers N,M large enough that
+
+    |A0|=|Naq| > 2|p|,    |B0|=|Mbp| > 2|q|.
+
+Choose them also to avoid wall-parallel directions. The four image directions are
+
+    (p+A0,q), (p-A0,q), (p,q+B0), (p,q-B0).
+
+Give these four events weights
+
+    1/4-p/(2A0), 1/4+p/(2A0), 1/4-q/(2B0), 1/4+q/(2B0).
+
+All weights are positive, sum to one, and their weighted directions sum to zero. Bilinearity of the determinant gives a positive zero stress on the four event rows. The average of the first two rows equals the original seed row, so the packet span contains the seed row.
+
+If p=0 or q=0, first apply a nonzero power of the other shear to make both components nonzero. Condition (F) still holds for the resulting event. Its four-row packet spans both determinant component functionals for this eta (differences of the horizontal and vertical row pairs give them separately), hence includes the original seed row too.
+
+Repeat for each seed and add the packet stresses. The union has full quotient rank because it contains the span of all seed rows. A strictly positive zero stress on full-rank rows implies that every nonzero quotient deformation has at least one negative row: if all evaluations were nonnegative, their positive weighted sum being zero forces every evaluation to vanish, contradicting rank. This proves the conditional claim.
+
+Duplicate events may be merged by adding their positive weights. The conclusion concerns a finite event family; it makes no uniform assertion about the size or length of the necessary powers.
+
+## 3. A strong sufficient geometric condition for (F)
+
+Suppose all horizontal cylinder core classes span a single nonzero line in H1(X;R). A horizontal affine multitwist that fixes A can be represented as a product of Dehn twists on annuli avoiding A. If a regular marked point lies in a cylinder, cut at its closed horizontal leaf and choose a sufficiently large common shear so that the twist is integral on every resulting subannulus. Square-tiled coordinates make these finitely many moduli and marked heights rational. Cylinder boundaries are pointwise fixed; a further power fixes all finite labels and sectors.
+
+For a relative class eta, the twist difference is an absolute class in the span of the annulus cores:
+
+    f_*eta - eta = sum_i n_i intersection(eta,c_i) c_i.
+
+All c_i are homologous up to scalar under the one-dimensional hypothesis. On the other hand, affineness gives
+
+    hol(f_*eta-eta) = (P_h-I)hol(eta) = 0
+
+when hol(eta)=0. A nonzero horizontal core has nonzero horizontal holonomy, so holonomy is injective on that one-dimensional span. Therefore f_*eta=eta. The vertical argument is identical.
+
+This uses one-dimensional **absolute homology span of cylinder cores**. A statement about Teichmuller rank, rational moduli, or one-dimensional holonomy images does not imply it. In particular, every horizontal cylinder period is horizontal, even when the cores represent many independent homology classes.
+
+The twist construction is only asserted here for square-tiled surfaces and rational marked coordinates; no existence claim is made for arbitrary marked translation surfaces.
+
+## 4. Exact applicability check: the strong condition fails
+
+`twist-cylinders.py` builds only the frozen parity-W25-24 surface, using the previously audited square builder copied to `inputs/twist_origami.py`. It never calls a darkness decider or explores a shear orbit. For permutations r,u on n squares, the oriented cellular face row is
+
+    h_s + v_(r(s)) - h_(u(s)) - v_s.
+
+A cycle of r gives the sum of its horizontal edge rows; a cycle of u gives the corresponding vertical sum. These are homology representatives of core curves at an interior height. Stacked rows may duplicate a cylinder's core; including all of them does not change their span. Exact rational elimination computes
+
+    rank(face rows + core rows) - rank(face rows).
+
+Checks include permutation validity, connectivity, zero boundary of face/core chains, face rank n-1, vertex boundary rank, and Euler genus. Two prescribed controls are a one-square torus and a three-square genus-two L surface. The script also checks one rational instance of the four-weight formula.
+
+|Surface|Squares|Genus|Horizontal core rank|Vertical core rank|
+|---|---:|---:|---:|---:|
+|Frozen ear example|112|28|15|15|
+|One-square torus control|1|1|1|1|
+|Three-square L control|3|2|2|2|
+
+Thus Section3 cannot justify (F) for our test room. This does not prove (F) false for particular event classes; it invalidates using the blanket rank-one-core shortcut here.
+
+## 5. The remaining useful target
+
+The weaker necessary input for Section2 is that the chosen event classes are fixed by both twists. One could weaken it further to equality after evaluation by every allowed polygon-deformation period derivative, provided this equality is proved for every integer power used by the packets. For a multitwist T, (T-I)^2=0 on these relative classes because the cores avoid the marked endpoints. Hence one-step evaluated invariance implies invariance for every integer power. If an axis seed is first moved by the other twist, however, the evaluated invariance must also hold for that changed class. Full class fixation avoids this cross-twist issue.
+
+The initial core-rank check did not compute that action. The follow-up fixed-event calculation now does so, as described next. Full absolute homology has dimension56 in the test room, whereas allowed room deformations have a much smaller image. Core rank15 therefore neither proves nor refutes the weaker evaluated-action condition.
+
+A productive next calculation would reconstruct the actual relative chains of the already-saved events, their twist actions and their evaluations on the polygon deformation chart. It must account for corner sector labels and all regular marked lifts. It would use fixed event data and topological algebra, with no direction discovery. Until that premise is proved, the four-weight identity is a conditional mechanism, not a general illumination result.
+
+
+## 6. Stronger mechanism: aligned core drift cancels the quadratic term
+
+Class fixation is unnecessary if core period derivatives stay parallel to their cylinder direction. Assume the horizontal and vertical multitwists act by I+N_h and I+N_v on H1(X,A), with N_h^2=N_v^2=0. Write their derivatives I+L_h and I+L_v, where
+
+    L_h(p,q)=(a q,0),    L_v(p,q)=(0,b p).
+
+For an event class eta, the exact signed row of its nth horizontal affine image is
+
+    g_h,n(v) = -sigma det(w+n L_h w, E(v)+n H(v)),
+    E(v)=delta_hol_v(eta),    H(v)=delta_hol_v(N_h eta).
+
+Suppose H(v) is horizontal for every allowed deformation. Then det(L_h w,H(v))=0, so
+
+    g_h,n = g_0 + n s_h,
+    s_h(v) = -sigma [det(L_h w,E(v)) + det(w,H(v))].
+
+Similarly, if Z(v)=delta_hol_v(N_v eta) is vertical, then
+
+    g_v,n = g_0 + n s_v,
+    s_v(v) = -sigma [det(L_v w,E(v)) + det(w,Z(v))].
+
+Neither identity requires H or Z to vanish. Each uses powers of a single twist acting on the original seed; it never composes different twists and needs no axis-seed reduction. An axis seed can have a zero slope for one twist and a useful slope for the other.
+
+**Signed-slope criterion.** If finitely many slopes s_h,s_v obtained this way span the full deformation quotient dual, then affine images of the corresponding seed events positively span that dual.
+
+Indeed, for any nonzero v some slope s(v) is nonzero. The sequence g_0(v)+n s(v) is negative for integers n of one sign with sufficiently large magnitude. Powers giving a projected wall-parallel direction can be omitted: when the twist changes the direction, only finitely many powers are bad; when it does not change the direction, the original seed direction is already nonparallel. This proves that all these orbit rows oppose every nonzero v. Compactness on the unit sphere and continuity of each row give a finite subfamily.
+
+The only admissibility conditions used are: an unfolded straight event with one forbidden corner at its midpoint; distinct endpoint lifts; an admissible side for smoothing the corner; no other forbidden vertex contact; isolated wall-interior contacts away from that corner; and no segment parallel to a projected wall. There is no prescribed length bound, angle window, or minimality requirement. An orientation-preserving affine map fixing all vertex and endpoint lifts preserves straightness, midpoint ratio, sidedness and the incidence/avoidance conditions. Removing wall-parallel powers supplies isolated physical wall contacts. Thus images are geometrically available without discovering new reflection words.
+
+**An explicit finite positive stress.** Select d independent slopes s_1,...,s_d. Write the corresponding base rows as g_i=sum_j A_ij s_j; this is possible because the slope basis spans the quotient. Choose an integer n larger than every absolute column sum of A, and avoid wall-parallel powers for the chosen events. Set
+
+    c_j = sum_i A_ij,
+    lambda_j,+ = (1-c_j/n)/2,
+    lambda_j,- = (1+c_j/n)/2.
+
+These weights are strictly positive, and
+
+    sum_j [lambda_j,+ (g_j+n s_j) + lambda_j,- (g_j-n s_j)] = 0.
+
+The row differences recover every s_j, so the 2d-row family has rank d. This is a direct exact stress certificate, stronger than a rank-only observation.
+
+## 7. Fixed-room realization and its scope
+
+`twist-action.py` computes only the two prescribed annulus systems and the already-saved167event words. It performs no orbit search and traces no affine-image paths. It constructs a piecewise-linear material deformation of the frozen triangular cellulation: original corners follow the supporting-line chart, smooth boundary grid points follow their wall fractions, the two marks follow their variables, and unmarked interior grid points may be held fixed. Each oriented cell edge carries the derivative of its developed vector. All112face cochains are checked closed in both coordinates. Core sums therefore evaluate actual absolute-period derivatives, independent of this auxiliary interior gauge.
+
+For every saved event, the checker reconstructs its original developed segments and locates crossings of horizontal or vertical annulus midlines. The difference of the second-half and first-half oriented crossing counts gives the intersection numbers of eta with the cores. At grid-line ambiguities every possible triangle assignment must produce the same annulus. No new direction is chosen or searched.
+
+Every row-annulus has height1; the cylinder widths divide48. The maps which shear each horizontal annulus by48, or each vertical annulus by48, glue along pointwise-fixed boundaries, since48 is divisible by every width. They fix all grid vertices and their directional prongs. They are affine maps of the original surface; their existence does not assume the deformed room is square-tiled.
+
+The exact calculation finds:
+
+- Horizontal and vertical core homology ranks are15, so class fixation does not follow from the earlier rank-one criterion.
+- No saved event has a vanishing horizontal twist increment after evaluation on the room chart;8have a vanishing vertical increment. None is fixed by both in this evaluated sense.
+- Nevertheless, **every horizontal core-period derivative is horizontal and every vertical one is vertical** throughout the fixed-wall-direction deformation chart. The event increments therefore satisfy the alignment needed by Section6.
+- The combined signed slopes have rank26 in the29-dimensional chart, whose three symmetry dimensions are translation and uniform scaling.
+- An exact26-slope basis yields52affine-image rows at powers+2and-2 of the shear48 maps, all away from wall-parallel directions. They have rank26 and a strictly positive rational zero stress. The smallest weight is12955111/32221952.
+
+This offers a structural explanation of signed spanning in this fixed room, contingent on independent validation of the relative-chain/action calculation and the admissibility transfer in Section6. It does not establish a universal parity-room sign theorem. The general tasks are to prove alignment geometrically for the intended family and show that these signed slope maps have only the similarity kernel. The recorded numerical rank is not a proof of either universal statement.
+
+
+CHECKER
+"""Prescribed multitwist increments of already-saved one-corner event classes.
+
+No affine image paths or directions are traced. Only the 167 frozen words are
+replayed to locate their intersections with the two fixed annulus systems.
+"""
+from fractions import Fraction as F
+from pathlib import Path
+from math import lcm
+import json, hashlib
+if not __debug__: raise RuntimeError('Exact checks require no -O')
+B=Path(__file__).resolve().parent
+D=json.loads((B/'coupling.json').read_text()); W=D['walls']; dim=W+4
+V=[tuple(map(F,p)) for p in D['room']['vertices']]
+S,T=[tuple(map(F,p)) for p in D['room']['marked']]
+normals=[tuple(map(F,n)) for n in D['offset_normals']]
+dot=lambda x,y:sum(a*b for a,b in zip(x,y))
+add=lambda x,y:tuple(a+b for a,b in zip(x,y))
+sub=lambda x,y:tuple(a-b for a,b in zip(x,y))
+mv=lambda A,x:tuple(dot(row,x) for row in A)
+mt=lambda A:tuple(zip(*A))
+mm=lambda A,C:tuple(tuple(dot(row,col) for col in zip(*C)) for row in A)
+cross=lambda x,y:x[0]*y[1]-x[1]*y[0]
+I=((F(1),F(0)),(F(0),F(1)))
+h=[dot(n,p) for n,p in zip(normals,V)]
+unit=lambda k:tuple(F(j==k) for j in range(dim))
+zero=tuple(F(0) for j in range(dim))
+
+# Preserve the frozen builder file; expose its existing local cell metadata only.
+ns={'__name__':'frozen_builder','__file__':str(B/'inputs/twist_origami.py')}
+source=(B/'inputs/twist_origami.py').read_text()
+assert source.count('return r,u,lab,sstart')==1
+exec(compile(source.replace('return r,u,lab,sstart','return r,u,lab,sstart,tris,sqs,sq'),str(B/'inputs/twist_origami.py'),'exec'),ns)
+r,u,labels,s0,tris,sqs,sq=ns['build']([tuple(map(int,p)) for p in V],tuple(map(int,S)),tuple(map(int,T)))
+n=len(r)
+
+def cycles(p):
+    unseen=set(range(n)); out=[]; membership={}
+    while unseen:
+        s=min(unseen); c=[]
+        while s in unseen:
+            membership[s]=len(out); unseen.remove(s);c.append(s);s=p[s]
+        assert s==c[0]; out.append(c)
+    return out,membership
+
+hc,hi=cycles(r);vc,vi=cycles(u)
+
+def vertex_forms(k):
+    a,b=normals[k-1],normals[k]; det=cross(a,b); assert det
+    return tuple((b[1]*unit((k-1)%W)[j]-a[1]*unit(k)[j])/det for j in range(dim)),tuple((-b[0]*unit((k-1)%W)[j]+a[0]*unit(k)[j])/det for j in range(dim))
+cv=[vertex_forms(i) for i in range(W)]
+
+def point_forms(p):
+    if p in V: return cv[V.index(p)]
+    if p==S: return unit(W),unit(W+1)
+    if p==T: return unit(W+2),unit(W+3)
+    for i,a in enumerate(V):
+        b=V[(i+1)%W]; d=sub(b,a)
+        if cross(sub(p,a),d)==0 and dot(sub(p,a),sub(p,b))<=0:
+            j=0 if d[0] else 1; t=(p[j]-a[j])/d[j]
+            return tuple(tuple((1-t)*x+t*y for x,y in zip(cv[i][k],cv[(i+1)%W][k])) for k in (0,1))
+    # A material PL triangulation may fix all unmarked interior grid vertices.
+    return zero,zero
+
+pf={tuple(p):point_forms(tuple(p)) for tri in tris for p in tri}
+
+def transform_forms(g,f):
+    return tuple(tuple(sum(g[k][l]*f[l][j] for l in (0,1)) for j in range(dim)) for k in (0,1))
+
+def edge_forms(s,axis):
+    candidates=[]
+    for ti,g in sqs[s]:
+        tri=tris[ti]; pts=[mv(g,p) for p in tri]
+        low=(min(p[0] for p in pts),min(p[1] for p in pts))
+        for k,p in enumerate(pts):
+            q=pts[(k+1)%3]
+            if p[1-axis]==q[1-axis]==low[1-axis] and abs(q[axis]-p[axis])==1:
+                a,b=tri[k],tri[(k+1)%3]
+                if q[axis]<p[axis]:a,b=b,a
+                f=tuple(sub(pf[b][z],pf[a][z]) for z in (0,1))
+                candidates.append(transform_forms(g,f))
+    assert candidates and all(x==candidates[0] for x in candidates)
+    return candidates[0]
+
+he=[edge_forms(s,0) for s in range(n)];ve=[edge_forms(s,1) for s in range(n)]
+for s in range(n):
+    for k in (0,1):
+        assert add(he[s][k],ve[r[s]][k])==add(he[u[s]][k],ve[s][k]), ('face cochain not closed',s,k, sqs[s], sqs[r[s]], sqs[u[s]], sub(add(he[s][k],ve[r[s]][k]),add(he[u[s]][k],ve[s][k])))
+
+def total_forms(c,edges):
+    return tuple(tuple(sum(edges[s][k][j] for s in c) for j in range(dim)) for k in (0,1))
+hforms=[total_forms(c,he) for c in hc];vforms=[total_forms(c,ve) for c in vc]
+ah=lcm(*map(len,hc));av=lcm(*map(len,vc))
+
+def reflect(i):
+    nn=normals[i];d=dot(nn,nn)
+    return tuple(tuple(F(k==l)-2*nn[k]*nn[l]/d for l in (0,1)) for k in (0,1)),tuple(2*h[i]*x/d for x in nn)
+
+# Exact location in the original triangular cellulation, at a fixed point of an
+# already-saved segment. On cell edges both choices must give the same annulus.
+def annulus(point,g,axis):
+    opts=set(); membership=hi if axis==1 else vi
+    for ti,tri in enumerate(tris):
+        dets=[cross(sub(tri[(k+1)%3],tri[k]),sub(point,tri[k])) for k in range(3)]
+        if min(dets)>=0 or max(dets)<=0:
+            opts.add(membership[sq[(ti,g)]])
+    assert len(opts)==1,(point,g,axis,opts)
+    return opts.pop()
+
+assert all(not any(f[1]) for f in hforms), 'horizontal cores can drift vertically'
+assert all(not any(f[0]) for f in vforms), 'vertical cores can drift horizontally'
+records=[]
+slopes=[]
+base_rows=[]
+for e in D['events']:
+    target=tuple(dot(tuple(map(F,row)),tuple(map(F,D['offset_base_point']))) for row in e['target_image_forms'])
+    delta=sub(target,S);corner=tuple(dot(tuple(map(F,row)),tuple(map(F,D['offset_base_point']))) for row in e['corner_image_forms'])
+    assert corner==add(S,tuple(x/2 for x in delta))
+    O=I;shift=(F(0),F(0));start=F(0);cuts=[]
+    for i in e['word']:
+        nn=mv(O,normals[i]);den=dot(nn,delta);assert den
+        t=(h[i]-dot(nn,sub(S,shift)))/den
+        assert start<=t<=1
+        cuts.append((start,t,O,shift)); start=t
+        R,b=reflect(i);shift=add(shift,mv(O,b));O=mm(O,R)
+    cuts.append((start,F(1),O,shift))
+    assert add(mv(O,T),shift)==target
+    incs=[]
+    for axis,cs,forms,shear in ((1,hc,hforms,ah),(0,vc,vforms,av)):
+        counts=[0]*len(cs)
+        if delta[axis]:
+            lo,up=sorted((S[axis],target[axis]));assert lo.denominator==up.denominator==1
+            for level in range(int(lo),int(up)):
+                tau=(F(level)+F(1,2)-S[axis])/delta[axis]
+                assert 0<tau<1 and tau!=F(1,2)
+                assignments=[]
+                for a,b,g,sh in cuts:
+                    if a<=tau<=b and a<b:
+                        phys=mv(mt(g),sub(add(S,tuple(tau*x for x in delta)),sh))
+                        assignments.append(annulus(phys,g,axis))
+                assert assignments and len(set(assignments))==1
+                first_or_second=1 if tau>F(1,2) else -1
+                counts[assignments[0]]+=first_or_second*(1 if delta[axis]>0 else -1)
+        assert sum(counts)==0 # zero holonomy of eta in the transverse direction
+        coeff=[F(shear,len(c))*a for a,c in zip(counts,cs)]
+        # Positive derivative shears x+=a*y or y+=b*x fix all grid vertices.
+        assert sum(t*len(c) for t,c in zip(coeff,cs))==0
+        response=tuple(tuple(sum(t*f[k][j] for t,f in zip(coeff,forms)) for j in range(dim)) for k in (0,1))
+        incs.append({'annulus_crossing_difference':counts,'twist_coefficients':list(map(str,coeff)),
+            'zero_on_room_deformations':not any(x for row in response for x in row),
+            'period_derivative':[[str(x) for x in row] for row in response]})
+    E=[tuple(F(a)-2*F(b)+F(j==W+k) for j,(a,b) in enumerate(zip(e['target_image_forms'][k],e['corner_image_forms'][k]))) for k in (0,1)]
+    half=tuple(x/2 for x in delta); p,q=half; side=F(e['side'])
+    primitive=tuple(map(F,e['direction'])); factor=next(x/y for x,y in zip(half,primitive) if y)
+    assert factor>0 and half==tuple(factor*x for x in primitive)
+    g0=tuple(-side*(p*E[1][j]-q*E[0][j]) for j in range(dim))
+    assert g0==tuple(factor*F(x) for x in e['offset_gradient'])
+    base_rows.extend((g0,g0))
+    H=list(map(F,incs[0]['period_derivative'][0])); Z=list(map(F,incs[1]['period_derivative'][1]))
+    hs=tuple(side*q*(x-ah*y) for x,y in zip(H,E[1]))
+    vs=tuple(side*p*(av*x-y) for x,y in zip(E[0],Z))
+    slopes.extend((hs,vs))
+    records.append({'horizontal_row_slope':list(map(str,hs)),'vertical_row_slope':list(map(str,vs)),'index':e['index'],'direction':e['direction'],'horizontal':incs[0],'vertical':incs[1],
+        'nonaxis':all(e['direction']), 'both_zero':all(x['zero_on_room_deformations'] for x in incs)})
+
+def rank(rows):
+    bs={}
+    for row in rows:
+        row=list(map(F,row))
+        for k,v in sorted(bs.items()):
+            if row[k]:
+                a=row[k];row=[x-a*y for x,y in zip(row,v)]
+        k=next((i for i,x in enumerate(row) if x),None)
+        if k is not None:
+            a=row[k];bs[k]=[x/a for x in row]
+    return len(bs)
+# Extract an independent slope basis, carrying exact representations.
+basis={}; chosen=[]
+for i,original in enumerate(slopes):
+    row=list(original); combo={i:F(1)}
+    for k,(v,c) in sorted(basis.items()):
+        a=row[k]
+        if a:
+            row=[x-a*y for x,y in zip(row,v)]
+            for j,t in c.items(): combo[j]=combo.get(j,F(0))-a*t
+    k=next((j for j,x in enumerate(row) if x),None)
+    if k is not None:
+        a=row[k]; basis[k]=([x/a for x in row],{j:t/a for j,t in combo.items() if t});chosen.append(i)
+assert len(chosen)==W+1
+A=[]
+for i in chosen:
+    row=list(base_rows[i]);combo={}
+    for k,(v,c) in sorted(basis.items()):
+        a=row[k]
+        if a:
+            row=[x-a*y for x,y in zip(row,v)]
+            for j,t in c.items():combo[j]=combo.get(j,F(0))+a*t
+    assert not any(row)
+    coeff=[combo.get(j,F(0)) for j in chosen]
+    assert all(sum(t*slopes[j][k] for t,j in zip(coeff,chosen))==base_rows[i][k] for k in range(dim))
+    A.append(coeff)
+# A common finite power makes a strictly positive zero stress explicit.
+colbound=max(sum(abs(row[j]) for row in A) for j in range(len(chosen)))
+power=colbound.numerator//colbound.denominator+1
+def orbit_direction(i,sign):
+    e=D['events'][i//2];direction=tuple(map(F,e['direction']))
+    p,q=direction
+    return (p+sign*power*ah*q,q) if i%2==0 else (p,q+sign*power*av*p)
+def avoids_wall_parallel(w):return w[0]*w[1]!=0 and abs(w[0])!=abs(w[1])
+while not all(avoids_wall_parallel(orbit_direction(i,t)) for i in chosen for t in (-1,1)):power+=1
+orbit_rows=[];weights=[];packets=[]
+for k,i in enumerate(chosen):
+    diff=-sum(row[k] for row in A)/power
+    assert abs(diff)<1
+    for sign in (1,-1):
+        weight=(1+sign*diff)/2;assert weight>0
+        row=tuple(x+sign*power*y for x,y in zip(base_rows[i],slopes[i]))
+        orbit_rows.append(row);weights.append(weight)
+        packets.append({'saved_index':i//2,'twist':'horizontal' if i%2==0 else 'vertical','power':sign*power,'weight':str(weight),'row':list(map(str,row))})
+assert rank(orbit_rows)==W+1
+assert all(sum(t*row[j] for t,row in zip(weights,orbit_rows))==0 for j in range(dim))
+selected=[x['index'] for x in records if x['both_zero'] and x['nonaxis']]
+rows=[e['offset_gradient'] for e in D['events'] if e['index'] in selected]
+summary={'saved_events':len(records),'horizontal_evaluated_fixed':sum(x['horizontal']['zero_on_room_deformations'] for x in records),
+    'vertical_evaluated_fixed':sum(x['vertical']['zero_on_room_deformations'] for x in records),'both_evaluated_fixed_nonaxis':len(selected),
+    'selected_indices':selected,'selected_row_rank':rank(rows),'full_quotient_rank_required':W+1,'all_core_derivatives_aligned':True,'signed_orbit_slope_rank':rank(slopes),'horizontal_shear':ah,'vertical_shear':av,'orbit_packets':len(packets),'common_integer_power':power,'strict_positive_orbit_stress':True,'orbit_row_rank':rank(orbit_rows),'minimum_stress_weight':str(min(weights))}
+assert len(records)==167
+out={'status':'EXACT_FIXED_EVENT_ACTION_PASS','scope':'Only frozen words; prescribed horizontal/vertical annuli; no affine-image optical replay or discovery.',
+    'summary':summary,'orbit_stress_certificate':packets,'base_in_slope_basis':[[str(x) for x in row] for row in A],'chosen_slope_indices':chosen,'core_period_derivatives':{'horizontal':[[list(map(str,row)) for row in f] for f in hforms],'vertical':[[list(map(str,row)) for row in f] for f in vforms]},'events':records,'input_sha256':{str(p.relative_to(B)):hashlib.sha256(p.read_bytes()).hexdigest() for p in (B/'coupling.json',B/'inputs/twist_origami.py')}}
+(B/'twist-action.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(summary,indent=2))

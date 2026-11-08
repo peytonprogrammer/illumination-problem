@@ -1,0 +1,19 @@
+Two bounded attempts at a genus/singularity budget,2026-11-02
+
+Exact target (unproved): an orthogonal simple room with a dark pair of distinct interior points has at least9reflex corners, equivalently standard-unfolding genus>=10 and walls>=22. No lattice/mark/exception assumptions for this target. No goal auto-execution is resumed.
+
+Attempt1 — independent charging of the16lift pairs
+Gap: extract independent singularity costs from darkness of the entire physical pair.
+Success criterion: a valid charge lower bound, not merely restating all lift pairings.
+Test: reduce the16conditions by diagonal G={1,H,V,HV} symmetry while retaining the actual corner set F.
+Outcome:16ordered lift pairs split into only4diagonal G-orbits. Fixing a lift x of S, darkness is equivalent to nonconnection fromx to each of4target lifts gy. There is no16fold independent budget. A single physical corner has ONE lifted corner fixed byHV, so different obstructions may share corners. This kills the proposed naive pair-count route, but does not refute a subtler4orbit geometric inequality. One bounded attempt consumed.
+
+Attempt2 — charge global midpoint-halfturn obstructions
+Gap: replace informal cost independence by fixed-point counts of affine−I involutions, without assuming arbitrary darkness has this form.
+Success criterion: a rigorously scoped fixed-point constraint or counterexample to the mechanism, keeping all regular convex corner lifts.
+Test: orthogonal unfolding has hyperelliptic involution iota=HV with Fix(iota)=F, all zeros of order2 at its fixed points. Examine any other affine involution h with derivative−I and whether Fix(h) can lie inF.
+Candidate hand result to independently verify: for genus>=2, either h=iota or h has exactly4fixed REGULAR points outsideF, and genus is odd. Thus h different fromiota cannot have Fix(h) subsetF. It cannot certify a distinct physical dark pair merely by forcing its midpoint to an actual corner. The only globally corner-supported halfturn isiota, which pairs lifts of the SAME physical point. This is a conditional no-go, not a statement that all darkness is impossible.
+Proof is in findings.txt; the fresh tools-disabled Opus critique accepts it with scope cautions recorded there. A third attempt is not authorized by this bounded plan.
+
+Retirement comparison
+The old inverse-quotient idea assumed a family of global−I involutions covering target lifts. Its finiteness/seed reduction did not establish their existence. The present test addresses that exact assumption on the stronger orthogonal/disk/hyperelliptic class. It is not a period-rank, cylinder-span, sign-theorem, seed-reachability, wall-parameter encoding or larger finite census argument. Existing finite-dark-pair theorems also warn against an everywhere-valid new halfturn pairing; we seek an elementary fixed-point explanation, not another use of a broad abstract bound.

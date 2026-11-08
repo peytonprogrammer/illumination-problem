@@ -1,0 +1,1615 @@
+Independently review the following mathematical lemmas. You have no tools. Give ACCEPT or REJECT separately for: (1) mirror-line-offset local chart, (2) exact first-half-minus-second-half wall-load identity and signs, (3) opposite-side cancellation with its stated common-corner-affine-form hypothesis, (4) structural rank bound W-1 for paired rows, (5) interpretation and scope of the fixed exact dual control. Challenge any inference that would accidentally claim the open sign theorem. Do not assume numerical LP output proves positivity or nonpositivity. The numerical LP proposed the deformation, then its gauge constraints and row signs were verified exactly with fractions. State any missing hypotheses. These are intended as proof infrastructure for a global research question, not a completed reduction theorem.
+
+# A supporting-line formulation of the sign theorem
+
+[done] General algebraic lemmas and one exact frozen-data control.
+[waiting on Claude] Independent mathematical review requested.
+The positivity theorem remains open.
+
+## 1. Eliminate artificial independence of corner motion
+
+Fix a strictly simple polygon's cyclic wall directions, with no consecutive parallel walls. Choose a fixed normal n_i for each wall and write its supporting line as n_i dot x=h_i. The adjacent-normal matrices are invertible. In a neighborhood of the base polygon its vertices are exactly
+
+    c_i=B_i h,
+    n_(i-1) dot c_i=h_(i-1), n_i dot c_i=h_i.
+
+The matrices B_i are constant. Positivity of wall lengths and absence of nonincident contacts are open conditions, so (h,s,t) is a local chart of dimension W+4. It has no closure constraint: intersecting the cyclic supporting lines closes the polygon automatically. This is equivalent to the earlier W+6 edge-length/mark chart with two closure equations. The corner is no longer an independent variable.
+
+Reflection in wall i has fixed linear part and offset-linear translation:
+
+    r_i(x)=R_i x+b_i(h),
+    R_i=Id-2 n_i n_i^T/|n_i|^2,
+    b_i(h)=2h_i n_i/|n_i|^2.
+
+Let a fixed one-corner event have wall word i_1,...,i_m. Define prefix maps
+
+    F_j(x)=O_j x+B_j(h), O_0=Id, B_0=0,
+    O_j=O_(j-1) R_(i_j),
+    B_j=B_(j-1)+O_(j-1)b_(i_j).
+
+These maps are affine in h, not approximations.
+
+Choose a prefix index r that represents the developed event corner. Put
+
+    C(h,s)=F_r(c)-s,
+    A(h,s,t)=F_m(t)-s.
+
+At the parity event, A=2w and C=w for primitive nonzero w. The exported signed functional is f=sigma det(A,C). Its derivative is
+
+    g(delta)=sigma det(w,delta E), E=2C-A.
+
+This fixes the previously audited sign convention.
+
+## 2. Exact first-half-minus-second-half wall identity
+
+Expanding the prefix shifts gives
+
+    E=2O_r c-O_m t-s
+       + sum_(j<=r) O_(j-1)b_(i_j)
+       - sum_(j>r) O_(j-1)b_(i_j).
+
+The common prefix of the full target map is present twice in the corner image and once in the target image, leaving coefficient +1. The suffix appears only in the target image, leaving -1. Thus the identity follows directly from the affine prefix recurrence.
+
+For wall-hit j let epsilon_j be +1 before the split and -1 after it. Its contribution to the scalar event row is
+
+    sigma * 2 epsilon_j det(w,O_(j-1)n_(i_j))/|n_(i_j)|^2 * delta h_(i_j).
+
+The explicit corner contribution becomes a load on its TWO incident wall offsets by substituting c=B_c h. The remaining mark terms are -sigma det(w,delta s) and -sigma det(w,O_m delta t).
+
+This is the complete coupling in one chart. It does not permit independently varying c while freezing its incident walls.
+
+If n_i=J d_i for a primitive wall tangent d_i and v_j=O_(j-1)^T w, orthogonality gives
+
+    det(w,O_(j-1)n_i)=det(O_(j-1)) dot(v_j,d_i).
+
+So the wall-load sign involves the tangential velocity and reflection parity. It is not an unsigned incidence count. The +/− split at the corner adds another sign. There is no immediate local positivity principle in this formula.
+
+## 3. Paired-side cancellation lemma
+
+Consider two admissible events at the same incoming primitive direction w, opposite exported sides +1/-1, and the SAME developed corner affine form C. This common-form hypothesis holds when the events share their pre-corner itinerary; incident reflections at c fix c identically and may be moved across the split without changing its image.
+
+Let their developed target differences be A_+, A_-. Then
+
+    g_+ + g_- = det(w,delta(A_- - A_+)).
+
+Proof: g_+=det(w,2delta C-delta A_+) and g_-=-det(w,2delta C-delta A_-). Add them. The explicit corner term, source term, and common pre-corner shift cancel. What remains compares two target-image continuations after the corner. Wall offsets in the two suffixes still matter; the cancellation does not erase them.
+
+The sum uses positive coefficients, so it is a valid consequence of the original two darkness inequalities. A negative paired sum forces at least one original event negative. It is therefore a useful sufficient obstruction, not a replacement for every original event.
+
+These paired loop rows have zero source-coordinate coefficients and are invariant under translating the room and target together, while leaving the source independent. They also annihilate uniform scale of the room and target. Hence in the W+4 chart they have at least five independent kernel directions (two source motions, two room-plus-target translations, one room-plus-target scaling), giving rank at most W-1. The full sign theorem needs rank W+1 modulo actual family symmetries for a room with diagonal walls. Paired loops alone necessarily lose at least two needed dimensions.
+
+This rank bound is structural, not a sampling claim. It prevents mistaking the cancellation lemma itself for a complete positivity argument.
+
+## 4. Exact control: why the diagonal can matter
+
+The frozen room parity-W25-24 has 25 walls and 167 supplied event rows. All167 replay with their supplied direction and side; the new offset-chart rows pull back EXACTLY to the previously exported rows modulo the old closure equations. They annihilate the two translations and uniform scale exactly.
+
+An LP proposes a normalized deformation; exact active-equation reconstruction then verifies it with fractions. The source is fixed, total primitive wall length has zero variation, and the target moves by (0,1/13). All102SAVEDaxis-corner rows are nonnegative:94zero and8strictlypositive. This is a tangent-cone control for the saved subset, not a dark deformation or an exhaustive statement about all possible axis events.
+
+Six saved events at the previously identified diagonal repair corner (1,3) are negative. For example:
+
+| Incoming direction | Side | Local corner-and-mark value | Wall-hit value | Coupled value |
+|---|---:|---:|---:|---:|
+|(-5,-11)|+1|132/13|-145/13|-1|
+|(7,-3)|+1|83/13|-96/13|-1|
+|(7,-3)|-1|-69/13|-9/13|-6|
+
+The first two would point the wrong way if the wall terms were discarded. The (7,-3) pair has total -7; its explicit corner/source/common-prefix terms cancel by Lemma3, so its negative obstruction is also a target-image loop obstruction.
+
+There are19opposite-side pairs in this saved packet. All19satisfy the exact cancellation identity. Their loop rows have exact rank17, below the structural maximum24 and below the full-event rank26. A floating LP finds no strictly positive dependence for these19rows; this numerical observation is not used as a proof. The rank deficit alone proves the saved paired loops cannot supply the full certificate.
+
+## 5. Precise remaining theorem
+
+After substituting the coupled corner terms into wall offsets, prove that actual admissible event rows generate all dual directions modulo the actual symmetry kernel. A sufficient finite form is full quotient rank plus strictly positive weights lambda_e with
+
+    sum_e lambda_e g_e=0.
+
+That weighted identity must balance each wall offset and each mark coordinate. It cannot be obtained from a cancellation that discards the wall suffixes or the needed mark directions.
+
+For an infinite event family, the exact target remains: every nonsymmetry delta has some admissible g_e(delta)<0. Strict negativity gives an open cover of the unit quotient sphere and hence a finite subcover, PROVIDED the one-corner illumination implication persists locally. The algebra above supplies no such global signed balance by itself.
+
+Next proof target: identify a reversible or cycle-balance construction that combines target-image loop constraints with the missing mark-control directions, using actual admissible continuations. The example above is a fixed exact test any proposed balance must explain. No new ray search is justified merely by this reformulation.
+
+## Scope
+
+All geometric statements concern a fixed cyclic direction family near a strictly simple base room. No arbitrary-angle isolation, all-parity-room positivity, extension to the non-parity22construction, or degeneration exclusion is claimed. The8-axis-plus1diagonal conjecture remains an observed finite-family pattern.
+
+
+EXACT CHECK SOURCE:
+"""Supporting-line stress identity on one frozen event packet. No new rays."""
+from pathlib import Path
+from fractions import Fraction as F
+import importlib.util,json,hashlib
+ROOT=Path(__file__).resolve().parent;I=ROOT/'inputs'
+spec=importlib.util.spec_from_file_location('fixed_event_model',I/'event_model.py')
+m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+room=json.loads((I/'room.json').read_text());events=json.loads((I/'events.json').read_text())['rows']
+stored=json.loads((I/'funcs.json').read_text());old=m.EventModel(room)
+W=old.W;dim=W+4;zero=(F(0),)*dim
+unit=lambda i:tuple(F(i==j) for j in range(dim))
+add=lambda a,b:tuple(x+y for x,y in zip(a,b))
+scale=lambda a,v:tuple(a*x for x in v)
+dot=lambda a,b:sum(x*y for x,y in zip(a,b))
+cross=lambda a,b:a[0]*b[1]-a[1]*b[0]
+matmul=m.matmul
+ID=((F(1),F(0)),(F(0),F(1)))
+
+def mv(A,v):return tuple(sum(A[j][k]*v[k] for k in (0,1)) for j in (0,1))
+def mf(A,v):return tuple(add(scale(A[j][0],v[0]),scale(A[j][1],v[1])) for j in (0,1))
+def pf(A,b,p):return tuple(add(x,y) for x,y in zip(mf(A,p),b))
+def evaluate(p):return tuple(dot(row,theta) for row in p)
+def formcross(w,p):return tuple(w[0]*p[1][j]-w[1]*p[0][j] for j in range(dim))
+normals=[(-d[1],d[0]) for d in old.dirs]
+theta=tuple(F(dot(n,c)) for n,c in zip(normals,old.vertices))+tuple(map(F,old.s+old.t))
+sform=(unit(W),unit(W+1));tform=(unit(W+2),unit(W+3))
+cornerforms=[]
+for c in range(W):
+    p=(c-1)%W;a=normals[p];b=normals[c];det=cross(a,b);assert det
+    cornerforms.append((scale(1/F(det),add(scale(b[1],unit(p)),scale(-a[1],unit(c)))),
+                        scale(1/F(det),add(scale(-b[0],unit(p)),scale(a[0],unit(c))))))
+assert all(evaluate(p)==tuple(map(F,c)) for p,c in zip(cornerforms,old.vertices))
+reflect=[]
+for j,n in enumerate(normals):
+    nn=dot(n,n)
+    R=tuple(tuple(F(int(a==b))-F(2*n[a]*n[b],nn) for b in (0,1)) for a in (0,1))
+    b=tuple(scale(F(2*n[a],nn),unit(j)) for a in (0,1))
+    reflect.append((R,b))
+# Pullback of offsets and marks to the prior edge-length/closure chart.
+K=[add(scale(n[0],p[0]),scale(n[1],p[1])) for n,p in zip(normals,old.vforms)]+list(old.sform)+list(old.tform)
+pullback=lambda g:tuple(sum(g[j]*K[j][k] for j in range(dim)) for k in range(old.dim))
+records=[]
+for index,e in enumerate(events):
+    w=tuple(e['dir']);side=e['side'];corner=old.vertices.index(tuple(e['corner']))
+    replay=old.event(w,side,maxhits=2000)
+    assert replay['status']=='EVENT',(index,replay)
+    assert replay['corner']==tuple(e['corner'])
+    assert tuple(map(F,replay['unfolded_target_minus_s']))==tuple(2*v for v in w)
+    word=replay['word'];O=ID;shift=(zero,zero);states=[(O,shift)];translations=[]
+    for wall in word:
+        R,b=reflect[wall];translations.append(mf(O,b))
+        shift=tuple(add(x,y) for x,y in zip(shift,translations[-1]));O=matmul(O,R);states.append((O,shift))
+    target=pf(O,shift,tform)
+    matches=[r for r,(Or,br) in enumerate(states) if evaluate(pf(Or,br,cornerforms[corner]))==tuple(old.s[k]+w[k] for k in (0,1))]
+    assert matches,(index,word)
+    r=matches[0];Or,br=states[r];C=pf(Or,br,cornerforms[corner])
+    E=tuple(add(add(scale(2,C[k]),scale(-1,target[k])),scale(-1,sform[k])) for k in (0,1))
+    assert evaluate(E)==(0,0)
+    local=tuple(add(add(scale(2,mf(Or,cornerforms[corner])[k]),scale(-1,mf(O,tform)[k])),scale(-1,sform[k])) for k in (0,1))
+    walls=(zero,zero);counts=[F(0)]*W
+    for j,(wall,tj) in enumerate(zip(word,translations)):
+        eps=1 if j<r else -1
+        walls=tuple(add(walls[k],scale(eps,tj[k])) for k in (0,1))
+        Oj=states[j][0];n=normals[wall];nn=dot(n,n)
+        coeff=side*F(2*eps,nn)*cross(w,mv(Oj,n))
+        v=mv(tuple(zip(*Oj)),w);det=cross(Oj[0],Oj[1])
+        assert coeff==side*F(2*eps,nn)*det*dot(v,old.dirs[wall])
+        counts[wall]+=coeff
+    assert tuple(add(local[k],walls[k]) for k in (0,1))==E
+    full=scale(side,formcross(w,E));glocal=scale(side,formcross(w,local));gwalls=scale(side,formcross(w,walls))
+    assert tuple(counts)+tuple(F(0) for _ in range(4))==gwalls
+    expected=tuple(map(F,replay['gradient']))
+    assert old.project(pullback(full))==old.project(expected),(index,'chart pullback')
+    saved=tuple(map(F,stored['funcs'][index]));assert m.canon(old.project(saved))==m.canon(old.project(expected)),(index,'saved row')
+    # Actual chart symmetries: two translations and uniform scale.
+    for axis in (0,1):
+        trans=tuple(F(n[axis]) for n in normals)+tuple(F(j%2==axis) for j in range(4))
+        assert dot(full,trans)==0
+    assert dot(full,theta)==0
+    records.append({'index':index,'direction':w,'side':side,'corner':e['corner'],'word':word,
+                    'prefix_hits':r,'all_hits':len(word),'equivalent_split_positions':matches,
+                    'offset_gradient':list(map(str,full)),
+                    'corner_image_forms':[[str(x) for x in row] for row in C],
+                    'target_image_forms':[[str(x) for x in row] for row in target],
+                    'local_corner_and_marks_gradient':list(map(str,glocal)),
+                    'first_minus_second_wall_gradient':list(map(str,gwalls))})
+out={'status':'PASS','tag':room['tag'],'walls':W,'offset_dimension':dim,'length_chart_dimension':old.dim,
+     'events_checked':len(records),'scope':'Exact new wall-stress identity and chart pullback on fixed saved events; no positive-span theorem or optical discovery.',
+     'room':room,'offset_normals':normals,'offset_base_point':list(map(str,theta)),
+     'events':records,'input_hashes':{str(p.relative_to(I)):hashlib.sha256(p.read_bytes()).hexdigest() for p in I.rglob('*') if p.is_file() and '__pycache__' not in p.parts}}
+(ROOT/'coupling.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps({k:v for k,v in out.items() if k not in ('events','room','offset_base_point','input_hashes','offset_normals')},indent=2))
+
+
+PAIRED CHECK SOURCE:
+"""Paired-side corner elimination on frozen affine event forms."""
+from pathlib import Path
+from fractions import Fraction as F
+from collections import defaultdict
+import json
+import numpy as np
+from scipy.optimize import linprog
+ROOT=Path(__file__).resolve().parent
+j=json.loads((ROOT/'coupling.json').read_text());dim=j['offset_dimension'];W=j['walls']
+def dot(a,b):return sum(x*y for x,y in zip(a,b))
+def rank(rows):
+    A=[list(map(F,row)) for row in rows];k=0
+    for c in range(dim):
+        p=next((i for i in range(k,len(A)) if A[i][c]),None)
+        if p is None:continue
+        A[k],A[p]=A[p],A[k];v=A[k][c];A[k]=[x/v for x in A[k]]
+        for i in range(k+1,len(A)):
+            if A[i][c]:v=A[i][c];A[i]=[x-v*y for x,y in zip(A[i],A[k])]
+        k+=1
+    return k
+
+groups=defaultdict(dict)
+for e in j['events']:groups[(tuple(e['direction']),tuple(e['corner']))][e['side']]=e
+out=[];rows=[]
+for key,sides in sorted(groups.items()):
+    if set(sides)!={-1,1}:continue
+    plus,minus=sides[1],sides[-1]
+    Cplus=[[F(x) for x in row] for row in plus['corner_image_forms']]
+    Cminus=[[F(x) for x in row] for row in minus['corner_image_forms']]
+    assert Cplus==Cminus,key
+    gp=list(map(F,plus['offset_gradient']));gm=list(map(F,minus['offset_gradient']));row=tuple(a+b for a,b in zip(gp,gm))
+    Tp=[[F(x) for x in r] for r in plus['target_image_forms']];Tm=[[F(x) for x in r] for r in minus['target_image_forms']]
+    w=key[0]
+    expected=tuple(w[0]*(Tm[1][k]-Tp[1][k])-w[1]*(Tm[0][k]-Tp[0][k]) for k in range(dim))
+    assert row==expected and row[W]==row[W+1]==0
+    rows.append(row)
+    out.append({'direction':key[0],'corner':key[1],'plus_index':plus['index'],'minus_index':minus['index'],'loop_gradient':list(map(str,row)),
+                'corner_forms_cancel':True,'source_coefficients_cancel':True})
+assert rows
+M=np.array([[float(v/max(map(abs,row))) for v in row] for row in rows if any(row)])
+lp=linprog(np.ones(len(M)),A_eq=M.T,b_eq=np.zeros(dim),bounds=[(1,None)]*len(M),method='highs')
+assert lp.status in (0,2)
+result={'status':'PASS','tag':j['tag'],'paired_sides':len(rows),'nonzero_loop_rows':len(M),
+        'exact_full_rank':rank([e['offset_gradient'] for e in j['events']]),
+        'exact_loop_rank':rank(rows),'structural_max_loop_rank':W-1,
+        'loop_positive_dependence_float':lp.status==0,
+        'loop_positive_dependence_scope':'Numerical exploration only; not an exact positive certificate.',
+        'paired_events':out,
+        'scope':'Exact paired-gradient identity on fixed side pairs. A sufficient sign theorem for all rooms remains open; source-fixed paired loops alone cannot control moving source relative to room and target.'}
+(ROOT/'sign-identity.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if k!='paired_events'},indent=2))
+
+
+DUAL CONTROL:
+{
+  "status": "EXACT_PASS",
+  "tag": "parity-W25-24",
+  "offset_deformation": [
+    "-1/26",
+    "-1/52",
+    "-1/26",
+    "0",
+    "-1/52",
+    "1",
+    "-7/13",
+    "-1/52",
+    "1/26",
+    "-1/13",
+    "-1/52",
+    "-3/26",
+    "0",
+    "-5/52",
+    "-3/26",
+    "1/13",
+    "-1/52",
+    "3/52",
+    "0",
+    "-1/52",
+    "-1/26",
+    "0",
+    "-1/52",
+    "-1/52",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/13"
+  ],
+  "vertex_deformations": [
+    [
+      "0",
+      "-1/26"
+    ],
+    [
+      "1/52",
+      "-1/26"
+    ],
+    [
+      "1/52",
+      "-1/52"
+    ],
+    [
+      "1/26",
+      "0"
+    ],
+    [
+      "1/52",
+      "0"
+    ],
+    [
+      "1/52",
+      "53/52"
+    ],
+    [
+      "-6/13",
+      "7/13"
+    ],
+    [
+      "1/52",
+      "7/13"
+    ],
+    [
+      "1/52",
+      "3/52"
+    ],
+    [
+      "1/26",
+      "1/13"
+    ],
+    [
+      "1/52",
+      "1/13"
+    ],
+    [
+      "1/52",
+      "5/52"
+    ],
+    [
+      "0",
+      "3/26"
+    ],
+    [
+      "0",
+      "5/52"
+    ],
+    [
+      "-1/52",
+      "5/52"
+    ],
+    [
+      "-1/26",
+      "1/13"
+    ],
+    [
+      "-1/52",
+      "1/13"
+    ],
+    [
+      "-1/52",
+      "3/52"
+    ],
+    [
+      "0",
+      "3/52"
+    ],
+    [
+      "0",
+      "1/52"
+    ],
+    [
+      "-1/52",
+      "1/52"
+    ],
+    [
+      "-1/26",
+      "0"
+    ],
+    [
+      "-1/52",
+      "0"
+    ],
+    [
+      "-1/52",
+      "-1/52"
+    ],
+    [
+      "0",
+      "-1/52"
+    ]
+  ],
+  "mark_deformations": [
+    "0",
+    "0",
+    "0",
+    "1/13"
+  ],
+  "gauge": "Source fixed and total primitive edge-length variation zero",
+  "axis_rows": 102,
+  "axis_strictly_positive": 8,
+  "axis_zero": 94,
+  "axis_negative": 0,
+  "all_rows_negative": 15,
+  "repair_corner": [
+    1,
+    3
+  ],
+  "repair_negative_events": [
+    {
+      "index": 16,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        -9,
+        -11
+      ],
+      "side": 1,
+      "local_value": "-298/13",
+      "wall_value": "12/13",
+      "coupled_value": "-22",
+      "prefix_hits": 9,
+      "all_hits": 19
+    },
+    {
+      "index": 33,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        -7,
+        -11
+      ],
+      "side": -1,
+      "local_value": "-13",
+      "wall_value": "-1",
+      "coupled_value": "-14",
+      "prefix_hits": 6,
+      "all_hits": 16
+    },
+    {
+      "index": 43,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        -7,
+        9
+      ],
+      "side": -1,
+      "local_value": "-226/13",
+      "wall_value": "-8/13",
+      "coupled_value": "-18",
+      "prefix_hits": 8,
+      "all_hits": 15
+    },
+    {
+      "index": 50,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        -5,
+        -11
+      ],
+      "side": 1,
+      "local_value": "132/13",
+      "wall_value": "-145/13",
+      "coupled_value": "-1",
+      "prefix_hits": 6,
+      "all_hits": 14
+    },
+    {
+      "index": 123,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        7,
+        -3
+      ],
+      "side": 1,
+      "local_value": "83/13",
+      "wall_value": "-96/13",
+      "coupled_value": "-1",
+      "prefix_hits": 4,
+      "all_hits": 9
+    },
+    {
+      "index": 124,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        7,
+        -3
+      ],
+      "side": -1,
+      "local_value": "-69/13",
+      "wall_value": "-9/13",
+      "coupled_value": "-6",
+      "prefix_hits": 4,
+      "all_hits": 8
+    }
+  ],
+  "axis_local_terms_rescued_by_wall_terms": [
+    {
+      "index": 12,
+      "corner": [
+        -1,
+        2
+      ],
+      "direction": [
+        -11,
+        10
+      ],
+      "side": 1,
+      "local_value": "-5/13",
+      "wall_value": "5/13",
+      "coupled_value": "0",
+      "prefix_hits": 10,
+      "all_hits": 19
+    },
+    {
+      "index": 15,
+      "corner": [
+        1,
+        2
+      ],
+      "direction": [
+        -10,
+        3
+      ],
+      "side": -1,
+      "local_value": "-8/13",
+      "wall_value": "8/13",
+      "coupled_value": "0",
+      "prefix_hits": 7,
+      "all_hits": 11
+    },
+    {
+      "index": 18,
+      "corner": [
+        0,
+        5
+      ],
+      "direction": [
+        -9,
+        -8
+      ],
+      "side": -1,
+      "local_value": "-4/13",
+      "wall_value": "4/13",
+      "coupled_value": "0",
+      "prefix_hits": 6,
+      "all_hits": 15
+    },
+    {
+      "index": 19,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        -9,
+        -2
+      ],
+      "side": -1,
+      "local_value": "-8/13",
+      "wall_value": "8/13",
+      "coupled_value": "0",
+      "prefix_hits": 4,
+      "all_hits": 9
+    },
+    {
+      "index": 21,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        -9,
+        4
+      ],
+      "side": 1,
+      "local_value": "-2/13",
+      "wall_value": "2/13",
+      "coupled_value": "0",
+      "prefix_hits": 5,
+      "all_hits": 10
+    },
+    {
+      "index": 22,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        -9,
+        10
+      ],
+      "side": -1,
+      "local_value": "-14/13",
+      "wall_value": "14/13",
+      "coupled_value": "0",
+      "prefix_hits": 10,
+      "all_hits": 18
+    },
+    {
+      "index": 26,
+      "corner": [
+        -1,
+        6
+      ],
+      "direction": [
+        -8,
+        -7
+      ],
+      "side": -1,
+      "local_value": "-3/13",
+      "wall_value": "3/13",
+      "coupled_value": "0",
+      "prefix_hits": 6,
+      "all_hits": 14
+    },
+    {
+      "index": 30,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        -8,
+        5
+      ],
+      "side": 1,
+      "local_value": "-2/13",
+      "wall_value": "2/13",
+      "coupled_value": "0",
+      "prefix_hits": 4,
+      "all_hits": 12
+    },
+    {
+      "index": 31,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        -8,
+        11
+      ],
+      "side": 1,
+      "local_value": "-15/13",
+      "wall_value": "15/13",
+      "coupled_value": "0",
+      "prefix_hits": 9,
+      "all_hits": 18
+    },
+    {
+      "index": 32,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        -7,
+        -12
+      ],
+      "side": -1,
+      "local_value": "-20/13",
+      "wall_value": "20/13",
+      "coupled_value": "0",
+      "prefix_hits": 8,
+      "all_hits": 18
+    },
+    {
+      "index": 35,
+      "corner": [
+        0,
+        7
+      ],
+      "direction": [
+        -7,
+        -10
+      ],
+      "side": 1,
+      "local_value": "-18/13",
+      "wall_value": "18/13",
+      "coupled_value": "0",
+      "prefix_hits": 7,
+      "all_hits": 15
+    },
+    {
+      "index": 42,
+      "corner": [
+        -1,
+        2
+      ],
+      "direction": [
+        -7,
+        8
+      ],
+      "side": -1,
+      "local_value": "-12/13",
+      "wall_value": "12/13",
+      "coupled_value": "0",
+      "prefix_hits": 7,
+      "all_hits": 13
+    },
+    {
+      "index": 46,
+      "corner": [
+        1,
+        2
+      ],
+      "direction": [
+        -6,
+        5
+      ],
+      "side": 1,
+      "local_value": "-9/13",
+      "wall_value": "9/13",
+      "coupled_value": "0",
+      "prefix_hits": 4,
+      "all_hits": 8
+    },
+    {
+      "index": 48,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        -6,
+        11
+      ],
+      "side": -1,
+      "local_value": "-36/13",
+      "wall_value": "36/13",
+      "coupled_value": "0",
+      "prefix_hits": 7,
+      "all_hits": 15
+    },
+    {
+      "index": 57,
+      "corner": [
+        0,
+        1
+      ],
+      "direction": [
+        -4,
+        -9
+      ],
+      "side": -1,
+      "local_value": "-7/13",
+      "wall_value": "124/13",
+      "coupled_value": "9",
+      "prefix_hits": 5,
+      "all_hits": 11
+    },
+    {
+      "index": 58,
+      "corner": [
+        1,
+        2
+      ],
+      "direction": [
+        -4,
+        -1
+      ],
+      "side": 1,
+      "local_value": "-1/13",
+      "wall_value": "1/13",
+      "coupled_value": "0",
+      "prefix_hits": 2,
+      "all_hits": 2
+    },
+    {
+      "index": 60,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        -4,
+        7
+      ],
+      "side": -1,
+      "local_value": "-2/13",
+      "wall_value": "2/13",
+      "coupled_value": "0",
+      "prefix_hits": 4,
+      "all_hits": 9
+    },
+    {
+      "index": 61,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        -4,
+        11
+      ],
+      "side": -1,
+      "local_value": "-9/13",
+      "wall_value": "9/13",
+      "coupled_value": "0",
+      "prefix_hits": 6,
+      "all_hits": 14
+    },
+    {
+      "index": 64,
+      "corner": [
+        1,
+        2
+      ],
+      "direction": [
+        -3,
+        10
+      ],
+      "side": -1,
+      "local_value": "-2/13",
+      "wall_value": "2/13",
+      "coupled_value": "0",
+      "prefix_hits": 5,
+      "all_hits": 10
+    },
+    {
+      "index": 68,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        -2,
+        5
+      ],
+      "side": 1,
+      "local_value": "-6/13",
+      "wall_value": "6/13",
+      "coupled_value": "0",
+      "prefix_hits": 3,
+      "all_hits": 5
+    },
+    {
+      "index": 72,
+      "corner": [
+        0,
+        7
+      ],
+      "direction": [
+        1,
+        -10
+      ],
+      "side": 1,
+      "local_value": "-15/13",
+      "wall_value": "15/13",
+      "coupled_value": "0",
+      "prefix_hits": 2,
+      "all_hits": 9
+    },
+    {
+      "index": 73,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        1,
+        -8
+      ],
+      "side": 1,
+      "local_value": "-6/13",
+      "wall_value": "6/13",
+      "coupled_value": "0",
+      "prefix_hits": 1,
+      "all_hits": 7
+    },
+    {
+      "index": 75,
+      "corner": [
+        1,
+        2
+      ],
+      "direction": [
+        1,
+        -4
+      ],
+      "side": -1,
+      "local_value": "-3/13",
+      "wall_value": "3/13",
+      "coupled_value": "0",
+      "prefix_hits": 1,
+      "all_hits": 2
+    },
+    {
+      "index": 79,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        1,
+        4
+      ],
+      "side": -1,
+      "local_value": "-4/13",
+      "wall_value": "4/13",
+      "coupled_value": "0",
+      "prefix_hits": 0,
+      "all_hits": 3
+    },
+    {
+      "index": 81,
+      "corner": [
+        0,
+        7
+      ],
+      "direction": [
+        1,
+        6
+      ],
+      "side": -1,
+      "local_value": "-9/13",
+      "wall_value": "9/13",
+      "coupled_value": "0",
+      "prefix_hits": 1,
+      "all_hits": 5
+    },
+    {
+      "index": 91,
+      "corner": [
+        0,
+        7
+      ],
+      "direction": [
+        2,
+        5
+      ],
+      "side": -1,
+      "local_value": "-7/13",
+      "wall_value": "7/13",
+      "coupled_value": "0",
+      "prefix_hits": 1,
+      "all_hits": 5
+    },
+    {
+      "index": 92,
+      "corner": [
+        -1,
+        6
+      ],
+      "direction": [
+        2,
+        7
+      ],
+      "side": 1,
+      "local_value": "-20/13",
+      "wall_value": "20/13",
+      "coupled_value": "0",
+      "prefix_hits": 2,
+      "all_hits": 8
+    },
+    {
+      "index": 97,
+      "corner": [
+        1,
+        2
+      ],
+      "direction": [
+        3,
+        -4
+      ],
+      "side": -1,
+      "local_value": "-5/13",
+      "wall_value": "5/13",
+      "coupled_value": "0",
+      "prefix_hits": 3,
+      "all_hits": 6
+    },
+    {
+      "index": 98,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        3,
+        -2
+      ],
+      "side": 1,
+      "local_value": "-1/13",
+      "wall_value": "1/13",
+      "coupled_value": "0",
+      "prefix_hits": 1,
+      "all_hits": 3
+    },
+    {
+      "index": 101,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        3,
+        8
+      ],
+      "side": 1,
+      "local_value": "-18/13",
+      "wall_value": "18/13",
+      "coupled_value": "0",
+      "prefix_hits": 5,
+      "all_hits": 11
+    },
+    {
+      "index": 105,
+      "corner": [
+        -1,
+        6
+      ],
+      "direction": [
+        4,
+        7
+      ],
+      "side": 1,
+      "local_value": "-19/13",
+      "wall_value": "110/13",
+      "coupled_value": "7",
+      "prefix_hits": 4,
+      "all_hits": 8
+    },
+    {
+      "index": 106,
+      "corner": [
+        -1,
+        6
+      ],
+      "direction": [
+        4,
+        11
+      ],
+      "side": 1,
+      "local_value": "-31/13",
+      "wall_value": "31/13",
+      "coupled_value": "0",
+      "prefix_hits": 6,
+      "all_hits": 14
+    },
+    {
+      "index": 108,
+      "corner": [
+        1,
+        2
+      ],
+      "direction": [
+        5,
+        -8
+      ],
+      "side": 1,
+      "local_value": "-12/13",
+      "wall_value": "12/13",
+      "coupled_value": "0",
+      "prefix_hits": 4,
+      "all_hits": 10
+    },
+    {
+      "index": 111,
+      "corner": [
+        -1,
+        6
+      ],
+      "direction": [
+        5,
+        4
+      ],
+      "side": -1,
+      "local_value": "-12/13",
+      "wall_value": "12/13",
+      "coupled_value": "0",
+      "prefix_hits": 3,
+      "all_hits": 7
+    },
+    {
+      "index": 117,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        6,
+        -11
+      ],
+      "side": -1,
+      "local_value": "-8/13",
+      "wall_value": "8/13",
+      "coupled_value": "0",
+      "prefix_hits": 6,
+      "all_hits": 14
+    },
+    {
+      "index": 122,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        7,
+        -4
+      ],
+      "side": 1,
+      "local_value": "-12/13",
+      "wall_value": "12/13",
+      "coupled_value": "0",
+      "prefix_hits": 4,
+      "all_hits": 10
+    },
+    {
+      "index": 125,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        7,
+        2
+      ],
+      "side": 1,
+      "local_value": "-3/13",
+      "wall_value": "3/13",
+      "coupled_value": "0",
+      "prefix_hits": 3,
+      "all_hits": 7
+    },
+    {
+      "index": 128,
+      "corner": [
+        0,
+        5
+      ],
+      "direction": [
+        7,
+        6
+      ],
+      "side": -1,
+      "local_value": "-2/13",
+      "wall_value": "2/13",
+      "coupled_value": "0",
+      "prefix_hits": 4,
+      "all_hits": 12
+    },
+    {
+      "index": 131,
+      "corner": [
+        -1,
+        6
+      ],
+      "direction": [
+        8,
+        -11
+      ],
+      "side": 1,
+      "local_value": "-2",
+      "wall_value": "2",
+      "coupled_value": "0",
+      "prefix_hits": 9,
+      "all_hits": 18
+    },
+    {
+      "index": 134,
+      "corner": [
+        1,
+        2
+      ],
+      "direction": [
+        8,
+        -1
+      ],
+      "side": -1,
+      "local_value": "-5/13",
+      "wall_value": "5/13",
+      "coupled_value": "0",
+      "prefix_hits": 5,
+      "all_hits": 8
+    },
+    {
+      "index": 146,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        9,
+        8
+      ],
+      "side": -1,
+      "local_value": "-1",
+      "wall_value": "1",
+      "coupled_value": "0",
+      "prefix_hits": 5,
+      "all_hits": 11
+    },
+    {
+      "index": 149,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        10,
+        3
+      ],
+      "side": -1,
+      "local_value": "-9/13",
+      "wall_value": "9/13",
+      "coupled_value": "0",
+      "prefix_hits": 3,
+      "all_hits": 10
+    },
+    {
+      "index": 152,
+      "corner": [
+        -1,
+        6
+      ],
+      "direction": [
+        10,
+        11
+      ],
+      "side": 1,
+      "local_value": "-6/13",
+      "wall_value": "6/13",
+      "coupled_value": "0",
+      "prefix_hits": 8,
+      "all_hits": 19
+    },
+    {
+      "index": 155,
+      "corner": [
+        1,
+        6
+      ],
+      "direction": [
+        11,
+        -8
+      ],
+      "side": 1,
+      "local_value": "-37/13",
+      "wall_value": "37/13",
+      "coupled_value": "0",
+      "prefix_hits": 8,
+      "all_hits": 19
+    },
+    {
+      "index": 157,
+      "corner": [
+        0,
+        5
+      ],
+      "direction": [
+        11,
+        -6
+      ],
+      "side": -1,
+      "local_value": "-2/13",
+      "wall_value": "67/13",
+      "coupled_value": "5",
+      "prefix_hits": 5,
+      "all_hits": 15
+    },
+    {
+      "index": 158,
+      "corner": [
+        0,
+        5
+      ],
+      "direction": [
+        11,
+        -6
+      ],
+      "side": 1,
+      "local_value": "-3/13",
+      "wall_value": "3/13",
+      "coupled_value": "0",
+      "prefix_hits": 5,
+      "all_hits": 15
+    },
+    {
+      "index": 160,
+      "corner": [
+        0,
+        1
+      ],
+      "direction": [
+        11,
+        4
+      ],
+      "side": 1,
+      "local_value": "-9/13",
+      "wall_value": "152/13",
+      "coupled_value": "11",
+      "prefix_hits": 8,
+      "all_hits": 16
+    },
+    {
+      "index": 164,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        12,
+        -11
+      ],
+      "side": 1,
+      "local_value": "-18/13",
+      "wall_value": "18/13",
+      "coupled_value": "0",
+      "prefix_hits": 11,
+      "all_hits": 20
+    },
+    {
+      "index": 166,
+      "corner": [
+        0,
+        3
+      ],
+      "direction": [
+        12,
+        5
+      ],
+      "side": 1,
+      "local_value": "-18/13",
+      "wall_value": "174/13",
+      "coupled_value": "12",
+      "prefix_hits": 12,
+      "all_hits": 22
+    }
+  ],
+  "all_negative_events": [
+    {
+      "index": 8,
+      "corner": [
+        -1,
+        7
+      ],
+      "direction": [
+        -11,
+        7
+      ],
+      "side": 1,
+      "local_value": "-17/13",
+      "wall_value": "-35/13",
+      "coupled_value": "-4",
+      "prefix_hits": 6,
+      "all_hits": 13
+    },
+    {
+      "index": 13,
+      "corner": [
+        1,
+        4
+      ],
+      "direction": [
+        -10,
+        -11
+      ],
+      "side": 1,
+      "local_value": "-160/13",
+      "wall_value": "17/13",
+      "coupled_value": "-11",
+      "prefix_hits": 9,
+      "all_hits": 18
+    },
+    {
+      "index": 16,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        -9,
+        -11
+      ],
+      "side": 1,
+      "local_value": "-298/13",
+      "wall_value": "12/13",
+      "coupled_value": "-22",
+      "prefix_hits": 9,
+      "all_hits": 19
+    },
+    {
+      "index": 33,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        -7,
+        -11
+      ],
+      "side": -1,
+      "local_value": "-13",
+      "wall_value": "-1",
+      "coupled_value": "-14",
+      "prefix_hits": 6,
+      "all_hits": 16
+    },
+    {
+      "index": 43,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        -7,
+        9
+      ],
+      "side": -1,
+      "local_value": "-226/13",
+      "wall_value": "-8/13",
+      "coupled_value": "-18",
+      "prefix_hits": 8,
+      "all_hits": 15
+    },
+    {
+      "index": 50,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        -5,
+        -11
+      ],
+      "side": 1,
+      "local_value": "132/13",
+      "wall_value": "-145/13",
+      "coupled_value": "-1",
+      "prefix_hits": 6,
+      "all_hits": 14
+    },
+    {
+      "index": 88,
+      "corner": [
+        1,
+        4
+      ],
+      "direction": [
+        2,
+        -11
+      ],
+      "side": -1,
+      "local_value": "-144/13",
+      "wall_value": "118/13",
+      "coupled_value": "-2",
+      "prefix_hits": 7,
+      "all_hits": 16
+    },
+    {
+      "index": 99,
+      "corner": [
+        1,
+        5
+      ],
+      "direction": [
+        3,
+        5
+      ],
+      "side": -1,
+      "local_value": "1/13",
+      "wall_value": "-66/13",
+      "coupled_value": "-5",
+      "prefix_hits": 3,
+      "all_hits": 9
+    },
+    {
+      "index": 115,
+      "corner": [
+        1,
+        4
+      ],
+      "direction": [
+        5,
+        12
+      ],
+      "side": 1,
+      "local_value": "-81/13",
+      "wall_value": "-75/13",
+      "coupled_value": "-12",
+      "prefix_hits": 5,
+      "all_hits": 14
+    },
+    {
+      "index": 123,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        7,
+        -3
+      ],
+      "side": 1,
+      "local_value": "83/13",
+      "wall_value": "-96/13",
+      "coupled_value": "-1",
+      "prefix_hits": 4,
+      "all_hits": 9
+    },
+    {
+      "index": 124,
+      "corner": [
+        1,
+        3
+      ],
+      "direction": [
+        7,
+        -3
+      ],
+      "side": -1,
+      "local_value": "-69/13",
+      "wall_value": "-9/13",
+      "coupled_value": "-6",
+      "prefix_hits": 4,
+      "all_hits": 8
+    },
+    {
+      "index": 127,
+      "corner": [
+        1,
+        5
+      ],
+      "direction": [
+        7,
+        5
+      ],
+      "side": -1,
+      "local_value": "-11/13",
+      "wall_value": "-15/13",
+      "coupled_value": "-2",
+      "prefix_hits": 7,
+      "all_hits": 11
+    },
+    {
+      "index": 137,
+      "corner": [
+        1,
+        4
+      ],
+      "direction": [
+        8,
+        9
+      ],
+      "side": 1,
+      "local_value": "-10",
+      "wall_value": "1",
+      "coupled_value": "-9",
+      "prefix_hits": 7,
+      "all_hits": 15
+    },
+    {
+      "index": 144,
+      "corner": [
+        1,
+        4
+      ],
+      "direction": [
+        9,
+        4
+      ],
+      "side": -1,
+      "local_value": "-124/13",
+      "wall_value": "-45/13",
+      "coupled_value": "-13",
+      "prefix_hits": 9,
+      "all_hits": 15
+    },
+    {
+      "index": 151,
+      "corner": [
+        1,
+        4
+      ],
+      "direction": [
+        10,
+        7
+      ],
+      "side": 1,
+      "local_value": "-93/13",
+      "wall_value": "-37/13",
+      "coupled_value": "-10",
+      "prefix_hits": 10,
+      "all_hits": 16
+    }
+  ],
+  "scope": "One exact infinitesimal deformation satisfying all SAVED axis-event inequalities, cut off by saved diagonal events. Not a dark deformation and not an exhaustive optical event set."
+}

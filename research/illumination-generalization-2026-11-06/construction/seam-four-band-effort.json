@@ -1,0 +1,20 @@
+{
+  "id": "A55",
+  "original_start_utc": "2026-11-07T07:10:00+00:00",
+  "deadline": "2026-11-07T07:24:00+00:00",
+  "recorded_utc": "2026-11-07T07:11:52.399833+00:00",
+  "premises": "A0/A1 four-band core1 height2 rooms, common actual D0 seams, selectedwidth1, independentintegerleftwidthsa,b.",
+  "missing_implication": "Complete the depth-zero four-band family left outside A54; zero endpoint arms require a separate guard specialization.",
+  "success_criterion": "All h>=3,d>=1 actual pair closure via all-width return grids/finite exact complements and protected local floor paths, independently reviewed.",
+  "strongest_objection": "D0 removes the strict endpoint phase window, and a previously far-wall-dependent path may not survive arbitrary opposite widths.",
+  "outputs": [
+    "seam-four-band-proof.md",
+    "seam-four-band-review-request.json",
+    "seam-four-band-chart-check.py/json/log",
+    "seam-four-band-inputs.json",
+    "seam-four-band-seeds.py/json/log",
+    "seam-four-band-physical-check.py/json/log"
+  ],
+  "whole_goal_complete": false,
+  "note": "New endpoint class after completed/frozen A54 D1/2 proof; original conservative start includes preliminary D0 algebra."
+}

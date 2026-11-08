@@ -1,0 +1,7 @@
+# EA05 candidate: paired actual target images cross an opposite-valuation obstruction
+
+Original ordered spiral equal armsK=P, P a power of two,L a power of two with L>=4P,N>P+L,nu2N=nu2P+1. Let e>0 rational,integer0<b<c<h<H,h even,c odd,cap depth beta=H-h EVEN. Actual rationalhorizontal S=(s,u),T=(t,v) satisfy0<s<Pe,b<u<h,(N-L)e<t<Ne,0<v<c,even integeru,v. Write z=Ne-t, and assume z/(eP) is an ODD integer. Claim actual finite corner-avoiding S-to-T illumination.
+
+New gap: the full divisor Gamma=2P does not divideP, and the old positive-target-index correction may fail. The half-open source/cap basis and even-beta right repair survive. If j-k is odd, choose the NEGATIVE image of the SAME actual target, not another physical point; then the full target congruence becomes solvable. Success criterion: establish a strict actual path at one common final slope and prove exact +/-z matching modulo2Le. Strongest objection: the sign choice changes the congruence constant and must be fixed before full-period correction; no free target sheet or ray concatenation allowed.
+
+Prescribed HAND control only: e4/P=K1/N6/L4,b1c3h6H8,S2,4/T12,2. Actuala4,l8,w20,A24,strictnativeinteriormarks. alpha1,beta2,f2,d5,coeff(-7/4,-3/2),i2j1m0,seed29/5,z0=-12/5,z1=-16/5,k2,z2=-9/5,J-1,E4. FullGamma2; use negative targetimage,z12,E+z16. Lambda6,p1=>final269/5,indices14,4,20,E52=-12modTRUE32,actualT12,2;roof46/5ordinary. No discovery/newclock/engine/worker/git. This is a terminal-PAIR theorem with a stated phase/depth condition, not a whole native-room theorem or fullr3/r<=8 closure.

@@ -1,0 +1,13 @@
+# Independent full review of A62
+
+Decision: ACCEPT the ENTIRE A1h3d2 actual-seam family with all five positive real horizontal dimensions independent. Accepted A59 supplies its necessary target-width reduction. Arbitrary actual depths and universal W21 remain OPEN.
+
+Read the complete proof, request, prescribed checker and declared protected-search provenance. All seven pins match. No author code executed. The independently accepted A59 table for A1h3d2 forces any dark actual seam pair to have target ratio1/3 or1; both repairs therefore suffice for the whole real-width theorem.
+
+For target widthc/3, independently check the nine legs of the displayed path have absolute slope18/(5c). The left contacts28/5,56/5,58/5 lie strictly in(5,7),(9,12),(9,12); right contact46/5 lies in(9,12). Both ACTUAL roof contacts2c/9,c/9 have0<x<c. The upper-tooth floor7c/6 is strictly between c and4c/3, and its genuine far point(4c/3,38/5) has7<38/5<9. The strict portal heights are38/5 and44/5. Thus all open portions lie inside the actual core or upper tooth, and every normal sign reversal is valid. No left tooth or lower selected tooth is entered. Earlier portals are not original target height8; other nonterminal upper-tooth points havex>c. The original target is first reached at the final point.
+
+For target widthc, A60's accepted eight-reflection path has no global roof reflection and stays at heights<=9. All its contacts therefore remain genuine in the ACTUAL twelve-high core, with the original selected upper walls unchanged. Its first floor reflection is atc/4, left gaps are(0,3),(5,7), and right core contact10/3 is in(3,7). The genuine target far wall isx2c. We verify directly against the G12 contour; no mirror on the old roof10 is used. The path retains original first target arrival.
+
+Both repairs preserve arbitrary independent lower and opposite widths. Under actual darkness, the accepted A59 necessary condition selects one of these two true upper widths; its repair contradicts darkness. This proves the whole stated seam family without any rationality, integer-core or sampled-width premise. It does not give a uniform reflection bound over all widths outside the two explicit repairs, nor an arbitrary-depth extension.
+
+Own critical-d2-d6-independent-check.py validates both repairs on independent original20-wall contours, alongside A63 controls:14 paths total,80 reflections and1880 full wall/leg guards. Six paths specifically test the two A62 ratios at independently extreme real/rational core and unused widths. No author control replay claimed. All pins current; no finding remains. Independent AI hand review and exact checks are not formal verification or external expert refereeing.

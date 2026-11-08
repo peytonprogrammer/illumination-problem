@@ -1,0 +1,109 @@
+{
+  "status": "PASS_PRESCRIBED_CALIBRATION",
+  "checker_source": "<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/resumed-exact-check.py",
+  "checker_sha256": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a",
+  "source_image": [
+    18,
+    4
+  ],
+  "target_image": [
+    10,
+    40
+  ],
+  "corner_images": [
+    [
+      48,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      48,
+      16
+    ],
+    [
+      16,
+      16
+    ],
+    [
+      16,
+      48
+    ],
+    [
+      0,
+      48
+    ]
+  ],
+  "boundary_identity_checks": [
+    {
+      "cylinder": "b",
+      "y": -16,
+      "shift": 0,
+      "circumference": 96
+    },
+    {
+      "cylinder": "b",
+      "y": 16,
+      "shift": 96,
+      "circumference": 96
+    },
+    {
+      "cylinder": "t",
+      "y": 16,
+      "shift": 0,
+      "circumference": 32
+    },
+    {
+      "cylinder": "t",
+      "y": 80,
+      "shift": 192,
+      "circumference": 32
+    }
+  ],
+  "path": [
+    [
+      "18",
+      "4"
+    ],
+    [
+      "0",
+      "262/25"
+    ],
+    [
+      "16",
+      "406/25"
+    ],
+    [
+      "0",
+      "22"
+    ],
+    [
+      "16",
+      "694/25"
+    ],
+    [
+      "0",
+      "838/25"
+    ],
+    [
+      "16",
+      "982/25"
+    ],
+    [
+      "14",
+      "40"
+    ]
+  ],
+  "launch_direction": [
+    -25,
+    9
+  ],
+  "time": "4",
+  "portal_x": "46/3",
+  "wall_leg_guards": 42,
+  "reflections": 6,
+  "scope": "One formula-derived path and affine calibration; gluing and integer-set arguments also require the written hand proof. No universal orbit coverage or novelty established.",
+  "search": false
+}

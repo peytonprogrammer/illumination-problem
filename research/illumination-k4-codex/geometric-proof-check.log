@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "room_sha256": "c7838dfe640932458e6853af7171396af05df71067658ee8f78f9ca3d91cab20",
+  "base_cells": [
+    [
+      -1,
+      -1
+    ],
+    [
+      0,
+      -2
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      -3
+    ],
+    [
+      1,
+      -2
+    ]
+  ],
+  "base_vertex_roles": {
+    "(-1, -1)": "convex",
+    "(-1, 0)": "convex",
+    "(0, -2)": "convex",
+    "(0, -1)": "concave",
+    "(0, 0)": "smooth",
+    "(1, -3)": "convex",
+    "(1, -2)": "concave",
+    "(1, -1)": "concave",
+    "(1, 0)": "convex",
+    "(2, -3)": "convex",
+    "(2, -2)": "smooth",
+    "(2, -1)": "convex"
+  },
+  "copies": [
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        1,
+        -2
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        0
+      ]
+    ]
+  ],
+  "fold_maps": [
+    "(x,y)",
+    "(x,-y)",
+    "(4-x,-y)"
+  ],
+  "seams": [
+    [
+      [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    ]
+  ],
+  "smooth_exceptions": [
+    [
+      -1,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "base_corner_fiber_roles": {
+    "(-1, -1)": [
+      "convex"
+    ],
+    "(-1, 0)": [
+      "convex",
+      "smooth"
+    ],
+    "(0, -2)": [
+      "convex"
+    ],
+    "(0, -1)": [
+      "concave"
+    ],
+    "(1, -3)": [
+      "convex"
+    ],
+    "(1, -2)": [
+      "concave"
+    ],
+    "(1, -1)": [
+      "concave"
+    ],
+    "(1, 0)": [
+      "convex",
+      "smooth"
+    ],
+    "(2, -3)": [
+      "convex",
+      "smooth"
+    ],
+    "(2, -1)": [
+      "convex",
+      "smooth"
+    ]
+  },
+  "walls": {
+    "base": 10,
+    "three_copy": 22
+  },
+  "scope": "Exact geometry and parity hypotheses only. The general primitive-step / retroreflection argument is in geometric-proof.md; no rays or direction search."
+}

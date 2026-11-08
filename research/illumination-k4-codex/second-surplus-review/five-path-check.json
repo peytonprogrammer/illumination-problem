@@ -1,0 +1,273 @@
+{
+  "status": "PASS",
+  "five_path": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        2,
+        3
+      ],
+      [
+        -2,
+        1
+      ]
+    ],
+    [
+      [
+        8,
+        5
+      ],
+      [
+        18,
+        5
+      ]
+    ],
+    [
+      [
+        2,
+        1
+      ],
+      [
+        11,
+        3
+      ]
+    ],
+    [
+      [
+        12,
+        7
+      ],
+      [
+        26,
+        7
+      ]
+    ],
+    [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  ],
+  "five_reflections": 5,
+  "five_required_caps": [
+    "B+",
+    "T-"
+  ],
+  "five_required_outer": [
+    [
+      0,
+      -2
+    ],
+    [
+      1,
+      -2
+    ],
+    [
+      1,
+      -1
+    ]
+  ],
+  "five_forbidden_caps": [
+    "Nb+",
+    "T+"
+  ],
+  "five_forbidden_outside_alphabet": [
+    [
+      [
+        0,
+        -2
+      ],
+      [
+        1,
+        -3
+      ],
+      [
+        1,
+        -2
+      ]
+    ],
+    [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  ],
+  "analytic_parameter": "d=1/6",
+  "whole_interval": "1/7<d<2/11",
+  "actual_target_equation": "12d=2",
+  "case_implications": {
+    "L_triple": {
+      "status": "PASS",
+      "path": "L_square_eleven",
+      "forced_present": [
+        "B+",
+        "E-",
+        "L+",
+        "L-",
+        "Nb-",
+        "T-"
+      ],
+      "forced_absent": [
+        "B-",
+        "E+",
+        "Nb+",
+        "Nr+",
+        "Nr-",
+        "T+"
+      ],
+      "only_outer_extras": [
+        "l"
+      ]
+    },
+    "centerB_outerL": {
+      "status": "PASS",
+      "path": "L_square_eleven",
+      "forced_present": [
+        "B+",
+        "B-",
+        "E-",
+        "L+",
+        "Nb-",
+        "T-"
+      ],
+      "forced_absent": [
+        "E+",
+        "L-",
+        "Nb+",
+        "Nr+",
+        "Nr-",
+        "T+"
+      ],
+      "only_outer_extras": [
+        "l"
+      ]
+    },
+    "B_triple_Nbplus_absent": {
+      "status": "PASS",
+      "path": "five",
+      "forced_present": [
+        "B+",
+        "B-",
+        "E-",
+        "L+",
+        "T-"
+      ],
+      "forced_absent": [
+        "E+",
+        "L-",
+        "Nb+",
+        "T+"
+      ],
+      "only_outer_extras": [
+        "b"
+      ]
+    },
+    "B_triple_Nbplus_present": {
+      "status": "PASS",
+      "path": "ordinary_thirteen",
+      "forced_present": [
+        "B+",
+        "B-",
+        "E-",
+        "L+",
+        "Nb+",
+        "T-"
+      ],
+      "forced_absent": [
+        "E+",
+        "L-",
+        "Nb-",
+        "Nr+",
+        "Nr-",
+        "T+"
+      ],
+      "only_outer_extras": [
+        "b"
+      ]
+    },
+    "centerL_outerB_Nbplus_absent": {
+      "status": "PASS",
+      "path": "five",
+      "forced_present": [
+        "B+",
+        "E-",
+        "L+",
+        "L-",
+        "T-"
+      ],
+      "forced_absent": [
+        "B-",
+        "E+",
+        "Nb+",
+        "T+"
+      ],
+      "only_outer_extras": [
+        "b"
+      ]
+    },
+    "centerL_outerB_Nbplus_present": {
+      "status": "PASS",
+      "path": "L_centered_twelve",
+      "forced_present": [
+        "B+",
+        "E-",
+        "L+",
+        "L-",
+        "Nb+",
+        "T-"
+      ],
+      "forced_absent": [
+        "B-",
+        "E+",
+        "Nb-",
+        "Nr+",
+        "Nr-",
+        "T+"
+      ],
+      "only_outer_extras": [
+        "b"
+      ]
+    }
+  },
+  "path_reflections": {
+    "five": 5,
+    "L_square_eleven": 11,
+    "L_centered_twelve": 12,
+    "ordinary_thirteen": 13
+  },
+  "all_sigma_transfers": "PASS",
+  "scope": "One local analytic composition plus three previously fixed paths, exact symbolic implications for six hand branches; no room/cap-assignment enumeration or search."
+}

@@ -1,0 +1,37 @@
+{
+  "status": "ACCEPTED_EVENTUAL_LONG_NECK_AND_LOCAL_UNIFORMITY",
+  "reviewed_at": "2026-11-07T01:11:40.279559+00:00",
+  "reviewer": "Codex01a1a00f",
+  "whole_goal_complete": false,
+  "findings": [],
+  "scope": "Two fixed arbitrary-real orthogonal chambers with smooth width-w mouths, fixed opposing actual interior marks, every real L above a finite chamber-dependent threshold; locally uniform on nondegenerate nearby data.",
+  "source_sha256": {
+    "../construction/long-neck-proof.md": "dd38605169a0395616fadab7eca4a51c0661b96dccfd099c1f622749a11e4991",
+    "../construction/long-neck-sources.json": "ee3fe76c0dd13fbf7408819384a3be58bd8d2ac78fdf276474ec13b8f0ce5284",
+    "../construction/long-neck-check.py": "1df332f434457d77057f7d818fd8885903713fb730855cabea53663e597cee0a",
+    "../construction/long-neck-check.json": "f7dc9d5bf9e7bafdb446524fa6745937eadf29c8d5da3776914f3487cd1bde97",
+    "../construction/long-neck-effort.json": "e4056109da7e139fdecffe4383133afdfdf700ea1da633a514b3fa0b247e9870",
+    "long-neck-ZK-primary.pdf": "222b96c7b4a78eb78cdf60f017fd86175568bd1fa253296e8664547da71a36d8",
+    "long-neck-MT-primary.pdf": "1787bd5bb25621baf807a152bd6bf26a21e04206bd9a9166ce55a92550de7054",
+    "long-neck-independent-check.py": "03af5577d56f7bcc82ee77f6395ccabf8fbce22964109dd7d3fef2a0c8113d3a",
+    "long-neck-independent-check.json": "2bea1f91e9fcc3ce79a048e513d2d7b5bc6ae62540a91ec5f8874ab4221fda02",
+    "long-neck-peer-prescribed-replay.json": "99612828e65a4ab7d01075906dcf5b67112e3f0926c42ac1ca03486b2fb89982"
+  },
+  "peer_review_sha256": {
+    "long-neck-independent.md": "3808299901a13e062d08199c3c885df48ccaa3eb6975516382b8fd886c2426a6"
+  },
+  "primary_input": "Zemlyakov\u2013Katok1975 Proposition3/Definition2 and Masur\u2013Tabachnikov Theorem1.8; independently read primary copies",
+  "verification_levels": {
+    "hand_proof": "Independent full quantified audit, signs, actualtarget andlocaluniformity",
+    "own_controls": "Fournewprescribedpaths36reflections480allwallguards",
+    "peer_validator": "Read-only prescribed reproduction; not independentimplementation",
+    "formal_verification": false
+  },
+  "not_proved": [
+    "UniformL0inW",
+    "Allroomdecomposition",
+    "Allpairsinsamechamber",
+    "Diagonalchamberextension",
+    "UncappedW21"
+  ]
+}

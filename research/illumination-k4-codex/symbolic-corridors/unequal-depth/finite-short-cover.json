@@ -1,0 +1,56 @@
+{
+  "status": "NORM4_FAILURE_PREMISE_REFUTED_BY_EXACT_CELL",
+  "phase": [
+    5,
+    6,
+    14
+  ],
+  "s": "1195/1692",
+  "t": "1/47",
+  "a": "5",
+  "b": "8",
+  "failure_cell": [
+    [
+      "2/3",
+      "0"
+    ],
+    [
+      "3/4",
+      "0"
+    ],
+    [
+      "33/47",
+      "3/47"
+    ]
+  ],
+  "progress": {
+    "phase_pairs_passed": 18,
+    "q_completed": 13,
+    "clauses_applied": 205,
+    "max_residual_pieces": 7
+  },
+  "effort": {
+    "start": 1793993395.928326,
+    "deadline": 1793994235.928326,
+    "limit_seconds": 840,
+    "question": "Complete exact CONTINUOUS endpoint-square verification of all primitive rational phasepairs q<=100 with no nonzero l1<=4 annihilator. New lattice-sampling handlemma bounds q>100, so this is a proof obligation rather than larger endpoint sampling. A failed rational cell refutes norm4 claim, not darkness.",
+    "q_max": 100,
+    "outputs": [
+      "finite-short-cover.py",
+      "finite-short-cover.json"
+    ],
+    "state": "active"
+  },
+  "scope": "No original vertical-only chart; not four-cap failure or darkness.",
+  "simple_exact_witness": {
+    "s": "7/10",
+    "t": "1/100",
+    "all_chart_evaluations": 56,
+    "no_short_normals_checked": 40,
+    "first_norm5_relation": [
+      4,
+      -1,
+      1
+    ]
+  }
+}

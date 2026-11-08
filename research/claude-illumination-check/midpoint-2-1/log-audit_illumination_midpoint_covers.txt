@@ -1,0 +1,29 @@
+{"event": "midpoint_seed_audit", "guards": 286, "fixed_positive_controls": 12}
+{"event": "midpoint_guard_audit", "records": 25, "guards": 336}
+{"event": "midpoint_guard_audit", "records": 50, "guards": 386}
+{"event": "midpoint_guard_audit", "records": 75, "guards": 436}
+{"event": "midpoint_guard_audit", "records": 100, "guards": 486}
+{"event": "midpoint_guard_audit", "records": 125, "guards": 536}
+{"event": "midpoint_guard_audit", "records": 150, "guards": 586}
+{"event": "midpoint_guard_audit", "records": 175, "guards": 636}
+{"event": "midpoint_guard_audit", "records": 200, "guards": 686}
+{"event": "midpoint_guard_audit", "records": 225, "guards": 736}
+{"event": "midpoint_guard_audit", "records": 250, "guards": 786}
+{"event": "midpoint_guard_audit", "records": 275, "guards": 836}
+{"event": "midpoint_guard_audit", "records": 300, "guards": 886}
+{"event": "midpoint_guard_audit", "records": 325, "guards": 936}
+{"event": "midpoint_guard_audit", "records": 350, "guards": 986}
+{"event": "midpoint_guard_audit", "records": 375, "guards": 1036}
+{"event": "midpoint_implication_replay", "neck_type": 1, "pattern": [[], 12, 82], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 2, "pattern": [[], 12, 83], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 3, "pattern": [[], 12, 210], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 4, "pattern": [[], 13, 83], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 5, "pattern": [[], 15, 83], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 6, "pattern": [[], 32, 83], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 7, "pattern": [[], 40, 83], "status": "INFEASIBLE", "conditional_midpoint_lemma": true}
+{"event": "midpoint_implication_replay", "neck_type": 8, "pattern": [[[1, -1]], 83, 64], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 9, "pattern": [[[1, -1]], 83, 80], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 10, "pattern": [[[1, -1]], 83, 128], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 11, "pattern": [[[1, -1]], 211, 0], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"event": "midpoint_implication_replay", "neck_type": 12, "pattern": [[[1, -1]], 211, 64], "status": "OPTIMAL", "conditional_midpoint_lemma": false}
+{"status": "PASS", "source_sha256": "3b01028279ea9ef378ee7124cb926591f857613c065a7a04703b9b7247d6e25b", "geometry_only_parent": true, "historical_illumination_cuts": false, "seed_guards": 286, "new_rooms": 390, "new_guards": 780, "total_guards": 1066, "mutation_checks": 8, "corrupt_guard_checks": 8, "max_reflections": 33, "conditional_midpoint_lemmas": 1, "all_necks_covered": false, "scope": "Every guard preserves an exact one-exception midpoint ray. An infeasible geometry-only fixed-neck parent proves its finite sufficient-condition disjunction covers all valid completions. Caps and finite directional misses remain open. Computer-assisted implication, not a formal UNSAT proof."}

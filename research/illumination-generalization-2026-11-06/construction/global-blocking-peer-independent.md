@@ -1,0 +1,15 @@
+# R60 independent full hand review
+
+ACCEPT the27-square Heisenberg construction, its positive-slope zero-only dark graph, and its exact stated scope. This is not a physical counterexample or an uncapped wall theorem. I read the full proof, prior audit and review request; all10 request pins are current. No author checker or group enumeration was executed.
+
+The displayed multiplication is associative, as seen by its upper-unitriangular3x3 matrix realization. r,u generate the central commutator z and all triples. The power formula gives exponent3. Right/up square gluing is connected and translation-compatible; the commutator acts in9 cycles of length3, so every square vertex is a true6pi cone. Euler9-54+27=-18 gives genus10. There are no regular points over the unit torus origin.
+
+Left z commutes with both right gluing maps, has derivativeI and fixes every vertex cycle while acting freely elsewhere. For any regular x, a hypothetical straight path to z*x projects to a positive-length closed straight torus trajectory. Its displacement is a nonzero integer vector. Dividing by its gcd gives a primitive simple torus loop, with the full path exactly its d-fold repetition. Because all preimages of0 are genuine zeros, this projected path cannot visit0. Its primitive loop is valid in the punctured torus.
+
+The primitive loop’s monodromy h has abelianization equal to its primitive homology vector mod3, which is nonzero. This statement survives any basepoint conjugation and any commutator correction to the homotopy word. If d is a multiple of3, h^d=e; otherwise its abelianization remains nonzero. It is never z or z². Actual left multiplication by z requires right monodromy z because z is central. Thus every regular x is zero-only dark from tau(x), in ALL directions and for all finite lengths. No source/target switch occurs. On the regular graph the scalar slope is+1.
+
+The25-element cyclic envelope is exact as a GROUP envelope: identity plus24 noncentral elements, excluding the two central nonidentity elements. It is not a claim of realization of every group element by a primitive straight loop. This correctly separates group generation from single-direction reachability.
+
+The graph does not give a complete q-by-q physical rectangle. I additionally proved that the supplied surface has NO canonical45 disk quotient at any wall count; see global-monodromy-physical-obstruction.md, an application of the old primitive half-period criterion. The primitive period lattice is3Z² and its9 zeros have9 distinct primitive torus images, incompatible with the physical intrinsic half-turn. This is compatible with the frozen R60 text, which claimed no physical quotient. It sharpens the applicability boundary without invalidating the abstract example.
+
+The old six-wall intrinsic graph uses removable corner blockers and same-physical-point pairs; R60 is different. Nonetheless neither R60 nor its physical exclusion adds universal optical coverage. Multiple correspondence components and isolated arithmetic full-fiber pairs remain uncontrolled. Independent mathematical hand review only; no formal verification or expert refereeing.

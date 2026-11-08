@@ -1,0 +1,303 @@
+{
+  "status": "PARENT_FOUR_UNIT_BOTH_DR_ERASURE_THIRTEEN",
+  "four_root_leaf_junctions": [
+    {
+      "root": "B",
+      "root_sectors": [
+        0,
+        1
+      ],
+      "leaf": "D",
+      "leaf_sectors": [
+        3
+      ],
+      "shared_C": [
+        1,
+        -2
+      ],
+      "fixed_angle": 180,
+      "other_K_heals": false
+    },
+    {
+      "root": "D",
+      "root_sectors": [
+        2,
+        3
+      ],
+      "leaf": "B",
+      "leaf_sectors": [
+        0
+      ],
+      "shared_C": [
+        1,
+        -2
+      ],
+      "fixed_angle": 180,
+      "other_K_heals": false
+    },
+    {
+      "root": "E",
+      "root_sectors": [
+        4,
+        5
+      ],
+      "leaf": "R",
+      "leaf_sectors": [
+        2
+      ],
+      "shared_C": [
+        4,
+        1
+      ],
+      "fixed_angle": 180,
+      "other_K_heals": false
+    },
+    {
+      "root": "R",
+      "root_sectors": [
+        2,
+        3
+      ],
+      "leaf": "E",
+      "leaf_sectors": [
+        5
+      ],
+      "shared_C": [
+        4,
+        1
+      ],
+      "fixed_angle": 180,
+      "other_K_heals": false
+    }
+  ],
+  "D_unit_attaching_arcs": [
+    {
+      "D_sectors": [
+        0,
+        1
+      ],
+      "H_attaching_edges": [
+        [
+          [
+            2,
+            -1
+          ],
+          [
+            3,
+            -1
+          ]
+        ]
+      ],
+      "proper_arc": true,
+      "possible_B_and_R_point_contacts_on_arc": true
+    },
+    {
+      "D_sectors": [
+        1,
+        2
+      ],
+      "H_attaching_edges": [
+        [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ]
+        ],
+        [
+          [
+            2,
+            -1
+          ],
+          [
+            3,
+            -1
+          ]
+        ]
+      ],
+      "proper_arc": true,
+      "possible_B_and_R_point_contacts_on_arc": true
+    },
+    {
+      "D_sectors": [
+        2,
+        3
+      ],
+      "H_attaching_edges": [
+        [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ]
+        ]
+      ],
+      "proper_arc": true,
+      "possible_B_and_R_point_contacts_on_arc": true
+    }
+  ],
+  "partial_center_adjacency": [
+    [
+      "B",
+      "D"
+    ],
+    [
+      "E",
+      "R"
+    ]
+  ],
+  "exact21_fixed_inventory_checks": [
+    {
+      "name": "zero-surplus-L/cover-check.json:one",
+      "reflections": 1,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "zero-surplus-L/cover-check.json:one_sigma",
+      "reflections": 1,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "zero-surplus-L/cover-check.json:four",
+      "reflections": 4,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "zero-surplus-L/cover-check.json:four_sigma",
+      "reflections": 4,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "zero-surplus-L/cover-check.json:thirteen",
+      "reflections": 13,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "zero-surplus-L/cover-check.json:thirteen_sigma",
+      "reflections": 13,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/square-exchange-check.json:B_four",
+      "reflections": 2,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/square-exchange-check.json:E_four",
+      "reflections": 2,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/square-exchange-check.json:B_thirteen",
+      "reflections": 11,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/square-exchange-check.json:E_thirteen",
+      "reflections": 11,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/square-exchange-check.json:T_thirteen",
+      "reflections": 11,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/square-exchange-check.json:L_thirteen",
+      "reflections": 11,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/centered-left-check.json:left",
+      "reflections": 12,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/centered-left-check.json:top",
+      "reflections": 12,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/bottom-residual-check.json",
+      "reflections": 6,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "first-surplus-review/residual-cover-check.json",
+      "reflections": 3,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "second-surplus-review/five-path-check.json",
+      "reflections": 5,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "third-surplus-review/independent-review/guard-extension-check.json:centeredB3",
+      "reflections": 3,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "third-surplus-review/independent-review/guard-extension-check.json:outerB2",
+      "reflections": 2,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "third-surplus-review/independent-review/guard-extension-check.json:sigma_centeredB3",
+      "reflections": 3,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    },
+    {
+      "name": "third-surplus-review/independent-review/guard-extension-check.json:sigma_outerB2",
+      "reflections": 2,
+      "whole_D_R_avoidance": true,
+      "sigma": true
+    }
+  ],
+  "parent_claim": "After litNbridgehandled, allfourunits are d1/q2roots atb0; ifDandRunitoccupied, deleteDthenR alongproperHboundaryarcs, preservingtworemainingunitROOTS. AcceptedbudgetfreeTWOunit theorem plus21fixedinventory/fullD-Ravoidance andlocalouter-squareexchanges givesactualST<=13 afterreinsertion. Handgeometry/completeness in argument.txt; independentreviewrequested.",
+  "limits": "This closesONLYbothD/Rsubfamily atparentlevel, notallfourunits. No completedroom, capassignmentproduct, discoverypath/ray/direction/word/archive/worker. Only21manifestselectedpaths/sevenpinnedsources read. Sourceopticalbounds andtwo-unitcompleteness are inheritedaccepteddependencies.",
+  "source_sha256": {
+    "third-surplus-review/path-support-check.json": "a3e428811040ad4a641772dbec4021b76a9597bada05d3b30f49ea9362a67566",
+    "zero-surplus-L/cover-check.json": "92b37634e01aa8700e0f1d336f370421e8b15caa2c6e765227a336ac28f21c4d",
+    "first-surplus-review/square-exchange-check.json": "68be137dd44997265aa84b2ddfe5899711c31dccb2c03faf2b981b9b80eca53a",
+    "first-surplus-review/centered-left-check.json": "a5a638714b953fabcb02cd8336afc7e6b8ada8db0fb25f8127bd91af44bc3213",
+    "first-surplus-review/bottom-residual-check.json": "6408344b2c304f95ab3a9df64b0e04d4c2e0e33c2af9f41bb29521e56ebfb631",
+    "first-surplus-review/residual-cover-check.json": "a90643eab8114b606222a6c3ce6f8d9d8cda002370375d28c77e5f7b31b0ea85",
+    "second-surplus-review/five-path-check.json": "7c6cdcc85fbc7c2e019622b9e8cb72f8b3a9fde7100d66a3b2e01c3ae5ceae09",
+    "third-surplus-review/independent-review/guard-extension-check.json": "c4b577fadd611af6cb56d5b0d5b8ca60053510c48f617a8ae890efddd8e2eecc",
+    "surplus-four-local/two-unit.txt": "7e84594fdb8902b62b4b521de45d81fec8f8c0fea87cdef3b45f486c22bb73db",
+    "fourth-surplus-review/two-unit-independent/review.txt": "273cfcee4518cad3185843cdeca68a0761608e2f970f3c72f8f561f09f5acb33",
+    "fourth-surplus-review/mixed-e2-e1/noncritical-erasure.txt": "5d74f3e80a3637d343ca594ec6b9c4388ed95fe65c269dd0e83b0a3bde67cd7a",
+    "fourth-surplus-review/mixed-e2-e1/support-check.json": "de9dc8143c693b3f2ab0771b0f5cbf508852353fa4faba05a3f397292dfb46b1",
+    "triangle-composition/inputs/guard_checker.py": "00463d79fa3477204f451d1d38d812950dc4766299cee3c024a781c2d36af914",
+    "triangle-composition/inputs/boundary_replay.py": "7364f8eea21a41de1ccfec24e449f4f1a7dd44a92b97a76fde8204cfda1d2aa0",
+    "triangle-composition/inputs/illumination_geometry.py": "544192ba3b5b0105d0c5dd6417e8093d2d81c813a7da19b885fcffbe2330daf1",
+    "fourth-surplus-review/four-unit-DR-erasure/check.py": "f56e4b08d2eca9403e78e0004ede6c7a8d9061a46d11438264f05612b74794f2"
+  }
+}

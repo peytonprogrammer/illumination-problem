@@ -1,0 +1,117 @@
+Centered-B core shuttle: new EIGHT and useful reflected cover
+Codex01a1a00f, 5 November 2026
+
+STATUS: Parent hand derivation and exact checks PASS. Independent hand
+review requested; no full surplus-four theorem or universal minimum claim.
+
+1. Discovery scope and geometry
+
+The ONE authorized pattern was H+L670+B12+E4+Tc5+N5+D1+R3. The bounded
+search stopped at its first candidate, initial direction(2,5), after62
+primitive directions (61 corner stops). Its log records about0.001s.
+The five-minute budget was a ceiling, not actual elapsed search time.
+No other pattern was built/searched and no remaining time was reused.
+
+The frozen room has34triangles,20maximal walls, full interior A exactly
+S=(0,0),U=(2,0),T=(2,2), J4,sN2,Q10,k6,Delta4. Own Fraction reconstruction
+checks the maximal polygon, strict simplicity, angle ledger, first-wall
+hits, every intervening segment, first actual T, reversal and sigma.
+
+2. The mechanism and hand derivation
+
+H is the full union of the S/U/T stars. From S launch(d,1). Shuttle between
+bare horizontal/vertical walls of H BEFORE visiting the B12 pocket:
+ ceiling(d,1), floor(3d,-1), T roof(7d,3), T right(3,10-3/d),
+ floor(6-11d,-1), ceiling(6-13d,1).
+The respective outgoing directions are(d,-1),(d,1),(d,-1),(-d,-1),
+(-d,1),(-d,-1). The first and last ceiling hits use N6-absent; both floor
+hits use D2-absent. The T roof requires Tc6 absent, the T right E3 absent.
+All four restrictions hold for the searched critical-L description.
+
+The descending last leg enters B at y=-1,x=6-15d. Reflection on the left
+B diagonal y=-x-2 occurs at
+ c=(6-16d)/(1+d), y=-c-2;
+outgoing direction is(1,d). Reflection on the right diagonal y=x-2 occurs
+at r=(16d-6)/(1-d), y=r-2; outgoing direction is(d,1).
+The final line is x=dy+18d-6. Therefore its coordinate at target height2
+is20d-6. Actual T forces20d-6=2, or d=2/5.
+
+One sufficient strict branch is5/13<d<7/17. This implies all six H mirror
+positions lie inside the declared finite sides, -1<c<0 and0<r<1, both B
+inlet/exit positions lie inside(-1,1), and all connecting H passages avoid
+the concave corners. In particular5d crosses the U/T seam inside(1,3),
+and after the B return the crossing at y=1 has x=19d-6>1. The complete
+incident-tile check at the forced root separately verifies every open leg;
+the interval arithmetic alone is not substituted for that check.
+
+The exact path is
+ S,(2/5,1),(6/5,-1),(14/5,3),(3,5/2),(8/5,-1),(4/5,1),
+ (-2/7,-12/7),(2/3,-4/3),T.
+There are EIGHT reflections. No bounce lies at a lattice vertex. The open
+legs cross(2,1) and(0,-1); both are full360 interior points of H+B12.
+Neither source nor target is revisited before its proper endpoint.
+Actual T unfolds to(8,20), aligned with launch(2,5).
+
+3. Complete support certificate
+
+Required20triangles all lie in minimum H+B12. Forbidden6triangles are
+ B0,B3,D2,E3,Tc6,N6.
+There is NO L or R support requirement or blocker. An upper support may
+contain fullL/R, Bexcept0/3, Dexcept2, Eexcept3, Tcexcept6, Nexcept6.
+Every valid room between the stated minimum and maximum inherits this
+path. These extrema are support envelopes, not extra constructed rooms.
+Six negative controls each fill one forbidden triangle and are rejected.
+The checker verifies all finite contacts, positive specularity, complete
+incident support on open legs, first actual T, reverse/sigma and unfolding.
+
+4. Original inward case and two outside-C centered-B rows
+
+The last unresolved centered-B inward description is
+ H+L670+B12+E4+Tc5+N5+D1+R3.
+It fits the eight-path support. This closes ONE more named inward
+description at parent level, relative to the recorded necessary table.
+The two L701/EC/N7/R3 descriptions have a SEPARATE pending nine-path
+transfer. If both transfers pass review, the historical eight inward
+descriptions become FIVE. This is not a valid-room count.
+
+For either outside-C L012 or L0123, the centered-B row requires ordinary
+E4,Tc5,N5 and exactly one of D2,D1,R3,R4. With D2 absent all three choices
+D1/R3/R4 fit ONE symbolic eight-path upper support. With D2 present use
+the previously independently accepted centered-B/D2 SIX path. Its full
+maximum permits allL/E/Tc/R and Nexcept6. Thus BOTH entire outside-C
+centered-B rows have parent bound<=8. No D-cap product or room census ran.
+
+5. Reflected eight and the centered-E outside-C rows
+
+Sigma(x,y)=(2-y,2-x), together with time reversal, preserves the actual
+ordered endpoints S/T. It transforms minimum H+B12 to H+E34 and the six
+blockers to E2,E5,R3,B2,L7,N7. The transformed eight is independently
+rechecked by the own exact engine. It uses no D or Tc cap mirror.
+
+For either L012 or L0123 with centered E34, the required ordinary caps
+are B1,Tc5,N5, with one of D2,D1,R3,R4. Both L shapes omit7, so if R3 is
+absent the choices D2/D1/R4 fit the reflected eight maximum. If R3 is
+present, use the already independently accepted E34/R3 SIX (the sigma
+of the accepted B12/D2 six). Its fullL/B/D/Tc maximum permits these rows.
+The checker rechecks that fixed six and both symbolic inclusions too.
+Thus BOTH entire centered-E outside-C rows have parent bound<=8.
+
+This does NOT close the L7012/EC/R4 outside-C row: it contains L7, which
+removes a mirror of the reflected eight. Nor does this cover arbitrary
+N or E unit variants in the centered-B application. Full critical-L,
+other outside-C partner rows, mixed/remote cases and Delta4 remain open.
+
+6. Evidence and review
+
+Reproduce: python3 -B .context/illumination-k4-codex/surplus-four-local/L670-B12-D1-search/verify.py
+Receipt verification.json pins search/room/result, own Fraction primitives,
+original critical-L table and independent accepted-six review sources.
+Frozen search.py/search.log/room.json/result.json are unchanged.
+No second room, extra direction/word/parameter search, archive or worker.
+These are parent mathematical checks, not formal or expert verification.
+
+[done parent] New eight-path, strict hand equation, original inward transfer.
+[done parent] Entire L012/L0123 centered-B and centered-E rows <=8.
+[waiting on Codex01a18403] Independent hand challenge of new8 and four rows.
+[in progress] Other critical-L/outside-C/local/mixed/remote surplus4 gaps.
+Next move: independent review, preserving all new proof inputs frozen.

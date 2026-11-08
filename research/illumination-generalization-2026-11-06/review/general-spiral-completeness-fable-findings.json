@@ -1,0 +1,54 @@
+{
+  "id": "FABLE_STRUCTURAL_PREREQUISITE_DRAFT_AUDIT",
+  "created_utc": "2026-11-08T04:36:03.013655+00:00",
+  "source_observations": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/fable/general-geometry-01-lifting.md",
+      "sha256": "5d50e5592bc0cefb01cb1adbc0549e554145b6344d844395e9bfd7e80f878280"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/fable/general-geometry-02-r3-shapes.md",
+      "sha256": "5be10c0bc5e761a028cd3f989511ac5524a7575dc49a838c4e133373b8dd05e4"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/fable-frontier.md",
+      "sha256": "0a71c4f962a6386aa92cf08c6b352573882b87888d8fc661d8b9c53b4f8f42d0"
+    }
+  ],
+  "draft_not_frozen_review": true,
+  "findings": [
+    {
+      "id": "F1",
+      "decision": "CORRECT",
+      "topic": "branched starting prong uniqueness"
+    },
+    {
+      "id": "F2",
+      "decision": "CORRECT",
+      "topic": "Gamma action derivative"
+    },
+    {
+      "id": "F3",
+      "decision": "REJECT_UNPROVED_RESTRICTION",
+      "topic": "only global symmetry quotients/common-period covers"
+    },
+    {
+      "id": "F4",
+      "decision": "CORRECT",
+      "topic": "coordinate-swap ordered chart"
+    },
+    {
+      "id": "F5",
+      "decision": "REJECT_FALSE_PREMISE",
+      "topic": "cone-to-regular ramification and distinct cone merging"
+    },
+    {
+      "id": "F6",
+      "decision": "CORRECT_CATEGORY_GAP",
+      "topic": "orbifold versus translation-surface lifting"
+    }
+  ],
+  "all_findings_pending_reconciliation": true,
+  "new_discovery": false,
+  "whole_goal_complete": false
+}

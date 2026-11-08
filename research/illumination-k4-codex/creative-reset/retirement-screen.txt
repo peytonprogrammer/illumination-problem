@@ -1,0 +1,17 @@
+Bounded creative reset — retirement screen, 2026-11-02
+
+No discovery searches. Read-only text/source retrieval and hand reasoning only.
+
+1. Axis-affine normalization: RETIRED AS OLD.
+Independent positive x/y scaling exactly conjugates orthogonal billiards; original local rigidity already uses the four-parameter axis-affine quotient. Existing rigidity-review/findings.md, parity-sign-theorem/holonomy-rigidity.md, inputs/review1/peer-review.txt.
+
+2. Next strict triangular seed: SCREENED OUT for improving22.
+For seed A=pi/n and an actual disk tiling, let I be interior A vertices, s_A smooth boundary A vertices, m the A incidence at each remaining A corner. Assume every non-A tile vertex is a true boundary corner; no other interior vertices. Triangulation gives N=2I+W+s_A−2. A incidence gives N=2nI+ns_A+sum m. Subtraction gives W=2+(2n−2)I+(n−1)s_A+sum m. For I>=2, W>=4n−2. The n>=6 cases cannot give <22. This is a conditional hand screen, not a theorem excluding transparent vertices or arbitrary polygons. Wolecki Lemma3.1 supplies a nonreturn seed only under its own hypotheses; nothing here strengthens those hypotheses. Source https://arxiv.org/html/1905.09358v3 section3.
+
+3. Parametrize maximal walls instead of occupied tiles: NO NEW REDUCTION.
+Fixed-word legality is semialgebraic, not generally polyhedral in room and mark parameters. Infinite words, unbounded travel lengths, and degenerate limits remain. Prior l3-analysis.md and proofs/l3-foundations-review.md. Calling the variables periods does not remove those obligations.
+
+4. Refold the SAME orthogonal surface: SCREENED OUT as a way to reduce walls.
+At each orthogonal vertex, the four corner sectors form ONE equivalence class (the two reflections generate the whole four-element group). A convex vertex yields one regular cone of angle2pi. A reflex270-degree vertex yields ONE cone of angle6pi/zero order2. Thus total zero order is2r, so2g−2=2r, g=r+1, and W=2r+4=2g+2. Known22walls givesg10; <=20walls givesg<=9. My initial board conclusion was correct but its phrase 'two simple zeros' was wrong; a subsequent attempted correction erroneously counted two double zeros. This corrected sector-orbit count supersedes BOTH incorrect descriptions. Fixed genus fixes W for a connected standard four-copy orthogonal billiard unfolding. It says nothing about other angle groups or nonstandard covers.
+
+5. Retired pocket routes: module/dimension/symplecticity, boundary flux, local excursion identity, leaf deletion, unconstrained sealed portals, fixed short direction lists, and empty-triangle global closure remain retired. A new proposal must give actual endpoint coupling or a different construction, not a renamed equivalent. See parity-sign-theorem/pocket-geometric-brainstorm.md and peer reviews.

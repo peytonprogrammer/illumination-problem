@@ -1,0 +1,365 @@
+{
+  "status": "PASS",
+  "case": "I2_1_1_p00",
+  "encoding_seconds": 0.3108094580238685,
+  "triangle_variables": 1296,
+  "unit_square_pairs": 648,
+  "exception_channels": 559,
+  "base_clauses": 570223,
+  "exact_k_clauses": 6599,
+  "controls": [
+    {
+      "control": "analytic_notch_fill_and_leaf_truncation_W18_k7",
+      "SAT": true,
+      "geometry": {
+        "vertices": [
+          [
+            -1,
+            -1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "unit_squares": 16,
+        "triangles": 32,
+        "walls": 18,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "k": 7,
+        "J": 3,
+        "s_N": 4,
+        "Q": 14,
+        "s_A": 2,
+        "exceptions": [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "simple": true,
+        "orthogonal": true
+      },
+      "cells": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "reflections": 0,
+      "exception_channels_match": true,
+      "corner_channels_match": true
+    },
+    {
+      "control": "known_W22_k4_room_rejected",
+      "SAT": false,
+      "geometry": {
+        "vertices": [
+          [
+            -1,
+            -1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "unit_squares": 15,
+        "triangles": 30,
+        "walls": 22,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "k": 4,
+        "J": 0,
+        "s_N": 4,
+        "Q": 12,
+        "s_A": 2,
+        "exceptions": [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "simple": true,
+        "orthogonal": true
+      }
+    },
+    {
+      "control": "unpaired_unit_triangles_rejected",
+      "SAT": false
+    },
+    {
+      "control": "same_k7_room_rejected_when_exact_k6_requested",
+      "SAT": false
+    }
+  ],
+  "frozen_triangle_checker_agrees": true,
+  "scope": "Prescribed controls only, including analytic whole-square modifications of the known room. No second search case."
+}

@@ -1,0 +1,1145 @@
+Independently challenge proposed all-k Section34. Tools disabled. NO room/ray/direction/word/cylinder/orbit or parameter discovery scan. This is a hand parametric family, not extrapolation from examples. Check lower-triangle D V D return with phase2/M<q<1; all-k cap-entry inequalities q_j>=3/M; k alternatingcap loops ending at ACTUALT; first-half corridor and primitive equal halves; MOVING diagonalpi atB; full defect; and the explicit raw fan-chain family membership/count formulas for ALLk. ONE k2/W37 exact topology/path control passed, which alone cannot establish the theorem. State ACCEPT/REJECT/CONDITIONAL with precise corrections. Keep universal arbitrary-room goal OPEN.
+
+## 1. Scope
+
+Let P be a strictly simple canonical grid-triangle room with distinct interior A marks S,T. Every noncorner integer point is A; in particular, there are no interior B/C points. Keep every wall direction and the rest of P fixed. The pocket has vertices
+
+    B_0=(1,1), A_0=(2,2), C_0=(1,2),
+
+and portal x=1, 1<y<2. Immediately above and below the portal the physical wall also lies on x=1. Move B_0,A_0,C_0 by t u, where u=(0,-1), leaving both marks fixed. Thus the two moving mirror lines are
+
+    D_t: y-x=-t,       H_t: y=2-t.
+
+We seek an admissible event from a chosen source lift to a lift of the ACTUAL physical target T, through exactly one corner at the developed midpoint. The halves have equal displacement w; each avoids other physical corners. The selected intrinsic continuation at the corner bounds an embedded pi-sector. Wall-parallel directions are omitted when applying a physical opening inequality. These requirements cannot be replaced by reaching an arbitrary A point or by an arbitrary broken geodesic.
+
+The global existence assertion has not been proved. The local return-map and single-excursion results do not need the grid or parity hypotheses on the rest of the room. The odd-word criterion only needs its wall reflection linear parts to lie in D4. The raw parity hypotheses matter for the proposed global existence and for the previously proved axis-twist transfer. No existence is inferred from accessibility of the pocket.
+
+
+
+## 3. The exact wall-load identity for the slide
+
+Write each fixed-direction physical reflection as
+
+    F_i,t(x)=R_i x+b_i(t).
+
+All R_i belong to D4. For the two moving pocket mirrors,
+
+    a_D := b_D'(0)=(1,-1),
+    a_H := b_H'(0)=(0,-2),
+
+and every other a_i is zero. These follow either from conjugation by tau_(t u), or directly from the equations of D_t,H_t. Number hits j=0,...,n-1, so p is the number strictly before the chosen corner development. Let L_j be the product of the linear reflection parts strictly BEFORE hit j in the development from the source. Composition differentiation gives
+
+    derivative of accumulated affine translation = sum_j L_j a_j.       (1)
+
+Suppose an actual saved or constructed admissible midpoint event has n wall hits in its fixed word, with p hits before its corner c. Its physical corner velocity is v_c=u if c is B_0,A_0,C_0 and zero otherwise. Both actual marks are fixed. With eta=gamma_second-gamma_first, the period defect derivative is
+
+    Q(eta) = sum_(j>=p) L_j a_j
+             - sum_(j<p) L_j a_j - 2 L_p v_c.                         (2)
+
+A corner can admit equivalent choices of the coincident split position. The identity uses the prefix matching the chosen labeled corner development. When comparing prefixes, differentiate the corner position too. Formula (2) follows from Q(eta)=T_image'-2 C_image'+S_image'; here S_image'=0. It therefore retains the actual target, the first-half transport and corner motion.
+
+For a corner outside the pocket, group complete pocket excursions. Each contributes its transported vector L(I-R_G)u with a minus sign before the midpoint and a plus sign afterward. This proves a conditional geometric result:
+
+Here a corner outside the pocket means c is not one of B_0,A_0,C_0. The actual interior A marks are outside the closed unit pocket because that triangle and its open portal contain no other integer points.
+
+**Single-excursion criterion.** If an admissible actual S-to-T event has its sole corner outside the pocket, makes exactly one complete excursion into the pocket, and that excursion uses any return map except DHD, then Q(eta) is nonzero. More generally it suffices that all other excursions use DHD.
+
+The proof is immediate from the table and invertibility of L. It applies with the remainder of the room arbitrary. In the D4 setting its nonzero defect is axis- or diagonal-parallel, so an admissible non-wall-parallel w also gives a nonzero scalar opening row. Its sign selects one sign of the slide. The criterion does NOT supply the event.
+
+
+
+### 26.9 End-leaf detection using its MOVING diagonal flank
+
+**Status: focused independent Opus review12562 accepts this scoped
+hand proof(exit0), with corrections incorporated; exact fixed-path and
+nonvacuity controls pass.**
+Retain26.7's connected-H upper corridor with S=(0,0), M=(2,0), T=(4,0).
+Suppose the specified literal upper end pocket is
+A=(6,0),C=(5,0),B=(5,1). Its vertical slide velocity is u=(0,1), and its
+moving diagonal mirror is D_t:x+y=6+t. Additionally suppose the lower
+leaf at(4,-2) uses its RIGHT portal y=-1,4<x<5. This extra hypothesis
+is essential. Its alternative left portal is not treated here.
+
+By literal225degrees at B, the upper leaf at(4,2) is the m=2 upper-right
+quadrant. As26.8 proves, rawness consequently forces N's right portal.
+This new construction does NOT reflect in that portal or assume it a
+wall. At the other B point(5,-1), the full T star contributes90degrees,
+the specified UPPER end triangle contributes none, and no other fan from
+the complete list reaches it apart from the lower leaf. A right m=2
+lower quadrant would add90degrees and leave this B smooth180degrees,
+forbidden by rawness. Thus the assumed right-portal lower leaf is m=1:
+
+    [(4,-2),(4,-1),(5,-1)].
+
+Its two fixed mirrors are D_-:x-y=6 and V_-:x=4. Their composite
+D_- V_- D_- is reflection in y=-2.
+
+The first half is the straight forced-corridor segment S->B, with
+primitive displacement w=(5,1), no other corner and no ordinary hit.
+At B choose the MOVING diagonal flank D_t, rather than the fixed
+vertical flank. At the base it sends incoming(5,1) to outgoing(-1,-5).
+The ensuing physical half is prescribed exactly as
+
+    B=(5,1) -> (9/2,-3/2) -> (4,-8/5)
+      -> (13/3,-5/3) -> T=(4,0).
+
+It enters the lower triangular leaf at(23/5,-1), uses its three fixed
+mirrors D_-,V_-,D_-, and exits at(21/5,-1). Those ordinary hits all lie
+strictly inside their mirror segments. Its successive velocities are
+(-1,-5),(-5,-1),(5,-1),(-1,5), and durations are
+1/2,1/10,1/15,1/3, totaling1. The portions outside the lower leaf are
+inside the full T square. None of these open segments meets another
+physical corner. The first and second half reach the specified ACTUAL
+marks; no boundary A is substituted for T.
+
+Developing ACTUAL T by the fixed lower cap reflects it to(4,-4).
+Reflection in the selected diagonal flank then gives
+
+    T'(t)=(10+t,2+t),       B(t)=(5,1+t).
+
+At t=0 the two developed halves are both(5,1). In the original source
+frame the complete moving-flank derivative is
+
+    Qeta=T'_derivative-2 B_derivative=(1,1)-(0,2)=(1,-1),
+    det(w,Qeta)=-6.
+
+No ordinary mirror term moves under this END-pocket slide. The moving
+corner reflection itself DOES contribute and is retained; simply using
+-2u would be incorrect. For small t the fixed lower-cap hits remain
+away from endpoints. Actual straight connection after opening is governed
+by the same local derivative criterion as Section3; the prescribed
+base event is what is asserted here.
+
+For intrinsic legality put alpha=atan(1/5). At B the physical link is
+[pi/2,7pi/4]: the upper-right quadrant, full T and end triangle together
+have225degrees. Its source germ is pi+alpha. The outgoing physical germ
+(-1,-5) lies at3pi/2-alpha. Across the diagonal flank ray7pi/4 it
+develops to2pi+alpha in the adjacent copy. The interval
+[pi+alpha,2pi+alpha] has length pi, crosses that labeled flank once and
+embeds in the total10pi cone. Thus this is the legal pi continuation,
+not a3pi one. The clockwise pi-continuation at B across the fixed vertical up-ray,
+with outgoing(-5,1), is a DIFFERENT choice and is not used here. The
+withdrawn26.8 attempt had midpoint C and failed at an earlier portal;
+it was not this B continuation.
+
+This conditional case is NONVACUOUS: Section33's prescribed actual W25
+room, translated by(4,0), has every stated fan and both marked endpoints.
+It also has all its diagonal-direction cylinder loads zero by the
+separately accepted scoped proof in33. Consequently
+that directional cylinder blindness does not prevent a directly detecting
+one-corner event with a moving-diagonal continuation. Whole-room grid
+symmetries preserve the conditional construction. Upper end pockets with
+a LEFT-portal opposite lower leaf, lower-pointing end pockets in this
+fixed upper-corridor normalization, disconnected-H placements and arbitrary
+wall counts remain open. Whole-room reflection does not silently cover
+the lower-pointing pocket: it also changes M's half-star. The left end
+has the corresponding conditional construction by horizontal reflection
+and actual endpoint exchange, preserving |det|=6. No direction/word/path/room scan is used.
+
+
+
+
+## 34. A moving-diagonal detecting family with no wall-count bound
+
+**Status: proposed parametric hand proof, focused independent review
+pending.** This extends26.9's mechanism beyond the bounded fan census.
+It proves a specified infinite FAMILY, not the universal pocket lemma.
+No parameter, direction, room or trajectory discovery scan is used.
+
+Let k>=1 be an integer, D=4k and M=D+1. Suppose a canonical room has
+actual interior marks S=(0,0),T=(D,0), contains the open upper corridor
+(0,D+1) x(0,1), and has the following actual cap geometry at T. Its full
+star contains[D-1,D+1] x[-1,1]. The fixed upper cap is the rectangle
+[D,D+1] x[1,2], with actual top mirror y=2. Its fixed lower cap is the
+triangle[(D,-2),(D,-1),(D+1,-1)], with actual mirrors x=D and x-y=D+2.
+The specified straight-attached upper end pocket is
+
+    A=(D+2,0), C=(D+1,0), B=(D+1,1),
+
+sliding by u=(0,1). It has the literal45/270/225angles, fixed vertical
+flanks on x=D+1 and moving diagonal D_t:x+y=D+2+t. The remainder of the
+room is fixed. These are geometric hypotheses, not consequences of
+arbitrary room topology.
+
+Then there is an ACTUAL S/T one-B-corner midpoint event, with equal
+primitive halves(M,1), an embedded intrinsic pi continuation, and
+
+    Qeta=(1,-1),         det((M,1),Qeta)=-(M+1)=-(4k+2).
+
+**First half and corner.** Take S->B directly through the open corridor.
+Its displacement(M,1) is primitive, and it meets no other integer point.
+Choose reflection at B in its MOVING diagonal flank, sending(M,1) to
+(-1,-M). The physical225degree link and embedded pi-sector are exactly
+26.9's computation with alpha=atan(1/M). The interval
+[pi+alpha,2pi+alpha] crosses the moving diagonal once and embeds in the
+10pi cone.
+
+**Lower-cap return lemma.** In local coordinates relative to T, enter
+the lower triangular cap at(q,-1) with velocity(-1,-M), where
+
+    M>1,          2/M < q < 1.
+
+The fixed three-reflection word D_- V_- D_- returns through(q-2/M,-1)
+with velocity(-1,M), after elapsed time2/M. Here D_-:x-y=2 and V_-:x=0.
+This is a prescribed triangular reflection identity, not a trial word.
+The first D hit has x=(M*q-1)/(M-1); the V hit is
+(0,-2+q-1/M); the second D hit has x=(M*q-1)/(M+1) and y=x-2.
+All are interior points of their mirror segments. The last portal x
+coordinate q-2/M is positive by hypothesis. The consecutive durations
+are
+
+    (1-q)/(M-1),
+    (M*q-1)/(M*(M-1)),
+    (q-1/M)/(M+1),
+    (1-(M*q-1)/(M+1))/M.
+
+Their sum is2/M. Positivity and the displayed coordinates prove that no
+other edge or corner is met. In development the word is exactly reflection
+in y=-2. Thus this REAL triangular cap realizes the same outgoing state
+as a horizontal reflector at y=-2, with unchanged horizontal phase.
+
+**Upper cap and repeated returns.** In the fixed upper rectangle an
+entry at(q,1) with velocity(-1,M), again q>2/M, simply hits y=2 and
+returns through(q-2/M,1) with velocity(-1,-M) in time2/M. No vertical
+side is met because x stays between q-2/M and q, both in(0,1).
+
+Starting at B, use the virtual vertical interval[-2,2]. Its j-th far-wall
+hit, indexed j=0,...,k-1, occurs after vertical distance4j+3, at time
+
+    t_j=(4j+3)/M.
+
+The hits alternate lower,upper,lower,upper. Each corresponding cap entry
+occurs at time(4j+2)/M and has horizontal portal coordinate
+
+    q_j=1-(4j+2)/M >=3/M >2/M.
+
+Thus EVERY return is geometrically valid by the two cap lemmas. The
+coordinate x relative to T is1-t whenever the path is outside the lower
+triangle, and each triangular return exits at that same predicted phase.
+The final cap exit is at time4k/M, phase1/M and height either+1or-1.
+The remaining time1/M brings the path to(0,0) relative to T. Hence the
+second half reaches ACTUAL T at time1, with no earlier arrival. Its total
+Euclidean length equals the first half because all velocities have norm
+sqrt(M²+1), including the swapped components in the lower cap.
+
+In the fixed development, k alternating far-wall reflections take ACTUAL
+T to(D,-4k)=(D,-D). Reflection in the selected moving corner flank gives
+
+    T'(t)=(2D+2+t,2+t),       B(t)=(D+1,1+t).
+
+Thus T'(0)=2B(0), both developed halves equal(M,1), and the full defect
+is(1,1)-2(0,1)=(1,-1). All ordinary cap mirrors are fixed. Since(M,1)
+is primitive and every base reflection preserves the canonical integer
+lattice, no open half can meet another physical corner. The construction
+uses k analytically prescribed cap returns; no bounded ray run or guessed
+reflection scan is needed for the all-k proof.
+
+**An explicit unbounded raw family realizing the hypotheses.** For every
+k>=1, put full stars at(4j,0), j=0,...,k. For j=0,...,k-1 put the upper
+half-star at(4j+2,0), with a right one-triangle leaf at(4j+2,2). At each
+full star put an upper-right one-triangle leaf centered at(4j,-2).
+Put a lower-right one-triangle leaf at(4j,2) for j<k, and the lower-right
+two-triangle quadrant at(D,2). Add a lower-right triangle at(-2,0) and
+the specified upper-left triangle at(D+2,0) (the latter is the upper end
+pocket, directed back toward T). Each named triangle is the unique
+canonical triangle on the stated side of its inward C portal.
+
+The fan graph is a tree: there are k+1full fans, k shared half-stars and
+3k+4leaves. Its5k+4portals join5k+5fans. The unit-box geometry has no
+nonlocal overlaps. All shared B links are contiguous; their angles are
+90,135or225degrees, never180or360. All C links are90or270degrees. The
+only smooth boundary A points are the k half-star centers. These local
+facts repeat by translation along the chain; the two ends have the
+explicit literal225/270 pocket and the harmless135degree left B tip.
+Thus the connected disk has a simple boundary and is raw. This is a hand
+construction, not a completeness enumeration.
+
+There are15k+13canonical triangles. The partial charge is6k+5, since
+k half-stars contribute3k and the3k+4leaves have only one m=2 member.
+The raw identity gives
+
+    W=2+6(k+1)+(6k+5)=12k+13.
+
+In particular k=1 has W25 and k=2 has W37. A SINGLE fixed k=2 fixture
+and its prescribed two-cap event provide exact geometry/segment controls;
+those checks are not the proof for all k. The universal theorem remains
+open because arbitrary raw rooms need not contain this corridor and pair
+of cap geometries.
+
+
+"""ONE fixed k2 control for a stated analytic all-k corridor theorem.
+No k scan, ray/word/cylinder search or room enumeration.
+"""
+from pathlib import Path
+from fractions import Fraction as F
+import importlib.util,json
+base=Path(__file__).resolve().parent
+ring=[(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
+def fan(a,start,count):
+ return [tuple(sorted((a,(a[0]+ring[j%8][0],a[1]+ring[j%8][1]),(a[0]+ring[(j+1)%8][0],a[1]+ring[(j+1)%8][1])))) for j in range(start,start+count)]
+# This single prescribed control k=2 checks nonvacuity beyond the W26 range.
+k=2;D=4*k;M=D+1;room=[]
+for j in range(k+1):
+ room+=fan((4*j,0),0,8)
+ room+=fan((4*j,-2),1,1)
+ room+=fan((4*j,2),6,2 if j==k else 1)
+for j in range(k):
+ room+=fan((4*j+2,0),0,4);room+=fan((4*j+2,2),6,1)
+room+=fan((-2,0),7,1);room+=fan((D+2,0),3,1)
+def load(name,path):
+ sp=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m);return m
+geom=load('frozen_geometry',base.parent/'k5-proof-pilot/inputs/illumination_geometry.py')
+receipt=geom.check({'triangles':room,'marked':[(0,0),(D,0)],'require_simple':True},strict=True)
+assert receipt['walls']==12*k+13==37 and receipt['tiles']==15*k+13==43
+assert set(map(tuple,receipt['interior_A']))=={(0,0),(4,0),(8,0)}
+assert receipt['sectors']['(9, 1)']==[5] and receipt['sectors']['(9, 0)']==[6]
+a=load('fixed_guard_checker',base.parent/'persisted-replay/audit.py')
+def p(x,y):return(F(x),F(y))
+def sub(a,b):return tuple(x-y for x,y in zip(a,b))
+def dot(a,b):return sum(x*y for x,y in zip(a,b))
+def mul(k,a):return tuple(k*x for x in a)
+def ref(a,n,c):return sub(a,mul(2*(dot(n,a)-c)/dot(n,n),n))
+S=p(0,0);T=p(8,0);B=p(9,1);w=p(9,1);u=p(0,1)
+post=[B,p(F(35,4),F(-5,4)),p(8,F(-4,3)),p(F(43,5),F(-7,5)),p(F(74,9),2),T]
+mirrors=[(p(1,-1),F(10)),(p(1,0),F(8)),(p(1,-1),F(10)),(p(0,1),F(2))]
+times=[F(1,4),F(1,12),F(1,15),F(17,45),F(2,9)]
+v=ref(w,p(1,1),F(0));assert v==p(-1,-9) and sum(times)==1
+for i,t in enumerate(times):
+ assert sub(post[i+1],post[i])==mul(t,v)
+ if i<len(mirrors):
+  n,c=mirrors[i];assert dot(n,post[i+1])==c;v=ref(v,n,F(0))
+R=frozenset(room);path=[S]+post
+for x,y in zip(path,path[1:]):assert a.segment(x,y)<=R
+for x,y,z in zip(post,post[1:],post[2:]):
+ used,absent=a.bounce(x,y,z);assert used<=R and not absent&R
+assert a.incident(S)<=R and a.incident(T)<=R
+image=T
+for n,c in reversed(mirrors):image=ref(image,n,c)
+assert image==p(D,-D)
+base_target=ref(image,p(1,1),F(D+2));assert base_target==p(2*(D+1),2)
+assert sub(base_target,B)==w
+eps=F(1,100);target_velocity=mul(1/eps,sub(ref(image,p(1,1),F(D+2)+eps),base_target))
+Q=sub(target_velocity,mul(2,u));assert Q==p(1,-1)
+assert w[0]*Q[1]-w[1]*Q[0]==-(4*k+2)
+# Fixed bottom-cap phase in this supplied event; the all-M lemma is hand-proved.
+q=F(7,9);m=9
+cap_times=[(1-q)/(m-1),(m*q-1)/(m*(m-1)),(q-F(1,m))/(m+1),(1-(m*q-1)/(m+1))/m]
+assert q>F(2,m) and sum(cap_times)==F(2,m) and all(t>0 for t in cap_times)
+assert q-F(2,m)==F(5,9)
+# Two parity identities are the symbolic induction step for the fixed-cap
+# endpoint formula F_k(y)=(-1)^k*y-4*k, not a k or geometry scan.
+for parity in (-1,1):
+ far=-2*parity
+ assert parity*2*far==-4
+out=dict(status='PRESCRIBED_K2_CORRIDOR_CONTROL_PASS',geometry=receipt,prescribed_triangles=room,
+ fixed_k=k,first_half=[S,B],second_half=post,developed_actual_target=base_target,
+ defect=Q,determinant=-(4*k+2),cap_phase=q,cap_elapsed=sum(cap_times),
+ all_k_proof='HAND_THEOREM_PENDING_REVIEW_NOT_ESTABLISHED_BY_THIS_FIXED_CONTROL',
+ independent_review='PENDING',universal_pocket_detection='OPEN',discovery_runs=0)
+(base/'pocket-corridor-chain.json').write_text(json.dumps(out,indent=2,default=str)+'\n')
+print(json.dumps({x:y for x,y in out.items() if x not in ['geometry','prescribed_triangles']},indent=2,default=str))
+
+
+{
+  "status": "PRESCRIBED_K2_CORRIDOR_CONTROL_PASS",
+  "geometry": {
+    "simple_polygon": true,
+    "tile_complex_euler": 1,
+    "tiles": 43,
+    "walls": 37,
+    "interior_A": [
+      [
+        0,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    "transparent_vertices": [],
+    "slit_edges": 0,
+    "boundary_contacts": [],
+    "atomic_boundary_faces": 39,
+    "sectors": {
+      "(-2, 0)": [
+        1
+      ],
+      "(-1, -1)": [
+        3
+      ],
+      "(-1, 0)": [
+        6
+      ],
+      "(-1, 1)": [
+        2
+      ],
+      "(0, -2)": [
+        1
+      ],
+      "(0, -1)": [
+        6
+      ],
+      "(0, 1)": [
+        6
+      ],
+      "(0, 2)": [
+        1
+      ],
+      "(1, -1)": [
+        3
+      ],
+      "(1, 0)": [
+        6
+      ],
+      "(1, 1)": [
+        5
+      ],
+      "(2, 0)": [
+        4
+      ],
+      "(2, 1)": [
+        6
+      ],
+      "(2, 2)": [
+        1
+      ],
+      "(3, -1)": [
+        2
+      ],
+      "(3, 0)": [
+        6
+      ],
+      "(3, 1)": [
+        5
+      ],
+      "(4, -2)": [
+        1
+      ],
+      "(4, -1)": [
+        6
+      ],
+      "(4, 1)": [
+        6
+      ],
+      "(4, 2)": [
+        1
+      ],
+      "(5, -1)": [
+        3
+      ],
+      "(5, 0)": [
+        6
+      ],
+      "(5, 1)": [
+        5
+      ],
+      "(6, 0)": [
+        4
+      ],
+      "(6, 1)": [
+        6
+      ],
+      "(6, 2)": [
+        1
+      ],
+      "(7, -1)": [
+        2
+      ],
+      "(7, 0)": [
+        6
+      ],
+      "(7, 1)": [
+        5
+      ],
+      "(8, -2)": [
+        1
+      ],
+      "(8, -1)": [
+        6
+      ],
+      "(8, 1)": [
+        6
+      ],
+      "(8, 2)": [
+        2
+      ],
+      "(9, -1)": [
+        3
+      ],
+      "(9, 0)": [
+        6
+      ],
+      "(9, 1)": [
+        5
+      ],
+      "(9, 2)": [
+        2
+      ],
+      "(10, 0)": [
+        1
+      ]
+    },
+    "certificate": "PASS: reflection tiling, connected interior, two interior A points, all B/C sectors absorbing corners"
+  },
+  "prescribed_triangles": [
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    [
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    [
+      [
+        3,
+        -1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    [
+      [
+        3,
+        -1
+      ],
+      [
+        4,
+        -1
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    [
+      [
+        4,
+        -1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        -1
+      ]
+    ],
+    [
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        -1
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    [
+      [
+        4,
+        -2
+      ],
+      [
+        4,
+        -1
+      ],
+      [
+        5,
+        -1
+      ]
+    ],
+    [
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    [
+      [
+        8,
+        0
+      ],
+      [
+        9,
+        0
+      ],
+      [
+        9,
+        1
+      ]
+    ],
+    [
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        1
+      ]
+    ],
+    [
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        1
+      ]
+    ],
+    [
+      [
+        7,
+        0
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    [
+      [
+        7,
+        -1
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    [
+      [
+        7,
+        -1
+      ],
+      [
+        8,
+        -1
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    [
+      [
+        8,
+        -1
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        9,
+        -1
+      ]
+    ],
+    [
+      [
+        8,
+        0
+      ],
+      [
+        9,
+        -1
+      ],
+      [
+        9,
+        0
+      ]
+    ],
+    [
+      [
+        8,
+        -2
+      ],
+      [
+        8,
+        -1
+      ],
+      [
+        9,
+        -1
+      ]
+    ],
+    [
+      [
+        8,
+        1
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        9,
+        1
+      ]
+    ],
+    [
+      [
+        8,
+        2
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        9,
+        2
+      ]
+    ],
+    [
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    [
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    [
+      [
+        6,
+        0
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        7,
+        1
+      ]
+    ],
+    [
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        7,
+        1
+      ]
+    ],
+    [
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        1
+      ]
+    ],
+    [
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    [
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        1
+      ]
+    ],
+    [
+      [
+        -2,
+        0
+      ],
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    [
+      [
+        9,
+        0
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        10,
+        0
+      ]
+    ]
+  ],
+  "fixed_k": 2,
+  "first_half": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "9",
+      "1"
+    ]
+  ],
+  "second_half": [
+    [
+      "9",
+      "1"
+    ],
+    [
+      "35/4",
+      "-5/4"
+    ],
+    [
+      "8",
+      "-4/3"
+    ],
+    [
+      "43/5",
+      "-7/5"
+    ],
+    [
+      "74/9",
+      "2"
+    ],
+    [
+      "8",
+      "0"
+    ]
+  ],
+  "developed_actual_target": [
+    "18",
+    "2"
+  ],
+  "defect": [
+    "1",
+    "-1"
+  ],
+  "determinant": -10,
+  "cap_phase": "7/9",
+  "cap_elapsed": "2/9",
+  "all_k_proof": "HAND_THEOREM_PENDING_REVIEW_NOT_ESTABLISHED_BY_THIS_FIXED_CONTROL",
+  "independent_review": "PENDING",
+  "universal_pocket_detection": "OPEN",
+  "discovery_runs": 0
+}

@@ -1,0 +1,185 @@
+{
+  "status": "PARENT_GLOBAL_SOURCE_AND_21_FIXED_GUARD_SUPPORT_CHECK_PASS_PENDING_FINAL_HAND_REVIEW",
+  "local_types": 10,
+  "remote_rows": [
+    [
+      1,
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      3,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      2,
+      0,
+      0
+    ]
+  ],
+  "bound": 32,
+  "fixed_paths": {
+    "zero-surplus-L/cover-check.json:one": {
+      "n": 1,
+      "U": 7,
+      "Z": 1,
+      "all_support_in_K": true
+    },
+    "zero-surplus-L/cover-check.json:one_sigma": {
+      "n": 1,
+      "U": 7,
+      "Z": 1,
+      "all_support_in_K": true
+    },
+    "zero-surplus-L/cover-check.json:four": {
+      "n": 4,
+      "U": 11,
+      "Z": 3,
+      "all_support_in_K": true
+    },
+    "zero-surplus-L/cover-check.json:four_sigma": {
+      "n": 4,
+      "U": 11,
+      "Z": 3,
+      "all_support_in_K": true
+    },
+    "zero-surplus-L/cover-check.json:thirteen": {
+      "n": 13,
+      "U": 16,
+      "Z": 7,
+      "all_support_in_K": true
+    },
+    "zero-surplus-L/cover-check.json:thirteen_sigma": {
+      "n": 13,
+      "U": 16,
+      "Z": 7,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/square-exchange-check.json:B_four": {
+      "n": 2,
+      "U": 12,
+      "Z": 2,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/square-exchange-check.json:E_four": {
+      "n": 2,
+      "U": 12,
+      "Z": 2,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/square-exchange-check.json:B_thirteen": {
+      "n": 11,
+      "U": 17,
+      "Z": 7,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/square-exchange-check.json:E_thirteen": {
+      "n": 11,
+      "U": 17,
+      "Z": 7,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/square-exchange-check.json:T_thirteen": {
+      "n": 11,
+      "U": 17,
+      "Z": 6,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/square-exchange-check.json:L_thirteen": {
+      "n": 11,
+      "U": 17,
+      "Z": 6,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/centered-left-check.json:left": {
+      "n": 12,
+      "U": 18,
+      "Z": 7,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/centered-left-check.json:top": {
+      "n": 12,
+      "U": 18,
+      "Z": 7,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/bottom-residual-check.json": {
+      "n": 6,
+      "U": 17,
+      "Z": 5,
+      "all_support_in_K": true
+    },
+    "first-surplus-review/residual-cover-check.json": {
+      "n": 3,
+      "U": 12,
+      "Z": 3,
+      "all_support_in_K": true
+    },
+    "second-surplus-review/five-path-check.json": {
+      "n": 5,
+      "U": 14,
+      "Z": 4,
+      "all_support_in_K": true
+    },
+    "third-surplus-review/independent-review/guard-extension-check.json:centeredB3": {
+      "n": 3,
+      "U": 13,
+      "Z": 3,
+      "all_support_in_K": true
+    },
+    "third-surplus-review/independent-review/guard-extension-check.json:outerB2": {
+      "n": 2,
+      "U": 12,
+      "Z": 2,
+      "all_support_in_K": true
+    },
+    "third-surplus-review/independent-review/guard-extension-check.json:sigma_centeredB3": {
+      "n": 3,
+      "U": 13,
+      "Z": 3,
+      "all_support_in_K": true
+    },
+    "third-surplus-review/independent-review/guard-extension-check.json:sigma_outerB2": {
+      "n": 2,
+      "U": 12,
+      "Z": 2,
+      "all_support_in_K": true
+    }
+  },
+  "current_source_pins": 148,
+  "limits": "21fixedpathguards/sigma, weightedchargepartitions, frozenreview/sourceidentity only. Doesnotreplacehandtopologyorfinalindependentreview. No room/ray/direction/worddiscovery."
+}

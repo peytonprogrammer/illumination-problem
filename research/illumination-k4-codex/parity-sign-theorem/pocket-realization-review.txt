@@ -1,0 +1,173 @@
+# Pocket-detection lemma: four new deductions and a sharper reduction
+
+**Result.** I have neither a proof nor a counterexample. I do have four rigorous new deductions:
+
+- **R1.** An exact formula for the slide derivative on the translation surface.
+- **R2.** As a consequence of R1, axis-isoperiodicity holds in every room of the scope.
+- **R3.** A twist-increment theorem in arbitrary rational directions.
+- **R4.** A proof that the diagonal bit cannot be toggled by any affine or twist mechanism when the pocket diagonal is the only diagonal wall.
+
+Together these reduce the lemma to a sharper statement about the existence of events.
+
+Notation:
+- X is the eight-copy unfolding, a translation surface, so no transport factors L are needed in its own frame.
+- δ ∈ H¹(X,Σ;ℝ²) is the slide-derivative class, so Q(η)=δ(η).
+- β = [D̂] mod 2.
+
+## 0. Structural facts used below (short proofs)
+
+**(a) X is an origami.** The developing map goes to ℝ²/2ℤ² and then to ℝ²/ℤ², branched only over 0, and the unit squares tile X. So the Veech group is commensurable with SL₂(ℤ) (Gutkin–Judge). With all grid vertices marked, there is a finite-index subgroup Γ_lab that fixes every vertex and every prong. Every lift S̃, T̃ is a vertex.
+
+**(b) Half-time corner.** Take S̃ and a primitive w. The point S̃+sw is an integer point only for s∈ℤ. At s=1 it lies over w mod 2, which is nonzero, so it is a B/C point and hence a corner. Every rational ray from S therefore hits a corner exactly at the half-time and no corner earlier. The second half meets no corner before s=2.
+
+**(c) Regular convex corners give only S→S.** Convex 45° and 90° corners have cone angle 2π.
+- The π-rotation there crosses four 45° sectors or two 90° sectors.
+- That crossing composes to the linear part −I.
+- So the outgoing physical direction equals the direction back toward S, with the same length.
+- The continuation therefore ends at S, and S≠T rules these corners out.
+
+The admissible event corners are therefore:
+- B corners of 135°, 225°, 270° or 315°;
+- C corners of 270° (C corners carry only axis walls).
+
+**The convex 135° B corner is included.**
+
+**(d) Fan rigidity.** Every full fan has exactly one portal per side, and each side midpoint C is a 270° corner whose neighbour C–A edge is a wall.
+- If both halves of a side were walls, C would be a smooth boundary point.
+- If both halves were open, C would be interior, or the room would contain a slit.
+
+The pocket's C₀ with the wall H is exactly this pattern.
+
+**(e) Cylinder-boundary form of events.** Fix a primitive direction w.
+- Every A-fibre regular point lies on exactly one w-saddle connection, as its midpoint.
+- An admissible event is exactly a pair of consecutive saddle connections, of holonomy 2w, on one boundary component of a w-cylinder, whose midpoints are lifts of S and T.
+- The π-sector between them is the sector of that cylinder at c.
+
+This keeps the actual labels, the primitive half-time condition and the intrinsic π-sector.
+
+## R1. The slide is the flux of a boundary field of the pocket square
+
+The eight pocket lifts form one embedded open square Π⊂X of side 2.
+- Its centre is the lift a of A₀.
+- Its four corners are the single lift b of B₀.
+- Its side midpoints are the two lifts of C₀, with opposite midpoints identified.
+- Its boundary consists of the eight portal lifts αⱼ.
+- The four half-diagonals of Π are exactly D̂.
+
+Let eⱼ be the unit vector along αⱼ pointing from its C₀ end to its B₀ end. Then eⱼ = gⱼu, where gⱼ is the copy containing αⱼ, because u points from C₀ to B₀ along the physical portal.
+
+**Proposition.** Let γ be any chain in X that is transverse to ∂Π, avoids the cone points and has its endpoints outside Π̄. Then
+
+  δ(γ) = Σ over crossings of ∂Π: +eⱼ on entering through αⱼ, and −eₖ on exiting through αₖ.
+
+*Proof.* Outside Π every load is zero. Consider a pass that enters through αⱼ and exits through αₖ, with relative return map G, so that gₖ = gⱼR_G. In X's frame its load is gⱼ(I−R_G)u = gⱼu − gₖu = eⱼ − eₖ.
+
+As a check, entering through the lower-left arc (e=(0,−1)) and exiting through the six possible arcs reproduces the six-map table:
+
+| Exit arc | e_exit | e_in − e_exit |
+|---|---|---|
+| bottom-left | (−1,0) | (1,−1) |
+| bottom-right | (1,0) | (−1,−1) |
+| right-lower | (0,−1) | (0,0) |
+| right-upper | (0,1) | (0,−2) |
+| top-right | (1,0) | (−1,−1) |
+| top-left | (−1,0) | (1,−1) |
+
+∎
+
+**Consequences.** Pass types contribute as follows:
+
+| Pass type | Contribution |
+|---|---|
+| Opposite side, same half | 0 |
+| Opposite side, other half | ±2 along that side |
+| Adjacent sides | (±1,±1) |
+
+So δ_y is the "upper minus lower" flux through the vertical sides, and δ_x is the "right minus left" flux through the horizontal sides. Reducing mod 2 recovers equation (3).
+
+## R2. Axis-isoperiodicity holds in every room of the scope
+
+- A horizontal closed geodesic meets Π only in left→right passes at a height y≠1, so it stays in the same half.
+- A vertical closed geodesic meets Π only in bottom→top passes in the same half.
+- By R1 each such pass contributes 0, so δ vanishes on every axis cylinder core.
+
+Hence δ(H^st)=0 in every room of the scope, not only in the raw-parity room. The conversion in Section 5, from a vector seed to two-sided opening, therefore needs **only one admissible event with δ(η)≠0**, in any room.
+
+In addition, δ≠0 on H₁(X) in every room:
+1. Enter Π through the lower-left arc from neighbour copy I, and exit straight through the upper-right arc into copy −I.
+2. Return through X∖Π̄. P′ is connected and contains both a vertical and a horizontal wall, which compose to −I.
+3. By R1 this closed curve has δ = (0,−1)−(0,1) = (0,−2).
+
+It follows that the Poincaré dual δ* is a nonzero vector in H^(0), the zero-holonomy part.
+
+## R3. Twist increments in arbitrary directions
+
+Let η be any admissible S→T event, possibly blind. Let w′∦w be rational, and let φ∈Γ_lab be the parabolic in direction w′.
+
+Some power of φ fixes every saddle connection pointwise. So that power is isotopic, rel Σ, to Πᵢ τ_{Cᵢ}^{kᵢ} with all kᵢ≥1. The cores Cᵢ avoid Σ, because every vertex, including S̃ and T̃, lies on a w′-saddle connection by (b).
+
+**Admissibility of φⁿη.** Each φⁿη is an admissible event:
+- the holonomy Mⁿw is primitive;
+- the corner lifts are fixed;
+- an affine image of an embedded π-sector bounded by opposite prongs is again such a sector;
+- the actual lifts S̃ and T̃ are fixed;
+- only finitely many n give a wall-parallel direction.
+
+Picard–Lefschetz then gives
+
+  **Q(φⁿη) = Q(η) + nΔ, where Δ = Σᵢ kᵢ (Cᵢ·η) δ(Cᵢ),**
+  **D̂·φⁿη ≡ D̂·η + n Σᵢ kᵢ (Cᵢ·η)(D̂·Cᵢ) (mod 2),**
+
+with δ(Cᵢ) computed from the Π-passes of Cᵢ by R1.
+
+**Theorem.** If some admissible event η and some rational direction w′ satisfy Δ≠0, then the slide gives two-sided local illumination of T from S.
+
+*Proof.* Choose n with Q(φⁿη)≠0, then apply R2 and Section 5. ∎
+
+The axis shears of Section 5 are exactly the cases where Δ is forced to be 0. R3 is the "genuinely different action with a justified effect."
+
+**Two constraints that rule out naive versions:**
+- Σᵢ hᵢ δ(Cᵢ) = 0 in every direction, because Σhᵢ[Cᵢ] ∈ H^st. So a single uncancelled δ-nonnull cylinder never occurs.
+- Σᵢ hᵢ (Cᵢ·η) = 0, because η has zero holonomy.
+
+The weights kᵢ ∝ ℓᵢ/hᵢ differ from hᵢ, so these constraints do not force Δ=0.
+
+**On your fact 3.** The subgroup Γ_β that fixes β preserves bits, as the parity increment shows for φ²: there the parity term doubles and vanishes mod 2. The real increment nΔ is not killed by passing to powers. Mod-2 toggling needs an element of Γ_lab∖Γ_β with an odd increment.
+
+## R4. Rooms with a single diagonal wall: the bit cannot be toggled affinely
+
+Suppose the pocket diagonal is the only diagonal wall. By Section 8, D̂ = ∂X₀ mod 2, so β vanishes on absolute classes.
+
+For φ∈Γ_lab, the difference (φ−1)η is absolute, since φ fixes S̃, T̃ and c. Hence β(φη) = β(η) for **every** element of the label-fixing affine group, not just for twists.
+
+The bit is col(T̃)−col(S̃). Physically, it equals 1 exactly when the arrival direction at T is axis-swapped relative to the departure direction at S, that is, when |vₓ| and |v_y| are exchanged.
+
+**Conclusion for this subclass:**
+- Odd seeds exist iff some actual event arrives axis-swapped.
+- No twist, shear or orbit argument can manufacture one from even events.
+- Every δ(Cᵢ) lies in 2ℤ², so only real, even increments (such as DHDH-type ±2 passes) remain available.
+
+This is a genuine structural obstruction to the parity route. It is not a counterexample to detection.
+
+## What a structural counterexample must satisfy
+
+For every admissible event η:
+- (N1) δ(η) = 0;
+- (N2) Δ_{w′}(η) = 0 for every rational direction w′;
+- (N3) more strongly, δ* is symplectically orthogonal to the Γ_lab-module M_η ⊂ H^(0) generated by the increments (φ−1)η.
+
+By R2, δ* is nonzero in H^(0), and the intersection form is nondegenerate on H^(0). Two consequences follow:
+- If Γ_lab acts irreducibly on H^(0)(X;ℝ), then any event with some (φ−1)η≠0 already gives detection.
+- A counterexample therefore needs every event module to be a proper invariant subspace orthogonal to δ*.
+
+This is where a branched-cover obstruction, or imprimitive monodromy, would have to enter. Your six-square control shows such splittings are not excluded merely because the period lattice is full.
+
+There is one caution for cover constructions. Π is a single square sheet of X. So δ* is not pulled back from a nontrivial intermediate cover Y, and any splitting would have to kill both projections of δ*. I have not shown this is impossible.
+
+## What still fails
+
+1. **Existence of an event.** I have not proved that some admissible S→T event exists for every pair, that is, that the S and T midpoints are ever adjacent on a w-cylinder boundary. Neither the fan tree nor (d) forces it.
+2. **Excluding universal δ-orthogonality.** I have not excluded that every event module is δ-orthogonal. That needs either irreducibility of Γ_lab on H^(0), which is unproved and false for some origamis, or a direct computation of Δ that uses Π.
+3. **The single-diagonal subclass.** Whether an axis-swapped arrival event always exists there is open. I have not checked that this subclass is nonempty within the class; for example, axis walls must have unit length on odd lines.
+
+The sharpest justified statement is this. In every room of the scope, two-sided local illumination follows from **one admissible event η together with one rational direction in which δ does not vanish on Γ_lab·η**, and both quantities are computable from Π-crossings by R1.

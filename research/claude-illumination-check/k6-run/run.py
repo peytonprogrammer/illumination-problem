@@ -1,0 +1,119 @@
+"""Claude k=6 tranche. Necessary geometry: Codex's frozen audited encoder (read-only), kmax=6.
+Optical clauses: only guards that pass my exact checker (guard_audit.check). Lit paths from my exact
+tracer or BFS orbit extraction; DARK verdicts from my origami decider stop the case as a candidate.
+Certification: fresh standalone solve of the final CNF with DRAT, checked by my drat-trim."""
+import sys,json,os,time,importlib.util,hashlib,subprocess
+from fractions import Fraction as F
+H=os.path.dirname(os.path.abspath(__file__)); B=os.path.join(H,'..'); X=os.path.join(B,'../illumination-k4-codex/')
+E=X+'k5-proof-pilot/inputs/'; sys.path[:0]=[E,B+'/folded',B+'/reduction']
+def load(n,p):
+    s=importlib.util.spec_from_file_location(n,p); m=importlib.util.module_from_spec(s); s.loader.exec_module(m); return m
+enc=load('enc',E+'encode.py'); from exact import run as trace
+from origami_dark import decide
+from pysat.solvers import Solver
+from pysat.formula import CNF
+ga=open(B+'/k5-residual/guard_audit.py').read().split('idx=random')[0]
+ga=ga.replace("L=[json.loads(l) for l in open('../../illumination-k4-codex/k5-proof-continuation/learned.jsonl')]","L=[]")
+_a=sys.argv; sys.argv=['x','0','0']; g={}; exec(ga,g); sys.argv=_a; check,tiles_at=g['check'],g['tiles_at']
+src=open(B+'/k6-i4/i4.py').read(); exec('from collections import defaultdict',g)
+exec(src[src.index('def polygon'):src.index('shapes={')],g); polygon,guard_from=g['polygon'],g['guard_from']
+EX=load('ex',B+'/orbit-extract/extract_bfs.py'.replace('extract_bfs.py','extract_bfs.py')) if False else None
+def bfs_dir(V,S,T):
+    sp=importlib.util.spec_from_file_location('of',X+'k5-proof-pilot/inputs/origami_frame.py'); o=importlib.util.module_from_spec(sp); sp.loader.exec_module(o)
+    from collections import deque
+    mul=lambda A,C:tuple(tuple(sum(A[i][k]*C[k][j] for k in range(2)) for j in range(2)) for i in range(2))
+    r,u,lab,s0,fr=o.build(list(V),S,T); st=o.canon(r,u,lab,s0); seen={st}; Q=deque([(st,((1,0),(0,1)))])
+    while Q:
+        (R,U,lab),M=Q.popleft(); s=R[0]
+        while s!=0:
+            if lab[s]=='block': break
+            if lab[s]=='T':
+                dev=(M[0][0],M[1][0]); ft=tuple(zip(*fr)); return (ft[0][0]*dev[0]+ft[0][1]*dev[1],ft[1][0]*dev[0]+ft[1][1]*dev[1])
+            s=R[s]
+        Ri,Ui=o.inv(R),o.inv(U)
+        for a,b,N in ((R,tuple(o.comp(U,Ri)),((1,-1),(0,1))),(tuple(o.comp(R,Ui)),U,((1,0),(-1,1)))):
+            n=o.canon(a,b,lab,0)
+            if n not in seen: seen.add(n); Q.append((n,mul(M,N)))
+        if len(seen)>400000: return None
+    return 'DARK'
+from math import gcd
+DIRS=sorted([(p,q) for p in range(-12,13) for q in range(-12,13) if gcd(p,q)==1],key=lambda d:d[0]*d[0]+d[1]*d[1])
+MATS=[(a,0,0,b) for a in (1,-1) for b in (1,-1)]+[(0,a,b,0) for a in (1,-1) for b in (1,-1)]
+def mapt(tri,m,o): return tuple(sorted((m[0]*p[0]+m[1]*p[1]+o[0],m[2]*p[0]+m[3]*p[1]+o[1]) for p in tri))
+def clauses(rec,s,t,x):
+    out=set(); q=rec['q']
+    for o,e in ((s,t),(t,s)):
+        v=(e[0]-o[0],e[1]-o[1])
+        for m in MATS:
+            if (m[0]*q[0]+m[1]*q[1],m[2]*q[0]+m[3]*q[1])!=v: continue
+            U=[mapt(tri,m,o) for tri in rec['U']]; Z=[mapt(tri,m,o) for tri in rec['Z']]
+            if all(u in x for u in U): out.add(tuple(sorted([-x[u] for u in U]+[x[z] for z in Z if z in x])))
+    return out
+def library():
+    L=[json.loads(l) for l in open(X+'k5-proof-continuation/learned.jsonl')]+json.load(open(X+'k5-proof-continuation/peer-guards.json'))+[json.load(open(X+'k5-proof-pilot/orbit-guard.json'))]
+    import glob
+    for f in glob.glob(H+'/cases/*/guards*.jsonl'): L+=[json.loads(l) for l in open(f)]
+    return L
+def runcase(c,budget=int(os.environ.get("BUDGET","5400")),rounds=50000):
+    tag=c['tag']; d=f'{H}/cases/{tag}'; os.makedirs(d,exist_ok=True); t0=time.time()
+    case={'full':c['full'],'allowed':[(a+dx,b+dy) for a,b in c['full'] for dx in range(-14,15) for dy in range(-14,15) if abs(dx)+abs(dy)<=14]}
+    cnf,pool,x,ts=enc.geometry(case,wmax=21,kmax=6); base=len(cnf.clauses)
+    s,t=[(2*a,2*b) for a,b in c['pair']]; added=set()
+    prior=[]
+    cube=os.environ.get('CUBE'); gf=f'{d}/guards.jsonl'; asm=[]
+    if cube:
+        ci,cn=map(int,cube.split('/')); gf=f'{d}/guards.cube{ci}.jsonl'
+        units={abs(cl[0]) for cl in cnf.clauses if len(cl)==1}
+        cen=lambda tt:sum((F(v[0]-s[0])**2+F(v[1]-s[1])**2) for v in tt)
+        free=sorted((tt for tt in x if x[tt] not in units),key=cen)[:cn.bit_length()-1]
+        asm=[x[tt] if ci>>j&1 else -x[tt] for j,tt in enumerate(free)]
+    shared=library()
+    for rec in shared+prior: added|=clauses(rec,s,t,x)
+    for cl in added: cnf.append(list(cl))
+    status='OPEN'; new=0; log=[]
+    with Solver(name='glucose4',bootstrap_with=cnf.clauses) as so:
+        for it in range(rounds):
+            if time.time()-t0>budget: status='TIMEOUT'; break
+            if not so.solve(assumptions=asm): status='UNSAT'; break
+            m={l for l in so.get_model() if l>0}; room=[tt for tt,v in x.items() if v in m]; V=polygon(room)
+            if V is None: status='NONSIMPLE_MODEL'; json.dump(room,open(d+'/nonsimple.json','w')); break
+            path=None; found=[]
+            for dd in DIRS:
+                r=trace(V,s,t,B=3000,dirs=[dd])
+                if r[0] is None: continue
+                found.append(r[1])
+                if len(found)>=int(os.environ.get('MULTI','6')): break
+            if found: path=found[0]
+            if path is None:
+                dr=bfs_dir(V,s,t)
+                if dr=='DARK':
+                    dd,n=decide(V,s,t,limit=3_000_000); status='CANDIDATE_DARK' if dd=='DARK' else 'DISAGREE'
+                    json.dump(dict(vertices=V,marks=[s,t],bfs='DARK',decide=dd),open(d+'/candidate.json','w'),default=int); break
+                if dr is None: status='UNDECIDED'; json.dump(dict(vertices=V,marks=[s,t]),open(d+'/undecided.json','w'),default=int); break
+                r=trace(V,s,t,B=200000,dirs=[dr]); path=r[1] if r[0] is not None else None
+                if path is None: status='EXTRACT_FAIL'; json.dump(dict(vertices=V,marks=[s,t],dir=dr),open(d+'/extract_fail.json','w'),default=int); break
+            for path in (found if found else [path]):
+                U,Z=guard_from(path,room); sh=lambda tri:[[v[0]-s[0],v[1]-s[1]] for v in tri]
+                rec={'U':[sh(tt) for tt in U],'Z':[sh(tt) for tt in Z],'q':[t[0]-s[0],t[1]-s[1]],
+                     'path':[[[ (F(a)-s[0]).numerator,(F(a)-s[0]).denominator],[(F(b)-s[1]).numerator,(F(b)-s[1]).denominator]] for a,b in path]}
+                assert check(rec)=='ok',(tag,check(rec))
+                with open(gf,'a') as f: f.write(json.dumps(rec)+'\n')
+                for cl in clauses(rec,s,t,x):
+                    if cl not in added: added.add(cl); so.add_clause(list(cl)); cnf.append(list(cl))
+                new+=1
+    res=dict(tag=tag,status=status,new_guards=new,library_clauses=len(added),secs=round(time.time()-t0))
+    if cube: res['cube']=cube
+    if status=='UNSAT' and not cube:
+        cnf.to_file(d+'/formula.cnf')
+        with Solver(name='glucose4',bootstrap_with=cnf.clauses,with_proof=True) as so2:
+            assert not so2.solve(); open(d+'/proof.drat','w').write('\n'.join(so2.get_proof())+'\n')
+        p=subprocess.run([B+'/k5-residual/own-drat/drat-trim',d+'/formula.cnf',d+'/proof.drat','-t','40000'],capture_output=True,text=True)
+        open(d+'/drat.log','w').write(p.stdout+p.stderr)
+        res['drat']='VERIFIED' if 's VERIFIED' in p.stdout else 'NOT VERIFIED'
+        res['cnf_sha256']=hashlib.sha256(open(d+'/formula.cnf','rb').read()).hexdigest()
+        res['proof_sha256']=hashlib.sha256(open(d+'/proof.drat','rb').read()).hexdigest()
+    json.dump(res,open(d+(f'/result.cube{ci}.json' if cube else '/result.json'),'w'),indent=1); print(json.dumps(res),flush=True); return res
+if __name__=='__main__':
+    cs=json.load(open(H+'/cases.json')); sel=sys.argv[1:]
+    for c in cs:
+        if not sel or c['tag'] in sel: runcase(c)

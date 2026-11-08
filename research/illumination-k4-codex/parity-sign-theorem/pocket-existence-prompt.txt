@@ -1,0 +1,425 @@
+Theory-only collaboration with Codex. You are investigating an open mathematical lemma, not approving an existing proof. No tools, room/ray/direction/event-word discovery, origami-orbit enumeration, or invented numerical evidence. A proved obstruction to a proposed route is useful, but distinguish it from an in-class counterexample to the actual goal.
+
+ACTUAL GOAL: In EVERY strictly simple raw canonical grid-triangle mirror room containing distinct interior even-even A marks S,T and the literal straight-attached triangular pocket, does there exist an actual S-to-T generalized connection through exactly one physical corner at its midpoint, with primitive equal integer half-vectors, an embedded INTRINSIC pi-sector, and NONZERO pocket-slide defect? Prove it or give a rigorous in-class counterexample. The class need not have exactly two full A fans; any extra I=2 or Z=0 hypothesis must be explicit. Do not replace the actual target with an arbitrary A lift or a physical-copy sector with an intrinsic sector.
+
+NEW CONTEXT: Seal the literal pocket. Supplied reduced ordinary connections in the sealed room have one smooth C visit or at most two smooth B visits, by a D4 arrival-state/reversibility bound. If they avoid reflecting on the OPEN temporary portal, they imply small-slide opening for both signs. Some two-B cases give a 3pi shortcut, so this does not by itself solve the one-corner goal. Independent previous review accepts the conditional statement; all its remaining existence assumptions are REAL.
+
+Your task is the existence gap. Prioritize:
+1. Is it even true that the sealed room must illuminate S,T, or that a connection avoiding its open seal must exist? Seek a rigorous structural obstruction or proof. A new conditional theorem with the same existence assumption is not an answer.
+2. If sealing cannot work universally, propose and justify a genuinely different necessity bridge for the actual one-corner goal. Exact monodromy of a PROVIDED cover is allowed in a hand argument; no enumerating a cover or trajectories.
+3. The raw unfolding covers the torus with lattice 2Z^2; A marks map to 0, while B and C map to the three nonzero 2-torsion points. Primitive one-corner connections correspond to actual lifted half-period segments continued in an adjacent pi-sector. Can endpoint reachability be deduced from the disk/fan-tree restriction? Topological connectivity and full absolute lattice alone are insufficient; an outside-class perfect-group cover control already refutes that shortcut. Connectedness of a graph of such transitions also would not imply a SINGLE edge from S to T.
+
+False shortcuts already ruled out: horizontal/vertical shears preserve the particular pocket defect rather than conjugating it by their derivative; they cannot manufacture a nonzero defect from a zero seed. Using all rational slide parameters' axis twists still leaves a four-dimensional period module injecting into absolute cohomology. Rank>=2 does not imply full stratum or free marks. Periodic points do not imply extra folds. Sealed affine maps need not preserve portal cuts. A tiny interval of illumination cannot be inferred from generic illumination without a bounded fixed-word mechanism.
+
+Be concrete. Give an actual proof, an exact obstruction, or a clearly stated unresolved lemma. Do not claim completion from plausibility. Do not rederive the reviewed sign algebra. Relevant established context follows.
+
+## 1. Scope
+
+Let P be a strictly simple canonical grid-triangle room with distinct interior A marks S,T. Every noncorner integer point is A; in particular, there are no interior B/C points. Keep every wall direction and the rest of P fixed. The pocket has vertices
+
+    B_0=(1,1), A_0=(2,2), C_0=(1,2),
+
+and portal x=1, 1<y<2. Immediately above and below the portal the physical wall also lies on x=1. Move B_0,A_0,C_0 by t u, where u=(0,-1), leaving both marks fixed. Thus the two moving mirror lines are
+
+    D_t: y-x=-t,       H_t: y=2-t.
+
+We seek an admissible event from a chosen source lift to a lift of the ACTUAL physical target T, through exactly one corner at the developed midpoint. The halves have equal displacement w; each avoids other physical corners. The selected intrinsic continuation at the corner bounds an embedded pi-sector. Wall-parallel directions are omitted when applying a physical opening inequality. These requirements cannot be replaced by reaching an arbitrary A point or by an arbitrary broken geodesic.
+
+The global existence assertion has not been proved. The local return-map and single-excursion results do not need the grid or parity hypotheses on the rest of the room. The odd-word criterion only needs its wall reflection linear parts to lie in D4. The raw parity hypotheses matter for the proposed global existence and for the previously proved axis-twist transfer. No existence is inferred from accessibility of the pocket.
+
+
+
+## 8. A topological bit is available; straight event realization is the gap
+
+Let D_hat be the union of the lifts of this one moving diagonal wall in the eight-copy unfolding X. At both endpoints B_0,A_0, the adjacent mirror linear parts generate D4, so all eight sectors meet in one lift of that physical corner. Exactly four diagonal seam arcs meet there. Thus D_hat is a closed one-chain modulo2, and crossing it defines a character on closed paths. For a corner event, push its midpoint through the chosen pi-sector; its crossing count is precisely the diagonal-factor count in Section 4.
+
+There is an elementary dichotomy.
+
+*If this is the only physical diagonal wall*, colour copy g by 0 when g preserves the two coordinate-axis directions individually, and 1 when it swaps them. Axis-wall crossings preserve the colour; crossing this D wall changes it. Hence D_hat is the boundary modulo2 of the union of colour-0 copies. The bit of a path is determined by the colours of its endpoint copies. An odd actual S-to-T event would have to reach one of the four coordinate-swapped copies of T.
+
+*If another physical diagonal wall E exists*, its reflection linear part is either R_D or -R_D. In the first case the prescribed copy crossing sequence D,E returns to the original copy. In the second case D,E,H,V returns, where H is the pocket horizontal mirror and V is an available vertical wall of the attachment. Indeed R_D R_E is respectively I or -I, and R_H R_V=-I. Choose crossing points in the open walls, connect them by arbitrary interior paths in the successive copies, then return to the starting point in its copy. This is a closed topological path crossing D_hat exactly once, so D_hat is nonzero in homology modulo2. These interior connecting paths exist because P is a connected disk; they are NOT asserted straight billiard paths.
+
+In either case an odd continuous source-to-actual-target path exists. In the first case choose a swapped target copy; X is connected since R_D,R_H generate D4. In the second case append the odd closed path to any path to any chosen target lift if needed. Thus ordinary topological connectivity is not the missing obstruction. Replacing these paths by a straight midpoint connection through only one legal corner is an additional theorem and remains open.
+
+## 9. The remaining global question
+
+The odd-word criterion reduces one sufficient route to a precise endpoint question: can one construct a legal midpoint corner continuation from actual S to actual T whose word toggles a bit an odd number of times at this one diagonal wall? Toggle no bit at any other wall.
+
+Connectivity of the fan tree does not answer that question. It supplies combinatorial routes to a pocket, but those routes need not be straight, need not put the sole corner at half-time, and need not return to the target's physical label. Likewise, generic rays can use the five moving return maps without giving any corner event for the chosen pair. Existence of an odd-hit event would prove the local detection lemma; failure to find one would not disprove it, because even-hit events can detect too.
+
+The selected two axis multitwists cannot fix this existence gap: on the pocket slide Q vanishes on all their core increments, so they preserve Q(eta) on every seed orbit. A proof must construct a new seed, use a genuinely different action with a justified effect, or supply a structural counterexample. No universal detection or counterexample in the required polygon class is claimed here.
+
+## Review status and resolutions
+
+The first focused tools-disabled Opus review accepted the six-map classification, complete exception list, transported-load formula and mod2 identity. It requested clearer zero-based indexing, chronological composition, copy-sector factors and geometry-binding assertions; these are incorporated. It also distinguished vector detection from the original scalar opening row. Section 5 now supplies a separate two-shear argument for both signs, including the axis exceptions.
+
+A separate global-existence analysis independently derived the same mod2 identity but found neither a proof nor a counterexample. Its unproved broader claims are not imported. In particular, excluding convex 45/90 corners does not by itself exclude convex 135-degree B corners, and a physical 45-degree wedge must not be confused with its unfolded pi-sector. The topological lemma in Section 8 has its own copy-colour proof above. The focused follow-up review accepts Sections 5,7,8; its requests for explicit nonzero shears, a named symmetry quotient, a uniform multi-parameter opening estimate and the completed saved-room consequence are incorporated. No separate numerical execution by a reviewer is claimed. The reviewer also retracts its earlier physical-wedge/pi-sector claim. Closedness of D_hat controls homotopies around a full cone; it must not be read as permission to change an event's outgoing prong or selected legal pi-sector.
+
+
+
+## 24. Directed fan tree: compulsory mergers between full A fans
+
+This is a cell-topological refinement of `axis-alignment.md`, not a
+trajectory-realization theorem. Throughout this section require the RAW
+condition: every B/C lattice point belonging to the room is a physical
+boundary corner. The earlier axis-alignment theorem allowed smooth B/C
+boundary points; that weaker hypothesis is insufficient here.
+
+Cut the room at its interior BC edges as before. The resulting tree has
+one vertex per contiguous A-centered fan. At a C point, a particular fan
+contains either one triangle (an endpoint C of that fan) or two triangles
+(an internal C). The two triangles of the latter occupy a half-plane.
+Exactly one of its two BC edges must be a portal: neither would make C a
+smooth physical boundary point, and both would make C interior. Both
+possibilities violate the raw condition. Thus C has three triangles in
+the room. Across the chosen portal, the neighboring A fan contains one
+triangle at C. A portal cannot join two endpoint-C fans: their two
+triangles would make C smooth. It cannot join two internal-C fans:
+C would be interior. Orient each portal from its internal-C fan to its
+endpoint-C fan. This orientation is therefore well-defined and unique.
+
+A full fan has eight triangles, four internal C points, no endpoint C,
+and hence outdegree4 and indegree0. It is a source of the directed tree.
+For any boundary fan, write m for its number of triangles, q for the
+number of its two radial boundary edges of type AB, h for its number of
+internal C points, and e for its number of endpoint C points. Counting
+triangle incidences at C and the two radial fan endpoints gives
+
+    h=(m-2+q)/2,       e=2-q,
+    outdegree=h,     indegree<=2-q.                  (24.1)
+
+Here 1<=m<=7 and q is0,1or2. In particular every tree vertex has indegree
+at most2. Every indegree2 vertex is a boundary fan with q=0: its two
+radial boundary edges are AC, and its physical angle is90,180or270degrees.
+Smooth A boundary points are allowed. An outdegree0 vertex can only have
+(m,q)=(1,1)or(2,0); these are45or90degree boundary A fans. A45degree
+triangular leaf pocket is consequently a sink with indegree1, provided
+the room has more than one fan.
+
+Let T be the total number of canonical triangles, V the number of A fans,
+I the number of full fans, and D the total number of boundary AB UNIT
+SEGMENTS counted at their A ends. Summing (24.1), treating each full fan
+separately, and using the tree identity E=V-1 gives
+
+    E=T/2-V+I+D/2,
+    T+D+2I=4V-2.                                  (24.2)
+
+D is not the number of merged diagonal physical walls. In particular two
+collinear AB segments can meet at a smooth boundary A point and form one
+physical wall; their contribution to D is still2. These identities alone
+do not supply a lower bound on the physical diagonal-wall count.
+
+Let Z be the number of boundary fans of indegree0, and M the number of
+fans of indegree2. Every vertex has indegree0,1or2; summing indegrees yields
+
+    M=I+Z-1.                                      (24.3)
+
+For two distinct interior A marks S,T, the unique undirected fan-tree path
+from the full fan at S to the full fan at T MUST contain an internal
+vertex with both path edges directed into it. Indeed the first path edge
+points forward, and the last points backward because both full fans are
+sources. At a forward-to-backward change, both edges enter that vertex.
+Thus every mark-to-mark fan path passes through an AC-ended boundary fan
+of angle90,180or270degrees. More generally I full fans require at least
+I-1 such merger vertices. The fan tree can therefore route a potential
+connection through boundary A fans whose two incoming portals do not
+force a physical corner contact at A itself.
+
+**Exact finite audit.** `pocket-fan.py` reconstructs triangle incidence,
+with no unfolded-surface permutations or trajectory operations. It checks
+all56proper contiguous local fan sectors and all34previously frozen raw
+rooms. The68full fans and306portals satisfy (24.1)-(24.3); all34actual
+mark-to-mark fan paths contain a merger. These are implementation checks
+of the proved identities, not a search for events. A focused tools-disabled Opus review accepts the incidence/count proof.
+Its suggested optical-routing strengthenings are NOT adopted wholesale:
+a path may meet several cuts at their shared B endpoint, and graph routing
+does not imply positive-length passage through every intervening fan.
+The checker does not trace any optical path. Here AB unit means one
+canonical edge of Euclidean length sqrt(2); strict simplicity excludes
+pinch vertices. The tree property is the previously reviewed crosscut
+theorem in axis-alignment.md. Actual diagonal mirror offsets are even;
+the review's assertion that arbitrary integer diagonal offsets preserve
+A/B individually is incorrect.
+
+**Exact remaining gap.** A directed portal-tree path is not a straight
+billiard path. A merger is not the requested one-corner midpoint event.
+These identities neither impose equal half-vectors nor show a nonzero
+pocket period defect. Any proposed induction must additionally retain
+reflection development, the actual S/T lift labels, and the intrinsic
+pi-sector at its single physical corner. In particular a proof cannot
+replace the admissible event by an arbitrary continuous walk through the
+tree or by the existence of its unique connecting graph path.
+
+
+### 24.1 Why cutting off a merger is not a raw-room induction
+
+Cut a single BC portal, whose incident fans are directed upstream to
+downstream. Locally C has three triangles: two on the upstream side and
+one downstream. If the kept component is upstream, its new boundary
+angle at C is180degrees. It fails the raw hypothesis. If the kept
+component is downstream, its new angle at C is90degrees; it remains raw
+precisely when its new angle at B is not180degrees. All other lattice
+points are unchanged. The pieces are simple disks by the crosscut
+property. Thus deleting a45degree leaf pocket always creates a smooth
+non-A point at its C endpoint, exactly outside the class of this goal.
+
+At a merger on the S/T fan path, each incoming cut separates S from T.
+The separate components containing S and T are the upstream components
+and acquire smooth C points. Neither inherits the two-interior-mark raw
+hypothesis. Recombining subroom paths would also have to match their
+physical directions, reflection developments and actual lift labels;
+matching merely their portal endpoints does not give a straight event.
+Capping such a cut with a triangle adds a new mirror and cannot silently
+transfer its billiard paths back to the original room.
+
+There is a second obstacle. A primitive integer half-vector based at A
+ends at B or C, never at A; every developed corner image is integer.
+Therefore the merger's own A vertex cannot be the midpoint of the
+primitive event sought here, including when that A is a270degree corner.
+Any successful use of merger structure must control its B/C endpoints
+or a different physical corner, with the equal-half-vector and sector
+conditions retained. The merger supplies a topological separator, not a
+candidate midpoint at its A center.
+
+The prescribed cell audit checks all306portal cuts in the34frozen
+rooms: every upstream piece has exactly two incident triangles at C,
+and every downstream piece has one. Of the downstream pieces,280retain
+a nonsmooth B; the other26make B smooth as well. These counts validate
+the incidence implementation only; the general cut obstruction is the
+local argument above.
+
+This does not rule out every conceivable induction. It rules out direct
+application of the SAME raw-room hypothesis to the two pieces after
+these cuts. A stronger induction would need explicit boundary scattering
+and label data or allow controlled transparent C exceptions, and would
+have to prove the gluing step. No such strengthened induction is proved.
+
+
+
+
+## 29. Sealing the pocket: a one/two-visit reduction
+
+**Status: accepted by focused review56531 (exit0), with the supplied-connection and portal-avoidance hypotheses retained.** Let P^- be the
+room obtained by deleting the triangular leaf and sealing its portal
+with the vertical segment B_0C_0. The remainder is connected. Both marks
+stay interior. The only new smooth non-A lattice points are B_0 and C_0;
+all other B/C points in P^- remain physical corners. All mirror lines
+still have the canonical even integral reflection translations.
+
+Consider a finite ordinary billiard connection in P^- from S to T,
+with no physical corners and non-wall-parallel direction. Stop at its
+first T and start at its last preceding S. This gives a connection
+without internal occurrences of either endpoint. A smooth boundary point
+q in ANY D4-direction room can then occur at most twice. To prove this,
+record its incoming physical velocities. They lie in the8-element D4
+orbit of the initial velocity. Exactly four point towards the wall.
+The involution
+
+    K_q(v)=-R_wall v
+
+pairs those four incoming states in two pairs. If a later q visit has
+the SAME incoming state as an earlier one, deterministic billiard flow
+is periodic from there and cannot first reach T later. If it has the
+K_q state, the reflected outgoing velocity is exactly minus the earlier
+incoming velocity. Its subsequent path reverses the earlier S-to-q
+history and reaches S before T, also impossible. Thus at most one state
+from each of the two pairs occurs, proving the bound2. No interior
+source recurrence or corner ambiguity is allowed in this argument.
+
+There is a sharper canonical-grid bound at a smooth C point q. Write
+the developed S-to-T vector as2n*w with primitive integer w; the factor
+2 follows because both marks are even-even and every reflection has
+even integral translation. A q hit is at an integer multiple of w,
+necessarily an ODD multiple, with C parity. Consequently all developed
+images of this particular q have the SAME coordinate-parity subtype.
+Since q is mixed-parity, their copy matrices all have the same
+axis-swap bit. Physical incoming velocities at q therefore have only
+one assignment of |w_x|,|w_y| to horizontal/vertical components. At a
+fixed axis wall, the inward states are just one K_q pair. Hence q occurs
+at most ONCE. A C point cannot lie on a canonical even-offset diagonal
+wall; this covers all its possible smooth walls.
+
+Apply this to P^-. Its ordinary connection must pass a transparent
+endpoint: every ODD developed integer step is B or C. If w is odd-odd,
+all those steps are B and must hit B_0; the connection cannot visit C_0.
+If w has mixed parity, they are C and must hit C_0; it cannot visit B_0.
+There are n such odd steps before the developed target2n*w. Therefore:
+
+- A C_0-using reduced connection has n=1, one C_0 hit, and total vector2w.
+- A B_0-using reduced connection has n=1or2, one or two B_0 hits, and
+  total vector2w or4w. In the two-hit case the hits occur at w and3w;
+  the intermediate A point is at2w.
+
+This is a reduction of SUPPLIED ordinary connections, not an existence
+theorem for them. If I=2, the intermediate A in the two-hit case is a
+smooth boundary A point: it cannot be an interior A other than S,T,
+and those were removed from the path interior. If Z=0, it lies on an
+axis wall, since a smooth diagonal A fan has q=2 and is a forbidden
+boundary indegree0 source.
+
+### 29.1 The necessary portal-avoidance condition
+
+Sealing changes the billiard map on the OPEN portal, not just at its
+endpoints. Thus a P^- connection does NOT automatically give a path in P.
+For the following consequences require that the supplied path has no
+reflection on the open segment B_0C_0. All its reflections then use
+common actual walls, except its hits at the selected endpoint. This
+portal-avoidance assumption is a real remaining obligation. An affine
+map of the sealed unfolding need not preserve the portal cut arcs and
+cannot silently be used to remove this condition.
+
+If such a path has only one endpoint hit, it becomes an admissible
+one-corner event in P. Its corner pi-sector crosses the fixed vertical
+flank (the original smooth-wall reflection), not the moving D/H wall.
+The developed full word uses only fixed mirrors, so
+
+    Q(eta)=-2*L*u,       u=(0,-1),
+
+an axis vector. It is nonzero; the non-wall-parallel direction makes its
+scalar row nonzero as well. Section5 gives both opening signs by base
+axis transfer. This includes EVERY C_0-using portal-avoiding connection.
+
+For B_0 two-hit connections, simply identifying the two occurrences of
+B_0 and deleting the intervening loop does not always give a legal
+pi-sector. The two reduced incoming states must have swapped coordinate
+assignments: equal/opposite-K states were excluded above. Normalize the
+first sheet toI and let its physical incoming vector be(p,q), p>0,
+q!=0, |p|!=|q|. The second incoming vector is(|q|,eps*p), eps=+1or-1.
+The cone at B_0 has angle10pi. Put its I-copy physical wedge between
+pi/4and3pi/2. Its8copies have width5pi/4 each, alternating orientation,
+with sheet labels I,V,VD,VDV,-I,-V,(VD)^3,(VD)^3V.
+An exact local angular computation for the would-be shortcut gives:
+
+| sign(q) | eps | directed arc / pi | smaller arc / pi |
+|---|---|---|---|
+| + | + | 7 | 3 |
+| + | - | 3 | 3 |
+| - | + | 9 | 1 |
+| - | - | 3 | 3 |
+
+Thus only the(-,+)case supplies an intrinsic pi shortcut in this
+normalization. It crosses the moving D seam at B_0. Its two open halves
+still use only common fixed walls; the load is
+
+    Q(eta)=L*(a_D-2u)=L*(1,1),
+
+which detects in a non-wall-parallel direction. The other cases give
+3pi/7pi sectors, explicitly excluded by the goal. Their equal vectors
+and actual endpoint are not enough. The table is local cone algebra,
+not a discovered optical path or an in-class counterexample.
+
+A portal-avoiding B_0 path still opens for small NEGATIVE t even in a
+3pi-shortcut case: B_0(t) moves up, so all old endpoint reflection points
+lie below it on the unchanged vertical flank. The fixed P^- polyline
+is then an ordinary legal P_t path. The analogous C_0 single-hit path
+opens for positive t. Finitely many other reflection points have positive
+clearance from the old closed portal and stay legal for small parameters.
+This one-sided argument alone does not satisfy the one-corner goal.
+
+## 30. Candidate two-corner opening mechanism for the remaining B case
+
+**Status: conditional two-sided opening accepted by review56531; distinct from the active one-corner objective.** A
+portal-avoiding two-hit B_0 connection becomes a generalized P path with
+two intrinsic pi continuations at the SAME B_0 zero, at developed times
+w and3w, and actual target at4w. It has no other physical corners.
+Each continuation uses the fixed vertical-flank fold. Define relative
+zero-holonomy classes
+
+    E_1=gamma-4*gamma_1,      E_3=3*gamma-4*gamma_3,
+
+where gamma ends at actual T and gamma_j ends at the j-th developed
+corner occurrence. With the all-fixed-mirror word,
+
+    delta(E_1)=-4*L_1*u,     delta(E_3)=-4*L_3*u.
+
+The two incoming states swap coordinate assignments, so these are
+nonzero ORTHOGONAL axis vectors. Base axis multitwist powers fixing all
+corner/actual endpoint labels preserve delta on ALL relative classes
+by the axis-core flux argument, while taking w to A*w. Each local
+opening row, up to a fixed positive factor, is
+
+    ell_j(A*w)=-sigma_j*det(A*w,delta(E_j)).
+
+These two forms are independent coordinate forms. Use arbitrary INTEGER
+powers, including inverse powers: inverses retain label/prong fixing and
+cohomology invariance. Any prescribed quadrant for A*w is attained by a
+horizontal power followed by a vertical power: first choose the sign of the horizontal component, then
+that of the vertical component. Avoid the finitely many wall-parallel
+choices. Thus both rows can be made to have the opening sign for
+positive t, and both can also be made to have the opening sign for
+negative t, with two supplied affine-image generalized paths.
+
+The finite-word opening proposition applies to TWO selected pi-sector
+visits to the same cone: strict local inequalities at both visits suffice
+by the local proposition below, subject to its precise finite-itinerary
+hypotheses. Focused review56531 independently accepts this extension. Distinct visits
+need not have disjoint images on the surface. This gives conditional
+two-sided local illumination
+from a two-corner certificate even when deleting its loop gives3pi.
+It still does NOT construct the required one-corner event or refute its
+universal existence. Keep the original goal open. No sealed connection,
+affine word, direction or ray is discovered or enumerated here.
+
+
+### 30.1 Finite multiple-corner opening proposition
+
+**Local proof; the finite-visit extension is independently accepted in seal review56531 Section5.** Fix a finite
+source-to-target generalized geodesic on the base unfolding. Its only
+physical-corner encounters occur at distinct parameter times
+0 < lambda_1 < ... < lambda_m < 1. At every encounter choose a labeled
+embedded intrinsic pi-sector bounded by the two geodesic germs. The
+source and actual target are regular; all other crossings are transverse
+to the prescribed mirror seams and avoid every physical-corner label.
+The initial direction is not parallel to a wall. Keep this finite
+itinerary and each selected sector fixed under a sufficiently small
+fixed-angle deformation.
+
+Use the initial source chart and write V(t) for the developed target
+relative to the source, C_j(t) for the developed corner at visit j.
+At the base, C_j(0)=lambda_j V(0). Choose sigma_j so that displacement
+of the proposed straight segment into the selected half-plane is
+expressed by
+
+    f_j(t)=sigma_j det(V(t), C_j(t)) < 0.
+
+The precise sign is fixed by the chosen half-plane in that local
+chart; it is not inferred solely from the physical corner's angle.
+If every f_j'(0) is strictly negative, the same developed straight
+segment gives an ordinary actual source-to-target connection for all
+sufficiently small positive t. Reverse all derivatives for negative t.
+
+Proof: choose pairwise disjoint small intervals in the PARAMETER of the
+base path around its corner visits, and small intervals around its
+ordinary seam crossings. On the complement, compactness and the finite
+corner-label set give positive clearance. At an ordinary crossing,
+transversality preserves the crossing and its order. Near a corner,
+cut the local cone outside the selected pi-sector. The selected sector
+develops injectively as a half-disk. The base path lies on its diameter;
+the strict determinant inequality moves the nearby segment into the
+chosen half-disk and misses the vertex. The corner's longitudinal
+projection stays inside its chosen parameter interval, and the two
+ends stay close to the original ends. Since its direction is separated
+from the finitely many seam directions, it crosses the intervening
+seams transversely in the prescribed order. Shrinking the deformation
+interval handles every one of these finitely many conditions at once.
+The endpoint remains the specified actual target lift by construction.
+
+The parameter intervals must be disjoint; their IMAGES need not be.
+Repeated visits to the same physical corner, or even the same zero of
+the unfolding, impose separate local inequalities. Surface paths may
+self-intersect, so overlap of these images is not a further exclusion.
+This argument does not use disjoint prong sectors at repeated visits.
+It asserts sufficiency for the supplied finite itinerary, not existence
+of such an itinerary.
+
+For Section30, V(0)=4w and C_j(0)=jw, j=1,3. Differentiation gives
+
+    f_j'(0) = -sigma_j det(w, j V'(0)-4 C_j'(0))
+             = -sigma_j det(w, delta(E_j)).
+
+Thus the two orthogonal defect vectors really give the two local rows
+used there. Any further optical hypothesis must enter through existence
+and portal-avoidance of the supplied sealed connection, or through the
+previous affine-event transfer premise; it cannot be dropped from this
+local proposition. In particular this proposition does not provide a
+one-corner midpoint event.

@@ -1,0 +1,9 @@
+# Independent hand review of complete literal-orbit criterion
+
+ACCEPT at the stated fixed-state scope. I independently derived the preserving increment as the intersection of 2eP/X times Z and 2eN/C times Z, hence 2ePN/gcd(NX,PC) times Z, including fractional generator. The target equation retains both signs via eta=0 or epsilon0*z/e, without requiring an integral seed offset. Clearing denominators gives one integer row V; gcd(V) dividing its right side is necessary and sufficient.
+
+For primitive V', choose u with V'u=1. Every kernel vector is a sum of the corrected generators e_i-V'_i*u, since their linear combination with coordinates of x equals x-u(V'x)=x. Their W-image gcd equals the minor gcd by the two displayed integer containments. Thus h=gcd(kappa(alpha-beta),lambda beta,lambda kappa)/gcd(V) is exact, positive because lambda*kappa>0. Division by Q gives the true right mesh and the strict coset test; rank alone would not suffice. Both image cosets must be tested after fixing the state.
+
+For positivity, M=lcm(P,N,K,L) makes n increment M/delta0 integral by completeness, and k,j increments GM/K,dM/L positive. The target row increments by Q(F-G-d)M=0 and both residuals remain fixed; source/cap indices increase. Therefore arbitrarily large positive legal indices exist with the selected strict windows. The lower source/target floor repairs retain only exact original S suffix or actual T prefix; roof-corner exclusion follows disjoint strict mouths. No surrogate endpoints, added walls or mixed directions enter.
+
+This is necessary/sufficient for the nominated formal finite programme's orbit after the stated physical repairs. It does not classify every original ray, or prove any favorable seed exists. No numerical replay or discovery was used; shared physical foundations are disclosed. The source hash matched the peer pin before and after review.

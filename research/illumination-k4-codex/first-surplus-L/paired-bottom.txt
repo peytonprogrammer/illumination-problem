@@ -1,0 +1,306 @@
+Centered bottom/east cap: return map and conditional family illumination
+4 November 2026 — restricted Codex01a1a00f
+
+RESULT
+For the fixed three-star L support S=(0,0), U=(2,0), T=(2,2), assume
+Delta=Q+s_N-8=1 and the sole exceptional fan is the centered bottom pair
+B- plus B+. Every other occupied partial A cell is an ordinary single cap.
+The previous one/four-reflection implications show that a potentially dark
+room must contain E- and L+.
+
+For every such completion, a saved ten-reflection path proves illumination
+if D- is present and Nb+, R-, T+ are absent. Combining it with the old
+reflected thirteen-reflection path gives the stronger sufficient condition
+
+ T+ absent AND [N is not Nr-/Nr+ OR (D- present AND R- absent)].       (1)
+
+The initial two-path cover left the necessary condition
+
+ T+ present OR [N is Nr-/Nr+ AND (D- absent OR R- present)].          (2)
+
+NEW STRUCTURAL CONTINUATION (sections8-9) strengthens this: a two-for-three
+local cap substitution into the old four-bounce beam forces T- as well.
+Then T+ and Nr+ are absent. The old13path forces N=Nr-, and the new10path
+reduces every hypothetical dark member to
+
+ B-,B+,E-,L+,T-,Nr- present AND (D- absent OR R- present).           (6)
+
+These are necessary remaining conditions, not dark examples. Full family
+illumination is still unproved. No room/cap-assignment census, direction
+or word search, archive lookup or solver was used. The same theorem
+transfers to the centered east pair by sigma and trajectory reversal.
+
+1. Two-reflection return map, including its branch conditions
+The centered bottom pair is the triangle with vertices(-1,-1),(0,-2),(1,-1).
+Its mouth is y=-1, -1<x<1. Its two walls are perpendicular diagonals.
+Let a ray enter at(u,-1) with velocity(d,-1). If
+
+ -1<u<1,  -1<u+2d<1,  u+d != 0,                                  (3)
+
+it hits both diagonal walls, without a corner collision, and returns to
+the mouth at(-u-2d,-1) with velocity(-d,1).
+These strict conditions imply -1<d<1. The sign of u+d determines the first
+wall; zero means a collision with the apex, which is excluded.
+
+For u+d<0 the first wall is x+y=-2. In local coordinates X=x,Y=y+2,
+the first hit is
+ X1=(u+d)/(1-d), Y1=-X1.
+Reflection changes(d,-1) to(1,-d). The second wall is Y=X, with hit
+ X2=Y2=-(u+d)/(1+d).
+The entry condition puts0<Y1<1. The inequality u+2d>-1 puts0<Y2<1,
+so the second collision occurs before reaching the mouth. The second
+reflection gives(-d,1). Its mouth intersection is Xexit=-u-2d, which is
+strictly inside the mouth by(3). Each open leg is inside this convex
+triangle. Reflect x to -x for the u+d>0 branch; this gives the same map.
+
+There is also a direct unfolding derivation. The composition of the two
+wall reflections is the half-turn about(0,-2). The unfolded image of the
+exit(-u-2d,-1) is(u+2d,-3). The entering straight ray reaches this image
+after time2. This explains the map, while(3) supplies the missing validity
+conditions; the formula alone does not prove that a ray hits both walls.
+
+For the saved witness take u=d=-r, with0<r<1/3. Then the pair returns the
+ray at(3r,-1) directed(r,1). Both collisions are legal. A single B+ cap
+in the peer paired-left proof takes three reflections to reach the SAME
+exit and direction; the centered pair takes two.
+
+2. Whole ten-reflection itinerary
+Launch S with velocity(-r,-1), where
+
+ 3/17 < r < 3/16.                                                 (4)
+
+The complete bounce list, followed by the height2 endpoint, is
+ 1  (-2r/(1+r), -2/(1+r))          bottom-pair left diagonal
+ 2  (2r/(1-r), 2r/(1-r)-2)        bottom-pair right diagonal
+ 3  (5r,1)                       source roof
+ 4  (6r/(1-r), -6r/(1-r))         D- diagonal
+ 5  (2,-8r)                      D- vertical wall
+ 6  (10r/(1+r), -10r/(1+r))       D- diagonal
+ 7  (13r,3)                      target roof, right half
+ 8  (3,16-3/r)                   elbow right wall, lower half
+ 9  (6-17r,-1)                   elbow bottom wall, right half
+10  (6-21r,3)                    target roof, right half
+end (6-22r,2).
+
+The first pair exits at(3r,-1). The source roof reverses the vertical
+velocity. The descending ray enters D- at(7r,-1). Its diagonal/vertical/
+diagonal reflections return it at(9r,-1), again directed(r,1).
+The last four reflections are horizontal, vertical, horizontal, horizontal.
+Solving the final target equation6-22r=2 gives r=2/11, strictly inside(4).
+Every point then equals the previously saved line167 exactly.
+
+3. Strict containment for the full interval
+The bottom-pair conditions hold because0<r<1/3. Its exit lies in the open
+mouth. The source roof hit satisfies0<5r<1 and uses precisely the half-side
+opposite Nb+.
+The falling leg crosses x=1 at y=6-1/r, strictly between-1 and1; it passes
+through the open source/elbow portal. At y=-1 its entry into D- obeys
+1<7r<2, and the cap exit obeys1<9r<2. The D- diagonal hit x values lie
+strictly between1 and2, and -2<-8r<-1 for its vertical hit. Thus all three
+collisions are in open wall segments, and the cap legs are interior.
+The rising ray crosses y=1 at x=11r in(1,3), entering the target star.
+Its roof hit2<13r<3 uses the half-side opposite T+.
+After descending across y=1 at2<15r<3, it reaches x=3 at
+-1<16-3/r<0. These last bounds are exactly(4); the opposite cap is R-.
+The next bottom hit has2<6-17r<3, on the half-side opposite D+.
+On rising, it crosses y=1 at1<6-19r<3 and hits the target roof again
+at2<6-21r<3. The last leg reaches height2 at1<6-22r<3, inside the
+target star. The available endpoint beam is
+ {(X,2):15/8<X<36/17}, which contains actual T=(2,2).
+All stated inequalities hold throughout the open interval by monotonicity
+of the displayed affine or fractional-linear expressions. Boundary values
+are not claimed as valid corner-free trajectories.
+
+4. Which arbitrary completions preserve the mirrors
+Exact required tiles outside H are precisely B-,B+,D-.
+Forbidden ordinary single caps are D+,R-,T+,Nb+.
+The three other forbidden triangles are the two outer quarter triangles
+at B and one outer quarter triangle at D; their coordinates are recorded
+in paired-bottom-check.json. They cannot occur here: the unique defect
+is already the centered B pair, and all other occupied cells are single
+full-facing caps. If D- is present, its opposite D+ is absent because D
+is a single-cap cell. Hence the family implication is exactly
+
+ D- AND not Nb+ AND not R- AND not T+ => illuminated.               (5)
+
+The old necessities supply E- (otherwise a one-bounce path) and L+
+(otherwise the reflected four-bounce path, since E- remains a single cap).
+No smooth B is available in this centered first-surplus branch. As B- is
+present, L- must be absent; as L+ is present, Nb- must be absent. E+ is
+absent because E- occupies its cell. Those old implications alone do not
+force T- or rule out T+: the original bottom four-bounce path fails here
+because B- is present. Section8 now supplies a distinct three-bounce
+replacement that DOES force T-. This is a new analytic substitution,
+not an assertion that the old four-bounce path survived unchanged.
+
+5. Combining two existing paths removes a northwest blocker
+The old reflected thirteen-bounce path needs only L+,E- outside H.
+Its forbidden single caps are L-,E+,T+,Nr-,Nr+. Its other forbidden
+triangles are outer triangles at L/E, absent in the present family.
+The previous paragraph already excludes L-/E+. Therefore if T+ is absent
+and N is not a right cap, this path works, regardless of D or R.
+
+If N IS a right cap, it is the sole triangle in its cell, so Nb+ is
+automatically absent. Under D- present and R- absent, (5) now works.
+This proves(1) for ALL eligible ordinary-cap completions, without a room
+assignment census or W/k bound. Negating it gives exactly(2) after the
+one/four necessities have been imposed.
+
+The no-smooth-B condition T- AND Nr+ forbidden further says that the
+Nr+ part of(2), with T+ absent, has the top cell empty. It does not close
+the alternatives. Under W<=21,k<=6 the count of ordinary occupied cells
+is4,5 or6. That budget alone supplies neither D- nor the required mirror
+absences. This report makes no claim that(2) is sufficient for darkness.
+
+6. Centered east counterpart
+Sigma maps B pair to E pair, E- to B+, L+ to T-, D- to R+, R- to D+,
+T+ to L-, Nb+ to Nr-, and the two right N caps to the two bottom N caps.
+Reversing the transformed path restores actual endpoints S and T.
+After the one/four necessities B+,T-, the east family is illuminated if
+
+ L- absent AND [N is not Nb-/Nb+ OR (R+ present AND D+ absent)].
+
+Its remaining necessary darkness condition is
+ L- present OR [N is Nb-/Nb+ AND (R+ absent OR D+ present)].
+No symmetry of an unknown room is assumed; sigma transfers the theorem
+between two classes of rooms.
+
+7. Verification, peer review and limits
+paired-bottom-check.py reads the ALREADY selected B_bottom_repair witness
+from shared-extensions-check.json (frozen guard source line167). It does
+not scan the guard archive. Exact tile requirements and all ten formulas
+at r=2/11 agree with that saved witness. The original fixed-room actual
+wall check was already PASS; this turn reuses it and recomputes the
+universal tile implication. The checker also recomputes the one old
+reflected13 path, monotone interval endpoint bounds, and sigma/reversal.
+Receipt: paired-bottom-check.json, PASS. This is exact rational validation
+with reused checker code, not formal verification or a new independent
+actual-boundary implementation.
+
+Independent HAND read of peer first-surplus-review/paired-left.txt
+sections1-5 as present before its second bounded attempt: ACCEPT, no
+corrections. I independently derived the shared tail, the interval and
+target equation. Its first-cap three-reflection formulas and B/D/T
+single-cell absences justify its stated conditional family implication.
+It correctly leaves D-/Nb+/R- residuals, rather than claiming closure.
+This review does not preapprove later edits or its ongoing second attempt.
+
+Completed initially: local two-mirror branch lemma, whole beam, conditional
+family theorem and two-path cover. Sections8-9 extend that work below.
+
+8. Analytic short-path substitution forces the missing top cap
+The old single B+ triangle, launched from S in direction(d,-1), returns
+after THREE reflections at(3d,-1) in direction(d,1). The centered B pair,
+launched from the SAME S in direction(-d,-1), returns after TWO reflections
+at exactly that same point and velocity (section1, u=d_entry=-d).
+Thus the old four-bounce beam's entire tail can be reused unchanged:
+
+ S -> (-2d/(1+d),-2/(1+d))
+   -> (2d/(1-d),2d/(1-d)-2)
+   -> (7d,3) -> (8d,2),      1/5<d<2/7.
+
+The two cap collisions are strict because0<d<1/3. After cap exit(3d,-1),
+the ray crosses x=1 at y=1/d-4 in(-1,1), then y=1 at x=5d>1, through
+the source/elbow and elbow/target portals. It hits the target roof at
+1<7d<2. This mirror is present exactly when T- is absent. The last leg
+stays in the target star and reaches(8d,2).
+The target equation8d=2 selects d=1/4, strictly inside the same old beam
+interval. Its exact three-reflection path is
+
+ (0,0) -> (-2/5,-8/5) -> (2/3,-4/3) -> (7/4,3) -> (2,2).
+
+The local change deletes one cap reflection; the last cap bounce and all
+subsequent points equal the old four-bounce witness exactly. This is an
+analytic construction from the proved return maps, without searching
+directions or records. Exact required/forbidden tile replay PASS: outside
+H it needs B-,B+; the only forbidden ordinary cap is T-. The two other
+forbidden tiles are outer quarter tiles at B, absent in this class.
+
+Therefore every paired-bottom room with T- absent is illuminated in
+THREE reflections. T- is forced for hypothetical darkness. Its occupied
+single cell excludes T+, and its no-smooth-B condition excludes Nr+.
+The old reflected13path now has only Nr- as a possible blocker, so N=Nr-
+is forced. N's single-cell rule excludes Nb+, making the10path available
+whenever D- is present and R- absent. This proves(6).
+
+Under the original W<=21,k<=6 budget, L+,E-,T-,Nr- account for four
+ordinary cells already. Only D and R remain optional. The hand constraints
+exclude D+ together with R- (a smooth B). Equivalently the residual splits
+into R- present with D empty/D-, or R- absent with D empty/D+.
+This is a symbolic two-branch description, not an enumerated room census;
+it is not a darkness characterization and does not close the theorem.
+
+Sigma/reversal gives a three-reflection E-pair route when L+ is absent.
+After the corresponding necessities, the east-family residual is
+ E-,E+,B+,T-,L+,Nb+ present AND (R+ absent OR D+ present).
+
+9. A bounded continuation through the forced northwest cap
+The newly forced caps suggest following the reflected13path's original
+L+/E- approach, then actually traversing Nr- instead of trying to reflect
+at its mouth. This provides a class-wide analytic entrance into the upper
+chamber. Its first passage does not reach T; the calculation below states
+the exact failed target condition, rather than claiming illumination.
+
+Launch from S with velocity(-1,r). The established three-reflection
+single-cap response gives
+ L+ mouth exit(-1,3r), velocity(1,r);
+ E- mouth entry(3,7r), exit(3,9r), velocity(-1,r);
+ Nr- mouth entry(1,11r), exit(1,13r), velocity(1,r).
+For Nr-, use local X=1-x,Y=y-1: its triangle is0<=X<=Y<=1, mouthX=0.
+The same diagonal/horizontal/diagonal law raises Y by2r. All three cap
+branches and the intervening full-star portals are strict exactly on
+the common interval
+
+ 1/7 < r < 2/13.                                                  (7)
+
+In particular E entry7r>1 is the lower bound, and Nr exit13r<2 is the
+upper bound. L's3r<1 and E's9r<2 are weaker. L-to-E crosses x=1 at
+height5r<1 and y=1 before x=3; E-to-N crosses the target square and the
+open Nr- mouth. All cap mirrors are intact in the residual class.
+
+After N exit the upper chamber's side-wall contacts are
+ (3,15r), (1,17r), (3,19r).
+They are all at heights strictly between2 and3 on(7). The side-wall
+triangles E+ and Nr+ are absent, so the contacts are legal. On the next
+leftward leg y=r(22-x), the y=3 crossing is x=22-3/r in(1,5/2).
+Split at r=3/20, where it would hit the corner(2,3), hence that value
+is excluded from the two strict roof branches.
+
+Left roof branch, 1/7<r<3/20:
+The ray enters T-, hits its diagonal y=x+2 at
+ x=(22r-2)/(1+r), y=x+2,
+and reflects to velocity(r,-1). The hit is strictly inside the diagonal;
+the ray exits the top-cap mouth at(21r-2,3) before reaching its vertical
+wall. At its first descent to height2 it has x=22r-2. Reaching actual T
+would require r=2/11, outside(7). Thus this branch misses T on that pass.
+
+Right roof branch, 3/20<r<2/13:
+The ray reflects from the uncovered right roof, since T+ is absent.
+Until its first descent to height2 it stays in the rectangle1<x<3,
+2<y<3, with vertical side reflections as needed. Let t be its total
+horizontal travel after N exit; x starts at1 directed right. It reaches
+the midpoint x=2 only at odd positive integers t=1,3,5,... by unfolding
+the two side walls. Before/after the roof its height rises then falls,
+so height2 on descent requires13r+rt=4, or t=4/r-13.
+Thus reaching T requires4/r to be an EVEN integer. But throughout this
+branch26<4/r<80/3<28, so there is no such integer. This branch also
+misses T on its first upper passage.
+
+These failed equations do NOT exclude later illumination. The left-roof
+branch continues with a steep ray into the lower chamber; the right-roof
+branch eventually re-enters capped sides below height2. Those later
+passes have not been classified. The result identifies a specific next
+obligation: a compatible second passage, not merely entrance into the
+target star or an arbitrary return to a cap. Do not treat this one branch
+failure as evidence of a dark room.
+
+Current completion boundary
+The local substitution and exact three-bounce implication are proved;
+the necessary centered-bottom/east residue is strictly smaller than(2).
+The10/13 cover plus the3path still does not handle(6). One natural
+three-cap continuation was evaluated analytically and fails to hit T on
+its first upper passage. No enlarged search, archive lookup, solver,
+worker or universal-goal resumption occurred. Receipt: the updated
+paired-bottom-check.json checks the fixed substitution and the stated
+monotone interval/target-equation bounds; the whole-branch argument is
+the hand proof here, not a numerical sampling claim.

@@ -1,0 +1,598 @@
+{
+  "status": "EXACT_ALL_ORTHOGONAL_NORMAL_FORM_AND_CUT_CONTROLS_PASS",
+  "rows": [
+    {
+      "name": "rectangle",
+      "normal_form": {
+        "walls": 4,
+        "base_polygon": [
+          [
+            -2,
+            -2
+          ],
+          [
+            4,
+            -2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            -2,
+            4
+          ]
+        ],
+        "base_source": [
+          0,
+          0
+        ],
+        "base_target": [
+          2,
+          2
+        ],
+        "parameters": [
+          {
+            "axis": 0,
+            "residues": [
+              2,
+              2,
+              2
+            ],
+            "unbounded_counts": [
+              3,
+              10,
+              3
+            ],
+            "levels": [
+              -8,
+              0,
+              22,
+              30
+            ],
+            "base_levels": [
+              -2,
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "axis": 1,
+            "residues": [
+              2,
+              2,
+              2
+            ],
+            "unbounded_counts": [
+              2,
+              5,
+              1
+            ],
+            "levels": [
+              -6,
+              0,
+              12,
+              16
+            ],
+            "base_levels": [
+              -2,
+              0,
+              2,
+              4
+            ]
+          }
+        ]
+      },
+      "cut_tree": {
+        "cut_coordinate": "19",
+        "parallel_necks": 1,
+        "fixed_chambers": 2,
+        "tree_degrees": [
+          1,
+          1
+        ],
+        "mouths": [
+          {
+            "bottom": "0",
+            "top": "22",
+            "components": [
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "primitive_L",
+      "normal_form": {
+        "walls": 6,
+        "base_polygon": [
+          [
+            -2,
+            -2
+          ],
+          [
+            3,
+            -2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            -2,
+            6
+          ]
+        ],
+        "base_source": [
+          0,
+          0
+        ],
+        "base_target": [
+          0,
+          4
+        ],
+        "parameters": [
+          {
+            "axis": 0,
+            "residues": [
+              2,
+              2,
+              1
+            ],
+            "unbounded_counts": [
+              1,
+              1,
+              4
+            ],
+            "levels": [
+              -4,
+              0,
+              4,
+              13
+            ],
+            "base_levels": [
+              -2,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "axis": 1,
+            "residues": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "unbounded_counts": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "levels": [
+              -4,
+              0,
+              4,
+              8,
+              12
+            ],
+            "base_levels": [
+              -2,
+              0,
+              2,
+              4,
+              6
+            ]
+          }
+        ]
+      },
+      "cut_tree": {
+        "cut_coordinate": "6",
+        "parallel_necks": 1,
+        "fixed_chambers": 2,
+        "tree_degrees": [
+          1,
+          1
+        ],
+        "mouths": [
+          {
+            "bottom": "0",
+            "top": "16",
+            "components": [
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "U_same_side_middle",
+      "normal_form": {
+        "walls": 8,
+        "base_polygon": [
+          [
+            -2,
+            -4
+          ],
+          [
+            8,
+            -4
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            -2
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            -2,
+            2
+          ]
+        ],
+        "base_source": [
+          0,
+          0
+        ],
+        "base_target": [
+          6,
+          0
+        ],
+        "parameters": [
+          {
+            "axis": 0,
+            "residues": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "unbounded_counts": [
+              0,
+              1,
+              3,
+              1,
+              0
+            ],
+            "levels": [
+              -2,
+              0,
+              4,
+              12,
+              16,
+              18
+            ],
+            "base_levels": [
+              -2,
+              0,
+              2,
+              4,
+              6,
+              8
+            ]
+          },
+          {
+            "axis": 1,
+            "residues": [
+              2,
+              2,
+              2
+            ],
+            "unbounded_counts": [
+              1,
+              2,
+              0
+            ],
+            "levels": [
+              -10,
+              -6,
+              0,
+              2
+            ],
+            "base_levels": [
+              -4,
+              -2,
+              0,
+              2
+            ]
+          }
+        ]
+      },
+      "cut_tree": {
+        "cut_coordinate": "7",
+        "parallel_necks": 2,
+        "fixed_chambers": 3,
+        "tree_degrees": [
+          1,
+          1,
+          2
+        ],
+        "mouths": [
+          {
+            "bottom": "0",
+            "top": "6",
+            "components": [
+              0,
+              1
+            ]
+          },
+          {
+            "bottom": "14",
+            "top": "20",
+            "components": [
+              0,
+              2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "five_neck_comb",
+      "normal_form": {
+        "walls": 20,
+        "base_polygon": [
+          [
+            -4,
+            -2
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            -2,
+            2
+          ],
+          [
+            -2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            -2,
+            6
+          ],
+          [
+            -2,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            -2,
+            10
+          ],
+          [
+            -2,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            2,
+            14
+          ],
+          [
+            -2,
+            14
+          ],
+          [
+            -2,
+            16
+          ],
+          [
+            2,
+            16
+          ],
+          [
+            2,
+            20
+          ],
+          [
+            -4,
+            20
+          ]
+        ],
+        "base_source": [
+          0,
+          0
+        ],
+        "base_target": [
+          0,
+          18
+        ],
+        "parameters": [
+          {
+            "axis": 0,
+            "residues": [
+              2,
+              2,
+              2
+            ],
+            "unbounded_counts": [
+              1,
+              1,
+              5
+            ],
+            "levels": [
+              -8,
+              -4,
+              0,
+              12
+            ],
+            "base_levels": [
+              -4,
+              -2,
+              0,
+              2
+            ]
+          },
+          {
+            "axis": 1,
+            "residues": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "unbounded_counts": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "levels": [
+              -2,
+              0,
+              2,
+              6,
+              10,
+              14,
+              18,
+              22,
+              26,
+              30,
+              32,
+              34
+            ],
+            "base_levels": [
+              -2,
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20
+            ]
+          }
+        ]
+      },
+      "cut_tree": {
+        "cut_coordinate": "6",
+        "parallel_necks": 5,
+        "fixed_chambers": 6,
+        "tree_degrees": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ],
+        "mouths": [
+          {
+            "bottom": "0",
+            "top": "4",
+            "components": [
+              0,
+              1
+            ]
+          },
+          {
+            "bottom": "8",
+            "top": "12",
+            "components": [
+              0,
+              2
+            ]
+          },
+          {
+            "bottom": "16",
+            "top": "20",
+            "components": [
+              0,
+              3
+            ]
+          },
+          {
+            "bottom": "24",
+            "top": "28",
+            "components": [
+              0,
+              4
+            ]
+          },
+          {
+            "bottom": "32",
+            "top": "36",
+            "components": [
+              0,
+              5
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "within_original_deadline": true,
+  "whole_goal_complete": false,
+  "optical_equivalence_claim": false,
+  "independent_acceptance": false
+}

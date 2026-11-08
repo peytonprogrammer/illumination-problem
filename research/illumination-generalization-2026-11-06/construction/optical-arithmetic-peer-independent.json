@@ -1,0 +1,42 @@
+{
+  "decision": "ACCEPT_THREE_SCOPED_PEER_PACKETS",
+  "receipts": [
+    {
+      "request": "optical-arithmetic-interval-prerequisite-review-request.json",
+      "source_pins_current": {
+        "optical-arithmetic-interval-prerequisite.md": true,
+        "optical-arithmetic-interval-prerequisite.py": true,
+        "optical-arithmetic-interval-prerequisite.json": true
+      },
+      "exact_control_statuses": {
+        "optical-arithmetic-interval-prerequisite.json": "PASS_STRICT_OPEN_PREREQUISITE_CHECKS"
+      }
+    },
+    {
+      "request": "optical-arithmetic-endpoint-conservation-review-request.json",
+      "source_pins_current": {
+        "optical-arithmetic-endpoint-conservation.md": true,
+        "optical-arithmetic-endpoint-conservation.py": true,
+        "optical-arithmetic-endpoint-conservation.json": true
+      },
+      "exact_control_statuses": {
+        "optical-arithmetic-endpoint-conservation.json": "PASS_EXACT_ABSTRACT_ENDPOINT_CONTROLS"
+      }
+    },
+    {
+      "request": "optical-arithmetic-narrow-cap-controls-review-request.json",
+      "source_pins_current": {
+        "optical-arithmetic-narrow-cap-controls.md": true,
+        "optical-arithmetic-narrow-cap-controls.py": true,
+        "optical-arithmetic-narrow-cap-controls.json": true
+      },
+      "exact_control_statuses": {
+        "optical-arithmetic-narrow-cap-controls.json": "PASS_TWO_PRESCRIBED_ACTUAL_NARROW_CAP_PATHS"
+      }
+    }
+  ],
+  "method": "Independent hand derivations and exact source inspection; peer scripts not executed",
+  "global_r_le_8_selection_proved": false,
+  "whole_goal_complete": false,
+  "created_utc": "2026-11-07T18:37:19.309301+00:00"
+}

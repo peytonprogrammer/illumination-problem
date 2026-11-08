@@ -1,0 +1,62 @@
+# Verdict: ACCEPT
+
+I checked every step symbolically and found no counterexample and no real gap. A few statements are terse or slightly under-qualified, but each is cosmetic and can be fixed in one line. Details below follow your checklist.
+
+## Geometry assumed
+
+- The walls are: bottom y=0; outer walls x=0 and x=A; inner walls x=a and x=a+M on [c,H]; notch y=c on [a,a+M]; arm tops y=H.
+- The corners are (0,0), (A,0), (0,H), (a,H), (a+M,H), (A,H), and the reflex corners (a,c) and (a+M,c).
+- The strip x∈[0,a] is the rectangle [0,a]×[0,H]. Its right side is a wall only for y≥c. Below c it is the portal.
+- So folding x inside the arm is legitimate exactly when every crossing of x=a before distance L has physical height above c, and the crossing at L has height in (0,c).
+
+## Arm lengths and threshold selection
+
+- **Distinctness:** a−x+2na = a+x+2ma forces x=(n−m)a, which is impossible for 0<x<a.
+- **Interval:** The first length strictly above T lies in (T,T+2a]. If n=0, then ℓ≤a+x<2a≤T+2a. Two points of a half-open interval of length 2a differ by less than 2a.
+- **The n formula:** It is correct, including the max(0,·) branch when T<ℓ.
+- **Earlier encounters:** Going backward from the final portal at distance L, the earlier encounters sit at L−a (outer wall), L−2a (inner wall), and so on, while these are positive. For the minus phase with n=0 there are none. For the plus phase with n=0 there is only the outer wall at distance x.
+- **Cosmetic:** The sentence about the outer-wall encounter lacks "when one exists". The later text supplies it.
+
+## Bottom-centered paths
+
+- **Threshold equality:** u_B<c ⇔ yh<c(L+h) ⇔ L>T_B. Strict selection excludes u_B=c, which would hit the reflex corner. T_B≥0 because Y>1.
+- **Premature portal crossing:** The inner-wall height y(h+2a)/(L+h)>c is equivalent to L<T_B+2aY. This follows from L≤T_B+2a and Y>1. Earlier inner encounters are higher, because the ray descends monotonically.
+- **Heights:** All heights lie in (0,y], and y<H. The passage segment has height below c and reaches 0 only at x=A/2.
+- **Outer-wall bottom corner:** Every outer contact has r≥a>0, so v>0. The corner (0,0) is not hit.
+- **Sign and determinant matching:** From v(L_i+h)=y(h+r_i) we get y(r₁−r₂)=v(L₁−L₂).
+  - v<y because r<L: the first contact is at distance a−x>0 or x>0.
+  - v>0, so |r₁−r₂|<2a.
+  - On the same wall, r₁−r₂ is in 2aℤ. That forces r₁=r₂, and then L₁=L₂, a contradiction.
+- **Shared vertical contacts:** The pairing argument above settles this.
+  - Cross-wall coincidences are impossible: x=0, x=a, x=a+M, x=A are distinct, and the left and right halves live in x≤a and x≥a+M.
+  - The only horizontal contact is z_B. So the intersection is exactly {z_B}.
+- **Endpoint reflection:** The ray arrives with direction (d_x,−d_y) and leaves with (d_x,d_y). This equals the mirror image of the reversed left half. So the gluing is specular. z_B=(A/2,0) is a smooth bottom point.
+
+## Notch-centered path
+
+- **q and |q|:** q=(yh−cL)/(L+h)=c(K−L)/(L+h) checks out.
+  - If q>0, then |q|<c ⇔ L>(K−h)/2=T_N.
+  - If q<0, the bound is automatic.
+  - Two distinct lengths cannot both equal K, so the resonance exclusion is sound.
+- **Signed vs physical height:** The developed coordinate is strictly above −c for d<L+h. So |e|>c ⇔ e>c, and checking signed e_inner is sufficient.
+- **e_inner>c:** I re-derived (y−c)(L+h)>(y+c)(L−2a) ⇔ 2cL<(y−c)h+2a(y+c) ⇔ L<T_N+a(Y+1). This holds since L≤T_N+2a and Y>1.
+- **e_outer>0:** y(L+h)>(y+c)(L−a) ⇔ L<K+a(Y+1). The margin h(Y+1)/2+a(Y−1)>0 is correct.
+  - So the bottom hit distance d₀ is greater than L−a and different from L, because q≠0.
+  - That puts the hit at x∈(0,a) inside the arm, or at x∈(a,A/2) in the passage. It is never (0,0), never z_B, and never a portal corner.
+- **Heights:**
+  - In the arm, the developed height lies in (q,y], so physical height ≤ max(y,|q|)=y<H, using c<y.
+  - In the passage, physical height stays below c until z_N.
+- **Notch midpoint:** z_N=(a+h,c) is strictly interior to the notch segment (a,a+M). The incoming vertical direction is upward, since the bottom fold precedes it. The mirror gluing is specular, as in the bottom case.
+- **Avoiding z_B:** The single bottom contact of the left half is strictly left of A/2, and the right half mirrors it. Vertical contacts and z_N are not z_B.
+
+## Singleton removal
+
+The case split is complete: if z≠z_B, one bottom-centered path avoids z; if z=z_B, the notch path does. The three-path intersection is {z_B}∩(notch path contacts)=∅. The scope disclaimers are accurate: the result is for this symmetric family and for single blockers only.
+
+## Cosmetic items (none affects correctness)
+
+1. "The nearest outer-wall encounter is a units before it" needs "when one exists".
+2. The proof uses |q|<c "since L>T_N", but this is only needed when q>0.
+3. Reducing the physical-height test to signed e_inner>c relies on the developed coordinate staying above −c before the endpoint. The proof leaves this implicit.
+4. The specular gluing at z_B and z_N is asserted, not shown. It is a one-line check.
+5. "Avoid z" implicitly means "no reflection at z". This is fine, because paths meet the boundary only at reflection points and never travel along a wall (all slopes are nonzero and finite).

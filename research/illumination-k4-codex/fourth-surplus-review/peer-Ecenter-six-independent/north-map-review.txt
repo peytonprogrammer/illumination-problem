@@ -1,0 +1,93 @@
+Independent six-branch right-isosceles cap-return review
+Codex01a18403 — 4 November 2026
+
+VERDICT: ACCEPT north-return-maps.txt's complete local return map,
+strict branch domains, six singular slopes and source-direct specialization,
+without corrections. This is a local lemma, not a global illumination
+closure. The proposed direct-north-to-E obstruction is also correct.
+
+1. Completeness by eight fixed sectors
+
+For triangle u>=0,eta>=0,u+eta<=1 and input(u,0),(a,1),0<u<1,
+the two nonportal mirror lines meet at A=(0,1) at angle45 degrees.
+The fixed eight dihedral images form eight distinct45-degree sectors
+about A, with disjoint interiors. Their outer portal edges are exactly
+the eight half-sides of[-1,1]x[0,2]. Each image has area1/2, so their
+union is that square, area4. The checker verifies the fixed eight images,
+vertices, areas and portal half-edges; the radial-sector argument proves
+disjointness by hand. It does not infer tiling from area alone.
+
+The unfolded ray(u+a*t,t) exits at the first of height2 or either side.
+The six possible open HALF-edges of the right/top/left boundary give
+exactly the peer's six branches. There is no bottom exit for vy>0.
+For a=0, height2 is reached normally and lies in the top-positive branch.
+No finite a outside the named singular values is omitted.
+
+2. Affine folding, directions and chronological words
+
+Direct affine composition gives the folded maps on an unfolded point(x,y):
+ H:      (1-y,1-x),
+ HV:     (y-1,1-x),
+ HVH:    (x,2-y),
+ HVHV:   (-x,2-y),
+ VHVH:   (-x,2-y),
+ VHV:    (y-1,x+1),
+ VH:     (1-y,x+1).
+Substitution of the appropriate side/top exit gives every displayed
+return coordinate and velocity exactly for arbitrary u,a. The checker
+verifies integer affine coefficients rather than selected entry states.
+
+Right lower/upper first hit H; their exit times are(1-u)/a below1
+or between1 and2, giving words H or HV. Top-positive has u+2a in(0,1)
+and word HVH. In top-negative, first H precedes V iff a>-u, giving
+HVHV; if a<-u, V is first, giving VHVH. The common affine product does
+not make a=-u legal: it passes through the apex. Left upper/lower begin
+with V and give VHV or VH, depending on side exit height above/below1.
+
+On each branch the stated inequalities directly imply0<u'<1 and a
+strictly downward exit component. At most four reflections occur.
+In particular the top-negative four-contact branch changes a to-a;
+it cannot be replaced by the familiar three-contact normal return.
+
+3. Singular values
+
+The five outer events are exactly the three side midpoints(1,1),(0,2),
+(-1,1) and upper corners(1,2),(-1,2). They yield
+ 1-u, (1-u)/2, -u/2, -(1+u)/2, -(1+u)
+for a. The remaining internal vertex is A, giving a=-u at t1.
+All six are distinct for0<u<1. The three square side midpoints fold to
+portal endpoints; they cannot be treated as smooth square-side points
+in the original cap. The original assigned N5/N6 vertices are true room
+corners under the stated support. More general supports would require
+an explicit new endpoint analysis, as the peer correctly warns.
+
+4. Global coordinate conversion and source launches
+
+The physical maps x=epsilon*u,y=1+eta, epsilon=-1 for N5 and+1 forN6,
+are isometries. Normalizing by vy and restoring that positive speed
+factor preserves directions and specularity. For source-direct u=a=d,
+the six-branch domain specializes to exactly three intervals:
+ three hits0<d<1/3, two hits1/3<d<1/2, one hit1/2<d<1.
+The generic four-contact return cannot occur in this direct-source
+specialization. It needs an independently justified oblique inlet.
+
+All returned velocities have vy<0. A rightward north exit from y1,
+x between-1 and1, therefore reaches x3 below y1, so it cannot enter
+E34 directly. This excludes only the direct interface, not routes with
+an intervening lower/corridor reflection.
+
+5. Limits and subsequent matching
+
+The local return map supplies no actual S/T connection by itself.
+A separate hand prescription in north-match-hand.txt section6 realizes
+a four-contact inlet from S, but the proposed full match fails at an
+earlier true corner. No global candidate was replayed or accepted.
+Neither the nine inward descriptions nor outside-C gaps are closed.
+
+Reproduce fixed affine checks:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/peer-Ecenter-six-independent/north-map-check.py
+Receipt north-map-check.json. Hand review supplies inequalities, chronology
+and sector exhaustion; coefficient checks alone are not a quantified
+inequality proof. No peer checker execution, state samples, room/cap
+construction, direction/word search, solver, archive or worker. Independent
+AI review, not formal verification or expert refereeing.

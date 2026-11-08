@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "exact_quadratic_gradient_checks": 4116,
+  "events_checked": 147,
+  "strict_positive_dependency": "PASS_ON_CLOSURE",
+  "corruption_controls_rejected": [
+    "negative_weight",
+    "missing_weight",
+    "reversed_row",
+    "wrong_gradient"
+  ],
+  "orthogonal_group_order": 4,
+  "mixed_group_order": 8,
+  "corrected_corner_lifts": [
+    {
+      "angle_units": 1,
+      "points": 1,
+      "cone_angle_pi": 2
+    },
+    {
+      "angle_units": 2,
+      "points": 2,
+      "cone_angle_pi": 2
+    },
+    {
+      "angle_units": 3,
+      "points": 1,
+      "cone_angle_pi": 6
+    },
+    {
+      "angle_units": 5,
+      "points": 1,
+      "cone_angle_pi": 10
+    },
+    {
+      "angle_units": 6,
+      "points": 2,
+      "cone_angle_pi": 6
+    },
+    {
+      "angle_units": 7,
+      "points": 1,
+      "cone_angle_pi": 14
+    }
+  ],
+  "nonpolyhedral_visibility": "L-room direct segment: a*b<1",
+  "limitations": "Finite differences check the exact quadratic derivative, not validity of arbitrary event geometry; check.py and validate.py provide independent word/side replay."
+}

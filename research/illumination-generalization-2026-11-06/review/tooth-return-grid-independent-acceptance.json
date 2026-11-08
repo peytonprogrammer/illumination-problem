@@ -1,0 +1,46 @@
+{
+  "status": "INDEPENDENT_FULL_HAND_EXACT_ACCEPTANCE_WITH_F1_CORRECTION",
+  "accepted_utc": "2026-11-07T07:14:00.320244+00:00",
+  "scope": "EntireA0h>=3 andA1h>=3,d>=1 selectedminimalwidthD+1 commonactualD1/2, independentintegera,b>=1.",
+  "source_sha256": {
+    "../construction/tooth-return-grid-proof.md": "abfb72a85f4d7bead97410344e929b9c380fd8ddb32db0439ab8200ef7ac9910",
+    "../construction/tooth-return-grid-end-check.py": "4f6343f9f48ef35f97c0ca3e83254f88e01064ac27246f95ff8eae1096109cae",
+    "../construction/tooth-return-grid-end-check.json": "3b9046e34dd7649f1d68ff6a4d62a42ec9c06e0955f53f68c31a6f87a1f08ad2",
+    "../construction/tooth-return-grid-physical-check.py": "30fc360ffe1d925bd49f02894ae2e0f2c413d2e4480b860f25cc057014ea58da",
+    "../construction/tooth-return-grid-physical-check.json": "91be33366a75499269d1afede1c493591fe0ecb77322ca06498ec145464bda42",
+    "../construction/tooth-return-grid-low-physical-check.py": "62c040dd9dd5d88efdad0513d6b8877d03dab90bf3694960f537e07d1e7780f6",
+    "../construction/tooth-return-grid-low-physical-check.json": "463c26ec1997e098460f7e57e4c4c6b784117f0625e2d06c666a3c17ed2fc8a6",
+    "../construction/tooth-return-grid-seeds.py": "ee76a4b8337f6355825de86529a999648a8b1bba2be7d92867c24bba12848904",
+    "../construction/tooth-return-grid-seeds.json": "d34aeca1bce1177112e2e6c69745d99e8408e9079aa7fcb48af01c389007a43f",
+    "../construction/tooth-return-grid-large-inputs.json": "fce297c4dc13288cbcc0a3cb78fd3923236fe932606a350a824252e719acff26",
+    "../construction/tooth-return-grid-large-seeds.py": "e4138ab7c704d287f9bb6945f5d3275477012fef7343ac0e98e6c1c414111089",
+    "../construction/tooth-return-grid-large-seeds.json": "5c7516edc8d6d0691b50f4d13917cd788f0932e4d7e6b2767b853ae234e0fda9",
+    "../construction/tooth-return-grid-small-inputs.json": "fcd56793ad925b1dc4bf4cb33e5af8b0885b0765e32bb286e839a1cc3d1e2fbc",
+    "../construction/tooth-return-grid-small-seeds.py": "6fc49e66fa13cec9efa385169ce36677f2fb9fda1c9131c0e3aa0e6c4edaf970",
+    "../construction/tooth-return-grid-small-seeds.json": "d7343e4340ceb99c2ab5827bf9c02d4cbd5b9fc604ca2ebe0510af53fd6e389a",
+    "../construction/tooth-return-grid-cap.py": "c2cd8d71ed68c14232db149a2c881d3b59125a6b711f9d7ad0264875d36c5602",
+    "../construction/tooth-return-grid-cap.json": "9bb988fb47a2b3406c47cf90f56ca9b80abc4b4115bc1fe49eb858554f02146e",
+    "../construction/tooth-return-grid-cap-h4.py": "c5325391aeb8c8de06fbfaa83a79f6ca4317a376920a57f14d66b61e749987bd",
+    "../construction/tooth-return-grid-cap-h4.json": "e25fb1a21cf1a0cd153f03423e647b6387a017b28b43071afefc19502c604e81",
+    "../construction/common-depth-zigzag-proof.md": "fe3de757ff09ec4ba88e2c4cd0ff8505fd10d97e2da605473b918a829352315c",
+    "../construction/../review/common-depth-zigzag-independent-acceptance.json": "faa83a82008012b9ca4966530ba54bbecd250fb87966d0ccdec8bc0efdb4bb21",
+    "../construction/tooth-return-grid-roof-repair.md": "8959f926461eb4815316599c22948cd6fd678ebe0036e610b38b0d9070f457f0",
+    "../construction/tooth-return-grid-roof-repair.py": "f30ea4750496b37e07b7c8de4ce676058d27b883f419cf48a14c25986ee91b51",
+    "../construction/tooth-return-grid-roof-repair.json": "73d1882609abf2464d934dcaccdd680b65481d745f79242c9f35d6103180fe5e",
+    "tooth-return-grid-independent.md": "e6e32361f56d042cd8ff42c5b2302f4e9c2ea57db42de0a2d6d685dd4a70a821",
+    "tooth-return-grid-independent-check.py": "b9bc191c35b5c72bed77a4516020f0ea4dce9b69b8f7ec1950441e8aa8843789",
+    "tooth-return-grid-independent-check.json": "40f87271f44a49c41adfc22ade49ba0cd1efaf765c110340e7a0171ba57a448f",
+    "tooth-return-grid-local-independent-check.py": "91e189707c5821cf311f315ae238f4e9845d3db0f9bf09ab322bf608dd1a4b29",
+    "tooth-return-grid-local-independent-check.json": "7a86c1bdc6c5f790fa2b5f3cd91dbb45727a9e5d10cf338456b75e0b8b10e5bd"
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "id": "F1",
+      "issue": "16h4d2D1 storedseedcontours hadG16instead ofrequiredG14",
+      "resolution": "Independentoriginalpath replayagainstfullrequiredG14PASS; mandatoryauthorroofrepairread/pinned",
+      "required_supplement": "../construction/tooth-return-grid-roof-repair.md"
+    }
+  ],
+  "whole_goal_complete": false
+}

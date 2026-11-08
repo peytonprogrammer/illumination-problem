@@ -1,0 +1,90 @@
+Surplus-four remote erasure: five whole charge families
+4 November 2026 — Codex01a18403
+
+STATUS: parent hand proof with stored support receipts; independent challenge
+outstanding. Conditional only on the structural lemmas in structural-reduction.txt.
+This does not close the entire Delta4 class.
+
+1. Target and objection
+Missing implication: does erasure reduce to an optical theorem that applies
+WITHOUT the W/k cap and whose path avoids all remote mirror changes?
+Success: cover every r1 row of the eight-row remote charge list.
+Strongest objection: a deleted remote fan can create smooth B vertices, and
+a lower-layer W/k-bounded theorem need not apply after deletion.
+
+2. Topological and accounting lemma
+The remote fan has a unique direct parent, a quarter root of excess1. That
+parent has only ONE outward BC edge. Hence the remote fan and the rest of
+the room meet along exactly that edge and its endpoints. Any other shared
+vertex without a shared edge would produce disconnected occupied angular
+sectors and violate strict simplicity. Here only the specified parent can
+supply a neighboring sector across a remote BC edge; the remote A vertex
+belongs to that cell alone. Thus no such extra vertex-only contact is legal.
+
+Deleting the entire fan preserves a strictly simple disk: replace its outside
+boundary arc by the one attached BC edge. At the B endpoint the removed
+sector lies at the end of the occupied angular fan: its other bordering
+edge either faces a missing triangle in this same A cell or another BC
+neighbor, which is absent by unique parenthood. At the C endpoint the
+parent quadrant remains convex. All other remote vertices disappear.
+S/U/T remain interior and the partial parent still touches the same H side.
+No full A point is added or removed.
+
+Let l be the remote q/e weight; a smooth four-sector fan has weight3, not4.
+Only the B endpoint of the attached edge can create a new smooth B point.
+Let delta_B be its indicator change, at most1. At the shared C the quarter
+parent contributes90 degrees. A leaf contributing90 makes that C smooth;
+a leaf contributing180 makes it a270-degree corner. After erasure it is90.
+Consequently
+ Delta_after = 4 - l - epsilon + delta_B,
+where epsilon=1 for a90-degree leaf contribution and0 for180. Any other
+outside smooth C that disappears would only LOWER Delta_after further.
+In the permitted rows below there is no need to assume delta_B=0.
+
+3. No extra local unit fan: three rows
+(1,1,0,2): l1,epsilon1, so Delta_after<=3. Only one local unit fan remains.
+(1,2,0,1): a quarter leaf gives epsilon1 and Delta_after<=2; a centered
+parent-facing pair gives epsilon0 and Delta_after<=3. Again only the root
+unit fan remains.
+(1,3,0,0): no outside smooth C is allowed. The leaf must have its complete
+C pair facing its parent. An additional complete pair elsewhere would be
+smooth because no other neighboring cell can supply a quadrant. Thus its
+shared contribution is180, epsilon0, and Delta_after<=2. The leaf may be a
+triple or smooth four-sector fan; the weight remains3 in both cases.
+
+In all three rows, apply the stronger accepted all-single/one-unit optical
+lemma, which permits arbitrary smooth B points and needs no W/k budget
+(second-surplus-L/classification.txt section4). The resulting one-unit fan
+has no outside C pair; its other cells are ordinary. Its prescribed paths
+and their sigma images all have complete guard support in K. Reinsert the
+remote fan outside K: every required and forbidden triangle is unchanged.
+Therefore all valid rooms in these three rows illuminate actual S/T in at
+most13 reflections.
+
+4. One additional local unit fan: two rows
+(1,1,1,1): epsilon1 gives Delta_after<=3; two local unit fans remain.
+(1,2,1,0): b0 forces the remote pair to be centered toward the parent;
+epsilon0 gives Delta_after<=3; two local unit fans remain.
+After deletion both fans retain their H-facing sides, so each still has e1.
+If Delta_after<=2, use the W/k-free lower-layer theorem. If Delta_after=3,
+the remaining b is exactly1; use third-surplus-review/local-two-unit.txt,
+which explicitly proves this partition without W/k restrictions.
+Do not invoke the full bounded Delta3 theorem: deletion need not keep k<=6.
+
+Its ten newly needed guard implications use B6,L11,E11,sigma13,five and
+sigma_B6 only. inherited-two-unit-support.json links every implication to
+the previous complete K-support receipt and verifies its current source
+hashes. All other inherited paths are in that receipt as well. Thus adding
+the remote fan back cannot remove a required mirror or introduce a corner
+on the selected path. These two charge rows also illuminate within13 hits.
+
+5. Exact remaining remote types
+The three unclosed rows have parent e2:
+ (2,1,0,1), (2,2,0,0), (2,1,1,0).
+A full parent pair can become smooth upon erasure. For a single remote
+triangle Q decreases1 while s_N can increase1 at C and1 at B. The erased
+room can therefore stay at Delta4 or reach Delta5; there is no general
+lower-layer inference. A two-triangle leaf can also expose a smooth parent
+C and may change two B endpoints if the parent spans both interface halves.
+These rows require a new optical family argument or a valid budget exclusion.
+No darkness conclusion follows from the failure of erasure.

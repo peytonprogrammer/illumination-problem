@@ -1,0 +1,135 @@
+# Independent review of Sections 14–16
+
+I did not run the checker. This is a proof and code-reading review only. I hold Sections 14–16 to the stated event definition: actual S/T lifts, one corner at the developed midpoint, and an embedded π-sector. None of these sections supplies such an event, and I make no seed-existence or optical claim.
+
+**Verdict:** I accept Sections 14, 15 and 16 mathematically. Four wording or scope corrections are needed (listed at the end). I found no counterexample to any displayed formula. Below are the checks I did, followed by the gaps.
+
+---
+
+## Section 14: the real rational map
+
+**Well-definedness of π: X → E.** Across a wall with reflection Rx + b, the charts of [p,g] and [p,gR] differ by the translation g·b.
+
+- Canonical A–B diagonals have even d, so b ∈ 2Z².
+- Canonical axis walls have b = 2k e_i, which is also even.
+- D4 preserves 2Z², so π is well defined.
+- Equivariance is immediate because ρ acts on labels from the left and gluings act on the right.
+
+**E/C4.** The quarter turn fixes 0 and (1,1) modulo 2. It swaps (1,0) with (0,1), and the stabilizer of that orbit has order 2. The orbifold Euler characteristic is 2 − (3/4 + 3/4 + 1/2) = 0, which is consistent. E/D4 is the canonical triangle, so the real circle of E/C4 is that triangle's boundary, containing A, B and C.
+
+**Degree.** C4 acts freely on generic points of both X and E, so deg F = deg π = 2·area(P) = T. This uses connectedness of X, which is assumed.
+
+**Reality.** In the chart of copy s, the swap of the two P-copies is p ↦ sp, which is antiholomorphic. Its fixed set is the glued boundary, a single oval because P is a disk.
+
+I also checked that F∘σ = σ_E∘F, where σ_E is induced by s. This holds because s normalizes C4: F(C4·s, p) = C4·s·p = s(C4·p). Both real loci are nonempty, so uniformization does give a real rational map.
+
+**Local degrees.**
+- On the double, a corner of angle mπ/4 is a cone of angle mπ/2. Its uniformizer is w = ζ^(4/m).
+- The base uniformizer is W = ζ⁴ at A or B, and W = ζ² at C.
+- Composing gives degree m at A/B and m/2 at C. This is correct, including the smooth case m = 4.
+- An interior A point is smooth in X/C4 and has degree 4 in each orientation.
+
+**Reality of the B/C fibers.** Every preimage of B or C is the image of an integer B/C point of P. All of these are boundary corners by hypothesis, so all B/C preimages lie on the real oval.
+
+**Counts.** The preimage count is T + 2 (30 for the control). This agrees with the Riemann–Hurwitz total of 2T − 2 = 54 and with the quarterturn vertex count of 30.
+
+**Gap 14a (needs rewording).** "It is stronger than the full-lattice condition in Section 10" is not proved, and I see no implication in either direction. The partition and reality data say nothing directly about whether X → E factors through an isogeny. Section 10's lattice proof uses the specific pocket identity, not the data in this section. Replace "stronger than" with "independent of / in addition to", or supply a proof.
+
+**Note 14b (scope of the checker).** The checker's partition assertions do not independently verify the local-degree table. It recomputes the degrees from the same formulas, and its assertions then reduce to combinatorial identities:
+- "Each partition sums to T" is the identity that each triangle contributes one unit of A-angle, with 8 = 4 + 4 at interior A points.
+- The Riemann–Hurwitz total is equivalent to the double having T + 2 vertices.
+
+The independent content is the separately computed quarterturn genus 0. The table itself rests on the uniformizer argument above, which I accept. The text should say that the checks are consistency checks.
+
+---
+
+## Section 15: the halfturn genus formula
+
+**Fixed points.** J fixes [p,g] exactly when −I lies in the local linear group at p. This uses that −I is central.
+
+- At interior and smooth boundary points the local group is trivial or {I, R}, so these points are not fixed.
+- At a corner, the rotation subgroup has order 4/gcd(m,4) ∈ {4, 2}, because m ∈ {1,2,3,5,6,7}. That subgroup contains −I.
+- So every corner lift is fixed: J sends the coset g·Loc to (−g)·Loc = g·Loc.
+
+This gives F_J = Σ g_i = 2W − O.
+
+**Genus of X.** 2g(X) − 2 = Σ(m_i − g_i), using Σ m_i = 4W − 8. Riemann–Hurwitz for X → Z then gives g(Z) = O/2 − 1. Odd m_i occurs exactly at the transitions between axis and diagonal walls, so O = 2d.
+
+**A useful closed form to add.** Combining the above gives g(X) = W + d − 3. The control has 25 + 6 − 3 = 28, which matches.
+
+**A sharper hyperelliptic statement.** The branch points of Z → X/C4 are exactly the images of the odd corners:
+- At an odd corner the C4-stabilizer is C4, so the residual involution fixes its image.
+- The two lifts of an even corner are swapped by ρ, so their images are not branch points.
+
+This gives 2d = 2g(Z) + 2 real branch points, which is a good internal check. Consider stating it.
+
+**Gap 15a (connectedness caveat is incomplete).** All-diagonal polygons also have a disconnected unfolding. Their linear group is {±I, ±R_D}, of order 4, and the formula would give d = 0, O = 0 and genus −1. The checker excludes this case with `not all(diagonal)`, but the text mentions only the axis-only case. The pocket excludes both cases, because D and H are present.
+
+**Gap 15b (genus threshold).** With d = 1, J is a hyperelliptic involution only if g(X) = W − 2 ≥ 2, that is W ≥ 4. Pocket rooms have W ≥ 5, because V_below, D, H and V_above are four distinct walls and a fifth is forced. State this explicitly instead of writing "X itself is hyperelliptic" without qualification.
+
+**Control arithmetic.** I recomputed the control figures:
+- Vertices of X: 58 = 38 corner lifts + 16 interior-A lifts + 4 lifts of one smooth boundary point.
+- Vertices of Z: 48 = 38 + 20/2.
+- Euler characteristics: −54, −8 and 2, giving genera 28, 5 and 0.
+
+All of these agree with the output. In the checker, the coset gluings are well defined because left cosets are glued by right multiplication, and HgR ≠ Hg for both H = C2 and H = C4. Faces are freely permuted. No edge is reversed, because no edge midpoint is fixed.
+
+---
+
+## Section 16: pocket flux
+
+**Square structure.** The angles at the pocket corners follow from "the wall is on x = 1 above and below the portal":
+- B0 has m = 5, so it has a single lift.
+- A0 has m = 1, a single smooth lift at the centre.
+- C0 has m = 6, so it has two lifts.
+
+The local group at C0 is {I, R_H, R_V, −I}. Both midpoints (0,1) and (2,1) lie in this coset, so opposite midpoints are identified. The open square is embedded; its closure is not.
+
+**Formula (5).** Matching it to Section 2 with g = I and h = R_G gives (I − R_G)u, which reproduces the table. Transporting gives (g − h)u.
+
+I also checked independently that the flux vanishes on small loops around each moving cone point. This is required for consistency, because those loops are null-homologous in X.
+- **B0 lift** (counterclockwise in the square, contributions at the four corners): (−1,1) + (−1,−1) + (1,−1) + (1,1) = 0.
+- **First C0 lift**, at the midpoints (0,1) and (2,1): (0,−2) + (0,2) = 0.
+- **Second C0 lift**, at the midpoints (1,0) and (1,2): (2,0) + (−2,0) = 0.
+- **A0**: the loop crosses no portal arcs.
+
+So δ is a genuine class on H₁(X, {s, t}) for endpoints outside the closed pocket. Since the deformation is affine in t, δ(γ) is the exact slope of each period of a fixed class, not just its derivative at t = 0.
+
+**Axis cylinders.** The matching portal fields are:
+
+| Crossing | Arcs and fields |
+|---|---|
+| Horizontal, lower half | u, u (copies I and R_V) |
+| Horizontal, upper half | (0,1), (0,1) (copies H and −I) |
+| Vertical, left half | (−1,0), (−1,0) (copies D and HD) |
+| Vertical, right half | (1,0), (1,0) (copies DH and HDH) |
+
+So every crossing cancels, whatever the traversal direction or number of passes. I accept that every absolute axis-core class has δ = 0 for this literal pocket, whatever the rest of the room looks like.
+
+Caveat: Section 5 also uses the corner term −2L_p v_c and endpoint labelling for the shear images. That transfer is still imported from `corner-rigidity.md`. Section 16 settles only the absolute-core part.
+
+**Nonzero absolute derivative.** The entry field is u and the exit field is −u, so the load is 2u = (0,−2). The return through P′ is valid:
+- P′ is connected.
+- Its actual walls include V and some second, nonparallel direction.
+- In D4, the product of reflections across lines 45° or 90° apart has order 4 or 2, so −I lies in the group they generate. Since −I is central, the left/right convention does not matter.
+
+I accept the claim. It shows that the slide is not absolute-period preserving. It is correctly labelled as a continuous cycle, not an event.
+
+**Sole-diagonal bit.** The statement is correct but nearly tautological. Because D̂ bounds the colour-0 region, the bit of any relative chain is the endpoint colour difference. φ fixes the endpoint lifts, so bit(φη) = bit(η) without any homology argument. Keep the paragraph's warning that relative and absolute vanishing are different; that is the useful part.
+
+**Gap 16a (twist paragraph).** Two points need care:
+- For "fixes the saddle connections in its cylinder direction" to give a label-fixing map, the S/T lifts must be included in the singular set when forming cylinders. Otherwise a multitwist moves interior points: a point at height y in a cylinder of circumference c moves by s·y modulo c.
+- The required power must also fix every cone point and permute no cylinders.
+
+State that the fixed set is the saddle connections relative to Σ ∪ {lifts of S and T}. With those cylinders, the increment Σ k_i ⟨η, c_i⟩ c_i is standard.
+
+---
+
+## Required edits
+
+1. In Section 14, replace "stronger than the full-lattice condition" with "an additional, independent restriction", unless a proof is supplied.
+2. Describe the checker's partition assertions as consistency identities, not as independent verification of the local-degree table.
+3. In Section 15, add the all-diagonal exclusion. Add g(X) = W + d − 3, and qualify "hyperelliptic" with g(X) ≥ 2, which holds since W ≥ 5 here. Optionally, record that the 2d real branch points of Z → S² are exactly the odd corners.
+4. In Section 16, specify that the marked S/T lifts belong to the singular set in the twist paragraph. Note that the corner-term transfer in Section 5 is still imported.
+
+None of Sections 14–16 constructs an S→T event with an embedded π-sector, and none supplies a structural obstruction to one. Universal pocket detection remains open.

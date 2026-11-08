@@ -1,0 +1,31 @@
+Attempt 2 — can fixed wall count give a finite reflection budget?
+3 November 2026. Hand proof; independent review pending.
+
+Gap attacked
+A direct corner-count argument might try to inspect all connecting paths up to a number of reflections determined only by the number of walls. Success criterion: establish such a cap, or rigorously refute it on a prescribed analytic family. Strongest objection: long thin arms allow repeated wall use without additional physical corners.
+
+Proposition
+For any real L>1 let
+ P_L=([0,L+1]x[0,1]) union ([0,1]x[0,L+1]),
+ S=(L,1/2), T=(1/2,L).
+This is a strictly simple orthogonal six-wall room, with one reflex corner (1,1). Every finite legal S-to-T billiard trajectory with m reflections satisfies
+  m >= 2L-4.
+All these pairs nevertheless illuminate each other by the previously proved arbitrary-real-parameter L-room construction in ../single-boundary-blocker/l-monotone-proof.md. Hence no finite reflection cap depending only on wall count exists, even for six-wall rooms and their illuminated pairs.
+
+Proof
+In an orthogonal room reflections preserve |v_x| and |v_y|. Both are nonzero for this pair, since horizontal and vertical trajectories respectively cannot change y and x. Put r=|v_y|/|v_x|>0.
+Take the prefix ending at the first crossing of x=1. Before that crossing the path lies in the horizontal arm 1<=x<=L+1,0<=y<=1. Let h count its reflections. Its total horizontal variation is at least L-1, so its total vertical variation is at least r(L-1). It consists of h+1 straight pieces, each with vertical variation at most1. Therefore
+  r(L-1) <= h+1.                             (1)
+Take the suffix beginning at the last crossing of y=1. This suffix lies in the vertical arm 0<=x<=1,1<=y<=L+1. Let v count its reflections. Its total vertical variation is at least L-1 and its horizontal variation is at most v+1. Consequently
+  (L-1)/r <= v+1.                            (2)
+The prefix ends before the suffix begins: reaching T requires entering the horizontal-to-vertical junction before the final exit upward. A crossing of both portal lines at (1,1) would hit the forbidden reflex corner. The remaining possible portal endpoints are also corners, so both crossings are interior points, not reflections. Thus h+v<=m; no reflection is counted twice.
+Multiply (1),(2) and use the arithmetic-geometric mean inequality:
+  (L-1)^2 <= (h+1)(v+1) <= ((h+v+2)/2)^2 <= ((m+2)/2)^2.
+Hence m>=2L-4. For any proposed finite six-wall cap M, choose L>(M+4)/2. The existing L-room theorem supplies a connecting path, and this inequality proves every such path exceeds M reflections.
+
+Realignment and limitation
+This rules out a wall-count-only finite reflection cutoff as a way to prove the universal minimum. It does NOT rule out a finite symbolic description with variable repetition counts, a geometry-dependent reflection cap, a structural theorem valid over all words, or global counting that correctly accounts for reuse.
+This is not a dark room, not a lower bound on the number of walls of dark rooms, and not a proof or refutation of the active 22-wall target. It is a rigorous obstacle to one tempting proof strategy. Historical novelty unassessed. No ray, room, direction or word search was used.
+
+Literature screen
+Two targeted web queries returned primarily diffuse-reflection bounds, which do not apply to specular billiards. No relevant external theorem is imported or priority assertion made. The only existence input is the existing local L-room hand proof and its saved independent review.

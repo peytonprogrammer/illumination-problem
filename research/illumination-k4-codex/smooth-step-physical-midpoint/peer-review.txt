@@ -1,0 +1,64 @@
+# Verdict: ACCEPT, with one correction to the open-family paragraph
+
+The two fixed counterexamples hold under independent re-derivation. One sentence in the open-family paragraph is false, and one of the nine family controls is not midpoint-free. Neither affects the main claim.
+
+## Re-derivation
+
+**Room.** Going counterclockwise, the turn cross products are 6·3, 3, −1, 5, 20, 24. Only (5,3) is reflex. All walls lie on the integer lines x ∈ {0,5,6} and y ∈ {0,3,4}. Reflection across x = 5 or 6 gives x ↦ 10−x or 12−x, both ≡ −x (mod 2), and likewise for y. So the four-copy unfolding X covers R²/2Z², and a physical point p has torus images (±p_x, ±p_y) mod 2 with independent signs. ✓
+
+**Arc.** The incoming direction is (3,4) and the outgoing direction is (3,−4), so reflection at y = 4 is correct. The point z = (3,4) lies inside the top edge (0,4)–(5,4), so it is a smooth wall point.
+
+Reflex clearance:
+- **Leg 1:** projection parameter 27/25 > 1, so the nearest point is z, at squared distance 2² + 1² = 5. ✓
+- **Leg 2:** parameter 2/5, foot (21/5, 12/5), squared distance (4/5)² + (3/5)² = 1. ✓
+- **Notch:** leg 2 is at y = 4/3 when x = 5, so it passes below the notch. ✓
+
+**Core.** The arc meets only rectangle walls, so the orbit is given by the fold maps. These have periods 12 and 8, so (12,16) is a period on X.
+- (6,8) is not a period: after θ = ½ the copy is (−,+), not (+,+). The closed geodesic therefore passes through two distinct corner points of X, at θ = 0 and θ = ½.
+- The π/2 corners are regular points of X with cone angle 2π.
+- At θ = ¼ the copies are (+,+)/(+,−); at θ = ¾ they are (−,+)/(−,−). So the two z-lifts are distinct points of X. ✓
+
+**Involution.** The map (e_x,e_y) ↦ (−e_x,−e_y) has derivative −I. Its fixed points are the corner points. It acts on the core as θ ↦ −θ, and fold is even, so the physical images agree. A π-rotation of an open cylinder has exactly two fixed points, both on the central leaf. Here θ = 0 and θ = ½ are fixed, so this core is the central leaf. ✓
+
+**Occurrences.**
+- s₁ = (12/7, 16/7) and t₂ = (2, 8/3) lie on leg 1, since their slope is 4/3.
+- t₁ = (9/2, 2) and s₂ = (24/5, 8/5) lie on leg 2, since they satisfy y = 8 − 4x/3.
+- The legs meet only at z, so each mark has exactly the two core occurrences {θ, −θ}.
+
+Core components after deleting {¼, ¾}:
+
+| Pair | Source occurrences | Component | Target occurrences | Component | Opposite? |
+|---|---|---|---|---|---|
+| 1 | {1/7, 6/7} | (¾, 5/4) | {3/8, 5/8} | (¼, ¾) | ✓ |
+| 2 | {2/5, 3/5} | (¼, ¾) | {1/6, 5/6} | (¾, 5/4) | ✓ |
+
+**Midpoint test.** B = (1,0), so 2B ≡ 0 and the condition reduces to ±s ± t ≡ 0 (mod 2) in each coordinate separately.
+- **Pair 1, vertical:** ±2/7 ± 0 is never 0. Residues {2/7, 12/7}. ✓
+- **Pair 2, vertical:** s_y ∈ {8/5, 2/5}, t_y ∈ {2/3, 4/3}. Residues {4/15, 14/15, 16/15, 26/15}. ✓ The horizontal coordinate also fails independently: ±4/5 ± 0.
+- **Positive control (1/8, 3/8):** x gives 3/2 + 1/2 ≡ 0 and y gives 0 + 0. ✓
+
+**Bypass.** All four marks lie in (0,6)×(0,3), which is in the room interior, and z has y = 4. So both pairs are directly lit. ✓
+
+## Correction: the open-family paragraph
+
+Parameterize the family by a = θ_s ∈ (1/8, 3/16) and d = θ_t ∈ (5/16, 7/16). Then:
+- s = (12a, 16a)
+- t = (12d, 8 − 16d) ≡ (12d, −16d) mod 2
+
+The midpoint condition is 12(a ± d) ∈ 2Z and 16(a ± d′) ∈ 2Z, with the signs chosen independently per coordinate. Working through the cases:
+
+- **Same sign "+" in both coordinates:** a + d ∈ ½Z. The family has a + d ∈ (7/16, 5/8), which contains ½.
+- **Same sign "−":** a − d ∈ ½Z, which is impossible in the family.
+- **Mixed, x "+" and y "−":** the only solution is a = 1/8, d = 3/8. That is the old positive control, which sits on the boundary of the family and is excluded.
+- **Mixed, x "−" and y "+":** the only solution is a = 1/6, d = 1/3, which already lies on a + d = ½.
+
+So within the family, the midpoint locus is the entire segment **θ_s + θ_t = ½**. It is a codimension-one line, not a set of isolated points.
+
+Consequences:
+
+1. **Replace "isolated midpoint equalities"** with: "midpoint equalities occur only on the closed nowhere-dense line θ_s + θ_t = ½. Its complement is an open dense set of separated, midpoint-free marks." The logical conclusion is unchanged.
+2. **The family control (1/6, 1/3) satisfies the midpoint relation.** Here s = (2, 8/3) and t = (4, 8/3): x gives 2 + 4 ≡ 0 and y gives 8/3 − 8/3 = 0. The checker never tests midpoints on the nine family pairs, so `PASS` does not certify them as midpoint-free. Either relabel the nine as separation-only controls, or add a per-pair midpoint flag. With that flag, (1/6, 1/3) would read `true` and the other eight `false`. I computed a + d for each of the other eight; none equals ½ or meets the mixed-sign conditions.
+
+## Scope
+
+The scope statement is correct. Both pairs are globally lit, so this refutes only the claim that local central-cylinder separation plus physical wall realization forces a midpoint. It says nothing about the globally-essential-blocker conjecture.

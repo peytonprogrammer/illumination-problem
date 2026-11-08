@@ -1,0 +1,74 @@
+# Audit verdict
+
+**Section 21 is correct from the stated inputs**, including analytic continuation across immersion branches. Three hypotheses need to be stated explicitly. **The elementary darkness correction has a real gap.** Its retracing step holds only for removable corners of angle π/(2m).
+
+## Section 21
+
+### 1. Transcendence step: correct
+
+Each branch W through v(τ) is a linear subspace defined over K ⊂ ℝ ∩ ℚ̄. For each defining form L, both L(v₀) and L(v₁) lie in K(i). So L(v₀) + τL(v₁) = 0 forces both terms to vanish, and span(v₀, v₁) ⊂ W. Because W ∩ U_τ ⊂ M_τ, a neighborhood of τ maps into M_τ.
+
+This also works for any non-algebraic complex τ, which is a harmless strengthening.
+
+### 2. Continuation across branches: correct, and no branch persistence is needed
+
+The "closed analytic preimage" sentence is valid. A fully elementary version is cleaner:
+
+- Let S = {t ∈ D : X_t ∈ M}. S is closed because M is closed.
+- At any t₁ ∈ S, M is locally ∪W_j, a finite union of linear spaces in the same chart. Period coordinates at nearby points are the same coordinates.
+- An affine line meets a linear subspace in nothing, one point, or the whole line. So near t₁, S is either a neighborhood of t₁ or a finite set.
+- Hence a boundary point of int(S) would be a non-isolated point of S, so it would be interior. Therefore int(S) is open and closed in D, and S = D.
+
+This handles switching between different immersion sheets automatically.
+
+Requirements:
+- **(a)** The chart is period coordinates for a ℚ-basis of H₁(X, Σ; ℚ). Wright's field is invariant under GL(n, ℚ).
+- **(b)** If X₀ or X_t has translation automorphisms, the chart is an orbifold chart. The argument still works on the marked cover.
+
+### 3. Field ℚ
+
+This is standard: Wright Theorem 1.1 and Example 1.2. I cannot re-verify the citation with tools disabled.
+
+### 4. Rank ≥ 2: correct, and standard
+
+The argument is that rank 1 with a ℚ-defined absolute tangent puts the absolute periods in a lattice, so the surface is a torus cover.
+
+**Gap to check:** Section 17's "torus cover" must mean "absolute periods form a lattice," with branching allowed over several points. If Section 17 only proved the statement for covers branched over one point, or for relative periods in a lattice, the contradiction does not close.
+
+### 5. rel = 0: correct, with two conditions
+
+**(a) Σ must be fixed pointwise.** Σ in the chart must consist only of points fixed by J. If the stratum marks any regular points that J moves, ker p is no longer +1-invariant and the argument fails. This includes marked removable-corner lifts.
+
+**(b) The local-constancy sentence is glossed.** Cleaner justification:
+- Affine self-maps with derivative −I on a given surface form a torsor for the finite translation-automorphism group. So any limit point carries only finitely many candidate involutions J_i.
+- Each J_i fixes Σ, as a limit of maps fixing the non-colliding zeros.
+- So M is locally contained in a finite union of linear spaces E_i, the −1 eigenspaces of J_i* on H¹(X, Σ).
+- Each irreducible branch lies in a single E_i, and E_i ∩ (ℂ^Σ/ℂ) = 0.
+
+Arzelà–Ascoli also needs the J_n transported to a common domain by the local marking. This is routine but should be said.
+
+**Consistency check:** rel = 0 forces v₁ to have a nonzero absolute part. This agrees with Section 17.
+
+### 6. Standard consequence vs. new input
+
+- **Standard:** the generic-point-of-an-algebraic-family argument, k = ℚ from a square-tiled point, "rank 1 over ℚ gives torus covers," and "an involution fixing Σ gives rel = 0."
+- **New inputs:** the ℚ[i]-linear chart, Section 17's rational-iff criterion, and J fixing all of Σ.
+
+The "one M_* for all transcendental t, containing the disk" statement is a standard-consequence packaging. M_* is the smallest affine invariant manifold containing the curve, and M_t ⊂ M_* for algebraic t. The "Remaining obstruction" paragraph is accurate and does not overclaim.
+
+## Elementary darkness correction: gap
+
+The retracing claim fails for odd n. A convex corner gives a regular lift exactly when its angle is π/n.
+
+- Unfold the 2n sectors. The straight continuation runs from sector k to sector k+n.
+- **n even:** the folding map from sector k+n to sector k is the rotation by π, so the folded path retraces exactly. Example: n = 2, a ray along (−1,−2) folds back to (1,2).
+- **n odd:** that folding map is orientation-reversing. The path exits along the mirror image of the incoming ray in the corner bisector. Example: in a 60° corner, a ray entering at 20° exits at 40°. The case n = 1 is the ordinary reflection law.
+
+So the L < 2a, L = 2a, L > 2a reduction is valid only if every removable corner the segment passes through has angle π/(2m).
+
+When that condition holds, the rest checks out:
+- The reversed segment on (a, 2a) has no corner contacts.
+- The remainder starts at some S-lift and has strictly fewer contacts. This assumes S itself is not a corner.
+- Not tracking lift labels is correct.
+
+For odd-n corners you need either a separate argument or the weaker finite-blocking statement. I can't verify that Wolecki's Remark 2.2 covers odd n with tools disabled, so check whether it assumes even n or angles π/(2m).

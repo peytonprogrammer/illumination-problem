@@ -1,0 +1,7 @@
+# EA01: equal-arm illumination with even outer widths
+
+Predeclared hand-proof candidate. Extend accepted LJ03 by replacing N odd with nu2(N)<=nu2(P), retaining K=P,1<=P<L,L a power of two,N>P+L,h even,c odd,integer ordered heights0<b<c<h<H and rational e>0. For actual rational horizontal marks S=(s,u),T=(t,v) in the same strict terminal domains with even integer u,v and b<u<h, claim a legal finite original S-to-T path. With integral e, claim EVERY distinct native even-even pair in the whole stated room family, using accepted upper/mouth UJ02 and protected placement TR01/TR05.
+
+Gap closed: even N was excluded from LJ03 solely in the right-return and target-divisor arguments. Success criterion: show both survive the explicit valuation order for all endpoint/cap depths, and reuse actual optical guards without new assumptions. Strongest objection: an even N could make a kernel return a full right period or force a target divisor not dividing P. Both must be excluded arithmetically.
+
+Only prescribed hand calibration: e2,P=K2,L4,N10,b1,c3,h6,H12,S(2,4),T(14,2). All are actual interior marks. Predict alpha1,beta6,f2,d9,H0=2,seed i1,m0,j0,tau16/9,z0=-22/9,z1=-10/9,right k1,z2=-34/9,J=-2; final p1 gives tau376/9,actual indices i11,m12,k16,E38=6 modulo8,actualT14,2. No discovery search or physical replay is needed to prove this extension; hand check and pinned dependency audit only. No claimed full r3 or r<=8 closure.

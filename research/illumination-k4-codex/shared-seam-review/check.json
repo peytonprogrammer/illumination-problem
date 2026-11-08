@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "scope": "Independent code, three prescribed assemblies and nine supplied small bases only; general theorems need hand proof. No peer-code imports, discoveries, rays, archives or workers.",
+  "sources": {
+    "shared-seam-test/findings.txt": "6ca81a03008ad0b050bc026ec3acbabd8ac12c3202b9bb93fdebfab639feb426",
+    "shared-seam-test/check.py": "69139ec2b2d327fb85827595de71e5e3c1128d4462a063f2d1b00e6c50714be0",
+    "shared-seam-test/check.json": "75b211840649f846b59789c318e74c53f576b77ead3cffd5daaf99415c9d0b9b",
+    "research-note.tex": "bc1727a98614fe463a5a3e56c7dac247ef036f07c339d7d88c2eac4186f9e6d1"
+  },
+  "fixtures": [
+    {
+      "name": "known22",
+      "walls": 22,
+      "reflex": 9,
+      "area": 15,
+      "junction_counts": {
+        "1": 13,
+        "2": 4
+      },
+      "seams": 2,
+      "cycle_rank": 0,
+      "fibers": {
+        "(0, 0)": {
+          "(0, 0)": "interior",
+          "(4, 0)": "smooth"
+        },
+        "(2, -2)": {
+          "(2, -2)": "smooth",
+          "(2, 2)": "interior"
+        }
+      }
+    },
+    {
+      "name": "shared24",
+      "walls": 24,
+      "reflex": 10,
+      "area": 15,
+      "junction_counts": {
+        "1": 14,
+        "3": 1,
+        "2": 2
+      },
+      "seams": 2,
+      "cycle_rank": 0,
+      "fibers": {
+        "(0, 0)": {
+          "(0, 0)": "interior",
+          "(-2, 0)": "smooth"
+        },
+        "(2, -2)": {
+          "(2, -2)": "smooth",
+          "(2, 2)": "smooth",
+          "(-4, 2)": "smooth"
+        }
+      }
+    },
+    {
+      "name": "fourfold28",
+      "walls": 28,
+      "reflex": 12,
+      "area": 20,
+      "junction_counts": {
+        "1": 16,
+        "2": 4,
+        "4": 1
+      },
+      "seams": 4,
+      "cycle_rank": 1,
+      "fibers": {
+        "(0, 0)": {
+          "(0, 0)": "interior",
+          "(-2, 0)": "interior"
+        },
+        "(2, -2)": {
+          "(2, -2)": "smooth",
+          "(2, 2)": "smooth",
+          "(-4, 2)": "smooth",
+          "(-4, -2)": "smooth"
+        }
+      }
+    }
+  ],
+  "small_bases": [
+    {
+      "name": "strip1",
+      "area": 1,
+      "smooth": 0,
+      "interior": 0,
+      "residue_count": 0
+    },
+    {
+      "name": "strip2",
+      "area": 2,
+      "smooth": 2,
+      "interior": 0,
+      "residue_count": 2
+    },
+    {
+      "name": "strip3",
+      "area": 3,
+      "smooth": 4,
+      "interior": 0,
+      "residue_count": 4
+    },
+    {
+      "name": "strip4",
+      "area": 4,
+      "smooth": 6,
+      "interior": 0,
+      "residue_count": 4
+    },
+    {
+      "name": "L3",
+      "area": 3,
+      "smooth": 2,
+      "interior": 0,
+      "residue_count": 2
+    },
+    {
+      "name": "square4",
+      "area": 4,
+      "smooth": 4,
+      "interior": 1,
+      "residue_count": 3
+    },
+    {
+      "name": "T4",
+      "area": 4,
+      "smooth": 2,
+      "interior": 0,
+      "residue_count": 2
+    },
+    {
+      "name": "L4",
+      "area": 4,
+      "smooth": 4,
+      "interior": 0,
+      "residue_count": 3
+    },
+    {
+      "name": "S4",
+      "area": 4,
+      "smooth": 2,
+      "interior": 0,
+      "residue_count": 2
+    }
+  ]
+}

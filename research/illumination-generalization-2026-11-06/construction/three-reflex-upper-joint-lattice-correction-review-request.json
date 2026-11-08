@@ -1,0 +1,93 @@
+{
+  "id": "UJ01-F1",
+  "created_utc": "2026-11-08T03:02:01.922232+00:00",
+  "claim": "Discard invalid old corner-source calibration3; replace P1 byP2 with actual native source and strict original geometry. Quantified theorem unchanged.",
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-correction-candidate.md",
+      "sha256": "e6005e84e0edfc981007317c54b2cb232c2a41725b75139f1da7729342085b50"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-correction-proof.md",
+      "sha256": "8225b745333a72d335344aa3dfd198bb7ba83e977cf33de49a56e65b8842051b"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-correction-check.py",
+      "sha256": "176cd6acfb45fa0801b7ff7f9bade67a9af946130510b57e2b8b8766103171d1"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-correction-check.json",
+      "sha256": "9103011df1af5fa1dc669f3b36e72cf89d83e29235640c1ec0c4b7eed698596e"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-joint-lattice-mouth-finding.md",
+      "sha256": "24fa8a0338f2fdba70942d848a07a636619dfd459e2888746027275b10d19fe6"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-joint-lattice-mouth-finding.json",
+      "sha256": "8efcebadf69f9ce158d64267f7f81a8773de0d543c7e7b2840a7769411cedbda"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-candidate.md",
+      "sha256": "89c13c37e12870b07a33449839ec1e979924a1df25a82c624870ad944e95d742"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-proof.md",
+      "sha256": "1e2fef09a0030d246cc3fb924041731a8d6e61ef0f91f206ed0e8beeb20e586a"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-check.py",
+      "sha256": "231121bffde6a0366527ecc911e151b757302f5bac92d6e1d1677abdfc6e5865"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-check.json",
+      "sha256": "f010233b99df507b017dde8688c9c85d1c5d686b0cb46d898de4e706165eed99"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-cap-orbit-proof.md",
+      "sha256": "d91f5376097c1587e75ed56344cd8e199f1b3f438cec5ceeb7757db5eb445d6e"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-cap-orbit-independent.md",
+      "sha256": "cf8de283aa623abe4ace499f89e31d6d2448f326fd0ceca3d1ee29fdb92250c0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-upper-cap-orbit-independent.json",
+      "sha256": "6cd09cd064c0f112ddc837206d422cc217147e1e470bf254d09d77caf1557d4c"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-upperwindow-proof.md",
+      "sha256": "60c90cafded42f391007bbf0529123f27254b16c9f14eeac25f87ad6d8aa7289"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-01.md",
+      "sha256": "384d4f32e9eaaab9b76bf8886cf844924ac96e65b9404f39c56beb03b041f2a0"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-05.md",
+      "sha256": "8d541d5d7503e765e67900d18f21d2cd1812d2ffce151f7f397449b4d920d6d8"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent.md",
+      "sha256": "bdfd57c1521ff4efe32adbc238cc732c5d85850995f793dcba9035c0c80cdceb"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.md",
+      "sha256": "0d57019acc0b9d30a8031c1f0eea6ce2887b03a16f53303a2810104be0897983"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-upper-joint-lattice-review-request.json",
+      "sha256": "d50c6be3e7982062b2cc26a4c32ee7cf5c3a69ea1ceed13fc404aed027818f3d"
+    }
+  ],
+  "supersedes_evidence_only": "Original control3 withP1/e2/S2,4 is NOTan actual interior path; never count it asphysicalevidence. NewP2 calibration replaces it.",
+  "review_questions": [
+    "Old invalidcorner rejected by explicit source-domainassertion",
+    "CorrectedP2 native actualsource/mouth/geometry and tau6 originalwall ray",
+    "Generalquantified theorem already retained strictsourceguard",
+    "All other original pins preserved unchanged"
+  ],
+  "independent_acceptance": false,
+  "whole_goal_complete": false,
+  "discovery_search": false
+}

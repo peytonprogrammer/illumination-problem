@@ -1,0 +1,202 @@
+Following rays through the triangular caps
+3 November 2026
+
+Result
+The fixed W=16,k=6 room is explicitly illuminated from S=(0,0) to T=(2,2)
+by a legal ten-reflection trajectory with initial velocity (-3,-10).
+A saved certificate supplied the path. Exact independent replay and a
+separate actual-boundary intersection check both pass. A hand derivation
+then explains the complete itinerary and an open interval of related rays.
+Two triangular-cap response lemmas, with precise entry hypotheses, describe
+the mechanism. No new wall-count lower bound or complete I2/I3 exclusion
+follows. The result is a concrete constructive case, not merely a sampled
+failure to find darkness.
+
+Room
+Exactly the fixed geometry in darkness-constraint.txt section 5:
+full A stars at (0,0),(2,0),(2,2), plus single-triangle caps
+ bottom: {(0,-2),(0,-1),(1,-1)},
+ east:   {(4,2),(3,2),(3,1)},
+ top:    {(2,4),(2,3),(1,3)},
+ left:   {(-2,0),(-1,0),(-1,1)}.
+The previously checked ledger is N28/W16/I3/J2/s_N4/Q4/k6.
+
+1. Witness provenance and verification
+Reuse the existing saved library, not a direction or reflection-word search:
+ claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl,
+ line 2642 (one-based).
+The file contains 3896 saved records; two have U contained in the fixed room
+and Z disjoint from it after the coordinate change. Chose the one with
+fewer reflections, breaking ties by line order. This does NOT establish a
+globally shortest path. Source SHA256 and the unchanged original record
+are retained in cap-continuation-witness.json.
+Map the saved coordinates by (x,y)->(-y,x). This takes its marked displacement
+(2,-2) to (2,2) and its full L support to the three full stars above.
+
+The complete path in physical coordinates is:
+ S   (0,0)
+ 1   (-3/10,-1)          bottom wall of the S star
+ 2   (-9/10,1)           top wall of the S star
+ 3   (-6/5,0)            horizontal wall of the left cap
+ 4   (-18/13,8/13)       diagonal wall of the left cap
+ 5   (3,-7/10)           right wall of the elbow star
+ 6   (2,-1)              bottom wall of the elbow star
+ 7   (-1,-1/10)          left wall of the S star
+ 8   (22/7,8/7)          diagonal wall of the east cap
+ 9   (17/5,2)            horizontal wall of the east cap
+ 10  (46/13,20/13)       diagonal wall of the east cap
+ T   (2,2).
+
+There are ten reflections, with two in the left cap and three in the east
+cap. Bounce 6 is an INTEGER C point but lies strictly inside a straight
+physical wall. It is legal. No bounce is a genuine room corner, and no open
+leg touches any room boundary. The bottom and top caps are never entered.
+
+Verification method A: independently written canonical-triangle implication
+checker in persisted-replay/audit.py. It checks exact specular reflection,
+all open-leg tile incidence and the occupied/absent half-stars at bounces.
+For the rotated path, 19 triangles suffice and 9 must remain absent. The
+only needed triangles outside the three full stars are the left and east
+cap triangles. The optional bottom/top triangles are neither needed nor
+forbidden. Required/forbidden sets are recorded in cap-continuation-check.json.
+
+Verification method B: the actual sixteen maximal boundary walls, obtained
+from the fixed-room boundary cycle. Every bounce lies strictly inside one
+wall and satisfies its exact rational reflection equation. Each leg has no
+boundary intersection in its open interval, no collinear wall overlap, and
+an interior midpoint by exact point-in-polygon parity. Both endpoints are
+interior. Thus the actual physical polygon supports the entire path.
+No numerical tolerances, new rays, solver, or peer geometry imports are used.
+
+2. Cap response A: a two-reflection quarter-turn
+Translate the left cap to its actual position. Its mouth is x=-1, 0<y<1;
+its mirrors are y=0 and y=x+2. A ray enters at (-1,h) with velocity (-r,-1).
+Assume
+  0<h<1, r>0, r(1+h)<1.
+These imply r<1. The ray hits the horizontal mirror first at
+  (-1-rh,0),
+then the diagonal mirror, then exits through the same mouth with
+  exit height h'=1-r(1+h),
+  exit velocity (1,-r).
+There are exactly TWO cap reflections. Reflection in y=0 changes (-r,-1)
+to (-r,1); reflection in y=x+2 swaps components to (1,-r).
+
+Derivation. After the first hit, the time to the diagonal is
+  t=(1-rh)/(1+r).
+Its coordinates are (-1-rh-rt,t). Travel next with (1,-r) until x=-1.
+The exit height simplifies to 1-r-rh. The hypotheses make the first and
+second hits interior to their mirror segments and the exit height strictly
+between zero and one, so no third reflection or corner collision occurs.
+For the actual connecting ray r=3/10 and h=2/3, giving h'=1/2.
+This cap turns a steep downward-left ray into a shallow downward-right ray.
+
+3. Cap response B: three reflections equivalent to a farther mirror
+Use local east-cap coordinates X=x-3, Z=y-1. The cap is
+  0<=X<=Z<=1.
+Its mouth is X=0; its mirrors are Z=X and Z=1. A ray enters at (0,h) with
+velocity (1,r). Assume
+  h>0, r>0, h+2r<1.
+Then it makes exactly THREE reflections: diagonal, horizontal, diagonal.
+The successive local hit points are
+  (d1,d1),               d1=h/(1-r),
+  (h+r,1),
+  (d2,d2),               d2=(h+2r)/(1+r).
+It exits the mouth at
+  (0,h+2r), with velocity (-1,r).
+
+Derivation. Swap velocity components at each diagonal reflection and negate
+the vertical component at the horizontal reflection:
+  (1,r) -> (r,1) -> (r,-1) -> (-1,r).
+Solving each linear intersection gives the points above. The strict
+inequality h+2r<1 ensures they lie in the open mirror segments and that the
+ray exits before a fourth hit. The output matches what a VIRTUAL vertical
+mirror at X=1 would do: an outward-and-back horizontal displacement of two
+raises the height by 2r. No physical vertical wall at X=1 is claimed.
+For the actual connecting ray h=1/10,r=3/10, the exit height is 7/10,
+so the physical exit point is (3,17/10), directed toward T.
+
+These two response formulas are local lemmas for triangular mirror caps
+with their two mirror walls intact. They are not assertions about arbitrary
+partial fans or a cap whose external walls have been extended by more tiles.
+
+4. A hand construction of the complete beam
+Launch S with velocity (-r,-1), where
+  5/17 < r < 4/13.                              (A)
+This is an OPEN interval, with 3/10 strictly inside it.
+Two horizontal reflections in the S star, first on y=-1 and then y=1,
+give cap entry at x=-1 with height
+  h_L=4-1/r.
+Condition (A) places h_L strictly between zero and one and satisfies the
+two-reflection cap condition. The left cap returns the ray at
+  (-1,2-5r), velocity (1,-r).
+
+It next reflects on the elbow's right wall at
+  (3,2-9r),
+and its bottom wall at
+  (12-3/r,-1),
+and the source star's left wall at
+  (-1,13r-4).
+The ray now travels with velocity (1,r). At the east-cap mouth x=3 its
+height above y=1 is
+  h_E=17r-5.
+Condition (A) gives h_E>0 and h_E+2r<1. The three-reflection response
+therefore returns it at
+  (3,19r-4), velocity (-1,r).
+At the vertical line x=2 it arrives at
+  (2,20r-4).                                   (B)
+Setting r=3/10 makes this point exactly T=(2,2). This gives the witness
+without treating a saved successful simulation as the proof.
+
+Path validity for the WHOLE interval (hand check)
+- The initial bottom/top hits have x=-r and x=-3r, in the open uncapped
+  source-wall portions. The source-to-cap entry height h_L is in (0,1).
+- Left-cap exit has height 2-5r in (0,1). On the way to x=3, the ray crosses
+  x=1 at height 2-7r in (-1,1), so it stays inside the source/elbow stars.
+  The right-wall hit 2-9r is in (-1,1).
+- The bottom hit x=12-3/r is in (1,3), in the elbow bottom wall, away from
+  the optional bottom cap. On returning across x=1, the height is 11r-4,
+  also in (-1,1).
+- The next source-left hit has -1<13r-4<0, below the left-cap mouth.
+- After this reflection, the ray crosses x=1 at height 15r-4 in (-1,1).
+  It crosses y=1 at x=5/r-14 in (1,3), so it passes from the elbow star
+  into the target star before entering the east cap.
+- The two local cap hypotheses are strict. All five cap bounces are
+  consequently away from corners and all cap legs are interior.
+- East-cap exit has 1<19r-4<3. Both this point and the target in (B) are
+  in the target star, with the intervening open segment in its interior.
+These inequalities follow directly from (A). Source and target stars are
+full, and all stated portals join occupied full sides. No other physical
+boundary point occurs on an open leg.
+
+The exact formula for every bounce is implemented in family(r) in the
+checker. Its r=3/10 value equals the unchanged saved path exactly. The
+checker evaluates only that supplied ray; the interval proof is the hand
+inequality argument above, not a numerical sampling claim.
+
+5. What generalizes and what does not
+As r varies in (A), the same ten-wall itinerary illuminates every point
+  (2,Y), 32/17<Y<28/13.
+Thus T is inside an explicit beam, not at a singular limiting direction.
+Since the required/forbidden conditions do not involve the optional bottom
+and top triangles, the SAME path remains legal if either or both are
+removed. More generally, it works in any canonical completion containing
+its required triangle set and avoiding the nine forbidden triangles, with
+interior endpoint stars. This is a local universal guard with an explicit
+human-readable derivation.
+
+However, adding other tiles can remove one of the mirrors this itinerary
+uses. The response windows also require the incoming ray to arrive with
+specific direction and position. Neither the wall count nor the charge
+identities proved so far force these conditions in every I2/I3 completion.
+These gaps prevent a conclusion about all low-wall rooms or a universal
+22-wall minimum. No claim that every triangular addition improves
+illumination, or that all caps have one constant response, is made.
+
+Decision
+The fixed 16-wall example is now explained constructively. The reusable
+output is a pair of cap response lemmas and a complete beam calculation.
+The next genuinely stronger target would force some admissible cap-entry
+window and a compatible return to the actual target throughout a class
+of remaining completions. That global condition has not been proved.
+Do not restart a broad room/direction search or the paused universal
+corner-bound goal on the strength of this one solved example.

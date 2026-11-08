@@ -1,0 +1,263 @@
+{
+  "status": "PASS",
+  "darkness": "PARITY_THEOREM_HYPOTHESES_VERIFIED",
+  "walls": 28,
+  "squares": 16,
+  "quarter_turn_symmetry": true,
+  "non_A_corner_checks": [
+    {
+      "point": [
+        -3,
+        -1
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        -3,
+        0
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        -2,
+        -1
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        -2,
+        1
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        -1,
+        -2
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        -1,
+        -1
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        -1,
+        0
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        -1,
+        1
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        -1,
+        2
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        -1,
+        3
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        0,
+        -3
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        0,
+        -1
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        0,
+        1
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        0,
+        3
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        1,
+        -3
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        1,
+        -2
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        1,
+        -1
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        1,
+        0
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        1,
+        1
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        1,
+        2
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        2,
+        -1
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        2,
+        1
+      ],
+      "incident_cells": 3
+    },
+    {
+      "point": [
+        3,
+        0
+      ],
+      "incident_cells": 1
+    },
+    {
+      "point": [
+        3,
+        1
+      ],
+      "incident_cells": 1
+    }
+  ],
+  "boundary_targets": [
+    {
+      "target": [
+        -2,
+        0
+      ],
+      "wall": 1,
+      "endpoints": [
+        [
+          -3,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ]
+    },
+    {
+      "target": [
+        2,
+        0
+      ],
+      "wall": 15,
+      "endpoints": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "target": [
+        0,
+        2
+      ],
+      "wall": 8,
+      "endpoints": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "target": [
+        0,
+        -2
+      ],
+      "wall": 22,
+      "endpoints": [
+        [
+          0,
+          -3
+        ],
+        [
+          0,
+          -1
+        ]
+      ]
+    }
+  ],
+  "primitive_residues": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "room_sha256": "14c12819c9779fe815f617b090bb324a46ec953ebbd8be52f981a2ebd245f57a",
+  "scope": "All positive-length finite specular paths, center to each boundary target and to itself. Polygon corners stop paths; final smooth-wall target is permitted. Geometry is idealized from raster, not author coordinates."
+}

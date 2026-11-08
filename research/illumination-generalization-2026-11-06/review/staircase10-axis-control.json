@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-11-08T06:50:39.344Z",
+  "status": "OWN_HAND_CONSTRUCTION_EXACT_PATH_PASS_PENDING_RECIPROCAL_REVIEW",
+  "scope": "ONE frozen four-band room/pair; actual oblique illumination, not full milestone.",
+  "initial_velocity": [
+    -3,
+    1
+  ],
+  "first_target_time": 36,
+  "actual_reflections": 16,
+  "finite_wall_leg_guards": 170,
+  "strict_seam_points": [
+    [
+      8,
+      12
+    ],
+    [
+      4,
+      16
+    ]
+  ],
+  "ordinary_wall_seam_contact": [
+    0,
+    20
+  ],
+  "material_review_guard": "Smooth maximal-wall point(0,20) is legal; band seams are not automatically true corners.",
+  "dependencies": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-axis-control-check.py",
+      "sha256": "d2ab2186f17e13fb94b7c6efe86883e6289912947179a3940857143c3491bddd"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/staircase10-axis-control-check.json",
+      "sha256": "c77550f3529f2a87ef9b115363e78a2b577838ec784f7d20041f61fd7f017c55"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/axis-only-obstruction.md",
+      "sha256": "2441e420d53f4f2b881509559c80dc9d97b8a0e9516cc146a617474ce4299192"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/axis-only-independent.md",
+      "sha256": "5cf807aebf6952388948ff065580d1e0ddaf9e45023c8e568c5a461613c83edd"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/axis-only-independent-acceptance.json",
+      "sha256": "0afba04d219dc8b98efd4bd361258af0530e4d243c370b17eb320b8acae5a167"
+    }
+  ],
+  "proof_sha256": "0c5d3d91dc8240fa5b183d98799c3cb49da58d87fa615faccd45d997a1014fdb",
+  "all_metric_milestone_complete": false,
+  "full_goal_complete": false,
+  "new_discovery": false,
+  "review_request_to": "Existing author/coordinator; no new workers."
+}

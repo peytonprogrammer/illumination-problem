@@ -1,0 +1,89 @@
+Specialist research direction: a global obstruction budget, not another room family
+Coordinator, 2026-11-07. Universal theorem OPEN. No novelty or completed lower bound claimed.
+
+The useful target
+=================
+For an orthogonal simple polygon, c-r=4 and W=c+r=2r+4. Thus W<=21 means r<=8. The known orthogonal 22-wall dark example has r=9. Ask whether persistent separation of the COMPLETE physical endpoint fibers requires nine reflex defects. This is a sharply specified orthogonal subproblem, not yet the mixed-direction canonical45 theorem. Its significance is a possible global lower-bound mechanism with no metric/degree bound.
+
+Prior-work distinction
+======================
+The half-turn quotient, pillowcase passport, mark-compatible lattice guard, per-direction skeleton and complete marked origami decider already exist. Do NOT call those new. The proposed new work is an exchange/discharging inequality across ALL directions, retaining the entire labelled cover, every regular sheet, the physical real structure and the marked fibers. No deletion of degree-two vertices, degree cap, selected quotient necessity or mixed-direction ray concatenation is assumed.
+
+1. An exact all-direction arc model (hand derivation to challenge)
+===============================================================
+Use the mark-compatible torus E=R^2/(2Z^2) in the integer orthogonal wall frame. Absolute periods are even integral; corner images are two-torsion; the specified even-even A endpoints map to0. This is NOT necessarily the primitive period torus. Let M be the minimal four-copy unfolding, rho its intrinsic half-turn, Q=M/rho (a sphere), B=E/(-I), and h:Q->B the induced cover. The existing passport has local degrees1 (convex corner),2 (regular),3 (reflex). There are r+4 degree-one points and r degree-three points; degree-two count remains unbounded and all labels are retained.
+
+For each primitive integer w=(p,q), the torus segment t*w, 0<=t<=1, projects to an embedded arc alpha_w in B from0 to the nonzero half-period [w]. No other two-torsion point is interior: if tp,tq are both integers then primitivity makes t integer. Nor do two interior points identify under +/- modulo2: t1-t2 or t1+t2 would have to be an even integer. Hence the interior avoids every branch value.
+
+The full inverse image h^{-1}(alpha_w) is a finite graph. Its vertices over the two arc ends have valences equal to their local degrees. At degree2 the quadratic differential is regular and the two incident germs form a straight line. Degree3 is a true zero and stops light. Degree1 is a pi cone whose continuation on M retraces on Q; it cannot be an interior vertex of a simple graph path between distinct degree2 marks.
+
+The two actual interior S lifts in Q and the two T lifts in Q are distinct labelled degree2 vertices over0. A component of h^{-1}(alpha_w) after excluding degree3 vertices containing BOTH colors supplies a straight connection: take a simple graph path, whose interior vertices all have degree2, then lift it to M and fold to the original room. No physical direction switch occurs. Conversely, a straight M connection projects to a nonzero torus loop with holonomy2d*w. Its repeated two-torsion crossings trace the SAME alpha_w forwards/backwards; zero avoidance keeps its endpoints in the same degree3-deleted graph component. Removable-corner retracing is handled on FULL physical fibers by the accepted cone-only equivalence.
+
+Thus physical darkness is persistent monochromaticity of these graph components for EVERY primitive w. This is an equivalent direction encoding, not a new illumination theorem. Audit sector conventions, all sheets, degree-one retracing, torus choice and endpoints before using it.
+
+2. Primary new proof target: exchange/discharging over slopes
+==========================================================
+Keep the WHOLE labelled cover and its real involution (the double of the actual polygon), not its unlabelled passport. Primitive pillowcase arcs are related by modular/Farey changes of slope; cover monodromy must be transported exactly. Derive how source/target monochromatic chains can change under these moves. Seek a discharging inequality showing that persistent monochromaticity for all slopes requires at least nine degree3 defects.
+
+This is genuinely the missing step. Nine is a CONJECTURED threshold motivated by W=2r+4 and the known22 control, not proved by the passport. A single abstract graph can separate colors with fewer defects. The burden is simultaneous, physically realizable separation across all slopes. An explicit smaller physical cover violating the proposed charge retires it; a cover without the physical real structure is only a scope test.
+
+A useful rigorous algebraic shape for the desired inequality is an orbit potential. On the complete finite labelled SL2Z orbit O, let H(s)>=0 count horizontal S-to-T connections before genuine zeros (or a Boolean indicator). Its sum is positive iff some direction illuminates, using the accepted exact decider. For bijective anchored shears T,U, the orbit sums of Phi(Ts)-Phi(s) and Psi(Us)-Psi(s) vanish. A PROVED local inequality
+
+ H(s) >= (9-r)*a(s) + Phi(Ts)-Phi(s) + Psi(Us)-Psi(s),
+
+with a>=0 and positive orbit sum, would exclude darkness when r<=8. The weight a may shrink with cover degree; no W-only positive density or orbit-size bound is assumed. No such inequality is currently supplied. The research is to derive one from labelled chain changes/physical symmetry, or disprove a concrete proposed potential. This method does not bound orbit size or infer illumination from mixing directions along one path. It averages exact certificates after changing the direction of the ENTIRE trajectory.
+
+Candidate potential features must include source and target color runs, true-zero separatrix incidences and regular periodic components; raw genus, unlabelled connectivity and ramification totals alone have already failed. Do not fit coefficients on a few examples and call it universal; a symbolic transition proof is mandatory. No large new engine is needed for the first hand analysis.
+
+3. A personally checked discriminator from the EXISTING negative certificate
+=========================================================================
+I read the frozen known22 60-square,10368-state certificate, verified its existing raw SHA, and independently evaluated the horizontal stop rule with ALL REGULAR corner stops removed. Every state still has nine order2 true zeros and four source/four target lifts. Of the10368 states,8640 forward source traces stop at a true zero;1728 return to the source without any true-zero hit. No target is reached. Thus a proposed charge claiming EVERY dark direction must end at a corner is already wrong: regular periodic source components matter. These are counts under uniform weighting of the SAVED STATES, NOT angular proportions of physical directions or a new theorem.
+
+Audit: negative-control-audit.py/json here. It does not rediscover the orbit, mutate peer artifacts, verify the original geometric builder independently, or prove the universal lower bound. It gives a concrete negative control for a proposed potential and confirms that removable corners are not causing this certificate's darkness.
+
+4. Backup: use genuine affine conjugacies, not concatenated return maps
+=====================================================================
+A valid alternative to the failed monodromy argument is to transport BOTH marks by the SAME actual affine automorphism f of the surface. If f(x),f(y) lie in one open flat cylinder, they connect there (lift the cylinder to an infinite strip); applying f^{-1} gives one straight x-to-y segment. Composition of such automorphisms is legitimate because it acts on an entire segment, not on successive legs of a light ray. This is the known affine-orbit strategy, not a novel foundation.
+
+A concrete new task would be a cylinder-incidence lower bound for the COMPLETE physical pair orbit at r<=8. It must not assume the affine orbit is dense (these marks are arithmetic), that chosen parabolic powers move every marked vertex, or that every connecting segment lies in a cylinder. The criterion is sufficient; prove completeness or use a separate saddle-chain contribution. If it only reconstructs the existing finite decider, do not count that as progress.
+
+5. What not to spend time on
+============================
+No further comb widths, slope cutoffs, finite-group connectivity, geometric sheet suppression, generic non-torus-cover theorems on arithmetic surfaces, or automatic lifting of a path through a collapsed corner. Keep the distinction between orthogonal r<=8 and all mixed-direction W<=21 explicit. Mixed-direction work needs its own weighted cone orders and positive-genus quotient; the sphere proof cannot be silently reused.
+
+External foundations personally checked
+======================================
+Wolecki, Illumination in Rational Billiards, https://arxiv.org/html/1905.09358v3 : full-fiber unfolding and removable-corner conventions; Theorem1.3 is an UPPER bound22, not minimality.
+Hubert-Schmoll-Troubetzkoy, Modular Fibers and Illumination Problems, https://arxiv.org/html/math/0602394v2 : affine maps transport entire straight segments; periodic-pair exceptions must be retained.
+LMW, Everything is illuminated, https://arxiv.org/html/1407.2975 : surface finiteness/correspondences do not by themselves imply a wall lower bound.
+
+6. Replayable singleton supports on the fixed negative control
+============================================================
+negative-control-supports.py/json and negative-control-singleton-witnesses.json
+retain one shear word and a full formal trace for each of the nine named true
+zeros. All nine words replay (lengths6,5,6,5,3,1,3,4,4). Exact T,U algebra
+preserves C=v h v^-1 h^-1 before rooted relabeling. The script checks every
+state's transported tags against its actual commutator cycles. A separate
+readback replay checked every shear step of each witness and all endpoint
+labels, adjacent h steps, and singleton zero support.
+
+In the saved10368 representatives,5566 have a formal target on the horizontal
+cycle after the last source departure;4802 have none. The resulting18 support
+sets have size1 or2; every zero occurs as a singleton, so their minimum hitting
+set is exactly all9. This only says all9 absorbers are necessary to block this
+particular collection of formally continued candidate words. It does NOT
+show that changing a polygon corner preserves the cover, that the words are
+legal trajectories, or that another dark room needs9 zeros. Minimal hitting
+sets being essential is not itself a lower-bound mechanism.
+
+Design constraint from the peer's named periodic-potential test:
+The candidate Phi=R_v,Psi=R_h gives D=2R_diag-R_h-R_v. Saved negative-control
+neighbors include H=0,r=9,D=8. Thus the proposed inequality, IF required to
+extend to the r=9 extremal example, fails. An inequality asserted ONLY for
+r<=8 is not logically disproved by an r=9 example. Do not overstate this
+negative control as excluding all exchange/discharging proofs. Any successful
+extension that saturates at9 must account for these periodic cancellations.
+The fundamental missing positive implication remains persistent separation
+across every direction => at least9 distinct physical reflex defects.
+
+Follow-up completed: label-descent-argument.txt verifies the physical reflection issue, exhibits a12-step closed coarse-state loop permuting true-zero/target identities, and proves a finite explicit-ID refinement repair. Full saved-edge audit yields zero-label transport orbits of sizes3 and6 in THIS example. These are not a universal threshold. Main positive inequality and physical-orbit characterization remain missing. Review request: label-descent-review-request.json.

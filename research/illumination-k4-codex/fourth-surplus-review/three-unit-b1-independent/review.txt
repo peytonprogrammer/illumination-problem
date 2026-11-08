@@ -1,0 +1,86 @@
+Independent hand review: three local e1 cells plus b1
+4 November 2026 — Codex01a18403
+
+VERDICT: ACCEPT without corrections, within the stated canonical45 local
+support class. Actual S=(0,0) and T=(2,2) illuminate within13 reflections.
+No W/k bound is required for this partition. This is an independent agent
+hand review supported by exact checks, not formal verification or expert
+refereeing. No full Delta4 theorem or universal minimum follows.
+
+Reviewed argument: surplus-four-local/three-unit-b1/argument.txt sections1–7.
+Own reproduction:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/three-unit-b1-independent/check.py
+Own receipt: check.json, including dependency hashes and full guard sets.
+The peer checker was read but was not executed or used as a verdict oracle.
+
+Completeness and topology
+
+After the directly illuminating N bridge is removed from consideration,
+e1 roots have d1/q2 and two consecutive sectors; d0/e1 cells are single
+triangles. Within K only B-D and E-R share side edges. Three positive cells
+therefore allow at most one d0 leaf. The four attachment orientations are
+exhaustive, with B/Eleaf handled by the unconditional one-path and D/Rleaf
+by deletion. I checked the D3 leaf's complete attaching segment against
+maximum remaining support and the endpoint angle changes315->270 and
+180->90. The remaining disk has two positive roots, as required by the
+accepted arbitrary-b/W/k two-unit theorem.
+
+For all-root rooms with positive D/R, each two-sector D window meets the
+remaining support in one connected proper arc. The B extension joins the
+same H arc. A diagonal R contact lies on an occupied H edge, so it cannot
+leave an isolated point after deletion. The remaining junction angles
+are contiguous and less than360; every remaining partial cell still joins
+H. Boundary-arc surgery consequently leaves a strict simple disk with the
+same full interior A stars. Reinsertion is justified by the accepted
+complete two-root path inventory avoiding D/R in BOTH U and Z. This is
+specific support inheritance, not an assumption of monotonic illumination.
+The retained nine-path is not part of that two-root inventory.
+
+After deletion cases, eight short forcing implications leave exactly the
+four active C/O critical forms. Remaining positive roots are N plus two
+critical sites, or three critical sites. The four N forms and CC/OO/CO
+hand tables exhaust the former. Both inward N caps and the outside mate
+are included; there is no ordinary-N assumption in this branch.
+
+For three critical sites N is ordinary. The explicit missing-site/C-O
+case split, with sigma and generic Lcenter branch, covers all32 labels.
+The new centered E/T pair makes (3,3) a smooth180 B point. Nr+ would make
+(1,3) a second distinct smooth180 B point. Both are odd/odd, hence neither
+is a baseline uncovered-H C midpoint removed from b. The remaining third
+critical root and every allowed ordinary N/D/R triangle miss both points,
+so neither point can be healed. Thus Nr+ contradicts b1. The three new
+path implications and sigma close precisely these permitted single-pair
+cases. A centered pair alone is not incorrectly excluded.
+
+Exact evidence and its limits
+
+Own closed-triangle intersection and eight-sector angle routines checked
+three short D root templates, the single Dleaf template, and12 remaining
+B/R junctions. Own hand-built minimum/maximum supports gave148 fixed
+whole-family guard implications:96 N-pair,38 inherited three-critical,
+6 new b1,8 forcing. All PASS. The32-label comparison is bookkeeping;
+completeness comes from the hand split, not from geometric enumeration.
+
+Only the already cited retained source_line800 was read from
+third-surplus-review/local-three-residue-project.json. Its actual-endpoint
+nine-path was replayed on that project's existing32-triangle minimum,
+forward, reverse and sigma. Own physical checks verify first actual T,
+first finite-wall contacts, corner avoidance, segment interiors and
+specular reflection. Unfolding actual walls gives target(-20,18).
+An appended earlier-T loop and an off-wall contact corruption are both
+rejected. Its D3 forbidden triangle is retained: this branch's envelope
+permits ordinary D/R only, sufficient when all positive cells are critical.
+
+Dependency and geometry helpers have shared historical origins; rebuilding
+the cases and physical replay is independent agent work, not independent
+formal foundations. Previously accepted square-return/deletion dependency
+proofs are reused explicitly rather than claimed newly proved here.
+No new room/cap-assignment/ray/direction/word discovery, archive sweep,
+orbit run, solver, worker or peer-owned file edit occurred.
+
+[done] Entire local three-e1+b1 partition independently accepted <=13.
+[in progress] Local e2+e1+b1, mixed e2+twoe1 and four e1 remain open.
+[in progress] Two remote charge rows remain partially open. Within mixed,
+11 L/T exact fixtures, B/E critical-root families and six attached rows
+remain open. Peer independently accepted the11-fixture L/T reduction;
+that acceptance does not supply its missing optical closures.

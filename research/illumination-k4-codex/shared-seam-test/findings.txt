@@ -1,0 +1,87 @@
+Shared seam endpoints: explicit compression test and an extended wall bound
+4 November 2026
+
+[done] The proposed three-copy shared-endpoint modification does NOT compress the known room. It has24walls, ten reflex corners, and no interior copy of the target mark. The local junction itself is compatible with folding. More usefully, a hand argument extends the old22wall bound to all strictly simple, fold-compatible FULL-WALL reflected-copy assemblies, including shared endpoints and cycles, under the precise assumptions below. A further rigidity lemma shows that full-wall contact is automatic for whole congruent copies with a pointwise well-defined inverse-copy fold. Same-agent proof/checks only; independent review pending. This does not cover other folding mechanisms or arbitrary rooms.
+
+1. The explicit change tested
+Use the same five-square staircase base P and marks a=(0,0), b=(2,-2) as research-note.tex. Its cells are
+  (-1,-1),(0,-1),(0,-2),(1,-2),(1,-3).
+It has ten maximal walls, three reflex corners and seven convex corners. Form
+  P0=P,
+  P1={(x,-y):(x,y) in P},
+  P2={(-2-x,-y):(x,y) in P}.
+This moves the third copy from the known construction's half-turn (4-x,-y) to the half-turn(-2-x,-y).
+P0 lies in x>=-1,y<=0; P1 in x>=-1,y>=0; P2 in x<=-1,y>=0. Interiors are disjoint. The full-wall contacts are
+  P0/P1: [-1,1]x{0},
+  P1/P2: {-1}x[0,1].
+P0/P2 meet only at c=(-1,0). The two seam endpoints now share c. The union has15unit cells, area15 and a single Jordan boundary; the exact checker extracts its24maximal walls.
+At c, three convex right-angle copy corners occupy three consecutive quadrants. The union has a NEW270degree reflex corner there. The other seam endpoints(1,0) and(-1,1) are smooth exterior points.
+The base's nine reflex-corner incidences survive as nine distinct room corners, and c adds a tenth. Therefore W=2*10+4=24. Sharing this endpoint costs two walls compared with the known22wall room; it saves none.
+
+Actual endpoint check. The preimages of a are(0,0) and(-2,0). Only S=(0,0) is interior. All three preimages of b,
+  (2,-2),(2,2),(-4,2),
+are smooth boundary points. Thus this fixture does not supply a dark INTERIOR pair regardless of wall count.
+The fold maps are f0(x,y)=(x,y), f1(x,y)=(x,-y), f2(x,y)=(-2-x,-y). They agree on both seams and at c; all send c to the convex base corner(-1,0). A legal upstairs ray stops at c, so no invalid continuation through a base reflex corner is introduced. The two smooth seam endpoints still project to convex-corner retracing, exactly as in the known proof. This local folding compatibility does not repair the failed target interiority.
+
+2. Why three copies cannot share BOTH marked full-wall seams here
+With only two seams connecting three copies, one copy is incident to both seams. To interiorize actual preimages of a AND b, one seam must cover the base wall containing a and the other the base wall containing b; a full base wall contains at most one of these smooth lattice marks.
+In this staircase those marked walls are [-1,1]x{0} and {2}x[-3,-1]. Their endpoint sets are disjoint. Their images in the central copy cannot share an endpoint under any isometry. Consequently the known three-copy construction cannot make its two MARKED full-wall seams share an endpoint. The explicit fixture instead uses a marked and an unmarked seam, which explains its loss of interior b.
+This is a geometry argument, not a scan of reflected placements.
+
+3. Precise larger construction class
+Let B be a strictly simple orthogonal polygon with w maximal walls and r reflex corners, and let B_i=g_i(B), i=1,...,m, be finitely many copies. Assume:
+ (A) the copies have pairwise disjoint interiors;
+ (B) Q=union B_i is a strictly simple orthogonal polygonal disk, with no holes, slits or boundary point pinches;
+ (C) every positive-length contact between two copies is a union of segments each equal to a WHOLE maximal wall of EACH copy; no partial-wall contact or T-junction is allowed;
+ (D) on each such seam ell, the neighboring copies are reflections of each other across its supporting line, with inverse-copy maps agreeing pointwise there; the piecewise inverse-copy map is well-defined also at all point contacts.
+The copies may share seam endpoints, and the positive-length seam graph may have cycles. No tree assumption or distinct-endpoint assumption is made.
+Under these hypotheses, let t3 count physical points where exactly three convex90degree copy corners meet. Then
+  R(Q)=m*r+t3,
+  W(Q)=m*(w-4)+4+2*t3.                    (1)
+In particular shared three-corner junctions INCREASE the wall count, while four-corner interior junctions cannot lower the right side of the old tree formula.
+
+4. Proof of the reflex count
+A base reflex corner cannot be an endpoint of a seam. Its local angle is270degrees; its reflection across either incident wall also occupies270degrees, so the two reflected copies overlap in an open sector, contradicting(A).
+Nor can another copy fill the missing quadrant at such a corner without a seam: filling any part of that quadrant while avoiding overlap entails a positive-length contact along an incident boundary ray. Hypotheses(C),(D) then make that contact a full reflected seam, already impossible. Thus EVERY reflex-corner incidence survives as an actual270degree boundary corner of Q. Two such incidences cannot share a physical point, since two270degree sectors overlap. This contributes exactly m*r distinct reflex corners.
+At a point belonging to a convex copy corner, any other incident copy must also have a convex90degree corner there. A smooth180degree boundary point in a neighbor would give a partial-wall contact with the convex corner's adjacent wall, violating(C); an interior neighbor would overlap; a270degree neighbor was excluded above.
+The only remaining possibilities are k=1,2,3,4 convex quadrants. With k=2, opposite rather than consecutive quadrants would be a forbidden boundary point pinch. Hence:
+  k=1:90degrees, a convex exterior corner;
+  k=2:180degrees, a smooth exterior point;
+  k=3:270degrees, one new reflex exterior corner;
+  k=4:360degrees, an interior point.
+All other seam-interior points are smooth two-half-plane interior points, and unglued smooth wall points remain smooth. These exhaust possible new reflex corners under(C). Therefore R(Q)=m*r+t3.
+For a simple orthogonal disk, convex-minus-reflex=4, so W=2R+4 and w=2r+4. Substitution yields(1).
+
+5. A check on cycles: fourfold junctions fill them, without lowering W
+Let t_k denote the number of k-convex-corner junctions, k=1,2,3,4; t1 includes the unglued base convex corners. Count the convex copy incidences and the exterior turns:
+  m*(r+4)=t1+2*t2+3*t3+4*t4,
+  t1-(m*r+t3)=4.
+Subtracting gives
+  t2+2*t3+2*t4=2*m-2.                     (2)
+If E counts full-wall seam segments, the endpoint incidence count is
+  2E=t2+2*t3+4*t4.                         (3)
+A twofold junction ends one seam, a threefold junction ends two, and a fourfold junction ends four. Thus
+  E=m-1+t4.                               (4)
+The seam graph is connected: copies cannot form an interior-connected polygon by isolated point contacts alone. Its cycle rank E-m+1 equals t4. The allowed cycles are therefore locally filled at fourfold junctions; they do not earn a wall discount in(1).
+These equalities do not cover partial-wall T-junctions, overlapping copies, holes, or discontinuous fold identifications.
+
+6. Extension of the22wall bound for parity bases
+Now impose the parity-base hypotheses from research-note.tex: B is a simple polyomino, a,b are distinct smooth boundary lattice marks, and every non-corner lattice point belongs to a+2Z^2. The previously established base theorem gives w>=10. Also every maximal wall has integer length at most2: a longer wall contains two consecutive smooth lattice points in different parity classes. Hence each base wall contains at most one of the two marks.
+If preimages of both marks are interior to Q, then m>=3. Indeed m=1 leaves both boundary marks on the boundary. For m=2, t4=0 because a fourfold junction requires four distinct copy corners; equation(4) gives E=1. Thus there is just one full-wall seam. An interior preimage of either mark must lie in the interior of a seam: the mark is smooth in every copy, and(C) excludes it being a T-junction endpoint. That one seam can interiorize at most one of a,b, a contradiction.
+Consequently, equation(1) implies
+  W(Q)=m*(w-4)+4+2*t3 >=3*(10-4)+4=22.    (5)
+This extends the old DISTINCT-ENDPOINT TREE count to the entire fold-compatible full-wall class(A)-(D). It is a construction-class lower bound, NOT a theorem about arbitrary orthogonal rooms or arbitrary darkness proofs. In fact the wall count only uses the geometry, compatibility and marked interiority, not an assumption that Q is dark.
+The explicit known room attains22 with m=3,w=10,t3=0. The new shared fixture has m=3,w=10,t3=1 and hence24; it fails marked interiority separately.
+
+7. A partial seam cannot retain the same pointwise whole-copy fold
+There is a further elementary rigidity fact. Suppose two whole congruent copies B_i=g_i(B), B_j=g_j(B), with disjoint interiors, meet along a positive-length segment I and their inverse-copy maps agree pointwise on I. Then the relative Euclidean isometry
+  h=g_j composed with g_i^{-1}
+fixes every point of I. An isometry fixing a segment pointwise is either the identity or reflection across its supporting line ell. This follows directly from distances to two distinct fixed points: an image point has only its original and mirror positions, and a single isometry chooses one consistently. The identity would make the two copies identical and violate disjoint interiors. Hence h is the reflection in ell.
+Let W be the maximal wall of B_i containing I. Reflection fixes ALL of W and maps the entire polygon B_i onto B_j, so W is also a maximal wall of B_j and the whole W is shared. Thus a contact cannot stop partway along W. Conditions(C) and the reflection part of(D) are automatic from whole copies, disjoint interiors, and the pointwise inverse-copy fold requirement. The lower bound therefore applies even if FULL-WALL contact was not separately assumed.
+For example, shift the upper reflected copy by s=1/2 instead. Its overlap with the base top wall is the partial segment[-1/2,1]x{0}. But the lower fold is(x,0)->(x,0), while the upper inverse-copy fold is(x,0)->(x-1/2,0). These disagree everywhere on that segment. Crossing it no longer projects to a reflection at the SAME base point, so the known parity/retracing proof cannot be imported. This is a prescribed affine-map control, not a placement or ray search.
+Consequently partial seams are not a remaining loophole for this precise pointwise folding mechanism. They would require a genuinely different certificate, for example different pieces or a non-pointwise identification with a separate valid blocking argument. Merely sliding a whole copy or shortening an opening does not preserve the known proof.
+No smaller room or universal lower bound has been obtained. The completed result closes shared-endpoint/cycle compression for the congruent whole-copy pointwise-fold class. It does not classify all reflected-copy darkness proofs, noncongruent pieces, overlapping sheets, arbitrary piecewise maps or arbitrary orthogonal rooms. No additional construction or search is queued.
+
+8. Validation and review limits
+check.py reconstructs ONLY the prescribed base, old22wall assembly, new24wall shared assembly, and a prescribed four-copy convex-corner assembly illustrating one allowed cycle. The fourth copy for that control is {(-2-x,y):(x,y) in P}; together with P0,P1,P2 it fills all four quadrants at c. That control has20cells,28walls,12reflexcorners and one fourfold junction. It extracts exact unit-cell boundaries, maximal walls, strict simplicity, area and angle counts; verifies disjoint interiors, all full-wall contact segments, inverse-fold agreement, every copy-corner incidence and both marked fibers. It checks equations(1)-(4) on these three controls, plus the fixed half-unit-slide fold mismatch in section7. No reflected-placement enumeration, direction/word discovery, archive lookup, solver or worker is used.
+These finite checks validate the fixed fixtures and count formulas there. The general extension is the hand argument above. No independent reviewer verdict is claimed; optional peer hand challenge is requested on the coordination board only. Original research-note.tex/pdf, other agents' files and GOALS.md remain unchanged.

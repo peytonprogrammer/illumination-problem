@@ -1,0 +1,41 @@
+{
+  "decision": "INDEPENDENT_AUTHOR_ACCEPT_SCOPED_NECESSARY_CONTROLS_AND_FIXED_INPUT_AUDIT",
+  "created_utc": "2026-11-07T22:25:02.945079+00:00",
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr02-fixed-audit.md",
+      "sha256": "a567d349f5690b86900b134c05a1f0f67d3922c1171d004224ea674b75896168"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-single-roof-necessity.md",
+      "sha256": "983cede825142f6e0ee76c1e7597841ec56fc65e481e845578ad828a2de60ac4"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-cap-first-exit.md",
+      "sha256": "696ec6d1606a02496c053b59c49c83972cf3b4432b6149dddb473dea1d83caa4"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-cap-margin-supplement.md",
+      "sha256": "510ac2fee207c8414a3908a0881f8a16f3267e84bb77f5de476c5da06e994e8c"
+    }
+  ],
+  "TR02_frozen_hash_checks": {
+    "three-reflex-tr02-fixed-audit.md": true,
+    "three-reflex-tr02-fixed-replay.py": true,
+    "three-reflex-tr02-fixed-replay.json": true,
+    "three-reflex-tr02-fixed-witness-check.py": true,
+    "three-reflex-tr02-fixed-witness-check.json": true,
+    "three-reflex-tr02-fixed-clock.json": true
+  },
+  "prescribed_replay": {
+    "feasible_residues": 178,
+    "first_tau": "7/6",
+    "method": "Target triangular wave instead of target sign enumeration; same fixed input only."
+  },
+  "hand_review": ".context/illumination-generalization-2026-11-06/construction/three-reflex-peer-necessity-review.md",
+  "corrections": [],
+  "search_used": false,
+  "closed_clock_renewed": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

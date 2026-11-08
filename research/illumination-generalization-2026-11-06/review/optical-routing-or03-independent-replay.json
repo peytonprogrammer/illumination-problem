@@ -1,0 +1,90 @@
+{
+  "status": "PASS_PRESCRIBED_OR03_GEOMETRY_AND_ALL_RESIDUES",
+  "room": [
+    [
+      -8,
+      -200
+    ],
+    [
+      24,
+      -200
+    ],
+    [
+      24,
+      0
+    ],
+    [
+      16,
+      0
+    ],
+    [
+      16,
+      2
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      -8,
+      0
+    ]
+  ],
+  "r": 2,
+  "actual_even_even_S": [
+    4,
+    -2
+  ],
+  "actual_even_even_T": [
+    6,
+    -100
+  ],
+  "actual_direct_segment_legal": true,
+  "horizontal_group_generators": [
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      -400
+    ]
+  ],
+  "complete_group_form": "sign*y+400*n",
+  "all_difference_residues": [
+    {
+      "source_sign": -1,
+      "target_sign": -1,
+      "difference_residue": 98,
+      "minimum_absolute_representative": 98
+    },
+    {
+      "source_sign": -1,
+      "target_sign": 1,
+      "difference_residue": 298,
+      "minimum_absolute_representative": 102
+    },
+    {
+      "source_sign": 1,
+      "target_sign": -1,
+      "difference_residue": 102,
+      "minimum_absolute_representative": 102
+    },
+    {
+      "source_sign": 1,
+      "target_sign": 1,
+      "difference_residue": 302,
+      "minimum_absolute_representative": 98
+    }
+  ],
+  "all_exterior_words_excluded_from_width_criterion": true,
+  "all_cuts": "0<=c<2: common c cancels; 2h_c<=4<98",
+  "claim_requires": "OR01 exterior-before-terminal-section guard",
+  "actual_dark_counterexample": false,
+  "G8_refuted": false,
+  "whole_goal_complete": false
+}

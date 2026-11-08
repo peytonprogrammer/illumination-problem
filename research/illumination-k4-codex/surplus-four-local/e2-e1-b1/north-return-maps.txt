@@ -1,0 +1,193 @@
+Exact north N5/N6 return maps for the assigned E/R-minus split
+4 November 2026 — Codex01a1a00f
+
+[done] Assigned local map deliverable complete: all nonsingular entry
+states through either ordinary north triangle have the SIX exit branches
+below, with at most FOUR reflections. Exact free-polynomial coefficient
+checks pass for every hand-declared branch/word, including all six corner
+events. No numerical trajectory or parameter was sampled.
+[waiting on Codex01a18403] Use these entry/exit states for your actual-T
+matching; independent hand challenge of this local-map proof requested.
+This file does not close a room or establish a new full S-to-T path.
+
+Assignment and ownership
+
+Daniel directed us to the new split. Peer owns backward actual-T/E34
+matching in fourth-surplus-review/peer-Ecenter-six-independent/
+north-match-hand.txt. I own ONLY exact N5/N6 local return maps and strict
+conditions for the two descriptions
+ L6701+E34+B1+Tc5+N5+D2+R4,
+ L701 +E34+B1+Tc5+N6+D2+R4.
+The peer's N6/B1-two/R4/Lupper/E and N5-single/D2-two/E prescriptions
+remain retired. Neither was rerun, extended or counted as new progress.
+Original critical-L and continuation files remain frozen.
+
+1. Coordinates and full entry domain
+
+Set epsilon=-1 for N5 and epsilon=+1 for N6. Map physical coordinates
+by x=epsilon*u, y=1+eta. Either cap becomes the right-isosceles triangle
+ Δ={u>=0,eta>=0,u+eta<=1}.
+Its portal is eta=0,0<u<1. Its two reflecting walls are
+ V: u=0; H: u+eta=1.
+These H/V names are LOCAL wall labels, not the three-star support H.
+In N5, V is x=0 and H is y=x+2. In N6, V is x=0 and H is x+y=2.
+Ordinary N5 leaves N4/N6 absent; ordinary N6 leaves N5/N7 absent, so
+both nonportal mirrors exist in the assigned rooms.
+
+An entering physical state (x,1), velocity(vx,vy), vy>0, gives
+ u=epsilon*x, a=epsilon*vx/vy.
+Normalize to entry(u,0), velocity(a,1), with0<u<1 and ANY finite real a.
+There is no assumed small-angle or normal-entry restriction. After the
+local return, convert (u',0), velocity(a',b') back by
+ x'=epsilon*u', y'=1, velocity=vy*(epsilon*a',b').
+Every strict branch has b'<0. Scaling by vy preserves speed correctly.
+
+2. Why one square gives the complete finite map
+
+Unfold across the two nonportal mirrors V and H, which meet at angle45
+at apex A=(0,1). Their eight dihedral images tile exactly the square
+ [-1,1] x [0,2], with A at its center. Each outer half-edge is an image
+of the original portal. A folded triangular trajectory is therefore the
+straight unfolded segment
+ (u+a*t,t), t>=0,
+until its FIRST exit from that square. No reflected path needs to be
+guessed: its exit time is exactly
+ tau=min(2, (1-u)/a if a>0, (1+u)/(-a) if a<0).
+For a=0 the side terms are omitted and tau=2.
+
+The ray crosses the fixed radial tile edges. Folding across them yields
+the prescribed H/V reflection word. Any exact passage through A is a
+true apex collision, not a mirror reflection; it occurs at a=-u,t=1.
+No other interior tile vertex exists. Strict outer half-edge interiors
+exclude the remaining portal-endpoint collisions. Thus the resulting
+branch partition is exhaustive and its corner exclusions complete for
+this LOCAL cap return. It does not establish global segment clearance
+outside the cap.
+
+3. The SIX branches, with exact directions and strict gates
+
+Let z=u+2a. In each word, read H/V in chronological contact order.
+The first/last vertex of the portal is excluded throughout.
+
+Branch       Strict gate                          u'                 (a',b')   word
+right lower  a>1-u                                1-(1-u)/a          (-1,-a)   H
+right upper  (1-u)/2<a<1-u                        (1-u)/a-1          ( 1,-a)   HV
+top positive -u/2<a<(1-u)/2                       u+2a                ( a,-1)   HVH
+top negative -(1+u)/2<a<-u/2, a!=-u              -u-2a               (-a,-1)   FOUR*
+left upper   -(1+u)<a<-(1+u)/2                    (1+u)/(-a)-1       ( 1, a)   VHV
+left lower   a<-(1+u)                            1-(1+u)/(-a)       (-1, a)   VH
+
+* For top negative: a>-u gives HVHV; a<-u gives VHVH. Both products
+are the SAME half-turn about A, so both have the same exact exit state.
+The intervening a=-u is forbidden because the unfolded ray hits A.
+The four-contact branch must not be mistaken for the usual three-hit
+normal return: it reverses the tangential component as well.
+
+On all six gates,0<u'<1 and b'<0 follow directly from the displayed
+inequalities. The two positive-side branches have a>0; the negative-side
+branches have a<0. The top branches have b'=-1. All contacts and the
+final base crossing lie in strict finite-wall interiors after the six
+singular values below are excluded.
+
+For example, on the right-upper branch the square exit is(1,tau),
+1<tau<2. Applying H then V maps it to(tau-1,0) and maps velocity(a,1)
+to(1,-a). The other five identities follow from their listed isometries.
+The checker verifies these as coefficient identities in FREE u,a after
+clearing denominators, rather than testing chosen rays.
+
+4. Every singular value, and why it is singular
+
+For fixed0<u<1, exclude EXACTLY these six distinct slopes:
+ a=1-u:          square exit(1,1), portal midpoint image, u'=0;
+ a=(1-u)/2:      square exit(1,2), outer corner, u'=1;
+ a=-u/2:         square exit(0,2), portal midpoint image, u'=0;
+ a=-(1+u)/2:     square exit(-1,2), outer corner, u'=1;
+ a=-(1+u):       square exit(-1,1), portal midpoint image, u'=0;
+ a=-u:           internal apex hit at(0,1), t=1.
+Portal midpoint here means midpoint of a SQUARE side: it is an endpoint
+of either of its half-edge portals, and folds to a true triangle vertex.
+It is not harmless because the square side itself is straight.
+
+Every other finite a lies in exactly one of the six branches (with one
+of the two top-negative words). In the original assigned cap, all these
+excluded vertex contacts are prohibited. Full-room neighboring triangles
+must not be assumed to heal them; those would require a changed support
+and a separate optical argument. Input u=0 or1 is also excluded.
+
+5. Complete source-direct north launches, as a useful handoff
+
+Source S=(0,0) with launch(epsilon*d,1),0<d<1, enters at u=d,a=d.
+Specializing the COMPLETE map gives exactly three strict intervals:
+
+0<d<1/3:
+ u'=3d, velocity_local(d,-1), THREE contacts HVH.
+ Physical exit(epsilon*3d,1), velocity(epsilon*d,-1).
+ This includes the normal N6 source prefix and the N5 mirrored version.
+
+1/3<d<1/2:
+ u'=1/d-2, velocity_local(1,-d), TWO contacts HV.
+ Physical exit(epsilon*(1/d-2),1), velocity(epsilon,-d).
+ In N5 this goes LEFT/down. In N6 it goes RIGHT/down.
+
+1/2<d<1:
+ u'=2-1/d, velocity_local(-1,-d), ONE contact H.
+ Physical exit(epsilon*(2-1/d),1), velocity(-epsilon,-d).
+ In N5 this goes RIGHT/down, giving the peer's known one-hit prefix;
+ in N6 it goes LEFT/down.
+
+At d=1/3 the square exit is(1,2), a cap base endpoint; at d=1/2 it is
+(1,1), the other base endpoint. These are not additional valid routes.
+Thus source-direct north launch has no unexamined fourth branch. The
+GENERIC four-contact map is still available for a different, explicitly
+derived oblique inlet u,a; it cannot occur for source-direct u=a=d>0.
+
+Another named entry, from a source-floor reflection into N5, has u=3d,
+a=d. Its normal-three-hit gate is5d<1 and its exit is5d in local u.
+This explains the old Nb- phase shift without selecting any new circuit.
+It does NOT assume that every route arrives with u=3d.
+
+6. Interface constraints for the peer's E matching
+
+All north returns exit at y=1 with vy_out<0. If vx_out>0, a straight run
+to x=3 has height
+ p=1+(3-x_exit)*vy_out/vx_out <1,
+since x_exit lies strictly between-1 and1. Consequently NO direct north
+exit can enter the E34 portal, whose height must lie in(1,3).
+The same fact excludes all three of the peer's terminal E interfaces
+without an intervening reflection. A downward rightward north state
+cannot silently be relabeled as an upward E input or skip the right
+core wall below E. An additional lower/corridor return is essential.
+This is a geometric interface obstruction, not an all-path impossibility.
+
+For any given north output(X,1),(V,-W), W>0, its tentative next y=-1
+crossing is
+ q=X+2V/W.
+If V>0, the necessary floor/cap inlet alternatives in the assigned
+families are B1 when0<q<1, D2 when1<q<2, and a bare floor when-1<q<0
+or2<q<3. Endpoints q=-1,0,1,2,3 need an explicit local corner/interior
+check and must never be included by weak inequalities. A full path may
+hit another wall before that height, so q alone is not a global first-hit
+certificate. The peer owns composing these states and checking its target
+condition p+3d=2, or its single-E alternatives, within strict branches.
+
+The generic four-contact top-negative map and the left-upper map are
+explicitly available as different local states, subject to a REAL prefix
+that produces their inlet. This assignment does not invent such a prefix
+or repeat the two retired north-assisted prescriptions.
+
+7. Verification and limits
+
+Reproduce:
+ python3 -B .context/illumination-k4-codex/surplus-four-local/e2-e1-b1/north-return-maps-check.py
+Receipt north-return-maps-check.json reports
+ EXACT_HAND_N5_N6_SIX_BRANCH_RETURN_MAP_IDENTITIES_PASS.
+It checks seven chronological words (two for the same top-negative exit
+branch), affine isometry products, exact denominator-cleared endpoint and
+velocity identities, and all six singular-line endpoint identities.
+No point sampling, branch search, trajectory/word generation, symbolic
+solver, full room, cap assignment, archive or workers.
+Branch exhaustion and strict inequalities are proved by hand via the square;
+the coefficient check alone is not a quantified inequality proof. This is
+a LOCAL reusable return lemma, pending independent hand review, not a
+new illumination closure, formal verification or expert refereeing.
+The nine inward descriptions and separate outside-C gaps remain OPEN.

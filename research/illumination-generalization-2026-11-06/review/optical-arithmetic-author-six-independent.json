@@ -1,0 +1,130 @@
+{
+  "status": "PASS_PRESCRIBED_AUTHOR_SIX_REFLECTION_CONTROL",
+  "method": "Own rational first-wall ray replay and independent hand inequality conversion; no author code",
+  "m": "97/253",
+  "events": [
+    {
+      "wall_index": 8,
+      "point": [
+        "1400/253",
+        "2"
+      ]
+    },
+    {
+      "wall_index": 5,
+      "point": [
+        "24",
+        "-4478/97"
+      ]
+    },
+    {
+      "wall_index": 11,
+      "point": [
+        "-8",
+        "-12574/97"
+      ]
+    },
+    {
+      "wall_index": 3,
+      "point": [
+        "56",
+        "-28766/97"
+      ]
+    },
+    {
+      "wall_index": 2,
+      "point": [
+        "4134/253",
+        "-400"
+      ]
+    },
+    {
+      "wall_index": 1,
+      "point": [
+        "16",
+        "-38714/97"
+      ]
+    }
+  ],
+  "actual_target": [
+    54,
+    -300
+  ],
+  "first_actual_target": true,
+  "developed_target_image": [
+    "198",
+    "-500"
+  ],
+  "a": 2,
+  "b": 500,
+  "K": 506,
+  "epsilon": 1,
+  "maximal_joint_guard_component": [
+    "19/50",
+    "59/150"
+  ],
+  "guard_constraints": [
+    {
+      "name": "mpositive",
+      "lo": "0",
+      "hi": null
+    },
+    {
+      "name": "source mouth",
+      "lo": "-2",
+      "hi": "6"
+    },
+    {
+      "name": "T-left smooth and bottom-first order",
+      "lo": "19/50",
+      "hi": null
+    },
+    {
+      "name": "bottom point",
+      "lo": "19/50",
+      "hi": "39/50"
+    },
+    {
+      "name": "B2 right point",
+      "lo": "13/50",
+      "hi": "39/50"
+    },
+    {
+      "name": "seam",
+      "lo": "11/30",
+      "hi": "59/150"
+    },
+    {
+      "name": "B1 left point",
+      "lo": "71/250",
+      "hi": "71/150"
+    },
+    {
+      "name": "B1 right point",
+      "lo": "87/250",
+      "hi": "29/50"
+    },
+    {
+      "name": "mouth",
+      "lo": "91/250",
+      "hi": "99/250"
+    }
+  ],
+  "normalized_residue_window": [
+    "-43/800",
+    "377/2400"
+  ],
+  "only_winding_label": 0,
+  "K_width": "506/75",
+  "two_w": 32,
+  "lower_endpoint_corner": [
+    "16",
+    "-400"
+  ],
+  "upper_endpoint_corner": [
+    "16",
+    "-200"
+  ],
+  "global_C8_proved": false,
+  "whole_goal_complete": false
+}

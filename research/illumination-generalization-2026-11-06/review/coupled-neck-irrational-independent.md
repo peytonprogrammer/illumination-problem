@@ -1,0 +1,27 @@
+# Independent acceptance: two-neck illumination away from finitely many ratios
+
+Verdict: ACCEPT the complete A18 theorem for its fixed three orthogonal chambers, equal neck widths, fixed opposing actual marks and valid gluings. Its conclusion is uniform outside ANY neighborhood of a chamber-dependent finite rational ratio set. This is not resolution of those resonances, changing chamber geometries or the full W<=21 theorem.
+
+## Finite first transit and a common beam
+
+The accepted minimal-direction input supplies a common nonaxis magnitude for the three connected orthogonal unfoldings. Remove countably many corner directions for S,T. At the middle left mouth, the corner-hit starting ordinates are countable for this fixed direction: for each finite developed wall word and corner image, a nonvertical ray determines at most one such ordinate. Choose a remaining phase. Minimality gives a finite first right-mouth encounter. Taking the last left-mouth departure before it supplies a finite left-to-right word with neither mouth visited in between. Finitely many transverse corner-free contacts give a product-open neighborhood of phase and magnitude with the SAME first-transit word. Its incoming vertical sign may differ from either end beam, and the proof keeps that sign explicitly.
+
+The end beam virtual marks have positive horizontal distances a,b as already accepted. In the middle unfolding, entry and exit horizontal physical velocities are both positive, so the outgoing chart derivative in x is+1. Unfolded horizontal speed stays positive constant, hence developed distance d is strictly positive even when the physical word backtracks in x. Its vertical derivative is kappa=e0*e1 and its vertical translation c0 is constant for the word. Thus kappa*zout+c0=z+e0*m*d is correct for every phase in the product beam.
+
+## Exact two-neck charts and actual target
+
+I independently derive sigma1=eS*e0, sigmaout=eS*e1 and sigma2=-eS*eT. The first-neck output phase2n1w+sigma1*z folds to actual z with physical slope e0*m. Passing through the middle places its exit at developed coordinate B0+sigmaout*zout, B0=2n1w+sigma1*c0. A second-neck copy of the target has ordinate B0+2n2w+sigma2*beta. Its integer period is unrestricted even when sigmaout=-1. Therefore N=n1+n2 yields tau_N=(K+2Nw)/D with K=sigma1*c0+sigma2*beta-alpha and D=L1+L2+a+b+d.
+
+The first-mouth normalized phase is exactly alpha/(2w)+(K/(2w)+N)*rho modulo1, rho=(L1+a)/D. The signed phase arc corresponds uniquely to z in the actual open middle beam and its integer n1. Setting n2=N-n1 then retains the actual target image and the already determined middle entry; neither is independently adjusted afterward. In the second-neck physical fold, derivative sigmaout*sigma2 combines with the unfolding chart sign sigmaout to give final physical slope sigma2*tau=-eT*m. This is precisely the reversed target word's slope. All mouths stay strictly inside their apertures, and all contacts remain actual smooth walls. Finite lengths and nonzero finite slopes give finite trajectories. Own16sign controls check every affine and velocity identity; they are algebra checks rather than physical sampling proofs.
+
+## Rotation nets and all exceptional ratios
+
+An initial rotation orbit with maximum circular gap STRICTLY less than ell meets every translate of the OPEN phase arc of length ell. A finite perturbation of each orbit point by at most epsilon enlarges its largest circular gap by at most2epsilon; crossing the circle origin does not change this bound. Thus the covering property is locally stable in the step.
+
+For an irrational step, pigeonholing gives a nonzero signed multiple with circular distance gamma in (0,ell/2). Its consecutive multiples up to one turn form a finite mesh with largest gap at most gamma; translating the finitely many possibly negative indices into the nonnegative range embeds a translated mesh in a finite initial orbit. For reduced rational p/q with q>1/ell, its q points give the exact grid gap1/q<ell. Consequently the only steps not covered by some such robust finite net lie in the explicitly finite set q<=1/ell, including0 and1. Equality of gap and ell is correctly retained among possible exceptions.
+
+For any open neighborhood U of this finite set, its complement in [0,1] is compact. A finite subcover of step neighborhoods gives a common finite index bound m; adding further orbit points cannot increase a circular gap. The SAME bound applies to every translated block and every initial phase, including the length-dependent phase offset. The admissible integer interval has length D*(v-u)/(2w). Once it exceeds m+2 it contains m+1 consecutive integers strictly inside it, so one meets the exact middle arc. This proves the quantified D0, including negative signed slope intervals and endpoint ties.
+
+Hence every dark sequence in this fixed family with D diverging must approach the finite ratio set. Since the chamber constants are fixed, rho and L1/(L1+L2) have identical limits. There is no inference that a listed rational ratio is actually dark, nor any bound in W on that set, threshold or finite net size.
+
+All earlier primary inputs are identified in the accepted long-neck review; no new literature assertion is imported. This audit independently checks the full hand proof and prescribed rational identity/net controls, with source pins retained. It is not formal verification or a general optical decomposition.

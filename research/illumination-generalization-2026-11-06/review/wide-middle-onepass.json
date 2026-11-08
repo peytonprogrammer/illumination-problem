@@ -1,0 +1,97 @@
+{
+  "status": "NO_ONEPASS_FAILURE_IN_FINISHED_SCOPE",
+  "cases": 4455,
+  "candidate_checks": 39588,
+  "first_failure": null,
+  "fixed_controls": [
+    {
+      "input": [
+        "2",
+        "1",
+        "1",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "3/2"
+      ],
+      "answer": {
+        "verdict": "FOUND_EXACT_Y_MONOTONE_PATH",
+        "slope": "2/3",
+        "period": "8",
+        "grid_step_numerator": "2",
+        "checked_until_success": 2,
+        "complete_grid_size": 12
+      }
+    },
+    {
+      "input": [
+        "2",
+        "1",
+        "1",
+        "1/2",
+        "1/2",
+        "1",
+        "1/2",
+        "3/2"
+      ],
+      "answer": {
+        "verdict": "FOUND_EXACT_Y_MONOTONE_PATH",
+        "slope": "3",
+        "period": "8",
+        "grid_step_numerator": "2",
+        "checked_until_success": 7,
+        "complete_grid_size": 16
+      }
+    },
+    {
+      "input": [
+        "2",
+        "1",
+        "1",
+        "1/2",
+        "1/2",
+        "3/2",
+        "1/2",
+        "3/2"
+      ],
+      "answer": {
+        "verdict": "FOUND_EXACT_Y_MONOTONE_PATH",
+        "slope": "4/5",
+        "period": "8",
+        "grid_step_numerator": "2",
+        "checked_until_success": 3,
+        "complete_grid_size": 20
+      }
+    },
+    {
+      "input": [
+        "2",
+        "1",
+        "1",
+        "1/2",
+        "1",
+        "1/2",
+        "1/2",
+        "3/2"
+      ],
+      "answer": {
+        "verdict": "FOUND_EXACT_Y_MONOTONE_PATH",
+        "slope": "1/2",
+        "period": "4",
+        "grid_step_numerator": "2",
+        "checked_until_success": 2,
+        "complete_grid_size": 8
+      }
+    }
+  ],
+  "elapsed_seconds": 6.643272399902344,
+  "original_deadline_utc": "2026-11-06T22:51:02.194534+00:00",
+  "timed_out": false,
+  "whole_goal_complete": false,
+  "physical_darkness_claim": false,
+  "limits": "Onepass means y-monotone and vertical-wall reflections only; exact rational data. Completeness depends on hand-derived slope-grid/period proof; arbitrary-real theorem not claimed.",
+  "source_sha256": {
+    "wide-middle-onepass.py": "9210e4dd4318784daa8215e65c02d1b244dc7d0bbba084f2564967ef1cd385d3"
+  }
+}

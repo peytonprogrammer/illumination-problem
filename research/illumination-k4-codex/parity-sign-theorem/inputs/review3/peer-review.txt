@@ -1,0 +1,129 @@
+# Review: conditional holonomy rigidity
+
+**Bottom line:** The algebra is correct. The theorem is standard material: the Zemlyakov–Katok unfolding, period coordinates, the commutant of a finite reflection group, and the vanishing of H¹(G;ℝ²) for a finite group G. What is new is the presentation and the exact checks. **No novel illumination result is established.** All illumination content sits in the unproved premise that darkness preserves the cover, and the documents state that honestly. I read the code but did not run it.
+
+## 1. Return words are genuine absolute periods: **ACCEPT**
+
+- **Composition order.** The copy reached after crossing walls i₁…i_k is r_{i₁}∘…∘r_{i_k}(P). This matches b_{uv}=b_u+O_u b_v and the BFS in the code (`P=mm(O,R)`, `B+O·b`).
+- **Closing the loop.** The endpoint y in copy I develops to y+b_w. Closing inside the final developed copy adds the displacement x−y. The net displacement is b_w, as claimed.
+- **Repeated walls.** Words such as `i i` are realizable by crossing a wall and coming back.
+- **Vertex loops.** (ij)^k loops have zero translation because both supporting lines pass through c.
+- The converse direction is fine.
+
+## 2. Finite Schreier generators suffice: **ACCEPT** (minor wording)
+
+- Inverse words exist because each r_i is an involution, so the inverse is the reversed word.
+- I re-derived L_{g,i}=B_g+g b_i−B_{g'} and it is correct.
+- The telescoping argument needs P_I to be the empty word. The code does this; the document should say so. A non-empty P_I with O=I would also work, because conjugating by a return word preserves b.
+
+## 3. Covariance forces A to commute with G: **ACCEPT**
+
+- b_{wkw⁻¹}=b_w+g b_k−b_w=g b_k. Since g is fixed, Ag=gA on span{b_k}=ℝ².
+- **D4:** commuting with the horizontal reflection makes A diagonal, and commuting with the diagonal swap equalizes the entries.
+- **Orthogonal case:** the centralizer is the diagonal matrices, as stated.
+
+## 4. Averaging removes the cocycle: **ACCEPT**
+
+- **Cocycle identity.** This follows from δO=0 and AO_u=O_uA.
+- **Well-definedness.** This uses z(v⁻¹)=−O_v⁻¹z(v), which comes from z(vv⁻¹)=0. It is worth one line.
+- **Averaging and the final step.** The averaging identity and (I−R_i)a=2(n_i·a)n_i/|n_i|² are correct. δh_i=λh_i+n_i·a is exactly the action of translation and scale on the line n_i·x=h_i.
+- **Observation.** The case A=0 already proves that absolute periods determine h modulo translation, for any fixed wall directions. The code's `isoperiodic_kernel == 2` assertion is therefore a consequence of the theorem, not independent evidence.
+
+## 5. Exact versus infinitesimal: **CORRECT** (minor)
+
+- **Infinitesimal version.** It is a statement about tangent vectors. To get a finite statement along a path, require (P) at each t with continuous A(t), then integrate h′=λ(t)h+n·a(t).
+- **Exact version.** It is sound as written. Spanning is needed only for the old periods, and invertibility of A excludes λ=0.
+- **The sign of λ.** "For nearby configurations λ is positive" is true by continuity, but λ<0 is also a similarity, since −I∈D4 (a 180° rotation). Positivity only matters for interior-side and orientation labeling. Say this rather than implying λ<0 escapes the conclusion.
+
+## 6. Marked points and the gap darkness ⇒ preservation
+
+### (a) Profile premise (M): **CORRECT**
+
+(M) measures from c₀. A fixed torus profile for s and t alone does not give it. Fixed lattice coordinates are also needed for the image of c₀.
+
+That matters because c₀ may be a regular corner. Corners of angle π/2 and π/4 lift to regular points (cone angle 2π), so their images are not automatically pinned. This is the same issue as item 2 in `cover-rigidity.md`.
+
+**Fix:** either include c₀ in the fixed-profile data, or measure from a cone-point vertex.
+
+### (b) The marked check is automatic: **CORRECT** (documentation)
+
+Each new unknown δs_a or δt_a appears in exactly one new row, with coefficient 1. Hence `marked_kernel == kernel_dimension` holds identically. "Adding the four marked-profile equations leaves dimension three" should not be presented as a check.
+
+### (c) The darkness ⇒ preservation gap: **ACCEPT** as open, with a sharper framing recommended
+
+- **Inside a fixed diagram, rigidity is close to tautological.** The period lattice must be D4-invariant, hence square up to similarity (Gaussian). Absolute periods are fixed integer combinations of a lattice basis, so they move by a similarity. Item 4 with A=λI then finishes the argument.
+- **Nearby rooms change the diagram.** 45° rooms with rational vertices are expected to be Gaussian torus covers. Please confirm this against Apisa–Wright Prop. 3.11. Such rooms are dense, and their covering diagrams have unbounded degree. So the torus-cover locus is dense, not open, and continuity alone cannot preserve a fixed diagram.
+- **Consequence.** The missing theorem must use darkness to exclude finer-tiled neighbors and non-torus neighbors. That exclusion is the entire problem.
+- The x²+y²=0 caveat (isolation does not imply a nondegenerate linearization) is correct.
+
+## Code review: `holonomy-rigidity.py`
+
+- **Correct:**
+  - The reflection matrices and shift forms.
+  - Cramer's rule for `vertex0`, which equals v[0] as the intersection of lines W−1 and 0.
+  - The ordering of the `eq` unknowns.
+  - The translation and scale test vectors, including the mark extensions.
+  - The `rank` elimination: pivots are leading entries, and reducing in increasing pivot order leaves processed pivots zero.
+  - Treating order 8 as D4, since D4 is the only planar reflection group of order 8.
+- **Redundant:** the nonscalar-A inconsistency test. kernel=3, with tx, ty and uniform independent and in the kernel, already forces A∝I. It is harmless.
+- **CORRECT:**
+  - Every guarantee rests on `assert`. `python -O` strips them and still writes `EXACT_PASS`. Use explicit `raise`.
+  - The count of 34 rooms is never asserted.
+
+## Code review: `bidirectional-loops.py` and the reversal sign
+
+### The determinant-sign line is vacuous: **CORRECT**
+
+`assert -sr*det == e['side']` is a tautology, because sr:=−side·det and det²=1. The comment claims f_rev==f_original "on arbitrary affine inputs", but no quadratic identity is tested.
+
+The genuine checks are:
+
+- `sr·(wr×Er)==row`. This is non-trivial because (Oᵀu)×(Oᵀv)=det(O)(u×v).
+- The base-point identities for Ar and Cr.
+- The paired identity g=w×(T_m−T_p). This assertion would fail if the sign of sr were wrong.
+
+Fix the comment, or actually test the identity on generic affine inputs.
+
+### Paired rows are positive sums of original rows: **ACCEPT**
+
+- `g = plus['row'] + minus['row']`, where both rows are original `offset_gradient` entries.
+- The repair branch maps the pair weights back to original indices. It then asserts directly on the original rows:
+  - the weights are nonnegative,
+  - the weighted sum is zero,
+  - the support has rank W+1.
+- Certificate validity therefore never depends on the reversal geometry or on sr. Reversal only proposes groupings, and no newly traced optical record is assumed.
+
+Caveats:
+
+1. When `stress is not None`, there is no equivalent re-expression on original rows and no rank check. Add both.
+2. `solve` and `positive_stress` live in the unseen `repair-structure.py`, which I did not inspect.
+3. Validity of the frozen original rows is inherited, not checked here.
+
+### Separator wording: **CORRECT**
+
+If g·δ≥0 for all pairs and >0 for some, every nonnegative stress must vanish on the rows with g·δ>0. A nonnegative stress supported on the δ-orthogonal rows is not excluded.
+
+`positive_stress_impossible_for_all_listed_pairs` is therefore true only for strictly positive weights on every row. State that, or check the δ-orthogonal subsystem as well.
+
+### Minor issues
+
+- The scope string hardcodes "167" and is missing spaces. Compute the count from `len(records)`.
+- The pair-graph logic is sound. Each family is a matching, so degree ≤2 and edges alternate between families; components are paths or even cycles, and the 2-coloring assertion is consistent.
+
+## Verdict summary
+
+| Issue | Verdict |
+|---|---|
+| Return words are absolute periods | ACCEPT |
+| Schreier generators (P_I empty) | ACCEPT, minor wording |
+| Commutation with G / D4 ⇒ scalar | ACCEPT |
+| Cocycle averaging | ACCEPT |
+| Infinitesimal vs exact; λ sign | CORRECT (minor) |
+| (M) needs c₀ profile | CORRECT |
+| Marked-kernel "check" is automatic | CORRECT |
+| darkness ⇒ preservation open; dense torus-cover locus | ACCEPT, sharpen |
+| Assert-only checks | CORRECT |
+| Reversal det-sign assert tautological | CORRECT |
+| Paired rows are positive sums of originals | ACCEPT |
+| "Positive stress impossible" scope | CORRECT |
+| Novel illumination result | None claimed; none present |

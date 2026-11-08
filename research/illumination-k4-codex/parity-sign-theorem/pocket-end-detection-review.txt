@@ -1,0 +1,69 @@
+# Verdict: ACCEPT (scoped), with four corrections to §26.9
+
+I re-derived every number by hand. The construction holds under its stated hypotheses: connected-H upper corridor, an upper one-triangle end pocket at (6,0), and a lower leaf at (4,−2) using its right portal. The corrections below fix one historical claim, the scope list, one dependency, and one hard-coded value. None of them changes the event, the defect or the determinant.
+
+## Checks that pass
+
+**Pocket and slide**
+- The triangle [(6,0),(5,0),(5,1)] has portal x=5, 0<y<1.
+- The fixed walls x=5 just above the portal (1<y<2, the edge of the upper-right quadrant) and just below it (−1<y<0, T's edge) both exist, so the pocket is straight-attached.
+- With u=(0,1): D_t is x+y=6+t, H_t is y=t, and B(t)=(5,1+t) lies on D_t.
+
+**Forced fans**
+- At B=(5,1), T gives 90°, the pocket gives 45°, and the leaf at (4,2) must supply 90°. A one-triangle leaf on the right would give 180° (smooth), which rawness forbids. So the leaf is the upper-right m=2 quadrant.
+- At (5,−1), T gives 90°, the upper pocket gives 0°, and no other center reaches the point. A right-portal m=2 leaf would make it 180°, so the leaf is forced to be m=1: [(4,−2),(4,−1),(5,−1)].
+- That triangle's non-portal edges x=4 and x−y=6 are true walls, since the adjacent triangles belong only to the same fan and are absent.
+- D_−V_−D_− is reflection in y=−2. ✓
+
+**First half**
+- S→B is the line y=x/5. It crosses x=1 at y=0.2 and x=3 at y=0.6, both inside interior portals, and stays in (0,5)×(0,1).
+- gcd(5,1)=1, so there is no interior lattice point.
+- The segment never touches y=1, so N's right portal is not used.
+
+**Second half**
+- The corner reflection sends (5,1) to (−1,−5).
+- Hits: (9/2,−3/2) on x−y=6, (4,−8/5) on x=4, (13/3,−5/3) on x−y=6. All have 4<x<5 and −2<y<−1, so they are interior to their segments.
+- Velocities are (−1,−5), (−5,−1), (5,−1), (−1,5).
+- Portal crossings are at (23/5,−1) and (21/5,−1). The only y=0 crossing in T's square is at (4.8,0).
+- Durations sum to 1, so the second half also has length √26, matching the first.
+- The path ends at the actual T. No corner other than B is met.
+
+**Development**
+- T maps (4,0) → (6,−2) → (2,−2) → (4,−4) under the cap, then to (10+t, 2+t) under D_t.
+- Both halves equal (5,1) at t=0.
+- The checker's reversed loop applies the mirrors in the correct order R_D R_{D−} R_V R_{D−}.
+
+**Derivative**
+- Q = T′′ − 2B′ = (1,1) − (0,2) = (1,−1), and det(w,Q) = −6.
+- This matches formula (2) with p=0, the flank as hit j=p, L_p=I, a_D = b′=(1,1), and every cap term zero.
+- Dropping the flank term would give −2u, which is wrong, as the text says.
+
+**Intrinsic π**
+- The link at B is [π/2, 7π/4], i.e. 225°, and the total cone is 8·5π/4 = 10π.
+- In the copy reflected across 7π/4, θ develops to 7π/2 − θ. So the physical direction 3π/2−α develops to 2π+α.
+- The interval [π+α, 2π+α] crosses only the D flank and stays below 3π, the edge of the adjacent copy. It is embedded, so this is a genuine π continuation and not 3π.
+
+**Nonvacuity**
+- Section 33's room shifted by (4,0) gives N as a right-portal triangle, the (4,2) quadrant, the m=1 lower leaf, and the required pocket. That is 28 tiles with r=1, so W=25.
+- I hand-checked every B/C point. The angles are 225, 135, 225, 90, 225, 90, 135 and 135, plus 270 at each C point. None is 180°, and each link is contiguous. The room is raw.
+
+## Required corrections
+
+1. **Withdrawn-attempt sentence is inaccurate.** "The fixed-vertical alternative was precisely the failed choice in the withdrawn attempt" should be replaced. The withdrawn event used midpoint C=(5,0) and failed at its first-half reflection (5/2,1) inside N's portal. Replace with: "The clockwise π-continuation at B, across the fixed vertical ray π/2 with outgoing direction (−5,1), is a different choice and is not treated here."
+
+2. **Scope list is missing the lower-portal end pocket.** The case A=(6,0), C=(5,0), B=(5,−1) in the fixed upper-corridor normalization should be added to the open cases.
+   - Whole-room vertical reflection does not cover it, because it moves M to the lower half.
+   - The construction does not transfer: S→(5,−1) meets the wall x=1, −1<y<0 at (1,−1/5).
+   - Optionally, note that an m=2 end leaf is not a literal pocket.
+   - The left end leaf is covered via x→4−x with S/T exchange, which keeps |det|=6.
+
+3. **The cylinder-blindness remark is conditional.** "It also has all its diagonal-direction cylinder loads zero" depends on Section 33's coverage argument, which is still pending review. Reword it as conditional on that acceptance. The event itself does not depend on it.
+
+4. **Checker hard-codes (1,1).** It checks `moved == (10+t, 2+t)` at three values of t but then hard-codes (1,1) in Q. Derive T′′ instead, for example as `(moved(1/100) − moved(0)) * 100`, and assert that it equals (1,1).
+
+## Scope I am not asserting
+
+- This does not establish universal pocket detection.
+- It does not settle left-portal lower leaves, lower-portal end pockets, or disconnected-H placements.
+- It gives no global wall minimum.
+- The checker verifies only the prescribed segments and formulas. Intrinsic-π legality and the fan forcing rest on the hand argument above.

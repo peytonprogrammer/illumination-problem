@@ -1,0 +1,70 @@
+{
+  "id": "CE02",
+  "created_utc": "2026-11-08T00:16:34.834425+00:00",
+  "claim": "Actual two target signs cover invariant target-orbit gcd2 when z/a is odd integer; originalB2a center-column targets need no odd d2 restriction.",
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-two-sign-candidate.md",
+      "sha256": "2e42c6abaf9a5c1e39a78af34a45dedcb4ea5fd388689587615a31a100eb0485"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-two-sign-proof.md",
+      "sha256": "a20fc2d39a3eb7b70480b8316e012f6677fb1199164b78be7175b885923452e8"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-two-sign-check.py",
+      "sha256": "2ea670c0574fbf60fb0b6fb88d7bdd2c337eba5662e6ab2f01372ca9e7ac9e34"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-two-sign-check.json",
+      "sha256": "5ddeb82b18e4cea8907dd8b41791bf0cf36335f406a093636f55f23bb70f8d9d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-candidate.md",
+      "sha256": "f78b4c9e7ae48b6dab25553559f19889f87a0ab8c8dc61715ef5a0d253ccbca2"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-proof.md",
+      "sha256": "a5136465311272b295d00283d434759399d89b56ec7073b2dce8f17ca63b55fa"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-prescribed-check.py",
+      "sha256": "4e835d8be92cff63d4b8f30c9705eeceae0918b953cd36ef9b17c3a92cea6b91"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-generalized-independent.md",
+      "sha256": "e79d0b762c8610e0a717be37600dccb60b441047a23d7a38e098528827f74ce9"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-coprime-generalized-independent.json",
+      "sha256": "dcb253e5b2b1d8d56efc236b7a01e533aba2f23d02c1a6481d4a551e49ed9c5d"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/resumed-exact-check.py",
+      "sha256": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-tr01-independent-check.py",
+      "sha256": "e2e4bb0dcfc225d8b392b5b7a6d6622058b8b10c395d4bf59d7dab029329e161"
+    }
+  ],
+  "review_questions": [
+    "Check positive/negative target congruences J=0 or-r modL and reduced inverse modL/2 includingmodulus1.",
+    "Check negative-image signed arrival remains legal exact actualT and allportal/firsthit guards persist.",
+    "Check L2 allintegerd2 centeredtargetcorollary and thin-cap ALLnative-source coverage; notoff-center/allpairsclaim."
+  ],
+  "prescribed_command": "python3 .context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-two-sign-check.py",
+  "evidence": {
+    "controls": 11,
+    "reflections": 1151,
+    "wall_guards": 11940,
+    "negative_images": 5,
+    "nonzero_corrections": 4,
+    "whole_center_column_sources": 5,
+    "new_terminal_sources": 2
+  },
+  "disclosed_reuse": "CE01 physical replay read-only with new selector injected in memory; no guards removed.",
+  "search_used": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

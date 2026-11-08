@@ -1,0 +1,7 @@
+# Independent reciprocal review: arbitrary-bottom upper subsumption
+
+ACCEPT the quantified prime-divisibility and strict native consequence. For arbitrary prime valuations I independently derive H=min(n+f,c+k,c+l), Z=min(n+k+d,n+l+g,k+l+c). If l<=k, the third Z term is at most k+c+l and k+c+k; the minimum of the first two is <=n+k+min(d,g)<=n+k+f, including equal-valuation cancellation in G+d. Hence Z<=k+H. If l>k, the full-divisor hypothesis min(max(n,k)+d,l)<=k forces n<=k and d=0. Then Z<=n+k and each term in H is >=n, giving the same divisibility.
+
+At2, native C,F even and G,d odd give d=g=0,c/f>=1. With n<=k, when l>k we have Z=n+k and H>=n+1. When l<=k, Z=n+l and H=min(n+f,c+l); the deficit is min(k+f-l,k+c-n)>=1. Therefore K Hprime/Zprime is a positive even integer. The raw GSE03 bound follows exactly after canceling e^2.
+
+At the exact shared native upper/strict-mouth terminal scope this subsumes UJ01 (oddN) including nondyadicL and UJ02 (dyadicL and nuN<=nuK), with their previously accepted optical conclusions. It does NOT erase rational widths, full-cap s<A versus terminal s<a, lower-source routes, larger placement ranges or global-isometry clauses. No new universal availability is inferred. I read UJ01/UJ02/UC01 frozen proofs and their scope corrections earlier in this continuation. All source+argument pins match before/after. Hand proof only; no new numerical replay/discovery.

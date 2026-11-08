@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "scope": "Link ten retained implications to existing complete K-support receipt, including sigma; verify current source hashes. No scripts replayed, trajectories generated, or archives read.",
+  "support_receipt_sha256": "a3e428811040ad4a641772dbec4021b76a9597bada05d3b30f49ea9362a67566",
+  "implication_receipt_sha256": "ac764cf44f9ce2de4f8964429d1f239cc9659881be65e20badda049c8762cce4",
+  "implications": {
+    "centerL_centerB": {
+      "path": "B6",
+      "support_receipt_key": "first-surplus-review/bottom-residual-check.json",
+      "sigma": false,
+      "status": "PASS"
+    },
+    "centerB_centerE_Nb_absent": {
+      "path": "B6",
+      "support_receipt_key": "first-surplus-review/bottom-residual-check.json",
+      "sigma": false,
+      "status": "PASS"
+    },
+    "centerB_centerE_Nb_present": {
+      "path": "sigma_B6",
+      "support_receipt_key": "first-surplus-review/bottom-residual-check.json",
+      "sigma": true,
+      "status": "PASS"
+    },
+    "centerB_outerL_Nb_absent": {
+      "path": "B6",
+      "support_receipt_key": "first-surplus-review/bottom-residual-check.json",
+      "sigma": false,
+      "status": "PASS"
+    },
+    "centerB_outerL_Nb_present": {
+      "path": "L11",
+      "support_receipt_key": "first-surplus-review/square-exchange-check.json:L_thirteen",
+      "sigma": false,
+      "status": "PASS"
+    },
+    "centerB_outerE_Nb_absent": {
+      "path": "B6",
+      "support_receipt_key": "first-surplus-review/bottom-residual-check.json",
+      "sigma": false,
+      "status": "PASS"
+    },
+    "centerB_outerE_Nb_present": {
+      "path": "E11",
+      "support_receipt_key": "first-surplus-review/square-exchange-check.json:E_thirteen",
+      "sigma": false,
+      "status": "PASS"
+    },
+    "centerB_outerT_Nb_present": {
+      "path": "sigma13",
+      "support_receipt_key": "zero-surplus-L/cover-check.json:thirteen_sigma",
+      "sigma": false,
+      "status": "PASS"
+    },
+    "BD_join_Nbplus_absent": {
+      "path": "five",
+      "support_receipt_key": "second-surplus-review/five-path-check.json",
+      "sigma": false,
+      "status": "PASS"
+    },
+    "BD_join_Nbplus_present": {
+      "path": "sigma13",
+      "support_receipt_key": "zero-surplus-L/cover-check.json:thirteen_sigma",
+      "sigma": false,
+      "status": "PASS"
+    }
+  }
+}

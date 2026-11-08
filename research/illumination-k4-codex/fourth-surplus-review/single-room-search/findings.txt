@@ -1,0 +1,117 @@
+ONE authorized fixed-room search: nine-reflection certificate and hand proof
+Codex01a18403 — 4 November 2026
+
+RESULT
+The fixed inward description H+L701+E34+B1+Tc5+N6+D2+R4 has a legal
+S=(0,0) to T=(2,2) path with NINE reflections. Exact actual-boundary
+verification and an elementary endpoint derivation both pass. Independent
+peer challenge requested. Thus one of the current nine necessary inward
+descriptions has a parent proof, giving eight pending peer acceptance.
+No whole critical-L, b1, surplus-four or universal-minimum closure follows.
+
+1. Authorized search scope and frozen geometry
+
+The recorded research scope permitted a five-minute bounded path-discovery search
+on ONE fixed unresolved room. Only that room was assembled and searched.
+room.json verifies strict simplicity, exactly interior A stars S,U,T,
+W20,k6,Q10,J4,sN2,Delta4. There are no holes, slits or boundary contacts.
+The script enumerates primitive integer directions with maxcomponent512,
+all signs, at most400 reflections, hard300 seconds, stopping first path.
+It stopped after38 directions:37 terminated at a genuine corner, and
+(1,4) reached actual T with9 reflections. Search-loop elapsed time was
+about0.001 seconds, excluding setup/geometry construction. This was not
+an optimization search for the shortest path. No second room was searched
+and the unused time budget was not repurposed for other cases.
+
+Search uses exact integer affine frames: p(lambda)=O+v*lambda. Reflections
+keep O,v integral for these canonical walls. Future intersection times
+and segment incidence use integer cross-products; no floating-point
+proximity to T or corners is used. Verification is separate: exact
+Fraction replay against the actual maximal polygon boundary, plus complete
+triangle-support implications and actual finite-wall unfolding.
+
+2. Exact path
+
+ (0,0)
+ (2/5,8/5)
+ (0,3/2)
+ (2/3,4/3)
+ (4/3,-4/3)
+ (2,-3/2)
+ (8/5,-8/5)
+ (11/4,3)
+ (16/5,6/5)
+ (1,7/4)
+ (2,2).
+
+The first3 reflections are in N6, next3 in ordinary D2, then one on
+bare ceiling y3 to the RIGHT of Tc5, one on the LOWER E34 diagonal,
+and one on T's left wall x1. This uses one E reflection followed by a
+left-wall return; it is not the retired two-E-diagonal terminal branch.
+
+3. Hand derivation and strict gates
+
+Write launch(d,1). Source N6 normal triple return has entry(d,1), exit
+(3d,1), outgoing(d,-1), strict0<d<1/3. Its actual contact formulas are
+ (2d/(1+d),2/(1+d)), (0,2-2d),
+ (2d/(1-d),2-2d/(1-d)).
+
+The next y=-1 crossing is(5d,-1). For the successful branch it lies
+inside ordinary D2's portal(1,2), not the ordinary B1 portal. The D2
+normal triple return has contacts
+ (4d/(1-d),-4d/(1-d)), (2,-6d),
+ (8d/(1+d),-8d/(1+d)),
+and exits(7d,-1), outgoing(d,1). Both D entry and exit are strict in
+(1,2) for the final d; its retained three mirrors require D1/D3 absent.
+
+The ascending ray reaches bare ceiling y3 at(11d,3), strictly between
+x2 and3. Tc5 lies on the LEFT half and does not obstruct it; Tc6 must
+be absent. The ceiling reflects to(d,-1). It crosses x3 and enters
+E34. Its LOWER diagonal y=x-2 is hit at
+ (16d/(1+d),16d/(1+d)-2),
+reflecting to(-1,d). It reaches T-left wall at(1,15d-2), strictly
+between heights1 and2, where N7 must be absent. This mirror reflects
+to(1,d). At actual target abscissa2 the height is
+ 16d-2.
+Actual T therefore forces d=1/4, i.e. launch(1,4).
+A sufficient combined strict interval is
+ 3/13<d<4/15.
+The root1/4 lies strictly inside it. All N/D contacts, D ports, ceiling,
+E diagonal and T-left contact are strictly inside their physical finite
+segments. At d1/4, the E inlet crosses(3,2), which is INTERIOR because
+both E3/E4 and T's full star are present; it is not an absorbing corner.
+This is why checking the open segments is essential.
+
+4. Exact physical verification and stronger conditional family
+
+verify.py independently checks actual first boundary walls, specularity,
+open-segment interior, corner avoidance, first actual T, reversed path
+and sigma/time reversal. Actual target unfolds to(4,16), aligned with
+launch(1,4). Correct unfolding alone is not used as proof.
+
+Complete required U lies in
+ minimum=H+N6+D2+E34.
+Complete forbidden Z misses
+ maximum=minimum+FULL L+B+R stars+Tc45.
+Thus every valid support between this minimum and maximum shares the
+same path. The full L/B/R freedom is a whole-family guard implication,
+not a second-room search or a claim the maximum itself is a valid room.
+The fixed original room lies in that envelope. No boundary from L, B
+or R is used; this may support other previously classified applications,
+but none has been counted here without checking its stated assumptions.
+
+5. Review and scope
+
+Inputs room.json/result.json/verification.json plus this proof.
+Independent challenge should inspect finite first walls and all open
+segments, especially the interior E-inlet point(3,2), before accepting.
+The local helper routines have historical origins; this is separate
+exact search/physical checking plus a hand proof, not formal verification
+or expert refereeing.
+
+Reproduce ONE frozen candidate verification only (does not search):
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/single-room-search/verify.py
+It writes verification.json, owned by Codex01a18403; a peer should adapt
+receipt output to their own files rather than overwrite this receipt.
+Do not rerun search.py or search another room without a fresh authorized
+scope. Discovery STOPPED at the first successful candidate.

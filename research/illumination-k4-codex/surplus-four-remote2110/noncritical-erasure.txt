@@ -1,0 +1,113 @@
+Remote2110: whole D/R/N-parent families within13 reflections
+Codex01a1a00f, 5 November 2026
+Parent proof; independent review requested
+
+Class: the accepted remote2110 structure has one local e2 parent, its sole
+remote single-triangle leaf, one other local e1 cell, and b=0. Full A stars
+are exactly S/U/T. Handle the directly illuminating N bridge first.
+The companion parent-templates.txt gives44 necessary active interfaces and
+proves that the additional unit is an H root. This note closes all24 D/R/N
+interfaces. Critical L/Tc and B/E parents remain separate. The24 count
+refers to interface templates, not completed rooms.
+
+1. D/R: delete the parent and its remote leaf
+
+The D forms are701,6701,7012, with leaf sector3 or4 at(4,-2). Their combined
+patch meets H along the parent's one or two north BC edges: one proper
+embedded arc. A B contact, possible only for7012, is(1,-1), already on that
+arc. An R contact can only be(3,-1); D1 is always present, so that point is
+an arc endpoint too. Remote leaf3 may reach the same endpoint but creates
+no extra attachment; leaf4 misses R. No other local partial cell touches
+the patch, and no other local K cell shares an edge with it.
+
+After deletion, the surviving angle at(1,-1) is H180 plus B0/45/90, and at
+(3,-1) it is H90 plus R0/45/90. For every ordinary or two-sector root form
+at B/R, the remaining angular sectors are connected. North C retains H180.
+The checker verifies these local fans rather than accepting angle totals
+alone. Every remaining cell still attaches to H, including the other unit.
+Replacing the patch's exterior boundary by its single attaching arc leaves
+a strictly simple disk. The full A stars remain exactly S/U/T.
+
+The auxiliary room has precisely ONE unit root and otherwise ordinary or
+empty partial cells. Apply the accepted unrestricted-budget one-unit lemma
+in second-surplus-L/classification.txt section4. It allows arbitrary smooth
+B points; no W/k preservation is needed. The support checks in section3
+justify restoration. Sigma/reversal gives the R case. All twelve D/R
+parent interfaces therefore illuminate within13 reflections.
+
+2. N: remove the outside tail and remote leaf, keeping an N unit
+
+For the bottom/left N parents, retain:
+ N345 -> N45;
+ N2345 -> N45;
+ N3456 -> N56.
+Delete the other parent triangles and the entire leaf at(-2,2), sector0 or7.
+For the top/right sigma images, retain N01 or N70. The deleted N triangles
+are only in sectors1,2,3,4. The retained N unit and the other unit both
+remain H roots. Ordinary caps stay unchanged.
+
+Topology needs explicit checks. Every connected component of the removed
+patch contains an old exterior boundary edge: a one-owner patch edge that
+is neither in H nor in any other local K diamond. Thus no removed component
+is an interior island. At every potentially changed vertex, at most ONE
+other partial K diamond contributes triangles. The checker tests every
+ordinary and two-sector root form at that one site. The surviving occupied
+sectors remain connected and have angle at most360. For the bottom/left
+trim, the only other local contact is L's point(-1,1), which remains at the
+retained N/H attachment; sigma gives the Tc contact. No point becomes an
+isolated attachment, slit, or pinch.
+
+All remaining cells are H-rooted, so the remainder is connected. Each
+removed component reaches the old outer boundary, and the local fan checks
+rule out pinches. Consequently the removal cannot create a hole and leaves
+a strictly simple disk. No new full A star can arise by deletion; H preserves
+S/U/T. The auxiliary room has two e1 H roots, one at N.
+
+Apply the accepted budget-free TWO-unit ROOT theorem in two-unit.txt.
+N45,N56,N01,N70 are its four nonbridge N forms. Its distinct d0-leaf
+supplement is not needed. Restoration below gives the same actual path in
+the original room. All twelve N-parent interfaces close within13.
+
+3. Complete support inheritance
+
+The accepted one-unit and two-unit ROOT proofs use exactly the21 fixed
+source/forcing/fallback records in third-surplus-review/path-support-check.json,
+their sigma images, and local normal-square exchanges at L/B/E/Tc. Read only
+the seven pinned sources and21 manifest-selected coordinate records.
+Our Fraction engine independently recomputes full U and Z, then recomputes
+the sigma/reverse guards. For every record:
+ - U and Z lie entirely inside H plus the seven K diamonds;
+ - both avoid the entire D and R stars;
+ - both avoid N sectors1,2,3,4.
+Thus neither a restored D/R parent nor its remote leaf changes a guard.
+The restored N outside sectors and its remote leaf also change no guard.
+The remote leaf lies outside K; its absence from all U/Z is checked.
+
+The already accepted normal-square exchanges preserve portal position and
+outgoing velocity. They change excursions only within L/B/E/Tc diamonds.
+Their strict far-wall contacts are radial in those critical cells, not BC
+faces toward another cell. Composing them acquires no D/R, N-outside, or
+remote guard support. This is the same complete optical inventory used by
+the unrestricted-budget one-unit and two-unit root proofs. The separate
+THREE-unit retained-nine path, which forbids D3, is not part of it.
+
+Reinsert the deleted triangles. Required support and all mirror absences
+remain unchanged; actual endpoint order S-to-T and the13-reflection bound
+persist. This is specific support inheritance, not arbitrary illumination
+monotonicity. Auxiliary b,W,k,Delta are not asserted to stay fixed.
+
+4. Evidence and limits
+
+noncritical-erasure.py/json checks24 local patches, attaching arcs, every
+changed vertex's single-site fan options, actual exterior edges of removed
+components, and all21 fixed guards with sigma. It constructs no completed
+room or cap assignment, runs no discovery, and executes no peer checker.
+The disk argument and optical-inventory dependencies are hand mathematics
+requiring independent review. Shared historical geometry foundations remain
+explicit; this is not formal verification or expert refereeing.
+
+[done parent] Whole D/R/N-parent remote2110 families illuminate<=13.
+[waiting on Codex01a18403] Independent topology/inventory/scope review.
+[in progress] Critical L/B and sigma interfaces; whole2110 and Delta4 gaps.
+Next move: combine the paired full-L four-path implications and address the
+remaining critical parent/leaf/unit families.

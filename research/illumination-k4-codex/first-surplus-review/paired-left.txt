@@ -1,0 +1,71 @@
+A two-bottom-cap replacement path for the paired-left first-surplus family
+4 November 2026 — Codex01a18403
+
+Result
+Let a Delta1 room have exactly the three interior A stars S=(0,0), U=(2,0), T=(2,2), with a centered two-triangle defect at L=(-2,0). All other occupied partial cells are single caps by the reviewed first-surplus classification. Every such room is illuminated if at least one of B+, E-, T- is missing. If these caps are present, the room is also illuminated whenever
+ D- is present, Nb+ is absent, and R- is absent.             (1)
+No W/k cap is needed for this implication. It covers arbitrary other single-cap choices consistent with the room hypotheses, not only the saved W17 fixture. It does not close the whole paired-left family.
+
+The coordinate labels are those in zero-surplus-L/classification.txt:
+ B+ = conv{(0,-2),(0,-1),(1,-1)};
+ D- = conv{(2,-2),(2,-1),(1,-1)};
+ Nb+ = conv{(0,2),(0,1),(1,1)};
+ R- = conv{(4,0),(3,0),(3,-1)}.
+The defect contains both L+,L-. Missing B+ or E- gives the existing one-bounce path. If B+,E- are present but T- is missing, the bottom cap is still a single cap, so the existing four-bounce path applies.
+
+1. Route and exact parameter
+For d in (3/17,3/16), start at S with velocity(d,-1).
+(a) Enter B+ at(d,-1). Three reflections (diagonal, vertical, diagonal) return to(3d,-1) with velocity(d,1).
+(b) Hit H's source roof at(5d,1), reflect to(d,-1). The roof lies above the left half of the notch; Nb+ absent preserves this mirror.
+(c) Enter D- at(7d,-1). Three reflections (diagonal, vertical, diagonal) return to(9d,-1) with velocity(d,1).
+(d) Hit the target roof at(13d,3), reflect to(d,-1).
+(e) Hit the elbow right wall at(3,16-3/d), reflect to(-d,-1).
+(f) Hit the elbow bottom wall at(6-17d,-1), reflect to(-d,1).
+(g) Hit the target roof again at(6-21d,3), reflect to(-d,-1).
+At height2 the last leg reaches (6-22d,2). The actual target equation is
+ 6-22d=2,
+so d=2/11, strictly inside the stated interval. There are11 reflections:3+1+3+1+1+1+1. No source/target surrogate is used.
+
+2. Explicit cap and wall formulas
+The first three reflection points are
+ (2d/(1+d), -2/(1+d)),
+ (0, 2d-2),
+ (2d/(1-d), 2d/(1-d)-2).
+The next point is(5d,1).
+The three D- cap reflection points are
+ (6d/(1-d), -6d/(1-d)),
+ (2,-8d),
+ (10d/(1+d), -10d/(1+d)).
+The four remaining reflection points are those in(d)-(g).
+Reflection at horizontal/vertical walls flips the respective velocity coordinate. Reflection in y=x-2 swaps coordinates; reflection in y=-x swaps and negates coordinates. These rules give each stated velocity and cap exit directly.
+An initial transcription error in the checker used4d-2 for the D vertical hit; exact comparison with the saved path rejected it. The derived value is -8d, as follows by propagating velocity(1,-d) from the preceding diagonal. Corrected before adopting this proof; all fixed points now agree exactly.
+
+3. Strict containment and mirrors
+Throughout the interval, 1/7<d<1/5. Thus0<d<1/3 validates the first cap trip; 5d<1 makes the source-roof hit interior to its open half-side.
+The falling leg from(5d,1) to(7d,-1) crosses x=1 at y=6-1/d, strictly between-1 and1, passing through the open source/elbow portal. The D- entry satisfies1<7d<2 and exit1<9d<2. The three D cap formulas lie in the open diagonal/vertical/diagonal sides; the same inequalities make the entry and exit nonsingular.
+The next rising leg crosses y=1 at x=11d, strictly between1 and3, and hits the roof at2<13d<3. Thus it uses the target roof's right half, whose opposite cap is T+.
+On descending it crosses y=1 at2<15d<3 before reaching x=3. The right-wall coordinate obeys -1<16-3/d<0, exactly because3/17<d<3/16. This is the elbow's lower right half-side, whose opposite cap is R-.
+The next bottom hit satisfies2<6-17d<3; its opposite triangle is D+. The rising return crosses the elbow/target portal and reaches2<6-21d<3 on the same target-roof right half. The final height2 point stays strictly inside the target star; at d=2/11 it is exactly T.
+In a paired-left room all B/D/T cells are single. B+ and D- therefore keep their other cap walls intact and exclude B-/D+. T- excludes T+. Every external triangle outside the single-cap alphabet is absent except the two L caps, neither of which intersects any required-absent triangle of this route. Condition(1) supplies the two remaining mirrors, Nb+ and R- absent. All legs otherwise remain in H or the two stated bottom caps.
+
+4. Exact implication and reflection
+The existing rational path checker recomputes required/forbidden triangles of the saved path, agreeing exactly with the prior actual-boundary check. Required caps outside H are ONLY B+,D-. Forbidden single caps are B-,D+,Nb+,R-,T+. The other two forbidden triangles are outer triangles at B and D, absent in this paired-left class. Hence(1) suffices for the full family implication above.
+Apply sigma(x,y)=(2-y,2-x) and reverse the path to exchange actual endpoints back to S,T. The paired-left defect becomes paired-top. The analogous condition is R+ present, Nr- absent, D+ absent, with E- supplying the second required bottom-cap image. No symmetry of the unknown room is assumed.
+
+5. Exact residual obligation
+The previously reviewed one/four paths force B+,E-,T- for any hypothetical dark paired-left room. The zero-smooth-B rules exclude Nb-,Nr+ and B-. Among the remaining cells, D may be empty or D-/D+, R empty or R-/R+, and N empty or Nb+/Nr-. The ordinary-cap count n is between4 and6 under W21/k6; B+,E-,T- account for only3, so the budget demands another occupied cell but does NOT by itself force D- or either absence in(1).
+Consequently this replacement route alone leaves the exact logical alternatives
+ D- absent OR Nb+ present OR R- present.
+No claim that these alternatives imply darkness, and no assignment census or new fixture construction was performed. These are the next structural obligations for a complete family proof. Do not turn the successful saved fixture replay into a claim covering all completions.
+
+Verification/provenance
+paired-left-check.py reads the already saved A_left_repair witness in exception-geometry/shared-extensions-check.json (frozen guard source line361), replays its exact universal tile implication, matches every hand formula at d=2/11, checks the algebraic interval endpoints, and verifies the sigma/reversal transformation. paired-left-check.json reports PASS and records the source hash. Reuses existing checker code; not formal/expert verification or a new independent implementation. No new ray/direction/word/room discovery, broader source-archive lookup, solver, or worker. Universal goal stays paused.
+
+Peer request
+Restricted Codex01a1a00f: independently challenge the family implication, the full open-interval itinerary and the residual obligation. Inputs are this file and paired-left-check.json; hand review requested, not a discovery run. Retain ownership of other first-surplus branches.
+
+6. Second bounded coverage attempt: other prescribed saved routes do not close it
+Also checked the TWO other already selected witnesses in shared-extensions-check.json, and their sigma images, without retrieving any new source records.
+The ten-reflection bottom-repair route requires BOTH B+ and B-, hence another defect in B; its sigma image requires both E caps. Neither can apply in the paired-left class. This is only an applicability observation; the peer retains derivation and broader bottom-family coverage.
+The twelve-reflection roof-repair route requires L- absent, impossible for the paired-left defect. Its sigma image requires T- together with Nr+, a smooth-B combination forbidden in this class (and also has L- among its forbidden caps). Thus neither supplies a new paired-left family exclusion.
+The static checker replays these fixed implications exactly, PASS. This is the second bounded attempt at extending this selected-witness cover. It yields no further class exclusion, so this witness-reuse approach is retired for the residual; no further example lookup or larger check run is justified by this attempt. This does not establish a structural obstruction to other illuminating paths or exhaust geometric approaches.

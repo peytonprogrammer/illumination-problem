@@ -1,0 +1,108 @@
+Centered roof: bounded attempt and precise remaining optical gap
+4 November 2026 — Codex01a18403
+
+STATUS: unresolved. No centered-roof family exclusion is proved here.
+Two bounded approaches are exhausted; no expanded search or retrieval queued.
+This is a mathematical impasse for these approaches, not an external blocker.
+
+Scope
+H consists of full stars S=(0,0),U=(2,0),T=(2,2). The root L=(-2,0) has
+sectors7,0,1,2; the remote(-2,2) has only sector6. The additional local unit
+fan is Tcap=(2,4) sectors5,6: triangle with vertices(1,3),(2,4),(3,3).
+Other partial cells are ordinary caps. The active budget is Delta4,W20,k6.
+This is the centered-roof interaction left by triangle-composition/findings.txt,
+not every orientation in either remaining remote row.
+
+The old one-reflection paths force B+ and E- in any still-dark room. These
+ordinary slots exclude B- and E+. Both T- and T+ are present because of
+the centered roof. The supplied fixed control is recorded in
+centered-roof-geometry.json; it is not asserted to be dark.
+
+1. Attempt1: retain the seven-path prefix and change the roof return
+Missing implication: can a new suffix make the already legal B/remote
+prefix reach actual T? Success: an endpoint solution strictly inside its
+finite-wall branch, with full cap compatibility. Strongest objection:
+the floor or roof event becomes a corner at the solved parameter.
+
+The established prefix launches(d,-1), reflects once in B+, three times
+in the remote leaf, and reaches the source floor at
+ A=(7d-6,-1), incoming(d,-1).
+For9/11<d<6/7 this is a strict negative-x floor contact and the outgoing
+direction is(d,1). It hits right wall x3 at(3,9/d-8) and enters the roof
+portal y3 at x=12-11d, moving(-d,1).
+
+The centered roof has mirrors x+y6 and y-x2. Two reflections in them give
+the half-turn about(2,4). If there are two roof hits, exit through y3 is
+x=13d-8, outgoing(d,-1). In the present branch this requires
+9/11<d<11/13, excluding d5/6 which hits the roof apex. Its next right-wall
+contact is(3,16-11/d); after reflecting there it crosses y2 at
+ x=14-14d.
+The target equation x2 requires d6/7, outside this two-hit branch.
+
+For11/13<d<6/7 there is instead just ONE left roof-diagonal reflection.
+The roof exit is(11/d-10,3), outgoing(1,-d). It next hits the right wall
+at(3,14-13d). Its subsequent y2 crossing has
+ x=16-12/d.
+Again x2 forces d6/7, the endpoint of the admissible prefix.
+
+At d6/7 the prefix floor point is exactly(0,-1). This is a genuine room
+corner: H supplies180 degrees above it and the ordinary B+ triangle90
+below/right, total270. No other ordinary cap repairs it. A corner-avoiding
+specular path cannot use this hit. The same (6,6) target image that closed
+the bottom square is therefore insufficient for this retained prefix.
+
+For comparison, omitting the final right-wall return and asking the two-roof
+suffix to reach T gives unfolded target(4,6): (7d-6)+7d=4, hence d5/7.
+That parameter was already outside the original prefix. This repeats the
+peer's earlier failed substitution and is not counted as new progress.
+
+Conclusion: retire repairs confined to these one/two-roof suffixes of the
+unchanged prefix. This does not rule out different incoming branches,
+additional external returns, or paths not visiting the remote pocket.
+
+2. Attempt2: the explicitly retained two-unit implications
+Missing implication: does an existing roof-bypassing lower-layer path
+survive the fixed root/leaf and centered roof? Success: a compatible
+whole-family implication with remaining ordinary-cap conditions. Strongest
+objection: the fixed geometry already removes one of its mirrors or
+excludes a triangle it requires.
+
+Read ONLY the ten implication names in inherited-two-unit-support.json.
+They use SIX unique retained paths: B6, sigma_B6, L11, E11, sigma13, five.
+No original guard archive, new direction, room assignment or word was read
+or generated. For each path, recompute exact required U and forbidden Z.
+Let P contain H, the fixed root/leaf/roof, and forced B+/E-.
+Let A contain H, the same fixed fans, and the entire ordinary-cap alphabet.
+Any U outside A or in forced-absent B-/E+ makes the path impossible here.
+Any Z intersecting P means a needed mirror is necessarily removed.
+
+Every one of the six unique paths has at least one such fixed contradiction.
+This proves incompatibility for ALL completions in the stated residual
+class, not merely failure on its supplied control. The precise triangles
+and ten-name dispatch are in centered-roof-check.json. Different retained
+names using the same B6 path are not counted as different optical attempts.
+No additional family is excluded. Retire this particular reuse set rather
+than expanding it automatically.
+
+3. Realignment
+Proved previously: the ordinary-cap version of this root/leaf illuminates
+within7, E-center is covered by the peer's6-reflection variant, and the
+bottom B-square interaction has the new parent5/8-reflection cover awaiting
+independent review. None of those proves centered-roof illumination.
+
+Still missing: a legal actual S/T route compatible with the centered roof,
+full L root and right single leaf, uniformly across the eligible ordinary
+caps. A successful next approach needs a DIFFERENT entrance/return branch
+or a structural constraint forcing another sufficient route. Extra checks
+of the six incompatible paths, or another version of the same(6,6) suffix,
+will not close that implication.
+
+Both finite paths failing and the retained-cover failure are logically
+consistent with illumination by a different trajectory. There is no dark
+counterexample and no complete row, surplus-four, or universal minimum theorem.
+
+Verification
+python3 -B .context/illumination-k4-codex/fourth-surplus-review/centered-roof-check.py
+recomputes the six supplied paths' full exact guards and class contradictions;
+it pins every read source hash. The guard implementation is reused. The
+corner and suffix algebra above is a hand calculation, not an optical scan.

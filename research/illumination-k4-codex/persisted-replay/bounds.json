@@ -1,0 +1,262 @@
+{
+  "status": "PASS",
+  "placements": [
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      12,
+      2
+    ]
+  ],
+  "completed_run_receipts": [
+    {
+      "q": [
+        2,
+        2
+      ],
+      "nodes": 65428331,
+      "learned": 4065
+    },
+    {
+      "q": [
+        4,
+        0
+      ],
+      "nodes": 521918121,
+      "learned": 4352
+    },
+    {
+      "q": [
+        4,
+        2
+      ],
+      "nodes": 1508351132,
+      "learned": 3164
+    },
+    {
+      "q": [
+        4,
+        4
+      ],
+      "nodes": 2846619563,
+      "learned": 1025
+    },
+    {
+      "q": [
+        6,
+        0
+      ],
+      "nodes": 2997314251,
+      "learned": 19
+    },
+    {
+      "q": [
+        6,
+        2
+      ],
+      "nodes": 3109356734,
+      "learned": 54
+    },
+    {
+      "q": [
+        6,
+        4
+      ],
+      "nodes": 3223424839,
+      "learned": 0
+    },
+    {
+      "q": [
+        6,
+        6
+      ],
+      "nodes": 3243090546,
+      "learned": 0
+    },
+    {
+      "q": [
+        8,
+        0
+      ],
+      "nodes": 3241636653,
+      "learned": 0
+    },
+    {
+      "q": [
+        8,
+        2
+      ],
+      "nodes": 3241960163,
+      "learned": 0
+    },
+    {
+      "q": [
+        8,
+        4
+      ],
+      "nodes": 3242999969,
+      "learned": 0
+    },
+    {
+      "q": [
+        8,
+        6
+      ],
+      "nodes": 3243285446,
+      "learned": 0
+    },
+    {
+      "q": [
+        8,
+        8
+      ],
+      "nodes": 3243285466,
+      "learned": 0
+    },
+    {
+      "q": [
+        10,
+        0
+      ],
+      "nodes": 3243285466,
+      "learned": 0
+    },
+    {
+      "q": [
+        10,
+        2
+      ],
+      "nodes": 3243285466,
+      "learned": 0
+    },
+    {
+      "q": [
+        10,
+        4
+      ],
+      "nodes": 3243285466,
+      "learned": 0
+    },
+    {
+      "q": [
+        10,
+        6
+      ],
+      "nodes": 3243285466,
+      "learned": 0
+    },
+    {
+      "q": [
+        12,
+        0
+      ],
+      "nodes": 3243285466,
+      "learned": 0
+    },
+    {
+      "q": [
+        12,
+        2
+      ],
+      "nodes": 3243285466,
+      "learned": 0
+    }
+  ],
+  "adjacent_direct_segment": true,
+  "max_I_W21_k4": 3,
+  "max_N_W21_k4": 36,
+  "arithmetic_rows": 458,
+  "coordinate_bound_for_N38": "64/3",
+  "mutation_controls_rejected": [
+    "missing-used",
+    "missing-absent",
+    "wrong-reflection",
+    "wrong-target",
+    "missing-used",
+    "missing-absent",
+    "wrong-reflection",
+    "wrong-target",
+    "missing-used",
+    "missing-absent",
+    "wrong-reflection",
+    "wrong-target"
+  ],
+  "limitations": [
+    "Run receipts confirm completion metadata but do not cryptographically bind the executable/argv/environment at launch.",
+    "BFS verifies all placements for N<=38; no full enumeration rerun or formal UNSAT proof."
+  ]
+}

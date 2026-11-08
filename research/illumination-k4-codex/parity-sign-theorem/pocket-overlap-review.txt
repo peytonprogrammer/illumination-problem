@@ -1,0 +1,115 @@
+# Verdict on Section 32
+
+**Accept with one substantive correction and four wording fixes.**
+
+- **32.1:** The zero-mean identity is correct.
+- **32.2:** The overlap formula is correct, including annulus covers. My attempt to break the "each lifted face is crossed exactly once" claim failed. Its scope should name torus-lift strips explicitly.
+- **32.3:** The coefficients, signs and the four-term identity are correct.
+- **Gap:** The sentence "A_γ lies in SL2(Z)" is asserted but not proved. The strip transport and the legality of the four images both depend on it, so it must become a hypothesis. Correction 1 below gives the replacement.
+
+No optical, room, direction, cylinder or orbit discovery was made or used.
+
+## 32.1: Zero mean from cup orthogonality
+
+**Correct.** This is a new use of 21.1, so I checked it directly.
+
+**Orthogonality.** 21.1 gives four vanishing pairings:
+- B(x_0,x_1)=0 and B(y_0,y_1)=0.
+- B(x_1,y_0)=0 and B(x_0,y_1)=0, since both equal cross terms vanish.
+
+Together these make span{x_1,y_1} B-orthogonal to span{x_0,y_0}. The form β=det(e,ω_0) is a real combination of x_0,y_0, so B(β,α)=0 for both components α of Q.
+
+**Cylinder integral.** I checked the derivation, which needs a regularity remark.
+- Represent α by a closed smooth form that vanishes near the zeros. This is possible because a closed form is locally exact near each point.
+- β is the genuine flat form, so ∫_X β∧α is the cup pairing.
+- On an open cylinder D write α=(α(c_D)/ℓ_D)ds+dg.
+- Stokes on the truncated cylinder τ∈[δ,h−δ] kills ∫dτ∧dg, because dτ restricts to zero on level leaves. As δ→0 the integrand stays bounded, so no boundary extension of g is needed.
+- With ds∧dτ positive and c_D oriented along +e, this gives ∫_D β∧α = −h_D α(c_D).
+- The cylinders have full measure, so (32.1) follows.
+
+**Qualification to add.** The argument identifies Q restricted to absolute classes with (x_1,y_1). That holds only for:
+- the same literal straight-attached pocket slide as in 21.1, and
+- Gauss–Manin transport through the persistent cellulation.
+
+The normalization of t is irrelevant to vanishing.
+
+**The 9.2b simplification is correct.** If all ratios r_D were equal to r, then Σ Area(D) r_D = r·Area(X) = 0, so r=0. Hence "not all equal" is equivalent to "some Q(c_D)≠0".
+
+**Torus-strip version.** The version with all heights equal to 1/|θ| is correct.
+
+## 32.2: Signed intersection equals determinant times overlap area
+
+**Correct.** I tried to break it in six ways and none worked.
+
+1. **Face count and embedding.** The torus graph has |m| four-valent vertices and 2|m| edges, so χ=0 gives |m| faces. An open face embeds in the torus: two points of one parallelogram differing by a lattice vector λ have F(λ) ∈ Z² ∩ (−1,1)², so λ=0. The extra intersection points of the two geodesics are not 0, but they are face vertices and are harmless.
+2. **Lifting.** π is ramified only over 0, since every cone point lies over 0. Faces are simply connected and avoid 0, so their lifts are trivial covers.
+3. **Core through each face.** Each θ-face spans the full transverse height (k,k+1) of its strip. The level-a core of the base cylinder therefore meets each torus face in exactly one segment. For n_E>1 the preimage of the base core in the connected annulus cover E is a single closed curve, and it meets each lifted face of E exactly once. The same holds for D.
+4. **Genericity.** The only requirement is that the levels a,b are non-integer. Then every crossing has both F-coordinates non-integer, so it lies in the interior of a common face. No crossings occur on the cut graph and none are lost.
+5. **Sign.** The sign is sign(m) at every crossing. This matches the 9.3 convention: c along e, upward crossing positive, and N adds +m_i c_i.
+6. **Alternative check.** Map E∩D to the pair of transverse coordinates in (0,h_E)×(0,h_D). This map has area Jacobian 1/|sin∠|. Every fibre consists of crossings of two level cores. All of these crossings have the same sign, so each fibre count equals |⟨c_E,c_D⟩|. Hence Area(E∩D) = |⟨c_E,c_D⟩| h_E h_D/|sin∠|. For torus-lift strips the factor h_E h_D/|sin∠| is 1/|m|, which reproduces (32.2) without face combinatorics.
+
+**Scope fix.** (32.2) as written holds only for **torus-lift strips**, meaning components of X∖π⁻¹(γ_θ). It does not hold for maximal cylinders or for strips refined only at marks. A maximal cylinder made of k torus strips satisfies ⟨c_E,c_D⟩ = m·Area(E∩D)/k. The general normalized form ⟨c_E,c_D⟩ = det(θ̂,φ̂)·Area(E∩D)/(h_E h_D) covers every case.
+
+Section 32 calls these strips "refined", but in 9.2 that word means refinement at marks only. Replace "refined" by "torus-lift" throughout 32.
+
+## 32.3: Coefficients, signs and the four-event certificate
+
+**(32.3) is correct.**
+- The half p→t has transverse change det(v,w)=ε. It runs boundary to boundary across D_t, so ⟨c_{D_t},p→t⟩=ε.
+- The half p→s gives −ε against c_{D_s}.
+- The twist number is κ/n, from 9.5 with a=κ|v|².
+- Cross-check with 9.3b: κ|v|²·(ε/|v|)·Q(c)/(n|v|) = εκQ(c)/n. ✓
+- z is absolute: τ_v fixes p,s,t, and 26.5 shows H_1(X)→H_1(X,π⁻¹(0)) is injective.
+- If D_s=D_t then z=0 and the contrast vanishes, which is consistent.
+
+**(32.4) is correct,** given the strip-transport hypothesis in Correction 1.
+- Q(N_θx) = κ Σ_E f_E ⟨c_E,x⟩.
+- Substitute x = γ_*z = εκ(c_{γD_t}/n_t − c_{γD_s}/n_s) and apply (32.2).
+- The result is εκ²·det(θ,A_γv)·(Avg_{γD_t}f_θ − Avg_{γD_s}f_θ).
+- Areas n_s,n_t are the correct normalizers.
+
+**Cross-check against 9.4.** Take γ=id and θ=w in (32.4).
+- It reproduces 9.4's d_j up to the sign det(w,v)=−ε.
+- Q(z) reproduces b_j.
+- So 9.4 is the γ=id, θ=w slice of 32.3, as the text says.
+
+**(32.5) is correct.** Expanding N_θγ_*(τ_v*−I)η gives the four signed images exactly. Q is linear on H_1(X,Σ_z∪{s,t}), so a nonzero sum forces some image to have nonzero Q. The relative-versus-absolute distinction is kept: Q is applied to absolute z and N_θγ_*z, and to relative actual image classes.
+
+## Required corrections
+
+1. **SL2(Z) and strip transport (substantive).** For an arbitrary affine γ fixing s and preserving zeros, A_γ only preserves the lattice generated by Λ_abs and the periods from s to the zeros. That lattice may be a proper sublattice of Z², and nothing in 9, 21.1 or 26 shows otherwise. Without A_γ∈SL2(Z):
+   - γ need not map torus-lift v-strips to torus-lift A_γv-strips;
+   - γ need not preserve π⁻¹(0);
+   - so it need not preserve the regular physical corner lifts in Σ_c, and γ_*η need not be a legal one-corner event.
+
+   **Replace** "Its derivative A_γ lies in SL2(Z)" with:
+
+   > Assume A_γ∈SL2(Z), as holds for the group generated by the 9.5 lifts Φ_v. Since γ fixes s∈π⁻¹(0) and absolute periods lie in Z², path-independence gives π∘γ = f_{A_γ}∘π. Hence γ preserves π⁻¹(0)⊇Σ_c and maps torus-lift v-strips to torus-lift A_γv-strips of equal degree.
+
+   Legality of all four images then follows:
+   - their open halves avoid π⁻¹(0);
+   - s and t are fixed;
+   - the corner maps to a true zero;
+   - π-sectors are preserved, because a linear map sends embedded half-planes to half-planes.
+
+2. **Converse wording.** "All these averages agree" overstates what follows. Replace it with: "for each such (v,θ,γ), Avg_{γD_t}f_θ = Avg_{γD_s}f_θ." State also that the group must contain the compositions Φ_θγτ_v, γτ_v and Φ_θγ.
+3. **Wall-parallel step.** Cite its two inputs explicitly:
+   - Q-invariance under the axis group G, from 9.2 item 2;
+   - the Section 5 power avoiding at most four wall lines.
+
+   This is an input to the step, not something re-verified here.
+4. **Control script.**
+   - `left==right` is an algebraic tautology, since the intersections are defined as m·A. It checks the substitution in (32.4), not (32.2) or its signs.
+   - The zero-mean assert holds trivially, because Qcore=[1,−1] is prescribed.
+   - The four-term basis check assumes γ=id.
+
+   These are acceptable as arithmetic controls, but the write-up should not present them as tests of (32.2).
+
+## Items checked and unchanged
+
+- Actual S/T labels, π-sectors and the relative/absolute split are preserved throughout.
+- Section 32 never assumes that cylinder cores span homology.
+- No universal strip separation is claimed.
+- Rejecting the broad review's spanning claim and its hidden-symmetry claim is appropriate.
+
+The remaining open obligation is unchanged: for an arbitrary specified pocket, an actual bounded seed with a nonzero contrast must still be shown to exist.

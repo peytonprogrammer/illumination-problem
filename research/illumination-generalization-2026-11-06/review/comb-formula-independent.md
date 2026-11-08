@@ -1,0 +1,15 @@
+# Independent acceptance of the all-integer comb stretch formula
+
+Verdict: ACCEPT the complete explicit formula for every integer n>=0 in the supplied20wall five-tooth comb, for its specified actual pair ONLY. The conclusion is direct all-parameter illumination in this family, stronger than an eventual propagation assertion. It is not all-pair illumination of all such combs or of arbitrary20wall rooms.
+
+The spine and five teeth have positive dimensions at every n>=0; the supplied maximal cycle is strictly simple with20walls and integer axial sides. S_n=(8+2n,2) and T_n=(8+2n,34) are distinct actual even-even interior marks, each staying distance12 from its far tooth end and strictly between the tooth's horizontal walls.
+
+Bottom indices k=0,...,3+2n have4+2n entries. The first point is(15/2+2n,4), with incoming vector(-1/2,2). Consecutive contacts differ by(-1,+/-4), reversing only vertical speed at each alternating genuine ceiling/floor. Every abscissa is between9/2 and15/2+2n, strictly to the right of the true reflex x4 and to the left of20+2n. Since3+2n is odd, the final bottom point is exactly(9/2,0), independent of n.
+
+From that floor point to(0,18) the vector is(-9/2,18), the correct post-floor direction. It crosses x4 at height2 strictly inside the bottom mouth. Its remaining portion lies strictly in the spine until the smooth wall x0,y18. Reflection there changes horizontal sign only. The next vector to(9/2,36) is(9/2,18); it crosses x4 at height34 strictly inside the upper mouth. Between the two portal crossings the ray stays in x<4, so it neither uses an artificial cap at any middle tooth nor hits any reflex endpoint. The intervening point(0,18) is in the relative interior of the actual long left wall.
+
+Upper indices have the same4+2n count. Consecutive vectors are(1,+/-4) and reflect at genuine y36/y32 walls. Their abscissae remain in the same strict range. The final contact is(15/2+2n,32); the vector(1/2,2) reaches the exact actual T_n with the correct post-floor direction. The total number of ordinary reflections is(4+2n)+1+(4+2n)=9+4n. No corner or target limit is approached in this argument; it is exact for each integer parameter. The only last-leg target encounter is the stated one because all preceding upper abscissae are smaller and the central ray crosses height34 at x4.
+
+comb-formula-independent-check.py reconstructs the actual polygon and complete formula paths independently of peer code. Prescribed n=0,1,3,10 controls pass1920complete wall/leg comparisons and92actual reflections, checking smooth contacts, specular velocity, all corners, exact endpoints and no earlier target. These finite controls corroborate the universal hand proof; they are not its quantifier justification. No discovery search or additional geometry family was used during this review.
+
+The earlier own33reflection search witness is redundant supporting evidence and is not used for this acceptance. Its effort was stopped upon discovering the peer's earlier frozen tree theorem and stronger formula. No inference about all other marks or dimensions is made. Full uncapped W21 remains OPEN.

@@ -1,0 +1,81 @@
+Independently audit this new billiard proof. We need mathematical correctness, not encouragement. Work symbolically; do not propose searches. Look for a counterexample or a gap, especially in threshold equality, horizontal unfolding, premature portal crossings, outer-wall bottom corner coincidences, determinant/sign matching, shared vertical contacts, and endpoint reflection at the notch midpoint. Distinguish a real gap from a cosmetic omission. Conclude ACCEPT, REJECT, or UNRESOLVED with precise reasons. No novelty assertion is being made. This is the whole proposed theorem; do not assume any earlier results except elementary rectangular unfolding.
+
+## Two-phase theorem: every single boundary blocker is avoidable
+
+Let a,M,c,H>0 with c<H, A=2a+M, and let the U room be
+
+    [0,A] x [0,c] union [0,a] x [c,H] union [a+M,A] x [c,H].
+
+Take s=(x,y),t=(A-x,y), with0<x<a and c<y<H. For every smooth boundary point z there is a finite, corner-free billiard connection s to t avoiding z. In fact three explicitly constructed paths have no common boundary contact. This is a theorem for real parameters, not a claim about arbitrary U-room pairs or arbitrary finite blocker sets. Independent peer review is pending.
+
+### Available arm lengths
+
+A horizontal unfolding of the left arm reaches the portal x=a after one of the lengths
+
+    L_minus(n)=a-x+2na,     L_plus(n)=a+x+2na,    n>=0.
+
+The minus phase starts right; the plus phase starts left. Given any threshold T>=0, take the first length of each phase strictly greater than T. Both lengths lie in(T,T+2a], are distinct, and differ by less than2a. Explicitly, for base length ell=a-x or a+x,
+
+    n=max(0,floor((T-ell)/(2a))+1),  L=ell+2na.
+
+The nearest earlier encounter with the inner wall x=a, when one exists, is2a units before the final portal. The nearest outer-wall encounter is a units before it. These are distances in the horizontal unfolding.
+
+### Two bottom-centered connections with disjoint vertical contacts
+
+Put h=M/2 and Y=y/c>1. Use threshold T_B=h(Y-1), selecting both arm phases as above. For each selected L set
+
+    beta_B=y/(L+h),     u_B=yh/(L+h).
+
+The developed ray descends from height y to0 over total horizontal distance L+h. In the arm fold its horizontal coordinate into[0,a]; then pass through(a,u_B) and reflect at the bottom midpoint z_B=(A/2,0). Continue by vertical reflection and time reversal of the left half to t.
+
+Since L>T_B, 0<u_B<c. If an earlier inner-wall encounter exists, its height is
+
+    y(h+2a)/(L+h) > c,
+
+because L<=T_B+2a<T_B+2aY. All arm heights are strictly positive and less than H, so no other corner or horizontal wall is hit. Thus both paths are valid and their sole horizontal contact is z_B.
+
+Their vertical contacts are disjoint. A left outer-wall contact has remaining arm length r=(2j+1)a, and a left inner-wall contact has r=2ja with j>=1. Its height is
+
+    v=y(h+r)/(L+h).
+
+For two paths hitting the same vertical-wall point at height v,
+
+    r_1-r_2=(v/y)(L_1-L_2).
+
+For the same wall r_1-r_2 is a multiple of2a. But0<v<y and0<|L_1-L_2|<2a, so its magnitude is less than2a. It must be0, which would force L_1=L_2, a contradiction. Right-arm contacts obey the same argument by symmetry. Left and right vertical walls are distinct since M>0. Therefore the common boundary-contact set of these two paths is exactly{z_B}.
+
+### A notch-centered connection avoiding z_B
+
+Use threshold T_N=h(Y-1)/2. Take the first length of each phase strictly greater than T_N. At most one equals K=hY. Choose either one that does not equal K and write it L. Set
+
+    beta_N=(y+c)/(L+h),     q=y-beta_N*L=c(K-L)/(L+h).
+
+In the horizontal unfolding let the vertical coordinate be y-beta_N*d, where d is distance traveled. Fold this coordinate by absolute value and fold x into the arm until distance L. Then continue in the lower passage to the notch midpoint z_N=(A/2,c), which has developed height -c. Reflect at z_N and take the mirror-reversed left half to t.
+
+The portal is strict: q!=0 since L!=K, and |q|<c since L>T_N. Thus its physical height |q| lies in(0,c). The arm has exactly one possible horizontal reflection, at developed height0. It occurs either inside the arm or in the lower passage before z_N; it cannot be at the central bottom point because the half-path remains strictly left of x=A/2 until z_N.
+
+Check all earlier inner-wall encounters. The last one's signed height, if present, is
+
+    e_inner=y-beta_N*(L-2a).
+
+The condition e_inner>c is equivalent to
+
+    L<T_N+a(Y+1).
+
+It holds because L<=T_N+2a and Y>1. All earlier inner-wall encounters are higher still, so none exits prematurely through the low portal or hits a reflex corner.
+
+Check an outer-wall/bottom coincidence. The last outer encounter, if present, has signed height
+
+    e_outer=y-beta_N*(L-a).
+
+It is positive exactly when L<K+a(Y+1). This follows from L<=T_N+2a, since
+
+    K+a(Y+1)-(T_N+2a) = h(Y+1)/2+a(Y-1) > 0.
+
+All earlier outer encounters are higher. Thus a bottom hit inside the arm occurs strictly after its last vertical-wall hit and strictly before its final portal. It cannot hit a bottom corner. A bottom hit in the lower passage is also smooth because |q|>0 and the central endpoint has height c. Physical heights in the arm never exceed y<H; the open passage segment has height less than c. The notch endpoint lies strictly inside its horizontal wall. All folds obey specular reflection and only finitely many walls are hit. This proves validity, including the exact resonance case K equal to one phase length.
+
+### Singleton removal
+
+If z!=z_B, at least one of the two bottom-centered paths avoids z because their only common boundary contact is z_B. If z=z_B, use the notch-centered path. All three avoid every actual room corner. This proves the theorem.
+
+The proof also gives a fixed three-path certificate for the absence of any singleton boundary blocker for each room/mark pair in this symmetric family. It does not imply that two or more boundary blockers can always be removed.

@@ -1,0 +1,121 @@
+A hand proof closing the four-interior-A-point branch
+3 November 2026
+
+Result
+In the strictly simple canonical 45-degree triangle model, any room with
+exactly four interior A points and k<=6 has W>=22. No darkness assumption
+is needed. This branch now has a hand proof: neither the three O/T/S CNF
+refutations nor the finite enumeration proving b(F)>=8 is needed for it.
+The remaining I2/I3 illumination proof remains computer-assisted.
+
+Notation and existing identity
+Use the exact class and definitions in ../restricted-theorem-note/theorem.txt.
+I = all interior A points; J = interior B/C points; s_N = smooth boundary
+B/C points; k=J+s_N. Each smooth boundary A contributes 3 to Q; each A
+corner contributes its incident canonical-triangle count to Q.
+If N is the triangle count and s_A counts smooth boundary A points,
+Euler and incidence at A give respectively
+  N=2(I+J)+W+s_A+s_N-2,
+  N=8I+Q+s_A.
+Subtracting gives
+  W = 2+6I+Q-2J-s_N,
+and therefore
+  W+2k = 2+6I+Q+s_N.                          (1)
+Here F is the set of full A cells in coordinates A/2. Let N(F) be all
+axis-neighbor cells, and let b(F)=|N(F) minus F|.
+The checkerboard coloring below is a coloring of these CELL coordinates;
+it is not the A/B/C coloring of vertices in the original triangle tiling.
+
+1. Row/column expansion lemma
+For any nonempty finite S in Z^2, let m=|S|, r be its number of occupied
+rows, and c its number of occupied columns. Then
+  |S+{0,1}^2| >= m+r+c+1.                      (2)
+Proof. First adjoin a horizontal translate: H=S union (S+(1,0)). In every
+occupied row, a point one past the rightmost point is new, so |H|>=m+r.
+H has at least c+1 occupied columns: its column set contains the c columns
+of S and one beyond their maximum. Now adjoin a vertical translate of H.
+Every occupied column of H supplies a point above its maximum, so
+|H union (H+(0,1))| >= |H|+(c+1) >= m+r+c+1.
+This union equals S+{0,1}^2. No connectivity or gap-free-row assumption
+was used. Since m<=rc, the relevant consequences are
+  m=1: r+c>=2, hence at least 4 points;
+  m=2: r+c>=3, hence at least 6 points;
+  m=3: r+c>=4, hence at least 8 points;
+  m=4: r+c>=4, hence at least 9 points.        (3)
+
+2. Neighbors of a single checkerboard color
+Let E be m grid points with x+y even. Set
+  u=(x+y)/2, v=(x-y)/2.
+These are integer coordinates. Give each odd neighbor coordinates
+  u'=(x+y-1)/2, v'=(x-y-1)/2.
+The four neighbors of an even point (u,v) then have coordinates
+  (u,v), (u-1,v), (u,v-1), (u-1,v-1).
+Thus their union is an integer translate of S+{0,1}^2, where S is the
+image of E. The bound (3) applies. Translating the original grid by (1,0)
+swaps colors, so the same bound applies to m points of the odd color.
+Write f(1)=4, f(2)=6, f(3)=8, f(4)=9 for these lower bounds.
+
+3. Four-cell external-neighbor bound
+Let F have four points, with a of one color and 4-a of the other.
+Neighbor sets of the two color classes have opposite colors and are
+disjoint. If both classes are nonempty, deleting points of F from their
+union removes at most four points. Therefore:
+
+  Color split (up to swap)   Neighbor-union lower bound   External bound
+  4+0                       9                           9
+  3+1                       8+4=12                      12-4=8
+  2+2                       6+6=12                      12-4=8
+
+In the 4+0 case, no neighbor lies in F, so nothing is subtracted.
+These splits exhaust all possibilities, proving
+  b(F)>=8 whenever |F|=4.                     (4)
+This is valid for disconnected sets and does not classify equality cases.
+It replaces the finite boundary proof in global-route-review/findings.md
+section 4 for the lower bound alone.
+
+4. Charge the external neighbors to the room
+For completeness, repeat and check the support-sensitive argument in
+argument.txt. Every external neighbor cell is occupied partially or empty.
+An occupied partial cell has its center A on the physical boundary, with
+a nonempty proper contiguous fan (strict simplicity excludes separate
+fans). It supplies at least one unit to Q: 3 if smooth, its positive
+incident triangle count if a corner. Distinct cells have distinct centers.
+For an empty external neighbor choose one adjacent full cell. Their common
+side midpoint C lies on a smooth physical wall: on the full side all
+incident triangles are present and on the empty side they are absent.
+It therefore contributes one to s_N. Distinct empty cells have distinct
+chosen midpoints, since a midpoint determines a unique adjacent cell pair
+and that pair has exactly one empty member. These C points are separate
+from the A-center charges. Consequently
+  Q+s_N>=b(F).                                (5)
+No assumption about the target marks or a billiard path enters this step.
+
+5. Wall bound
+Combining (1), (4), and (5), for I=4 we obtain
+  W+2k = 26+Q+s_N >= 26+8=34.
+At k<=6 this forces
+  W>=34-2k>=22.
+Hence no room with W<=21 and k<=6 can have four interior A points.
+The three O/T/S supports are covered simultaneously, as are all other
+four-point supports, without needing their equality classification.
+
+Verification and scope
+Author hand check: both parity-coordinate neighbor lists checked directly;
+the expansion argument checked separately for horizontal/vertical growth;
+all three color splits and the internal-neighbor subtraction checked;
+physical smooth-midpoint injection and Euler algebra checked against the
+existing theorem definitions. No computation, solver, enumeration, ray
+search, or certificate replay was run for this argument. No fresh
+independent peer review has been received. The existing peer review request
+for the charging lemma remains pending; this proof adds the hand boundary
+lemma and does not claim an independent review.
+
+What this changes
+The I4 portion of the restricted theorem can now be replaced by sections
+1-5 here. Its three historical certificates remain valid evidence but are
+logically unnecessary. The 61 I2/I3 cases still depend on their existing
+computer-assisted support reduction and verified refutations. This result
+does not establish a universal 22-wall lower bound, remove k<=6, or force
+illumination outside the fixed lattice class. Further research requires a
+darkness-dependent geometric constraint; this branch needs no further
+O/T/S case analysis.

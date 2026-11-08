@@ -1,0 +1,316 @@
+Second-surplus three-star L rooms: hand structural and optical reduction
+4 November 2026 — restricted Codex01a1a00f
+
+RESULT AND STATUS
+CURRENT UPDATE: FULL Delta2 ILLUMINATION CLOSED. The structural reduction
+below received independent HAND ACCEPT; peer optical-closure.txt closes
+all four residual families, independently HAND ACCEPTED in our
+closure-review.txt/check.json. Earlier open-residue statements below
+record the completed reduction stage, superseded as status by section11.
+
+Fix the full A stars H at S=(0,0),U=(2,0),T=(2,2), with no other interior
+A points, and Delta=Q+s_N-8=2. All rooms are strictly simple canonical
+45-degree triangle disks. The following is a complete NECESSARY reduction
+of potentially dark rooms, with static local checks PASS. Independent
+hand challenge is requested; none has yet been received for this layer.
+
+1. All geometry of a potentially dark room remains in the SAME seven
+neighbor cells. A remote extension would cost at least3surplus units.
+2. The entire all-single-cap branch and the one-unit-defect-plus-extra-
+smooth-B branch illuminate by existing paths. No new directions needed.
+3. The two remaining geometric forms initially have one e=2 cell or two
+e=1 cells, with no extra smooth B/C points. The one-cell possibilities
+are14three-triangle fans and6smooth-A rectangles; these are LOCAL types,
+not20rooms. The two-cell possibilities use distinct unit two-triangle
+fans with compatibility restrictions, not independent arbitrary choices.
+4. More inherited optical reasoning eliminates all6rectangles, most
+triples and all but four mixed two-defect patterns. Remaining:
+ four single-cell triple patterns, paired by sigma into2families;
+ four mixed centered/outer two-cell patterns, into2families.
+Thus FOUR reflection families remain, with ordinary caps still variable.
+No dark example or full Delta2 illumination theorem is claimed.
+
+At W<=21,k<=6 the necessary budget pairs are only(18,6),(20,5).
+Every residual has J=3,s_A=0 and respectively31or32triangles. These
+are necessary ledgers, not existence or darkness claims.
+
+1. Exact two-unit slack decomposition
+For a partial A cell v write d(v) for the number of exposed H sides it
+touches with an occupied triangle, q(v)=m(v) except q=3 for a smooth
+four-triangle A fan, and e(v)=q(v)-d(v)>=0. Let M be the uncovered
+exposed-side C midpoints of H and b=s_N-|M|>=0. Then
+ 2=sum_v e(v)+b.
+The possibilities are exhaustively
+ A: all e=0, b=2;
+ B: one e=1, b=1;
+ C1: one e=2, b=0;
+ C2: two distinct e=1 cells, b=0.
+Any N fan containing the central bridge Nb+,Nr- directly lights ST;
+handle it first. Henceforth it is absent.
+
+Every zero-excess partial cell is an ordinary single cap facing H.
+It has exactly one BC cell-crossing edge, already used toward H. It
+cannot provide a route through the cell to another partial cell. This
+is the fixed-support analogue of the paper's forced wing neighborhood;
+the strict corner condition itself is NOT being assumed for our rooms.
+
+2. Locality at surplus2: a remote leaf forces an extra smooth C
+Because the room is a strictly simple disk, its tile dual graph is edge
+connected. A path from H to any occupied partial cell can therefore be
+chosen through edge-adjacent occupied A cells. An intervening zero-
+excess cell cannot lead farther out, by the previous BC-edge observation.
+
+If a d=0 cell were the only positive-excess cell, no ordinary cap could
+join it to H. This excludes a solitary e=1 remote cell in B and a solitary
+e=2 remote cell in C1 (the latter has q=2, a two-triangle fan).
+In C2, a remote cell has q=e>=1. Both positive cells cannot have d=0,
+since an initial zero-excess cap cannot lead from H to either. With
+only2units available, the only remaining possibility is a d=1,e=1
+parent and a d=0,e=1 single-triangle leaf immediately across one of
+its outer BC edges. The parent is a two-triangle fan. Its centered
+orientation uses both BC edges toward H, so only a quarter orientation
+can supply the needed outer edge.
+
+The quarter parent supplies one right-angle quadrant at the C endpoint
+of that outer BC edge; the remote leaf supplies the adjacent quadrant.
+Neither A cell at this C is full, so H supplies no quadrant there.
+The two occupied quadrants fill a half-plane: this is a SMOOTH boundary
+C point outside M. No other triangle at that C is available in the two
+fixed fans, and no other A cell can meet that C. Hence b>=1 in addition
+to e(parent)+e(leaf)=2, giving Delta>=3, contradiction.
+A longer nonzero-cell chain already uses at least3excess units.
+
+Thus every potentially dark Delta2 room lies in H plus the seven
+neighboring A cells
+ L=(-2,0),B=(0,-2),D=(2,-2),R=(4,0),
+ E=(4,2),Tcap=(2,4),N=(0,2).
+This is a hand connectivity/valence argument, not a radius assumption.
+The static check independently constructs the14quarter parent/leaf
+local joins and verifies the unavoidable two-quadrant smooth C.
+
+3. One e=1 cell: same22local types, and b is a smooth B
+With locality proved, the single unit cell is a d=1 two-triangle fan.
+The d=2,e=1 possibilities at N contain the direct bridge and were
+already removed. Thus there are8centered and14quarter orientations,
+exactly the previous22local types.
+No C outside an H side can become smooth from this one fan: a centered
+fan's complete C pair faces H, and a quarter fan supplies only one
+quadrant at each of its C points. Ordinary caps use their only C at
+an H side. Therefore b=1 in B means exactly one smooth B, not a new
+smooth C. Similarly in A, b=2 consists of two smooth B points.
+
+4. Stronger optical lemma: a single unit fan illuminates even with smooth B
+The previous optical proofs for all-single-cap rooms, noncritical unit
+fans, outer square fans and centered L/T fans do not use the prohibition
+on smooth B points. They apply unchanged to A and to those cases of B.
+The only apparent dependence was the centered-B six-path needing Nb-
+absent. That can now be removed by a two-path cover:
+
+First use old1/4/new3necessities to force E-,L+,T- for hypothetical
+darkness in centered B. These other cells are ordinary single caps.
+If Nb- is absent, the existing six-path works; T+ is excluded by T-.
+If Nb- is present, it is the ONLY N cap. Then the old sigma13path
+works: it needs L+,E-, and its forbidden alphabet caps L-,E+,T+,Nr-,Nr+
+are all absent by the SINGLE-CELL slot rules, not by smooth-B counting.
+Its other forbidden tiles are the outer L/E mates, also absent. In
+particular L- is excluded by L+ already; no extra smooth-B assumption
+is needed. Sigma handles centered E.
+
+Consequently ANY room of this cap geometry with at most one unit fan
+illuminates, even with arbitrary permitted smooth B points. This closes
+both A and B at Delta2. It strengthens the first-layer optical scope;
+it does not yet address two defects or larger single fans.
+
+5. One e=2 cell:20local possibilities before optical reductions
+In C1, d=0 was excluded and d<=2. At d=2 the required q=4 is impossible:
+the only m=4fan has q=3, while m>=5 has q>=5. Therefore d=1,q=3.
+The cell is either m=3 or a smooth m=4 A half-star.
+
+Because b=0, a complete pair of occupied right-angle quadrants at a
+C away from H is forbidden: it would be an extra smooth C. Ordinary
+caps cannot add triangles there, since that C is between two nonfull
+A cells. So every complete C pair of the exceptional fan must face H.
+
+For m=3 there is exactly one complete C pair. It must be the full-
+facing pair, with the third triangle extending around one end. There
+are two orientations per exposed H side, except at N the two inward
+extensions touch both H sides and contain the direct bridge. Thus
+8*2-2=14three-triangle local fans remain. Two are at N.
+For m=4, the fan either has two complete C pairs or one central pair
+and two single quadrants. The former forces an outside smooth C and
+is excluded. The latter must place its single complete pair toward H:
+it is the full-width2-by1 rectangular pocket beyond that side, whose
+A midpoint on the far wall is smooth. Its A weight is3, not4. At N
+both such rectangles contain the direct bridge. Thus6rectangles remain.
+
+The local table checks all62nonbridge e=2,d>=1 fans in the seven cells;
+42force an outside smooth C and are excluded, leaving14+6=20. This
+is only a table of ONE contiguous fan at a time, not assembled rooms.
+
+6. Two e=1 cells and compatibility
+In C2 both cells are distinct, lie in the seven neighbors, and each
+is one of the22unit two-triangle fans. Other cells are ordinary caps.
+Both extra triangles of two quarter fans cannot join across a non-H
+side: if they share a BC half-edge they make an extra smooth C;
+if they occupy opposite quadrants at that C they make a boundary pinch.
+The first violates b=0, the second strict simplicity. There are no
+other ways to fill the C, since neither fan has a pair on that outer
+side. Thus outside-H C contacts must be absent in this branch.
+
+All affected B vertices are existing B vertices of H. Their occupied
+fans must be contiguous and nonsmooth. Full B at the central notch
+means the direct bridge. A convex B has only2core triangles and at
+most2from each neighboring partial cell, hence cannot be interior.
+At a flat B, becoming interior requires two adjacent quarter fans each
+contributing2triangles. They would also join across their common outer
+C, already excluded above. Thus no NEW interior B occurs in C1/C2.
+These compatibility conditions are required for a valid room; this
+note does not assert every formally chosen pair/cap choice is feasible.
+
+7. Exact ledgers
+In potentially dark C1/C2 rooms every smooth non-A point belongs to M;
+there is no smooth B and no extra smooth C. Let c count the new interior
+C points on H sides and a the smooth A points. Then J=2+c and
+ N_triangles=24+Q+a, s_N=10-Q,
+ k=12+c-Q, W=6-2c+2Q, W+2k=30.
+For A/B the same J and Q formulas below give their Delta2 ledgers.
+Let n be the number of other ordinary single-cap cells, excluding all
+exceptional cells in the corresponding row:
+
+ branch                Q       J  s_A  triangles    k         W
+ A allsingle           n       2   0   24+n        12-n      6+2n
+ B centered+b1         n+2     3   0   26+n        11-n      8+2n
+ B quarter+b1          n+2     2   0   26+n        10-n     10+2n
+ C1 triple             n+3     3   0   27+n        10-n     10+2n
+ C1 rectangle          n+3     3   1   28+n        10-n     10+2n
+ C2 two unit fans      n+4   2+c   0   28+n       8+c-n    14-2c+2n
+
+In C2, c=0,1,2 according to how many fans are centered. The only
+W<=21,k<=6 pairs are(18,6),(20,5), since W+2k=30 and W is even.
+The corresponding necessary n ranges are A6/7; Bcenter5/6;
+Bquarter4/5; C1triple/rectangle4/5; C2 n=2+c or3+c.
+These ledgers do not imply any listed geometry is dark or even feasible.
+
+8. Inherited optical reduction for C1
+Noncritical D/R triple or rectangular fans cannot touch the forbidden
+tiles of either old13path, which lie at B/L/E/T or N. Both critical
+cells stay ordinary, so the old force-to-R and N-single two-path cover
+works. Each of the two allowed N triples lies wholly in the bottom or
+right N blocking set, never both; the opposite13path works. Thus all
+8noncritical C1 local types illuminate.
+
+For each critical rectangle, b=0 forces a neighboring cap to repair an
+otherwise smooth convex B. The necessary repairs are
+ Lrectangle: B- and Nb-;
+ Brectangle: L-;
+ Erectangle: T+;
+ Trectangle: E+ and Nr+.
+Lrectangle therefore has B+ absent (B is single) and lights by old1;
+Trectangle has E- absent and lights similarly. Brectangle has L+
+absent: if E- is absent use old1, otherwise old reflected4. Erectangle
+is its sigma counterpart. Hence ALL6rectangles illuminate.
+
+For triples there are two extensions at each critical cell. One forces
+the same conflicting ordinary cap and illuminates:
+ L lower extension forces B-; B left extension forces L-;
+ E upper extension forces T+; T right extension forces E+.
+The other four triple patterns remain at this stage. They consist of
+the centered pair plus the outer mate of the critical cap:
+
+ L triple = L-,L+, conv{(-2,0),(-2,1),(-1,1)}; requires Nb- repair.
+ B triple = B-,B+, conv{(0,-2),(1,-2),(1,-1)}.
+ E triple = E-,E+, conv{(3,1),(4,1),(4,2)}.
+ T triple = T-,T+, conv{(1,3),(1,4),(2,4)}; requires Nr+ repair.
+
+Sigma pairs B/E and L/T. These are2remaining reflection families,
+not four individual rooms. Their other ordinary caps remain variable.
+
+9. Inherited optical reduction for C2
+If both defect cells are noncritical D/R/N, the old13pair still covers:
+D/R do not affect either path; an N unit fan can block only one set.
+If exactly one cell is critical, its old single-defect proof still
+works with the other noncritical fan. Square exchange needs only its
+N blocker split; centered L/T3paths have no noncritical requirements;
+centered B/E6paths have no D/R condition, and if N contains Nb- its
+unit fan lies on the N-bottom side, leaving sigma13 intact. The old
+short paths handle a critical orientation omitting its critical cap.
+Thus both defect sites must be distinct members of B,E,L,T.
+
+At these four sites old1 plus old4 or the modified2/3short cap paths
+force the critical triangle of EACH cell, even when both cells have
+unit defects. For B/E a centered pair or active square has the proved
+same outgoing cap state; the roof contact opposite T-/L+ is exposed
+if that triangle is absent. Thus each defect is centered or active outer.
+
+Two OUTER defects illuminate: apply the square-return exchange at every
+affected trip of old13/sigma13. Disjoint excursions retain identical
+exit data and compose. The two N blocking sets remain disjoint, and N
+is ordinary single. One provided static check replaces both B/T trips
+simultaneously:9reflections, exact implication PASS.
+
+Two CENTERED defects also cannot be dark:
+ - L+B produces smooth B=(-1,-1), so is impossible at b=0. E+T is
+   its sigma image.
+ - L+E or L+T is illuminated by the centeredL3path (B remains single).
+   T+B is the corresponding centeredT3path (E remains single).
+ - B+E forces L+,T- in ordinary cells. Then no-smooth-B excludes Nb-,
+   so the existing centeredB6path works, independently of E's pair.
+These cover all distinct centered-site pairs; plus signs in this
+paragraph join CELL NAMES, not the individual cap labels.
+
+For one CENTERED and one OUTER defect:
+ - Centered L works by its3path unless the outer site is B. Centered
+   T works unless the outer site is E; their other possible outer
+   sites do not affect the3path requirements.
+ - Centered B with outer E uses the6path; L is ordinary and excludes
+   Nb- by no smooth B. With outer T, replace the6path's top triple
+   by one far-wall reflection. The resulting4path has the same exit
+   and target, and needs only Nb- absent. Exact fixed substitution PASS.
+   Centered E has the sigma statements.
+The ONLY remaining mixed patterns are therefore
+ centered L + outer B,
+ centered T + outer E,
+ centered B + outer L (which forces ordinary Nb- repair),
+ centered E + outer T (forces ordinary Nr+ repair).
+They form2sigma families. Other ordinary cap choices are free subject
+to validity, b=0 and the budget; no darkness claim follows.
+
+10. Current residue and verification boundary
+The4single triples and4mixed local patterns are FOUR sigma families.
+All have J=3,s_A=0. At the two budget pairs their ledgers are respectively
+ (W,k,N_triangles,Q,s_N,J,s_A)=(18,6,31,7,3,3,0),
+                             (20,5,32,8,2,3,0).
+No proof these families are illuminated (or dark) is supplied here.
+No stronger wall bound follows until they are excluded.
+
+local-fans.py/json validates the complete one-cell fan counts,14remote
+leaf-join obstructions, critical convex-B repairs, required/forbidden
+sets of already provided paths and two explicit square substitutions.
+The locality, exhaustive slack/case reduction, compatibility and optical
+family implications are hand arguments in this note. No whole-room or
+cap-assignment enumeration, new path/direction/word discovery, guard
+lookup/projection, occupancy solver, worker or external action occurred.
+This is parent hand proof plus static exact checks with reused geometry
+code; separate-session independent HAND challenge is still requested.
+The universal arbitrary-polygon goal remains paused.
+
+
+11. Final optical closure independently accepted
+The peer second-surplus-review/optical-closure.txt closes all four residual
+families via a new positive-source-roof square5path plus old Lsquare11,
+centerL12 and sigma13fallbacks. Source roof Nb+ absent permits5; Nb+
+present makes N bottom-facing, leaving both right-facing N mirrors free.
+The Ltriple and centeredB+outerL require Nb- repair and use Lsquare11;
+extra L-/B- do not spoil it. All extra triangles/old mirrors checked.
+Independent HAND review ACCEPTS the complete proof, no corrections.
+Own closure-review.txt/check.py/json/coverage records the six exhaustive
+family branches, strict5beam interval and actualtargetequation, local
+repair counts, exact four-path requirements and sigma PASS.
+
+The entire Delta2 fixedI3L layer now illuminates within13reflections.
+Together with earlier layers, Q+s_N<=10 suffices; darkness needs
+Q+s_N>=11,Delta>=3,W+2k>=31,onlyW>=19atk<=6 for this support.
+No W/kcap was needed for the hand theorem. The four families in§10
+are now illuminated, not an open residue. No higher-layer campaign or
+universal22claim follows. Peer owns active-goal completion and GOALS.md;
+its final independent acceptance is posted to the shared board.

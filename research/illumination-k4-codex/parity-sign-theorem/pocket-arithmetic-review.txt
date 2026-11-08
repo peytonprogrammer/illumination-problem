@@ -1,0 +1,80 @@
+# Review of §17 (rational/irrational dichotomy) and §18
+
+**Verdict.** The dichotomy holds, but two things need fixing. The irrational direction is rigorous as written. The rational direction reaches the right conclusion with an imprecise justification. As written, it fails for odd numerators under your even-diagonal convention. The frozen-word algebra checks out exactly. I recommend tightening several scope statements, listed below.
+
+## 1. Frozen-word algebra (checked by hand)
+
+With D_t: (x,y) ↦ (y+t, x−t) and H_t: (x,y) ↦ (x, 4−2t−y):
+
+- **D_t H_t** is (x,y) ↦ (4−t−y, x−t). This is a quarter-turn about A₀(t) = (2, 2−t), as it should be: D and H meet at A₀ at angle π/4.
+- **G_t = (D_t H_t)²** is (x,y) ↦ (4−x, 4−2t−y). This matches the stated formula and is the halfturn about A₀(t).
+- **D_t H_t D_t** is the reflection in D_t(H_t). That line is x = 2, independent of t. So V₁·(DHD) is the translation (−2, 0), constant in t. Conjugating by D_t gives (0, −2). This confirms the §10 periods are constant.
+- **W = V₁H₀** is z ↦ −z + (2, 0), the halfturn about (1, 0).
+- **W G_t** is the composite of two halfturns, so it is the translation 2·((1,0) − (2, 2−t)) = (−2, −4+2t). This matches (6), ba = (−2,−4) and da = (0,2).
+
+The halfturn-centre reading is a useful cross-check to add to the text. The variable period is literally twice the displacement of the moving A-vertex from a fixed lattice point. That makes the dichotomy transparent: it is the question of whether A₀(t) is a rational point.
+
+**Subtraction step.** (−2, −4) = −(2,0) − 2(0,2), so (0, 2t) lies in the period group. Correct.
+
+## 2. Is the variable closed-loop period realizable?
+
+Yes, as a homology period. Not as a geodesic, and the text correctly does not claim one.
+
+In the D4 unfolding, a word e₁…e_k leads from copy *id* to copy r_{e₁}…r_{e_k} (linear part). The loop closes in the surface exactly when that linear part is I. Its holonomy is the translation part of the affine composite. This needs only that:
+
+- every crossing is through an open edge of positive length, and
+- consecutive crossings can be joined inside P. This holds because P is connected.
+
+Nothing about straight-line itineraries is needed.
+
+**Scope notes:**
+
+- **V₁ is not a "fixed wall" in the segment sense.** Its line x = 1 is fixed, so dh = 0 is right. But its segment ends at B₀(t) = (1, 1−t), so its length changes with t. Likewise, the "fixed vertical wall portions above/below the portal" cannot literally be fixed segments: the portal endpoints move along x = 1. Say "fixed supporting lines". State the size bound on |t| explicitly: both adjacent x = 1 edges keep positive length, and the polygon stays simple.
+- **"Same material homology class at small t" is unused by the proof.** For each t, the loop is constructed directly on X_t. The Gauss–Manin transport claim needs combinatorial stability and is unnecessary here. Drop it, or mark it as a remark.
+- **The conjugate word in the checker contains a backtrack.** wy = (2,1,2,3,2,2) ends in D D. As a map that is fine. As a loop, reduce it to D V₁ D H.
+
+## 3. Does a torus cover require a discrete absolute period group?
+
+Yes, and the converse also holds, which is the better tool for the rational case.
+
+- **Forward.** If f: X → ℂ/L is a (branched) translation cover, then ω = f\*dz. Every absolute period of ω lies in L, which is discrete.
+- **Irrational case.** You do not even need pigeonhole. (0, 2) and (0, 2t) would both lie in L ∩ (y-axis), a discrete subgroup of ℝ, so t ∈ ℚ. Marked points do not matter, because absolute periods live in H₁ of the closed surface.
+- **Converse.** If the absolute periods form a lattice Λ, then integrating ω from a base point gives a well-defined map X → ℂ/Λ, which is a translation cover.
+- **Useful corollary for §17–18.** If X is not a torus cover, no translation quotient of X is either, since composing the covers would make X one. So the irrational-t conclusion transfers automatically to X's minimal translation quotient. State this explicitly, because §18 invokes the minimal-quotient alternative.
+
+## 4. Does rational t suffice for a coherent Gaussian tiling?
+
+Yes, but "scale to a common denominator" is wrong as stated.
+
+Under your conventions, A = (even, even), B = (odd, odd), and C = mixed parity. The mirror lines are x, y ∈ ℤ and x ± y ∈ 2ℤ. This is also why the checker can assert even translations.
+
+Take t = p/q and scale the grid by 1/q. The diagonal mirrors become x ± y ∈ (2/q)ℤ. But D_t requires y − x = −p/q, which lies on that grid only when p is even. **For odd p you must scale by 1/(2q).** Then:
+
+- all original walls (x, y ∈ ℤ and x ± y ∈ 2ℤ) and all moved walls lie on mirror lines of one crystallographic reflection group;
+- that group's label-preserving translation lattice is (1/q)ℤ²;
+- the scaled grid carries a coherent A-B-C labeling by similarity.
+
+That scaled labeling does not agree with the original canonical labels at integer points. So hypotheses like "no noncorner integer point is B or C" do not carry over to t ≠ 0. §17 does not use them, so this is harmless, but say so.
+
+**Cleaner proof to substitute.** P is a disk, so X has a cellular structure with 2-cells equal to the copies. H₁ is generated by 1-skeleton cycles, and each 1-cell has holonomy g·(v_{i+1} − v_i) with g ∈ D4. With rational vertices, all periods (even relative ones) lie in (1/N)ℤ². That set is discrete and contains 2ℤ², hence a lattice. By the converse in §3, X is a torus cover. No tiling is needed.
+
+## 5. Checker gaps (the algebra itself is right)
+
+- **Edge incidence is not checked.** Nothing asserts that the edges used by W actually lie on their stated lines with positive length. Add incidence checks n_i·V[i] = n_i·V[i+1] = h_i for V[0]–V[1] (y = 0) and V[1]–V[2] (x = 1).
+- **The controls at t = ±1/100 are purely algebraic.** No simplicity or edge-length check confirms that they lie inside the "sufficiently small" range. This includes the negative direction, which the theorem statement never explicitly admits. Either add those checks or relabel them as algebraic controls only.
+- **Naming collision.** The comment "V₁ D H D = V₁ V₂" uses V₂ for the reflection in x = 2. That line is not a wall, and V₂ is unrelated to `normals[2]` (which is D). Rename it.
+- **Redundant derivative check.** Translation parts are exactly affine in t because linear parts are t-independent. The text already says it does not rely on the controls, which is correct.
+
+## 6. §18 literature scope (theorem numbers not verified here)
+
+- **Match the object to the hypothesis.** Apisa–Wright's non-torus-cover hypotheses must be checked against the exact surface each theorem is stated for: the unfolding, the rotational quotient as a k-differential, or the forgotten-marked-points surface. The §3 corollary gives this for translation quotients of X. If Theorem 3.10 is phrased for the rotational quotient, add one sentence saying how "torus cover" is defined there and why nondiscrete periods on X exclude it.
+- **The rational side is consistent and empty.** At rational t, X is a torus cover, so the non-torus-cover theorems do not apply, and torus-cover classification says nothing about this pair. The text says this; keep it.
+- **The goal is not advanced.** §17 does not prove seed existence or illumination, and it does not touch the first-order midpoint seed. The closing paragraph correctly says so. The irrational-t periodic-point and minimal-quotient alternatives remain open for this fixed pair.
+
+## Summary of required edits
+
+1. Replace the rational-direction argument with either the 1/(2q) scaling or the cellular period-lattice argument.
+2. Change "fixed walls" to "fixed supporting lines", give the explicit |t| bound, and say whether negative t is in scope.
+3. Drop or demote the "same material homology class" sentence.
+4. Add the halfturn-centre interpretation and the minimal-quotient transfer corollary.
+5. Add incidence and positive-length assertions to the checker, and fix the V₂ naming.

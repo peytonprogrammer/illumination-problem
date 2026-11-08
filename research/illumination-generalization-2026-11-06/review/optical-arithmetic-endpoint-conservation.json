@@ -1,0 +1,34 @@
+{
+  "status": "PASS_EXACT_ABSTRACT_ENDPOINT_CONTROLS",
+  "balanced_but_target_missing": [
+    {
+      "copies": 1,
+      "total_length": "1",
+      "start_end_charges_balance": true,
+      "C_target_0": 0,
+      "C_quarter": 1,
+      "U_target_0": 1
+    },
+    {
+      "copies": 3,
+      "total_length": "3",
+      "start_end_charges_balance": true,
+      "C_target_0": 0,
+      "C_quarter": 3,
+      "U_target_0": 3
+    }
+  ],
+  "rotated_same_cyclic_structure": {
+    "total_length": "1",
+    "C_target_0": 1,
+    "target_phase_registration_matters": true
+  },
+  "long_window_endpoint_deficit": {
+    "C_target_0": 1,
+    "C_regular": 2,
+    "endpoint_multiplicity": 1
+  },
+  "physical_room_realization_claimed": false,
+  "global_coverage_proved": false,
+  "whole_goal_complete": false
+}

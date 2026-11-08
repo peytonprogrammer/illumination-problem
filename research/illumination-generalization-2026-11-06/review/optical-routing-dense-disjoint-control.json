@@ -1,0 +1,88 @@
+{
+  "status": "PASS_EXACT_ALL_INTEGER_COEFFICIENT_CONTROL",
+  "arithmetic_model": "Q(sqrt2), coefficient comparison; symbolic congruences cover all integer word translations",
+  "room": [
+    [
+      0,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      0,
+      8
+    ]
+  ],
+  "r": 0,
+  "S": [
+    2,
+    2
+  ],
+  "T": [
+    4,
+    6
+  ],
+  "target_image_rows": [
+    {
+      "epsilon_x": -1,
+      "epsilon_y": -1,
+      "sqrt2_coefficient_constant": -6,
+      "sqrt2_coefficient_n": 16,
+      "constant_term": 8,
+      "constant_term_k": -16,
+      "sqrt2_coefficient_mod16": 10,
+      "all_integer_n_k_excluded": true
+    },
+    {
+      "epsilon_x": -1,
+      "epsilon_y": 1,
+      "sqrt2_coefficient_constant": -6,
+      "sqrt2_coefficient_n": 16,
+      "constant_term": -4,
+      "constant_term_k": -16,
+      "sqrt2_coefficient_mod16": 10,
+      "all_integer_n_k_excluded": true
+    },
+    {
+      "epsilon_x": 1,
+      "epsilon_y": -1,
+      "sqrt2_coefficient_constant": 2,
+      "sqrt2_coefficient_n": 16,
+      "constant_term": 8,
+      "constant_term_k": -16,
+      "sqrt2_coefficient_mod16": 2,
+      "all_integer_n_k_excluded": true
+    },
+    {
+      "epsilon_x": 1,
+      "epsilon_y": 1,
+      "sqrt2_coefficient_constant": 2,
+      "sqrt2_coefficient_n": 16,
+      "constant_term": -4,
+      "constant_term_k": -16,
+      "sqrt2_coefficient_mod16": 2,
+      "all_integer_n_k_excluded": true
+    }
+  ],
+  "corner_coefficient": {
+    "constant": -2,
+    "n": 8,
+    "nonzero_mod8": 6
+  },
+  "source_target_section_difference": {
+    "sqrt2_constant": 2,
+    "sqrt2_integer_multiplier": 16,
+    "rational_constant": -4,
+    "rational_integer_multiplier": -16,
+    "sqrt2_coefficient_never_zero": true
+  },
+  "density": "Proved by irrational-circle-rotation hand argument in paired markdown, not finite sampling",
+  "actual_pair_directly_lit_slope": "2",
+  "whole_goal_complete": false
+}

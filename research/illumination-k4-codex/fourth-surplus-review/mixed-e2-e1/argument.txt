@@ -1,0 +1,238 @@
+Mixed e2+two e1, b0: structural reduction and partial optical closure — 4 November2026
+Codex01a18403. Parent hand argument, not a closed classification or theorem.
+
+Gap: identify admissible root/leaf configurations before optical work.
+Success criterion: exhaustive adjacency skeleton and exact ordinary-cap budget.
+Strongest objection: spatial locality K does not imply every positive cell
+is a root; ignoring a d0 cell gives the wrong Q and cap count.
+
+1. Only matching edges
+The seven partial A-cell centers are L(-2,0), B(0,-2), D(2,-2), R(4,0),
+E(4,2), Tcap(2,4), N(0,2). Their side adjacencies within this list are
+only B-D and R-E. Thus the induced graph on any three positive cells
+is a matching: no three-cell chain or fork occurs inside K.
+An ordinary cap's sole BC edge already faces H and cannot connect a d0
+positive cell to H. Each d0 cell must therefore share its matching edge
+with a positive root. With only three positive cells, at most one has d0.
+So either all three are roots, or there is one root/leaf pair and one
+independent root. A single-root three-positive configuration is impossible.
+
+2. Cap budget
+No e1/e2 root can have d2 without the direct N bridge: d2/e1 has q3 and
+bridges; d2/e2 would have nonexistent q4. Every root therefore has d1.
+Let r be the root count, n the number of ordinary caps and J the actual
+interior non-A count. Here sum e=4 and b0, so
+ Q=4+r+n, sN=12-Q=8-r-n, k=J+8-r-n.
+At k6 this gives n=J+2-r: n=J-1 for three roots, n=J for a root/leaf pair.
+These are necessary identities, not counts of room completions.
+
+3. Root/leaf contribution restrictions
+At their shared outside-H C, two90-degree contributions would be smooth,
+contradicting b0; opposite occupied quadrants are a forbidden pinch.
+The pair cannot consist of two e1 cells, since both supply at most90.
+Hence it involves the unique e2 cell. If e2 is the root, its shared-side
+contribution must be180 and the single-triangle e1 leaf contributes90.
+If e2 is the d0 leaf, its two sectors must be the centered shared-side pair,
+contributing180; the e1 quarter root contributes90. A two-sector leaf with
+only90 at the join is forbidden by b0. The third e1 cell is an independent
+root. The D-root/B-leaf orientation omits B+ and is directly illuminated;
+sigma does the same for the opposite R/E orientation.
+
+What remains after the initial lemma: explicit root windows, independent-unit
+interactions and an actual S/T optical cover. Section4 now closes the case
+where e2 is the leaf; it uses a theorem with NO k or wall budget premise.
+The newly repaired global frontier also contains e2+e1+b1 and three e1+b1;
+this local lemma does not close them or the entire surplus-four layer.
+
+4. Entire e2-LEAF subcase closes within13 reflections
+This is a new parent inheritance proof; independent challenge requested.
+For the B-root orientation, section3 forces B0/1 and the centered D leaf3/4.
+The third positive cell is an e1 root elsewhere in K, independent of D.
+Erase precisely D3/4. The resulting room has exactly two e1 ROOT cells;
+all remaining partial cells are ordinary H-facing caps. It still has exactly
+full A stars S/U/T. It satisfies the accepted arbitrary-b/W/k two-unit theorem
+in surplus-four-local/two-unit.txt. No Delta3 theorem is invoked and no claim
+that erasure preserves k6 is needed.
+
+Deletion legality, not just a smaller triangle set
+The D leaf is the triangle with vertices(1,-1),(1,-3),(2,-2), subdivided at
+C=(1,-2). It meets the remaining closed room exactly along the segment
+(1,-1)--(1,-2). Its other vertices and open edges meet no H or other K cell.
+At(1,-1), H supplies180 degrees and B0/1 supplies90; deletion changes315 to270.
+At(1,-2), B supplies90 and D supplies180; deletion changes270 to90.
+The other D vertices disappear from the boundary. Thus replacing the flap's
+outer boundary arc by its attaching segment introduces no self-contact,
+slit, new interior A mark or lost H connection. All remaining caps and both
+unit roots connect directly to H. The auxiliary room is a strictly simple disk.
+
+Preserving actual optical paths under reinsertion
+The two-root part of the accepted two-unit proof uses the old one/four/13
+paths, centered-L/T three-paths, centered-B/E six-paths, square-return paths,
+five path, and the later centered-L12 replacement. Their actual coordinates
+occur in the already-pinned21-path catalog third-surplus-review/path-support-check.json
+and its sigma images. support-check.py/json confirms EVERY required AND
+forbidden triangle in that catalog lies outside BOTH D and R cells.
+Therefore reinserting D3/4 changes none of these path certificates.
+
+The two-outer subcase also composes square exchanges on two critical cells
+B/E/L/T. Each exchange replaces only that cap excursion, preserves its exit
+point and outgoing velocity, and stays inside its own critical A cell.
+The unchanged path segments and these new local contacts still avoid D/R.
+These compositions introduce no additional D/R mirror requirements.
+The new L12 fallback for arbitrary b is expressly included in the pinned
+catalog. The auxiliary room has two ROOTS, so the separate d0-single-leaf
+supplement of the two-unit theorem is not being invoked.
+Consequently whichever accepted two-root path the theorem selects remains
+a legal actual S/T path after D is reinserted, within the same13 bound.
+This is exact support inheritance, not general monotonicity under enlargement.
+
+If the root is D and the d0 e2 leaf is B, B+ is absent, and the old
+one-reflection actual S/T path applies directly, independently of the third
+unit cell. Sigma supplies both E/R orientations. This closes EVERY mixed
+configuration with e2 as the d0 leaf.
+
+5. Earlier checkpoint (superseded by sections6–8)
+Proved at parent level: matching adjacency, root/cap identities and the entire
+e2-leaf subcase of e2+two e1/b0, within13 by a strictly simple auxiliary
+room plus complete D/R-support inheritance. Existing fixed path catalog
+only; no new room, parameter, direction or word was generated.
+Still open in this partition: three-root configurations, and the case where
+e2 is the root of a single e1 leaf plus an independent unit root. The other
+newly restored local rows e2+e1+b1 and three e1+b1 are not closed here.
+This does not resolve the seven peer-owned joined two-e2 rooms or remote rows.
+
+6. e2-ROOT/e1-LEAF: finite fan classification and reference forcing
+Parent hand proof, exact named guard implications PASS; peer challenge requested.
+Use B-D; sigma gives E-R. A D-root/B-leaf omits B+ and illuminates directly.
+For a B root with full shared east C pair, the only q3 windows touching H are
+ O3=B7/0/1; O4=B6/7/0/1; H4=B7/0/1/2.
+The single D leaf is sector3 or4. These are the two half-edge attachments
+on the shared C; H-facing D1/2 cannot occur in a d0 leaf. The independent
+unit root X is one of L,E,Tcap,R,N. No third local chain exists by section1.
+
+E- is forced by the old one_sigma path, even with the entire other K stars
+allowed. If E is ordinary, its old sigma_four path forces L+. If X=E,
+its two-sector fan containing E- is either centered3/4 or outer4/5; the
+sigma centered-B3 or outer-B2 short path respectively forces ordinary L+.
+These FOUR forcing implications are explicitly checked in root-leaf-check.json
+against full B/D/R/T/N support, allowing every L tile except the absent L+.
+Thus L+/E- necessity has no hidden T-cap assumption. T- is NOT forced.
+Once X=L or E, the required reference cap leaves exactly centered or active
+outer-square choices at that X. Other unit positions retain their nonbridge
+H-facing forms. This lists individual fan windows, not room assignments.
+
+Budget for this branch
+Let h=1 for H4,0 for O3/O4, and c=1 when X is centered on its H side,
+0 for a quarter. Exactly J=2+h+c: H contributes two interior C points;
+H4 completes the B/H C; a centered X completes its own H-side C.
+The shared B/D C is270, never360. The shared upper B=(1,-1) has at most315.
+The central N notch has at most315 without its bridge. At every other B,
+H contributes at most180 and a unit plus an ordinary cap gives at most135
+more. No ordinary cap can add another full B/C point. Therefore section2's
+n=J identity becomes n=2+h+c, among four ordinary slots outside B,D,X.
+
+7. Angle-forced whole optical covers and exact remaining table
+All angles below are totals at one specified vertex; an unhealed180-degree
+boundary point contradicts b0. Strict simplicity also excludes a pinch.
+
+X=L outer0/1: at(-1,1), H90+L90=180, so ordinary Nb- MUST be present to
+repair it. N is therefore exactly Nb-, in particular Nr- absent. The new
+five-path replaces the first three L contacts of uniform7 by(-2,1/3), keeping
+its portal exit unchanged. It allows the FULL B/D/R/T stars. This closes
+ALL L-outer cases within5 reflections, without additional T or R conditions.
+
+X=Tcap centered5/6: E- absent gives one_sigma; otherwise the accepted
+sigma-centered-L three-path works with arbitrary B/D/R/N/L support.
+X=Tcap west quarter4/5: at(1,3), H90+T90=180 forces ordinary Nr+; hence Nr-
+is absent and uniform7 works. (The n budget additionally excludes O3/O4.)
+X=Tcap east quarter6/7: at(3,3), H90+T90=180 needs E+, unavailable because
+ordinary E- is forced. This quarter is impossible at b0.
+Thus EVERY admissible independent Tcap unit case closes within7.
+
+X=R lower quarter4/5: at(3,-1), H90+R90=180 requires D+. The D single leaf
+has d0 and cannot contain D+, so this quarter is impossible at b0.
+X=N bottom centered5/6: at(-1,1), H90+L+45+Nb-45=180, so it is impossible.
+The N SW4/5 and NE0/1 quarters lack Nr- and are covered by uniform7.
+
+Additional sufficient whole covers (not exhaustive by themselves):
+ - Ordinary L/E and Nr- absent: uniform7, even with FULL B/D/R/T support.
+ - X=E outer4/5 and Nr- absent: exchange only E's three contacts for
+   (4,4/3), preserving exit; five reflections, full B/D/R/T support.
+ - X=E centered3/4 and Nr+ absent: accepted sigma-B6, six reflections.
+ - X=L centered7/0, neither right N cap and T+ absent: accepted L12.
+Every U/Z implication and sigma identity passes root-leaf-check.py/json.
+Three explicitly hand-prescribed W20/k6/Delta4 controls pass actual finite
+first-wall/first-target/specular/interior/reverse/sigma replay for the two
+new five-path exchanges and centered-T3. They are controls, not a census.
+
+After these covers/exclusions, only the following NECESSARY branches remain.
+Rows are configurations, not assertions that all listed completions exist.
+Dleaf may be3 or4 and sigma images are implicit.
+
+Independent X    Root restriction     Remaining necessary ordinary-cap rules
+L centered7/0    O3 or O4 only         E-; Nb- absent; exactly TWO of N,T,R
+                                      occupied. Remains only if N is right-
+                                      facing or T+ occurs. For N=Nr+, T-
+                                      is absent. H4 is impossible: at(-1,-1),
+                                      H90+B2(45)+L-45=180 unhealed.
+E centered3/4    O3 or O4 only         L+,N=Nr+,T empty, exactly one R cap.
+                                      Ecenter+T+ gives180 at(3,3), so T+
+                                      absent; Nr++T- gives180 at(1,3).
+                                      Hence T empty. H4 would require all
+                                      FOUR ordinary slots, impossible.
+E outer4/5       O3,O4,H4              L+,N=Nr-. For O3/O4, T and R empty;
+                                      for H4, exactly ONE of T,R occupied.
+R centered3/4    O3,O4,H4              L+,E-,N=Nr-. For O3/O4,T empty;
+                                      for H4,T occupied (either sign).
+R upper2/3       H4 only              L+,E-,N=Nr-,T empty. O3/O4 require
+                                      n2 but already have three forced caps.
+N rightcenter7/0 O3,O4,H4              L+,E-,T- absent. For O3/O4 exactly
+                                      ONE of T,R occupied (T if present is
+                                      T+). For H4 both T+ and one R cap.
+
+The table follows directly from n=2+h+c and the angle conditions, not from
+checking assembled cap assignments. For Ecenter the six-path leaves only
+Nr+; for Eouter/R the seven/five paths leave only Nr-. For Ncenter, Nr+
+with T- would be an unhealed180-degree point, forcing T- absent. Lcenter
+uses its twelve-path whenever neither remaining blocker is present.
+This is an exhaustive necessary frontier of this ONE root/leaf branch,
+subject to independent review; it is NOT an optical closure of the table.
+
+8. Current realignment
+Closed at parent level: all e2-leaf configurations; all e2-root/single-leaf
+configurations with independent Louter or admissible Tcap unit; the stated
+ordinary-L/E, outer-E, centered-E and centered-L conditional subfamilies.
+Excluded: inactive reference fans, Rlower, Nbottomcenter, Teastquarter and
+Lcenter with H4. Named checks pass; independent challenge remains pending.
+Open within this partition: all-three-root configurations and the six table
+rows above. No new path/ray/direction/room/word discovery, archive retrieval,
+new orbit run, worker, or automatic expansion occurred.
+The universal minimum and full surplus-four layer remain unresolved.
+
+9. All-three-root noncritical subfamily
+noncritical-erasure.txt proves every all-three-root configuration with the
+e2 root at D or R illuminates within13. The larger fan meets the remaining
+room in one proper H/B boundary arc; the possible diagonal R point is
+already on its H side. Removal leaves a strictly simple two-unit ROOT room.
+Use the accepted two-unit theorem without b/W/k restrictions, then fullD/R
+U/Z support invariance to reinsert the fan. No new optical computation.
+Parent hand proof awaiting independent challenge. The remaining all-root
+e2 positions are L/B/E/Tcap/N; attached-pair six-row frontier unchanged.
+
+10. All-three-root notch subfamily
+N-root.txt proves a <=13 cover when the e2 root is N. b0 restricts it to
+bottom4/5/6 or right7/0/1. An explicit critical-unit-count/C/O dispatch handles
+BOTH inward caps on its one side, using the already checked SW/NE outside-
+mate support. No ordinary-N exclusivity or illegal auxiliary-room inference.
+Parent proof awaiting independent challenge. All-root e2 at D/R/N now has
+parent covers; only critical e2 sites L/B/E/Tcap remain, plus six attached-
+pair rows. Earlier all-root-open statements are historical checkpoints.
+
+11. Critical all-root L/T reduced to eleven fixtures
+critical-L.txt gives the complete parent reduction for e2 at L (sigma gives
+Tcap): Llower/Lupper/Lrectangle are the only fan forms. Known full-support
+paths cover all but eleven exact rooms in critical-L-check.json. Fourteen
+hand-forced geometries were verified; three close by explicitly retained
+2997/2240 witnesses. Eleven remain OPTICS OPEN; no discovery ran on them.
+B/E critical all-root and six attached-pair rows are separate open scopes.
+The D/R and N all-root proofs now have independent peer HAND ACCEPTS.

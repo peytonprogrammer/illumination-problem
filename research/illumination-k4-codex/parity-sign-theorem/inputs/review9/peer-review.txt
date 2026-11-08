@@ -1,0 +1,67 @@
+# Verdict on the Section 5 proposition and the conditional theorem
+
+**Verdict: yes.** With the setup as now stated, Sections 1–5 give a valid conditional theorem for this class:
+
+> If finitely many admissible one-corner midpoint event rows have ordinary full rank on the symmetry quotient, then their two-shear orbit contains a finite family whose positive hull is the whole quotient dual.
+
+I found no counterexample and no missing load-bearing condition in the local proposition. The issues below are precision points. They should be written in, but none of them changes the argument. The theorem still depends on the cited relation (A), and on nothing beyond it.
+
+## Checking each challenged point
+
+**1. Intrinsic π-sector.** On the cone at c, of angle 2πn, the backward ray (θ+π) and the forward ray (θ) cut the cone into two sides of angles (2j+1)π and 2πn−(2j+1)π. Condition 3 requires the σ-side to be exactly π. The definition correctly does not label sectors by the physical incident wall.
+
+- At removable lifts (vertex angle π/4 or π/2, so cone angle 2π), both sides are π. Both signs are then admissible and the row pair is ±g. This is harmless; it is not an obstruction.
+- A 3π/3π split at a 6π cone point is correctly excluded.
+
+**2. Sign.** With A=hol(α+β) and C=hol(α), we get det(A,C)=det(hol β, hol α). Differentiating at hol α = hol β = w gives
+
+  f′(0) = −σ det(w, Q(β−α)).
+
+The geometry agrees. Perturbing to w+εσJw puts the line on side σ of c, so c sits on side −σ of the chord, and σ det(A,C) < 0. There is no sector-dependent flip.
+
+**3. Straight bypass on the deformed surface.** This is valid. Two facts make it rigorous:
+
+- **Path-independent development.** X_δ is a translation surface with trivial linear holonomy. Developing from α's chart to β's chart around c therefore does not depend on which side you go around. The σ-side π-sector simply is a flat half-disk containing the offset chord.
+- **Exact formula for f.** In the fixed-direction family each copy is g(P_δ), with g a fixed linear reflection. Each wall reflection has the form x ↦ Rx + 2d·n, with d the varying offset. So S(δ), C(δ), T(δ) are affine in the parameters, and f is exactly a quadratic polynomial while the combinatorics are frozen. The step "f′(0)<0 ⇒ f(tδ)<0 for small t>0" is therefore exact, with no o(t) estimate needed.
+
+**4. Ordered immersed strip continuity.** This is valid. Every base crossing is a transverse wall-interior hit, and the path stays a positive distance from all vertex lifts (by compactness). So keeping the same ordered crossing pattern is an open condition in δ, and allowing self-overlap is correct. One omission should be made explicit:
+
+- **Near-corner hits.** Inside the σ-half-disk the bypass crosses the radial fold lines from c that lie in that sector. Physically these are reflections off the walls adjacent to the vertex, close to the corner. They are wall-interior hits once the disk radius is smaller than the adjacent wall lengths. They are transverse because condition 4 excludes wall-parallel directions. The current text says "misses c" but does not mention these crossings.
+
+**5. Physical projection.** Folding a geodesic on X that avoids every vertex lift gives a legal billiard path. Fold lines lie in the fixed direction set, so non-wall-parallel segments cross them transversally. Revisiting S, or reaching T early, is handled correctly. The shears need not respect fold lines, and nothing requires them to.
+
+**6. Affine preservation across wall sectors.** This is correct. Since P(−v) = −P(v), the angular lift of P to the 2πn cone satisfies φ(θ+π) = φ(θ)+π. So F carries the σ π-sector to a π-sector on the same side, because det(Pw, PJw) = det P·|w|² > 0. It does not matter if F permutes sheets of the cone.
+
+Other preserved properties:
+- F fixes A pointwise. Each height-1 row is sheared by a, which is a multiple of l_i, so row boundaries are fixed pointwise.
+- Vertex avoidance, endpoint labels and the midpoint relation are all preserved.
+- Physical sector labels may change, but the proposition never uses them.
+
+## Checking the algebra feeding the slope argument
+
+I re-derived each step:
+
+- **Horizontal powers.** For the n-th horizontal image, the n² coefficient is det((aq,0), (Q_x N_hη, 0)) = 0 by (A). The linear coefficient is σq[Q_x N_hη − aQ_yη], as stated. It vanishes because large n of both signs are admissible.
+- **Generators with q = 0.** The vertical-then-horizontal powers recover (H) by linearity in k. The generator itself need not be admissible.
+- **Eigenvalue step.** N_hN_vC = CT with T = D_h E D_v Eᵀ, and B = T/(ab) is row-stochastic. Further:
+  - B has positive diagonal and is irreducible, so eigenvalue 1 is simple with no Jordan block.
+  - The generalized ab-eigenspace lies in im(N_hN_v) ⊂ im C.
+  - Passing to the quotient by ker C cannot raise multiplicity, so the eigenspace on M is Rc₊.
+  - hol_x(c₊) = #squares > 0, so c₊ ∉ M₀, and ab is not an eigenvalue on K.
+- **Conclusion on K.** Q_x(N_hN_v − ab) = 0 on K gives Q_x = 0, and then (H) gives Q_y = 0.
+- **Contrapositive and compactness.** These are correct. Rows vanish on the true symmetries: translations give Q=0, and scalings give Q = D·hol, which is zero on M₀.
+
+## Tightening I'd add (not gaps)
+
+1. **Development and affinity.** State the path-independence of development across c and the affine dependence of the developed points on offsets and marks, so f is quadratic. This also gives a uniform bonus: the selected family is finite, so on the quotient unit sphere min over rows ≤ −κ < 0. With a uniform quadratic remainder, there is one neighborhood of the base room in which every non-symmetric fixed-direction deformation illuminates S↔T.
+2. **Near-corner crossings.** Mention the radial fold-line crossings inside the σ-sector and the radius bound (less than the adjacent wall lengths and the distance to other vertex lifts).
+3. **Smooth boundary lattice points.** These angle-π points are in A and forbidden to event interiors. That is over-restrictive but safe. If they are modeled as vertices with two collinear walls, the family must tie their offsets together. Otherwise varying them independently creates genuine new vertices and changes the wall count, which violates "constant cyclic wall order". Say this explicitly.
+4. **Dependence on (A).** The whole reduction rests on Q_y(h_i) = 0 and Q_x(v_j) = 0 for every unit row/column core under arbitrary fixed-direction deformations, marks included. Cite the exact statement from `axis-alignment.md` that delivers this for absolute cores, since everything else hinges on it.
+
+## What the theorem does not give
+
+- **Rank.** It is purely a rank-to-positivity transfer. Ordinary full quotient rank of admissible seed rows remains an unproved premise for general parity rooms.
+- **Existence of seeds.** It does not produce enough admissible seeds with the required π-sector at a nonremovable corner.
+- **Scope.** It does not address non-parity rooms, degenerations, or global (non-local) minimality.
+
+So the status line can move from "under focused review" to accepted as a conditional theorem, provided items 1–4 are written in and the premise stays clearly marked as open.

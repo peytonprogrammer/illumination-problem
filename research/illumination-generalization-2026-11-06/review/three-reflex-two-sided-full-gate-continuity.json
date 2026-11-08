@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-11-08T06:28:08.271Z",
+  "claim": "FG01",
+  "status": "HAND_COUNTERCONTROL_PENDING_INDEPENDENT_REVIEW",
+  "statement": "All four literal final-bottom target gates admit no globally continuous selector; any continuous selector interval in reciprocal parameter z has diameter at most2c/(w-t).",
+  "strictness": "Any two included parameter points have separation strictly less than2c/(w-t); interval diameter can equal the bound for open endpoints.",
+  "dependencies": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-bottom-depth.md",
+      "sha256": "836101a7461aa7a4624738c0195b75915164e37353a249157d76f484e9ff8771"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-bottom-depth.json",
+      "sha256": "9140b9bd2b2a541c612ca6fa131254f10e66f5b9ba927e7b1fb512e3b463bef6"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-target-gates.md",
+      "sha256": "e16ce407d36f8f87d7bbc7db835b14056dfc9639d425eecbea490b185b36121f"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-target-gates.json",
+      "sha256": "7324d21fb5cf410767e79db6ae1d818499987d3e688526ac6738c9c310b5bd70"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-matching-prerequisite.md",
+      "sha256": "3651d598c2d66fa47d226cdb7e679c39e6a25f05ec96548cef43821aa521724b"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-matching-prerequisite.json",
+      "sha256": "afe24dcd2c0091e9700433e808ad6c08a3f44f14100ed4e6f6ba43ec7bffd241"
+    }
+  ],
+  "proof_sha256": "445121ec8aefa9b0590899d031ed6270937ae17294a281df23074db8b4ff3781",
+  "scope": "Integral ordered room, native/integer target l<t<w,0<v<c; conditional on BD full-entry characterization.",
+  "review_questions": [
+    "Check local finiteness on compact z intervals with unbounded m.",
+    "Check negative slopes for both target-image signs and strict/open interval distinction.",
+    "Check opposite-arrival-sign junction gives a forbidden pre-target postturn corner.",
+    "Check final cap-to-target scope and do not infer failure of existential illumination."
+  ],
+  "source_target_existence": false,
+  "full_goal_complete": false,
+  "new_discovery": false,
+  "clocks_preserved": true
+}

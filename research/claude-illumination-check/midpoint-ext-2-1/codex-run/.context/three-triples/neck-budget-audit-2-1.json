@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "source_sha256": "989c49855a9d4f4e93dfbe4a753a18e7db13d8220b18eb4cbc63c596512dde35",
+  "local_masks_independently_checked": 17440,
+  "factors": 187,
+  "exhaustive_connectivity_fixtures": 200,
+  "fixtures_with_connected_completion": 120,
+  "exhaustive_budget_fixtures": 200,
+  "fixtures_with_solution": 97,
+  "recomputed_cases": 12,
+  "distinct_room_controls": 422,
+  "controls_per_case": [
+    56,
+    21,
+    36,
+    19,
+    22,
+    34,
+    23,
+    64,
+    30,
+    31,
+    49,
+    37
+  ],
+  "control_sources": {
+    "double-fan-search-2-1.json": "2734c9ead4032beb6ca40aa9707898ef8703448cefd9bcaf9f7aa1a71697ebcb",
+    "ray-pattern-probe-2-1.json": "789ed069e3dfccd374e0a09d21810bd5219c2ebee7103350fa7eec3fc5081c47",
+    "fan-search-2-1.json": "8c94b91b3440c3e76fdd3910dca98ee72dceca6871f385bac6628aba1a0ace37",
+    "cell-search-2-1.json": "0187c19ccf85e3f946138e16c7d09c4253d912912f0eaf0dd9e8b6fbf16968c4",
+    "cell-2-1-bootstrap.json": "e7219d6188c46680008fb5247dcf12eff463618d6cfcadd82c7e3bc52835f64c"
+  },
+  "controls_first_seen": {
+    "double-fan-search-2-1.json": 93,
+    "ray-pattern-probe-2-1.json": 11,
+    "fan-search-2-1.json": 161,
+    "cell-search-2-1.json": 109,
+    "cell-2-1-bootstrap.json": 48
+  },
+  "scope": "Local-sector rows checked with independent fan graph; exact budget-support DP compared to exhaustive products on200 fixtures; all propagated consequences retain every checked valid room. Necessary relaxation only; no new global exclusion or illumination lemma."
+}

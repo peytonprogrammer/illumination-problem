@@ -1,0 +1,40 @@
+{
+  "decision": "CORRECT_FIXED_IMAGE_SCOPE_REJECT_ACTUAL_TARGET_EXCLUSION",
+  "source_pins_before": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-orbit-obstruction.md",
+      "sha256": "5aed0e32a5cd41ba347bc7b64cc6b84f3469656142b78fd1cbcc57902e2d54e1"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-orbit-obstruction.json",
+      "sha256": "5bc03a7650ae32e4bbbb3f6f5eca6e9cd4f4359056857c02352b094a5acd2643"
+    }
+  ],
+  "source_pins_after": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-orbit-obstruction.md",
+      "sha256": "5aed0e32a5cd41ba347bc7b64cc6b84f3469656142b78fd1cbcc57902e2d54e1"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-orbit-obstruction.json",
+      "sha256": "5bc03a7650ae32e4bbbb3f6f5eca6e9cd4f4359056857c02352b094a5acd2643"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "status": "OPEN_AUTHOR_RECONCILIATION",
+      "claim": "All nominated orbits miss actual T with both target images allowed",
+      "decision": "REJECT",
+      "reason": "Floor/direct branch has odd J0 and gcd(6K,L)=2, so J0+3epsilon+6K*ell=0 mod L reaches opposite actual T image while preserving all literal states."
+    }
+  ],
+  "accepted_claims": [
+    "qualifying geometry",
+    "strict nearest source/cap/right seeds",
+    "same-image k in gZ failure"
+  ],
+  "hand_proof_only": true,
+  "discovery": false,
+  "whole_goal_complete": false
+}

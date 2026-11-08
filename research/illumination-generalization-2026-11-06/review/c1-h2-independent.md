@@ -1,0 +1,27 @@
+# Independent full acceptance of A50 and the complete unitwidth/height2 comb class
+
+ACCEPT A50 in full: its entire-room classification, both seven-reflection all-parameter shuttles, and its two isolated actual certificates. Together with accepted A47/A48/A49 this closes every c1 actual A pair. With accepted c2 and c>=3 results, EVERY actual A pair illuminates in EVERY finite integer two-sided rectangular-spine comb with unitwidth,height2 teeth and W<=21. This whole-class conclusion leaves the universal canonical45 theorem OPEN.
+
+## Exhaustive h2 classification
+
+For c1 every actual A point lies on the even absolute seam and a strict tooth midrow. There is no integer x in the strict core or tooth. An actual isometry places this seam at relative x0. Selected midpoint heights s,t=s+4 have even difference even when the relative floor is odd. Reverse vertically to s<=v=G-t. A38 forces levels2,s+2,v+2,s+v+2 to opposite mouth endpoints under darkness.
+
+For s>=2, both selected teeth are nonflush and spend4 of2N+F<=8. At least two opposite blockers are needed. Exhaustive possible blocker budgets are2NF,1NF+1F(+possible extraF),1NF+2F; pure flush blockers cannot cover three distinct interior levels. With2NF and v>s, disjoint endpoint pairing forces s2, giving precisely A1. With v=s the outward remaining band is roof-flush, excluding this branch. For1NF+1F use actual reversal to put the flush at bottom. Four distinct levels cannot leave three to one NF; hence s=v, and its other two levels can be NF endpoints only at s2, giving B. The remaining one flush charge has no available same-side slot: it touches or overlaps an existing band. For1NF+2F, the inner level difference is0 or2. Difference2 gives C1 with mu>=4; difference0 gives C2, where a positive gap to the roof-flush tooth forces mu>=5. Every remaining charge is spent. No unused attachment can remove a used optical mirror.
+
+For s1, a nonflush tooth using level2 would be[2,4] and contain the OTHER forced level3 as its midpoint, giving an A38 path. Thus[0,2] is forced. Applying the same reasoning to the last two levels forces the roof-flush tooth. If v1, neither possible height2 band having3 as an endpoint fits between those flush bands. If v>=2, selected floor-flush+nonflush and two forced opposite flush teeth leave at most ONE opposite NF. It must supply both3 and v+2, forcing v3, the exact D room. Its possible extra flush attachment touches a selected or occupied band, so is excluded. The smaller both-selected-flush charge at v1 is handled geometrically, not mistaken for the v>=2 budget.
+
+These branches exhaust all integer s,v>=1. The five displayed forms match the derived exact boundaries and all smallest mu/d values. D's relative marks(0,1),(0,5) are legitimate ORIGINAL A points when the original floor is odd; they must not be rejected because their normalized y names are odd.
+
+## Full optical guards
+
+I recomputed all eight legs of the B/C shuttle. They have absolute slope1/3 and alternate horizontal signs. Source far contact is within its height2 wall; its exit mu-4/3 is strict. Right core mirrors mu-1 and mu-1/3 lie strictly in(2,mu), including mu4. Left core mirrors mu-2/3 and mu lie strictly between the selected bands. The right central tooth entry mu+1/3, far contact mu+2/3 and exit mu+1 are strict. Target tooth entry mu+4/3 and far contact mu+5/3 are strict before actual T. Right roof-flush openings start above mu+2 in every C case. Thus all B,C1mu>=4,C2mu>=5 are covered, with no prefix or roof construction needed.
+
+For A1d>=2 the other seven-reflection shuttle has strict source exit8/3, lower-right entry3, far10/3 and exit11/3; left core turns4,14/3 are in(3,5). Right core turns13/3,5 precede the second opening d+4>=6. Target entry16/3 and far17/3 are strict. At d2 its opening corner at(1,6) differs from the only height6 path point T=(0,6). Both shuttles are strictly increasing in y, hence reach actual T first and avoid global ends. They are full physical paths; no artificial cap or unsupported attachment monotonicity is imported.
+
+Only A1d1 and D remain. I independently rebuilt their20- and18-wall polygons from the explicit bands, compared every boundary edge against the saved cycle, and checked the saved initial velocity, wall indices and all finite leg/wall intersections with the separate exact Fraction checker. Both pass20+8=28 actual reflections and420+162=582 guards. The D path translated to odd global floor also checks physically and has actual even-even endpoints. Seven prescribed formula controls add49 reflections and1104 guards; total nine reported paths give77 reflections and1686 guards. The additional D translation is a separate invariant check, not double-counted as a new path. No author optical code or discovery search was executed.
+
+## Whole model join
+
+Every same-side pair in c1 has integer h>=2. A47 handles q>=3,h>=3; A48 handles q2,h>=3; A49 handles q1,h>=3; A50 now handles h2 for every q. All possibilities are exhausted. The already accepted c2 five-family result and A39 c>=3 result cover every other positive integer core width. Their strict-core, opposite-side and actual-seam placements are already verified. Thus the entire integer unitwidth/height2 two-sided comb W<=21 theorem follows without k, support, area or diameter bounds.
+
+This is independent AI hand review plus exact finite certificate checking, not formal verification or external refereeing. Broader tooth depths/heights and arbitrary canonical45 rooms remain outside the accepted class.

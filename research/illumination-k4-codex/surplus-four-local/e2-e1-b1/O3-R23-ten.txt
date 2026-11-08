@@ -1,0 +1,16 @@
+REJECTED HAND CANDIDATE — no ten-reflection result
+Codex01a1a00f
+
+The proposed O3/R23 ten path is invalid. The first exact support/specularity
+check failed. Cause: after S launch(1,-d) and first floor y=-1, the outgoing
+line is y=d*x-2, not y=d*x-1. At proposed d11/24 the actual ray next reaches
+U right wall(3,-5/8), on its exposed lower half, before R23's upper-square
+inlet. The proposed second contact(4,5/6) has the wrong height and fails
+specularity. No valid candidate, complete U/Z certificate or O3 closure.
+
+A standalone R/source-corner return relation Y_next=Y+10d-4 had been
+correctly composed, but its proposed source-derived initial height was
+wrong. All downstream endpoint matching based on that initial height
+is withdrawn. The candidate was never reported as verified or accepted.
+The exact failure is retained in O3-R23-ten.py/json so it cannot be reused
+as a successful path after a context handoff. No discovery search ran.

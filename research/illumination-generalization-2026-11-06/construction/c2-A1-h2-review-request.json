@@ -1,0 +1,20 @@
+{
+  "id": "A45",
+  "created_utc": "2026-11-07T06:19:10.495315+00:00",
+  "status": "frozen_pending_review",
+  "scope": "All A1 h2, even d>=2, explicit four-reflection actual path; join A44 yields entire A1",
+  "original_deadline": "2026-11-07T06:32:29.695294Z",
+  "source_sha256": {
+    "c2-A1-h2-proof.md": "93b0fdcaaa87bdf5c5ce80d4b04280d7f6e2a6e8cc715a4251d88176f91a0327",
+    "c2-A1-h2-check.py": "63e7404f6b2ca92967ef601de32e3cdd8828f563cd72f2ebb4c42f913e830364",
+    "c2-A1-h2-check.json": "c084e6433eba1b449652671fff8026d99e37aae33d8e7fcf4315aa93751a73c7",
+    "c2-A1-variable-angle-proof.md": "444714d3aa46350065e9e51fa267ac46b9ba0fe4667a1cf4108521ca4b58b5c4"
+  },
+  "whole_goal_complete": false,
+  "challenge": [
+    "Directly verify all five legs against actual full20wall family",
+    "d2 equality puts upperleft corner at y6 but no path point there",
+    "No artificial ceiling used; actual far walls and endpoint T",
+    "Join with A44 exhausts all even h,d"
+  ]
+}

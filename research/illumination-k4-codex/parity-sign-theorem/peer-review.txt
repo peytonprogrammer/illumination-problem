@@ -1,0 +1,135 @@
+# Independent challenge: corner-period rigidity audit and nine-seed module
+
+I reviewed both scripts by reading them only. **I did not execute either script** and did not open the frozen JSON inputs. Any numeric value below that comes from a run (ranks 10, 17, 26, 32, the value −17, and so on) is the document's claim, not mine.
+
+## Verdict
+
+- **Section 1** (two-shear orbit blindness on D0) is correct, with one wording fix.
+- **Section 2's** lower-bound counting is correct, but it depends on whether the marks are free variations.
+- **Section 3's** virtual-mirror identity is exact. The "every axis-cylinder period is exactly constant" wording overreaches.
+- **Section 4's** module generation argument is correct.
+- **Section 5** has two substantive problems:
+  1. The "first nine indices 0–8" claim is not what the code guarantees.
+  2. The jump from rank 26 to positive spanning depends on the exact scope of the cylinder-mixing theorem's K, which I could not check.
+- The code is missing several cheap kernel assertions. The pocket-slide numbers are not computed by either script shown.
+
+## 1. Orbit blindness on D0
+
+The algebra holds. Each generator is I+N with im N ⊂ U. Products keep the form I + (operator with image in U), because the image of AB lies in the image of A.
+
+Inverses also keep this form. N_h² = 0, since horizontal cores have zero mutual intersection, so (I+N_h)⁻¹ = I−N_h exactly. The same holds for N_v. Therefore Q_δ(gη) = Q_δ(η) for δ ∈ D0 and all g ∈ Γ.
+
+The rows −σ det(w_g, Q_δ(gη)) are first-order functionals with w_g fixed at the base point. On D0, each whole orbit's rows lie in the span of the two components of Q_δ(η).
+
+The count (1) is right once you note the symmetries are automatically in the kernel. Translations leave every relative period unchanged, so the 2m functionals descend to D0/S0. Rigidity on D0 needs 2m ≥ d0.
+
+**Wording fix.** Section 1 says "An entire Γ orbit of a seed class can impose at most two scalar constraints." Section 5 later says "fewer than nine seed Γ-orbits cannot be enough." Both statements must keep the qualifier **Γ = ⟨the two selected axis multitwists⟩**.
+
+Any affine automorphism with a parabolic direction outside the axes, or any pseudo-Anosov element, has N-image outside U. Such elements break the D0 invariance, and the bound then says nothing. The bound also says nothing about mixing orbit rows with non-orbit corner rows.
+
+The bound does hold for arbitrary seeds, not just saved ones, because it needs nothing about η. So "optimal seed-orbit count under this Γ in this frozen room" is a fair claim once the qualifier is added. I would remove "optimal" from any heading.
+
+**One more check I did and found consistent.** For Γ to act on the marked surface, the shears must fix the marks. The code's unit-height row annuli, integral twists s/l_i per row, and grid-point marks on row boundaries make this hold. The document should state this explicitly. It would fail for maximal cylinders with marks in their interiors.
+
+## 2. Dimension count: translations versus scale
+
+The counts below are taken from the code logic:
+
+- The kernel of the axis rows over walls has dimension 25 − 10 = 15.
+- It contains the wall parts of both translations. This is asserted via `dot(f[axis], normal components) == 0`.
+- Adding 4 mark directions gives 19. Removing 2 translations gives 17. That gives m ≥ 9.
+
+Scale is correctly excluded. The asserted Euler identity `dot(f[axis], offsets) == len(c)` shows every core length changes under scaling.
+
+Scale is also correctly killed by every orbit row: all of K has zero holonomy (asserted by `zero_hol`), so Q_scale(k) = period(k) = 0. This is why the full quotient has dimension 29 − 3 = 26.
+
+Three caveats:
+
+- **The room counts depend on symmetries in D0.** The per-room bound `(len(ker)+3)//2` in `core-rigidity.py` assumes translations are the only symmetries in D0 for all 34 rooms. That is reasonable but not checked per room.
+- **Free versus pinned marks.** The opening sentence says "fix the source and target." If the marks are pinned rather than freely varying, D0 has dimension 15 with no translation quotient, and the bound becomes m ≥ 8. The document should state that mark velocities are deformation variables.
+- **The witness bound coincides only by assertion.** `minimal_block_count_lower_bound` is computed from `restricted_rank`, not from dim D0. The two agree only because the code asserts `restricted_rank == len(full_basis) − 2`. Compute the bound from the dimension so it does not depend on the saved data.
+
+## 3. Triangular-pocket slide
+
+I re-derived the composite:
+
+- D_d: (x,y) ↦ (y−d, x+d)
+- H_b: (x,y) ↦ (x, 2b−y)
+- D_d ∘ H_b ∘ D_d: (x,y) ↦ (2b−2d−x, y), which is V_{b−d}.
+
+The path-length check also works. Entering at height y, the path segments are (y−1) + (2−y) + (2−y) + (y−1) = 2 = 2(2−1). Under the slide, b − d = 2 is preserved.
+
+Only the open segment x=1 gives access to the pocket, and vertical rays run parallel to it. So "enters horizontally" is right.
+
+The value g₁ = −σ det((−12,5),(−1,−1)) = −(12+5) = −17 checks arithmetically.
+
+**Overreach.** "Every axis-cylinder period is exactly constant along this small family" is stronger than the argument supports. What is exact:
+
+1. Any fixed generic base trajectory keeps its itinerary for small t.
+2. In the fixed chart the period map is affine, so the base core classes have exactly constant periods.
+
+What is not shown is that the axis directions stay completely periodic with the same cylinder decomposition. Strips of width O(t) near heights 1 and 2 switch between reflecting at x=1 and entering the pocket. Their long-term fate, whether a new thin cylinder or a non-periodic component, is not analyzed. Cylinder heights, and therefore the moduli and twist multiplicities, also change.
+
+None of this affects the first-order argument at the base point. Rephrase the sentence as "periods of all base axis core classes are exactly constant."
+
+**Unverified in the shown code.** Neither script constructs the slide vector (δh₂ = −1, δh₃ = +1) or evaluates Q_δ(η₀) and Q_δ(η₁). The claim "exact stored forms and ranks verify these values" is unsupported by the code presented. The witness in `core-rigidity.py` is a generic kernel vector, not the slide. Add a short check that:
+
+- the slide vector lies in `ker`,
+- it is independent of tx, ty and the offsets,
+- it gives E₀·δ = (0,0) and E₁·δ = (−1,−1).
+
+## 4. Why the module is the seed classes plus core increments
+
+The argument is correct and slightly cleaner than written. Over ℚ, span(Γη) = ℚ[Γ]η. ℚ[Γ] contains g − I = N_h and h − I = N_v. Since N_h² = N_v² = 0, every word, including inverses, is I plus a non-unital polynomial in N_h and N_v. So K = span{ηᵢ} + 𝒜·ηᵢ, where 𝒜 is the non-unital algebra generated by N_h and N_v.
+
+On core vectors, N_h kills horizontal cores and N_v kills vertical ones. Nonzero words therefore alternate, and the BFS from Tₕηᵢ and Tᵥηᵢ captures 𝒜·ηᵢ.
+
+**Sign convention.** `operators()` uses +E[i][j] for both T_h and T_v. True intersection is antisymmetric, so one of them should carry −E. This is harmless for spans: an alternating word with n vertical steps only changes by (−1)ⁿ. The code should still note it.
+
+**Implicit row-sum identity.** The `zero_hol` assertion on operator images quietly checks that each row sum of E equals the corresponding row width, which in turn requires unit row heights. That is a good consistency check, but it should be stated as such.
+
+**Normalization.** The normalization T = N/s matches unit-height rows with twist s/l_i. If any "row" had height other than 1, `operators()` would be missing the height factor.
+
+## 5. Rank 26 and positive spanning from nine orbits
+
+**The linear claim.** If the run reproduces combined rank 26, then Q_δ(K) = 0 forces δ into span{translations, scale}. However, neither script asserts what the kernel actually is. `seed-module.py` checks rank 26 but never checks that the E-rows and K-period rows vanish on full translation (`fulltx`, `fullty`) and on scale. Similarly, `restricted_rank == dim − 2` in `core-rigidity.py` does not identify the 2-dimensional kernel as the translations.
+
+A convention bug, such as mark ordering in `F(j==W+k)` or `fulltx = tx + [1,0,1,0]`, could produce the right rank with the wrong kernel. Add three vanishing assertions. They are the actual certificate.
+
+**Positive spanning.** Granting the theorem, the step from "no nonzero δ mod symmetries with all rows ≥ 0" to finite positive spanning is sound:
+
+1. The dual cone is {0}, so the closure of cone(S) is the whole space.
+2. A convex set whose closure is ℝⁿ equals ℝⁿ.
+3. Finitely many rows suffice to generate ±eᵢ.
+
+The document correctly calls the resulting packet existential.
+
+**The dependency I could not check.** The upgrade is valid only if the reviewed cylinder-mixing theorem concludes Q_δ = 0 on the **full** linear span of Γηᵢ. If its proof only reaches orbit elements that are admissible, with actual lifts, actual w_g and σ, for example only sufficiently large twist powers, then K must be the span of the admissible subset.
+
+It is plausible that the subset spans the same space, because large-power differences recover N_h and N_v. But that needs to be stated and checked in the theorem, not assumed. Until then, "rank 26 ⇒ positive spanning from nine orbits" is conditional on this matching of K.
+
+**"First nine saved events, indices 0–8" is not guaranteed.** `seed-module.py` uses `C['fixed_room_witness']['saved_blocks_selected']`. That list is produced by a greedy max-rank-gain search over all 167 saved blocks, with ties broken by lowest index. It equals [0..8] only if each of events 0–8 is a maximal-gain choice at its step, and no assertion checks this.
+
+"These were not selected" is also inaccurate: they were selected, by rank over the saved set. This is not new path discovery, but it is selection. Either assert `chosen == list(range(9))` or reword it as "nine saved events chosen greedily by D0 rank."
+
+**The 9 = 10 − 1 assertion.** It is correctly interpreted as maximal. Zero-holonomy core functionals vanish on scale, and scale is not killed by the axis rows. So 9 is the ceiling, and reaching it requires overlap between the horizontal and vertical length spans; the area identity Σℓ_h = Σℓ_v supplies that overlap. The code comment "at most 9" is right, but the document should say that the ceiling is attained, not just respected.
+
+## Code-logic notes, unexecuted
+
+- **`insert` / `echelon` / `kernel`.** Reduction in increasing pivot order is correct, since stored rows are zero before their pivot. Kernel back-substitution is correct and self-asserted. BFS closure is sound: it stores reduced vectors, operators are linear, and closure is re-checked.
+- **Core-row cross-check.** `core-rigidity.py` compares its core rows to `twist-action.json` only on the first W columns. `seed-module.py` uses the full (W+4)-column forms. The mark columns of the core forms are never checked to be zero.
+- **"Independent" reconstruction.** The seed-defect formula target − 2·corner + e_{W+k} is duplicated verbatim in both scripts. That is consistency, not independence. "Independently reconstructed period derivatives" applies only to the core rows.
+- **SHA binding.** The hashes are recorded but never compared against expected values, so they are receipts, not bindings.
+- **Interior grid points.** Assigning zero velocity to interior grid points is legitimate. A change of interior vertex velocities changes the edge cochain only by a coboundary, which is invisible on closed cores.
+- **The -O guard.** The `-O` refusal is good practice.
+
+## Required edits before calling this reviewed
+
+1. Qualify every bound and "optimal" statement with Γ = ⟨the two axis row multitwists⟩. State explicitly that the marks are free variables.
+2. Replace "every axis-cylinder period exactly constant" with "base core-class periods exactly constant."
+3. Add a check that computes the pocket slide and reproduces E₀δ = 0, E₁δ = (−1,−1) and g₁ = −17.
+4. Assert that translations and scale annihilate all E-rows and K-rows, in both scripts.
+5. Fix or assert the "indices 0–8" claim.
+6. Record precisely which K the cylinder-mixing theorem controls: full orbit span or admissible subset.
+
+None of this frozen evidence supports a universal rigidity or seed-realization statement. The document itself already disclaims that, correctly.

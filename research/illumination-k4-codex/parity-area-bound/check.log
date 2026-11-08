@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "walls": 24,
+      "triangles": 27,
+      "internal_diagonals_canonicalized": 0,
+      "strict_boundary": true,
+      "parity": true,
+      "A_corner_angle_units": 7,
+      "smooth_non_A": 0,
+      "interior_non_A": 0,
+      "identity": [
+        88,
+        88
+      ],
+      "tile_cap": 29,
+      "rooted": {
+        "root": [
+          0,
+          0
+        ],
+        "star_tiles": 8,
+        "max_dual_distance": 9,
+        "dual_distance_cap": 19,
+        "max_coordinate": 6,
+        "coordinate_cap": 20
+      },
+      "room": "room-illumination-search-simple-unrestricted"
+    },
+    {
+      "walls": 34,
+      "triangles": 38,
+      "internal_diagonals_canonicalized": 0,
+      "strict_boundary": true,
+      "parity": true,
+      "A_corner_angle_units": 14,
+      "smooth_non_A": 0,
+      "interior_non_A": 0,
+      "identity": [
+        128,
+        128
+      ],
+      "tile_cap": 42,
+      "rooted": {
+        "root": [
+          2,
+          0
+        ],
+        "star_tiles": 8,
+        "max_dual_distance": 12,
+        "dual_distance_cap": 30,
+        "max_coordinate": 6,
+        "coordinate_cap": 31
+      },
+      "room": "room-tokarsky34"
+    },
+    {
+      "walls": 28,
+      "triangles": 32,
+      "internal_diagonals_canonicalized": 8,
+      "strict_boundary": true,
+      "parity": true,
+      "A_corner_angle_units": 8,
+      "smooth_non_A": 0,
+      "interior_non_A": 0,
+      "identity": [
+        104,
+        104
+      ],
+      "tile_cap": 34,
+      "rooted": {
+        "root": [
+          0,
+          0
+        ],
+        "star_tiles": 8,
+        "max_dual_distance": 4,
+        "dual_distance_cap": 24,
+        "max_coordinate": 3,
+        "coordinate_cap": 25
+      },
+      "room": "room-jain28"
+    },
+    {
+      "walls": 22,
+      "triangles": 24,
+      "internal_diagonals_canonicalized": 0,
+      "strict_boundary": false,
+      "parity": true,
+      "A_corner_angle_units": 8,
+      "smooth_non_A": 0,
+      "interior_non_A": 0,
+      "identity": [
+        80,
+        80
+      ],
+      "tile_cap": 26,
+      "rooted": {
+        "root": [
+          0,
+          0
+        ],
+        "star_tiles": 8,
+        "max_dual_distance": 8,
+        "dual_distance_cap": 16,
+        "max_coordinate": 4,
+        "coordinate_cap": 17
+      },
+      "room": "room-wolecki22-pinch"
+    },
+    {
+      "walls": 22,
+      "triangles": 30,
+      "internal_diagonals_canonicalized": 0,
+      "strict_boundary": true,
+      "parity": false,
+      "A_corner_angle_units": 6,
+      "smooth_non_A": 4,
+      "interior_non_A": 0,
+      "identity": [
+        80,
+        80
+      ],
+      "tile_cap": 26,
+      "rooted": {
+        "root": [
+          0,
+          0
+        ],
+        "star_tiles": 8,
+        "max_dual_distance": 11,
+        "dual_distance_cap": 22,
+        "max_coordinate": 5,
+        "coordinate_cap": 23
+      },
+      "room": "known22"
+    }
+  ],
+  "caps": [
+    {
+      "walls": 21,
+      "max_triangles": 25,
+      "max_square_area_numerator": 25,
+      "max_square_area_denominator": 2,
+      "root_star_distance_cap": 17,
+      "root_coordinate_cap": 18
+    },
+    {
+      "walls": 26,
+      "max_triangles": 32,
+      "max_square_area_numerator": 32,
+      "max_square_area_denominator": 2,
+      "root_star_distance_cap": 24,
+      "root_coordinate_cap": 25
+    }
+  ],
+  "input_hashes": {
+    "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/isolation-review/inputs/room-illumination-search-simple-unrestricted.json": "512b3eaaed9612bd69b9f8ed9494ae52e128f6ebf13bcbc0c5f8a9adbf54b598",
+    "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/isolation-review/inputs/room-tokarsky34.json": "4c6bc1b1dbef066872e810b4a93e1baeb13de1628cc627f0d2e016530b477ef7",
+    "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/isolation-review/inputs/room-jain28.json": "6073163969ce727adf504ce49faed3af990a1d23f39deaba88dd44dc188f7800",
+    "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/isolation-review/inputs/room-wolecki22-pinch.json": "7e9796bca9c2546c63722a5377f8074b0885f62af0a0fcf86080114b301ded6e",
+    "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/isolation-review/inputs/known22.json": "c7838dfe640932458e6853af7171396af05df71067658ee8f78f9ca3d91cab20"
+  },
+  "scope": "Identity and rooted-radius controls on frozen rooms; no shape enumeration, optical tests, global minimality or arbitrary real-grid claim."
+}

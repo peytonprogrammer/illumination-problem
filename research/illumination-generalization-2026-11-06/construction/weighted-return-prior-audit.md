@@ -1,0 +1,13 @@
+# Weighted-return prerequisites and distinction
+
+Read programme.md and weighted-return-phase.md in full before WR01. SAME goal and budget waiver preserved. No prior discovery clock is restarted.
+
+- direction-skeleton.md: a fixed primitive direction has bounded marked-prong edge count and unbounded positive integer first-return times. Actual source/target fibers and forbidden physical corner lifts are retained. This is not a bounded arithmetic state space.
+- direction-state-obstruction.md: P_n has W4 yet minimum primitive illuminating norm sqrt(n^2+1). The specified W-bounded unweighted SL2Z automaton is impossible. Parameter-dependent weighted operations were explicitly not excluded.
+- review/marked-origami-decision.md and marked-origami-orbit-check.py: anchored T/U operations act on a finite marked origami orbit for each fixed input; the saved 10368-state known22 closure is accepted. This does not force positivity or a W-uniform finite bound. No orbit traversal or engine will be repeated here.
+- review/dark-endpoint-rationality.md with its accepted supplement: powers of actual surface shears lift and can fix the full zero fiber, including regular physical corner marks. Those maps do not have to descend to the polygon. Complete actual endpoint-fiber preservation must be established separately; here integral marks lie over0 and sufficiently large powers fix that fiber pointwise.
+- global-monodromy-argument.md: composing different directional partial returns is not a trajectory. Even all integer (n,1)/(1,n) families can miss a lit square pair. Group transitivity is not actual S/T illumination.
+- global-bridge-impasse.md: finite blocking, generic torus-cover rigidity imports, graph cuts and unspecified affine transport do not supply the missing physical low-reflex force.
+- endpoint-transfer-frontier.md: conditional actual floor repair holds; universal collar availability fails at r2, and every one-wall choice fails at a particular lit r5 pair. No complete multi-contact transfer or nine-corner implication follows.
+
+WR01 tests a different precise step: genuine whole-surface horizontal/vertical affine twists, preserving actual endpoint fibers and forbidden sets, used as weighted Euclidean subtraction on a primitive displacement. It first proves the transfer and a PARTIAL rank decrease, then tests whether a decreasing move is always available. The actual maps will be constructed, not inferred from a matrix or a word. Original return times remain part of the data; different directional partial returns are never concatenated. No global availability, terminal illuminated base or r<=8 force is assumed.

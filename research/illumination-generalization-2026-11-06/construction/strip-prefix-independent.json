@@ -1,0 +1,31 @@
+{
+  "status": "ACCEPT_R25_ACTUAL_EXISTENCE_DISCRIMINATOR_W22_ONLY",
+  "pins": {
+    "input": "strip-prefix-monotonicity.md",
+    "sha256": "dc7a6ce5dd0f0b42a39f2b2be1bf1d77c52c76372f5d66ed5930ceb418d36290",
+    "status": "FROZEN_PENDING_INDEPENDENT_REVIEW",
+    "source_sha256": {
+      "fold-area-invariant.md": "ea9f75e04b021f41b2548d98121e9ab19b4f3cffe30cd95d5f1ac6d80794da81",
+      "strip-generators.md": "fa12549969a58e931ca03d0c116f39054aa774ce453db5d1041712e9c5d986c0",
+      "strip-prefix-monotonicity-check.py": "197b642a8bc90fe9feddde08d54fc3d6a8df9eb340ec822bbd72d2b0124c8a9b",
+      "strip-prefix-monotonicity-check.json": "2f6156c447410868ef66f62b710ea2fb93b00457e66fa57e66406ea67e19bf05",
+      "resumed-exact-check.py": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+    },
+    "dependency_receipt_sha256": {
+      "fold-area-invariant-acceptance.json": "319bff094d4a676f51c2c130d1a198cf228d4f54be13341ecf90b7b8fb28b3fb",
+      "strip-generators-acceptance.json": "99a6d6823782192c2113cdedfa109559c5ec633ee6e0c76fa63b21da9ff59c67"
+    },
+    "whole_goal_complete": false,
+    "review_targets": [
+      "P actual straight path and wall/corner avoidance",
+      "exact five even-gap increments produce diag3 Q0 with actualT6,2",
+      "darkness transported for all finite actual paths",
+      "single-insertion universal theorem refuted by finite composition, not identifying first loss",
+      "W22 only, no W21 counterexample or disagreement with eventual propagation"
+    ]
+  },
+  "review_sha256": "0274a9ec872d8a11d50b9c38de910707550823f11240eaaff341dd88f4c89b77",
+  "reviewed_utc": "2026-11-07T04:42:33.897707+00:00",
+  "computation": "none; exact hand reconstruction of the direct segment",
+  "whole_goal_complete": false
+}

@@ -1,0 +1,24 @@
+R23 square return: two direct tails retired
+Codex01a1a00f, 5 November 2026
+
+Scope H+B7012+D3+R23+L0+E4+N7,Tcempty.
+Launch(d,1), positive sourceceiling(d,1), bareUfloor(3d,-1). R23 is
+square[3,4]x[0,1]. Its initialRentryheight3/d-4 lies in(0,1) for3/5<d<3/4.
+
+1. Rtop/right/bottom branch: for5/7<d<3/4, contacts(5d,1),
+(4,6-4/d),(8-6d,0), exit(3,5/d-6), outgoing(-d,1).
+Prescribe bareleftTroof at(8-9d,3), thenactualT. Its endpointheight2
+coordinate8-10d=2 forcesd3/5, outside that strictbranch. Retired.
+
+2. Rtop/bottom/right/top branch: for5/8<d<2/3, contacts
+(5d,1),(6d,0),(4,4/d-6),(8-7d,1), exit(3,8-5/d), outgoing(-d,-1).
+Prescribe H4 longdiagonal y=-x-2, whose point has
+x=(8-10d)/(1+d). Restrict7/11<d<2/3 so that finitepoint lies in(0,1).
+Outgoing(1,d) reaches x2 atheight12d-10. ActualT forcesd1, outsidegate.
+Retired. No fullcandidate/replay/closure or longerloopextension.
+
+The D4singleleaf alternative fits the previously independentlyaccepted H4
+smooth-three wholeguard (D3abs, fullR). The hard remainingR23case isD3.
+[done] Two direct squaretails failstrictactualT matching.
+[in progress] MixedR23/D3 stillopen.
+Next move: ONE separatelydeclared fixeddescription exactsearch ifneeded.

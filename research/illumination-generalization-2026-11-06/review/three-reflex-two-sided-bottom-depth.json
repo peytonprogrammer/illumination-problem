@@ -1,0 +1,70 @@
+{
+  "created_utc": "2026-11-08T06:18:26.385440+00:00",
+  "status": "HAND_ARGUMENT_PENDING_INDEPENDENT_REVIEW",
+  "claims": [
+    {
+      "id": "BD01",
+      "statement": "Every legal successful nearP ray to t<w has at least floor((w-t)/(2c*epsilon)) genuine underside reflections in its FINAL bottom episode, irrespective of all earlier history.",
+      "proof": "Integer-time full-period cancellation and global 1-Lipschitz triangular fold."
+    },
+    {
+      "id": "NG01",
+      "statement": "For 0<epsilon<1/(2c), the last bottom entry must have w<x_e<w+2c*epsilon and actual vx=-tau,vy=-1.",
+      "proof": "At least one underside reflection is necessary; positive horizontal phase cannot reach the underside within its first2c vertical time."
+    },
+    {
+      "id": "BT01/BT02",
+      "statement": "At most four exact negative-gate target-reaching entry states per epsilon; unique unbounded m per target/vertical-sign branch, with strict alignments and true-corner guards.",
+      "proof": "No slow 2B wrap before the next R exit; full target fold gives two image signs and two arrival orientations."
+    },
+    {
+      "id": "BT03",
+      "statement": "For EVERY small positive epsilon and every such target, one or two pre-left-turn entry states are legal and reach ACTUAL T without a corner. No prior illumination assumed.",
+      "proof": "The two strict-alignment arguments differ by v/c in(0,1), so cannot both be integral. All earlier slow phases stay before x=l."
+    }
+  ],
+  "domain": {
+    "geometry": "Integral ordered original spiral 0<a<l<w<A;0<b<c<h<H",
+    "target": "Actual integer/native l<t<w,0<v<c",
+    "direction": "tau=P+epsilon, P=2lcm(a,A,A-w,A-l);0<epsilon<1/(2c)",
+    "prior_source_history": "Arbitrary legal left/right/cap/bottom history; last-entry necessity only. Target-side sufficiency starts at the specified actual incoming state."
+  },
+  "remaining_global_implication": "Actual source at SAME epsilon must attain one of those exact position-and-negative-velocity entry states. Target-side nonemptiness alone does not imply source intersection.",
+  "excluded_from_claim": [
+    "t=w",
+    "t>w",
+    "source-to-target existence for an unknown pair",
+    "all ordered/r3/r<=8",
+    "minimum reflection depth over all slopes",
+    "historical novelty"
+  ],
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/two-sided-return-test.md",
+      "sha256": "96983f3998dda94bd15087765d12270375944dc4d8edfdde5fb31270d9365b79"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/two-sided-return-acceptance.json",
+      "sha256": "d69fdca4f962e3c963bb99977b6b97b27248e7f2f92fbe10e004f1bfc3ff64b3"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-return-independent.md",
+      "sha256": "d7e1485dcadc1dbc9a3dd6fd4dba2e55bb8dd149eb5c3d15bf1879c918a0f013"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-return-independent.json",
+      "sha256": "ee822ffb919bdd31180541e44de3f9d2cabfb55cd62e687a92bb56ba33776bb1"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-left-return-proof.md",
+      "sha256": "0fcfc5c99fe86378660668a51d7bd91754c56587521df554387f7e7beca84fec"
+    }
+  ],
+  "proof_sha256": "836101a7461aa7a4624738c0195b75915164e37353a249157d76f484e9ff8771",
+  "independent_review_requested_from": "Existing author/coordinator via shared board; no new worker or direct outward message",
+  "new_discovery": false,
+  "numerical_run": false,
+  "new_engine": false,
+  "prior_clocks_preserved": true,
+  "full_goal_complete": false
+}

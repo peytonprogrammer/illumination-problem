@@ -1,0 +1,38 @@
+{
+  "status": "EXACT_STRUCTURAL_PASS",
+  "scope": "Single frozen room; only horizontal/vertical cellular core ranks. No lighting, shear-orbit or ray searches.",
+  "input_sha256": {
+    "inputs/room.json": "4e9d566118d1bb8d9f81f12255abe14da7f67028b0d8b63789b081a145c3e805",
+    "inputs/twist_origami.py": "cd1b19c002c1d234d6f0d29ad46250e6f409ff14cea509c488ec4b1b34bdf19e"
+  },
+  "positive_balance_control": {
+    "directions": [
+      [
+        "137",
+        "11"
+      ],
+      [
+        "-127",
+        "11"
+      ],
+      [
+        "5",
+        "71"
+      ],
+      [
+        "5",
+        "-49"
+      ]
+    ],
+    "weights": [
+      "61/264",
+      "71/264",
+      "19/120",
+      "41/120"
+    ]
+  },
+  "criterion_applies": false
+}
+room {'squares': 112, 'vertices': 58, 'face_rank': 111, 'genus': 28, 'H1_dimension': 56} {'horizontal': {'row_cycle_count': 20, 'row_cycle_lengths': [2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 16, 16], 'core_homology_rank': 15, 'rank_one_sufficient_condition': False}, 'vertical': {'row_cycle_count': 20, 'row_cycle_lengths': [2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 16, 16], 'core_homology_rank': 15, 'rank_one_sufficient_condition': False}}
+torus {'squares': 1, 'vertices': 1, 'face_rank': 0, 'genus': 1, 'H1_dimension': 2} {'horizontal': {'row_cycle_count': 1, 'row_cycle_lengths': [1], 'core_homology_rank': 1, 'rank_one_sufficient_condition': True}, 'vertical': {'row_cycle_count': 1, 'row_cycle_lengths': [1], 'core_homology_rank': 1, 'rank_one_sufficient_condition': True}}
+L {'squares': 3, 'vertices': 1, 'face_rank': 2, 'genus': 2, 'H1_dimension': 4} {'horizontal': {'row_cycle_count': 2, 'row_cycle_lengths': [1, 2], 'core_homology_rank': 2, 'rank_one_sufficient_condition': False}, 'vertical': {'row_cycle_count': 2, 'row_cycle_lengths': [1, 2], 'core_homology_rank': 2, 'rank_one_sufficient_condition': False}}

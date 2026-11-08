@@ -1,0 +1,59 @@
+{
+  "id": "TR01",
+  "created_utc": "2026-11-07T21:55:40.906983+00:00",
+  "claim": "Positive actual-P illumination for all stated ordered spiral metrics and actual endpoint pairs both in G or both in int(R).",
+  "source_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-01.md",
+      "sha256": "64640c28451b69910455543d9a190548f323a08daacd0734ad2efe14d1babbdf"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-argument-01.md",
+      "sha256": "384d4f32e9eaaab9b76bf8886cf844924ac96e65b9404f39c56beb03b041f2a0"
+    },
+    {
+      "path": ".context/illumination-k4-codex/single-boundary-blocker/l-monotone-proof.md",
+      "sha256": "dc80c57e5d3d74c82863779913a4b6fc59256363391ff4e1bfbff506cd769db3"
+    },
+    {
+      "path": ".context/illumination-k4-codex/two-reflex-blocker/all-heights.md",
+      "sha256": "25ae281ecec09edef135f51d6a4aac0308d1f7767505cca40fd5645afd492016"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-L-dependency-review.md",
+      "sha256": "5ad9ecfde7282d4d69c6d3240399c2e42d7218520483f93463fd7a7d80efdc25"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
+      "sha256": "7ee8342244b36ac3505e6369c3087181b00c8a7ac672cfc48c108105a1f69708"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-review.md",
+      "sha256": "16aa60f945c22c9588de002d3da8579aca601950d0da1889db22e8d4c0f02f34"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
+      "sha256": "31cd407a59dfd1a16e834a67d61f847b5cbd78423363b411f48464d053ff22c6"
+    }
+  ],
+  "base_nine_current_hash_checks": {
+    ".context/illumination-generalization-2026-11-06/review/whole-staircase-candidate.md": true,
+    ".context/illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/staircase-window-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/uneven-T-acceptance.json": true,
+    ".context/illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json": true
+  },
+  "review_questions": [
+    "Do the ordered spiral geometry, turn word and exact uncovered pair set hold?",
+    "Does the particular U construction avoid x=w below c and the additional actual corner(w,c), including endpoints at y=c,h?",
+    "Do all U placement cases (arm/arm, arm/base, direct) use genuine actual mirrors and attain actual T?",
+    "Does the horizontal-only L construction in R avoid every artificial vertical wall and(w,h), with artificial-boundary endpoints explicitly excluded?",
+    "Confirm arbitrary real metrics/no reflection cap and partial r3/full-goal scope boundaries."
+  ],
+  "search_used": false,
+  "whole_goal_complete": false
+}

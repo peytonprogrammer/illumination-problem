@@ -1,0 +1,181 @@
+{
+  "checked_at": "2026-11-02",
+  "scope": "Targeted primary-literature gate for cylinder-span and same-orbit-closure hypotheses; no comprehensive absence claim.",
+  "sources": [
+    {
+      "url": "https://academicweb.nd.edu/~andyp/papers/HomologyCovers.pdf",
+      "title": "Generating the homology of covers of surfaces",
+      "authors": [
+        "Marco Boggi",
+        "Andrew Putman",
+        "Nick Salter"
+      ],
+      "version_date": "2024-01-22",
+      "location": "Theorem B, paper page 2; proof page 9",
+      "used_for": "Lifted-simple-curve homology is symplectic over Q for any finite branched cover between closed oriented surfaces. Applied to the one-puncture unit torus as in the existing structural note.",
+      "not_used_for": "Not a statement that cylinder cores span all homology, that the physical neck lies in this span, or that an actual S/T event exists."
+    },
+    {
+      "url": "https://arxiv.org/abs/1209.2854",
+      "title": "Symplectic and Isometric SL(2,R) invariant subbundles of the Hodge bundle",
+      "authors": [
+        "Artur Avila",
+        "Alex Eskin",
+        "Martin Moeller"
+      ],
+      "location": "Author abstract, v2 revised 2014-12-04",
+      "used_for": "Forni-bundle flatness and tangent orthogonality concern the same affine invariant manifold.",
+      "not_used_for": "No identification of the Forni spaces of the arithmetic base Teichmuller curve and the larger pocket-slide orbit closure."
+    },
+    {
+      "url": "https://www.numdam.org/item/10.5802/ahl.198.pdf",
+      "title": "A Zero Lyapunov Exponent in Genus 3 Implies the Eierlegende Wollmilchsau",
+      "authors": [
+        "David Aulicino",
+        "Frederik Benirschke",
+        "Chaya Norton"
+      ],
+      "location": "2024 paper; earlier structural note uses Lemma 4.3",
+      "used_for": "Existing one-direction warning that Forni classes vanish on cylinder cores.",
+      "not_used_for": "No converse to cylinder vanishing; no arbitrary-genus no-Forni theorem inferred."
+    },
+    {
+      "url": "https://webusers.imj-prg.fr/~anton.zorich/Papers/SQUARE_TILED_CYCLIC_COVERS.pdf",
+      "title": "Square-tiled cyclic covers",
+      "authors": [
+        "Giovanni Forni",
+        "Carlos Matheus",
+        "Anton Zorich"
+      ],
+      "location": "Sections 1 and 2.1",
+      "used_for": "Four-point cyclic pillow covers have additional global covering/flat-structure hypotheses; not automatically every point with C4 symmetry.",
+      "not_used_for": "No classification applied to arbitrary raw canonical disk unfoldings."
+    },
+    {
+      "url": "https://arxiv.org/pdf/0912.1425",
+      "title": "The action of the affine diffeomorphisms on the relative homology group of certain exceptionally symmetric origamis",
+      "authors": [
+        "Carlos Matheus",
+        "Jean-Christophe Yoccoz"
+      ],
+      "location": "v2 (2010-10-06): q=3 for11; odd q>=3 for13. Sections3.1,3.3,3.5,3.7; paper pp18--28",
+      "used_for": "Published affine-group/homology matrices for11 and degree-q square-torus covering/three wholly singular nonzero torsion fibers for13. Exclusion proofs are separately derived hand arguments.",
+      "not_used_for": "The source itself does not assert the new room-factor exclusion, geometric neck realization or universal S/T detection."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1009.4655",
+      "title": "A geometric criterion for the non-uniform hyperbolicity of the Kontsevich--Zorich cocycle",
+      "authors": [
+        "Giovanni Forni"
+      ],
+      "location": "Definitions3--4 and Theorem2 (paper pp8--9), Theorem4 (p10)",
+      "used_for": "Hypothesis gate only: requires a periodic foliation of maximal homological dimension for the full hyperbolicity conclusion. No such foliation is established for every room here.",
+      "not_used_for": "No claim that real branch values or C4 symmetry supplies that hypothesis; no actual S/T event conclusion."
+    }
+  ],
+  "new_hand_lemmas": "Sections7--8/10 accepted with corrections by review-gate-module. General invariant-subspace symplecticity and an exact Gamma-orbit blindness criterion; no seed/detection existence. Further module/dimension refinements retired as next work.",
+  "formal_control": "47 fixed identities, several dependent or true by definition; not 47 independent results. Peer separately rebuilt source matrices; see review-gate11-12/findings.md checker audit. No optical existence verified.",
+  "universal_goal": "OPEN",
+  "primitive_refinement": "Rank>=2W-8 suffices conditionally on an actual seed, but forces the unproved dim K_-<=2 condition. Exact criterion: pi_C(B) is Omega-orthogonal to V_eta. No universal bound proved.",
+  "independent_structural_review": {
+    "path": ".context/claude-illumination-check/review-structural-filter/findings.md",
+    "scope": "Earlier covering and two-cover span note, accepted with incorporated corrections. Not a review of new module lemma.",
+    "incorporated": [
+      "core-to-lift converse at raw base",
+      "exact nonorthogonality criterion",
+      "AEM symplecticity attribution",
+      "unambiguous pullback notation",
+      "topological detector versus descended sphere twist distinction"
+    ]
+  },
+  "explicit_affine_generators": "Hand construction added in Section7; fixed origin fiber, integer unimodular shear, positive annulus twist counts, actual primitive midpoint-event transfer.",
+  "axis_checker_repair_mutation": {
+    "method": "in-memory source mutation before basis construction; real output writes omitted",
+    "source_sha256": "b54c195992389f6733a9ed1c58a688ce3d00264f3a010c419b5963b5457735e3",
+    "membership": [
+      true,
+      true
+    ],
+    "neck_axis_inclusion_refuted": false,
+    "response_determinant": "0",
+    "scope": "Regression reproduces the peer C2 mutation; not a new geometry or optical test."
+  },
+  "ornithorynque_gate": {
+    "primary_source": "https://arxiv.org/pdf/0912.1425",
+    "quotient_genera": {
+      "quarterturn": 0,
+      "halfturn": 1
+    },
+    "rotation_form_rational_anisotropy": "|2x-(1+3i)y|^2=6|y|^2 has no nonzero Q(i) solution, by mod3 infinite descent",
+    "scope": "Specified surface and its order4 quarterturn only; no higher-cover or universal-event conclusion",
+    "lecture_notes_corrections": [
+      "Aff(1) stabilizes regular A_i; it is not the zero-fixing subgroup",
+      "H_tau action is cyclic order6, not3"
+    ],
+    "independent_review": "ACCEPT WITH CORRECTIONS; review-gate11-12/findings.md. Corrections incorporated. Statement concerns rational anisotropy of H_0(M)_-, not a literal pocket on M."
+  },
+  "multi_component_gate": {
+    "section": 12,
+    "input": "three orthogonal copies of published q=3 H_b with the specified compatible linear reflection",
+    "beta0": [
+      1,
+      2,
+      4,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "quadratic_values": [
+      20,
+      -4,
+      -16
+    ],
+    "scope": "Formal rational direct sum only. It defeats unrestricted arithmetic extension, not the goal. Actual occurrence and neck containment in a room remain unproved.",
+    "independent_review": "ACCEPT; review-gate11-12/findings.md"
+  },
+  "geometric_factor_gate": {
+    "section": 13,
+    "primary_source": "https://arxiv.org/pdf/0912.1425",
+    "locations": "Matheus--Yoccoz v2 Section3.1, paper pp18--22; main pocket-detection.md1/10/12/14 and31 local cone formula",
+    "theorem": "A literal-pocket room with full lattice2Z[i], zeros overE[2], regular A mark and nonzero-torsion cone multiplicities5/3 cannot translation-cover a torus cover having a common divisor d>=2 in all nonzero2torsion-fiber cone multiplicities.",
+    "handles": [
+      "arbitrary complex differential scaling",
+      "arbitrary torus shift",
+      "non-equivariant finite holomorphic translation factorization"
+    ],
+    "application": "Published odd-q family, including genus4 q3, excluded as every translation quotient; no abstract representation exclusion.",
+    "independent_review": "ACCEPT WITH CORRECTIONS; review-gate13/findings.md. Connected raw t=0 source, compact connected finite-degree target and endomorphism/coset inputs explicit; abstract homology not excluded.",
+    "validation": "Hand proof from periods, three-point coset size, regular A mark and local order divisibility; no new script or search."
+  },
+  "neutral_scattering_hand_lemma": {
+    "proof": "pocket-detection.md35",
+    "source": "Existing prescribed D H D identity, now with exact incoming-state and first-hit proof. No external theorem used.",
+    "state_domain": "a>0; m=b/a;0<q<1;0<q+2m<1",
+    "exit_state": "(0,q+2m),(-a,b),time2/a",
+    "scope": "Supplied finite event; selected corner fixed outside pocket; all pocket visits strict neutral. Actual S/T labels and embeddedpi retained. Not a room counterexample or universal detector.",
+    "independent_review": "added verification details pending; lower priority than13 and module7--8/10",
+    "prior_result": "The exact slope interval and fixed return map are already in main2. Section35 adds explicit flight time/hit clearance and persistence details; no new detection result."
+  },
+  "direct_path_literature_check": {
+    "scope": "Two targeted primary-literature searches, not an exhaustive literature review",
+    "outcome": "No source was adopted as supplying actual S/T adjacency or pocket flux contrast; no theorem inferred from search snippets."
+  },
+  "current_turn_assessment": "Independent peer reviews received and corrections incorporated. Supporting results consolidated; universal actual seed and nonzero event pairing remain OPEN. No new existence theorem. Retire further Gamma-module/dimension work; next geometry target is B not subset K.",
+  "endpoint_marking_audit": {
+    "scope": "Read-only hand consistency inspection of current module7--8/10 and main25/31.1; not independent peer verification",
+    "finding": "No defect identified from auxiliary origin-fiber marks. A common material marking transports auxiliary points; actual event endpoint periods are unaffected, and twist differences with fixed endpoint labels are absolute. This does not supply a seed or nonzero pairing."
+  },
+  "review_status": {
+    "module": ".context/claude-illumination-check/review-gate-module/findings.md",
+    "geometric_factor": ".context/claude-illumination-check/review-gate13/findings.md",
+    "rational_neck": ".context/claude-illumination-check/review-gate11-12/findings.md",
+    "axis_checker_repair": ".context/claude-illumination-check/review-axis-span/findings.md",
+    "scope": "Independent peer audits; accepted with documented corrections, repair verified. Not universal theorem acceptance."
+  }
+}

@@ -1,0 +1,7 @@
+# R57 review reconciliation
+
+Peer construction/h2-depth-prefix-independent.md/json read in full. ACCEPT the clarification and the limited continuous prefix only. Frozen source files are preserved.
+
+Correction to the identical early-target determinant argument: physical S,T having different y coordinates does not alone prohibit an unfolded earlier-target image from passing the source. In this particular construction every copy's image y coordinate is constant and the ray vertical component gamma is constant and nonzero. Therefore an identically collinear earlier-target image has CONSTANT ray parameterlambda=(image_y-S_y)/gamma. If lambda were zero, identical collinearity would force image_x(D)=S_x for allD, contradicting its nonzero affine slope+/-1. Thus it cannot cross zero or pass the developed source. An ordering change at a collision is impossible because the physical actual target remains strictly interior. This replaces the insufficient physical-y rationale in the frozen prose.
+
+Peer independently rebuilt all six prescribed word cells, including affine-identity checks atD2, exact cuts, first-hit wall tests, protection and the complete[0,14/15) union. Author discovery code was not executed. No finding remains within the limited result after this correction. The unclosed interval beginning14/15 is undecided; no all-path failure or darkness follows. Main universal goal remains open. No effort was restarted or extended.

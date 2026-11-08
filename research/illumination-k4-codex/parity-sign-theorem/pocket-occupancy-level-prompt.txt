@@ -1,0 +1,52 @@
+Independent tools-disabled geometric proof review, no enumeration or optical searches. Check ONLY this proposed common-level parabolic construction. Base X is8copy D4 unfolding of a simple canonical grid-triangle polygon, Ntriangles each area1/2; translation charts have integer gluing translations and singularities develop toZ2. Hence pi:X->R2/Z2 is a branched translation cover degree d=4N branched onlyover0; actual regular source/target lifts and ALL physicalcorner lifts are in pi^-1(0). A supplied actual onecorner seed has halfvector primitive integer w and allits points project to the closed torus w-leaf. Prior accepted geometric affine-event theorem: orientationpreserving affine map fixing actual endpoint/corner labels transports a legal intrinsicpi continuation and avoids all other physicalcorners, retaining endpoints.
+
+Does the proposed K(d)=lcm(1..d) lift of EVERY primitive-direction torus parabolic exist with the stated derivative and pointwise-fixed leaf graph? Carefully check annulus covering degrees/heights, all slit/saddle edges and regular leaves, simultaneous top/bottom shifts, different boundary periods/incident sheets, zero-sector extensions, affine gluing, inverse, and ALL actuallabels. Is any extra power actually needed for these geometric hypotheses (not immersionbranch/tangent hypotheses)? If a statement fails, correct it. Do not assume graph fixed just because marks are fixed. No original seed existence or successful defect is claimed. Does this rigorously bound the symbolic residue count in9.4 by the degree? Provide accept/correct/refute concise proof.
+
+### 9.5 A common twist coefficient bounded by the cover degree
+
+**Status: candidate corollary; independent review requested.** In the raw
+canonical base made of N triangles of area1/2, the eight-copy surface X
+has area4N. Its integer-chart map to R^2/Z^2 is a branched translation
+cover of degree d=4N, ramified only over0. Define
+
+    K(d)=lcm(1,2,...,d).
+
+For ANY primitive integer v, remove the entire inverse image of the closed
+torus v-geodesic through0. The remaining components D_i are connected
+unbranched finite covers of its open cylinder. If their degrees are n_i,
+then sum_i n_i=d, each n_i<=d, their heights are1/|v|, and their
+circumferences are n_i |v|. On each D_i use the shear of coefficient
+
+    a=K(d)|v|^2,    twist number m_i=K(d)/n_i.
+
+At the bottom boundary its displacement is0, and at the top it is
+K(d)|v|, an integer multiple of that component's circumference. Thus
+each completed boundary leaf is fixed pointwise. These maps extend as
+identity on the removed graph and glue to an affine homeomorphism of X
+with the SAME derivative in every chart,
+
+    A_v z=z+K(d) det(v,z)v.                         (9.5)
+
+Across an ordinary graph edge the two affine formulas agree on the edge
+and have identical derivative, so they give one affine formula locally.
+At a zero they extend continuously, preserve each incident v-sector and
+are affine on its punctured sectors. The inverse uses -a; this proves
+bijectivity as well. No base room symmetry or extra point permutation
+is assumed. The construction fixes the entire fibre pi^-1(0), including
+all actual marks/corner labels and the v-prong graph.
+
+Accordingly Section9.4 may take K=K(d) and L_j=K(d) for all residues,
+without any geometric direction computation. These maps already have
+the endpoint and sector properties needed by the affine-event theorem;
+no claim that they fix a chosen immersed orbit-closure branch is needed.
+The finite transfer criterion has at most2K(d) vector coefficient tests
+per supplied seed, followed by six images after a successful coefficient
+pair. The size is deliberately crude; it is not a practical algorithm or
+a bound independent of N. For a particular direction, lcm_i n_i may be
+smaller, but no such decomposition is computed here.
+
+This corollary does NOT prove that one coefficient pair is nonzero, does
+not construct the supplied actual event, and does not permit replacing
+that event by an arbitrary zero-holonomy cycle. No directions or optical
+words have been enumerated or searched.
+

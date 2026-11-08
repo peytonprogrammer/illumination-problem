@@ -1,0 +1,288 @@
+{
+  "status": "PASS",
+  "necessary_bounds": {
+    "status": "PASS",
+    "fan": {
+      "partial_fans_checked": 56,
+      "side_pair_checks": 136
+    },
+    "cases": [
+      {
+        "target_A_cell": [
+          2,
+          1
+        ],
+        "minimum_Q_plus_missing": 10,
+        "wall_lower_bound": 18,
+        "connected_outside_sets": 105
+      },
+      {
+        "target_A_cell": [
+          3,
+          0
+        ],
+        "minimum_Q_plus_missing": 12,
+        "wall_lower_bound": 20,
+        "connected_outside_sets": 136
+      },
+      {
+        "target_A_cell": [
+          2,
+          2
+        ],
+        "minimum_Q_plus_missing": 12,
+        "wall_lower_bound": 20,
+        "connected_outside_sets": 40
+      },
+      {
+        "target_A_cell": [
+          3,
+          1
+        ],
+        "minimum_Q_plus_missing": 13,
+        "wall_lower_bound": 21,
+        "connected_outside_sets": 29
+      },
+      {
+        "target_A_cell": [
+          4,
+          0
+        ],
+        "minimum_Q_plus_missing": 15,
+        "wall_lower_bound": 23,
+        "connected_outside_sets": 17
+      },
+      {
+        "target_A_cell": [
+          3,
+          2
+        ],
+        "minimum_Q_plus_missing": 14,
+        "wall_lower_bound": 22,
+        "connected_outside_sets": 5
+      },
+      {
+        "target_A_cell": [
+          4,
+          1
+        ],
+        "minimum_Q_plus_missing": 16,
+        "wall_lower_bound": 24,
+        "connected_outside_sets": 3
+      },
+      {
+        "target_A_cell": [
+          5,
+          0
+        ],
+        "minimum_Q_plus_missing": 18,
+        "wall_lower_bound": 26,
+        "connected_outside_sets": 1
+      }
+    ]
+  },
+  "cases": [
+    {
+      "target_A_cell": [
+        1,
+        1
+      ],
+      "status": "PASS",
+      "source_sha256": "c8184b9a2f87fc8d7c907b1c1e9d877d727fc61dcd44533e2183cdc13b785b74",
+      "records": 37,
+      "seed_cuts": 1853,
+      "additional_cuts": 148,
+      "exact_rays_checked": 2001,
+      "required_touch_sets": 2001,
+      "independent_closed_triangle_guard_checks": 2001,
+      "mutation_checks": 12,
+      "corrupt_guard_checks": 12,
+      "max_new_path_reflections": 18,
+      "recorded_exhausted": false,
+      "fresh_parent_replay": "OPTIMAL",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        2,
+        0
+      ],
+      "status": "PASS",
+      "source_sha256": "54009ecd3b61def129f72b1462921f2791c7f2a1c5a9a061be304c36baeb2314",
+      "records": 39,
+      "seed_cuts": 1266,
+      "additional_cuts": 156,
+      "exact_rays_checked": 1422,
+      "required_touch_sets": 1422,
+      "independent_closed_triangle_guard_checks": 1422,
+      "mutation_checks": 12,
+      "corrupt_guard_checks": 12,
+      "max_new_path_reflections": 19,
+      "recorded_exhausted": false,
+      "fresh_parent_replay": "OPTIMAL",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        2,
+        1
+      ],
+      "status": "PASS",
+      "source_sha256": "fd0671ff0eb1f4cd208b7669de3ffd3a42a2a13a05b3be06135d1a76ac144eae",
+      "records": 73,
+      "seed_cuts": 713,
+      "additional_cuts": 146,
+      "exact_rays_checked": 859,
+      "required_touch_sets": 859,
+      "independent_closed_triangle_guard_checks": 859,
+      "mutation_checks": 12,
+      "corrupt_guard_checks": 12,
+      "max_new_path_reflections": 45,
+      "recorded_exhausted": false,
+      "fresh_parent_replay": "OPTIMAL",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        3,
+        0
+      ],
+      "status": "PASS",
+      "source_sha256": "254ecdd627ba2b8223e1494874f4ab90e98bf3b1da1991351c23b44961e28d7f",
+      "records": 8,
+      "seed_cuts": 0,
+      "additional_cuts": 26,
+      "exact_rays_checked": 26,
+      "required_touch_sets": 26,
+      "independent_closed_triangle_guard_checks": 26,
+      "mutation_checks": 12,
+      "corrupt_guard_checks": 12,
+      "max_new_path_reflections": 23,
+      "recorded_exhausted": false,
+      "fresh_parent_replay": "UNKNOWN",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        2,
+        2
+      ],
+      "status": "PASS",
+      "source_sha256": "e4ad055ece008c80ec0704aab9fc5445600b42fe0a69d71e8d578fe4e607fd23",
+      "records": 119,
+      "seed_cuts": 76,
+      "additional_cuts": 476,
+      "exact_rays_checked": 552,
+      "required_touch_sets": 552,
+      "independent_closed_triangle_guard_checks": 552,
+      "mutation_checks": 12,
+      "corrupt_guard_checks": 12,
+      "max_new_path_reflections": 30,
+      "recorded_exhausted": false,
+      "fresh_parent_replay": "OPTIMAL",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        3,
+        1
+      ],
+      "status": "PASS",
+      "source_sha256": "ab3a43a4ad6f6ccfebae1c670ce7169841198fce3cb95bb0d3e7641ac1441e4d",
+      "records": 42,
+      "seed_cuts": 0,
+      "additional_cuts": 84,
+      "exact_rays_checked": 84,
+      "required_touch_sets": 84,
+      "independent_closed_triangle_guard_checks": 84,
+      "mutation_checks": 12,
+      "corrupt_guard_checks": 12,
+      "max_new_path_reflections": 27,
+      "recorded_exhausted": true,
+      "fresh_parent_replay": "INFEASIBLE",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        4,
+        0
+      ],
+      "status": "PASS",
+      "source_sha256": "454dc031efabdc7aa1a3da5b70a114419464f1c50ff60efe6fc967005b9a8cfc",
+      "records": 0,
+      "seed_cuts": 0,
+      "additional_cuts": 0,
+      "exact_rays_checked": 0,
+      "required_touch_sets": 0,
+      "independent_closed_triangle_guard_checks": 0,
+      "mutation_checks": 0,
+      "corrupt_guard_checks": 0,
+      "max_new_path_reflections": 0,
+      "recorded_exhausted": true,
+      "fresh_parent_replay": "DEFERRED_TO_PEER_GEOMETRY_CHECK",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        3,
+        2
+      ],
+      "status": "PASS",
+      "source_sha256": "307929a1badacac61b608da075f1394fa58ae4fed9dec64179108db15ace6a13",
+      "records": 0,
+      "seed_cuts": 0,
+      "additional_cuts": 0,
+      "exact_rays_checked": 0,
+      "required_touch_sets": 0,
+      "independent_closed_triangle_guard_checks": 0,
+      "mutation_checks": 0,
+      "corrupt_guard_checks": 0,
+      "max_new_path_reflections": 0,
+      "recorded_exhausted": true,
+      "fresh_parent_replay": "DEFERRED_TO_PEER_GEOMETRY_CHECK",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        4,
+        1
+      ],
+      "status": "PASS",
+      "source_sha256": "5424e7fa3940338162b3c1c76f07f678654e6132bb8ecbb551c840b801fb11ac",
+      "records": 0,
+      "seed_cuts": 0,
+      "additional_cuts": 0,
+      "exact_rays_checked": 0,
+      "required_touch_sets": 0,
+      "independent_closed_triangle_guard_checks": 0,
+      "mutation_checks": 0,
+      "corrupt_guard_checks": 0,
+      "max_new_path_reflections": 0,
+      "recorded_exhausted": true,
+      "fresh_parent_replay": "DEFERRED_TO_PEER_GEOMETRY_CHECK",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    },
+    {
+      "target_A_cell": [
+        5,
+        0
+      ],
+      "status": "PASS",
+      "source_sha256": "e1b81d0ab9aae37ee04d201ca2b840d7c1f21afed4460bb3ff954b9e5a4f50f7",
+      "records": 0,
+      "seed_cuts": 0,
+      "additional_cuts": 0,
+      "exact_rays_checked": 0,
+      "required_touch_sets": 0,
+      "independent_closed_triangle_guard_checks": 0,
+      "mutation_checks": 0,
+      "corrupt_guard_checks": 0,
+      "max_new_path_reflections": 0,
+      "recorded_exhausted": true,
+      "fresh_parent_replay": "DEFERRED_TO_PEER_GEOMETRY_CHECK",
+      "scope": "Positive-ray guards checked physically and by independent closed segment/triangle intersection; geometry-only negative checking assigned to Claude."
+    }
+  ],
+  "family_status": "INCOMPLETE",
+  "scope": "I=2,k=3 guard/bounds audit; this is not a full three-exception exclusion when any case remains open."
+}

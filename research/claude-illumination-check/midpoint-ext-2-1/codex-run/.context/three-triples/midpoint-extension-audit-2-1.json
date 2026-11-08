@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "source_sha256": "9a14ae337b82c87544b2e0d54f70f5995f35cf5530652564b02c616803178d89",
+  "provenance": {
+    "frozen_manifest_sha256": "f3e5e5c995e1ebc122d36e2c84d3fb9443853a65be3958a203a0ee4003231ed5",
+    "source_sha256": "3b01028279ea9ef378ee7124cb926591f857613c065a7a04703b9b7247d6e25b",
+    "peer_witness_sha256": "82af721c31e76cf228a03345f54eedbf18cf426787ef726de7aa3b5510fe36d3"
+  },
+  "fixed_positive_controls": [
+    {
+      "neck_type": 1,
+      "triangles": 29
+    },
+    {
+      "neck_type": 2,
+      "triangles": 29
+    },
+    {
+      "neck_type": 3,
+      "triangles": 32
+    },
+    {
+      "neck_type": 4,
+      "triangles": 31
+    },
+    {
+      "neck_type": 5,
+      "triangles": 31
+    },
+    {
+      "neck_type": 6,
+      "triangles": 29
+    },
+    {
+      "neck_type": 7,
+      "triangles": 32
+    },
+    {
+      "neck_type": 8,
+      "triangles": 30
+    },
+    {
+      "neck_type": 9,
+      "triangles": 32
+    },
+    {
+      "neck_type": 10,
+      "triangles": 31
+    },
+    {
+      "neck_type": 11,
+      "triangles": 29
+    },
+    {
+      "neck_type": 12,
+      "triangles": 29
+    }
+  ],
+  "new_rooms": 765,
+  "new_guards": 1530,
+  "peer_seed_guards": 2,
+  "total_guards": 2598,
+  "mutation_checks": 8,
+  "corrupt_guard_checks": 8,
+  "max_reflections": 24,
+  "cases": [
+    {
+      "neck_type": 1,
+      "status": "OPTIMAL",
+      "conditional_lemma": false
+    },
+    {
+      "neck_type": 2,
+      "status": "OPTIMAL",
+      "conditional_lemma": false
+    },
+    {
+      "neck_type": 3,
+      "status": "OPTIMAL",
+      "conditional_lemma": false
+    },
+    {
+      "neck_type": 4,
+      "status": "OPTIMAL",
+      "conditional_lemma": false
+    },
+    {
+      "neck_type": 5,
+      "status": "INFEASIBLE",
+      "conditional_lemma": true
+    },
+    {
+      "neck_type": 6,
+      "status": "OPTIMAL",
+      "conditional_lemma": false
+    },
+    {
+      "neck_type": 7,
+      "status": "INFEASIBLE",
+      "conditional_lemma": true
+    },
+    {
+      "neck_type": 8,
+      "status": "OPTIMAL",
+      "conditional_lemma": false
+    },
+    {
+      "neck_type": 9,
+      "status": "INFEASIBLE",
+      "conditional_lemma": true
+    },
+    {
+      "neck_type": 10,
+      "status": "INFEASIBLE",
+      "conditional_lemma": true
+    },
+    {
+      "neck_type": 11,
+      "status": "OPTIMAL",
+      "conditional_lemma": false
+    },
+    {
+      "neck_type": 12,
+      "status": "INFEASIBLE",
+      "conditional_lemma": true
+    }
+  ],
+  "types_proved": 5,
+  "scope": "Geometry-only sufficient midpoint cover. Feasible/capped branches unresolved; no whole-placement or darkness conclusion."
+}

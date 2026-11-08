@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "input_sha256": "c7838dfe640932458e6853af7171396af05df71067658ee8f78f9ca3d91cab20",
+  "controls": [
+    {
+      "sx": 1,
+      "sy": 1,
+      "W": 22,
+      "N": 30,
+      "I": 2,
+      "k": 4,
+      "positive_net_cells": 7,
+      "zero_net_occupied_cells": 0,
+      "total_net": "20",
+      "corner_angle_sum_over_pi": "20",
+      "marked_nets": [
+        "4",
+        "4"
+      ],
+      "scalar_coordinate_gcd": 1
+    },
+    {
+      "sx": 2,
+      "sy": 2,
+      "W": 22,
+      "N": 120,
+      "I": 2,
+      "k": 59,
+      "positive_net_cells": 22,
+      "zero_net_occupied_cells": 8,
+      "total_net": "20",
+      "corner_angle_sum_over_pi": "20",
+      "marked_nets": [
+        "0",
+        "0"
+      ],
+      "scalar_coordinate_gcd": 2
+    },
+    {
+      "sx": 3,
+      "sy": 1,
+      "W": 22,
+      "N": 90,
+      "I": 7,
+      "k": 38,
+      "positive_net_cells": 16,
+      "zero_net_occupied_cells": 1,
+      "total_net": "20",
+      "corner_angle_sum_over_pi": "20",
+      "marked_nets": [
+        "2",
+        "0"
+      ],
+      "scalar_coordinate_gcd": 1
+    },
+    {
+      "sx": 5,
+      "sy": 1,
+      "W": 22,
+      "N": 150,
+      "I": 12,
+      "k": 72,
+      "positive_net_cells": 16,
+      "zero_net_occupied_cells": 11,
+      "total_net": "20",
+      "corner_angle_sum_over_pi": "20",
+      "marked_nets": [
+        "2",
+        "0"
+      ],
+      "scalar_coordinate_gcd": 1
+    },
+    {
+      "sx": 11,
+      "sy": 1,
+      "W": 22,
+      "N": 330,
+      "I": 27,
+      "k": 174,
+      "positive_net_cells": 16,
+      "zero_net_occupied_cells": 41,
+      "total_net": "20",
+      "corner_angle_sum_over_pi": "20",
+      "marked_nets": [
+        "2",
+        "0"
+      ],
+      "scalar_coordinate_gcd": 1
+    },
+    {
+      "sx": 21,
+      "sy": 1,
+      "W": 22,
+      "N": 630,
+      "I": 52,
+      "k": 344,
+      "positive_net_cells": 16,
+      "zero_net_occupied_cells": 91,
+      "total_net": "20",
+      "corner_angle_sum_over_pi": "20",
+      "marked_nets": [
+        "2",
+        "0"
+      ],
+      "scalar_coordinate_gcd": 1
+    }
+  ],
+  "global_identity": "sum(net) = sum(genuine corner interior angle / pi) = W-2",
+  "straight_strip_collapse": {
+    "entry": [
+      "0",
+      "0"
+    ],
+    "exit": [
+      "0",
+      "1"
+    ]
+  },
+  "optics_status": "Darkness of affine controls follows from the analytic axis-reflection conjugacy, not a new optical test."
+}

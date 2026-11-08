@@ -1,0 +1,13 @@
+# GSE04 candidate: finite complete first-cap-exit programmes for a lower source
+
+For arbitrary positive integer a<A, beta and nonnegative integer X, w in(a,A), a fixed actual horizontal mark0<s<a and source sign sigma=±1, let z0(tau)=center_(2a)(sigma*s+X*tau), excluding its true endpoint phases ±a. For tau>0 let the qth descending cap contact be x_q=F_A(z0(tau)+2q*beta*tau). A legal notch programme requires a<x_q<w until the final exit from that strict interval.
+
+Claim: for each fixed data set there exists a FINITE bound Q depending on those full metrics/source data such that NO strict-left-entry programme has more than Q consecutive strict notch contacts. It is uniform over all positive slopes, but not over rooms, sizes, or source heights. It bounds cap horizontal contacts, NOT ordinary vertical-wall reflections. It does not bound arbitrary full-room words that revisit the left arm.
+
+Proposed proof: periodic compact slope parameter. At a putative accumulation with an interior left phase, an irrational cap rotation hits the open left hole and a rational rotation returns to its start. At a limiting source corner, irrational rotation again enters the open left hole. A rational rotation returns after q to the same +a or -a boundary. On each admissible side, entry displacements X*epsilon and return displacements (X+2q*beta)*epsilon have the SAME sign; they are toward the left hole. Thus that same q contact is actually LEFT for all nearby admissible slopes, precluding arbitrarily long notch runs. X=0 has no source-boundary limit because0<s<a.
+
+Success criterion: rigorous finite open-cover argument handling BOTH discontinuity branches and all contacts; a finite complete partition into actual first-exit guard intervals follows in principle. Falsification: an explicit qualifying sequence of slopes with divergent first exit, or an invalid recurrence/corner-limit inference. No engine, numerical cutoff, new discovery clock or census is authorized or needed. This does not itself force an actual-target root; target-compatible availability remains open.
+
+## Upper-source obstruction declared before proof
+
+For an actual upper source, C=2H-h-u and beta=H-h. If there is n>=1 with tau0=nA/beta and F_A(s+C*tau0) strictly inside(a,w), then EVERY cap contact is in that same notch state and the upper ray is a regular cap-periodic trajectory. For each N, all first N notch contacts remain legal in a neighborhood of tau0, so no uniform cap-first-exit bound is available for that source. Reuse the already accepted countercontrol after its exact global swap: A5,a3,w4,beta2K,C2K+2,s2,K>=33. Any even n in(K/5,2K/5) gives notch state2+5n/K in(3,4). This is a symbolic hand consequence on frozen room controls, not a new example/search and not darkness.

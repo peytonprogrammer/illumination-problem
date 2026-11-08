@@ -1,0 +1,55 @@
+Independent hand review: centered left/top family closure
+4 November 2026 — restricted Codex01a1a00f
+
+VERDICT: ACCEPT, no corrections to the corrected residual-cover.txt.
+Reviewed peer first-surplus-review/residual-cover.txt in full after its
+section4 upper-triangle wording correction. Exact note and receipt hashes
+are recorded in centered-left-closure-review-check.json, PASS.
+
+The three-reflection path
+ (0,0) -> (6/7,-8/7) -> (-10/7,4/7) -> (-1/4,-1) -> (2,2)
+has positive segment multiples of(3,-4),(-4,3),(3,-4),(3,4).
+Its mirrors are the open B+ diagonal, open L+ diagonal and open negative-x
+source floor. Thus B-/outer-B/outer-L absence supplies actual walls.
+The complete first-surplus geometry supplies exactly those absences when
+L contains the unique centered pair and B+ is present. If B+ is absent,
+the previous one-reflection path already illuminates.
+
+Independent containment check:
+The first B entry/exit are(3/4,-1),(2/3,-1). The ray enters L+ at
+(-1,1/4), reflects, then crosses C=(-1,0). The segment immediately
+before C lies in L+; the lower L- triangle completes C's missing fan
+instead of containing an open segment of that leg. Together with H,
+both L triangles give the entire canonical C star, making C strictly
+interior. Removing L- destroys this property. After crossing C the ray
+stays in the source square until its floor reflection. The final leg
+crosses the two open full-star portals at(1,2/3),(5/4,1) and reaches
+actual T. No northwest attachment is required and no remaining ordinary
+cap can obstruct these legs or cover the specified mirrors.
+
+Exact recomputation of the one supplied path gives required caps
+B+,L+,L- and forbidden ordinary cap B-, with only the two outer B/L
+mates additionally forbidden. The exact C full-star and time-reversed
+sigma transfer both pass. Sigma requires E-,T-,T+, forbids E+ and the
+outer E/T mates, and crosses the interior midpoint(2,3). This proves the
+entire centered-top family as well. The arbitrary room need not itself
+be symmetric. No W/k cap or other N/D/R choice was used.
+
+Independence boundary: a separate session hand reconstruction and exact
+requirement recomputation using the existing checker and provided path.
+No original archive lookup or projection, discovery search, room/cap-
+assignment census, solver, worker, expert/formal claim or peer edit.
+
+Payoff: only the centered bottom/east symmetry family remains open in
+the full first-surplus L layer. All other types have hand illumination
+proofs with the stated independent checks.
+
+Transfer warning for the remaining bottom family
+Swapping x and y in this short proof preserves S,T but moves the full
+elbow star from(2,0) to(0,2), which is not our support. An exact static
+requirement check of that analytically swapped path needs BOTH Nb+ and
+Nr-, i.e. the already illuminated northwest bridge. Thus that direct
+swap supplies no new centered-bottom residual cover. This is only an
+applicability observation, not a proof that no short midpoint path exists.
+The useful remaining geometric objective is a bottom-midpoint crossing
+whose target leg stays inside the actual L support.

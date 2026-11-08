@@ -1,0 +1,81 @@
+{
+  "decision": "ACCEPT_EXPLICIT_NATIVE_LOWER_FIRST_CAP_BOUND",
+  "claims": [
+    {
+      "claim": "Uniform Q=max(AX,floor(2A(1+2A beta)/a)+1) for all strict source-mouth slopes at native horizontal marks",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "Near-corner comparison uses exact q=AX reference rotation closure and BOTH source fold signs",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "All native lower/mouth sources in fixed room share Q_room=max(2A(h-b),N)",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "No fixed-W reflection bound, upper-source extension or actual-target existence claim",
+      "decision": "ACCEPT"
+    }
+  ],
+  "pins_before": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-cap-finiteness-quantitative-candidate.md",
+      "sha256": "3e5307f51cce9b03027efa374151338af4cd3c6f8497d9b46dc555dfa9ab4409",
+      "actual": "3e5307f51cce9b03027efa374151338af4cd3c6f8497d9b46dc555dfa9ab4409",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-cap-finiteness-quantitative-proof.md",
+      "sha256": "aa9a46641f1eb6c8e24a0b4d5d4fb93e3f41f9855eb4e57bbdcc7541b6ba56b0",
+      "actual": "aa9a46641f1eb6c8e24a0b4d5d4fb93e3f41f9855eb4e57bbdcc7541b6ba56b0",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-cap-finiteness-proof.md",
+      "sha256": "52b61d7ab33cbac577c34691dac2ccdcd336bc9e3ead3f35f7b2c5e06e34aa98",
+      "actual": "52b61d7ab33cbac577c34691dac2ccdcd336bc9e3ead3f35f7b2c5e06e34aa98",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-argument.md",
+      "sha256": "8070fd84404374adf39fbd0887746e223822a3dd5f9dce6effd3e434d3410819",
+      "actual": "8070fd84404374adf39fbd0887746e223822a3dd5f9dce6effd3e434d3410819",
+      "match": true
+    }
+  ],
+  "pins_after": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-cap-finiteness-quantitative-candidate.md",
+      "expected": "3e5307f51cce9b03027efa374151338af4cd3c6f8497d9b46dc555dfa9ab4409",
+      "actual": "3e5307f51cce9b03027efa374151338af4cd3c6f8497d9b46dc555dfa9ab4409",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-cap-finiteness-quantitative-proof.md",
+      "expected": "aa9a46641f1eb6c8e24a0b4d5d4fb93e3f41f9855eb4e57bbdcc7541b6ba56b0",
+      "actual": "aa9a46641f1eb6c8e24a0b4d5d4fb93e3f41f9855eb4e57bbdcc7541b6ba56b0",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-cap-finiteness-proof.md",
+      "expected": "52b61d7ab33cbac577c34691dac2ccdcd336bc9e3ead3f35f7b2c5e06e34aa98",
+      "actual": "52b61d7ab33cbac577c34691dac2ccdcd336bc9e3ead3f35f7b2c5e06e34aa98",
+      "match": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/general-spiral-existence-argument.md",
+      "expected": "8070fd84404374adf39fbd0887746e223822a3dd5f9dce6effd3e434d3410819",
+      "actual": "8070fd84404374adf39fbd0887746e223822a3dd5f9dce6effd3e434d3410819",
+      "match": true
+    }
+  ],
+  "request_sha256": "2c4f7af6ca003f9ae8cf0152f9f2758d416f7ab7b0957be49481434ffbaf799b",
+  "argument_sha256": "bb8a22e4226c1f7390170a3e5c3b873e7bac57b4d215771e1eaf4d5a6a81ae4b",
+  "Q": "max(A*X,floor(2*A*(1+2*A*beta)/a)+1)",
+  "Q_room": "max(2*A*(h-b),floor(2*A*(1+2*A*(H-h))/a)+1)",
+  "hand_review_only": true,
+  "discovery": false,
+  "actual_target_existence": false,
+  "full_goal_complete": false
+}

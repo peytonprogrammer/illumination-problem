@@ -1,0 +1,123 @@
+# Hand review of §26.15 and the appended §26.14 cap-cone paragraph
+
+**Verdict: scoped ACCEPT for both, with no math defects.** I recommend five wording and checker corrections (C1–C5 below). I reconstructed everything by hand from the tile list and did no tool runs. I relied on §26.14 only for its accepted square-cap event and its π-sector argument, never on the withdrawn LEFT-triangle suffix.
+
+## Room reconstruction
+
+The fan list produces the following room:
+
+- **T square:** [3,5]×[-1,1].
+- **Corridor:** [1,3]×[0,1], the fan at (2,0) with j=0..3.
+- **N:** the triangle (2,2),(2,1),(3,1).
+- **Pocket:** the triangle (6,0),(5,0),(5,-1).
+- **Lower leaf:** [4,5]×[-2,-1].
+- **Upper leaf:** in the RIGHT fixture, the triangle (4,2),(4,1),(5,1).
+
+The T-square boundary then splits as follows:
+
+| Edge | Wall part | Portal part |
+|---|---|---|
+| y=1 | x∈[3,4] | x∈[4,5] |
+| x=3 | y∈[-1,0] | y∈[0,1] |
+| y=-1 | x∈[3,4] | x∈[4,5] |
+| x=5 | y∈[0,1] | y∈[-1,0] (to the pocket) |
+
+## §26.15 checks (all PASS)
+
+**Forcing at (5,1).**
+- T contributes the sector [π, 3π/2], which is 90°.
+- A RIGHT m2 quadrant would add [π/2, π]. The total is 180° at an odd-odd point, which the raw rule forbids.
+- The m1 triangle j=6 adds [3π/4, π], so the total is 135°. This is legal.
+- The pocket does not touch (5,1).
+- The other new corner is also fine: (4,1) gets 180° from T plus 90° from j=6, which is 270°.
+
+**First half (unchanged from §26.14).**
+- The path crosses x=1 at y=3/5. That point is in the S-square/corridor portal.
+- The hit at (5/3,1) is interior to the wall y=1, 1<x<2.
+- The second leg crosses x=3 at y=1/5, which is in (0,1). It does not reach y=0 inside the corridor.
+- Under any single-portal N_right, the wall y=1, 1<x<2 persists, because j=5 at (2,2) is excluded.
+
+**Second half: first hits.**
+- From B=(5,-1) with velocity (-3,5): the path reaches y=1 at τ=2/5 (x=19/5) before x=3 (τ=2/3). Its initial direction lies in T's sector (π/2, π).
+- From there with velocity (-3,-5): it reaches x=3 at τ=4/15 (y=-1/3) before y=-1.
+- Then with velocity (3,-5): it reaches y=-1 at τ=2/15 (x=17/5) before x=5.
+- Then with velocity (3,5): it reaches T=(4,0) at τ=1/5.
+- The durations sum to 6/15 + 4/15 + 2/15 + 3/15 = 1. Speed is √34 on both halves.
+- No segment passes through S, T, or any vertex. For example, B→(19/5,1) crosses x=4 at y=2/3 and y=0 at x=22/5.
+
+**Wall clearances.** Each hit is a positive distance from the nearest vertex:
+
+| Hit | Clearance |
+|---|---|
+| (19/5, 1) | 1/5 from (4,1) |
+| (3, -1/3) | 1/3 from (3,0), 2/3 from (3,-1) |
+| (17/5, -1) | 2/5 from (3,-1), 3/5 from (4,-1) |
+| (5/3, 1) | 1/3 from (2,1) |
+
+Every wall used is fixed under D_t. In particular, (4,-1) and the segment x=3, y∈[-1,0] do not move.
+
+**Development.**
+- Unfolding the suffix: H₋₁(T)=(4,-2), then V₃ gives (2,-2), then H₁ gives (2,4).
+- Cross-check: B + (-3,5) = (2,4).
+- Reflecting in x-y=6+t gives (2,4) + (8+t)(1,-1) = (10+t, -4-t). Applying H₁ gives T′(t) = (10+t, 6+t).
+- The corner is B′(t) = H₁(5, -1-t) = (5, 3+t).
+- Midpoint condition at t=0: 2B′ = (10,6) = T′.
+- Derivative: Q = (1,1) − 2(0,1) = (1,-1), and det((5,3), Q) = −5 − 3 = −8 ≠ 0.
+
+**π-sector at B.** The incoming germ (π−α), the outgoing germ (π/2+α), and the link [π/4, 3π/2] are all identical to §26.14. So the sector [−α, π−α] is reused validly.
+- The physical part [π/4, π−α] spans 3π/4 − α.
+- The mirrored part spans π/4 + α.
+- Together they total π, and neither part reaches 3π/2.
+
+## Appended §26.14 cone inequality (algebra verified)
+
+**Entry.** A half leaving B with velocity (−b, a) meets y=1 at q = 5 − 2b/a. The condition 3 < q < 4 is equivalent to 1 < a/b < 2. ✓
+
+**Hypotenuse hit.**
+- Entering the triangle cap, the path meets the hypotenuse x−y=2 at a point with x_h − 3 = 2(a−b)/(a+b).
+- This point is automatically interior to the hypotenuse.
+- Reflection there gives velocity (a, −b).
+
+**Exit.** Returning to y=1 gives x_exit = 3 + (x_h − 3)(1 + a/b) = 1 + 2a/b. ✓
+- The path stays inside the cap iff x_exit < 4, i.e. a/b < 3/2.
+- Equality makes the return hit the portal endpoint (4,1).
+
+**Consistency with the withdrawn control.** At a/b = 5/3:
+- The hypotenuse hit is x_h = 7/2, matching the withdrawn (7/2, 3/2).
+- The formal exit is x_exit = 13/3 > 4. The path actually hits x=4 at y = 3/2 − 3/10 = 6/5, again matching.
+
+## Corrections (none change the result)
+
+**C1. Forcing wording.** "A right m2 upper quadrant" is narrower than what the proof gives. A single-portal RIGHT fan at (4,2) must have a contiguous index range that starts at j=6. So any such fan with m≥2 contains j=7, and (5,1) becomes smooth. No r-budget argument is needed for the RIGHT side.
+
+State that this uses two exclusions:
+- No tile from (6,0) other than j=4. This comes from the literal pocket hypothesis.
+- No tile from (6,2). This comes from §26.7's seven-leaf structure.
+
+Without them, a fan with j=6,7 plus the (6,2) triangle j=4 would reach 225° at (5,1).
+
+**C2. Case partition.** The sentence "26.14 = LEFT m2, 26.15 = RIGHT m1, LEFT m1 open" silently relies on two assumptions:
+- The upper T leaf is single-portal. A two-portal fan j=5,6 would turn (19/5,1) into a portal.
+- LEFT m≥3 is excluded by the r ≤ 2 budget, since the forced lower m2 already uses r=1.
+
+Cite §26.7 for both, or list the uncovered cases as open.
+
+**C3. W-label scope.** The claim "for every single-portal N_right size" covers N m2, which makes the room W26, not W25. The checker witnesses only N m1. Say so explicitly. The event is also independent of the three S-side leaves; state this or fix them.
+
+**C4. "No cap … geometry is used after B."** This overstates. The proof does use the upper leaf's portal side, since the wall at x∈[3,4], y=1 depends on it. What it doesn't use is the leaf's interior. Reword accordingly.
+
+**C5. Checker housekeeping.**
+- The module docstring still says "One square-cap … plus a rejected triangular suffix". It should mention the RIGHT-triangle fixture.
+- Add `receipt['sectors']['(5, 1)']==[3]` to the right_triangle case so the forcing angle is checked mechanically.
+- Optionally, add a RIGHT-m2 fixture that is expected to fail the strict check.
+- Change `independent_review.right_triangle` from `PENDING` to `ACCEPTED_SCOPED_HAND_REVIEW`.
+
+**Cone-paragraph nit.** "Leaves the triangular cap back through y=1 at x_exit" is only an actual exit when x_exit < 4. Phrase it as "would meet y=1 at x_exit; this is the actual exit iff x_exit < 4." The scope statement already present (start at B, j=5 cap, local only) is adequate.
+
+## Accepted scope
+
+**§26.15:** under connected H, N_right, the literal lower pocket, the forced lower RIGHT m2 leaf, and a single-portal upper RIGHT leaf (forced to m1), there is one base event with D = −8. Opening remains conditional on Section 3.
+
+Still open: upper T LEFT m1, a two-portal upper leaf (unless excluded by §26.7), N_left, disconnected H, larger rooms, and universal detection. W25 is one witness, not a classification.
+
+**§26.14 addendum:** the cone condition 1 < a/b < 3/2 is accepted as a local admissibility condition for the j=5 cap entered from B, and nothing more.

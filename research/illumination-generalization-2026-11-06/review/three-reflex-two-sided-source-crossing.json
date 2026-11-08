@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-08T06:30:22.178Z",
+  "status": "HAND_CONDITIONAL_OPTICAL_LEMMA_PENDING_REVIEW",
+  "claims": [
+    "SC01a: source component width>(2max(v,c-v))/(alpha+w-t) gives a strict actual safe-target match.",
+    "SC01b: a single whole-prefix-regular full-gate source branch forces at least two distinct rational illuminating slopes.",
+    "SC01c: actual darkness forces every regular source-gate component to lie in one paired target-residue gap and satisfy the derived strict sub-full-gate span bound."
+  ],
+  "source_availability_proved": false,
+  "dependencies": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-bottom-depth.md",
+      "sha256": "836101a7461aa7a4624738c0195b75915164e37353a249157d76f484e9ff8771"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-target-gates.md",
+      "sha256": "e16ce407d36f8f87d7bbc7db835b14056dfc9639d425eecbea490b185b36121f"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-matching-prerequisite.md",
+      "sha256": "3651d598c2d66fa47d226cdb7e679c39e6a25f05ec96548cef43821aa521724b"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-two-sided-full-gate-continuity.md",
+      "sha256": "445121ec8aefa9b0590899d031ed6270937ae17294a281df23074db8b4ff3781"
+    }
+  ],
+  "proof_sha256": "9071517b426861524b81de83a6f980b599e3cb6180c3695944829c00728a77fc",
+  "full_goal_complete": false,
+  "new_search": false,
+  "clocks_preserved": true
+}

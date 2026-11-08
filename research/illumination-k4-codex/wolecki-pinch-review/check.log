@@ -1,0 +1,66 @@
+PASS 12 164 rows
+PASS 18 403 rows
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "radius": 12,
+      "metadata_rows_matched": 164,
+      "supplied_directions": 150,
+      "side_statuses": {
+        "EVENT": 164,
+        "SECOND_CORNER": 136
+      },
+      "families": [
+        {
+          "rows": 164,
+          "closure_rank": 2,
+          "rank_on_closure": 23,
+          "symmetry_rank": 3,
+          "positive_coefficients": 164,
+          "family": "free_tips"
+        },
+        {
+          "rows": 164,
+          "closure_rank": 4,
+          "rank_on_closure": 21,
+          "symmetry_rank": 3,
+          "positive_coefficients": 164,
+          "family": "pinch_kept"
+        }
+      ]
+    },
+    {
+      "radius": 18,
+      "metadata_rows_matched": 403,
+      "supplied_directions": 362,
+      "side_statuses": {
+        "SECOND_CORNER": 321,
+        "EVENT": 403
+      },
+      "families": [
+        {
+          "rows": 403,
+          "closure_rank": 2,
+          "rank_on_closure": 23,
+          "symmetry_rank": 3,
+          "positive_coefficients": 403,
+          "family": "free_tips"
+        },
+        {
+          "rows": 403,
+          "closure_rank": 4,
+          "rank_on_closure": 21,
+          "symmetry_rank": 3,
+          "positive_coefficients": 403,
+          "family": "pinch_kept"
+        }
+      ]
+    }
+  ],
+  "pinch_labels": [
+    7,
+    10
+  ],
+  "scope": "Independent dual-sided replay of supplied directions only; exact signed gradients modulo closure, both closure families and rational positive dependencies. Geometric opening coverage requires boundary-check and written audit."
+}

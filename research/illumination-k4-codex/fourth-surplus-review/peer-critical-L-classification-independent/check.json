@@ -1,0 +1,1135 @@
+{
+  "status": "SYMBOLIC_PER_VERTEX_CHECKS_PASS",
+  "checks": {
+    "lower_BC_(-1, 1)": {
+      "fixed_45deg_units": 3,
+      "coefficients": {
+        "Nb-": 1
+      }
+    },
+    "lower_BC_(1, 3)": {
+      "fixed_45deg_units": 2,
+      "coefficients": {
+        "T-": 1,
+        "Nr+": 1
+      }
+    },
+    "lower_BC_(3, -1)": {
+      "fixed_45deg_units": 2,
+      "coefficients": {
+        "D+": 1,
+        "R-": 1
+      }
+    },
+    "lower_BO_fixed_smooth_B": {
+      "point": [
+        -1,
+        -1
+      ],
+      "units": 4
+    },
+    "upper3_(-1, 1)": {
+      "fixed_45deg_units": 4,
+      "coefficients": {
+        "Nb-": 1
+      }
+    },
+    "upper3_(1, 3)": {
+      "fixed_45deg_units": 2,
+      "coefficients": {
+        "T-": 1,
+        "Nr+": 1
+      }
+    },
+    "upper3_(3, -1)": {
+      "fixed_45deg_units": 2,
+      "coefficients": {
+        "D+": 1,
+        "R-": 1
+      }
+    },
+    "upper3_lower_B": {
+      "point": [
+        -1,
+        -1
+      ],
+      "units_after_Bplus": 3
+    },
+    "rectangle_(-1, 1)": {
+      "fixed_45deg_units": 4,
+      "coefficients": {
+        "Nb-": 1
+      }
+    },
+    "rectangle_(1, 3)": {
+      "fixed_45deg_units": 2,
+      "coefficients": {
+        "T-": 1,
+        "Nr+": 1
+      }
+    },
+    "rectangle_(3, -1)": {
+      "fixed_45deg_units": 2,
+      "coefficients": {
+        "D+": 1,
+        "R-": 1
+      }
+    },
+    "rectangle_lower_B": {
+      "point": [
+        -1,
+        -1
+      ],
+      "units_after_Bplus": 4
+    },
+    "lower4_repairs": {
+      "outside_C": [
+        -2,
+        -1
+      ],
+      "lower_B": [
+        -1,
+        -1
+      ],
+      "only_B2_repairs_lower_B": true,
+      "N5_would_add_second_smooth_B": true
+    },
+    "outer3_outside_repairs": {
+      "outside_C": [
+        -2,
+        1
+      ],
+      "smooth_B_needs_N5": [
+        -1,
+        1
+      ],
+      "Bcenter_extra_lower_B": false
+    },
+    "fullnorth_outside_repairs": {
+      "outside_C": [
+        -2,
+        1
+      ],
+      "smooth_B_needs_N5": [
+        -1,
+        1
+      ],
+      "Bcenter_extra_lower_B": true
+    },
+    "outer4_outside_repairs": {
+      "outside_C": [
+        -2,
+        1
+      ],
+      "smooth_B_needs_N5": [
+        -1,
+        1
+      ],
+      "Bcenter_extra_lower_B": false
+    },
+    "DR_outside_table_repairs": {
+      "D01_needs_R4": true,
+      "R45_needs_D1": true,
+      "D12_forbids_R4_with_b_consumed": true,
+      "R34_forbids_D1_with_b_consumed": true
+    },
+    "lower_BC_no_omitted_smooth_B": {
+      "tracked_points": [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "all_other_B_fixed_above180_or_max_below180": true
+    },
+    "lower_BO_no_omitted_smooth_B": {
+      "tracked_points": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "all_other_B_fixed_above180_or_max_below180": true
+    },
+    "lower4_BC_no_omitted_smooth_B": {
+      "tracked_points": [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "all_other_B_fixed_above180_or_max_below180": true
+    },
+    "upper_EC_no_omitted_smooth_B": {
+      "tracked_points": [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "all_other_B_fixed_above180_or_max_below180": true
+    },
+    "rectangle_EC_no_omitted_smooth_B": {
+      "tracked_points": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "all_other_B_fixed_above180_or_max_below180": true
+    }
+  },
+  "all_named_inward_vertex_coefficients": {
+    "lower_BC": [
+      {
+        "point": [
+          -2,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 2,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 5,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 3,
+        "coefficients": {
+          "Nb-": 1
+        }
+      },
+      {
+        "point": [
+          0,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          0,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nb-": 2,
+          "Nb+": 2
+        }
+      },
+      {
+        "point": [
+          1,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 5,
+        "coefficients": {
+          "D-": 1
+        }
+      },
+      {
+        "point": [
+          1,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          1,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 6,
+        "coefficients": {
+          "Nb+": 1,
+          "Nr-": 1
+        }
+      },
+      {
+        "point": [
+          1,
+          2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nr-": 2,
+          "Nr+": 2
+        }
+      },
+      {
+        "point": [
+          1,
+          3
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "T-": 1,
+          "Nr+": 1
+        }
+      },
+      {
+        "point": [
+          2,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "D+": 2,
+          "D-": 2
+        }
+      },
+      {
+        "point": [
+          2,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          2,
+          3
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "T-": 2,
+          "T+": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "D+": 1,
+          "R-": 1
+        }
+      },
+      {
+        "point": [
+          3,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "R+": 2,
+          "R-": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "E-": 1,
+          "R+": 1
+        }
+      },
+      {
+        "point": [
+          3,
+          2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "E-": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          3
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "T+": 1
+        }
+      }
+    ],
+    "lower_BO": [
+      {
+        "point": [
+          -2,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 2,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 4,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 3,
+        "coefficients": {
+          "Nb-": 1
+        }
+      },
+      {
+        "point": [
+          0,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 6,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          0,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nb-": 2,
+          "Nb+": 2
+        }
+      },
+      {
+        "point": [
+          1,
+          -2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 2,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          1,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 6,
+        "coefficients": {
+          "D-": 1
+        }
+      },
+      {
+        "point": [
+          1,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          1,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 6,
+        "coefficients": {
+          "Nb+": 1,
+          "Nr-": 1
+        }
+      },
+      {
+        "point": [
+          1,
+          2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nr-": 2,
+          "Nr+": 2
+        }
+      },
+      {
+        "point": [
+          1,
+          3
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "T-": 1,
+          "Nr+": 1
+        }
+      },
+      {
+        "point": [
+          2,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "D+": 2,
+          "D-": 2
+        }
+      },
+      {
+        "point": [
+          2,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          2,
+          3
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "T-": 2,
+          "T+": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "D+": 1,
+          "R-": 1
+        }
+      },
+      {
+        "point": [
+          3,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "R+": 2,
+          "R-": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "E-": 1,
+          "R+": 1
+        }
+      },
+      {
+        "point": [
+          3,
+          2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "E-": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          3
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "T+": 1
+        }
+      }
+    ],
+    "upper_EC": [
+      {
+        "point": [
+          -2,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 2,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 3,
+        "coefficients": {
+          "B-": 1
+        }
+      },
+      {
+        "point": [
+          -1,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nb-": 1
+        }
+      },
+      {
+        "point": [
+          0,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "B+": 2,
+          "B-": 2
+        }
+      },
+      {
+        "point": [
+          0,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nb-": 2,
+          "Nb+": 2
+        }
+      },
+      {
+        "point": [
+          1,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "B+": 1,
+          "D-": 1
+        }
+      },
+      {
+        "point": [
+          1,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          1,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 6,
+        "coefficients": {
+          "Nb+": 1,
+          "Nr-": 1
+        }
+      },
+      {
+        "point": [
+          1,
+          2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nr-": 2,
+          "Nr+": 2
+        }
+      },
+      {
+        "point": [
+          1,
+          3
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "T-": 1,
+          "Nr+": 1
+        }
+      },
+      {
+        "point": [
+          2,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "D+": 2,
+          "D-": 2
+        }
+      },
+      {
+        "point": [
+          2,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          2,
+          3
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "T-": 2,
+          "T+": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "D+": 1,
+          "R-": 1
+        }
+      },
+      {
+        "point": [
+          3,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "R+": 2,
+          "R-": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 5,
+        "coefficients": {
+          "R+": 1
+        }
+      },
+      {
+        "point": [
+          3,
+          2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          3,
+          3
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 3,
+        "coefficients": {
+          "T+": 1
+        }
+      }
+    ],
+    "rectangle_EC": [
+      {
+        "point": [
+          -2,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 2,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -2,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 2,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "B-": 1
+        }
+      },
+      {
+        "point": [
+          -1,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          -1,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nb-": 1
+        }
+      },
+      {
+        "point": [
+          0,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "B+": 2,
+          "B-": 2
+        }
+      },
+      {
+        "point": [
+          0,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nb-": 2,
+          "Nb+": 2
+        }
+      },
+      {
+        "point": [
+          1,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "B+": 1,
+          "D-": 1
+        }
+      },
+      {
+        "point": [
+          1,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          1,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 6,
+        "coefficients": {
+          "Nb+": 1,
+          "Nr-": 1
+        }
+      },
+      {
+        "point": [
+          1,
+          2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "Nr-": 2,
+          "Nr+": 2
+        }
+      },
+      {
+        "point": [
+          1,
+          3
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "T-": 1,
+          "Nr+": 1
+        }
+      },
+      {
+        "point": [
+          2,
+          -1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "D+": 2,
+          "D-": 2
+        }
+      },
+      {
+        "point": [
+          2,
+          1
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          2,
+          3
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "T-": 2,
+          "T+": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          -1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 2,
+        "coefficients": {
+          "D+": 1,
+          "R-": 1
+        }
+      },
+      {
+        "point": [
+          3,
+          0
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 4,
+        "coefficients": {
+          "R+": 2,
+          "R-": 2
+        }
+      },
+      {
+        "point": [
+          3,
+          1
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 5,
+        "coefficients": {
+          "R+": 1
+        }
+      },
+      {
+        "point": [
+          3,
+          2
+        ],
+        "kind": "C",
+        "fixed_45deg_units": 8,
+        "coefficients": {}
+      },
+      {
+        "point": [
+          3,
+          3
+        ],
+        "kind": "B",
+        "fixed_45deg_units": 3,
+        "coefficients": {
+          "T+": 1
+        }
+      }
+    ]
+  },
+  "seven_L_windows": {
+    "lower3": [
+      6,
+      7,
+      0
+    ],
+    "upper3": [
+      7,
+      0,
+      1
+    ],
+    "outer3": [
+      0,
+      1,
+      2
+    ],
+    "lower4": [
+      5,
+      6,
+      7,
+      0
+    ],
+    "rectangle": [
+      6,
+      7,
+      0,
+      1
+    ],
+    "fullnorth": [
+      7,
+      0,
+      1,
+      2
+    ],
+    "outer4": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "source_sha256": {
+    "surplus-four-local/e2-e1-b1/critical-L.txt": "e98f0423553e3674990d98b3b90f8ef297ced7db891101c5ac046d7efaacbf3a",
+    "surplus-four-local/e2-e1-b1/argument.txt": "0a90842bac2d1a4059ae4c903b4df2cc5531384028a0cd2c31d2a0fee2f7c383",
+    "fourth-surplus-review/peer-critical-L-classification-independent/check.py": "67923788ac8d28b7825fc8276519f5051c7d5dc0bd5b792f812faa3c9eb77d50"
+  },
+  "limits": "Local incidence/coefficient checks only; no completed-room construction, cap-assignment enumeration, geometry validity census, optical guard replay, ray/direction/word search, archive, solver or worker. Hand review supplies exclusivity and budget deductions."
+}

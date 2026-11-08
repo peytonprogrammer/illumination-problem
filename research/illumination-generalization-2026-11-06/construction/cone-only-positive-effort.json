@@ -1,0 +1,24 @@
+{
+  "id": "A24",
+  "start_utc": "2026-11-07T04:32:38.053680+00:00",
+  "deadline_utc": "2026-11-07T04:46:38.053680+00:00",
+  "routes_assessed": {
+    "compression": "Unconditional global-affine compression already refuted by the accepted six-wall clearance example; nonaffine deletion needs a new actual optical transfer and is not inferred from geometry.",
+    "cone_only": "Accepted full-fiber cone-only reduction removes regular convex-corner blockers, so marked half-turn counterexamples do not refute an unmarked darkness constraint. Choose this route first."
+  },
+  "premises": "Orthogonal canonical room, minimal four-copy unfolding M, true cone zeros Z only, actual disjoint source/target Gamma fibers A,B. Full A\u00d7B is zero-blocked if physical pair dark.",
+  "intended_implication": "Derive a nontrivial necessary restriction on zero-only nonillumination correspondences from the regular fixed points of the intrinsic half-turn, ideally a lower bound on reflex-corner charge; do not assume global maps or one component covers the rectangle.",
+  "first_obligation": "Determine exactly when a zero-only affine correspondence can contain a regular half-turn pair and whether the intrinsic rho graph can itself be a zero-only component. Check primary classification hypotheses and derive the first local escape lemma.",
+  "success_criterion": "A proved actual-path/zero-only restriction not relying on a supplied factor; or explicit failure of that precise implication and a distinct next approach.",
+  "strongest_objection": "Removing regular blockers does not classify higher-degree correspondences; a regular fixed midpoint helps nearby pairs, not an arbitrary actual lift pair.",
+  "outputs": [
+    "cone-only-positive-effort.json",
+    "cone-only-positive-source-screen.txt",
+    "cone-only-positive-notes.md",
+    "cone-only-positive-review-request.json"
+  ],
+  "status": "retired_no_forward_global_implication",
+  "method": "Hand reasoning plus bounded primary-source retrieval; no room/ray discovery scan",
+  "finished_utc": "2026-11-07T04:36:07.230169+00:00",
+  "outcome": "Local cone-only diameter excludes the intrinsic rho graph, but no constraint on actual off-orbit darkness was derived; multiple/isolated correspondences remain."
+}

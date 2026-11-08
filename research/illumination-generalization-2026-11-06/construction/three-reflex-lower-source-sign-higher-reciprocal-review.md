@@ -1,0 +1,15 @@
+# LS02 independent reciprocal hand acceptance
+
+ACCEPT the higher-gap lower beta and upper n divisibility theorems and the stated complete ordered native cap-depth-two family at nu2N=nu2P+2. All thirteen source pins are current before and after review. This is hand reasoning plus source-integrity review; no peer checker or new ray replay was executed here. Fullr3/r<=8 remains open.
+
+The strict lower seed proof compares two actual source directions before invoking any valuation; its exact right difference is nonzero and less than2a. Its positivity branch distinguishes full-period preservation from non-full-period repair. The upper cap/right seed proofs likewise use only actual integer preimages/offsets, source directions and true period comparisons. Neither needs nuN=nuP+1 until target transport. This separation is legitimate and preserves both actual endpoints.
+
+At t>p, lower beta or upper n divisible2^(t-p-1) gives nuHstar>=t-1. Since g1odd, D0=gcd(g1N,2Hstar) hasvaluationt. Its block increments2Nf/D0 andg1N/D0 are integral, and their difference Nd2/D0 is a positive odd INTEGER. Divisibility of N alone is not assumed. The literal signed source/cap/right guards are restored. Gamma2^min(t,ell),rho=Gamma/2^p may exceed2. Odd deltaM is invertible modulo this FULLrho, so the finite positive block count corrects ALLmissing bits, followed by the independent full target-period congruence moduloL/Gamma. No parity-only shortcut is used.
+
+All target updates are on one final common ray with actual positive folds, original finite walls, strict true-corner guards, smooth-zero treatment and signed velocity matching. The lower final roof is regular by disjoint h entry/exit mouths. The upper final roof, if singular, is removed only through the accepted exact-original-S regular suffix before the cap exit. First-T guards remain sourcex<=a<l<t,upperheights>v and bottomlastheightv. No enlargement or generic affine transport appears.
+
+For the whole family H=h+2,t=p+2, nativeevenu cannot satisfyh<u<H. Lower beta2 and mouthn2 exactly meet2^(t-p-1)=2. Thus every residual terminal native pair is covered and the protected placement/reversal join supplies every complementary pair. This is a whole unbounded family with its stated capheight and parity premises, not all higher-gap rooms.
+
+Independently hand-recomputed lower control e4/P1/N12/L8,b1c3h6H8,S2,4/T20,2: selectednegative seed59/5,indices i3,m0,j2,k4,signedresiduals(-12/5,-16/5,1/5),M-2,H02,D04,B01,deltaM3. TWO blocks solveM0mod4, giving299/5,i15,m2,j26,k22,M4. Finalperiodp1 gives779/5,i39,m6,j74,k58,M16,E156=28mod64,actualT20,2.
+
+Mouth controlS2,6: n=f2,H02,positive seed45/4,m0,j2,k4,z1=-1,z2=3/4,M-2. TWO blocks give237/4,m2,j26,k22,M4; finalp1 gives621/4,m6,j74,k58,E156,actualT20,2. Domains are strict and full physicalperiod64 is used. These are HAND arithmetic checks, not own physical replay counts. Peer's saved actual-wall evidence is independently authored corroboration. Fullproof/request/checker read; no material correction required.

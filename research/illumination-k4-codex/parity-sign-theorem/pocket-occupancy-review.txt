@@ -1,0 +1,117 @@
+# Review of NEW 9.3 and 9.4
+
+**Verdict:** Both sections are correct as conditional statements once the fixes below are made. One sentence in 9.3 is wrong as written. The rest of the fixes either add a missing hypothesis or narrow the scope of a claim. Nothing here produces a seed, an actual S/T event, or a nonzero (b_j, d_j). Section 9.4's "iff" applies only to pure twists, not to arbitrary parabolics.
+
+---
+
+## 9.3: Occupancy and the unimodular strip criterion
+
+### Equal-height strips: **yes**
+- For any primitive v, the closed torus geodesic through 0 in direction v is a single simple closed curve.
+- Its complement is one open cylinder with circumference |v| and height 1/|v|, since its area is 1.
+- All cone points lie over 0, so π is unbranched over this cylinder. X is compact, so every preimage component is a finite connected cover of an annulus. Each component is therefore an annulus of height 1/|v| and circumference n_D|v|.
+- Each component's interior avoids π⁻¹(0) ⊇ P ∪ Σ, so it lies inside one maximal v-cylinder.
+
+### Each det-1 half lies in one strip: **yes**
+- det(v,·) descends to a map R²/Z² → R/Z, because det(v,Z²) ⊂ Z. Its zero set is exactly the removed v-geodesic.
+- Along p + τw, the value is τ·det(v,w) = ±τ. For τ in (0,1) this is never an integer.
+- So each open half is a connected set inside π⁻¹(open cylinder), which places it in one strip.
+- D_s = D_t is allowed, and in that case the change in defect is 0.
+
+### Formula (9.3a): **exact, but one sentence is wrong**
+The sentence "each full signed crossing of a strip i contributes h_i k_i to transverse displacement" is false. Replace it with:
+
+> A strip i of height h_i and circumference ℓ_i is twisted k_i = a·h_i/ℓ_i times, with each k_i an integer. Each signed crossing contributes h_i to transverse displacement and k_i·Q(c_i) = a·h_i·r_D to the defect.
+
+With that fix, the derivation goes through:
+- The endpoints p, s, t lie on refined levels, so each half is a union of complete crossings.
+- Within D, the sum of h_i·m_i equals det(e,±w)·λ_D.
+- The half p→s has velocity −det(e,w). This gives the minus sign on λ^s.
+- The image class adds +k_i·c_i for an upward crossing and −k_i·c_i for a downward crossing. This matches the stated orientation convention when a > 0 shears higher points in the +e direction. That compatibility should be stated explicitly.
+
+**Missing justification for r_i = r_D:**
+- ℓ_i = ℓ_D holds because the refined cores are parallel closed leaves of D.
+- Q(c_i) = Q(c_D) holds only because Q is evaluated on the image of the cores in H1(X,P). Refined cores in the same maximal cylinder can differ in H1(X∖P) by peripheral loops, but those loops die in H1(X).
+- Refinement matters only for the intersection pairing H1(X∖P) × H1(X,P). Add the hypothesis "Q is a linear functional on H1(X,P)".
+
+**Twist-invariance of λ: correct.** The twist preserves transverse coordinates and membership pointwise. This is consistent with N² = 0.
+
+### Formula (9.3b): correct, with two wording fixes
+- (9.3b) is the special case λ_{D_t}^t = λ_{D_s}^s = 1 with e = v/|v|.
+- With the π-construction, a = L|v|², so the right-hand side equals L·|v|·det(v,w)·(r_{D_t} − r_{D_s}).
+- **Fix 1:** "acquires a nonzero defect iff r_{D_t} ≠ r_{D_s}" also needs a ≠ 0 and Q(η) = 0. In general, the correct statement is "the defect *changes* iff r_{D_t} ≠ r_{D_s}".
+- **Fix 2:** the "global gluing" disclaimer is appropriate and should stay.
+
+---
+
+## 9.4: Finite residue reduction
+
+### Pure parabolics fixing all torus-origin fibre leaves pointwise: **yes, with one caveat**
+- Use the derivative z ↦ z + L·det(v,z)·v with n_D | L. On each strip this is L/n_D full Dehn twists, which fix both boundaries pointwise.
+- The strips glue to an affine map. That map fixes the whole graph π⁻¹(v-geodesic), and so fixes π⁻¹(0).
+- It fixes every v-separatrix, so its prong action is trivial.
+- **Caveat:** "Take further powers for any remaining actual label/prong requirements" is vague. Either:
+  - name the requirement, or
+  - delete the sentence and state that π⁻¹(0)-fixing satisfies the hypotheses of the accepted affine-event theorem.
+
+  Powers cannot repair a derivative constraint, for example compatibility with D4 if the theorem requires it.
+
+### g fixes η pointwise: **yes**
+- π maps each half onto the w-geodesic through 0. This uses that w is primitive, so the projection is a single traversal.
+- So the event lies in the strip-boundary graph, which g fixes pointwise. This gives g_*η = η geometrically.
+
+### Powers and conjugation: **correct**
+- A_w^n·v_j = v_j + nK·det(w,v_j)·w = v_j + nK·w.
+- g^{±n} = (I + N_w)^{±n} = I ± n·N_w for every integer n, using N_w² = 0.
+- Since g^{−n}η = η, the conjugate's increment is g_*^n·z_j = z_j + n·N_w·z_j. Formula (9.4a) follows.
+- z_j and N_w·z_j are absolute classes in the core spans. Their holonomy is A_j·0 − 0 = 0.
+
+### Residue completeness: **correct**
+- det(w, v − v_0) = 0 and w primitive together give v = v_0 + m·w with m an integer.
+- The direction v_0 + m·w is reached by j ≡ m (mod K) and n = (m − j)/K, including negative n.
+- Reversing v covers the det = −1 case.
+- **Fix:** τ_j must be built by the π-construction. For an arbitrary pure twist, the coefficient L_j is only a nonzero rational. For example, a single maximal cylinder of height 2/|v| and n_D = 1 permits L = 1/2. Either require the π-construction or write L_j ∈ Q∖{0}. The (9.4b) argument needs only L_j ≠ 0.
+
+### Necessity: **holds for pure twists only**
+- Let ψ be any pure twist in direction v_j + nK·w. Both ψ and φ_{j,n} fix the maximal-cylinder boundaries pointwise, and their derivatives are commensurate. So ψ^p = φ^q with p, q ≠ 0.
+- N² = 0 gives p·N_ψ·η = q·N_φ·η.
+- **Add the hypothesis:** Q takes values in a torsion-free group. Then Q(N_ψ·η) = 0 iff Q(N_φ·η) = 0.
+- **Confirm** that an arbitrary ψ meets the exact hypothesis of 9.2's commensurability lemma ("fixing actual regular source").
+- **Scope:**
+  - The "iff" covers pure single-direction twists only.
+  - It does not cover arbitrary parabolics: those with derivative −(unipotent), cylinder permutations, fractional or half twists, or maps that are pure only after a power. For such maps, ψ_* is not of the form I + N, and Q(ψ_*·η) is not controlled by this argument.
+  - It does not cover products of twists in different directions.
+- The statement should say "some *pure* twist" everywhere, and should explicitly exclude non-pure parabolics.
+
+### Formula (9.4b) and the six-image bound: **correct**
+- A_w^{−n}·w = w, and det(v_j, w) = −1.
+- These give A_w^n·A_j·A_w^{−n}·w = (1 − nKL_j)·w − L_j·v_j. The written A_w^n·A_j·w is the same thing.
+- The vector is nonzero because L_j ≠ 0.
+- Fix a wall line spanned by u. The parallel condition is (1 − nKL_j)·det(u,w) − L_j·det(u,v_j) = 0.
+  - If det(u,w) ≠ 0, this is linear in n with nonzero slope, so at most one n solves it.
+  - If u ∥ w, it reduces to L_j·det(w,v_j) = 0, which never holds.
+- The D4 action preserves the set of four wall directions, so there are at most four wall lines in X.
+- If d_j ≠ 0, then b_j + n·d_j = 0 for at most one n. If d_j = 0 and b_j ≠ 0, no n kills the defect.
+- That is at most 5 bad values of n, so six distinct values suffice.
+- The image event keeps p, s, t because φ_{j,n} fixes π⁻¹(0) pointwise. It still avoids other corner lifts because φ_{j,n} preserves π⁻¹(0) setwise. The π sector is retained by the affine-event theorem.
+
+---
+
+## Summary of required edits
+
+| # | Location | Fix |
+|---|---|---|
+| 1 | 9.3 crossing sentence | Each crossing gives h_i of displacement and k_i·Q(c_i) = a·h_i·r_D of defect, with k_i = a·h_i/ℓ_i |
+| 2 | 9.3 r_D | State that Q is a functional on H1(X,P). Constancy follows via the image of the cores in H1(X), not via H1(X∖P) |
+| 3 | 9.3 orientation | State that the shear sign of a and the intersection convention are chosen compatibly |
+| 4 | 9.3b "iff" | Add a ≠ 0 and Q(η) = 0, or say "defect changes iff" |
+| 5 | 9.4 "further powers" | Name the requirement or delete the sentence |
+| 6 | 9.4 τ_j | Use the π-construction, or allow L_j ∈ Q∖{0} |
+| 7 | 9.4 necessity | Q values torsion-free. Pure twists only, excluding general parabolics and products. Match 9.2's lemma hypotheses exactly |
+
+## Status
+Both sections are conditional. **OPEN** is unchanged:
+- No actual S/T event has been supplied.
+- No (b_j, d_j) ≠ 0 has been shown for any event, and Q(η) ≠ 0 has not been shown either.
+- K is not uniformly bounded.
+- The absolute-cycle and rank ≥ 3 facts do not realize an event.

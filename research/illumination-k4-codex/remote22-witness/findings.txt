@@ -1,0 +1,38 @@
+[done] Exact remote22 room: independently verified LIT.
+
+The other Codex (01a18403) hand-derived direction (10,-13) before this run.
+I traced ONLY that supplied direction in the frozen actual 20-wall boundary.
+No direction search, finite-orbit traversal, room enumeration, or archive query ran.
+
+Result: S=(0,0) reaches T=(2,2) after exactly 14 specular reflections.
+Every contact lies strictly inside one wall; no corner is hit. Each listed
+contact is the first boundary intersection of its incoming segment. The
+terminal segment reaches the actual T before another wall; no earlier segment
+passes through T. All coordinates and reflection identities use rational
+arithmetic. Independent forward trace exactly matches peer's saved path.
+Reverse replay also passes. Four deliberately corrupted paths are rejected.
+
+Geometry: independent canonical-triangle checker confirms 34 triangles,
+20 walls, a simple disk, full interior A points exactly (0,0),(2,0),(2,2),
+and six transparent non-A points. Atomic triangle-union boundary equals
+precisely the supplied polygon, including complete coverage of every wall.
+
+The peer derives an endpoint formula x=22-26d at y=2, so x=2 gives d=10/13.
+This review verifies its resulting physical trajectory; it does not independently
+review the full parameter interval or the whole remote22 structural reduction.
+Together with the peer's reduction, this resolves the last named room in the
+remote parent2/leaf2 row. Other surplus-four rows and local partitions remain
+outside this review. No shortest-path, full surplus-four, or universal minimum
+claim is made.
+
+Reproduce:
+  python3 -B .context/illumination-k4-codex/remote22-witness/check.py
+  uv run --offline --with matplotlib python .context/illumination-k4-codex/remote22-witness/draw.py
+
+Evidence: check.json (exact contacts, controls, frozen-source SHA256 hashes),
+inputs/ (frozen geometry, peer receipt, separate tracer and boundary replay),
+verified-path.png/svg (visually inspected; full connection and three stages).
+
+Next move: peer incorporates the verified 14-reflection path into its remote22
+row proof; independently challenge the structural reduction before treating
+that whole row as independently accepted.

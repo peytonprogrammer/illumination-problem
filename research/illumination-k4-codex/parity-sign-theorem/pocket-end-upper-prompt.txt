@@ -1,0 +1,375 @@
+Independently adversarially review Section26.13 below, its claim to finish the UPPER end cases, and supplied exact checker. Work by hand with NO tools or discovery scans. Do not trust arithmetic controls as proof of forcing, fixed-versus-portal geometry or intrinsic pi. Check actual target, source-prefix frame, all moving mirror contributions, ordinary hit locations, and nonvacuity. Identify substantive gaps or accept scoped. Universal arbitrary-room detection stays open. Prior26.9/26.10 are accepted only in their stated branches. In connected-H W<=26: full S0,0/T4,0; M2,0 upper halfstar; seven other fans centered at(-2,0),(0,2),(0,-2),(2,2),(6,0),(4,2),(4,-2), each a contiguous one- or two-triangle leaf with W24+r,r<=2. C portals run along full unit side. Raw forbids any non-A smooth or interior integer point. Literal upper end is triangle[(6,0),(5,0),(5,1)] with B225/C270. Please return a detailed check and required corrections.
+
+### 26.9 End-leaf detection using its MOVING diagonal flank
+
+**Status: focused independent Opus review12562 accepts this scoped
+hand proof(exit0), with corrections incorporated; exact fixed-path and
+nonvacuity controls pass.**
+Retain26.7's connected-H upper corridor with S=(0,0), M=(2,0), T=(4,0).
+Suppose the specified literal upper end pocket is
+A=(6,0),C=(5,0),B=(5,1). Its vertical slide velocity is u=(0,1), and its
+moving diagonal mirror is D_t:x+y=6+t. Additionally suppose the lower
+leaf at(4,-2) uses its RIGHT portal y=-1,4<x<5. This extra hypothesis
+is essential. Its alternative left portal is not treated here.
+
+By literal225degrees at B, the upper leaf at(4,2) is the m=2 upper-right
+quadrant. As26.8 proves, rawness consequently forces N's right portal.
+This new construction does NOT reflect in that portal or assume it a
+wall. At the other B point(5,-1), the full T star contributes90degrees,
+the specified UPPER end triangle contributes none, and no other fan from
+the complete list reaches it apart from the lower leaf. A right m=2
+lower quadrant would add90degrees and leave this B smooth180degrees,
+forbidden by rawness. Thus the assumed right-portal lower leaf is m=1:
+
+    [(4,-2),(4,-1),(5,-1)].
+
+Its two fixed mirrors are D_-:x-y=6 and V_-:x=4. Their composite
+D_- V_- D_- is reflection in y=-2.
+
+The first half is the straight forced-corridor segment S->B, with
+primitive displacement w=(5,1), no other corner and no ordinary hit.
+At B choose the MOVING diagonal flank D_t, rather than the fixed
+vertical flank. At the base it sends incoming(5,1) to outgoing(-1,-5).
+The ensuing physical half is prescribed exactly as
+
+    B=(5,1) -> (9/2,-3/2) -> (4,-8/5)
+      -> (13/3,-5/3) -> T=(4,0).
+
+It enters the lower triangular leaf at(23/5,-1), uses its three fixed
+mirrors D_-,V_-,D_-, and exits at(21/5,-1). Those ordinary hits all lie
+strictly inside their mirror segments. Its successive velocities are
+(-1,-5),(-5,-1),(5,-1),(-1,5), and durations are
+1/2,1/10,1/15,1/3, totaling1. The portions outside the lower leaf are
+inside the full T square. None of these open segments meets another
+physical corner. The first and second half reach the specified ACTUAL
+marks; no boundary A is substituted for T.
+
+Developing ACTUAL T by the fixed lower cap reflects it to(4,-4).
+Reflection in the selected diagonal flank then gives
+
+    T'(t)=(10+t,2+t),       B(t)=(5,1+t).
+
+At t=0 the two developed halves are both(5,1). In the original source
+frame the complete moving-flank derivative is
+
+    Qeta=T'_derivative-2 B_derivative=(1,1)-(0,2)=(1,-1),
+    det(w,Qeta)=-6.
+
+No ordinary mirror term moves under this END-pocket slide. The moving
+corner reflection itself DOES contribute and is retained; simply using
+-2u would be incorrect. For small t the fixed lower-cap hits remain
+away from endpoints. Actual straight connection after opening is governed
+by the same local derivative criterion as Section3; the prescribed
+base event is what is asserted here.
+
+For intrinsic legality put alpha=atan(1/5). At B the physical link is
+[pi/2,7pi/4]: the upper-right quadrant, full T and end triangle together
+have225degrees. Its source germ is pi+alpha. The outgoing physical germ
+(-1,-5) lies at3pi/2-alpha. Across the diagonal flank ray7pi/4 it
+develops to2pi+alpha in the adjacent copy. The interval
+[pi+alpha,2pi+alpha] has length pi, crosses that labeled flank once and
+embeds in the total10pi cone. Thus this is the legal pi continuation,
+not a3pi one. The clockwise pi-continuation at B across the fixed vertical up-ray,
+with outgoing(-5,1), is a DIFFERENT choice and is not used here. The
+withdrawn26.8 attempt had midpoint C and failed at an earlier portal;
+it was not this B continuation.
+
+This conditional case is NONVACUOUS: Section33's prescribed actual W25
+room, translated by(4,0), has every stated fan and both marked endpoints.
+It also has all its diagonal-direction cylinder loads zero by the
+separately accepted scoped proof in33. Consequently
+that directional cylinder blindness does not prevent a directly detecting
+one-corner event with a moving-diagonal continuation. Whole-room grid
+symmetries preserve the conditional construction. Upper end pockets with
+a LEFT-portal opposite lower leaf, lower-pointing end pockets in this
+fixed upper-corridor normalization, disconnected-H placements and arbitrary
+wall counts remain open. Whole-room reflection does not silently cover
+the lower-pointing pocket: it also changes M's half-star. The left end
+has the corresponding conditional construction by horizontal reflection
+and actual endpoint exchange, preserving |det|=6. No direction/word/path/room scan is used.
+
+
+### 26.10 End-leaf detection with the opposite LEFT portal and fixed S flank
+
+**Status: focused independent Opus review86457 accepts the scoped hand
+proof(exit0); prescribed topology/path/development controls pass. The
+corner's pi-sector and fixed-flank incidence are HAND-reviewed, not
+machine proofs of intrinsic geometry.** The broad hardleaf response supplied this
+single candidate. Its interval-family classifications are not used here.
+Retain26.9's upper literal end pocket A=(6,0),C=(5,0),B=(5,1),
+with u=(0,1), D_t:x+y=6+t and H_t:y=t in that normalization, but now
+suppose the lower leaf at(4,-2) uses its LEFT portal, and the S-left leaf
+at(-2,0) uses its LOWER portal. These are conditional geometric hypotheses,
+not a census or claim to settle other orientations.
+
+Literal end geometry still forces the upper-right m=2 quadrant at(4,2),
+and rawness forces N's RIGHT portal. Thus the central top segment y=1,
+1<x<2 is fixed. The S-left lower portal makes x=-1,0<y<1 fixed. The
+first half is
+
+    S=(0,0) -> (-1,2/7) -> (3/2,1) -> C=(5,0).
+
+Its velocities are(-7,2),(7,2),(7,-2), and durations are1/7,5/14,1/2,
+which sum to1. The two ordinary bounces are on those fixed wall interiors.
+The entire path stays in S's square, the forced upper corridor and T's
+square, and meets no other physical corner. Its prefix development is
+V_-1 H_1, giving developed C'=(-7,2) and primitive half-vector(-7,2).
+
+At C choose the FIXED vertical flank x=5 pointing down. Its other half
+is
+
+    C -> (3,-4/7) -> (9/2,-1) -> (5,-6/7)
+      -> (3,-2/7) -> T=(4,0).
+
+It has velocities(-7,-2),(7,-2),(7,2),(-7,2),(7,2), with durations
+2/7,3/14,1/14,2/7,1/7, totaling1. The four ordinary mirrors are x=3,
+y=-1,x=5,x=3. All hits are in fixed T-wall interiors: M has no lower
+part; the lower leaf's portal is LEFT while the bottom hit has x=9/2;
+and the moving end triangle is UPPER while the x=5 hit is below0.
+The lower leaf may have one or two triangles; neither lies on the used
+right bottom flank. Actual T is attained, not a boundary A point.
+
+Developing ACTUAL T through these fixed mirrors, the selected corner
+flank and the two prefix reflections gives T'=(-14,4)=2C'. Thus both
+halves are(-7,2). The end-pocket slide has velocity u=(0,1), and the
+prefix linear part is -I, so C'_derivative=(0,-1). Every used supporting
+line is fixed under this slide. Hence Qeta=(0,2) and det((-7,2),Qeta)=-14.
+
+At C the physical link is[0,3pi/2]. For beta=atan(2/7), the source germ
+is pi-beta and the outgoing germ is pi+beta. Across the selected down
+flank it develops to2pi-beta. The interval[pi-beta,2pi-beta] has length
+pi, crosses that flank once and embeds in the6pi cone. This gives the
+specified intrinsic pi continuation. No3pi shortcut or corner deletion
+is used.
+
+These hypotheses are nonempty. A second FIXED hand-prescribed raw W25
+assembly uses full stars0,0 and4,0, upper M2,0 and these seven leaves:
+N2,2 right triangle;6,0 upper triangle(the pocket);4,2 right lower
+quadrant;4,-2 left upper triangle; -2,0 lower right triangle;0,2 lower
+right triangle;0,-2 upper right triangle. A strict geometry check and
+exact supplied-path tile checks verify this one fixture. They do not
+enumerate rooms or prove all abstract orientation assignments feasible.
+
+Together26.9 and26.10 treat right opposite portal, and left opposite
+portal with S-left lower, respectively. The left opposite portal with
+S-left UPPER remains open, as do lower-pointing end pockets in the fixed
+upper-corridor normalization and the disconnected-H cases. The full
+universal theorem remains open.
+
+
+### 26.13 The remaining upper-end orientation uses the source cap
+
+**Status: exact prescribed W25 room/path controls PASS; independent
+hand review pending.** Retain the connected-H upper-corridor normalization
+and upper end pocket A=(6,0), C=(5,0), B=(5,1), u=(0,1).
+Suppose Tdown uses its LEFT portal and Sleft its UPPER portal.
+The literal pocket forces Tup's right m2 quadrant and N's right portal,
+as in26.9. At B=(1,1), S and M each contribute90degrees while Nright
+contributes none; rawness forces Sup's RIGHT portal. Sup may be m1 or m2.
+At(-1,1), Sup then contributes none and S contributes90degrees.
+An m2 upper Sleft would contribute90degrees and create a forbidden
+smooth non-A point. Thus Sleft is the fixed m1 triangle
+
+    [(-2,0),(-1,0),(-1,1)].
+
+Its mirrors D_L:x-y=-2 and H_0:y=0 have composite D_L H_0 D_L=V_-2,
+reflection in x=-2. The first physical half is prescribed as
+
+    S -> (-9/5,1/5) -> (-16/9,0) -> (-7/4,1/4) -> B.
+
+Starting with w=(-9,1), its velocities are(-9,1),(1,-9),(1,9),(9,1).
+Durations are1/5,1/45,1/36,3/4, totaling1. The three ordinary hits lie
+strictly within the indicated fixed mirrors. After the third hit it
+leaves the cap through(-1,1/3) and stays in the forced open corridor
+until B. Its developed corner is V_-2(B)=(-9,1).
+
+Choose the moving diagonal continuation D_t:x+y=6+t at B. It sends
+physical incoming(9,1) to(-1,-9). The second physical half is
+
+    B -> (43/9,-1) -> (40/9,2) -> (37/9,-1) -> T=(4,0).
+
+Its ordinary mirrors are H_-1,H_2,H_-1; durations are2/9,1/3,1/3,1/9,
+again totaling1. All these hits have4<x<5. Since Tdown's portal is
+LEFT, the bottom RIGHT flank y=-1 is fixed; Tup's m2 RIGHT quadrant
+supplies the fixed top y=2. The open legs stay in the full T square
+and that upper quadrant. All ordinary reflections are fixed under the
+specified slide. No other physical corner is met.
+
+The fixed suffix develops ACTUAL T to(4,-8). The moving diagonal sends
+this to(14+t,2+t); the fixed source prefix V_-2 then gives
+
+    T'(t)=(-18-t,2+t),       B'(t)=(-9,1+t).
+
+Both developed base halves are the primitive vector(-9,1). Therefore
+
+    Q=(-1,1)-2(0,1)=(-1,-1),      det((-9,1),Q)=10.
+
+The first-half prefix is essential: omitting its horizontal reversal
+would compute the defect in the wrong source frame.
+
+For intrinsic legality the physical germ entering B points backwards
+at pi+alpha with alpha=atan(1/9), and its outgoing germ is3pi/2-alpha.
+The physical link is[pi/2,7pi/4]. Reflection across its diagonal end
+ray7pi/4 develops the outgoing germ to2pi+alpha. Thus the interval
+[pi+alpha,2pi+alpha] is an embedded pi-sector, just as in26.9; it crosses
+one labeled moving flank. Its development then transports by the fixed
+source prefix. No 3pi continuation is used. Strict ordinary-hit clearance
+persists for small |t|; subsequent opening uses Section3's criterion.
+
+A hand-prescribed strict-raw W25 fixture with28triangles, checked in
+pocket-end-upper.py/json, proves the hypotheses nonvacuous. The script
+checks exact segments, ordinary reflections, unit halftimes and the
+stated affine development; this paragraph's forcing and pi-sector
+arguments remain hand-proof obligations for independent review.
+
+Together with26.9 (TdownRIGHT) and26.10 (TdownLEFT,SleftLOWER), this
+would cover every UPPER end pocket in the connected-H W<=26 census,
+subject to acceptance of this section. LOWER end pockets in this fixed
+upper-corridor frame, disconnected H and arbitrary room geometry remain
+open. No discovery search was run.
+
+
+
+SUPPLIED CHECKER
+"""One prescribed upper-end event and raw room; no discovery scans."""
+from pathlib import Path
+from fractions import Fraction as F
+import importlib.util,json
+base=Path(__file__).resolve().parent
+ring=[(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
+def fan(a,start,count):
+ return [tuple(sorted((a,(a[0]+ring[j%8][0],a[1]+ring[j%8][1]),(a[0]+ring[(j+1)%8][0],a[1]+ring[(j+1)%8][1])))) for j in range(start,start+count)]
+room=[]
+for args in [((0,0),0,8),((4,0),0,8),((2,0),0,4),((2,2),6,1),
+             ((6,0),3,1),((4,2),6,2),((4,-2),2,1),((-2,0),0,1),
+             ((0,2),6,1),((0,-2),2,1)]:room+=fan(*args)
+def load(name,path):
+ sp=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m);return m
+geom=load('frozen_geometry',base.parent/'k5-proof-pilot/inputs/illumination_geometry.py')
+receipt=geom.check({'triangles':room,'marked':[(0,0),(4,0)],'require_simple':True},strict=True)
+assert receipt['walls']==25 and receipt['tiles']==28
+assert receipt['sectors']['(5, 1)']==[5] and receipt['sectors']['(5, 0)']==[6]
+a=load('fixed_guard_checker',base.parent/'persisted-replay/audit.py')
+def p(x,y):return(F(x),F(y))
+def sub(a,b):return tuple(x-y for x,y in zip(a,b))
+def dot(a,b):return sum(x*y for x,y in zip(a,b))
+def mul(k,a):return tuple(k*x for x in a)
+def ref(a,n,c):return sub(a,mul(2*(dot(n,a)-c)/dot(n,n),n))
+def V(x):return(p(1,0),F(x))
+def H(y):return(p(0,1),F(y))
+S=p(0,0);T=p(4,0);B=p(5,1);w=p(-9,1);u=p(0,1)
+D=(p(1,-1),F(-2));corner_D=(p(1,1),F(6))
+first=[S,p(F(-9,5),F(1,5)),p(F(-16,9),0),p(F(-7,4),F(1,4)),B]
+fm=[D,H(0),D];ft=[F(1,5),F(1,45),F(1,36),F(3,4)]
+second=[B,p(F(43,9),-1),p(F(40,9),2),p(F(37,9),-1),T]
+sm=[H(-1),H(2),H(-1)];st=[F(2,9),F(1,3),F(1,3),F(1,9)]
+v=w
+for pts,mirrors,times in [(first,fm,ft),(second,sm,st)]:
+ assert sum(times)==1
+ for i,t in enumerate(times):
+  assert sub(pts[i+1],pts[i])==mul(t,v)
+  if i<len(mirrors):
+   n,c=mirrors[i];assert dot(n,pts[i+1])==c;v=ref(v,n,F(0))
+ if pts is first:
+  assert v==p(9,1)
+  v=ref(v,corner_D[0],F(0));assert v==p(-1,-9)
+R=frozenset(room)
+for pts in [first,second]:
+ for x,y in zip(pts,pts[1:]):assert a.segment(x,y)<=R
+ for x,y,z in zip(pts,pts[1:],pts[2:]):
+  used,absent=a.bounce(x,y,z);assert used<=R and not absent&R
+assert a.incident(S)<=R and a.incident(T)<=R
+suffix=T
+for n,c in reversed(sm):suffix=ref(suffix,n,c)
+assert suffix==p(4,-8)
+corner=B
+for n,c in reversed(fm):corner=ref(corner,n,c)
+assert corner==w
+# These exact parameter controls check a stated affine development, not paths.
+for t in [F(-1,100),F(0),F(1,100)]:
+ target=ref(suffix,corner_D[0],F(6)+t)
+ assert target==p(14+t,2+t)
+ for n,c in reversed(fm):target=ref(target,n,c)
+ assert target==p(-18-t,2+t)
+ moved_corner=p(5,1+t)
+ for n,c in reversed(fm):moved_corner=ref(moved_corner,n,c)
+ assert moved_corner==p(-9,1+t)
+Q=sub(p(-1,1),mul(2,u));det=w[0]*Q[1]-w[1]*Q[0]
+assert Q==p(-1,-1) and det==10
+out=dict(status='PRESCRIBED_UPPER_END_SOURCE_CAP_PASS',geometry=receipt,prescribed_triangles=room,
+ first_half=first,second_half=second,half_vector=w,developed_corner=corner,
+ developed_actual_target=p(-18,2),defect=Q,determinant=det,
+ scope='Connected-H upper end, opposite Tdown LEFT, Sleft UPPER; pi and forcing require hand proof.',
+ independent_review='PENDING',universal_pocket_detection='OPEN',discovery_runs=0)
+(base/'pocket-end-upper.json').write_text(json.dumps(out,indent=2,default=str)+'\n')
+print(json.dumps({k:v for k,v in out.items() if k not in ['geometry','prescribed_triangles']},indent=2,default=str))
+
+CONTROL RECEIPT
+{
+  "status": "PRESCRIBED_UPPER_END_SOURCE_CAP_PASS",
+  "first_half": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "-9/5",
+      "1/5"
+    ],
+    [
+      "-16/9",
+      "0"
+    ],
+    [
+      "-7/4",
+      "1/4"
+    ],
+    [
+      "5",
+      "1"
+    ]
+  ],
+  "second_half": [
+    [
+      "5",
+      "1"
+    ],
+    [
+      "43/9",
+      "-1"
+    ],
+    [
+      "40/9",
+      "2"
+    ],
+    [
+      "37/9",
+      "-1"
+    ],
+    [
+      "4",
+      "0"
+    ]
+  ],
+  "half_vector": [
+    "-9",
+    "1"
+  ],
+  "developed_corner": [
+    "-9",
+    "1"
+  ],
+  "developed_actual_target": [
+    "-18",
+    "2"
+  ],
+  "defect": [
+    "-1",
+    "-1"
+  ],
+  "determinant": "10",
+  "scope": "Connected-H upper end, opposite Tdown LEFT, Sleft UPPER; pi and forcing require hand proof.",
+  "independent_review": "PENDING",
+  "universal_pocket_detection": "OPEN",
+  "discovery_runs": 0
+}

@@ -1,0 +1,205 @@
+Later passages of the forced northwest-cap beam
+4 November 2026 — restricted Codex01a1a00f
+
+RESULT AND LIMIT
+Continued exactly the beam from paired-bottom.txt section9 by hand, without
+choosing new directions, looking up guards, tracing numerical rays or
+enumerating rooms. No additional room family is excluded by this step.
+
+Two parameter branches now have explicit second AND third height2
+crossings, neither at actual T. The third parameter branch returns to an
+optional R+ cap, whose presence changes the next source-side contact.
+This prevents claiming one unchanged itinerary for all completions.
+
+The reusable positive result is a set of strict one/two/three-hit cap
+return maps and a four-hit cap branch. These explain exactly where the
+previous three-reflection cap formula ceases to apply. Symbolic exact
+verification PASS for five cap identities, five prescribed continuations
+and the R+ split. Strict flight times were checked on their full open
+intervals by algebraic factor signs, not sampled directions.
+
+1. Fixed geometry and inherited beam
+For a hypothetical dark centered-bottom member, the prior proof forces
+ B-,B+,L+,E-,T-,Nr- present,
+and leaves only D and R variable, with(D- absent OR R- present).
+Every other occupied partial cell is a single full-facing cap. In
+particular L-,E+,T+,Nb-,Nb+,Nr+ are absent. D+ with R- is prohibited
+because it would make a smooth B, unavailable in this surplus branch.
+
+Launch S=(0,0) with velocity(-1,r). The previously derived L+/E-/Nr-
+three-cap route returns at(1,13r), velocity(1,r), on
+ I=(1/7,2/13).
+It has side contacts(3,15r),(1,17r),(3,19r) and then crosses y=3 at
+x=22-3/r. If r<3/20, it enters T- and first descends to y=2 at
+x=22r-2, velocity(r,-1). If r>3/20, it reflects from the uncovered
+right roof, eventually first descending through y=2 in the upper square.
+The value r=3/20 hits the corner(2,3) and is excluded from these strict
+branches. Neither first passage hits T, as already proved.
+
+2. Complete descending-entry response in one normalized cap
+Use triangle0<=X<=Y<=1, mouthX=0. Enter at(0,h) with velocity(1,-r),
+where0<h<1 and0<r<1. Its diagonal is Y=X and far mirror is Y=1.
+The first hit is(h/(1+r),h/(1+r)); reflection gives(-r,1).
+
+ - 0<h<r: exit after ONE reflection at(0,h/r), velocity(-r,1).
+ - r<h<2r: hit the far mirror, then exit after TWO reflections at
+   (0,2-h/r), velocity(-r,-1).
+ - 2r<h<1: diagonal/far-mirror/diagonal gives THREE reflections,
+   exit(0,h-2r), velocity(-1,-r).
+
+The thresholds have a geometric meaning. At h=r the first outgoing leg
+hits the upper mouth corner(0,1). At h=2r the second outgoing leg hits
+the lower mouth corner(0,0). Both are excluded. The comparisons follow
+by testing which comes first: the mouth or far mirror after hit1, and
+the mouth or diagonal after hit2. All listed exits lie in the open
+mouth, so convexity gives interior cap legs. The formulas alone must
+not be applied across these thresholds.
+
+3. A four-reflection branch for steep entry
+Normalize the bottom-type cap to triangle with vertices(0,0),(1,0),(0,-1),
+mouthy=0. Enter(h,0) with velocity(-r,-1), with
+ 0<r<1/3, 0<h<2r, h!=r.
+Then the exit is(2r-h,0), velocity(r,1), after FOUR reflections.
+If r<h<2r the order is diagonal/vertical/diagonal/vertical.
+If0<h<r the order is vertical/diagonal/vertical/diagonal.
+
+For the first order, the first diagonal coordinate is(h-r)/(1-r)>0;
+its vertical hit has height h-r-1 in(-1,0), and the next diagonal is
+also interior. The output of that third reflection would reach the
+mouth at h-2r<0, so a fourth vertical reflection intervenes. For the
+second order, the first vertical hit is at height-h/r in(-1,0).
+The successive diagonal/vertical/diagonal contacts follow by the same
+reflection equations; strict0<h<r avoids the apex at h=r. In either
+order the four reflections compose to a half-turn about(0,-1).
+Its unfolded mouth is y=-2, giving exit2r-h. Because0<2r-h<2r<1,
+the output lies in the open mouth. The stated bounds keep the other
+contacts strictly inside their wall segments.
+
+This does not contradict the old three-reflection lemma: these entries
+violate that lemma's strict exit condition. It supplies the missing
+branch when continuing a ray past that condition's boundary.
+
+4. Left-roof continuation: first two later height2 crossings
+Let1/7<r<3/20. After the first descent, the ray travels(r,-1),
+crosses the elbow/target portal and reaches y=-1 at x=25r-2 in(1,2).
+Only D- can affect this contact. The next two y=2 coordinates are:
+
+ D- state / strict interval           next ascending      next descending
+ absent, 1/7<r<3/20                    28r-2               30r-2
+ present, 1/7<r<4/27                   30r-2               32r-2
+ present, 4/27<r<3/20                  6-30r              34r-4
+
+No entry equals2 in its stated open interval. Exact endpoint ranges
+are retained in later-passes-check.json. An endpoint value of2 at an
+excluded interval endpoint is not a legal connection.
+
+Derivation and containment:
+If D- is absent, the floor reflects the ray. It crosses y=1 at27r-2
+in(1,3), y=2 at28r-2, and the uncovered right roof at29r-2 in(2,3).
+The next descending crossing is30r-2. D+ and both R choices do not
+affect any of these legs.
+
+If D- is present and r<4/27, its three-reflection branch exits at
+(27r-2,-1), velocity(r,1). The condition27r-2<2 is exactly r<4/27.
+The ray passes the open elbow/target portal and crosses y=2 at30r-2.
+Its roof hit31r-2 lies in(2,3), uncovered because T+ is absent. The
+next descending y=2 crossing is32r-2, before reaching x=3.
+
+If D- is present and r>4/27, apply the four-reflection lemma with
+local h=4-25r and r<h<2r. It exits at(6-27r,-1), velocity(-r,1).
+The ascending y=2 crossing is6-30r. At y=3 it enters T- at6-31r.
+That top cap has a valid three-reflection return at(6-33r,3),
+velocity(-r,-1). Before descending to y=2, it reflects at the exposed
+left wall x=1 at height36-5/r in(2,3); Nr+ is absent. The resulting
+descending y=2 crossing is34r-4. Every portal and contact is strict.
+At r=4/27 the D- excursion reaches its mouth corner(2,-1), so that
+parameter is excluded from these two D- branches.
+
+Thus ALL these left-roof branches miss T on their first three height2
+crossings. This is a statement about this beam, not about darkness.
+
+5. Right-roof return and the northwest threshold
+Let3/20<r<2/13. After the roof reflection there are exposed side hits
+ (1,6-21r),(3,6-23r),(1,6-25r),
+all strictly between heights2 and3. Then the ray enters E- at
+ (3,6-27r), velocity(1,-r).
+The descending cap map's three-hit condition holds throughout: its
+normalized entry h=5-27r exceeds2r. It exits E- at(3,6-29r), directed
+(-1,-r), then enters Nr- at(1,6-31r). At Nr- the normalized entry is
+h=5-31r. It is always greater than r, but its comparison with2r gives
+a new strict threshold:
+
+ 3/20<r<5/33: Nr- makes THREE hits, exits(1,6-33r),(1,-r).
+ 5/33<r<2/13: Nr- makes TWO hits, exits(1,34-5/r),(r,-1).
+
+The parameter5/33 hits the lower mouth corner(1,1), so is excluded.
+This is why continuing the old three-hit formula uniformly would fail.
+
+6. Two-hit northwest branch: two more crossings, still no target
+For5/33<r<2/13 the steep ray reaches the elbow bottom at x=35r-4
+in(1,2). Its next two height2 crossings are:
+
+ D- state              next ascending      next descending
+ absent                38r-4               8-42r
+ present               40r-4               42r-4
+
+Neither equals2 inside this interval.
+If D- is absent, the ascending roof entry is39r-4 in(1,2), and it
+enters T- near its vertical wall. Apply section3's four-hit branch
+with h=6-39r<r. The exit is(8-41r,3), directed(-r,-1), giving the
+descending coordinate8-42r. All these segments stay inside the target
+star and cap after the elbow floor; D+/R choices do not affect them.
+If D- is present, its three-hit return exits(37r-4,-1),(r,1).
+The upper roof hit41r-4 is in(2,3), uncovered; the next descent gives
+42r-4. Hence this right-roof branch also misses T on its first three
+height2 crossings, regardless of D-/R choices allowed by the residual.
+
+7. Three-hit northwest branch exposes an optional-cap choice
+For3/20<r<5/33, Nr- exits at(1,6-33r) with velocity(1,-r),
+crosses the elbow/target portal and reaches x=3 at y=6-35r.
+Its height lies strictly between23/33 and3/4, in the R+ mouth.
+
+ - If R+ is absent, the vertical wall reflects it. Its next left-side
+   contact is(-1,6-39r), in the L+ mouth at height between1/11 and3/20.
+ - If R+ is present, its diagonal/floor/diagonal return gives exit
+   (3,6-37r), velocity(-1,-r). Its next left-side contact is
+   (-1,6-41r), strictly below0. It reflects from the exposed lower
+   source wall, since L- is absent.
+
+Both returns are legal; the cap-present case's entry height exceeds2r,
+so its three hits are strict. The open segment to the left passes x=1
+inside the source/elbow portal in either case. These two trajectories
+then have different source-side continuations. Under the residual,
+R+ present implies D- absent (because D- would force R-), but neither
+R+ state is ruled out by the wall/exception budget. No full-family
+target connection follows from this stage.
+
+8. Verification and scope
+later-passes-check.py uses SymPy to compose the hand-specified reflection
+walls and portal intersections symbolically in r. It does not select a
+numeric r, discover an itinerary, construct a room or solve an occupancy
+problem. Five local cap identities, the five table rows and both R+
+source-side contacts match the displayed formulas exactly. Each selected
+flight time is strictly positive on its full open interval: the checker
+factors the rational expression, excludes interior zeros/poles by exact
+linear-factor endpoint signs, and verifies its positive one-sided limit.
+The hand argument supplies wall segments, first-contact/portal validity,
+and the interpretation of height2 passages. This is not formal proof-
+assistant verification or an independent numerical ray tracer.
+
+The initial audit script omitted two intermediate exposed-side contacts
+in the right-roof branch and tried to reflect at the E mouth. Its own
+symbolic state assertion rejected that transcription. The hand equation
+for E entry(3,6-27r) was unchanged; the specified wall list was corrected
+before the PASS receipt and the final report were adopted.
+
+Completion boundary
+No new centered-family illumination theorem or extra forced cap was
+obtained. The entire first-surplus theorem remains open, as do later
+passages after these displayed states. This bounded continuation now
+explains the branch changes exactly; following additional isolated
+passages alone is not a sufficient completion strategy. The next useful
+mathematical objective is compatibility of the cap return maps across
+the residual D/R choices, with actual target closure as the criterion.
+No new guard lookup, direction/word search, room/cap-assignment census,
+external solver, worker or universal-goal resumption occurred.

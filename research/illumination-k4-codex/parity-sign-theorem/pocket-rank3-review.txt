@@ -1,0 +1,81 @@
+# Review of §21.1: rank(M_*) ≥ 3 for the straight-attached pocket slide
+
+**Verdict: accept.** Every step either follows from the accepted inputs (1)–(5) plus the cited Avila–Eskin–Möller theorem, or is elementary. Three spots need tighter wording, but none of them is a gap. These are items 1, 2 and 5 below.
+
+## Step-by-step check
+
+**1. K exists for a nonsymmetric room. ✔**
+Write X_t = ⊔_{g∈D4} gP_t, with copy g glued to copy g·r_e along the edge g·e. For any h ∈ D4, define the map (g, p) ↦ (hg, hp).
+
+- It respects the gluings: the edge g·e goes to hg·e, and the partner copy g·r_e goes to hg·r_e.
+- So it is a well-defined automorphism of X_t with derivative h.
+- No symmetry of P_t is used.
+
+For h = reflection in the x-axis, the map is orientation-reversing and permutes the copies. That is K. For h = rotation by 90°, the map is R. The walls are horizontal and vertical with 45° triangles, so D4 is the full copy group and contains both maps.
+
+*Wording fix:* write out this construction instead of only saying "fixed topological copy symmetries".
+
+**2. Fixed Gauss–Manin action. ✔**
+R and K exist for every small real t. Along the real path, their mapping classes are locally constant, so R* and K* are fixed matrices in the flat marked chart.
+
+- In charts, R is z ↦ iz + c, so R*ω = iω. This gives R*x = −y and R*y = x.
+- In charts, K is z ↦ z̄ + c, so K*ω = ω̄. This gives K*x = x and K*y = −y.
+
+Apply these to ω_t = (x₀ + t·x₁) + i(y₀ + t·y₁) for at least two real values of t. That separates the j = 0 and j = 1 relations. Only real t is needed, which is correct because complex t gives no polygon.
+
+**3. All four classes lie in the same tangent space. ✔**
+- By the Eskin–Mirzakhani–Mohammadi structure theorem, a local branch of M_* is an open piece of a linear subspace L_C = L_R ⊗ C, cut out by homogeneous real equations.
+- By input (2), ω_t ∈ L_C for small t. Taking real parts and imaginary parts at two real t values puts x₀, x₁, y₀ and y₁ in L_R. Taking p puts them in V.
+
+*Wording fix:* the sentence "same holds for ω₀ by the GL action" is unnecessary and slightly misleading. ω₀ is a square-tiled point, and its own orbit-closure tangent is smaller. The linearity argument above avoids this.
+
+Independence comes from the determinant: the block-triangular matrix has det = 4·4 = 16 for every p and q.
+
+**4. Cup pairings. ✔** Here R preserves B (degree +1) and K reverses B (degree −1).
+
+- K: B(x₀,x₁) = B(K*x₀, K*x₁) = −B(x₀,x₁), so B(x₀,x₁) = 0. The same argument gives B(y₀,y₁) = 0.
+- R: B(x₁,y₀) = B(R*x₁, R*y₀) = B(−y₁, x₀) = B(x₀,y₁).
+- R alone would only give B(x₀,x₁) = B(y₀,y₁). K is genuinely needed for the vanishing.
+- R is essential for splitting the area cross term. Without it, only the sum vanishes, the radical could be smaller, and the bound would fail.
+
+**5. Area constancy. ✔**
+- area(X_t) = ∫ Re ω ∧ Im ω = 8·area(P_t). It depends only on the absolute classes.
+- The expansion is B(x₀,y₀) + t[B(x₀,y₁) + B(x₁,y₀)] + t²·B(x₁,y₁).
+- area(P_t) = area(remainder) + area(triangle), provided the interiors stay disjoint for small t. Strict simplicity gives this.
+- A polynomial that is constant on an interval has vanishing t and t² coefficients. With the R equality, both cross terms vanish.
+
+**6. Gram matrix (21.1a). ✔** All ten pairings among x₀, y₀, x₁, y₁ are accounted for. Only B(x₀,y₀) = A > 0 survives. So rad(B restricted to W) = span{x₁, y₁}, which is 2-dimensional because the four classes are independent.
+
+**7. Dimension count (21.1b). ✔**
+- AEM gives nondegeneracy on p(T_C M); since B is real, this is equivalent to nondegeneracy on V.
+- Then V → rad*, v ↦ B(·, v) restricted to rad, is surjective.
+- Its kernel rad^⊥ contains W. So dim V ≥ 4 + 2 = 6.
+- An equivalent argument: span{x₀, y₀} is a symplectic pair. Its B-complement in V is symplectic and contains the isotropic plane span{x₁, y₁}, so it has dimension at least 4.
+- Either way, dim_R V ≥ 6 and rank ≥ 3.
+
+## Minor corrections
+
+- **rel = 0 is not needed for dim_C M_* ≥ 6.** Since dim = 2·rank + rel ≥ 6 holds for any rel ≥ 0, input (3) only adds the equality dim_C M_* = 2·rank.
+- **Citation.** I could not check the theorem number without tools. Confirm that the "p(TM) is symplectic" statement is numbered 1.4 in v2 of arXiv:1209.2854.
+- **Consistency sanity check (not part of the proof).** Rank ≥ 3 requires genus ≥ 3, which is stronger than input (1)'s genus ≥ 2.
+  - This is not contradicted. If the fixed wall extends strictly past both ends of the slid triangle, the vertex B′ has interior angle 5π/4 and C′ has 3π/2.
+  - Each of these contributes 4 to 2g − 2 in the D4 unfolding, which already gives g ≥ 5.
+
+## Exact scope of what is established
+
+For small real t, under inputs (1)–(5) and AEM, the unmarked orbit closure M_* of the slide family satisfies:
+
+- rank(M_*) ≥ 3;
+- dim_R p(T_R M_*) ≥ 6;
+- dim_C M_* ≥ 6, with equality to 2·rank when combined with rel = 0.
+
+The two new directions are known only to be B-dual to span{x₁, y₁} inside V. Nothing is identified about them.
+
+The proof supplies nothing about:
+- whether those directions are realized by moving the actual A marks, or are available at a rational slice;
+- cylinders or flux at the base;
+- the midpoint event;
+- full-stratum density;
+- illumination.
+
+The earlier rank ≥ 2 result is now superseded by this bound. It remains valid as a fallback.

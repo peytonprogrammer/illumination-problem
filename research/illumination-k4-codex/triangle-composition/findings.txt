@@ -1,0 +1,149 @@
+Triangle-return composition: a uniform6/7-reflection family lemma
+4 November 2026 — Codex01a1a00f
+
+RESULT
+The local triangle return map composes with the actual source and target.
+An analytically solved launch(5,-6) gives a7-reflection path, or a6-reflection
+variant when an upper-right diagonal replaces the right-wall/roof pair.
+This proves whole conditional families without W/k restrictions, including
+nonempty subfamilies of BOTH remaining surplus-four remote rows. It does NOT
+close either entire row. No room/direction/word scan or archive lookup ran.
+
+1. Exact universal sufficient conditions
+Use sector order E,NE,N,NW,W,SW,S,SE around an even-even A point. Let H contain
+full stars S0,0; U2,0; T2,2. Any strictly simple canonical triangle room which
+contains the following required triangles and omits the stated forbidden
+triangles has the indicated actual S/T trajectory:
+
+COMMON required outside H:
+ L(-2,0) sectors7,0,1;
+ remote(-2,2) sector6;
+ B(0,-2) sector1, the B+ cap.
+COMMON forbidden:
+ remote(-2,2) sectors5,7;
+ B(0,-2) sectors0,2.
+
+Seven-reflection version: additionally forbid Tcap(2,4) sector6 (T+) and
+E(4,2) sector3 (E+). No further triangle is required.
+Six-reflection version: instead require E sector3 (E+), forbid E sector2,
+and place no condition on the T cap.
+
+The full exact U/Z implications are seven-path.json and six-path.json.
+The support of every required/forbidden triangle is listed above. All other
+triangles are arbitrary, subject only to room validity. Thus arbitrary D/R/N
+caps and even more distant additions cannot invalidate these connections.
+This is a geometric guard theorem, not an inference from the five controls.
+
+2. Derivation from the return map and a common unfolded target
+Launch(d,-1). The source first reflects in B+'s diagonal, giving(-1,d).
+Its entry at the right remote triangle's bottom portal y1 has x=2-3/d,
+local coordinate xi=4-3/d. On the branch4/5<d<1, the triangle map gives
+exit at(5d-6,1), direction(d,-1), after three leaf reflections.
+The three physical leaf contacts are
+ (-2,4d-2),
+ ((2-6d)/(1+d),(6d-2)/(1+d)),
+ (-2,6-4/d).
+It then hits the ordinary negative part of the core floor at
+ A=(7d-6,-1), and leaves with direction(d,1).
+The required lower L sector7 is precisely what permits this descent through
+y0; treating the parent as any arbitrary north fan would be wrong.
+
+For 9/11<d<6/7 the seven-path suffix hits
+ right wall (3,9/d-8), then roof (12-11d,3).
+At y2 the resulting x is12-12d. Setting x2 gives d5/6, strictly within
+that interval. The actual endpoints are preserved throughout.
+
+A cleaner way to obtain this equation is to unfold the target across the
+roof y3 and right wall x3. T(2,2) maps to T'=(4,4). The ray from A must obey
+ (7d-6)+5d=4, hence d5/6.
+This chooses the target image BEFORE expanding another wall itinerary.
+
+3. Why the diagonal variant has the SAME initial direction
+The diagonal through the right/roof corner is x+y6. Reflection of T(2,2)
+in that line also gives(4,4), exactly the same target image as the two flat
+reflections. When E+ is present, the incoming ray can instead reflect once
+in E+'s diagonal at
+ ((14d-6)/(1+d),(12-8d)/(1+d)).
+After this reflection, its crossing of x2 has y12-12d. Again d5/6 reaches T.
+The added E sector2 would remove this diagonal mirror, hence its explicit
+absence condition. A matching target image is not by itself a valid optical
+path: the actual mirror segments and first intersections must also agree.
+Here the exact guards verify that agreement.
+
+General mirror-exchange identity:
+For perpendicular walls x=c,y=e and a target(c-rho,e-rho), reflecting the
+target in both walls equals reflecting it once in x+y=c+e: both give
+(c+rho,e+rho). This supports replacing a two-wall suffix by one diagonal
+suffix when the actual path hits the required finite mirror segments.
+There is no claim of a new historical optical principle.
+
+4. Actual rational paths
+Common prefix, source then five contacts:
+ (0,0), (10/11,-12/11), (-2,4/3), (-18/11,18/11),
+ (-2,6/5), (-1/6,-1).
+Seven version: (3,14/5), (17/6,3), then T(2,2).
+Six version: (34/11,32/11), then T(2,2).
+All contacts are on smooth maximal walls. None is a polygon corner.
+Complete guard extraction and exact actual-boundary replay pass; independently
+tracing ONLY the analytically supplied direction(5,-6) matches each path.
+
+5. Consequence for the two active remote rows
+Row(2,1,0,1): for a right SINGLE remote leaf at(-2,2) with L parent either
+sectors7/0/1 or7/0/1/2, all other cells ordinary, the usual short paths force
+B+,E-,T- for any putative darkness. Their opposite caps are then absent.
+The seven path applies with NO ordinary-cap count needed. Thus these entire
+oriented subfamilies illuminate in at most7 reflections; sigma handles their
+endpoint-exchanging partners. Other parent/leaf orientations remain outside
+this conclusion.
+
+Row(2,1,1,0): restrict to the full-H/full-north L parent sectors7/0/1/2 and
+the right single leaf. An extra e1 fan is a two-sector fan in another K cell.
+The same short paths force B+,E-; when B is ordinary its four-path also forces
+T-. Additional unit fans in D/R/N leave the seven path unchanged.
+For a unit E fan with E- present, the only two options are sectors3/4 or4/5:
+3/4 uses the six path, while4/5 uses seven. A unit T fan with T- present is
+sectors4/5 or5/6;4/5 uses seven (valid b0 completions must also repair its
+extra smooth B, e.g. by Nr+).
+If the unit B fan has B+ present, it is0/1 or1/2. The centered1/2 fan would
+make B(-1,-1) smooth with the fixed lower L sector7 and H. It cannot be
+repaired at b0, so only the square0/1 fan remains.
+Thus within THIS oriented full-H/right-leaf subfamily, only the unit B0/1
+and unit T5/6 types remain outside this new cover. This is not a reduction of
+all other L/B/E/T parents to these two types.
+
+6. The two remaining mirror obstructions are real, not invalid-budget cases
+Two prescribed fixtures in check.json meet W20,k6,Delta4,b0 and the exact
+same full S/U/T support:
+ - unit B0/1, ordinary E-,T-,R+;
+ - unit T5/6, ordinary B+,E-,D-,R+.
+Both violate the new seven guard. The six guard also does not apply, since
+the required E+ triangle is absent. These are failures of THESE sufficient
+paths, not darkness and not failures of all possible paths.
+
+I tried the direct map substitutions before proposing more cases:
+(a) B0/1 is the bottom square[0,1]x[-2,-1]. Launch(d,-1) and its rectangle
+return followed by the remote triangle give a new first floor contact
+ (9d-6,-1), outgoing(d,1), on3/5<d<2/3.
+Keeping the two-flat-wall target image(4,4) would require
+ (9d-6)+5d=4 => d5/7, OUTSIDE that branch. This particular replacement
+cannot extend the7path. It does not exclude other source directions or loops.
+(b) T5/6 is a centered triangular roof. Replacing the former roof contact
+by its two diagonal reflections, after the right wall, sends the unfolded
+T to(4,6). With the original first-floor prefix this requires
+ (7d-6)+7d=4 => d5/7, outside the9/11<d<6/7 prefix branch.
+Again the tempting unchanged-prefix substitution fails its admissibility gate.
+No scanned trajectories were used to choose another branch afterward.
+
+7. Evidence and next mathematical question
+check.py/json validates five hand-prescribed positive controls, including valid
+examples in each charge row and the E-center/T-outer unit cases, plus the two
+valid unresolved guard obstructions. Every positive has the derived physical
+path and exact W/k/Delta/b ledger. Universal coverage is established by U/Z
+set implications, not by these examples. Figure visually inspected.
+
+The reusable result is target-first composition with an exact pocket map and
+an explicit mirror exchange. The original two whole rows are still open.
+Next useful bounded target: a different exterior return or source-entry branch
+for the B-square and T-center obstructions, retaining actual S/T and a strict
+parameter interval. Repeating the same first-floor prefix cannot fix the
+inadmissible root. No broader room/word/archive campaign is queued.

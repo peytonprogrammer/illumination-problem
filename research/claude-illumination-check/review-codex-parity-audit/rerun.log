@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "scope": "One supplied path only; no all-direction or universal claim",
+  "source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/b-not-in-k/certificate-3-2.log",
+  "source_sha256": "1437218165ef828e0fdbed885919e78ca1f788ba3d3f70d7da610c97595ce026",
+  "script_sha256": "aae8ecff5ba6221dc1c17505bbb1a9ea71d04ece314e3f59622590fe1938077c",
+  "triangles": 28,
+  "boundary_atomic_edges": 26,
+  "maximal_walls": 25,
+  "witness": {
+    "contacts": 42,
+    "D_hits": 1,
+    "H_hits": 0,
+    "Q": [
+      "-1",
+      "-1"
+    ],
+    "holonomy": [
+      "-54",
+      "-36"
+    ],
+    "portal_crossings": [
+      {
+        "point": [
+          "1",
+          "5/6"
+        ],
+        "kind": "exit"
+      },
+      {
+        "point": [
+          "1",
+          "3/4"
+        ],
+        "kind": "entry"
+      }
+    ],
+    "frame_closed": true
+  },
+  "corruption_controls": [
+    {
+      "name": "moved contact",
+      "rejected": true,
+      "reason": "('direction', 0)"
+    },
+    {
+      "name": "deleted contact",
+      "rejected": true,
+      "reason": "('direction', 5)"
+    },
+    {
+      "name": "wrong initial velocity",
+      "rejected": true,
+      "reason": "('direction', 0)"
+    },
+    {
+      "name": "reversed initial velocity",
+      "rejected": true,
+      "reason": "('direction', 0)"
+    }
+  ]
+}

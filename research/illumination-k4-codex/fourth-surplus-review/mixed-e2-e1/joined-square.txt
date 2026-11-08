@@ -1,0 +1,100 @@
+O4 square substitution completes the joined all-root critical-B branch
+Codex01a18403, 5 November 2026. Parent proof; independent challenge pending.
+
+Keep joined-four.txt/check.py/json FROZEN for the peer's separate review.
+This new note gives exactly two prescribed square substitutions, not a
+new direction/word search. The existing normal-square exchange is derived
+explicitly below, so no unsupported path inheritance is needed.
+
+1. Missing implication and new idea
+
+Joined O4=B6701 includes B6, which removes the diagonal used by the new
+O3/H4 lower triple. However, B6+B7 together form the complete square
+[0,1]x[-3,-2]. The old B7 normal excursion and a SINGLE bottom reflection
+in this square have exactly the same inlet, outlet and outgoing velocity.
+Success: full O4 support certificates covering both ordinary roof cases.
+Strongest objection: D4 or another K cell spoils the new finite floor.
+
+2. Exact local exchange
+
+For0<d<1/4 the old triangle input is (2d,-2),(d,-1), and its proved
+three-contact return exits at(4d,-2),(d,1). In the square, the ray instead
+hits(3d,-3), reflects to(d,1), and reaches the SAME outlet(4d,-2).
+The condition0<2d<3d<4d<1 keeps both legs and the finite floor contact
+strictly inside their sides. No vertical square wall is encountered.
+The used floor's exterior mate belongs to remote A=(0,-4), outside K.
+No K cell, including D4, can remove it. Thus arbitrary D support is safe.
+
+3. New TWO path, Tc5 absent
+
+Replace the first three contacts in joined-four's four-path by(3/5,-3).
+The actual path is
+ S=(0,0), (3/5,-3), (9/5,3), T=(2,2).
+Initial velocity(1,-5) reflects upward at the floor, then downward at the
+bare ceiling. Actual S/T and the suffix are unchanged by the local
+exchange. It crosses(1,-1) on the ascending leg, so it needs the complete
+joined D23 neighborhood, just as the original four-path did.
+
+ minimum2 = H+B6701+D23.
+ maximum2 = minimum2+fullD+fullL+fullR+fullE+fullN+Tcexcept5.
+Complete U2 lies inside minimum2; complete Z2 misses maximum2. Both actual
+finite mirrors are strict, targetfirst/open-segment interior hold, and
+reverse/sigma identities pass. Unfolded actual T=(2,-10).
+
+4. New FOUR path, ordinary Tc5 present
+
+Apply the same replacement to joined-four's six-path, at d1/6:
+ S=(0,0), (1/2,-3), (8/5,18/5), (2,11/3), (12/7,26/7), T=(2,2).
+The first reflection is the square floor; the next three are the already
+proved Tc5 normal return. Same inlet/outlet states preserve actual T.
+Its upward crossing of y=-1 is at5/6, so joined D23 is unnecessary.
+
+ minimum4 = H+B6701+Tc5.
+ maximum4 = minimum4+fullD+fullL+fullR+fullE+fullN+Tc(0,1,2,3,5,7).
+The roof's diagonal/vertical mirrors still require Tc4/Tc6 absent;
+ordinary Tc5 ensures both. Full D support is allowed, including either
+single leaf3 or4. Complete U4/Z4, strict finite mirrors, actual first T,
+reverse/sigma and unfolding(2,-12) PASS.
+
+5. Whole joined all-root cover
+
+The accepted joined critical-B classification has precisely
+ O3=B701, O4=B6701, H4=B7012, all with D23.
+Their remaining six-row table has independent unit X at L/E/R/N, so Tc
+is ordinaryempty/5/6. For O3/H4 use joined-four's4if5absent,6ifordinary5.
+For O4 use this note's2if5absent,4ifordinary5. Full other-cell envelopes
+make the X and remaining ordinary caps irrelevant to this dispatch.
+Thus ALL previously unresolved joined rows now have parent covers<=6.
+
+If X itself is Tc, the existing whole Tc-unit theorem in argument.txt7
+already gives<=7. It is outside the six-row unresolved table. Combining
+that established case gives ENTIRE joined critical-B ALL-ROOT mixed
+branch a parent bound<=7. Independent review of these new implications
+is requested. This does not mean a single fixed path works on every fan.
+
+Together with accepted Beast012<=13 and west123/rectangle0123<=2, ALL
+all-root critical-B mixed e2+two-e1/b0 cases now have parent covers<=13.
+Sigma gives critical E. Previously accepted e2-at-D/R/N cases were already
+closed. Remaining all-root mixed optical cases are the eleven L/T fixtures.
+The separate root/single-leaf six-row frontier is NOT entirely covered:
+new four covers O4/Tc5 with either Dleaf, and new six covers O3/H4/Tc5
+with Dleaf3. MissingTc5 and other single-leaf cases remain open.
+No full mixed/Delta4 or universal minimum theorem follows.
+
+6. Verification and review
+
+joined-square-check.py/json reads ONLY the frozen two supplied paths from
+joined-four-check.json, makes the stated local substitutions, and checks
+complete support, all finite mirrors/specularity, firstT, reverse/sigma
+and unfolded targets. No room construction/scan/ray/direction/word/archive
+search, solver or worker. Shared historical exact helpers are used, so
+peer independent review remains necessary. No formal/expert verification.
+
+Run fixed question only, adapting output to a reviewer's owned files:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/mixed-e2-e1/joined-square-check.py
+
+NOTE ON FROZEN FOUR/SIX INPUT PROVENANCE
+joined-four-check.json pins critical-B.txt before its append-only section19
+was added. Its input section7 and the mathematical classification remain
+unchanged. Peer should distinguish that documented append from drift in
+the frozen path/checker/receipt. The four/six files themselves are frozen.

@@ -1,0 +1,2763 @@
+{
+  "caps": {
+    "W": 21,
+    "k": 5,
+    "N": 38
+  },
+  "positive_control": true,
+  "input_hashes": {
+    "inputs/guards/certs-paths-10_0.json": "e672df9ac5ce3cc7afa79d26231fda7745ed6c238b56b5d83cd8f2e9cd97cfbd",
+    "inputs/guards/certs-paths-10_2.json": "0d49979115887a140aeee2f598fd929de3742fdd3540da8efe89cd0abfc7bc8c",
+    "inputs/guards/certs-paths-12_0.json": "117e6d89ab1084b4bc4664f1bb0d6128eaf616268afe622aa1c0a62a1767d0ef",
+    "inputs/guards/certs-paths-2_2.json": "f5d171383385c2adfd4ada8d51c7908a4897e19133a82303044ce6d26bd09d18",
+    "inputs/guards/certs-paths-4_0.json": "7fb653aed8864e9fd4ced4bb9c07375558766dba97db9d33ec0915efae527cd9",
+    "inputs/guards/certs-paths-4_2.json": "29eefd11d59536f09770a13f49fad01ff1c2a7c4974bd9d4098de39d72e21cdd",
+    "inputs/guards/certs-paths-4_4.json": "f202a1e3f61fc302d6b6c24d50bf0079c120e5f83fc4cab6a96e7e24680c1cae",
+    "inputs/guards/certs-paths-6_0.json": "e6b0ecd7f8a30886913b7ba47b6e404b3c4c489cf0891927228f633c182a5b38",
+    "inputs/guards/certs-paths-6_2.json": "ee5e78ed9275cbe71f8fac2dfe3063f2068a12202162e59014168abb96eee944",
+    "inputs/guards/certs-paths-6_4.json": "3a798d8a7d6790fc1b2a9e3f443c2576333e22c28bcb7616df6413704b6b7703",
+    "inputs/guards/certs-paths-6_6.json": "edc72ece5e169d6e9cc51ccbf76a1a9177e3dd56b791fd2bb4474ae513b70a52",
+    "inputs/guards/certs-paths-8_0.json": "34f0401fc34e5eb4c7f41b68c7015e7853e95981477e4f0610c1c1c8f4dc10f2",
+    "inputs/guards/certs-paths-8_2.json": "cc931042292a9a7ddb0cab940d3fbb8c72ec25f8d8e65c9b482e0ee7809ba1bc",
+    "inputs/guards/certs-paths-8_4.json": "925aa2d870e6bfd6912cc206b34f10f5befe0250c45d73374e6c9aa26e134574",
+    "inputs/guards/claude-k4-w21-learned-L10,0.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/guards/claude-k4-w21-learned-L10,2.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/guards/claude-k4-w21-learned-L12,0.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/guards/claude-k4-w21-learned-L2,2.jsonl": "2a436f13f5f4401c1fe6ed98ad4c66b116d632f36f87956776734b619969f137",
+    "inputs/guards/claude-k4-w21-learned-L4,0.jsonl": "02d48ad8517891aabe896e968d55ef4751d8c54b2b3a06f86261d0d15fed57ef",
+    "inputs/guards/claude-k4-w21-learned-L4,2.jsonl": "b88f4f859c1fd098ca255e53d42d182984af94793257b82363c9779c9a4f01b0",
+    "inputs/guards/claude-k4-w21-learned-L4,4.jsonl": "03d262d1865224e43721b4664bad550f19435580d2fc14ba5da2d7b26399505f",
+    "inputs/guards/claude-k4-w21-learned-L6,0.jsonl": "f985b7396260718d8398154cc23bf893b5eddcfd44650c388213610906ec962d",
+    "inputs/guards/claude-k4-w21-learned-L6,2.jsonl": "6a650bbe6cc1a3f47774b4808ad7edd59cc52465a178eba6ecf1f827b8efd29a",
+    "inputs/guards/claude-k4-w21-learned-L6,4.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/guards/claude-k4-w21-learned-L6,6.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/guards/claude-k4-w21-learned-L8,0.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/guards/claude-k4-w21-learned-L8,2.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/guards/claude-k4-w21-learned-L8,4.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "counts": {
+    "RESIDUAL": 10,
+    "VERIFIED_UNSAT": 21
+  },
+  "completed": 31,
+  "expected": 31,
+  "results": [
+    {
+      "tag": "I2_1_1-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "variables": 84507,
+      "clauses": 332223,
+      "tiles": 784,
+      "guards": {
+        "old": 5356,
+        "new": 4,
+        "total": 5360
+      },
+      "seconds": 0.967,
+      "solver_stats": {
+        "restarts": 8,
+        "conflicts": 795,
+        "decisions": 11535,
+        "propagations": 2042397
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 32,
+        "walls": 19,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 22,
+        "sectors": {
+          "(-2, 0)": [
+            1
+          ],
+          "(-1, -1)": [
+            3
+          ],
+          "(-1, 0)": [
+            6
+          ],
+          "(-1, 1)": [
+            2
+          ],
+          "(0, -2)": [
+            1
+          ],
+          "(0, -1)": [
+            6
+          ],
+          "(0, 1)": [
+            4
+          ],
+          "(0, 2)": [
+            1
+          ],
+          "(1, -1)": [
+            3
+          ],
+          "(1, 0)": [
+            6
+          ],
+          "(1, 1)": [
+            7
+          ],
+          "(1, 2)": [
+            6
+          ],
+          "(1, 3)": [
+            3
+          ],
+          "(2, 0)": [
+            4
+          ],
+          "(2, 4)": [
+            2
+          ],
+          "(3, -1)": [
+            1
+          ],
+          "(3, 0)": [
+            6
+          ],
+          "(3, 2)": [
+            6
+          ],
+          "(3, 3)": [
+            3
+          ],
+          "(4, 0)": [
+            4
+          ],
+          "(4, 2)": [
+            3
+          ],
+          "(5, 1)": [
+            2
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "4af4dddb755eb10ea980909c050939f3f390b371a32d875b54141917eea0774a",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I2_2_0-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "variables": 69536,
+      "clauses": 273577,
+      "tiles": 648,
+      "guards": {
+        "old": 5311,
+        "new": 0,
+        "total": 5311
+      },
+      "seconds": 0.903,
+      "solver_stats": {
+        "restarts": 4,
+        "conflicts": 331,
+        "decisions": 8678,
+        "propagations": 907059
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 30,
+        "walls": 20,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 24,
+        "sectors": {
+          "(-2, 0)": [
+            1
+          ],
+          "(-1, -1)": [
+            2
+          ],
+          "(-1, 0)": [
+            6
+          ],
+          "(-1, 1)": [
+            4
+          ],
+          "(0, -1)": [
+            4
+          ],
+          "(0, 2)": [
+            2
+          ],
+          "(1, -1)": [
+            3
+          ],
+          "(1, 1)": [
+            6
+          ],
+          "(2, 0)": [
+            3
+          ],
+          "(2, 1)": [
+            6
+          ],
+          "(2, 2)": [
+            4
+          ],
+          "(3, -1)": [
+            3
+          ],
+          "(3, 0)": [
+            4
+          ],
+          "(3, 1)": [
+            6
+          ],
+          "(3, 2)": [
+            6
+          ],
+          "(3, 3)": [
+            1
+          ],
+          "(4, -2)": [
+            1
+          ],
+          "(4, -1)": [
+            6
+          ],
+          "(4, 1)": [
+            6
+          ],
+          "(4, 2)": [
+            2
+          ],
+          "(5, -1)": [
+            3
+          ],
+          "(5, 0)": [
+            6
+          ],
+          "(5, 1)": [
+            2
+          ],
+          "(6, 0)": [
+            1
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "69caf9e4e79a5c1207b4bc8d8180cedec984b73aeab4228a4b550f450bc81444",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I2_2_1-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "variables": 49259,
+      "clauses": 193625,
+      "tiles": 464,
+      "guards": {
+        "old": 3866,
+        "new": 0,
+        "total": 3866
+      },
+      "seconds": 0.949,
+      "solver_stats": {
+        "restarts": 7,
+        "conflicts": 3032,
+        "decisions": 8967,
+        "propagations": 6354740
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 33,
+        "walls": 21,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 27,
+        "sectors": {
+          "(-1, -1)": [
+            2
+          ],
+          "(-1, 0)": [
+            4
+          ],
+          "(-1, 1)": [
+            3
+          ],
+          "(0, -1)": [
+            4
+          ],
+          "(0, 2)": [
+            4
+          ],
+          "(1, -1)": [
+            5
+          ],
+          "(1, 1)": [
+            5
+          ],
+          "(1, 2)": [
+            6
+          ],
+          "(1, 3)": [
+            5
+          ],
+          "(1, 4)": [
+            2
+          ],
+          "(2, -2)": [
+            1
+          ],
+          "(2, -1)": [
+            6
+          ],
+          "(2, 0)": [
+            4
+          ],
+          "(2, 2)": [
+            4
+          ],
+          "(2, 3)": [
+            6
+          ],
+          "(2, 4)": [
+            2
+          ],
+          "(3, -1)": [
+            1
+          ],
+          "(3, 1)": [
+            2
+          ],
+          "(3, 2)": [
+            6
+          ],
+          "(3, 3)": [
+            5
+          ],
+          "(4, 1)": [
+            4
+          ],
+          "(4, 3)": [
+            6
+          ],
+          "(4, 4)": [
+            1
+          ],
+          "(5, 1)": [
+            2
+          ],
+          "(5, 2)": [
+            6
+          ],
+          "(5, 3)": [
+            3
+          ],
+          "(6, 2)": [
+            1
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "a3fa3a0e008955d60b4d3b1b3bc566881ef76097f1a9c3b25d521494cf37561c",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I2_3_0-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "variables": 54558,
+      "clauses": 210668,
+      "tiles": 512,
+      "guards": {
+        "old": 682,
+        "new": 0,
+        "total": 682
+      },
+      "seconds": 1.021,
+      "solver_stats": {
+        "restarts": 33,
+        "conflicts": 6718,
+        "decisions": 27473,
+        "propagations": 15081308
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 30,
+        "walls": 21,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            6,
+            -1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 28,
+        "sectors": {
+          "(-1, -1)": [
+            2
+          ],
+          "(-1, 0)": [
+            4
+          ],
+          "(-1, 1)": [
+            2
+          ],
+          "(0, -2)": [
+            1
+          ],
+          "(0, -1)": [
+            6
+          ],
+          "(0, 1)": [
+            4
+          ],
+          "(1, -1)": [
+            5
+          ],
+          "(1, 0)": [
+            6
+          ],
+          "(1, 1)": [
+            2
+          ],
+          "(2, -2)": [
+            2
+          ],
+          "(2, -1)": [
+            6
+          ],
+          "(2, 0)": [
+            4
+          ],
+          "(3, -2)": [
+            2
+          ],
+          "(3, -1)": [
+            6
+          ],
+          "(3, 0)": [
+            4
+          ],
+          "(4, -2)": [
+            2
+          ],
+          "(4, -1)": [
+            6
+          ],
+          "(4, 0)": [
+            4
+          ],
+          "(5, -2)": [
+            2
+          ],
+          "(5, -1)": [
+            6
+          ],
+          "(5, 0)": [
+            6
+          ],
+          "(5, 1)": [
+            2
+          ],
+          "(6, -1)": [
+            4
+          ],
+          "(6, 1)": [
+            4
+          ],
+          "(7, -1)": [
+            3
+          ],
+          "(7, 0)": [
+            6
+          ],
+          "(7, 1)": [
+            2
+          ],
+          "(8, 0)": [
+            1
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "2053150db102d15b0736bb4ab68ac4e53fa9e139b67061ed6f02259de1d589f4",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I2_2_2-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "variables": 50171,
+      "clauses": 194678,
+      "tiles": 472,
+      "guards": {
+        "old": 1694,
+        "new": 0,
+        "total": 1694
+      },
+      "seconds": 0.963,
+      "solver_stats": {
+        "restarts": 10,
+        "conflicts": 1915,
+        "decisions": 9156,
+        "propagations": 3940790
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 34,
+        "walls": 21,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 26,
+        "sectors": {
+          "(-2, 0)": [
+            1
+          ],
+          "(-1, -1)": [
+            3
+          ],
+          "(-1, 0)": [
+            6
+          ],
+          "(-1, 1)": [
+            3
+          ],
+          "(0, -1)": [
+            4
+          ],
+          "(0, 2)": [
+            4
+          ],
+          "(1, -1)": [
+            3
+          ],
+          "(1, 1)": [
+            5
+          ],
+          "(1, 2)": [
+            6
+          ],
+          "(1, 3)": [
+            3
+          ],
+          "(2, 0)": [
+            2
+          ],
+          "(2, 2)": [
+            4
+          ],
+          "(2, 3)": [
+            4
+          ],
+          "(2, 4)": [
+            1
+          ],
+          "(3, 1)": [
+            1
+          ],
+          "(3, 2)": [
+            6
+          ],
+          "(3, 3)": [
+            7
+          ],
+          "(3, 4)": [
+            6
+          ],
+          "(3, 5)": [
+            3
+          ],
+          "(4, 2)": [
+            4
+          ],
+          "(4, 5)": [
+            6
+          ],
+          "(4, 6)": [
+            1
+          ],
+          "(5, 3)": [
+            3
+          ],
+          "(5, 4)": [
+            6
+          ],
+          "(5, 5)": [
+            3
+          ],
+          "(6, 4)": [
+            1
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "71f929fc1a4ef8f88fe16adf8c493b3a9f25852f315d2a25b5669820517632f8",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I2_3_1-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "variables": 54598,
+      "clauses": 210445,
+      "tiles": 512,
+      "guards": {
+        "old": 710,
+        "new": 0,
+        "total": 710
+      },
+      "seconds": 0.956,
+      "solver_stats": {
+        "restarts": 32,
+        "conflicts": 5041,
+        "decisions": 25345,
+        "propagations": 10431523
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 32,
+        "walls": 21,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            2
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 26,
+        "sectors": {
+          "(-1, -1)": [
+            2
+          ],
+          "(-1, 0)": [
+            4
+          ],
+          "(-1, 1)": [
+            3
+          ],
+          "(0, -1)": [
+            4
+          ],
+          "(0, 2)": [
+            2
+          ],
+          "(1, -1)": [
+            2
+          ],
+          "(1, 0)": [
+            6
+          ],
+          "(1, 1)": [
+            5
+          ],
+          "(2, 0)": [
+            4
+          ],
+          "(2, 1)": [
+            4
+          ],
+          "(3, -1)": [
+            1
+          ],
+          "(3, 0)": [
+            6
+          ],
+          "(3, 1)": [
+            5
+          ],
+          "(4, 0)": [
+            4
+          ],
+          "(4, 2)": [
+            3
+          ],
+          "(5, 1)": [
+            6
+          ],
+          "(5, 2)": [
+            6
+          ],
+          "(5, 3)": [
+            2
+          ],
+          "(6, 0)": [
+            1
+          ],
+          "(6, 1)": [
+            6
+          ],
+          "(6, 3)": [
+            6
+          ],
+          "(6, 4)": [
+            1
+          ],
+          "(7, 1)": [
+            3
+          ],
+          "(7, 2)": [
+            6
+          ],
+          "(7, 3)": [
+            3
+          ],
+          "(8, 2)": [
+            1
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "2e2034c02a10768d8f3b5e3b8fbddb071412c8f727d857191d0c6158566389bd",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I2_4_0-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "variables": 59030,
+      "clauses": 227018,
+      "tiles": 552,
+      "guards": {
+        "old": 505,
+        "new": 0,
+        "total": 505
+      },
+      "seconds": 5.369,
+      "solver_stats": {
+        "restarts": 130,
+        "conflicts": 28952,
+        "decisions": 73428,
+        "propagations": 69526943
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "319ae73a5681b930d1cff7214fced0d84b9ef9ca64ecdf98556981c475a4102c",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "205b7fc4c005d06e67b71f258ce11283404e6d2b28e838234e51a129e761bfbb"
+    },
+    {
+      "tag": "I2_3_2-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "variables": 56298,
+      "clauses": 217637,
+      "tiles": 528,
+      "guards": {
+        "old": 711,
+        "new": 0,
+        "total": 711
+      },
+      "seconds": 2.165,
+      "solver_stats": {
+        "restarts": 118,
+        "conflicts": 21814,
+        "decisions": 82247,
+        "propagations": 49181265
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 32,
+        "walls": 21,
+        "interior_A": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            4
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 26,
+        "sectors": {
+          "(-1, -1)": [
+            2
+          ],
+          "(-1, 0)": [
+            4
+          ],
+          "(-1, 1)": [
+            2
+          ],
+          "(0, -1)": [
+            4
+          ],
+          "(0, 1)": [
+            4
+          ],
+          "(1, -1)": [
+            3
+          ],
+          "(1, 1)": [
+            5
+          ],
+          "(2, 0)": [
+            4
+          ],
+          "(2, 2)": [
+            4
+          ],
+          "(3, 1)": [
+            3
+          ],
+          "(3, 2)": [
+            6
+          ],
+          "(3, 3)": [
+            3
+          ],
+          "(4, 2)": [
+            3
+          ],
+          "(4, 3)": [
+            6
+          ],
+          "(4, 4)": [
+            2
+          ],
+          "(5, 3)": [
+            6
+          ],
+          "(5, 4)": [
+            6
+          ],
+          "(5, 5)": [
+            3
+          ],
+          "(6, 2)": [
+            1
+          ],
+          "(6, 3)": [
+            6
+          ],
+          "(6, 5)": [
+            6
+          ],
+          "(6, 6)": [
+            1
+          ],
+          "(7, 3)": [
+            2
+          ],
+          "(7, 4)": [
+            6
+          ],
+          "(7, 5)": [
+            3
+          ],
+          "(8, 4)": [
+            1
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "764bdebfea64c398b4d84a42848f5c87ab257f31361bb5012509b8b9ab266793",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I2_4_1-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "variables": 59856,
+      "clauses": 230853,
+      "tiles": 560,
+      "guards": {
+        "old": 643,
+        "new": 0,
+        "total": 643
+      },
+      "seconds": 4.56,
+      "solver_stats": {
+        "restarts": 120,
+        "conflicts": 25373,
+        "decisions": 66168,
+        "propagations": 64818408
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "cd29fe592fa17636ff10e4b882b69586b3345b7f3f6e5e92ba62522a3148df32",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "1b62350c4ecb07b0104afad6b0920b7cc6a58cec63fe979670188aa044bc7a05"
+    },
+    {
+      "tag": "I2_5_0-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "variables": 63416,
+      "clauses": 244037,
+      "tiles": 592,
+      "guards": {
+        "old": 545,
+        "new": 0,
+        "total": 545
+      },
+      "seconds": 1.414,
+      "solver_stats": {
+        "restarts": 31,
+        "conflicts": 5854,
+        "decisions": 18239,
+        "propagations": 13754739
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "7781ccf555c69d9ac07f2b2c88aa1da8e63b1fc3d6241c17798297e8035bae8f",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "2e26254f76dce34f91b5da7d21f797a128e9dc02a353150c2d535254b6cd1cdc"
+    },
+    {
+      "tag": "I2_3_3-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "variables": 58076,
+      "clauses": 224214,
+      "tiles": 544,
+      "guards": {
+        "old": 609,
+        "new": 0,
+        "total": 609
+      },
+      "seconds": 3.731,
+      "solver_stats": {
+        "restarts": 76,
+        "conflicts": 19689,
+        "decisions": 55421,
+        "propagations": 35980549
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "d57bdd6625699b79084cf4da5045f8b9e7f965315d5ac5607b0af8606f322307",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "a48261a98b76457138aa5e5c8a281c7f2cecb677819cd167d3cc289ebad2cf60"
+    },
+    {
+      "tag": "I2_4_2-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "variables": 60764,
+      "clauses": 234086,
+      "tiles": 568,
+      "guards": {
+        "old": 667,
+        "new": 0,
+        "total": 667
+      },
+      "seconds": 2.637,
+      "solver_stats": {
+        "restarts": 60,
+        "conflicts": 13354,
+        "decisions": 35272,
+        "propagations": 25012296
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "13cb9acc4f04edafeea80c619b1ae9700f0cf06f78be648d18b6dbbf7bdbeba6",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "c6e22a4c11289c5602b549a9fb77d619ff5397fa2d2a91b7d914f38247841dd2"
+    },
+    {
+      "tag": "I2_5_1-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "full": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "marks": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "variables": 63456,
+      "clauses": 243755,
+      "tiles": 592,
+      "guards": {
+        "old": 514,
+        "new": 0,
+        "total": 514
+      },
+      "seconds": 1.403,
+      "solver_stats": {
+        "restarts": 33,
+        "conflicts": 5266,
+        "decisions": 15467,
+        "propagations": 8856805
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "b674ecdf6185f0ab1a7489cc5f19efa21dd8bb1c27c0393795bb8b8aa5b4d0ab",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "436fde5f8e3e9bf944ba940e8dc83a362f88a596ef2e5d3b6d55239613bd2193"
+    },
+    {
+      "tag": "I2_6_0-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 11,
+      "variables": 66148,
+      "clauses": 253426,
+      "tiles": 616,
+      "guards": 355,
+      "positive_control": null,
+      "seconds": 1.169,
+      "solver_stats": {
+        "restarts": 8,
+        "conflicts": 893,
+        "decisions": 3124,
+        "propagations": 1554409
+      },
+      "cnf_sha256": "f1a7b8072955757cffdbb83374cbca5413236fe699850c801a82ab1eeecfc0d6",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "This one fixed full-star/marked-pair case only. Frozen universally validated guards; no new optical discovery.",
+      "proof_sha256": "ccd8605be06c4be4d94797e012c9175232e292ab271e2a99ca8456bbe2b1837e"
+    },
+    {
+      "tag": "I3_0-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -3,
+          -1
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -3,
+          -1
+        ],
+        [
+          -2,
+          0
+        ]
+      ],
+      "variables": 8823,
+      "clauses": 33929,
+      "tiles": 96,
+      "guards": {
+        "old": 1768,
+        "new": 0,
+        "total": 1768
+      },
+      "seconds": 0.66,
+      "solver_stats": {
+        "restarts": 5,
+        "conflicts": 1984,
+        "decisions": 2822,
+        "propagations": 1003584
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "b7464934751f09902a58a134a356a578651ca362de1cd38be658e61281240739",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "232d1eac4abef5ad4b9e176e5c209fe6514edf2701c4e9eda138584f74728dd3"
+    },
+    {
+      "tag": "I3_0-pair1",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -3,
+          -1
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -3,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 8823,
+      "clauses": 32212,
+      "tiles": 96,
+      "guards": {
+        "old": 51,
+        "new": 0,
+        "total": 51
+      },
+      "seconds": 0.344,
+      "solver_stats": {
+        "restarts": 4,
+        "conflicts": 1871,
+        "decisions": 3733,
+        "propagations": 744556
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "70378e0a55aecad54e76d849404c39f0c996b61272f655ef8d14ca3d4e4d1942",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "5c5bcfae9ba22c96954cbf067f732542611c39cb41bbe7df852fcd3df289c848"
+    },
+    {
+      "tag": "I3_0-pair2",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -3,
+          -1
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 8823,
+      "clauses": 33514,
+      "tiles": 96,
+      "guards": {
+        "old": 1353,
+        "new": 0,
+        "total": 1353
+      },
+      "seconds": 0.581,
+      "solver_stats": {
+        "restarts": 2,
+        "conflicts": 221,
+        "decisions": 839,
+        "propagations": 83611
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "ace97eb75df11d4c6a559251abeb0ee0534dbb5bad394011e51b169e6f245f15",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "685fda4da8e07c738fe1c8b1f731da0f495c228a6965e9fb1d021df874e977b9"
+    },
+    {
+      "tag": "I3_1-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -3,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -3,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 8780,
+      "clauses": 32415,
+      "tiles": 96,
+      "guards": {
+        "old": 32,
+        "new": 0,
+        "total": 32
+      },
+      "seconds": 0.308,
+      "solver_stats": {
+        "restarts": 4,
+        "conflicts": 1375,
+        "decisions": 3061,
+        "propagations": 561528
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "99e814eb183161e5e1760b884d8e61f126bbf831b33c396f186495e427af781e",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "7042ca8869454699140f42adfae076f28decfb0df91cf04d575bb98d29fc3be9"
+    },
+    {
+      "tag": "I3_1-pair1",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -3,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 8780,
+      "clauses": 33798,
+      "tiles": 96,
+      "guards": {
+        "old": 1415,
+        "new": 0,
+        "total": 1415
+      },
+      "seconds": 0.604,
+      "solver_stats": {
+        "restarts": 1,
+        "conflicts": 150,
+        "decisions": 838,
+        "propagations": 43939
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "a69854439562c059d71a2e8d21e951f1414096cede8c524a7247597d4254e56e",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "af4bee85cf5e589e2f9660fbcde54ebf4c714f86cc3e682d3dac1792d8d39bc4"
+    },
+    {
+      "tag": "I3_2-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "variables": 18435,
+      "clauses": 73804,
+      "tiles": 184,
+      "guards": {
+        "old": 4160,
+        "new": 4,
+        "total": 4164
+      },
+      "seconds": 1.37,
+      "solver_stats": {
+        "restarts": 30,
+        "conflicts": 7771,
+        "decisions": 12107,
+        "propagations": 8013129
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "97f1387dbc3d1705a6411ecc61b7e4972155958601d1e88f3deb892cc1736378",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "2e056de38e2202ea152d3342ce462b6f55e8aa336a1cb5416829bf2a27b8d741"
+    },
+    {
+      "tag": "I3_2-pair1",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          -2
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 18435,
+      "clauses": 70834,
+      "tiles": 184,
+      "guards": {
+        "old": 1194,
+        "new": 0,
+        "total": 1194
+      },
+      "seconds": 0.471,
+      "solver_stats": {
+        "restarts": 7,
+        "conflicts": 2272,
+        "decisions": 4971,
+        "propagations": 1636510
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "eedb49b401f5b405c4b9128c966c7769e8c791ab070e1522a10a6706c9fa6049",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "790e0e63b67436213972e5ca87089db6815e2f0a45c0fb6c7e16b0b6ee03fdc8"
+    },
+    {
+      "tag": "I3_2-pair2",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 18435,
+      "clauses": 73802,
+      "tiles": 184,
+      "guards": {
+        "old": 4158,
+        "new": 4,
+        "total": 4162
+      },
+      "seconds": 0.931,
+      "solver_stats": {
+        "restarts": 17,
+        "conflicts": 4599,
+        "decisions": 8028,
+        "propagations": 3861408
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "0deadce35c3a848271d0448a132742e850b37cc4490caa58886198365a4b0f9e",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "1cbcca8eca6b1e568af906a862f506acc50e446cef00c1d3c17ab1ca9992dc92"
+    },
+    {
+      "tag": "I3_3-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          -1
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 8740,
+      "clauses": 35407,
+      "tiles": 96,
+      "guards": {
+        "old": 2729,
+        "new": 0,
+        "total": 2729
+      },
+      "seconds": 0.647,
+      "solver_stats": {
+        "restarts": 12,
+        "conflicts": 2385,
+        "decisions": 5707,
+        "propagations": 947273
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "7764980d7a0ab881fa4a38ac372990568cde28f52f79d04dd1d0cdfd52efc259",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "021655b8a1b4edaaa7a8862ba8d31a9228ff515d8794735efbc4a51df3c49ec1"
+    },
+    {
+      "tag": "I3_3-pair1",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          -1
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 8740,
+      "clauses": 35481,
+      "tiles": 96,
+      "guards": {
+        "old": 2803,
+        "new": 0,
+        "total": 2803
+      },
+      "seconds": 0.748,
+      "solver_stats": {
+        "restarts": 12,
+        "conflicts": 2507,
+        "decisions": 6071,
+        "propagations": 950613
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "1c83dd82398db4d5a34e2999329e7e7db47ad9dd2defd1788f4bf27f2fb68987",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "ee4f82e0eaf752550cc471bb9e75bade4768d079895c77f19b716757ab98854f"
+    },
+    {
+      "tag": "I3_4-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 18395,
+      "clauses": 73243,
+      "tiles": 184,
+      "guards": {
+        "old": 3356,
+        "new": 0,
+        "total": 3356
+      },
+      "seconds": 0.61,
+      "solver_stats": {
+        "restarts": 7,
+        "conflicts": 1572,
+        "decisions": 5106,
+        "propagations": 1244627
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 31,
+        "walls": 21,
+        "interior_A": [
+          [
+            -4,
+            -2
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            -4,
+            -3
+          ],
+          [
+            -4,
+            -1
+          ],
+          [
+            -3,
+            -2
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            -2,
+            -1
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 25,
+        "sectors": {
+          "(-6, -2)": [
+            1
+          ],
+          "(-5, -3)": [
+            2
+          ],
+          "(-5, -2)": [
+            6
+          ],
+          "(-5, -1)": [
+            3
+          ],
+          "(-4, -3)": [
+            4
+          ],
+          "(-4, -1)": [
+            4
+          ],
+          "(-3, -3)": [
+            5
+          ],
+          "(-3, -1)": [
+            4
+          ],
+          "(-2, -4)": [
+            1
+          ],
+          "(-2, -3)": [
+            6
+          ],
+          "(-2, -1)": [
+            4
+          ],
+          "(-2, 0)": [
+            1
+          ],
+          "(-1, -3)": [
+            2
+          ],
+          "(-1, -2)": [
+            6
+          ],
+          "(-1, -1)": [
+            7
+          ],
+          "(-1, 0)": [
+            6
+          ],
+          "(-1, 1)": [
+            3
+          ],
+          "(0, -2)": [
+            2
+          ],
+          "(0, -1)": [
+            6
+          ],
+          "(0, 1)": [
+            6
+          ],
+          "(0, 2)": [
+            1
+          ],
+          "(1, -1)": [
+            2
+          ],
+          "(1, 0)": [
+            6
+          ],
+          "(1, 1)": [
+            3
+          ],
+          "(2, 0)": [
+            1
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "d1c1295c85c119586a5ef7ac6f6f69dd9eb8dd74d87e976fbc16d19b7105b197",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I3_4-pair1",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 18395,
+      "clauses": 74115,
+      "tiles": 184,
+      "guards": {
+        "old": 4224,
+        "new": 4,
+        "total": 4228
+      },
+      "seconds": 0.666,
+      "solver_stats": {
+        "restarts": 6,
+        "conflicts": 1315,
+        "decisions": 4019,
+        "propagations": 1195750
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 33,
+        "walls": 21,
+        "interior_A": [
+          [
+            -4,
+            -2
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            -4,
+            -1
+          ],
+          [
+            -3,
+            -2
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 25,
+        "sectors": {
+          "(-6, -2)": [
+            1
+          ],
+          "(-5, -3)": [
+            3
+          ],
+          "(-5, -2)": [
+            6
+          ],
+          "(-5, -1)": [
+            2
+          ],
+          "(-4, -4)": [
+            1
+          ],
+          "(-4, -3)": [
+            6
+          ],
+          "(-4, -1)": [
+            4
+          ],
+          "(-3, -3)": [
+            6
+          ],
+          "(-3, -1)": [
+            6
+          ],
+          "(-3, 0)": [
+            2
+          ],
+          "(-2, -4)": [
+            1
+          ],
+          "(-2, -3)": [
+            6
+          ],
+          "(-2, 0)": [
+            4
+          ],
+          "(-1, -3)": [
+            2
+          ],
+          "(-1, -2)": [
+            4
+          ],
+          "(-1, -1)": [
+            7
+          ],
+          "(-1, 0)": [
+            6
+          ],
+          "(-1, 1)": [
+            3
+          ],
+          "(0, -2)": [
+            1
+          ],
+          "(0, -1)": [
+            6
+          ],
+          "(0, 1)": [
+            6
+          ],
+          "(0, 2)": [
+            1
+          ],
+          "(1, -1)": [
+            2
+          ],
+          "(1, 0)": [
+            4
+          ],
+          "(1, 1)": [
+            2
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "2d43bb2f6f136ee968904271430ae011d973c32c2ca221e9ec1a873ae15edf1f",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    },
+    {
+      "tag": "I3_5-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "variables": 18435,
+      "clauses": 73832,
+      "tiles": 184,
+      "guards": {
+        "old": 4188,
+        "new": 4,
+        "total": 4192
+      },
+      "seconds": 1.144,
+      "solver_stats": {
+        "restarts": 20,
+        "conflicts": 5268,
+        "decisions": 10027,
+        "propagations": 5721676
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "c1cceb5f13f361e2bdd8578fe9247f4ad13ee430ea73238a0016d909eb0f159f",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "dd611f214041a7614797c180d02652099f5418dfca6431cda27588be92537106"
+    },
+    {
+      "tag": "I3_5-pair1",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 18435,
+      "clauses": 74173,
+      "tiles": 184,
+      "guards": {
+        "old": 4533,
+        "new": 0,
+        "total": 4533
+      },
+      "seconds": 0.876,
+      "solver_stats": {
+        "restarts": 13,
+        "conflicts": 2795,
+        "decisions": 6798,
+        "propagations": 2166842
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "2bdc1e5cdbd6e27be9bb52ba0a59c58c00ee7ef4d3b4e4fea6f09d97fb2ea4ba",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "1371d394ee0ee733501a2777ffa8a869cddcedffbd35f1979293a407c503e54d"
+    },
+    {
+      "tag": "I3_5-pair2",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 18435,
+      "clauses": 73833,
+      "tiles": 184,
+      "guards": {
+        "old": 4189,
+        "new": 4,
+        "total": 4193
+      },
+      "seconds": 0.82,
+      "solver_stats": {
+        "restarts": 8,
+        "conflicts": 2763,
+        "decisions": 6622,
+        "propagations": 2612427
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "7c96b69d60b3c19b2670eb5622ee728f549447cc8463616d8712494d9cb06ca5",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "758b43cba4501154c51ab7be32d054eeb377ee79beb05117282f2470f8f1c274"
+    },
+    {
+      "tag": "I3_6-pair0",
+      "status": "VERIFIED_UNSAT",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 18351,
+      "clauses": 74661,
+      "tiles": 184,
+      "guards": {
+        "old": 4559,
+        "new": 0,
+        "total": 4559
+      },
+      "seconds": 0.681,
+      "solver_stats": {
+        "restarts": 0,
+        "conflicts": 0,
+        "decisions": 0,
+        "propagations": 5283
+      },
+      "geometry_receipt": null,
+      "cnf_sha256": "376072417fd8f24692662afb3c1ed0548b695f258e995358fbf9c451507f72bb",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21.",
+      "proof_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "tag": "I3_7-pair0",
+      "status": "RESIDUAL",
+      "W_cap": 21,
+      "exception_cap": 5,
+      "N_cap": 38,
+      "partial_or_missing_cap": 9,
+      "full": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "variables": 29802,
+      "clauses": 118593,
+      "tiles": 288,
+      "guards": {
+        "old": 4554,
+        "new": 4,
+        "total": 4558
+      },
+      "seconds": 0.753,
+      "solver_stats": {
+        "restarts": 7,
+        "conflicts": 876,
+        "decisions": 3983,
+        "propagations": 1255153
+      },
+      "geometry_receipt": {
+        "simple_polygon": true,
+        "tile_complex_euler": 1,
+        "tiles": 34,
+        "walls": 21,
+        "interior_A": [
+          [
+            -2,
+            -2
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "transparent_vertices": [
+          [
+            -2,
+            -1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "slit_edges": 0,
+        "boundary_contacts": [],
+        "atomic_boundary_faces": 22,
+        "sectors": {
+          "(-4, -2)": [
+            1
+          ],
+          "(-4, 0)": [
+            1
+          ],
+          "(-3, -3)": [
+            2
+          ],
+          "(-3, -2)": [
+            6
+          ],
+          "(-3, -1)": [
+            6
+          ],
+          "(-3, 0)": [
+            6
+          ],
+          "(-3, 1)": [
+            2
+          ],
+          "(-2, -4)": [
+            1
+          ],
+          "(-2, -3)": [
+            6
+          ],
+          "(-2, 1)": [
+            6
+          ],
+          "(-2, 2)": [
+            1
+          ],
+          "(-1, -3)": [
+            3
+          ],
+          "(-1, -2)": [
+            4
+          ],
+          "(-1, -1)": [
+            7
+          ],
+          "(-1, 1)": [
+            6
+          ],
+          "(0, -2)": [
+            2
+          ],
+          "(0, 2)": [
+            2
+          ],
+          "(1, -1)": [
+            5
+          ],
+          "(1, 0)": [
+            6
+          ],
+          "(1, 1)": [
+            3
+          ],
+          "(2, -1)": [
+            2
+          ],
+          "(2, 0)": [
+            2
+          ]
+        },
+        "certificate": "GEOMETRY ONLY: transparent vertices invalidate the original darkness certificate"
+      },
+      "cnf_sha256": "8b068252d8f701646dd9fd53451b0125c5c46a2244573e29767ca929b1299014",
+      "encoder_sha256": "0749a86ed2e31d966f9b2bcdc5baac81b6f60c126c5f57d67c97cedfdb79c031",
+      "scope": "Fixed full-star support and marked pair; necessary disk geometry and fixed universally validated illumination guards, k<=5,W<=21."
+    }
+  ]
+}

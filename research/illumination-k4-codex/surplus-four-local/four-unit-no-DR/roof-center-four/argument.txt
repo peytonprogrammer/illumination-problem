@@ -1,0 +1,52 @@
+New hand roof-center FOUR (no discovery)
+Codex01a1a00f, 5 November 2026
+
+Parent optical lemma: If a valid local room contains H+B01+Tc56 and
+avoids B7,Tc4,Tc7,N6, actual S/T illuminate within FOUR reflections.
+Other whole L/E/D/R stars are allowed. The whole support envelope is
+in verification.json. Independent review requested.
+
+Start from the already accepted bottom-square five path's source and
+bottom prefix, launch(d,1). Source ceiling hit(d,1) reflects to(d,-1).
+It hits the B01 square far wall at(4d,-2), reflecting to(d,1).
+This outgoing line is x=d(y+6). At the Tc bottom portal y3, x=9d.
+The first upper-left Tc5 mirror y=x+2 is hit at
+ A=(a,a+2), a=8d/(1-d).
+Reflection sends(d,1) to(1,d). The line is y=dx+8d+2.
+Because Tc6 is present, the old middle x2 mirror is gone. Continue to
+upper-right Tc6 mirror x+y6:
+ B=(c,6-c), c=(4-8d)/(1+d).
+Reflection sends(1,d) to(-d,-1). Its outgoing line satisfies
+ x=d*y+4-14d.
+At actual target height2 its abscissa is4-12d. Actual T=(2,2) forces
+ d=1/6.
+
+A sufficient strict gate is1/7<d<2/11. It guarantees0<d<1,
+0<4d<1, source-to-bottom/core portal3d<1, ascending source ceiling
+crossing7d>1, upper-T bottom portal1<9d<2, leftcontact1<a<2,
+rightcontact2<c<3 and final Tc roof exit2<4-11d<3. All are monotone
+linear/fractional-linear expressions without poles on the interval.
+Thus no contact is an endpoint; forced root is strictly inside the gate.
+Complete open-leg incidence is separately checked at that exact root.
+
+The exact path:
+ S,(1/6,1),(2/3,-2),(8/5,18/5),(16/7,26/7),T.
+Four finite mirrors:
+ (0,1)--(1,1), (0,-2)--(1,-2),
+ (1,3)--(2,4), (2,4)--(3,3).
+Own Fraction verification recomputes U16,Z4, all strict finite specular
+contacts, complete open-leg support, firstactualT, no source revisit,
+reverse/sigma, and actual target unfolding(2,12).
+The ascending leg crosses(1,0), full360 interior to H; no reflection there.
+Z is EXACTLY B7,Tc4,Tc7,N6. Sigma/reversal gives minH+E45+L70 and
+forbids E2,L1,L6,N7. Both remain actual ordered S-to-T paths.
+
+Applications: last three symbolic FOUR-unit labels all have
+LC70,BO01,EO45,TcC56 and ordinary Nempty,6or7; D/R ordinary freely.
+For Nempty orN7, use direct FOUR. For N6 use sigma FOUR, because N7
+is then absent. Both minima fit every whole corresponding envelope;
+neither U nor Z requires any D/R choice. This closes all THREE remaining
+labels, subject to the separate classification/forcing argument.
+No completed room, cap completion, direction/word scan or archive was
+used to derive or verify this path. No numerical candidate is substituted
+for its exact actual endpoint derivation. Parent proof, peer review pending.

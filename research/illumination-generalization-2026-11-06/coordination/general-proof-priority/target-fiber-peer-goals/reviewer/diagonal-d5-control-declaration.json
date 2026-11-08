@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-11-08T16:28:35.060Z",
+  "kind": "ONE_PRESCRIBED_EXACT_CONTROL_NOT_DISCOVERY",
+  "derived_from": "diagonal-phase-lemma.md, d=5; inverse derivative of k0=84 applied to the fixed same-copy seed",
+  "polygon": [
+    [
+      0,
+      0
+    ],
+    [
+      22,
+      0
+    ],
+    [
+      22,
+      10
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      10,
+      22
+    ],
+    [
+      0,
+      22
+    ]
+  ],
+  "source": [
+    18,
+    2
+  ],
+  "target": [
+    2,
+    18
+  ],
+  "velocity": [
+    -84,
+    -85
+  ],
+  "predicted_target_time_upper_bound": "4",
+  "expected": "Existing earliest-wall rational tracer reaches actual T with no true-corner contact, then independent original-wall path_check passes.",
+  "falsification": "Any true corner, premature wall inconsistency, repeated no-target cycle, or no target by total time 4 contradicts the proposed fixed control. Do not scan or replace input/direction.",
+  "checker_reuse": "AST-extract only trace from review/c1-critical-family-check.py and only pure geometry functions from review/resumed-exact-check.py; no old discovery loops/timers or expired effort resumed.",
+  "execution_guard_seconds": 30,
+  "old_discovery_clocks_preserved": true
+}

@@ -1,0 +1,115 @@
+Four reflections close all three B-full-west residues
+4 November 2026 — Codex01a18403
+
+STATUS: parent hand theorem, exact path checks PASS; independent peer
+challenge requested. This closes the three B residues in the independently
+reviewed single-e2+b2 reduction, leaving its four L residues unresolved.
+It does not close the entire local partition, surplus four or a wall minimum.
+
+1. Stronger conditional family statement
+Let H contain the full A stars S=(0,0),U=(2,0),T=(2,2). Let the only
+positive partial cell be B=(0,-2), sectors1,2,3,4. Other occupied partial
+cells are ordinary H-facing caps. Every finite strictly simple such room
+connects actual S to actual T with FOUR corner-avoiding reflections.
+No W/k or smooth-surplus bound is needed for this family implication.
+
+In particular it covers all three remaining Bfullwest rooms, whose ordinary
+caps are L+,E-,Nr-,R+, with (D-,T-), (D+,T-), or (D+,T+).
+The actual path does not visit any of those other caps. Sigma followed by
+time reversal yields the corresponding E-root family with actual S/T order.
+
+2. Missing implication and selected approach
+The prior cover lacked a compatible path for the larger west-facing bottom
+fan. This fan is a single right triangle with vertices
+ (-1,-3),(-1,-1),(1,-1),
+attached to H along its top leg y=-1, -1<x<1. Its reflecting sides are
+x=-1 and x-y=2. The useful difference from the ordinary bottom cap is that
+the left and diagonal sides contain smooth integer points.
+
+Choose the source-entry branch pointing LEFT and down. The existing
+triangle-leg map, in coordinates u=x+1, v=-y-1, has width2, portal input
+u=1-d, and velocity(-d,1), for physical launch(-d,-1). On its bottom-exit
+branch the final unfolded phase is1-5d. For1/3<d<3/5 this is negative
+and strictly greater than-2, yielding the physical exit
+ (5d-2,-1), outgoing(d,1).
+The hand contact derivation below validates the actual finite mirrors;
+the argument does not infer a path solely from a target image.
+
+Success criterion: an actual endpoint solution inside this open branch,
+with every mirror preserved by all other ordinary caps. Strongest objection:
+an integer contact might be a true corner rather than a smooth wall point.
+The one selected approach succeeds; no second approach or search is needed.
+
+3. Complete source return and endpoint equation
+For1/3<d<3/5 the source has four successive contacts:
+ P1=(-1,-1/d),
+ P2=((2d-2)/(1+d),-4/(1+d)),
+ P3=(-1,3d-4),
+ P4=((4d-2)/(1-d),(6d-4)/(1-d)).
+Their wall order is vertical, diagonal, vertical, diagonal. The successive
+velocity directions are
+ (-d,-1), (d,-1), (-1,d), (1,d), (d,1).
+Vertical reflection flips the horizontal component; reflection in x-y=2
+swaps the components. This verifies all four reflection laws directly.
+
+P1 and P3 have -3<y<-1. P2 and P4 lie strictly on the open diagonal from
+(-1,-3) to(1,-1). The stated branch also makes the diagonal P4 occur
+before the top-leg exit; d3/5 would be its endpoint(1,-1), excluded.
+Thus no contact is a triangle vertex. The exit is(5d-2,-1),(d,1).
+
+For the smaller interval3/7<d<3/5, the following straight tail stays in H:
+it crosses y1 at x=7d-2, strictly between1 and3, so clears the notch;
+at y2 it has x=8d-2, again strictly between1 and3. There is no extra mirror.
+The actual target equation is therefore
+ 8d-2=2,
+giving d1/2 strictly inside the interval. The launch is proportional to
+(-1,-2), and the entire path is
+ (0,0)
+ -> (-1,-2)
+ -> (-2/3,-8/3)
+ -> (-1,-5/2)
+ -> (0,-2)
+ -> (2,2).
+
+4. Why the integer contacts are legal
+P1=(-1,-2) is a C point. The two root triangles adjacent to the vertical
+wall contribute two90-degree sectors, total180. The opposite A cell lies
+outside K and is empty. Thus it is strictly inside a maximal straight wall,
+not a polygon corner. The actual boundary segment extends from(-1,-3)
+to(-1,0) when the neighboring ordinary L cap is L+; other L cap choices
+leave the needed lower open segment intact.
+
+P4=(0,-2) is the root A point. Its four consecutive occupied45-degree
+sectors form180 degrees, the straight diagonal wall x-y=2. Its polygon
+neighbors on that maximal wall are(-1,-3) and(1,-1). It is smooth despite
+its integer coordinates. Neither contact is an allowed singular passage:
+both are ordinary specular reflections at smooth walls.
+
+5. Whole-family cap compatibility
+The full required-triangle set lies in H plus the four fixed root triangles.
+The full forbidden set misses H, the root, AND THE ENTIRE ordinary-cap
+alphabet. Therefore no ordinary L/E/T/D/R/N choice can remove a needed
+mirror, insert an earlier wall, or make a contact into a corner.
+This is a single symbolic implication covering every valid completion;
+it is not inferred from testing three particular rooms.
+An extension into a forbidden nonordinary triangle could invalidate the
+path, so arbitrary enlargements are not asserted to preserve illumination.
+
+6. Exact checks and limits
+Own check.py verifies only this one algebraically selected trajectory.
+For all three already supplied residues it checks actual strict maximal-wall
+contacts, segment interiors, no earlier wall/vertex, the specular law,
+actual endpoints, reversed path, and sigma with reversed endpoint order.
+The integer contact angles are independently counted as180 in every room.
+The established guard extractor is reused, and its full U/Z yields the
+whole ordinary-cap statement in section5. This reuse is disclosed.
+
+The geometry input is a frozen copy of exactly the three supplied residues,
+already independently checked as W20/k6/Delta4/full A set S/U/T in the
+seven-case reduction review. No new room or cap assignment is generated.
+Input hashes are in check.json. No source archive, direction/ray/word scan,
+solver, worker, or larger-surplus campaign is used.
+
+Next limitation: the four L-pocket residues in the same reduction remain
+outside this theorem. The separate centered-roof remote interaction and
+other surplus-four partitions are also untouched.

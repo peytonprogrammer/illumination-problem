@@ -1,0 +1,104 @@
+{
+  "status": "PASS_ALGEBRAIC_GATES_ONLY",
+  "slit_tip_conjugacy_gate": {
+    "original_tip_absorbing": true,
+    "folded_tip_is_smooth": true,
+    "reflected_path_in_half_room": [
+      [
+        "-1/2",
+        "-1/2"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "-1/2",
+        "1/2"
+      ]
+    ],
+    "same_path_invalid_in_original": true,
+    "scope": "Counterexample to the proposed exact local flow conjugacy, not a counterexample to its global darkness equivalence."
+  },
+  "D4_invariant_symmetric_metric_dimension": 1,
+  "D2_invariant_symmetric_metric_dimension": 2,
+  "reflections_compatible_with_fixed_standard_quarter_turn": [
+    [
+      -1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      -1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      -1
+    ]
+  ],
+  "free_orbit_orders_dividing_eight": [
+    2,
+    4,
+    8
+  ],
+  "conjugate_group_checks": [
+    {
+      "M": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "averaged_metric": [
+        "12",
+        "-12",
+        "-12",
+        "24"
+      ],
+      "metric_is_conjugated_original": true
+    },
+    {
+      "M": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "averaged_metric": [
+        "24",
+        "-48",
+        "-48",
+        "120"
+      ],
+      "metric_is_conjugated_original": true
+    },
+    {
+      "M": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "averaged_metric": [
+        "56",
+        "-84",
+        "-84",
+        "140"
+      ],
+      "metric_is_conjugated_original": true
+    }
+  ],
+  "scope": "Algebraic necessary conditions; no enumeration of affine actions on the actual room, no alternative planar quotient found."
+}

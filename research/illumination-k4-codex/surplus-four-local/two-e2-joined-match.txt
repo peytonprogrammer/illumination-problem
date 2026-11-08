@@ -1,0 +1,101 @@
+Two-ended joined-room compatibility test — 4 November 2026
+
+[done] One declared source/target pair checked in the ORIGINAL fixture
+Bouter3_Dhalf3_Rplus_Tempty. No illumination closure. Peer retains the
+sole Llower/Beast R+ fixture and remote work; no peer files changed.
+
+Use Gamma={(2,h):-1<h<2}, wholly inside this room. The section was extended
+downward from the initial 0<h<2 plan to include the lower-passage return.
+Source and backward-target rays must meet at the same h with opposite
+velocity; agreeing only on position is insufficient.
+
+1. Five-reflection source family
+
+Launch from S=(0,0) with velocity(-d,-1). Prescribed mirrors are
+ x=-1; y=-1; E roof y=2; E diagonal x-y=2; E roof y=2.
+Contacts and final section state are:
+ (-1,-1/d)
+ (d-2,-1)
+ (4d-2,2)
+ ((8d-2)/(d+1),(6d-4)/(d+1))
+ (8-6/d,2)
+ (2,8-6d), velocity(-1,-d).
+
+A sufficient strict range for this entire word is 5/4<d<7/5.
+The first two walls are reached smoothly for 1<d<2. On the upward flight,
+height at x=1 is 3/d-2<1, keeping clear of the notch; E entry at x=3 has
+height 5/d-2 between 1 and 2. First E roof contact 4d-2 is between 3 and 4.
+The diagonal contact lies strictly between (3,1) and (4,2), and the second
+roof contact 8-6/d is strictly between x=3 and x=4. After that roof contact,
+exit at x=3 has height 8-5d. Requiring 8-5d>1 keeps the flight from hitting
+the E diagonal again: this tightens the provisional d<3/2 bound to d<7/5.
+The remaining flight to Gamma stays in the full U star.
+
+2. Six-reflection backward-target family
+
+Launch backward from T=(2,2) with velocity(-1,-d). Prescribed mirrors are
+ B left wall x=0; B tip wall x=1; B diagonal x+y=-2;
+ B tip wall x=1; B diagonal x+y=-2; B left wall x=0.
+With a=4(d-1)/(d+1), b=(4d-6)/(d-1), contacts and section state are:
+ (0,2-2d)
+ (1,2-3d)
+ (a,-2-a)
+ (1,5/d-6)
+ (b,-2-b)
+ (0,4d-8)
+ (2,6d-8), velocity(1,d).
+
+The full word is legal for 3/2<d<5/3. The first B left-wall height is
+strictly between -4/3 and -1. First tip-wall height 2-3d lies between -3
+and -5/2. Both a and b lie strictly between 0 and 1; the second tip-wall
+height 5/d-6 lies between -3 and -8/3. The final B left-wall height 4d-8
+lies strictly between -2 and -4/3. On the final rising flight, height at
+x=1 is 5d-8<1, so it clears the notch and reaches Gamma at 1<6d-8<2.
+These strict mirror and passage inequalities establish the prescribed
+itinerary, rather than assuming reflections at infinite mirror lines.
+
+3. Matching and outcome
+
+After reversing the target family, directions match exactly when both
+families use the same d. Heights then require
+ 8-6d = 6d-8, hence the unique root d=4/3 and h=0.
+But the legal ranges (5/4,7/5) and (3/2,5/3) are disjoint.
+At d=4/3 the source path is legal and reaches U=(2,0). The target-side
+first proposed contact is (0,-2/3), which is strictly INTERIOR to the room.
+It cannot reflect there. Thus the formal joined path is rejected.
+This failure is not a corner-hit claim; it is a false interior mirror.
+
+The legitimate source-to-U control at d=4/3 is
+ S,(-1,-3/4),(-2/3,-1),(10/3,2),(26/7,12/7),(7/2,2),U.
+It does not close S/T: the required backward-target continuation is absent.
+
+4. Verification and limits
+
+Command:
+ python3 -B .context/illumination-k4-codex/surplus-four-local/two-e2-joined-match.py
+Receipt: two-e2-joined-match.json.
+Exact actual-boundary/first-wall/interior/specular/reverse/U-Z checks PASS:
+ source at d=13/10 (five reflections);
+ backward target at d=8/5 (six reflections);
+ source at matching root d=4/3 (five reflections to actual U).
+Target at root4/3 is rejected; its first alleged mirror is checked interior.
+The interval arguments above are hand-derived; the script checks the three
+predeclared rational controls, not an interval sample or formal proof.
+
+[in progress] Seven joined rooms and the peer's sole R+ room remain open:
+eight exact two-e2 residuals; other Delta4 partitions and remote gaps also
+remain. No full partition or universal theorem is established.
+
+This test gives no positive evidence of a legal joined S/T connection.
+A further attempt needs a genuinely different compatible target arrival
+family or a proved return changing the section state into that family.
+Two-ended matching is a useful rejection method, not yet a closure lemma.
+No additional circuit has been declared or executed.
+
+No room/cap-assignment/direction/word discovery scan, archive sweep, solver,
+worker, or long-running job was used.
+
+CURRENT UPDATE: peer soleRplus nineteen-path has independent finite-certificate
+ACCEPT in two-e2-Rplus19-review.txt/json. Thus SEVEN two-e2 residuals remain,
+all joined B/D. Earlier eight-case counts describe the prior checkpoint.
+Our joined compatibility test still gives no new closure.

@@ -1,0 +1,4055 @@
+{
+  "status": "PASS",
+  "scope": "I2/I3 and I4 arithmetic clauses and saved base prefixes",
+  "cases": 64,
+  "full_run": true,
+  "calls": [
+    {
+      "case": "I2_00_02-pair0",
+      "kind": "cardinality",
+      "inputs": 872,
+      "bound": 41,
+      "top_before": 17714,
+      "top_after": 51785,
+      "clauses": 68932,
+      "branches": null,
+      "input_sha256": "340ed5cd4726153fff087bd679ea937c6b27f107ed3154cf8424bc64c89cb102"
+    },
+    {
+      "case": "I2_00_02-pair0",
+      "kind": "cardinality",
+      "inputs": 497,
+      "bound": 21,
+      "top_before": 51785,
+      "top_after": 61781,
+      "clauses": 20447,
+      "branches": null,
+      "input_sha256": "7dc908d342cf97812eb6853953fed114598d3d104aa472b96fb4507152a69129"
+    },
+    {
+      "case": "I2_00_02-pair0",
+      "kind": "cardinality",
+      "inputs": 388,
+      "bound": 6,
+      "top_before": 61781,
+      "top_after": 64073,
+      "clauses": 4960,
+      "branches": null,
+      "input_sha256": "032bb02773b64e106f04baf626330ec10aa24767dd93d5e298b2fb76e551526a"
+    },
+    {
+      "case": "I2_00_02-pair0",
+      "kind": "cardinality",
+      "inputs": 100,
+      "bound": 5,
+      "top_before": 64073,
+      "top_after": 64548,
+      "clauses": 1040,
+      "branches": null,
+      "input_sha256": "e60d5a95ae47cc23a93c0e8fcd0e61398b8680ebd06251816e8cec9081b58630"
+    },
+    {
+      "case": "I2_00_02-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1988,
+      "bound": 3487,
+      "top_before": 95722,
+      "top_after": 99651,
+      "clauses": 27565,
+      "branches": {
+        "parity_new": 1959,
+        "carry_new": 1970,
+        "parity_fixed": 4,
+        "parity_other": 7,
+        "unit": 1
+      },
+      "input_sha256": "b6d9f2941a8be8e88df29d7d823302400f923cf0af56d2aa74b9d360ef535f5b"
+    },
+    {
+      "case": "I2_00_03-pair0",
+      "kind": "cardinality",
+      "inputs": 720,
+      "bound": 41,
+      "top_before": 14545,
+      "top_after": 42384,
+      "clauses": 56316,
+      "branches": null,
+      "input_sha256": "a4a9fb577f1471e3cef86f3be88ffb45b1359b3de024fd501a30246a969c90e7"
+    },
+    {
+      "case": "I2_00_03-pair0",
+      "kind": "cardinality",
+      "inputs": 415,
+      "bound": 21,
+      "top_before": 42384,
+      "top_after": 50658,
+      "clauses": 16921,
+      "branches": null,
+      "input_sha256": "fcb7c966a1be78727a9f5cfd31324a50033d1ee25c7f4c1706d20e4caf7153fa"
+    },
+    {
+      "case": "I2_00_03-pair0",
+      "kind": "cardinality",
+      "inputs": 325,
+      "bound": 6,
+      "top_before": 50658,
+      "top_after": 52572,
+      "clauses": 4141,
+      "branches": null,
+      "input_sha256": "02f2f75e2cd0798cd6336cdd5b79c47023033385a53e43becd39d66a84609664"
+    },
+    {
+      "case": "I2_00_03-pair0",
+      "kind": "cardinality",
+      "inputs": 80,
+      "bound": 4,
+      "top_before": 52572,
+      "top_after": 52876,
+      "clauses": 680,
+      "branches": null,
+      "input_sha256": "c20d25d4a6eccf1e5aa3d6f3cf7e537833d6cd65899e52ed355b7b26c5c35b96"
+    },
+    {
+      "case": "I2_00_03-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1660,
+      "bound": 2913,
+      "top_before": 78616,
+      "top_after": 81894,
+      "clauses": 23007,
+      "branches": {
+        "parity_new": 1634,
+        "carry_new": 1644,
+        "parity_fixed": 5,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "25930f14e95b1e3b781d64f208405e8f8d310677a440a355a7a711c9d8f36118"
+    },
+    {
+      "case": "I2_00_04-pair0",
+      "kind": "cardinality",
+      "inputs": 776,
+      "bound": 41,
+      "top_before": 15662,
+      "top_after": 45797,
+      "clauses": 60964,
+      "branches": null,
+      "input_sha256": "6a63d6d495ca6f50744cd9a43ce6f5f527c2058a020d53db8366d9c2c81aca5e"
+    },
+    {
+      "case": "I2_00_04-pair0",
+      "kind": "cardinality",
+      "inputs": 449,
+      "bound": 21,
+      "top_before": 45797,
+      "top_after": 54785,
+      "clauses": 18383,
+      "branches": null,
+      "input_sha256": "3c8dd69b2e4d0457dea4dabad19f5146a519c0f32cd7b6e29b8dfcebaffae718"
+    },
+    {
+      "case": "I2_00_04-pair0",
+      "kind": "cardinality",
+      "inputs": 352,
+      "bound": 6,
+      "top_before": 54785,
+      "top_after": 56861,
+      "clauses": 4492,
+      "branches": null,
+      "input_sha256": "c1ef6380ecdb61d856543a58cf098695735a07a0eb39d7c32f36422ee50cbcb5"
+    },
+    {
+      "case": "I2_00_04-pair0",
+      "kind": "cardinality",
+      "inputs": 87,
+      "bound": 4,
+      "top_before": 56861,
+      "top_after": 57193,
+      "clauses": 743,
+      "branches": null,
+      "input_sha256": "cb2a68cc02ad553026850ab4255407e30d435493c2c96b5ce346d5b44dcc2d7f"
+    },
+    {
+      "case": "I2_00_04-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1796,
+      "bound": 3151,
+      "top_before": 84935,
+      "top_after": 88484,
+      "clauses": 24897,
+      "branches": {
+        "parity_new": 1769,
+        "carry_new": 1780,
+        "parity_fixed": 6,
+        "parity_other": 5,
+        "unit": 1
+      },
+      "input_sha256": "9c7ce0432c2b212b948fa73bf8a7379f16672804ae349b023ea1a5a3043565ac"
+    },
+    {
+      "case": "I2_00_05-pair0",
+      "kind": "cardinality",
+      "inputs": 832,
+      "bound": 41,
+      "top_before": 16827,
+      "top_after": 49258,
+      "clauses": 65612,
+      "branches": null,
+      "input_sha256": "36104881c1067c98ca034b9b41a078e68bd5e8b351895878d3bf00251ef6e991"
+    },
+    {
+      "case": "I2_00_05-pair0",
+      "kind": "cardinality",
+      "inputs": 479,
+      "bound": 21,
+      "top_before": 49258,
+      "top_after": 58876,
+      "clauses": 19673,
+      "branches": null,
+      "input_sha256": "2224408841e821855b31a45d5f310f5ddeffa2a360bb5431ff09ff6e5f1df47a"
+    },
+    {
+      "case": "I2_00_05-pair0",
+      "kind": "cardinality",
+      "inputs": 375,
+      "bound": 6,
+      "top_before": 58876,
+      "top_after": 61090,
+      "clauses": 4791,
+      "branches": null,
+      "input_sha256": "85e0ac1a54f14023c51f0e6d512d7432e49129b8d8687a9462f5bd2c63bd0621"
+    },
+    {
+      "case": "I2_00_05-pair0",
+      "kind": "cardinality",
+      "inputs": 94,
+      "bound": 4,
+      "top_before": 61090,
+      "top_after": 61450,
+      "clauses": 806,
+      "branches": null,
+      "input_sha256": "c1a400f7f9ccb174d8fc83f81c3e0403c0b646fcf1f63d66e27bfbe213cde703"
+    },
+    {
+      "case": "I2_00_05-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1916,
+      "bound": 3361,
+      "top_before": 91194,
+      "top_after": 94985,
+      "clauses": 26595,
+      "branches": {
+        "parity_new": 1890,
+        "carry_new": 1901,
+        "parity_fixed": 5,
+        "parity_other": 6,
+        "unit": 1
+      },
+      "input_sha256": "ef5a49354a0901cb641005f8eed56611d197ffd896e6d95eb2f480901382d5c7"
+    },
+    {
+      "case": "I2_00_06-pair0",
+      "kind": "cardinality",
+      "inputs": 872,
+      "bound": 41,
+      "top_before": 17602,
+      "top_after": 51673,
+      "clauses": 68932,
+      "branches": null,
+      "input_sha256": "340ed5cd4726153fff087bd679ea937c6b27f107ed3154cf8424bc64c89cb102"
+    },
+    {
+      "case": "I2_00_06-pair0",
+      "kind": "cardinality",
+      "inputs": 505,
+      "bound": 21,
+      "top_before": 51673,
+      "top_after": 61837,
+      "clauses": 20791,
+      "branches": null,
+      "input_sha256": "7335e2e136045c92903f6c4f92305b61b3515b395527c6d531e10f718408be39"
+    },
+    {
+      "case": "I2_00_06-pair0",
+      "kind": "cardinality",
+      "inputs": 396,
+      "bound": 6,
+      "top_before": 61837,
+      "top_after": 64177,
+      "clauses": 5064,
+      "branches": null,
+      "input_sha256": "bce244914d23a4fe9b316a1113b9cec3ea901f80781fc1fd43eed3555bcb1a5c"
+    },
+    {
+      "case": "I2_00_06-pair0",
+      "kind": "cardinality",
+      "inputs": 99,
+      "bound": 4,
+      "top_before": 64177,
+      "top_after": 64557,
+      "clauses": 851,
+      "branches": null,
+      "input_sha256": "851d8f9589ab742e3881801284842d1d44e7618961acd42a1c334d19e5f6b732"
+    },
+    {
+      "case": "I2_00_06-pair0",
+      "kind": "weighted_equality",
+      "inputs": 2020,
+      "bound": 3543,
+      "top_before": 95731,
+      "top_after": 99724,
+      "clauses": 28013,
+      "branches": {
+        "parity_new": 1991,
+        "carry_new": 2002,
+        "parity_fixed": 4,
+        "parity_other": 7,
+        "unit": 1
+      },
+      "input_sha256": "de42331734f90a1e404b9c792fdda645a1fa9fbdcb23f9a314e700c5a51573f6"
+    },
+    {
+      "case": "I2_00_07-pair0",
+      "kind": "cardinality",
+      "inputs": 912,
+      "bound": 41,
+      "top_before": 18425,
+      "top_after": 54136,
+      "clauses": 72252,
+      "branches": null,
+      "input_sha256": "570aad0bcb56aabe334d27f4b08160b766e317219a42d7f4c15e51877a70778b"
+    },
+    {
+      "case": "I2_00_07-pair0",
+      "kind": "cardinality",
+      "inputs": 527,
+      "bound": 21,
+      "top_before": 54136,
+      "top_after": 64762,
+      "clauses": 21737,
+      "branches": null,
+      "input_sha256": "88954be60f8c27bafb362670beceaa433ca000496bf5033a1e1bdd75ff4f11c5"
+    },
+    {
+      "case": "I2_00_07-pair0",
+      "kind": "cardinality",
+      "inputs": 413,
+      "bound": 6,
+      "top_before": 64762,
+      "top_after": 67204,
+      "clauses": 5285,
+      "branches": null,
+      "input_sha256": "8832b0c8face91425afa85e7d9d6e6477ec0a90f453b02bfc0ce2abbe4a284e6"
+    },
+    {
+      "case": "I2_00_07-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 4,
+      "top_before": 67204,
+      "top_after": 67604,
+      "clauses": 896,
+      "branches": null,
+      "input_sha256": "b623d1a7ccbdd9b039c380c968be27ec426005319285ffcaf44305e37d25debd"
+    },
+    {
+      "case": "I2_00_07-pair0",
+      "kind": "weighted_equality",
+      "inputs": 2108,
+      "bound": 3697,
+      "top_before": 100208,
+      "top_after": 104382,
+      "clauses": 29282,
+      "branches": {
+        "parity_new": 2082,
+        "carry_new": 2092,
+        "parity_fixed": 5,
+        "parity_other": 6,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "6616072cdb6ea9b84fb3a215e925114ea280caa402ed6c82516c2f3a6f4a2cb8"
+    },
+    {
+      "case": "I2_00_11-pair0",
+      "kind": "cardinality",
+      "inputs": 1024,
+      "bound": 41,
+      "top_before": 20907,
+      "top_after": 61210,
+      "clauses": 81548,
+      "branches": null,
+      "input_sha256": "60a47554bcc5423dd4d8dbd27828960f3ce59bb9ce584c7c1607257b53817bc0"
+    },
+    {
+      "case": "I2_00_11-pair0",
+      "kind": "cardinality",
+      "inputs": 577,
+      "bound": 21,
+      "top_before": 61210,
+      "top_after": 72886,
+      "clauses": 23887,
+      "branches": null,
+      "input_sha256": "19dbce253141f268217735fa059a73ab27e8983f56e37c69172ddb89a7d18848"
+    },
+    {
+      "case": "I2_00_11-pair0",
+      "kind": "cardinality",
+      "inputs": 449,
+      "bound": 6,
+      "top_before": 72886,
+      "top_after": 75544,
+      "clauses": 5753,
+      "branches": null,
+      "input_sha256": "7a93d612e8c5c439d0ae3bd332d55f0ed89b4ad6a1e7aea574c668d53047437e"
+    },
+    {
+      "case": "I2_00_11-pair0",
+      "kind": "cardinality",
+      "inputs": 120,
+      "bound": 6,
+      "top_before": 75544,
+      "top_after": 76228,
+      "clauses": 1476,
+      "branches": null,
+      "input_sha256": "bd31b83da967083f5516833d1b56b09e07c99a64b882ec5bb59a14fa45b543e4"
+    },
+    {
+      "case": "I2_00_11-pair0",
+      "kind": "weighted_equality",
+      "inputs": 2308,
+      "bound": 4047,
+      "top_before": 112836,
+      "top_after": 117406,
+      "clauses": 32046,
+      "branches": {
+        "parity_new": 2280,
+        "carry_new": 2290,
+        "parity_fixed": 7,
+        "parity_other": 4,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "3a64ce517c0da5fb0c52afbdc111814d032bcfdf90cc18a170e4521a23ca155c"
+    },
+    {
+      "case": "I2_00_12-pair0",
+      "kind": "cardinality",
+      "inputs": 656,
+      "bound": 41,
+      "top_before": 13233,
+      "top_after": 38448,
+      "clauses": 51004,
+      "branches": null,
+      "input_sha256": "3cb45b84cb3ac9fa5675cc7864ed18f5cc6e1498e5af313185de3c5da987d5a4"
+    },
+    {
+      "case": "I2_00_12-pair0",
+      "kind": "cardinality",
+      "inputs": 379,
+      "bound": 21,
+      "top_before": 38448,
+      "top_after": 45966,
+      "clauses": 15373,
+      "branches": null,
+      "input_sha256": "b2f41c1d14e79584d0dde092b9679797f83342956f49eb4ee55d33ac14838bba"
+    },
+    {
+      "case": "I2_00_12-pair0",
+      "kind": "cardinality",
+      "inputs": 297,
+      "bound": 6,
+      "top_before": 45966,
+      "top_after": 47712,
+      "clauses": 3777,
+      "branches": null,
+      "input_sha256": "85dab4e3e24836e30c364fdfd14ef9a31a6c4d523a4fda5cff58d1cb32ea37bd"
+    },
+    {
+      "case": "I2_00_12-pair0",
+      "kind": "cardinality",
+      "inputs": 72,
+      "bound": 4,
+      "top_before": 47712,
+      "top_after": 47984,
+      "clauses": 608,
+      "branches": null,
+      "input_sha256": "8ef44f15eba7ec64679558ef9ee68ade9d1db62818667e9ee5f40c92eaeada71"
+    },
+    {
+      "case": "I2_00_12-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1516,
+      "bound": 2661,
+      "top_before": 71436,
+      "top_after": 74426,
+      "clauses": 20991,
+      "branches": {
+        "parity_new": 1490,
+        "carry_new": 1500,
+        "parity_fixed": 5,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "a4c51df3e003f8bbdfaea9cccf19f779c6e6c6cd511dfe37842fb7b54c42f108"
+    },
+    {
+      "case": "I2_00_13-pair0",
+      "kind": "cardinality",
+      "inputs": 720,
+      "bound": 41,
+      "top_before": 14521,
+      "top_after": 42360,
+      "clauses": 56316,
+      "branches": null,
+      "input_sha256": "a4a9fb577f1471e3cef86f3be88ffb45b1359b3de024fd501a30246a969c90e7"
+    },
+    {
+      "case": "I2_00_13-pair0",
+      "kind": "cardinality",
+      "inputs": 417,
+      "bound": 21,
+      "top_before": 42360,
+      "top_after": 50676,
+      "clauses": 17007,
+      "branches": null,
+      "input_sha256": "995e47e26ddbe838e6ecf177f7a93edef22c98ca4ad7be4c481242705a7cdb0e"
+    },
+    {
+      "case": "I2_00_13-pair0",
+      "kind": "cardinality",
+      "inputs": 327,
+      "bound": 6,
+      "top_before": 50676,
+      "top_after": 52602,
+      "clauses": 4167,
+      "branches": null,
+      "input_sha256": "e48ad8562e8f365b708cb313ebb781ad85febcf6d417026aea9a49a851043240"
+    },
+    {
+      "case": "I2_00_13-pair0",
+      "kind": "cardinality",
+      "inputs": 80,
+      "bound": 4,
+      "top_before": 52602,
+      "top_after": 52906,
+      "clauses": 680,
+      "branches": null,
+      "input_sha256": "eacd2986c50d3b6a949933270c18f6023d309a234231eb1e47be32e4ab7d71cf"
+    },
+    {
+      "case": "I2_00_13-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1668,
+      "bound": 2927,
+      "top_before": 78646,
+      "top_after": 81936,
+      "clauses": 23091,
+      "branches": {
+        "parity_new": 1640,
+        "carry_new": 1650,
+        "parity_fixed": 5,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "4eb5fb11fb6cd2594d112980300f139cf2f0d6d604b66ba114b557d7451df467"
+    },
+    {
+      "case": "I2_00_14-pair0",
+      "kind": "cardinality",
+      "inputs": 784,
+      "bound": 41,
+      "top_before": 15857,
+      "top_after": 46320,
+      "clauses": 61628,
+      "branches": null,
+      "input_sha256": "13778caa2f3e9e3086eefc4b4829322ec263cf2a6391700a56884b00bb7ff4cd"
+    },
+    {
+      "case": "I2_00_14-pair0",
+      "kind": "cardinality",
+      "inputs": 451,
+      "bound": 21,
+      "top_before": 46320,
+      "top_after": 55350,
+      "clauses": 18469,
+      "branches": null,
+      "input_sha256": "fe75078415e71c3094099bf31ea3862898c02904a32454f83964d13f53a88ee8"
+    },
+    {
+      "case": "I2_00_14-pair0",
+      "kind": "cardinality",
+      "inputs": 353,
+      "bound": 6,
+      "top_before": 55350,
+      "top_after": 57432,
+      "clauses": 4505,
+      "branches": null,
+      "input_sha256": "eba50dd13659be1807376bdcc2aff6e2a93481130f23a77904ec745309d30ba7"
+    },
+    {
+      "case": "I2_00_14-pair0",
+      "kind": "cardinality",
+      "inputs": 88,
+      "bound": 4,
+      "top_before": 57432,
+      "top_after": 57768,
+      "clauses": 752,
+      "branches": null,
+      "input_sha256": "8c6f03aa54449ff6b06f6c2b160da23800f0e93268a84261920a2702e3c4d322"
+    },
+    {
+      "case": "I2_00_14-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1804,
+      "bound": 3165,
+      "top_before": 85796,
+      "top_after": 89365,
+      "clauses": 25037,
+      "branches": {
+        "parity_new": 1779,
+        "carry_new": 1790,
+        "parity_fixed": 6,
+        "parity_other": 5,
+        "unit": 1
+      },
+      "input_sha256": "963a173402f7ed1a19704c35f61d7d6bc4d988704e568a9f148370db90b1d74f"
+    },
+    {
+      "case": "I2_00_15-pair0",
+      "kind": "cardinality",
+      "inputs": 832,
+      "bound": 41,
+      "top_before": 16803,
+      "top_after": 49234,
+      "clauses": 65612,
+      "branches": null,
+      "input_sha256": "36104881c1067c98ca034b9b41a078e68bd5e8b351895878d3bf00251ef6e991"
+    },
+    {
+      "case": "I2_00_15-pair0",
+      "kind": "cardinality",
+      "inputs": 481,
+      "bound": 21,
+      "top_before": 49234,
+      "top_after": 58894,
+      "clauses": 19759,
+      "branches": null,
+      "input_sha256": "204f9c01708aaf3ef8d76d08b371cfb697e57ecb7100a1f1c4343ca8ef9a8a63"
+    },
+    {
+      "case": "I2_00_15-pair0",
+      "kind": "cardinality",
+      "inputs": 377,
+      "bound": 6,
+      "top_before": 58894,
+      "top_after": 61120,
+      "clauses": 4817,
+      "branches": null,
+      "input_sha256": "f9fb0675575d8c0bf530f5b70875d7a9608dd008548495faaa279b5c30087587"
+    },
+    {
+      "case": "I2_00_15-pair0",
+      "kind": "cardinality",
+      "inputs": 94,
+      "bound": 4,
+      "top_before": 61120,
+      "top_after": 61480,
+      "clauses": 806,
+      "branches": null,
+      "input_sha256": "fcc8a96371b83e58e9f26aeb87fb7ca0de0348fd6cae06fbc9ff1951d9253309"
+    },
+    {
+      "case": "I2_00_15-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1924,
+      "bound": 3375,
+      "top_before": 91224,
+      "top_after": 95027,
+      "clauses": 26679,
+      "branches": {
+        "parity_new": 1896,
+        "carry_new": 1907,
+        "parity_fixed": 5,
+        "parity_other": 6,
+        "unit": 1
+      },
+      "input_sha256": "97f08524870719e021e35cbca125d345558182fd30aa9130c5582878dc9234f1"
+    },
+    {
+      "case": "I2_00_16-pair0",
+      "kind": "cardinality",
+      "inputs": 880,
+      "bound": 41,
+      "top_before": 17797,
+      "top_after": 52196,
+      "clauses": 69596,
+      "branches": null,
+      "input_sha256": "556f2cb77e85026df9eb88adae455df030a377aaa75468ebd8b9ad421bd6a6ec"
+    },
+    {
+      "case": "I2_00_16-pair0",
+      "kind": "cardinality",
+      "inputs": 507,
+      "bound": 21,
+      "top_before": 52196,
+      "top_after": 62402,
+      "clauses": 20877,
+      "branches": null,
+      "input_sha256": "f90eb0f75a86bbce72a10814aa3c235edec06a62d649da377971c1ead915db23"
+    },
+    {
+      "case": "I2_00_16-pair0",
+      "kind": "cardinality",
+      "inputs": 397,
+      "bound": 6,
+      "top_before": 62402,
+      "top_after": 64748,
+      "clauses": 5077,
+      "branches": null,
+      "input_sha256": "1e2db166c7c2762036a7f4400b60d6b25d42edcfcfec66117510a2e1f0a3ba75"
+    },
+    {
+      "case": "I2_00_16-pair0",
+      "kind": "cardinality",
+      "inputs": 100,
+      "bound": 4,
+      "top_before": 64748,
+      "top_after": 65132,
+      "clauses": 860,
+      "branches": null,
+      "input_sha256": "c0859439c71844667895d71e8bb5979afd056fb1f680e3da9cf9c4cc721cc259"
+    },
+    {
+      "case": "I2_00_16-pair0",
+      "kind": "weighted_equality",
+      "inputs": 2028,
+      "bound": 3557,
+      "top_before": 96592,
+      "top_after": 100601,
+      "clauses": 28133,
+      "branches": {
+        "parity_new": 1999,
+        "carry_new": 2010,
+        "parity_fixed": 2,
+        "parity_other": 9,
+        "unit": 1
+      },
+      "input_sha256": "55eebe6d6b1ccbe17e62b4ace473c1b5306563258213f3af5ea5980cdb17221f"
+    },
+    {
+      "case": "I2_00_22-pair0",
+      "kind": "cardinality",
+      "inputs": 664,
+      "bound": 41,
+      "top_before": 13380,
+      "top_after": 38923,
+      "clauses": 51668,
+      "branches": null,
+      "input_sha256": "15e2c3f249bb4bb61a3469713f84e6be4dce7ae070ad83f3d2dd5bbac8ad9885"
+    },
+    {
+      "case": "I2_00_22-pair0",
+      "kind": "cardinality",
+      "inputs": 385,
+      "bound": 21,
+      "top_before": 38923,
+      "top_after": 46567,
+      "clauses": 15631,
+      "branches": null,
+      "input_sha256": "cc3d39e3aecee6ec815a9185985b194877f545f0c40003ef29c256277975b201"
+    },
+    {
+      "case": "I2_00_22-pair0",
+      "kind": "cardinality",
+      "inputs": 302,
+      "bound": 6,
+      "top_before": 46567,
+      "top_after": 48343,
+      "clauses": 3842,
+      "branches": null,
+      "input_sha256": "944a5b26cb94d4a2a6220ba2fe1ddbc369377daa71d8452c9d9d64b7f37517ce"
+    },
+    {
+      "case": "I2_00_22-pair0",
+      "kind": "cardinality",
+      "inputs": 73,
+      "bound": 4,
+      "top_before": 48343,
+      "top_after": 48619,
+      "clauses": 617,
+      "branches": null,
+      "input_sha256": "9b36353cf513bd79a40d781c8a37e8e2a706d9c377b1d831782dfedb96ec57d1"
+    },
+    {
+      "case": "I2_00_22-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1540,
+      "bound": 2703,
+      "top_before": 72357,
+      "top_after": 75395,
+      "clauses": 21315,
+      "branches": {
+        "parity_new": 1514,
+        "carry_new": 1524,
+        "parity_fixed": 8,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "c1f4cdb678b2138a242a27c1b4340fb6dcd6d66a4b0228eb0b0859ffa2d2b082"
+    },
+    {
+      "case": "I2_00_23-pair0",
+      "kind": "cardinality",
+      "inputs": 736,
+      "bound": 41,
+      "top_before": 14887,
+      "top_after": 43382,
+      "clauses": 57644,
+      "branches": null,
+      "input_sha256": "e3b5c50a8e7f7fb727efc8a6b7afe4a3042244a5c6b48264d2310c532c549f4a"
+    },
+    {
+      "case": "I2_00_23-pair0",
+      "kind": "cardinality",
+      "inputs": 423,
+      "bound": 21,
+      "top_before": 43382,
+      "top_after": 51824,
+      "clauses": 17265,
+      "branches": null,
+      "input_sha256": "4494db724cf5f81064aae572ba8001e15ae77a3e83780ea2a7117f60b44705bd"
+    },
+    {
+      "case": "I2_00_23-pair0",
+      "kind": "cardinality",
+      "inputs": 331,
+      "bound": 6,
+      "top_before": 51824,
+      "top_after": 53774,
+      "clauses": 4219,
+      "branches": null,
+      "input_sha256": "9dabac8f7801ba14c731cf33c1da28b030f37a3766ccc8bff568bb3827bfb476"
+    },
+    {
+      "case": "I2_00_23-pair0",
+      "kind": "cardinality",
+      "inputs": 82,
+      "bound": 4,
+      "top_before": 53774,
+      "top_after": 54086,
+      "clauses": 698,
+      "branches": null,
+      "input_sha256": "4ddd6a90182f88e0657ef64fe24f1177b00bc0a79e16af485192a59b2b0adb1b"
+    },
+    {
+      "case": "I2_00_23-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1692,
+      "bound": 2969,
+      "top_before": 80398,
+      "top_after": 83740,
+      "clauses": 23455,
+      "branches": {
+        "parity_new": 1666,
+        "carry_new": 1676,
+        "parity_fixed": 5,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "975965d8631a9de1faa4084160e85ba69fdecd849a0212fe28e619a88279296d"
+    },
+    {
+      "case": "I2_00_24-pair0",
+      "kind": "cardinality",
+      "inputs": 792,
+      "bound": 41,
+      "top_before": 16004,
+      "top_after": 46795,
+      "clauses": 62292,
+      "branches": null,
+      "input_sha256": "005eddb6d5b5c3b42be315f1a89537375cce862e2871da89d2e96fe8ce736321"
+    },
+    {
+      "case": "I2_00_24-pair0",
+      "kind": "cardinality",
+      "inputs": 457,
+      "bound": 21,
+      "top_before": 46795,
+      "top_after": 55951,
+      "clauses": 18727,
+      "branches": null,
+      "input_sha256": "3eee68f43d86e5fe2253e98465cc0e5f02b92412ba99be776d1990cd5852c1cf"
+    },
+    {
+      "case": "I2_00_24-pair0",
+      "kind": "cardinality",
+      "inputs": 358,
+      "bound": 6,
+      "top_before": 55951,
+      "top_after": 58063,
+      "clauses": 4570,
+      "branches": null,
+      "input_sha256": "ee1144e3d7835b47fed84cb500124756e24e1bea04e9eae06dcd4852cfb3f707"
+    },
+    {
+      "case": "I2_00_24-pair0",
+      "kind": "cardinality",
+      "inputs": 89,
+      "bound": 4,
+      "top_before": 58063,
+      "top_after": 58403,
+      "clauses": 761,
+      "branches": null,
+      "input_sha256": "cf41c1c9f716c58bc8cf2fe369333178e62d0a24662124b69c6312a202af3a19"
+    },
+    {
+      "case": "I2_00_24-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1828,
+      "bound": 3207,
+      "top_before": 86717,
+      "top_after": 90334,
+      "clauses": 25369,
+      "branches": {
+        "parity_new": 1803,
+        "carry_new": 1814,
+        "parity_fixed": 7,
+        "parity_other": 4,
+        "unit": 1
+      },
+      "input_sha256": "edb718a4f0651abe59982e32de7a7d77f93a27df6737b40089eaaadf9a89dc7d"
+    },
+    {
+      "case": "I2_00_25-pair0",
+      "kind": "cardinality",
+      "inputs": 848,
+      "bound": 41,
+      "top_before": 17169,
+      "top_after": 50256,
+      "clauses": 66940,
+      "branches": null,
+      "input_sha256": "c5d67869a60029e7504a3478873acf26474a4a74a6fdc45a9e7011ffaee529d5"
+    },
+    {
+      "case": "I2_00_25-pair0",
+      "kind": "cardinality",
+      "inputs": 487,
+      "bound": 21,
+      "top_before": 50256,
+      "top_after": 60042,
+      "clauses": 20017,
+      "branches": null,
+      "input_sha256": "9e63fe890eba7bd14e9b6547496d1635d35ee2f557b503b4816f6481103535e6"
+    },
+    {
+      "case": "I2_00_25-pair0",
+      "kind": "cardinality",
+      "inputs": 381,
+      "bound": 6,
+      "top_before": 60042,
+      "top_after": 62292,
+      "clauses": 4869,
+      "branches": null,
+      "input_sha256": "a2873ff77e9d409853479b6caebb0d6811a25e7f0d67fe4821dbecf53053f741"
+    },
+    {
+      "case": "I2_00_25-pair0",
+      "kind": "cardinality",
+      "inputs": 96,
+      "bound": 4,
+      "top_before": 62292,
+      "top_after": 62660,
+      "clauses": 824,
+      "branches": null,
+      "input_sha256": "fc69423b2e9d76c6fcc9b0cd964f6ab658f549cfa0054c887238187246ce69a6"
+    },
+    {
+      "case": "I2_00_25-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1948,
+      "bound": 3417,
+      "top_before": 92976,
+      "top_after": 96831,
+      "clauses": 27039,
+      "branches": {
+        "parity_new": 1922,
+        "carry_new": 1933,
+        "parity_fixed": 6,
+        "parity_other": 5,
+        "unit": 1
+      },
+      "input_sha256": "f7f89633ae746d4bbf53ef0900264985e55b0d89b573c9831c869a30887d7deb"
+    },
+    {
+      "case": "I2_00_33-pair0",
+      "kind": "cardinality",
+      "inputs": 752,
+      "bound": 41,
+      "top_before": 15205,
+      "top_after": 44356,
+      "clauses": 58972,
+      "branches": null,
+      "input_sha256": "fb608ee0b45d3d082c1de54e1a2c347b0eef22bdb18fd030c42b282cc87a52e6"
+    },
+    {
+      "case": "I2_00_33-pair0",
+      "kind": "cardinality",
+      "inputs": 433,
+      "bound": 21,
+      "top_before": 44356,
+      "top_after": 53008,
+      "clauses": 17695,
+      "branches": null,
+      "input_sha256": "79773994d8b7f697306efb59d3e0194c3b2a35d953d2d057a2bb6e01d077677d"
+    },
+    {
+      "case": "I2_00_33-pair0",
+      "kind": "cardinality",
+      "inputs": 339,
+      "bound": 6,
+      "top_before": 53008,
+      "top_after": 55006,
+      "clauses": 4323,
+      "branches": null,
+      "input_sha256": "ddadcdadbf8482ad098f01bbec58f819e8919e55ebe48ccabbab6c0faab25c57"
+    },
+    {
+      "case": "I2_00_33-pair0",
+      "kind": "cardinality",
+      "inputs": 84,
+      "bound": 4,
+      "top_before": 55006,
+      "top_after": 55326,
+      "clauses": 716,
+      "branches": null,
+      "input_sha256": "a3a4e53e139ece999360adfb7d895ee9b899e35dc4a537829f9a023b47256664"
+    },
+    {
+      "case": "I2_00_33-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1732,
+      "bound": 3039,
+      "top_before": 82210,
+      "top_after": 85628,
+      "clauses": 23983,
+      "branches": {
+        "parity_new": 1704,
+        "carry_new": 1714,
+        "parity_fixed": 6,
+        "parity_other": 5,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "e025a720031238a4a3fa40dfe7af8645093e28415178890e61d147c949ce7144"
+    },
+    {
+      "case": "I2_00_34-pair0",
+      "kind": "cardinality",
+      "inputs": 816,
+      "bound": 41,
+      "top_before": 16541,
+      "top_after": 48316,
+      "clauses": 64284,
+      "branches": null,
+      "input_sha256": "d60c09920c8f10b819e0ac7a0d71957cb29d9e2271de6952142ef39e9729478b"
+    },
+    {
+      "case": "I2_00_34-pair0",
+      "kind": "cardinality",
+      "inputs": 467,
+      "bound": 21,
+      "top_before": 48316,
+      "top_after": 57682,
+      "clauses": 19157,
+      "branches": null,
+      "input_sha256": "b34b45f56a756b6d327dff2b815c83be95fda2f369ba8fc20caf130dc9bf057d"
+    },
+    {
+      "case": "I2_00_34-pair0",
+      "kind": "cardinality",
+      "inputs": 365,
+      "bound": 6,
+      "top_before": 57682,
+      "top_after": 59836,
+      "clauses": 4661,
+      "branches": null,
+      "input_sha256": "47336f3d16268d15044b162409860488bee597d98a62fa3733b48116ef81018e"
+    },
+    {
+      "case": "I2_00_34-pair0",
+      "kind": "cardinality",
+      "inputs": 92,
+      "bound": 4,
+      "top_before": 59836,
+      "top_after": 60188,
+      "clauses": 788,
+      "branches": null,
+      "input_sha256": "ac29a62635376e29bde99341cbcc0b66f7856cc0214b49594cc83463731a9675"
+    },
+    {
+      "case": "I2_00_34-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1868,
+      "bound": 3277,
+      "top_before": 89360,
+      "top_after": 93055,
+      "clauses": 25923,
+      "branches": {
+        "parity_new": 1842,
+        "carry_new": 1853,
+        "parity_fixed": 5,
+        "parity_other": 6,
+        "unit": 1
+      },
+      "input_sha256": "c70565e0c85dc3af0dd8a041a12c21c4d91a16dc06e23ffc528b2904fec45e82"
+    },
+    {
+      "case": "I3_00_01_02-pair0",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6072,
+      "top_after": 17183,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_01_02-pair0",
+      "kind": "cardinality",
+      "inputs": 189,
+      "bound": 21,
+      "top_before": 17183,
+      "top_after": 20711,
+      "clauses": 7203,
+      "branches": null,
+      "input_sha256": "012355a511aab0e04fc431f823b06369d35678e78bc10578af206c6c0e5c86ce"
+    },
+    {
+      "case": "I3_00_01_02-pair0",
+      "kind": "cardinality",
+      "inputs": 150,
+      "bound": 6,
+      "top_before": 20711,
+      "top_after": 21575,
+      "clauses": 1866,
+      "branches": null,
+      "input_sha256": "6d0f5ba16eb04c7ddf453403be0aa04c7db873645083f41711e385f79ade9634"
+    },
+    {
+      "case": "I3_00_01_02-pair0",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21575,
+      "top_after": 21627,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "b7338b9fbc8335524831e94991106e4b09f55fe29deb21937c98105488f92c26"
+    },
+    {
+      "case": "I3_00_01_02-pair0",
+      "kind": "weighted_equality",
+      "inputs": 756,
+      "bound": 1331,
+      "top_before": 32742,
+      "top_after": 34219,
+      "clauses": 10377,
+      "branches": {
+        "parity_new": 734,
+        "carry_new": 743,
+        "parity_fixed": 9,
+        "parity_other": 1,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "856858eccd468a1fbe2959c7f45ba0eb0d2e45f02918734105b19f6316e277b7"
+    },
+    {
+      "case": "I3_00_01_03-pair0",
+      "kind": "cardinality",
+      "inputs": 208,
+      "bound": 41,
+      "top_before": 3881,
+      "top_after": 10728,
+      "clauses": 13820,
+      "branches": null,
+      "input_sha256": "3610f4cd45e005208fd03294473a52338e0395dcd75c2fd72dd1ab49ef44f9d9"
+    },
+    {
+      "case": "I3_00_01_03-pair0",
+      "kind": "cardinality",
+      "inputs": 135,
+      "bound": 21,
+      "top_before": 10728,
+      "top_after": 13122,
+      "clauses": 4881,
+      "branches": null,
+      "input_sha256": "f08d40f1e6f81d6a2aa49dee87e9f3cca5dfe4154481d89325b893b54e08d4b5"
+    },
+    {
+      "case": "I3_00_01_03-pair0",
+      "kind": "cardinality",
+      "inputs": 109,
+      "bound": 6,
+      "top_before": 13122,
+      "top_after": 13740,
+      "clauses": 1333,
+      "branches": null,
+      "input_sha256": "37596482e78eeb9f6615f3c7c1a461501b2695e27433c5164569795863ccb01a"
+    },
+    {
+      "case": "I3_00_01_03-pair0",
+      "kind": "cardinality",
+      "inputs": 14,
+      "bound": 1,
+      "top_before": 13740,
+      "top_after": 13753,
+      "clauses": 38,
+      "branches": null,
+      "input_sha256": "44a4d4540de183c0a9a66fef42a78dabc24aca0c4fe98b1118ef6292b3b19d3d"
+    },
+    {
+      "case": "I3_00_01_03-pair0",
+      "kind": "weighted_equality",
+      "inputs": 540,
+      "bound": 953,
+      "top_before": 21163,
+      "top_after": 22209,
+      "clauses": 7368,
+      "branches": {
+        "parity_new": 519,
+        "carry_new": 527,
+        "parity_fixed": 6,
+        "parity_other": 3,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "d7c146ce037ed0942f1614c37aa1c764919a85af9e1124c7c73005a64a91c5f8"
+    },
+    {
+      "case": "I3_00_01_03-pair1",
+      "kind": "cardinality",
+      "inputs": 208,
+      "bound": 41,
+      "top_before": 3881,
+      "top_after": 10728,
+      "clauses": 13820,
+      "branches": null,
+      "input_sha256": "3610f4cd45e005208fd03294473a52338e0395dcd75c2fd72dd1ab49ef44f9d9"
+    },
+    {
+      "case": "I3_00_01_03-pair1",
+      "kind": "cardinality",
+      "inputs": 135,
+      "bound": 21,
+      "top_before": 10728,
+      "top_after": 13122,
+      "clauses": 4881,
+      "branches": null,
+      "input_sha256": "f08d40f1e6f81d6a2aa49dee87e9f3cca5dfe4154481d89325b893b54e08d4b5"
+    },
+    {
+      "case": "I3_00_01_03-pair1",
+      "kind": "cardinality",
+      "inputs": 109,
+      "bound": 6,
+      "top_before": 13122,
+      "top_after": 13740,
+      "clauses": 1333,
+      "branches": null,
+      "input_sha256": "37596482e78eeb9f6615f3c7c1a461501b2695e27433c5164569795863ccb01a"
+    },
+    {
+      "case": "I3_00_01_03-pair1",
+      "kind": "cardinality",
+      "inputs": 14,
+      "bound": 1,
+      "top_before": 13740,
+      "top_after": 13753,
+      "clauses": 38,
+      "branches": null,
+      "input_sha256": "44a4d4540de183c0a9a66fef42a78dabc24aca0c4fe98b1118ef6292b3b19d3d"
+    },
+    {
+      "case": "I3_00_01_03-pair1",
+      "kind": "weighted_equality",
+      "inputs": 540,
+      "bound": 953,
+      "top_before": 21163,
+      "top_after": 22209,
+      "clauses": 7368,
+      "branches": {
+        "parity_new": 519,
+        "carry_new": 527,
+        "parity_fixed": 6,
+        "parity_other": 3,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "d7c146ce037ed0942f1614c37aa1c764919a85af9e1124c7c73005a64a91c5f8"
+    },
+    {
+      "case": "I3_00_01_04-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1738,
+      "top_after": 4321,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_01_04-pair0",
+      "kind": "cardinality",
+      "inputs": 77,
+      "bound": 21,
+      "top_before": 4321,
+      "top_after": 5497,
+      "clauses": 2387,
+      "branches": null,
+      "input_sha256": "a7d80908a5ebf433fc920899fe739e7ee0fb0de7d396ad7a231cd552f8a0ccb2"
+    },
+    {
+      "case": "I3_00_01_04-pair0",
+      "kind": "cardinality",
+      "inputs": 64,
+      "bound": 6,
+      "top_before": 5497,
+      "top_after": 5845,
+      "clauses": 748,
+      "branches": null,
+      "input_sha256": "797f199ffed967a10e3e7f3d9a1af9d93949c613feadc75443a467685fd450f0"
+    },
+    {
+      "case": "I3_00_01_04-pair0",
+      "kind": "weighted_equality",
+      "inputs": 308,
+      "bound": 547,
+      "top_before": 9550,
+      "top_after": 10134,
+      "clauses": 4135,
+      "branches": {
+        "parity_new": 288,
+        "carry_new": 296,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "9e8aa0f18f74a63d8f0242c923c18253de8696f2669c4383cd6a8729f09b1cb3"
+    },
+    {
+      "case": "I3_00_01_04-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1738,
+      "top_after": 4321,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_01_04-pair1",
+      "kind": "cardinality",
+      "inputs": 77,
+      "bound": 21,
+      "top_before": 4321,
+      "top_after": 5497,
+      "clauses": 2387,
+      "branches": null,
+      "input_sha256": "a7d80908a5ebf433fc920899fe739e7ee0fb0de7d396ad7a231cd552f8a0ccb2"
+    },
+    {
+      "case": "I3_00_01_04-pair1",
+      "kind": "cardinality",
+      "inputs": 64,
+      "bound": 6,
+      "top_before": 5497,
+      "top_after": 5845,
+      "clauses": 748,
+      "branches": null,
+      "input_sha256": "797f199ffed967a10e3e7f3d9a1af9d93949c613feadc75443a467685fd450f0"
+    },
+    {
+      "case": "I3_00_01_04-pair1",
+      "kind": "weighted_equality",
+      "inputs": 308,
+      "bound": 547,
+      "top_before": 9550,
+      "top_after": 10134,
+      "clauses": 4135,
+      "branches": {
+        "parity_new": 288,
+        "carry_new": 296,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "9e8aa0f18f74a63d8f0242c923c18253de8696f2669c4383cd6a8729f09b1cb3"
+    },
+    {
+      "case": "I3_00_01_10-pair0",
+      "kind": "cardinality",
+      "inputs": 440,
+      "bound": 41,
+      "top_before": 8700,
+      "top_after": 25059,
+      "clauses": 33076,
+      "branches": null,
+      "input_sha256": "eca7f2799044dfd195460131480c953f276df773755a264511591452b976aa27"
+    },
+    {
+      "case": "I3_00_01_10-pair0",
+      "kind": "cardinality",
+      "inputs": 261,
+      "bound": 21,
+      "top_before": 25059,
+      "top_after": 30099,
+      "clauses": 10299,
+      "branches": null,
+      "input_sha256": "563f4301ef9c94ee285e57ed331172a6ed6a4b8f6030c047f6607f2cfb66a697"
+    },
+    {
+      "case": "I3_00_01_10-pair0",
+      "kind": "cardinality",
+      "inputs": 206,
+      "bound": 6,
+      "top_before": 30099,
+      "top_after": 31299,
+      "clauses": 2594,
+      "branches": null,
+      "input_sha256": "e1df916bcdeb949964bcfc4c772f93c74a39b9032a9b9afd4268d5ed6b9e3378"
+    },
+    {
+      "case": "I3_00_01_10-pair0",
+      "kind": "cardinality",
+      "inputs": 45,
+      "bound": 3,
+      "top_before": 31299,
+      "top_after": 31425,
+      "clauses": 291,
+      "branches": null,
+      "input_sha256": "d37401056a8fc21876f46de1512eab5aaa145c1573d5f8fb72b43d08ae95627b"
+    },
+    {
+      "case": "I3_00_01_10-pair0",
+      "kind": "weighted_equality",
+      "inputs": 1044,
+      "bound": 1835,
+      "top_before": 47100,
+      "top_after": 49151,
+      "clauses": 14410,
+      "branches": {
+        "parity_new": 1021,
+        "carry_new": 1030,
+        "parity_fixed": 6,
+        "parity_other": 4,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "ca6bd79053d951b11da21427fa5ae04f9d01778d408dc09b97febea5c91dba01"
+    },
+    {
+      "case": "I3_00_01_12-pair0",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6048,
+      "top_after": 17159,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_01_12-pair0",
+      "kind": "cardinality",
+      "inputs": 191,
+      "bound": 21,
+      "top_before": 17159,
+      "top_after": 20729,
+      "clauses": 7289,
+      "branches": null,
+      "input_sha256": "4d488e67134341c60a5324001d66e36436dfd0c69ef74a6366a0230b2a8a8524"
+    },
+    {
+      "case": "I3_00_01_12-pair0",
+      "kind": "cardinality",
+      "inputs": 152,
+      "bound": 6,
+      "top_before": 20729,
+      "top_after": 21605,
+      "clauses": 1892,
+      "branches": null,
+      "input_sha256": "187625a4ea65589f954e6c37a56fa25732d4dbfd182749d69c30ab84c65d841c"
+    },
+    {
+      "case": "I3_00_01_12-pair0",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21605,
+      "top_after": 21657,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "d30a271f5a7f8059f4f37b0f4d062c6c2f19132462ea9d078fbf80fdf821c952"
+    },
+    {
+      "case": "I3_00_01_12-pair0",
+      "kind": "weighted_equality",
+      "inputs": 764,
+      "bound": 1345,
+      "top_before": 32772,
+      "top_after": 34265,
+      "clauses": 10497,
+      "branches": {
+        "parity_new": 742,
+        "carry_new": 751,
+        "parity_fixed": 7,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "644aa28c18a5cd9f4e9b34daded7dc5bdb1db7c055162d012e9254eb78aa2396"
+    },
+    {
+      "case": "I3_00_01_12-pair1",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6048,
+      "top_after": 17159,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_01_12-pair1",
+      "kind": "cardinality",
+      "inputs": 191,
+      "bound": 21,
+      "top_before": 17159,
+      "top_after": 20729,
+      "clauses": 7289,
+      "branches": null,
+      "input_sha256": "4d488e67134341c60a5324001d66e36436dfd0c69ef74a6366a0230b2a8a8524"
+    },
+    {
+      "case": "I3_00_01_12-pair1",
+      "kind": "cardinality",
+      "inputs": 152,
+      "bound": 6,
+      "top_before": 20729,
+      "top_after": 21605,
+      "clauses": 1892,
+      "branches": null,
+      "input_sha256": "187625a4ea65589f954e6c37a56fa25732d4dbfd182749d69c30ab84c65d841c"
+    },
+    {
+      "case": "I3_00_01_12-pair1",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21605,
+      "top_after": 21657,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "d30a271f5a7f8059f4f37b0f4d062c6c2f19132462ea9d078fbf80fdf821c952"
+    },
+    {
+      "case": "I3_00_01_12-pair1",
+      "kind": "weighted_equality",
+      "inputs": 764,
+      "bound": 1345,
+      "top_before": 32772,
+      "top_after": 34265,
+      "clauses": 10497,
+      "branches": {
+        "parity_new": 742,
+        "carry_new": 751,
+        "parity_fixed": 7,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "644aa28c18a5cd9f4e9b34daded7dc5bdb1db7c055162d012e9254eb78aa2396"
+    },
+    {
+      "case": "I3_00_01_13-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1794,
+      "top_after": 4377,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_01_13-pair0",
+      "kind": "cardinality",
+      "inputs": 73,
+      "bound": 21,
+      "top_before": 4377,
+      "top_after": 5469,
+      "clauses": 2215,
+      "branches": null,
+      "input_sha256": "b2955bc01bcc400d0eb3cd2a1de39891dfd5c3a956f00f50f1aa0354e7ecda51"
+    },
+    {
+      "case": "I3_00_01_13-pair0",
+      "kind": "cardinality",
+      "inputs": 60,
+      "bound": 6,
+      "top_before": 5469,
+      "top_after": 5793,
+      "clauses": 696,
+      "branches": null,
+      "input_sha256": "3983ec5bb1e36ef68fa2f4d683d613ba4e35d57f83806ab0698a7bf6aaf4b5ee"
+    },
+    {
+      "case": "I3_00_01_13-pair0",
+      "kind": "weighted_equality",
+      "inputs": 292,
+      "bound": 519,
+      "top_before": 9498,
+      "top_after": 10050,
+      "clauses": 3911,
+      "branches": {
+        "parity_new": 272,
+        "carry_new": 280,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "99f40311a6a33ffc80af2c9c839e33302a54cf30c5afe52278be7cef0e4d10de"
+    },
+    {
+      "case": "I3_00_01_13-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1794,
+      "top_after": 4377,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_01_13-pair1",
+      "kind": "cardinality",
+      "inputs": 73,
+      "bound": 21,
+      "top_before": 4377,
+      "top_after": 5469,
+      "clauses": 2215,
+      "branches": null,
+      "input_sha256": "b2955bc01bcc400d0eb3cd2a1de39891dfd5c3a956f00f50f1aa0354e7ecda51"
+    },
+    {
+      "case": "I3_00_01_13-pair1",
+      "kind": "cardinality",
+      "inputs": 60,
+      "bound": 6,
+      "top_before": 5469,
+      "top_after": 5793,
+      "clauses": 696,
+      "branches": null,
+      "input_sha256": "3983ec5bb1e36ef68fa2f4d683d613ba4e35d57f83806ab0698a7bf6aaf4b5ee"
+    },
+    {
+      "case": "I3_00_01_13-pair1",
+      "kind": "weighted_equality",
+      "inputs": 292,
+      "bound": 519,
+      "top_before": 9498,
+      "top_after": 10050,
+      "clauses": 3911,
+      "branches": {
+        "parity_new": 272,
+        "carry_new": 280,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "99f40311a6a33ffc80af2c9c839e33302a54cf30c5afe52278be7cef0e4d10de"
+    },
+    {
+      "case": "I3_00_01_20-pair0",
+      "kind": "cardinality",
+      "inputs": 200,
+      "bound": 41,
+      "top_before": 3738,
+      "top_after": 10257,
+      "clauses": 13156,
+      "branches": null,
+      "input_sha256": "cb692c559b9a8495abc564aaa495667242812384a54c445c160989dd5dc74ec3"
+    },
+    {
+      "case": "I3_00_01_20-pair0",
+      "kind": "cardinality",
+      "inputs": 129,
+      "bound": 21,
+      "top_before": 10257,
+      "top_after": 12525,
+      "clauses": 4623,
+      "branches": null,
+      "input_sha256": "0605bac693808248e6145239a9ac6fa2d2648e269778c3449e218501c5e9dd4d"
+    },
+    {
+      "case": "I3_00_01_20-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 6,
+      "top_before": 12525,
+      "top_after": 13113,
+      "clauses": 1268,
+      "branches": null,
+      "input_sha256": "a757acc4b3930334acdcc2752b97dc496e5d21efc2b4bb38582ce17a5dd53ca6"
+    },
+    {
+      "case": "I3_00_01_20-pair0",
+      "kind": "cardinality",
+      "inputs": 13,
+      "bound": 1,
+      "top_before": 13113,
+      "top_after": 13125,
+      "clauses": 35,
+      "branches": null,
+      "input_sha256": "a2bc9bfbad71940e1c2d32ed0dc82c7ab9a51eab87193d8fbf6a95918fa8587f"
+    },
+    {
+      "case": "I3_00_01_20-pair0",
+      "kind": "weighted_equality",
+      "inputs": 516,
+      "bound": 911,
+      "top_before": 20250,
+      "top_after": 21245,
+      "clauses": 7009,
+      "branches": {
+        "parity_new": 493,
+        "carry_new": 502,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "unit": 1
+      },
+      "input_sha256": "eca697f0f5761606c357844ad15faf80b7732850c7e653798630ca5b2517d453"
+    },
+    {
+      "case": "I3_00_01_20-pair1",
+      "kind": "cardinality",
+      "inputs": 200,
+      "bound": 41,
+      "top_before": 3738,
+      "top_after": 10257,
+      "clauses": 13156,
+      "branches": null,
+      "input_sha256": "cb692c559b9a8495abc564aaa495667242812384a54c445c160989dd5dc74ec3"
+    },
+    {
+      "case": "I3_00_01_20-pair1",
+      "kind": "cardinality",
+      "inputs": 129,
+      "bound": 21,
+      "top_before": 10257,
+      "top_after": 12525,
+      "clauses": 4623,
+      "branches": null,
+      "input_sha256": "0605bac693808248e6145239a9ac6fa2d2648e269778c3449e218501c5e9dd4d"
+    },
+    {
+      "case": "I3_00_01_20-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 6,
+      "top_before": 12525,
+      "top_after": 13113,
+      "clauses": 1268,
+      "branches": null,
+      "input_sha256": "a757acc4b3930334acdcc2752b97dc496e5d21efc2b4bb38582ce17a5dd53ca6"
+    },
+    {
+      "case": "I3_00_01_20-pair1",
+      "kind": "cardinality",
+      "inputs": 13,
+      "bound": 1,
+      "top_before": 13113,
+      "top_after": 13125,
+      "clauses": 35,
+      "branches": null,
+      "input_sha256": "a2bc9bfbad71940e1c2d32ed0dc82c7ab9a51eab87193d8fbf6a95918fa8587f"
+    },
+    {
+      "case": "I3_00_01_20-pair1",
+      "kind": "weighted_equality",
+      "inputs": 516,
+      "bound": 911,
+      "top_before": 20250,
+      "top_after": 21245,
+      "clauses": 7009,
+      "branches": {
+        "parity_new": 493,
+        "carry_new": 502,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "unit": 1
+      },
+      "input_sha256": "eca697f0f5761606c357844ad15faf80b7732850c7e653798630ca5b2517d453"
+    },
+    {
+      "case": "I3_00_01_22-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1798,
+      "top_after": 4381,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_01_22-pair0",
+      "kind": "cardinality",
+      "inputs": 73,
+      "bound": 21,
+      "top_before": 4381,
+      "top_after": 5473,
+      "clauses": 2215,
+      "branches": null,
+      "input_sha256": "d7cff5d883853f033aa888f5fac6b005cd2db1f9c130737c0129bf5df341c004"
+    },
+    {
+      "case": "I3_00_01_22-pair0",
+      "kind": "cardinality",
+      "inputs": 60,
+      "bound": 6,
+      "top_before": 5473,
+      "top_after": 5797,
+      "clauses": 696,
+      "branches": null,
+      "input_sha256": "058e30aa6ce461198862ccc95c0d4b03b8c1eb58816410fb0f07b00c012501ef"
+    },
+    {
+      "case": "I3_00_01_22-pair0",
+      "kind": "weighted_equality",
+      "inputs": 292,
+      "bound": 519,
+      "top_before": 9502,
+      "top_after": 10054,
+      "clauses": 3911,
+      "branches": {
+        "parity_new": 272,
+        "carry_new": 280,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "d6e3fcc9e669143fba7be7770d83189aa3f5e9169caa3e0f082b9b58f1c3676f"
+    },
+    {
+      "case": "I3_00_01_22-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1798,
+      "top_after": 4381,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_01_22-pair1",
+      "kind": "cardinality",
+      "inputs": 73,
+      "bound": 21,
+      "top_before": 4381,
+      "top_after": 5473,
+      "clauses": 2215,
+      "branches": null,
+      "input_sha256": "d7cff5d883853f033aa888f5fac6b005cd2db1f9c130737c0129bf5df341c004"
+    },
+    {
+      "case": "I3_00_01_22-pair1",
+      "kind": "cardinality",
+      "inputs": 60,
+      "bound": 6,
+      "top_before": 5473,
+      "top_after": 5797,
+      "clauses": 696,
+      "branches": null,
+      "input_sha256": "058e30aa6ce461198862ccc95c0d4b03b8c1eb58816410fb0f07b00c012501ef"
+    },
+    {
+      "case": "I3_00_01_22-pair1",
+      "kind": "weighted_equality",
+      "inputs": 292,
+      "bound": 519,
+      "top_before": 9502,
+      "top_after": 10054,
+      "clauses": 3911,
+      "branches": {
+        "parity_new": 272,
+        "carry_new": 280,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "d6e3fcc9e669143fba7be7770d83189aa3f5e9169caa3e0f082b9b58f1c3676f"
+    },
+    {
+      "case": "I3_00_01_30-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1742,
+      "top_after": 4325,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_01_30-pair0",
+      "kind": "cardinality",
+      "inputs": 77,
+      "bound": 21,
+      "top_before": 4325,
+      "top_after": 5501,
+      "clauses": 2387,
+      "branches": null,
+      "input_sha256": "cef8b9ff7ff52776535087fa26ca670b4bfaa0b616e8c8a21abea5f4b99d84d6"
+    },
+    {
+      "case": "I3_00_01_30-pair0",
+      "kind": "cardinality",
+      "inputs": 64,
+      "bound": 6,
+      "top_before": 5501,
+      "top_after": 5849,
+      "clauses": 748,
+      "branches": null,
+      "input_sha256": "eb3ef5409e46fdb8518ee7d49c22a9d2e0301aadaa623573b826a8dff832069b"
+    },
+    {
+      "case": "I3_00_01_30-pair0",
+      "kind": "weighted_equality",
+      "inputs": 308,
+      "bound": 547,
+      "top_before": 9554,
+      "top_after": 10138,
+      "clauses": 4135,
+      "branches": {
+        "parity_new": 288,
+        "carry_new": 296,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "7aaf02539b391c019a1cf7acf444cf741ad67815882c0416b3865555859bd009"
+    },
+    {
+      "case": "I3_00_01_30-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1742,
+      "top_after": 4325,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_01_30-pair1",
+      "kind": "cardinality",
+      "inputs": 77,
+      "bound": 21,
+      "top_before": 4325,
+      "top_after": 5501,
+      "clauses": 2387,
+      "branches": null,
+      "input_sha256": "cef8b9ff7ff52776535087fa26ca670b4bfaa0b616e8c8a21abea5f4b99d84d6"
+    },
+    {
+      "case": "I3_00_01_30-pair1",
+      "kind": "cardinality",
+      "inputs": 64,
+      "bound": 6,
+      "top_before": 5501,
+      "top_after": 5849,
+      "clauses": 748,
+      "branches": null,
+      "input_sha256": "eb3ef5409e46fdb8518ee7d49c22a9d2e0301aadaa623573b826a8dff832069b"
+    },
+    {
+      "case": "I3_00_01_30-pair1",
+      "kind": "weighted_equality",
+      "inputs": 308,
+      "bound": 547,
+      "top_before": 9554,
+      "top_after": 10138,
+      "clauses": 4135,
+      "branches": {
+        "parity_new": 288,
+        "carry_new": 296,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "7aaf02539b391c019a1cf7acf444cf741ad67815882c0416b3865555859bd009"
+    },
+    {
+      "case": "I3_00_02_04-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1690,
+      "top_after": 4273,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_02_04-pair0",
+      "kind": "cardinality",
+      "inputs": 81,
+      "bound": 21,
+      "top_before": 4273,
+      "top_after": 5533,
+      "clauses": 2559,
+      "branches": null,
+      "input_sha256": "4450622d36972e76f1068b8d79d104b9a5e6bcc6f43ed1993152d86e0e2923dd"
+    },
+    {
+      "case": "I3_00_02_04-pair0",
+      "kind": "cardinality",
+      "inputs": 68,
+      "bound": 6,
+      "top_before": 5533,
+      "top_after": 5905,
+      "clauses": 800,
+      "branches": null,
+      "input_sha256": "67f8b1ec02ab04152abc301848eefbeb7f0c2c82d76a174538cf3186615c01d8"
+    },
+    {
+      "case": "I3_00_02_04-pair0",
+      "kind": "weighted_equality",
+      "inputs": 324,
+      "bound": 575,
+      "top_before": 9610,
+      "top_after": 10220,
+      "clauses": 4325,
+      "branches": {
+        "parity_new": 301,
+        "carry_new": 309,
+        "parity_fixed": 3,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "b853148d37e89c9b306569dccbb76d4ce02ec2d42b39a1080cb15bb8ebb2ef59"
+    },
+    {
+      "case": "I3_00_02_04-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1690,
+      "top_after": 4273,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_02_04-pair1",
+      "kind": "cardinality",
+      "inputs": 81,
+      "bound": 21,
+      "top_before": 4273,
+      "top_after": 5533,
+      "clauses": 2559,
+      "branches": null,
+      "input_sha256": "4450622d36972e76f1068b8d79d104b9a5e6bcc6f43ed1993152d86e0e2923dd"
+    },
+    {
+      "case": "I3_00_02_04-pair1",
+      "kind": "cardinality",
+      "inputs": 68,
+      "bound": 6,
+      "top_before": 5533,
+      "top_after": 5905,
+      "clauses": 800,
+      "branches": null,
+      "input_sha256": "67f8b1ec02ab04152abc301848eefbeb7f0c2c82d76a174538cf3186615c01d8"
+    },
+    {
+      "case": "I3_00_02_04-pair1",
+      "kind": "weighted_equality",
+      "inputs": 324,
+      "bound": 575,
+      "top_before": 9610,
+      "top_after": 10220,
+      "clauses": 4325,
+      "branches": {
+        "parity_new": 301,
+        "carry_new": 309,
+        "parity_fixed": 3,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "b853148d37e89c9b306569dccbb76d4ce02ec2d42b39a1080cb15bb8ebb2ef59"
+    },
+    {
+      "case": "I3_00_02_04-pair2",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1690,
+      "top_after": 4273,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_02_04-pair2",
+      "kind": "cardinality",
+      "inputs": 81,
+      "bound": 21,
+      "top_before": 4273,
+      "top_after": 5533,
+      "clauses": 2559,
+      "branches": null,
+      "input_sha256": "4450622d36972e76f1068b8d79d104b9a5e6bcc6f43ed1993152d86e0e2923dd"
+    },
+    {
+      "case": "I3_00_02_04-pair2",
+      "kind": "cardinality",
+      "inputs": 68,
+      "bound": 6,
+      "top_before": 5533,
+      "top_after": 5905,
+      "clauses": 800,
+      "branches": null,
+      "input_sha256": "67f8b1ec02ab04152abc301848eefbeb7f0c2c82d76a174538cf3186615c01d8"
+    },
+    {
+      "case": "I3_00_02_04-pair2",
+      "kind": "weighted_equality",
+      "inputs": 324,
+      "bound": 575,
+      "top_before": 9610,
+      "top_after": 10220,
+      "clauses": 4325,
+      "branches": {
+        "parity_new": 301,
+        "carry_new": 309,
+        "parity_fixed": 3,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "b853148d37e89c9b306569dccbb76d4ce02ec2d42b39a1080cb15bb8ebb2ef59"
+    },
+    {
+      "case": "I3_00_02_11-pair0",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6024,
+      "top_after": 17135,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_02_11-pair0",
+      "kind": "cardinality",
+      "inputs": 193,
+      "bound": 21,
+      "top_before": 17135,
+      "top_after": 20747,
+      "clauses": 7375,
+      "branches": null,
+      "input_sha256": "ccbc172aa84760ee4b3193b4fedc418677931937a5afd117187727c143ba2236"
+    },
+    {
+      "case": "I3_00_02_11-pair0",
+      "kind": "cardinality",
+      "inputs": 154,
+      "bound": 6,
+      "top_before": 20747,
+      "top_after": 21635,
+      "clauses": 1918,
+      "branches": null,
+      "input_sha256": "1790e71444b09ec4e5dddeec7cb626d0cb4594071c6f2c181efd13e88629cc03"
+    },
+    {
+      "case": "I3_00_02_11-pair0",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21635,
+      "top_after": 21687,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "926ab4af7c13b99af305a241ad8daeb9dbc3b87af2aa725c58d9b96644304c78"
+    },
+    {
+      "case": "I3_00_02_11-pair0",
+      "kind": "weighted_equality",
+      "inputs": 772,
+      "bound": 1359,
+      "top_before": 32802,
+      "top_after": 34307,
+      "clauses": 10581,
+      "branches": {
+        "parity_new": 748,
+        "carry_new": 757,
+        "parity_fixed": 7,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "156bb3f29f0d93003b20b634cc6c1c6bb768d3e7ae0dc7195b1e3f8284c41684"
+    },
+    {
+      "case": "I3_00_02_11-pair1",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6024,
+      "top_after": 17135,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_02_11-pair1",
+      "kind": "cardinality",
+      "inputs": 193,
+      "bound": 21,
+      "top_before": 17135,
+      "top_after": 20747,
+      "clauses": 7375,
+      "branches": null,
+      "input_sha256": "ccbc172aa84760ee4b3193b4fedc418677931937a5afd117187727c143ba2236"
+    },
+    {
+      "case": "I3_00_02_11-pair1",
+      "kind": "cardinality",
+      "inputs": 154,
+      "bound": 6,
+      "top_before": 20747,
+      "top_after": 21635,
+      "clauses": 1918,
+      "branches": null,
+      "input_sha256": "1790e71444b09ec4e5dddeec7cb626d0cb4594071c6f2c181efd13e88629cc03"
+    },
+    {
+      "case": "I3_00_02_11-pair1",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21635,
+      "top_after": 21687,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "926ab4af7c13b99af305a241ad8daeb9dbc3b87af2aa725c58d9b96644304c78"
+    },
+    {
+      "case": "I3_00_02_11-pair1",
+      "kind": "weighted_equality",
+      "inputs": 772,
+      "bound": 1359,
+      "top_before": 32802,
+      "top_after": 34307,
+      "clauses": 10581,
+      "branches": {
+        "parity_new": 748,
+        "carry_new": 757,
+        "parity_fixed": 7,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "156bb3f29f0d93003b20b634cc6c1c6bb768d3e7ae0dc7195b1e3f8284c41684"
+    },
+    {
+      "case": "I3_00_02_11-pair2",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6024,
+      "top_after": 17135,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_02_11-pair2",
+      "kind": "cardinality",
+      "inputs": 193,
+      "bound": 21,
+      "top_before": 17135,
+      "top_after": 20747,
+      "clauses": 7375,
+      "branches": null,
+      "input_sha256": "ccbc172aa84760ee4b3193b4fedc418677931937a5afd117187727c143ba2236"
+    },
+    {
+      "case": "I3_00_02_11-pair2",
+      "kind": "cardinality",
+      "inputs": 154,
+      "bound": 6,
+      "top_before": 20747,
+      "top_after": 21635,
+      "clauses": 1918,
+      "branches": null,
+      "input_sha256": "1790e71444b09ec4e5dddeec7cb626d0cb4594071c6f2c181efd13e88629cc03"
+    },
+    {
+      "case": "I3_00_02_11-pair2",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21635,
+      "top_after": 21687,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "926ab4af7c13b99af305a241ad8daeb9dbc3b87af2aa725c58d9b96644304c78"
+    },
+    {
+      "case": "I3_00_02_11-pair2",
+      "kind": "weighted_equality",
+      "inputs": 772,
+      "bound": 1359,
+      "top_before": 32802,
+      "top_after": 34307,
+      "clauses": 10581,
+      "branches": {
+        "parity_new": 748,
+        "carry_new": 757,
+        "parity_fixed": 7,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "156bb3f29f0d93003b20b634cc6c1c6bb768d3e7ae0dc7195b1e3f8284c41684"
+    },
+    {
+      "case": "I3_00_02_13-pair0",
+      "kind": "cardinality",
+      "inputs": 208,
+      "bound": 41,
+      "top_before": 3857,
+      "top_after": 10704,
+      "clauses": 13820,
+      "branches": null,
+      "input_sha256": "3610f4cd45e005208fd03294473a52338e0395dcd75c2fd72dd1ab49ef44f9d9"
+    },
+    {
+      "case": "I3_00_02_13-pair0",
+      "kind": "cardinality",
+      "inputs": 137,
+      "bound": 21,
+      "top_before": 10704,
+      "top_after": 13140,
+      "clauses": 4967,
+      "branches": null,
+      "input_sha256": "8ff599616871f74de4257b6631f49d9d62f6d09565213136710bd334dd4aa8e2"
+    },
+    {
+      "case": "I3_00_02_13-pair0",
+      "kind": "cardinality",
+      "inputs": 111,
+      "bound": 6,
+      "top_before": 13140,
+      "top_after": 13770,
+      "clauses": 1359,
+      "branches": null,
+      "input_sha256": "6ac8017f1bbeea6648501b70a8fbc83f54b6993e42929d9656722ecf249ed577"
+    },
+    {
+      "case": "I3_00_02_13-pair0",
+      "kind": "cardinality",
+      "inputs": 14,
+      "bound": 1,
+      "top_before": 13770,
+      "top_after": 13783,
+      "clauses": 38,
+      "branches": null,
+      "input_sha256": "82cd2b10fb30e0d8eb69ccb176efdaaf14d532df534a30bd207a915211748d60"
+    },
+    {
+      "case": "I3_00_02_13-pair0",
+      "kind": "weighted_equality",
+      "inputs": 548,
+      "bound": 967,
+      "top_before": 21193,
+      "top_after": 22255,
+      "clauses": 7476,
+      "branches": {
+        "parity_new": 527,
+        "carry_new": 535,
+        "parity_fixed": 7,
+        "parity_other": 2,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "488ae504bd1734be66cfa8cef043781eeceab1581fee61c86890a2787d5150b9"
+    },
+    {
+      "case": "I3_00_02_13-pair1",
+      "kind": "cardinality",
+      "inputs": 208,
+      "bound": 41,
+      "top_before": 3857,
+      "top_after": 10704,
+      "clauses": 13820,
+      "branches": null,
+      "input_sha256": "3610f4cd45e005208fd03294473a52338e0395dcd75c2fd72dd1ab49ef44f9d9"
+    },
+    {
+      "case": "I3_00_02_13-pair1",
+      "kind": "cardinality",
+      "inputs": 137,
+      "bound": 21,
+      "top_before": 10704,
+      "top_after": 13140,
+      "clauses": 4967,
+      "branches": null,
+      "input_sha256": "8ff599616871f74de4257b6631f49d9d62f6d09565213136710bd334dd4aa8e2"
+    },
+    {
+      "case": "I3_00_02_13-pair1",
+      "kind": "cardinality",
+      "inputs": 111,
+      "bound": 6,
+      "top_before": 13140,
+      "top_after": 13770,
+      "clauses": 1359,
+      "branches": null,
+      "input_sha256": "6ac8017f1bbeea6648501b70a8fbc83f54b6993e42929d9656722ecf249ed577"
+    },
+    {
+      "case": "I3_00_02_13-pair1",
+      "kind": "cardinality",
+      "inputs": 14,
+      "bound": 1,
+      "top_before": 13770,
+      "top_after": 13783,
+      "clauses": 38,
+      "branches": null,
+      "input_sha256": "82cd2b10fb30e0d8eb69ccb176efdaaf14d532df534a30bd207a915211748d60"
+    },
+    {
+      "case": "I3_00_02_13-pair1",
+      "kind": "weighted_equality",
+      "inputs": 548,
+      "bound": 967,
+      "top_before": 21193,
+      "top_after": 22255,
+      "clauses": 7476,
+      "branches": {
+        "parity_new": 527,
+        "carry_new": 535,
+        "parity_fixed": 7,
+        "parity_other": 2,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "488ae504bd1734be66cfa8cef043781eeceab1581fee61c86890a2787d5150b9"
+    },
+    {
+      "case": "I3_00_02_13-pair2",
+      "kind": "cardinality",
+      "inputs": 208,
+      "bound": 41,
+      "top_before": 3857,
+      "top_after": 10704,
+      "clauses": 13820,
+      "branches": null,
+      "input_sha256": "3610f4cd45e005208fd03294473a52338e0395dcd75c2fd72dd1ab49ef44f9d9"
+    },
+    {
+      "case": "I3_00_02_13-pair2",
+      "kind": "cardinality",
+      "inputs": 137,
+      "bound": 21,
+      "top_before": 10704,
+      "top_after": 13140,
+      "clauses": 4967,
+      "branches": null,
+      "input_sha256": "8ff599616871f74de4257b6631f49d9d62f6d09565213136710bd334dd4aa8e2"
+    },
+    {
+      "case": "I3_00_02_13-pair2",
+      "kind": "cardinality",
+      "inputs": 111,
+      "bound": 6,
+      "top_before": 13140,
+      "top_after": 13770,
+      "clauses": 1359,
+      "branches": null,
+      "input_sha256": "6ac8017f1bbeea6648501b70a8fbc83f54b6993e42929d9656722ecf249ed577"
+    },
+    {
+      "case": "I3_00_02_13-pair2",
+      "kind": "cardinality",
+      "inputs": 14,
+      "bound": 1,
+      "top_before": 13770,
+      "top_after": 13783,
+      "clauses": 38,
+      "branches": null,
+      "input_sha256": "82cd2b10fb30e0d8eb69ccb176efdaaf14d532df534a30bd207a915211748d60"
+    },
+    {
+      "case": "I3_00_02_13-pair2",
+      "kind": "weighted_equality",
+      "inputs": 548,
+      "bound": 967,
+      "top_before": 21193,
+      "top_after": 22255,
+      "clauses": 7476,
+      "branches": {
+        "parity_new": 527,
+        "carry_new": 535,
+        "parity_fixed": 7,
+        "parity_other": 2,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "488ae504bd1734be66cfa8cef043781eeceab1581fee61c86890a2787d5150b9"
+    },
+    {
+      "case": "I3_00_02_20-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1684,
+      "top_after": 4267,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_02_20-pair0",
+      "kind": "cardinality",
+      "inputs": 80,
+      "bound": 21,
+      "top_before": 4267,
+      "top_after": 5506,
+      "clauses": 2516,
+      "branches": null,
+      "input_sha256": "ccd0e427359a70e4c2f1679526aec2726b677f3bb6af11c58066bf5d93d6ff30"
+    },
+    {
+      "case": "I3_00_02_20-pair0",
+      "kind": "cardinality",
+      "inputs": 67,
+      "bound": 6,
+      "top_before": 5506,
+      "top_after": 5872,
+      "clauses": 787,
+      "branches": null,
+      "input_sha256": "499ebd0a205dd17a9073f5af580d4df23e821d222945fc4f5fd8887cdd40a112"
+    },
+    {
+      "case": "I3_00_02_20-pair0",
+      "kind": "weighted_equality",
+      "inputs": 320,
+      "bound": 568,
+      "top_before": 9577,
+      "top_after": 10181,
+      "clauses": 4291,
+      "branches": {
+        "parity_new": 298,
+        "carry_new": 306,
+        "parity_other": 8,
+        "parity_fixed": 1,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "b3dc6f3b14192ef69e8cdf20f4d94e589b74d6d03028da3ed35922858c17d746"
+    },
+    {
+      "case": "I3_00_02_20-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1684,
+      "top_after": 4267,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_02_20-pair1",
+      "kind": "cardinality",
+      "inputs": 80,
+      "bound": 21,
+      "top_before": 4267,
+      "top_after": 5506,
+      "clauses": 2516,
+      "branches": null,
+      "input_sha256": "ccd0e427359a70e4c2f1679526aec2726b677f3bb6af11c58066bf5d93d6ff30"
+    },
+    {
+      "case": "I3_00_02_20-pair1",
+      "kind": "cardinality",
+      "inputs": 67,
+      "bound": 6,
+      "top_before": 5506,
+      "top_after": 5872,
+      "clauses": 787,
+      "branches": null,
+      "input_sha256": "499ebd0a205dd17a9073f5af580d4df23e821d222945fc4f5fd8887cdd40a112"
+    },
+    {
+      "case": "I3_00_02_20-pair1",
+      "kind": "weighted_equality",
+      "inputs": 320,
+      "bound": 568,
+      "top_before": 9577,
+      "top_after": 10181,
+      "clauses": 4291,
+      "branches": {
+        "parity_new": 298,
+        "carry_new": 306,
+        "parity_other": 8,
+        "parity_fixed": 1,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "b3dc6f3b14192ef69e8cdf20f4d94e589b74d6d03028da3ed35922858c17d746"
+    },
+    {
+      "case": "I3_00_02_20-pair2",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1684,
+      "top_after": 4267,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_02_20-pair2",
+      "kind": "cardinality",
+      "inputs": 80,
+      "bound": 21,
+      "top_before": 4267,
+      "top_after": 5506,
+      "clauses": 2516,
+      "branches": null,
+      "input_sha256": "ccd0e427359a70e4c2f1679526aec2726b677f3bb6af11c58066bf5d93d6ff30"
+    },
+    {
+      "case": "I3_00_02_20-pair2",
+      "kind": "cardinality",
+      "inputs": 67,
+      "bound": 6,
+      "top_before": 5506,
+      "top_after": 5872,
+      "clauses": 787,
+      "branches": null,
+      "input_sha256": "499ebd0a205dd17a9073f5af580d4df23e821d222945fc4f5fd8887cdd40a112"
+    },
+    {
+      "case": "I3_00_02_20-pair2",
+      "kind": "weighted_equality",
+      "inputs": 320,
+      "bound": 568,
+      "top_before": 9577,
+      "top_after": 10181,
+      "clauses": 4291,
+      "branches": {
+        "parity_new": 298,
+        "carry_new": 306,
+        "parity_other": 8,
+        "parity_fixed": 1,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "b3dc6f3b14192ef69e8cdf20f4d94e589b74d6d03028da3ed35922858c17d746"
+    },
+    {
+      "case": "I3_00_03_11-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1770,
+      "top_after": 4353,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_03_11-pair0",
+      "kind": "cardinality",
+      "inputs": 75,
+      "bound": 21,
+      "top_before": 4353,
+      "top_after": 5487,
+      "clauses": 2301,
+      "branches": null,
+      "input_sha256": "0015f60f2d3f77ee23228b70cfaccbb94baada9f96ccfd6ec9a4c9d0a7565080"
+    },
+    {
+      "case": "I3_00_03_11-pair0",
+      "kind": "cardinality",
+      "inputs": 62,
+      "bound": 6,
+      "top_before": 5487,
+      "top_after": 5823,
+      "clauses": 722,
+      "branches": null,
+      "input_sha256": "633714c83f382b5d86857f737f58436656cff037af7fbd418f4ffeb17f450170"
+    },
+    {
+      "case": "I3_00_03_11-pair0",
+      "kind": "weighted_equality",
+      "inputs": 300,
+      "bound": 533,
+      "top_before": 9528,
+      "top_after": 10096,
+      "clauses": 4027,
+      "branches": {
+        "parity_new": 280,
+        "carry_new": 288,
+        "parity_fixed": 4,
+        "parity_other": 5,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "ec13efb5d52fddf7af01be1684480d15b1ae21f13a10e30224cdadf15a5ba190"
+    },
+    {
+      "case": "I3_00_03_11-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1770,
+      "top_after": 4353,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_03_11-pair1",
+      "kind": "cardinality",
+      "inputs": 75,
+      "bound": 21,
+      "top_before": 4353,
+      "top_after": 5487,
+      "clauses": 2301,
+      "branches": null,
+      "input_sha256": "0015f60f2d3f77ee23228b70cfaccbb94baada9f96ccfd6ec9a4c9d0a7565080"
+    },
+    {
+      "case": "I3_00_03_11-pair1",
+      "kind": "cardinality",
+      "inputs": 62,
+      "bound": 6,
+      "top_before": 5487,
+      "top_after": 5823,
+      "clauses": 722,
+      "branches": null,
+      "input_sha256": "633714c83f382b5d86857f737f58436656cff037af7fbd418f4ffeb17f450170"
+    },
+    {
+      "case": "I3_00_03_11-pair1",
+      "kind": "weighted_equality",
+      "inputs": 300,
+      "bound": 533,
+      "top_before": 9528,
+      "top_after": 10096,
+      "clauses": 4027,
+      "branches": {
+        "parity_new": 280,
+        "carry_new": 288,
+        "parity_fixed": 4,
+        "parity_other": 5,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "ec13efb5d52fddf7af01be1684480d15b1ae21f13a10e30224cdadf15a5ba190"
+    },
+    {
+      "case": "I3_00_03_11-pair2",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1770,
+      "top_after": 4353,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_03_11-pair2",
+      "kind": "cardinality",
+      "inputs": 75,
+      "bound": 21,
+      "top_before": 4353,
+      "top_after": 5487,
+      "clauses": 2301,
+      "branches": null,
+      "input_sha256": "0015f60f2d3f77ee23228b70cfaccbb94baada9f96ccfd6ec9a4c9d0a7565080"
+    },
+    {
+      "case": "I3_00_03_11-pair2",
+      "kind": "cardinality",
+      "inputs": 62,
+      "bound": 6,
+      "top_before": 5487,
+      "top_after": 5823,
+      "clauses": 722,
+      "branches": null,
+      "input_sha256": "633714c83f382b5d86857f737f58436656cff037af7fbd418f4ffeb17f450170"
+    },
+    {
+      "case": "I3_00_03_11-pair2",
+      "kind": "weighted_equality",
+      "inputs": 300,
+      "bound": 533,
+      "top_before": 9528,
+      "top_after": 10096,
+      "clauses": 4027,
+      "branches": {
+        "parity_new": 280,
+        "carry_new": 288,
+        "parity_fixed": 4,
+        "parity_other": 5,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "ec13efb5d52fddf7af01be1684480d15b1ae21f13a10e30224cdadf15a5ba190"
+    },
+    {
+      "case": "I3_00_03_14-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1714,
+      "top_after": 4297,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_03_14-pair0",
+      "kind": "cardinality",
+      "inputs": 79,
+      "bound": 21,
+      "top_before": 4297,
+      "top_after": 5515,
+      "clauses": 2473,
+      "branches": null,
+      "input_sha256": "a5f4a24a3c5c7d74b8944f5571065d9da399e84567046cd429db2e59952331ae"
+    },
+    {
+      "case": "I3_00_03_14-pair0",
+      "kind": "cardinality",
+      "inputs": 66,
+      "bound": 6,
+      "top_before": 5515,
+      "top_after": 5875,
+      "clauses": 774,
+      "branches": null,
+      "input_sha256": "c73ca8ce2c0139771b9ec3fe6e44931d094c2668b88cd18242c4ab6758bd42f7"
+    },
+    {
+      "case": "I3_00_03_14-pair0",
+      "kind": "weighted_equality",
+      "inputs": 316,
+      "bound": 561,
+      "top_before": 9580,
+      "top_after": 10178,
+      "clauses": 4241,
+      "branches": {
+        "parity_new": 295,
+        "carry_new": 303,
+        "parity_fixed": 3,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "42288018f3632f2980c84fcdf5036c11d3c87eec24f12e5ad09d31dc402cf186"
+    },
+    {
+      "case": "I3_00_03_14-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1714,
+      "top_after": 4297,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_03_14-pair1",
+      "kind": "cardinality",
+      "inputs": 79,
+      "bound": 21,
+      "top_before": 4297,
+      "top_after": 5515,
+      "clauses": 2473,
+      "branches": null,
+      "input_sha256": "a5f4a24a3c5c7d74b8944f5571065d9da399e84567046cd429db2e59952331ae"
+    },
+    {
+      "case": "I3_00_03_14-pair1",
+      "kind": "cardinality",
+      "inputs": 66,
+      "bound": 6,
+      "top_before": 5515,
+      "top_after": 5875,
+      "clauses": 774,
+      "branches": null,
+      "input_sha256": "c73ca8ce2c0139771b9ec3fe6e44931d094c2668b88cd18242c4ab6758bd42f7"
+    },
+    {
+      "case": "I3_00_03_14-pair1",
+      "kind": "weighted_equality",
+      "inputs": 316,
+      "bound": 561,
+      "top_before": 9580,
+      "top_after": 10178,
+      "clauses": 4241,
+      "branches": {
+        "parity_new": 295,
+        "carry_new": 303,
+        "parity_fixed": 3,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "42288018f3632f2980c84fcdf5036c11d3c87eec24f12e5ad09d31dc402cf186"
+    },
+    {
+      "case": "I3_00_03_14-pair2",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1714,
+      "top_after": 4297,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_03_14-pair2",
+      "kind": "cardinality",
+      "inputs": 79,
+      "bound": 21,
+      "top_before": 4297,
+      "top_after": 5515,
+      "clauses": 2473,
+      "branches": null,
+      "input_sha256": "a5f4a24a3c5c7d74b8944f5571065d9da399e84567046cd429db2e59952331ae"
+    },
+    {
+      "case": "I3_00_03_14-pair2",
+      "kind": "cardinality",
+      "inputs": 66,
+      "bound": 6,
+      "top_before": 5515,
+      "top_after": 5875,
+      "clauses": 774,
+      "branches": null,
+      "input_sha256": "c73ca8ce2c0139771b9ec3fe6e44931d094c2668b88cd18242c4ab6758bd42f7"
+    },
+    {
+      "case": "I3_00_03_14-pair2",
+      "kind": "weighted_equality",
+      "inputs": 316,
+      "bound": 561,
+      "top_before": 9580,
+      "top_after": 10178,
+      "clauses": 4241,
+      "branches": {
+        "parity_new": 295,
+        "carry_new": 303,
+        "parity_fixed": 3,
+        "parity_other": 6,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "42288018f3632f2980c84fcdf5036c11d3c87eec24f12e5ad09d31dc402cf186"
+    },
+    {
+      "case": "I3_00_11_22-pair0",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6024,
+      "top_after": 17135,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_11_22-pair0",
+      "kind": "cardinality",
+      "inputs": 193,
+      "bound": 21,
+      "top_before": 17135,
+      "top_after": 20747,
+      "clauses": 7375,
+      "branches": null,
+      "input_sha256": "3cd48d385f1b623a49bd59a765d3475f2da1e10fa0fb8de7a12e9fa2212835f9"
+    },
+    {
+      "case": "I3_00_11_22-pair0",
+      "kind": "cardinality",
+      "inputs": 154,
+      "bound": 6,
+      "top_before": 20747,
+      "top_after": 21635,
+      "clauses": 1918,
+      "branches": null,
+      "input_sha256": "f8eb002c97d3ebeadd4d112e48dc2a5814c22d84a36e6a43f2a28076ed4d2876"
+    },
+    {
+      "case": "I3_00_11_22-pair0",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21635,
+      "top_after": 21687,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "838a48d9a0d6396df094e0cdcdfd5927e205ddf10580597ef49d4e827ab5c0bf"
+    },
+    {
+      "case": "I3_00_11_22-pair0",
+      "kind": "weighted_equality",
+      "inputs": 772,
+      "bound": 1359,
+      "top_before": 32802,
+      "top_after": 34307,
+      "clauses": 10581,
+      "branches": {
+        "parity_new": 748,
+        "carry_new": 757,
+        "parity_fixed": 7,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "7bcd88f0ae1be0bfc3b7e29f744c4b33b6d80eccee3fbd784831d30d15336ad7"
+    },
+    {
+      "case": "I3_00_11_22-pair1",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6024,
+      "top_after": 17135,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_11_22-pair1",
+      "kind": "cardinality",
+      "inputs": 193,
+      "bound": 21,
+      "top_before": 17135,
+      "top_after": 20747,
+      "clauses": 7375,
+      "branches": null,
+      "input_sha256": "3cd48d385f1b623a49bd59a765d3475f2da1e10fa0fb8de7a12e9fa2212835f9"
+    },
+    {
+      "case": "I3_00_11_22-pair1",
+      "kind": "cardinality",
+      "inputs": 154,
+      "bound": 6,
+      "top_before": 20747,
+      "top_after": 21635,
+      "clauses": 1918,
+      "branches": null,
+      "input_sha256": "f8eb002c97d3ebeadd4d112e48dc2a5814c22d84a36e6a43f2a28076ed4d2876"
+    },
+    {
+      "case": "I3_00_11_22-pair1",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21635,
+      "top_after": 21687,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "838a48d9a0d6396df094e0cdcdfd5927e205ddf10580597ef49d4e827ab5c0bf"
+    },
+    {
+      "case": "I3_00_11_22-pair1",
+      "kind": "weighted_equality",
+      "inputs": 772,
+      "bound": 1359,
+      "top_before": 32802,
+      "top_after": 34307,
+      "clauses": 10581,
+      "branches": {
+        "parity_new": 748,
+        "carry_new": 757,
+        "parity_fixed": 7,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "7bcd88f0ae1be0bfc3b7e29f744c4b33b6d80eccee3fbd784831d30d15336ad7"
+    },
+    {
+      "case": "I3_00_11_22-pair2",
+      "kind": "cardinality",
+      "inputs": 312,
+      "bound": 41,
+      "top_before": 6024,
+      "top_after": 17135,
+      "clauses": 22452,
+      "branches": null,
+      "input_sha256": "11a8c17c45921c7294549bacccde6efbaaa4ee1b7de179cdf413a1b6914df9ca"
+    },
+    {
+      "case": "I3_00_11_22-pair2",
+      "kind": "cardinality",
+      "inputs": 193,
+      "bound": 21,
+      "top_before": 17135,
+      "top_after": 20747,
+      "clauses": 7375,
+      "branches": null,
+      "input_sha256": "3cd48d385f1b623a49bd59a765d3475f2da1e10fa0fb8de7a12e9fa2212835f9"
+    },
+    {
+      "case": "I3_00_11_22-pair2",
+      "kind": "cardinality",
+      "inputs": 154,
+      "bound": 6,
+      "top_before": 20747,
+      "top_after": 21635,
+      "clauses": 1918,
+      "branches": null,
+      "input_sha256": "f8eb002c97d3ebeadd4d112e48dc2a5814c22d84a36e6a43f2a28076ed4d2876"
+    },
+    {
+      "case": "I3_00_11_22-pair2",
+      "kind": "cardinality",
+      "inputs": 28,
+      "bound": 2,
+      "top_before": 21635,
+      "top_after": 21687,
+      "clauses": 128,
+      "branches": null,
+      "input_sha256": "838a48d9a0d6396df094e0cdcdfd5927e205ddf10580597ef49d4e827ab5c0bf"
+    },
+    {
+      "case": "I3_00_11_22-pair2",
+      "kind": "weighted_equality",
+      "inputs": 772,
+      "bound": 1359,
+      "top_before": 32802,
+      "top_after": 34307,
+      "clauses": 10581,
+      "branches": {
+        "parity_new": 748,
+        "carry_new": 757,
+        "parity_fixed": 7,
+        "parity_other": 3,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "7bcd88f0ae1be0bfc3b7e29f744c4b33b6d80eccee3fbd784831d30d15336ad7"
+    },
+    {
+      "case": "I3_00_11_23-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1770,
+      "top_after": 4353,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_11_23-pair0",
+      "kind": "cardinality",
+      "inputs": 75,
+      "bound": 21,
+      "top_before": 4353,
+      "top_after": 5487,
+      "clauses": 2301,
+      "branches": null,
+      "input_sha256": "14719516bb7f2c9e629c7bb83921670e06ae0dbcc8a545adeb5f6a6da2344037"
+    },
+    {
+      "case": "I3_00_11_23-pair0",
+      "kind": "cardinality",
+      "inputs": 62,
+      "bound": 6,
+      "top_before": 5487,
+      "top_after": 5823,
+      "clauses": 722,
+      "branches": null,
+      "input_sha256": "412bbafe0a2df05da7d3340e7a1ef4aba30254653a488aa03aca58568ea771bf"
+    },
+    {
+      "case": "I3_00_11_23-pair0",
+      "kind": "weighted_equality",
+      "inputs": 300,
+      "bound": 533,
+      "top_before": 9528,
+      "top_after": 10096,
+      "clauses": 4027,
+      "branches": {
+        "parity_new": 280,
+        "carry_new": 288,
+        "parity_fixed": 4,
+        "parity_other": 5,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "1fa2edf5a134ec1244d724687888079c699c79fb0bb33263f3231526336bebe0"
+    },
+    {
+      "case": "I3_00_11_23-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1770,
+      "top_after": 4353,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_11_23-pair1",
+      "kind": "cardinality",
+      "inputs": 75,
+      "bound": 21,
+      "top_before": 4353,
+      "top_after": 5487,
+      "clauses": 2301,
+      "branches": null,
+      "input_sha256": "14719516bb7f2c9e629c7bb83921670e06ae0dbcc8a545adeb5f6a6da2344037"
+    },
+    {
+      "case": "I3_00_11_23-pair1",
+      "kind": "cardinality",
+      "inputs": 62,
+      "bound": 6,
+      "top_before": 5487,
+      "top_after": 5823,
+      "clauses": 722,
+      "branches": null,
+      "input_sha256": "412bbafe0a2df05da7d3340e7a1ef4aba30254653a488aa03aca58568ea771bf"
+    },
+    {
+      "case": "I3_00_11_23-pair1",
+      "kind": "weighted_equality",
+      "inputs": 300,
+      "bound": 533,
+      "top_before": 9528,
+      "top_after": 10096,
+      "clauses": 4027,
+      "branches": {
+        "parity_new": 280,
+        "carry_new": 288,
+        "parity_fixed": 4,
+        "parity_other": 5,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "1fa2edf5a134ec1244d724687888079c699c79fb0bb33263f3231526336bebe0"
+    },
+    {
+      "case": "I3_00_11_23-pair2",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1770,
+      "top_after": 4353,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_11_23-pair2",
+      "kind": "cardinality",
+      "inputs": 75,
+      "bound": 21,
+      "top_before": 4353,
+      "top_after": 5487,
+      "clauses": 2301,
+      "branches": null,
+      "input_sha256": "14719516bb7f2c9e629c7bb83921670e06ae0dbcc8a545adeb5f6a6da2344037"
+    },
+    {
+      "case": "I3_00_11_23-pair2",
+      "kind": "cardinality",
+      "inputs": 62,
+      "bound": 6,
+      "top_before": 5487,
+      "top_after": 5823,
+      "clauses": 722,
+      "branches": null,
+      "input_sha256": "412bbafe0a2df05da7d3340e7a1ef4aba30254653a488aa03aca58568ea771bf"
+    },
+    {
+      "case": "I3_00_11_23-pair2",
+      "kind": "weighted_equality",
+      "inputs": 300,
+      "bound": 533,
+      "top_before": 9528,
+      "top_after": 10096,
+      "clauses": 4027,
+      "branches": {
+        "parity_new": 280,
+        "carry_new": 288,
+        "parity_fixed": 4,
+        "parity_other": 5,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "1fa2edf5a134ec1244d724687888079c699c79fb0bb33263f3231526336bebe0"
+    },
+    {
+      "case": "I3_00_12_21-pair0",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1798,
+      "top_after": 4381,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_12_21-pair0",
+      "kind": "cardinality",
+      "inputs": 73,
+      "bound": 21,
+      "top_before": 4381,
+      "top_after": 5473,
+      "clauses": 2215,
+      "branches": null,
+      "input_sha256": "0b91bad60729d20ac12af40a8f3a870c71c287abb3fba3ee266534601c80dd75"
+    },
+    {
+      "case": "I3_00_12_21-pair0",
+      "kind": "cardinality",
+      "inputs": 60,
+      "bound": 6,
+      "top_before": 5473,
+      "top_after": 5797,
+      "clauses": 696,
+      "branches": null,
+      "input_sha256": "e227e58cbd6172bd7480ade43a1e661b1954d330e333645690d931fc6adba016"
+    },
+    {
+      "case": "I3_00_12_21-pair0",
+      "kind": "weighted_equality",
+      "inputs": 292,
+      "bound": 519,
+      "top_before": 9502,
+      "top_after": 10054,
+      "clauses": 3911,
+      "branches": {
+        "parity_new": 272,
+        "carry_new": 280,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "988a787114a199e35ff357ecde11ef41e4ac51aa1589fa11e139ee05123e50d4"
+    },
+    {
+      "case": "I3_00_12_21-pair1",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1798,
+      "top_after": 4381,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_12_21-pair1",
+      "kind": "cardinality",
+      "inputs": 73,
+      "bound": 21,
+      "top_before": 4381,
+      "top_after": 5473,
+      "clauses": 2215,
+      "branches": null,
+      "input_sha256": "0b91bad60729d20ac12af40a8f3a870c71c287abb3fba3ee266534601c80dd75"
+    },
+    {
+      "case": "I3_00_12_21-pair1",
+      "kind": "cardinality",
+      "inputs": 60,
+      "bound": 6,
+      "top_before": 5473,
+      "top_after": 5797,
+      "clauses": 696,
+      "branches": null,
+      "input_sha256": "e227e58cbd6172bd7480ade43a1e661b1954d330e333645690d931fc6adba016"
+    },
+    {
+      "case": "I3_00_12_21-pair1",
+      "kind": "weighted_equality",
+      "inputs": 292,
+      "bound": 519,
+      "top_before": 9502,
+      "top_after": 10054,
+      "clauses": 3911,
+      "branches": {
+        "parity_new": 272,
+        "carry_new": 280,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "988a787114a199e35ff357ecde11ef41e4ac51aa1589fa11e139ee05123e50d4"
+    },
+    {
+      "case": "I3_00_12_21-pair2",
+      "kind": "cardinality",
+      "inputs": 104,
+      "bound": 41,
+      "top_before": 1798,
+      "top_after": 4381,
+      "clauses": 5188,
+      "branches": null,
+      "input_sha256": "0e4b06a3c162b5d80e9306dc7ad2e4aeefdb88eba02c5592850abd815fa23594"
+    },
+    {
+      "case": "I3_00_12_21-pair2",
+      "kind": "cardinality",
+      "inputs": 73,
+      "bound": 21,
+      "top_before": 4381,
+      "top_after": 5473,
+      "clauses": 2215,
+      "branches": null,
+      "input_sha256": "0b91bad60729d20ac12af40a8f3a870c71c287abb3fba3ee266534601c80dd75"
+    },
+    {
+      "case": "I3_00_12_21-pair2",
+      "kind": "cardinality",
+      "inputs": 60,
+      "bound": 6,
+      "top_before": 5473,
+      "top_after": 5797,
+      "clauses": 696,
+      "branches": null,
+      "input_sha256": "e227e58cbd6172bd7480ade43a1e661b1954d330e333645690d931fc6adba016"
+    },
+    {
+      "case": "I3_00_12_21-pair2",
+      "kind": "weighted_equality",
+      "inputs": 292,
+      "bound": 519,
+      "top_before": 9502,
+      "top_after": 10054,
+      "clauses": 3911,
+      "branches": {
+        "parity_new": 272,
+        "carry_new": 280,
+        "parity_fixed": 5,
+        "parity_other": 4,
+        "carry_fixed": 1,
+        "empty": 1
+      },
+      "input_sha256": "988a787114a199e35ff357ecde11ef41e4ac51aa1589fa11e139ee05123e50d4"
+    },
+    {
+      "case": "I4_O",
+      "kind": "cardinality",
+      "inputs": 96,
+      "bound": 41,
+      "top_before": 1623,
+      "top_after": 3878,
+      "clauses": 4524,
+      "branches": null,
+      "input_sha256": "2118f179d00bc3670519f75770ed93182adb2f5825926154510069d37a08ab5f"
+    },
+    {
+      "case": "I4_O",
+      "kind": "cardinality",
+      "inputs": 65,
+      "bound": 21,
+      "top_before": 3878,
+      "top_after": 4802,
+      "clauses": 1871,
+      "branches": null,
+      "input_sha256": "8e229b96c653d68fcd05d903c0b1b3661c7230f6dbda7f1fa5fad63a10638765"
+    },
+    {
+      "case": "I4_O",
+      "kind": "cardinality",
+      "inputs": 53,
+      "bound": 6,
+      "top_before": 4802,
+      "top_after": 5084,
+      "clauses": 605,
+      "branches": null,
+      "input_sha256": "3212ea64b4c0610769237d9d6b470d7afcacdb26fec7439794e18f2d4fd84a14"
+    },
+    {
+      "case": "I4_O",
+      "kind": "weighted_equality",
+      "inputs": 260,
+      "bound": 463,
+      "top_before": 8492,
+      "top_after": 8978,
+      "clauses": 3443,
+      "branches": {
+        "parity_new": 239,
+        "carry_new": 247,
+        "parity_fixed": 4,
+        "parity_other": 4,
+        "unit": 1
+      },
+      "input_sha256": "f31b40f5476bd8ecbfcf03c0b2f28359170ae0f024f3a8aab8fb7b7e3e899e0a"
+    },
+    {
+      "case": "I4_T",
+      "kind": "cardinality",
+      "inputs": 96,
+      "bound": 41,
+      "top_before": 1599,
+      "top_after": 3854,
+      "clauses": 4524,
+      "branches": null,
+      "input_sha256": "2118f179d00bc3670519f75770ed93182adb2f5825926154510069d37a08ab5f"
+    },
+    {
+      "case": "I4_T",
+      "kind": "cardinality",
+      "inputs": 67,
+      "bound": 21,
+      "top_before": 3854,
+      "top_after": 4820,
+      "clauses": 1957,
+      "branches": null,
+      "input_sha256": "2fceb5cbd295b7bfcca42f2610665175c57b3b75be4bdfb6ba4894d80af61c12"
+    },
+    {
+      "case": "I4_T",
+      "kind": "cardinality",
+      "inputs": 55,
+      "bound": 6,
+      "top_before": 4820,
+      "top_after": 5114,
+      "clauses": 631,
+      "branches": null,
+      "input_sha256": "bee57e7559f100f8f62671d14beedf141fd21a9a0c8a7ac25af5d1294e57160d"
+    },
+    {
+      "case": "I4_T",
+      "kind": "weighted_equality",
+      "inputs": 268,
+      "bound": 477,
+      "top_before": 8522,
+      "top_after": 9027,
+      "clauses": 3578,
+      "branches": {
+        "parity_new": 249,
+        "carry_new": 256,
+        "parity_fixed": 5,
+        "parity_other": 3,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "288763a56850c4d2a37a44247f894411be5c4fbc372f81a779904144d478d525"
+    },
+    {
+      "case": "I4_S",
+      "kind": "cardinality",
+      "inputs": 96,
+      "bound": 41,
+      "top_before": 1599,
+      "top_after": 3854,
+      "clauses": 4524,
+      "branches": null,
+      "input_sha256": "2118f179d00bc3670519f75770ed93182adb2f5825926154510069d37a08ab5f"
+    },
+    {
+      "case": "I4_S",
+      "kind": "cardinality",
+      "inputs": 67,
+      "bound": 21,
+      "top_before": 3854,
+      "top_after": 4820,
+      "clauses": 1957,
+      "branches": null,
+      "input_sha256": "020e69d829961a134ec2e1462b0de005b88be11a1f0b8811fef341bcb238667a"
+    },
+    {
+      "case": "I4_S",
+      "kind": "cardinality",
+      "inputs": 55,
+      "bound": 6,
+      "top_before": 4820,
+      "top_after": 5114,
+      "clauses": 631,
+      "branches": null,
+      "input_sha256": "fc7376d52c296732c5f668fd5de9181a3f7d39e6e9a36c21ae97d7f346b76e35"
+    },
+    {
+      "case": "I4_S",
+      "kind": "weighted_equality",
+      "inputs": 268,
+      "bound": 477,
+      "top_before": 8522,
+      "top_after": 9027,
+      "clauses": 3578,
+      "branches": {
+        "parity_new": 249,
+        "carry_new": 256,
+        "parity_fixed": 5,
+        "parity_other": 3,
+        "carry_other": 1,
+        "empty": 1
+      },
+      "input_sha256": "69c6023d2170e8a4be6d499e16e79dbfcae21f4f323ca96463523d5e2658ef5d"
+    }
+  ],
+  "case_receipts": [
+    {
+      "case": "I2_00_02-pair0",
+      "base_clauses": 375410,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_03-pair0",
+      "base_clauses": 308112,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_04-pair0",
+      "base_clauses": 332329,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_05-pair0",
+      "base_clauses": 357016,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_06-pair0",
+      "base_clauses": 374057,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_07-pair0",
+      "base_clauses": 391611,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_11-pair0",
+      "base_clauses": 443038,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_12-pair0",
+      "base_clauses": 280086,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_13-pair0",
+      "base_clauses": 307865,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_14-pair0",
+      "base_clauses": 336152,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_15-pair0",
+      "base_clauses": 356769,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_16-pair0",
+      "base_clauses": 377860,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_22-pair0",
+      "base_clauses": 283431,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_23-pair0",
+      "base_clauses": 315264,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_24-pair0",
+      "base_clauses": 339505,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_25-pair0",
+      "base_clauses": 364164,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_33-pair0",
+      "base_clauses": 322165,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I2_00_34-pair0",
+      "base_clauses": 350446,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_02-pair0",
+      "base_clauses": 128000,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_03-pair0",
+      "base_clauses": 81943,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_03-pair1",
+      "base_clauses": 81943,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_04-pair0",
+      "base_clauses": 36376,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_04-pair1",
+      "base_clauses": 36376,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_10-pair0",
+      "base_clauses": 184112,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_12-pair0",
+      "base_clauses": 127789,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_12-pair1",
+      "base_clauses": 127789,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_13-pair0",
+      "base_clauses": 36958,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_13-pair1",
+      "base_clauses": 36958,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_20-pair0",
+      "base_clauses": 78643,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_20-pair1",
+      "base_clauses": 78643,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_22-pair0",
+      "base_clauses": 37030,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_22-pair1",
+      "base_clauses": 37030,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_30-pair0",
+      "base_clauses": 36448,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_01_30-pair1",
+      "base_clauses": 36448,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_04-pair0",
+      "base_clauses": 35904,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_04-pair1",
+      "base_clauses": 35904,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_04-pair2",
+      "base_clauses": 35904,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_11-pair0",
+      "base_clauses": 127542,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_11-pair1",
+      "base_clauses": 127542,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_11-pair2",
+      "base_clauses": 127542,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_13-pair0",
+      "base_clauses": 81720,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_13-pair1",
+      "base_clauses": 81720,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_13-pair2",
+      "base_clauses": 81720,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_20-pair0",
+      "base_clauses": 35803,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_20-pair1",
+      "base_clauses": 35803,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_02_20-pair2",
+      "base_clauses": 35803,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_03_11-pair0",
+      "base_clauses": 36743,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_03_11-pair1",
+      "base_clauses": 36743,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_03_11-pair2",
+      "base_clauses": 36743,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_03_14-pair0",
+      "base_clauses": 36151,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_03_14-pair1",
+      "base_clauses": 36151,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_03_14-pair2",
+      "base_clauses": 36151,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_11_22-pair0",
+      "base_clauses": 127542,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_11_22-pair1",
+      "base_clauses": 127542,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_11_22-pair2",
+      "base_clauses": 127542,
+      "arithmetic_calls": 5,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_11_23-pair0",
+      "base_clauses": 36743,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_11_23-pair1",
+      "base_clauses": 36743,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_11_23-pair2",
+      "base_clauses": 36743,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_12_21-pair0",
+      "base_clauses": 37030,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_12_21-pair1",
+      "base_clauses": 37030,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I3_00_12_21-pair2",
+      "base_clauses": 37030,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I4_O",
+      "base_clauses": 33211,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I4_T",
+      "base_clauses": 33015,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    },
+    {
+      "case": "I4_S",
+      "base_clauses": 33015,
+      "arithmetic_calls": 4,
+      "prefix_identical": true
+    }
+  ],
+  "elementary_gate_checks": 144,
+  "installed": [
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/bounded-proof/venv/lib/python3.15/site-packages/pysat/card.py",
+      "sha256": "8f7f6e605860a25d3c9f145e4f583bb4c11f11db4c984910cc8fc9276d7d51a7"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/bounded-proof/venv/lib/python3.15/site-packages/pysat/pb.py",
+      "sha256": "715a4215cd2000045a41af55534571f8fe70016a0b95770c2a9ba182d46a7b3e"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/bounded-proof/venv/lib/python3.15/site-packages/pysat/formula.py",
+      "sha256": "aad003a5abe5e66fa91d10e767b3c3122a2c4fb4db682c2a63fc69bfffbe365c"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/bounded-proof/venv/lib/python3.15/site-packages/pycard.cpython-315-darwin.so",
+      "sha256": "7afa2a77c8bc979683dd5ccc419eef663515c9dce4f21316b7bd97e7feced896"
+    },
+    {
+      "path": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/bounded-proof/venv/lib/python3.15/site-packages/pindakaas/__init__.py",
+      "sha256": "9516db272d39fc95e579b33d79594b7a5ac842714f18ee926a5ffab7d8beb99a"
+    }
+  ],
+  "seconds": 11.644,
+  "solver_calls": 0
+}

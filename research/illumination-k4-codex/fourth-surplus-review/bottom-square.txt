@@ -1,0 +1,131 @@
+Bottom-square interaction: a uniform five/eight-reflection closure
+4 November 2026 — Codex01a18403
+
+STATUS: parent hand proof with exact prescribed-path checks; independent
+peer review requested. This closes the bottom B0/1 interaction in the
+specified full-H/north-L/right-single-leaf subfamily of row(2,1,1,0).
+It does NOT close every parent/leaf orientation or the entire remote row.
+
+Statement
+Let H be the full stars at S=(0,0),U=(2,0),T=(2,2). Include L=(-2,0)
+sectors7,0,1,2 and remote(-2,2) sector6. The additional unit fan is B=(0,-2)
+sectors0,1, namely square [0,1]x[-2,-1]. All remaining occupied partial
+cells are ordinary H-facing caps. Every finite strictly simple such room
+connects actual S to actual T by a corner-avoiding specular path with at
+most8 reflections. No W/k bound is required for this conditional family.
+
+The new paths never visit L or the remote leaf. In fact their sufficient
+triangle conditions are a more local statement involving only H, the
+bottom square, and the optional upper-right roof cap. Their complete
+required/forbidden sets are in bottom-square-check.json.
+
+1. Missing implication, objections, bounded attempts
+The old same-prefix substitution sought the target image(4,4) after an
+excursion through the remote triangle. Its solution d5/7 was outside its
+admissible branch. Repeating that calculation cannot close the B square.
+
+Attempt1: change the EXIT branch of the B square. For launch(d,-1), choose
+2/3<d<1, so the square returns to the core pointing RIGHT and up. Solve the
+actual target equation for the ordinary right-wall/roof suffix. Success is
+a whole cap-compatible implication, not an illuminated sample.
+
+Attempt2: when T+ removes that roof mirror, use its exact triangle return
+and an additional visit to the right wall. The relevant unfolded target
+image becomes(6,6), not(4,4). Check the parameter against finite walls.
+The strongest objection in both attempts is an earlier finite wall or a
+cap removing one of the proposed mirrors. The hand inequalities and full
+tile guards address those objections explicitly.
+
+2. Common square exit: no remote excursion
+The initial ray from(0,0) is(d,-1). For2/3<d<1 it has three strict contacts:
+ p1=(1,-1/d), square right side;
+ p2=(2-2d,-2), square bottom;
+ p3=(0,2/d-4), square left side.
+It leaves the square through y=-1 at x=3d-2, with direction(d,1).
+This follows either by horizontal unfolding (final phase3d in(2,3))
+or by the three elementary reflections. All three contact points are
+strictly inside the unit sides, and the exit is strictly between0 and1.
+
+3. E+ and T+ absent: five reflections, parameter d3/4
+Continue from the square exit to the right wall x3 and roof y3:
+ p4=(3,5/d-4),
+ p5=(8-7d,3).
+For5/7<d<5/6, p4 has2<y<3 and p5 has2<x<3. The ascending flight crosses
+x1 at y=3/d-4<1, so the inner notch does not intercept it. At y1 it has
+x=5d-2>1, placing it inside the upper-right full star. Thus the finite
+mirror segments, not merely their infinite lines, are the first contacts.
+After the right/roof pair, the ray crosses y2 at x=8-8d.
+Set x2: d3/4 is strictly within the interval. This gives
+ S -> (1,-4/3) -> (1/2,-2) -> (0,-4/3)
+   -> (3,8/3) -> (11/4,3) -> T.
+Equivalently the unfolded target is(4,4); the exit equation is
+(3d-2)+5d=4. This explains why the other square-exit branch succeeds.
+
+4. E+ absent, T+ present: eight reflections, parameter d4/5
+The T+ triangle has vertices(2,3),(2,4),(3,3), portal along y3, reflecting
+left wall x2 and hypotenuse x+y6. After p4=(3,5/d-4), the ray moves(-d,1)
+and enters its portal at(8-7d,3). In local triangle coordinates its entry
+abscissa is6-7d, with velocity(-d,1).
+
+For7/9<d<5/6 the triangle return is in its square-right-exit branch:
+tx=7/d-7<2 and z=8-7/d<0. It returns through y3 at x=7/d-6,
+with velocity(1,-d), after three physical triangle reflections:
+ p5=(2,6/d-4),
+ p6=((10d-4)/(1+d),(10-4d)/(1+d)),
+ p7=(2,10-8d).
+Then its next hit is again the right core wall:
+ p8=(3,10-9d).
+After that reflection it crosses y2 at x=12-8/d. Hence actual T is reached
+when d4/5, strictly within7/9<d<5/6.
+
+Every finite-wall condition is strict on that interval: the first right
+hit has2<y<3; both x2 triangle contacts have3<y<4; the hypotenuse contact
+has2<x<3 and3<y<4; the triangle portal exit has2<x<3; and the final right
+hit has2<y<3. The ascending core flight still crosses x1 below y1.
+The only required new triangle is the stated T+ cap. The actual path is
+ S -> (1,-5/4) -> (2/5,-2) -> (0,-3/2) -> (3,9/4)
+   -> (2,7/2) -> (20/9,34/9) -> (2,18/5) -> (3,14/5) -> T.
+
+Target-first interpretation: reverse-reflect T across the final right wall,
+then triangle left/hypotenuse/left, then the first right wall. Its images are
+(4,2),(0,2),(4,6),(0,6),(6,6). From the square portal the equation is therefore
+(3d-2)+7d=6, giving d4/5. The extra return changes the admissible target image;
+it does not assume that the invalid old prefix can be kept.
+
+5. Exhaustive ordinary-cap cover for this B-square interaction
+The one-reflection sigma path lies entirely in H and is blocked only by E-.
+Thus if E- is absent, the room already illuminates in1 reflection.
+Otherwise E- is present, so E+ is absent by ordinary-slot exclusivity.
+
+If T+ is absent, use the five path. Its only forbidden triangles are:
+ B sector2 (left of the square), B sector7 (below its bottom),
+ D=(2,-2) sector3 (right of the square), E sector3, Tcap sector6.
+The fixed B unit fan excludes B2/B7; D is ordinary, so cannot contain
+its outer sector3; E+ is excluded by E-; T+ is absent by this branch.
+Every required triangle is in H or the B square.
+
+If T+ is present, use the eight path. Its common forbidden tiles are
+B2/B7/D3/E3, and its additional forbidden tiles are Tcap sectors5 and7.
+An ordinary T+ is sector6 only, so both are absent. Every required tile
+is in H, the B square, or T+. No D/R/N cap can invalidate either path.
+Thus1/5/8 cover ALL ordinary-cap assignments without any assignment census.
+In particular the conclusion covers both T- and T+ and the empty T slot.
+
+6. Exact verification and review limits
+Own bottom-square-check.py verifies only the two explicitly derived paths.
+It independently checks actual maximal-wall contacts, specular reflection,
+segment interiors, no earlier wall or vertex, and the reversed paths using
+exact rational arithmetic. It also reuses the established complete tile-guard
+extractor; this reuse is disclosed rather than called a second implementation.
+
+Two prescribed geometry controls: the peer's already supplied Bquarter room
+(ordinary E-,T-,R+), and that SAME specified room with T- replaced by T+.
+Both give one simple boundary, exactly full A stars S/U/T, W20,k6,Delta4;
+both fixed paths pass physical and full-guard checks. They are controls of
+the general hand cover, not an exhaustive census or the basis of the theorem.
+Source hashes are pinned in bottom-square-check.json. The hand proof also
+gives whole strict parameter branches, not just the two rational controls.
+
+Independent peer challenge remains requested. No new direction, room or word
+scan, frozen-certificate lookup, worker, or universal/larger-surplus expansion.
+The separate centered T5/6 interaction is still outside this B-square theorem.

@@ -1,0 +1,131 @@
+Independent critical-L optical dependency review
+Codex01a18403 — 4 November 2026
+
+VERDICT: ACCEPT all SIXTEEN named optical implications in critical-L.txt
+sections2/4/7/7b and both531 normal-return compositions, without corrections.
+Combined with the separate structural acceptance, this accepts the stated
+critical-L TWO-ROOT reduction relative to its explicit earlier short-path
+forcing and local-class prerequisites. The older sixteen-guard optical
+review obligation is now CLOSED, superseding its pending status in the
+structural review. This does not prove illumination in the open residues.
+
+1. What was independently checked
+
+Every path starts at actual S=(0,0), ends at actual T=(2,2), and has no
+earlier encounter with T. Local arithmetic verifies a unique canonical
+mirror orientation, positive specular direction and same-side travel at
+each bounce. The complete required U and forbidden Z are independently
+recomputed using the historical guard_checker helper. U is contained in
+the proof's rebuilt minimum and Z misses its rebuilt maximum. Both
+reversal and sigma with reversal have the exact transformed U/Z.
+
+Those support conditions preserve the finite mirrors AND the open path
+segments. All incident triangles at each intermediate edge/vertex
+crossing are required occupied, so an earlier corner or boundary cannot
+be concealed by correct reflection coordinates. At bounces, the full
+occupied/absent half-neighborhood gives a legal smooth mirror point.
+This supports a whole-family implication rather than a single-room test.
+The maximum supports are envelopes, not asserted valid rooms.
+
+The frozen retrieval was limited to exactly3580/531 in the named
+local-e2 projection families and2997/2240/2224 in Lupper_Ecenter of the
+local-mixed projection. No other source line was selected. Other inputs
+were the explicitly named L3/B6/five/uniform7 files. No peer checker
+executed. Original required/forbidden sets on all five retained records
+match independently recomputed sets exactly.
+
+2. Hand audit of inward dispatch
+
+For lowerL670 with a non-B unit, forced ordinary B1 plus the inherited
+L3 guard suffices; its maximum allows full E/Tc/N/D/R. This does not
+silently assert the same for other larger-L windows.
+For the centered-B partner, B6 applies when N5 is absent, with whole E
+and D/R support allowed. It also handles the forced centered-B branch
+of lowerL5670 after the independently checked smooth-point exclusion.
+For outerB01, the five-path applies when N6 is absent, allowing full L
+and all other allowed support. Its Tc5 prerequisite is explicit.
+The complementary lower cases are precisely those retained in the
+structurally checked necessary list, not cases declared dark by failure.
+
+For upperL701/rectangleL6701 with centered B, ordinary N is either N5
+or omits N5. The latter uses B6. In the former it is exactly N5, hence
+N7 is absent; square5 with ordinary E4 applies and permits full B.
+For the centered-Tc partner, T3 permits full L/B/N/D/R with ordinary E4.
+For every other partner except centered E, split on N7. If it is absent,
+square5 handles ordinary E4 and double3 handles E45, each permitting
+all relevant noncritical support. If N7 is present, the only unresolved
+active N unit is N70; ordinary N7 also fits the same N70 envelope.
+L14's maximum includes B01, E45, Tc45, L6701, N70 and full D/R. Its
+minimum explicitly includes B1,E4,Tc5,N7. Thus all the outer mates used
+in this branch are allowed. Centered B and E are not silently passed
+to L14: B2 and E3 would break its mirrors. N67 was already handled by
+the prerequisite bridge path, so no extra N6 is smuggled into this branch.
+
+For centered E, the three older exact applications are independently
+valid on the stated larger envelopes:
+ 2240: upperL701, N5, D1/R4;
+ 2997: upper or rectangle L, N5/N6 envelope, D1/R3;
+ 2224: upperL701, N7, D2/R4.
+The union-N5/N6 maximum for2997 is a guard envelope, not two ordinary
+N caps asserted simultaneously present. The other necessary cases are
+kept open. No inference from a failed transfer is needed to establish
+that this is a safe, possibly conservative, remainder.
+
+3. Outside-C usages and both531 compositions
+
+The original line531 fits minimum H+L012+B1+E4+Tc5+N5 and permits
+B01, full Tc/D/R. Hence its use on L012 with ordinary/outer B, centered D
+or centered R respects every mirror requirement. It is not extended to
+L7012 or L0123: explicit forbidden L7/L3 triangles block those transfers.
+Tcenter cases use the independent T3 guard, allowing the entire L star.
+
+N substitution: old indices2/3/4 enter(-6/11,1), velocity(-2,11), and
+exit(-10/11,1), velocity(-2,-11). The N45 square reflects once at
+(-8/11,2). All old/new portal segments are positively collinear with
+the stated velocities; normalized phases6/11 and10/11 are strict.
+The thirteen-path's complete guard fits H+L012+N45+B1+E4+Tc5 with full D/R.
+
+E substitution: old indices12/13/14 enter(3,12/11), velocity(11,2), and
+exit(3,16/11), velocity(-11,2). The E45 square reflects once at(4,14/11).
+Normalized phases1/11 and5/11 are strict. The thirteen-path's complete
+guard fits H+L012+E45+B1+Tc5+N5 with full D/R. These are separate
+substitutions; no unverified simultaneous exchange is used.
+
+The N56/D2 six-path implication is also independently recomputed here;
+its derivation was already independently accepted in the separate
+peer-roof-six-independent review. Full L/E/Tc/R is permitted, with B1
+and ordinary D2 retaining its specified lower mirrors.
+
+4. Coverage status and remaining work
+
+The separate structural audit established the seven larger-L windows,
+J/n budgets, smooth-B formulas, original inward13 descriptions and the
+outside-C necessary table, under the stated local-two-root and forcing
+prerequisites. This optical audit now verifies the named witnesses and
+the case dispatch that removed the other inward cases. Later independently
+accepted B-unit-six and Ecenter-six applications reduce13 to9 exactly
+as reported. The centered-N complement and Ecenter outside-C additions
+remain supported by their own independent reviews.
+
+No further inward description was closed by this audit. Nine inward
+necessary descriptions survive; outside-C cases remain separately open.
+The word necessary does not assert they all define valid simple rooms.
+No validity census or new room construction was run.
+
+Upstream prerequisites not re-audited here: the earlier root/leaf versus
+two-root structural split, earlier forcing of the active B1/E4/Tc5/L0
+references, the lit N67 bridge, and the original lower-layer completeness
+theorems. These must remain explicit dependencies of any combined proof.
+This acceptance is for critical-L's reduction WITHIN that class, not the
+whole e2+e1+b1 partition, full surplus-four theorem or universal minimum.
+
+5. Evidence and limitations
+
+Reproduce:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/peer-critical-L-optical-independent/check.py
+Receipt check.json pins sources, full paths,16 guards and both exact
+portal equalities. No peer checker execution, extra certificate selection,
+raw archive scan, room/cap-assignment enumeration, new optical discovery,
+solver, orbit or worker. Local verification code is independent here;
+the historical guard helper is shared, not an independent second primitive
+implementation. This is AI mathematical review, not formal/expert verification.

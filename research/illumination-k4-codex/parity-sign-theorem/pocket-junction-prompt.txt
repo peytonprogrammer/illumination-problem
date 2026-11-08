@@ -1,0 +1,293 @@
+Independent narrow proof challenge, tools disabled. NO room/ray/word/direction discovery. Check raw-B angle incidence and whether the withdrawn end-leaf first-flank premise is actually impossible, rather than merely unsupported. Also check reviewer correction that literal corridor B forces N LEFT portal but not N's triangle size. Do NOT infer global realization from local incidences. State ACCEPT/REJECT and corrections. Context+script follow.
+
+### 26.7 Corridor-side literal leaves: explicit actual detection
+
+**Status: focused independent Opus review accepts the scoped hand proof
+(exit0), with its wall/portal and frame corrections incorporated. Exact
+checks verify only the three prescribed segment formulas.** This is a
+bounded geometric extension of26.6, not universal pocket detection.
+
+First sharpen26.4: P_A=8 for every raw room in its W<=26 scope. If P_A=9,
+then sum(q_A)=12 and every partial charge equals its actual degree. The three
+equality types listed in26.4 all have positive indegree. Thus Z=0 and
+there is exactly one indegree2 partial. The remaining eight partials are
+one-triangle degree1 leaves. The unique merger has degree at most3.
+The complete degree sum is therefore at most8+8+3=19, whereas the tree
+on I+P_A=11 vertices requires20. This contradiction does not depend on
+H connectivity. Connected H has seven partial neighbors; P_A=7 is
+impossible because its shared M upper half-star has an outgoing neighbor
+at(2,2), which is not among those seven. Disconnected H already has eight
+partial neighbors. Hence both cases have exactly eight partials.
+
+In connected H normalize S=(0,0), M=(2,0), T=(4,0), with M the upper
+half-star. Its only further neighbor is N=(2,2). The complete tree consists
+of these two full fans, M, and seven leaves centered at
+
+    (-2,0), (0,2), (0,-2), (2,2), (6,0), (4,2), (4,-2).
+
+Every leaf has indegree1,outdegree0, hence m=1 or2. If r leaves have m=2,
+then sum(q_A)=3+7+r=10+r and W=24+r, so r<=2. In disconnected H there are the
+M,R bridge and six leaves: M has charge3 whether m=3or4, R has charge2,
+so sum(q_A)=11+r,W=25+r and r<=1. These are necessary fan shapes, not an
+assertion that every choice embeds as a raw simple room.
+
+Now suppose the specified literal pocket is the one-triangle leaf at
+A=(4,2), on the corridor side of T. Its C is c=(4,1), and its B is either
+(3,1)or(5,1). The slide translates these three vertices horizontally;
+write u=(1,0) for one parameter sign. The line y=1 of the portal and
+its fixed flank remains fixed. Denote by L the right leaf centered
+at(6,0). Its sole incoming portal is either the upper or lower unit
+segment at x=5. All the mirrors in L stay fixed under THIS pocket slide.
+The forced region contains the open rectangle(-1,5) x(0,1), since the
+full S/T squares and the upper M half-square join along interior portals.
+
+**Upper right portal.** Use moving midpoint c=(4,1). The first leg is
+the straight segment S->c, with displacement w=(4,1). It lies in the
+forced corridor until its endpoint. Select the fixed horizontal flank
+reflection at c. The outgoing physical displacement is(4,-1).
+If L has m=2, it is the rectangle[5,6] x[0,1]. The ordinary reflection
+at(6,1/2)in x=6 returns the path to the ACTUAL T=(4,0).
+If L has m=1, it is the triangle with vertices(6,0),(5,0),(5,1).
+Its two fixed mirrors are D_L:x+y=6 and H_L:y=0. The same effective return
+in x=6 is realized by the prescribed D_L,H_L,D_L reflections, at
+
+    (16/3,2/3), (11/2,0), (28/5,2/5).
+
+The path enters L at(5,3/4), leaves at(5,1/4), and ends at T. Each
+reflection point lies strictly inside its mirror segment. The intervening
+segments stay inside the convex triangular leaf or the full T square.
+The open first leg contains no integer point, since gcd(4,1)=1. None of
+the subsequent open segments contains an integer point or another physical
+corner, as the prescribed coordinate checks show. Both descriptions have
+developed target(8,2), with c its midpoint and equal primitive halves(4,1).
+Indeed D_L H_L D_L is reflection in x=6; composing with reflection in y=1
+maps T to(8,2). This use of D_L H_L D_L is in a DIFFERENT, fixed leaf, so
+there is no moving-mirror term from those ordinary reflections.
+
+The cone sector at c is checked just as in26.4, now with alpha=atan(1/4).
+If the upper-right quadrant at c is missing, the S germ is pi+alpha,
+and the outgoing germ across the fixed horizontal flank develops to
+2pi+alpha. If the upper-left quadrant is missing, the adjacent copy gives
+the interval[alpha,pi+alpha]. Both have length pi and embed in the
+6pi cone at this270degree corner. Rawness actually forces B separately in the two upper cases. For an
+upper rectangular L, B=(3,1) would leave (5,1) smooth, with90degrees
+from T and90degrees from L. Thus B=(5,1), and the upper-left quadrant
+at c is missing. For an upper triangular L, B=(5,1) would have
+90+45+45=180degrees, also forbidden. Thus B=(3,1), and the upper-right
+quadrant is missing. In either case the horizontal ray on the side
+opposite the pocket is an actual wall: the other triangle at A=(4,2)
+is absent. These are the fixed flanks used in the two cone computations.
+
+**Lower right portal.** The segment x=5,0<y<1 is then a fixed physical
+mirror. The literal pocket must have B=(3,1). To see this, if B=(5,1),
+T contributes90degrees at B and the pocket contributes45degrees, but
+L with a lower portal contributes none: it lies at y<=0. No other
+fan in the displayed complete fan shape reaches B. Thus B would have
+angle135degrees, contrary to its specified literal225degree angle.
+
+The left horizontal flank(2,1)--(3,1) must also be an actual wall.
+The full T fan, M and the pocket already contribute90+90+45=225degrees
+at b. If N's portal were on its right side, N would add45degrees
+when triangular or90degrees when rectangular, contradicting the literal
+225degree angle. Thus N's portal is on its left side; its fan may have
+one OR two triangles there. This leaves the required left flank fixed.
+
+Use instead the moving midpoint b=(3,1). The first leg S->b is inside
+the forced corridor, with displacement w=(3,1). Select reflection in
+the fixed horizontal flank y=1. The outgoing physical displacement(3,-1)
+reaches the fixed right wall at(5,1/3), reflects, and ends at ACTUAL T.
+Developing T successively across x=5 and y=1 gives(6,2), so b is its
+midpoint and both developed halves equal the primitive vector(3,1).
+There are no other corner hits: the legs are interior to the corridor
+and full T square except for the one prescribed interior mirror hit.
+
+Here b has the physical225degree link[pi,9pi/4]. Put alpha=atan(1/3).
+The S germ is pi+alpha in the original copy. Reflect the outgoing T arm
+across the horizontal flank with ray angle pi: its developed germ is
+alpha in the adjacent copy. The interval[alpha,pi+alpha] crosses that
+flank once, has length pi, and embeds in the total cone10pi. Thus this
+is the required intrinsic pi continuation, not a3pi one.
+
+**Defect and scope.** All selected corner-flank and ordinary mirrors
+have fixed supporting lines during the specified slide. The actual marks
+stay fixed. Only the chosen corner translates, with velocity u. In the
+source frame the Section3 formula is therefore Q(eta)=-2u in all three
+cases; det(w,Q)=2 in this normalized orientation. Every direction used
+is neither axial nor diagonal.
+Thus the specified literal corridor-side leaf is detected directly.
+After reversing an event to restore source naming, the prefix can be
+nontrivial: the general source-frame expression is Q=-2 L_p u, not
+necessarily -2u in physical coordinates. The fixed-prefix linear map
+L_p is orthogonal; under the grid symmetries and reversal below,
+nonzero defect and |det(w,Q)|=2 are retained.
+Reflection x->4-x and exchange of the actual endpoint names handles the
+corridor-side leaf at(0,2). Whole-room vertical reflection handles the
+lower-corridor normalization. It does NOT turn an opposite-side leaf in
+a fixed upper-corridor room into a case covered here. The opposite-side
+leaves, end leaves, disconnected-H pockets, and unrestricted wall counts
+remain unresolved. No direction, word, trajectory or room scan is used:
+the formulas above are prescribed by the forced corridor and fixed cap
+return isometry; the checker verifies only those formulas.
+
+
+### 26.8 Opposite-side detection and a withdrawn end-leaf attempt
+
+**Status: the opposite-side conditional construction passes independent
+focused Opus review(exit0). The proposed end-leaf extension is withdrawn:
+its fixed-flank premise is incompatible with rawness, as explained below.**
+Retain26.7's connected-H upper corridor. This does not settle all its
+leaves, much less the universal goal.
+
+**Opposite-side leaf.** Suppose the specified literal pocket is
+A=(4,-2), C=(4,-1), B=(5,-1), and the segment y=1,1<x<2 is a fixed wall.
+The last condition says the central N portal is on its right side.
+At B the full T fan contributes90degrees and the pocket45degrees.
+For the prescribed225degree B, the right leaf must contribute90degrees,
+so it is the m=2 rectangle[5,6] x[-1,0]. There is no other possible
+contributing fan in26.7's forced center list. The opposite orientation
+B=(3,-1)would have only135degrees because M has no lower-half tiles;
+thus it is not a literal pocket in this normalization.
+
+The first half is the prescribed path
+
+    S=(0,0) -> (5/3,1) -> B=(5,-1).
+
+The first reflection is in the fixed central flank y=1. Its two open
+segments lie in the forced corridor and full T square. Select the fixed
+horizontal flank y=-1 at B, with its physical wall ray pointing right.
+The second half, with initial physical velocity(5,3), is
+
+    B -> (6,-2/5) -> (16/3,0) -> (11/3,-1)
+      -> (3,-3/5) -> T=(4,0).
+
+Its ordinary mirrors, in order, are x=6, y=0, y=-1 and x=3. The first
+two hits are in the fixed right rectangle. The third lies in the FIXED
+part3<x<4 of T's lower wall, outside the moving portal4<x<5. The fourth
+lies in T's fixed left wall below the M corridor. It crosses the right
+portal at(5,-1/5), never at an endpoint. Every displayed ordinary hit is
+strictly interior to its physical mirror segment. Every open segment
+lies in the given rectangles, has noninteger y throughout its interior
+or at its isolated y=0 crossing has noninteger x; no further physical
+corner occurs.
+
+Unfold the first y=1 reflection. The developed corner is B'=(5,3).
+Developing ACTUAL T through the subsequent fixed mirrors, the selected
+corner flank and that first reflection gives T'=(10,6). Thus the halves
+are both the primitive w=(5,3). The first leg has duration1 at speed|w|;
+the second has durations1/5,2/15,1/3,2/15,1/5, totaling1.
+
+For intrinsic legality put alpha=atan(3/5). The physical link at B is
+[0,5pi/4], its source germ is pi-alpha, and the selected horizontal-flank
+reflection puts its outgoing germ at -alpha in the adjacent copy. The
+interval[-alpha,pi-alpha] has length pi and embeds across the fixed ray0
+in the total10pi cone. This proves the required pi continuation.
+All supporting mirror lines in this event are fixed during the specified
+horizontal slide; B' has velocity u=(1,0). Consequently Q=-2u and
+|det(w,Q)|=6. The chosen direction is neither axial nor diagonal.
+
+**Withdrawn end-leaf attempt: local rawness defeats the premise.**
+The earlier candidate took a literal end pocket A=(6,0),C=(5,0),B=(5,1),
+and assumed y=1,2<x<3 was a fixed central wall, meaning N's portal was
+on its LEFT side. It proposed first-half reflection at(5/2,1), followed
+by the midpoint C and lower-T reflections. The reflected-coordinate
+arithmetic gave equal halves(5,2), actual target image(10,4), and a
+nonzero frame-correct defect(0,2). This algebra alone did NOT establish
+an admissible event in the room class.
+
+Focused review found that its lower hit(7/2,-1) could be a portal rather
+than a wall. More fundamentally, a separate local incidence argument
+shows that the assumed central wall cannot occur at all with this
+literal end pocket. At B=(5,1), T contributes90degrees and the end
+pocket45degrees. Literal225 forces the(4,2)leaf to be the upper-right
+m=2 quadrant[4,5] x[1,2]. At the DIFFERENT B point b=(3,1), M and T
+then contribute90degrees each. That upper-right quadrant contributes
+nothing at b. No other leaf from26.7's complete center list reaches b
+except N when its portal is on its RIGHT side. If N's portal were left,
+b would be a smooth180degree boundary B, forbidden in a raw room.
+Thus N's portal must be right, and the proposed first reflection point
+(5/2,1) is inside that portal. The first half fails before its midpoint.
+
+The proposed end-leaf event is therefore withdrawn as geometric progress,
+not repaired by adding a lower-wall assumption. Its exact arithmetic is
+retained only as a FORMAL negative-scope control in pocket-opposite.py.
+It is not an in-class counterexample to universal detection. In particular
+the review's optional two-reflection repair for a lower triangular leaf
+would not fix the invalid first reflection. End leaves remain open.
+
+The accepted opposite-side construction still needs the stated fixed
+left-central-flank hypothesis. Whole-room grid symmetries preserve that
+hypothesis; they do not remove it for a fixed specified pocket. Exact
+checks verify its prescribed segments and target development. They are
+not a room/direction/word scan or a proof of universal pocket detection.
+The separate prescribed junction-incidence control checks the rawness
+incompatibility above without constructing or enumerating rooms.
+
+
+
+
+"""Prescribed B-junction triangle incidence, no room or path enumeration."""
+from pathlib import Path
+import json
+b=Path(__file__).resolve().parent
+ring=[(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
+def fan(a,start,count):
+ return [(a,(a[0]+ring[j%8][0],a[1]+ring[j%8][1]),
+          (a[0]+ring[(j+1)%8][0],a[1]+ring[(j+1)%8][1]))
+         for j in range(start,start+count)]
+def angle_at_B(point,triangles):return 45*sum(point in tri for tri in triangles)
+T=fan((4,0),0,8);M=fan((2,0),0,4)
+end_upper=fan((6,0),2,1)
+Tup_right_rectangle=fan((4,2),6,2)
+Tup_left_triangle=fan((4,2),5,1)
+assert angle_at_B((5,1),T+end_upper)==135
+assert angle_at_B((5,1),T+end_upper+Tup_right_rectangle)==225
+# FOUR prescribed local N fans, not global room choices or searches.
+N_cases=[('left_triangle',fan((2,2),5,1)),
+         ('left_rectangle',fan((2,2),4,2)),
+         ('right_triangle',fan((2,2),6,1)),
+         ('right_rectangle',fan((2,2),6,2))]
+receipts=[]
+for name,N in N_cases:
+ end_junction=angle_at_B((3,1),T+M+Tup_right_rectangle+N)
+ corridor_literal=angle_at_B((3,1),T+M+Tup_left_triangle+N)
+ assert end_junction== (180 if name.startswith('left') else (225 if name.endswith('triangle') else 270))
+ assert corridor_literal==(225 if name.startswith('left') else (270 if name.endswith('triangle') else 315))
+ receipts.append(dict(local_N=name,end_pocket_junction=end_junction,
+                      corridor_literal_B=corridor_literal))
+out=dict(status='PRESCRIBED_JUNCTION_INCIDENCE_PASS',receipts=receipts,
+ end_leaf_fixed_right_flank='INCOMPATIBLE_WITH_RAWNESS',
+ corridor_lower_case='FORCES_N_LEFT_PORTAL_BUT_NOT_TRIANGLE_SIZE',
+ scope='Local prescribed fan incidences; no global room realization or census.',discovery_runs=0)
+(b/'pocket-junction.json').write_text(json.dumps(out,indent=2)+'\n')
+print(json.dumps(out,indent=2))
+
+
+{
+  "status": "PRESCRIBED_JUNCTION_INCIDENCE_PASS",
+  "receipts": [
+    {
+      "local_N": "left_triangle",
+      "end_pocket_junction": 180,
+      "corridor_literal_B": 225
+    },
+    {
+      "local_N": "left_rectangle",
+      "end_pocket_junction": 180,
+      "corridor_literal_B": 225
+    },
+    {
+      "local_N": "right_triangle",
+      "end_pocket_junction": 225,
+      "corridor_literal_B": 270
+    },
+    {
+      "local_N": "right_rectangle",
+      "end_pocket_junction": 270,
+      "corridor_literal_B": 315
+    }
+  ],
+  "end_leaf_fixed_right_flank": "INCOMPATIBLE_WITH_RAWNESS",
+  "corridor_lower_case": "FORCES_N_LEFT_PORTAL_BUT_NOT_TRIANGLE_SIZE",
+  "scope": "Local prescribed fan incidences; no global room realization or census.",
+  "discovery_runs": 0
+}

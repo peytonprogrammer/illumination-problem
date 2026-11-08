@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-11-08T07:36:49.619605+00:00",
+  "review_kind": "Independent AI HAND reconstruction and prescribed exact controls; no external referee or proof assistant",
+  "central_strip": {
+    "decision": "ACCEPT_SCOPED_NORMALIZATION_PROPAGATION_AND_DISCONTINUITY",
+    "all_six_requested_source_pins_current": true,
+    "actual_target_existence_proved": false,
+    "pending_review_closed_at_stated_scope": true
+  },
+  "eight_wall": {
+    "decision": "ACCEPT_WRITTEN_CHAIN_AFTER_EXPLICIT_PACKET_CORRECTIONS_AT_AI_HAND_LEVEL",
+    "scope": "Every finite strictly simple orthogonal polygon W<=8, all distinct real interior pairs, finite corner-avoiding specular path",
+    "manuscript_corrections": 5,
+    "reproduction_corrections": 2,
+    "fatal_gap_found": false,
+    "external_review": false,
+    "novelty_claim": false
+  },
+  "original_inputs": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/final-review/inputs.json",
+  "reports": {
+    ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/final-review/central-strip-review.md": "155b5a15b492c76655417d28159ef33b68876a4eff43e56a3851fcc803472704",
+    ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/final-review/eight-wall-review.md": "60e7051d41a941175f88039faace039da217f50d565cf5ff1820b68327b7dbc5",
+    ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/final-review/central-strip-check.json": "c85ce433c2b14bc74fcc967642fac5d800ccc21f29a2965eceb42c9ef0f325cf",
+    ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/final-review/reproduction-check.json": "1e6ad6fca5a2f3018587f3bc8e777913bdef2dec02d8f1fc793822ca940afb1a",
+    ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/final-review/u-bound-check.json": "2f4006c88324010d62c44e4d8dde5ac05d71b99fe282c7be72053ef9bbfe6973"
+  },
+  "full_staircase10_proved": false,
+  "full_r_le_8_proved": false,
+  "native_goal_changes": false,
+  "new_search": false,
+  "final_packet": {
+    "manifest_sha256": "ed5444822aa2d1b3f44a0ba9f45df3513fc480c5ca995e421c0cf5ab0b2ad2f9",
+    "proof_sha256": "7b52c59cc6e3d1949b1347fb4d594aa93f6b4d4ca76d793050415a19f82526e8",
+    "source_records": 34,
+    "acceptance_records": 13,
+    "source_pin_mismatches": 0,
+    "packet_file_hashes_verified": 15
+  },
+  "referee_addendum": {
+    "created_utc": "2026-11-08T07:42:00.148555+00:00",
+    "mathematical_judgment": "Corrected all-real orthogonal W<=8 constructive proof accepted",
+    "u_iteration_bound": "updates <= 1+n_L(tau_max)+n_R(tau_max)",
+    "u_exact_reflections": "2*n_L+2*n_R+2*k+1",
+    "u_reflection_bound": "2*floor((ys-c)*tau_max/(2a))+2*floor((yt-c)*tau_max/(2b))+2*k+5",
+    "metric_only_opposite_arm_bound": true,
+    "normal_form_repair": "c>0 follows from strict simplicity, not edge positivity alone",
+    "new_theorem_scope": false,
+    "historical_novelty_claim": false
+  }
+}

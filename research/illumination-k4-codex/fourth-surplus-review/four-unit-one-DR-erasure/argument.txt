@@ -1,0 +1,121 @@
+Four-unit/b0 rooms containing D or R: a THREE-unit reduction
+Codex01a18403, 5 November 2026
+
+STATUS: NEW parent hand proof, independent challenge requested.
+The entire local four-e1/b0 subfamily with at least ONE positive D/R unit
+illuminates actual S/T within13 reflections. Together with the separate
+both-D/R proof, this leaves only four-unit rooms whose positive cells are
+all drawn from L,B,E,Tc,N. No fullfour-unit/Delta4 result is claimed.
+
+Gap: after deleting a single noncritical unit, a three-unit path might
+lose a mirror when that unit is restored. Success requires a bounded
+auxiliary b value AND complete protection of whichever three-unit witness
+is selected. Strongest objection: retained9 forbids D3, so arbitrary
+reinsertion is false. The new point is that this precise obstruction is
+incompatible with originalb0, rather than being ignored.
+
+1. Inherited local class and topology
+
+Use finite strictly simple canonical45 rooms with fullA exactlyS/U/T,
+localH/K support, four excess-one partialcells, all othercells ordinary
+or empty, and b0. Handle directly lit N67bridge first. The separate
+four-unit-DR-erasure argument proves every remaining unit is d1/q2ROOT:
+a d0singletriangle would form one of four matching-edge root/leaf joins
+with unhealable outerC90+90=180, contraryb0.
+
+If BOTH D/R are positive, use that separate two-deletion proof<=13.
+Otherwise assume ONLYD is positive (sigma gives onlyR). D's exact root
+windows are01,12,23. Its intersection with the rest is one properHboundary
+arc; a B-D side-edgejoin would be smooth180 and is excludedb0. The only
+possible diagonalRpoint is on the H attaching arc, not isolated. All other
+cells remain Hrooted after deletion. The earlier disk-flap/contiguous-angle
+argument proves the auxiliary P0 is strictly simple with exactlyTHREE
+unitROOTS and the SAME full interiorA marks. NoW/k invariance is asserted.
+
+2. Deleting D creates at most ONE extra smooth non-A point
+
+Only vertices of the removed fan can change boundary status. Apart from
+the disappearing Acenter, these belong to
+ (1,-1),(1,-2),(2,-1),(3,-1),(3,-2).
+Because R is ordinary here (not aunit), the possible remaining angles are:
+ (1,-1): H180 + Bcontribution0,45or90. It MAY newly be smooth180.
+ (3,-1): H90 + ordinaryRcontribution0or45, hence90or135, never180.
+ (1,-2): Bcontribution0or90, never180. BunitrootBO can reach it with
+          ONE triangle90; a two-sector Hroot cannot supply two quadrants.
+ (3,-2): zero, since the other incident Acenter is remote and absent.
+ (2,-1): H180, the baseline uncovered-H C midpoint counted in M, not
+          an EXTRA point in b=sN-M. Its newly exposed status does not addb.
+No other K site contributes at these points. No unaffected vertex can
+newly become smooth. Since originalb0, the auxiliary has b0or1.
+The independent local coefficient check uses single-site incidence lists,
+not products of cap assignments or completed rooms.
+
+3. Accepted THREE-unit proof applies to b<=1
+
+Use surplus-four-local/three-unit-b1/argument.txt and its independent
+review in three-unit-b1-independent/review.txt. For these THREEroot
+auxiliary rooms without D/Rpositive cells, only its sections3–5 are needed:
+reference forcing, Nunit+two-critical table, and three-critical C/O table.
+There is no W/k/count restriction in that accepted optical cover.
+
+Although its original statement names exactb1, the SAME proof coversb0
+as well. The Nunit table and optical fallback clauses do not useb atall.
+The ONLY use of b1 in the three-critical repair excludes TWO distinct
+unhealed smooth180 points, because they requireb>=2. This remains a
+contradiction for everyb<=1. No exactb=1 equality, cap count or existence
+of a permitted smooth point is used to select a path. Root/leaf cases
+are irrelevant here: the three surviving units are already genuine roots.
+Thus P0 has a legal actualS/T trajectory within13 from the accepted cover.
+
+4. Complete reinsertion check and the one potentially bad branch
+
+Read ONLY the148 whole-guard clauses already stored in our accepted
+three-unit-b1-independent/check.json. No raw archive or new path is read.
+Every clause's required support avoids the ENTIRE D/R stars. Exactly TWO
+clauses have ANY D/R forbidden support:
+ three_CL_CE_BO_1: forbiddenD3; its minimum includesB01;
+ three_sigma_CL_CE_BO_1: forbiddenR2; its minimum includesE45.
+All other146 complete guards avoid fullD/R in BOTH U andZ.
+This is a check of the complete accepted proof inventory, not selection
+of whichever ray happens to survive.
+
+When restoring the soleDunit, the sigma clause'sR2 is unaffected, since
+R is ordinary throughout. The direct retained9D3 could be blocked only
+by D23; neither D01 norD12 contains3. But that very clause requires B
+outer01. OriginalB01+D23 makes outsideC=(1,-2) smooth180: B andD each
+supply90 and NOotherKcell reaches it. This contradicts originalb0.
+Hence the only potentially blocked selected clause is UNREACHABLE for
+an original room in this subfamily. All other selected witnesses survive.
+
+For the soleRunit case, apply sigma/reversal: the only dangerous R23
+reinsertion would pair with E45 at outerC=(4,1), again fixed180 forbidden
+by originalb0. The directD3 absence is unchanged because D is ordinary.
+Local square-exchange paths are already included in the accepted148
+whole-guard clauses; the separate THREE-unit proof's two-root deletion
+inventory is not needed in this exactly-one-D/R case.
+
+Therefore the actual path selected in P0 keeps every used triangle and
+mirror absence after restoring the removed unit. Endpoint order remains
+actualS/T; reflection count remains<=13. No monotonicity assumption.
+
+5. Result and remaining FOUR-unit work
+
+Combining this exactly-one case with the separate BOTH-D/R theorem yields:
+ every stated local FOURunit/b0 room with at leastoneD/Rpositive cell
+ illuminates actualS/T within13 reflections.
+Only the NOpositiveD/R subfamily remains in that partition: four units
+among L,B,E,Tc,N, with D/R ordinary/empty. That subfamily is not classified
+or solved by this note. Otherlocal/mixed/West/remote obligations remain.
+
+Evidence check.py/json verifies148storedguard dependencies, precisely the
+two badclauses, their unitD/Rblockingforms, the two unhealableb0junctions,
+and local coefficient/newb bound. Topology, b<=1 proof extension and
+inventory completeness are hand arguments depending on the earlier accepted
+proofs and explicitly require independent challenge. No newcompletedroom,
+capproduct, ray/direction/word discovery, archive, solver orworker.
+ParentAI mathematical work, not formal or expert verification.
+
+[done parent] FOURunit with at leastoneD/R<=13.
+[waiting on Codex01a1a00f] Independent deletion/newb/retained9exception review.
+[in progress] FOURunit with noD/Rpositive, and otherDelta4 gaps.
+Next move: verify the new reduction before counting it as accepted.

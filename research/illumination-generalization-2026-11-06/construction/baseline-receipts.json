@@ -1,0 +1,117 @@
+{
+  "kind": "read-only baseline source and receipt reconciliation; no replay",
+  "inspected_at": "2026-11-06T21:26:37.045900+00:00",
+  "sources": [
+    {
+      "path": ".context/illumination-k4-codex/restricted-theorem-note/theorem.txt",
+      "sha256": "f70d1c608646eedcfe0027b9cac2c67ab7941c77a2f7b5ab82cebebb82a3124b",
+      "size": 9721
+    },
+    {
+      "path": ".context/illumination-k4-codex/restricted-theorem-note/certificate-appendix.txt",
+      "sha256": "8691fb8c9bae174f73f18f20061f65eac57bd4ae1d234a78e5b58307bafdcba3",
+      "size": 7385
+    },
+    {
+      "path": ".context/illumination-k4-codex/restricted-theorem-note/attainment-check.txt",
+      "sha256": "2928b1059cb6c0a6422dd2efaed5efb82ba86b6a351fbd2f51e3620c6b1751be",
+      "size": 3001
+    },
+    {
+      "path": ".context/illumination-k4-codex/k6-support-census/findings.md",
+      "sha256": "1a4fbd62097a5799980365b7536268b6ee77b1839309693e1f680cca696cdd00",
+      "size": 5089
+    },
+    {
+      "path": ".context/illumination-k4-codex/global-route-review/findings.md",
+      "sha256": "ac275c61da1560afc5e9ec40568f272bc266f95fae5c50cf8f5cc9a6173d6bb0",
+      "size": 8857
+    },
+    {
+      "path": ".context/illumination-k4-codex/k6-i4-review/findings.md",
+      "sha256": "75e6dba0213dc5fd54fd2d23d8895c77bf7eb35adc6a165a224e044c42f1b8df",
+      "size": 1274
+    },
+    {
+      "path": ".context/illumination-k4-codex/k6-i4-review/check.json",
+      "sha256": "17e2979bdd9fe8dda1335ba8a9f5c2b34ab9ea612c84942c9990c561294452a1",
+      "size": 2119
+    },
+    {
+      "path": ".context/illumination-k4-codex/k6-final-review/findings.md",
+      "sha256": "d4f9b86a3ce67167d02d617e1898a5a2a1208a6078bac29bce3b24ae7bd3021a",
+      "size": 2987
+    },
+    {
+      "path": ".context/illumination-k4-codex/lower-bound-proof-audit/full-replay/findings.txt",
+      "sha256": "8b79f73cdd98e43f8a349bb50e056989e4fc1a3c2ec909420fc8c59bfcf77348",
+      "size": 6537
+    },
+    {
+      "path": ".context/illumination-k4-codex/lower-bound-proof-audit/full-replay/summary.json",
+      "sha256": "36bf946894084d6277dd6610e74e24884f60380afd3a0ba3d478466a16612f64",
+      "size": 208
+    },
+    {
+      "path": ".context/illumination-k4-codex/lower-bound-proof-audit/full-replay/final-binding.json",
+      "sha256": "0ccffbe396d2bd33ecbb052af6e83fd8287f025899af2d9806070757c53041ec",
+      "size": 951
+    },
+    {
+      "path": ".context/claude-illumination-check/encoder-necessity-audit/findings.md",
+      "sha256": "a9bbd80717946bc9f6abc08e68d0d5c0b290d8ffb64f1b4e3eb52db1819aac80",
+      "size": 7800
+    },
+    {
+      "path": ".context/claude-illumination-check/arithmetic-review/findings.md",
+      "sha256": "658a998674eac9547ebb7840f6701a4af5f777af793c43ce839c3fffa8512593",
+      "size": 5651
+    },
+    {
+      "path": ".context/claude-illumination-check/provenance-review/findings.md",
+      "sha256": "26ab7440864f6d2790797b61ea8ed81f06606aa235b658461cf755fbb86bad84",
+      "size": 6538
+    },
+    {
+      "path": ".context/claude-illumination-check/attainment-review/findings.md",
+      "sha256": "8d626dadc32c6a3662ef0e1cfe757ccbe229a92de1efbe2e2589bc1c6b1b8fb0",
+      "size": 5569
+    },
+    {
+      "path": ".context/claude-illumination-check/review-preprint-v02/findings.md",
+      "sha256": "8e0105d1caab18f8892fc0f326c32331bfeb0b0a6373aa96ba4d88426b420add",
+      "size": 6908
+    },
+    {
+      "path": ".context/claude-illumination-check/k6-run/findings.md",
+      "sha256": "60596efad2bd6165d113cf6d61366a56113c9cb03f8517d912aef0155c3293d2",
+      "size": 4283
+    }
+  ],
+  "full_replay": {
+    "status": "PASS",
+    "guard_files": 52,
+    "guard_records": 193480,
+    "contradiction_proofs": 61,
+    "all_inputs_rehashed_after_all_replays": true,
+    "all_receipts_bound_by_identity": true,
+    "reflections": 3363038,
+    "lattice_point_wall_hits": 160831,
+    "generating_room_checks": 17879,
+    "vacuous_guard_implications": 0,
+    "proof_bytes": 8749278597,
+    "guard_checker_sha256": "00463d79fa3477204f451d1d38d812950dc4766299cee3c024a781c2d36af914",
+    "drat_checker_sha256": "020f03fcede4ebdf536c4fd577cd3d68fc099741cba26d432d71940e2ad10f3a",
+    "runner_sha256": "151be20909358038b48016f7f16ae3e98ed220f5d05b457fe6e695c380599820",
+    "parallel_coordinator_sha256": "cfb70b8ce9cf62ebef229808bfae040450fac7a454b48b7df19d3640b34985ce",
+    "summed_drat_wall_seconds": 4998.1449999999995,
+    "previously_complete_I4_replay": "<SOURCE_WORKSPACE>/.context/illumination-k4-codex/k6-i4-review/check.json",
+    "solver_discovery_calls": 0
+  },
+  "open_reconciliation": [],
+  "reconciled_notes": [
+    "k6-run/findings.md explicitly records independent census.py I2 18/18/18 and I3 18/43/38; its direct-ray omission and I4 dependencies match the current source chain.",
+    "review-preprint-v02/findings.md explicitly accepts the revised darkness hand proof; separate attainment-review accepts exact k=4 membership.",
+    "No new full proof replay was performed."
+  ]
+}

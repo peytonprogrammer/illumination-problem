@@ -1,0 +1,227 @@
+CURRENT STATUS (4 November 2026): CLOSED, with independently checked
+fixed paths for all seven residues originally left by sections5–7.
+Section8 supplies the closure. The original check.json remains a frozen
+reduction receipt, so its historical remaining_exact_cases list is not the
+current status; see single-e2-closure.json and coverage.txt.
+
+Single excess-two fan at surplus four: seven exact remaining cases
+4 November 2026 — Codex01a1a00f
+
+STATUS: parent hand reduction, independently unreviewed. The ENTIRE one-e2+b2
+partition is NOT closed. All its cases except seven explicitly specified
+rooms, up to sigma, have constructive illumination arguments below. The seven
+rooms are valid W20/k6/Delta4 geometries, not dark counterexamples.
+
+Scope: finite strictly simple canonical45 triangle disks, precisely full A
+stars S=(0,0),U=(2,0),T=(2,2), all partial cells local in K, one excess-two
+fan, every other partial cell an ordinary H-facing cap. H, sector directions,
+and cap names are the same as the accepted lower-layer proof.
+
+1. Structural and budget reduction
+A sole positive d0 cell cannot connect to H: all other partial cells have
+e0 and cannot transmit. Hence the unique e2 cell is a ROOT. This explicitly
+avoids the d0-in-K omission found in the two-unit predecessor. The accepted
+single-e2 ROOT classification remains exhaustive without a b bound:
+a critical root has d1,q3, hence three consecutive sectors or four consecutive
+sectors forming a smooth A half-fan. N's d2/q4 option does not exist. D/R/N
+roots still use the old opposite13 cover, with the nonbridge N support
+clarification in third-surplus-review/local-e2.txt. No b exclusion is used.
+
+One-bounce routes force B+/E-. With a critical L root, B is ordinary, so the
+old four route forces T-. With a critical B root, E is ordinary, so the
+sigma four route forces L+. These forces depend on actual mirror guards,
+not a smooth-point budget. Sigma pairs L/T and B/E.
+Thus the fourteen critical fans are exactly the seven L and seven B fans
+listed in the accepted proof: L m3 starts6/7/0, m4 starts5/6/7/0; B m3
+starts7/0/1, m4 starts6/7/0/1. No new fan enumeration was used.
+
+Let n be the number of ordinary caps, excluding the root. Then Q=3+n.
+Delta4 gives sN=9-n, and k6 gives n=J+3. J is3 when the fan has a complete
+H-facing C pair and2 otherwise. The other six A slots are ordinary, each
+with at most one cap: J3 forces ALL SIX occupied; J2 forces FIVE occupied.
+The local angle table in single-e2-charge.json records the actual fixed and
+variable angular contributions, not whole-room assignments.
+
+Write nb, nr for indicators of Nb-, Nr+, X=indicator(D+ and R-), and t for
+indicator(T-). Once L/E/B/T critical caps are forced where applicable,
+the extra smooth charge b is:
+ L upper3(start7):                 1-nb+nr+X;
+ L rectangle4(start6):             2-nb+nr+X;
+ L outer3(start0), fullnorth4(7),
+   outer4(start0):                 2-nb+nr+X;
+ B outer3(start7), outer4(6),
+   Heast4(start7):                 1+nb+nr*t+X;
+ B fullwest4(start1):              2+nb+nr*t+X.
+The other L/B fans have already sufficient paths, so their formulas are not
+needed. These formulas count distinct vertices: root outside C and/or
+source-side B contributions; B(-1,1) controlled by Nb-; B(1,3) controlled by
+Nr+/T-; and B(3,-1) controlled by D+/R-. Ordinary caps cannot repair an
+outside root C, and ordinary N options are mutually exclusive. Baseline
+smooth H-facing C points from empty cap slots are excluded from b.
+Set each displayed expression equal to2; no full Delta3 theorem is invoked
+on a room whose budget has changed.
+
+2. A seven-reflection lemma with very small support
+Promote the already retained line18038 path from the old Bouter3 residue
+receipt to its full symbolic implication. It requires only H+L++E-.
+Its complete forbidden set is L-, E+, Nr-, the upper outer L mate
+conv{(-2,0),(-2,1),(-1,1)}, and east outer E mate
+conv{(4,2),(4,1),(3,1)}. In particular the FULL B/D/R/T stars miss this set.
+
+Hand derivation: launch(-1,d). Ordinary L+ returns at(-1,3d),(1,d) after
+three reflections. E- is entered at(3,7d) and returns at(3,9d),(-1,d)
+after three more. The next hit is x1 at y11d; it reflects to reach x2 at
+height12d. The finite itinerary holds for 1/7<d<2/11. Thus d1/6 reaches
+actual T, using seven reflections. Absence of Nr- preserves the x1 mirror;
+Nr+ is harmless because the contact is below y2. The exact coordinates and
+full U/Z are in single-e2-check.json. No source archive was reread.
+
+Therefore every critical B-root fan is illuminated when ordinary N is NOT
+Nr-. This statement permits arbitrary ordinary D/R/T and arbitrary bottom
+triangles consistent with the five forbidden triangles.
+
+3. A three-reflection rectangle lemma
+The Bouter4 fan sectors6/7/0/1 is exactly the rectangle
+ [0,1] x [-3,-1]
+attached along its roof. At launch(d,-1) the prescribed contacts are
+ (1,-1/d), (2-3d,-3), (0,2/d-6).
+The ray leaves through y-1 at x5d-2 with velocity(d,1), and at y2 has
+x8d-2. Choose d1/2. The contacts are (1,-2),(1/2,-3),(0,-2), then actualT.
+The last contact is a smooth A point of the half-fan, not a room corner.
+The whole finite prefix/tail is strict for 3/7<d<3/5. Its full guards allow
+EVERY other ordinary cap. This reuses the retained line29384 coordinates,
+but the whole-family implication and rectangle derivation are new here.
+Hence the entire Bouter4 case needs no further b or slot reasoning.
+
+4. Three new source/return compositions on the L side
+The following maps preserve the outgoing velocity(1,d).
+
+Short square: L sectors0/1 fill [-2,-1]x[0,1]. A launch(-1,d) reflects
+once at(-2,2d), returns to x-1 at y3d. Extra sectors7 and6 are harmless.
+Replace the three L+ prefix contacts in section2 by that one contact.
+The same d1/6 now gives FIVE reflections. Full cap blockers are E+ and
+Nr- only; all noncap forbidden triangles are accounted for in the receipt.
+This covers Lupper3 and Lrectangle4 whenever N!=Nr-.
+
+Wide rectangle: L sectors0/1/2/3 fill [-3,-1]x[0,1]. One reflection at
+(-3,3d) returns at(-1,5d),(1,d), for 0<d<1/5.
+
+Trapezoid: L sectors0/1/2 instead has the three contacts
+ (-2/(1-d),2d/(1-d)), (-2-3d,1),
+ (-2(3d+1)/(1+d),4d/(1+d)).
+It returns to EXACTLY the same(-1,5d),(1,d), for 0<d<1/5.
+Adding sector7 (fullnorth4) does not alter any mirror on this path.
+
+From the common wide/trapezoid exit, the E- return enters at(3,9d), exits
+at(3,11d),(-1,d). Its three contacts are
+ ((2+6d)/(1-d),8d/(1-d)), (2+10d,2),
+ ((2+14d)/(1+d),12d/(1+d)).
+
+If N=Nr-, enter that triangle at(1,13d). In square coordinates
+xi=2-y, eta=1-x its portal input is xi=2-13d, velocity(-d,1).
+The normal-return branch has phase z=2-15d>0 and returns at
+ (1,15d), velocity(1,d).
+All finite-wall conditions hold for 1/9<d<2/15: the source prefix is
+strict, the ascent crosses x1 below y1 (7d<1), E entry is above y1,
+and the N phase stays positive. The endpoint at x2 is y16d, so d1/8
+reaches actualT. This gives SEVEN hits for the wide rectangle and NINE
+for the trapezoid/fullnorth fan. N is ordinary Nr-, excluding Nb+/Nr+;
+E- excludes E+. All other ordinary caps remain arbitrary.
+
+left-return-check.json recomputes all complete guards, confirms the two
+extra-fan extensions, and replays each new path forward/backward and after
+sigma against actual walls in prescribed controls.
+
+A tempting shortcut is invalid: keeping a flat x1 mirror with the wide
+exit would give endpoint14d=2, d1/7. Its earlier ascent goes through the
+true concave corner(1,1). This failed branch is NOT part of the cover.
+
+5. Complete B-side dispatch except three exact rooms
+B_east3(start0), B_Hwest3(start1) and B_rectangle4(start0) retain their
+previous budget-free five/Nb+ dichotomy or unconditional12 path. Bouter4
+uses the rectangle3 lemma. All other B cases use seven when N!=Nr-.
+
+For N=Nr-, Nb-=Nr+=0. In Bouter3, b2 forces X1, hence D+/R-; n5 leaves T
+empty. In BHeast4, b2 likewise forces D+/R-, with T ordinary and occupied.
+The retained Bouter3 line515 works in BOTH full symbolic families. Its
+requirements need no root triangles missing from these fans.
+
+For Bfullwest4 (sectors1..4), b2 instead forces X0 and n6 fills all slots.
+If R- is present, D- is forced and the SAME line515 works with either T.
+If R+ is present, D-/T+ is covered by retained line2551, after checking its
+full guards against this DIFFERENT root. The remaining exact cases are:
+ Bfullwest4 + L+,E-,Nr-,R+,D-,T-;
+ Bfullwest4 + L+,E-,Nr-,R+,D+,T-;
+ Bfullwest4 + L+,E-,Nr-,R+,D+,T+.
+The full D+/R- pair is excluded here by X0, not by an obsolete b1 rule.
+
+6. Complete L-side dispatch except four exact rooms
+L lower3(start6) and lower4(start5) retain the centered-L3 path. Lupper3
+uses the new square5 path if N!=Nr-, otherwise retained line3580 with14
+hits. Lrectangle4 likewise uses square5 for N!=Nr-, or line3580: the extra
+lower sector6 has been explicitly checked harmless. No unsupported path
+transfer between fans is used.
+
+Lfullnorth4 has J3,n6. Its b equation gives:
+ N=Nb- => X1, so D+/R- and retained528;
+ N=Nb+ => X0, with retained528 for R- and652 for R+;
+ N=Nr- => new trapezoid/Ncap9 path;
+ N=Nr+ => b>=3, impossible.
+Thus this WHOLE fan case is closed.
+
+Louter3/4 have J2,n5. B+/E-/T- are forced, so exactly two of D/R/N are
+occupied. The b equation is nb=nr+X. N=Nb- would require both D+/R- in
+addition to N, exceeding those two slots. N=Nr+ is impossible outright.
+If N empty, D/R both occur and X0: retained2635 covers D-/R-,361D covers
+D-/R+,3866 covers D+/R+. Each full guard has been checked for BOTH the
+three- and four-sector L roots.
+If N=Nr-, the new nine/seven path covers every remaining D/R choice.
+If N=Nb+, exactly one D/R cap occurs: retained3224 covers D+, and361R
+covers R+. This leaves two exact cases for EACH root Louter3 and Louter4:
+ H + root + B+,E-,T-,Nb+,D-;
+ H + root + B+,E-,T-,Nb+,R-.
+These four and the three B cases of section5 are the seven open rooms.
+
+7. Verification and limits
+single-e2-check.py checks23 explicitly named symbolic implications, both
+newly promoted whole-family lemmas, and the geometry of16 hand-forced
+candidate residues. New compositions close nine of those16 by full guards;
+seven remain. Every remaining room has a single simple boundary, exactly
+full A set S/U/T, W20,k6,Delta4. Inputs and retained sources are hashed.
+The code does NOT enumerate cap assignments or claim that finite receipt
+counts prove the hand dispatch. It does not try unspecified paths on the
+remaining rooms. There is no darkness certificate.
+
+No source archives, new trajectory/direction/word scan, room-discovery
+campaign, solver or worker. The larger local partitions two e2,
+e2+two e1 and four e1 remain separate. The whole surplus-four theorem and
+universal wall-minimum problem remain unresolved. Independent peer
+challenge is requested for the new lemmas and the completeness of this
+seven-case reduction.
+
+8. Closure of all seven residual rooms
+
+The hand reduction in sections1–7 was independently accepted without
+corrections in fourth-surplus-review/single-e2-independent/review.txt.
+Its original seven residues are now ALL illuminated:
+
+- Three Bfullwest rooms: common four-reflection witness from
+  fourth-surplus-review/three-bottom/proof.txt. Independent HAND ACCEPT
+  and own frozen actual-boundary/reverse/sigma/full-guard checks:
+  three-bottom-review.txt/json. Entire conditional ordinary-cap completion
+  family accepted, without a W/k restriction.
+- Two R-minus Louter3/4 rooms: upward direction(4,25),21/19 reflections,
+  backward-gate.txt/check.json. Peer HAND ACCEPT of exact fixed witnesses:
+  fourth-surplus-review/R-gate-independent/review.txt/check.json.
+  Whole parameter-interval computation is supplementary and was not
+  independently recertified; it is unnecessary for these fixed witnesses.
+- Two D-minus Louter3/4 rooms: common direction(-20,-9),32 reflections,
+  fourth-surplus-review/two-left-D/proof.txt/check.json. Independent HAND
+  ACCEPT: two-left-D-review.txt/json, using our original room fixtures and
+  own frozen physical replay, reverse/sigma and full triangle guards.
+
+Thus the single-e2+b2 spatial-local partition is closed, including sigma
+images. single-e2-closure.json joins the seven original residue identifiers
+to their exact proofs and review receipts; none remains unresolved.
+This does not close two-e2, e2+two-e1, four-e1 or remaining remote cases.
+The universal wall minimum remains unresolved.

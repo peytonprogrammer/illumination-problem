@@ -1,0 +1,14 @@
+Comparison with the referenced paper, for editorial context only
+
+Theorem 7.4 assumes a single global reflection/half-turn sigma of R preserving disjoint endpoint sets U,V. At an exception its path identity is alpha(t+u)=sigma(alpha(t-u)); the proof removes an excursion using a shortest connecting ray, whose existence follows from discrete lattice lengths.
+
+Our statement is on the folded base P. Its local identity is eta(t+u)=eta(t-u), with no sigma. The physical path in Q may retrace a different copy; equality is asserted only after applying f. First arrival at b and last visit to a replace shortest-ray selection, so no discreteness/minimum-length argument is needed for this step. Truncation at arbitrary preimages of a,b is essential.
+
+Both proofs use deterministic reversibility to remove an exceptional excursion. Theorem 7.4 is related precedent and useful explanatory context. It does not apply directly to Q, and the local folded identity needs its own verification, supplied in clarification.txt. No novelty follows from this comparison.
+
+Paper: https://github.com/JoostdeWinter/unilluminable-rooms/blob/b4daf70b708d8cb3456470a4476e069864154062/unilluminable_rooms.tex (Theorem7.4 source lines602-612).
+Proof note contains no professor name. It does not change or replace the existing manuscript.
+
+Theorem 7.4 does not apply directly to the base P either: a,b lie on its boundary, while the theorem requires interior endpoint sets. Also our enlarged folded dynamics reverse at genuine base corners, whereas its physical exceptions are noncorner points. This comparison is an analogy of deterministic reversibility, not an application of its hypotheses.
+
+Independent tools-disabled Opus review ACCEPT, with clarifications incorporated: all endpoint preimages, copy-independent folded dynamics, explicit endpoint timing cases, and no other permitted corner contact. The review did not receive the full repository definition or author header; its questions about authorship and C-point terminology were access limits, resolved against the pinned source rather than accepted as factual objections. Its source-numbering caution was resolved by counting the shared theorem environments in Section7.

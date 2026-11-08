@@ -1,0 +1,180 @@
+{
+  "status": "PASS",
+  "method": "Symbolic substitution into specified wall sequences, no numeric direction samples or itinerary selection.",
+  "strict_positive_flight_times_over_intervals": 78,
+  "descending_cap_map": [
+    {
+      "reflections": 1,
+      "exit_height": "h/r",
+      "velocity": [
+        "-r",
+        "1"
+      ]
+    },
+    {
+      "reflections": 2,
+      "exit_height": "-h/r + 2",
+      "velocity": [
+        "-r",
+        "-1"
+      ]
+    },
+    {
+      "reflections": 3,
+      "exit_height": "h - 2*r",
+      "velocity": [
+        "-1",
+        "-r"
+      ]
+    }
+  ],
+  "steep_four_hit_cap_map": [
+    {
+      "wall_order": [
+        "diagonal",
+        "vertical",
+        "diagonal",
+        "vertical"
+      ],
+      "exit_x": "2r-h",
+      "velocity": [
+        "r",
+        "1"
+      ]
+    },
+    {
+      "wall_order": [
+        "vertical",
+        "diagonal",
+        "vertical",
+        "diagonal"
+      ],
+      "exit_x": "2r-h",
+      "velocity": [
+        "r",
+        "1"
+      ]
+    }
+  ],
+  "five_prescribed_continuations": {
+    "left_roof_Dminus_absent": {
+      "interval": [
+        "1/7",
+        "3/20"
+      ],
+      "second_height2_x": "28*r - 2",
+      "third_height2_x": "30*r - 2",
+      "open_x_ranges": [
+        [
+          "2",
+          "11/5"
+        ],
+        [
+          "16/7",
+          "5/2"
+        ]
+      ],
+      "target_hit": "NO on these specified passages"
+    },
+    "left_roof_Dminus_three_hits": {
+      "interval": [
+        "1/7",
+        "4/27"
+      ],
+      "second_height2_x": "30*r - 2",
+      "third_height2_x": "32*r - 2",
+      "open_x_ranges": [
+        [
+          "16/7",
+          "22/9"
+        ],
+        [
+          "18/7",
+          "74/27"
+        ]
+      ],
+      "target_hit": "NO on these specified passages"
+    },
+    "left_roof_Dminus_four_hits": {
+      "interval": [
+        "4/27",
+        "3/20"
+      ],
+      "second_height2_x": "6 - 30*r",
+      "third_height2_x": "34*r - 4",
+      "open_x_ranges": [
+        [
+          "3/2",
+          "14/9"
+        ],
+        [
+          "28/27",
+          "11/10"
+        ]
+      ],
+      "target_hit": "NO on these specified passages"
+    },
+    "right_roof_Ntwo_Dminus_absent": {
+      "interval": [
+        "5/33",
+        "2/13"
+      ],
+      "second_height2_x": "38*r - 4",
+      "third_height2_x": "8 - 42*r",
+      "open_x_ranges": [
+        [
+          "58/33",
+          "24/13"
+        ],
+        [
+          "20/13",
+          "18/11"
+        ]
+      ],
+      "target_hit": "NO on these specified passages"
+    },
+    "right_roof_Ntwo_Dminus_present": {
+      "interval": [
+        "5/33",
+        "2/13"
+      ],
+      "second_height2_x": "40*r - 4",
+      "third_height2_x": "42*r - 4",
+      "open_x_ranges": [
+        [
+          "68/33",
+          "28/13"
+        ],
+        [
+          "26/11",
+          "32/13"
+        ]
+      ],
+      "target_hit": "NO on these specified passages"
+    }
+  },
+  "remaining_three_hit_northwest_branch": {
+    "interval": [
+      "3/20",
+      "5/33"
+    ],
+    "point": [
+      "3",
+      "6-35r"
+    ],
+    "height_open_range": [
+      "23/33",
+      "3/4"
+    ],
+    "next_boundary_choice": "R+ present or absent",
+    "Rplus_present_next_left_contact": [
+      "-1",
+      "6 - 41*r"
+    ],
+    "Rplus_absent_next_left_contact": [
+      "-1",
+      "6 - 39*r"
+    ]
+  },
+  "limits": "Hand interval/portal proof supplies itinerary validity. No entire-family illumination or dark example established; later passes remain open."
+}

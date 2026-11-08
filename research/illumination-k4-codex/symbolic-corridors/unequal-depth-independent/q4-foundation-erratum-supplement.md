@@ -1,0 +1,3 @@
+# Q4 portal erratum: foundation review occurrence
+
+The already accepted q4 portal erratum also applies to arbitrary-endpoints-independent/review.md, line143, which repeats the same 7d/4 typo as the older equal-depth proof and independent review. Its stated path contacts (5d/2,g),(3d,g/2),(5d/2,0), from the centered marks at depths g/2, cross BOTH portals at 3d/2. Exact interpolation of the first/last legs gives that value. The original frozen review remains unchanged. This is a numeric prose correction; strict portals, actual contacts, specular velocities and the theorem are unaffected. The final acceptance reads all three frozen texts with this correction. No mathematical finding remains.

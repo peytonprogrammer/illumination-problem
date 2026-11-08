@@ -1,0 +1,214 @@
+{
+  "status": "EXACT_ATLAS_CONTROLS_PASS",
+  "geometry_controls": [
+    {
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "marks": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "strictly_simple": true,
+      "sign_location_checks": true
+    },
+    {
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "marks": [
+        [
+          1,
+          "1/2"
+        ]
+      ],
+      "strictly_simple": false,
+      "sign_location_checks": true
+    },
+    {
+      "vertices": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "marks": [
+        [
+          "1/2",
+          1
+        ]
+      ],
+      "strictly_simple": false,
+      "sign_location_checks": true
+    }
+  ],
+  "compact_primitive_escape_controls": [
+    {
+      "n": 2,
+      "k": 47,
+      "primitive_coordinate_gcd": 1,
+      "normalized_marks": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ],
+      "normalized_wall_lengths": [
+        "9/2",
+        "2",
+        "5/2",
+        "2",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "n": 4,
+      "k": 167,
+      "primitive_coordinate_gcd": 1,
+      "normalized_marks": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ],
+      "normalized_wall_lengths": [
+        "17/4",
+        "2",
+        "9/4",
+        "2",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "n": 10,
+      "k": 959,
+      "primitive_coordinate_gcd": 1,
+      "normalized_marks": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "3"
+        ]
+      ],
+      "normalized_wall_lengths": [
+        "41/10",
+        "2",
+        "21/10",
+        "2",
+        "2",
+        "4"
+      ]
+    }
+  ],
+  "same_geometric_cell_word_change": {
+    "sign_signature_sha256": "a37dc4b32c454ebe67aa841428bd9b16059b711a1a4cb22cbcd2f28b57a11ad1",
+    "marks": [
+      [
+        2,
+        -2
+      ],
+      [
+        4,
+        -2
+      ],
+      [
+        6,
+        -2
+      ]
+    ],
+    "floor_then_right_legal_only_for_last_of_three": true,
+    "last_path_guards": {
+      "wall_leg_guards": 12,
+      "reflections": 2
+    },
+    "all_three_pairs_illuminate_directly": true
+  },
+  "within_original_deadline": true,
+  "whole_goal_complete": false,
+  "independent_acceptance": false
+}

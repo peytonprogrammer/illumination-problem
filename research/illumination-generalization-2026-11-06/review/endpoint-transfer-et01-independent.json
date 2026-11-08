@@ -1,0 +1,148 @@
+{
+  "status": "PASS_ET01_PRESCRIBED_INDEPENDENT_CONTROLS",
+  "method": "Own exact reflections, positive proportionality and raw finite-wall first hits; no author code, search or new room campaign",
+  "formula_controls": [
+    {
+      "parameters": [
+        "4",
+        "4",
+        "8",
+        "8",
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "floor_x": "5",
+      "interface_x": "3",
+      "positive_floor_time": "1/4"
+    },
+    {
+      "parameters": [
+        "10",
+        "12",
+        "20",
+        "30",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "floor_x": "10",
+      "interface_x": "22/3",
+      "positive_floor_time": "1/3"
+    },
+    {
+      "parameters": [
+        "10",
+        "12",
+        "20",
+        "30",
+        "6",
+        "8",
+        "3",
+        "4"
+      ],
+      "floor_x": "71/5",
+      "interface_x": "44/5",
+      "positive_floor_time": "1/5"
+    }
+  ],
+  "author_r2": {
+    "polygon": [
+      [
+        2,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "r": 2,
+    "S": [
+      6,
+      2
+    ],
+    "T": [
+      2,
+      6
+    ],
+    "singular_chord_corner": [
+      4,
+      4
+    ],
+    "forced_corridor_interior_boundary_point": [
+      2,
+      2
+    ],
+    "both_axis_orientations_fail_full_corridor": true,
+    "actual_legal_floor_path": [
+      [
+        6,
+        2
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        2,
+        6
+      ]
+    ]
+  },
+  "r9_guard": {
+    "frame": "(x-1,1-y)",
+    "blocked_corner": [
+      1,
+      1
+    ],
+    "transformed_source": [
+      1,
+      -1
+    ],
+    "transformed_target": [
+      -1,
+      1
+    ],
+    "forced_interior_point": [
+      -1,
+      -1
+    ],
+    "original_boundary_corner": [
+      0,
+      2
+    ],
+    "corridor_hypothesis_fails": true,
+    "new_darkness_proof_claimed": false
+  },
+  "local_ET01_proved_by_hand": true,
+  "universal_A8": "REJECTED_BY_ACTUAL_R2",
+  "nine_distinct_corners_proved": false,
+  "whole_goal_complete": false
+}

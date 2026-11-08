@@ -1,0 +1,48 @@
+Bounded pi/6 boundary-exception hand test, 2026-11-02
+
+Verdict: proposed counting inequality s_N<=Q_6 is FALSE in its stated geometric class. The explicit hand assembly below has I=2,J=0,s_A=1,s_N=12,Q_6=5,W=15. It is a counterexample to the counting inequality ONLY. No darkness or illumination verdict for this room is claimed. No room/ray/direction/word enumeration, discovery run, solver, or new implementation was used.
+
+1. Exact assembly
+Put h=1/sqrt(3). Let H_c be the closed regular hexagon centered at(c,0), with cyclic vertices
+ (c−1,−h),(c,−2h),(c+1,−h),(c+1,h),(c,2h),(c−1,h).
+Let H_0^+=H_0 intersect{y>=0}. Define
+ R=H_{−2} union H_0^+ union H_2,
+ S=(−2,0), T=(2,0).
+Each full hexagon subdivides into12 copies of the30-60-90 triangle with vertices A=(0,0),C=(1,0),B=(1,h), reflected around its center. The upper half has6 such triangles. Adjacent hexagons share complete side x=−1 or1; after taking the middle upper half the contact is exactly its upper half, from C=(±1,0) to B=(±1,h). This is ONE whole BC edge of the triangular tiling on each side. There are30 triangles in total, with pairwise disjoint interiors.
+
+2. Strict simplicity and wall count
+The counterclockwise exterior corner cycle is
+ (−3,−h),(−2,−2h),(−1,−h),(−1,0),(1,0),
+ (1,−h),(2,−2h),(3,−h),(3,h),(2,2h),
+ (1,h),(0,2h),(−1,h),(−2,2h),(−3,h).
+These15 vertices are distinct, successive edges are nonzero, and no consecutive edges are collinear. Simplicity also follows directly by attaching H_0^+ to the two disjoint full hexagons along two disjoint full BC intervals, with no other contact. The two full-hexagon centers S,T have neighborhoods entirely inside R. There are no holes or self-contacts.
+Area check by hand: area(full hex)=2sqrt(3), area(half)=sqrt(3), so area(R)=5sqrt(3)=30*(1/(2sqrt(3))).
+
+3. Full vertex ledger
+Interior A: exactly S,T, so I=2.
+Boundary A: exactly(0,0), a straight180degree point carrying6 A angles; s_A=1 and no nonsmooth A vertex. Thus Q_6=5*s_A+sum m_v=5.
+Interior non-A: none,J=0. The only shared BC edges have boundary endpoints; their relative interiors contain no tile vertices.
+Smooth non-A: each outer full hexagon has6 C midpoints; the contacting C=(±1,0) becomes a270degree corner, leaving5 smooth C on each. Middle half adds two smooth C at(−1/2,3h/2),(1/2,3h/2). Total s_N=5+5+2=12. No B vertex is smooth: the two shared upper B points have240degree angle; every other B corner has120degree angle. Each of the two C contact endpoints has270degree angle. Turning check:11*(180−120)+2*(180−240)+2*(180−270)=360degrees.
+All tile vertices have been accounted for in these fans.
+
+4. Independent identities agree
+A incidence:N=12I+6s_A+sum m_v=24+6=30.
+Euler:N=2(I+J)+W+s_A+s_N−2=4+15+1+12−2=30.
+Wall identity:W=2+10I+Q_6−2J−s_N=2+20+5−12=15.
+In particular s_N−Q_6=7>0, refuting the proposed inequality.
+
+5. Why this is NOT a fifteen-wall nonillumination result
+There is a copywise triangle fold, but f(S)=f(T)=A, the SAME base vertex. The established proof in preprint-review-codex/revised.tex, Lemma Reversals do not help, concerns DIFFERENT base marks a and b. Its last-visit/first-arrival truncation requires a!=b. A folded path from A to A can reverse and return to A; the lemma supplies no contradiction in that case. Different preimages of A cannot silently be identified as the same physical room point.
+Therefore the proposed transfer of our distinct-base-mark reversal proof to this one-triangle seed is unsupported. The old strict seed proof excludes all intermediate seed vertices, so it does not have this issue; making some vertex preimages smooth removes that premise. A new theorem controlling the sheet of the returning A would be needed. This is the actual-endpoint-lift gap already seen elsewhere, not a solved new mechanism.
+This note does NOT assert that the displayed room is dark OR lit. We have not looked for a connecting ray. It does not refute all possible30-60-90 constructions.
+
+6. Stop decision
+The bounded test is complete: a rigorous within-class counterexample settles the specific fan inequality, and the existing optical argument is insufficient for the surviving geometric window. Retire this as an immediately justified path to fewer walls. Do not start an assembly/ray search or a fresh sheet-monodromy campaign without a concrete new endpoint argument. The earlier final response's statement that our existing folding proof might suffice was too optimistic; it omitted its distinct-base-mark hypothesis.
+
+Peer review requested
+Inputs:this note, count-notes.txt, preprint-review-codex/revised.tex Lemmas Seam-endpoint reversal and Reversals do not help, and Wolecki arXiv1905.09358v3 Lemma3.1. Hand review only, no run command. Check the two full-hexagon/upper-half-hexagon tile labels, wall cycle, every vertex count, and exactly which lemma fails to transfer. No optical verdict is supplied for review to confirm.
+
+Independent Opus review received,2026-11-02
+Peer claude-illumination-check/pi6-review/findings.md ACCEPTS the geometric assembly, complete ledger, count identity, proof-transfer gap and final orthogonal genus formula, without corrections. Hand/source review only; no optical certificate.
+New conditional observation independently checked here: set O=(0,0), mu(x,y)=(−x,y). If a legal path S->O reaches the smooth horizontal wall from the interior with velocityv=(vx,vy), then its mirrored reverse O->T has outgoing velocity Dmu(−v)=(vx,−vy), exactly the horizontal-wall specular reflection. It is legal because mu preserves the whole room and its corners. Thus such an S->O path would concatenate to a legal S->T path. This reduces one sufficient illumination test; no S->O path is provided, and there is no darkness verdict.
+Scope precision: infinitely many relevant directions do not rule out a finite uniform hand PROOF. They rule out treating finitely many individual direction checks as exhaustive absent a reduction. Do not elevate peer's informal sentence about a finite hand check into an impossibility theorem. Peer agrees with the stop decision; no new argument currently closes the endpoint-return gap.

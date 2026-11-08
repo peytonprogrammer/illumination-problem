@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "input_sha256": "9f81b7bf93b258958fa3d6347631e50f8165e57ad32166547431a3be9ed26bec",
+  "twist_action_sha256": "b500e3b59ba262a81655d60441f31d6c7da74e022d308761f171cc7459f81e27",
+  "optimized_mode_rejection": true,
+  "raw_grid_premise_checked": true,
+  "local_return_maps": [
+    {
+      "map": "D",
+      "side": "bottom-left",
+      "slope": -2,
+      "exit": [
+        "1/4",
+        0
+      ],
+      "derivative": [
+        1,
+        -1
+      ],
+      "diagonal_count": 1,
+      "portal_image_check": true
+    },
+    {
+      "map": "DH",
+      "side": "bottom-right",
+      "slope": "-3/8",
+      "exit": [
+        "4/3",
+        0
+      ],
+      "derivative": [
+        -1,
+        -1
+      ],
+      "diagonal_count": 1,
+      "portal_image_check": true
+    },
+    {
+      "map": "DHD",
+      "side": "right-lower",
+      "slope": 0,
+      "exit": [
+        2,
+        "1/2"
+      ],
+      "derivative": [
+        0,
+        0
+      ],
+      "diagonal_count": 2,
+      "portal_image_check": true
+    },
+    {
+      "map": "DHDH",
+      "side": "right-upper",
+      "slope": "2/5",
+      "exit": [
+        2,
+        "13/10"
+      ],
+      "derivative": [
+        0,
+        -2
+      ],
+      "diagonal_count": 2,
+      "portal_image_check": true
+    },
+    {
+      "map": "HDH",
+      "side": "top-right",
+      "slope": "6/5",
+      "exit": [
+        "5/4",
+        2
+      ],
+      "derivative": [
+        -1,
+        -1
+      ],
+      "diagonal_count": 1,
+      "portal_image_check": true
+    },
+    {
+      "map": "HD",
+      "side": "top-left",
+      "slope": 2,
+      "exit": [
+        "3/4",
+        2
+      ],
+      "derivative": [
+        1,
+        -1
+      ],
+      "diagonal_count": 1,
+      "portal_image_check": true
+    }
+  ],
+  "D4_transport_controls": 8,
+  "copy_colour_controls": 8,
+  "prescribed_odd_copy_loops": 2,
+  "seam_degrees": [
+    4,
+    4
+  ],
+  "saved_events": [
+    {
+      "index": 0,
+      "physical_source": [
+        0,
+        2
+      ],
+      "physical_target": [
+        0,
+        6
+      ],
+      "physical_corner": [
+        0,
+        3
+      ],
+      "prefix_hits": 9,
+      "half_displacement": [
+        -12,
+        -5
+      ],
+      "pocket_wall_loads": [],
+      "defect": [
+        0,
+        0
+      ],
+      "diagonal_hit_parity": 0,
+      "signed_opening": 0,
+      "actual_saved_endpoint_forms_match": true
+    },
+    {
+      "index": 1,
+      "physical_source": [
+        0,
+        2
+      ],
+      "physical_target": [
+        0,
+        6
+      ],
+      "physical_corner": [
+        -1,
+        2
+      ],
+      "prefix_hits": 7,
+      "half_displacement": [
+        -12,
+        5
+      ],
+      "pocket_wall_loads": [
+        {
+          "position": 4,
+          "wall": 3,
+          "before_corner": true,
+          "transported": [
+            2,
+            0
+          ]
+        },
+        {
+          "position": 5,
+          "wall": 2,
+          "before_corner": true,
+          "transported": [
+            -1,
+            1
+          ]
+        }
+      ],
+      "defect": [
+        -1,
+        -1
+      ],
+      "diagonal_hit_parity": 1,
+      "signed_opening": -17,
+      "actual_saved_endpoint_forms_match": true
+    }
+  ],
+  "prescribed_shear_image": {
+    "shear": 1,
+    "half_displacement": [
+      228,
+      5
+    ],
+    "signed_opening": 223,
+    "scope": "Determinant algebra; admissibility from earlier affine-event theorem, no new tracing."
+  },
+  "scope": "Local exact mirror algebra and two frozen labeled developments only. No discovery or optical tracing; universal event existence remains open."
+}

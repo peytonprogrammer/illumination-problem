@@ -1,0 +1,9 @@
+# R37: the proposed q1/3 cover remains incomplete
+
+The whole odd-h c1 family is NOT proved. Its prescribed q1/3,p<=35 pack failed at h5 after236 directions. No darkness follows. A genuinely different exact finite-orbit FIRSTcandidate method on ONLY that isolated h5 input found velocity(-5,8),20 smooth reflections/420 wall-leg guards, word U,T,U,T,U at98 states. The exact physical tracer validates actual S=(0,2),T=(0,12), all walls and strict geometry. The finite orbit was not exhausted or treated as a dark certificate.
+
+The unchanged prescribed pack then found h7 velocity(2,3) after14 trials,11 reflections/240 guards, but exhausted236 directions at h9 without a path. h11 was NOT attempted after that failure. The attempted whole-family finite cover therefore fails its planned verification gate. No additional direction pack, replacement room or renewed effort is claimed.
+
+These two positive paths are exact candidates pending independent review. h5 is an isolated geometric prefix with a zero second bare gap; it is NOT transferred by a fictitious zero-gap neck. The h7 path could be propagated through its two actual bare width1 gaps by increments6n (horizontal advance4n, full period2), giving h7mod6 only. That residue is not the entire odd-h family; no universal conclusion is asserted from it here.
+
+Frozen exact records: c1-critical-q13-failure.json preserves the original failed pack; c1-critical-q13-check.py preserves that first attempted source. c1-critical-final-check.json gives the distinct isolated-prefix witness and later h7 success/h9 failure, including all trials. All work remains in the ORIGINAL R37 aggregate interval ending06:23:32.242917Z. This effort is retired early, without resetting or extending its deadline. The next genuinely distinct work is the accepted c2 five-family structural reduction and optical closure of B/C1/C2, while the peer owns A0/A1. The main uncappedW21 goal remains OPEN.

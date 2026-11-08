@@ -1,0 +1,98 @@
+# Verdict: I found no counterexample, and the theorem appears correct
+
+I checked every step you flagged. None of them fails. There are a few places where the wording is wrong or a short justification is missing, and one remark that claims more than it shows. Details below, in proof order.
+
+## Section 1: crosscuts, fans, tree
+
+**Proper crosscuts.** This is correct. A B–C edge with its relative interior in int P has both endpoints on ∂P by hypothesis. So it is a chord of a closed Jordan disk, and it separates the disk into two Jordan disks.
+
+**Coinciding endpoints.** This case is simpler than the proof makes it look:
+- Each C point, say (1,0), has exactly two B–C edges, (1,0)–(1,±1).
+- If both were cut, all four triangles at C would lie in P. Then C would be interior, which is excluded.
+- So crosscuts never share a C endpoint. They can only share a B endpoint.
+
+Cutting along interior-disjoint chords that share a B endpoint keeps each later chord a proper crosscut of exactly one current piece. Hence n cuts give n+1 pieces, the dual graph is connected, and it is a tree. I would replace the "incident sectors" sentence with this observation.
+
+**Each piece is exactly one A-fan.** This is correct:
+- Every triangle has exactly one A vertex.
+- Gluing across an A–B or A–C edge keeps the A vertex. Gluing across a B–C edge changes it, for example from (0,0) to (2,0).
+- Every interior B–C edge is cut.
+- At a boundary A, strict simplicity makes the link an arc. So the included triangles form one contiguous sector of at most 7 triangles, and consecutive triangles share an uncut radial edge in int P.
+
+**No parallel edges.** It is worth stating this concretely. The two unit B–C edges on the side x=1 of the fan at (0,0) both lead to the same neighbor, the fan at (2,0). They cannot both be portals, by the C-interior argument above. This is exactly the case the tree argument needs, so make it explicit rather than leaving it implied by "tree".
+
+**A–C walls.** The conclusion is right but the reason given is wrong. "A ray parallel to that wall cannot arrive from the fan interior" is not the reason. The reason is genericity: the transverse coordinate is never an integer.
+
+## The genericity lemma (asserted, not proved)
+
+The proof says the core "avoids every integer point" without justification. It needs a short lemma:
+
+- The physical walls lie on lines x=k, y=k, x−y=2m or x+y=2m.
+- A horizontal path at height y ≡ h (mod 1), reflected in any of these lines, becomes either horizontal at y ≡ ±h or vertical at x ≡ ±h (mod 1).
+- So if h ∉ ½ℤ… in fact h ∉ ℤ is enough, the path never meets a grid line transversally at a lattice point, never glides along a grid line, and never touches a vertex or a smooth boundary lattice point.
+
+This holds only for the undeformed polygon. That is fine, because Section 4 needs genericity only at the base point.
+
+## Section 2: radial scattering, exit at time 2, same portal
+
+I verified each identity:
+
+- **Reflection preserves z·v.** At a reflection M in a line through the origin, z·(Mv) = (Mz)·v = z·v, since Mz = z.
+- **Time evolution.** Between reflections, d/dt(z·v) = |v|² = 1. This gives (1) exactly.
+- **Never reaches the center.** The minimum of |z|² is r² > 0, so the path never hits A.
+- **Exit time.** Reaching any outer side with axis velocity forces z·v = 1, so t = 2 and |z(2)|² = 1+r². Gliding is excluded by genericity.
+- **Same-portal exit is impossible.** The velocity condition alone gives R(−1,0) = (1,0). In K = {±Id, ±S}, only R = −Id satisfies this. Then the position condition gives (−1,−r) = (−1,r), so r = 0, a contradiction. The position check is redundant but correct.
+
+The radial A–B mirrors are exactly the lines y = ±x, so K is the right group.
+
+**Wording error.** "It can exit through a different portal on the same physical side" is false as stated. The unique same-side candidate is (1,−r), which lies on the other x=1 edge. That edge goes to the same neighbor, so by the C-interior argument it is a wall, not a portal. The correct statement is: a normal-free visit cannot exit on its entry side at all.
+
+## Section 3: closed walk in the tree
+
+This is correct:
+- Portal crossings are transverse, and each one moves between the two pieces adjacent to that portal.
+- A periodic orbit with no normal reflection gives a cyclic closed walk. It is nonempty by (1), and it has length at least 2 because there are no loops.
+- Every cyclic closed walk in a tree has a backtrack.
+- Since there are no parallel edges, a backtrack means re-exiting through the same portal. Section 2 rules that out.
+
+## Section 4: the deck reflection
+
+This is correct:
+
+- **Well defined.** Define rho by (p,h) ↦ (p,Gh). Left multiplication by G commutes with the right-multiplication gluings, so rho is well defined. It commutes with the projection to P, so it is a deck transformation of the branched cover.
+- **Fixes the hit point.** (p,g) maps to (p,gR_i), which is glued to (p,g).
+- **Correct G.** Developed walls stay orthogonal under g. So at a normal hit the developed wall is vertical, and G = diag(−1,1).
+- **Reverses the core.** rho is an isometry with linear part G, and the hit point is regular. So rho maps the horizontal leaf through the fixed point to itself with orientation reversed, giving rho_*c = −c.
+- **Holonomy equivariance.** hol(rho_*c) = ∫_c rho^*ω = G·hol(c). This holds even though det G = −1.
+- **Persists across the family.** rho_v is defined combinatorially, so it commutes with the material identification of homology. The identity is therefore exact on the whole chart, and the vertical component is 0.
+
+**Harmless caveat.** If the walls generate a proper subgroup Γ of D₈ (for example, an axis-only room like the unit square), the eight-copy unfolding is disconnected. rho preserves the component gΓ that contains the core but may permute the other components. This does not affect the argument. You could add one sentence on it.
+
+**Note on scope.** This step uses only one normal hit. Its strength is entirely Sections 1–3.
+
+## The diamond remark overstates what it shows
+
+Take the diamond |x|+|y| ≤ 2 at height ½. It does have a normal-free axis orbit with period 8. It also has an interior C at (0,1), so it lies outside the class. As the proof notes, its interior B/C points mean the tree structure that Sections 1–3 rely on is not available.
+
+What this shows is that the method fails there. It does not show that alignment fails there. To claim the hypotheses are necessary for the conclusion, you would need to compute the transverse period under a deformation, which the remark does not do.
+
+## Theorem versus conjecture
+
+**What is proved, subject to the fixes above:** for compact, strictly simple, simply connected unions of grid triangles with no interior B/C points, every horizontal or vertical core class has exactly zero transverse period on the whole fixed-direction chart.
+
+**What is not proved:**
+- The step to "multitwist increments are combinations of axis cores," and from there to the affine-in-power formula. These depend on `twist-span-lemma.md` §6, which I could not check.
+- Full quotient rank of the signed slope maps.
+- Existence of enough one-corner seed events.
+- Rooms with holes, interior B/C points, or other angles.
+
+The full-rank slope statement is still a conjecture.
+
+## Fixes to make
+
+1. Add the transverse-coordinate lemma (h stays ±h mod 1).
+2. Replace the A–C wall justification with genericity.
+3. State that each C has only two collinear B–C edges, so crosscuts share only B endpoints and same-side portals cannot both be cut.
+4. Delete the "different portal on the same side" sentence.
+5. Note the component caveat for rho.
+6. Weaken the diamond remark to "the method fails there."

@@ -1,0 +1,60 @@
+{
+  "patterns_checked": 4461,
+  "status": "PASS",
+  "method": "All selected-tile and open-edge combinations at representative A B C vertices; angular slots vs independent tile-fan graph",
+  "invalid_mutations_rejected": [
+    {
+      "name": "removed slit",
+      "rejection": "('transparent non-A vertex', (1, 0))"
+    },
+    {
+      "name": "boundary target",
+      "rejection": "marks must be distinct interior A vertices"
+    },
+    {
+      "name": "duplicate tile",
+      "rejection": "duplicate tile"
+    },
+    {
+      "name": "false simple claim",
+      "rejection": "boundary is not a simple Jordan polygon"
+    }
+  ],
+  "certificates_checked": [
+    {
+      "file": "illumination-22.json",
+      "walls": 22,
+      "simple": false
+    },
+    {
+      "file": "illumination-20.json",
+      "walls": 20,
+      "simple": false
+    },
+    {
+      "file": "illumination-search-slit-small.json",
+      "walls": 20,
+      "simple": false
+    },
+    {
+      "file": "illumination-search-simple-unrestricted.json",
+      "walls": 24,
+      "simple": true
+    },
+    {
+      "file": "illumination-search-simple-large.json",
+      "walls": 24,
+      "simple": true
+    },
+    {
+      "file": "illumination-search-contact.json",
+      "walls": 22,
+      "simple": false
+    },
+    {
+      "file": "illumination-search-slit-large.json",
+      "walls": 20,
+      "simple": false
+    }
+  ]
+}

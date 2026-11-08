@@ -1,0 +1,99 @@
+{
+  "decision": "INDEPENDENT_ACCEPT_EA05_PAIRED_ACTUAL_TARGET_IMAGES_LOWER_PAIR_ONLY",
+  "created_utc": "2026-11-08T03:35:31.962350+00:00",
+  "request_pin": {
+    "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-paired-review-request.json",
+    "sha256": "98195418cb1e2e0152aa3ba23f76f99bbc930e4a7a4c626773057046ab5d9db2"
+  },
+  "source_pins_before_after": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-paired-candidate.md",
+      "sha256": "0c71def7db36c6f7575f9868995f0d0e9def3885140c1b68375a12135ef8663b",
+      "actual": "0c71def7db36c6f7575f9868995f0d0e9def3885140c1b68375a12135ef8663b",
+      "passed": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-equal-arm-paired-proof.md",
+      "sha256": "208ca66325b12cf217ec1a2176c0517312900bc1fcac8f5739b99c2bd69d6d3d",
+      "actual": "208ca66325b12cf217ec1a2176c0517312900bc1fcac8f5739b99c2bd69d6d3d",
+      "passed": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-lower-equal-arm-proof.md",
+      "sha256": "7537aa96ef3f28473f06d91cecb4995c23869417e3fb9ef893c2794895148897",
+      "actual": "7537aa96ef3f28473f06d91cecb4995c23869417e3fb9ef893c2794895148897",
+      "passed": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-lower-equal-arm-independent.md",
+      "sha256": "0fd34aad40ff265cc0783901af5fc92ba1cfd0f1d54e417e313de6b28f636889",
+      "actual": "0fd34aad40ff265cc0783901af5fc92ba1cfd0f1d54e417e313de6b28f636889",
+      "passed": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-lower-equal-arm-independent.json",
+      "sha256": "054d0a431a82213af3aad5f1a932564f9282c4d831ddb48d6be427a6aa43881c",
+      "actual": "054d0a431a82213af3aad5f1a932564f9282c4d831ddb48d6be427a6aa43881c",
+      "passed": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-two-sign-proof.md",
+      "sha256": "a20fc2d39a3eb7b70480b8316e012f6677fb1199164b78be7175b885923452e8",
+      "actual": "a20fc2d39a3eb7b70480b8316e012f6677fb1199164b78be7175b885923452e8",
+      "passed": true
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/construction/three-reflex-coprime-extension-halfgrid-proof.md",
+      "sha256": "4cc5aae56569791d4ad8f6690064075ff43be308e127734c61c008e8b736f6e9",
+      "actual": "4cc5aae56569791d4ad8f6690064075ff43be308e127734c61c008e8b736f6e9",
+      "passed": true
+    }
+  ],
+  "proof_pin": {
+    "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-equal-arm-paired-independent.md",
+    "sha256": "983a4ad2594bad9492387a8001690b07f1459b0d82b0664f2b7147d596294a85"
+  },
+  "evidence_pins": [
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-equal-arm-paired-check.py",
+      "sha256": "dd755c97e5ed5193b19823522c9f1fe6f52c3a0d4141771434ad36b0ff669703"
+    },
+    {
+      "path": ".context/illumination-generalization-2026-11-06/review/three-reflex-equal-arm-paired-check.json",
+      "sha256": "b3a3d789c139231f6912650af5d1de0be4bf5a51f5e1ad49645b84f17d2dac5e"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "Strict half-open passage existence independent of N parity",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "Even beta gives nu2H0>=nu2N and true right-period repair",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "Gamma2P and actual plus/minus target image chosen AFTER right repair",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "Correct J_epsilon and full bottom congruence at one final slope",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "Actual corner/roof/first-hit and signed velocity guards",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "269/5 declared calibration requires negative image and strict source/targetdomains",
+      "decision": "ACCEPT"
+    }
+  ],
+  "author_code_executed": false,
+  "own_actual_wall_replay": true,
+  "material_findings": [],
+  "search_used": false,
+  "whole_native_room_claim": false,
+  "whole_r3_complete": false,
+  "whole_goal_complete": false
+}

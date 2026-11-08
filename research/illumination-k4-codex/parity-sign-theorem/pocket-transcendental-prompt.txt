@@ -1,0 +1,80 @@
+Independent mathematical audit, tools disabled. Please be concise and identify actual gaps. Check the proof below without assuming genericity. Known inputs: the small physical pocket slide gives smooth connected genus>=2 translation surfaces with one fixed relative-period chart v(t)=v0+t*v1, v0,v1 in Q[i]^n; the square-tiled base is t=0; a prior exact period proof shows X_t is a torus cover iff real t is rational. Every source zero is fixed by the physical halfturn J, derivative -I. EMM orbit closures are proper immersed complex-linear manifolds with real homogeneous period equations. Wright Theorem1.1 gives real-number-field coefficients and fieldQ for an orbit closure containing a square-tiled point (Example1.2), and the absolute tangent is defined over the same field. Do these inputs prove ALL of Section21, especially analytic continuation across different immersion branches? Rank>=2 is meant via rational tangent-space obstruction to rank1, not from period Q-span. Do not infer full stratum, absence of periodic marks, or an actual billiard event. If correct distinguish standard consequence from new input.
+
+Also check this elementary correction: Physical darkness of distinct S,T is equivalent to no zero-avoiding straight segment between any of their actual unfolding lift fibers even if regular convex-corner lifts may be passed. Wolecki1905.09358v3 Remark2.2 states this. Independent argument: first removable-corner contact at time a forces folded retracing; if endpoint reached at L<2a, it already occurred at2a-L<a; if L=2a then T=S; if L>2a, remove the excursion returning to physical S at2a and restart with a possibly different actual S lift, reducing the finite number of contacts. Repeat. Do NOT demand preservation of an individual S/T lift label. This corrects an earlier overcautious claim that only finite blocking could be inferred; the weaker finite-blocking proof remains valid.
+
+## 21. Transcendental parameters share one arithmetic orbit closure
+
+This is a new proof candidate awaiting the independent exceptional-case
+review. It refines the orbit-closure question without assuming a full
+quadratic stratum or deducing rank from the period Q-span.
+
+Work in one sufficiently small fixed relative-period chart about X_0.
+The literal slide has period vector
+
+    v(t)=v_0+t*v_1,       v_0,v_1 in Q[i]^n.
+
+The same formula defines translation surfaces on a small complex parameter
+disk, even though nonreal parameters need not represent physical mirror
+polygons. This complex extension is used only for analytic continuation.
+Let M_tau be the GL^+(2,R) orbit closure for a real transcendental tau in
+the disk. By Wright's field-of-definition theorem, each local branch has
+homogeneous linear equations with coefficients in a real number field K.
+For such an equation L, the equality
+
+    L(v_0)+tau*L(v_1)=0
+
+has algebraic complex coefficients. Transcendence forces both terms
+L(v_0)=L(v_1)=0. Thus a neighborhood of tau in the parameter disk belongs
+to that branch of M_tau. The orbit closure is a closed complex-analytic
+subset locally (the proper immersion has finitely many branches). Its
+preimage in the connected parameter disk is therefore a closed analytic
+set containing an open subset, hence the entire disk. In particular it
+contains every small real parameter and the square-tiled base X_0.
+
+For any second transcendental sigma, this yields X_sigma in M_tau, hence
+M_sigma subset M_tau by closed GL-invariance. Interchanging sigma and tau
+proves equality. There is one orbit closure M_* for ALL sufficiently small
+transcendental real parameters, and it contains the complete parameter disk.
+This statement does not assert the same orbit closure for all irrational
+algebraic parameters.
+
+Wright's Theorem1.1 and Example1.2 give k(M_*)=Q because M_* contains X_0.
+See [Wright, The field of definition of affine invariant submanifolds](https://websites.umich.edu/~alexmw/numfield.pdf).
+
+Its rank is at least2. If it had rank1, the absolute tangent space, defined
+over Q, would be the complexification of a rational real2-plane. The real
+and imaginary parts of omega belong to that plane and are independent.
+After choosing two rational basis vectors and clearing their finitely many
+denominators, all absolute periods would belong to the lattice generated
+by two independent complex numbers. Integration modulo that lattice would
+make X_tau a torus cover, contradicting Section17. This argument uses the
+rational tangent-space theorem; the period Q-span computation alone would
+not justify an orbit-closure rank statement. No upper rank bound follows.
+
+There is also no relative tangent direction in M_*. Every source zero is
+a corner lift fixed by the physical halfturn J. The affine involution with
+derivative -I persists under GL^+(2,R) and smooth limits: its maps are
+isometries of the source flat path metric, so Arzela-Ascoli and J^2=1
+preserve an involution in the limit; the differential relation J^*omega=-omega
+prevents a trivial limit. On a local finite cover marking J, its topological
+action and its fixing of every labeled zero are constant. Tangents lie in
+the -1eigenspace of relative cohomology. But
+
+    ker[H^1(X,Sigma;C)->H^1(X;C)] = C^Sigma / C
+
+has J-action +1, because J fixes Sigma pointwise. Its intersection with
+the -1eigenspace is0. Hence rel(M_*)=0, so dim_C(M_*)=2*rank(M_*)>=4.
+
+**Remaining obstruction.** The conclusion is an arithmetic rank>=2,
+rel0 orbit closure, not the entire stratum of canonical quadratic covers.
+The generic full-stratum periodic-point classification cannot be applied
+without proving that equality. A proper arithmetic covering locus can
+still have periodic regular points away from Fix(J). The unmarked tangent
+argument alone says nothing about whether our actual fixed S/T lifts are
+among them. An analogous claim about their marked orbit closure requires
+an explicit marked field-of-definition input as well as a nonzero vertical
+marked tangent; neither is assumed here. Even excluding dark pairs at
+transcendental parameters would still require a separate argument to
+produce the original admissible one-corner midpoint event at t=0.
+
+

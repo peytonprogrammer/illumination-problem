@@ -1,0 +1,66 @@
+Two hand attempts at an orthogonal singularity budget
+2 November2026. Hand deductions; fresh tools-disabled Opus proof critique received (see section6).
+
+Question: can simultaneous darkness of two four-point lift fibers force genus>=10, hence at least9reflex corners and22walls? The proposed two tests do NOT establish that bound. Attempt1 finds dependent constraints; attempt2 gives a conditional no-go for the proposed global-halfturn mechanism at EVERY genus. No discovery search, implementation, enumeration or numerical evidence is used.
+
+1. Exact orthogonal setting
+P is a bounded strictly simple orthogonal polygonal disk. X is its connected standard four-copy unfolding, with G={1,H,V,iota=HV}. The natural physical projection is pi:X->P. For distinct interior physical points S,T, pi^{-1}(S) and pi^{-1}(T) are disjoint four-point orbits of regular points.
+
+Let F be the lifted set of ALL physical polygon corners, including regular convex lifts. Each corner has exactly one lift: its four sectors form one cyclic vertex class. Convex corners give a regular2pi point; reflex corners give a6pi point, a zero of order2. The involution iota fixes exactly F. It fixes no point over a physical interior or smooth wall. The quotient X/iota is topologically the double of P, a sphere. Thus for genus>=2,iota is the hyperelliptic involution, and is central in the holomorphic automorphism group. With r reflex corners,2g−2=2r,g=r+1,W=2r+4=2g+2. Genus1 is the rectangle case and is illuminated by convexity.
+These geometric facts retain the disk quotient; no arbitrary translation surface is being substituted.
+
+2. Attempt1: sixteen conditions do not give sixteen charges
+Fix lifts x,y of S,T. The16ordered pairs are(hx,ky),h,k inG. Applyingh^{-1} to a segment preserves X,F and straightness, mapping that pair to(x,h^{-1}ky). Thus all16conditions reduce to exactly4relative-label conditions, indexed byh^{-1}k inG.
+The diagonal action is free on the pair set, since it is free on each interior-point fiber. Each orbit has4elements. Physical darkness is equivalent to the absence of a corner-avoiding segment for ALL4fixed-source pairs(x,gy).
+No additivity of singularity costs follows: different relative-label obstructions can use the same corner lifts. Every physical corner supplies only ONE lifted corner, not four private copies for charging. Therefore the naive16pair argument is invalid. A genuine4orbit separation theorem would be new input; none is proved here.
+This consumes the first bounded attempt.
+
+3. Attempt2: classify the proposed global midpoint involutions
+
+PROPOSITION. Assumeg>=2. Let h be an affine involution of(X,omega) with derivative−I. Then eitherh=iota, orh has exactly4fixed points, all regular and outsideF. In the second caseg is odd. In particular,
+ Fix(h) subsetF  implies  h=iota.                       (A)
+
+Proof.
+BecauseDh=−I is complex linear,h is holomorphic andh*omega=−omega. Centrality of the hyperelliptic involution givesh iota=iota h. Puttau=h iota. Thentau*omega=omega andtau²=1. Ifh!=iota,taunonidentity.
+
+A translation automorphism fixing a regular point is locally a translation with a fixed point, hence identity locally and globally. It therefore cannot fix a regular point unless it is identity.
+
+It cannot fix an order2zero either. Near such a zero choose a coordinatez for whichomega=z²dz. Fromtau*omega=omega andtau(0)=0, integration gives(tau(z))³=z³. Thereforetau(z)=zeta z withzeta³=1. Sincetau²=1,zeta²=1 as well, sozeta=1. This makes tau locally and globally identity, a contradiction. All zeros ofXhaveorder2. Thustau acts freely on ALL ofX.
+
+Ifp lay inFix(h) intersectF, theniota p=p andtau p=h iota p=p, contradicting freeness. SoFix(h) is disjoint fromF.
+
+Sinceh commutes withiota,it descends to a holomorphic automorphismbarh of the quotient sphere. Ifbarh were identity,h would be a deck transformation of the hyperelliptic double cover and thereforeid oriota. Neither is ourh. Sobarh is a nonidentity involution of the sphere and has exactly2fixed points.
+Neither fixed base point can be a branch value: its unique preimage would be anh-fixed point inF. Each therefore has exactly2preimages exchanged byiota. All4preimages are regular, because every zero ofomega belongs toF. On either2point fiber,h can fix both points or swap them. Swapping would maketau=h iota fix both, impossible. Soh fixes both in each fiber, giving4regular fixed points. Anyh-fixed point must project to a fixed point ofbarh, so these are all of them.
+Finally,the free double coverX->X/tau gives2g−2=2(2g'−2), henceg=2g'−1 is odd. QED.
+
+External standard input: uniqueness/centrality of the hyperelliptic involution for a complex curve of genus>=2. This is stated in the primary article Köck–Tait, On the de-Rham cohomology of hyperelliptic curves, §4 immediately after Remark4.2:
+https://link.springer.com/article/10.1007/s40993-018-0111-4
+The halfturn proposition above is a hand deduction from that input and the precise orthogonal geometry. No historical novelty is claimed. The initially attempted author-hosted alternative reference timed out and is not relied upon.
+
+4. Exactly what this says about darkness
+Suppose a global affine involutionh withDh=−I exchanges regularx andh(x). For any nonsingular straight segmentgamma between those endpoints, the pathh(gamma(L−t)) has the same start and initial velocity asgamma. Geodesic uniqueness forces equality, so the midpoint is fixed byh. Sinceh commutesiota,it preservesF, including its regular convex points.
+IfFix(h) were contained inF,this would automatically obstruct every corner-avoiding segmentx->h(x). Proposition(A) says that the only such global halfturn isiota. Butpi(iota x)=pi(x),so it cannot exchange lifts of DISTINCT physical room points. Thus the automatic global-halfturn certificate cannot explain a physical dark pair in any orthogonal room in this class, irrespective of the number of corners.
+
+IMPORTANT LIMIT: the four regular fixed points of anotherh do NOT prove that a particularx->h(x) connection exists. They need not be realizable as geodesic midpoints for thatpair. A pair-specific unreachability argument might still block them; none is supplied here. We also do not assume every dark pair admits any suchglobalh.
+
+Corollary: at even genus,the only affine−I INVOLUTION isiota. In particular,the known22wall orthogonal room hasg10 and no second such involution. Its established darkness uses the folded-piece obstruction, not this stronger global-surface symmetry mechanism. Non-involutive affine maps withDh=−I are not classified here; a map actually exchanging two regular endpoints both ways must square to identity, because its square is a translation automorphism fixing a regularpoint.
+
+5. Decision after two attempts
+The singularity budget did not materialize. The first approach overcounted independent conditions; the second automatic mechanism cannot even explain the known22example. That is a precise reason to retire this route, not evidence of the sought universal lowerbound. A third renaming of the problem as midpoint reachability, cylinder span, module dimension or periodic-point classification is outside this approved bounded attempt.
+
+No theorem forcing9reflex corners, no counterexample below22, no extension beyondk6, and no progress on the universal pocket lemma is claimed. The conditional symmetry constraint is the useful mathematical output. Independent coordinating-peer review remains requested; the separate fresh Opus critique is recorded below.
+
+6. Independent fresh Opus critique and a precise residual equivalence
+The tools-disabled Opus consultation in opus-response.txt accepts P1–P3, with scope cautions. It independently checks the local zero normal form, free translation involution, sphere descent, four regular fixed points and genus parity. Its requested g>=2 restriction is already in the proposition and retained. Genus1 is separately a convex rectangle; no genus1 classification is needed for the proposed lower-bound target. If desired, on a torus z->−z+c directly gives four fixed points, disjoint from canonical2torsion when c!=0, without the hyperelliptic-centrality proof.
+
+The substantive scope caution is adopted: only the AUTOMATIC fixed-set argument is retired. We have not shown that a pair-specific midpoint-unreachability argument is impossible or that every dark pair would have a global halfturn. We claim no necessity of the fixed-set containment condition.
+
+A useful exact strengthening of the midpoint observation, independently checked here:
+ Let h!=iota be such an involution, and let x be regular with hx!=x. Then a corner-avoiding straight segment x->hx exists IF AND ONLY IF some p in Fix(h) is reached by a corner-avoiding segment x->p.
+Forward: take the h-fixed midpoint of a connecting segment.
+Reverse: for a segment gamma:x->p, append h applied to time-reversed gamma. At p its outgoing velocity is Dh(−v)=v, so the concatenation is straight; it ends at hx. Because h commutes withiota,it preservesF, so the second half avoids all physical corner lifts whenever the first does. Fixed p is regular/outsideF. If the target occurs earlier, truncate there.
+Thus absence of a connection reduces to nonreachability of all four regular fixed points from the SPECIFIED lift x. This is a finite set of targets, not a finite direction bound and not proof any is reached. One must not erase the lift labels by simply projecting these points to the room.
+
+For the known22wall orthogonal room,g10 is even, so there is no additional h of this type at all. The residual four-midpoint reduction cannot explain that example. This further limits the proposed symmetry-based approach rather than closing the general problem.
+
+All conclusions stay within the two approved attempts. No search or third approach follows. These are elementary hand consequences of standard curve theory and the orthogonal unfolding; their historical novelty has not been assessed.

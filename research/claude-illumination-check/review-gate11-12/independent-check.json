@@ -1,0 +1,190 @@
+{
+  "diag_of_minus_G": [
+    "4",
+    "3",
+    "-8",
+    "-6"
+  ],
+  "minus_G_isotropic_over_Q_p": {
+    "2": false,
+    "3": false,
+    "5": true,
+    "7": true
+  },
+  "checks": {
+    "S table respects sum relation": true,
+    "T table respects sum relation": true,
+    "paper pairings vanish on sum(s_i)": true,
+    "paper pairings vanish on sum(z_i)": true,
+    "S matches Codex transcription": true,
+    "T matches Codex transcription": true,
+    "Omega_b matches Codex transcription": true,
+    "R_b = [[0,-I],[I,0]]": true,
+    "braid relation S T^-1 S = T^-1 S T^-1": true,
+    "R_b^4 = I": true,
+    "(S T^-1)^3 = R_b^2": true,
+    "Z/3 deck action preserves Omega_b": true,
+    "S,T-invariant antisymmetric forms on H_b are one-dimensional": true,
+    "R on H_tau is -I": true,
+    "R on T_0 is J": true,
+    "genus X/<R> = 0": true,
+    "genus X/<R^2> = 1": true,
+    "G symmetric": true,
+    "G matches Section 11 display": true,
+    "det G = 576 = 24^2 (square discriminant)": true,
+    "-G anisotropic over Q_3 (descent prime)": true,
+    "-G anisotropic over Q_2": true,
+    "-G locally equivalent to <1,1,-6,-6> at 2,3": true,
+    "L implements i -> -i on s": true,
+    "V_b involution": true,
+    "V_b antisymplectic": true,
+    "V_b R V_b = R^-1": true,
+    "V_b negative eigenspace basis": true,
+    "(12.1) restricted Gram": true,
+    "(12.1) restricted form anisotropic (6 not a square)": true,
+    "two V-negative copies remain anisotropic at 3": true,
+    "R_3 b matches Section 12 display": true,
+    "block values 20,-4,-16": true,
+    "Omega_3(b, R_3 b) = 0": true,
+    "V_3 b = -b": true,
+    "V_3 R_3 b = R_3 b": true,
+    "saturating minor rows 4,6": true,
+    "two copies, no V constraint: isotropic R-plane exists": true,
+    "left V maps annulus j to annulus -j": true,
+    "V beta_0 = -beta_0": true,
+    "V beta_1 = beta_1": true
+  },
+  "check_count": 41,
+  "S_b": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      -1,
+      1,
+      0,
+      -1
+    ],
+    [
+      -1,
+      0,
+      1,
+      -1
+    ]
+  ],
+  "T_b": [
+    [
+      -1,
+      1,
+      0,
+      -1
+    ],
+    [
+      -1,
+      0,
+      1,
+      -1
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "Omega_b": [
+    [
+      0,
+      6,
+      -4,
+      2
+    ],
+    [
+      -6,
+      0,
+      2,
+      -4
+    ],
+    [
+      4,
+      -2,
+      0,
+      6
+    ],
+    [
+      -2,
+      4,
+      -6,
+      0
+    ]
+  ],
+  "R_b": [
+    [
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  ],
+  "G": [
+    [
+      "-4",
+      "2",
+      "0",
+      "-6"
+    ],
+    [
+      "2",
+      "-4",
+      "6",
+      "0"
+    ],
+    [
+      "0",
+      "6",
+      "-4",
+      "2"
+    ],
+    [
+      "-6",
+      "0",
+      "2",
+      "-4"
+    ]
+  ],
+  "invariant_antisymmetric_form_dim": 1,
+  "scope": "Fixed rational linear algebra rebuilt from arXiv:0912.1425v2 3.3/3.5/3.7 index formulas; no geometric realization, scan or search."
+}

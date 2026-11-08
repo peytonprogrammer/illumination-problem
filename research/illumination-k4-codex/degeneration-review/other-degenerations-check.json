@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "moving_corner": {
+    "epsilon": "1/100",
+    "corner": [
+      "-1/100",
+      "0"
+    ],
+    "source": [
+      "-101/10000",
+      "-1/5000"
+    ],
+    "target": [
+      "2",
+      "1"
+    ],
+    "forbidden_point_on_prescribed_segment": [
+      "-999/100000",
+      "-145999/1005050000"
+    ],
+    "conclusion": "Fixed-origin angle test accepts, but the prescribed segment exits the moving reflex sector. This refutes that proof step, not room illumination by another word."
+  },
+  "smooth_step_collapse": {
+    "before_walls": 6,
+    "after_maximal_walls": 4,
+    "merged_angle": "pi",
+    "conclusion": "One short horizontal step collapses; vertical neighbors merge. No notch is present and maximal wall count drops by two."
+  },
+  "scope": "Deterministic exact local geometry only. No dark sequence, optical search, global exclusion or counterexample to global illumination is asserted."
+}

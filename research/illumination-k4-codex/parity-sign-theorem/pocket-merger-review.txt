@@ -1,0 +1,100 @@
+# Independent review: §27, the 90° merger lemma
+
+**Verdict: the local lemma is correct as stated, under strict simplicity (no pinch) and the raw hypothesis.** It proves the B-angle claim, the true-zero claim and the window-width claim. It proves nothing about matching, and correctly says so. There is one wording point to tighten and one mismatch with your affine-invariance premise (§3).
+
+## 1. Checking the lemma
+
+**Coordinates.** A ∈ 2ℤ², B ∈ (1,1)+2ℤ², C = points with x+y odd. Canonical triangles have legs AC and BC of length 1, a right angle at C, and hypotenuse AB of length √2. All admissible mirrors preserve the A, B and C classes:
+
+- x = c and y = c preserve both coordinate parities.
+- y − x = 2k sends (x,y) ↦ (y−2k, x+2k), which preserves the "both even" and "both odd" classes.
+
+**Merger shape.** A merger with m=2, q=0 has both radial edges AC, so the two triangles share the AB edge. The fan is the unit square A=(0,0), C₁=(1,0), B=(1,1), C₂=(0,1). Indegree 2 forces both BC₁ and BC₂ to be portals, so a, b' ≥ 1. Each neighbor's triangles at B lie in its own unit square with corner B, so a, b' ≤ 2.
+
+**No fourth-quadrant repair of a = b' = 1.** Label the eight 45° sectors at B cyclically:
+
+Q1b, Q1a | Q0a, Q0b | Q3a, Q3b | Q2a, Q2b
+
+- If a = b' = 1, then Q1b and Q3b are empty.
+- Q2a and Q2b lie strictly between Q3b and Q1b, so any occupied Q2 sector forms a second component of the link at B. That is exactly a pinch.
+- Under strict simplicity the occupied set is exactly {Q1a, Q0a, Q0b, Q3a}. That is 180°, so B is smooth, which is not raw.
+- Therefore a + b' ≥ 3.
+
+The only possible repair is a pinch, and the lemma is correct to exclude it.
+
+**Angle list.** The occupied arcs that contain the four mandatory sectors extend by i sectors left and j right. Excluding the smooth case (i+j = 0) and the full circle (i+j = 4) leaves 9 masks, which matches the audit's 9.
+
+One wording point: "B cannot be interior" holds **only by the raw hypothesis** when a = b' = 2 and both Q2 sectors are occupied. Geometric contiguity does not exclude it in that case. With that noted, the angles are 225°, 270° or 315°.
+
+**True zero.** A corner of angle kπ/4, written as πp/q in lowest terms, unfolds to cone angle 2πp:
+
+| Corner angle | Cone angle | Lifts in the 8-copy surface |
+|---|---|---|
+| 225° (k=5) | 10π | 1 |
+| 270° (k=6) | 6π | 2 |
+| 315° (k=7) | 14π | 1 |
+
+All three are genuine zeros. By contrast, 45° and 90° corners are removable, which independently explains why the 90° A centre is useless.
+
+The table also shows one point worth recording: **a 270° B has two lifts.** "Actual B lift" is therefore a real datum, not a formality.
+
+**Window width.** The conditions are θ ∈ (−aπ/4, 0) and θ+π ∈ (π/2, π/2 + b'π/4). The intersection is (−aπ/4, (b'−2)π/4), of width (a+b'−2)π/4:
+
+| (a, b') | Window | Width |
+|---|---|---|
+| (1, 2) | (−π/4, 0) | π/4 |
+| (2, 1) | (−π/2, −π/4) | π/4 |
+| (2, 2) | (−π/2, 0) | π/2 |
+| (1, 1) | empty (open interval) | 0, consistent with the smooth case |
+
+The π-sector crosses only the two portal rays. It contains no wall ray at B, and it contains a radius-1 sector, since each canonical triangle at B reaches distance ≥ 1 along every interior ray. It is an embedded physical π-sector. **Accepted.**
+
+## 2. Proved further steps toward matching
+
+**Proposition A (half-vector arithmetic; automatic corner-avoidance).**
+
+- Any event with midpoint at a B point has half-vector v ≡ (1,1) mod 2.
+- If v is primitive, the developed S→T vector satisfies w = 2v ≡ (2,2) mod 4. A C midpoint gives (2,0) or (0,2) mod 4, and an A midpoint is impossible.
+- If v is primitive, the open developed segment from S to S+2v contains exactly one integer point, the midpoint. Every physical corner is an integer point, so "no other physical corners" is **automatic** for primitive v, apart from the midpoint itself.
+- The one degenerate direction is v = ±(1,±1), which runs along a single AB edge. When that edge is incident to an interior mark it is interior, not a wall.
+
+**Proposition B (continuation reformulation; uses I = 2).** Suppose a corner-free development from S arrives at this B with incoming prong in the window. Continue straight through the embedded π-sector for the same length |v|.
+
+- By Proposition A, this continuation hits no corner in its interior.
+- It ends at an A lattice point. Since I = 2, that point is S, T, or a boundary A point.
+- So equality of half-vectors is not a separate condition to be matched. The only conditions are that the endpoint is T and that the development reaches T's actual target lift.
+
+This does not infer equal half-vectors from accessibility. It replaces two-sided matching with a single-valued continuation map, one value per choice of π-sector.
+
+**Proposition C (the short event exists).** Suppose the fan-tree path is S → U ← T, so the merger's two incoming fans are the full fans of S and T. Then:
+
+- a = b' = 2, with S = B + (1,−1) and T = B + (−1,1).
+- The segment S→B→T runs along two interior AB edges of the full fans.
+- It crosses B in the middle of the window, at θ = −π/4.
+- It involves no reflections, so it develops in the identity chart and reaches the actual lift of T.
+- Its half-vectors are equal, (−1,1) and (−1,1). B is a true zero, and S, B, T are the only lattice points on the segment.
+
+This is a genuine admissible one-corner midpoint event, apart from the pocket requirements.
+
+**Corollary (conditional on (26.1), which I don't have).** If the slide period defect measures the t-dependence of the event's developed period, the short event touches no wall. Its defect is therefore zero whenever the pocket mirrors D and H do not pass through B.
+
+So in the short case, existence is free and the defect is the whole problem. Any nonzero-defect event must reflect off D or H.
+
+Caveat: if the pocket is the one-triangle fan in Q2 at this same B, sliding D or H moves a wall ray through B itself. That case needs separate treatment.
+
+## 3. Structural obstruction to affine synchronization
+
+1. **Affine maps act diagonally.** An affine map preserves straightness and the intrinsic angle π between opposite prongs: linear maps send opposite vectors to opposite vectors and preserve cyclic order. Moving the S-half by g₁ and the T-half by g₂ separately requires both maps to fix B̃, with g₁ also fixing S and g₂ fixing T. It also requires Dg₁v_S = Dg₂v_T in the chart at B̃, with opposite prongs. Stabilizers only guarantee E_S ⊇ Γ_B·v₁ and E_T ⊇ Γ_B·v₂. A meeting point exists only if v₁ and −v₂ lie in the same Γ_B-orbit. As you say, a finite-index subgroup can have several primitive-vector orbits, so this can fail.
+
+2. **This conflicts with your premise that the group preserves admissible events.** Physical embeddedness means the π-sector at B̃ lies in one copy and contains no wall ray. The wall rays have axis and diagonal directions, and a derivative outside the dihedral group sends them to non-wall directions. So a general affine map preserves intrinsic π-sectors but not embedded ones. It also does not preserve pocket involvement or the defect. Your premise holds only if "admissible" is defined intrinsically, or if the group is cut down to dihedral derivatives at B̃, which leaves no synchronizing power. Please check which definition (26.1) uses.
+
+## 4. Open gaps
+
+These remain unproved:
+
+- the general (non-short) S→T continuation landing at T;
+- nonzero defect;
+- the 180° and 270° merger fans, which can also be the unique merger when I = 2, Z = 0;
+- the case where the Q2 pocket sits at the merger's own B.
+
+The local lemma stands.

@@ -1,0 +1,32 @@
+General triangular-seed wall count — bounded hand test, 2026-11-02
+
+Scope: finite edge-to-edge tiling of a topological disk by congruent triangles. One labeled tile angle is A=pi/n. Every vertex is a tile vertex; maximal wall corners are exactly W. Let I=#interior A vertices, J=#interior non-A vertices, s_A=#smooth boundary A vertices, s_N=#smooth boundary non-A vertices. Let m_v count incident triangle A angles at nonsmooth boundary A vertices. The remaining boundary corners can be non-A. Copies/reflections retain the labeled A type; if equal angles admit other labels, choose the inherited consistent labeling, not a geometric-angle relabeling.
+
+Count1 (Euler): writing N for triangles, all vertices number V=I+J+W+s_A+s_N. Edge incidence and disk Euler give N=2(I+J)+W+s_A+s_N−2. This uses exactly one boundary sector at every boundary vertex and excludes pinches/holes.
+
+Count2 (A incidence): each triangle contributes one A angle. Interior A vertices carry2n triangles, smooth A boundary vertices n, remaining A boundary corners m_v. Therefore N=2nI+ns_A+sum_v m_v.
+
+Subtract:
+ W = 2 + (2n−2)I + (n−1)s_A + sum_v m_v − 2J − s_N.
+Set Q_n=(n−1)s_A+sum_v m_v.
+For two distinct interior A marks, I>=2 gives
+ W >= 4n−2 + Q_n − 2J − s_N.
+This inequality is necessary only. It does not prove a room exists or is dark.
+
+n=4 recovers the previously used W=2+6I+Q−(2J+s_N).
+n=6 gives W=2+10I+Q_6−2J−s_N.
+For I=2 and W<=21, it requires 2J+s_N >= Q_6+1. In particular, a single smooth transparent non-A vertex is arithmetically enough to cancel one unit of nonnegative Q cost, if Q_6=0. This is only a possible counting window; no eligible disk realizing Q_6=0 is supplied. If J=0,s_N=1, the inequality forces Q_6=0 and W=21. If J=1,s_N=0, it permits Q_6<=1. Additional local rules may eliminate all these cells.
+
+Conclusion of the bounded test: Opus's dichotomy is incorrect. The I coefficient DOES stay10, but transparency subtracts2J+s_N and can lower the bound. Hence unchanged I coefficient does NOT close the pi/6 route. The count alone leaves a specific window and the same optical obligation: prove every newly transparent branch value remains unable to carry an actual connection, or show an unavoidable connection exists.
+
+What would make this route worth further work:
+Specify an exact local fan/quotient pattern realizing the necessary window, THEN prove its transparent continuations do only harmless reversal or another globally controlled operation. A mere smooth midpoint is not harmless by default. No request to enumerate triangles, rays, words, or rooms follows from this calculation.
+
+Trapezoid screen:
+S=conv((0,0),(2,0),(1,1),(0,1)). Insert(1,0) and diagonal(0,0)->(1,1). The three triangles are (0,0),(1,0),(1,1); (0,0),(1,1),(0,1); (1,0),(2,0),(1,1). These are canonical45degree tiles. Its mirror lines are x=0,y=0,y=1,x+y=2; their reflections preserve the canonical tiling and even-even A class. Consequently rooms assembled by reflecting this seed remain in the existing lattice class (with whatever exception count they actually have). It is a different seed presentation, not an established new mechanism. The proposed three-generation A-image discovery test was NOT run, consistent with Daniel's no-word-discovery rule.
+
+Conditional inverse-halfturn lemma review:
+Given all h_g assumed by Opus, j_g=h_g^{-1} g h_e fixes s and has derivativeDg. For a reflection Dg, j_g² is a translation automorphism fixing a regular point, hence identity. Finite derivative group plus finite translation kernel at genus>=2 makes generated K finite. The quotient may be a cone orbifold, so a planar triangle incidence bound cannot automatically be applied. Halfturn fixed sets contained in marked vertices are sufficient hypotheses, not necessary for arbitrary darkness. No reduction covering all dark rooms follows. Opus's suggestion of a publishable negative result is not adopted; novelty and global scope unproved.
+
+Superseding bounded-test result,2026-11-02
+See pi6-boundary-test.txt: explicit two-hexagon/upper-half-hexagon assembly refutes s_N<=Q_6 with I2,J0,Q5,s_N12,W15. This is geometry only, not a dark room. Crucially f(S)=f(T)=A, whereas our existing reversal nohelp lemma needs distinct base marks. Thus the suggested direct transfer of that proof is not justified. Bounded test complete; no further search/campaign recommended absent a new endpoint-sheet argument.

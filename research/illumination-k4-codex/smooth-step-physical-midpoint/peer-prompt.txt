@@ -1,0 +1,354 @@
+Independently challenge the following mathematical result. You have no tools. Re-derive the physical folding, torus coordinate normalization, all endpoint lift sign options, midpoint arithmetic, and cylinder realization. Report ACCEPT or REJECT with precise corrections. This is claimed only as a counterexample to LOCAL physical geometry forcing a midpoint, not to the globally essential-blocker conjecture. Both marked pairs are explicitly globally lit. No novelty claim.
+
+# Physical wall realization does not force a midpoint
+
+## Result
+
+The local physical-geometry premise is insufficient, not merely the abstract-circle premise. Two of the three existing central-circle controls are realizable in the same fixed six-wall L room, with a smooth wall blocker, an invariant ordinary cylinder, and no midpoint relation on the physical covering torus for ANY reflected source/target/blocker images.
+
+Both pairs have direct bypasses. This is not a counterexample to the conjecture that a GLOBALLY essential smooth wall blocker must satisfy a torus midpoint relation. That conjecture would need the global all-connections hypothesis, not just local cylinder separation plus physical realization.
+
+## Fixed physical room and central cylinder
+
+Scale the earlier prescribed L by two so its corners are integral. Boundary:
+
+    (0,0),(6,0),(6,3),(5,3),(5,4),(0,4).
+
+Let c0=(0,0), c1=(6,0), z=(3,4). The path c0 -> z -> c1 reflects at the smooth top wall y=4. It avoids the unique reflex corner (5,3), with squared distances 5 and 1 from its two legs. Its continuation through regular convex corner lifts retraces physically and closes on the four-copy unfolding. The positive clearance gives an ordinary cylinder neighborhood. Its maximal cylinder is invariant under the derivative-minus-identity involution because it contains the fixed corner lifts, and this closed curve is its central core, as in the previously accepted critical-leaf proof.
+
+Parameterize that core by theta modulo one, developed period (12,16):
+
+    physical(theta)=(fold_6(12 theta),fold_4(16 theta)),
+    fold_L(v)=min(v modulo 2L, 2L-(v modulo 2L)).
+
+The corner parameters are 0 and 1/2; the two lifts of z are 1/4 and 3/4; the involution is theta -> -theta. The physical fold agrees for theta and -theta.
+
+## Two realized fixed controls
+
+1. theta_s=1/7, theta_t=3/8 gives s=(12/7,16/7), t=(9/2,2).
+2. theta_s=2/5, theta_t=1/6 gives s=(24/5,8/5), t=(2,8/3).
+
+For each pair, the two source occurrences and two target occurrences on the central circle lie in opposite components after deleting {1/4,3/4}. Every core arc between those selected occurrences therefore meets a z lift.
+
+The third abstract control put its supposed blocker at theta=3/8, which folds to (9/2,2), an interior point. It fails the physical-wall condition, but the two examples above pass it.
+
+## Direct exclusion of the physical torus midpoint relation
+
+The four-copy unfolding covers R^2/2Z^2. An interior point p has torus images (plus-or-minus p_x, plus-or-minus p_y) modulo 2, with independently chosen signs. The two distinct lifts of z both project to (1,0). A midpoint modulo half-periods requires
+
+    2B-X-Y in 2Z^2
+
+for some source, target and blocker images X,Y,B. Check all sign choices, not only the core's involution pair.
+
+For pair 1, source heights modulo two are 2/7 and 12/7, target height is zero, and blocker height is zero. Thus the vertical residue of 2B-X-Y is always 2/7 or 12/7, never zero.
+
+For pair 2, all vertical residues are 4/15,14/15,16/15,26/15 modulo two, again never zero. Either example excludes the midpoint relation on the actual covering torus, even allowing all four physical endpoint lifts.
+
+The old positive control theta_s=1/8, theta_t=3/8 does satisfy the midpoint test, so the arithmetic test is not rejecting every configuration.
+
+## Why the controls are globally lit
+
+All four physical marks above lie in the convex open rectangle (0,6)x(0,3), contained in the room. The direct segment for each pair stays in that rectangle and avoids z=(3,4). Therefore z is not globally essential.
+
+In fact choose any theta_s in (1/8,3/16) and theta_t in (5/16,7/16). The source and target lie on opposite sides of z along the corner-to-corner quotient arc while staying in the same convex lower rectangle. Thus core separation persists on an open family of physical marks; isolated midpoint equalities cannot follow from these local physical assumptions.
+
+## Consequence for the research route
+
+A proof of the global midpoint conjecture must use interactions between different physical connections. Local central-cylinder geometry and physical wall realization alone cannot prove it, already in form (B). The missing global step is equally substantive here and for the reflex saddle-connection form (A). The common-cylinder-bypass route remains open.
+
+No new optical discovery search was run. The room and reflecting arc are the previously fixed analytic control; only two prescribed source/target placements were evaluated.
+
+## Recheck
+
+Run `python3 -B check.py` in this directory. `check.json` records exact room coordinates, torus residues, core separation, reflection law, positive reflex clearance, old midpoint positive control and nine formula controls inside the displayed open parameter ranges.
+
+
+Exact checker:
+"""Exact prescribed physical realization of existing central-circle controls.
+
+No reflection words, directions or rooms are discovered or searched.
+"""
+from fractions import Fraction as F
+from itertools import product
+from pathlib import Path
+import hashlib,json
+ROOT=Path(__file__).resolve().parent
+ROOM=[(F(0),F(0)),(F(6),F(0)),(F(6),F(3)),(F(5),F(3)),(F(5),F(4)),(F(0),F(4))]
+C0=(F(0),F(0));C1=(F(6),F(0));Z=(F(3),F(4));REFLEX=(F(5),F(3))
+PERIOD=(F(12),F(16))
+sub=lambda a,b:(a[0]-b[0],a[1]-b[1])
+dot=lambda a,b:a[0]*b[0]+a[1]*b[1]
+cross=lambda a,b:a[0]*b[1]-a[1]*b[0]
+
+def fold(t,L):
+    t=t%(2*L)
+    return t if t<=L else 2*L-t
+
+def physical(theta):return (fold(12*theta,F(6)),fold(16*theta,F(4)))
+def torus(p):return tuple(x%2 for x in p)
+def fibers(p):return {torus((ex*p[0],ey*p[1])) for ex,ey in product((-1,1),repeat=2)}
+def lower_window(p):return 0<p[0]<6 and 0<p[1]<3
+
+def same_core_component(theta):
+    theta%=1
+    assert theta not in (F(1,4),F(3,4))
+    return F(1,4)<theta<F(3,4)
+
+def distance2(p,a,b):
+    v=sub(b,a);lam=max(F(0),min(F(1),dot(sub(p,a),v)/dot(v,v)))
+    foot=(a[0]+lam*v[0],a[1]+lam*v[1])
+    return dot(sub(p,foot),sub(p,foot))
+
+# The prescribed c0 -> z -> c1 arc and its reversed continuation.
+vin=sub(Z,C0);vout=sub(C1,Z)
+assert vout==(vin[0],-vin[1])
+assert Z[0]<5  # Entire first leg lies left of the removed notch.
+assert F(8)-F(4,3)*5==F(4,3)<3  # Second leg is below notch for x>=5.
+clearances=[distance2(REFLEX,C0,Z),distance2(REFLEX,Z,C1)]
+assert clearances==[F(5),F(1)]
+assert physical(F(0))==physical(F(1))==C0
+assert physical(F(1,2))==C1
+assert physical(F(1,4))==physical(F(3,4))==Z
+assert torus(PERIOD)==(0,0) and torus(tuple(c/2 for c in PERIOD))==(0,0)
+assert torus(tuple(c/4 for c in PERIOD))!=(0,0)
+turns=[cross(sub(ROOM[(i+1)%6],ROOM[i]),sub(ROOM[(i+2)%6],ROOM[(i+1)%6])) for i in range(6)]
+assert sum(v<0 for v in turns)==1 and sum(v>0 for v in turns)==5
+
+rows=[]
+for a,d in [(F(1,7),F(3,8)),(F(2,5),F(1,6))]:
+    s=physical(a);t=physical(d)
+    assert lower_window(s) and lower_window(t) and s!=t
+    source_core={a,(-a)%1};target_core={d,(-d)%1}
+    assert all(physical(u)==s for u in source_core)
+    assert all(physical(v)==t for v in target_core)
+    assert all(same_core_component(u)!=same_core_component(v) for u,v in product(source_core,target_core))
+    xs=fibers(s);ys=fibers(t);bs=fibers(Z)
+    assert bs=={(F(1),F(0))}
+    # Midpoint modulo half-periods on R^2 / 2Z^2 is 2b-x-y in 2Z^2.
+    residues={torus((2*b[0]-x[0]-y[0],2*b[1]-x[1]-y[1])) for x,y,b in product(xs,ys,bs)}
+    assert (F(0),F(0)) not in residues
+    # The vertical coordinate alone excludes all midpoint choices.
+    yres={r[1] for r in residues};assert F(0) not in yres
+    rows.append({'source_core_parameter':a,'target_core_parameter':d,'source':s,'target':t,
+                 'source_torus_images':sorted(xs),'target_torus_images':sorted(ys),
+                 'blocker_torus_images':sorted(bs),'all_selected_core_arcs_blocked':True,
+                 'torus_midpoint_for_any_lift':False,'vertical_midpoint_residues_mod_two':sorted(yres),
+                 'ordinary_direct_bypass':True,'bypass_reason':'Both marks are in convex open lower rectangle (0,6)x(0,3), disjoint from z.'})
+
+# The earlier physical control has a midpoint; the test must accept it.
+s=physical(F(1,8));t=physical(F(3,8))
+assert any(torus((2*b[0]-x[0]-y[0],2*b[1]-x[1]-y[1]))==(0,0)
+           for x,y,b in product(fibers(s),fibers(t),fibers(Z)))
+# The third abstract control's proposed blocker is interior, not a wall point.
+assert physical(F(3,8))==(F(9,2),F(2)) and lower_window(physical(F(3,8)))
+# Rational endpoint checks for a prescribed open family of mark placements.
+family=[]
+for a,d in product((F(2,15),F(1,7),F(1,6)),(F(1,3),F(3,8),F(5,12))):
+    assert F(1,8)<a<F(3,16) and F(5,16)<d<F(7,16)
+    assert lower_window(physical(a)) and lower_window(physical(d))
+    assert same_core_component(a)!=same_core_component(d)
+    family.append((a,d))
+out={'status':'PASS','room':ROOM,'blocker':Z,'developed_core_period':PERIOD,
+     'minimum_squared_reflex_clearances':clearances,'fixed_physical_controls':rows,
+     'old_midpoint_positive_control':'PASS','third_abstract_blocker_is_interior':True,
+     'prescribed_open_family_controls':family,
+     'scope':'Physical local core separation without torus midpoint; both rooms are the SAME fixed L and both pairs have direct bypasses. No global essential blocker or darkness claim.'}
+(ROOT/'check.json').write_text(json.dumps(out,indent=2,default=str)+'\n')
+print(json.dumps(out,indent=2,default=str))
+
+
+Results:
+{
+  "status": "PASS",
+  "room": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "6",
+      "0"
+    ],
+    [
+      "6",
+      "3"
+    ],
+    [
+      "5",
+      "3"
+    ],
+    [
+      "5",
+      "4"
+    ],
+    [
+      "0",
+      "4"
+    ]
+  ],
+  "blocker": [
+    "3",
+    "4"
+  ],
+  "developed_core_period": [
+    "12",
+    "16"
+  ],
+  "minimum_squared_reflex_clearances": [
+    "5",
+    "1"
+  ],
+  "fixed_physical_controls": [
+    {
+      "source_core_parameter": "1/7",
+      "target_core_parameter": "3/8",
+      "source": [
+        "12/7",
+        "16/7"
+      ],
+      "target": [
+        "9/2",
+        "2"
+      ],
+      "source_torus_images": [
+        [
+          "2/7",
+          "2/7"
+        ],
+        [
+          "2/7",
+          "12/7"
+        ],
+        [
+          "12/7",
+          "2/7"
+        ],
+        [
+          "12/7",
+          "12/7"
+        ]
+      ],
+      "target_torus_images": [
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "3/2",
+          "0"
+        ]
+      ],
+      "blocker_torus_images": [
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "all_selected_core_arcs_blocked": true,
+      "torus_midpoint_for_any_lift": false,
+      "vertical_midpoint_residues_mod_two": [
+        "2/7",
+        "12/7"
+      ],
+      "ordinary_direct_bypass": true,
+      "bypass_reason": "Both marks are in convex open lower rectangle (0,6)x(0,3), disjoint from z."
+    },
+    {
+      "source_core_parameter": "2/5",
+      "target_core_parameter": "1/6",
+      "source": [
+        "24/5",
+        "8/5"
+      ],
+      "target": [
+        "2",
+        "8/3"
+      ],
+      "source_torus_images": [
+        [
+          "4/5",
+          "2/5"
+        ],
+        [
+          "4/5",
+          "8/5"
+        ],
+        [
+          "6/5",
+          "2/5"
+        ],
+        [
+          "6/5",
+          "8/5"
+        ]
+      ],
+      "target_torus_images": [
+        [
+          "0",
+          "2/3"
+        ],
+        [
+          "0",
+          "4/3"
+        ]
+      ],
+      "blocker_torus_images": [
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "all_selected_core_arcs_blocked": true,
+      "torus_midpoint_for_any_lift": false,
+      "vertical_midpoint_residues_mod_two": [
+        "4/15",
+        "14/15",
+        "16/15",
+        "26/15"
+      ],
+      "ordinary_direct_bypass": true,
+      "bypass_reason": "Both marks are in convex open lower rectangle (0,6)x(0,3), disjoint from z."
+    }
+  ],
+  "old_midpoint_positive_control": "PASS",
+  "third_abstract_blocker_is_interior": true,
+  "prescribed_open_family_controls": [
+    [
+      "2/15",
+      "1/3"
+    ],
+    [
+      "2/15",
+      "3/8"
+    ],
+    [
+      "2/15",
+      "5/12"
+    ],
+    [
+      "1/7",
+      "1/3"
+    ],
+    [
+      "1/7",
+      "3/8"
+    ],
+    [
+      "1/7",
+      "5/12"
+    ],
+    [
+      "1/6",
+      "1/3"
+    ],
+    [
+      "1/6",
+      "3/8"
+    ],
+    [
+      "1/6",
+      "5/12"
+    ]
+  ],
+  "scope": "Physical local core separation without torus midpoint; both rooms are the SAME fixed L and both pairs have direct bypasses. No global essential blocker or darkness claim."
+}

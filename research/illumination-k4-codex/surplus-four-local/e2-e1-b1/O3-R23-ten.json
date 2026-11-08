@@ -1,0 +1,16 @@
+{
+  "status": "REJECTED_INVALID_HAND_CANDIDATE_NO_PATH",
+  "proposed_root": "11/24",
+  "first_floor": [
+    "24/11",
+    "-1"
+  ],
+  "correct_after_floor": "y=d*x-2",
+  "incorrect_after_floor": "y=d*x-1",
+  "actual_next_wall": [
+    "3",
+    "-5/8"
+  ],
+  "reason": "The ray hits lower U right wall x3,y in(-1,0), before reaching the R23 upper-square inlet. Earlier candidate also fails first post-floor specularity.",
+  "limits": "No valid ten path, full support certificate or O3 closure. No search/room construction/parameter scan. Standalone R/source-corner map was not enough: its assumed initial height was wrong."
+}

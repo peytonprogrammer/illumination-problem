@@ -1,0 +1,194 @@
+You are an independent mathematical researcher, tools disabled. Seek a real proof or structural counterexample, not another restatement of the open claim. Scope is only the universal pocket-detection lemma in the note below. Actual S/T labels, primitive half-time condition and the chosen intrinsic pi-sector must be retained. No computational discovery or ray scans. User has set this as a persistent goal.
+
+New facts/controls to use or challenge:
+1. At the raw grid base the full absolute period lattice of the unfolding is exactly 2Z^2. All canonical reflections have even affine translations. In pocket coordinates, actual vertical mirror V1 followed by D0 H2 D0 gives V1 V2 = translation(-2,0). Its conjugate by D0 gives(0,-2). Linear copy labels return to I, so both words are realizable as CONTINUOUS closed paths in the unfolded copies, not billiard rays. Thus no larger torus quotient separates S/T. Both periods stay constant under the pocket slide.
+2. DO NOT infer primitive permutation action from that full period lattice. Prescribed negative control: a connected six-square origami with r=(0,1,5,4,2,3), u=(2,3,0,1,4,5) (zero-based images). It projects i -> floor(i/2) onto the three-square L with r0=(0,2,1),u0=(1,0,2). The pairs{0,1},{2,3},{4,5} form a block system. r fixes square0 and u fixes square4, giving periods(1,0),(0,1). Its commutator has two 3-cycles above the base one 3-cycle, so it is an unramified degree2 cover of a genus2 origami, genus3 upstairs. This is an algebraic control OUTSIDE the required polygon class, not a counterexample to the goal.
+3. A finite-index subgroup of the affine group can fix every grid vertex and any chosen mod2 relative cohomology class recording the diagonal bit. If correct, primitive event direction orbits under it are finite in number, preserving endpoint/corner/prong labels and the bit. This makes each FIXED room finite decidable, but does not prove the all-room statement. No orbit enumeration is proposed.
+
+Question: does the actual no-interior-B/C FAN-TREE disk structure force a geometric/monodromy property strong enough to generate an actual S-to-T midpoint event with nonzero Q? Can one prove independence of the bit using the pocket's two mouth corners, or refute it by constructing an admissible fan-tree room with a nontrivial branched cover obstruction? Do not assume ordinary transitivity gives all constrained geodesic paths, or invoke alternating-group theorems without true permutation primitivity. If a cover construction creates a smooth boundary B/C point or interior B/C point, it leaves the class and is not a counterexample. The prohibition on such points makes gluing two full copies across a B-C edge fail at its C endpoint:90+90=smooth180,90+270=interior360. Diagonal seams need separate care.
+
+Earlier global analysis incorrectly inferred 'only reflex B/C corners' by excluding convex45/90 corners; convex135 B corners also need treatment. Do not repeat that. Likewise physical45 wedge versus unfolded cone pi-sector must be distinguished.
+
+Please concentrate on a genuinely new deduction or exact counterexample construction. If unable to finish, state the sharpest justified partial result and what still fails. Do not invent references.
+
+CURRENT LOCAL NOTE
+# Detecting a sliding triangular pocket
+
+[in progress] Universal detection by an actual source-to-target corner event remains open.
+[done] Local, sign-transfer, binary-rank and topological lemmas accepted in tools-disabled Opus reviews, with corrections incorporated.
+[done] Two-sided small-slide illumination established in the saved room, using its earlier optical seed and the reviewed affine-image theorem.
+[done] Local six-map scattering classification and an odd-word sufficient criterion derived below.
+
+## 1. Scope
+
+Let P be a strictly simple canonical grid-triangle room with distinct interior A marks S,T. Every noncorner integer point is A; in particular, there are no interior B/C points. Keep every wall direction and the rest of P fixed. The pocket has vertices
+
+    B_0=(1,1), A_0=(2,2), C_0=(1,2),
+
+and portal x=1, 1<y<2. Immediately above and below the portal the physical wall also lies on x=1. Move B_0,A_0,C_0 by t u, where u=(0,-1), leaving both marks fixed. Thus the two moving mirror lines are
+
+    D_t: y-x=-t,       H_t: y=2-t.
+
+We seek an admissible event from a chosen source lift to a lift of the ACTUAL physical target T, through exactly one corner at the developed midpoint. The halves have equal displacement w; each avoids other physical corners. The selected intrinsic continuation at the corner bounds an embedded pi-sector. Wall-parallel directions are omitted when applying a physical opening inequality. These requirements cannot be replaced by reaching an arbitrary A point or by an arbitrary broken geodesic.
+
+The global existence assertion has not been proved. The local return-map and single-excursion results do not need the grid or parity hypotheses on the rest of the room. The odd-word criterion only needs its wall reflection linear parts to lie in D4. The raw parity hypotheses matter for the proposed global existence and for the previously proved axis-twist transfer. No existence is inferred from accessibility of the pocket.
+
+## 2. All local return maps
+
+Translate the original pocket by (-1,-1), so its vertices are (0,0),(1,1),(0,1). At t=0 write
+
+    D(x,y)=(y,x),       H(x,y)=(x,2-y).
+
+Eight reflected triangles tile the square [0,2]^2 centered at (1,1). Their outer edges are eight images of the open portal x=0,0<y<1. A legal ray enters at (0,e), 0<e<1, with velocity proportional to (1,m). Until it leaves the pocket, its unfolded development is exactly the straight line through that point in the square. There are no exterior walls of the rest of the room in this local development.
+
+It exits through the bottom, right, or top of the square. The images of the portal on these sides determine the following six return isometries. Words are read chronologically left to right in the physical pocket; the developed map is the displayed composition, with AB meaning A after B. The displayed words specify the isometries, not a unique chronological itinerary; the two four-reflection words represent the same half-turn.
+
+|Developed exit|Slope interval|Portal image G|Linear part R_G|dG_t/dt=(I-R_G)u|
+|---|---|---|---|---|
+|bottom, 0<x<1|m<-e|D|(x,y)->(y,x)|(1,-1)|
+|bottom, 1<x<2|-e<m<-e/2|DH|(x,y)->(-y,x)|(-1,-1)|
+|right, 0<y<1|-e/2<m<(1-e)/2|DHD|(x,y)->(-x,y)|(0,0)|
+|right, 1<y<2|(1-e)/2<m<(2-e)/2|DHDH|(x,y)->(-x,-y)|(0,-2)|
+|top, 1<x<2|(2-e)/2<m<2-e|HDH|(x,y)->(-y,-x)|(-1,-1)|
+|top, 0<x<1|m>2-e|HD|(x,y)->(y,-x)|(1,-1)|
+
+Exclude equality cases, which hit a portal endpoint, and exclude m=1-e, which goes through the developed center, a lift of the physical tip A_0. Apart from these cases the straight segment avoids every physical corner lift in the square. Hence every interval, with that deletion, genuinely occurs locally. An individual interval need not have a single literal reflection word across the center-hit exclusion, but its return isometry is as stated.
+
+For any legal fixed local itinerary, translating both mirrors gives
+
+    G_t = tau_(t u) G_0 tau_(-t u).
+
+Its linear part stays R_G and its affine translation derivative is (I-R_G)u. Exactly one of the six maps has zero derivative: DHD, reflection in the unchanged vertical line. For that branch G_t=G_0 exactly. This is the branch used by the continued axis trajectories. The other five maps change to first order.
+
+This is a statement about the developed return map. It does not claim a ray at fixed entry and direction has fixed exit time or exit coordinate; for some branches these vary as well. The return-map derivative is the quantity entering a prescribed developed corner-event equation.
+
+## 3. The exact wall-load identity for the slide
+
+Write each fixed-direction physical reflection as
+
+    F_i,t(x)=R_i x+b_i(t).
+
+All R_i belong to D4. For the two moving pocket mirrors,
+
+    a_D := b_D'(0)=(1,-1),
+    a_H := b_H'(0)=(0,-2),
+
+and every other a_i is zero. These follow either from conjugation by tau_(t u), or directly from the equations of D_t,H_t. Number hits j=0,...,n-1, so p is the number strictly before the chosen corner development. Let L_j be the product of the linear reflection parts strictly BEFORE hit j in the development from the source. Composition differentiation gives
+
+    derivative of accumulated affine translation = sum_j L_j a_j.       (1)
+
+Suppose an actual saved or constructed admissible midpoint event has n wall hits in its fixed word, with p hits before its corner c. Its physical corner velocity is v_c=u if c is B_0,A_0,C_0 and zero otherwise. Both actual marks are fixed. With eta=gamma_second-gamma_first, the period defect derivative is
+
+    Q(eta) = sum_(j>=p) L_j a_j
+             - sum_(j<p) L_j a_j - 2 L_p v_c.                         (2)
+
+A corner can admit equivalent choices of the coincident split position. The identity uses the prefix matching the chosen labeled corner development. When comparing prefixes, differentiate the corner position too. Formula (2) follows from Q(eta)=T_image'-2 C_image'+S_image'; here S_image'=0. It therefore retains the actual target, the first-half transport and corner motion.
+
+For a corner outside the pocket, group complete pocket excursions. Each contributes its transported vector L(I-R_G)u with a minus sign before the midpoint and a plus sign afterward. This proves a conditional geometric result:
+
+Here a corner outside the pocket means c is not one of B_0,A_0,C_0. The actual interior A marks are outside the closed unit pocket because that triangle and its open portal contain no other integer points.
+
+**Single-excursion criterion.** If an admissible actual S-to-T event has its sole corner outside the pocket, makes exactly one complete excursion into the pocket, and that excursion uses any return map except DHD, then Q(eta) is nonzero. More generally it suffices that all other excursions use DHD.
+
+The proof is immediate from the table and invertibility of L. It applies with the remainder of the room arbitrary. In the D4 setting its nonzero defect is axis- or diagonal-parallel, so an admissible non-wall-parallel w also gives a nonzero scalar opening row. Its sign selects one sign of the slide. The criterion does NOT supply the event.
+
+## 4. A stronger cancellation-resistant parity criterion
+
+Equation (2) is integral. Reduce it coordinatewise modulo 2. Every D4 matrix permutes coordinates and changes signs, so it fixes (1,1) modulo 2. Consequently
+
+    L_j a_D = (1,1) mod 2,
+    L_j a_H = (0,0) mod 2,
+    2 L_p v_c = (0,0) mod 2.
+
+The sign distinguishing the two halves also disappears modulo 2. Thus, for EVERY admissible midpoint event in this family,
+
+    Q(eta) = (# hits on this moving diagonal D mod 2) (1,1) mod 2.      (3)
+
+In particular:
+
+**Odd-word criterion.** Any admissible actual S-to-T midpoint corner event whose limiting development word contains an ODD number of factors for the pocket's moving diagonal has Q(eta) nonzero (vector detection). It cannot be canceled by other pocket excursions, moving-horizontal-wall hits, transport through the rest of the room, or the motion of its sole corner.
+
+Count every diagonal factor in the chosen limiting development word, including any copy transition through the selected pi-sector at the corner. Such a corner transition is not a legal physical reflection at the vertex. If the corner lies outside the pocket, every counted diagonal factor is an ordinary transverse wall-interior hit. Equivalent coincident split positions must retain the same full development and the corresponding corner derivative in (2); (3) does not authorize arbitrary edits to the word.
+
+For a complete excursion the four bottom/top exit maps in the table have odd diagonal-hit count. The two right-side exit maps have even count. This gives a sufficient condition even when many excursions occur: an odd total number of bottom/top exits in these developed pocket squares guarantees detection, provided the corner lies outside the pocket so every encounter is complete.
+
+Nonzero vector defect alone need not make the ORIGINAL scalar row nonzero: w can be parallel to Q(eta). The axis-shear argument in Section 5 supplies the sign step rather than assuming it.
+
+D-parity is a well-defined character of the local dihedral group: D^2, H^2 and (DH)^4 all have even D count. Equivalently, it records whether R_G swaps the coordinate axes. Thus the odd/even counts assigned to the six maps are independent of their chronological representation.
+
+The converse is false locally: DHDH has even diagonal count but nonzero derivative (0,-2). Even-hit actual events require the full vector sum (2); they are not certified blind by parity.
+
+## 5. Conditional two-sided opening, without an additional sign hypothesis
+
+For the raw parity room, all continued base axis-core periods are constant under this slide. Hence Q(g eta)=Q(eta) for every g in the group generated by the two selected axis shears, as proved in `corner-rigidity.md`. Their shear parameters a,b are positive nonzero integers. Their affine maps fix the physical endpoint labels and preserve the selected intrinsic pi-sector.
+
+Suppose an admissible odd-word event has half-vector w=(p,q), defect v=Q(eta), and side sigma. Both components v_x,v_y are odd integers and therefore nonzero. Under the horizontal shear (x,y)->(x+a n y,y), its event row is
+
+    g_h,n = -sigma [p v_y-q v_x+n a q v_y].
+
+If q is nonzero, this has nonzero slope in n. Arbitrarily large positive and negative integer n produce rows of opposite signs. Only finitely many such powers are wall-parallel. If q=0, p is nonzero; the vertical powers give
+
+    g_v,n = -sigma [p v_y-n b p v_x],
+
+again with nonzero slope. Choose one admissible integer power for each sign. The reviewed local opening proposition then gives a legal actual S-to-T connection for every sufficiently small positive slide and another for every sufficiently small negative slide. The two neighborhoods may have different radii; take their minimum.
+
+Thus existence of ONE actual admissible odd-word seed would prove two-sided local destruction of darkness for this slide. It would not require proving the initial event's scalar determinant nonzero or favorable. This is a conditional consequence, not an event-existence proof. No new powers or optical paths are enumerated here.
+
+More generally, on ANY variation for which Q is zero on the axis-core span, nonzero v suffices without a parity condition. If q v_y or p v_x is nonzero, use the corresponding formula above. If both vanish while w,v are nonzero, the only possibilities are w vertical/v horizontal or w horizontal/v vertical. In the first case one horizontal shear makes p nonzero, then vertical powers give both signs; exchange axes in the second case. At most one preliminary shear is needed. The defect remains v throughout, and the intrinsic side remains sigma. Therefore vector seed detection on an axis-isoperiodic subspace is equivalent to signed separation by their two-shear orbits on that subspace. More precisely, for a linear subspace E of D0 let H_E be its intersection with the actual translation directions. Uniform scaling is not in D0 since the axis cores have nonzero periods. If the common vector-seed kernel on E equals H_E, take a linear complement E_0 to H_E. Compactness of the unit sphere in E_0 extracts a finite positively spanning family of orbit rows. For the independently parameterized fixed-mark pocket slides of Section 7, H_E is zero. This elementary restricted statement does not need the cylinder-mixing spectral argument used for general, non-isoperiodic variations.
+
+For clarity, the finite-family statement gives a uniform geometric neighborhood, not just a different interval for each direction. For each selected fixed word, the developed corner and target images are affine in delta. Its signed area is f_e(delta)=g_e(delta)+O(norm(delta)^2), with a uniform bound for that word. All noncorner crossing and vertex-avoidance conditions persist in a neighborhood; f_e<0 handles the sole corner as in the reviewed opening proposition. On the compact unit sphere, the finite rows have a margin c>0 such that some g_e(delta)<=-c norm(delta). With C the maximum of their quadratic bounds and epsilon the minimum of their legality neighborhoods, choose norm(delta)<min(epsilon,c/(2C)) (omit the second bound if C=0). The corresponding f_e is negative. This proves uniform local opening within E_0.
+
+## 6. Frozen control: one uncanceled two-mirror visit
+
+No new paths are needed to check the criterion against the existing control. Saved event1 has actual physical corner (-1,2), outside the pocket. Its recorded wall word includes exactly one pocket visit, the adjacent walls H,D (wall indices 3,2), before the corner, and no other hit on either pocket mirror. Its prefix transport sends a_HD=(1,-1) to (1,1). Therefore (2) gives
+
+    Q(eta_1)=(-1,-1).
+
+With w=(-12,5) and sigma=+1 its signed opening row is
+
+    -sigma det(w,Q(eta_1))=-17.
+
+This already supplies the odd seed required by Section 5 in THIS saved room. Its previously proved raw-parity and axis-core hypotheses apply. The initial row -17 opens t>0. The known horizontal shear has a=48; its first positive image has half-vector (228,5), unchanged defect (-1,-1), and signed row 223, which opens t<0. Both directions avoid wall parallelism. Thus the two fixed theorem-prescribed events establish illumination for all sufficiently small nonzero t in this literal pocket-slide family. The positive-power image is justified by the reviewed affine-event transfer; no new word or optical replay for that image is claimed, and no explicit uniform interval radius is computed here.
+
+This is a completed restricted opening result, distinct from the earlier three-vertex ear deformation. It does not supply an event in an arbitrary room.
+
+Saved event0 has no hits on either pocket mirror, and its physical corner is outside the pocket. Equation (2) gives zero, agreeing with its whole two-axis-shear orbit being blind.
+
+The checker reconstructs both fixed affine developments directly from their physical wall reflections, compares them with the frozen corner/target forms, and evaluates (2) and (3). It performs no direction, word, ray or room search, and does not claim new optical validation of these previously audited events.
+
+## 7. Several independent pockets: a finite-field sufficient condition
+
+Suppose k disjoint pockets have independent legal unit slide parameters t_r, and both marks stay fixed. Their moving diagonal walls are distinct; no maximal wall or moving vertex is shared. D4 images of the pocket are allowed. The outer axis-wall derivatives remain even, and each diagonal-wall derivative has both coordinates odd. For any supplied admissible event e, (3) applies to each parameter:
+
+    partial Q_x(eta_e) / partial t_r = B_er mod 2,
+    B_er = number of factors on moving diagonal r, modulo 2.
+
+The corner-motion term is still even. If a finite packet of actual events has rank k for B over F_2, a k-by-k minor of the integer x-defect matrix is odd. That minor is nonzero over the reals, so these event defects detect every nonzero real combination of these k pocket slides.
+
+Assume, as required for the transfer, that each slide fixes the continued base axis periods in the k-pocket room. The local fixed DHD branch or its D4 image supplies the same reason as in the single-pocket argument. Then Section 5 converts this conditional vector injectivity into signed separation and a finite positively spanning orbit family on the k-dimensional slide subspace. This is a sufficient independence criterion. It neither supplies the events nor classifies the full axis-isoperiodic kernel as pocket slides. Failure of the binary rank test does not imply failure of real detection.
+
+## 8. A topological bit is available; straight event realization is the gap
+
+Let D_hat be the union of the lifts of this one moving diagonal wall in the eight-copy unfolding X. At both endpoints B_0,A_0, the adjacent mirror linear parts generate D4, so all eight sectors meet in one lift of that physical corner. Exactly four diagonal seam arcs meet there. Thus D_hat is a closed one-chain modulo2, and crossing it defines a character on closed paths. For a corner event, push its midpoint through the chosen pi-sector; its crossing count is precisely the diagonal-factor count in Section 4.
+
+There is an elementary dichotomy.
+
+*If this is the only physical diagonal wall*, colour copy g by 0 when g preserves the two coordinate-axis directions individually, and 1 when it swaps them. Axis-wall crossings preserve the colour; crossing this D wall changes it. Hence D_hat is the boundary modulo2 of the union of colour-0 copies. The bit of a path is determined by the colours of its endpoint copies. An odd actual S-to-T event would have to reach one of the four coordinate-swapped copies of T.
+
+*If another physical diagonal wall E exists*, its reflection linear part is either R_D or -R_D. In the first case the prescribed copy crossing sequence D,E returns to the original copy. In the second case D,E,H,V returns, where H is the pocket horizontal mirror and V is an available vertical wall of the attachment. Indeed R_D R_E is respectively I or -I, and R_H R_V=-I. Choose crossing points in the open walls, connect them by arbitrary interior paths in the successive copies, then return to the starting point in its copy. This is a closed topological path crossing D_hat exactly once, so D_hat is nonzero in homology modulo2. These interior connecting paths exist because P is a connected disk; they are NOT asserted straight billiard paths.
+
+In either case an odd continuous source-to-actual-target path exists. In the first case choose a swapped target copy; X is connected since R_D,R_H generate D4. In the second case append the odd closed path to any path to any chosen target lift if needed. Thus ordinary topological connectivity is not the missing obstruction. Replacing these paths by a straight midpoint connection through only one legal corner is an additional theorem and remains open.
+
+## 9. The remaining global question
+
+The odd-word criterion reduces one sufficient route to a precise endpoint question: can one construct a legal midpoint corner continuation from actual S to actual T whose word toggles a bit an odd number of times at this one diagonal wall? Toggle no bit at any other wall.
+
+Connectivity of the fan tree does not answer that question. It supplies combinatorial routes to a pocket, but those routes need not be straight, need not put the sole corner at half-time, and need not return to the target's physical label. Likewise, generic rays can use the five moving return maps without giving any corner event for the chosen pair. Existence of an odd-hit event would prove the local detection lemma; failure to find one would not disprove it, because even-hit events can detect too.
+
+The selected two axis multitwists cannot fix this existence gap: on the pocket slide Q vanishes on all their core increments, so they preserve Q(eta) on every seed orbit. A proof must construct a new seed, use a genuinely different action with a justified effect, or supply a structural counterexample. No universal detection or counterexample in the required polygon class is claimed here.
+
+## Review status and resolutions
+
+The first focused tools-disabled Opus review accepted the six-map classification, complete exception list, transported-load formula and mod2 identity. It requested clearer zero-based indexing, chronological composition, copy-sector factors and geometry-binding assertions; these are incorporated. It also distinguished vector detection from the original scalar opening row. Section 5 now supplies a separate two-shear argument for both signs, including the axis exceptions.
+
+A separate global-existence analysis independently derived the same mod2 identity but found neither a proof nor a counterexample. Its unproved broader claims are not imported. In particular, excluding convex 45/90 corners does not by itself exclude convex 135-degree B corners, and a physical 45-degree wedge must not be confused with its unfolded pi-sector. The topological lemma in Section 8 has its own copy-colour proof above. The focused follow-up review accepts Sections 5,7,8; its requests for explicit nonzero shears, a named symmetry quotient, a uniform multi-parameter opening estimate and the completed saved-room consequence are incorporated. No separate numerical execution by a reviewer is claimed. The reviewer also retracts its earlier physical-wedge/pi-sector claim. Closedness of D_hat controls homotopies around a full cone; it must not be read as permission to change an event's outgoing prong or selected legal pi-sector.

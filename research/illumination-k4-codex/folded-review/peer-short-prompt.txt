@@ -1,0 +1,77 @@
+Independently challenge a mathematical proof. You are a separate Opus reviewer, not the running live Claude peer. Tools are disabled: do not call tools or edit files. Return a rigorous review with ACCEPT/REJECT/CONDITIONAL for each lemma, any actual gap or counterexample, and minimum corrections. Do not infer correctness from prior acceptance. The claimed theorem is restricted to the specified canonical folded-parity class, not general mirror rooms. The already independently audited finite inputs1-3 may be assumed here; scrutinize the new lemmas and whether they logically cover the class. In particular check the15-triangle star budget, the fixed supporting line disk argument, and Euler inclusion-exclusion for2 copies. No ray searches.
+
+# A short reduction for the folded-parity 22-wall minimum
+
+Working theorem; written proof and finite classification independently checked by Codex; separate peer review pending. This does not establish a global minimum among mirror rooms.
+
+## Scope and remaining finite inputs
+
+Fix the canonical tiling by area1/2 right-isosceles triangles with vertices of three kinds: A=2Z^2, mixed parity, and odd-odd. Each triangle has one vertex of each kind and its angles there are pi/4,pi/2,pi/4, respectively. A parity base P is a closed simple polygon made of these triangles, with every non-A lattice point in P an actual boundary corner. Its distinct marks a,b are noncorner A points; they may be smooth boundary points or interior points.
+
+A folded room Q is a closed simple polygon equal to the union of m congruent copies g_i(P) with disjoint interiors. The copy maps agree as a continuous fold f:Q->P, restricting to g_i^(-1) on the i-th copy. Along each common positive-length boundary segment, adjacent copies are mirror images pointwise across its supporting line. Interior physical marks S,T satisfy f(S)=a, f(T)=b. No holes, slits, point contacts in the exterior boundary, or overlaps are permitted.
+
+We use three previously verified inputs:
+
+1. The wall identity
+
+       W_Q = m(W_P-4)+4+E+2b45+4i45 >= m(W_P-4)+4,
+
+   with nonnegative terms as derived in findings.md§2. It permits arbitrary copy-adjacency cycles and shared seam endpoints.
+2. No parity room with two interior A marks has W<=21 (the m=1 case, already independently audited).
+3. Among parity bases with two distinct noncorner A marks, none has W_P<=8. At W_P=9 there is one base shape, given below, up to a grid isometry. This small classification is computer-assisted: a fresh run of frozen reviewed enum_base.c through W12 has eight W9 listings and no smaller listing. The eight W9 geometries and marks normalize to the stated representative. No fold enumeration is needed in this input.
+
+The prior positive22-wall construction attains the resulting lower bound and is dark by the separately reviewed parity/folding/retracing proof.
+
+## Lemma 1: an interior A mark and another noncorner A mark need at least14 base walls
+
+Let N be the number of canonical triangles and E_A the sum of angles at actual A corners in units of pi/4. Every mixed-parity and odd-odd vertex in P is a genuine corner. Summing triangle angles of these two kinds, then adding A-corner angles, gives
+
+    4(W_P-2)=3N+E_A,     E_A>=0.
+
+Suppose a is interior. Its eight-triangle star is contained in P. At each of its four axial mixed-parity neighbors, the star contains exactly two of the four available pi/2-angle sectors, giving angle pi. Every such vertex must be an actual corner. It cannot have just those two sectors (smooth), or all four (interior); it must have exactly three contiguous sectors. Thus P needs one extra triangle at each of four distinct mixed-parity vertices.
+
+If b is interior, its eight triangles are disjoint from a's eight because a canonical triangle has only one A vertex. Hence N>=16.
+
+If b is smooth boundary, its four-triangle half-star is disjoint from a's star. The four axial mixed-parity neighbors of a and b have at most one common point. Indeed, a common neighbor forces b-a to be one of (±2,0),(0,±2), and then it is unique. The half-star at b can therefore fulfill at most one of the four extra-triangle requirements at a's mixed neighbors. It cannot fulfill two at the shared neighbor, because that would fill all four sectors there and make a forbidden non-A interior point. At least three additional triangles lie outside both stars. Therefore N>=8+4+3=15.
+
+In either case, 4(W_P-2)>=45, so integer W_P>=14. In particular, a base with W_P<=12 and two noncorner A marks has both marks on its boundary.
+
+## Lemma 2: an interiorizable smooth mark must lie on a supporting wall
+
+Normalize its copy to P, and suppose a smooth mark p on wall line l becomes interior in Q. Its incident copy contributes angle pi at p. Every other incident copy maps p to that same base point, hence also contributes angle pi. Exactly one further copy is possible, occupying the opposite half-neighborhood. Coherence and mirror gluing force that entire copy to be R_l(P), where R_l reflects pointwise in l.
+
+If l met int(P) anywhere, take a small disk centered at that intersection and contained in int(P). Reflection in l preserves the disk, so it lies in both int(P) and int(R_l(P)), contradicting disjoint copy interiors. Thus l avoids int(P). The interior of a simple polygon is connected, so it lies entirely on one side of l. Accordingly l supports the entire base.
+
+This is a necessary condition only. A supporting wall need not be sufficient for a larger valid assembly.
+
+## Lemma 3: two copies cannot give W_Q<=21
+
+The wall identity forces W_P<=12. Lemma1 therefore puts a,b on the base boundary. Normalize one copy to P. Since both marks need interior lifts, the second copy must be reflection across the line of a's wall and also across the line of b's wall. The coherent fold determines the copy transformation, so these reflection lines agree; call the line l. Lemma2 puts P in one closed half-plane and R_l(P) in the opposite one. Hence their intersection K equals P intersect l.
+
+The compact set K is a finite union of closed intervals and possibly isolated points. Each connected component is contractible. Euler inclusion-exclusion for these finite polygonal cell complexes gives
+
+    1 = chi(Q) = chi(P)+chi(R_l(P))-chi(K) = 2-c,
+
+where c is the number of components of K. Thus c=1, and K is one interval containing both a and b.
+
+Every point strictly between a and b on that interval has boundary angle pi in P: its boundary contains the same straight line on both sides and P lies on one side. But the segment between two distinct A lattice points on an axis or diagonal lattice line contains a non-A lattice point. That point would be smooth, contradicting the parity-base condition. Therefore two copies are impossible below22.
+
+This proof also rules out disconnected multiple seams and isolated supplementary contacts; no assumption of a tree is needed.
+
+## Lemma 4: the sole9-wall base cannot interiorize both marks, for any number of copies
+
+A representative boundary is
+
+    (0,0),(1,1),(2,1),(2,3),(1,3),(1,2),(-1,2),(-1,1),(0,1).
+
+Its only noncorner lattice points are a=(0,2) and b=(2,2). The maximal wall containing a is on y=2, but this line meets the polygon interior at (3/2,2). Indeed, the full rectangle [1,2]x[1,3] belongs to P and is symmetric about y=2. The reflection across a's wall overlaps P on an open rectangle. By Lemma2, a cannot acquire an interior lift in any allowed assembly. Isometries transfer this obstruction to every listed9-wall base.
+
+## Conclusion
+
+If W_Q<=21, input3 gives W_P>=9, so the wall inequality forces m<=3.
+
+- m=1 is excluded by input2.
+- m=2 is excluded by Lemma3.
+- m=3 forces W_P=9 and is excluded by Lemma4.
+
+Therefore every room in this normalized folded-parity class has at least22 walls. The known22-wall room attains the bound. The proof retains a finite base classification through9 and the earlier m=1 exclusion, but replaces all412-base/fold checks in the exclusion step. The independent larger replay remains a cross-check.

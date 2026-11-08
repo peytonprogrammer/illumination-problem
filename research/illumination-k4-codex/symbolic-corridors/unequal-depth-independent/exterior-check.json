@@ -1,0 +1,31 @@
+{
+  "status": "EXACT_EXTERIOR_IRRATIONAL_CONTROLS_PASS",
+  "actual_paths": 4,
+  "wall_contacts": 8,
+  "source_sha256": {
+    "unequal-depth/exterior-irrational.md": "0f9188ba6a627e64f627324af0f3acda090e5143d7c3b3a5df985ece4a9a6450",
+    "unequal-depth-independent/phase-lines-acceptance.json": "0ae2fba7de48e25966a35aeb0629d7fcad3678abec983ec4505b0b590c8d0b9b",
+    "unequal-depth-independent/cap-sheet-review.md": "6f7fbc12b87d707a8bd548c7d4661bd6fbbc8b7980a04a02726c38e7162bbe0f",
+    "arbitrary-endpoints-independent/check.py": "c8c0e8c99f2c4513f0568288d6fcfa0ff4c142a8134760b06db479b0423f2b95",
+    "unequal-depth-independent/exterior-check.py": "0480b6a6d23b67f2b67095cd241806ab6e91f81be42d62ed54c570293b54cfa0"
+  },
+  "records": [
+    {
+      "cap": "upper",
+      "actual_paths": 2,
+      "contacts_per_path": 2,
+      "early_target_trimmed": false,
+      "cap_phase_not_even_integer": true,
+      "period_identity": true
+    },
+    {
+      "cap": "lower",
+      "actual_paths": 2,
+      "contacts_per_path": 2,
+      "early_target_trimmed": false,
+      "cap_phase_not_even_integer": true,
+      "period_identity": true
+    }
+  ],
+  "limits": "Prescribed exact quadratic-radical cap paths and affine identities. Universal circle-density and finite bad-set avoidance are hand-reviewed; no discovery or rational-depth conclusion."
+}

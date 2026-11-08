@@ -1,0 +1,108 @@
+Remote(2,1,0,1): critical parent/leaf necessary classification
+Codex01a18403, 5 November 2026
+WORKING TABLE, independent hand challenge required. No full row theorem.
+
+Scope: previously accepted Delta4 structural lemmas, strictly simple finite
+canonical45 triangle rooms, full interior A exactlySUT, W<=21,k<=6.
+The row has parent excess2, exactlyoneoutside-K leaf ofexcess1, noother
+positive cells, b1. HandleNbridge67 firstbydirectillumination.
+NoncriticalD/R/N parents are separate (oldopposite13 route); sigma pairs
+L/Tc andB/E. This table concernscriticalL/B afterreferenceforcing.
+
+Forcing: established one/four localguards with nooutside-K support force
+L0 ifLcritical, thenordinaryB1,E4,Tc5; orB1 ifBcritical, thenordinaryL0,E4.
+Ifaforcedcapabsent, thatacceptedshortpath illuminates. No Tc5necessity
+is assumed for Bcritical. Allremaininglocalcells areordinarysingleHcaps,
+withatmostone of N5,N6,N7,N0 andatmostonecapofeachotherpartialcenter.
+
+Completeness by hand. A d1/q3 parent is acontiguousm3orm4window.
+Lwindowscontaining0:012,670,701,0123,5670,6701,7012.
+Bwindowscontaining1:123,701,012,0123,6701,7012,1234.
+For eachoccupiedsector, its BCedge faces exactlyonecardinalneighborA.
+Keep only neighborsoutsideH+sevenK. A singleleaf canonly be thetriangle
+sharingthatBCedge. Thisgives13Linterfaces and5Binterfaces listedbelow.
+B701/012/7012 have nooutside-K BCedge. L0123 has a thirdside towest,
+andB6701 a thirdside tosouth: do notomitthese merelybecausem4fansusually
+haveonlytwosides. Their twofixedoutside smoothpoints excludethem b1.
+Noorientation orordinaryassignmentrealizability isasserted bythislist.
+
+SharedC: parent90+leaf90 createsoneoutsideC180, parent180+leaf90 makes
+270 andnoextraC. AtallotheroutsideC acompleteparentpairis180unless
+facedbytheleaf. OddoddB smoothpoints addtob, baseline uncoveredH-sideC
+pointscancelagainstM anddoNOTaddtob. Nootherpositivecellcanhealangles.
+The classification checker uses exact per-vertex minima/maxima overwhole
+ordinaryslot alternatives; it doesnotuseunionofbothalternatives asafeasible
+assignment. This givesJ=2+cH, cH=1iffparentcompletesitsH-facingC.
+ThetwofixedJpoints are Hjoins(1,0),(2,1). OtherBangles staybelow360
+(thecore notch reaches315unlessNbridge). ThefullHsideaddsonefullC.
+Q=4+n andsN=12-Q=8-n. Sincek6=J+sN, n=J+2=4+cH.
+Theseareordinarycapcounts, nottriangles; m4parentq3includesonesmoothA.
+ThusLhas1+cH extraordinaryslots beyondB1/E4/Tc5. Bhas2+cH beyondL0/E4.
+
+Use x=[N5],y=[N0],z=[D1][R4],t=[Tc5]. Exactb equations:
+ L012/0123 + northleaf6: b=y+z, cH0, ONEextraslot.
+ L012/0123 + northleaf5: b=1-x+y+z, cH0, ONEextraslot.
+ L670 southleaf1: b=1+x+y+z, cH1, TWOextraslots.
+ L701 northleaf6: b=1+y+z, cH1, TWOextraslots.
+ L5670 southleaf2: b=1+x+y+z, cH1, TWOextraslots.
+ L5670 southleaf1: b=x+y+z, cH1, TWOextraslots.
+ L6701 southleaf1: b=2-x+y+z, cH1, TWOextraslots.
+ L7012 northleaf5/6: sameequation asL012 northleaf5/6, cH1,TWOextraslots.
+ B123 upperleaf0 orB0123 upperleaf0: b=1+x+yt+z,cH1,THREEextraslots.
+ B1234 upperleaf0: b=x+yt+z,cH1,THREEextraslots.
+ B1234 lowerleaf7: b=1+x+yt+z,cH1,THREEextraslots.
+Thefixed1minusx termcomesfromoddodd(-1,1), yfromoddodd(1,3), zfrom
+oddodd(3,-1). Bfixed1isoutsideC(-1,-2) oroddodd(-1,-1), respectively.
+
+Eighteennecessaryinterfaces andcurrentclosure:
+ L012 north6                 coreTHREE afterb1forcesN0,D/Rempty
+ L012 north5                 old13unlessN6; thenD/RemptycoreTHREE
+ L670 south1                 acceptedL3 (anyordinarycaps)
+ L701 north6                 independentlyacceptedremoteleafFOUR
+ L0123 north6                sameasL012north6
+ L0123 north5                sameasL012north5
+ L0123 west0                 excluded:outsideC(-3,0),(-2,1)both180
+ L5670 south2                acceptedL3
+ L5670 south1                acceptedL3
+ L6701 south1                b1forcesN5, acceptedL11
+ L6701 north6                excluded:C(-2,1)andB(-1,-1)both180
+ L7012 north6                independentlyacceptedremoteleafFOUR
+ L7012 north5                newparentroofFOUR (ALLordinarycompletions)
+ B123 westupper0             OPEN (conditionalcoversinothernotes)
+ B0123 westupper0            <=13 acceptedoldtwo/five/13 plusnewcoreTHREE
+ B1234 westupper0            OPEN (conditionalcoversinothernotes)
+ B1234 westlower7            OPEN (conditionalcoversinothernotes)
+ B6701 south1                excluded:outsideC(0,-3),(1,-2)both180
+
+Lhandcoverage details: whenoneextraslot, z isimpossible. L012rightleafb1
+forcesy1, soN0 istheslot,D/Rempty, coreTHREEworks. Leftleafb1forcesx=y;
+Nslotexclusivity givesx=y0. EitherN6,theonlyremainingbottomN,consumes
+theslotandcoreTHREEworks, orNnotbottomandold13works. L6701south has
+fixedoutsideC1andB(-1,1)contributes1-x; b1forcesx1,y=z0. TheNslotisN5,
+soN0/N7absent andoldL11works. FullH/north5 has11necessarytwoslotlabels:
+ Nempty+D2R4/D2R3/D1R3; N6orN7+oneD1/D2/R3/R4.
+The newroofFOUR ignoresallD/R/Nandcoversall11.
+
+B0123handcoverage: missingTc5usesacceptedforcingTWO. WithTc5presentand
+N6absent useacceptedFIVE. IfN6present, N0,N7,Tc6absent, soaccepted13
+works regardlessD/R. Thisexhaustsitsordinarycompletions.
+
+Proofstatus: componentoldguards independentlyaccepted; newcoreTHREE and
+fullLleftFOURsubmittedforpeerreview; classificationhandjoinalsoawaiting
+independentchallenge. B123/B1234 remainopenfamilies. support.json lists
+onlysymbolicnecessaryslotlabels satisfyingexactb1/n, thenconditionalguard
+coverage. Neitherthese counts noranunmatchedlabel provesvalidityordarkness.
+No validroomcensusisusedinclassification. Discoveryisconfinedtospecific
+separatelyclaimedcontrolrooms, eachwith840saggregatebound.
+
+Checkpoint: exact symbolic dispatch after current whole guard proofs
+The finite necessary-slot implication now leaves exactly TWO cap descriptions:
+ (i) B1234, remote(-2,-2)0, ordinaryL0,E4,D2,N5,Tc6; Rempty.
+ (ii) B1234, remote(-2,-2)7, ordinaryL0,E4,D2,R4,Tc6; Nempty.
+Allothernecessarydescriptionsmatcha completewholeguard (max13); this is
+not a validroomcensus and neitherexception is asserted dark. Thehandb/n
+relations remain the completeness argument; support.json verifies the finite
+logicaldispatch againstthoserelations. Newproofsnotyetindependentlyaccepted
+remain labelledparent; no completecriticalB orremote2101theoremclaimed.
+Classification.py/json/txt andsupport.py/json are NOW FROZEN for peer review.
+Futureopticaldispatcheswillusea separatefinal-dispatch receipt.

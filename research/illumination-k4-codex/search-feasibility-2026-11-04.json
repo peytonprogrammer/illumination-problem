@@ -1,0 +1,47 @@
+{
+  "status": "ANALYTICAL_ASSESSMENT_ONLY",
+  "bounds": [
+    {
+      "wall_cap": 20,
+      "exception_cap": 6,
+      "triangle_cap": 40,
+      "interior_A_cap": 4,
+      "partial_plus_missing_caps_by_I": {
+        "2": 12,
+        "3": 10,
+        "4": 8
+      }
+    },
+    {
+      "wall_cap": 20,
+      "exception_cap": 7,
+      "triangle_cap": 42,
+      "interior_A_cap": 4,
+      "partial_plus_missing_caps_by_I": {
+        "2": 13,
+        "3": 11,
+        "4": 9
+      }
+    },
+    {
+      "wall_cap": 20,
+      "exception_cap": 8,
+      "triangle_cap": 45,
+      "interior_A_cap": 5,
+      "partial_plus_missing_caps_by_I": {
+        "2": 14,
+        "3": 12,
+        "4": 10
+      }
+    }
+  ],
+  "raw_occupancy_masks": {
+    "4x4": 65536,
+    "5x5": 33554432,
+    "6x6": 68719476736
+  },
+  "rooted_orthogonal_20_turn_words_upper_bound": 125970,
+  "new_candidate_count": null,
+  "runtime_estimate": null,
+  "scope": "Arithmetic from existing accepted inequalities; no geometry/support census, solver, orbit or ray run. Occupancy counts include disconnected sets, holes and wrong wall counts; not candidate counts."
+}

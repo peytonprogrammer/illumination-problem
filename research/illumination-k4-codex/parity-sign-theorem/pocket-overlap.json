@@ -1,0 +1,67 @@
+{
+  "status": "PRESCRIBED_OVERLAP_LOAD_ALGEBRA_PASS",
+  "controls": [
+    {
+      "signed_determinant": 2,
+      "areas": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "flux_means": [
+        "0",
+        "0"
+      ],
+      "contrast": "0",
+      "tested_increment": "0"
+    },
+    {
+      "signed_determinant": 1,
+      "areas": [
+        [
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "flux_means": [
+        "1/2",
+        "-1/2"
+      ],
+      "contrast": "-1",
+      "tested_increment": "144"
+    },
+    {
+      "signed_determinant": -2,
+      "areas": [
+        [
+          "3/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "3/2"
+        ]
+      ],
+      "flux_means": [
+        "1/4",
+        "-1/4"
+      ],
+      "contrast": "-1/2",
+      "tested_increment": "-144"
+    }
+  ],
+  "four_event_identity": true,
+  "zero_mean_does_not_force_selected_contrast": true,
+  "scope": "Formal margin/intersection arithmetic only; no overlap table is asserted realizable and no cylinders are computed.",
+  "universal_actual_strip_separation": "OPEN",
+  "optical_discovery_runs": 0
+}

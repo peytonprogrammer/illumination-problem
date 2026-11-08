@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "Complete k=4 geometric-support eligibility only. No full two-star tuple projection or darkness conclusion.",
+  "negative_fixed_cell_checks": 225,
+  "physical_positive_checks": 48,
+  "support_counts": {
+    "GEOMETRY_FEASIBLE": 10,
+    "GEOMETRY_INFEASIBLE": 12
+  },
+  "three_star_projected_queries": 66,
+  "directly_illuminated_full_chain": {
+    "tag": "I3_6",
+    "proof": "Three adjacent full cells form the rectangle [-5,1] x [-1,1]. The only nonadjacent marks (-4,0),(0,0) lie in it; their connecting segment is interior. Similarities transfer the statement."
+  },
+  "potential_dark_shapes": [
+    "I2_1_1",
+    "I2_2_0",
+    "I2_2_1",
+    "I2_3_0",
+    "I2_2_2",
+    "I2_3_1",
+    "I2_3_2",
+    "I3_4",
+    "I3_7"
+  ],
+  "potential_dark_marked_families": 10
+}

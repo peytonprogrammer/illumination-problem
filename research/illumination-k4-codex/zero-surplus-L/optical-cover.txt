@@ -1,0 +1,80 @@
+Illumination of the FULL zero-surplus three-star L family
+4 November 2026
+
+THEOREM
+Let P be a finite strictly simple canonical45-degree triangle disk room with exactly three interior A points at S=(0,0), U=(2,0), T=(2,2), and no other interior A points. Use the exact lattice and ledger definitions in restricted-theorem-note/theorem.txt. If
+  Q+s_N=8,
+then S and T illuminate each other by a path with AT MOST13 REFLECTIONS. Indeed all pairs of distinct interior A points illuminate: the other two pairs have adjacent full stars and connect directly.
+No wall cap or exception cap is needed for THIS fixed-support equality theorem. It is not a statement about arbitrary interior marks, other supports, positive surplus or arbitrary polygons.
+
+STATUS
+Parent hand proof complete; six fixed paths and their universal tile implications exactly replayed, PASS. Separate-session peer independently reconstructed the full decision proof and short-path interval argument, with separate exact set/path checks PASS: exception-geometry/zero-L-completion.txt and zero-L-completion-check.json. No corrections. Same-model collaboration with reused checker, not formal or external expert verification. No new direction/room/word discovery. Historical novelty unassessed.
+
+Proof inputs
+1. The equality classification in classification.txt sections2–4, independently accepted by the other Codex: either the unique two-triangle northwest bridge already opens ST directly, or P consists of the three full stars H and at most one cap in each of seven fixed cells. No smooth B points are allowed. The sixteen individual cap options and five smooth-making forbidden pairs are explicit there.
+2. The exact13bounce path in cap-return-review/findings.txt, with its hand construction, and its reflected/reversed counterpart. The equality superroom-of-reference-R theorem has independently accepted proof in exception-geometry/mirror-exchange.txt.
+3. The new short implication below, extracted from an ALREADY SAVED optical guard and proved here geometrically. This forces the missing reference caps and upgrades the subfamily theorem to the full equality family.
+
+1. One-reflection paths force B+ and E-
+If the bottom-right cap B+=conv{(0,-2),(0,-1),(1,-1)} is absent, the path
+  S -> (1/2,-1) -> T
+is legal. Its only reflection is on the bottom open half-side of S's full star; the opposite triangle is precisely B+. Its incoming vector(1/2,-1) reflects to(1/2,1), proportional to T-(1/2,-1). The first leg is in S's star; the second crosses the full source, elbow and target stars, with interior side crossings(1,0) and(3/2,1). Other cap choices cannot affect those open legs or that mirror.
+Thus darkness forces B+.
+Apply the isometry sigma(x,y)=(2-y,2-x) and reverse the fixed path to exchange actual S,T. It gives
+  S -> (3,3/2) -> T.
+The corresponding sole opposite triangle is the east-bottom cap E-=conv{(4,2),(3,2),(3,1)}. Darkness forces E- as well.
+
+2. A four-reflection implication forces the top-left cap
+Suppose B+ is present. Equality and the single-cap classification ensure its other two sides remain actual mirror walls: adding a second triangle in that cell would have positive surplus. Suppose the top-left cap
+  T-=conv{(2,4),(2,3),(1,3)}
+is ABSENT. Then this path is legal:
+  S=(0,0)
+    -> (2/5,-8/5)
+    -> (0,-3/2)
+    -> (2/3,-4/3)
+    -> (7/4,3)
+    -> T=(2,2).
+It makes THREE reflections inside B+ and ONE at the smooth top half-side of T's full star.
+
+Direct hand construction
+Launch with velocity(d,-1). For 0<d<1/3, entry into B+ occurs at(d,-1) and its diagonal/vertical/diagonal reflections return the ray to(3d,-1) with velocity(d,1). This is the already derived cap rule with u=d and 0<u<1-2d. The three cap hit points are
+  (2d/(1+d),-2/(1+d)),
+  (0,2d-2),
+  (2d/(1-d),2d/(1-d)-2).
+Choose d in(1/5,2/7). The rising ray crosses y=1 at x=5d>1, so it enters the full target star through the open elbow/target portal, and reaches the top wall at(7d,3) with1<7d<2. Absence of T- makes that open half-side a physical mirror; the other top-cap option cannot cover it. Reflection sends velocity(d,1) to(d,-1). At height2 its x-coordinate is8d.
+For d=1/4, this is exactly T=(2,2), with the four listed rational reflection points. Every inequality is strict, the cap hits avoid its corners, the full-star crossings are interior and the last leg stays inside T's full star. Other external caps do not intersect the corridor or cover any used mirror; the precise tile check below confirms this independently.
+Thus B+ present and T- absent imply illumination. A dark equality room, already forced to contain B+, must contain T-.
+
+3. Reflection of the short path forces L+
+Reflect the same four-reflection path by sigma and reverse it. It remains a fixed legal S-to-T path whenever E- is present and the left-upper cap
+  L+=conv{(-2,0),(-1,0),(-1,1)}
+is absent. The full core H is invariant under sigma. Required/forbidden tiles are transformed explicitly; no symmetry of the unknown extended room is assumed.
+Therefore darkness also forces L+.
+Steps1–3 force ALL FOUR reference caps B+,E-,T-,L+ in any hypothetical dark equality room.
+
+4. Finish by the reviewed two-path cover
+The room now contains the reference R. The previously verified13-reflection path needs B+,T- and its sigma-reflected/reversed counterpart needs E-,L+. The equal-charge classification and no-smooth-B condition leave only these possible blockers:
+ - original13path: Nb+=conv{(0,2),(0,1),(1,1)};
+ - reflected13path: Nr-=conv{(0,2),(1,1),(1,2)}.
+They occupy the SAME northwest A cell. In the single-cap case they cannot both be present, so at least one13path connects S,T. If both triangles are present, they form the unique direct bridge, making the physical midpoint(1,1) interior and opening the straight segment ST. Either way darkness is impossible.
+This proves the theorem for the entire stated equality family, not only superrooms of R. Neither the n4/5/6 budget bound nor a room-by-room census is required.
+
+5. Darkness-dependent consequence
+For this exact full-star support, the general side-charge inequality gives Q+s_N>=8. The theorem rules out equality for a dark pair. Since the ledger is integral, any dark room with this support must satisfy
+  Q+s_N >=9,
+  W+2k=20+Q+s_N >=29.
+At k<=6 this yields only W>=17. It is a strictness improvement for a geometric bound, NOT a22wall lower bound for positive-surplus rooms. The already certified general I2/I3 theorem remains stronger in its wall conclusion but uses computer certificates. This hand result explains one whole equality branch.
+
+6. Certificate provenance and exact checks
+The four-reflection path is the unchanged saved guard at line28527 of claude-illumination-check/k6-run/cases/I2_00_11-pair0/guards.jsonl, with q=(2,2). Its source hash is bound to the historical full-replay manifest. The source was part of the ORIGINAL global guard archive; projecting only the L-case file had missed it. No new path or initial direction was generated by a discovery search.
+project-guards.py makes only fixed-source guard-to-cap-alphabet projections and logical dominance comparisons. It reads three frozen sources totaling52312 historical guard records, filters by actual endpoint displacement and available tile alphabet, and considers finite tiling isometries/reversal. It does not enumerate cap assignments or construct candidate rooms. Projection produced114 distinct conditions and42 undominated ones; only the stated one/four/thirteen paths are needed for the final proof. The bulky projected list is not a mathematical premise of the theorem.
+cover-check.py independently replays the six fixed paths (one/four/thirteen and sigma/reverse). It recomputes exact segment incidence, specular half-star conditions, full actual endpoint stars and transformed U/Z equality using the existing independently written rational checker. Every path passes. It checks the symbolic implication chain directly, not a truth-table/cap-assignment enumeration.
+The critical four-path cap requirements are:
+  original4: requires B+; forbidden cap options B-,T-;
+  reflected4: requires E-; forbidden cap options E+,L+.
+B- and E+ are excluded by the occupied-single-cell rule when B+ and E- respectively are present. Forbidden tiles outside the16cap alphabet are absent by the geometric classification.
+All exact paths, tile conditions and source hash are retained in cover-check.json. This reuses an existing checker; it is not a fresh second implementation. Human geometric argument above proves class-wide completeness. No formal proof assistant or external expert acceptance is asserted.
+
+7. Coordination and completion boundary
+Other Codex01a1a00f owns independent full-family review in exception-geometry/zero-L-completion.*. It separately identified the same short archived witness and hand parameter formula; review receipt has been read and reconciled: zero-L-completion.txt gives the full independent hand proof; its exact-check JSON reports PASS and maximum_reflections_needed=13. This thread owns classification and this full optical cover. No duplicate room/ray search or solver was launched.
+Bounded objective is achieved at the hand-proof, exact-check and separate-session peer-review levels. Universal goal remainsPAUSED. Do not enlarge the theorem to arbitrary zero-surplus supports, positive surplus, unbounded I or arbitrary real polygons.

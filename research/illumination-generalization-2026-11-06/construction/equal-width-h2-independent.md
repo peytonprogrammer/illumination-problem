@@ -1,0 +1,9 @@
+# Independent full hand review of R54
+
+Decision: ACCEPT the entire stated real equal-selected-width h2d1 actual-seam family. Main W21 goal remains OPEN. Full proof/request read; all five source pins current. No author 2500 arithmetic/33 physical controls replayed here.
+
+R50 applies with h2 and G-mu5 in the prescribed integer-height2 band room, independently real horizontal dimensions and equal selected widths. Any nonzero phase gives a positive square product, hence a COMPLETE actual connecting path with the already reviewed physical end-fold guards. If both phases vanish, 2q and5q are integers, and q=3(2q)-5q is integral. The first-index floor condition2q=floor(3q/2+1/2) implies2q<=3q/2+1/2, hence0<q<=1. Thus q1 is the ONLY remaining ratio. This argument does not assume c or w integral.
+
+At q1, the accepted R47 literal seam path translated by4 and scaled only in x gives the displayed eight reflections. Left contacts14/3 and8 lie in the true smooth gaps; the right-core22/3 and roof3c/8 contacts are strict. Every upper selected horizontal contact is strictly between c and2c, and its far reflection atx2c is genuine because w=c. All segments have the displayed common slope magnitude and the correct normal sign reversal. They never enter either variable left tooth. The original target is reached first by the previously reviewed R47 geometry. Independent positive vertical scaling also commutes with axial reflection sign changes, so the vertical-scale corollary is valid.
+
+This proves all c,w,A,B>0 in precisely this room and seam endpoint class. Unequal selected widths, other midpoint depths, other tooth patterns and universal canonical45 disks remain outside. No substantive objection remains. This is an independent AI hand review, not formal verification or external refereeing.

@@ -1,0 +1,11 @@
+# EA06 candidate: preserve all three guards while transporting the actual target index
+
+Original ordered equal-arm geometry K=P<L, Lpower2,N>P+L,positiveintegral widths,heven/codd,integer0<b<c<h<H,e>0 rational,actualrationalhorizontal terminal marks/evenintegeru,v, b<u<h. Let p=nu2P,t=nu2N>p and assume beta=H-h divisible2^(t-p). Claim actual S-to-T illumination for EVERY stated target horizontal position, without EA05's phase restriction or alternate target sign.
+
+H0=gcd(Nalpha,Pbeta,Nf),alpha=(h-u)/2,f=(h-v)/2,g1=h-c,d2=c-v. All defining terms have valuation>=t. After strict half-open source/cap selection, a positive null makes the actual right guard strict. Define D0=gcd(g1N,2H0),B0=2H0/D0. A block of B0 original null shifts preserves ALL THREE signed residuals and changes M=j-k by deltaM=N*d2/D0. It is an INTEGER because D0 divides2Nf andg1N, and ODD since nu2D0=t. Thus positive blocks solve M0 modulo rho=2^(min(t,log2L)-p). Then complete target-period correction reaches actualT.
+
+Success criterion: prove block integrality, exact signed right-phase restoration, target index change and a finite nonnegative choice for every offset. Strongest objection: D0 need NOT divide N alone; prove divisibility of N*d2 rather than silently use N/D0 as an integer. Direction and actual endpoint sheet remain physical throughout.
+
+Whole native corollary: integer e,ANY P<Lpower2,N>P+L,nu2N=nu2P+1,b/c/h ordered withheven/codd,and H=h+2. Every terminal native height has u<=h; uppernativelevels are absent. At mouthu=h alpha0 requires separate degeneration (not the lower nonzero-determinant argument): upper UJ01 with gridstepP,Hupper=gcd(betaP,Nf) hasvaluation>=t, so SAMEthree-guard target-block argument applies with no source index. Prove this explicitly. Then acceptedTR01/TR05 covers all pairs.
+
+One prescribed HAND calibration inherited geometry e4/P1/N6/L4,b1c3h6H8,S2,4/T12,2, seed29/5,strictresiduals(-12/5,-16/5,-9/5),i2m0j1k2,M-1,H02,D02,B02,deltaM3odd. Oneblocktau+24 gives149/5,M2; J2Gamma2divisible. After one block i8,m2,j13,k11,M2,tau149/5. Finalp1Lambda6 gives389/5,indices i20,m6,j37,k29,M8,E76=12mod32,actualT12. No execution/discovery requested; handproof then prescribed Fraction check only if needed. Partialwholefamily,fullr3/r<=8 remainsopen.

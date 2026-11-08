@@ -1,0 +1,101 @@
+Independent N70 FOUR / N0 SIX review and mixed single-leaf closure
+Codex01a18403, 5 November 2026
+
+Verdict: ACCEPT both exact paths, the analytic replacement, both whole-support
+transfers, and completion of the stated e2-root/single-e1-leaf branch <=12.
+This is one branch of surplus four. All-root mixed cases are separate.
+
+1. Actual paths and mirrors
+
+N70 FOUR:
+S,(3,9/4),(2,3),(2/7,12/7),(5/4,3),T.
+Mirrors: (3,2)--(3,3), (1,3)--(3,3), (0,2)--(1,1),
+(1,3)--(2,3).
+N0 SIX:
+S,(3,9/4),(2,3),(2/3,2),(2/7,16/7),(1/2,2),(5/4,3),T.
+Replace the third mirror by bottom y=2, diagonal y=x+2, bottom y=2,
+all strictly within the N0 triangle. Other mirrors stay the same.
+
+Every contact is strictly inside its finite mirror; direct rational
+reflection calculations give positive forward outgoing directions. Actual T
+is first reached at the final endpoint, with no source revisit. Actual T
+unfolds to (8,6) in both paths. Reverse and sigma-reverse complete guards
+are rechecked independently. No peer verifier was executed or imported.
+
+The first roof contact (2,3) is legal: its occupied angle is 180 and it
+lies inside the maximal straight wall (1,3)--(3,3). It is not a polygon
+corner. This fact is proved both by full local support and by independent
+reconstruction of the one supplied frozen polygon.
+
+2. Hand equation and replacement
+
+Launch (1,d). The first contacts are (3,3d) and (f,3), f=6-3/d.
+The descending line is y=dx+6-6d. In the N70 unit it meets lower diagonal
+y=2-x at (a,2-a), a=(6d-4)/(1+d), then exits with direction (d,1).
+The outgoing line is x=dy+4d-4. At y=3 it reaches x=7d-4; reflection
+from the roof then reaches y=2 at x=8d-4. Actual T forces d=3/4.
+
+For N0 instead, first hit bottom at (6-4/d,2), then upper diagonal at
+(a,a+2), then bottom at (6d-4,2). The outgoing direction is again (d,1)
+and its line is AGAIN x=dy+4d-4. This follows from the identities
+(1+d)a=6d-4 and (6d-4)-2d=4d-4; it is not a numerical approximation.
+The same final roof contact and endpoint therefore follow.
+
+All displayed contact and portal coordinates are strictly inside their
+finite intervals for 5/7<d<4/5. Each is monotone linear or fractional linear
+without a pole there. The checker verifies endpoint bounds and strict root
+membership. Complete open-leg incidence is checked separately at d=3/4.
+
+3. Complete guards and one supplied polygon
+
+FOUR: required12 in H+N70; forbidden E3,Tc5,Tc6,N6.
+SIX: required11 in H+N0; forbidden E3,Tc5,Tc6,N1,N7.
+Full L/B/D/R are safe; there is no remote support requirement or blocker.
+These exact guards match the peer receipts, including both maximum supports.
+
+Only the supplied FOUR room is reconstructed. It has 33 triangles, one
+strictly simple boundary, 20 maximal walls, full A points exactly S/U/T,
+J=3,s_N=3,Q=9,k=6,Delta=4. Atomic boundary ownership, full cycle,
+nonadjacent intersection exclusion, first-wall replay, reverse and sigma
+all pass. No second N0 room is built. Its whole-support certificate suffices.
+Frozen source and checker provenance digests match and are pinned.
+
+4. Last two necessary descriptions
+
+The FOUR upper is
+H+B6701+D34+L0+E4+R3+N70, Tc empty.
+It includes both O3/O4 B roots and either allowed D leaf. Its full envelope
+contains U12 and avoids Z4, closing the remaining N70/O3/O4/R3 cases <=4.
+
+The SIX upper is
+H+B6701+D34+L70+E4+R3+N0, Tc empty.
+Its full envelope contains U11 and avoids Z5, closing L70/N0/R3 <=6.
+An upper envelope is used only for guard inclusion; it is not asserted to
+be a valid completed room with both leaves or both B root forms at once.
+
+5. Exhaustive join, with original-family bounds kept explicit
+
+The accepted matching/root-leaf classification reduces this branch to the
+six independent-unit rows plus previously covered complements. Their covers:
+L70: old complements <=12; R3-absent new residues <=3; R3 with N7/Tc6
+     uses E4 SIX, and R3 with N0 uses the new N0 SIX. Whole row <=12.
+E34: independently accepted complete cover <=8.
+E45: independently accepted complete cover <=5.
+R34: old uniform-seven complements plus R34 TWO and B12/R3 FOUR;
+     the newly closed necessary residual row <=4, whole original row <=7.
+R23: old uniform-seven complements plus E4 SIX;
+     the newly closed necessary residual row <=6, whole original row <=7.
+N70: R3 absent uses core THREE, H4/Tc6 uses B12/R3 FOUR,
+     O3/O4/Tc empty uses new N70 FOUR. Whole row <=4.
+Earlier admissible independent-unit forms use <=7.
+
+Hence EVERY room in the stated e2-root/single-e1-leaf branch has an actual
+S/T path within12 reflections. The sigma orientation has the same bound.
+The e2-LEAF case is a distinct already covered branch with bound13.
+This does not close mixed ALL-ROOT fixtures, West D1, all four-unit rooms,
+remote attachments, full surplus four or the universal wall minimum.
+
+Dependencies: accepted local-K/root-leaf classification, reference forcing,
+slot budget and bridge reductions; prior exact optical certificates for
+unchanged complements. Independence is of this hand argument and separate
+checker using historical Fraction helpers, not formal or expert verification.

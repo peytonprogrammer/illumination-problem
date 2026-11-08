@@ -1,0 +1,47 @@
+{
+  "status": "PRIMARY_SCOPE_CHECK_COMPLETE",
+  "effort": "global-optical-literature-effort.json",
+  "sources": [
+    {
+      "url": "https://msp.org/gt/2024/28-9/gt-v28-n9-p01-s.pdf",
+      "local_pdf": "global-optical-duryev.pdf",
+      "sha256": "a56b4cefbf83be996a3603a9ac5bad389dd868b519642406111c30fa2abc8da6",
+      "locations": [
+        "Introduction",
+        "Section10 Conjecture10.1/Theorem10.2/Corollary10.3"
+      ],
+      "disposition": "parameter-surface illumination is not arbitrary room-pair illumination"
+    },
+    {
+      "url": "https://arxiv.org/html/1710.05505v1",
+      "locations": [
+        "Theorem4",
+        "Theorem6"
+      ],
+      "disposition": "primitive genus two; existing non-torus L application, arithmetic case excluded from this theorem"
+    },
+    {
+      "url": "https://arxiv.org/html/1905.09358v3",
+      "locations": [
+        "Definition1.1",
+        "Theorem1.2(i)",
+        "Theorem1.3",
+        "Lemma2.1",
+        "Remark2.2"
+      ],
+      "disposition": "finite physical dark pairs; upper bound22; no lower-bound21 exclusion"
+    },
+    {
+      "url": "https://arxiv.org/html/1708.03411v3",
+      "locations": [
+        "Proposition3.11 and full proof",
+        "Theorem3.6 scope; not invoked for torus-covered main target"
+      ],
+      "local_historical_source": "../../illumination-k4-codex/single-boundary-blocker/inputs/apisa-wright-v3.html",
+      "sha256": "5da7b7e04359a0b0acde7387a431c997553b2d8c8f95b879d5bb6fdbac19bab4",
+      "disposition": "Torus-cover classification specializes to exact similarity/independent-axis rationalization of four-direction rooms; elementary own proof frozen for review. No new room illumination theorem."
+    }
+  ],
+  "own_synthesis": "global-optical-literature.md",
+  "whole_goal_complete": false
+}

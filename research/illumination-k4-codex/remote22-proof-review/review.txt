@@ -1,0 +1,115 @@
+Independent review: surplus-four remote parent2/leaf2 proof
+4 November 2026 — Codex01a1a00f
+
+VERDICT: ACCEPT, for the precise fixed-support family stated below.
+No material gap found in structural-reduction.txt or remote22.txt.
+The proof uses exact, machine-checked optical certificates alongside its hand
+case reduction. This is an independent agent review, not formal verification
+or an external mathematician's assessment. It does not close full surplus four.
+
+Statement accepted
+A finite strictly simple canonical45 triangle disk has exactly full interior A
+stars S=(0,0), U=(2,0), T=(2,2), W<=21, k<=6 and Delta=4. In the remote
+charge row (parent,leaf,other-local,smooth-surplus)=(2,2,0,0), actual S and T
+connect by a finite specular trajectory avoiding all polygon corners, using
+at most23 reflections. The direct N bridge cases already illuminate.
+
+1. Arbitrary-size structural reduction: hand challenge
+The established identity W+2k=28+Delta gives W20,k6 at Delta4. For a partial
+contiguous A fan, q=m except q=3 for a smooth half-star m4; q=4 is absent.
+The nonnegative charge e=q-d counts occupied H-facing sides d. After the N
+bridge is removed, zero-charge cells are single H-facing caps and cannot
+transmit. Remote single triangles have one BC edge and cannot transmit.
+A transmitting remote fan costs at least2. A root1 that transmits is a
+quarter pair: its H and outward sides each contribute90degrees at C.
+
+I checked the connecting-tree exhaustion in structural-reduction.txt §§3–4:
+with two remote cells and total excess at most4, the only three-positive-cell
+possibilities are root2 with two single leaves, or root1/transmitter2/leaf1.
+In the first, a three-sector root has at most two sides; a four-sector root
+has side contributions90/180/90, so one remote join must add an outside smooth
+C. In the chain, both90+90 joins are outside smooth C. Four positive cells
+all have excess1; transmitting roots cannot branch and each remote/root join
+costs another smooth C. These exceed Delta4. Extra adjacencies cannot heal
+an outside C because exactly its two neighboring A cells determine its fan.
+The same argument excludes a d0 intermediary and a remote cell with two roots.
+Thus every remote cell is the sole remote leaf, directly attached to one root.
+
+The eight remote rows and seven local partitions follow from q values and
+r+l+h+b=4. For the reviewed row, the parent has d1/q3, hence exactly three
+or four contiguous sectors. The remote leaf has d0/q2, hence exactly two.
+No additional positive cell is affordable. All remaining occupied cells are
+one H-facing cap in the six other K cells. This supplies a complete finite
+domain for this row; it is not an assumed bounding window.
+
+2. Root/leaf orientations and critical cap budget
+I checked that all seven root positions in K are included, before using sigma.
+No full outside-H C pair can be healed by an ordinary neighboring cap, whose
+sole BC edge faces H. Thus a full outward pair must face the sole remote leaf.
+At its common C,90+90 is excluded by b0; a half side therefore forces a
+centered pair. A full side allows either quarter or the centered pair.
+
+For critical L/B parents, no outside full B can be made: at each noncore B,
+the four incident A cells contribute at most90+90+90+45=315degrees. The core
+notch gets at most one N cap, hence stays below360. Thus J=2+c_H+c_R.
+The parent contributes q3 and leaf q2, so Q=5+n; the charge identity gives
+s_N=7-n. From k6, n=J+1. This justifies the slot counts used in §§4–7.
+
+I checked the L start lists and both remote sides, the forbidden west case,
+the south rectangle's forced Nb- repair, and the north half/full-H cases.
+I checked the B west-only reduction and each smooth-B prohibition. Their
+sigma images exchange actual S/T; time reversal restores the endpoint order.
+The named case splits are exhaustive under slot exclusivity and the ledger.
+In particular the final R- room is forced, not chosen as a representative
+while other cap assignments remain unaccounted for.
+
+3. Optical implications: independent executable challenge
+I froze the reviewed texts and retained receipts in inputs/; no archive read.
+The independent checker constructs the necessary root/leaf domain from the
+angular definitions, not from the peer's nine named family templates. It
+permits every ordinary cap option, then enforces contiguous fans, exact full-A
+support, b0, Delta4, k6, and a connected simple disk with Euler characteristic1.
+It does not use darkness, failed rays, or the selected paths to reject geometry.
+
+154 necessary angular patterns, 174,474 finite cap assignments considered;
+6,738 valid configurations across98 orientations remain. These are configurations
+in exactly this fixed row, including sigma pairs, not a new global room census.
+Every survivor passes the SPECIFIC path assigned by the prose case split.
+The checker separately verifies88 retained symbolic terms,13 successful inherited
+symbolic implications, and134 distinct retained paths (including sigma images).
+All134 full path conditions also pass a second implementation based on segment/
+triangle intersections and wall-normal reflection, separate from the original
+four-line-family guard extractor. Maximum selected path length is23.
+Only the final named room and its sigma image need the new14 path among this
+retained set; removing that certificate would leave exactly those two uncovered.
+That supports the claimed residual identification without assuming it.
+
+4. Final analytic path and scope of acceptance
+Earlier remote22-witness/ independently traced and replayed all14 actual wall
+contacts, verified strict smooth contact(1,2), and the open crossing x1,y12/13.
+The wall x1 truly ends at y1; treating it as a mirror below y1 is invalid.
+The exact symbolic interval is checked separately in analytic-interval.json.
+The endpoint equation x=22-26d gives d10/13, strictly inside13/17<d<7/9.
+No claimed shortest path is required. The23 bound belongs to other branches.
+
+5. Limits and build-on result
+This acceptance covers the structural reduction and the entire(2,2,0,0) row.
+It does not independently certify the five erased rows' lower-layer dependency
+chain, the other two parent2 rows, or wholly local surplus-four partitions.
+No universal22-wall bound, new darkness exclusion outside the stated support,
+novelty assessment, or finite bound for all geometric rooms follows.
+
+The reusable advance is a local entrance-to-exit map, replacing repeated
+physical-wall itineraries inside a pocket. See pocket-return.txt: a general
+rectangle map, exact height periodicity, and a triangle-leg map directly relevant
+to the two remaining single-triangle remote rows. These are elementary new
+lemmas for this continuation, not claims of historical novelty. Their local
+return conclusions do not by themselves guarantee a global S/T connection.
+
+Reproduce
+ python3 -B .context/illumination-k4-codex/remote22-proof-review/check.py
+ uv run --offline --with sympy python -B .context/illumination-k4-codex/remote22-proof-review/analytic-interval.py
+ python3 -B .context/illumination-k4-codex/remote22-proof-review/pocket-periodicity.py
+ python3 -B .context/illumination-k4-codex/remote22-proof-review/triangle-return.py
+
+Coverage: check.json, analytic-interval.json, coverage.txt; source hashes in check.json.

@@ -1,0 +1,108 @@
+Independent review: final centered bottom/east closure and full first layer
+4 November 2026 — restricted Codex01a1a00f
+
+VERDICT: ACCEPT, no corrections.
+Read peer first-surplus-review/bottom-residual-cover.txt and
+first-layer-theorem.txt in full. Reconstructed the complete six-reflection
+beam and its required absences by hand. Exact fixed-path, formula,
+monotone interval bounds, local smooth-B exclusion and sigma checks PASS
+in bottom-closure-review-check.json. Reviewed hashes are in that receipt.
+
+1. Family conditions really force the required mirrors
+Assume the unique first-surplus fan is centered B-,B+. Other occupied
+partial cells are ordinary single caps (a northwest bridge is directly
+illuminated and may be handled first).
+Missing E- gives the old one-reflection connection. With E- present,
+missing L+ gives the old reflected four-reflection connection; its east
+cap remains single and its walls intact. With T- absent, the independently
+proved three-reflection centered-B prefix path connects. Thus any
+hypothetical dark completion has L+ and T-.
+The centered-defect branch has no smooth B points. At(-1,1), H supplies
+two45-degree triangles, L+ supplies one and Nb- would supply another.
+Four triangles would make a smooth B; hence Nb- is absent. T-'s single
+cell excludes T+ and its outer mate. B is exactly the centered pair,
+so both outer B mates are absent. These are ALL absences the new route
+requires. Neither N=Nr- nor the remaining D/R conditions are needed.
+
+2. Complete beam and actual target
+Launch S=(0,0) in direction(-d,1) on the open interval
+ 1/7<d<2/11.
+Reflect at(-d,1), a point strictly inside the source roof's negative-x
+half-side. Nb- is absent, so this is a genuine mirror. The ray enters
+the centered bottom pair at(-3d,-1), directed(-d,-1).
+The already proved two-hit map has u=-3d and tangent v=-d. Its strict
+conditions hold because3d<1,5d<1 and u+v=-4d!=0. It exits at(5d,-1),
+velocity(d,1).
+On the rise it crosses x=1 at height1/d-6 in(-1,1), then y=1 at
+x=7d in(1,3). Those are the source/elbow and elbow/target open portals.
+The x=1 crossing at d=1/6 is(1,0), an interior C of H, not a corner.
+The top-cap entry is(9d,3), with1<9d<2. Its single T- triangular cap
+returns after three reflections at(11d,3), velocity(d,-1), because
+0<2-9d<1 and0<2-11d<1. At height2 it reaches(12d,2).
+Choosing d=1/6 gives actual T=(2,2), strictly inside the beam interval.
+
+This gives exactly1+2+3=6reflections. The fixed path is
+ (0,0), (-1/6,1), (-4/7,-10/7), (4/5,-6/5),
+ (8/5,18/5), (2,11/3), (12/7,26/7), (2,2).
+The three top hits lie in open diagonal/vertical/diagonal segments;
+the two lower hits are strictly inside the two bottom diagonals.
+Every open leg is contained in H or the two stated caps. Other ordinary
+cap choices cannot change these legs or the indicated mirrors.
+
+3. Exact universal requirements and symmetry
+Independently recomputed from the supplied fixed path:
+ needed outside H: B-,B+,T-;
+ forbidden ordinary caps: Nb-,T+;
+ forbidden outside the ordinary alphabet: both outer B mates and the
+ outer T mate.
+All were established in section1. Thus the implication holds for every
+eligible completion, not only the residual used to retrieve the path.
+The checker matches all six hand formulas at d=1/6 and checks their
+monotone endpoint inequalities over the stated entire open interval.
+Sigma(x,y)=(2-y,2-x), followed by path reversal, keeps actual endpoints
+S,T. It requires E-,E+,L+ and forbids L-,Nr+ plus the outer E/L mates.
+The transferred necessity argument covers the entire centered-east
+family. No symmetry of an unknown completion is assumed.
+
+4. Consolidated theorem independently accepted
+The peer first-layer-theorem.txt correctly combines the mutually checked
+geometry and earlier optical cases with the two short centered closures.
+The22 potentially dark local fan types partition as
+10 noncritical +4 omitting critical +4 active outer +2 centered L/T
++2 centered B/E. The separate all-single-cap branch is covered too,
+and bridge-containing fans are directly illuminated.
+The left/top closure was independently accepted in
+centered-left-closure-review.txt. The bottom/east closure is accepted
+here. Maximum reflection counts are13 for the old/outer branches,
+3 for centered L/T, and6 for centered B/E. Therefore:
+
+ For every strictly simple canonical45-degree triangle room whose
+ interior A points are exactly S=(0,0),U=(2,0),T=(2,2), if
+ Q+s_N<=9, then S illuminates T within13reflections.
+
+The other two distinct A pairs are adjacent and directly connected.
+Thus all three interior A points mutually illuminate in this class.
+There is no W/k cap needed for this fixed-support theorem.
+
+The exact side-charge lower bound Q+s_N>=8 means this handles both
+Delta0 and Delta1. Integer charge then forces any dark pair with this
+support to satisfy Q+s_N>=10, Delta>=2. Using the already established
+identity W+2k=20+Q+s_N gives W+2k>=30, hence W>=18 at k<=6.
+The arithmetic and the limited scope in the peer consolidation are
+correct. This is not a W>=22 result, a theorem for every I2/I3 support,
+or a universal polygon minimum.
+
+5. Independence and completion boundary
+This review used the ONE supplied path receipt and existing exact checker,
+not a new archive projection or lookup. Hand reconstruction is separate-
+session work; checker code and prior lemmas are shared. No external expert,
+formal proof-assistant or new independent boundary implementation is
+claimed. The original guard provenance is retained in the peer receipt;
+this turn hashes the reviewed receipt and notes rather than claiming to
+have independently rescanned its source archive.
+The whole first-surplus L layer is now CLOSED at this hand-proof level.
+The long-beam later-pass attempts remain valid partial calculations but
+are unnecessary for excluding this layer. Larger surplus2–5, other
+supports and the universal goal remain untouched; no new campaign is
+started by this review. No room/direction/word search, solver, worker,
+peer edit or external communication occurred.

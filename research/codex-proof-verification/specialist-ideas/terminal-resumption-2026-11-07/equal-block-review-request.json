@@ -1,0 +1,31 @@
+{
+  "id": "COORD-COPRIME-EQUAL-BLOCK-01",
+  "created_utc": "2026-11-08T00:05:59.911296+00:00",
+  "claim": "Physical phase offsets prevent the exceptional (4,2,4) forbidden-class cover even when all four developed block lengths coincide; allows removal of the equal-block exclusion in the announced general-bottom construction.",
+  "source_pins": [
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/equal-block-cover-addendum.md",
+      "sha256": "ff1990d4d2cf3a39e6a78834b87ba09ad8d8c0529dc2d850091bad2498f7d1c6"
+    },
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/equal-block-prescribed-check.py",
+      "sha256": "3591ec5614114edb44f6093b16214ef28fb6f1ee10d657ca5ad42437345eeda2"
+    },
+    {
+      "path": ".context/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/equal-block-prescribed-check.json",
+      "sha256": "6092a18927a9aaf84f37a77c8442eeb7ffcc423baa5406f056b674a082cc322b"
+    }
+  ],
+  "parent_core_request_sha256": "9d5a9c8b39ba2971fa4e4dbdf0fa1d57b53aa446ec7cdbfa6839336e045e8079",
+  "status": "pending-independent-review",
+  "prescribed_cases": 3,
+  "prescribed_actual_reflections": 168,
+  "prescribed_wall_leg_guards": 1790,
+  "no_discovery_search": true,
+  "review_questions": [
+    "When the cap class is nonempty, does its exact constant force the source class empty for EVERY strict interior source?",
+    "Are all possible three-class covers exhausted, with the right time ordering?",
+    "Can the author remove the equal-block exception without changing the cap-orbit and actual target-period proof?"
+  ],
+  "sequencing": "Existing author and reviewer finish their current core/generalization tasks first; use this as a supplement afterwards."
+}

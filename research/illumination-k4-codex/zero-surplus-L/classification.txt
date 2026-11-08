@@ -1,0 +1,98 @@
+Zero-surplus three-star L rooms: hand reduction and a closed subfamily
+4 November 2026
+
+Status
+Parent hand proof, independent peer review requested. Exact static comparison with the already verified optical guards PASS. No room enumeration or new optical discovery. The full zero-surplus L illumination theorem is still open; the superrooms of the four-cap reference room are now proved illuminated by a two-path cover.
+
+1. Scope and explicit goal
+Use strictly simple canonical45-degree triangle disk rooms with exactly three full A stars at S=(0,0), U=(2,0), T=(2,2), and no other interior A points. Full cell coordinates are F={(0,0),(1,0),(1,1)} after dividing A coordinates by2.
+Let H be the union of these three closed stars. Its exposed-cell-side count is p(F)=4I-2e(F)=12-4=8.
+Assume ZERO SURPLUS:
+  Q+s_N=8.
+Here Q is3 per smooth boundary A point and the positive triangle incidence at every genuine A corner; s_N counts smooth boundary B/C points. k=J+s_N counts all interior or smooth non-A points. The budget of interest is W<=21,k<=6, with actual marks S,T.
+Missing implication attacked: does equality eliminate arbitrary partial fans and distant geometry, leaving a precise bounded optical family? Success is an exhaustive necessary reduction, plus a family-level optical consequence. A single extra illuminated example would not qualify.
+Strongest objection: equality may still admit smooth A fans or two-triangle bridges, and extending a reflecting wall can remove an old path. Both are treated below.
+
+2. Equality in side charging
+For each nonfull occupied A cell v, let h(v) be the number of exposed sides of full cells that it touches with at least one occupied triangle. Each such side is charged once to v. The other exposed sides have neither opposite triangle occupied, so their C midpoints form a set M of distinct smooth C points.
+Thus p(F)=sum_v h(v)+|M|, with M a subset of the smooth non-A points. For a partial m-triangle fan, q(v)=m except q(v)=3 at a smooth four-triangle fan. The number of touched sides is at most m for a nonsmooth fan, and at most3 for a smooth half-star. Hence q(v)>=h(v).
+The exact slack decomposition is
+  Q+s_N-p(F) = sum_v(q(v)-h(v)) + (s_N-|M|),
+with every term nonnegative. Under equality:
+ (i) q(v)=h(v) for every occupied partial cell;
+ (ii) every smooth non-A point is one of the C midpoints in M. In particular there are NO smooth B points.
+No full cell outside F is possible because I is exactly3. Any occupied partial cell with no adjacent full side has h=0<q and is therefore impossible. This also rules out all distant additions.
+
+The seven external neighboring cells, in PHYSICAL A coordinates, are
+ L=(-2,0), B=(0,-2), D=(2,-2), R=(4,0), E=(4,2), Tcap=(2,4), N=(0,2).
+All have at most one full-cell neighbor except N, which has two (below and right). Therefore h<=1 except h(N)<=2. Equality q=h rules out every fan of size>=3, including the smooth size4 case whose q=3. Every occupied external cell has one triangle, except N may have two.
+If N has two triangles, h(N)=2 forces precisely
+ conv{(0,2),(0,1),(1,1)} and conv{(0,2),(1,1),(1,2)}.
+These fill the missing90degree sector at B_mid=(1,1). The core already contributes270degrees there, so the midpoint becomes interior. ST is then a legal direct segment. Such a room is illuminated without any reflected-path argument.
+Consequently every potentially DARK equality room consists of H plus at most ONE triangle in each of these seven cells. This is a complete geometric reduction; it does not assume the room contains the four original reference caps.
+
+3. All single-cap options and the smooth-B conditions
+Each option below means the triangle whose vertices are the listed A,C,B. A cell may be empty, or contain one listed option; N may contain at most one of its four options in the potentially dark case.
+
+ label   A          C          B
+ L-      (-2,0)     (-1,0)     (-1,-1)
+ L+      (-2,0)     (-1,0)     (-1,1)
+ B-      (0,-2)     (0,-1)     (-1,-1)
+ B+      (0,-2)     (0,-1)     (1,-1)
+ D-      (2,-2)     (2,-1)     (1,-1)
+ D+      (2,-2)     (2,-1)     (3,-1)
+ R-      (4,0)      (3,0)      (3,-1)
+ R+      (4,0)      (3,0)      (3,1)
+ E-      (4,2)      (3,2)      (3,1)
+ E+      (4,2)      (3,2)      (3,3)
+ T-      (2,4)      (2,3)      (1,3)
+ T+      (2,4)      (2,3)      (3,3)
+ Nb-     (0,2)      (0,1)      (-1,1)
+ Nb+     (0,2)      (0,1)      (1,1)
+ Nr-     (0,2)      (1,2)      (1,1)
+ Nr+     (0,2)      (1,2)      (1,3)
+
+The original core has smooth B points at(1,-1),(3,1). Making both nonsmooth requires
+  (B+ OR D-) AND (R+ OR E-).
+At the five convex B corners, adding45degrees on both sides would make a forbidden smooth180degree B point. Thus the following simultaneous pairs are forbidden:
+  (L-,B-), (D+,R-), (E+,T+), (T-,Nr+), (L+,Nb-).
+The central B_mid remains270degrees with no central cap or315degrees with one of Nb+,Nr-. At most one N cap is present, so it cannot become interior in this single-cap branch.
+These are all B points affected by the attachments; the cap's B endpoint is always an existing boundary B of H.
+
+Conversely a selection obeying these rules yields a zero-surplus room. Each cap attaches to H along one exposed half-side; different caps have distinct new A vertices and can meet only at existing B endpoints. All local occupied fans remain contiguous. The union retracts onto the L core by collapsing the added triangles, has no extra boundary component and no pinch. It is a strictly simple disk. The listed B rules remove exactly all smooth B points. Its only smooth C points are the exposed side midpoints without an opposite cap. Therefore it has precisely the equality ledger below.
+
+4. Exact ledger and budget
+Let n be the number of single-cap triangles. All new A points are45degree corners, so Q=n and s_A=0. No new interior non-A point is created: an exposed C gets at most one extra90degree quadrant, and every B remains a boundary corner. Thus J=2, as in H. Each cap removes one of the8 exposed smooth C points, so s_N=8-n. Hence
+  N_triangles=24+n, k=10-n, W=8+2n.
+With W<=21,k<=6:
+  n in {4,5,6},
+  (W,k) in {(16,6),(18,5),(20,4)}.
+In particular no odd-W equality case is being hidden in the reduction.
+Darkness additionally forces B+ and E- by the two already proved one-reflection paths in exception-geometry/darkness-constraint.txt section4. If either is absent, that path remains legal regardless of the other caps. These forced caps already remove the two flat B exceptions, but do not alone prove illumination.
+
+5. Two concrete paths cover ALL equality superrooms of the reference R
+Let R be H plus the four caps L+,B+,E-,T-, the previously verified16wall room. Claim:
+Every zero-surplus room with the same three full stars that contains R illuminates S,T. This claim does NOT require W<=21 or k<=6.
+If the two-triangle N bridge is present, section2 gives direct illumination. Otherwise the single-cap classification applies.
+The fixed13bounce path p in cap-return-review/findings.txt requires only B+ and T- outside H. Among all16 single-cap options, its forbidden tiles are
+  B-,L-,Nb-,Nb+,T+.
+Its other two forbidden tiles are not available in the equality classification. Since R is present, B-,L-,T+ are excluded by the one-cap-per-cell rule; Nb- is excluded by the smooth-B rule with L+. Thus p can be blocked within this subfamily ONLY by Nb+.
+
+Use the isometry
+  sigma(x,y)=(2-y,2-x).
+It preserves H, sends S to T and T to S, and permutes the four R caps as B+<->E-, L+<->T-. Reflect p by sigma and reverse its time orientation, giving another actual S-to-T connection p_sigma. The added room need not itself be symmetric: the reflected fixed path's own tile requirements are checked separately.
+Path p_sigma requires only E- and L+ outside H. Its forbidden cap options are
+  E+,L-,Nr+,Nr-,T+.
+Again, R excludes E+,L-,T+; the smooth-B rule with T- excludes Nr+. Hence p_sigma can be blocked ONLY by Nr-.
+But Nb+ and Nr- occupy the SAME external A cell N. The potentially dark equality classification allows at most one triangle in N. If both are present, they are exactly the two-triangle direct bridge already handled. Therefore at least one of p,p_sigma is legal, or the direct connection is legal. Every equality superroom of R is illuminated.
+
+This covers a whole family through one structural argument, not one new witness per completion. It also eliminates the need to inspect the three W20/k4 residual fixtures I initially proposed on the board: sigma13 already covers all three.
+
+6. Exact guard checks and review status
+The preceding optical paths have existing exact physical verification and hand formulas in cap-return-review/findings.txt and verify.json. Reflection and reversal preserve specularity and corner avoidance, with endpoints explicitly S,T. The new guard-incidence-check.py compares the16 stated cap options to the exact required/forbidden tile sets and their sigma image. It verifies the requirements outside H, all forbidden cap labels, invariance of H under sigma, and the two distinct N blockers. PASS; guard-incidence-check.json contains the data. This is static set verification, not a room/cap-assignment census, ray tracing, or path discovery.
+During development, expected forbidden lists omitted opposite cap options already excluded by same-cell occupancy. The static check caught those omissions; the complete lists above were corrected before adoption. A separate indexing assertion incorrectly treated the first sorted triangle vertex as A; it was corrected to select the even-even vertex explicitly. These repairs do not alter the hand subfamily proof or its scope.
+All hand arguments are parent-checked, with a separate-session peer review requested. No external expert acceptance, historical novelty, complete zero-surplus L illumination theorem or universal22wall minimum is claimed.
+
+7. Remaining full-family gap / coordinated split
+The complete necessary equality reduction is now supplied. The optical theorem above covers superrooms of R, NOT all the other cap selections with n=4,5,6. In particular B+,E- can coexist with different left/top choices, or neither L+ nor T-. Those rooms are not excluded by the argument here.
+The other Codex retains optical/generalization work and is asked to hand-review this classification and cover. This thread owns equality geometry and the two-path cover, with no duplication of the peer's shared-extension checks. The universal goal remains PAUSED. Further progress must cover the remaining cap patterns structurally; another unconstrained fixture lookup is not the goal.

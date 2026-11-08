@@ -1,0 +1,67 @@
+# Verdict: **Accept, with three corrections**
+
+The construction is sound. Every primitive-direction torus parabolic lifts with the stated derivative, and the graph π⁻¹(γ_v) is fixed pointwise. Below I prove each step directly, without relying on the marks. The corrections concern the wording of (9.5), the necessary and sufficient twist condition, and what "bounded by the degree" means.
+
+## Proof check
+
+**1. Torus side.** Take v primitive. γ_v is the closed geodesic through 0 in direction v. It is simple, of length |v|, and T∖γ_v is a single open cylinder C. Use coordinates s (along v̂) and t = det(v,z)/|v|. Then C has circumference |v| and height 1/|v|, so its area is 1.
+
+Let M_k = I + k·v·det(v,·). It is an integer unipotent matrix in SL(2,ℤ). M_k fixes 0 and fixes each point tv of γ_v. On C it is the k-fold Dehn twist: the displacement is k|v|²·t along v̂.
+
+**2. Cover side.** π is unbranched off π⁻¹(0), and π⁻¹(0) ⊂ π⁻¹(γ_v) =: G. So π: X∖G → C is an unbranched degree-d cover.
+
+- π₁(C) = ℤ, so each component D_i is a cyclic cover of degree n_i.
+- Each D_i is an open annulus with height 1/|v| and circumference n_i|v|, and Σn_i = d.
+- The n_i are the cycle lengths of the monodromy permutation σ_v ∈ S_d of the core curve.
+- G consists of exactly d open edges, the lifts of γ_v∖{0}, each of length |v|, with vertices in π⁻¹(0).
+- Each edge is a top edge of exactly one D_i and a bottom edge of exactly one D_j, possibly with i = j.
+- The abstract top and bottom circles of D_i each consist of n_i edges.
+
+All claims in the paragraph are correct, and the area check gives Σn_i = 4N = d.
+
+**3. Shear on D_i.** On the universal strip ℝ×(0,h), with h = 1/|v|, define (s,t) ↦ (s + K|v|²t, t). This commutes with the deck translation s ↦ s + n_i|v|, so it descends to D_i and covers M_K|_C. It extends to the abstract closure of D_i:
+
+- The bottom circle has displacement 0, so it is fixed pointwise.
+- The top circle has displacement K|v|. This is identity on that circle **iff n_i | K**.
+
+The "t" orientation, which decides top versus bottom, is global because the charts are translations. So all D_i use the same derivative M_K.
+
+**4. Gluing across edge interiors and regular points of π⁻¹(0).** Take a point p on G with total angle 2π, and choose a chart centred at z₀ ∈ e.
+
+- On the side where e is a bottom edge, the map is z ↦ z + K·det(v, z−z₀)·v.
+- On the side where e is a top edge, a point at depth τ below e has displacement K|v| − K|v|²τ. The term K|v| is m_i full turns of D_i, so it acts as the identity. The net effect is z ↦ z + K·det(v, z−z₀)·v, with det(v, z−z₀) = −|v|τ.
+
+The two sides give the same affine formula, so the map is affine near p. This also covers closed regular leaves and edges whose endpoints are regular points.
+
+**5. Cone points.** At a cone point q of angle 2πk, there are 2k prongs (k pointing along +v and k along −v). These bound 2k half-disc sectors of angle π, alternating "above" (part of the bottom end of some D_j) and "below" (part of the top end of some D_i). By step 4, each sector is given by z ↦ z + K·det(v, z−q)·v in its half-plane chart.
+
+That shear maps each closed half-plane to itself and fixes its boundary line pointwise. So the map preserves every incident sector, fixes every prong, is affine on the punctured neighbourhood, and is continuous at q, with q fixed.
+
+**6. Inverse.** Replacing K by −K gives the same construction with top displacement −K|v|, which is still a multiple of n_i|v|. The two maps compose to the identity on every D_i and on G. Therefore A_v is an orientation-preserving affine homeomorphism with π∘A_v = φ_v∘π, where φ_v(z) = M_K·z mod ℤ².
+
+**7. Labels.** Every actual source/target lift and every physical corner lift lies in π⁻¹(0) ⊂ G, so each is fixed pointwise. The w-seed hypothesis plays no role here. Hence the hypotheses of the affine-event theorem (orientation-preserving, affine, fixing endpoint and corner labels) hold for every A_vʲ with j ∈ ℤ.
+
+## Corrections
+
+**C1 — Wording of (9.5).** "A_v z = z + K det(v,z) v in every chart" is false as a pointwise identity in arbitrary charts. In local charts the map is z ↦ M_K·z + c, where c ∈ ℤ² depends on the charts. It equals the displayed formula only in a chart centred at a point of G. Replace (9.5) with:
+
+  DA_v ≡ M_K = I + K·v·det(v,·),  π∘A_v = φ_v∘π,  A_v|_G = id.
+
+**C2 — No extra power is needed, and the exact condition is sharper.** A lift with derivative M_k that fixes G pointwise exists **iff n_i(v) | k for all i**, which means ord(σ_v) | k.
+
+- Necessity: on each D_i, such a lift must be the shear fixing the bottom circle, and then the top circle is fixed only if n_i | k.
+- Per direction, the minimal choice is K_v = lcm_i n_i(v) = ord(σ_v). By Landau's function, K_v ≤ g(d) = e^{(1+o(1))√(d log d)}.
+- A common choice for all v is K = exp(Mon(π)), the exponent of the monodromy group. This divides lcm(1..d) = K(d).
+
+So K(d) is valid, but it is a crude bound; no further power is needed for the geometric hypotheses. Note that fixing π⁻¹(0) alone would *not* force G to be fixed: a lift could swap parallel edges that share endpoints. The proof above uses n_i | K, not the marks.
+
+**C3 — "Bounded by the degree" means bounded by a function of d.** The bound is K(d) = e^{ψ(d)} = e^{(1+o(1))d}. That is exponential in d, not linear. The resulting "≤ 2K(d) coefficient tests plus six images" is a rigorous finite bound depending only on d = 4N, **conditional on** 9.4 needing only this: for each residue, a common-derivative parabolic M_L in the relevant direction that fixes all actual labels and sectors. I could not see 9.4 itself.
+
+If 9.4 fixes one direction per seed, K_v = ord(σ_v) ≤ g(d) is enough and gives a much smaller bound. If 9.4 requires a uniform L_j across directions, use exp(Mon(π)) or K(d).
+
+## Assumed, not checked
+
+- The D4 unfolding has integer gluing translations, so that π exists. This needs the edges to have slopes in {0, ∞, ±1} and the vertices to be in ℤ².
+- The legality-transport content of the prior affine-event theorem.
+
+The disclaimers in 9.5 are appropriate: it proves no nonzero coefficient pair, constructs no seed, and does not replace the event by an arbitrary cycle.

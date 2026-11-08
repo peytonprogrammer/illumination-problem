@@ -1,0 +1,33 @@
+{
+  "status": "PRELIMINARY_REVIEW_AUTHOR_FREEZE_PENDING",
+  "observed_author_pins": {
+    "optical-arithmetic-candidate-01.md": "55f490b296dcaad69459c99df9b55913a43c0609fbf44401025fbd9668ef42a6",
+    "optical-arithmetic-r4-control.md": "56549f59b174607f298a6e2fbfcd828b370dac10708c98e54cef2ba83f894d03"
+  },
+  "own_evidence_pins": {
+    "optical-arithmetic-author-six-independent.md": "d21f9a3a7cbd868cc556ed7adb83b96d50b73b76072e799879f118749d6373d1",
+    "optical-arithmetic-author-six-independent.py": "84e1ef8eadb1603e7b23df289572c95511d8dbf72daa9b816b25b9cbd22d1a58",
+    "optical-arithmetic-author-six-independent.json": "d05374b68c5ed0665b60bf0c710a1428a4b21161b6dd59e1822fd4d3aad68ce3"
+  },
+  "claim_decisions": [
+    {
+      "claim": "Actual author six-reflection narrow cap path and maximal common open component",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "r2 straight-prefix narrow cap control",
+      "decision": "ACCEPT"
+    },
+    {
+      "claim": "Perfect endpoint current cancellation plus positive total length forces pointwise OPEN-window coverage",
+      "decision": "REJECT_AS_GENERAL_INFERENCE",
+      "physical_C8_refuted": false
+    },
+    {
+      "claim": "Global physical C8 for original r<=8",
+      "decision": "OPEN"
+    }
+  ],
+  "whole_goal_complete": false,
+  "created_utc": "2026-11-07T18:36:56.428684+00:00"
+}

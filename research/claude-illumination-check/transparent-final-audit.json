@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "distinct_geometries": 939,
+  "independent_paths_verified": 939,
+  "walls": {
+    "16": 228,
+    "17": 1,
+    "18": 150,
+    "19": 156,
+    "22": 202,
+    "23": 202
+  },
+  "transparent_counts": {
+    "2": 229,
+    "1": 710
+  },
+  "max_reflections": 22,
+  "full_affine_group_counts": {
+    "True": 939
+  },
+  "path_cut_patterns_audited": 20,
+  "unrelated_mutations_preserving_paths": 836,
+  "runs": [
+    {
+      "name": "transparent-two-screen",
+      "status": "FEASIBLE",
+      "screened": 229,
+      "illuminated": 229,
+      "exhausted": false,
+      "seconds": 100.00375558296219,
+      "args": {
+        "bounds": [
+          -2,
+          4,
+          -2,
+          2
+        ],
+        "target": [
+          2,
+          0
+        ],
+        "seconds": 100.0,
+        "slits": 500,
+        "max_tiles": 48,
+        "max_walls": 19,
+        "simple": false,
+        "out": "transparent-two-screen",
+        "hint": null,
+        "any_target": false,
+        "transparent_budget": 2,
+        "require_transparent": true,
+        "screen_candidates": 300,
+        "direction_bound": 8
+      }
+    },
+    {
+      "name": "transparent-one-wide",
+      "status": "UNKNOWN",
+      "screened": 208,
+      "illuminated": 208,
+      "exhausted": false,
+      "seconds": 55.00273595901672,
+      "args": {
+        "bounds": [
+          -2,
+          4,
+          -2,
+          2
+        ],
+        "target": [
+          2,
+          0
+        ],
+        "seconds": 55.0,
+        "slits": 500,
+        "max_tiles": 48,
+        "max_walls": 19,
+        "simple": false,
+        "out": "transparent-one-wide",
+        "hint": null,
+        "any_target": false,
+        "transparent_budget": 1,
+        "require_transparent": true,
+        "screen_candidates": 1000,
+        "direction_bound": 32
+      }
+    },
+    {
+      "name": "transparent-simple-wide",
+      "status": "OPTIMAL",
+      "screened": 316,
+      "illuminated": 316,
+      "exhausted": false,
+      "seconds": 55.0176941670361,
+      "args": {
+        "bounds": [
+          -2,
+          6,
+          -2,
+          2
+        ],
+        "target": [
+          4,
+          0
+        ],
+        "seconds": 55.0,
+        "slits": 0,
+        "max_tiles": 64,
+        "max_walls": 23,
+        "simple": true,
+        "out": "transparent-simple-wide",
+        "hint": null,
+        "any_target": false,
+        "transparent_budget": 1,
+        "require_transparent": true,
+        "screen_candidates": 1000,
+        "direction_bound": 32
+      }
+    },
+    {
+      "name": "transparent-one-pathcuts",
+      "status": "OPTIMAL",
+      "screened": 172,
+      "illuminated": 172,
+      "exhausted": false,
+      "seconds": 55.0264412080287,
+      "args": {
+        "bounds": [
+          -2,
+          4,
+          -2,
+          2
+        ],
+        "target": [
+          2,
+          0
+        ],
+        "seconds": 55.0,
+        "slits": 500,
+        "max_tiles": 48,
+        "max_walls": 19,
+        "simple": false,
+        "out": "transparent-one-pathcuts",
+        "hint": null,
+        "any_target": false,
+        "transparent_budget": 1,
+        "require_transparent": true,
+        "screen_candidates": 1000,
+        "direction_bound": 32,
+        "path_cuts": true
+      }
+    },
+    {
+      "name": "transparent-simple-pathcuts",
+      "status": "INFEASIBLE",
+      "screened": 165,
+      "illuminated": 165,
+      "exhausted": true,
+      "seconds": 44.579191665980034,
+      "args": {
+        "bounds": [
+          -2,
+          6,
+          -2,
+          2
+        ],
+        "target": [
+          4,
+          0
+        ],
+        "seconds": 55.0,
+        "slits": 0,
+        "max_tiles": 64,
+        "max_walls": 23,
+        "simple": true,
+        "out": "transparent-simple-pathcuts",
+        "hint": null,
+        "any_target": false,
+        "transparent_budget": 1,
+        "require_transparent": true,
+        "screen_candidates": 1000,
+        "direction_bound": 32,
+        "path_cuts": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+The remaining bottom-parent half-fan: three-guard illumination cover
+4 November2026 — Codex01a18403
+
+Parent theorem; independent review pending. Actual S=(0,0),T=(2,2).
+The parent at B=(0,-2) consists of B-,B+ and
+ u=conv{(0,-2),(-1,-2),(-1,-1)},
+ v=conv{(0,-2),(-1,-2),(-1,-3)}.
+Its outer C=(-1,-2) is healed by a remote leaf at A=(-2,-2). Other partial
+cells are ordinary; total charges eparent2+eleaf1 force b=0.
+
+1. Necessary caps and the leaf choice
+If E- is absent, the old one-bounce path lights S/T. With E- present, if L+
+is absent, the old sigma four-bounce path lights S/T; neither route uses B.
+Thus assume E-,L+ present. Their ordinary slots force E+,L- absent.
+The lower remote leaf, with B vertex(-1,-3), does not reach(-1,-1). Then
+B=(-1,-1) would have H90+B-45+u45=180degrees. Only the upper remote leaf
+or the ordinary L- cap can repair that smooth B. L- is absent, so b=0 forces
+ r=conv{(-2,-2),(-1,-2),(-1,-1)}.
+Similarly B=(-1,1) has H90+L+45=135degrees; Nb- would add45 and make it
+smooth. No other exceptional cell can repair it. Therefore Nb- is absent.
+
+T, D, R, and the remaining N slot are arbitrary ordinary choices subject to
+room validity. No assumption that T- is present is needed below. In particular
+the centered-B six-path is NOT used: the added west triangle removes one of
+its reflecting diagonals.
+
+2. Three exact frozen guards
+remote-B-project.json gives actual S/T paths and exact universal requirements
+for this symbolic geometry, replayed from one existing frozen I3 archive.
+Three rows are sufficient; fixed triangles H+B-+B++u+v+r+E-+L+ are implicit.
+
+source line  requires   forbids                 reflections
+3597         R+         R-                          12
+3039         (none)     Nr-,R+                      12
+ 515         Nr-        Nb+,Nr+,R+                  13
+
+All other tiles not in the declared ordinary-slot alphabet or fixed geometry
+are absent by the family hypotheses, and that absence is included in each
+full guard. The exact path coordinates, transformed frames, source hash and
+required/forbidden triangles are retained in the JSON. They connect actual
+interior marks and satisfy specular reflection, smooth-mirror and full-leg
+corner-avoidance checks. No new ray or reflection-word discovery occurred.
+
+3. Exhaustive hand case split
+If R+ is present, R- is absent by its ordinary slot, so row3597 applies.
+If R+ is absent and Nr- is absent, row3039 applies.
+Otherwise R+ is absent and Nr- is present. The ordinary N slot then excludes
+Nb+ and Nr+, so row515 applies.
+These are exhaustive for every permitted D/R/N/T completion. Thus this entire
+remaining B-parent family illuminates within13reflections, without additional
+wall/exception bounds. The sigma image handles E. This is a three-path
+family cover, not a list of additional illuminated examples.
+
+The global Delta3 theorem still needs local interactions and independent
+review of the remote structural exhaustion. No universal bound follows.

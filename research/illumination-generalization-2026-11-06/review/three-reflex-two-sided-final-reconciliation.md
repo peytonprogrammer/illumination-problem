@@ -1,0 +1,19 @@
+# Final reciprocal reconciliation of two-sided target access
+
+Decision: ACCEPT the coordinator's independent HAND decisions at their exact scopes. The final target-access-independent.md and JSON were read in full, including its independent backward construction, literal target-branch guard qualification, prescribed evidence, partial source-cut corroboration and review limitations. All unique referenced source/evidence pins are CURRENT. This is internal AI independent mathematical review using shared unfolding foundations and the existing exact replay routines, not formal verification or a second numerical engine.
+
+The accepted positive optical result GT01 states: in every integral strictly ordered spiral, for every integer/native bottom T with l<t<A,0<v<c, and EVERY real0<epsilon<1/(2H), there exists an actual strict downward R-cap state with an ordinary original-wall continuation to actual T before another cap return. It assumes no prior illumination. The full original source is NOT supplied. This is target-side availability, not a new all-pair room theorem.
+
+BD01/NG01/BT01-BT03 accepted: arbitrary source-history last-bottom necessity, unbounded depth lower bound, strict negative gate, at most four literal target branches, exact alignment/corner guards and pointwise nonempty safe branches. FT01 is reconciled: remove only a corner-invalid later itinerary, retaining a shared incoming state with an earlier legal actual target. This includes the exact66/130/194 control. Frozen proofs remain intact, with the supplement governing that interpretation.
+
+MS01/MS02/FG01 accepted: no globally continuous safe/all-four target selector at all small parameters, the finite reciprocal-parameter horizon, and unique guarded rational source/target branch roots. The all-four-line slope bound survives all shared-state/earlier-target qualifications.
+
+SC01 accepted conditionally: a whole-prefix-regular source component wide enough in reciprocal parameter forces an actual safe-target match by the two target-arrival residue gap. Actual darkness would constrain every such source component to one target gap. Universal availability of the required source component is NOT proved. No corner count follows.
+
+SG01 accepted ONLY as the selected successful source-word cut and component-width UPPER BOUND: the prescribed original S-to-T ray still works, while that source prefix cannot sweep the whole gate and its target-phase span is at most24/35<4. The independent selected-corner check does not certify equality with the claimed maximal interval. The stronger own exact-maximality calculation remains unreviewed and is excluded from all accepted conclusions; it is unnecessary for the accepted obstruction. No other source word or actual pair is excluded.
+
+All material findings in this packet are reconciled at these scopes. There is no outstanding required review on the core target-access/continuity/conditional-source-width/selected-cut conclusions. No assertion is made that a stopped author is currently running or that a board handoff is a live process.
+
+The mathematical frontier remains: for each residual actual original S,T, produce ONE fully guarded source prefix whose state matches a target-bound state at the SAME epsilon, actual position and signed velocity, or a different valid global illumination proof. Merely independent access, a root formula, continuity through corner cuts, recurrence or the successful fixed prefix cannot supply existence. All ordered spirals, allr3 and the fullr<=8 objective remain OPEN; other turn types/equality seams and r4..8 remain uncovered at their prior recorded scopes.
+
+No new replay, search, engine, worker, clock renewal, frozen-source edit or git mutation occurred during final reconciliation. Native identity/history/accounting and the budget waiver are preserved. Full goal is NOT complete.

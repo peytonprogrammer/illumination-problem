@@ -1,0 +1,97 @@
+# Independent review: supporting-line lemmas and exact dual control
+
+This review covers the algebra as written, plus a reading of both check sources. I did not run anything. I did not have the room data, so I could not recompute the vertex deformations or any individual row value. I did recompute all the local + wall = coupled sums in the control output, and they are arithmetically consistent.
+
+## (1) Mirror-line-offset local chart: **ACCEPT**
+
+- **Chart.** With fixed normals and no consecutive parallel walls, each vertex is c_i = B_i h, a 2×2 invertible solve. Positive edge lengths and simplicity are open conditions. So (h, s, t) is a valid local chart of dimension W+4. Counting against the old chart: W lengths + 2 base point + 4 marks − 2 closure equations = W+4. ✓
+- **Reflection.** r_i(x) = x − 2(n_i·x − h_i) n_i/|n_i|² = R_i x + 2h_i n_i/|n_i|². ✓
+- **Prefix recurrence.** F_j = F_(j−1) ∘ r_(i_j) is the correct unfolding order: reflecting across the developed wall F_(j−1)(L) is F_(j−1) r F_(j−1)^(−1). For a fixed word this is exactly affine in h. ✓
+- **Derivative.** At A = 2w, C = w, δ[σ det(A,C)] = σ(det(δA, w) + det(2w, δC)) = σ det(w, δ(2C − A)). ✓
+
+**Missing hypotheses to state explicitly:**
+
+- **Fixed word.** The wall word i_1…i_m, and its side-σ continuation, is fixed on the side of the event being used. The affine formulas are global, but they mean an optical event only where that word is realized.
+- **Choice of r.** r must be a position where the developed corner equals s + w as an affine form, not merely at the base point.
+  - The justification is: if hit i_(r+1) is incident to c, then n·(B_c h) ≡ h_i identically, so r_i(B_c h) ≡ B_c h.
+  - The check script takes `matches[0]` from a base-point numerical match. It does not assert that every entry of `matches` gives the identical affine form. Add that assertion.
+  - A coincidental base-point match through a non-incident reflection would otherwise go undetected.
+- **Sign convention.** Which sign of f means "dark" is imported from the earlier audit. It is not derived here, so cite it.
+
+## (2) First-half-minus-second-half identity and signs: **ACCEPT**
+
+- **Expansion.** E = 2O_r c − O_m t − s + B_r − (B_m − B_r), with coefficients +1 on hits j ≤ r and −1 on hits j > r. ✓
+- **Per-hit row.** The per-hit term σ · 2ε_j det(w, O_(j−1) n)/|n|² · δh is correct.
+- **Mark terms.** −σ det(w, δs) and −σ det(w, O_m δt) are correct.
+- **Orthogonality identity.** With n = Jd (J = +90°) we have det(w, Jx) = w·x. Also O J = det(O) J O for orthogonal O. Together these give det(w, O n) = det(O) (O^T w)·d. ✓ The code also asserts this per hit.
+
+**Caveat: the local/wall split is convention-dependent, though E itself is not.**
+
+- Moving the split across an incident reflection leaves C and E unchanged.
+- It does change the "local" part by ∓2 O_r δb_i and the "wall" part by the opposite amount.
+- The split is origin- and normal-scaling-invariant for a fixed deformation. It is *not* invariant under the choice among `equivalent_split_positions`.
+- Any narrative of the form "the local term points one way, the wall term rescues it" holds only for the stated r convention.
+
+## (3) Opposite-side cancellation: **ACCEPT**
+
+- **Identity.** g_+ + g_- = det(w, 2δC − δA_+) − det(w, 2δC − δA_-) = det(w, δ(A_- − A_+)). This uses exactly two hypotheses: same w and same affine form C. ✓
+- **Hypothesis is checked, not assumed.** The script asserts `Cplus==Cminus` exactly. ✓
+- **Logical use is correct.** A sum with positive weights is implied by the two inequalities. A negative sum therefore certifies that at least one original row is negative.
+
+**Two additions:**
+
+- **First-order only.** This is first-order logic. The original inequalities g_e ≥ 0 are only necessary conditions for darkness, and rows equal to zero are decided at higher order. This doesn't break the lemma, but the "darkness inequality" phrasing should say "linearized".
+- **Silent overwrite in the script.** `groups[...][side]=e` overwrites without warning if two saved events share (w, corner, side). Assert uniqueness.
+
+## (4) Structural rank bound W−1: **ACCEPT**
+
+The paired kernel contains five independent directions:
+
+- **Two source translations.** s cancels in A_- − A_+. The script checks `row[W]==row[W+1]==0`.
+- **Two room-plus-target translations.** Conjugating every F by a translation gives F'(t+v) = F(t) + v, so the difference is unchanged.
+- **One room-plus-target scaling.** The difference scales to λ(A_- − A_+), which is 0 at the base point because both equal 2w there.
+
+Independence holds because h ∉ {(n_i·x₀)_i}: a polygon's supporting lines cannot all pass through one point.
+
+This kernel contains the true symmetry kernel: full translations, plus full scaling as room-target scaling combined with source scaling. So the quotient rank is at most W−1, against the W+1 needed. That is a shortfall of at least 2. ✓
+
+The "diagonal walls" qualifier is correct. For axis-only rooms, anisotropic axis scaling commutes with the reflections and enlarges the symmetry kernel.
+
+## (5) Fixed exact dual control: interpretation and scope: **ACCEPT, with corrections to the prose**
+
+**What it legitimately shows (state this explicitly):**
+
+- **The deformation is a genuine non-symmetry.** The gauge is source fixed plus total length variation zero. Source fixed kills the translations. Total length zero kills scaling about s, the only symmetry left once s is fixed. So δ is a genuine non-symmetry direction.
+- **Exact consequence of the axis rows.** All 102 saved axis rows are ≥ 0, with 8 strictly > 0, exactly. By the Gordan/Stiemke argument, this *exactly proves* the 102 saved axis rows have no strictly positive dependence. Any nonnegative dependence among them must put zero weight on the 8 positive rows.
+  - This is a real exact theorem about the saved subset.
+  - It is not derived from LP output; the LP only proposed δ.
+
+**Corrections and challenges:**
+
+1. **Count the negatives accurately.** There are 15 negative rows, not 6. The 6 at (1,3) sit alongside 9 more at corners (1,4), (1,5), and (−1,7).
+   - The prose implies the "repair corner" (1,3) alone cuts off δ. That is not established.
+   - Any later claim that one diagonal corner suffices would need its own proof.
+2. **Define "axis row".** It is undefined in the text: incident walls, corner type, or something else. The 8-axis-plus-1-diagonal pattern depends on this definition.
+3. **Tie the split narrative to its convention.** "The first two would point the wrong way if wall terms were discarded" and the "rescued" list depend on the split convention (see (2)). Either state r = first match, or list all equivalent splits.
+   - The coupled values are invariant. The narrative around them is not.
+4. **Most axis rows are zero.** 94 of the 102 axis rows are zero. δ lies in the linearized cone, but those 94 are undecided at first order. "Tangent-cone control" is the correct phrase; "dark direction" would not be.
+5. **Unsaved events.** The control says nothing about unsaved axis events. An unsaved axis event could cut off δ. The "diagonal can matter" headline holds only relative to the saved packet.
+6. **Rank alone proves nothing.** Full-event rank 26 = W+1 is necessary for a certificate, not sufficient. Rank alone gives no positivity in either direction.
+7. **Paired-loop conclusion.** "Rank 17 proves saved paired loops can't certify" is correct, but it is already implied by (4). The float LP result is correctly marked as unused.
+
+## On accidentally claiming the open theorem
+
+- **§5 is correctly stated.** For an infinite family, "every non-symmetry δ has some g_e(δ) < 0" is equivalent, by compactness of the quotient sphere, to some finite subfamily positively spanning. So the finite reduction is valid.
+- **What §5 would yield is local.** Even then, the result is first-order local isolation at the base room, given persistence of the one-corner implication. It is not a global or all-rooms statement. The Scope section says this, and §4's headline should not drift from it.
+- **No lemma here supplies a sign.**
+  - (2) is an identity.
+  - (3) produces a sufficient obstruction only.
+  - (4) is a negative result, showing loops are insufficient.
+  - The control is about one δ and one saved packet.
+- **I found no inference that claims the theorem.**
+
+## Not independently verified
+
+- The vertex/offset consistency of the deformation.
+- The chart pullback to the old W+6 chart. The script asserts it, but I could not run it.
+- The replay of the 167 events.

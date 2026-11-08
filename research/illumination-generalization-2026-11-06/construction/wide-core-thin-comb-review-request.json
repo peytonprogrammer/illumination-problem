@@ -1,0 +1,23 @@
+{
+  "id": "A39",
+  "status": "frozen_pending_review",
+  "created_utc": "2026-11-07T05:59:17.871822+00:00",
+  "source_sha256": {
+    "wide-core-thin-comb-proof.md": "8f734074bfc5d1b02346a71b57ce30766d05e6997b0bb1ea36c541827a6534bc",
+    "four-level-spine-proof.md": "db966f3271529c4660133c8deba8e8e93172c7662205d0274eb92713bf2d35ea",
+    "mouth-endpoint-seam-supplement.md": "bd53ce9ab649b8ed5fe242e9909dd416e6e59104d0853c1afba61858728c4750",
+    "two-sided-star-independent.json": "ab4b4716f4bd790250907c41a528e23982c3db3fafd316f6fe989ad2191300d0",
+    "two-sided-midrow-proof.md": "5001807274eed7aab40a362e028c9fb460d86a51777accf72ea3687368062826"
+  },
+  "scope": "Every actual A pair in any integer width1,height2 two-sided comb with integer corewidth>=3 and W<=21; no k/support/size/height cap.",
+  "conditional_dependency": "A38 four-level spine proof separately pending independent review",
+  "challenge": [
+    "Exhaustive actual A point classification; translated parity only needs even vertical difference",
+    "All four virtual D0 twists are ACTUAL paths through reflected end-wall charts",
+    "c divides all chart half separations iff necessary c|h,mu,G",
+    "At least3 distinct endpoint levels require3 distinct NONFLUSH opposite teeth for c>=3",
+    "Both selected teeth nonflush; exact maximal-wall charge formula with overlapping opposite bands",
+    "No extrapolation to c1,c2 or arbitrary45 polygons"
+  ],
+  "whole_goal_complete": false
+}

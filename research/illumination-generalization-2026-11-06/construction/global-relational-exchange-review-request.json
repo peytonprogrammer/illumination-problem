@@ -1,0 +1,44 @@
+{
+  "id": "B06",
+  "author": "Codex01a18403",
+  "reviewer": "existing Codex01a1a00f",
+  "requested_utc": "2026-11-07T16:26:14.364054+00:00",
+  "frozen": true,
+  "files_sha256": {
+    "global-relational-exchange-effort.json": "4d40265805f904dba54a52b668fb571ff98effe052c14cc3370489102e6a5a94",
+    "global-relational-exchange-proposal.md": "cb6e569e0c4e2b14b915121de8916d720bc946912c3277ae200f39acb77e30dc",
+    "global-relational-exchange-argument.md": "7348ec527a9e3e60ce60add015f3ec45f774bcbfa33a17612e27db2036d406eb",
+    "global-relational-exchange-check.py": "bdaed730e75772bea7c5b4c39a6acbd4a5af8219580b06a4f3ee768ecff55457",
+    "global-relational-exchange-check.json": "fbef1cad6ff86a99df01bbd72bb60ee4946d4d9a61d56047323ca5dd9e1bfc1d",
+    "global-relational-exchange-check.log": "829b91105f11c6f5f1b53f75611e798ed2aee4dfb922dc30625a9dac069faf43",
+    "global-relational-exchange-status.json": "78207d0589c8ddd9b670e87e7da8232a347ae0c9a963afab7c31795f7bfb4ca8"
+  },
+  "dependencies_sha256": {
+    ".context/illumination-generalization-2026-11-06/construction/global-exchange-transition.md": "23476cda4d4eaba1a57704d22bd9040a98c11f4a470b353d004816de24960996",
+    ".context/illumination-generalization-2026-11-06/construction/global-exchange-cost-supplement.md": "21c990a439d54a3247549396283f761c600e5d89d2eb74cc507bf59f6c3d73d0",
+    ".context/illumination-generalization-2026-11-06/construction/global-exchange-periodic-check.json": "171492598ca4795bcd7f9888cad6d048567264c9974c6518eb153a7ae5c9e48d",
+    ".context/codex-proof-verification/specialist-ideas/relational-exchange-assignment.txt": "1d7f1df60428eda682b01222c82f201e50f62155a827a4e3be677656ba4eb1e6",
+    ".context/codex-proof-verification/specialist-ideas/label-descent-audit.json": "ab238980030062b18cbf7d63af44f97adb3bb35b80a5ef74849dc5f01c45b5ee",
+    ".context/illumination-generalization-2026-11-06/review/specialist-label-descent-independent.md": "1eaf89055b4568024b31c446e6ec5e9f19425afb522b63b44f112831d9f784c0",
+    ".context/illumination-generalization-2026-11-06/review/specialist-label-descent-independent.json": "5788fd07845a7921aa9b5d6232fe0ae8618376480cd0f2ecfd0199c4e22fa148"
+  },
+  "raw_known22_certificate_sha256": "2f5540623e3d0a7c08b2d1bbe4487d607e9024cef82263de175c30bec7b7a346",
+  "review_questions": [
+    "Is the feature well-defined with all actual endpoint marks, transparent regular corners, periodic components and sector distinctions retained?",
+    "Does the ordered-mark lemma prove zero same-slot cross-color incidence?",
+    "Check exact full tensor identities and both orientations, not merely scalar equality.",
+    "Independently recompute the feature and horizontal hits at A, B and C0 from the raw arrays. Do not rely only on author checker execution.",
+    "Check the candidate domain, threshold calibration, constant-weight argument and every stated limit.",
+    "Does any claim silently treat a sheared full marked cover as a physical room or use full-reflection descent?",
+    "Check that the square only establishes lack of r0 feature weight, and that no universal or low-reflex result is claimed."
+  ],
+  "read_only_control_input_command": "python3 -B -c 'import json; from pathlib import Path; x=json.loads(Path('\"'\"'<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/global-relational-exchange-check.json'\"'\"').read_text()); print(json.dumps([{k:r[k] for k in ['\"'\"'name'\"'\"','\"'\"'h'\"'\"','\"'\"'v'\"'\"','\"'\"'labels'\"'\"']} for r in x['\"'\"'rows'\"'\"'] if r['\"'\"'name'\"'\"'] in ['\"'\"'saved462:'\"'\"','\"'\"'saved462:Ui'\"'\"','\"'\"'saved462:T,Ui,T'\"'\"']],indent=2))'",
+  "command_scope": "Prints raw A/B/C0 control arrays only. Reviewer should implement own permutation walks or hand replay in reviewer-owned files. It is not verification by itself.",
+  "author_checker_command": "python3 -B <SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/global-relational-exchange-check.py",
+  "author_checker_deadline": "Its main entry is guarded by the ORIGINAL 2026-11-07T16:35:00Z deadline. Do not renew it; independent exact proof review may read the pinned arrays after deadline without restarting discovery.",
+  "original_aggregate_start_utc": "2026-11-07T16:21:00Z",
+  "original_aggregate_deadline_utc": "2026-11-07T16:35:00Z",
+  "whole_goal_complete": false,
+  "no_new_census_or_workers": true,
+  "freeze_rule": "Do not edit these files; return corrections in NEW reviewer-owned files. Author will supplement rather than mutate this freeze."
+}

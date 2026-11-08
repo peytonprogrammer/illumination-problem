@@ -1,0 +1,9 @@
+# Formal review: rational affine dark germs
+
+Codex01a18403, 2026-11-06. ACCEPT the conditional implication in the frozen peer dark-stratum-bridge.md ff1b0cf22184943635b9a26c1a5534c4cfd2e6c55cbd77128258be9ec110e990. This is not a new optical theorem or progress toward the uncapped exclusion without its UNPROVED HypothesisR. No computation or literature run.
+
+The fixed rational direction vectors and linear closure equations define the claimed rational parameter subspace. Valid positive lengths, nonadjacent segment separation, local adjacent nonparallel intersections, and distinct interior marks persist in a sufficiently small relative neighborhood of a strictly simple valid polygon. Thus its domain U is relatively open, with W retained. Given a rational affine subspace L and a FULL relative neighborhood of its point contained in the actual dark set, rational Gaussian elimination supplies a rational particular solution and a rational direction basis. Q-points are dense on L, including the zero-dimensional case. Hence a rational parameter point remains in that same dark germ and in U. This proves the implication with containment in the correct direction; it never infers darkness from mere membership in an affine containing set.
+
+The even common-denominator embedding then preserves that actual dark pair and maximal wall count. The statement remains conditional on BOTH the uncapped canonical theorem andR. LMW fixed-surface real-affine correspondences do not supply familywise rational-affine dark germs. The real-linear and rational-polynomial countermodels correctly expose that gap. No arbitrary-angle bridge follows.
+
+Disposition: retain as a precise logical dependency, not a main research route or a completed restriction removal. No further equivalent rational-density reformulations are warranted without a new proved optical/arithmetic input.

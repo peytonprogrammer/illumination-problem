@@ -1,0 +1,153 @@
+O3=B701: five reflections using the smooth outside C mirror
+Codex01a1a00f, 5 November 2026
+
+PARENT RESULT — exact verification PASS, independent HAND review requested
+The ONE authorized room H+B701+R23+L0+E4+N7, D/Tcempty has an actual
+FIVE-reflection path. Search STOPPED at its first exact candidate after57
+primitive directions (56 genuine-corner terminations, one success).
+This is a NEW candidate, unrelated to the explicitly REJECTED earlier
+hand ten-path. The previous height-offset error was not imported.
+
+Stronger conditional optical theorem:
+ minimum = H+B701,
+ maximum = minimum+Lexcept7+Dexcept3/4+FULL R/E/Tc/N.
+Every valid room between these supports has the same actual five-path.
+The particular R23 unit and ordinaryL0/E4/N7 are not required by the path.
+No b/W/k restrictions are used by this optical support lemma.
+
+Under the independently accepted LOCAL TWO-ROOT e2+e1+b1 class and its
+reference forcing, every O3 second-root partner except L70 now closes<=6:
+NEW5 covers all others exceptD23, which has the accepted ordinaryTc4/6
+split. L70 remains OPEN because it removes the initial lower source wall.
+This partner dispatch is a parent proof awaiting independent review.
+No entireO3, criticalB, b1, Delta4 or universal-minimum closure is claimed.
+
+1. Authorization and frozen geometry
+
+Daniel initially chose HANDONLY; no search ran under that direction.
+Daniel then explicitly allowed searchifneeded. We applied that permission
+to the concrete proposed O3/R23 support ONLY, hard300seconds, geometryfirst,
+invalid=>STOP, no replacement room, firstverifiedcandidate=>STOP, no unused
+budget reuse. No additional pattern, cap assignment or worker was searched.
+
+Frozen exact geometry:32triangles, strictly simple20maximal-wall polygon,
+interior A preciselyS/U/T, J2,sN4,Q8,k6,Delta4. Geometry passed before the
+integer-affine search. Bounds components<=512,400reflections/direction.
+Search stopped after57vectors at(-5,-2), FIVEreflections. Loop time about
+0.001s excludes setup; it is not a performance or shortest-path guarantee.
+search.py/room.json/result.json/search.log are the discovery record.
+
+2. Actual finite-mirror path
+
+ S=(0,0),
+ A=(-1,-2/5), lower source-left vertical wall;
+ B=(1,-6/5), right upper-square vertical wall;
+ C=(0,-8/5), upper B left vertical wall;
+ D=(1,-2), smooth outside C on the right vertical wall;
+ E=(2/7,-16/7), B7 diagonal y=-x-2;
+ T=(2,2).
+
+Directions are proportional to
+ (-5,-2) -> (5,-2) -> (-5,-2) -> (5,-2) -> (-5,-2) -> (2,5).
+A needsL7 absent. B/D needD3/D4 absent for the combined vertical wall
+x1,-3<y<-1. C needsB2 absent, with -2<-8/5<-1. E needsB6 absent and
+lies strictly inside the diagonal from(0,-2) to(1,-3). The O3 center
+(0,-2) is a genuine135corner, but this path does NOT hit it.
+
+D=(1,-2) is NON-A but smooth180: B0 and B7 supply its entire left
+half-plane, D3/D4 its forbidden right half-plane. It lies STRICTLY
+inside the actual maximal wall(1,-3)--(1,-1), not in the maximal vertex
+list. Reflecting there is legal under the established billiard convention.
+The frozen independent physical replay verifies this straight wall.
+
+The A-to-B leg crosses y=-1 atx1/2, inside the filled B1 portal; its
+x0 crossing occurs at y=-4/5, within H. The final leg returns through
+y=-1 atx4/5 and crossesx1 at y=-1/2 insideH, then enters the target
+square at y1,x8/5. Full incident support checks every intermediate event.
+The old unavoidable (0,-1) corner is avoided. ActualT is reached first
+on the last segment, not inferred merely from an unfolded image.
+
+3. Hand derivation after discovery
+
+Normalize launch(-1,-d). The first four contacts are
+ (-1,-d), (1,-3d), (0,-4d), (1,-5d).
+The right wall is straight across y=-2, so the fourth contact can cross
+that lattice height without a branch change. The next diagonal contact is
+ ((6d-2)/(1+d),-8d/(1+d)).
+Reflection gives(d,1). The final outgoing line is
+ x=d*y+8d-2,
+so targetheight2 hasx10d-2. ActualT forcesd2/5, strictly within
+ 1/3<d<3/7.
+This gate implies first right contact is above-2; left contact is(-2,-1);
+fourth right contact is(-3,-1); diagonal x is(0,1); the returning bottom
+portal hasx7d-2 in(0,1), and target entryx9d-2 is(1,3). The final x1
+crossing has height3/d-8 in(-1,1), insideH. All finite-contact inequalities
+are strict at the root. At that root D happens to be the smooth C point.
+Unfolding actualT through the five physical lines gives(-10,-4), aligned
+with initial(-5,-2). This is a consistency check, not the legality proof.
+
+4. Exact verification and whole support
+
+verify.py loads ONLY definitions from our frozen standalone Fraction
+engine, not a search or peer engine. It reconstructs ONLY the frozen
+supplied room's actual boundary, merges maximal walls, and performs
+finite first-wall/firstT, corner-avoidance, specularity, reverse and
+sigma/reversal checks. It independently recomputesJ2/sN4/fullinteriorA=SUT
+and smoothD180. No other room is assembled or replayed.
+
+Complete U has11triangles and lies inH+B701.
+Complete Z has5triangles: L7,D3,D4,B2,B6.
+Z misses the full maximum stated above. Every open segment is partitioned
+at canonical triangle-edge events; all intermediate points and intervals
+require full incident support. Bounce half-planes have complete required
+and forbidden support. Hence no lost mirror or intervening corner can be
+hidden by the endpoint equation. There is no remote forbidden triangle
+in this new five-path, though the whole-branch classification remains local.
+
+H4 containsB2 and O4 containsB6, so neither fits this new optical maximum.
+Their separate accepted closures remain unchanged. Both Dsingle3 and
+Dsingle4 intersectZ, so no single-leaf transfer is asserted here.
+
+5. Exhaustive second-root dispatch EXCEPT L70
+
+Use the accepted local TWO-ROOT classification, not a room census.
+If E4 absent, accepted one_sigma<=1 applies with full other K support.
+After E4 forcing, an absent L0 is covered by accepted ordinaryE4 four_sigma
+or activeE34/E45 short guards<=3/2. These previous forcing bounds are
+read from their accepted receipt. Thus assumeL0 and active reference fans.
+
+If the independent root isL, the active windows are70/01. L01 omitsL7
+and fitsNEW5. L70 containsL7 and remains open; do not import H4's
+additional-smooth-point exclusion into O3.
+
+If it isD, the root windows01/12 omitD3/D4 and fitNEW5. D23 containsD3
+but the accepted O3 four/six paths cover ordinaryTcempty/6 versus5.
+Tc is ordinary becauseB andD are the only two positive roots. Both
+previous envelopes permit fullL/E/R/N; own support containment checks
+match the receipt pinned by its independent acceptance.
+
+For ANY independent root atR/E/Tc/N, L isordinary0 afterforcing andD
+is ordinaryempty/1/2. The new maximum permits fullR/E/Tc/N, so every such
+root and all other ordinary choices fitNEW5. Earlier bridge cases, if
+handled first, do not create an omitted partner. No additional n/J budget
+or top/N direction restriction is needed for the optical implication.
+
+Therefore ALL O3 local two-rootb1 cases outsideL70 illuminate<=6 after
+the inherited short forcing cases. R23 in particular is now covered<=5
+afterforcing, including the one frozen searched room. Sigma supplies the
+critical-E counterpart. No count of valid rooms follows from these fans.
+
+6. Remaining O3 frontier and review request
+
+Only L70 remains among O3 two-root partners. The accepted necessary table
+then says: ordinaryE4; Tcempty or6; D/Rordinary1/2 or3/4; Nempty/0/6/7;
+N5 absent and D1/R4 forbidden. IfTcempty, D/R/N all occupied andN0or7.
+IfTc6, exactlyTWO ofD/R/N occupied. These remain necessary descriptions,
+not dark/valid room counts. West1234 and otherL/mixed/remote gaps separate.
+
+Please independently review the new five-path's smoothD bounce, exact
+frozen finite boundary/firstT, full11U5Z, hand gate, actual unfolding, and
+whole partner dispatch with L70 explicitly excluded andD23 inherited.
+Inputs: findings.txt,verify.py,verification.json plus frozenroom/result.
+Use own outputs/engine; leave these inputs frozen. Search is STOPPED;
+do NOT rerunsearch.py or use remaining time on another room.

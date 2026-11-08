@@ -1,0 +1,298 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "absolute_lattice_is_2Z2": true,
+      "regular_nonfixed_equals_source_union_target": true,
+      "regular_nonfixed_count": 16,
+      "source_target_residue": [
+        0,
+        0
+      ],
+      "unique_m7_anchor": [
+        1,
+        1
+      ],
+      "unique_m7_anchor_residue": [
+        1,
+        1
+      ],
+      "input": "illumination-22.json",
+      "sha256": "a9cbd690df88396108134e86d1d2ffbb04213bf70b7026e22d15865f0831b461",
+      "squares": 96,
+      "absolute_generators": [
+        [
+          -4,
+          4
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -2,
+          6
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          -2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "absolute_lattice_index_in_Z2": 4,
+      "cone_relative_lattice_index_in_Z2": 1,
+      "source_representatives": [
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "target_representatives": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "scope": "Spanning-tree periods and cone-relative periods. No affine group, ray, or quotient enumeration."
+    },
+    {
+      "absolute_lattice_is_2Z2": true,
+      "regular_nonfixed_equals_source_union_target": false,
+      "regular_nonfixed_count": 20,
+      "source_target_residue": [
+        0,
+        1
+      ],
+      "unique_m7_anchor": null,
+      "unique_m7_anchor_residue": null,
+      "input": "illumination-search-simple-unrestricted.json",
+      "sha256": "512b3eaaed9612bd69b9f8ed9494ae52e128f6ebf13bcbc0c5f8a9adbf54b598",
+      "squares": 108,
+      "absolute_generators": [
+        [
+          -6,
+          6
+        ],
+        [
+          -4,
+          4
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          -2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          8,
+          -4
+        ]
+      ],
+      "absolute_lattice_index_in_Z2": 4,
+      "cone_relative_lattice_index_in_Z2": 1,
+      "source_representatives": [
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "target_representatives": [
+        [
+          6,
+          5
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          8,
+          3
+        ]
+      ],
+      "scope": "Spanning-tree periods and cone-relative periods. No affine group, ray, or quotient enumeration."
+    }
+  ],
+  "dependencies_sha256": {
+    "illumination_cover.py": "0d30188cb9d783df56d7eeb785464a2744e59fa3c86144a533c3ee2263d057ab",
+    "illumination_midpoint.py": "dc9700b977b3680a4ec3be0fc4070255c9bb5fa715ec235098862c552ed2d5d8",
+    "illumination_geometry.py": "544192ba3b5b0105d0c5dd6417e8093d2d81c813a7da19b885fcffbe2330daf1"
+  }
+}

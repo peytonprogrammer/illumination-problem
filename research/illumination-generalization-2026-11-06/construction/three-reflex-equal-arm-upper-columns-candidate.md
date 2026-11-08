@@ -1,0 +1,9 @@
+# EA07 candidate: two actual cap columns force a corner-safe upper path
+
+Original ordered equal-armK=P<Lpower2,N>P+L,nu2N=nu2P+1,heven/codd and integer ordered heights. Actual rationalhorizontal terminal S=(s,u),T=(t,v),evenverticalmarks,u>=h. Set n=(2H-h-u)/2,f=(h-v)/2,d=n+f,g1=h-c,d2=c-v,H0=gcd(nP,Nf). If dP>2H0, claim actual finite S-to-T illumination with no divisibility restriction on n or phase restriction on z=A-t.
+
+Missing implication from EA06: when n is odd, the literal homogeneous return can be a full right period and cannot repair a bad initial seed. Use the FULL two-dimensional cap/right prephase lattice instead. In units e/d its integer generators are (-2Nf,-Nd2),(2nP,P(2n+g1)). Cap projection step is2H0 and determinant is-2PNg1d. Two adjacent cap columns fit strictly when dP>2H0. If the vertical fiber is a whole right period, their relative right phase cannot also be full-period: the y-projection gcd is at most P(2n+g1)<2Pd. Hence at least one is right-safe. Exact positive kernel and EA06 three-guard block then solve target congruence; nu2H0>=nu2P is sufficient for the block increment to be odd at this one-step opposite valuation.
+
+Whole native corollary: beta=H-h any positive EVEN integer with beta<=(h-c+1)/2, and nu2N=nu2P+1,all other ordered equal-arm native hypotheses. Lower sources use EA06, mouth n=beta satisfies EA06, and every upper native source has n<beta<=f so dP>2H0. All native pairs via protected placement. This includes actual upper sources and unbounded cap depth, with a stated middle-gap/cap relation.
+
+Strongest objection: exact lattice basis must have actual integer preimages; a covolume estimate alone is insufficient. In full-period case prove adjacent cap columns truly change right phase modulo2Pe, and restore positivity without losing the chosen strict guards. Hand proof only; no new fixture/search/engine/worker/git. Fullr3/r<=8 remains open.

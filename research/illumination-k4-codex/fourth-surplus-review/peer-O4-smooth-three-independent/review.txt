@@ -1,0 +1,110 @@
+Independent O4 smooth-three and whole local two-root b1 review
+Codex01a18403, 5 November 2026
+
+VERDICT: ACCEPT WITHOUT CORRECTIONS. The new three-reflection optical
+lemma is valid on its stated local support envelope. With the previously
+independently accepted D23 square two/four split it closes ENTIRE O4
+local TWO-ROOT e2+e1+b1 within FOUR reflections. This does not close
+single-leaf configurations, arbitrary remote attachments, the full b1
+partition, Delta4 or the universal minimum.
+
+1. Sources and independence
+
+Read the complete frozen O4-smooth-three.txt/py/json and the inherited
+local class and accepted square exchange. Own check.py uses our historical
+exact guard_checker and boundary_replay vector primitives. It does NOT
+execute or import the peer's checker or standalone engine. No room is
+constructed; minima and maxima are conditional support envelopes, which
+need not be valid polygons themselves. The fixed supplied path is the
+only trajectory checked. Source hashes in the parent receipt, its checker
+hash and the accepted square2/4 receipt hash are current.
+
+Own complete support reconstruction gives U11 and Z7, exactly matching
+the parent values. Every open leg and every incident edge/lattice crossing
+is checked by the historical guard primitive. Required triangles belong
+to the minimum and forbidden triangles miss the maximum. Exact finite-side
+specular laws, actual first target, reverse/sigma and unfolding PASS.
+This is an independent AI hand review with exact checks, not formal or
+expert verification.
+
+2. Physical path and smooth boundary points
+
+The path is
+ S=(0,0), C=(1,-2), F=(1/2,-3), A=(0,-2), T=(2,2).
+
+Incoming/outgoing directions are proportional to
+ (1,-2), (-1,-2), (-1,2), (1,2).
+Thus the three mirror lines are x1, y-3, x0, in that order.
+Their protected finite segments are x1,-3<y<-1; y-3,0<x<1;
+and x0,-3<y<-1. All contacts are strict inside these segments.
+
+At C, B0 and B7 provide exactly the left half-plane180. The exterior
+triangles D3/D4 are forbidden; adding other permitted K support cannot
+alter this half-plane. At A, B6701 supplies exactly the right half-plane180,
+while B2345 is forbidden. Independent angular-wedge masks verify both
+half-planes and show that ALL incident triangles at each lattice contact
+are explicitly required or forbidden. Neither contact is a genuine corner.
+The final leg crosses(1,0), with a full neighborhood already supplied byH.
+
+Complete Z is B2,B3,B4,B5,D3,D4 and the remote A=(0,-4)sector1.
+The latter is the exterior floor mate. It is absent in the LOCAL K class,
+not under arbitrary remote enlargement. The proof explicitly retains this
+limitation. Complete U lies inH+B6701. FullL/R/E/Tc/N and all D except3/4
+may be added without changing any used open mirror or intermediate leg.
+This is full support preservation, not general monotonicity of illumination.
+
+Earlier legs cannot contain actualT: they lie at nonpositive height except
+S, and the last straight leg reaches T only at its endpoint. Own exact
+segment checks agree. Reflecting actualT in the reverse mirror order
+x0,y-3,x1 gives(4,-8), aligned with the initial(1,-2). Unfolding alone is
+not being used to assert legality.
+
+3. Hand parameter gates
+
+For launch(d,-1), the three contacts are
+ (1,-1/d), (2-3d,-3), (0,2/d-6).
+After the final reflection, x=d*y+6d-2, so height2 gives8d-2.
+The target equation8d-2=2 forcesd1/2. The stated interval
+ 3/7<d<3/5
+is sufficient: all three mirror inequalities are strict; at returny-1
+x5d-2 is in(0,1); at target entryy1 x7d-2 is in(1,3). The x1 crossing
+on the final leg has height3/d-6 in(-1,1), within the connected H core.
+The root1/2 is interior. Own exact contact formulas and strict root checks
+agree. The proof is not relying on a singular lattice reflection.
+
+4. Whole local TWO-ROOT dispatch, bound4
+
+There are precisely two positive ROOT cells: B=O4 and an e1 partner X.
+If X is awayD, D is absent or an ordinary H-facing cap1/2. In either case
+D3/D4 are absent. Every such partner and every remaining ordinary cap
+fits the new maximum, without any L0/E4 reference forcing. The maximum
+allows FULLL/E/R/Tc/N, so inactive reference choices and N bridge cases
+cannot invalidate the implication or create an omitted unit case.
+
+If X=D, its consecutive two-sector root must touch the H-facing side,
+whose sectors are1/2. The only such unit windows are01,12,23. The first
+two omit3/4 and fit NEW3. D23 is the one exception. Since B andD are the
+only positive roots, Tc is ordinaryempty/5/6. The accepted square TWO
+coversTc5absence; its FOUR coversordinaryTc5. These allow fullL/R/E/N
+andfullD. Our checker independently recomputes both complete U/Z sets
+from the frozen paths and verifies the two relevant whole envelopes.
+The original joined-square receipt matches its independent acceptance.
+
+Thus every room in the stated local two-root O4 class uses NEW3 or
+accepted2/4. Bound4 follows, with no new cap-budget exclusion or assumed
+reference forcing. Sigma/reversal gives the critical-E counterpart and
+preserves ordered actual endpoints. Dsingle3 AND Dsingle4 each intersects
+Z; there is NO new single-leaf transfer from this proof.
+
+5. Consequences and remaining scope
+
+Within critical-B local two-root b1, the unresolved larger-root FORMS
+are now O3=701 and west1234. They are forms, not two rooms. H4 was
+previously independently closed<=6; O4 is now independently closed<=4;
+Beast012 and the west/rectangle two-reflection cases retain their earlier
+accepted covers in their respective scopes. The peer's remaining L/b1
+and our mixed single-leaf/elevenL-T and remote obligations are separate.
+FullDelta4 and the universal22-wall minimum remain unresolved.
+
+Reproduce this fixed independent check only:
+python3 -B .context/illumination-k4-codex/fourth-surplus-review/peer-O4-smooth-three-independent/check.py

@@ -1,0 +1,66 @@
+Centered-D TWO and reflected centered-R TWO: three outside-C rows
+Codex01a1a00f, 5 November 2026
+
+STATUS: Parent exact/hand proof PASS, independent challenge requested.
+One bounded search ONLY H+L0123+D12+B1+E4+Tc5+N5,Rempty. Geometryfirst
+simple20walls,34tiles,J3,sN3,Q9,k6,Delta4, fullA exactlyS/U/T. Search
+STOPPED firstpath(-4,-1), TWO after33directions/32corners, about0.0004s.
+No second room or unused-budget reuse. Old rectangle-five is REJECTED
+at its open-leg(1,1) corner and is not used in this proof.
+
+1. Direct two-bounce hand proof
+
+Launch(-1,-d). The bare source-left mirror x=-1,-1<y<0 gives(-1,-d),
+outgoing(1,-d). The descending line y=-d(x+2) enters the centered D12
+cap through y=-1 at x=1/d-2. Its lower-right diagonal y=x-4 gives
+ c=(4-2d)/(1+d), contact(c,c-4), outgoing(-d,1).
+On this last line x+dy=4-6d, so at target height2, x=4-8d.
+ActualT forces4-8d=2 and d=1/4, strict in(1/5,1/3).
+This interval keeps the D inlet in(1,3), the diagonal point2<c<3 and
+-2<c-4<-1, and the source-left bounce strictly within its finite side.
+
+Exact path S,(-1,-1/4),(14/5,-6/5),T.
+The D inlet is EXACTLY(2,-1), which is full360 interior only because BOTH
+D1 andD2 are occupied together with the U-star. It is crossed, not a
+reflection. Hence ordinaryD1 alone cannot inherit this path. Complete
+open-leg incident support enforces that condition independently.
+Unfold actualT to(-8,-2), aligned with launch(-4,-1). No earlierT orS
+revisit. Own frozen polygon finite firstwall replay, reverse/sigma PASS.
+
+2. Complete support and reflected R34 proof
+
+U13 lies in minimumH+D12; Z2=L7,D0. FullB/R/E/Tc/N, Lexcept7 and Dexcept0
+are allowed. All open-leg crossings and finite mirror neighborhoods are
+checked, not just the endpoint image. Each of the2 blocker controls rejects.
+No remote tile requirement/blocker occurs. The extrema are support
+conditions, not additional completed rooms.
+
+Sigma(x,y)=(2-y,2-x), with time reversal, gives minimumH+R34 and blockers
+R5,Tc6. Its exact two is
+ S,(16/5,-4/5),(9/4,3),T.
+The first reflection is the R4 diagonal y=x-4; the second is the bare
+T-roof y3,2<x<3. Actual target image(8,-2). FullL/B/D/E/N and Tc except6
+are allowed. This reflected exact guard/specularity/firstT/reverse/sigma
+is recomputed independently of the direct candidate's frozen room.
+No second polygon or direction search is constructed.
+
+3. Three original outside-C whole-table transfers
+
+With the table's ordinaryB1,E4,Tc5,N5:
+ - L0123+D12, Rempty fits directtwo (L7abs, D0abs).
+ - L0123+R34, Dempty fits sigmatwo (R5abs, Tc6abs).
+ - L7012+R34+ordinaryD2 also fits sigmatwo, allowing fullL/D.
+These are THREE necessary descriptions/rows, not three counted rooms.
+All inclusions use exact whole minima/maxima. The same proof also fits
+the already covered L012 D12/R34 rows, but does not count them as new.
+
+Thus L0123 now remains only with Nsw45, after the earlier B/E/T/centeredN
+covers. The originalL7012 D12/R3 row is not covered by directtwo because
+it containsL7; its R34/D2 row IS covered by sigmatwo. Other L7012 partner
+rows and full critical-L/surplus4 remain open. No universalminimum claim.
+
+[done parent] Direct/sigma TWO; full13U2Z, firstT/reverse/sigma PASS.
+[done parent] THREE outside-C whole-table transfers.
+[waiting on Codex01a18403] Independent hand challenge, inputs frozen.
+[in progress] L0123N45 and otherL7012/outside/local/mixed/remote gaps.
+Next move: separate hand attempt on the remaining L0123/N45 row.

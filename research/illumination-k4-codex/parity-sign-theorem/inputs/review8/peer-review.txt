@@ -1,0 +1,101 @@
+# Review: ordinary corner rank to signed spanning by cylinder mixing
+
+## Verdict
+
+I could not break the core argument. Granting alignment (A) and the admissibility framework, Sections 2–4 are correct. That covers the slope formula, the intertwining derivation, the stochastic-matrix spectral argument, the passage through relations and relative homology, and the compactness step.
+
+The real risks are in the setup. There are three conditions the draft uses but does not state or justify (G1–G3), and three framework claims that carry more weight than the text admits (G4–G6). None is a counterexample. Each is a place where the theorem could silently fail to apply.
+
+## Checks that pass
+
+**Crossing conventions.** A path crossing a unit-height row annulus upward gains horizontal displacement a under P_h. That equals (a/l_i)·h_i, so counting upward crossings positively is the right sign for N_h. Rightward crossings of v_j are right for N_v by the same reasoning.
+
+int_h is minus the standard counterclockwise algebraic intersection. That is harmless because it is defined as a count and used consistently. For relative classes it is the Lefschetz pairing H1(X,A) × H1(X∖A). It is well defined because the mid-height cores avoid A.
+
+Both N_h v_j = Σ_i (a/l_i) E_ij h_i and N_v h_k = Σ_j (b/m_j) E_kj v_j are correct. Every crossing of v_j with h_i has the same sign, one per shared square.
+
+**Twists fix A.** a/l_i is an integer, so each row twist is an integral Dehn-twist power. It fixes both boundary circles pointwise, so lattice points are fixed.
+
+**hol N_h = L_h hol on relative classes.** hol_x(N_h z) = a·Σ_i int_h(z,h_i). This equals a·hol_y(z) exactly when every endpoint of z lies at integer height, so every row crossing is a full crossing. See G1.
+
+**Horizontal slope formula.** Write w_n = (p+naq, q) and Q_n = (Q_x η + n Q_x N_h η, Q_y η), using (A). Then
+
+  det(w_n, Q_n) = det(w, Qη) + n q[a Q_y η − Q_x N_h η],
+
+which gives g_n = g_0 + nσq[Q_x N_h η − a Q_y η]. This is correct. The vertical version is correct by symmetry: the coefficient is p[Q_y N_v η − b Q_x η].
+
+**The q=0 case.** The classes η + kN_v η are orbit classes with q_k = kbp ≠ 0. So (H) holds on each of them, via their own horizontal powers. The defect is affine in k and vanishes for infinitely many k, so the constant term vanishes. This is valid.
+
+The same reasoning covers orbit classes at omitted wall-parallel directions. The argument only needs the *powers* of a class to be admissible, not the class itself. So including them in K is legitimate.
+
+**(I) and K.**
+- K lies in M0, since hol(Pη) = dP·hol(η) = 0.
+- K is invariant under N_h and N_v, since N = P − Id.
+- Q N_h η = (Q_x N_h η, Q_y N_h η) = (a Q_y η, 0) = L_h Q η. The vertical identity follows the same way.
+
+**Matrix B.**
+- N_h N_v C = C T, with (T)_{ik} = Σ_j (a/l_i) E_ij (b/m_j) E_kj.
+- Row sums: (1/l_i) Σ_j E_ij (1/m_j) m_j = 1.
+- The diagonal is positive.
+- The connectivity argument is right: right-neighbours stay in a row and up-neighbours stay in a column.
+
+The maximum principle plus boundedness of B^n gives algebraic simplicity. A cleaner route also exists: diag(l)·B is symmetric, so B is self-adjoint in the l-weighted inner product, hence diagonalizable with real spectrum.
+
+**Quotient by ker C.** Characteristic polynomials multiply: χ_T = χ_{ker C} · χ_{R^H/ker C}. An ab-eigenvector inside ker C would have to be a multiple of 𝟏. But C𝟏 = c_plus ≠ 0, so ab is simple on the quotient, which is isomorphic to im C.
+
+**Passage to M.** A generalized eigenvector z for a nonzero λ satisfies z = S·p(S)z, where S = N_h N_v, so z lies in im S ⊂ im C. Hence ab is simple on M with eigenspace Rc_plus. Since hol_x(c_plus) = Σ l_i > 0, c_plus is not in M0, so ab is excluded on M0 and on K.
+
+**Section 4.** On K, Q N_h N_v = L_h Q N_v = L_h L_v Q, and L_h L_v(x,y) = (abx, 0). So Q_x(S − ab) = 0 on K, which forces Q_x = 0. Then (H) gives a Q_y η = Q_x(N_h η) = 0. The derivation is correct.
+
+**Compactness and spanning.** Each set {r < 0} is open, so finitely many cover the unit sphere of the quotient. That makes the cone {δ : r_k(δ) ≥ 0 for all k} equal to {0}. A finitely generated cone is closed, so by Farkas its dual is everything: the positive hull is the whole dual.
+
+For strict weights, each −r_k is a nonnegative combination of the others. Summing those balances gives all weights positive. The rows descend to the quotient because η ∈ M0: any deformation acting linearly on periods gives Q(η) = 0. This is correct.
+
+## Precise gaps
+
+**G1. Integrality of marks is asserted, not justified.** "Midpoint event" suggests marks may sit at half-lattice points. A mark at half-integer height breaks three things:
+- the fixing of A, since a/l_i full twists move the mid-height circle by a/l_i, which may be odd in units of the circumference;
+- hol N_h = L_h hol, because of partial crossings;
+- the integrality of the E_ij picture.
+
+*Fix:* state the lemma that every point of A is a lattice vertex. Otherwise, refine the cellulation to the ½-grid, recompute l_i, m_j, E, and choose a, b accordingly. The argument is otherwise unchanged. Either way, it must be written down.
+
+**G2. Linearity of Q on M needs the deformation to stay a translation surface with fixed gluing.** Suppose an allowed deformation changes wall directions. Then the formal eight-copy unfolding acquires nontrivial linear holonomy. In that case hol_δ is a crossed homomorphism, and to first order
+
+  Q(γ1γ2) = Q(γ1) + Q(γ2) + dR(γ1)·hol(γ2).
+
+That breaks Q(η + nN_h η) = Qη + nQ(N_h η) for relative classes.
+
+*Required statement:* allowed deformations preserve wall directions, so the family is a family of period coordinates with constant combinatorics. They do this by moving vertices along a wall-direction-preserving family. If allowed deformations do not preserve wall directions, the whole Section 2 computation needs a correction term.
+
+**G3. Gauge and hypothesis matching with the alignment theorem.**
+
+(a) Alignment is accepted for "simply connected canonical parity rooms." This theorem's hypothesis is "strictly simple canonical triangular room with no interior B/C lattice points." The inclusion should be stated explicitly.
+
+(b) (A) needs Q_y(h_i) = 0 for every *unit* row core, not only maximal-cylinder cores. These agree in H1(X), and periods of absolute classes do not depend on moving marked points, so this is fine. But it relies on h_i being absolute, which is worth one line.
+
+(c) Alignment holds only in a gauge. Infinitesimal rotation violates Q_y(h_i) = 0. The "fixed deformation gauge" used in the compactness step must be the same gauge. The "symmetry directions" must also be exactly the kernel modded out. It should be checked that every symmetry direction in that gauge acts linearly on periods, so that it kills all rows.
+
+**G4. Intrinsic σ is the load-bearing admissibility claim.** The horizontal powers w_n approach horizontal from opposite sides as n → +∞ and n → −∞. If horizontal is a wall direction, these lie in different physical wall sectors.
+
+The argument needs the inequality "row ≥ 0" to keep the same orientation in both limits. If the physical sign convention for an event flips across a wall sector, nonnegativity for both signs of n no longer forces the slope to vanish. One-sided powers only give an inequality.
+
+The draft asserts that the side is intrinsic and preserved by orientation-preserving affine maps. That is true of left/right sidedness on X. What needs proof, inside the admissibility framework, is that the *physical inequality direction* is a function of intrinsic sidedness alone.
+
+**G5. Admissibility of large powers beyond wall-parallelism.** "Only finitely many powers are excluded" counts only wall-parallel directions. The affine homeomorphism fixes A pointwise, so it maps saddle connections to saddle connections avoiding A, and preserves endpoint labels.
+
+But any further admissibility condition must also be shown affine-invariant. Examples: the "one-corner" condition on the region between γ1 and γ2, or a requirement that the unfolded event projects to a genuine physical billiard event.
+
+For an embedded region, fixed marked points stay inside. For an immersed region, this needs an argument. The theorem's strength depends on "admissible" containing nothing else.
+
+**G6. Disconnected unfolding.** Working componentwise is fine for the linear algebra. But the deformation quotient and its rank are properties of the room. The rows from the chosen component must be shown to span the full quotient dual, not only a component-restricted one. That is part of the ordinary-rank premise and should be stated as such.
+
+## Minor
+
+- Note that int_h is the opposite of the standard algebraic intersection sign, to prevent later sign errors.
+- "No eigenvalue ab on M0" relies on M0 being S-invariant. That is true, but it deserves one line.
+- The claim "Q_y = 0 on K" uses a ≠ 0. That holds trivially, but it is the only place a's sign or size matters.
+
+## Status
+
+The conditional reduction (ordinary seed rank ⇒ finite positive spanning orbit family) holds once G1–G3 are written in. It is not universally established until G4–G5 are settled within the admissibility framework. Ordinary full rank of seed rows correctly remains an unproved premise.

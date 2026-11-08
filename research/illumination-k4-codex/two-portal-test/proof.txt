@@ -1,0 +1,65 @@
+Two passages do not always admit a forward-only billiard connection
+4 November 2026 — bounded analytic test of symbolic transport
+
+[done] The unrestricted forward/y-monotone two-passage compatibility claim is FALSE, even for three rectangular chambers forming a strictly simple12-wall room. An explicit member is nevertheless lit: a hand-derived10-reflection path passes the two openings after repeated vertical reversals in the middle chamber. Exact fixed-room/path verification passes. No universal wall theorem or impossibility of general transport methods follows. Independent peer review has been requested, not received.
+
+1. Exact question tested
+Let three closed rectangles occupy consecutive horizontal bands and overlap in a positive-width open passage at each shared height. Given an interior source in the bottom band and an interior target in the top band, must there be a corner-free billiard connection that increases strictly in y and crosses each passage once? Reflections at vertical walls are unrestricted in number. Horizontal reflections would reverse y and are excluded by this particular claim.
+This is the natural direct extension of our accepted L-room y-monotone construction. It is a STRONGER claim than ordinary illumination. The original broader transport idea allowed return maps; the present test determines whether one may avoid composing returns in its first useful generalization.
+
+2. A parameter family of obstructions
+Choose real parameters
+  0<delta<1/2,  0<eta<1/2-delta,  h>0,  H>0.
+Define
+  R0=[delta-1,delta] x [0,2h],
+  R1=[0,1] x [2h,3h],
+  R2=[1-eta,2-eta] x [3h,3h+H].
+Let P=R0 union R1 union R2 and S=(delta-1/2,h).
+The first passage has x in(0,delta), at y=2h. The second has x in(1-eta,1), at y=3h. The union is a strictly simple disk. Both interfaces have a step on each side; its boundary has12 noncollinear corners (8convex,4reflex). S is interior to R0. Take ANY interior T in R2 with y>3h.
+
+CLAIM. No legal S-to-T billiard path can be strictly increasing in y.
+
+3. Proof, allowing every real slope and every side-bounce count
+Write rho=v_x/v_y for the initial signed slope, with v_y>0. It remains unchanged except for sign reversals at vertical walls. In a hypothetical y-monotone path, let q be its physical x-coordinate at the first passage; necessarily0<q<delta.
+Use the triangular wave
+  F(z)=1-|((z mod2)-1)|,
+which folds the line into[0,1]. The source's local x-coordinate in R0 is1/2. The elapsed vertical distance to the first passage equals h. Unfolding every lower-chamber vertical reflection gives
+  1/2+h*rho = 2n+epsilon*(q+1-delta),
+where n is an arbitrary integer and epsilon is+1 or-1. The physical horizontal slope after the passage is epsilon*rho. The strict passage inequalities ensure epsilon is defined (no fold breakpoint).
+The middle chamber has width1 and height h. At its upper edge the physical x-coordinate would be
+  q2=F(q+epsilon*h*rho)
+     =F(2q+1-delta-epsilon/2+2epsilon*n).
+Period2 removes the arbitrary integer n. Both possible orientations are exact:
+  epsilon=+1: q2=1/2-delta+2q;
+  epsilon=-1: q2=1/2+delta-2q.
+Indeed the unfolded arguments respectively lie in(1/2-delta,1/2+delta) subset(0,1) and(3/2-delta,3/2+delta) subset(1,2), where F has the stated linear branches. Therefore EVERY such path reaches y=3h at
+  1/2-delta < q2 < 1/2+delta.
+But eta+delta<1/2 gives
+  1/2+delta < 1-eta.
+The entire reachable interval lies strictly to the left of the second passage. The ray hits the smooth horizontal ceiling, which reverses v_y. This contradicts y-monotonicity. QED.
+The proof does not bound n or rho, assume rational lengths, enumerate rays, or fix a reflection word. It retains physical positions and both possible incoming horizontal orientations. Equal source-to-first-passage distance and middle height are an ESSENTIAL stated resonance condition; small independent height changes are not covered.
+
+4. Explicit lit control, showing the scope of the failure
+Take delta=1/10,eta=1/5,h=H=1. Then
+  R0=[-9/10,1/10]x[0,2],
+  R1=[0,1]x[2,3],
+  R2=[4/5,9/5]x[3,4],
+  S=(-2/5,1), T=(47/50,7/2).
+The forward-only obstruction says every ray clearing the first passage reaches the next height in x in(2/5,3/5), while the second opening is x in(4/5,1).
+
+A connecting path has initial direction(11,25) and these TEN successive smooth reflection points:
+  (12/25,3), (23/25,2), (1,24/11), (16/25,3),
+  (1/5,2), (0,27/11), (6/25,3), (17/25,2),
+  (1,30/11), (4/5,35/11),
+then reaches T.
+It enters the first passage at(1/25,2). It hits the middle ceiling at x=12/25,16/25,6/25, reversing downward each time. The corresponding bottom-wall contacts are23/25,1/5,17/25, all outside the first passage, so it stays in the middle chamber. Its fourth upward approach reaches the second passage at(22/25,3), then reflects at the top chamber's left wall before reaching T.
+Hand derivation: set rho=11/25 and q=1/25. In the middle unfolded strip, upward approaches have horizontal phases q+(2j+1)*rho, j=0,1,2,3. Folding gives12/25,16/25,6/25,22/25. This is a prescribed symbolic recurrence and four evaluated terms, not a direction search. Midway lower contacts and intervening side contacts give the written exact path. It supplies one lit control, not a claim that every room in the parameter family is lit.
+
+5. Consequence for the research decision
+The first universal compatibility lemma fails before wall counts become large. An argument that chooses a slope to cross successive passages without turning back cannot cover even this12-wall room. Single-chamber formulas plus independent nearest-image choices do not supply global illumination.
+This does not refute symbolic transport with retries; the fixed control demonstrates exactly how retries can restore access. It also does not show that a coordinate-swapped method or another decomposition cannot illuminate the same room. A next general theorem would need a labeled return/accessibility mechanism accounting for blocked approaches and subsequent retries. No such mechanism is proved here, and no proof campaign or search run follows automatically.
+My recommendation is to retire the forward-only compatibility claim and lower confidence in the proposed shortcut. The explicit room is a useful adversarial fixture for any future global return-map theory. Do not turn this negative test into a claim that the full20-wall theorem is false, or that this room has a dark pair.
+
+6. Validation
+check.py is an independent direct geometric replay of the SINGLE analytically supplied path. It checks the12-edge boundary is orthogonal and strictly simple, exact area4, convex/reflex count8/4, interior marks, the earliest actual boundary contact on every leg, absence of corner hits, every specular reflection, and final target. It also checks the two affine interval branches and actual portal crossings exactly. check.json reports PASS,10reflections. It does not numerically test the real-parameter theorem: that is established by the argument in section3.
+No room/assignment/direction/reflection-word discovery search, solver, orbit traversal, archive lookup, worker or external communication was used. No new novelty assertion. Existing peerDelta3 work and GOALS.md were untouched.

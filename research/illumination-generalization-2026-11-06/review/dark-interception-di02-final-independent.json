@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-11-07T20:58:13.968Z",
+  "decision": "ACCEPT_CONDITIONAL_DI02_TWO_CORNER_NECESSITY",
+  "source_checks_before": [
+    {
+      "file": "dark-interception-candidate-02.md",
+      "expected": "8c49b3b346b0522b231cb0ac00cb569094ae99dfd9409e497997a3d5b9730b3c",
+      "actual": "8c49b3b346b0522b231cb0ac00cb569094ae99dfd9409e497997a3d5b9730b3c",
+      "pass": true
+    },
+    {
+      "file": "dark-interception-argument-02.md",
+      "expected": "4dc11c44fb3a83f526907956ad7fa9430c09122a73ac767c9fd6c930005292a5",
+      "actual": "4dc11c44fb3a83f526907956ad7fa9430c09122a73ac767c9fd6c930005292a5",
+      "pass": true
+    }
+  ],
+  "claims": [
+    {
+      "claim": "Duration2 triangle contains no interior lattice point and exactly three nonvertex boundary lattice points",
+      "decision": "ACCEPT",
+      "reason": "Independent unimodular change to (0,0),(2,0),(2,2); enumerate vertices and midpoints."
+    },
+    {
+      "claim": "Specified narrow cone germs and regular side midpoints determine exact original y completion",
+      "decision": "ACCEPT",
+      "reason": "Unique sheet over simply connected open triangle; local regular completions and specified cone wedge fix the two boundary edges."
+    },
+    {
+      "claim": "Full off-orbit darkness forces first genuine mediant cone at time1",
+      "decision": "ACCEPT",
+      "reason": "Otherwise regular diagonal completes at same y, and complete-fiber cone-only retracing contradicts darkness. Primitivity excludes an earlier branch-value event."
+    },
+    {
+      "claim": "Forced midpoint cone and common time2 cone are distinct physical reflex corners",
+      "decision": "ACCEPT",
+      "reason": "Shared cone parity 0, midpoint parity u+v nonzero; physical corner parity invariant under all integral orthogonal chart reflections."
+    },
+    {
+      "claim": "Conditional r>=2 only; no global chain availability, unbounded-time reduction or nine-corner claim",
+      "decision": "ACCEPT",
+      "reason": "No step supplies those additional implications. Q0 lacks any even-even reflex, so the antecedent is not universally forced."
+    }
+  ],
+  "evidence": [
+    "dark-interception-di02-independent.md",
+    "dark-interception-prescribed-calibrations.py",
+    "dark-interception-prescribed-calibrations.json"
+  ],
+  "additional_independent_constraint": "The forced non-even-even cone cannot be reused as a shared time2 cone under unchanged actual even-even endpoint and neighbor hypotheses.",
+  "corrections": [],
+  "whole_goal_complete": false,
+  "search_used": false
+}

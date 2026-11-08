@@ -1,0 +1,60 @@
+# Verdict: **Accept**, with two dependency caveats and one simplification
+
+I checked each step independently. The geometry is correct. The bounded-range corollary rests on two hypotheses about how the inherited theorem defines its class (H1 and H2). The report should state them explicitly instead of leaving them implicit.
+
+## 1. Exact counts: k = 2, W_core = W_raw − 3 — **correct**
+
+- **Deletion is clean.** The pocket {B₀=(1,1), A₀=(2,2), C₀=(1,2)} meets the rest of P only along the open portal. Its edges BA and AC are boundary edges, and B₀, C₀, A₀ each occur once on ∂P by strict simplicity. So P⁻ = P ∖ pocket is a strictly simple disk.
+- **Angles.** At B₀ the angle goes from 225° to 180°. At C₀ it goes from 270° to 180°. A₀ leaves the room.
+- **No new lattice points.** The open edges B₀A₀, A₀C₀ and B₀C₀ contain no lattice points.
+- **S and T stay interior.** The only lattice point the pocket owns is A₀, which is a 45° boundary corner, so it was never an interior mark.
+- **k = 2.** No other B/C point changes status, so the transparent set of P⁻ is exactly {B₀, C₀}, both smooth boundary points.
+- **W drops by 3.** The pieces lower flank, D, H and upper flank (four maximal pieces) become one vertical wall. Its far endpoints are distinct, one below and one above, and no other corner changes.
+
+## 2. Geometric eligibility and the actual-pair implication — **correct, conditional on H1 and H2**
+
+P⁻ is a strictly simple canonical union with the same distinct interior A marks, k = 2 and W(P⁻) ≤ 23 whenever W(P) ≤ 26. The inherited theorem then gives an S→T connection for the specified pair, with no restriction on the number of full A fans. This holds provided:
+
+- **H1:** the inherited family counts *smooth-boundary* B/C points as transparent exceptions, rather than only interior ones. It must also actually cover the configuration with both exceptions on a single wall at distance 1 apart. Since rawness is defined as "no interior *and* no smooth-boundary B/C", this is the intended reading, but it should be checked against the composition JSON.
+- **H2:** the inherited W counts *maximal straight boundary segments*, so transparent smooth points do not split walls. If the inherited W instead splits walls at transparent points, the merged wall counts as 3 pieces and W(P⁻) = W(P) − 1. The range would then shrink to W(P) ≤ 24.
+
+## 3. Lattice-step lemma — **correct**
+
+- **Translations are even.** Every mirror in the family has an even translation part, and D4 preserves the three parity classes. So any developed image T′ of T is even-even, and T′ − S = 2n·w with w primitive and n ≥ 1.
+- **Odd steps have one type.** The odd steps S + jw all have the parity of w: B if w is odd-odd, C if w is mixed.
+- **Odd steps land on B₀ or C₀.** Each odd step folds to a physical B/C point on the path. Corners are illegal, and P⁻ has no interior B/C, so the point is B₀ or C₀.
+- **Truncation is well-defined.** It needs finitely many visits to S, which holds for any path with finitely many linear pieces.
+
+## 4. Axis exclusion — **correct; can be shortened**
+
+The glide argument is valid, but the case is vacuous. A shorter physical argument:
+
+1. S is an interior A point, so its full 8-triangle star lies in P⁻.
+2. Both triangles adjacent to the unit edge from S in direction ±e are in that star. So the path travels straight to the physical point S ± e.
+3. That point must be C₀ = (1,2), which has parity (odd, even).
+4. A vertical step from an even-even point lands on an (even, odd) point, so it cannot reach C₀. Hence the step is horizontal.
+5. S = (2,2) is A₀, which is not in P⁻. So S = (0,2).
+6. The hit at C₀ is then normal, and the path returns to S at time 2, before reaching T. This contradicts truncation.
+
+## 5. Diagonal exclusion and the raw full-star contradiction — **correct**
+
+- **Reversibility.** At the smooth vertical wall at B₀, the possible incoming diagonal states are (1,1) and (1,−1), and they satisfy v₂ = −R v₁.
+  - If a state repeats, backward determinism (no corner is hit) puts S at time t₂ − t₁, which is before the first T.
+  - If v₂ = −R v₁, the outgoing velocity is −v₁. The path then retraces the T-free history on [0, t₁] and returns to S at time t₁ + t₂, before T.
+  - So B₀ is visited at most once. Every odd step is a visit to B₀ at a distinct time, so n = 1 and T′ = S + 2w.
+- **Each half is straight.** The developed half does lie *on* a mirror line x − y = 2m, so the "parallel glide" remark is needed. The cleaner justification is the same full-star fact as in §4: the open edge from S to S + w is interior to P⁻. The same holds from T, using the reversed path.
+- **Locating S and T.** Near B₀ that open edge must approach from the room side x < 1. So {S, T} = {(0,0), (0,2)}.
+- **Contradiction.** The four 90° triangles at (0,1) are:
+  - {(0,0),(1,1),(0,1)} and {(0,0),(−1,1),(0,1)}, which belong to star(0,0);
+  - {(0,2),(1,1),(0,1)} and {(0,2),(−1,1),(0,1)}, which belong to star(0,2).
+
+  So (0,1) is an interior C point of P⁻ ⊂ P. This contradicts rawness, and equally contradicts k(P⁻) = 2.
+
+**Conclusion of the corollary:** for W(P) ≤ 26, under H1 and H2, every reduced core connection is non-wall-parallel. Open-portal avoidance and W ≥ 27 remain open, as the text says.
+
+## 6. Section 29.2 — **correct**
+
+- **Local nonpersistence.** For q in the open portal, a small disk around q stays free in every P_t for small |t|. Uniform convergence on a short time window keeps the approximating paths in that disk, so they are affine. Their limit is then affine, which contradicts the kink. Fixing the reflection time is not even needed; uniform convergence on a window suffices.
+- **DHD computation.** With D(x,y) = (y,x) and H(x,y) = (x, 4−y), DHD(x,y) = (4−x, y). This equals τ₍₂,₀₎ ∘ V_seal, where V_seal(x,y) = (2−x, y).
+- **Exit point.** The developed exit is (3, y+2m), which folds back to (1, y+2m) with velocity (−1, m).
+- **General shift.** Since A τ_u = τ_{L_A u} A, the r substitutions add up to ΔV = 2 Σ L_j (1,0). This holds with L_j taken in whichever composition order the development uses; state that convention explicitly. The text is right that a zero or even sum does not establish realizability.

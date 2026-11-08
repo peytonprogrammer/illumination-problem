@@ -1,0 +1,208 @@
+FINAL STATUS (4 November2026): this subproof is included in the completed
+bounded Delta3 theorem. Independent AI review findings are reconciled in
+independent-review/reconciliation.txt. Earlier progress/open-case sentences
+below record development stages; current coverage is in theorem.txt.
+
+Local third surplus: complete one-e2-plus-b1 partition
+4 November2026 — Codex01a18403
+
+RESULT: hand proof with independent AI review reconciled; exact paths checked. Every active-class room
+contained in K=H+seven neighbors, with exactly one e2 partial cell and b1,
+illuminates actualS/T. The displayed cover uses at most37reflections. A smaller
+bound is not pursued. This closes one charge partition, not the full Delta3 goal.
+
+1. Exhaustive charge context and inherited easy partitions
+For a nonbridge room, Delta=sum(e)+b=3. Its partitions are
+ b3; e1+b2; e2+b1; e1+e1+b1; e3; e2+e1; e1+e1+e1.
+All-e0 and the one-e1 branches illuminate by the already accepted optical
+lemmas valid with arbitrary extra smooth B points (second-surplus-L/classification
+§4). No extra smooth C can arise from at most one e1 fan in K.
+A solitary e3 fan cannot occur without a direct bridge: d1 requires q4, which
+is impossible (m4smoothA hasq3, m>=5 hasq>=5); d2 is onlyN and q5,m5 necessarily
+contains both central bridge triangles. Thus the genuinely remaining local
+partitions after this note are two e1+b1, e2+e1, and three e1.
+
+2. Exhaustive one-e2 geometry
+No other positive cell exists. Every other partial cell is an ordinary cap.
+The root has d1,q3: m3 contiguous sectors or a smooth m4 half-fan. The d2/q4
+alternative is impossible. Noncritical D/R roots affect neither old13 guard;
+N's nonbridge3/4sector fan occupies only its bottom-facing or right-facing
+blocking set. The ordinary short paths force the four reference caps; the
+opposite original/sigma13 path works. Hence only critical L/B/E/T roots remain.
+
+Sigma pairs L/T and B/E. Write the eight sector directions counterclockwise
+ E,NE,N,NW,W,SW,S,SE around the root. Sector i is the triangle from the root
+to direction i and i+1. All descriptions below refer to these fixed sectors.
+
+For L, its critical cap L+ is sector0. Ordinary B/E short paths force B+,E-,
+T- and L+ for potential darkness. Thus every root is one of the3m3 fans and
+4m4 fans containing sector0: starts6,7,0 for m3; starts5,6,7,0 for m4.
+For B, B+ is sector1. If absent, the old one-bounce route works. Ordinary E
+and the sigma four-path force E-,L+. Thus the possible starts are7,0,1 for
+m3 and6,7,0,1 for m4. These sector lists are hand exhaustive; no room-assignment
+or fan-discovery search is involved.
+
+3. L cases covered by inherited paths
+m3/start6 and m4/start5 contain L-/L+ but omit the upper outer L mate. The
+centered-L three-path applies, since ordinary B+ has B- and outerB absent.
+Extra lower sectors do not touch its mirrors.
+m4/start6 is the full-height rectangular L pocket. B=(-1,-1) is smooth unless
+ordinary B- repairs it. B+ is forced, so B- is absent: this already uses b1.
+The upper B=(-1,1) must then be repaired by Nb-, which is the only remaining
+possible triangle there. N is bottom-facing, leaving Nr-/Nr+ absent. The old
+Lsquare11 path applies; the extra lower L sectors affect none of its guards.
+
+4. Remaining L cases and their exact frozen covers
+Use the names/actual path guards in local-e2-project.json. A source line below
+means the row in THAT family's projection, with its stored frame and full
+required/forbidden triangles, not an untransformed archive line.
+
+L_Hupper3: m3/start7 = L-,L+,upper outer mate. If N is bottom-facing or empty,
+Lsquare11 works. If N=Nr+, the already smooth B=(-1,1) and B=(1,3) created
+by T-+Nr+ give two extra smooth points, violating b1. Hence the only remaining
+N is Nr-. Family L_Hupper3_Nrminus has an unconditional14path, line3580.
+
+L_outer3: m3/start0 = L+,l,c. The outside C=(-2,1) is smooth, using b1.
+Then the otherwise smooth B=(-1,1) must be repaired by Nb-. The family
+L_outer3_Nbminus has an unconditional15path, line531.
+
+L_Hupper4: m4/start7 = L-,L+,l,c. Its outside C also uses b1 and Nb- is
+forced by the same B repair. Family L_Hupper4_Nbminus is covered by this
+ordered split on ordinary R/D:
+ R- present: line528;
+ otherwise R+ present: line652;
+ R empty,D- present: line3777;
+ R empty,D+ present: line1670;
+ R/D empty: line2642.
+The last branch is vacuous under its budget but the guard is valid. All
+forbidden opposite caps follow from the ordinary slot rules. Maximum14hits.
+
+L_outer4: m4/start0 = L+,l,c,w. Again the smooth outside C forces Nb-.
+J2,Q3+n,k10-n,W11+2n imply n4or5 under the active budgets. B+,E-,T-,Nb-
+are four ordinary caps, leaving at most ONE D/R cap. Family L_outer4_Nbminus:
+ D- present: line361 (R absent);
+ D+ present: line3224;
+ R- present: line1895 (D absent);
+ R+ present or D/R empty: line648 (D absent,R- absent).
+This is a complete slot/budget split, maximum14hits.
+
+These arguments cover every L root; sigma covers T. Their only computations
+are exact guard replays of the specified frozen paths, not room enumeration.
+
+5. B cases covered or excluded immediately
+m3/start0 is B-/B+ plus the active east outer mate. Its square-return two-hit
+short route forces T-; with ordinary T its T+ cap is absent. If Nb+ is absent,
+the previous positive-source-roof square five-path works, even with B- added.
+If Nb+ is present, N is bottom-facing and the old sigma13path works. L+/E-
+were already forced, and their ordinary opposite/outer caps are absent. The
+argument does not require b0 and therefore still applies here.
+
+m4/start1 has full H-facing pair plus full west outer pair. Its outside
+C=(-1,-2) is smooth. B=(-1,-1) is also smooth: H90+B-45+west-upper45=180;
+ordinary L+ excludes the only repair L-. Thus b>=2, impossible here.
+
+m3/start1 (B_Hwest3) and m4/start0 (B_rectangle4) have unconditional12paths,
+line664 in their respective projected guards. The complete forbidden guards
+omit Nb-, so these paths remain valid whether Nb- is present or absent.
+The absence deduction in section6 applies only to its three named families.
+
+6. Constraints shared by the remaining B fans
+The remaining B families are B_outer3(m3/start7), B_outer4(m4/start6), and
+B_Heast4(m4/start7). Each has a smooth outside C=(1,-2), using b1. Therefore
+Nb- is absent: with L+, it would make B=(-1,1) smooth as well.
+Also D+ and R- cannot both occur: at B=(3,-1), H90+D+45+R-45=180.
+Likewise Nr+ and T- cannot both occur: at B=(1,3), H90+Nr+45+T-45=180.
+All these points are distinct from the required smooth outside C.
+Here ordinary slots use exactly the 16-cap alphabet of the projection receipts;
+all other partial-cell triangles are absent except the specified root fan. D,R,N,T
+are ordinary one-cap slots, so opposite options in a slot are exclusive.
+
+B_outer3 and B_outer4 have J2,Q3+n,k10-n,W11+2n, hence n4or5. E-/L+ are
+already two ordinary caps. Thus TWO or THREE further slots among D/R/N/T
+are occupied. B_Heast4 instead has J3 and n5or6; its simple cover below does
+not need that count.
+
+7. B_Heast4: complete five-guard cover
+If Nr- is absent, use line139 when R+ is present, line681 when R- is present,
+and line1303 when R is empty. Their only other forbidden R labels follow
+from the ordinary slot. If Nr- is present, N excludes Nb+/Nr+: use line515
+when R+ is absent, line3503 when R+ is present (R- absent). This covers the
+entire family. The maximum here is37reflections (line3503); optimization is
+unnecessary for the illumination theorem.
+
+8. B_outer3: exhaustive hand cover with two fixed residues
+Split on N. References are rows in B_outer3's projection.
+N=Nr-: R+ absent uses515. If R+ present and D+ present, the three-slot cap
+budget forces T empty, so2635 applies. If D+ absent and T- absent, use2551.
+If T- present with N/R+, D is empty by the budget, so2642 applies (D empty and R- absent).
+N=Nr+: T- is absent. If T+ absent use1154. If T+ present, at most one D/R
+slot remains: D- uses1260; D+ uses1157; D empty and R+ uses361; D empty and
+R- uses3224; D/R empty uses2642.
+N=Nb+: T+ absent uses60. If T+ present and D- present,1698 applies. If D-
+absent and R+ absent,1405 applies. If R+ present, N/T/R already consume all
+three extra slots, so D is empty and361 applies.
+N empty: T+ absent uses60. If T+ present, R- uses243 (D+ absent by section6).
+Otherwise R+ with D+ absent uses361. R+ with D+ present is fixed residueA.
+If R is empty, D+ uses1036; D- is fixed residueB; D empty violates the two-
+extra-slot requirement.
+ResidueA: B_outer3 with ordinary L+,E-,D+,R+,T+ only.
+ResidueB: B_outer3 with ordinary L+,E-,D-,T+ only.
+No room choices remain unspecified in either residue.
+The former row2253 citation was transferred from another family and is retired;
+row2642 in this family provides the stated cover.
+
+9. B_outer4: exhaustive hand cover with three fixed residues
+References here belong to B_outer4's OWN projection; a guard for the preceding
+three-triangle fan must not be silently transferred to this larger fan.
+N=Nr-: R+ absent uses515. R+ with D+ present forces T empty and uses2635.
+R+ with D+ absent and T- absent uses2551. The remaining N/R+/T- choice
+forces D empty and is fixed residueC.
+N=Nr+: T- absent. If T+ present use3222. If T+ absent, D+ uses676; with D- present, R+ uses361, R- uses3866,
+and R empty is fixed residueE;
+D empty and R+ uses361; D empty and R- uses3224. D/R empty leaves only one
+extra slot and is excluded by the budget.
+N=Nb+: T+ absent uses60. Otherwise D- present uses1698; D- absent uses2633.
+N empty: T+ absent uses60. Otherwise D+ present uses676. With D+ absent,
+R+ uses228; R- uses243. R empty,D- present is fixed residueD; R/D empty
+violates the two-extra-slot requirement.
+ResidueC: B_outer4 with ordinary L+,E-,Nr-,R+,T- only.
+ResidueD: B_outer4 with ordinary L+,E-,D-,T+ only.
+ResidueE: B_outer4 with ordinary L+,E-,Nr+,D- only.
+For E, T- is excluded by Nr+, T+ is absent in this branch, and R is empty.
+ResidueC is also covered by this family’s row2642, but its exact fixed
+certificate is retained as a redundant check. The former row2250 citation
+belonged to a remote family and is retired; E supplies the missing branch.
+These splits exhaust the allowed N and ordinary-slot cases. Every row's
+requirements and absences follow from its branch plus section6's exclusions.
+
+10. Five exact residues closed
+local-e2-residue-check.json validates each specified room's single simple
+boundary, actual three interior A marks, Delta3 and budgets. ResiduesA/C
+have W21,k5; B/D/E have W19,k6. Their triangle sets are explicit, not outputs
+of a room search. A bounded frozen lookup in the already used I2archive
+provides actualS/T paths: A line18038,7hits; B/D/E line6428,9hits; C line29384,
+3hits. All full segment/reflection/corner-avoidance guards pass exact replay.
+The retained coordinates, hashes and frames are in local-e2-residue-frozen.json.
+No conclusion is based on absence of a found ray or a bounded ray search.
+
+11. Verification scope and remaining goal
+The family projection checked only nine explicitly hand-listed symbolic fans
+against one frozen archive, with no whole-room assignments, directions or words
+generated. The exhaustive sector and ordinary-slot arguments above supply
+coverage; projection counts alone do not. Static guard replays use an existing
+checker and are not formal verification. Independent hand challenge is pending.
+
+The all-e0, one-e1 and one-e2 local partitions now have parent illumination
+proofs; a solitary e3 reduces to the direct bridge. Together with the parent
+remote theorem, the exact open LOCAL partitions are e1+e1+b1, e2+e1, and three
+e1. The full goal remains active and unresolved; do not generalize to higher
+surplus or universal wall minimality.
+
+Final review clarification for the noncritical N e2 root
+independent-review/guard-extension-check.json checks the FULL eight-sector N
+star against both inherited13guards: old13 forbids exactly Nb-/Nb+, and sigma13
+exactly Nr-/Nr+, with no forbidden NW sectors2/3. A nonbridge3/4sector N fan
+cannot touch both H sides; the opposite13guard is therefore preserved. This
+covers the larger N roots separately from the four N-unit forms. Final reviews
+accepted the substantive coverage after five-residue/citation corrections;
+parent exact replay supplies code execution, which reviewers did not perform.

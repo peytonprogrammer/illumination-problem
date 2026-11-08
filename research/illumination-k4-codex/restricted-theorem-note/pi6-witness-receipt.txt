@@ -1,0 +1,20 @@
+Independent HAND verification of ONE supplied pi/6 connecting path
+2026-11-02. Input: Opus pi6-review/findings.md section5. No path/direction/word search or execution of peer code. No claim to verify all241 paths or660direction outcomes.
+
+Use rational coordinates(x,Y) with physical y=sqrt(3)*Y, metric dx^2+3dY^2. Supplied vertices:
+ S=(−2,0), P1=(−14/5,−2/5), P2=(−5/2,1/2), O=(0,0),
+ P4=(5/2,1/2), P5=(14/5,−2/5), T=(2,0).
+
+First half is legal.
+1. P1 lies in the RELATIVE INTERIOR of the lower-left hexagon wall x+3Y=−4, between(−3,−1/3) and(−2,−2/3).
+2. P2 lies in the RELATIVE INTERIOR of the upper-left wall x−3Y=−4, between(−3,1/3) and(−2,2/3). It is the smooth C midpoint of that wall, not a polygon corner.
+3. S->P1 and P1->P2 are open chords of the convex full hexagon H_{−2}, hence their relative interiors lie inside it and contain no boundary corner.
+4. P2->O crosses x=−1 at Q=(−1,1/5), inside the OPEN joining CB segment 0<Y<1/3. Its portion P2->Q is an open chord of H_{−2}; Q->O is an open chord of the convex upper half-hexagon. The joining point is interior to the union. Thus this leg crosses no physical wall/corner before O.
+5. O is a smooth point of the bottom horizontal wall, between(−1,0) and(1,0).
+
+Specular reflections, in physical coordinates:
+At P1, choose n=(1,sqrt(3)). Incoming displacement v=(−4/5,−2sqrt(3)/5). The reflected vector v−2(v.n)n/(n.n)=(1/5,3sqrt(3)/5). The actual next displacement P2−P1=(3/10,9sqrt(3)/10) is3/2 times this vector, a positive multiple.
+At P2, choose n=(1,−sqrt(3)). Incoming displacement v=(3/10,9sqrt(3)/10). The reflected vector is(3/2,−3sqrt(3)/10). The actual displacement O−P2=(5/2,−sqrt(3)/2) is5/3 times this vector, a positive multiple.
+At O, the incoming vector has vx>0,vy<0. Reflection in y=0 produces(vx,−vy). This is exactly the mirror under x->−x of the time-reversed first half. The remaining two contacts and legs are therefore legal by symmetry.
+
+Verdict: ACCEPT. The specified S,T in the15wall room illuminate each other via five smooth-wall reflections. It explicitly visits O and establishes that the single-base-A return can land at a different physical preimage. The room remains a counterexample to the COUNTING inequality only. No dark room or lower-wall upper-bound improvement follows.

@@ -1,0 +1,140 @@
+Independent hand review: two local unit charges, arbitrary smooth surplus
+4 November 2026 — Codex01a18403
+
+VERDICT: the claimed illumination theorem is supported WITH the explicit
+missing-geometry supplement in section4 below. The source proof as read
+has a completeness omission; request incorporation before marking that
+source unconditionally accepted. The new centered-L/B optical step is sound.
+
+Reviewed statement
+Finite strictly simple canonical45 rooms, exactly full A stars S=(0,0),
+U=(2,0),T=(2,2), all occupied cells in H and its seven neighboring A cells K,
+exactly two partial cells with e=q-d=1, all other partial cells ordinary caps:
+actual S/T illuminate within13 reflections, without b/W/k restrictions.
+This implies the local surplus-four two-e1+b2 partition. It does not imply
+the other partitions, remote rows, or a universal wall minimum.
+
+1. Audit of dropping b1 in the inherited proof
+Read all of third-surplus-review/local-two-unit.txt, including its final
+forcing/noncritical reconciliation. For TWO ROOT cells (d>0), remove the
+N direct bridge first. A nonbridge e1 root then has d1/q2 and two contiguous
+45-degree sectors. Each critical root has either its centered H-facing pair
+or the active outer quarter after the explicit short-path forcing. Other
+orientations missing a needed cap illuminate by the one/three/two/four paths.
+
+For these two-root cases, the inheritance audit checks out:
+ - Joined B-D / R-E outside-C pairs use the far-square short path and the
+   five/N-bottom dichotomy; none depends on an upper bound on b.
+ - Zero/one critical root uses opposite13 or a single-root fallback. Full
+   D/R support and N outside mates are handled in the final reconciliation.
+ - Two active outer quarters preserve the exact portal exit state under
+   square replacement. N is ordinary and cannot block both13 versions.
+ - All six centered/centered and twelve ordered centered/outer site pairs
+   have explicit fallbacks independent of b, EXCEPT the centered L/B step
+   declaring Nb- absent because it would consume a second smooth B.
+   Its sigma partner is the same gap. The peer replaces exactly this step.
+No W/k counting exclusion is being reused as a new optical implication.
+
+I checked the four possible nonbridge N unit forms against the reconciled
+argument: bottom pair, SW outer quarter, right pair, NE outer quarter.
+The two H-facing N bridge triangles give a direct S/T segment whenever
+both occur. There is no extra d2/q3 nonbridge e1 fan. Other smooth B points
+can remove old exclusions but do not affect these explicit fallback guards.
+
+2. New centered-L/B + Nb- implication: ACCEPT
+L is sectors7/0, B is1/2. Missing E- illuminates by one_sigma. Missing T-
+illuminates by the centered-B three-path, whose two outer B mates are absent.
+Otherwise E-/T- are present and their ordinary slots exclude E+/T+.
+
+Nb- absent uses B6 as before. If Nb- present, N is an ordinary single cap;
+both right N caps are therefore absent. The retained L12 path requires
+only H, centered L and E-. Its full forbidden set is disjoint from the
+union of centered L/B, prescribed Nb-/E-/T-, and EVERY remaining ordinary
+D/R cap. Recomputed exact guards verify this symbolic implication, rather
+than inferring it from the one supplied control. Sigma plus path reversal
+preserves actual endpoint order and transforms full guards exactly.
+
+The source-prefix exchange for L12 was already hand-derived in
+first-surplus-review/centered-left.txt. Reading that derivation checks
+its two diagonal reflections, common portal exit, actual target equation
+d2/11, and strict finite-wall contacts. The new argument only changes
+which extra centered triangles are allowed; the path itself is unchanged.
+The13 maximum comes from the inherited other branches; L12 uses12.
+
+3. The new branch's budget exclusion: ACCEPT
+For centered L/B, H contributes two full C points and each centered root
+adds one full H-side C: J4 exactly. No ordinary cap can make another full
+non-A vertex. At the notch there are at most315 degrees from one ordinary
+N cap; elsewhere the fixed fans and one cap per remaining cell likewise
+leave less than360. Both centered roots have q2. With n ordinary caps,
+Q=4+n. Delta4 gives sN=8-n, so k=12-n. Only D/R/E/T/N remain ordinary:
+n<=5, hence k>=7. This branch cannot belong to the requested k<=6 class.
+The optical proof is nevertheless valid for the stronger unrestricted lemma.
+
+4. Completeness omission: d0 single leaves INSIDE the spatial K region
+The opening statement of the inherited proof says both positive cells are
+d1/q2 two-triangle fans. Spatial confinement to K does NOT imply this.
+An e1 cell with d0 has q1: one triangle. It can be a leaf attached through
+the other positive root, which is a quarter, while still lying inside K.
+
+This omission is material even to the W20/k6/Delta4 partition. The explicit
+hand-prescribed control is
+ H + B(0,-2)sectors0/1 + D(2,-2)sector3
+   + ordinary L+,E-,T-,Nb-,R+.
+Independent triangle-boundary and vertex bookkeeping gives a strictly
+simple single boundary, only full A stars S/U/T, W20,Q8,J2,sN4,k6,Delta4,b2.
+B has(q,d,e)=(2,1,1), D has(1,0,1). Thus it satisfies the theorem but is
+not among the two-root two-triangle cases. It is illuminated, not dark.
+
+Here is an exhaustive hand supplement, with the SAME <=13 bound.
+Two d0 cells cannot connect to H: ordinary e0 caps have their sole BC edge
+already facing H and cannot transmit. With only two positive cells, any d0
+cell is a single leaf immediately attached to the one d1/q2 quarter root.
+Within K, the only adjacent partial-cell pairs are B-D and R-E. Other
+partial cells' cell-side neighbors are H or outside K. Therefore the only
+four root/leaf orientations, before sigma pairing, are:
+ (i) B root0/1, D leaf3;
+ (ii) D root2/3, B leaf0;
+ (iii) E root4/5, R leaf2, the sigma image of(i);
+ (iv) R root2/3, E leaf5, the sigma image of(ii).
+N bridge cases have already illuminated directly. This argument uses cell
+edge connectivity and actual occupied H-side edges, not an assumed radius.
+
+Case(ii) omits B+, so the one-path illuminates immediately. Sigma handles(iv).
+Case(i) is an incomplete B-D lower strip, but the join proof still applies:
+ E- absent -> one_sigma.
+ Otherwise E+ absent. L+ absent -> sigma_four (its guards avoid D leaf3).
+ Otherwise L+ present. T- absent -> the B-square TWO path, whose only
+ required extra tiles are B0/1, whose bottom hit is(1/2,-2), and whose
+ forbidden noncap tile lies BELOW the B square, not in D leaf3.
+ Thus a remaining room contains L+,E-,T-.
+ Nb+ absent -> existing FIVE path. Its full required set lies in H+B0/1+T-;
+ all forbidden tiles are disjoint from the D single leaf and all remaining
+ ordinary R/N choices except the explicitly absent Nb+.
+ Nb+ present -> N has neither right cap; existing sigma13 works. It requires
+ no D triangle at all, so does not require the absent D- cap. Its full
+ forbidden set avoids D leaf3 and either R cap. L-/E+/T+ are absent by slots.
+This closes case(i) within13. Sigma and reversal close(iii).
+
+The new script checks B_two/five/sigma13 implications against the entire
+symbolic ordinary-cap sets, including transformed full guards. No cap
+assignments or new paths are generated. The prescribed control falls under
+five and checks the asserted e/d/b ledger. This explicit addition completes
+the theorem's spatial-local scope; no broad claim follows without it.
+
+5. Independence and provenance
+The parent of this review originally authored the inherited local-two-unit
+proof and established guard code. This review independently challenges the
+peer's NEW unrestricted extension, and uncovered an omission inherited from
+our earlier wording. It is not an independent re-creation of every lower-layer
+ingredient, a second fresh optical implementation, or formal verification.
+Source hashes are in check.json. Peer files are untouched.
+
+The companion bottom-square-review.txt/json from the peer independently
+ACCEPTS our previous5/8 bottom-square family proof. That acceptance has now
+been read; the earlier status saying no receipt existed was incorrect.
+
+Follow-up requested: incorporate section4's four single-leaf cases into
+surplus-four-local/two-unit.txt, then reconcile the predecessor scope there
+or cross-reference this supplement. The theorem plus this supplement is
+accepted; the unamended source alone retains a documented completeness gap.

@@ -1,0 +1,71 @@
+# Audit: U-room opposite-arm billiard construction
+
+**Verdict: ACCEPT** for the main opposite-arm proposition (§§1–4). I found no counterexample and no real gap. **UNRESOLVED** for the "every pair" corollary in §5, but only because it depends on the cited L-room theorem, which is not reproduced here. The rest of the corollary's case analysis is sound.
+
+## Main proposition: checks performed
+
+**Fixed-point equation.** The left portal height is u = y_s − L/τ and the right portal height is v = y_t − R/τ. The lower-strip descent requires u + v = B/τ, which is equivalent to Sτ = L + R + B. Substituting L = (y_s−c)τ + ℓ_s and the same for R gives 2cτ = B + ℓ_s + ℓ_t. This identity drives everything below, and it holds.
+
+**Finite monotone iteration.**
+- H(τ) − τ = (B − 2cτ + ℓ_s + ℓ_t)/S.
+- Since B > 2cτ₀ and ℓ > 0, we get H(τ₀) > τ₀.
+- Since ℓ_s + ℓ_t ≤ 2a + 2b, we get H(τ_max) ≤ τ_max.
+- τ₀ < B/(2c) < τ_max, so τ₀ lies in the interval.
+- H is nondecreasing because y_s − c ≥ 0 and y_t − c ≥ 0. So the iterates stay in [τ₀, τ_max], where H takes finitely many values. The sequence therefore stabilizes, and stabilization means H(τ_n) = τ_n.
+
+**First stationary point versus phase jumps.**
+- Let n be minimal with τ_{n+1} = τ_n. Then n ≥ 1 and τ_n > τ_{n−1}.
+- A jump of L at τ_n means (y_s−c)τ_n = L_j. Then L(τ_{n−1}) ≤ L_j = L(τ_n) − 2a, so H(τ_{n−1}) ≤ τ_n − 2a/S < τ_n = H(τ_{n−1}). That is a contradiction.
+- Simultaneous L and R jumps only strengthen the contradiction.
+- If y_s = c or y_t = c, the corresponding arm length is constant (a − x_s or x_t), so no jumps occur and ℓ < a or ℓ < b trivially.
+- Conclusion: 0 < ℓ_s < 2a and 0 < ℓ_t < 2b strictly.
+- The index formula max(0, ⌊(thr − base)/period⌋ + 1) correctly returns the first length *strictly* above the threshold, including at exact equality.
+
+**Strict portal contacts.**
+- u = c − ℓ_s/τ lies in (c − 2a/τ, c). Since τ > τ₀ > 2a/c, this gives 0 < u < c.
+- Earlier encounters with x = a are at heights u + 2ja/τ ≥ c + (2a − ℓ_s)/τ > c. These are genuine wall reflections and never touch (a, c).
+- The right arm is symmetric. Its earlier x = a+M hits are at heights > c, and the crossing at v < c is a true crossing.
+- Arm heights are monotone and lie in [u, y_s] ⊂ (0, H_L). So no roof, no floor and no outer corner is touched, and x = 0 hits are smooth at every height.
+- The parity of the unfolding gives a rightward, downward velocity at the left portal. The reversed right-arm path gives leftward, downward, so the forward path is rightward, upward. These match the strip endpoint: dX/dd = +1 at X = a+M+2kA, and Y is decreasing through negative values, so the physical y is increasing. Both slopes are 1/τ.
+
+**Lower strip after multiple traversals.**
+- |Y| ≤ max(u, v) < c, so the notch wall and reflex corners are never reached.
+- Y vanishes once, at d₀ = uτ ∈ (0, B).
+- X₀ = a + M/2 + kA + (ℓ_t − ℓ_s)/2. Because (ℓ_t − ℓ_s)/2 ∈ (−a, b), we get X₀ − kA ∈ (M/2, A − M/2).
+- The interval is symmetric under x ↦ A − x, so the physical x is in (M/2, A − M/2) for either parity of k.
+- Every hit at X = jA has Y ≠ 0 and |Y| < c, so these are smooth side-wall reflections. (0, c) and (A, c) are not vertices of the U room.
+- The passage-crossing count is 2k + 1.
+
+**Edge cases.**
+- y_s = c or y_t = c: the mark is interior because x_s < a and x_t < b. The path drops below c immediately, and the argument goes through unchanged.
+- Unequal a ≠ b and H_L ≠ H_R: these enter only through the separate ℓ bounds and the roof bounds, and both are handled.
+
+**Numeric sanity check.** I hand-ran a = 1, b = 2, M = 1, c = 1, s = (0.5, 3), x_t = 1, y_t = 1.5, τ₀ = 4.5, k = 2:
+- The iterates were 4.5 → 7.22 → 8.11 → 8.56 → 9 → 9, fixed at τ = 9, with ℓ_s = ℓ_t = 0.5.
+- u = v ≈ 0.944, and u + v = 17/9 = B/τ.
+- X₀ = 9.5, which gives physical x = 1.5 ∈ (0.5, 3.5).
+- The earlier inner-wall hits are at heights 1.17 and 1.39, both above c = 1.
+
+All checks hold.
+
+**Minor presentational fixes (not gaps):**
+- State n ≥ 1 for the first stationary index.
+- Note the parity symmetry when converting X₀ to physical x.
+- In §1, the range ℓ ∈ (0, 2a] could note the sharper (0, a − x_s) branch below the first threshold.
+
+## Corollary (§5)
+
+The case split is exhaustive. Pairs covered without the L-room theorem:
+- Same arm (column [0,a] × [0,H_L] or [a+M,A] × [0,H_R]): convex region, so direct visibility.
+- Both at height ≤ c with one strictly below c: the open segment lies strictly below c inside the lower rectangle, so direct visibility.
+- Opposite arms with both heights ≥ c: the main construction.
+
+The remaining case, a point with y > c and a point with y < c in opposite or lower regions, depends on the earlier L-room theorem. The transfer argument is sound conditional on that theorem:
+- A vertical-only path is y-monotone and is confined to the arm column while y > c.
+- It therefore crosses y = c at x ∈ [0, a].
+- After that it stays strictly below c, so it never meets the artificial segment y = c, x ∈ [a+M, A].
+- Its x = A reflections occur at heights < c, which are smooth on the U room's full right wall.
+
+What I cannot verify is whether the cited theorem actually covers arbitrary L dimensions (A, a, c, H_L), every lower point with x ∈ (0, A), and corner-freeness at the reflex vertex (a, c). Hence UNRESOLVED for the corollary.
+
+The limitations paragraph in §5 makes no unproven claim about blockers, the 22-wall minimum, or priority, which is consistent with the stated scope.

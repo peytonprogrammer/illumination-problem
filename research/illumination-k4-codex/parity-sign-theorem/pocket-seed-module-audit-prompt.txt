@@ -1,0 +1,178 @@
+Daniel explicitly requests collaboration with Opus. Tools-disabled focused adversarial proof review, no discovery/optical runs. Audit the new mixed-twist lemma, the finite-dimensional supplied-generator module closure/depth statement, and the prescribed algebra control below. Do not claim its abstract 7-dimensional lattice is an actual surface, room or corner event. The geometric transfer theorem that supplied pure label/prong-fixing affine maps preserve actual S/T events and pi sectors is an established input. The axis-isoperiodic slide theorem QH=0 on marked relative homology is another established input. Check all sign/order/inverse/relative boundary issues, nonzero vector vs scalar opening, scope of finite generator completeness, and whether this genuinely escapes first-stage blindness. Nothing here supplies the universal nonzero mixed coefficient; keep that explicit. Return precise verdict and necessary corrections.
+
+# Actual seed modules: mixed twists can reveal a blind seed
+
+[in progress] The universal pocket-detection goal remains open. This note
+adds an exact mixed-twist mechanism and a prescribed algebraic control.
+It does not construct a room, direction, cylinder or optical event.
+
+## Mixed-twist lemma
+
+Let eta be a SUPPLIED actual S/T one-corner intrinsic-pi event. Retain the
+marked relative lattice for all physical corner lifts and actual endpoint
+lifts. Let h=I+H be an established pure axis multitwist and f=I+N another
+pure affine multitwist, each fixing these labels and the selected prongs.
+Their actions here are on relative homology, with absolute twist increments.
+Assume H^2=N^2=0, QH=0 on the whole marked relative group, and Qeta=0.
+The first condition is standard for the refined multitwists of Section9.2;
+the second is the established axis-isoperiodic slide property.
+For all integers a,b, including negative ones,
+
+    f^a h^b eta = eta + b Heta + a Neta + ab NHeta,
+    Q(f^a h^b eta) = a [ Q(Neta) + b Q(NHeta) ].        (M1)
+
+In particular Q(Neta)=0 does not make this whole TWO-ACTION family blind.
+If Q(NHeta)!=0, set a=1 and choose any nonzero b; then the actual image
+event detects. It preserves the actual S/T fibers and the embedded pi
+continuation because both supplied affine maps do. A final established
+axis action makes its direction non-wall-parallel and gives either scalar
+opening sign without changing Q. This last geometric conclusion uses
+Section5, not an assumption that a nonzero vector automatically gives a
+nonzero determinant in its initial direction.
+
+The order matters. Q(h^b f^a eta)=Q(f^a eta) because Qh=Q. One must
+PRECONDITION the seed by the blind axis map, then apply f. Conjugating
+an axis map by a Q-preserving group element is still blind; here f is
+NOT assumed globally Q-preserving. A first-stage vanishing QNeta=0 is
+only vanishing on this supplied eta, not on the entire homology group.
+The new nonzero test concerns the specific absolute class NHeta, not
+an arbitrary element of ker hol. Since affine maps preserve holonomy0,
+Heta and NHeta both have zero holonomy. No event is identified with an
+arbitrarily selected zero-period cycle.
+
+## A controlled algebraic counterexample to the single-stage shortcut
+
+Work in a six-dimensional symplectic absolute lattice with basis
+(h,v,e,f,g,k), pairings <h,v>=<e,f>=<g,k>=1 and the others zero. Give h,v
+holonomies(1,0),(0,1), and give e,f,g,k holonomy0. Add one formal relative
+boundary generator r with holonomy0 and fixed by the maps below. This is
+an abstract split relative model, not asserted to be a translation surface
+or a room. It preserves nonzero relative boundary of the test seed.
+Let
+
+    eta=r+e+g,
+    Q(e)=(1,0),   Q(g)=(-1,0),   Q(h)=Q(v)=Q(f)=Q(k)=Q(r)=0.
+
+Define two positive rank-two core operators by
+
+    Hx=<h+f,x>(h+f)+<h-f,x>(h-f),
+    Nx=<h+v+e,x>(h+v+e)+<h+v-e,x>(h+v-e).
+
+Both pairs of core vectors are isotropic, and each pair has the same
+nonzero holonomy within that pair. Thus H^2=N^2=0, I+H and I+N preserve
+the absolute symplectic form, and their holonomy actions are parabolic:
+
+    hol((I+H)x)=[1,2;0,1]hol(x),
+    hol((I+N)x)=[-1,2;-2,3]hol(x).
+
+All core coefficients have the same positive sign; this control does not
+use arbitrary indefinite nilpotent matrices. Directly,
+
+    QH=0,     Qeta=0,       Neta=0,
+    Heta=-2f,              NHeta=-4e,
+    Q((I+N)(I+H)eta)=(-4,0).
+
+So a globally blind axis operator can prepare a seed for detection by
+another operator that was blind on the original seed. This demonstrates
+only an algebraic nonimplication. It is not an in-class counterexample,
+not a construction of such operators in an actual room, and not proof
+that all first-stage unimodular directions can vanish in this model.
+Actual affine actions for EVERY rational direction obey further group
+relations not specified in this two-operator control.
+
+## Exact finite-dimensional closure for supplied generators
+
+For a FINITE SUPPLIED collection of pure affine multitwists f_i=I+N_i,
+write E=H_1(X,P;R), D=dim E, and
+
+    V_0=span{eta},
+    V_(j+1)=V_j+sum_i N_i V_j.
+
+The span of the actual group orbit of eta equals the stable V_j. Indeed
+each N_i=f_i-I is a difference of group actions, while f_i and f_i^-1
+are I+N_i and I-N_i. The stable subspace is therefore invariant under
+all supplied generators and their inverses, and is both contained in
+and contains the orbit span. If V_j=V_(j+1), it is already stable; otherwise
+dimension strictly increases. A nonzero eta therefore stabilizes by
+j<=D-1. For actual events eta has nonzero boundary s+t-2p, so eta!=0.
+
+If Q is nonzero on the stable module, some product N_(i_l)...N_(i_1)eta
+of length l<=D-1 has nonzero Q. Expanding that product as a signed sum
+of at most2^l actual group words proves at least one actual image with
+word length at most l detects. Conversely, if Q kills the stable module,
+EVERY actual image under THIS generated subgroup is blind. No claim is
+made that a chosen finite set of pure twists generates the full affine
+group or suffices for every detecting event. In particular, one-stage
+Bezout-residue blindness from Section9.4 is not such a module certificate.
+
+## Concrete next obligation
+
+For the reviewed bounded seed and an arbitrary specified literal pocket,
+prove Q(NHeta)!=0 for some justified non-axis f and one of the established
+axis operators H, OR prove a longer supplied-generator module pairing.
+The H^2=N^2=0 identities make this an exact mixed coefficient, even though
+the second twist can cross several strips after the first action.
+This can succeed when the original one-strip contrast vanishes. It still
+needs a real geometric proof of the mixed coefficient; the abstract
+control and finite-dimensional stopping bound supply no such existence.
+
+
+CONTROL CODE
+"""Exact prescribed symplectic mixed-twist control; no surface/optical search."""
+from fractions import Fraction as F
+from pathlib import Path
+import json
+b=Path(__file__).resolve().parent
+D=7
+zero=lambda:[[F(0) for _ in range(D)] for _ in range(D)]
+J=zero()
+for i in (0,2,4):J[i][i+1]=F(1);J[i+1][i]=F(-1)
+I=zero()
+for i in range(D):I[i][i]=F(1)
+def mv(A,x):return [sum(a*y for a,y in zip(row,x)) for row in A]
+def mm(A,B):return [[sum(A[i][k]*B[k][j] for k in range(D)) for j in range(D)] for i in range(D)]
+def plus(A,B):return [[a+b for a,b in zip(x,y)] for x,y in zip(A,B)]
+def transpose(A):return list(map(list,zip(*A)))
+def pairing(c,x):return sum(c[i]*z for i,z in enumerate(mv(J,x)))
+def operator(cores):
+ A=zero()
+ for c in cores:
+  row=[sum(c[k]*J[k][j] for k in range(D)) for j in range(D)]
+  for i in range(D):
+   for j in range(D):A[i][j]+=c[i]*row[j]
+ return A
+hplus=[1,0,0,1,0,0,0];hminus=[1,0,0,-1,0,0,0]
+nplus=[1,1,1,0,0,0,0];nminus=[1,1,-1,0,0,0,0]
+H=operator([hplus,hminus]);N=operator([nplus,nminus])
+eta=list(map(F,[0,0,1,0,1,0,1]));q=list(map(F,[0,0,1,0,-1,0,0]))
+def Q(x):return sum(a*z for a,z in zip(q,x))
+assert pairing(hplus,hminus)==pairing(nplus,nminus)==0
+for A in (H,N):
+ assert mm(A,A)==zero()
+ G=plus(I,A)
+ assert mm(mm(transpose(G),J),G)==J
+ assert mv(G,[0,0,0,0,0,0,1])==[0,0,0,0,0,0,1]
+assert all(Q([H[i][j] for i in range(D)])==0 for j in range(D))
+assert Q(eta)==Q(mv(N,eta))==0
+assert mv(H,eta)==[0,0,0,-2,0,0,0]
+assert mv(N,mv(H,eta))==[0,0,-4,0,0,0,0]
+assert Q(mv(plus(I,N),mv(plus(I,H),eta)))==-4
+for A,derivative in [(H,[[1,2],[0,1]]),(N,[[-1,2],[-2,3]])]:
+ G=plus(I,A)
+ for j in range(D):
+  x=[F(int(k==j)) for k in range(D)];image=mv(G,x)
+  assert image[:2]==[sum(derivative[i][k]*x[k] for k in range(2)) for i in range(2)]
+controls=[]
+for a,bb in [(-2,-3),(-1,2),(0,1),(1,0),(1,1),(2,-1),(3,4)]:
+ A=plus(I,[[a*x for x in row] for row in N])
+ B=plus(I,[[bb*x for x in row] for row in H])
+ result=mv(A,mv(B,eta))
+ assert Q(result)==-4*a*bb
+ controls.append(dict(a=a,b=bb,defect_x=str(Q(result)),boundary_r=str(result[-1])))
+out=dict(status='PRESCRIBED_MIXED_TWIST_ALGEBRA_PASS',
+ model='Six-dimensional symplectic absolute lattice plus formal fixed relative generator; no realization claimed.',
+ H_squared_zero=True,N_squared_zero=True,absolute_symplectic=True,
+ QH_globally_zero=True,Q_eta_zero=True,QN_eta_zero=True,QNH_eta=[-4,0],
+ controls=controls,universal_actual_mixed_pairing='OPEN',optical_discovery_runs=0)
+(b/'pocket-seed-module.json').write_text(json.dumps(out,indent=2)+'\n')
+print(json.dumps(out,indent=2))

@@ -1,0 +1,283 @@
+{
+  "status": "completed prefix",
+  "effort": {
+    "start": 1793984066.213351,
+    "deadline": 1793984906.213351,
+    "question": "Exact vertical-only affine coverage for alpha p/q, q=5,7",
+    "limit_seconds": 840
+  },
+  "results": [
+    {
+      "selected_cover": [
+        {
+          "shift": 2,
+          "sign": -1,
+          "M": 1,
+          "middle_shift": 1,
+          "guards": [
+            [
+              "4/5",
+              "-1/5",
+              "1/5"
+            ],
+            [
+              "-4/5",
+              "1/5",
+              "4/5"
+            ],
+            [
+              "1/5",
+              "-4/5",
+              "4/5"
+            ],
+            [
+              "-1/5",
+              "4/5",
+              "1/5"
+            ]
+          ]
+        }
+      ],
+      "p": 1,
+      "q": 5,
+      "status": "COVERED",
+      "candidate_clauses": 9,
+      "distinct_lines": 38,
+      "vertical_slabs_and_sections": 76,
+      "tested_sign_cells": 810,
+      "used_clauses": 4,
+      "uncovered_sign_cells": 0,
+      "first_uncovered": [],
+      "note": "Sign-invariant affine decomposition includes all boundary sections; not room counts."
+    },
+    {
+      "selected_cover": [
+        {
+          "shift": 2,
+          "sign": -1,
+          "M": 1,
+          "middle_shift": 3,
+          "guards": [
+            [
+              "3/5",
+              "-2/5",
+              "2/5"
+            ],
+            [
+              "-3/5",
+              "2/5",
+              "3/5"
+            ],
+            [
+              "2/5",
+              "-3/5",
+              "3/5"
+            ],
+            [
+              "-2/5",
+              "3/5",
+              "2/5"
+            ]
+          ]
+        }
+      ],
+      "p": 2,
+      "q": 5,
+      "status": "COVERED",
+      "candidate_clauses": 7,
+      "distinct_lines": 23,
+      "vertical_slabs_and_sections": 26,
+      "tested_sign_cells": 144,
+      "used_clauses": 4,
+      "uncovered_sign_cells": 0,
+      "first_uncovered": [],
+      "note": "Sign-invariant affine decomposition includes all boundary sections; not room counts."
+    },
+    {
+      "selected_cover": [
+        {
+          "shift": 2,
+          "sign": -1,
+          "M": 3,
+          "middle_shift": 3,
+          "guards": [
+            [
+              "6/7",
+              "-1/7",
+              "0"
+            ],
+            [
+              "-6/7",
+              "1/7",
+              "1"
+            ],
+            [
+              "1/7",
+              "-6/7",
+              "1"
+            ],
+            [
+              "-1/7",
+              "6/7",
+              "0"
+            ]
+          ]
+        },
+        {
+          "shift": 0,
+          "sign": 1,
+          "M": 3,
+          "middle_shift": 3,
+          "guards": [
+            [
+              "6/7",
+              "1/7",
+              "-2/7"
+            ],
+            [
+              "-6/7",
+              "-1/7",
+              "9/7"
+            ],
+            [
+              "1/7",
+              "6/7",
+              "2/7"
+            ],
+            [
+              "-1/7",
+              "-6/7",
+              "5/7"
+            ]
+          ]
+        },
+        {
+          "shift": 2,
+          "sign": 1,
+          "M": 2,
+          "middle_shift": 1,
+          "guards": [
+            [
+              "6/7",
+              "1/7",
+              "3/7"
+            ],
+            [
+              "-6/7",
+              "-1/7",
+              "4/7"
+            ],
+            [
+              "1/7",
+              "6/7",
+              "4/7"
+            ],
+            [
+              "-1/7",
+              "-6/7",
+              "3/7"
+            ]
+          ]
+        }
+      ],
+      "p": 1,
+      "q": 7,
+      "status": "COVERED",
+      "candidate_clauses": 13,
+      "distinct_lines": 52,
+      "vertical_slabs_and_sections": 164,
+      "tested_sign_cells": 2422,
+      "used_clauses": 3,
+      "uncovered_sign_cells": 0,
+      "first_uncovered": [],
+      "note": "Sign-invariant affine decomposition includes all boundary sections; not room counts."
+    },
+    {
+      "selected_cover": [
+        {
+          "shift": 2,
+          "sign": -1,
+          "M": 5,
+          "middle_shift": 3,
+          "guards": [
+            [
+              "5/7",
+              "-2/7",
+              "2/7"
+            ],
+            [
+              "-5/7",
+              "2/7",
+              "5/7"
+            ],
+            [
+              "2/7",
+              "-5/7",
+              "5/7"
+            ],
+            [
+              "-2/7",
+              "5/7",
+              "2/7"
+            ]
+          ]
+        }
+      ],
+      "p": 2,
+      "q": 7,
+      "status": "COVERED",
+      "candidate_clauses": 15,
+      "distinct_lines": 42,
+      "vertical_slabs_and_sections": 100,
+      "tested_sign_cells": 920,
+      "used_clauses": 9,
+      "uncovered_sign_cells": 0,
+      "first_uncovered": [],
+      "note": "Sign-invariant affine decomposition includes all boundary sections; not room counts."
+    },
+    {
+      "selected_cover": [
+        {
+          "shift": 2,
+          "sign": -1,
+          "M": 5,
+          "middle_shift": 1,
+          "guards": [
+            [
+              "4/7",
+              "-3/7",
+              "3/7"
+            ],
+            [
+              "-4/7",
+              "3/7",
+              "4/7"
+            ],
+            [
+              "3/7",
+              "-4/7",
+              "4/7"
+            ],
+            [
+              "-3/7",
+              "4/7",
+              "3/7"
+            ]
+          ]
+        }
+      ],
+      "p": 3,
+      "q": 7,
+      "status": "COVERED",
+      "candidate_clauses": 11,
+      "distinct_lines": 48,
+      "vertical_slabs_and_sections": 82,
+      "tested_sign_cells": 1016,
+      "used_clauses": 4,
+      "uncovered_sign_cells": 0,
+      "first_uncovered": [],
+      "note": "Sign-invariant affine decomposition includes all boundary sections; not room counts."
+    }
+  ],
+  "independent_review": false
+}

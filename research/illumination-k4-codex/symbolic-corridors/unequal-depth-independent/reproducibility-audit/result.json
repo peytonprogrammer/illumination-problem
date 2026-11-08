@@ -1,0 +1,166 @@
+{
+  "status": "ALL_FIXED_INDEPENDENT_CHECKS_REPRODUCED",
+  "checkers_planned": 14,
+  "checkers_replayed": 14,
+  "original_files_verified_unchanged": 117,
+  "changed_originals": [],
+  "elapsed_seconds": 6.49,
+  "records": [
+    {
+      "script": "equal-depth-independent/check.py",
+      "output": "equal-depth-independent/check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 2.844,
+      "original_sha256": "068494d7d703adb22e1cb5aa18b32b55692fd685762c95f137fd21261b767eb1",
+      "replay_sha256": "068494d7d703adb22e1cb5aa18b32b55692fd685762c95f137fd21261b767eb1",
+      "byte_identical": true,
+      "stdout": "{'status': 'INDEPENDENT_EXACT_CHECKS_PASS_HAND_VERDICT_IN_REVIEW', 'normalized_prescribed_cases': 450, 'actual_corridor_paths': 1350, 'actual_L_subroom_paths': 12, 'total_wall_contacts': 17318, 'maximum_in_controls': 41, 'four_portal_affine_identity_rows': 4, 'low_denominator_affine_guard_rows': 7, 'limits': 'Prescribed formulas only. Counts are controls, not proof by sampling or universal bounce bounds. Universal real-parameter coverage independently hand-reviewed in review.md. No peer program imported/executed, discovery, CAD, room/ray census, worker, or source edits.'}\n"
+    },
+    {
+      "script": "arbitrary-endpoints-independent/check.py",
+      "output": "arbitrary-endpoints-independent/check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.601,
+      "original_sha256": "2c0bfd024d85d385da155947152c070015a930ede1951e7260333ec7a13bd92d",
+      "replay_sha256": "2c0bfd024d85d385da155947152c070015a930ede1951e7260333ec7a13bd92d",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"PASS\", \"finite_fourier_frequencies\": 4225, \"nonzero_frequencies\": 4224, \"fourier_l1_norm\": \"1\", \"constant_coefficient\": \"916312070471295267/9223372036854775808\", \"threshold_chain_exact\": true, \"portal_affine_identity_charts\": 3, \"unequal_common_chart_paths\": 48, \"zero_slope_paths\": 1, \"equal_diagonal_paths\": 145, \"exact_irrational_paths\": 1, \"actual_paths\": 195, \"wall_contacts\": 2099, \"limits\": \"Prescribed formula controls, not proof by sampling or discovery. Universal real-parameter argument hand-reviewed separately. No peer code imports or execution.\"}\n"
+    },
+    {
+      "script": "unequal-depth-independent/midpoint-check.py",
+      "output": "unequal-depth-independent/midpoint-check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.321,
+      "original_sha256": "81d01dbc32593047d1362fecad92792e3a6bad02ec948da9d94e488bf1738890",
+      "replay_sha256": "81d01dbc32593047d1362fecad92792e3a6bad02ec948da9d94e488bf1738890",
+      "byte_identical": true,
+      "stdout": "{'status': 'PASS', 'scope': 'peer sections1-3 snapshot; not full unequal-depth theorem', 'four_affine_charts': 4, 'unequal_depth_L_paths': 96, 'wall_contacts': 1752, 'integer_midpoint_identity_controls': 505, 'limits': 'Universal lemmas require the hand review; controls do not prove darkness. Imports only own frozen independent helper, no peer code.'}\n"
+    },
+    {
+      "script": "unequal-depth-independent/repair-check.py",
+      "output": "unequal-depth-independent/repair-check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.17,
+      "original_sha256": "30f89beba4cb2af500a68849a90d028adf66f71b3d715a52a281eed94283aa77",
+      "replay_sha256": "30f89beba4cb2af500a68849a90d028adf66f71b3d715a52a281eed94283aa77",
+      "byte_identical": true,
+      "stdout": "{'status': 'PASS', 'actual_paths': 146, 'wall_contacts': 292, 'exact_irrational_paths': 2, 'smallest_prescribed_cap_clearance': '1/100000000', 'limits': 'Prescribed formula checks only. General positive-real inequalities hand-reviewed. No peer execution, discovery or darkness claim.'}\n"
+    },
+    {
+      "script": "unequal-depth-independent/cap-sheet-check.py",
+      "output": "unequal-depth-independent/cap-sheet-check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.043,
+      "original_sha256": "3fb3039b8c47aa8d6cd5234c53feac529d14534344967752a4cd8e6e329050e5",
+      "replay_sha256": "3fb3039b8c47aa8d6cd5234c53feac529d14534344967752a4cd8e6e329050e5",
+      "byte_identical": true,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"prescribed_actual_paths\": 4,\n  \"wall_contacts\": 6,\n  \"early_target_prefix_fixture\": true,\n  \"source_sha256\": {\n    \"unequal-depth/cap-chart-screen.py\": \"90b07374f4fa8d7c5921990356f34e795c1e6247341759f58538851a2ed3cf60\",\n    \"unequal-depth/cap-chart-screen.json\": \"e69c08e8cb924253b682e8cd50497af6b69599f6d2788f4109d4174af6bd3636\",\n    \"arbitrary-endpoints-independent/check.py\": \"c8c0e8c99f2c4513f0568288d6fcfa0ff4c142a8134760b06db479b0423f2b95\",\n    \"unequal-depth-independent/cap-sheet-check.py\": \"b28e968910a64c22d717c0ba988c3182de689ac164b02462d19f810cc8b4c110\"\n  },\n  \"records\": [\n    {\n      \"name\": \"original\",\n      \"path\": [\n        [\n          \"1\",\n          \"-1/4\"\n        ],\n        [\n          \"3\",\n          \"1/2\"\n        ],\n        [\n          \"1\",\n          \"5/4\"\n        ]\n      ],\n      \"contacts\": 1,\n      \"trimmed_at_earlier_target\": false,\n      \"period\": 6\n    },\n    {\n      \"name\": \"upper\",\n      \"path\": [\n        [\n          \"1\",\n          \"-1/2\"\n        ],\n        [\n          \"2\",\n          \"5/4\"\n        ],\n        [\n          \"8/7\",\n          \"11/4\"\n        ],\n        [\n          \"1\",\n          \"5/2\"\n        ]\n      ],\n      \"contacts\": 2,\n      \"trimmed_at_earlier_target\": false,\n      \"period\": 14\n    },\n    {\n      \"name\": \"lower\",\n      \"path\": [\n        [\n          \"1\",\n          \"-3/2\"\n        ],\n        [\n          \"8/7\",\n          \"-7/4\"\n        ],\n        [\n          \"2\",\n          \"-1/4\"\n        ],\n        [\n          \"1\",\n          \"3/2\"\n        ]\n      ],\n      \"contacts\": 2,\n      \"trimmed_at_earlier_target\": false,\n      \"period\": 14\n    },\n    {\n      \"name\": \"both-first-target\",\n      \"path\": [\n        [\n          \"3/2\",\n          \"-1/2\"\n        ],\n        [\n          \"3/2\",\n          \"-3/4\"\n        ],\n        [\n          \"3/2\",\n          \"5/2\"\n        ]\n      ],\n      \"contacts\": 1,\n      \"trimmed_at_earlier_target\": true,\n      \"period\": 16\n    }\n  ],\n  \"limits\": \"Conditional cap-sheet sufficiency controls and rational-period identities only. No exhaustive coverage, discovery, darkness or peer-code execution.\"\n}\n"
+    },
+    {
+      "script": "unequal-depth-independent/vertical-failure-check.py",
+      "output": "unequal-depth-independent/vertical-failure-check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.038,
+      "original_sha256": "91139eeba73dac7db4c5ba8b75c1826e70881c09bae75746d1cbcc3853d9885f",
+      "replay_sha256": "91139eeba73dac7db4c5ba8b75c1826e70881c09bae75746d1cbcc3853d9885f",
+      "byte_identical": true,
+      "stdout": "{'status': 'EXPLICIT_VERTICAL_ONLY_FAILURES_VERIFIED', 'pairs': 3, 'direct_chart_tests': 112, 'limits': 'Necessity rests on the independent hand unfolding argument. Finite controls do not classify all depth parameters or prove darkness. No peer code executed.'}\n"
+    },
+    {
+      "script": "unequal-depth-independent/centered-check.py",
+      "output": "unequal-depth-independent/centered-check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.159,
+      "original_sha256": "f726402102c60018f64dad314323ba463f399fbb8072a9b08185c053bd7ba770",
+      "replay_sha256": "f726402102c60018f64dad314323ba463f399fbb8072a9b08185c053bd7ba770",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"INDEPENDENT_CENTERED_CHECKS_PASS\", \"fourier_exponential_coefficients\": 16, \"cosine_terms\": 8, \"finite_proof_table_rows\": 40, \"finite_table_failures\": [[\"1/5\", \"3/5\"], [\"1/4\", \"3/4\"], [\"2/5\", \"4/5\"]], \"written_proof_table_reconciled\": true, \"large_q_grid_formula_controls\": 44, \"actual_paths\": 122, \"wall_contacts\": 296, \"exact_irrational_paths\": 2, \"limits\": \"Finite proof table after hand universal reduction, and prescribed actual-wall controls. No discovery extrapolation or arbitrary-horizontal theorem.\"}\n"
+    },
+    {
+      "script": "unequal-depth-independent/centered-source-update.py",
+      "output": "unequal-depth-independent/centered-source-update.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.033,
+      "original_sha256": "f7faf78bb2f8a741e10aa3ceaee3ea2fc4a867d07b4c41444d4bcf3146164409",
+      "replay_sha256": "f7faf78bb2f8a741e10aa3ceaee3ea2fc4a867d07b4c41444d4bcf3146164409",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"ANNOUNCED_FINAL_CERTIFICATES_ALREADY_PINNED\", \"theorem_source_unchanged\": true, \"theorem_sha256\": \"6264849d4f985b42bcdfa5f770b777b35c6fd6be8914c2cc0c5160ec315c876d\", \"changes\": {\"unequal-depth/centered-check.py\": {\"already_pinned\": \"d64a7a222b1ddccec32f1136718e0ee384ea7305bf28ac36b22a23b1871368b5\", \"announced\": \"d64a7a222b1ddccec32f1136718e0ee384ea7305bf28ac36b22a23b1871368b5\"}, \"unequal-depth/centered-check.json\": {\"already_pinned\": \"2ec4adbdb7c6725263f4c34c0bf0e4e4039fac24807a3d4ad2a3e7f0d115cc97\", \"announced\": \"2ec4adbdb7c6725263f4c34c0bf0e4e4039fac24807a3d4ad2a3e7f0d115cc97\"}}, \"all_40_rows_unchanged\": true, \"physical_records_matched_to_independent_checks\": 37, \"old_acceptance_preserved\": \"d7dcdb59f27a5ad8a53b18ee46f7a2691b2d90367ffde6675d7c570e3c239502\", \"review\": \"centered-source-update.md\", \"limits\": \"Parent code was read, not executed. Main mathematical acceptance is unchanged; the original independent receipt already captured these final source hashes; no hash replacement is required.\"}\n"
+    },
+    {
+      "script": "unequal-depth-independent/phase-lines-check.py",
+      "output": "unequal-depth-independent/phase-lines-check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.091,
+      "original_sha256": "f993627f40f5650e0986b072cd664b4a9e1e4003f06fd836308e4d2c2c3f9015",
+      "replay_sha256": "f993627f40f5650e0986b072cd664b4a9e1e4003f06fd836308e4d2c2c3f9015",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"INDEPENDENT_CONTINUOUS_AFFINE_COVERS_PASS\", \"primitive_relations\": 30, \"covered_rows\": 28, \"exceptional_rows\": 2, \"open_polygon_faces\": 94, \"tested_sign_cell_representatives\": 374, \"method\": \"Incremental rational polygon half-plane arrangement; test all open faces, edges and vertices, not parent vertical slabs\", \"written_table_reconciled\": true, \"reversal_closed\": true, \"limits\": \"Complete finite affine proof after the hand irrational-orbit reduction. Counts are sign-cell certificates, not sampled rays or rational-orbit coverage. No peer execution or discovery.\"}\n"
+    },
+    {
+      "script": "unequal-depth-independent/exterior-check.py",
+      "output": "unequal-depth-independent/exterior-check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.141,
+      "original_sha256": "cb60fbd330c8c9f0f63052a06056426ada41336b7b92ad4bd0011f6a6773bc86",
+      "replay_sha256": "cb60fbd330c8c9f0f63052a06056426ada41336b7b92ad4bd0011f6a6773bc86",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"EXACT_EXTERIOR_IRRATIONAL_CONTROLS_PASS\", \"actual_paths\": 4, \"wall_contacts\": 8, \"records\": [{\"cap\": \"upper\", \"actual_paths\": 2, \"contacts_per_path\": 2, \"early_target_trimmed\": false, \"cap_phase_not_even_integer\": true, \"period_identity\": true}, {\"cap\": \"lower\", \"actual_paths\": 2, \"contacts_per_path\": 2, \"early_target_trimmed\": false, \"cap_phase_not_even_integer\": true, \"period_identity\": true}], \"limits\": \"Prescribed exact quadratic-radical cap paths and affine identities. Universal circle-density and finite bad-set avoidance are hand-reviewed; no discovery or rational-depth conclusion.\"}\n"
+    },
+    {
+      "script": "unequal-depth-independent/twist-check.py",
+      "output": "unequal-depth-independent/twist-check.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.586,
+      "original_sha256": "2228873339140cec8aa06b0fce2ae2f53ae2c3c46956b787aa263d16c38e1c5f",
+      "replay_sha256": "2228873339140cec8aa06b0fce2ae2f53ae2c3c46956b787aa263d16c38e1c5f",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"INDEPENDENT_TWIST_CONTROLS_PASS\", \"annulus_roundtrips\": 192, \"vertex_representations_on_fixed_cuts\": 144, \"circumference_fixtures\": [{\"hm\": \"2\", \"hp\": \"2\", \"L\": 20, \"circumferences\": [\"4\", \"4\", \"10\", \"2\"]}, {\"hm\": \"3/4\", \"hp\": \"5/4\", \"L\": 30, \"circumferences\": [\"3/2\", \"5/2\", \"6\", \"2\"]}, {\"hm\": \"1/3\", \"hp\": \"7/5\", \"L\": 574, \"circumferences\": [\"2/3\", \"14/5\", \"82/15\", \"2\"]}], \"Q_independent_return\": {\"N\": 20, \"ell\": 15, \"source_delta\": \"K('-212', '150', '0', '0')\", \"target_delta\": \"K('-260', '0', '150', '0')\"}, \"primitive_relation_controls\": 20, \"prescribed_actual_paths\": 4, \"total_wall_contacts\": 4086, \"limits\": \"Exact prescribed controls plus complete hand review, not proof by sampling. No peer imports/execution or direction discovery. General fully rational case remains open.\"}\n[{\"eta\": 1, \"M\": 15, \"velocity\": [\"24\", \"-959\"], \"contacts_forward\": 1110, \"contacts_reverse\": 1110, \"first_target_time\": [\"5/2\", \"0\"], \"target_copy_parity\": [1, 1], \"edge_word_sha256\": \"e4cc720b9b8196857efad7c224ad3648b7da7f939a3a70bc754c5d0d6f2c939a\"}, {\"eta\": -1, \"M\": 13, \"velocity\": [\"102/5\", \"-815\"], \"contacts_forward\": 933, \"contacts_reverse\": 933, \"first_target_time\": [\"5/2\", \"0\"], \"target_copy_parity\": [-1, 1], \"edge_word_sha256\": \"c2d89d70b897df6b41013111b93cfc58a39d61573bce198dc3723dd1d2ba80f3\"}]\n"
+    },
+    {
+      "script": "unequal-depth-independent/rational-controls-review.py",
+      "output": "unequal-depth-independent/rational-controls-review.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.045,
+      "original_sha256": "38c0a72f08afcd53ca462d079b9b39992d944700897179501c0265e7de5fb7bc",
+      "replay_sha256": "38c0a72f08afcd53ca462d079b9b39992d944700897179501c0265e7de5fb7bc",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"PRESCRIBED14VERTICAL_FAILURES_AND_FINITE_GRAPH_VERIFIED\", \"prescribed_failure_rows\": 14, \"exact_chart_evaluations\": 1240, \"enumerator_primitive_phase_triples\": 8410, \"rectangle_in_recorded_graph\": false, \"limits\": \"Independently validates all14negative rows and absence of rectangles in their recorded graph. Does not independently rerun8410positive/negative classifications, prove global rectangle absence, exclude cap corners for positive charts, or establish darkness.\"}\n"
+    },
+    {
+      "script": "unequal-depth-independent/rational-room-audit/verify.py",
+      "output": "unequal-depth-independent/rational-room-audit/verification.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.296,
+      "original_sha256": "0811457561b9fcd1a3b9ab6ba6edc6fd1bbc49ad9ac4ecac958c42cbbbed53d9",
+      "replay_sha256": "0811457561b9fcd1a3b9ab6ba6edc6fd1bbc49ad9ac4ecac958c42cbbbed53d9",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"FIXED_RATIONAL_ROOM_CONTINUOUS_COVER_AND_PHYSICS_VERIFIED\", \"valid_clauses\": 34, \"full_domain\": \"0<s<=1,0<t<=1\", \"all_cap_bad_lines_reconstructed\": true, \"arrangement_lines\": 69, \"open_faces\": 272, \"actual_paths_and_sign_cells\": 1006, \"wall_contacts\": 4405, \"early_target_prefixes\": 0, \"limits\": \"One fixed rational room. Exact sign-invariant faces/edges/vertices prove continuum coverage, with an actual physical path checked at every representative. No universal commensurable or darkness claim; peer review requested.\"}\n"
+    },
+    {
+      "script": "unequal-depth-independent/verify-receipts.py",
+      "output": "unequal-depth-independent/review-index.json",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.041,
+      "original_sha256": "1ec8550d649d9817849466c2e7057d34febb803b189306253fee09c15039519a",
+      "replay_sha256": "1ec8550d649d9817849466c2e7057d34febb803b189306253fee09c15039519a",
+      "byte_identical": true,
+      "stdout": "{\"status\": \"ACCEPTED_PACKET_INTEGRITY_PASS\", \"checked_hashes_and_snapshot\": 133, \"mathematical_scope\": \"Equal depths, finite-resonance implication, unequal common-core endpoint reduction, four sufficient vertical charts, midpoint vertical-only obstruction, centered two-reflection repair and the full arbitrary-real centered-depth theorem, all noncommensurable depth pairs, irrational exterior-height reduction, irrational horizontal marks via corner-fixing twist, and one fixed rational-height room with continuous horizontal coverage. See individual hand reviews for quantified statements.\", \"whole_unequal_depth_theorem_accepted\": false, \"missing_completion_evidence\": [\"A full peer theorem or independently validated dark counterexample covering all allowed s,t,a,b and dimensions\", \"Independent completeness audit of all exceptional-plane/equality/resonance cases and any inherited hypotheses\", \"Final reconciled whole-result verdict with proof source hashes and reproducible controls\"], \"limits\": \"PASS confirms source and artifact integrity of reviewed partial results. It does not create a missing theorem or substitute control counts for arbitrary-real proof.\"}\n"
+    }
+  ],
+  "runner_sha256": "c75993a2559e07919c640e5ea7a59fa91ddf42abc7b785ce3dc01cc2b9f4a55b",
+  "limits": "Replays accepted prescribed exact checks only, not peer discovery programs. Confirms reproducibility and original artifact preservation, not full theorem coverage. Fully rational universal case remains open."
+}

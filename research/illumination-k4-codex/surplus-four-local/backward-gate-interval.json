@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "interval": [
+    "7/44",
+    "5/31"
+  ],
+  "actual_target_parameter": "4/25",
+  "proof_method": "Symbolic segment/boundary predicate root partition and exact replay of every sign cell and interior breakpoint for two predeclared paths; not trajectory discovery.",
+  "families": {
+    "Louter3": {
+      "status": "FULL_INTERVAL_PASS",
+      "reflections": 21,
+      "target_line_endpoint": [
+        "2",
+        "10-50*d"
+      ],
+      "predicate_polynomials": 381,
+      "interior_critical_parameters": [
+        "4/25"
+      ],
+      "exact_sign_cells_and_breakpoints_checked": 3
+    },
+    "Louter4": {
+      "status": "FULL_INTERVAL_PASS",
+      "reflections": 19,
+      "target_line_endpoint": [
+        "2",
+        "10-50*d"
+      ],
+      "predicate_polynomials": 353,
+      "interior_critical_parameters": [
+        "4/25"
+      ],
+      "exact_sign_cells_and_breakpoints_checked": 3
+    }
+  }
+}

@@ -1,0 +1,240 @@
+{
+ "forcing_table_45deg_units": {
+  "B(5,1) Tup options": {
+   "(1, 0),1": 4,
+   "(1, 0),2": 5,
+   "(-1, 0),1": 3,
+   "(-1, 0),2": 3
+  },
+  "B(3,1) N options": {
+   "(1, 0),1": 5,
+   "(1, 0),2": 6,
+   "(-1, 0),1": 4,
+   "(-1, 0),2": 4
+  },
+  "B(1,1) Sup options": {
+   "(1, 0),1,N1": 5,
+   "(1, 0),1,N2": 5,
+   "(1, 0),2,N1": 6,
+   "(1, 0),2,N2": 6,
+   "(-1, 0),1,N1": 4,
+   "(-1, 0),1,N2": 4,
+   "(-1, 0),2,N1": 4,
+   "(-1, 0),2,N2": 4
+  },
+  "B(-1,1) Sleft-upper options": {
+   "m1,Sup1": 3,
+   "m1,Sup2": 3,
+   "m2,Sup1": 4,
+   "m2,Sup2": 4
+  },
+  "B(5,-1) Tdown-right options": {
+   "m1": 3,
+   "m2": 4
+  },
+  "nontree A neighbours of (5, 1)": [
+   [
+    6,
+    2
+   ]
+  ],
+  "nontree A neighbours of (3, 1)": [],
+  "nontree A neighbours of (1, 1)": [],
+  "nontree A neighbours of (-1, 1)": [
+   [
+    -2,
+    2
+   ]
+  ],
+  "nontree A neighbours of (5, -1)": [
+   [
+    6,
+    -2
+   ]
+  ]
+ },
+ "26.13": {
+  "w": [
+   "-9",
+   "1"
+  ],
+  "first_durations": [
+   "1/5",
+   "1/45",
+   "1/36",
+   "3/4"
+  ],
+  "second_durations": [
+   "2/9",
+   "1/3",
+   "1/3",
+   "1/9"
+  ],
+  "developed_corner": [
+   "-9",
+   "1"
+  ],
+  "developed_target": [
+   "-18",
+   "2"
+  ],
+  "target_velocity": [
+   "-1",
+   "1"
+  ],
+  "corner_velocity": [
+   "0",
+   "1"
+  ],
+  "Q": [
+   "-1",
+   "-1"
+  ],
+  "det": "10",
+  "corner_link_degrees": 225,
+  "pi_sector": {
+   "flank_dir": [
+    "1",
+    "-1"
+   ],
+   "orientation": 1,
+   "arc1": 2.2455372690184494,
+   "arc2": 0.8960553845713441
+  },
+  "needed_tiles": 17,
+  "forbidden_tiles": 4,
+  "formula2_split_after": [
+   "-1",
+   "-1"
+  ],
+  "formula2_split_before": [
+   "-1",
+   "-1"
+  ],
+  "corner_frame": {
+   "w": [
+    "9",
+    "1"
+   ],
+   "Q": [
+    "1",
+    "-1"
+   ],
+   "det": "-10"
+  }
+ },
+ "26.9": {
+  "w": [
+   "5",
+   "1"
+  ],
+  "first_durations": [
+   "1"
+  ],
+  "second_durations": [
+   "1/2",
+   "1/10",
+   "1/15",
+   "1/3"
+  ],
+  "developed_corner": [
+   "5",
+   "1"
+  ],
+  "developed_target": [
+   "10",
+   "2"
+  ],
+  "target_velocity": [
+   "1",
+   "1"
+  ],
+  "corner_velocity": [
+   "0",
+   "1"
+  ],
+  "Q": [
+   "1",
+   "-1"
+  ],
+  "det": "-6",
+  "corner_link_degrees": 225,
+  "pi_sector": {
+   "flank_dir": [
+    "1",
+    "-1"
+   ],
+   "orientation": 1,
+   "arc1": 2.1587989303424644,
+   "arc2": 0.9827937232473287
+  },
+  "needed_tiles": 12,
+  "forbidden_tiles": 2
+ },
+ "26.10": {
+  "w": [
+   "-7",
+   "2"
+  ],
+  "first_durations": [
+   "1/7",
+   "5/14",
+   "1/2"
+  ],
+  "second_durations": [
+   "2/7",
+   "3/14",
+   "1/14",
+   "2/7",
+   "1/7"
+  ],
+  "developed_corner": [
+   "-7",
+   "2"
+  ],
+  "developed_target": [
+   "-14",
+   "4"
+  ],
+  "target_velocity": [
+   "0",
+   "0"
+  ],
+  "corner_velocity": [
+   "0",
+   "-1"
+  ],
+  "Q": [
+   "0",
+   "2"
+  ],
+  "det": "-14",
+  "corner_link_degrees": 270,
+  "pi_sector": {
+   "flank_dir": [
+    "0",
+    "-1"
+   ],
+   "orientation": 1,
+   "arc1": 1.849095985800008,
+   "arc2": 1.2924966677897856
+  },
+  "needed_tiles": 16,
+  "forbidden_tiles": 5
+ },
+ "fixture": {
+  "tiles": 28,
+  "walls": 25,
+  "boundary_edges": 26,
+  "angle_deg": {
+   "(5, 1)": 225,
+   "(5, 0)": 270,
+   "(3, 1)": 225,
+   "(1, 1)": 225,
+   "(-1, 1)": 135,
+   "(5, 2)": 90
+  },
+  "euler": 1
+ }
+}
+INDEPENDENT_CHECK_PASS

@@ -1,0 +1,84 @@
+{
+  "kind": "PRESCRIBED_EXACT_FOUR_SIGN_CHECK_NOT_DISCOVERY",
+  "ended_utc": "2026-11-07T00:24:13.435534+00:00",
+  "widths": [
+    40,
+    12,
+    8,
+    4
+  ],
+  "heights": [
+    0,
+    12,
+    16,
+    20,
+    40
+  ],
+  "S": [
+    "38",
+    "2"
+  ],
+  "T": [
+    "2",
+    "38"
+  ],
+  "interior_A_membership": true,
+  "maximal_walls": 10,
+  "geometry_justification": "Strict positive nested widths and heights; four-band staircase has 2m+2 maximal walls and a simple boundary. Integer axis-aligned walls form a canonical45 disk.",
+  "rows": [
+    {
+      "image_signs": [
+        1,
+        1
+      ],
+      "folded_midpoint": [
+        "20",
+        "20"
+      ],
+      "max_closed_cross_section_width": 8,
+      "strictly_outside": true
+    },
+    {
+      "image_signs": [
+        1,
+        -1
+      ],
+      "folded_midpoint": [
+        "20",
+        "18"
+      ],
+      "max_closed_cross_section_width": 8,
+      "strictly_outside": true
+    },
+    {
+      "image_signs": [
+        -1,
+        1
+      ],
+      "folded_midpoint": [
+        "18",
+        "20"
+      ],
+      "max_closed_cross_section_width": 8,
+      "strictly_outside": true
+    },
+    {
+      "image_signs": [
+        -1,
+        -1
+      ],
+      "folded_midpoint": [
+        "18",
+        "18"
+      ],
+      "max_closed_cross_section_width": 8,
+      "strictly_outside": true
+    }
+  ],
+  "all_axis_only_charts_fail": true,
+  "all_possible_axis_only_words_covered": "Hand velocity monotonicity lemma in axis-only-obstruction.md",
+  "physical_darkness": false,
+  "independent_acceptance": false,
+  "proof_sha256": "2441e420d53f4f2b881509559c80dc9d97b8a0e9516cc146a617474ce4299192",
+  "whole_goal_complete": false
+}

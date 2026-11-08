@@ -1,0 +1,182 @@
+{
+  "status": "PRESCRIBED_PORTAL_ALGEBRA_PASS",
+  "DHD_controls": [
+    {
+      "t": "0",
+      "z": [
+        "0",
+        "0"
+      ],
+      "DHD": [
+        "4",
+        "0"
+      ]
+    },
+    {
+      "t": "0",
+      "z": [
+        "1",
+        "3/2"
+      ],
+      "DHD": [
+        "3",
+        "3/2"
+      ]
+    },
+    {
+      "t": "0",
+      "z": [
+        "3",
+        "-2"
+      ],
+      "DHD": [
+        "1",
+        "-2"
+      ]
+    },
+    {
+      "t": "1/100",
+      "z": [
+        "0",
+        "0"
+      ],
+      "DHD": [
+        "4",
+        "0"
+      ]
+    },
+    {
+      "t": "1/100",
+      "z": [
+        "1",
+        "3/2"
+      ],
+      "DHD": [
+        "3",
+        "3/2"
+      ]
+    },
+    {
+      "t": "1/100",
+      "z": [
+        "3",
+        "-2"
+      ],
+      "DHD": [
+        "1",
+        "-2"
+      ]
+    },
+    {
+      "t": "-1/100",
+      "z": [
+        "0",
+        "0"
+      ],
+      "DHD": [
+        "4",
+        "0"
+      ]
+    },
+    {
+      "t": "-1/100",
+      "z": [
+        "1",
+        "3/2"
+      ],
+      "DHD": [
+        "3",
+        "3/2"
+      ]
+    },
+    {
+      "t": "-1/100",
+      "z": [
+        "3",
+        "-2"
+      ],
+      "DHD": [
+        "1",
+        "-2"
+      ]
+    }
+  ],
+  "local_return_controls": [
+    {
+      "entry_y": "3/2",
+      "slope": "1/8",
+      "exit_y": "7/4",
+      "sealed_y": "3/2"
+    },
+    {
+      "entry_y": "3/2",
+      "slope": "-1/8",
+      "exit_y": "5/4",
+      "sealed_y": "3/2"
+    }
+  ],
+  "composition_control": {
+    "old": [
+      "9",
+      "-3"
+    ],
+    "new": [
+      "11",
+      "-1"
+    ],
+    "difference": [
+      "2",
+      "2"
+    ]
+  },
+  "bounded_core_corollary": {
+    "wall_change": -3,
+    "transparent_BC_after_sealing": 2,
+    "raw_wall_upper_bound": 26,
+    "sealed_wall_upper_bound": 23,
+    "prior_receipt": "<SOURCE_WORKSPACE>/.context/three-triples/three-exception-complete.json",
+    "prior_sha256": "04a600b5ee6d8697f4dc5d76fe5b19afb59e27c5055e1ac547e64eca5f3f3863",
+    "dependency": "Inherited computer-assisted k<=3 exclusion; no new solver or optical replay.",
+    "diagonal_full_star_control": {
+      "source": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        2
+      ],
+      "forced_interior_C": [
+        0,
+        1
+      ],
+      "four_incident_unit_cells": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "inherited_smooth_boundary_scope": "Simple finite assemblies of canonical congruent45-45-90 tiles; distinct interior A marks; B/C exceptions are ordinary interior or smooth-boundary points. No slits, holes or contacts.",
+    "wall_count_definition_source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/claude_relaxed_replay.py",
+    "wall_count_definition_sha256": "58de7ee028c1fc544dd29cdfc79fa8174ddf7afade161f929c5fa2a9fd439a1e",
+    "wall_count_definition_observed": "vertex_table assigns corner=0 to smooth angle180; replay sums corner indicators.",
+    "open_portal_avoidance": "UNPROVED",
+    "universal_goal": "OPEN"
+  },
+  "scope": "One mandatory-star cell control and inherited theorem binding, plus nine fixed affine evaluations, two prescribed local return formulas and one fixed composition identity. No room, ray, direction, event-word or orbit discovery.",
+  "portal_avoiding_existence": "UNRESOLVED",
+  "universal_one_corner_goal": "OPEN"
+}

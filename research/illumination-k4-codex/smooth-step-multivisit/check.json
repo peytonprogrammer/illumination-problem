@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "symbolic_nonaxial_state_cases": [
+    {
+      "wall_normal_axis": 0,
+      "outgoing_signs": [
+        -1,
+        -1
+      ],
+      "other_outgoing_signs": [
+        -1,
+        1
+      ],
+      "other_arrival_is_negative_start": true
+    },
+    {
+      "wall_normal_axis": 0,
+      "outgoing_signs": [
+        -1,
+        1
+      ],
+      "other_outgoing_signs": [
+        -1,
+        -1
+      ],
+      "other_arrival_is_negative_start": true
+    },
+    {
+      "wall_normal_axis": 1,
+      "outgoing_signs": [
+        -1,
+        -1
+      ],
+      "other_outgoing_signs": [
+        1,
+        -1
+      ],
+      "other_arrival_is_negative_start": true
+    },
+    {
+      "wall_normal_axis": 1,
+      "outgoing_signs": [
+        1,
+        -1
+      ],
+      "other_outgoing_signs": [
+        -1,
+        -1
+      ],
+      "other_arrival_is_negative_start": true
+    }
+  ],
+  "normal_reversal_matrices": [
+    [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  ],
+  "axial_cases": [
+    {
+      "normal_axis": 0,
+      "unique_outgoing": [
+        -1,
+        0
+      ]
+    },
+    {
+      "normal_axis": 1,
+      "unique_outgoing": [
+        0,
+        -1
+      ]
+    }
+  ],
+  "outside_orthogonal_control": {
+    "room": "triangle 0<y<x<2",
+    "path": [
+      [
+        "7/4",
+        "3/4"
+      ],
+      [
+        "2",
+        "1"
+      ],
+      [
+        "3/2",
+        "3/2"
+      ],
+      [
+        "2",
+        "1"
+      ],
+      [
+        "3/2",
+        "1/2"
+      ]
+    ],
+    "same_smooth_point_visited_twice": true,
+    "midpoint_collision": "normal reflection in diagonal x=y",
+    "first_target_arrival": true
+  },
+  "scope": "Algebraic controls only. Continuous uniqueness/time-reversal proof is in findings.md; no numerical trajectory search proves the theorem."
+}

@@ -1,0 +1,133 @@
+Independent proof review; tools disabled. No ray, direction, room, itinerary, cylinder, orbit or other geometric discovery. We seek a UNIVERSAL actual S/T one-corner midpoint event with nonzero pocket-slide defect Q, or an in-class raw-room counterexample. This remains OPEN. Canonical polygon strictly simple, walls in4unoriented directions, integer developing charts, D4 unfolding X square-tiled, every physical corner and actual interior mark lies over0 of R2/Z2. Raw means no smooth/interior B/C. Supplied actual event has primitive equal halves w, exactlyone physical corner p, legal embedded intrinsic pi sector; all other corner lifts avoided; eta=(p->s)+(p->t), hol eta0. Prior accepted results: pure endpoint/physical-corner-label-fixing affine maps preserve actual events and intrinsic pi continuation; core twist action on marked relative homology requires refined cores in H1(X minus P) paired with H1(X,P); N^2=0; increments are absolute; axis twists fix Q; a detected non-wall-parallel event yields both slide signs by original axis action. Prior accepted9.2 proves N(abs ker hol)=core-span intersect ker hol, flux ratios criterion for arbitrary cycles, same-direction commensurability of pure twists fixing actual regularsource, and that one-core-span twists fix every zero-hol relativeclass.
+
+Check NEW9.3 and9.4 below. Does pullback of the primitive torus cylinder imply equal-height strips? Do det1 event halves lie entirely in a single strip each? Is the signed occupancy formula exact? Can one build the pure parabolics fixing all torus-origin fibre leaves pointwise? Does the event-direction parabolic fix eta pointwise? Check all powers/conjugation, residue completeness, arbitrary-parabolic necessity, and at most6 image bound with actual labels/pi sector retained. Reject overclaims, supply exact fixes. No geometry is computed: v0 and residues are purely symbolic. Do NOT treat the finite conditional criterion as seed existence or actual success. The absolute cycle andrank>=3 facts are not event realization.
+
+### 9.3 Actual-event occupancy and the unimodular strip criterion
+
+**Status: new conditional proof; independent review requested.** Retain a
+SUPPLIED legal actual S/T one-corner event, with primitive equal half-vector
+w and class eta=(p->s)+(p->t), whose two summands have holonomies -w,+w.
+Fix a nonparallel rational cylinder direction e of unit length. Let phi
+be a pure multitwist with signed shear coefficient a, refining at all
+marked endpoint levels as in Section9.2. For a maximal cylinder D, put
+
+    r_D=Q(c_D)/ell_D,
+    lambda_D^X=fraction of the half p->X inside D, X=s,t.
+
+Orient the core c_D along e and choose the intersection convention so
+upward transverse crossings of that core are positive. Because the halves
+are not parallel to e, boundary contacts occupy zero parameter length,
+and sum_D lambda_D^s=sum_D lambda_D^t=1. Group the refined-strip formula
+by maximal cylinder. Each full signed crossing of a strip i contributes
+h_i k_i to transverse displacement, and Q(c_i)/ell_i=r_D within D.
+The two halves have constant transverse velocities -det(e,w),+det(e,w)
+in normalized parameter0..1. Therefore
+
+    Q((phi_*-I)eta)
+      = a det(e,w) sum_D r_D (lambda_D^t-lambda_D^s). (9.3a)
+
+No absolute value or unstated sign choice is used in this convention.
+A pure twist changes only the coordinate parallel to e; it preserves
+transverse coordinates and cylinder membership, so these occupancies
+are invariant under that same twist. This also agrees with N^2=0.
+
+There is a particularly sharp version when det(w,v)=1 for a primitive
+integer vector v and e=v/|v|. Use the base torus map pi:X_0->R^2/Z^2
+provided by the integer developing charts. Every physical corner and
+actual A mark maps to0. Refine at ALL points of pi^-1(0), including any
+auxiliary regular points, and their complete v-leaves. The complement of
+the closed torus v-geodesic through0 is an open cylinder of height1/|v|.
+Its preimages are unbranched annulus covers, each of the same height and
+with circumference n_D |v| for an integer n_D>0. These are refined strips
+inside the maximal v-cylinders; no new trajectory is selected here.
+
+Along either open half of the supplied event, the torus transverse
+coordinate runs strictly between two successive integer levels because
+|det(v,w)|=1. It never crosses the removed v-leaf in its interior.
+Consequently each open half lies in ONE refined strip and hence in one
+maximal cylinder, denoted D_s,D_t. Formula(9.3a) becomes
+
+    Q((phi_*-I)eta)=a det(v,w)/|v| (r_Dt-r_Ds).       (9.3b)
+
+Thus a supplied event acquires a nonzero defect under this twist iff the
+two containing maximal cylinders have unequal normalized slide flux.
+Finding those maximal cylinders is GLOBAL gluing information; the last
+statement is not a local visibility proof. Nor does it supply a seed.
+The regular-midpoint exclusion already established in Section26 applies;
+no new regular-corner existence argument is being assumed.
+
+### 9.4 Finite residue reduction of all unimodular transfer directions
+
+**Status: new conditional proof; independent review requested.** This is a
+finite algebraic criterion for transferring a SUPPLIED blind event. It
+is not a finite search run and does not supply an actual S/T seed.
+
+Assume Q(eta)=0; otherwise the seed already detects. Choose a symbolic
+Bezout partner v_0 with det(w,v_0)=1. Every integer v with det(w,v)=1 is
+v_0+jw for a unique integer j. Unoriented directions with determinant-1
+are represented by reversing v, so no additional case is needed.
+
+All rational directions of this arithmetic base admit pure affine
+multitwists fixing pi^-1(0) pointwise: in the annulus-cover decomposition
+of Section9.3, choose a common multiple L of the finitely many n_D and
+use derivative z->z+L det(v,z)v. Each strip twists an integral number of
+times and its boundary is fixed pointwise; the maps glue to an affine
+map of X. Take further powers for any remaining actual label/prong
+requirements. For direction w choose such a map g, with derivative
+
+    A_w z=z+K det(w,z)w,    K a positive integer,
+    g_*=I+N_w,             N_w^2=0.
+
+The entire event lies in the preimage of the closed w-geodesic through0.
+The chosen g fixes that boundary graph pointwise, including both halves,
+so g_*eta=eta. This is a geometric fixed-path statement, not an inference
+from hol(eta)=0 alone. In particular N_w eta=0.
+
+For each SYMBOLIC residue j=0,...,K-1 let v_j=v_0+jw and choose one pure
+twist tau_j in direction v_j. Put
+
+    z_j=(tau_j*-I)eta,
+    b_j=Q(z_j),       d_j=Q(N_w z_j).
+
+The z_j and N_w z_j are absolute zero-holonomy classes. Do not infer that
+every absolute zero-holonomy cycle has this form. Define the conjugate
+phi_j,n=g^n tau_j g^-n, in direction v_j+nK w. Since g fixes eta and
+N_w^2=0, for EVERY integer n,
+
+    (phi_j,n*-I)eta = g_*^n z_j = z_j+n N_w z_j,
+    Q(phi_j,n*eta)=b_j+n d_j.                      (9.4a)
+
+Consequently some pure twist in a det(w,v)=1 direction turns this blind
+seed into a detecting event iff at least one of the FINITELY MANY vector
+pairs (b_j,d_j) is nonzero. For necessity for arbitrary pure twists in a
+residue direction, apply the same-direction commensurability argument of
+Section9.2: after nonzero powers it agrees with the displayed conjugate,
+and taking a power multiplies the increment by a nonzero integer.
+This criterion concerns all unimodular directions relative to THIS w;
+it does not classify every rational direction or every actual seed.
+
+If b_j or d_j is nonzero, at most one integer n kills its defect. Also
+write the derivative of tau_j as
+
+    A_j z=z+L_j det(v_j,z)v_j,   L_j a nonzero integer.
+
+The image half-vector of the actual event under phi_j,n is
+
+    A_w^n A_j w=(1-n K L_j)w-L_j v_j.              (9.4b)
+
+It is nonzero and for a fixed wall-direction line at most one integer n
+makes it parallel to that line: w and v_j are independent. The canonical
+room has at most FOUR unoriented wall directions. Thus among ANY SIX
+distinct integer n, at least one gives a non-wall-parallel detecting
+actual event, retaining the supplied endpoints and legal intrinsic pi
+sector by the reviewed affine-event theorem. The six-image bound is a
+conditional symbolic guarantee; no image directions or words are generated
+or traced in this work. Axis sign transfer then gives both slide signs.
+
+This reduces the proposed infinite family of near-event directions to
+2K vector coefficient tests and six images after a successful test. It
+leaves two exact obligations: obtain an actual S/T event, and prove some
+(b_j,d_j)!=0 for it (or prove direct Q(eta)!=0). The known detected absolute
+cycle and rank>=3 tangent bound establish neither. The statement is also
+not a claim that K is uniformly bounded across arbitrary rooms.
+

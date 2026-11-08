@@ -1,0 +1,73 @@
+{
+  "status": "RECIPROCAL_ACCEPTANCES_RECONCILED",
+  "receipts": [
+    {
+      "own_request": "optical-routing-section-review-request.json",
+      "peer_receipt": "optical-routing-peer-prerequisites-independent.json",
+      "source_pins": {
+        "optical-routing-section-criteria.md": "c19738dd7da79962c672fbd991c0044d897f0f066a1a867e022cfbed030d21d3",
+        "optical-routing-section-replay.py": "770a992227b4417ca90a1d501afb44f368b57da3a1bdb469a8398321f0e3cc8c",
+        "optical-routing-section-replay.json": "aa63837eeab89fdc56e9f90f66c613e83ba57e6a50ce9e93a12fe260be154196"
+      },
+      "pins_current": {
+        "optical-routing-section-criteria.md": true,
+        "optical-routing-section-replay.py": true,
+        "optical-routing-section-replay.json": true
+      },
+      "decision": "ACCEPT_AT_STATED_SCOPE"
+    },
+    {
+      "own_request": "optical-routing-dense-disjoint-review-request.json",
+      "peer_receipt": "optical-routing-peer-prerequisites-independent.json",
+      "source_pins": {
+        "optical-routing-dense-disjoint-control.md": "88f0db760937c57b02779dc30e0c6c07387f71192d1f2d142ce03294e92957e4",
+        "optical-routing-dense-disjoint-control.py": "3001f53ea6788c939ee050d37e962adb2fd324b5f38739670232676b9aee5028",
+        "optical-routing-dense-disjoint-control.json": "84043fd9545543ddc627d8fbf36178595c3d6f5a00390fad067edd90e7eefa49"
+      },
+      "pins_current": {
+        "optical-routing-dense-disjoint-control.md": true,
+        "optical-routing-dense-disjoint-control.py": true,
+        "optical-routing-dense-disjoint-control.json": true
+      },
+      "decision": "ACCEPT_AT_STATED_SCOPE"
+    },
+    {
+      "own_request": "optical-routing-width-necessity-review-request.json",
+      "peer_receipt": "optical-routing-width-independent.json",
+      "source_pins": {
+        "optical-routing-width-necessity.md": "099c3a82889caee3ff8b4bafbf534f865225fe78ebb519dd1a7f199c5b87f218",
+        "optical-routing-width-necessity.py": "b1d2be14b7bcccdb8e925020ab2e36a5bab47fac162ec4f523790d7953afecdb",
+        "optical-routing-width-necessity.json": "f365e9dd11a7765e170f542425fb368ecdc4fcfe529e2185958b12beb0de0485"
+      },
+      "pins_current": {
+        "optical-routing-width-necessity.md": true,
+        "optical-routing-width-necessity.py": true,
+        "optical-routing-width-necessity.json": true
+      },
+      "decision": "ACCEPT_AT_STATED_SCOPE"
+    },
+    {
+      "own_request": "optical-routing-nondirect-cap-review-request.json",
+      "peer_receipt": "construction/optical-routing-nondirect-independent.json",
+      "peer_hand_argument": "construction/optical-routing-nondirect-independent.md",
+      "decision": "ACCEPT_SCOPED_NONDIRECT_FIXED_CAP_CONTROL",
+      "source_pins": {
+        "optical-routing-nondirect-cap-control.md": "b69869ddc85ec015405545a680c40bba713782066da2d7c02b47090edbeb2b49",
+        "optical-routing-nondirect-cap-control.py": "e6f4d26b24a3eb664edcee43733f57591dd0dd27c0fe7cf4a998e4a08e03d4cc",
+        "optical-routing-nondirect-cap-control.json": "5e945f0f6c61ecbec24e96d4dfdba6377d7bf4c5adc76c221ba514e97086ca4b"
+      },
+      "pins_current": {
+        "optical-routing-nondirect-cap-control.md": true,
+        "optical-routing-nondirect-cap-control.py": true,
+        "optical-routing-nondirect-cap-control.json": true
+      },
+      "peer_argument_read_in_full": true,
+      "material_findings_remaining": [],
+      "scope": "One nondirect actual r4 pair is illuminated, but THIS prescribed shallow roof fails sufficient-width criterion at all exterior words and stated cuts; no other chamber excluded."
+    }
+  ],
+  "new_nondirect_cap_control_pending": null,
+  "material_findings_remaining": "No positive global G8 selection/alternative exact intersection theorem; local OR01 and fixed-cap obstructions accepted at scope",
+  "whole_goal_complete": false,
+  "updated_utc": "2026-11-07T18:22:25.975422+00:00"
+}

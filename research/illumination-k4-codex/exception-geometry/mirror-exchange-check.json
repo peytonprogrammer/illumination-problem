@@ -1,0 +1,197 @@
+{
+  "status": "PASS",
+  "guard_source": "<SOURCE_WORKSPACE>/.context/claude-illumination-check/k6-run/cases/I3_00_01_10-pair0/guards.jsonl",
+  "guard_line": 60,
+  "guard_sha256": "8b68ec4bb37012e9c226c1bde8fa9e3c8e341e35cbcb7563f31b27c8a499c750",
+  "classified_half_side_triangles": 16,
+  "external_A_cells": 7,
+  "original_path_reflections": 13,
+  "reflected_path_reflections": 13,
+  "core_invariant": true,
+  "reference_caps_invariant": true,
+  "path_sets_transform_exactly": true,
+  "original_only_possible_blocker": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "reflected_only_possible_blocker": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "blockers_share_A_center": [
+    0,
+    2
+  ],
+  "both_blockers_make_midpoint_interior": true,
+  "direct_bridge_check": "PASS",
+  "unavailable_same_cell_choices": [
+    [
+      [
+        -2,
+        0
+      ],
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    [
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  ],
+  "unavailable_smooth_B_choices": [
+    [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ]
+  ],
+  "required_original_outside_core": [
+    [
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  ],
+  "required_reflected_outside_core": [
+    [
+      [
+        -2,
+        0
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  ],
+  "scope": "Static independent recomputation of two fixed path implications and sixteen half-side incidences, plus one supplied direct-bridge implication. All-room completeness rests on the separate hand slack/fan classification. No cap-assignment census or ray discovery.",
+  "hand_reviewed_classification_sha256": "9dd5a12294cc151993b86f8c64f6e9d2ce8c0ad4c065444162924620c4f89aaf"
+}

@@ -1,0 +1,18 @@
+Source comparison, 2 November 2026
+
+Pinned source: de Winter and Tokarsky, Unilluminable rooms: minimal examples, classifications and exceptions, dated 31 October 2026; repository commit b4daf70b708d8cb3456470a4476e069864154062 (2 November UTC).
+https://github.com/JoostdeWinter/unilluminable-rooms/blob/b4daf70b708d8cb3456470a4476e069864154062/unilluminable_rooms.tex
+
+This confirms the existing .context/tokarsky-followup-2026-11-02/assessment.txt. That assessment was found during review; do not treat this as a separate novel discovery or duplicate peer task.
+
+Main comparison
+1. Definition 2.1 requires every B/C point to be an actual corner. Theorem 5.1 gives 24 sides for hole-free triangular lattice rooms; Theorem 5.2 gives 34 for square lattice rooms. Our Q has four smooth C points: (-1,0),(1,0),(2,1),(2,3). Thus neither strict minimum applies. No contradiction or refutation of their results follows from Q.
+2. Their blocking lemma is the same lattice-parity obstruction used on our base P. This mechanism is prior art, not the contribution to emphasize.
+3. Theorem 7.4 allows transparent exceptions at fixed points of ONE GLOBAL reflection/half-turn preserving two disjoint endpoint sets. Its proof uses shortest-path symmetry and retracing. This is close conceptual prior art for our reversal step but not a direct proof of Q: our map is a piecewise folding onto P with several seam endpoints, rather than the stated global symmetry of the room. Their Section 7 also contains 27-wall and nonagon examples, so the paper as a whole is not strict-only.
+4. Concluding question 4 asks whether a simple polygon with fewer than 24 sides can have two mutually invisible interior points. If Q is externally accepted under the same finite nonsingular billiard convention, it answers this question with 22. This identifies potential significance, not priority. The introduction itself mentions Monteil's unpublished 22 example, and Troubetzkoy separately recalled a staircase example. Its exact geometry/topology remains unknown here.
+5. Our k<=6 theorem permits transparent non-A points and proves a lower bound in a broader class than their strict corner condition. Their inspected statements do not give this result. Do not repeat an unqualified claim that no restricted wall-count lower bounds exist: this preprint supplies several. Novelty of the precise k<=6 result remains unresolved.
+
+Proof-facing next move
+Resolve the expert's first unclear step in the existing 22-wall proof. Focus the comparison on the FOUR smooth C exceptions and the piecewise-folded reversal lemma, using the already prepared seam-endpoint diagram. Their Theorem 7.4 supplies a useful shared reference for the deterministic-retracing idea, while its global-symmetry hypothesis must not be silently imported. Do not send a larger collection of follow-up claims or declare novelty before correctness and the unpublished Monteil antecedent are clarified.
+
+No external code executed. No new optical search or theorem claim.

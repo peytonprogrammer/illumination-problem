@@ -1,0 +1,92 @@
+# Adversarial check: diagonal double reduction
+
+## Verdict
+
+The reduction is **correct as a conditional transfer**, under the conditions listed below. It is also **exactly reversible**. Cross-copy one-corner events in P_D (actual S in P0 to actual T in P1) correspond bijectively to odd-D-word one-corner events in P. So it reformulates the problem without reducing it. The note's "sufficient extension" wording is accurate but undersells this; the open seed obligation is the original odd-word seed obligation in different form.
+
+No original corner becomes interior or smooth in the double, so no doubled event can project through a hidden forbidden corner. There is one convention trap at A_D, covered in item 4 below.
+
+## 1. Abstract double
+
+- **Disk.** Gluing two closed disks along one full boundary arc D gives a disk. Points in the relative interior of D get angle π+π=2π and become flat interior points.
+- **Endpoint angles.** A_D = 2·π/4 = π/2 and B_D = 2·5π/4 = 5π/2. Every other vertex of P appears twice with its angle unchanged.
+- **Unique corner above 2π.** B_D is the only boundary angle exceeding 2π, so P_D is not a simple planar polygon. The note handles this correctly: everything downstream is intrinsic and nothing uses the planar development of P1 = r_D P.
+- **Overlap is harmless.** If r_D P overlaps P0 in the plane and covers a vertex of P0, that planar point is not a point of P1. A P1 point projects to r_D⁻¹ of itself in P, which is not a vertex unless it is a P1 vertex.
+- **Labels.** Interior points of P1 project to interior points of P, boundary to boundary, and corners to corners. The only corners of P_D are A_D, B_D, and two copies of every other vertex of P. Actual T in P1 projects to actual T.
+- **"r_D(T) is still even-even" is a condition, not automatic.**
+  - D has no interior lattice point, so it has the form A→A+(1,±1), lying on the line x∓y=c with integer c.
+  - The reflection is r_D(x,y) = (±y+c, ±x∓c) (same-sign case). It maps ee to ee if c is even, and ee to oo if c is odd.
+  - So the claim holds iff A_x∓A_y is even.
+  - This does not affect the transfer, because developments coincide. It matters only if a future seed theorem for P_D is keyed to target lattice classes.
+
+## 2. Cover and local monodromies
+
+- **Endpoint walls.** At A the walls are D and an axis wall at angle π/4. At B the other wall makes 5π/4 ≡ π/4 mod π with D, so it is also axis. In both cases r_D·r_E is a rotation by ±π/2, so they generate D4.
+- **A's lift.** One lift, made of 8 sectors × π/4, cone angle 2π. The seams alternate D/E, giving 4 D-crossings.
+- **B's lift.** One lift, made of 8 sectors × 5π/4, cone angle 10π. Again 4 D-crossings.
+- **Other corners.** No other vertex lies on D, so there is no toggled seam.
+- **Conclusion.** The cover is unramified everywhere. Each corner lift has two preimages with the same cone angle. ✓
+- **Cross-check against the minimal unfolding of P_D.**
+  - At B_D the walls are E and r_D E r_D. Their product is a rotation by 5π ≡ π, giving a group of order 4.
+  - So there are 4 P_D-sectors × 5π/2 = 10π per lift, and |G_D|/4 lifts. This is 2 lifts when G_D = D4, matching X_D.
+  - A_D: 4 × π/2 = 2π. ✓
+- **Identification of X_D with the P_D unfolding.**
+  - P_D frame h corresponds to the pair {(h,0), (h·r_D,1)}.
+  - A second-half wall r_D E has linear part r_D r_E r_D. It sends frame h to h r_D r_E r_D, which sends the P1 copy h r_D to h r_D r_E with the bit unchanged.
+  - The internal seam sends (h,0) to (h r_D,1).
+  - The placements agree: (h r_D)·P is the same planar image in both, so the translation structures coincide. Developed vectors, integrality and primitivity transfer exactly. ✓
+- **Components, case 1: another diagonal E exists.**
+  - r_E is ±r_D. Together with any axis reflection (for example H) it generates D4, so G_D = D4.
+  - X_D is then the minimal unfolding and is connected. That is automatic for a minimal unfolding; Section 8 is not needed.
+- **Components, case 2: D is the sole diagonal.**
+  - P_D has only axis walls. Both H and r_D H (vertical) are present, so |G_D| = 4.
+  - b + colour(g) is invariant, so X_D splits into two components, each isometric to X and to the minimal unfolding of P_D.
+  - This resolves the "minimal component convention" gap. Cone angles and π-sector embeddedness are identical in either convention.
+  - But in this case the P_D seed problem is literally "find an event in X from S to a coordinate-swapped lift of T". The 450° corner adds nothing.
+- **Target lift exists.** The component containing (e,0) contains P1-copies of T because P_D is connected. ✓
+
+## 3. Transfer of the event
+
+- **Odd projected word.** The initial lift is bit 0 and the target lift is bit 1. The bit changes only on D crossings, so the projected word has an odd number of D-crossings.
+- **Corner convention is unambiguous.**
+  - Small loops around A or B lifts have even D-count, and no other corner touches D.
+  - So pushing through the selected π-sector or through its complement gives the same parity.
+  - This matches the Section 4 and Section 8 count.
+- **π-sector.** The projection is an isometry on each corner-lift neighbourhood, so an embedded π-sector in X_D maps to an embedded π-sector in X.
+  - A sector that crosses the seam projects to a seam-crossing copy transition in X, not a 3π substitution. ✓
+  - Condition: the original legality must be defined intrinsically in X, not inside P's own angle. It must already be, since A's angle π/4 < π forces any π-sector at A across seams.
+- **Grazing along the seam cannot slip in.** A segment along D in P_D lies on D's line. Since S and T are off D, the segment must run between A_D and B_D, so it hits two corners and is excluded by the one-corner requirement. In P this would have been an illegal graze along D.
+- **Section 4.** All data are integral (the corner is a lattice vertex and w is integral), so (3) gives Q ≡ (1,1) mod 2. Both components are odd. ✓
+  - Condition: Section 4's "admissible" must not restrict which copy the target lift lies in. In the sole-D case an odd event necessarily ends at a swapped copy of T, as Section 8 already notes.
+- **Section 5.** It applies to the projected event in X with no use of P_D.
+  - Strictly, Section 5 gives both signs regardless of whether the first row vanishes. So "needed only if w ∥ Q" is true but weaker than what is supplied.
+  - It inherits Section 5's own hypotheses: raw parity room, constant axis-core periods, and corner avoidance under shears. "Avoids wall directions" is not by itself corner avoidance.
+
+## 4. Forbidden-corner question: the exact answer
+
+| Feature | In P | In P_D | Risk |
+|---|---|---|---|
+| Interior of D | wall | flat interior | none; transverse crossings are legal reflections, and grazing forces two corners |
+| A | corner π/4, cone 2π in X | corner π/2, cone 2π | **convention trap** |
+| B | corner 5π/4, cone 10π | corner 5π/2, cone 10π | none |
+| other vertices | corners | corners (×2) | none |
+
+A_D is the only place where a doubled seed theorem could quietly differ from the original. A_D is regular in the unfolding (cone angle 2π), as A already was in X. A flat-surface seed theorem that treats only cone points above 2π as singular would allow straight passage through A_D. That passage projects to a passage through the π/4 corner A of P, which the original forbids as a non-selected physical corner.
+
+So the required condition is that the P_D seed theorem treats A_D (and B_D) as forbidden physical corners. A separate question is whether A_D may be the selected corner. At a cone-2π point both π-sectors embed, so the side σ and the opening proposition need checking for a removable corner. The note does not address this. Restricting the selected corner to the ones covered by the reviewed opening proposition closes the gap.
+
+## 5. Exact conditions for the reduction to hold
+
+1. The doubled event must target actual T in P1, with S in P0.
+2. It must avoid every lift of every P_D corner, explicitly including A_D.
+3. It must have equal primitive integer halves and an embedded π-sector intrinsic to X_D.
+4. The selected corner must be one for which the original opening proposition applies, or the A_D case must be handled separately.
+5. Section 4's admissibility must allow any lift of T and an intrinsic π-sector transition.
+6. Section 5's hypotheses must hold for P, including that its shear automorphisms avoid corner lifts.
+7. The "still even-even" remark holds iff the constant c of D's line is even.
+
+## 6. Remaining gap and assessment
+
+**Equivalence.** In the connected case, lift any odd-word event in X from (e,0). The cover is unramified at the selected corner, so the lift exists, and it ends at a bit-1 copy, which is actual T in P1. In the sole-D case the same holds componentwise. So existence of a cross-copy P_D seed is equivalent to existence of an odd-word P seed. Neither is proved.
+
+**What remains open.** The open obligation is unchanged in content. The doubled disk with its 450° corner is only useful if seed theory is genuinely easier there, and in the sole-D case it is isometrically the same problem. No hidden polygon substitution or label substitution was found.

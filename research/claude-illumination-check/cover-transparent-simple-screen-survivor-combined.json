@@ -1,0 +1,158 @@
+{
+  "status": "ILLUMINATED",
+  "certificate_screen": {
+    "status": "INCONCLUSIVE",
+    "all_directions_covered": false,
+    "method": "palindromic crossing-word endpoint relation on actual unfolded sheets",
+    "cover_squares": 104,
+    "palindrome_pairs": 8112,
+    "nonabsorbing_sectors": 24,
+    "source_sectors": 8,
+    "target_sectors": 8,
+    "reachable_regular_sectors": 24,
+    "potential_target_sectors": 8,
+    "axis_h_possible": false,
+    "axis_v_possible": false,
+    "seconds": 0.003912916989065707
+  },
+  "exact": {
+    "status": "ILLUMINATED",
+    "cover_squares": 104,
+    "primitive_cover_direction": [
+      9,
+      2
+    ],
+    "cover_witness": {
+      "source_square": 94,
+      "steps": 2,
+      "endpoint_square": 28
+    },
+    "witness": {
+      "status": "illuminated",
+      "direction": [
+        -2,
+        -9
+      ],
+      "bounces": 9,
+      "path": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            -2,
+            9
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            -8,
+            11
+          ],
+          [
+            14,
+            11
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            10,
+            9
+          ]
+        ],
+        [
+          [
+            -1,
+            1
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            4,
+            9
+          ]
+        ],
+        [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            1
+          ],
+          [
+            -10,
+            9
+          ]
+        ],
+        [
+          [
+            36,
+            11
+          ],
+          [
+            -14,
+            11
+          ]
+        ],
+        [
+          [
+            34,
+            9
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "events": 35,
+      "corner_convention": "occupied-sector"
+    },
+    "seconds": 0.014000250026583672,
+    "processed_pairs": 33,
+    "discovered_pairs": 65,
+    "distinct_codes": 33
+  },
+  "corner_convention": "occupied-sector"
+}

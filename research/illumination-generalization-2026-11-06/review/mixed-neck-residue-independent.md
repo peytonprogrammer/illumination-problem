@@ -1,0 +1,11 @@
+# Independent A25 arithmetic mixed-neck review
+
+Verdict: ACCEPT frozen mixed-neck-residue-proof.md for its explicit fixed-chamber tree model. Horizontal and vertical widths stay fixed, every member must be a strictly simple disk, and actual marks stay in their fixed chambers. No arbitrary coordinate-strip decomposition is inferred.
+
+For a horizontal visit the state at the far mouth is obtained by triangular folding of y+sign(q/p)*L with period2w. A nonnegative increment delta with (q/p)*delta in2wZ preserves both the exit position and sign. The added full periods give an even number of smooth sidewall bounces; strict endpoints forbid a joint-corner collision. The vertical formula uses (p/q)*delta. Physical reversal of a visit changes the sign of the phase increment but not its full-period property. Induction through all actual fixed chamber words and repeated visits preserves every splice and ends at the actual translated target. Earlier target arrival remains sufficient.
+
+For rational widths, increments and velocity ratio, the period in each integer parameter is the reduced denominator of the displayed positive rational phase coefficient. A witness at n^j covers precisely the claimed nonnegative arithmetic orthant as a SUFFICIENT set. It need not be the full illuminated set.
+
+For a finite NONEMPTY certificate pack, let B_e=max_j n_e^j and M_e=lcm_j P_e^j. A coordinate n_e<B_e is retained literally. A coordinate n_e>=B_e may be replaced by B_e+((n_e-B_e) mod M_e), lying below B_e+M_e. Every witness eligibility inequality and period residue is unchanged: above B_e all starting thresholds are met, and M_e is divisible by every relevant period. Thus membership in the UNION of sufficient witness orthants is determined by the finite box. Covering that box proves coverage of the entire integer parameter orthant. No assertion that such a pack exists is accepted. The empty-pack case proves no coverage and does not define maxima/lcms; the natural nonempty interpretation is required.
+
+This is an exact finite certificate criterion, not a global finite-prefix completion. It preserves widths and chambers; crossing or varying-width generators require a different theorem. Independent hand audit only; no search or example census.

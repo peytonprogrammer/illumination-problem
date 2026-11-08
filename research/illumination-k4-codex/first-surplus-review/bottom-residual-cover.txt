@@ -1,0 +1,69 @@
+Six reflections close the entire centered-bottom/east first-surplus family
+4 November 2026 — Codex01a18403
+
+THEOREM AND STATUS
+For the fixed three interior A stars S=(0,0), U=(2,0), T=(2,2), assume Delta=Q+s_N-8=1 and the unique excess fan is the centered B pair B-,B+. Then S and T illuminate with AT MOST SIX reflections. Sigma/reversal gives the centered E pair. No W/k budget or N/D/R condition is needed.
+Parent hand proof complete; exact fixed-path, formula and symmetry replay PASS. Separate-session peer independently HAND ACCEPTED the whole centered B/E family and complete first-layer closure, no corrections; bottom-closure-review-check.json records PASS and the exact reviewed proof hashes.
+
+1. Force only the mirrors the short path needs
+If E- is absent, the old one-reflection path S ->(3,3/2)->T is legal.
+If E- is present but L+ is absent, the old reflected/reversed four-reflection path applies: E is an ordinary single-cap cell, so its cap walls are intact. Thus a putatively dark room contains L+.
+If T- is absent, the independently accepted three-reflection centered-B source-prefix path applies:
+ S ->(-2/5,-8/5)->(2/3,-4/3)->(7/4,3)->T.
+Thus a putatively dark room contains T- as well.
+In this centered-defect branch there are NO smooth B points. L+ together with Nb- would make B=(-1,1) smooth180degrees (90 from H plus45 from each cap), so Nb- is absent. T's cell is ordinary single, so T- excludes T+ and the outer T mate. B consists of exactly its centered pair, so its two outer mates are absent.
+These are precisely the requirements used below. The previously narrowed N=Nr- condition and the optional D/R choices are unnecessary.
+
+2. Hand construction: use the source roof before the bottom pair
+Take a parameter
+ 1/7<d<2/11,
+and launch actual S in direction(-d,1).
+Reflect at the open source-roof point(-d,1). The opposite triangle is Nb-, already absent. The reflected velocity is(-d,-1), and entry into the centered B pocket occurs at(-3d,-1).
+Use the established centered-pocket two-hit map: entry(u,-1) with(v,-1) returns at(-u-2v,-1) with(-v,1), provided |u|<1,|u+2v|<1,u+v!=0. Here u=-3d,v=-d, so exit is(5d,-1) with velocity(d,1). All branch conditions are strict:3d<1,5d<1 and-4d!=0.
+The ray rises through H and enters T- at(9d,3). Its three-reflection cap response exits at(11d,3), with velocity(d,-1). At height2 it reaches
+ (12d,2).
+The actual target equation is12d=2, so choose d=1/6, strictly within the interval.
+This is six reflections: one source-roof reflection, two centered-bottom reflections, three top-cap reflections. There is no replacement of either actual endpoint by a convenient image.
+
+3. Full bounce formulas and the explicit path
+The six bounce points are
+ (-d,1),
+ (-4d/(1+d),4d/(1+d)-2),
+ (4d/(1-d),4d/(1-d)-2),
+ (8d/(1-d),8d/(1-d)+2),
+ (2,2+10d),
+ (12d/(1+d),12d/(1+d)+2).
+They follow by solving the displayed diagonal/vertical/horizontal intersections and applying specular coordinate swaps/sign changes. For d=1/6 the complete path is
+ S=(0,0)
+ ->(-1/6,1)
+ ->(-4/7,-10/7)
+ ->(4/5,-6/5)
+ ->(8/5,18/5)
+ ->(2,11/3)
+ ->(12/7,26/7)
+ ->T=(2,2).
+Every listed point lies strictly inside its reflecting wall; the two lower diagonal hits straddle the apex without meeting it, and all three top hits avoid corners.
+
+4. Strict containment on the whole parameter interval
+The first segment stays inside the source star until the open roof hit -1<-d<0. The next source-star segment reaches the open centered-B portal at -1<-3d<0. Both cap-return portal coordinates are strictly within(-1,1), so the two-hit centered-cap lemma supplies complete containment and no singularity.
+After B exit,5d is strictly between0 and1. The rising ray crosses x=1 at y=1/d-6, strictly between-1 and1 on this interval, then crosses the elbow/target portal y=1 at x=7d, strictly between1 and3. At d=1/6 the x=1 crossing is C=(1,0), already interior to H; it is legal.
+Its top-cap entry x=9d lies strictly between1 and2. In local top coordinates u=2-x, inward depth y-3 and tangential velocity -d, the triangular three-hit branch conditions are
+ 0<2-9d<1, 0<2-11d<1.
+Both hold on1/7<d<2/11. The diagonal/vertical/diagonal top trip is therefore strict, exits through1<11d<2, and leaves in direction(d,-1). The final height2 coordinate1<12d<3 remains inside the target star, becoming exactly2 at d=1/6.
+Thus every leg is in H or the two stated pockets. All reflecting walls are genuine walls: source roof by absence of Nb-, bottom diagonals by the unique centered-B assumption, and top cap walls by ordinary-single T geometry. Other caps cannot affect these segments.
+
+5. Exact universal implication and sigma
+The exact path checker recomputes:
+ required outside H: B-,B+,T-;
+ forbidden ordinary caps: Nb-,T+;
+ forbidden outside the ordinary alphabet: both outer B mates and the outer T mate.
+All of these absences were proved in section1. No D or R cap, E cap, or other N option appears in the path implication. Thus the six-path covers every completion surviving the earlier one/four/three necessities, not just the restricted residual used to retrieve it.
+Sigma/reversal gives a six-reflection actual-S/T path requiring E-,E+,L+, with L- and Nr+ absent, plus outer E/L mates absent. The same family forcing argument transfers to the centered E class. No symmetry of a particular room is assumed.
+
+6. Source and proof independence from the archive
+This is the unchanged guard at frozen I2_00_11-pair0/guards.jsonl line28781, sigma/reversed in the identity frame. One bounded symbolic projection of the same three already hashed sources revealed it under the newly proved centered-B constraints. The old equality projector prohibited a paired B cell and could not retain this term. No new ray/direction/word was generated, no room assignment enumerated, and no solver run.
+The projection's counts and completeness are NOT proof premises. The displayed path, strict cap maps and containment argument prove the class theorem directly. bottom-residual-check.py independently recomputes the exact universal implication using the existing checker, matches all six symbolic formulas at1/6 and verifies sigma transfer: PASS. Source hash/provenance and all points are in bottom-residual-check.json. Reused checker, not formal/expert verification or a fresh independent implementation.
+
+Peer request
+Please independently HAND challenge the necessity-to-absence step, source-roof/two-hit/three-hit composition, strict interval, actual-target equation and full family coverage. Inputs this note and bottom-residual-check.json. No new discovery or projection run requested.
+Universal goal stays paused. Only after this and centered-L closure are independently accepted should the full first-layer theorem be described as jointly checked.

@@ -1,0 +1,3240 @@
+             Rational billiards and flat structures
+                   Howard Masur and Serge Tabachnikov
+                                December 16, 1999
+
+
+Contents
+1 Polygonal billiards, rational billiards                                             1
+  1.1 Polygonal billiards . . . . . . . . . . . . . . . . . . . . . . . . . . . .     1
+  1.2 Examples: a pair of ellastic point-masses on a segment and a triple of
+      point-masses on a circle . . . . . . . . . . . . . . . . . . . . . . . . .      2
+  1.3 Unfolding billiard trajectories, rational polygons . . . . . . . . . . . .      3
+  1.4 Example: billiard in the unit square . . . . . . . . . . . . . . . . . . .      4
+  1.5 Rational billiard determines a flat surface . . . . . . . . . . . . . . . .     6
+  1.6 Minimality of the billiard flow in rational polygons . . . . . . . . . .        8
+  1.7 Rational billiards and interval exchange maps . . . . . . . . . . . . .        11
+  1.8 Flat metrics and quadratic differentials . . . . . . . . . . . . . . . . .     12
+
+2 Teichmuller space, strata of quadratic differentials and SL(2, R) ac-
+  tion                                                                            16
+  2.1 Teichmuller space and mapping class group . . . . . . . . . . . . . . . 16
+  2.2 Compactifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+  2.3 Strata of quadratic differentials . . . . . . . . . . . . . . . . . . . . . 18
+  2.4 SL(2, R) action on quadratic differentials . . . . . . . . . . . . . . . . 18
+
+3 Ergodicity                                                                         20
+  3.1 Veech nonuniquely ergodic example . . . . . . . . . . . . . . . . . . .        20
+  3.2 Ergodicity in almost every direction . . . . . . . . . . . . . . . . . . .     26
+  3.3 A combinatorial construction . . . . . . . . . . . . . . . . . . . . . .       29
+  3.4 Further ergodicity results . . . . . . . . . . . . . . . . . . . . . . . . .   33
+  3.5 Ergodicity of general polygonal billiards . . . . . . . . . . . . . . . .      34
+
+                                           1
+   3.6      Constructive approach to polygons with ergodic billiard flow . . . . .                                                           37
+
+4 Periodic orbits                                                                                                                            38
+  4.1 Periodic directions are dense . . . . . . . . . . . . . . . . . . . . . . .                                                            38
+  4.2 Counting saddle connections and maximal cylinders . . . . . . . . . .                                                                  44
+
+5 Veech groups                                                                                                                               45
+  5.1 Definition and examples of Veech groups . . . . . . . . . . . . . . . .                                                                45
+  5.2 Veech dichotomy . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                              49
+  5.3 Asymptotics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                            51
+  5.4 Covers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                           51
+
+6 Interval exchange transformations                                                                                                          54
+  6.1 Topological structure of orbits . . . . . . . . . . . . . . . . . . . . . .                                                            54
+  6.2 Number of invariant measures. Lack of mixing . . . . . . . . . . . . .                                                                 56
+  6.3 Ergodicity of interval exchange transformations . . . . . . . . . . . .                                                                59
+  6.4 Asymptotic flag of an interval exchange transformation . . . . . . . .                                                                 59
+
+7 Miscellaneous results                                                                                                                      62
+  7.1 Stable periodic trajectories . . . . . . . . . . . . . . . . . . . . . . . .                                                           62
+  7.2 Encoding billiard trajectories. Polygonal billiards have zero entropy .                                                                64
+  7.3 Complexity of billiard trajectories in rational polygons . . . . . . . .                                                               67
+  7.4 Periodic trajectories in some irrational billiards . . . . . . . . . . . .                                                             71
+  7.5 A non-periodic trajectory that is not dense in the configuration space                                                                 73
+
+   References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+
+
+   Acknowledgements
+   Both authors were supported by the National Science Foundation grants. The
+second author is grateful to Max-Planck-Institut in Bonn for its hospitality.
+
+
+
+
+                                                                      2
+1     Polygonal billiards, rational billiards
+1.1    Polygonal billiards
+Informally speaking, the theory of mathematical billiards can be partitioned into three
+areas: convex billiards with smooth boundaries, billiards in polygons (and polyhe-
+dra) and dispersing and semi-dispersing billiards (similarly to differential geometry
+in which the cases of positive, zero and negative curvature are significantly different).
+These areas differ by the types of results and the methods of study: in the former a
+prominent role is played by the KAM theory and the theory of area preserving twist
+maps; the latter concerns hyperbolic dynamics and has much in common with the
+study of the geodesic flow on negatively curved manifolds. The recent progress in
+the study of polygonal billiards is mostly due to applications of the theory of flat
+structures on surfaces (a.k.a. quadratic differentials) and the study of the action of
+the Lie group SL(2, R) on the space of quadratic differentials which is the main topic
+of this paper. We refer to [34], [35] and [56] for a general survey of mathematical
+billiards.
+    We will be considering a plane polygonal billiard Q, that is, a compact polygon
+(in general, not necessarily convex or simply connected). To fix ideas, the billiard
+flow is a flow in the unit tangent bundle to Q with discontinuities corresponding to
+reflections in the boundary ∂Q. These reflections are described by the familiar law of
+geometrical optics: the angle of incidence equals the angle of reflection. The billiard
+map T is a section of the billiard flow; it acts on unit tangent vectors (x, v) ∈ T Q
+whose foot point x is an interior point of a side of Q and the vector v has the inward
+direction. The map T has an invariant measure µ. Let t be the length parameter
+along the perimeter of Q and let θ be the angle made by v with the respective side.
+Then the invariant measure is given by the next formula:
+                                    µ = sin θ dθ dt.
+    One often needs to consider parallel beams of billiard trajectories in polygons.
+For example, every even-periodic trajectory includes into a strip consisting of a one-
+parameter family of parallel periodic trajectories of the same period and length. An
+odd-periodic trajectory also includes into a parallel strip, this time consisting of tra-
+jectories whose period and length is twice as great. Note that the billiard reflection
+in a side of Q transforms a parallel beam to another family of parallel trajectories,
+and that the width of the beam remains the same.
+    Fig. 1
+
+                                           3
+    Part of the interest in polygonal billiards comes from the fact that they are closely
+related to problems of mechanics. We discuss one such simple example below.
+
+
+1.2    Examples: a pair of ellastic point-masses on a segment
+       and a triple of point-masses on a circle
+Consider two points with masses m1 and m2 on the unit segment [0, 1]. The points
+may elastically collide and reflect from the end points of the segment (”walls”). The
+configuration space of the system is given by the inequalities 0 ≤ x1 ≤ √ x2 ≤ 1 where x1
+and x2 are the coordinates of the points. Rescale the variables: x̄i = mi xi , i = 1, 2.
+The configuration
+             q       space is now a right triangle in the (x̄1 x̄2 )-plane with the acute
+          −1
+angle tan ( m1 /m2 ).
+    Consider a collision of the points. Let v1 , v2 be the velocities before, and u1 , u2 –
+after the collision. The conservation of momentum and energy laws read:
+
+                             m1 u1 + m2 u2 = m1 v1 + m2 v2 ,
+
+                        m1 u21 /2 + m2 u22 /2 = m1 v12 /2 + m2 v22 /2.
+In the rescaled coordinates the velocities are rescaled by the same factors, therefore
+                        √         √          √         √
+                          m1 ū1 + m2 ū2 = m1 v̄1 + m2 v̄2 ,
+
+                                    ū21 + ū22 = v̄12 + v̄22 .
+The latter equation says that the magnitude of the vector (ū1, ū2 ) does not change
+after the√collision;
+                √ the former one says that the scalar product
+                                                         √     √of this vector with the
+vector ( m1 , m2 ) is preserved as well. The vector ( m1√     , m2 ) is tangent
+                                                                         √       to the
+side of the configuration triangle given by the equation x̄1 / m1 = x̄2 / m2 .
+    Thus the configuration trajectory reflects in this side according to the billiard
+reflection law. Likewise one considers collisions with the walls x = 0 and x = 1:
+they correspond to the billiard reflections in the other two sides of the configuration
+triangle. One concludes that the dynamical system of two elastic particles on a
+segment is isomorphic to the billiard in a right triangle whose shape depends on the
+ratio of the masses of the particles.
+    Similar arguments show that the system of three elastic point-masses on the circle
+with a fixed center of mass is isomorphic to the billiard in an acute triangle (we
+
+
+
+                                                4
+learned this example from E. Gutkin). Let the masses be m1 , m2 , m3 ; then the angles
+αi of the triangle are given by
+                                    s
+                                        m1 + m2 + m3
+                      tan αi = mi                    , i = 1, 2, 3.
+                                          m1 m2 m3
+In the limit m3 → ∞ one obtains the previous example of two point-masses on a
+segment.
+    Many other mechanical models reduce to billiards, in particular, the model of gas
+in a closed vessel as a collection of elastic balls in a compact domain. Such models
+are of great importance in statistical physics.
+
+1.3    Unfolding billiard trajectories, rational polygons
+Instead of reflecting a billiard trajectory in a side of the billiard polygon Q one
+may reflect Q in this side and unfold the trajectory to a straight line. This process
+is iterated at each reflection: each succesive copy of the billiard polygon is obtained
+from the previous one by the reflection in the side, met by the straightened trajectory.
+This unfolding method has many applications in the study of polygonal billiards.
+
+   Fig. 2
+
+    Let A(Q) be the group of motions of the plane generated by the reflections in the
+sides of Q. Denote the reflection in the side s by σs . Notice that for every two sides
+s and t of Q one has:
+                                   σσs (t) = σs σt σs .
+    It follows that every copy of Q involved in the unfolding is the image of Q under
+an element of the group A(Q). The product of an even number of elements of this
+group preserves orientation while an odd number reverses it.
+    To keep track of the directions of billiard trajectories in Q consider the group
+G(Q) that consists of the linear parts of the motions from A(Q). This subgroup of
+the orthogonal group is generated by the reflections in the lines through the origin
+which are parallel to the sides of the polygon Q. The group G(Q) acts on the unit
+circle. When a billiard trajectory in Q reflects in a side s its direction is changed by
+the action of the element of G(Q) which is the projection of σs to G(Q).
+
+Definition 1.1 A billiard polygon Q is called rational if the group G(Q) is finite and
+irrational otherwise.
+
+                                              5
+    If Q is a rational polygon then the group G(Q) is the dihedral group of symmetries
+of a regular polygon. A necessary condition for Q to be rational is that all its angles
+are rational multiples of π. It is also sufficient if the boundary is connected; that
+is, the polygon is simply connected. The set of plane n-gons can be considered as a
+subset in R2n (each vertex has two degrees of freedom). We give the space of n-gons
+the subspace topology. Rational polygons are dense in the space of polygons.
+    A given billiard trajectory in a rational billiard table will have only finitely many
+different directions; this finite collection of directions plays the role of an integral of
+motion. More precisely, let p be the composition of the projection of the unit tangent
+bundle Q × S1 on S1 and the projection of S1 to the quotient space S1 /G(Q). Then
+the function p is constant along every billiard trajectory in a rational polygon.
+    We illustrate the unfolding procedure in the simplest example of a rational poly-
+gon, the square.
+
+
+1.4    Example: billiard in the unit square
+Unfolding a trajectory one obtains a line in the plane which is tiled by the unit
+squares, the images of the original square Q under the action of the group A(Q).
+Two lines in the plane correspond to the same billiard trajectory in Q if they differ
+by a translation through a vector from the lattice 2Z + 2Z.
+    Consider the fundamental domain of the group 2Z + 2Z which is the square made
+of four copies of Q. Identify the opposite sides to obtain a flat torus. A billiard
+trajectory becomes a geodesic line on this torus; every geodesic line has a constant
+slope λ. The unit tangent bundle of the torus is represented as the union of the tori,
+ennumerated by the slopes λ; the geodesic flow on each torus is a constant flow.
+    The dynamics on an individual invariant torus depends on whether λ is rational
+or irrational: in the former case the geodesic flow is periodic, and in the latter it
+is ergodic, and in fact, uniquely ergodic. In particular, a billiard trajectory with a
+rational slope is periodic, while the one with an irrational slope is dense in the square.
+    One can also analyse periodic trajectories. The unfolding of such a trajectory is a
+segment in the plane whose end-points differ by a vector from 2Z+ 2Z. Every parallel
+trajectory is also periodic with the same period and length.
+    Assume that an unfolded periodic trajectory goes from the origin to the lattice
+point (2p, 2q). If p and q are coprime this is a prime periodic trajectory, and if p and
+q have a comon √ multiplier then the periodic trajectory is multiple. The length of the
+trajectory is 2 p2 + q 2 , and to a choice of p and q there correspond two orientations
+
+
+                                            6
+of the trajectory. Thus the number of (strips of) parallel trajectories of length less
+than L equals the number of pairs of integers, satisfying the inequality√p2 +q 2 < L2 /2.
+    This is the number of lattice points inside the circle of radius L/ 2, centered at
+the origin. In the first approximation, this number equals the area πL2 /2, and to take
+only prime periodic trajectories into account one divides this estimate by π 2 /6. Thus
+one obtains a quadratic asymptotic estimate on the number of periodic trajectories
+of the length not exceeding a fixed number. We will see in a later section that this
+result holds for general rational polygons.
+    Integrable billiards. What works so well in the above example is the fact that
+the images of Q under the group A(Q) tile the plane. A similar consideration applies
+to rectangles, equilateral triangles and right triangles with an acute angle π/4 or π/6.
+These polygons are called integrable, and the billiard flow reduces to a constant flow
+on a torus. Note that in all these cases one may define the extension of a billiard
+trajectory through a vertex of the billiard polygon.
+    Although integrable polygons are exceptional, some of the features of the billiard
+dynamics in the integrable case extend to general rational polygons. These results
+will be discussed in succeeding sections.
+    Almost integrable billiards. One class of rational billiards for which one can
+make such precise statements is the class of almost integrable billiards, intermediate
+between integrable and general rational polygons, studied by Gutkin ([24]). A polygon
+Q is called almost integrable if the group A(Q) is a discrete subgroup of the group of
+motions of the plane. There are exactly four such groups generated by the reflections
+in the sides of the four integrable polygons. An almost integrable polygon is one that
+can be drawn on the corresponding lattice.
+
+   Fig. 3
+
+    Given an almost integrable polygon, the billiard flow decomposes into directional
+flows Fθ (just as in the case of a square – see next section for a detailed discussion).
+Choose a basis e1 , e2 of the respective lattice. A direction is called rational if it is
+given by a vector a1 e1 + a2 e2 with a1 /a2 ∈ Q. Gutkin proved that, similarly to the
+square case, the following conditions are equivalent:
+    (i) θ is an irrational direction;
+    (ii) Fθ is minimal;
+    (iii) Fθ is ergodic;
+    (iv) Fθ is aperiodic, that is, Fθt 6= id for all t 6= 0.
+
+
+                                           7
+1.5    Rational billiard determines a flat surface
+The following construction of a flat surface from a rational billiard table plays a
+central role in the present study (see [17], [36], [37], [53] and [40]; the later paper was
+the first to relate billiards in polygons and quadratic differentials).
+    Let Q be a rational polygon. The group G(Q) is the dihedral group DN generated
+by the reflections in the lines through the origin that meet at angles π/N where N
+is a positive integer. This group has 2N elements, and the orbit of a generic point
+θ 6= kπ/N on the unit circle consists of 2N points. Let the angles of Q be πmi /ni
+where mi and ni are coprime integers. Then N is the least common multiple of the
+denominators ni .
+    Consider the unit tangent bundle Q × S1 , the phase space of the billiard flow, and
+let Mθ be the subset of points whose projection to S1 belongs to the orbit of θ under
+DN . Then, Mθ is an invariant surface of the billiard flow in Q. This invariant surface
+is a level surface of the above mentioned function p, ”the integral of motion”.
+    Assume that θ 6= kπ/N and ennumerate the angles in the DN -orbit of θ on the
+unit circle counterclockwise: θ = θ1 , θ2 , ..., θ2N . The surface Mθ is obtained from 2N
+copies of Q, namely, Q × θi ⊂ Q × S1 , i = 1, ..., 2N by gluing their sides according to
+the action of DN .
+    Consider 2N disjoint and parallel copies of Q in the plane. Call them Q1 , ..., Q2N
+and orient the even ones clockwise and the odd ones counterclockwise. Choose an
+index i = 1, ..., 2N and a side s of Qi ; reflect the direction θi in this side. The resulting
+direction is θj for some j = 1, ..., 2N. Glue the side s of Qi to the identical side of
+Qj . After these gluings are made for all values of i and all choices of the side s of
+Qi , the sides of all the polygons Qi are pasted pairwise, and the gluings agrees with
+the orientation. The result is an oriented compact surface that depends only on the
+polygon Q, but not on the choice of θ, and we denote it by M. The billiard flows on
+M in different directions are obtained one from another by rotation.
+    For example, if Q is a square then N = 2 and the result is a torus made of four
+identical squares. If Q is a right triangle with an acute angle equal to π/8 then the
+surface Mθ is obtained from a regular octagon, the result of gluing 16 copies of the
+triangle, by pairwise gluing its opposite sides; this surface has genus 2.
+
+   Fig. 4
+
+   The genus of M is given in the next lemma.
+
+
+
+                                              8
+Lemma 1.2 Let the angles of a billiard k-gon be πmi /ni , i = 1, ..., k where mi and
+ni are coprime, and N be the least common multiple of ni ’s. Then
+                                          N     X 1
+                         genus M = 1 +      k−2−      .
+                                          2        ni
+
+Proof. We need to analyse how the gluings are made around a vertex of Q. Consider
+the i-th vertex V with the angle πmi /ni . Let Gi be the group of linear transformations
+of the plane generated by the reflections in the sides of Q, adjacent to V . Then Gi
+consists of 2ni elements.
+    According to the construction of M the number of copies of the polygons Qj that
+are glued together at V equals the cardinality of the orbit of the test angle θ under
+the group Gi , that is, equals 2ni . Originally we had 2N copies of of the polygon Q,
+and therefore, 2N copies of the vertex V ; after the gluings we have N/ni copies of
+this vertex on the surface M.
+    It follows that the total number of vertices in M is N 1/ni . The total number
+                                                             P
+
+of edges is Nk, and the number of faces is 2N. Therefore the Euler characteristic of
+M equals
+                                X 1
+                             N         − Nk + 2N = 2 − 2g
+                                    ni
+where g is the genus, and the result follows.                                         ✷
+    The billiard flow on M is obtained from the constant flows in the directions θi in
+the polygons Qi . The result is a (unit) vector field on M with singularities at the
+vertices. The above proof shows that the i-th vertex of M is the result of gluing 2ni
+copies of the angle πmi /ni which sums up to an angle of 2πmi . One may realize such
+a singularity geometrically as follows. Take mi copies of a Euclidean upper half plane
+Hj and mi copies of a lower half plane Lj ; j = 1, ..., mi . Then glue the positive real
+axis of Hj to the positive real axis of Lj and glue the negative real axis of Lj to the
+negative real axis of Hj+1 (mi + 1 = 1). The result is a singularity with a total angle
+of 2πmi . We will call it a cone angle 2πmi singularity. From this description one
+can also see that for any direction θ, there are 2mi separatrices emanating from the
+singularity in direction θ.
+    It is easy to describe the set of polygons for which all the angles are 2π, that is,
+mi = 1; then the singularities of M are removable. The sum of interior angles of a
+k-gon is π(k − 2). Thus if mi = 1 for all i then
+                                1          1
+                                   + ... +    = k − 2.
+                                n1         nk
+
+                                           9
+This equation has only four solutions with ni ≥ 2, considered up to permutations:
+                     1 1 1 1 1 1 1 1 1 1 1 1 1
+                       , , ,       , , ,     , , ,        , , , .
+                      3 3 3      2 4 4      2 3 6       2 2 2 2
+These solutions correspond to the already mentioned integrable polygons, and in each
+case the invariant surface M is a torus with a constant flow.
+    To summarize the construction, given a rational billiard polygon Q, one constructs
+a compact surface M whose genus is given by the above lemma. This surface inherits
+a flat metric from Q with a finite number of cone-type singularities, corresponding
+to the vertices of Q, with cone angles multiples of 2π. The billiard flow on M is a
+constant flow in a fixed direction with singularities at the cone points.
+
+1.6    Minimality of the billiard flow in rational polygons
+The next result on the minimality of the billiard flow in a rational polygon is much
+easier than the stronger results on ergodicity described later in the paper. We discuss
+it because it serves a model for these harder theorems.
+Definition 1.3 A flow is called minimal if any of its orbits is dense in the phase
+space.
+   Denote the billiard flow on M in the direction θ by Fθ .
+Definition 1.4 A saddle connection in direction θ is an orbit of Fθ that goes from a
+singularity to a singularity (possibly, the same one) and has no interior singularities.
+    A saddle connection is also called a generalized diagonal since it corresponds to a
+billiard orbit in direction θ that goes from a vertex to another vertex.
+    We may decompose a saddle connection β as a sum of its horizontal part hβ and
+its vertical part vβ .
+Definition 1.5 A metric cylinder in direction θ is the isometric image of a straight
+Euclidean cylinder in R3 consisting of closed geodesics in direction θ. A metric cylin-
+der is maximal if it cannot be enlarged.
+    We already noted that a periodic orbit in direction θ for the billiard flow included
+into a strip of parallel periodic orbits thus giving rise to a metric cylinder in direction
+θ. The following lemmas and theorem are standard (see [55]), and the proofs do not
+use the group structure coming from billiards. Thus they will hold verbatim for the
+general situation of flat structures (that will be formally defined shortly).
+
+                                            10
+Lemma 1.6 If M has singularities, then the boundary of a maximal metric cylinder
+consists of a finite number of saddle connections in direction θ.
+
+Proof. If a metric cylinder fills the surface, then M is the flat torus which has
+no singularities. Thus we can assume the maximal cylinder has a boundary. The
+obstruction to enlarging a maximal cylinder are saddle connections on the boundary.
+✷
+
+Lemma 1.7 Suppose α+ is a trajectory, infinite in the positive direction. Let β be
+an interval perpendicular to α+ with initial point P0 on α+ as one of its endpoints.
+Then α+ returns to β after P0 .
+
+Proof. Since there are a finite number of singularities, there are a finite number of
+trajectories starting at points of β that hit a singularity before crossing β again. By
+shortening β to a subinterval β ′ with one endpoint P0 and some other endpoint Q0 , we
+can assume that no trajectory leaving β ′ hits a singularity before returning to β. Now
+flow the interval β ′ in the positive direction. The interval sweeps out rectangles of
+increasing area. Since the area of the surface is finite, the interval β ′ must return and
+overlap β. If α+ itself does, we are done. Otherwise the trajectory leaving Q0 returns
+to β ′ and some trajectory leaving a point Q1 ∈ β ′ returns to P0 . We now consider
+the interval β ′′ ⊂ β ′ with endpoints P0 and Q1 and apply the previous analysis to it.
+Flowing in the forward direction it must return to β and now α+ itself must return
+to β.                                                                                    ✷
+
+Theorem 1.8 For all but countably many directions θ the flow Fθ is minimal on the
+surface M.
+
+Proof. Since there are only finitely many singularities and countably many homotopy
+classes of arcs joining the singularities, it is clear that there are only countably many
+saddle connections (the same statement follows from the fact that the group A(Q) is
+countable.) We claim that the flow Fθ is minimal if there is no saddle connection in
+direction θ.
+    By Lemma 1.6 there cannot be a metric cylinder for then there would be a saddle
+connection. Suppose there was an infinite trajectory lθ in direction θ which is not
+dense. Let A 6= M be the set of ω limit points of lθ . Then A is invariant under the
+flow Fθ . Since A 6= M one can choose a trajectory γ on ∂A; let P0 be its initial point.
+
+                                           11
+We will show that γ is a saddle connection. If not then γ is infinite in at least one of
+the two directions. We show that there is an open neighborhood of P0 contained in
+A, a contradiction to P0 being a boundary point.
+    Let β be a perpendicular arc with P0 an endpoint. It is enough to show that there
+exists a segment [P0 , Q] ⊂ β which is contained in A. For then doing this on both
+sides we would have our open neighborhood. Now Lemma 1.7 implies that γ hits
+β again at some P1 . If the interval [P0 , P1 ] ⊂ A we are done. Suppose not. Then
+there exists Q1 ∈ [P0 , P1 ] which is not in A. Since A is closed, there is a largest open
+subinterval I1 ⊂ [P0 , P1 ] containing Q1 which is in the complement of A. Let P2 BE
+the endpoint of I1 closest to P0 . Then P2 ∈ A and the trajectory through P2 must be
+a saddle connection. For if it were infinite in either direction, it would intersect I1 .
+Since A is invariant under the flow, this contradicts that I1 misses A.                  ✷
+    Projecting back to the rational billiard polygon Q we see that for all but countably
+many directions every billiard trajectory is dense in Q. Approximating a general
+billiard by a rational one we obtain the next result on topological transitivity of
+polygonal billiards ([36]).
+
+Definition 1.9 A flow is called topologically transitive if it has a dense orbit.
+
+Theorem 1.10 For every k ≥ 3 there exists a dense Gδ subset in the space of simply
+connected k-gons that consists of polygons with topologically transitive billiard flows.
+
+Proof. Identify the phase space of the billiard flow in each k-gon with D2 × S1 , and
+assume that this identification depends continuously on the polygon. Let Bi be a
+countable basis for the topology of D2 × S1 . Denote by Xn the set of k-gons Q such
+that for each open set U in the phase space, there exists a billiard trajectory starting
+in U that visits all the images of the sets B1 , ..., Bn in the phase space of the billiard
+flow in Q. Each set Xn is open and their intersection is a Gδ set.
+     Let us show that this intersection is dense. Let Ym be the set of rational k-gons
+with the angles πmi /ni , mi and ni coprime, such that the least common multiple of
+ni ’s is at least m. For every polygon Q ∈ Ym the invariant surface Mθ is 1/m-dense
+in the phase space. Therefore for every n there exists m such that for every Q ∈ Ym
+the surface Mθ intesects all the images of the sets B1 , ..., Bn in the phase space of the
+billiard flow in Q. Since Mθ has a dense trajectory for all but countably many θ the
+space Ym lies in Xn . Finally, Ym is dense in the space of k-gons for every m, and so
+Xn is dense for every n as well. It follows that ∩Xn is dense by Baire’s theorem.
+
+
+                                            12
+    Let Q be a billiard polygon in ∩Xn . We claim that there is a dense billiard
+trajectory in the phase space of Q. Let U be a compact domain in the phase space
+D2 × S1 . Suppose inductively we have chosen a compact neighborhood Un−1 ⊂ U.
+Since Q ∈ ∩Xn , one can find a billiard trajectory starting in Un−1 in Q that visits
+B1 , ..., Bn . By continuity there is a neighborhood Un ⊂ Un−1 such that each trajectory
+in Un visits B1 , . . . , Bn within time Tn . Choose a phase point v ∈ ∩Un . Then the
+trajectory of the vector v is dense in the phase space of Q.                          ✷
+
+
+1.7    Rational billiards and interval exchange maps
+In the case of rational billiards the billiard flow on the invariant surface can be
+reduced to a one-dimensional transformation; this reduction is a particular case of
+the reduction of the billiard flow to the billiard transformation.
+
+Definition 1.11 Let (I1 , ..., In ) be a partition of the interval [0, 1) into nonintersect-
+ing semiclosed intervals, enumerated from left to right, and let σ be a permutation
+of n element. The respective interval exchange transformation T : [0, 1) → [0, 1) is
+a transformation whose restriction to every Ii is a parallel translation and such that
+the intervals T (I1 ), ..., T (In ) follow from left to right in the order σ(1), ..., σ(n).
+
+    Clearly, an interval exchange transformation preserves the Lebesgue measure on
+the unit interval.
+    Example. The exchange of two intervals [0, a) and [a, 1) is identified with the
+rotation of the circle R/Z through 1 − a.
+    Remark. We will often need to consider an interval exchange transformation
+defined on an interval I, different from [0, 1). In such a case it is understood that I
+is rescaled to [0, 1) by an affine transformation.
+    The reduction of the billiard flow in a fixed direction θ to an interval exchange goes
+as follows. Recall that the invarinat surface M was constructed by pasting pairs of
+equal and parallel sides of 2N copies of the billiard polygon Q. Choose one side from
+each such pair and call these segments s1 , ..., sm . Arrange these segments along a line
+and let I be their union. Give each segment the measure determined by the orthogonal
+projection on the direction, perpendicular to θ. Since ”the width of a beam” is an
+invariant transversal measure of a constant flow, the billiard transformation induces
+a piecewise isometry T of the segment I. If the segments are appropriately oriented
+then T is orientation preserving. It remains to rescale I to the unit interval and to
+
+
+                                            13
+define T at its points of discontinuity so that it is continuous on the left. The result
+is an interval exchange transformation.
+    The reduction of the billiard flow in a fixed direction to an interval exchange
+transformation is by no means unique. For example, assume that the flow Fθ is
+topologically transitive. Choose an interval I in M, transverse to the flow, and give it
+the measure determined by the orthogonal projection on the direction, perpendicular
+to θ. Then the first return map to I along the trajectoires of Fθ is orientation and
+mesure preserving, that is, an interval exchange transformation. Note that since Fθ
+is topologically transitive, the first return map is defined no matter how small I is.
+The points of discontinuity of the first return map correspond to the orbits of the
+flow through the singular points of the flow Fθ .
+
+1.8    Flat metrics and quadratic differentials
+As we have seen a rational billiard defines a closed surface formed by gluing Euclidean
+polygons isometrically along their edges. The vertices of the polygon correspond to
+points with cone angle singularities of the metric. In this section we generalize this
+notion to what we will call flat structures with parallel line fields, or just flat structures
+for short, so that the set of rational billiards of a given genus is a subset of the space
+of flat structures. The main reason for this generalization is that the group SL(2, R)
+acts on the space of flat structures while not preserving the space of rational billiards.
+The study of this action allows to make conclusions about flat structures in general,
+which then give us results about rational billiards in particular.
+    Let M be a compact C ∞ surface and Σ a finite set of points in M. On M \ Σ we
+require coordinate charts v = (x, y) such that the transition functions on the overlaps
+are of the form
+                              v → v + c or v → −v + c.
+That is, the transition functions are translations and reflections in the origin followed
+by translations. Since these preserve the Euclidean metric this allows one to define a
+locally Euclidean metric on M. In addition these transition functions preserve families
+of parallel lines in the plane so that for each direction θ, there is a well-defined foliation
+Fθ of the surface consisting of lines in direction θ.
+    Note that if the transition functions are all translations, then the line field defines
+a vector field and in each direction θ we have a flow Fθ . Now the same topological
+theorem Theorem 1.8 that holds for rational billiards hold in the more general case
+of a flat structure.
+
+
+                                             14
+   In a neighborhood of a point in Σ there are polar coordinates (r, θ) such that the
+metric can be written as
+                               ds2 = dr 2 + (crdθ)2
+where c is a half integer. We say that the metric has cone type singularity with cone
+angle 2πc. The curvature κ at a singular point is defined by the formula
+                                     κ = 2π − 2πc.
+We may concretely describe the metric in a neighborhood of a singular point by gluing
+together half planes as described above. Notice that our previous discussion shows
+that a rational polygon determines such a flat structure with transition functions all
+of the first type (parallel translations) and c an integer.
+    Another way to define the same structure would be to begin by requiring that
+M have Gaussian curvature zero, or equivalently, it is locally isometric to R2 with
+the Euclidean metric, away from a finite set of points Σ and cone type singularities
+near points of Σ, where c is an arbitrary real. This in itself is not enough, for it
+does not rule out the possibility of rotations in the transition functions, which would
+not allow for parallel line fields. One way to guarantee the correct structure in this
+language is to consider parallel translation with respect to the connection determined
+by the metric. The global obstruction to parallel translation being well defined is
+the holonomy group which is a subgroup of O(2). If the holonomy group is either
+trivial or {I, −I} then parallel translation is well-defined and M possesses a parallel
+line field. The existence of such a line field implies that the cone angles are multiples
+of π. Pick one such line field and call it the vertical line field. In the neighborhood
+of each point of M \ Σ we can construct a chart which is an orientation preserving
+isometry and takes the vertical line field to the vertical line field in R2 . The change
+of coordinate functions between these charts then have the desired form.
+    Quadratic differentials. The same structure can also be defined in terms of
+complex analysis. Recall that a Riemann surface or a complex analytic structure
+on a surface M consists of an atlas of charts (Uα , zα ) where {Uα } is a covering of
+M by open sets, zα : Uα → C is a homeomorphism and if Uα ∩ Uβ 6= ∅, then
+zα ◦ zβ−1 : zβ (Uα ∩ Uβ ) → C is complex analytic. The maps zα are called uniformizing
+parameters.
+    A meromorphic quadratic differential φ assigns to each uniformizing parameter zα
+a meromorphic function φzα (zα ) with the property that
+                                            dzβ 2
+                               φzβ (zβ )(       ) = φzα (zα )
+                                            dzα
+
+                                              15
+in Uα ∩ Uβ . Then the quadratic differential φ(z)dz 2 is invariantly defined on M.
+   Although the value of φ is not well-defined, the set of zeroes and poles of φ and
+their orders are. It is a classic result in Riemann surface theory that φ has a finite
+number of zeroes with orders ki and poles of order li satisfying
+                                X          X
+                                    ki −       li = 4g − 4.
+
+   In this paper we will assume that if there are poles then they are simple. This
+implies that the norm or area of φ defined by
+                                           Z
+                                 ||φ|| =        |φ(z)||dz|2
+                                           M
+
+is finite. Notice that the area element |φ(z)||dz 2 | is well-defined independently of
+choice of coordinates. We may equally well consider φ to be a holomorphic quadratic
+differential on the surface punctured at the poles.
+    A quadratic differential determines a metric with the length element |φ(z)|1/2 |dz|.
+If the quadratic differential has a simple pole then the metric is not complete on the
+punctured surface.
+    The vertical trajectories of φ are the arcs along which
+
+                                      φ(z)dz 2 < 0
+
+and the horizontal trajectories the arcs along which
+
+                                     φ(z)dz 2 > 0.
+
+    Equivalence of definitions. We now indicate why a flat structure (with a
+parallel line field) and quadratic differential define the same object. First suppose
+φ is a quadratic differential on M and p ∈ M is a point which is neither a pole
+nor zero. We may choose a uniformizing parameter ζ in a neighborhood of p with
+p corresponding to ζ = 0. We may then choose a branch of φ1/2 (ζ) near ζ = 0 and
+define a new uniformizing parameter w by
+                                               Z ζ
+                              w = w(ζ) =             φ1/2 (τ )dτ.
+                                                0
+
+Then, in the w coordinates, the quadratic differential is given by φw (w) ≡ 1. Such
+coordinates are called natural. If w and w ′ define natural coordinates in overlapping
+neighborhoods, then
+                                     w ′ = ±w + c
+
+                                               16
+and so one has a flat structure. The Riemannian metric is the flat metric |dw|.
+   At a zero of φ of order k (at a simple pole take k = −1) the quadratic differential
+can be written as                         !2
+                                     k+2
+                                              ζ k dζ 2
+                                       2
+for a choice of coordinate ζ. Then
+                                                 (k+2)
+                                      w(ζ) = ζ     2     ,
+
+where the uniformizing parameter w is defined as above. The full angle 0 ≤ arg ζ ≤ 2π
+is subdivided into k + 2 equal sectors
+                    2π              2π
+                       j ≤ arg ζ ≤     (j + 1), j = 0, ..., k + 1.
+                   k+2             k+2
+Every sector is mapped by w(ζ) onto the upper or lower halfplane. Thus a zero of
+φ of order k corresponds to a singular point of a flat structure with the cone angle
+π(k + 2). The pre-images of the horizontal lines are the horizontal trajectories of the
+quadratic differential φ, and the trajectory structure has the form of a k + 2 pronged
+singularity.
+
+   Fig. 5
+
+   Conversely, a flat structure with a parallel line field defines a quadratic differential.
+Let v = (x, y) and v ′ = (x′ , y ′) be coordinates in overlapping charts so that
+
+                                       v ′ = ±v + c.
+
+Setting z = x + iy and z ′ = x′ + iy ′ , the transition functions are complex analytic, so
+define a Riemann surface structure on M \ Σ, where Σ is the set of singularities. We
+may then define a quadratic differential φ on this Riemann surface by assigning the
+constant function 1 to the parameter z. The πc cone angle singularity corresponds
+to a zero of order c − 2.
+    There is an additional description of these structures via the theory of measured
+foliations, developed by Thurston (see [57], [7], [16]). This description will not play
+any role here and we will not dwell on it.
+    We will go back and forth between the terminology of quadratic differentials and
+flat structures with parallel line fields.
+
+                                            17
+    Example. We finish the section with an example taken from [68]: the Riemann
+surface corresponding to the billiard in a regular n-gon with n odd is conformally
+equivalent to the Fermat curve xn + y n = 1, and the respective quadratic differential
+is dx2 /y 4; see [3] for a similar description of Riemannian surfaces corresponding to
+rational triangles.
+
+
+2     Teichmuller space, strata of quadratic differen-
+      tials and SL(2, R) action
+2.1    Teichmuller space and mapping class group
+A general reference for Teichmuller spaces, and compactifications is the paper of Bers
+[6]. Let M be a surface of genus g with n punctures. We assume 3g − 3 + n ≥ 0.
+
+Definition 2.1 Teichmuller space Tg,n is the space of equivalence classes of complex
+structures X on M where X1 ∼ X2 if there is a biholomorphic map from X1 to X2
+which is isotopic to the identity on M.
+
+    One may define the Teichmuller distance function dT (·, ·) on Tg by
+
+                            dT (X1 , X2 ) = 1/2 inf log K(f ),
+
+where the infimum is taken over all quasiconformal maps f isotopic to the identity
+on M and K(f ) is the maximal dilation of f as measured by the complex structures
+X1 , X2 .
+
+Definition 2.2 The mapping class group Mod(g) is the group Dif f + (M)/Dif f0 (M),
+the group of orientation preserving diffeomorphisms modulo those isotopic to the iden-
+tity.
+
+    The mapping class group acts on Tg,n by pull-back; given a complex structure
+X defined by coordinate charts (Uα , zα ) and f ∈ Mod(g), we find a new complex
+structure f ·X defined by the atlas of coordinate charts (f (Uα ), zα ◦f −1 ) The quotient
+space Rg,n = Tg,n /Mod(g) is the moduli space of Riemann surfaces.
+
+
+
+
+                                           18
+2.2    Compactifications
+The moduli space Rg,n is well-known not to be compact. It is possible to deform
+a Riemann surface by pinching along one or more disjoint simple closed curves, by
+letting the hyperbolic length of the curves go to 0. The resulting surface then has
+nodes or punctures and may not be connected. For example if a closed surface of genus
+g is pinched along a single closed curve γ and γ does not disconnect M, the resulting
+surface has genus g − 1 with 2 punctures, while if γ is dividing, the resulting surface
+has two components each of which has one puncture and the sum of their genera is g.
+We can compactify Rg,n by adjoining the moduli spaces of surfaces obtained in this
+fashion.
+    Denote the compactification by R̄g,n . The topology has the following property. Let
+X0 be any surface in the compactification and Xn → X0 . Remove any neighborhood
+U of the punctures of X0 . Then for large enough n, there is a conformal embedding
+of X0 \ U → Xn .
+    The compactification by these moduli spaces is well-behaved with respect to
+quadratic differentials. For suppose φn are unit norm quadratic differentials on Xn
+which converge to X0 ∈ R̄g,n . Then there is a subsequence of φn which converges uni-
+formly on compact sets of X0 via the conformal embedding to an integrable quadratic
+differential φ0 . However it may be the case that φ0 ≡ 0 on one or more components
+of X0 . This issue will be discussed further in the section on periodic orbits.
+
+2.3    Strata of quadratic differentials
+Fix a surface M of genus g. Let σ = (k1 , . . . , kj , ǫ) be an j + 1 tuple where ki
+are integers which are either positive or −1 satisfying ki = 4g − 4 and ǫ = ±.
+                                                            P
+
+Consider the set of quadratic differentials with zeroes of order ki , and simple poles
+if ki = −1, the sign + if the quadratic differential is the square of a holomorphic
+1 form, and − otherwise. These spaces can be empty (see [50] for necessary and
+sufficient conditions) and need not be connected – [61] and [42]. We say that two
+such quadratic differentials are equivalent if there is a homeomorphism of M isotopic
+to the identity taking singular points to singular points of the same order and which
+at other points has the same local form as the change-of-coordinate functions. The
+resulting space is denoted by Q(σ) and one can prove that this is a manifold. In the
+case that all ki = 1 (and ǫ = −1) Q(σ) is called the principle stratum. For fixed g,
+the union of the Q(σ) where all ki > 0, is the space of all quadratic differentials Qg
+over Tg . It is a well-known part of Teichmuller theory that Tg is a complex manifold
+
+
+                                          19
+and Qg is the cotangent bundle, although we will not make use of this structure in
+this paper. The strata Q(σ) are not closed subsets of Qg , unless there is a single zero
+(n = 1). This is because a sequence in Q(σ) may collapse a pair of lower order zeroes
+into a higher order one.
+    The group Mod(g) acts on each Q(σ). The quotient is denoted by QD(σ) and will
+play a crucial role in this paper. Since Mod(g) does not act freely, the space QD(σ)
+has the structure of an orbifold.
+
+2.4    SL(2, R) action on quadratic differentials
+The group SL(2, R) acts on quadratic differentials by linear transformations of lo-
+cal coordinates, preserving each stratum. If {uα } is an atlas of natural coordinates
+defining a quadratic differential φ, and A ∈ SL(2, R) then {Auα } defines a new fam-
+ily of natural coordinates for a quadratic differential Aφ. We require that A takes
+singularites of φ to singularities of Aφ of the same order.
+    The following one parameter subgroups of SL(2, R) are of special interest:
+
+                       et/2    0                        cos θ sin θ               1 s
+                                                                                
+            gt =                          , rθ =                     , hs =           ,
+                        0     e−t/2                    − sin θ cos θ              0 1
+
+referred to as the geodesic or Teichmuller, circular and horocyclic flows, respectively.
+     The effect of the flow φ → gt φ is to stretch along the horizontal trajectories of φ
+by a factor of et and contract along the vertical trajectories by et . The flow contracts
+the transverse measure of the horizontal foliation and expands the transverse measure
+of the vertical foliation. Associated to gt is the map ft of the underlying Riemann
+surfaces X → Xt , called the Teichmuller map. The famous theorem of Teichmuller
+asserts that given any homeomorphism f : X → Y of Riemann surfaces of finite
+type, there is a unique Teichmuller map in the homotopy class which minimizes the
+maximal dilation.
+     The action of rθ on a quadratic differential φ is the same as multiplying φ by
+e2iθ . This multiplication defines an action of the circle R/πR on the set of quadratic
+differentials. Note that the action of rθ leaves the flat metric invariant, but changes
+the vertical line field.
+     The action on saddle connections is as follows. Let
+                                                       "         #
+                                                           a b
+                                              A=
+                                                           c d
+
+
+                                                       20
+be a matrix in P SL(2, R). Let β be a saddle connection, and let h1 and v1 be
+its horizontal and vertical components with respect to φ. Then the horizontal and
+vertical components h2 and v2 with respect to Aφ are given by matrix multiplication;
+namely                       "     # "      #   "    #
+                               a b      h1        h2
+                                     ·        =        .
+                               c d      v1        v2
+    The orbit of a quadratic differential under P SL(2, R) is called a Teichmuller disc
+and has been considered by numerous authors – see [43], for example. In a later
+section we will examine certain examples of Teichmuller discs that arise in the so-
+called Veech billiards and their generalizations.
+    The action of SL(2, R) commutes with the action of Mod(g) and thus descends
+to an action on QD(σ). It is this action we will study in some detail.
+    Invariant measure on the strata. It is possible to define an SL(2, R) invariant
+measure µ0 on each QD(σ) which is absolutely continuous with respect to the orbifold
+structure. We show how to do this for the principle stratum QD(σ). The measure
+is defined locally. A saddle connection of φ0 persists under small perturbation of φ0 .
+There are a finite number of such saddle connections β1 , . . . , βn whose horizontal and
+vertical components (hβ1 , vβ1 , . . . , hβn , vβn ) serve as local coordinates for Q(σ) in a
+neighborhood of φ0 . Specifically, pass to a double cover π : M̃ → M, ramified over
+the zeroes of φ0 . There is an involution τ of M̃ which interchanges the sheets. We
+choose the βi such that their lifts to M̃ form a basis for the first homology of M̃ , odd
+with respect to the involution τ . The measure µ0 is then Lebesgue measure on R2n
+pulled-back to Q(σ) via these local coordinates. One sees that µ0 does not depend on
+choice of basis βi , so actually defines a measure. It is easily seen to descend to QD(σ)
+and to be SL(2, R) invariant. The measure was shown to be finite and ergodic on the
+principle stratum in [44] and then on each component of general stratum in [60], [61].
+The following problem is quite interesting: to classify all ergodic SL(2, R) invariant
+measures on QD(σ).
+
+
+3     Ergodicity
+3.1    Veech nonuniquely ergodic example
+Definition 3.1 A foliation F is uniquely ergodic if it is minimal and the transverse
+measure is unique up to scalar multiplication.
+
+
+                                             21
+    Unique ergodicity is equivalent to the following condition. Let G be any foliation
+with transverse measure, transverse to F . For any point x0 , the transverse foliation
+G defines an arc length l(t) on the leaf of F through x0 in either direction. The pair
+(F, G) defines a measure µ on M. For every continuous function f (x) on M and every
+point x0 we have
+                                1 T
+                                  Z                Z
+                            lim       f (l(t))dt =     f (x)dµ(x).
+                           T →∞ T 0                 M
+    The classical example of a uniquely ergodic foliation is the irrational flow on the
+flat torus – see [34] for a detailed discussion.
+    Veech example. In [59] Veech constructed examples of minimal and not uniquely
+ergodic dynamical systems that are skew products over irrational rotations of the
+circle. Take two copies of the unit circle and mark off a segment J of length 2πα in
+the counterclockwise direction on each with one endpoint at 0. Now take θ irrational
+and consider the following dynamical system. Start with a point p, say in the first
+circle. Rotate counterclockwise by 2πθ until the first time the orbit lands in J; then
+switch to the corresponding point in the second circle, rotate by 2πθ until the first
+time the point lands in J; switch back to the first circle and so forth. Veech showed
+that if θ is an irrational with unbounded partial quotients, then there are α such that
+this system is minimal and not uniquely ergodic (see also [34], section 14.5e).
+    Geometric criterion for nonergodicity. We now give a geometric description
+of Veech’s examples and show that for any irrational α there is an uncountable set
+of θ such that the system is minimal and not uniquely ergodic. This work represents
+unpublished work of John Smillie and the first author. In order to do that we first
+give a geometric criterion of how to find nonergodic foliations. This criterion was
+given in [49]. To set the notation let E0 , E1 , . . . be a sequence of subsets in M so
+that En ∩ En+1 = ∅ and each En is bounded by a set of saddle connections all in
+the same direction θn . Assume the directions θn converge to θ∞ . Let Fθ∞ be the
+foliation in direction θ∞ . Rotate the coordinate system so that θ∞ is the vertical
+direction. Define a system of partitions Pn = [An , Bn ] of M as follows. If n is even,
+then An = En and Bn = Enc (complement of En ), and if n is odd, then An = Enc and
+Bn = En . Let hn be the sum of the horizontal components of the saddle connections
+separating An and Bn . Let µ be the measure defined by the flat structure.
+Theorem 3.2 Suppose that
+   • (i) limn→∞ hn = 0
+   • (ii) for some c, c′ , 0 < c ≤ µ(An ) ≤ c′ < 1
+
+                                           22
+             P∞
+   • (iii)    n=1 µ(An ∆An+1 ) < ∞
+
+Then the vertical foliation Fθ∞ is nonergodic.
+
+Proof. Let
+
+              A∞ = lim inf An = {x : ∃N such that for n ≥ N, x ∈ An }.
+
+              B∞ = lim inf Bn = {x : ∃N such that for n ≥ N, x ∈ Bn }.
+We first show that A∞ and B∞ satisfy
+   • (1) µ(M \ (A∞ ∪ B∞ )) = 0.
+
+   • (2) A∞ ∩ B∞ = ∅
+
+   • (3) µ(A∞ ∆An ) → 0 as n → ∞.
+
+   • (4) 0 < µ(A∞ ) < 1.
+By (iii) and the Borel-Cantelli Lemma the set of x′ which are in infinitely many
+An ∆An+1 has µ measure 0. ¿¿From this we have (1). Statement (2) is immediate.
+To see (3) note that
+                            A∞ ∆An ⊂ ∪∞ i=n Ai ∆Ai+1
+
+so that                                   ∞
+                                          X
+                           µ(A∞ ∆An ) ≤         µ(Ai ∆Ai+1 ).
+                                          i=n
+
+   Hypothesis (iii) implies that the right hand side goes to 0 as n goes to infinity,
+proving (3). Statement (4) follows from (3) and (ii).
+   Returning to the proof of Theorem 3.2 , we can assume that the vertical foliation
+Fθ∞ is orientable: if not, we may replace M by an orientable double cover and replace
+A∞ and B∞ by their lifts. Now let ft be the flow along vertical leaves.
+   We claim that for any t the set A∞ is µ a.e. invariant; that is,
+
+                                µ(ft (A∞ )∆A∞ ) = 0.
+
+Suppose on the contrary, that for some t0 , we have µ(ft0 (A∞ )∆A∞ ) = δ > 0. By (3)
+and (i) we may choose n large enough so that
+
+                        µ(A∞ ∆An ) < δ/8 and et0 hn < δ/8.
+
+                                          23
+Since ft0 is µ preserving, the first inequality above and the assumption give
+
+                           µ(ft0 (An )∆An ) ≥ δ − 2δ/8 = 3δ/4.
+
+     Thus at time t0 , 3δ/8 of the measure of An flows to its complement. However at
+most et0 hn < δ/8 of measure can cross the boundary of An , a contradiction, proving
+the claim. We would like to conclude that A∞ is flow invariant, although by the claim
+it is only a.e. invariant for each time. The theorem is a consequence of the following
+general lemma.
+
+Lemma 3.3 Let ft be a flow on a space X preserving a probability measure µ. Sup-
+pose there is a set A such that for every t, µ(ft (A)∆A) = 0. Then there is a set A′
+invariant under ft with µ(A∆A′ ) = 0.
+
+Proof. Let λ be Lebesgue measure on R. Let
+
+                             A′ = {x : ft (x) ∈ A for λ a.e.t}.
+
+It is clear that A′ is ft invariant. We will show that µ(A∆A′ ) = 0. Let
+
+                 C0 = {(x, t) : x ∈ A} and C1 = {(x, t) : ft (x) ∈ A}.
+
+For every t we have
+
+                      µ({x : (x, t) ∈ C0 ∆C1 }) = µ(ft (A)∆A) = 0.
+
+This implies that (µ × λ)(C0 ∆C1 ) = 0. By Fubini there is a set X ′ of full µ measure
+so that for all x ∈ X ′ ,
+                            λ({t : (x, t) ∈ C0 ∆C1 }) = 0.
+If x ∈ X ′ ∩ A then (x, t) ∈ C0 so that λ({t : (x, t) ∈    / C1 }) = 0. Therefore the set
+{t : ft (x) ∈ A} has full λ measure so x ∈ A′ . If x ∈ X ′ \A then the set {t : (x, t) ∈
+                                                                                       / C1 }
+has full λ measure so that x ∈ / A . Thus A∆A is contained in the complement of X ′
+                                   ′              ′
+
+so µ(A∆A′ ) = 0. This finishes the proof of the Lemma and therefore the Theorem.
+✷
+    Back to Veech example. Now we wish to return to the Veech examples which
+will be described in terms of quadratic differentials. We start with a square torus T ;
+that is, the unit square with lower left vertex at (0, 0) with opposite sides identified.
+Equivalently, it is R2 modulo the integer lattice. Fix a point (x0 , y0 ) ∈ R2 . For
+
+                                             24
+integers m, n let w be a segment in R2 joining (0, 0) to (x0 + m, y0 + n), projected to
+T . Take two copies of T , each slit along w, and identify the positive side of w on one
+copy to the negative side in another. It is easy to see that this results in a quadratic
+differential φ on a surface M of genus 2. Since the total angle around each of the
+points (0, 0) and (x0 + m, y0 + n) is 4π, they correspond to zeroes of order 2 of φ.
+The surface of genus 2 is partitioned into 2 sheets Mw+ and Mw− separated from each
+other by the union of the two slits.
+
+Theorem 3.4 Suppose x0 , y0 are not rationally related; that is, for any pair of ra-
+tionals, r1 , r2 , the equation r1 x0 + r2 y0 = 0 implies r1 = r2 = 0. Then there exists
+uncountably many directions θ such that the flow on M in direction θ is minimal and
+not ergodic.
+
+    In the special case that x0 = 0 and y0 = α, so that the slit is along the vertical
+axis, the resulting surface M has two metric cylinders in the vertical direction, one
+for each sheet. Choose the core curve of each metric cylinder. The first return map
+to this pair of curves for the flow in direction θ is precisely the dynamical system
+studied by Veech.
+    This same dynamical system can be described in terms of rational billiards by
+taking a rectangle of length 2 and width 1, with an interior slit of length α from the
+midpoint of a horizontal side.
+
+   Fig. 6
+
+Proof. Suppose w ′ is another segment on T with the same endpoints as w. Suppose w
+and w ′ intersect an odd number of times in their interior so they divide each other into
+an even number of pieces. This is equivalent to saying that w and w ′ are homologous
+mod 2 on T . The sheet interchange measured by c = (Mw+ ∩ Mw−′ ) ∪ (Mw− ∩ Mw+′ ) is
+a union of an even number of parallelograms with sides on w and w ′ (here w and w ′
+are thought of as vectors). Thus the area of c is at most |w × w ′|.
+
+   Fig. 7
+
+    Now fix a sequence of positive numbers ρj with         ρj < ∞. We will build an
+                                                         P
+
+infinite directed tree with each vertex leading to 2 further vertices. At level j there
+will be 2j−1 vertices. Each vertex will correspond to a pair of integers (p, q) which
+will determind a slit with endpoints (0, 0) and (x0 + p, y0 + q).
+
+
+                                           25
+     For any pair (p, q) form the quotient (p+x0 )/(q+y0 ), the slope of the corresponding
+slit. Let δj be the minimum distance between any two slopes as (p, q) varies over the
+vertices at level j. Now inductively, suppose we have determined the tree up to level
+j. For each vertex (p, q) at level j we will choose two vertices (p′ , q)′ and (p′′ , q,′′ ) at
+level j + 1, and call these the two children of (p, q). To find such children begin by
+choosing an even integer d such that
+                                          ρj
+                                                      < δj /4.
+                                (q + y0 )(q + y0 + d)
+
+Then consider the inequality
+
+                              d|(p + x0 )n − (q + y0 )m| < ρj
+
+Since x0 and y0 are not rationally related, neither are p0 + n and q + y0 , and so there
+are infinitely many coprime solutions (m, n). Choose any two of them and set
+
+                              p′ = p + dm and q ′ = q + dn,
+
+calling the two resulting two pairs the children. A direct calculation shows that
+
+                                        p + x0 p′ + x0
+                              δj′ = |          − ′     | < δj /4.
+                                        q + y0  q + y0
+That is to say, the distance between the slope of a slit and either child is bounded
+by δj /4. Then the distance between the slopes of the two children of (p, q) is at most
+δj /2, which implies that
+                                    δj+1 < δj /2.
+Let w be the segment corresponding to the parent and w ′ the segment of a child.
+Since d is even, w ′ is homologous to w mod 2. In fact w ′ − w represents d times
+the primitive class of (m, n). As we have seen the area of the sheet interchange c is
+bounded by |w ′ × w|, and an easy calculation shows that this is bounded by
+
+                              |(p + x0 )n − (q + y0 )m]| < ρj .
+
+Thus, in the situation of Theorem 3.2, we have constructed a sequence of par-
+titions satisfying (iii). Now for any geodesic in the tree, the sequence of ratios
+(p + x0 )/(q + y0 ) is a Cauchy sequence hence converging to some θ∞ . From this,
+condition (i) of Theorem 3.2 follows. Condition (ii) holds since the partition divides
+
+                                                26
+the surface into two pieces of equal areas. Thus by Theorem 3.2 the limiting foliation
+Fθ∞ is not ergodic.
+    We now show that, in fact, there are uncountably many limiting directions. Since
+there are only countably many directions that are not minimal, we then can conclude
+that there are uncountably many limiting directions which are minimal. Since each
+pair (p, q) has two children there are clearly uncountably many sequences. We there-
+fore need to show that any two limits are distinct. Suppose rj = (pj + x0 )/(qj + y0 ) →
+θ and a distinct sequence rj′ = (p′j + x0 )/(qj′ + y0 ) → θ′ . Suppose the sequences differ
+for the first time at stage j, so that the slopes rj and rj′ satisfy
+
+                                      |rj − rj′ | ≥ δj .                             (4.5)
+
+Then by (4.3) and (4.4) we have
+
+                                pj + x0    X         X δk   δj
+                         |θ −           |≤     δk′ <       < ,
+                                qj + y0    k≥j       k≥j 4  2
+
+and similarly |θ′ − rj′ | < δj /2. Combined with (4.5), we have θ 6= θ′ .           ✷
+    The above theorem gives uncountably many minimal nonergodic directions. By
+requiring α to satisfy a Diophantine condition, it is even possible to show that there
+is a set of such examples of positive Hausdorff dimension (see Further ergodicity
+results below). The main result of the next section however says that the set of
+nonergodic directions must have Lebesgue measure 0.
+
+3.2    Ergodicity in almost every direction
+Theorem 3.5 ([40]) For any quadratic differential φ (rational billiard) the set of
+θ ∈ [0, 2π] such that rθ φ has minimal but non-uniquely ergodic vertical foliation has
+Lebesgue measure 0.
+
+    The proof of this theorem uses the SL(2, R) action on quadratic differentials and
+some combinatorial constructions related to quadratic differentials. Let QDǫ be the
+set of quadratic differentials all of whose saddle connections have length at least ǫ.
+Recall that Rg is the moduli space of Riemann surfaces of genus g.
+
+Proposition 3.6 QDǫ is compact in QD.
+
+
+
+                                             27
+Proof. QDǫ is clearly closed in QD since if φn → φ and φ has a geodesic segment of
+length less than ǫ so does φn for n large. It is therefore enough to show that QDǫ lies
+over a compact set in Rg . If not, there is a sequence φn ∈ QDǫ of quadratic differentials
+lying on Riemann surfaces Xn going to infinity in Rg . Passing to subsequences we may
+assume that Xn converges to a Riemann surface X∞ with nodes or punctures acquired
+by pinching along a set of disjoint simple closed curves α1 , . . . , αp . By passing to a
+further subsequence we can assume that φn converges uniformly on compact sets to
+an integrable quadratic differential φ∞ on X∞ .
+    Thus φ∞ has at most simple poles at the nodes. There is therefore a curve αj
+homotopic to a puncture with φ∞ length at most ǫ/2. For large n the uniform
+convergence implies that αj has φn length at most ǫ/2, a contradiction.                 ✷
+
+Definition 3.7 A quadratic differential φ is called divergent if the Riemann surfaces
+on which gt φ lie, eventually leave every compact set of Rg as t → ∞.
+
+Theorem 3.8 Suppose the vertical foliation Fφ of φ is minimal but not uniquely
+ergodic. Then φ is divergent.
+
+Proof. Suppose the theorem is not true so that for some sequence tn → ∞ the
+Riemann surfaces Xn = Xtn converge in Rg to some X0 . By passing to a further
+subsequence we may assume that φn = gtn (φ) converges to some φ0 on X0 . Let ftn
+be the corresponding Teichmuller map. Denote by Σ and Σ0 the sets of zeroes of φ
+and φ0 , rspectively.
+    The normalized transverse measures on the topological foliation Fφ form a finite
+dimensional convex set for which the extreme points νi are mutually singular ergodic
+measures – see [67]. Let ν0 be the transverse measure of Fφ . We have ν0 = m        i=1 ci νi ,
+                                                                                 P
+
+for constants ci . Pick a segment I of a horizontal trajectory of φ so that νi (I) 6= νj (I)
+for i 6= j. Let µ the transverse measure to the horizontal foliation defined by φ. This
+means that the area element |φ(z)dz 2 | = ν0 × µ. Let Ei ⊂ X be the disjoint sets of
+generic points of the measure νi × µ for the interval I. We have (νi × µ)(Ei ) = 1.
+Each Ei is a union of leaves of Fφ .
+    For each i let Ai ⊂ X0 denote the set of accumulation points of ftn (x) ∈ Xn for
+x ∈ Ei . Now let U ⊂ X0 be any open set. We claim that there is a j such that
+
+                                        U ∩ Aj 6= ∅.
+
+To prove the claim, choose an open W so that W̄ ⊂ U. Since Xn → X0 , for each n,
+W may be considered as a subset of Xn with area bounded below by δ > 0. Consider
+
+                                              28
+Wn = ft−1n
+           (W ) ⊂ X. Since ftn preserves area, (ν0 × µ)(Wn ) > δ. Then for each n,
+there is a j = j(n) such that
+                                                              δ
+                      (νj × µ)(Ej ∩ Wn ) = (νj × µ)(Wn ) ≥       .
+                                                             mcj
+Choose a j so that this inequality holds for infinitely many n. This implies that there
+exists some x ∈ Ej ∩ Wn for infinitely many n. Since ftn (x) ∈ W , ftn (x) has an
+accumulation point in W̄ , proving the claim.
+    Partition X0 into a finite number of rectangles in the natural coordinates of φ0
+whose sides are horizontal and vertical segments. Adjacent rectangles meet along a
+common horizontal or vertical segment of a side. Each point of Σ0 is required to
+be a vertex of a rectangle. For each pair of adjacent rectangles R1 , R2 choose open
+sets Ui ⊂ Ri with the property that if yi ∈ Ui there is a vertical segment li with
+one endpoint yi such that l1 , l2 are two sides of a coordinate rectangle contained in
+R1 ∪ R2 . For any two points y1 , y2 in the same coordinate rectangle there are vertical
+segments li with endpoints yi which are the vertical sides of a coordinate rectangle.
+Now by the claim, by passing to further subsequences of tn , for each open set Ui we
+may choose yi ∈ Ui and xi ∈ ∪m  j=1 Ej such that yi = lim ftn (xi ).
+
+   Fig. 8
+
+    Now suppose U1 , U2 are such open sets contained in either adjacent or the same
+rectangle with corresponding yi and xi . We claim that x1 and x2 must belong to the
+same Ej . Assume otherwise. By renumbering assume xi ∈ Ei , i = 1, 2. Let li be the
+vertical segments with endpoints yi and which are vertical segments of a coordinate
+rectangle. They have the same length. Each li is the limit of vertical segments li,n
+of equal length of gtn φ with one endpoint ftn (xi ). Each li,n is the image under ftn of
+a vertical segment Li,n ⊂ Ei passing through xi ; Li,n have equal length which go to
+∞ with n. Therefore the number of intersections of Li,n with I goes to ∞ and since
+Li,n ⊂ Ei ,
+                 card(li,n ∩ ftn (I))       card(L1,n ∩ I)   ν1 (I)
+              lim                     = lim                =        6= 1.
+             n→∞ card(l2,n ∩ ft (I))    n→∞ card(L2,n ∩ I)   ν2 (I)
+                               n
+
+
+    But since li,n has limit li and every horizontal segment of φ0 that intersects l1
+intersects l2 and vice versa,
+                                   card(l1,n ∩ ftn (I))
+                                   card(l2,n ∩ ftn (I))
+
+                                           29
+can be made arbitrarily close to 1 by taking n large enough. This is a contradiction,
+proving the claim.
+     Any two rectangles R1 , Rn can be connected by a chain of rectangles R1 , . . . , Rn
+where Ri and Ri+1 are adjacent along a side. This fact and the last claim imply that
+there is a single index j such that xi ∈ Ej for all xi .
+     Choose some index i 6= j and x ∈ Ei \ Σ. Let y ∈ X0 be an accumulation point of
+ftn (x). By passing to further subsequences of tn we can assume that there is a single
+rectangle R such that ftn (x) ∈ R and limn→∞ ftn (x) = y. Let Uk ⊂ R be one of the
+open sets found previously. We may find vertical segments l ⊂ R with one endpoint
+y and l′ ⊂ R with endpoint yk = lim ftn (xk ) such that l, l′ are two vertical sides of
+a coordinate rectangle contained in R. We may find vertical segments ln and ln′ of
+gtn φ of equal length, ln → l and ln′ → l′ , ln has endpoint ftn (x) and ln′ has endpoint
+ftn (xk ). As before
+                                     card(ln ∩ ftn (I))
+                                     card(ln′ ∩ ftn (I))
+can be made arbitrarily close to 1 by taking n large enough, and yet since x and xk
+are points of Ei and Ej respectively, the ratio has limit
+
+                                       νi (I)
+                                              6= 1,
+                                       νj (I)
+
+and we have our contradiction.                                                         ✷
+   The proof of Theorem 3.5 follows from the above theorem and the next
+
+Theorem 3.9 The set of θ ∈ [0, 2π] such that rθ φ is divergent, has Lebesgue measure
+zero.
+
+3.3    A combinatorial construction
+In order to prove this theorem we will need to discuss certain a combinatorial con-
+struction. We fix a stratum QD(σ).
+
+Definition 3.10 Two saddle connections are disjoint if their only common points
+are vertices.
+
+Denote by p0 = p0 (σ) the maximum number of disjoint saddle connections. A set of
+disjoint saddle connections Γ is called a system. By |Γ| we mean the maximum length
+
+
+                                           30
+of any member of Γ. By a complex K we mean a subset of M consisting of disjoint
+saddle connections and triangles, such that a triangle is in K if and only if its sides
+are in K. An ǫ complex is a complex all of whose saddle connections have length at
+most ǫ. We denote the (topological) boundary of K by ∂K. Then ∂K is a system of
+saddle connections.
+    Note that if K is a complex, then K \ ∂K (viewed as a subset of M) is a (possibly
+empty) domain. We say that the complexity of a complex is j if it has j saddle
+connections, including those on the boundary. The main construction is as follows.
+
+Proposition 3.11 If K is a complex of complexity i and σ is a saddle connection
+crossing ∂K or disjoint from K, then there is a complex K ′ of complexity j > i with
+K ⊂ K ′ and |∂K ′ | ≤ 3|∂K| + |σ|.
+
+Proof. If σ is disjoint from K, we may just add σ to K. Thus we may assume
+that σ crosses ∂K at a point Q on a segment ω with endpoints A, B. In following σ
+from Q into the exterior of K to its other endpoint P , suppose σ hits P before again
+crossing ∂K. We may form a polygon with no interior singularities whose sides are
+ω, a possibly broken geodesic joining A to P and a possibly broken geodesic joining
+B to P . The edges and diagonals of this polygon have lengths bounded by |σ| + |ω|.
+Since ω is a boundary edge of K not all of the edges and diagonals of the polygon
+can be in K. We may therefore add an edge that is not in K.
+
+   Fig. 9
+
+     Thus assume that before next hitting P , σ again crosses ∂K at Q1 , an interior
+point of a segment ω1 . Let the endpoints of ω1 be denoted C, D. Let σ̂ be the
+subsegment of σ joining Q to Q1 . Now move σ̂ parallel to itself with one endpoint
+moving along ω toward A , the other along ω1 toward D. This can be done until for
+a first time a segment σ1 parallel to σ̂ either contains a singularity P0 in its interior
+or is an endpoint of ω or an endpoint of ω1 , say A. We have |σ1 | ≤ |σ| + |ω| + |ω1 |.
+In the first case we build a polygon as before, with σ1 replacing σ. In the second case
+also replace σ with σ1 and also replace ω with ω1 and P with A. Then we may use
+σ1 , A, and ω1 to form the desired polygon.                                            ✷
+
+Definition 3.12 Let ǫ < C. A saddle connection γ is (ǫ, C) isolated if it has length
+less than ǫ and every saddle connection that crosses γ in its interior has length greater
+than C.
+
+                                           31
+   Since any two (ǫ, C) isolated curves are disjoint, the number of such curves is
+bounded above by p0 .
+
+Definition 3.13 For a quadratic differential φ let nǫ (φ) be the maximum number of
+simplices in a connected ǫ complex.
+
+Definition 3.14 For a stratum QD(σ) let N(ǫ, C) be the set of quadratic differentials
+in the stratum which possess (ǫ, C) isolated saddle connections.
+
+Proposition 3.15 Let µ denote Lebesgue measure on the circle. Suppose there is a
+set S of angles θ of positive measure so that rθ φ is divergent for θ ∈ S. Then there
+are
+
+   • (1) a sequence of times Ti → ∞
+
+   • (2) a sequence of sets Si ⊂ S and a number δ > 0 such that µ(Si ) ≥ δ
+
+   • (3) a sequence ǫi → 0
+
+   • (4) a positive constant C such that gTi rθ φ ∈ N(ǫi , C) for θ ∈ Si .
+
+    The idea behind this Proposition is that since the Riemann surface of gt rθ φ even-
+tually leaves every compact set, there will be times Ti after which there will always be
+a segment of length less than ǫi in the corresponding metrics. For a fixed C, however,
+the sets N(ǫi , C) do not form a neighborhood basis of infinity so it may not be the
+case that for sufficiently large Ti that there will be always (ǫi , C) isolated segments.
+Nevertheless by passing to slightly smaller sets than Si we will be able to make the
+statement for isolated segments.
+Proof. Choose a sequence ǫi → 0. Since for each ǫi the set QDǫi is compact, for each
+divergent ray rθ (q) there are times Ti such that gt rθ (q) ∈ QD \ QDǫi for all t ≥ Ti .
+Then Ti can be chosen so that this relationship holds for all θ ∈ S ′ where S ′ ⊂ S and
+µ(S ′ ) > µ(S)/2.
+   Consider now triples of sequences (ǫi , Ti , Si ) such that ǫi → 0, Ti → ∞, µ(Si )
+bounded away from 0 and gTi rθ φ ∈ QD \ QDǫi for θ ∈ Si . The set of triples is
+nonempty for we can take Si = S ′ for all i. Choose a sequence of triples that maxi-
+mizes
+                                  min min nǫ (gTi rθ φ).
+                                    i   θ∈Si
+
+
+
+
+                                               32
+For the corresponding sequence, for each i and θ ∈ Si let Ci,θ be the length of the
+shortest saddle connection that crosses a boundary segment of the ǫi complex of
+gTi rθ φ. For each i, let mi be a number so that
+
+                          µ({θ ∈ Si : Ci,θ ≥ mi }) = µ(Si )/2.
+
+We claim that the numbers mi are bounded below. Suppose not. Choose a subse-
+quence converging to 0 and for that subsequence let
+
+                              Si′ = {θ ∈ Si : Ci,θ < mi },
+
+so µ(Si′) = µ(Si )/2 is bounded below, and let
+
+                                   ǫ′i = 3ǫi + mi → 0.
+
+Fix θ ∈ Si′ . Since there is an ǫi complex and a saddle connection of length at most
+mi crossing it, by Proposition 3.11 we can find an ǫ′i complex on gTi rθ φ with more
+simplices, contradicting the maximality of our sequence of triples. Thus the set of
+mi is bounded below, by some C > 0. If we replace Si with the set of θ such that
+Ci,θ ≥ mi ≥ C, every saddle connection crossing the ǫi complex has length at least
+C, proving the proposition.                                                           ✷
+    Let α be a geodesic segment. For some θα , the segment α is vertical with respect
+to rθα φ. Rotate the coordinate system so that θα = 0. Denote by l(t, θ) the length of
+α with respect to the structure gt rθ φ, so that |α|φ = l(0, 0). In these coordinates
+
+                       l(t, θ) = l(0, 0)(et sin2 θ + e−t cos2 θ)1/2 .
+
+Fix t ≥ 0 and choose ǫ > 0. Define two intervals Iα ⊂ Jα ⊂ (−π/2, π/2) with respect
+to the rotated coordinates:
+
+                            Iα = {θ : | sin θ| ≤ ǫ/(vet/2 )},
+
+                           Jα = {θ : | sin θ| ≤ C/(2vet/2 )}.
+
+Lemma 3.16 For θ ∈     / Iα one has: l(t, θ) ≥ ǫ. There are constants ǫ1 , T, K indepen-
+dent of α such that for ǫ < ǫ1 and t > T we have µ(Iα )/µ(Jα) < Kǫ. In addition if
+l(t, θ) < ǫ for some θ, then l(t, θ) < C for all θ ∈ Jα .
+
+
+
+                                            33
+Proof. The first statement is immediate from the definition. If l(t, θ) < ǫ for some
+θ then, since l(t, θ) attains its minimum at θ = 0,
+
+                            ve−t/2 | cos θ| ≤ ve−t/2 ≤ l(t, θ) < ǫ.
+
+For θ ∈ Jα , we then have
+
+                         l(t, θ) ≤ (C 2 /4 + ǫ2 e−t )1/2 ≤ C/2 + ǫ.
+
+If we choose ǫ1 = C/2 and ǫ < ǫ1 then l(t, θ) < C. This proves the last statement.
+    Let Iα′ and Jα′ be the images of Iα and Jα under the sine function. If C/(2vet/2 ) <
+1/2 then Jα′ is contained in the interval (−1/2, 1/2) and µ(Iα′ )/µ(Jα′ ) = 2ǫ/C. Since
+the arcsine function restricted to the interval (−1/2, 1/2) is Lipschitz and has a Lip-
+schitz inverse, it changes the lengths of intervals by a bounded amount. Thus we can
+choose a constant K depending on C such that µ(Iα )/µ(Jα ) < Kǫ as claimed.
+    To ensure that C/(2vet/2 ) < 1/2 choose T such that C/(2meT /2 ) < 1/2 where m
+is the length of the shortest saddle connection on φ. Since v ≥ m and t > T , the
+inequality holds and the proof of the lemma is finished.                               ✷
+    The last technical statement we need is as follows.
+
+Proposition 3.17 There are constants T, ǫ1 , K ′ such that for t > T and ǫ < ǫ1 one
+has:
+                       µ({θ : gt rθ φ ∈ N(ǫ, C)}) < K ′ ǫ.
+
+Proof. Fix T and ǫ < ǫ1 as in the preceding lemma. Consider all saddle connections
+α which are (ǫ, C) isolated with respect to gt rθ φ for some θ. For each such α let Iˆα
+be the smallest interval of θ′ s for which α is (ǫ, C) isolated. Then Iˆα ⊂ Iα ⊂ Jα .
+    Construct a new open interval Jˆα as follows: the left-hand endpoint of Jˆα will be
+halfway between the lefthand endpoints of Iˆα and Jα , and the righthand endpoint of
+Jˆα will be halfway between the righthand endpoints of Iˆα and Jα . The point of this
+construction is the fact that if Jˆα and Jˆβ intersect, then either Jα intersects Iˆβ or Jβ
+intersects Iˆα . Assume the first. We can find θ ∈ Jα ∩ Iˆβ such that β is (ǫ, C) isolated
+with respect to gt rθ q. Now, with respect to the metric of gt rθ φ, the saddle connection
+α has length less than C, and β cannot cross any geodesic segment of length less
+than C. Thus α and β are disjoint. The maximum number of disjoint segments is p0 .
+Therefore no θ can lie in more than p0 segments Jˆα . The sum of the lengths of the
+Jˆα is at most 2πp0 . The sum of the lengths of the Jα is at most 4πp0 . The sum of
+
+                                              34
+the lengths of the intervals Iα is at most 4Kπǫp0 , and the intervals Iα cover the set
+of θ for which gt rθ φ ∈ N(ǫ, C). Thus we can take K ′ = 4Kπp0 .                    ✷
+Proof of Theorem 3.9. Assume the theorem is false. Then choose constants ǫi → 0,
+times Ti → ∞, a constant C, and sets Si so that Proposition 3.15 holds. In particular,
+µ(Si ) ≥ δ > 0. Let K ′ , T be as in Proposition 3.17; then, for ǫi small enough and
+Ti > T large enough, we have: µ(Si ) < K ′ ǫi . However, for ǫi small enough, one has:
+K ′ ǫi < δ, a contradiction.                                                        ✷
+
+
+3.4    Further ergodicity results
+In this section we mention, without proofs, some further results on ergodicity of
+vertical foliations of quadratic differentials.
+   The measure 0 result in Theorem 3.5 was improved in [48] to give a statement
+about Hausdorff dimension.
+
+Theorem 3.18 For any quadratic differential φ the set of θ ∈ [0, 2π] such that rθ φ
+has minimal but non-uniquely ergodic vertical foliation has Hausdorff dimension at
+most 1/2.
+
+    Recently Y.Cheung ([11]) has shown that the bound 1/2 is sharp by revisiting the
+Veech examples described at the beginning of this chapter. Assume that the number
+α in the Veech example is not Liouville, that is, there exists s ≥ 2 and c > 0 such that
+|α − p/q| > c/q s for all p, q. Under this assumption Cheung proved that the set of
+directions θ for which the system is minimal but not uniquely ergodic has Hausdorff
+dimension 1/2. This is to be contrasted with an unpublished result of Boshernitzan
+who showed the same set has Hausdorff dimension 0 for a residual set of α.
+    On the other hand positive Hausdorff dimension turns out to be typical as was
+shown in [49]. Recall the stratum QD(σ) and SL(2, R) ergodic invariant measure µ0
+on each component of QD(σ). Assume that σ 6= (∅; +), (1, −1; −), (−1, −1, −1, −1; −),
+that is, the quadratic differentials do not define a flat torus, once punctured torus, or
+four times punctured sphere.
+
+Theorem 3.19 For each component C of QD(σ) there is a δ = δ(C) > 0 such
+that for µ0 almost all φ ∈ C, the set of θ ∈ [0, 2π] such that rθ φ has minimal but
+non-uniquely ergodic vertical foliation has Hausdorff dimension δ.
+
+
+
+
+                                          35
+3.5       Ergodicity of general polygonal billiards
+Now we apply Theorem 3.5 to polygonal billiards. As before, the collection of plane
+polygonal regions with n vertices and a given combinatorial type is identified with a
+subset of R2n and is given a subspace topology. Recall that G(Q) denotes the group
+generated by reflections in the sides of a polygon Q.
+   The next result is in the spirit of Theorem 1.10 but is stronger.
+
+Theorem 3.20 ([40]) Let X be a closed subset of the space of billiard tables with the
+property that for any number N the set of rational tables Q ∈ X with card(G(Q)) ≥ N
+is dense. Then ergodic tables in X form a dense Gδ subset.
+
+Proof. We can assume that X ⊂ R2n is compact. Each Q ∈ X is a polygonal region
+in the plane. We can assume that the area of Q is 1. Let P X be the bundle whose
+base space is X and the fiber PQ over Q ∈ X is the phase space of the corresponding
+billiard table Q. Note that P X ⊂ X × R2 × S1 . Let µQ the product of area measure
+on Q with unit Lebesgue measure on S1 , and let φt be the billiard flow on P X.
+     Choose a sequence of continuous functions f1 , f2 . . . on P X which, when restricted
+to each PQ , are dense in L2 (PQ ). We make the further assumption that if v is
+an outward and v ′ is the corresponding inward vector on the boundary of Q, then
+fi (v) = fi (v ′ ). Let E(i, n, T ) be the set of Q ∈ X for which
+
+                                1
+                      Z             Z T                     Z
+                              (           fi (φt (z))dt −        fi dµ)2 dµ < 1/n.
+                          z∈PQ T     0                      PQ
+
+Let
+                                     E(i, n) = ∪∞
+                                                T =1 E(i, n, T ),
+
+and let
+                                         E = ∩∞    ∞
+                                              i=1 ∩n=1 E(i, n).
+
+The set of Q ∈ X for which φt restricted to PQ is ergodic is precisely E – see [51].
+We will prove that
+
+      • (1) The sets E(i, n, T ) are open, and
+
+      • (2) For a given i and n, there is an N such that E(i, n) contains all rational
+        tables Q for which card(G(Q)) > N.
+
+
+
+                                                    36
+Assuming these statements, the theorem is proved as follows. The first stetement
+implies that the sets E(i, n) are open. The second one implies that the E(i, n) are
+dense. Then E is a Gδ , and it follows from the Baire category theorem that E is
+dense in X.
+   Statement (1) is a consequence of the next result.
+
+Lemma 3.21 Let T > 0 be fixed, and let f be a continuous function on P X respecting
+the boundary identifications. Then
+                                 1
+                       Z             Z T                     Z
+                               (           f (φt (z))dt −          f dµQ )2 dµQ
+                           z∈PQ T     0                       PQ
+
+depends continuously on Q.
+
+Proof. For Q ∈ X let a(Q) = Py f dµQ . Clearly, a(Q) depends continuously on Q.
+                                     R
+
+    Replace the function f by the function f˜ defined as follows: for z ∈ PQ let
+˜
+f (z) = f (z) − a(Q). Then the proof of the lemma reduces to the proof of the
+continuity of the following function:
+                                               1
+                                      Z            Z T
+                            c(Q) =            [          f˜(φt (z))dt]2 dµQ .
+                                          z∈PQ T    0
+
+The difficulty is that, due to discontinuities of the billiard flow at the corners, the
+billiard orbits of close velocity vectors may diverge. Roughly speaking, this difficulty
+is overcome by deleting the set of velocity vectors whose trajectories hit a corner; this
+set has zero measure, and the time T trajectory depends continuously on the velocity
+vector in its complement.
+    More specifically, for z ∈ PQ ⊂ P X introduce an auxiliary function l(z) as the
+infimum of the distance from the time T trajectory of vector z to the set of vertices
+of the polygon Q. Clearly l(z) depends continuously on z, and the zero level set of
+l(z), that is, the set of velocity vectors whose time T trajectory hits a vertex, has
+zero measure.
+    Let ǫ > 0 be fixed, and let M = sup f˜. For a neighborhood N1 of Q in the space
+of polygons denote by Q1 the intersection of all polygons from N1 (note that Q1 is
+not a polygon). We can choose N1 so small that the area of Q1 is at least 1 − ǫ/6M 2 .
+    Let Cδ ⊂ PQ be the set of velocity vectors z for which l(z) ≥ δ. Choose δ small
+enough so that the measure of Cδ is at least 1 − ǫ/6M 2 . Let Dδ ⊂ Cδ consist of pairs
+(x, v) ∈ R2 × S1 with x ∈ Q1 . Note that the measure of Dδ is at least 1 − ǫ/3M 2 .
+
+                                                   37
+Since Q1 ×S1 is contained in PR for all R ∈ N1 , we can identify N1 ×Dδ with a subset
+of P X in a natural way. Let ¯l(R) be the infimum of l(z) for z ∈ (PR ∩ (N1 × Dδ )).
+Now ¯l is continuous and ¯l(Q) = δ. We can find a neighborhood N2 ⊂ N1 so that for
+all R ∈ N2 , ¯l(R) > 0. Let d(R) denote
+                                                1
+                              Z                     Z T
+                      d(R) =                  [           f˜(φt (z))dt]2 dµR .
+                             z∈(PR ∩(N1 ×Dδ )) T     0
+
+Then
+                 |d(R) − c(R)| ≤ M 2 µ(PR \ (PR ∩ (N1 × Dδ ))) ≤ ǫ/3
+for each R ∈ N2 . For R ∈ N2 the function f (φt (z)) depends continuously on t ∈ [0, T ]
+and z ∈ Dδ . Thus we can find a neighborhood N3 of Q in which d varies by less than
+ǫ/3. Then, for R ∈ N3 ,
+         |c(Q) − c(R)| ≤ |c(Q) − d(Q)| + |d(Q) − d(R)| + |d(R) − c(R)| ≤ ǫ.
+This completes the proof of continuity of c and the proof of the Lemma.        ✷
+    To finish the proof of the Theorem one needs to establish statement (2); this
+statement follows from the next lemma.
+
+Lemma 3.22 Fix n > 0 and let f be a continuous function on P X. Choose δ > 0
+so that if |θ1 − θ2 | < δ then |f (θ1 ) − f (θ2 )| < 1/2n. Let N ≥ 2/δ, and let Q be a
+rational polygon with |G(Q)| ≥ N. Then for sufficiently large T one has:
+                  Z
+                         1ZT                Z
+                 [     [     f (φt (z))dt −     f dµQ]2 dµQ ]1/2 < 1/n.
+                   z∈PQ T 0                  Px
+
+
+Proof. SinceR Q is fixed we will drop the subscripts from P, G and µ. For θ ∈ S1 let
+u(θ) = 1/|G| z∈Mθ f (z)dA where dA is the area measure on Mθ ; here, as before, Mθ
+is the invariant surface of the
+                             RT
+                                billird flow in direction θ. For z ∈ Mθ let u′(z) = u(θ).
+For z ∈ P let vT (z) = 1/T 0 f (φt (z))dt. The quantity which appears in the lemma
+is the norm in the space L2 (P ) of the function vT − f dµ. We claim that
+                                                         R
+
+
+                                      lim ||vT − u′ || = 0.
+                                      T →∞
+
+To prove the claim, notice that the surfaces Mθ are parametrized by θ ∈ S1 /G. We
+evaluate the norm by integrating first with respect to Mθ and then with respect to θ:
+                                  Z
+                                        1 Z
+                       ′
+             ||vT − u || = [|G|                 (vT (z) − u′ (z))2 dAdθ]1/2 .
+                                θ∈S /G |G| z∈Mθ
+                                   1
+
+
+
+
+                                              38
+Let
+                                     1 Z
+                         wT (θ) = [          (vT (z) − u′ (z))2 dA]1/2 .
+                                    |G| z∈Mθ
+Then                                             Z
+                                    ′
+                            ||vT − u || = [|G|               wT (θ)2 dθ]1/2 .
+                                                 θ∈S1 /G
+
+For a given θ the ergodicity of φ restricted to Mθ implies that limT →∞ wT (θ) = 0.
+Theorem 3.5 implies ergodicity for almost all θ. Since the functions wT are bounded
+and converge pointwise almost everywhere to 0, they converge to 0 in norm. This
+completes the proof of the claim.
+   The second claim is that
+                                            Z
+                                        ′
+                                    ||u −       f dµ|| ≤ 1/2n.
+
+Now ||u′ − f dµ|| is equal to the norm of u − f dµ in L2 (S1 ). Let θ1 and θ2 be
+            R                                                 R
+
+points in the circle at which u assumes its minimum and maximum values m and
+M, respectively. Note that u is constant on the orbits of G. The distance between
+neighboring points in a G orbit is less than 2/|G| < 2/N < δ. By replacing θ2 by
+g(θ2 ), where g ∈ G, we may assume that |θ1 − θ2 | < δ. It follows from the continuity
+assumption on f that since |θ1 − θ2 | < δ, then |u(θ1 ) − u(θ2 )| < 1/2n. Since u is
+defined byR averaging f , P f = S 1 u. Thus m ≤ f ≤ M; hence |u(θ) − f | ≤ 1/2n
+                         R     R                R                         R
+
+and ||u − f || ≤ 1/2n. This completes the proof of the claim.
+    We now complete the proof of the lemma. Choose T sufficiently large so that
+||vT − u′ || ≤ 1/2n. Then
+                     Z                                   Z
+                                        ′            ′
+            ||vT −       f || ≤ ||vT − u || + ||u −          f || ≤ 1/2n + 1/2n = 1/n,
+
+and we are done.                                                                         ✷
+
+
+3.6    Constructive approach to polygons with ergodic billiard
+       flow
+Ya. Vorobets gave a constructive description of a topologically massive set of polygons
+with ergodic billiard flow – see [65]. We describe his result without proof.
+
+Definition 3.23 Let φ(N) be a positive function of a positive integer N whose limit
+is zero as N → ∞. Let Q be a plane k-gon with angles α1 , ..., αk between the adjacent
+
+                                                 39
+sides. We say that Q admits approximation by rational polygons at the rate φ(N) if
+for every n > 0 there is N > n and positive integers n1 , ..., nk , each coprime with N,
+such that |αi − πni /N| < φ(N) for all i.
+
+   The next theorem gives an explicit estimate of how well a polygon should be
+approximated by rational ones to guarantee ergodicity of the billiard flow.
+
+Theorem 3.24 Let Q be a polygon that admits approximation by rational polygons
+at the rate
+                                     22N −1
+                            φ(N) = 22         .
+Then the billiard flow in Q is ergodic.
+
+    The paper [65] also contain constructive versions of other results on polygonal
+billiards and flat surfaces. In particular it gives a different proof of the quadratic
+upper bound growth rate for the number saddle connections, a result we will discuss
+in more detail in the next section.
+
+
+4     Periodic orbits
+4.1    Periodic directions are dense
+Suppose β is a closed geodesic of a quadratic differential φ that does not pass through a
+zero. As we have observed, β can be moved parallel to itself and sweeps out a cylinder
+of homotopic geodesics; we called such a cylinder a metric cylinder. The boundary
+of the metric cylinder is a union of parallel saddle connections. In the special case of
+the flat torus, there are closed geodesics in a dense set of directions, and, of course,
+for each such direction the closed geodesics fill the surface. For surfaces of higher
+genus, the boundary of the metric cylinder contains saddle connections. We have
+already seen that for a rational billiard, there are periodic trajectories that leave a
+side orthogonally. The main objective of this section is to prove the following theorem,
+
+Theorem 4.1 ([45]) For any quadratic differential φ0 there is a dense set of direc-
+tions θ ∈ S1 such that φ0 has a metric cylinder in the direction θ.
+
+Corollary 4.2 For any rational billiard table there is a dense set of directions with
+a periodic orbit in that direction.
+
+
+                                           40
+   Theorem 4.1 was strengthened in the following result of Boshernitzan, Galperin,
+Kruger and Troubetzkoy – see [10].
+
+Theorem 4.3 For any quadratic differential φ0 there is a dense set of vectors in the
+tangent space to the surface such that the orbit determined by that vector is closed.
+
+   The theorem is proved in [10] for rational billiards. The proof holds verbatim for
+the general case of a quadratic differential.
+   Recall that in the compactification of Rg we allow pinching Riemann surfaces
+along p ≤ 3g − 3 simple closed curves to produce Riemann surface X0 with nodes or
+punctures. Also recall that if φn is a sequence of unit norm quadratic differentials
+on Xn , we can pass to a subsequence and assume that φn converges uniformly on
+compact sets of X0 to a finite norm quadratic differential φ∞ on X0 . We single out
+the a set of limiting quadratic differentials.
+
+Definition 4.4 A limiting quadratic differential φ∞ on X0 is called exceptional if
+
+ (a) some component of X0 is a torus and φ∞ defines the flat metric on the torus or
+
+ (b) some component of X0 is a punctured sphere and φ∞ has no zeroes or
+
+ (c) φ∞ ≡ 0 on every component of X0 .
+
+We note that in case (b), since φ∞ has no zeroes, there must be exactly four punctures
+at which φ∞ has a simple pole, and at any other puncture, φ∞ is regular. The impor-
+tance of this definition is illustrated by the following proposition. We are indebted
+to Yair Minsky for suggesting the proof. A different proof appeared in [45] based on
+work of [44].
+
+Proposition 4.5 There exists M > 0 with the property that if Xn → X0 in R̄g and
+φn are quadratic differentials on Xn which converge uniformly on compact sets of X0
+to an exceptional φ∞ , then for large enough n, φn has a metric cylinder of length at
+most M.
+
+Proof. In cases (a) and (b) there is a dense set of directions such that φ∞ has a metric
+cylinder in that direction. Choose one such metric cylinder and a neighborhood of the
+punctures such that the cylinder contains a closed curve missing that neighborhood.
+The uniform convergence of φn to φ∞ on the complement of this neighborhood implies
+that for large n, φn has a closed regular geodesic with some uniformly bounded length.
+
+                                          41
+    Thus we can assume we are in case (c). For any ǫ > 0 and for each loop C
+surrounding a puncture of X0 we have |C|φn < ǫ for large n. The loops C divide
+Xn into p annuli Bi homotopic to the pinching curves and φn → φ∞ uniformly on
+X0 \ (∪Bi ). Since φ∞ ≡ 0, the φn area of X0 \ (∪Bi ) goes to 0 and so the φn area of
+∪Bi goes to 1. For large n, for at least one annulus B, the φn area of B is at least
+1/(3g − 3). This annulus has two boundary components C.
+    Fix such a large n. If there is no metric cylinder in the homotopy class of C then
+we may let α be the unique φn geodesic homotopic to the loop C. Then α passes
+through singularities, at some of which the angle is in excess of π. We will arrive
+at a contradiction. First assume that α is embedded. For each r let N(r) be the r
+neighborhood of α; the set N(r) is convex. For small values of r, N(r) is an annulus
+containing α in its interior (here is where we use that α is embedded). For all r it is
+a domain with nonpositive Euler characteristic. Let αr = ∂N(r). For all except an
+isolated set of r, the curve αr is smooth.
+    The Gauss-Bonnet formula says that
+                         Z             Z
+                                  K+         κds = 2πχ(N(r)) ≤ 0,
+                          N (r)         αr
+
+where K is the Gaussian curvature and κ is the geodesic curvature. Now K = 0 except
+at the interior points x of N(r), where the curvature is negative and concentrated so
+that the contribution to the first term is −mπ, for m a positive integer. The number
+m may jump a bounded number of times as more zeroes are included in N(r) and so
+is maximized by some M. Thus
+                                  Z
+                                        κds ≤ mπ ≤ Mπ.
+                                   αr
+
+with equality in the first inequality as long as N(r) remains an annulus. Let A(r) =
+||N(r)||, the area of N(r), and let L(r) denote the length of αr . Then
+                                                    Z
+                 A′ (r) = L(r) and L′ (r) =               κds ≤ mπ ≤ Mπ,
+                                                     αr
+
+again with equality in the first inequality as long as N(r) remains an annulus. In
+particular this gives L(r) ≥ πr, as long as N(r) remains an annulus. Now the fact
+that A′′ (r) ≤ Mπ together with A(0) = 0 and A′ (0) ≤ ǫ, gives
+
+                                      A(r) ≤ Mπr 2 + ǫr.
+
+
+                                               42
+Choose ǫ small enough so that
+                                               1
+                                   A(ǫ) ≤          .
+                                            3g − 3
+
+We show that B ⊂ N(ǫ) and that this leads to the desired contradiction. Let r0 = ǫ/π.
+The first step is to notice that each component C of the boundary of B must intersect
+N(r0 ). If N(r0 ) is an annulus this follows from the fact that L(r0 ) ≥ r0 π = ǫ and
+N(r0 ) is convex, so any curve, namely C, of length smaller than ǫ cannot be homotopic
+to and exterior to N(r0 ). If χ(N(r0 )) < 0, then C must intersect N(r0 ) since C is
+homotopic to α. Since C has length at most ǫ the fact that C intersects N(r0 )
+implies that C must be contained in N(ǫ(1/π + 1/2)) ⊂ N(ǫ). Then both boundary
+components C of B are contained in N(ǫ), so we must have B ⊂ N(ǫ). But now
+                                                   1
+                              ||B|| ≤ A(ǫ) ≤            ,
+                                               (3g − 3)
+
+which is a contradiction.
+    In case α is not embedded, so that α is not in the interior of N(r), we lift α to
+the annular cover so that it is embedded. We have the same lower bound growth
+estimates for the length of curves in a neighborhood of the lifted α as well as the
+upper bound for the area of the neighborhood. This neighborhood projects to N(r).
+The rest of the proof then goes through.                                           ✷
+    The following Lemma says that the Teichmuller flow extends continuously to the
+compactification.
+
+Lemma 4.6 If φ0 is not identically 0 on every component of X0 , then for any t,
+gt (φn ) → gt (φ0 ).
+
+Proof. The proof is immediate by viewing the flow in the natural coordinates of
+quadratic differentials.                                                            ✷
+    For a given genus g, a stratum QD(σ) is not a closed subset of Qg , unless σ
+consists of a single zero. This is because a sequence in QD(σ) may collapse a pair of
+lower order zeroes into a higher order zero. In addition, the degeneration of Riemann
+surfaces allows limits of quadratic differentials on which the topology of the surface
+has changed. Because a degenerated surface need not be connected, in the following
+definition we allow disconnected surfaces and corresponding strata.
+
+
+                                         43
+Definition 4.7 A stratum QD(σ ′ ) is a degeneration of a stratum QD(σ) if QD(σ ′ ) 6=
+QD(σ) and there exists a sequence φn ∈ QD(σ) on Riemann surfaces Xn ∈ R̄g
+such that Xn → X0 in R̄g and φn converges uniformly on compact sets to some
+φ∞ ∈ QD(σ ′ ) where φ∞ is not identically zero.
+
+    For any quadratic differential φ which is not identically zero, denote by l(φ) the
+length of the shortest saddle connection of φ. Notice that l(·) is not continuous
+under degeneration within a fixed genus. This is because zeroes are collapsed. Thus
+if φn ∈ QD(σ) is a sequence converging to φ∞ ∈ QD(σ ′ ) then l(φn ) → 0 while
+l(φ∞ ) > 0.
+    Now suppose a nonzero quadratic differential φ0 on a connected surface is given.
+For any closed interval I ⊂ [0, 2π] let
+
+           EI (φ0 ) = {φ : ∃θn → θ ∈ I, ∃tn → ∞, ∃ψn : rψn gtn rθn φ0 → φ}.
+
+That is to say, EI is the set of all ω limit points φ in the SL(2, R) orbit of φ0 where
+the limiting initial rotation angle lies in I. Here the limiting φ may belong to any
+stratum. Note that θn need not lie in I. Now Theorem 4.1 will follow from the next
+proposition.
+Proposition 4.8 For any φ0 , EI (φ0 ) contains an exceptional φ.
+
+Proof. Since I is closed, EI = EI (φ0 ) is compact. Assume EI does not contain any
+exceptional φ; we will arrive at a contradiction. Let
+
+     EIT = {φ ∈ EI : ∀φ′ ∈ EI , QD(σ ′ (φ′ )) is not a degeneration of QD(σ(φ))}.
+
+That is, EIT is the set of φ ∈ EI which belong to a stratum that cannot be further
+degenerated within EI . Let
+                                   l = infT l(φ).
+                                        φ∈EI
+
+If l = 0 choose a sequence φn ∈ EIT with lim l(φn ) → 0. By passing to a subsequence
+we may assume that φn → φ∞ ∈ EI . Since l = 0 then either the Riemann surface of
+φn has degenerated or some set of zeroes of φn have been collapsed to a higher order
+zero of φ∞ . In either case φ∞ belongs to a stratum which is a degeneration of the
+stratum containing φn , a contradiction to the definition of EIT .
+     Suppose on the other hand that l > 0. Choose tn → ∞, θn → θ1 ∈ I such that
+
+                                gtn rθn φ0 → φ1 ∈ EIT .
+
+                                          44
+Then l(φ1 ) ≥ l. Let γ be a saddle connection of φ1 such that l(φ1 ) = |γ|φ1 . Let θγ be
+such that γ is vertical with respect to rθγ φ1 . As s → ∞ the length of γ with respect to
+the metric of gs rθγ φ1 goes to 0. Thus we can choose s such that the length of γ with
+respect to the metric of gs rθγ φ1 is less than l/2. We will have a contradiction if we
+can show that gs rθγ φ1 ∈ EIT . Since the stratum containing φ1 cannot be degenerated
+within EI we only need to show that gs rθγ φ1 ∈ EI . Now by Lemma 4.6
+
+                              gs rθγ φ1 = lim gs rθγ gtn rθn φ0 .
+                                          n→∞
+
+We claim that there exist sequences θn′ → 0, t′n → ∞, and ψn → θ such that
+
+                                  gs rθγ gtn = rψn gt′n rθn′ .
+
+Canonically identify G with the unit tangent√vectors to the upper half-plane with
+Id identified with the vertical vector at i = −1. Then SL(2, R) acts by Mobius
+transformations. Furthermore ∞ is an attracting fixed point of the geodesic flow gt .
+Therefore for each n, there is a unique rotation r−ψn such that r−ψn gs rθ gtn takes the
+vertical vector at i to a vector based on the imaginary axis and then for some small
+θn′ and large t′n , r−θn′ g−t′n takes this vector to the vertical vector at i, proving the
+claim. Finally,
+                                gs rθγ φ1 = lim rψn gt′n rθn +θn′ φ0 ,
+                                         n→∞
+
+that is, gs rθγ φ1 ∈ EI , and we are done.                                              ✷
+Proof of Theorem 4.1. Choose a closed subinterval I ′ of I contained in the interior
+of I. Then Proposition 4.8 says that there must be some exceptional φ ∈ EI ′ . By
+Proposition 4.5, for a sequence tn → ∞ and θn → θ0 ∈ I ′ , gtn rθn φ0 has a metric
+cylinder in the homotopy class of some βn and the length is uniformly bounded above
+by some M. Since tn → ∞ and gtn expands horizontal lengths, the horizontal length
+of βn in the metric of rθn φ0 goes to 0.
+    Thus for some θn′ → 0, the quadratic differential rθn′ rθn φ0 has a metric cylinder in
+the class of βn and since θn + θn′ ∈ I, for large n, we are done.                       ✷
+Proof of Theorem 4.3. Let T1 (S) = {(p, θ)} denote the unit tangent space to S;
+here p ∈ S and θ ∈ S1 . Let ǫ > 0. We begin by fixing a minimal uniquely ergodic
+direction θ ∈ S1 . Unique ergodicity implies that we can choose N large enough so
+that for all x ∈ S the leaf through x is ǫ/2-dense in S.
+    There are only a finite number of saddle connections of length less than or equal
+to 2N and so their tangent vectors lie in a finite set of directions. This means that
+
+                                              45
+we can choose δ sufficiently small so that if θ′ satisfies |θ − θ′ | < δ, then any saddle
+connection in direction θ′ has length at least 2N. We may also choose δ < ǫ/2N.
+¿¿From Theorem 4.1 we know that there is a point (x0 , θ0 ) on a closed leaf Lθ0 in a
+metric cylinder such that |θ0 − θ| < δ. Now let Lθ be the leaf through x0 in direction
+θ extended to length N in each direction, or to a zero. Now we claim that in at least
+one of the two possible directions, moving distance N, the endpoint of Lθ and the
+endpoint of Lθ0 are within ǫ/2 of each other. To prove the claim, for each direction,
+form the simply connected domain bounded by the segments and a geodesic joining
+their endpoints. If both simply connected domains contained a zero in their interior,
+there would be a saddle connection γ of length at most 2N in direction θ′ satisfying
+|θ′ − θ| < δ, contradicting the choice of δ. Thus in one direction the simply connected
+domain is actually a metric triangle with no interior zeroes. The choice of δ < ǫ/2N
+says now that the endpoints are within ǫ/2 of each other, proving the claim.
+    Since the segment of Lθ is ǫ/2 dense in S, the leaf Lθ0 is ǫ dense. This can be
+done for every uniquely ergodic direction θ. The set of vectors determining uniquely
+ergodic directions is dense in the whole phase space T1 S. Since ǫ is arbitrary this
+completes the proof.                                                                   ✷
+
+
+4.2    Counting saddle connections and maximal cylinders
+In this section we discuss some results on the asymptotics of the number of saddle
+connections and periodic orbits. No proofs will be given. As noted in the section
+on billiards in the unit square, the number of (parallel families of) periodic orbits of
+length at most L grows asymtotically as πL2 /2ζ(2). For a general rational billiard or
+flat structure, asymptotics are not known. However we do have quadratic upper and
+lower bounds. To be specific, given a flat structure φ and L > 0, let N1 (L) be the
+number of saddle connections of length at most L and N2 (L) the number of maximal
+metric cylinders of length at most L. The following theorem was proved in [46] and
+[47].
+
+Theorem 4.9 There exists positive constants c1 , c2 such that
+
+                            c2 L2 ≤ N2 (L) ≤ N1 (L) ≤ c1 L2 .
+
+   Different proofs of the upper estimate are given in [65] and [15]. It is possible to
+prove precise asymptotics for generic flat structures.
+
+
+
+                                           46
+Theorem 4.10 ([15]) There exists constants c = c(σ) and s = s(σ) such that on
+each component of QD(σ), for µ0 a.e. φ ∈ QD(σ) one has: N1 (L) ∼ cL2 and
+N2 (L) ∼ sL2 .
+
+   In the next section we discuss some circumstances under which these precise
+asymptotics are known to hold.
+
+
+5     Veech groups
+5.1    Definition and examples of Veech groups
+In this section we discuss the groups of affine transformations associated to flat struc-
+tures. These groups give rise to subgroups in P SL(2, R). If these groups are lattices
+in P SL(2, R), then the flat structure has particularly nice properties.
+    Let φ be a quadratic differential on the Riemann surface X. Let Σ be a subset of
+X which contains the zeroes of φ (but may be larger). Let X ′ = X \ Σ. Following
+Veech we give the next definition.
+
+Definition 5.1 The affine group Af f + (φ) is the group of orientation preserving self
+homeomorphisms of X that map X ′ to itself and are affine with respect to the natural
+coordinates of φ.
+
+   This means that for each point p ∈ X ′ we choose coordinates z near p so that
+φ = dz 2 and coordinates w near f (p) so that φ = dw 2 , and in these coordinates, the
+map f is an affine homeomorphism. We call the derivative (i.e., linear part) of that
+homeomorphism the derivative of f . It is well-defined independently of p, z and w
+up to a factor of ±I. Let a(f ) = ±A be the derivative. Then by an observation of
+Veech [62] we have
+                                 |f ∗ φ| = det(A)|φ|
+and                                Z           Z
+                                       |φ| =        |f ∗ (φ)|,
+
+which implies that the determinant is 1 and so A is an element of G = P SL(2, R).
+
+Definition 5.2 The Veech group Γ(φ) is the image of Af f + (φ) under the derivative
+map.
+
+
+                                               47
+    The case of most interest is when Γ is a lattice in G. Recall that a lattice Γ in G
+is a discrete subgroup such that G/Γ has finite volume; a lattice is nonuniform if the
+quotient is not compact (see, e.g., [5]).
+    We present several examples.
+    Thurston example. The following example is essentially due to Thurston [57].
+Recall that a (right) Dehn twist about a simple closed curve α on a surface is a
+homeomorphism of the surface which fixes α and twists any curve β crossing α once
+to the right about α.
+    Take the unit square with lower left vertex at the origin and identify opposite
+vertical sides. Mark off 4 points on both the top and bottom of the resulting cylinder
+C, dividing the top and bottom into equally spaced intervals and so that the points
+on top lie directly above the points on the bottom. Arrange the intervals on top into
+two pairs and glue each pair isometrically as indicated in the figure. Do the same for
+the bottom.
+
+   Fig. 10
+
+    The Euclidean metric on the rectangle extends to a quadratic differential φ = dz 2
+on the glued surface X, which has genus 2. The 4 marked points on the top identify
+to a single zero of order 2; similarly for the bottom. Let Σ consist of these two points.
+We define an affine map f1 : X → X which in the coordinates (x, y) is given by
+
+                              (x, y) → (x + y mod(1), y).
+
+The map is easily seen to be well-defined on the identification space, fixes Σ and the
+top and bottom of C, and acts as a right Dehn twist on the core curve of C. Its
+derivative is
+                                           1 1
+                                              
+                                   A1 =          .
+                                           0 1
+   To find a second affine map f2 notice that the gluings force all trajectories in
+the vertical direction to be closed as well. Indeed, an upward vertical trajectory hits
+the top horizontal side of the square at some point S and continues downwards from
+the point T of the same horizontal side which is identified with S. The surface X
+decomposes into vertical metric cylinders C1 , C2 of circumference 2 and height 1/4
+each composed of 2 vertical strips glued together; C1 is formed from the rectangles
+0 ≤ x ≤ 1/4 and 1/2 ≤ x ≤ 3/4 glued along tops and bottoms and similarly for C2 .
+(Note that here circumference is the vertical dimension of the cylinders while height is
+the horizontal one). This allows us to introduce coordinates (0 ≤ x′ ≤ 1/4, 0 ≤ y ′ ≤ 2)
+
+                                           48
+in C1 by x′ = x, y ′ = y for 0 ≤ x ≤ 1/4 and x′ = 3/4 − x, y ′ = 2 − y for 1/2 ≤ x ≤ 3/4
+and similarly for C2 . The map f2 is a right Dehn twist in each Ci . It is defined by
+
+                            (x′ , y ′) → (x′ , y ′ + 8x′ mod(2)).
+
+It again fixes Σ and its derivative is
+
+                                                1 0
+                                                   
+                                     A2 =           .
+                                                8 1
+
+The matrices A1 , A2 generate a finite index subgroup of P SL(2, Z).
+   Recall the following definition.
+
+Definition 5.3 Two subgroups Γ1 , Γ2 of G are commensurable if there is some g ∈ G
+such that gΓ1 g −1 ∩ Γ2 has finite index in both gΓ1 g −1 and Γ2 .
+
+    Gutkin and Judge [27] showed that the Veech group is commensurable with
+SL(2, Z) if and only if the surface can be tiled by a single Euclidean parallelogram. .
+    Veech examples. The next set of examples are due to Veech – see [62], [63].
+Part of the motivation was to construct an example of a non-arithmetic group, that
+is, a group, not commensurable to P SL(2, Z). These examples are the flat structures
+φn associated with billiards in right triangles with angles π/n, n ≥ 5. Veech proved
+the following theorem. The set Σ consists of the zeroes of φn .
+    Recall that the (p, q, r) triangle group is the index 2 subgroup of the group gener-
+ated by reflections in the sides of a triangle with angles π/p, π/q, π/r in the hyperbolic
+plane; the triangle group is a subgroup of G, the group of isometries of the hyperbolic
+plane. If an angle is 0, then the vertex of the triangle is at infinity (see, e.g., [5]).
+
+Theorem 5.4 For n odd, Γ(φn ) is a (2, n, ∞) triangle group. For even n = 2m,
+Γ(φn ) is the (m, ∞, ∞) triangle group. In either case the Riemann surface X is the
+nonsingular surface associated to y 2 + xn = 1.
+
+    One can check that the invariant surfaces for this triangle and the isosceles triangle
+with equal angles of π/n are translation isomorphic so that they determine the same
+Veech group.
+    We will not give a proof of the theorem but illustrate the main idea by an example.
+It is convenient to discuss Γ(φ8 ) as this invariant surface was already descirbed in
+figure 4. The invariant surface is the regular octagon P with opposite sides identified.
+
+                                             49
+The surface X has genus 2 and the quadratic differential φ8 has a single zero of order
+4 corresponding to the identification of all of vertices of P . The counterclockwise
+rotation f1 of order 8 about the center of P is obviously affine with respect to φ8 and
+is holomorphic with respect to X. It fixes the zero. Its derivative is
+                                    √          √
+                                        2/2 −√ 2/2
+                                                      
+                              A1 =    √                 .
+                                        2/2      2/2
+    To find a second affine map, rotate the octagon so that two of the opposite sides
+are vertical. Then we claim that every horizontal trajectory is closed and that the
+surface decomposes into two metric cylinders. The first cylinder C1 consists of hor-
+izontal segments joining the opposite vertical sides. Its boundary consists of the
+two horizontal segments joining opposite vertices. Next notice that because of the
+identifications made, each horizontal segment leaving one of the nonvertical sides is
+also closed; it first hits the other nonvertical side before closing. The family of these
+closed trajectories determine the second metric cylinder C2 . The boundary includes
+the first boundary together with an extra closed saddle connection which is the top
+and bottom horizontal segments of the octagon. If we normalize    √ so that the sides of
+P are of length 1, then C1 has circumference√      cot π/8 =√1 + 2 and height 1, while
+C2 has circumference 1 + cot π/8 = 2 + 2 and height 2/2. Notice that the ratio
+of height to circumference for the first cylinder is twice that for the second one. The
+ratio of height to circumference is called the modulus of a metric cylinder.
+   Fig. 11
+   Then there exists an affine map which preserves each cylinder fixing the boundary
+pointwise and whose derivative is
+                                           1 2 cot π/8
+                                                    
+                                A2 =                   .
+                                           0     1
+The map is the square of a right Dehn twist on C1 and a right Dehn twist on C2 .
+Now A1 , A2 generate a (8, ∞, ∞) triangle group which is not commensurable with
+P SL(2, Z) ([5]).
+   The following theorem combines results from [14],[66] and [68], and complements
+Theorem 5.4.
+Theorem 5.5 The Veech groups of the flat surfaces associated with the three series
+of triangles with angles
+          (π/2n, π/n, (2n − 3)π/2n), ((2k − 1)π/4k, (2k − 1)π/4k, π/2k)
+
+                                             50
+and
+                     (kπ/2k + 1, kπ/2k + 1, π/2k + 1), n ≥ 4, k ≥ 2,
+are, respectively,
+
+                       (3, n, ∞), (2k, ∞, ∞) and (2k + 1, ∞, ∞)
+
+triangle groups. In all cases the set Σ is the set of zeroes.
+
+5.2    Veech dichotomy
+We now discuss some properties of Γ(φ). These results are all due to Veech – [62],
+[63].
+
+Lemma 5.6 Let f ∈ Af f + (φ) such that A = a(f ) 6= ±Id, and let ζ ∈ R2 \ {0} such
+that Aζ = ±ζ. Then every leaf in directon corresponding to ζ is either a saddle con-
+nection or closed so that the surface decomposes into cylinders C1 , . . . , Cp in direction
+ζ. Moreover there exists a positive integer k such that for each i the map f k preserves
+Ci , fixing the boundary, and is a power of a Dehn twist in Ci .
+
+Proof. Clearly f fixes the foliation in direction ζ. For some k, that can be assumed
+even, f k maps each separatrix to itself. Since Aζ = ±ζ, f k must be the identity
+on each separatrix. Each separatirix is either a saddle connection or dense in an
+open set. In the latter case, since f k is real analytic, f k would be the identity in the
+open set, and so Ak = ±Id. However A is an unipotent, therefore Ak 6= ±Id. Thus
+every separatrix is a saddle connection which means that the surface decomposes into
+cylinders such that f k is the identity on the boundary of each cylinder. As it is linear
+on each cylinder, it must be a power of a Dehn twist.                                   ✷
+    Veech also shows that the moduli of the cylinders are rationally related.
+
+Lemma 5.7 If a(f ) 6= ±Id then f is not isotopic to the identity.
+
+Proof. Since f is affine in the coordinates determined by φ, it is a Teichmuller map
+determined by φ. Teichmuller maps are extremal quasiconformal maps within their
+homotopy class. This means that f cannot be homotopic to the identity, since the
+identity is conformal.                                                             ✷
+
+
+
+                                            51
+Corollary 5.8 Af f + (φ) is a subgroup of the mapping class group of the Riemann
+surface.
+
+Lemma 5.9 Γ(φ) is a discrete subgroup of G.
+
+Proof. Suppose fn ∈ Af f + (φ) is such that a(fn ) → ±Id. By passing to a subse-
+quence and using the Arzela-Ascoli theorem we can assume that fn converges uni-
+                                                   −1
+formly to a diffeomorphism f . For large m, fm ◦ fm+1   is isotopic to the identity, which
+by Lemma 5.7 gives a(fm+1 ) = a(fm ) and so a(fm ) = ±Id for large m.                    ✷
+    We now consider consequences of the assumption that Γ(φ) is a lattice. Begin
+again by canonically identifying G with the unit tangent√vectors to the upper half-
+plane with Id identified with the vertical vector at i = −1. Then SL(2, R) acts
+on itself by Mobius transformations. Recall that SL(2, R) also acts on quadratic
+differentials. If we associate the identity in G to φ, then we canonically identify the
+SL(2, R) orbit of φ with SL(2, R).
+
+Theorem 5.10 (Veech dichotomy). Suppose Γ(φ) is a lattice. For any direction
+either the foliation in that direction is minimal or its every leaf is closed or a saddle
+connection. In the latter case the surface decomposes into cylinders of closed leaves
+and there is f ∈ Af f + (φ) with a(f ) 6= I which preserves these cylindrers and acts as
+Dehn twists on them. Furthermore Γ is a nonuniform lattice.
+
+Proof. If the foliation is not minimal there is a saddle connection in that direction.
+By rotating, we can assume the direction is vertical. Then gt φ has a saddle connection
+which approaches 0 in length. This means that the ω limit set under the flow gt of Id
+in G/Γ is empty. Since Γ is a lattice this can only happen if the point at infinity is a
+fixed point for some parabolic element of Γ. In particular, the lattice is not uniform.
+Such a parabolic element fixes the vertical vector ζ = [0, 1]. It remains to apply
+Lemma 5.6.                                                                            ✷
+    A different proof of the above theorem can be found in [66].
+    Theorem 5.10 says that, just as in the case of the flat torus, there is a dichotomy:
+either the flow is minimal or every orbit is closed. Since the triangle groups are
+lattices, the Veech dichotomy applies, in view of Theorem 5.4, to billiards in the
+isosceles triangles with equal angle π/n; it applies to regular polygons as well.
+    In fact, the analogy with the flat torus extends to ergodicity as well.
+
+
+                                           52
+Theorem 5.11 Suppose Γ(φ) is a lattice. If the foliation in a direction is minimal,
+then it is uniquely ergodic.
+
+Proof. Again we can assume the direction is vertical. If the foliation is not uniquely
+ergodic then by Theorem 3.8 gt φ eventually leaves every compact set of moduli space.
+In particular, it cannot have an ω limit point in G/Γ. Again this implies that Γ has
+a parabolic element fixing infinity. By Lemma 5.6 the leaves in the vertical direction
+are all closed, which contradicts the minimality.                                    ✷
+
+5.3    Asymptotics
+Let φ be a quadratic differential. Recall that we defined N2 (φ, T ) as the number
+of homotopy classes of closed geodesics of length less than T or equivalently, the
+number of maximal cylinders whose circumference has length at most T . Recall in
+Theorem 4.9 there are upper and lower quadratic bounds for the number of maximal
+cylinders. Veech (op. cit.) has shown the following theorem.
+
+Theorem 5.12 Suppose Γ(φ) is a lattice. Then there exists a constant c = c(φ) such
+that N1 (T ) ∼ cT 2 .
+
+    The proof is using Eisenstein series. The constant c can be computed explicitly
+in the case of isosceles triangles Tn with angles (π/n, π/n, (n − 2)π/n). In that case
+
+                                       n(n2 − 1)
+                                c=                   ,
+                                     48π(n − 2)|Tn |
+
+where |Tn | is the area of the triangle.
+    Gutkin and Judge [27] have given another proof of the same theorem using the
+mixing of the horocyclic flow. The constant c is given in their work in purely topo-
+logical terms.
+
+5.4    Covers
+Constructing a flat surface M from a rational billiard polygon P it may happen that
+some of the cone angles are equal to 2π or, equivalently, the points are not zeroes of
+the quadratic differential. For example, if P is a square then M is a flat torus with
+no singular points. From the billiard view point this means that one can continuously
+
+
+                                         53
+define the extention of the billiard trajectory through the vertex of P ; this is possible
+if and only if the angle is of the form π/n. Adding such a point to Σ, the set of points
+that are required to be preserved by the affine diffeomorphisms may change the Veech
+group. It is particularly important to keep track of removable singular points in the
+study of covers of flat structures.
+
+Definition 5.13 Let (Xi , φi ), i = 1, 2 be flat structures and Σi ⊂ Xi , i = 1, 2 sets
+that contain the zeroes of Xi . Then (X1 , φ1 , Σ1 ) covers (X2 , φ2 , Σ2 ) if there exists
+a continuous map f : X1 → X2 , called a cover, that sends Σ1 to Σ2 and which is
+given, in local coordinates on the complement of these sets, by parallel translation.
+The multiplicity of a cover is the number of preimages of a non-singular point in X2
+(independent of the point).
+
+       In particular, a cover is a branched holomorphic cover of X2 by X1 branched over
+Σ2 .
+
+Definition 5.14 Two covers f1 : X1 → Y and f2 : X2 → Y are called isomorphic if
+there exists an isomorphism of the flat structures g : X1 → X2 such that f1 = f2 g.
+Similarly one defines an isomorphism of covers f1 : Y → X1 and f2 : Y → X2 .
+
+       The following finitness property holds (see [66] for a proof).
+
+Proposition 5.15 A given flat structure admits a finite number of isomorphic classes
+of covers with a given multiplicity. Likewise, the number of isomorphic classes of
+covers realizable by a given flat structure is finite.
+
+    The next construction provides examples of covers of flat structures associated
+with billiards in polygons. Let P1 and P2 be rational polygons, and assume that P2
+tiles P1 by reflections. This means that P1 is partitioned into a number of isometric
+copies of P2 , each two either disjoint, or having a common vertex or a common side,
+and if two of these polygons have a side in common then they are symmetric with
+respect to this side.
+    For example, a right triangle with angle π/n tiles by reflections a regular n-gon
+– see figure 4 for n = 8. Another example is given by the above mentioned Gutkin’s
+almost integrable billiard polygons: if such a polygon is drawn on a, say, integer
+square lattice in the plane, then it is tiled by the unit square.
+    Let (Xi , φi ) be the flat structures associated with the polygon Pi , i = 1, 2, and
+assume that P2 tiles P1 . Let Σ1 be the set of zeroes of φ1 (cone points with angles
+greater than 2π).
+
+                                             54
+Lemma 5.16 There is a set Σ2 containing the zeroes of φ2 such that (X1 , φ1, Σ1 )
+covers (X2 , φ2 , Σ2 ).
+
+Proof. Denote by G1 and G2 the groups generated by the linear parts of the re-
+flections in the sides of the polygons P1 and P2 . Then G1 ⊂ G2 . Each copy of P2 ,
+involved in the tiling of P1 , is identified with P2 by an isometry; this isometry is a
+composition of reflections in the sides of P2 . These identifications, combined, define
+a projection p from P1 to P2 . Given a point x ∈ P1 , let α(x) ∈ G2 be the linear part
+of the isometry that takes P2 to the tile (a copy of P2 ) that contains x.
+    Consider the map g : P1 × G1 → P2 × G2 that sends (x, β) to (p(x), βα(x)).
+Notice that the surfaces Xi are quotient spaces of Pi × Gi , i = 1, 2, and the map g
+determines a map f : X1 → X2 . This is the desired cover. The multiplicity equals
+n/m where n is the number of tiles in the tiling and m = [G2 : G1 ].
+    Some singular points of the first structure may project to removable singular points
+of the second one. This happens only if P2 has a vertex angle π/n. One then adds
+these points to Σ2 .                                                                   ✷
+    Note that one does not need to add removable singular points if none of the angles
+of P2 is of the form π/k.
+    As an example to Lemma 5.16 consider again a regular octagon P1 tiled by right
+triangles P2 with angle π/8. The flat surface M2 for the triangle is the regular octagon
+whose opposite sides are identified, while the flat surface M1 for the regular octagon
+is a union of 8 octagons with some gluings of the sides. Thus M1 covers M2 with
+multiplicity 8.
+    The next result relates the Veech groups of flat structures one of which covers the
+other; it was obtained independently by Gutkin and Judge [26], [27] and by Vorobets
+[66]. Recall that two subgroups of G are commensurate if they share a common
+subgroup that has a finite index in each.
+
+Theorem 5.17 If (X1 , φ1, Σ1 ) covers (X2 , φ2 , Σ2 ) then Γ(φ1 ) and Γ(φ2 ) are commen-
+surate. In particular, one of the groups Γ(φ1 ) and Γ(φ2 ) is a lattice if and only if the
+other is.
+
+Proof. Consider the set of triples S = {(X, φ, f )} where (X, φ) is a flat structure
+and f : X1 → X is a cover. Let S̄ be the set of equivalence classes of such triples
+considered up to isomorphism of covers.
+    Let g ∈ Af f + (φ1 ) and let A = a(g) be its derivative. Then f g is a cover of the flat
+structure (X, A−1 (φ)) by (X1 , φ1 ). This defines a right action of Af f + (φ1 ) on S, and
+
+                                            55
+this action descends to an action on S̄. Consider the subgroup Af f0+ (φ1 ) ⊂ Af f + (φ1 )
+that consists of the affine transformations acting trivially on S̄. By Proposition 5.15
+S̄ is finite, therefore this subgroup has finite index. Let Γ0 ⊂ Γ(φ1 ) consist of the
+derivatives of the elements of Af f0+ (φ1 ); then Γ0 has finite index too.
+    Let g ∈ Af f0+ (φ1 ) and A = a(g). Then, for every (X, φ, f ) ∈ S the flat structures
+(X, φ) and (X, A−1 φ) are isomorphich. Therefore A ∈ Γ(φ). Since (X1 , φ1 ) covers
+(X2 , φ2 ), it follows that Γ0 ⊂ Γ(φ2 ). Thus Γ0 ⊂ Γ(φ1 ) ∩ Γ(φ2 ) and has finite index
+in Γ(φ1 ). To show that Γ0 has finite index in Γ(φ2 ) as well one applies a similar
+argument to the set of covers of (X2 , φ2 ).                                           ✷
+
+Corollary 5.18 ([31]). If a rational polygon P2 has no angles of the form π/n and
+P2 tiles P1 by reflections then the respective Veech groups are commensurable.
+    Hubert and Schmidt [31] have shown that the Veech group associated to the
+isosceles triangle with angles 2π/n, (n − 2)π/2n, (n − 2)π/2n is not a lattice even
+though the right triangle with angle π/n tiles it with one reflection. This is due to
+the appearance of removable singular points that we discussed above.
+
+
+6     Interval exchange transformations
+6.1    Topological structure of orbits
+In this section we discuss the topological structure of orbits of an interval exchange
+transformation – see Definition 1.11; we refer to [34] for a detailed exposition; see
+also [38] and [12]. Without loss of generality, we may assume that end-points of all
+the interval involved are discontinuity points of the interval exchange transformation
+T involved; otherwise adjacent segments could be joined into one and T would be an
+exchange of a smaller number of intervals.
+    The following definitions provide analogs of saddle connection and metric cylinder
+in the present setting.
+Definition 6.1 An orbit segment (x, T x, . . . , T k−1x) is called a connecting segment
+of the interval exchange transformation T if the points x and T k−1x are end-points
+of some intervals Ii and Ij but none of the intermediate points T x, . . . , T k−2x is an
+end-point of either of the intervals I1 , . . . , In .
+Definition 6.2 An interval I = [a, b) ⊂ [0, 1) is called rigid if every positive iterate
+of T is continuous on I.
+
+                                           56
+   If x is a periodic point of an interval exchange transformation T then there exists
+the maximal rigid interval containing x and consisting of periodic points with the
+same period. The end-point of this interval belongs to connecting segment.
+
+Definition 6.3 An interval exchange transformation is called generic if it has no
+rigid intervals.
+
+   One has the following criterium for genericity. Denote by λ the Lebesgue measure
+on [0, 1).
+
+Lemma 6.4 The following properties are equivalent:
+  (i) T is generic;
+ (ii) T does not have periodic orbits;
+(iii) limk→∞ supi0 ,i1 ,...,ik λ(Ii0 ∩ T Ii1 ∩ . . . ∩ T k Iik ) = 0.
+
+Proof. We already mentioned that if T has a periodic point then it has a rigid
+interval. Thus (i) implies (ii). If T has a rigid interval then (iii) clearly does not
+hold. Thus (iii) implies (i).
+    It remains to deduce (iii) from (ii). Let E be the union of the orbits of the
+left end-points of the intervals I1 , . . . , In . Then (iii) is equivalent to E being dense.
+Assume that (iii) does not hold. Then the set [0, 1) − Ē is a non-empty open set.
+Each component of this set is an open interval, and T echanges these components.
+Since there are only finitely many components of a given length, each component is
+periodic, and (ii) does not hold.                                                          ✷
+
+Definition 6.5 A point x is called generic if it is a continuity point for all (positive
+and negative) iterates of T .
+
+    One can prove (see [34]) that a generic point is either periodic or the closure of its
+orbit is a finite union of intervals. The latter union is called a transitive component
+of the interval exchange transformation. We refer to [34] for the following structural
+result.
+
+Theorem 6.6 Let T be an exchange of n intervals. Then the interval [0, 1) splits
+into a finite union of connecting segments and at most 2n − 2 disjoint open invariant
+sets, each of which is either a transitive or a periodic component, and each of these
+components is a finite union of open intervals.
+
+                                                   57
+6.2    Number of invariant measures. Lack of mixing
+The first result of this section concerns the number of invariant measures for an
+interval exchange transformation. Assume that T is a generic exchange of n intervals.
+The idea of the proof of the next result belongs to V. Oseledets. We follow an elegant
+expositon in [34]; see also [12] and [54].
+Theorem 6.7 There exist at most n mutually singular T -invariant Borel probability
+measures.
+
+Proof. Denote by ξ the partition of [0, 1) into the intervals I1 , . . . , In . Due to
+condition (iii) in Lemma 6.4, ξ is a one-sided generator for T . Therefore an invariant
+measure µ is determined by its values on the elements of the partitions
+                          ξk = ξ ∨ T ξ ∨ . . . ∨ T k−1 ξ, k = 1, 2, . . .
+Claim: µ is determined by its values on I1 , . . . , In .
+    To prove this claim, consider two finite partitions η and ν of the interval [0, 1) into
+subintervals, and let µ be a nonatomic Borel probability measure on [0, 1). Then the
+values of µ on the elements of the partition η ∨ ν are uniquely determined. Indeed,
+let [a, b) be an element of η ∨ ν. Then a is the end-point of an interval from either η
+or ν. Therefore µ([0, a)) is determined. The same applies to µ([0, b)), thus µ([a, b))
+is determined as well.
+    Now the italized claim above is proved inductively: setting η = ξk , ν = T k ξ, one
+has: η ∨ ν = ξk+1, and the claim follows.
+    Assign a point of an (n − 1)-dimensional simplex
+                                                           X
+                               ∆ = {(x1 , . . . , xn ) :       xj = 1}
+to a T -invariant measure µ as follows: xj = µ(Ij ). We obtain a map F from the space
+of invariant probability measures to ∆. This map is affine, continuous in the week *
+topology and, as has been shown, injective. It remains to notice that if µ1 , . . . , µk are
+mutually singular measures then F (µ1 ), . . . , F (µk ) are linearly independent. Indeed,
+assume that a relation holds:
+                 a1 F (µ1 ) + . . . + ak F (µk ) = F (a1 µ1 + . . . + ak µk ) = 0.      (6.1)
+For every i = 1, . . . , k there is a set Ui ⊂ [0, 1) such that µi (U) > 0 but µj (U) = 0 for
+all j 6= i. Thus (a1 µ1 + . . . + ak µk )(Ui ) = ai µi (Ui ), and (6.1) implies that ai = 0. ✷
+    Next we discuss mixing properties of interval exchange transformations.
+
+                                                 58
+Definition 6.8 A measure-preserving trasformation T : (I, µ) → (I, µ) is called
+mixing if for every measurable sets A and B one has:
+
+                             lim µ(T −n (A) ∩ B) = µ(A)µ(B).
+                            n→∞
+
+   The following result is due to A. Katok [32], see also [12].
+
+Theorem 6.9 No interval exchange transformation is mixing with respect to any
+invariant Borel probability measure µ.
+
+   The proof makes use of the next lemma which also has other applications in the
+study of interval exchange transformations. Let T be an exchange of n intervals.
+Consider an interval J = [a, b) ⊂ [0, 1), and denote by TJ : J → J the first return
+map.
+
+Lemma 6.10 The map TJ is an exchange of at most n + 2 intervals.
+
+Proof. By the Poincaré recurrence theorem, almost every point of J returns to J.
+Denote by Σ the union of the discontinuity set of T and the end-points of J; this set
+contains at most n + 1 points. Consider the set
+
+Ω = {x ∈ J : TJ (x) = T k (x) and T l (x) ∈
+                                          / Σ for l = 0, . . . , k − 1; k = 1, 2, . . .}.
+
+Then Ω is an open dense subset of J.
+    Consider a maximal interval Jα ⊂ Ω and let y be its left end-point. The restriction
+of TJ on Jα is T k , for some k. Then an iterate T l (y), l = 0, . . . , k, belongs to the set
+Σ; otherwise Jα can be extended beyond y. Each of the points of Σ can appear in
+this way as an iterate of at most one left end-point of a maximal interval Jα . Thus
+Ω is the complement to at most n + 1 points, and TJ is an exchange of at most n + 2
+intervals.                                                                                  ✷
+Proof of Theorem 6.9. It is enough to consider an ergodic measure µ. Such a
+measure is either periodic or non-atomic. In the former case T is not mixing. Assume
+that µ is the Lebesgue measure; we will show that the general case reduces to this
+one. Let T be an exchange of n intervals.
+   Fix J ⊂ [0, 1). According to Lemma 6.10, TJ is an exchange of intervals J1 , . . . , Js
+where J = J1 ∪ . . . ∪ Js :
+
+                          TJ |Ji = T ki , i = 1, . . . , s; s ≤ n + 2.                  (6.2)
+
+                                              59
+Set: Jin = T n (Ji ). Then
+                                                    ki −1 n
+                                    [0, 1) = ∪si=1 ∪n=0  Ji .
+Denote this partition of the interval [0, 1) by ξJ . Choosing J sufficiently small, one
+makes ξJ arbitrarily fine.
+   Now one repeats the argument for the maps TJi , i = 1, . . . , s. One has:
+
+                     Ji = ∪sj=1
+                             i
+                                Jij , si ≤ n + 2,      and TJi |Jij = T kij .
+
+Set: Jijn = T n (Jij ).Then
+                                                       ki −1 n
+                                 [0, 1) = ∪si=1 ∪sj=1
+                                                   i
+                                                      ∪n=0  Jij .
+Notice that T kij (Jijn ) ⊂ Jin , and therefore Jijn ⊂ T −kij (Jin ). Thus
+
+                               Jin = ∪sj=1
+                                        i
+                                           Jijn ⊂ ∪sj=1
+                                                     i
+                                                        T −kij (Jin ).
+
+Let A be a set, measurable with respect to the partition ξJ . Then
+
+                                   A ⊂ ∪si=1 ∪sj=1
+                                                i
+                                                   T −kij (A).
+
+Since T is measure-preserving and s, si ≤ n + 2, one has, for some kij ,
+                                                                    1
+                  µ(A ∩ T kij (A)) = µ(T −kij (A) ∩ A) ≥                  µ(A).     (6.3)
+                                                                 (n + 2)2
+
+Fix a positive integer N and a set A such that
+                                                     1
+                                      µ(A) <               .                        (6.4)
+                                                 5(n + 2)2
+
+One can choose a subinterval J ⊂ [0, 1) so small that
+
+   • (i) there exists a set B, measurable with respect to the partition ξJ , and such
+     that µ(A∆B) < µ(A)2 ;
+
+   • (ii) the numbers ki in (6.2) are all greater than N.
+
+To satisfy (ii), one chooses a point x such that the points T i (x), i = 0, . . . , N − 1,
+are points of continuity of T . Then these points are all distinct (otherwise T would
+have a periodic orbit and a periodic component of positive measure), and J can be
+taken as a sufficiently small neighborhood of x.
+
+                                                 60
+   It follows from (i) that µ(B) ≥ µ(A) − µ(A)2 . Applying (6.3) to the set B and
+taking (i) and (6.4) into account, one obtains, for some kij ≥ ki > N,
+                                                           1
+      µ(A ∩ T kij (A)) ≥ µ(B ∩ T kij (B)) − 2µ(A∆B) ≥            µ(B) − 2µ(A)2 ≥
+                                                        (n + 2)2
+     1                1           2         2        2
+                                                              1          
+          2
+            µ(A) −         2
+                             µ(A)   − 2µ(A)   ≥ µ(A)    5 −         2
+                                                                      − 2   ≥ 2µ(A)2 .
+  (n + 2)          (n + 2)                                  (n + 2)
+Therefore T is not mixing.
+    To complete the proof it remains to justify the reduction of an invariant non-atomic
+probability measure µ to the Lebesgue measure λ. Define a map φ : [0, 1] → [0, 1]
+by the formula: φ(x) = µ([0, x]). Then φ is monotone, continuous, surjective and
+φ∗ µ = λ. Although φ is not necessarily injective, it is an isomorphism between the
+measure spaces ([0, 1], µ) and ([0, 1], λ).
+    Define a map S : [0, 1] → [0, 1] by the formula: S(x) = φ(T (y)) where y ∈ φ−1 (x);
+in other words, S = φ ◦ T ◦ φ−1 . To see that S is well defined, note that φ−1 (x)
+is either a point or an interval. In the latter case, φT φ−1 (x) is either a point or an
+interval. Actually, the latter holds, as follows from the next equalities:
+
+                λ(φT φ−1(x)) = µ(T φ−1(x)) = µ(φ−1(x)) = λ({x}) = 0.
+
+Thus S is well defined. Since S preserves the Lebesgue measure and orientation, and
+is continuous and one-to-one except for at most n points, S is an exchange of at most
+n intervals.                                                                       ✷
+    Using the reduction of the billiard flow on an invariant surface to an interval
+exchange transformation described in Section 1.7, one obtains the next corollary –
+see [32] for details.
+
+Corollary 6.11 For every rational polygon the billiard flow on an invariant surface
+is not mixing.
+
+6.3     Ergodicity of interval exchange transformations
+6.4     Asymptotic flag of an interval exchange transformation
+In this section we describe, without proofs, recent results obtained by A. Zorich
+[69], [70], [71], [72], [41] (these results can be also stated in the setting of measured
+foliations on surfaces).
+
+                                           61
+   Consider a generic interval exchange transformation T , pick a generic subinterval
+J ⊂ [0, 1) and a generic point x ∈ [0, 1). Generically, T is ergodic, therefore one has
+the following equality:
+
+                    #{i : 0 ≤ i ≤ N − 1, T i (x) ∈ J} = |J|N + o(N).
+
+Zorich observed in computer experiments that the error term above, generically, grows
+as a power of N: error term ∼ O(N α ). The exponent α < 1 depends only on the per-
+mutation associated with the interval exchange transformation T . This observation
+lead to the theory discussed in this section.
+    An exchange of n intervals (I1 , . . . , In ) is determined by the pair (ī, σ) where the
+vector ī = (i1 , . . . , in ) consists of the lengths ij = |Ij | and σ ∈ Sn is the permutation
+corresponding to T . In this section we assume that σ is irreducible, that is, for no
+k < n one has σ{1, . . . , k} = {1, . . . , k}. Since i1 +. . .+in = 1, the space of irreducible
+interval exchange transformations is the product of (n − 1)-dimensional simplex ∆n−1
+and the set of irreducible permutations Sn0 .
+    Renormalization procedure for interval exchange transformations. Ac-
+cording to Lemma 6.10, the first return map TJ to a subinterval J ⊂ [0, 1) is again an
+interval exchange transformation. Assume that one can choose J so that the following
+two properties hold:
+    (i) TJ is an irreducible exchange of n intervals (J1 , . . . , Jn ).
+    Given a point x ∈ Jq denote by Bpq (x) the number of points in the trajectory
+segment x, T (x), . . . , T k−1 (x) that belong to Ip ; here TJ (x) = T k (x) ∈ J is the first
+return point. The second assumption is:
+    (ii) For all pairs 1 ≤ p, q ≤ n the number Bpq (x) does not depend on x.
+    A procedure that chooses J and assigns TJ to T determines a transformation of
+   n−1
+∆      × Sn0 . An example of such a procedure, satisfying (i) and (ii), is provided by the
+Rauzy induction [52]. A modification of Rauzy induction was constructed in [70]; the
+corresponding transformation of ∆n−1 × Sn0 is called the generalized Gauss map. The
+set Sn0 decomposes into invariant subsets under the map G; these subsets are called
+Rauzy classes. Following arguments by Veech in [64], it is proved in [70] that for every
+Rauzy class R the generalized Gauss map is ergodic with respect to an absolutely
+continuous invariant probability measure µ on ∆n−1 × R.
+    The generalized Gauss map plays a role, similar to that of the Teichmuller geodesic
+flow for quadratic differentials.
+    Lyapunov exponents and the asymptotic flag. The matrix-valued function
+
+
+                                              62
+B determines a measurable cocycle on ∆n−1 × R:
+                                   Z
+                                       log+ ||B −1 ||dµ < ∞.
+
+The cocycle B −1 has the following spectrum of Lyapunov exponents:
+
+          θ1 > θ2 ≥ θ3 ≥ . . . ≥ θg ≥ 0 = . . . = 0 ≥ −θg ≥ . . . ≥ −θ2 > −θ1 ,
+
+where g depends on the Rauzy class R and the multiplicity of zero is n − 2g.
+   Given (ī, σ) ∈ ∆n−1 × R, set
+
+                    B (k) (ī, σ) = B(ī, σ)B(G(ī, σ)) . . . B(Gk−1 (ī, σ)).
+
+The cocycle B −1 determines a flag of subspaces in Rn , depending on a point in
+∆n−1 × R,
+               H1 (ī, σ) ⊂ H2 (ī, σ) ⊂ . . . ⊂ Hg (ī, σ) ⊂ H(ī, σ) ⊂ Rn .
+The flag is defined for µ almost every (ī, σ) by the following conditions:
+
+                 log ||B (k) (ī, σ)−1 v||
+              lim                          = −θj    for all v ∈ Hj , v ∈
+                                                                       / Hj−1 ,
+             k→∞            k
+                         log ||B (k) (ī, σ)−1 v||
+                     lim                           > 0 for all v ∈
+                                                                 / H.
+                     k→∞            k
+
+   Main result. Given an exchange T of n intervals, consider the following vector-
+valued function counting returns to the intervals (I1 , . . . , In ):
+                                                                      N −1
+                                                                             χi (T k (x))
+                                                                      X
+           S(x, N) = (S1 (x, N), . . . , Sn (x, N)), Si (x, N) =
+                                                                       k=0
+
+where x ∈ [0, 1) and χi is the indicator function of the interval Ii .
+   The main result by Zorich is the following theorem.
+
+Theorem 6.12 For a fixed Rauzy class R and µ almost every interval exchange
+transformation (ī, σ) ∈ ∆n−1 × R, the counting vector-function S(x, N) enjoys the
+following properties.
+    For every x ∈ [0, 1) one has:
+                                            S(x, N)
+                                       lim          = ī,
+                                       N →∞   N
+
+                                               63
+and the one-dimensional subspace H1 is spanned by the vector ī.
+   For every covector f ∈ Ann (Hj ), f ∈  / Ann (Hj+1), j = 1, . . . , g − 1, and every
+x ∈ [0, 1) one has:
+                                 log |(f, S(x, N))|   θi+1
+                         lim sup                    =      .
+                           N →∞        log N           θi
+For every covector f ∈ Ann (H), ||f || = 1, and every x ∈ [0, 1) one has:
+
+                                |(f, S(x, N))| ≤ Const,
+
+and the constant does not depend on either f, x or N.
+
+
+7     Miscellaneous results
+7.1    Stable periodic trajectories
+The material in this subsection is taken from the paper [21].
+
+Definition 7.1 A periodic billiard trajectory in a polygon Q is called stable if an
+arbitrary small perturbation of the polygon Q leads to a perturbation of this trajectory
+but not to its destruction.
+
+    For example, a 2-periodic trajectory in a square, perpendicular to a side, is not
+stable: a deformation of the square to a quadrilateral without parallel sides destroys
+this trajectory. The Fagnano 3-periodic trajectory in an acute triangle, connecting the
+foot points of the altitudes, is stable, and the same holds for the 6-periodic trajectory
+which is the double of the Fagnano one – see figure 1 again.
+    What follows is a criterium for the stability of periodic trajectories. Label the con-
+secutive sides of the polygon Q by 1, 2, ..., k. Without loss of generality, assume that
+the periodic trajectory has an even number of links 2n (otherwise, double it). Then
+the trajectory is encoded by the sequence i1 , ..., i2n of the labels of the consecutively
+visited sides of Q.
+
+Lemma 7.2 The trajectory is stable if and only if the labels in the sequence i1 , ..., i2n
+can be partitioned into pairs of identical labels such that the label in each pair appears
+once at an odd position and once at an even one.
+
+
+
+                                           64
+Proof. Denote by αi the angle, made by i-th side of Q with a fixed direction. Unfold
+the periodic trajectory to a straight line l. Then the (2n)-th copy of Q along this
+line, denoted by Q2n , is parallel to Q and, moreover, the parallel translation t that
+takes Q to Q2n preserves l. The composition of two reflections is a rotation through
+the angle, twice that between the axes of reflection. It follows that Q2n is obtained
+from Q by a rotation through the angle
+
+                         2(αi1 − αi2 + αi3 − ... + αi2n−1 + αi2n ),
+
+and this angle is a multiple of 2π.
+    Thus for the trajectory to be stable it is necessary that the variation of this angle
+satisfies the equation
+
+                      δαi1 − δαi2 + δαi3 − ... + δαi2n−1 + δαi2n = 0
+
+for every perturbation of the polygon. An arbitrary variation of Q gives rise to an
+arbitrary variation of the directions of its sides. Hence the above relation holds only
+if its terms cancel pairwise, as claimed.
+     Conversely, assume that the condition of the lemma on the coding of a periodic
+trajectory is satisfied. Using the same notation as before, one has: t(l) = l. Let Q′
+be a polygon, sufficiently close to Q, whose sides are labeled the same way as in Q.
+Reflect Q′ consecutively in its sides according to the sequence i1 , ..., i2n . Then Q′2n is
+parallel to Q′ . Let t′ be the respective parallel translation; this translation is close
+to t. Choose a point x ∈ l ∩ Q ∩ Q′ and let l′ be the line through x, invariant under
+t′ . If Q′ is sufficiently close to Q then l′ is the unfolding of a billiard trajectory in Q′
+labeled i1 , ..., i2n , and since t′ (l′ ) = l′ this trajectory is (2n)-periodic.          ✷
+     The lemma implies the next property of irrational billiards.
+
+Corollary 7.3 If the angles of a billiard k-gon are maximally independent over the
+rationals, that is, the dimension of the linear space over Q, generated by the angles,
+equals k − 1, then every periodic billiard trajectory in this polygon is stable.
+
+Proof. Consider a periodic billiard trajectory, labeled i1 , ..., i2n . Then
+
+                  αi1 − αi2 + αi3 − ... + αi2n−1 + αi2n = πm, m ∈ Z.
+
+Rewrite this as
+
+    (αi1 − α1 ) − (αi2 − α1 ) + (αi3 − α1 ) − ... + (αi2n−1 − α1 ) + (αi2n − α1 ) = πm.
+
+                                             65
+If the labels do not satisfy the condition of the above lemma, that is, do not can-
+cel pairwise, one obtains a non-trivial relation over Q on the angles α2 − α1 , α3 −
+α1 , ..., αk − α1 . It remains to notice that the linear space over Q, generated by these
+angles, coincides with that, generated by the angles of the billiard polygon.          ✷
+
+
+7.2    Encoding billiard trajectories. Polygonal billiards have
+       zero entropy
+The encoding of billiard trajectories by the consecutively visited sides of the billiard
+polygon provides a link between billiard and symbolic dynamics. Let us consider this
+encoding in more detail. We follow the paper [20].
+    Assume that the billiard k-gon Q is simply connected (most of the results hold
+without this assumption), and its sides are labeled 1, ..., k. The phase space of the
+billiard transformation T consists of the inward unit vectors whose foot points are on
+the boundary ∂Q and whose forward orbits never hit a vertex of Q. Given a phase
+point x, denote by w(x) the infinite sequence of labels 1, ..., k that encodes the forward
+T -orbit of x. Given an infinite word w, denote by X(w) the set of phase points x with
+w(x) = w. Call a subset S ⊂ X(w) a strip if all vectors in S are parallel and their
+foot points constitute an interval on a side of Q. An open strip is defined analogously.
+The billiard transformation takes a strip to a strip, preserving its width.
+    Start with two simple observations. First, if w(x) = w(y) then the vectors x
+and y are parallel. If not, the unfolded trajectories of x and y linearly diverge, so a
+vertex of a copy of Q will fall into the angle between them. First time this happens
+the reflections of the two trajectories occur at different sides of the polygon, thus
+w(x) 6= w(y).
+
+   Fig. 12
+
+   Secondly, if x and y are parallel vectors in X(w) then every parallel vector, whose
+foot point lies between those of x and y also belongs to X(w). This is true because
+Q is simply connected. It follows that X(w) is the maximal strip corresponding to
+the word w. The trajectories of its boundary points come arbitrarily close to vertices
+of Q.
+   The next theorem from [20] shows that the encoding is one-to-one on the set of
+non-periodic billiard trajectories.
+
+
+
+                                           66
+Theorem 7.4 If w is a (2n)-periodic word then each vector from X(w) has a 2n-
+periodic trajectory and X(w) is an open strip. If w is aperiodic then the set X(w)
+consists of at most one point.
+
+Proof. Start with the first claim. Consider x ∈ X(w) and unfold its trajectory to
+the line l. One claims that the (2n)-th copy of Q along this trajectory denoted, as
+before, by Q2n , is parallel to Q. If not, x and T 2n (x) have their foot points on the
+same side of Q but they are not parallel. According to the remark, preceding the
+theorem, w(x) 6= w(T 2n (x)) which contradicts the periodicity of w.
+    Let t be the parallel translation that takes Q to Q2n . One wants to show that
+t(l) = l. Suppose not. Then, for a sufficiently great integer k, the polygon tk (Q) does
+not intersect l. This is a contradiction because
+    this polygon is Q2nk . Finally, the strip X(w) is open because a periodic trajectory
+stays a bounded distance from the vertices of the polygon.
+    Now consider the second claim. Assume, to the contrary, that the set X(w) is a
+maximal strip of non-zero width; call this strip S. Let x ∈ S be the vector whose
+base point lies exactly in the middle of S.
+    The proof is especially simple if Q is a rational polygon, and we start with this case.
+Since Q is rational, the trajectory of x has a finite set of directions. It follows that
+this trajectory will visit some side of Q infinitely often with some fixed direction. Call
+these points xi = T ni (x) and let Si = T ni (S). All these strips have the same width,
+therefore they must intersect. Suppose Si and Sj intersect. Then the maximal width
+strips S̄i and S̄j , containing Si and Sj , respectively, are also parallel and intersect.
+These maximal strips cannot coincide, otherwise w would be periodic. Therefore a
+part of the boundary of S̄i lies inside S̄j (or vice versa). Since the trajectories of the
+boundary points of the maximal strip S̄i come arbitrarily close to vertices of Q, there
+are vertices inside S̄i , a contradiction.
+    Consider a general polygon Q. One cannot claim anymore that the trajectory of
+x visits some side of Q infinitely often with some fixed direction. This claim will be
+replaced by a weaker recurrence result.
+    Let Y be the forward limit set of x under the mapping T . Since the width of
+S is positive, the trajectories of the points from Y stay bounded distance from the
+vertices of Q. Therefore the restriction of T to Y is continuous. Note that Y is closed
+and bounded, hence compact.
+    One uses the strengthened version of the Poincaré recurrence theorem, due to H.
+Furstenberg [18]. This theorem implies that there exists a uniformly recurrent point
+y ∈ Y . This means the following: for every neighborhood U of y there is a constant
+
+                                            67
+C such that the return times ni > 0, defined by T ni (y) ∈ U, satisfy the inequalities
+ni+1 − ni < C.
+    Fix a sufficiently small ǫ > 0 and consider the unfolded maximal strip S ′ of y
+together with its ǫ neighborhood Sǫ′ . Since S ′ is maximal, some vertices of copies of
+Q, unfolded along this strip, will fall into Sǫ′ . Claim: they fall with uniformly bounded
+gaps into each of the two components of Sǫ′ − S ′ .
+    This claim follows from the uniform recurrency of y. More specifically, let z be the
+leftmost point of S ′ . Then there is m > 0 such that the foot point of T m (z) lies within
+ǫ/2 of a vertex v of Q; let m be the first such number. Let U be a neighborhood
+of y such that for every u ∈ U the m-th iterate T m (u) is ǫ/2 close to T m (y); such a
+neighborhood exists since T is continuous at y. Let ni be the return times of y to U.
+Then T m+ni (y) is ǫ/2 close to T m (y), and therefore T m+ni (z) is ǫ/2 close to T m (z).
+It follows that the foot points of T m+ni (z) lie within ǫ from the vertex v. The claim
+is proved.
+    To finish the proof of the theorem recall that y is a forward limit of x: there is a
+sequence ni → ∞ such that xi = T ni (x) → y. The argument, given above in the case
+of a rational polygon Q, shows that no two vectors xi and xj are parallel. Consider
+the intersection of the unfolded maximal strip for xi with Sǫ′ − S ′ . Let αi be the angle
+between these strips of width ǫ and, say, δ. Then αi → 0 as i → ∞. The intersection
+is a parallelogram which, by elementary geometry, contains a rectangle of width ǫ and
+length li = (δ − ǫ cos αi )/ sin αi . Since the gaps between the vertices in Sǫ′ − S ′ are
+uniformly bounded and li → ∞ as i → ∞, a vertex will eventually appear inside the
+unfolded maximal strip for xi . This is a contradiction.                                 ✷
+    As a consequence, the closure of every non-periodic billiard orbit contains a vertex
+of the billiard polygon.
+    An important corollary of the theorem concerns the entropy of polygonal billiards.
+
+Corollary 7.5 The metric entropy of the billiard mapping with respect to any invari-
+ant measure is zero.
+
+Proof. Morally, the argument goes as follows: the ”past” is uniquely determined by
+the ”future”, therefore the entropy vanishes.
+    More specifically, consider the set Σ of words in 1, ..., k that encode the billiard
+trajectories for time from −∞ to ∞, and let S be the shift transformation of Σ. Then
+the encoding map conjugates the billiard transformation and S. By the theorem, the
+shift S has a one-sided generator, the partition into k parts according to the value
+of the zero symbol in a word. This means that for this partition η the σ-algebra of
+
+                                            68
+measurable sets is generated by ∨∞      −i
+                                   i=0 S (η). It is a standard result in ergodic theory
+that the metric entropy of a transformation with a one-sided generator vanishes (see,
+e.g., [12]).                                                                         ✷
+    The variational principle implies that the topological entropy vanishes as well.
+    The zero entropy result was proved in [8] and [54] for the canonical billiard mea-
+sure, and in [33] for topological entropy (see also [20] and [25]). The latter work
+concerns a broader class of transformations, the so-called, polygon exchanges.
+    The zero entropy result implies that a number of quantities, associated with a
+polygonal billiard, grow slower than exponentially: the number of different words of
+length n in Σ, the number of strips of n-periodic trajectories or periodic trajectories
+of length not greater than L, etc. Conjecturally, all these numbers have a polynomial
+growth.
+
+7.3    Complexity of billiard trajectories in rational polygons
+Consider an aperiodic billiard trajectory in a rational polygon in a direction θ. Ac-
+cording to Theorem 1.4 its code w is an aperiodic sequence. Generically this sequence
+enjoys a weaker periodicity property, called quasiperiodicity, described in the next re-
+sult.
+
+Proposition 7.6 For all but countably many directions θ each finite segment of w
+appears in w infinitely many times.
+
+Proof. Let i1 , ..., in be a segment of w, and let x be a phase point on the trajectory
+under consideration whose first n successive reflections occur in the sides labeled
+i1 , ..., in . There is a neighborhood U of x such that for every phase point y ∈ U the
+first n reflections occur in the same sides of the polygon. By Theorem 1.8, for all
+but countably many directions θ, the trajectory is dense on the invariant surface. It
+follows that x returns to U infinitely many times, and each time the segment i1 , ..., in
+reappears in w.                                                                        ✷
+      A convenient way to measure the complexity of aperiodic trajectories and their
+codes is provided by the next definition.
+
+Definition 7.7 The complexity function p(n) of an infinite sequence w is the number
+of distinct n-element segments of w.
+
+
+
+                                           69
+    We start with the complexity of billiard trajectories in a square; the results are due
+to Hedlund and Morse [29]. We slightly modify the encoding using only two symbols,
+say, 0 and 1, to indicate that a trajectory reflects in a horizontal or a vertical side,
+respectively.
+
+Theorem 7.8 For every aperiodic trajectory one has: p(n) = n + 1.
+
+   The sequences with complexity p(n) = n + 1 are called Sturmian.
+Proof. Start with the following observation. Every aperiodic trajectory is dense in
+the respective invariant torus. Therefore p(n) can be computed as the number of
+different initial segments of length n in the codes w(x) where x ranges over the phase
+vectors having a fixed direction.
+    Unfold the billiard trajectory to a line l. Partition the square grid in the plane into
+”ladders”, going in the south-east – north-west direction, as shown in figure 11. The
+n-th symbol in the code of the trajectory is 0 or 1, according as l meets a horizontal
+or a vertical segment of n-th ladder.
+
+   Fig. 13
+
+    Let (e1 , e2 ) be the orthonormal frame. Consider the linear projection of the plane
+onto the diagonal x + y = 0 whose kernel is parallel to the line l. Factorize the
+diagonal by the translation through e1 − e2 and identify the quotient space with the
+unit circle S1 . The vertices of the first ladder are the lattice points (a, b) with a+b = 1
+or a + b = 2. Since l has an irrational slope the projections of the vertices of the
+first ladder partition the circle into two irrational arcs. Let T be the rotation of S1
+through the length of an arc, that is, through the projection of e1 .
+    The number of different initial n-segments corresponding to the lines, parallel to
+l, equals the number of segments into which the projections of the vertices of the first
+n ladders partition S1 . Each ladder is obtained from the first one by the translation
+through e1 . It follows that p(n) equals the cardinality of the orbit T i (0), i = 0, ..., n.
+Since T is an irrational rotation of the unit circle all points of this orbit are distinct,
+and p(n) = n + 1.                                                                          ✷
+    There are generalizations of the above theorem to multi-dimensional cubes – see
+[2] and [4].
+    Next we consider the complexity of billiard trajectories in convex rational poly-
+gons. The following result is due to P. Hubert ([30]).
+
+
+                                             70
+    Let Q be a convex rational k-gon with the angles πmi /ni , i = 1, ..., k (mi and ni
+are coprime), and let N be the least common multiple of ni ’s. Let θ be a direction such
+that there are no generalized diagonals in this direction. Consider a billiard trajectory
+in direction θ which avoids the vertices. Let w be its coding in the alphabet {1, ..., k},
+and denote by p(n) the complexity of w.
+
+Theorem 7.9 For all sufficiently great n one has: p(n) = n(k − 2)N + 2N.
+
+    In particular, if Q is a square, one obtains: p(n) = 4(n + 1). This does not con-
+tradict the previous theorem because the encoding there was different and, actually,
+4 times less precise: the pair of parallel sides were labeled identically.
+Proof. Consider the invariant surface M of the billiard flow. Recall that M is the
+result of pairwise identifying the sides of 2N copies of Q. Thus M has the structure
+of a complex; denote by v, e and f the number of vertices, edges and faces. Note that
+e = Nk and f = 2N. The edges can be labeled by pairs (i, j), i = 1, ..., k, j = 1, ..., N
+so that the (i, j)-th edge corresponds to the i-th side of Q. Let E ⊂ M be the union
+of the edges.
+    The billiard trajectory under consideration can be encoded in an obvious way
+in the alphabet {(i, j)}; denote its code by W . The projection (i, j) → i sends W
+to w (we will always denote by W words in the alphabet {(i, j)} and by w their
+projections). In other words, the new encoding takes into account not only the side
+of Q in which a reflection occurs but also the angle of reflection that can take finitely
+many values.
+    Let P (n) be the complexity of W .
+    Claim: P (n) = n(k − 2)N + 2N for all n ≥ 1.
+    Arguing as in the proof of the preceding theorem, P (n) equals the number of
+distinct initial segments of length n in the codes W (x) where x ranges over points of
+E.
+    Next, given a word Wn of length n, consider the set X(Wn ) consisting of the points
+x ∈ E such that the initial segment of W (x) is Wn . Then, arguing as in the previous
+section, X(Wn ) is an interval on an edge from E.
+    Denote by T the first return map of the directional flow Fθ to E (that is, the billiard
+map). Consider the set of initial segments of length (n + 1) in W (x), x ∈ X(Wn ).
+The word Wn will have different successors if and only if T n (X(Wn )) contains a vertex
+V of M. We say that Wn splits at V .
+    To find P (n + 1) − P (n) one needs to learn how many words of length n split
+at each vertex. Let V be a vertex with cone angle 2πc. Then there are c incoming
+
+                                            71
+saddle connections. Trace each one back n steps, and let W 1 , ..., W c be the respective
+n-length words. Then T n (X(W α )) contains V for each α = 1, ..., c.
+    The words W α are all different since their (n−1)-st letters are distinct. The latter
+hold because in the polygon Q there is only one trajectory that starts at a given side
+in a given direction and goes straight to a given vertex.
+    Thus all the n-length words that split at V are W 1 , ..., W c . It follows that
+                                                   X
+                             P (n + 1) − P (n) =       c(V ),
+
+sum over all vertices. To evaluate this sum note that the Euler characteristic of M
+equals the sum of indices of singular points of the flow Fθ ; the index at vertex V
+equals 1 − c(V ). Hence
+                                  X                       X
+                        χ(M) =        (1 − c(V )) = v −       c(V ).
+
+On the other hand, χ(M) = v − e + f , and it follows that c(V ) = (k − 2)N.
+                                                                       P
+
+Therefore P (n + 1) − P (n) = (k − 2)N, and since P (1) = kN, the claim follows.
+    To finish the proof of the theorem it remains to show that P (n) = p(n) for all
+sufficiently great n. Suppose not; then there exist arbitrary long words W 6= W ′ that
+are the initial segments of the codes of phase points x ∈ E such that w = w ′ .
+    The billiard trajectories, corresponding to W and W ′ , start at the same side of Q
+but make different angles with it: otherwise, since w = w ′ , they would reflect at the
+same sides of Q and meet them at the same angles which would imply that W = W ′ .
+Note that the angle between the two trajectories is bounded below by a constant α
+depending on Q and θ.
+    Unfold the trajectories to straight lines. Since these lines linearly diverge, there
+is a constant m, depending on Q and α, such that after at most m reflections of Q
+along either of the unfolded trajectories a vertex of a copy of Q will fall into the angle
+between the lines. Therefore if the length of W and W ′ is greater than m the codes
+w and w ′ are distinct, a contradiction.                                                ✷
+    If Q is a general k-gon let N be the least common denominator of its π-rational
+angles and s be the number of its distinct π-irrational angles. Then one has the next
+upper bound for the complexity pθ (n) of the billiard trajectories in Q in a fixed initial
+direction θ – see [28].
+
+Theorem 7.10 For all n one has:
+                                                    n s
+                                 pθ (n) ≤ kNn(1 +     ).
+                                                    2
+
+                                            72
+   Using techniques, similar to the ones in the proof of Theorem 7.9, S. Troubetzkoy
+obtained in [58] a complexity lower bound for arbitrary polygonal billiards. Unlike
+the previous results, his theorem concerns billiard trajectories in all directions, so
+that p(n) now means the number of distinct words of length n in the coding in the
+alphabet {1, ..., k} of all billiard orbits in a k-gon.
+
+Theorem 7.11 For every polygon there exists a constant c such that p(n) ≥ cn2 for
+all n ≥ 0.
+
+    A similar estimate is proved in [58] for d-dimensional polyhedra with the exponent
+2 replaced by d.
+
+7.4    Periodic trajectories in some irrational billiards
+The following elementary argument shows that every rational polygon has a periodic
+billiard trajectory of a special kind; it was found independently by A. Stepin ([21])
+and by M. Boshernitzan ([9]).
+    Shoot the billiard ball in the direction, perpendicular to a side of the polygon
+Q. By Poincaré’s recurrence theorem, for almost every initial position, the ball will
+return to the original side at an angle, arbitrarily close to π/2. Since the set of
+possible directions of the ball is discrete in a rational polygon, this angle will be equal
+to π/2. After the ball bounces off of the side it will backtrack the same trajectory, so
+the trajectory is periodic.
+    Surprisingly, a variation of this argument applies to some irrational polygons. This
+was observed by B. Cipra, R. Hanson and A. Kolan ([13]), and then generalized by
+E. Gutkin and S. Troubetzkoy ([28]). The next result is due to the former authors.
+
+Theorem 7.12 Given a right triangle with π-irrational acute angles, almost every
+(in the sense of measure) billiard trajectory, that starts at a side of the right angle
+in the direction, perpendicular to this side, returns to the same side in the same
+direction.
+
+Proof. The idea is to apply the construction which gave the invariant surfaces of
+the billiard flow in rational polygons. A significant difference with the rational case
+is that the invariant surface will not be compact.
+    Start with reflecting the triangle in the sides of the right angle to obtain a rhombus
+R. The study of the billiard inside the triangle reduces to that inside the rhombus.
+Let α be the acute angle of R.
+
+                                            73
+   Fig. 14
+
+    Consider the beam of horizontal trajectories, starting at the upper half of the
+vertical diagonal of the rhombus, and construct the invariant surface of the phase
+space, corresponding to this beam. This surface consists of rhombi, obtained from R
+by the action of the group A(R), whose sides are pasted pairwise in an appropriate
+manner. Since α is π-irrational, this surface is not compact. The invariant surface
+is partially foliated by the parallel trajectories from the horizontal beam, and this
+foliation has an invariant transversal measure, ”the width of a beam”.
+    Each rhombus involved is obtained from the original one by a rotation through
+the angle nα where n ∈ Z. Such a rhombus will be referred to as the n-th rhombus
+and denoted by Rn ; in particular, R = R0 . A trajectory from the beam under
+consideration may leave the n-th rhombus through a side which has one of the two
+possible directions. Call such a side positive if the trajectory enters an (n + 1)-st
+rhombus and negative if it enters an (n − 1)-st one.
+    One wants to show that almost every trajectory returns to R0 (where they hit the
+vertical diagonal in the perpendicular direction). We will prove that for every ǫ > 0
+the relative measure of the set of trajectories that do not return to R0 is less than ǫ.
+    Let ǫ be given. Since α is π-irrational, there exists n > 0 such that the vertical
+projection of the positive side of Rn is less than ǫ. This implies that the relative
+measure of the set of trajectories that make it to (n + 1)-st rhombi is less than ǫ.
+    The rest of trajectories are bound to stay in R0 , R1 , ..., Rn ; call this set of tra-
+jectories S. The union of the rhombi from 0 through n is compact, therefore the
+Poincaré recurrence theorem applies to S. It follows that almost every trajectory in
+S is recurrent, that is, returns to R0 .                                                 ✷
+    In fact, the above proof gives more: for every direction in a rhombus almost every
+billiard trajectory in this direction returns arbitrarily close to itself and in the same
+direction. A relevant definition is proposed in [28].
+
+Definition 7.13 Given a billiard polygon Q, a direction is called recurrent if almost
+every billiard trajectory in this direction returns arbitrarily close to itself and in the
+same direction. A polygon Q is called strongly recurrent if every direction is recurrent.
+
+    In particular, every rational polygon is strongly recurrent. An argument, similar
+to the preceding proof, gives the next result from [28], applicable, in particular, to all
+parallelograms.
+
+
+                                            74
+Theorem 7.14 Let Q be a polygon whose sides have one of the two fixed directions.
+Then Q is strongly recurrent. In particular, the billiard orbits, perpendicular to each
+side of Q, are periodic with probability one.
+
+7.5    A non-periodic trajectory that is not dense in the con-
+       figuration space
+An example of such a trajectory was constructed by G. Galperin in [19].
+   Fig. 15
+    Consider a centrally symmetric hexagon (so that its opposite sides are parallel
+and congruent) such that the bisector of the angle BAC = α is perpendicular to the
+side AF and the the bisector of the angle ABF = β is perpendicular to the side BC.
+    Since the bisector of α is perpendicular to BC, the reflection of AB in BC is the
+line BF . Thus the reflection of any vertical segment leading to BC is parallel to BF .
+Similarly, the reflection of vertical segments in CD are parallel to AC. After another
+reflection the segment becomes vertical again. Choose a line, perpendicular to the
+side AB; let X, Y, Z be the projections on this line of the points A, E, F , respectively.
+The set of vertical lines is identified with a horizontal segment XY , and the second
+iteration of the billiard transformation induces the exchange of the intervals XZ and
+ZY . An exchange of two intervals is equivalent to a circle rotation. For generic angles
+α and β each orbit of this circle rotation is dense. Therefore each vertical billiard
+trajectory is dense in the hexagon.
+    Extend the non-vertical sides of the hexagon to obtain a parallelogram. Then the
+two triangles, added to the hexagon, are never visited by any vertical trajectory, that
+starts inside the original hexagon.
+    Similar but more tedious considerations prove the following result by Galperin.
+Theorem 7.15 There exists an acute angle α0 such that for almost every (in the
+sense of measure) α ∈ (0, α0) a right triangle with the acute angle α contains a
+non-periodic and not everywhere dense billiard trajectory.
+
+
+References
+ [1] P. Arnoux. Ergodicité Générique des Billards Polygonaux. Sém. Bourbaki, No
+     696, (1987-88).
+
+                                           75
+ [2] P. Arnoux, C. Mauduit, I. Shiokawa, J.-I. Tamura. Complexity of sequences
+     defined by billiards in the cube. Bull. SMF, 122, F.1, (1994), 1-12.
+
+ [3] E. Aurell, C. Itzykson. Rational billiards and algebraic curves. J. Geom. and
+     Phys., 5, (1988), 191-208.
+
+ [4] Yu. Baryshnikov. Complexity of trajectories in rectangular billiards. Comm.
+     Math. Phys., 174, (1995), 43-56.
+
+ [5] A. Beardon. The geometry of discrete groups. Springer-Verlag, 1983.
+
+ [6] L. Bers. Finite dimensional Teichmuller spaces and generalizations, Bull. AMS,
+     5, (1981), 131-172.
+
+ [7] S. Bleiler, A. Casson. Automorphisms of surfaces after Nielsen and Thurston,
+     Cambridge Univ. Press, 1987.
+
+ [8] C. Boldrighini, M. Keane, F. Marchetti. Billiards in polygons. Ann. of Prob., 6,
+     (1978), 532-540.
+
+ [9] M. Boshernitzan. Billiards and rational periodic directions in polygons. Amer.
+     Math. Monthly, 99, (1992), 522-529.
+
+[10] M. Boshernitzan, G. Galperin, T. Kruger, S. Troubetzkoy. Periodic billiard orbits
+     are dense in rational polygons. Trans. AMS, 350 (1998), 3523-3535.
+
+[11] Y.Cheung. Ph.D. dissertation. University of Illinois at Chicago.
+
+[12] I. Cornfeld, S. Fomin, Ya. Sinai. Ergodic theory. Springer-Verlag, 1982.
+
+[13] B. Cipra, R. Hanson, A. Kolan. Periodic trajectories in right triangle billiards.
+     Phys. Rev., E 52, (1995), 2066-2071.
+
+[14] C. Earle, F. Gardiner. Teichmuller disks and Veech’s F -structures. Contemp.
+     Math., 201, AMS, Providence, 1997, 165-189.
+
+[15] A. Eskin, H.Masur. Pointwise asymptotic formulas on flat surfaces. Preprint.
+
+[16] A. Fathi, F. Laudenbach, V. Poenaru. Travaux de Thurston sur les surfaces.
+     Asterisque, 66-67, 1979.
+
+
+
+                                         76
+[17] R. Fox, R. Kershner. Geodesics on a rational polyhedron. Duke Math. J., 2,
+     (1936), 147-150.
+
+[18] H. Furstenberg. Recurrence in Ergodic Theory and Combinatorial Number The-
+     ory. Princeton Univ. Press, 1981.
+
+[19] G. Galperin. Nonperiodic and not everywhere dense billiard trajectories in convex
+     polygons and polyhedrons. Comm. Math. Phys., 91, (1983), 187-211.
+
+[20] G. Galperin, T. Kruger, S. Troubetzkoy. Local instability of orbits in polygonal
+     and polyhedral billiards. Comm. Math. Phys., 169, (1995), 463-473.
+
+[21] G. Galperin, A. Stepin, Ya. Vorobets. Periodic billiard trajectories in polygons:
+     generating mechanisms. Russ. Math. Surv., 47, No 3, (1992), 5-80.
+
+[22] E. Gutkin. Billiards in polygons. Physica D, 19, (1986), 311-333.
+
+[23] E. Gutkin. Billiards in polygons: survey of recent results. J. Stat. Phys., 83,
+     (1996), 7-26.
+
+[24] E. Gutkin. Billiards on almost integrable polyhedral surfaces. Ergod. Th. and
+     Dyn. Syst., 4, (1984), 569-584.
+
+[25] E. Gutkin, N. Haydn. Topological entropy of generalized polygon exchanges.
+     Bull. AMS, 32, (1995), 50-57.
+
+[26] E.Gutkin, C.Judge. The geometry and arithemtic of translation surfaces with
+     applications to polygonal billiards. Math. Res. Lett., 3, (1996), 391-403.
+
+[27] E.Gutkin, C.Judge. Affine mappings of translation surfaces: geometry and arith-
+     metic. Preprint
+
+[28] E. Gutkin, S. Troubetzkoy. Directional flows and strong recurrence for polygonal
+     billiards. in Pitman Res. Notes Math. Ser., 362, 1996.
+
+[29] G. Hedlund, M. Morse. Symbolic dynamics 2. Sturmian trajectories. Amer. J. of
+     Math., 62, (1940), 1-42.
+
+[30] P. Hubert. Complexité de suites définies par des billards rationnels. Bull. Soc.
+     Math. France, 123, (1995), 257-270.
+
+
+                                          77
+[31] P.Hubert, T.Schmidt, Veech groups and polygonal coverings. Preprint
+
+[32] A. Katok. Interval exchange transformations and some special flows are not mix-
+     ing. Isr. Math. J., 35, (1980), 301-310.
+
+[33] A. Katok. The growth rate for the number of singular and periodic orbits for a
+     polygonal billiard. Comm. Math. Phys., 111, (1987), 151-160.
+
+[34] A. Katok, B. Hasselblatt. Introduction to the modern theory of dynamical sys-
+     tems. Cambridge Univ. Press, 1995.
+
+[35] A. Katok, B. Hasselblatt. Principal structures. This Handbook.
+
+[36] A. Katok, A. Zemlyakov. Topological transitivity of billiards in polygons. Math.
+     Notes, 18, (1975), 760-764.
+
+[37] M. Kean. Coding problems in ergodic theory. Proc. Int. School of Math. Phys.,
+     Univ. Camerino, 1974.
+
+[38] M. Kean. Interval exchange transformation. Math. Zeitschrift, 141, (19750, 25-
+     31.
+
+[39] R. Kenyon, J. Smillie. Billiards in rational-angled triangles. Preprint
+
+[40] S. Kerckhoff, H. Masur, J. Smillie. Ergodicity of Billiard Flows and Quadratic
+     Differentials. Ann. of Math., 124, (1986), 293-311.
+
+[41] M. Kontsevich, A. Zorich. Lyapunov exponents and Hodge theory. IHES preprint,
+     1997.
+
+[42] M. Kontsevich, A. Zorich. Connected components of the moduli spaces of holo-
+     morphic differentials with prescribed singularities. Preprint
+
+[43] I.Kra. On the Nielsen-Thurston-Bers type of some self-maps of Riemann surfaces.
+     Acta. Math., 146, (1981), 231-270.
+
+[44] H.Masur. Interval exchange transformations and measured foliations. Ann. of
+     Math., 115, (1982), 169-200.
+
+[45] H. Masur, Closed trajectories for quadratic differentiasl with an application to
+     billiards. Duke Math. J., 53, (1986), 307-314.
+
+                                          78
+[46] H. Masur. Lower bounds for the number of saddle connections and closed trajec-
+     tories of a quadratic differential. In Holomorphic Functions and Moduli, Vol.1,
+     D. Drasin ed., Springer-Verlag, 1988.
+
+[47] H.Masur. The growth rate of trajectories of a quadratic differential. Erg. Th.
+     Dyn. Syst., 10, (1990), 151-176.
+
+[48] H. Masur. Hausdorff dimension of the set of nonergodic foliations of a quadratic
+     differential. Duke Math. J., 66, (1992), 387-442.
+
+[49] H. Masur, J.Smillie. Hausdorff dimension of sets of nonergodic foliations, Ann.
+     of Math., 134, (1991), 455-543
+
+[50] H. Masur, J. Smillie. Quadratic differential with prescribed singularities and
+     pseudo-Anosov diffeomorphisms. Comm.. Math. Helv., 68, (1993), 289-307.
+
+[51] J.C.Oxtoby, S.M.Ulam. Measure preserving homeomorphisms and metrical tran-
+     sitivity, Ann. of Math., 42, (1941), 874-920.
+
+[52] G. Rauzy. Echanges d’intervalles et transformations induites. Acta Arith., 34,
+     (1979), 315-328.
+
+[53] R. Richens, M. Berry. Pseudointegrable systems in classical and quantum me-
+     chanics. Physica D, 2, (1981), 495-512.
+
+[54] Ya. Sinai. Introduction to ergodic theory. Princeton Univ. Press, 1976.
+
+[55] K. Strebel. Quadratic differentials. Springer-Verlag, 1984.
+
+[56] S. Tabachnikov. Billiards. SMF Panoramas et Synthèses, 1995, No 1.
+
+[57] W.P. Thurston. On geometry and dynamics of diffeomorphisms of surface. Bull
+     Amer. Math. Soc., 18, (1988), 417-431.
+
+[58] S. Troubetzkoy. Complexity lower bounds for polygonal billiards. Chaos, 8,
+     (1998), 242-244.
+
+[59] W.Veech. Strict ergodicity in zero dimensional dynamical systems and the
+     Kronecker-Weyl theorem mod 2. Trans. AMS, 140, (1969), 1-34.
+
+[60] W.Veech. Teichmuller geodesic flow. Ann. of Math., 124, (1986), 441-530.
+
+                                          79
+[61] W. Veech. Moduli spaces of quadratic differentials. J. D’Analyse Math., 55,
+     (1990), 117-171.
+
+[62] W.Veech. Teichmuller curves in moduli space. Eisenstein series and and an ap-
+     plication to triangular billiards. Invent. Math., 97, (1990), 117-171.
+
+[63] W.Veech. The billiard in a regular polygon, Geom.Funct.Anal. 2 (1992) 341-379.
+
+[64] W.Veech. Gauss measures for transformations on the space of interval exchange
+     maps. Ann. Math., 115, (1982), 201-242.
+
+[65] Ya. Vorobets. Ergodicity of billiards in polygons. Mat. Sb., 188, (1997), No 3,
+     65-112.
+
+[66] Ya. Vorobets. Plane structures and billiards in rational polygons: the Veech
+     alternative. Russ. Math. Surv., 51, (1996), No 5, 3-42.
+
+[67] P. Walters. An Introduction to Ergodic Theory. Springer-Verlag, 1982.
+
+[68] C. Ward. Calculation of Fuchsian groups associated to billiards in a rational
+     triangle. Ergod. Th. and Dyn. Syst., 18, (1998), 1019-1042.
+
+[69] A. Zorich. Asymptotic flag of an orientable measured foliation on a surface. in
+     Geometric Study of Foliations, World Sci., 1994, 479-498.
+
+[70] A. Zorich. Finite Gauss measure on the space of interval exchange transforma-
+     tions. Lyapunov exponents. Ann. Inst. Fourier, 46, (1996), 325-370.
+
+[71] A. Zorich. Deviation for interval exchange transformations. Ergod. Th. and Dyn.
+     Syst., 17, (1997), 1477-1499.
+
+[72] A. Zorich. How do the leaves of a closed 1-form wind around a surface. Adv. in
+     Math. Sci., AMS, to appear.
+
+
+
+
+                                        80
+

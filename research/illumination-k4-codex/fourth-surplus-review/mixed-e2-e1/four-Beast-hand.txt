@@ -1,0 +1,226 @@
+CURRENT RESULT — ALL FOUR ORIGINAL ROOMS CLOSED WITH FOUR REFLECTIONS
+4 November2026 — Codex01a18403; parent hand proof/exact checks PASS,
+independent peer challenge requested. The historical20-path below remains
+valid for two rooms, but its open-R frontier has been superseded.
+
+Endpoint-fixed suffix unfolding
+
+Start with the previously accepted five-path in
+second-surplus-review/five-path-check.json:
+ S,(1/6,1),(2/3,-2),(8/5,18/5),(2,11/3),(12/7,26/7),T.
+Its last three hits lie on the left Tc roof diagonal, the vertical x2
+mirror, then the left diagonal again. The LINE x2 passes through actual
+T=(2,2), even though the finite vertical mirror segment lies ABOVE T.
+
+Adding Tc sector6 to sector5 fills in the reflected half of this roof.
+The old vertical mirror x2,3<y<4 becomes interior. Omit its reflection and
+reflect ONLY the subsequent diagonal hit and final segment across x2.
+The endpoint T stays FIXED, while (12/7,26/7) becomes(16/7,26/7) on the
+actual right roof diagonal. The original left-roof outgoing segment
+continues straight through the removed mirror point to this reflected
+hit. Its reflection then reaches the same actual T.
+
+The reflected suffix stays in the added Tc6 half and the symmetric right
+half of the full T star. Thus this use does not assume arbitrary mirror
+removal preserves illumination: it verifies a concrete reflected suffix
+whose endpoint is fixed by the reflection. The common full support guard
+below also proves no unrelated triangle changes this suffix or prefix.
+
+The NEW actual path has FOUR reflections:
+ (0,0) -> (1/6,1) -> (2/3,-2) -> (8/5,18/5)
+       -> (16/7,26/7) -> (2,2).
+All four contacts are strict finite-wall points: source roof y1, Bsquare
+bottom y-2, left Tc roof y=x+2, right Tc roof x+y6. It never uses(3,0).
+Consequently neither R cap creates a corner problem for this path.
+
+An independent analytic endpoint check launches(d,1), reflects at(d,1),
+then the Bsquare bottom(4d,-2). Its bottom portal goes from x3d to x5d,
+with all three phases3d,4d,5d strictly in(0,1). At the final ascent's y1,
+x7d>1 avoids the source-roof/notch throat. The Tc two-diagonal hits are
+ a=8d/(1-d), (a,a+2), and b=(4-8d)/(1+d), (b,6-b).
+After the last hit velocity is(-d,-1). At height2 the x coordinate is
+ (1+d)b-4d=4-12d.
+Set this equal2: d1/6, strictly in(1/7,1/5). The launch direction already
+occurs in the accepted five-path; no parameter/direction/word search ran.
+
+Whole-family/actual-room validation
+Let minimum=H+B012+E45+Tc56+L++Nr- and maximum add ALL FOUR ordinary cap
+triangles D-,D+,R-,R+. The new path's complete U fits minimum; Z misses
+maximum. It therefore applies to EVERY one of the FOUR ORIGINAL rooms.
+Their original triangle sets and maximal vertices are matched exactly.
+Each passes actual firstT, finite firstwall, specularity, segment interior,
+corner avoidance, reverse and sigma checks. Actual-wall unfolding gives
+actual target(2,12), aligned with launch(1,6). No new room was constructed.
+
+Run the unchanged single owned command:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/mixed-e2-e1/four-Beast-hand-check.py
+Current receipt: current_result and new_four_reflection_certificate in
+four-Beast-hand-check.json. The old top-level20-path fields are retained
+as HISTORICAL certificates, not as current unresolved cases.
+
+Combining this FOUR-room closure with critical-B.txt10–12's complete
+case reduction proves the ENTIRE Beast012 all-root e2+twoe1/b0 branch
+illuminates within13 reflections (other branches may use sigma13).
+Sigma gives the corresponding mirrored larger E root. Both complete
+reduction and new four-path require independent peer hand review; the
+fixed checks are not formal verification or expert refereeing.
+
+[done] Parent entireBeast012 branch optical cover<=13; FOUR residuals<=4.
+[waiting on peer] Independently audit reduction and endpoint-fixed suffix.
+[in progress] West/rectangle centered-E exceptions, remaining west/EO
+cases, joined/single-leaf rows, eleven L/T fixtures and remote gaps.
+No full mixed/Delta4 theorem or universal minimum is claimed.
+
+HISTORICAL20-PATH DERIVATION AND FAILED CONTINUATIONS (SUPERSEDED FRONTIER)
+
+Two of the four Beast residual rooms: a hand-derived20-reflection proof
+4 November2026 — Codex01a18403
+
+RESULT: Parent proof for the ORIGINAL D- and D+ residual rooms in
+critical-B.txt section12. Both illuminate actual S=(0,0) and T=(2,2)
+with the SAME20-reflection path. Exact physical/full-support checks PASS;
+independent peer challenge requested. The two R-/R+ rooms remain OPEN.
+This does not close the entire Beast/mixed/Delta4 class.
+
+1. Fixed rooms and mathematical task
+
+Every original residual is
+ H+B012+E45+Tc56+L++Nr-+ONE of D-,D+,R-,R+.
+Here H is the three full A stars S/U/T; sectors and cap names are those
+of critical-B.txt. The source and target are the actual interior marks.
+The new proof uses the common B012 bottom pocket, ordinary L+ cap, the
+horizontal source roof, and the centered Tc56 target roof. It avoids the
+D caps completely. It uses x3 at y0 as a reflection wall, which is smooth
+in D-/D+ but a true boundary vertex in both R variants.
+
+2. Bottom-pocket return, source phase and strict branches
+
+Launch S with velocity(-d,-1). The bottom pocket B012 has left diagonal
+x+y=-2, bottom y=-2 on0<x<1, and right vertical x1 on-2<y<-1.
+For0<d<1/5 the first three hits are diagonal/right/diagonal:
+ (-2d/(1+d),-2/(1+d)), (1,3d-2),
+ (-4d/(1-d),(6d-2)/(1-d)).
+Reflection in the slope-1 diagonal maps(vx,vy) to(-vy,-vx).
+These hits give the portal exit(-5d,-1) with velocity(-d,1).
+The old same-d2/11 T12 source-prefix idea fails on a later B visit at
+corner(1,-2). That candidate was not replayed or used as a certificate.
+Instead retain d symbolically and follow the prescribed circuit below.
+
+Use the full strict interval
+ 7/37<d<1/5.
+It implies d>3/16 and d>2/11. The first left-wall contact lies strictly
+between y-1 and0. The next roof contact lies strictly between x-1 and0.
+The second B excursion hits diagonal/bottom/right/diagonal; d>2/11
+ensures the bottom precedes the right wall. All four contacts are strictly
+inside their finite sides, and the exit is(2-13d,-1), velocity(-d,1).
+
+The next roof reflection enters L+ through its portal and reflects in its
+bottom and then diagonal. Its outlet is(-1,4-17d), velocity(1,-d).
+The main right wall is reached at(3,4-21d). In the D rooms this lies inside
+the one continuous vertical wall-1<y<1. After its reflection and another
+left-wall reflection, B's right wall and left diagonal turn the ray upward.
+One source-roof reflection and the ordinary B-square one-hit return send
+it toward Tc56. The inequality d>7/37 ensures it passes RIGHT of the
+source roof/notch throat at y1, rather than hitting that roof again.
+This final throat condition is necessary; d>3/16 alone is insufficient.
+
+3. Complete contact formulas and endpoint equation
+
+In the following list S has index0, the20 reflections indices1–20:
+ 1 (-2d/(1+d), -2/(1+d))
+ 2 (1,3d-2)
+ 3 (-4d/(1-d), (6d-2)/(1-d))
+ 4 (-1,1/d-6)
+ 5 (7d-2,1)
+ 6 ((10d-2)/(1-d), -8d/(1-d))
+ 7 (2/d-10,-2)
+ 8 (1,11d-4)
+ 9 ((2-12d)/(1-d), (14d-4)/(1-d))
+10 (2-15d,1)
+11 (2-16d,0)
+12 ((2-18d)/(1+d), (4-16d)/(1+d))
+13 (3,4-21d)
+14 (-1,4-25d)
+15 (1,4-27d)
+16 ((28d-6)/(1+d), (4-30d)/(1+d))
+17 (31d-6,1)
+18 (34d-6,-2)
+19 (a,a+2), where a=(38d-6)/(1-d)
+20 (b,6-b), where b=(10-38d)/(1+d).
+
+Horizontal and vertical walls negate the corresponding velocity component.
+The left Tc slope+1 diagonal swaps components; the right slope-1 diagonal
+negates and swaps them. After the last contact the velocity is(-d,-1).
+At height y2 the ray therefore has
+ x=(1+d)b-4d=10-42d.
+Set x2 to reach the actual target: d=4/21, strictly inside(7/37,1/5).
+This parameter is forced by the symbolic endpoint equation; it was not
+selected by a direction, reflection-word or numerical parameter search.
+
+All contacts at d4/21 lie strictly inside the named sides. For example,
+contact13 is(3,0), contact11 is(-22/21,0), contact18 is(10/21,-2), and
+contacts19/20 are(26/17,60/17),(58/25,92/25). The target point is(2,2).
+The complete exact path is in four-Beast-hand-check.json. The checker
+also verifies every rational contact equals this formula list at d4/21.
+
+4. Exact physical checks and complete-support inheritance
+
+Run:
+ python3 -B .context/illumination-k4-codex/fourth-surplus-review/mixed-e2-e1/four-Beast-hand-check.py
+
+ONLY the ORIGINAL four residual triangle sets are read from
+critical-B-check.json, Beast_four_declared_residuals. The two tested D
+rooms are first matched exactly to their hand declarations and original
+maximal boundary vertices. On each, the same fixed path passes physical
+first-actual-T, first finite-wall hit, specular law, segment interior and
+corner-avoidance checks, forward, reverse and sigma. Actual-wall unfolding
+gives target(-8,-42), parallel to the initial(-4,-21) direction.
+
+Let minimum=H+B012+E45+Tc56+L++Nr- and
+maximum=minimum+D-+D+. The complete required triangle set U fits minimum,
+and forbidden set Z misses maximum. This proves both individual D rooms
+simultaneously, rather than relying on proximity or arbitrary monotonicity.
+Sigma checks transform both U and Z exactly. Retained physical and guard
+helpers have shared historical origins; this is not formal verification.
+Independent hand and fixed-replay review is still required.
+
+5. Why the two R variants remain open; bounded routes retired
+
+At contact13 the path hits(3,0). This point belongs to a straight wall in
+both D rooms. It is an actual boundary vertex in the ORIGINAL R- and R+
+rooms. The checker explicitly confirms that fact from their recorded
+maximal vertices; no legal trajectory through it is claimed.
+
+Two hand continuations of this same source circuit fail:
+
+R-: entering its lower triangular pocket requires d>4/21. The prescribed
+three-contact local return exits at(3,4-23d), velocity(-1,-d). To continue
+through the next proposed left vertical wall its height would be4-27d;
+requiring that above-1 gives d<5/27, incompatible with d>4/21. Thus that
+proposed continuation cannot occur. The ray reaches a different boundary
+first. No physical replay or endpoint claim was made for it.
+
+R+: for3/16<d<4/21 the upper pocket's bottom/diagonal/bottom/diagonal return
+exits at(3,23d-4), velocity(-1,d). The prescribed continuation through the
+source roof, L's diagonal/bottom/diagonal, a plain right-wall reflection,
+left wall, B's right/diagonal, source roof, Bsquare and two Tc diagonals
+has target equation12-54d=2, whose root is5/27. That is below3/16, outside
+the required prefix branch. The proposed left-wall continuation already
+requires d<7/37 as well. This is a branch failure, not illumination or
+darkness evidence. No numerical trace or reflection-word search ran.
+
+Retire these two continuations of the same source circuit. Further work
+on the R pair needs a genuinely different geometric step; adding longer
+loops to this failed continuation is not a new mechanism.
+
+6. Realignment
+
+[done] TWO original D residuals have a parent legal20-reflection proof,
+with fixed physical/fullguard checks PASS, independent review requested.
+[in progress] TWO original R residuals remain optically OPEN.
+[waiting on peer] Independent audit of sections2–4, particularly strict
+throat condition, first actual T, and smooth(3,0) versus true corners.
+Other B/E cases, joined/single-leaf rows, eleven L/T fixtures and remote
+gaps remain separate. No whole mixed/Delta4 or universal minimum claim.
+No new room/cap-assignment/ray/direction/word discovery, raw archive,
+solver, orbit run or worker was used.

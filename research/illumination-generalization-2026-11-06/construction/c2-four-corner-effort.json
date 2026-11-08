@@ -1,0 +1,57 @@
+{
+  "id": "A40",
+  "start": "2026-11-07T06:00:50.081931+00:00",
+  "deadline": "2026-11-07T06:14:50.081931+00:00",
+  "hypothesis": "The unresolved c2 actual-seam four-corner pattern has a finite legal trajectory escaping both pure-turning-level and single far twist mechanisms.",
+  "success_criterion": "First candidate independently validated against every actual wall, then inspect its mechanism for a positive residual class; no second room search.",
+  "strongest_objection": "A positive fixed room does not establish all c2 rooms; candidate origami and exact actual ray validation must be separate.",
+  "room": {
+    "core": [
+      0,
+      2,
+      0,
+      16
+    ],
+    "right_teeth": [
+      [
+        2,
+        3,
+        1,
+        3
+      ],
+      [
+        2,
+        3,
+        13,
+        15
+      ]
+    ],
+    "left_teeth": [
+      [
+        -1,
+        0,
+        6,
+        8
+      ],
+      [
+        -1,
+        0,
+        10,
+        12
+      ]
+    ],
+    "S": [
+      2,
+      2
+    ],
+    "T": [
+      2,
+      14
+    ]
+  },
+  "mode": "focused single-input discovery; aggregate hard deadline",
+  "status": "terminal_first_actual_witness_search_stopped",
+  "finished_utc": "2026-11-07T06:04:31.408389+00:00",
+  "actual_reflections": 26,
+  "actual_wall_leg_guards": 540
+}

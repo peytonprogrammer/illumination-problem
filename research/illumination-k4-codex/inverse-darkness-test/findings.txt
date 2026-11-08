@@ -1,0 +1,65 @@
+Inverse-darkness corner charging: bounded mechanism test
+4 November 2026
+
+[done] The proposed local-bypass/distinct-corner mechanism has not yielded a wall bound. Its basic local premise duplicates an already retired route. A stronger analytic control below shows that first arrival, loop removal, and arbitrarily many target-aimed attempts do not by themselves rescue per-corner charging. No global lower-bound theorem is refuted.
+
+1. Correction to the proposal
+The chat suggested aiming at the actual target, resolving a corner hit on both sides, and charging the failures to distinct reflex corners until nine are forced. Our existing universal-corner-bound/local-bypass.txt already proves that a single reflex wedge can prevent every local fixed-endpoint bypass. Its reflection-budget.txt excludes a wall-count-only reflection cap; visibility-frontier.txt explains why isolated dark points need not have a separating shadow boundary. The existing singularity-budget/findings.txt also warns that different target-lift obstructions can reuse the same physical corner.
+I should not have presented the bare local-bypass proposal as a fresh mechanism. The current task does not restart those retired approaches. It tests the additional suggestion that first-arrival/minimal-path restrictions could make the obstruction count inject into physical corners.
+
+2. A fixed bounded room and actual endpoint pair
+Let
+  P=([0,2]x[0,1]) union ([0,1]x[0,2]),
+  S=(3/2,1/2), T=(1/2,3/2), V=(1,1).
+The boundary is (0,0),(2,0),(2,1),(1,1),(1,2),(0,2).
+This is a simple orthogonal six-wall room of area3, with ONE reflex corner V. Both marks are strictly interior.
+A singular target-aimed candidate means a folded straight development that connects these actual marks, obeys ordinary specular reflection at every smooth contact, and hits a specified corner. Under the corner-stopping convention this is NOT a legal billiard connection: the physical ray stops at its first corner. Any continuation after that event below is a prescribed formal candidate, not an asserted dynamical continuation through a corner.
+
+3. Infinitely many candidates fail at the SAME single reflex corner
+For every integer k>=0, put a=8k+1 and launch with velocity(-a,1). Write F_b(z)=b-|((z mod 2b)-b)|.
+For 1/2<=y<=1, define
+  x(y)=F_2(3/2-a(y-1/2)).
+For 1<=y<=3/2, define
+  x(y)=F_1(1-a(y-1)).
+At y=1, the lower unfolded coordinate is1-4k, so F_2=1 and its derivative is+1. The upper starts at x=1 and immediately moves left. Thus both pieces arrive at V and leave V with the SAME velocity(-a,1); there is no arbitrary bend at V.
+At y=3/2, the upper unfolded coordinate is1/2-4k and F_1=1/2. Hence it ends at the actual T. Except at y=1, the lower piece stays inside the lower rectangle with only smooth vertical-wall contacts, and the upper piece stays inside the upper rectangle with only smooth vertical-wall contacts. All contacts occur at strictly intermediate heights, away from every polygon corner.
+The exact contact lists are:
+  lower: z=-2j, y=1/2+(3/2+2j)/a, j=0,...,2k-1,
+         x=0 for even j, x=2 for odd j;
+  upper: z=-j, y=1+(1+j)/a, j=0,...,4k-1,
+         x=0 for even j, x=1 for odd j.
+The empty lists at k=0 are intentional. There are2k+4k=6k ordinary reflections and exactly ONE corner contact, namely V.
+Both lower and upper smooth-reflection counts are even. The target development is therefore T_k=(1/2-8k,3/2), the developed corner is V_k=(1-4k,1), and V_k=(S+T_k)/2. These are actual sheet images for the displayed folded itinerary, not an arbitrary reflection-group word without geometry.
+Because y increases strictly, each candidate has no physical self-intersection or repeated point. Its only arrival at T is its endpoint. Its initial direction differs for every k. All the infinitely many candidates, despite retaining the actual S and T and being loop-free/first-arrival, are obstructed by the same one physical reflex corner.
+This disproves any universal constant bound on the number of such failed candidate directions charged to one physical reflex corner. It does not disprove a different invariant with cancellations, a specially selected finite independent family, or a theorem that uses the assumption of darkness in an essential way. These candidates all belong to one relative reflection frame, so this is NOT a four-frame independence counterexample.
+
+4. Fixed-word endpoint rigidity
+For a prescribed finite wall-reflection word in a fixed polygon, reflect the target backward through those supporting lines to get one developed target T_w. If T_w!=S, the initial direction is forced to be the direction of T_w-S. Any ordinary finite trajectory realizing that word must unfold to that unique straight segment. If T_w=S, a positive-length straight developed segment with those endpoints is impossible.
+Therefore a small angular change while keeping the word fixed cannot both avoid a corner of that segment and still hit the same target. At a singular word boundary, one may switch itinerary, but the new developed target generally changes. Its endpoint-matching equation must be solved again; there is no automatic left/right pair of connecting rays.
+The following exact length gap makes this failure concrete in the bounded room, even though the pair is lit.
+
+5. Exact shortest legal length: sqrt(5), versus singular sqrt(2)
+All wall coordinates are integers. Reflections in x=c or y=c, c integer, send the corresponding coordinate to2c-x or2c-y. Every developed target therefore has coordinates
+  (epsilon_x/2+2m, epsilon_y*3/2+2n),
+  epsilon_x,epsilon_y in{+1,-1}, m,n integers.
+Subtracting S gives two integer displacement components. For any legal S-to-T connection both must be nonzero: orthogonal reflections preserve absolute component velocities, and an axial path cannot change both physical coordinates between these marks.
+The squared length is consequently a positive sum of two nonzero integer squares. Below5 its only possible value is2. Equality2 forces one of the four initial directions (+/-1,+/-1), and developed travel time1 when normalized to |v_x|=|v_y|=1.
+Three of those rays hit a corner after time1/2:
+  NE ->(2,1) convex corner;
+  NW ->V=(1,1) reflex corner;
+  SE ->(2,0) convex corner.
+The fourth, SW, first reflects at the smooth bottom point(1,0). At time1 its position is(1/2,1/2), not T. Hence length sqrt(2) is impossible for a legal connecting path. This tests only the four directions analytically forced by the possible shorter length; it is not a discovery search or a finite-ray completeness claim for arbitrary lengths.
+A legal connection of length sqrt(5) is
+  S -> Z=(0,5/4) -> T,
+with initial direction(-2,1). It crosses y=1 at x=1/2, strictly inside the passage; Z is a smooth point of the left wall. Reflection reverses the horizontal component and reaches T with no corner contact. The two segment lengths are(3/4)sqrt(5) and(1/4)sqrt(5). Thus sqrt(5) is the exact minimum legal length.
+At k=0 the singular candidate is the direct segment S->V->T with length sqrt(2). It is also a shortest path in the polygon closure, since its length equals the Euclidean endpoint distance. So even selecting a globally shortest corner-bending path does not supply a nearby legal fixed-endpoint path. Every legal connection is separated from its length by at least sqrt(5)-sqrt(2)>0.
+This does NOT assert that a true globally shortest legal connection reuses corners: legal connections cannot hit them at all. It distinguishes the singular minimizing object from a legal connecting path.
+
+6. What a viable distinct-corner theorem would still need
+The proposed lower bound would require selecting obstructions whose independence is PROVED from simultaneous darkness of all actual endpoint lift pairs, with a controlled charge per physical reflex corner. Counting paths, winding, reflection words, first arrivals or singular target images is insufficient by section3. Local left/right resolution does not preserve the endpoint automatically by section4. Globally minimizing singular length is insufficient by section5. A wavefront index, four-label rank or noncancellation theorem would be additional new input; none is supplied by these controls or the prior notes.
+In a simple orthogonal polygon W=2r+4, from convex-minus-reflex=4. Therefore r>=9 would indeed imply W>=22, but this identity is only the final conversion and supplies none of the missing nine independent charges.
+Decision: retire the proposed unqualified local distinct-corner count. Do not label it a new successful strategy or begin a broader search. The potentially different darkness-dependent independence theorem remains open, with no concrete invariant presently established. No extension of the restricted lattice theorem, universal22 theorem or novelty assertion follows.
+
+7. Verification and provenance
+check.py directly constructs only k=0,1,7 from the prescribed formulas and validates actual boundary intersections, the unique allowed singular contact, every smooth reflection, interior segment points, exact target, y-monotonicity, smooth-contact count and developed coordinates. It checks the explicit legal one-reflection path and the four forced shorter-length controls. check.json reports the receipt. The all-k result and the shortest-length exclusion rely on the written arguments, not samples.
+Same-agent hand argument and exact controls; no independent reviewer verdict. Read prior local-bypass/reflection-budget/frontier, singularity-budget, smooth-step-multivisit, pocket brainstorm, and existing L-room construction. No literature theorem is newly imported; no historical novelty assessed. No room/ray/direction/word discovery search, solver, archive lookup, workers, external messages, peer-file edits or universal goal activation. No branch/git state changed.

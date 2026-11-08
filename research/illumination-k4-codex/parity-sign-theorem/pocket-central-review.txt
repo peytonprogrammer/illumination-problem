@@ -1,0 +1,158 @@
+# Adversarial review of Sections 10–13
+
+**Bottom line.** The gonality argument in Sections 12–13 is correct. I found no gap in the norm direction, the Castelnuovo–Severi case split, the orbit-divisibility step or the bielliptic exclusion. Its hypotheses are actually redundant for perfect G (item 11). The real limits are in scope, not in the proof:
+
+- **Disk hypothesis.** It relies on P being simply connected and on X being exactly the 8-copy unfolding.
+- **Section 10 lattice claim.** "Exactly 2Z²" is proved only at the grid base.
+- **Section 11 event definition.** The obstruction depends on events at B being restricted to π-sectors. A 3π continuation breaks primitivity (item 4).
+
+I checked the arithmetic below by hand, not by execution.
+
+---
+
+### 1. Full absolute lattice from continuous loops (§10)
+
+**Sound at the grid base.**
+
+- **Realizability.** A crossing word whose linear part is I returns to the original copy, because copies are indexed by D4 linear parts. Crossing at open wall points and joining through copy interiors (P is connected) gives an honest closed loop that avoids the cone points.
+- **Period of the loop.** It is the translation part of σ₁σ₂σ₃σ₂, by the usual unfolding convention: the copy after crossings e₁…e_k is σ₁⋯σ_k P. The opposite convention gives V₂V₁ = +(2,0), which spans the same lattice, so nothing depends on it.
+- **Word `wy` = (2,1,2,3,2,2).** It ends in a backtrack 2,2, which is realizable. It is σ_D·T·σ_D, giving T at L_D(−2,0) = (0,−2).
+- **Inclusion in 2Z².** It holds because D4 preserves 2Z²: the translation part of σ₁σ₂ is q₁ + L₁q₂.
+
+**Gaps:**
+
+- **(a) One room only.** The evenness of diagonal-mirror offsets is asserted for the class ("canonical A-B edges") but checked only for the one pinned `coupling.json`. For the universal goal it is a hypothesis about the class, not a verified fact.
+- **(b) Off the grid base.** The checker shows only that *these two* periods have zero derivative. Mirrors 2 and 3 move: the translation derivatives are (1,−1) and (0,−2). "The absolute lattice is exactly 2Z² throughout the slide" therefore holds only if the slide is a pure rel deformation, meaning no absolute period depends on t. That is unproved. If any loop's period moves, the period group stops being a lattice at generic t. Sections 12–13 do not depend on this (see item 6), but the sentence in §10 should be restricted to t = 0.
+
+### 2. Six-square imprimitive full-period control
+
+**Verified by hand.**
+
+- **Covering condition.** r[i]//2 = r₀[i//2] and u[i]//2 = u₀[i//2] hold for all six i.
+- **Commutator.** u∘r∘u⁻¹∘r⁻¹ = (0 5 2)(1 4 3). Each cycle maps bijectively onto the base commutator cycle (0 2 1), so the double cover is unramified.
+- **Genus.** g = 1 + (N − c)/2 gives 3 upstairs and 2 at the base. Riemann–Hurwitz checks: −4 = 2·(−2).
+- **Connectivity and blocks.** The square graph is connected, and the blocks {2i, 2i+1} are invariant.
+- **Periods.** r(0) = 0 and u(4) = 4 give cylinder cores with periods (1,0) and (0,1).
+
+So a full period lattice does not imply primitive monodromy. This is a correct negative control.
+
+### 3. SL₂(F₇) control
+
+**Verified.**
+
+- **Generation.** E₁₂(1) and E₂₁(2) generate SL₂(F₇), since E₂₁(2)⁴ = E₂₁(1).
+- **Commutator.** [r,u] ≡ [[0,5],[4,6]], with trace −1, so it has order 3.
+- **Genus.** 2g − 2 = 336·(2/3) = 224, so g = 113.
+- **Perfectness witnesses.** With d = diag(2, 2⁻¹), d·E₁₂(x)·d⁻¹ = E₁₂(4x) and d·E₂₁(x)·d⁻¹ = E₂₁(2x).
+  - E₁₂(4·5)·E₁₂(−5) = E₁₂(1) = r.
+  - E₂₁(4)·E₂₁(−2) = u.
+- **Central target.** z = −I is central of order 2.
+
+**Strengthening.** Perfectness is not just sufficient for a full lattice; for a one-branch regular cover it is equivalent. The image of ker φ in H₁(E) has quotient F₂/(K·[F₂,F₂]) ≅ G/[G,G]. So "full period lattice" is exactly "G perfect".
+
+### 4. Primitive detours preserving the target (§11)
+
+**Mostly correct.**
+
+- **Primitive w.** A primitive w gives the chord 0 → 2w, which is primitive in 2Z². On that segment the only lattice points are 0, w and 2w, so the only forbidden point it meets is the midpoint.
+- **Non-primitive w.** For w = k·w₀ with k ≥ 2, the path reaches the point w₀ ≢ 0 (mod 2) first, which is forbidden.
+- **Detour class.** Pushing off B on either side gives a simple nonseparating loop on E∖B. Its based class is primitive, and conjugation preserves primitivity.
+- **Group step.** A primitive element extends to a basis, so φ(γ) belongs to a generating pair. A central z cannot, because G is nonabelian.
+- **Generators through C.** The axis generators pass through the C points, but C is unbranched, so this is harmless.
+
+**The specific gap: which continuations at B count as admissible.** Upstairs, B has cone angle 6π. The continuations whose projection is straight leave at angle π, 3π or 5π from the incoming direction.
+
+- **π and 5π.** These are the left and right semicircular push-offs, both primitive.
+- **3π.** This continuation projects to the push-off times one full peripheral loop, for example a·[a,b] = a²ba⁻¹b⁻¹. That word is cyclically reduced of length 5 in homology class (1,0). The only primitive class there, up to conjugacy, is a (Osborne–Zieschang), so it is **not primitive**, and nothing stops φ(a·[a,b]) = z.
+
+So §11 is valid only if the reviewed event definition requires a π-sector (π on one side, 5π on the other). If "one-corner midpoint event" allows any corner with straight projection, the obstruction proof is incomplete. Please check the definition explicitly.
+
+### 5. C₄ quotient is the double of P, genus 0 (§12)
+
+**Correct, under stated conditions.**
+
+- **Action.** X = (P × D4)/〜, with (p,g) 〜 (p, g·σ_e) on edge e. Left multiplication respects this relation.
+- **Holomorphic.** In charts, ρ acts as z ↦ iz plus a constant, so ρ is holomorphic.
+- **Free off vertices.** On an edge, ρᵏg = g·σ_e would force a rotation to equal a reflection.
+- **Quotient.** The cosets C₄\D4 are {rotations, reflections}, and edge e of P₊ is glued to edge e of P₋. That is the topological double, a sphere because P is a disk.
+
+**Specific failure modes:**
+
+- **(a) Interior slits.** If the pocket or any wall is a slit not attached to the outer boundary, P is an annulus or worse. The double then has genus ≥ 1, and X/C₄ only gives a degree-4 map to an elliptic curve. The argument then fails as written.
+- **(b) Larger covers.** If the "actual" sheet labels live on a cover X′ → X (for example parity or pocket-state labels), the bound does not lift. Gonality descends along covers, never up.
+- **(c) Edge directions.** All four D4 directions must occur. If only axis directions occur, you get a 4-copy surface with a C₂ quotient, which is even better (gonality ≤ 2), but it is not the stated construction.
+
+Interior *marks* (points) are harmless.
+
+### 6. Norm proof of monotonicity
+
+**Correct, and the direction is right: gon(Y) ≤ gon(X) for X → Y.**
+
+- **Pole bound.** Take a point x over y with ramification e_x, where f has pole order p_x. Each fiber value contributes |t|^(−p_x/e_x), and it appears e_x times. So every coefficient c_j has pole order at y at most Σ p_x, which is the coefficient of π_*D at y.
+- **Degree.** Total degree is ≤ k.
+- **Non-constancy.** If every c_j were constant, f would be algebraic over C, hence constant.
+
+The argument is independent of the complex structure of E, so it covers every slide parameter t and every deformed torus base. This makes it immune to the §10(b) issue.
+
+### 7. Uniqueness of the pencil, and the bielliptic case
+
+**Correct.**
+
+- **Degree 3.** Two distinct g¹₃ generate C(Y): a proper intermediate field would be C(f₁), forcing f₂ to be a Möbius image of f₁. That gives a (3,3) image, so g ≤ 4.
+- **Degree 4, no common factor.** Two distinct g¹₄ either generate C(Y) (a (4,4) image, so g ≤ 9), or both factor through some Z with [C(Y):C(Z)] = 2.
+  - The intermediate field cannot equal C(f₁), by the same Möbius argument.
+  - On Z the induced degree-2 maps are distinct pencils, so g(Z) ≤ 1.
+  - g(Z) = 0 means Y is hyperelliptic, which the degree-2 case already excludes.
+- **Bielliptic uniqueness for g > 5.** Two distinct index-2 subfields have C(Y) as compositum, and Castelnuovo–Severi gives g ≤ 2 + 2 + 1 = 5.
+- **Exclusion.** So στσ⁻¹ = τ for every σ in G, and G maps to Aut(E′) with kernel ⊆ ⟨τ⟩.
+- **Case order.** Applying the dichotomy to the pair (f, f∘σ) for each σ is exactly what the G-preservation step needs, and the order of cases (2, then 3, then 4) is sound.
+
+### 8. Divisibility via the G-invariant ramification divisor
+
+**Correct.**
+
+- **Invariance.** R_{f∘σ} = σ*R_f and R_{A∘f} = R_f, so R_f is G-invariant, with coefficients constant on orbits.
+- **Orbit sizes.** Orbits have size n, or n/m in the branch fiber.
+- **Contradiction.** deg R_f = n(1 − 1/m) + 2k, so n/m divides 2k, which is impossible when 0 < 2k ≤ 8 < n/m.
+- **No faithfulness needed.** The induced action on P¹ need not be faithful.
+
+**Natural extension.** With branch orders m₁,…,m_r over r points, the same argument gives gcd_i(n/m_i) | 2k. This matters because room covers X → E typically branch over several 2-torsion points. But for multi-branch covers, "full lattice" no longer forces G to be perfect (peripheral classes enter). The bielliptic step then needs a separate argument.
+
+### 9. A perfect group cannot act on an elliptic curve
+
+**Correct, and stronger than stated.** Aut(E′) ≅ E′(C) ⋊ C_{2,4,6} is solvable as an abstract group, so finiteness of the image is irrelevant. Any homomorphism from a perfect group to it is trivial, so G ⊆ ⟨τ⟩, contradicting |G| = 336.
+
+### 10. Limitations
+
+These are what the note should state.
+
+- **Literal factorization only.** It excludes holomorphic maps X → Y onto one-branch, perfect, regular Y, and therefore this exact control. It does **not** exclude the same "central target unreachable by primitives" phenomenon appearing in the fiber action of a non-regular X → E. There it lives in the Galois closure X̂, where gonality is unbounded, while X maps only to some Y/H. For H of even order in SL₂(F₇), z ∈ H, so the intermediate quotient carries no obstruction at all even though X might. The exclusion is of the literal factorization, not of the monodromy mechanism.
+- **One-branch only.** Multi-branch intermediates are not covered (item 8).
+- **No seed.** It supplies no construction of an event and proves no existence.
+
+### 11. The hypotheses g > 9 and n/m > 8 are automatic
+
+I believe these hypotheses are redundant for any nontrivial perfect G; please re-derive.
+
+- **Genus.** m ≥ 2 (otherwise G is abelian) and n ≥ 60 give 2g − 2 ≥ 30, so g ≥ 16.
+- **Index.** n/m is the index of the cyclic group ⟨c⟩, where c = [r,u]. G acts on its cosets with perfect, transitive, nontrivial image and cyclic point stabilizer. The perfect transitive groups of degree ≤ 8 are:
+
+| Degree | Group | Point stabilizer |
+|---|---|---|
+| 5 | A₅ | A₄ |
+| 6 | A₅ | D₁₀ |
+| 6 | A₆ | A₅ |
+| 7 | PSL₃(2) | S₄ |
+| 7 | A₇ | A₆ |
+| 8 | PSL₂(7) | 7:3 |
+| 8 | AGL₃(2) | GL₃(2) |
+| 8 | A₈ | A₇ |
+
+None has a cyclic point stabilizer. Imprimitive degree-6 and degree-8 candidates lie in solvable wreath products. So n/m ≥ 9.
+
+If this holds, Section 13 can be restated as: **no one-branch regular full-period torus cover with nontrivial deck group is covered by any D4 disk unfolding.**
+
+### Citations and checker
+
+- **Citations.** I could not verify the Shrestha or Orlić citations without tools. The facts attributed to them are standard either way.
+- **Checker.** It matches the prose. It does not encode the π-sector restriction or the slide-invariance of the lattice, which are exactly the two points above that need fixing.

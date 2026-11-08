@@ -1,0 +1,199 @@
+# Universal pocket detection: three new results and a sharper open target
+
+**What is new.**
+- **Proved:** in every rational direction, the slide loads of all cylinders cancel exactly (Theorem 1).
+- **Proved:** an algebraic intersection number equals an overlap area (Lemma 2). This turns every two-step affine word applied to the seed into an area-average test (Theorem 3).
+- **Proved:** in the shared-neighbour configuration, the horizontal test collapses to a statement about a single beam (Proposition 4).
+- **Conditional:** using Wright's notion of parallel cylinders, normalized flux is constant on each M\*-parallel class (Proposition 5).
+- **Obstruction mechanism:** the only obvious way all of these tests can fail is identified (Proposition 6).
+
+**Not proved:** universal detection, detection for W≤26, or an in-class counterexample.
+
+Throughout:
+- π: X₀ → R²/Z² is the integer-chart cover of degree d. Torus area is 1, so a refined θ-strip E of cover degree n_E has area n_E.
+- The fluxes and Γ-actions below are evaluated at the arithmetic base X₀.
+- Q = (x₁, y₁) on absolute cycles, where ω_t = x₀ + i y₀ + t(x₁ + i y₁).
+
+---
+
+## 1. Proved: zero-mean cylinder flux (Theorem 1)
+
+**Theorem 1.** Let θ be a rational direction with unit vector e. Let D range over the maximal θ-cylinders of X₀, or equally over refined strips, with heights h_D and cores c_D. Then
+
+  Σ_D h_D Q(c_D) = 0 ∈ R².
+
+Equivalently, define the flux density f_θ := Q(c_E)/Area(E) on each refined strip E. Then ∫_X f_θ dA = 0.
+
+**Proof.**
+1. Let β be the closed 1-form γ ↦ det(e, hol γ). It is a real combination of x₀ and y₀.
+2. Take α to be any smooth closed form. In cylinder coordinates (s along e, τ transverse), β = dτ.
+3. Writing α = a ds + b dτ, we get ∫_D dτ∧α = −∫₀^{h_D}(∫_{c_τ} α) dτ = −h_D α(c_D).
+4. The cylinders have full measure, so ∫_X β∧α = −Σ_D h_D α(c_D).
+5. Take α = x₁ and then α = y₁. Section 21.1 gives:
+   - B(x₀,x₁) = B(y₀,y₁) = 0, from the K-symmetry;
+   - B(x₁,y₀) = B(x₀,y₁), from the R-symmetry, and this common value is 0 by constant area.
+6. So all four pairings of {x₁, y₁} with {x₀, y₀} vanish, and the left side of step 4 is zero. ∎
+
+For refined strips of uniform height 1/|θ|, this reads Σ_E Q(c_E) = 0, which is the same as ∫ f_θ = 0.
+
+**Corollary 1.1 (sharpens 9.2b).** The θ-twist detects some zero-holonomy cycle if and only if some θ-cylinder core has Q(c_D) ≠ 0, i.e. some periodic θ-beam has nonzero net pocket load.
+- Reason: the area-weighted mean of the normalized fluxes r_D is zero, so "all r_D equal" forces "all r_D = 0".
+
+**Corollary 1.2.** In any loaded direction, the loads have both signs. For each linear functional λ with λ∘f_θ ≢ 0, λ∘f_θ takes both strictly positive and strictly negative values.
+
+---
+
+## 2. Proved: intersection number equals overlap area (Lemma 2)
+
+**Lemma 2.** Let θ, φ be primitive integer vectors with m = |det(θ,φ)| ≥ 1. Let E be a refined θ-strip and D a refined φ-strip, with cores oriented along θ and φ. Then
+
+  ⟨c_E, c_D⟩ = sgn det(θ,φ) · m · Area(E∩D).
+
+**Proof.**
+1. On the torus, the geodesics γ_θ and γ_φ through 0 meet in m points. By Euler characteristic, their complement consists of m open parallelograms, each of area 1/m.
+2. Each parallelogram spans the full θ-height and the full φ-height, and contains no point over 0. It therefore lifts unbranched to X.
+3. Generic cores c_E and c_D each cross each lifted face lying in E∩D exactly once. Inside a parallelogram, two such spanning segments meet exactly once.
+4. All crossings carry the same sign, so the intersection number is ± (number of faces) = ± m·Area(E∩D). ∎
+
+---
+
+## 3. Proved: the two-step averaged criterion (Theorem 3)
+
+**Setup.**
+- η is a supplied blind seed, Q(η) = 0, with primitive half-vector w.
+- v_j is a Bezout partner of w.
+- D_s, D_t are the v_j-strips containing the two open halves (Section 9.3).
+- Φ_θ is the uniform pure twist of Section 9.5, with coefficient κ = K(d) and twist number κ/n_E on strip E. Write Φ_θ* = I + N_θ.
+- Γ is the pure affine group fixing π⁻¹(0) and the selected prongs.
+
+From Section 9.3 with this normalization,
+
+  z_j := (τ_j* − I)η = ±κ (c_{D_t}/n_{D_t} − c_{D_s}/n_{D_s}).
+
+In particular z_j = 0 whenever D_s = D_t.
+
+Lemma 2 then gives, for every primitive θ not parallel to v_j and every γ ∈ Γ:
+
+  Q(N_θ γ z_j) = ± κ² |det(θ, Dγ v_j)| · [ Avg_{γD_t} f_θ − Avg_{γD_s} f_θ ],
+  Q(γ z_j) = ± κ [ f^{Q∘γ*}(D_t) − f^{Q∘γ*}(D_s) ].
+
+The signs depend only on orientation conventions and are common to both terms in each bracket.
+
+The finite coefficients of Section 9.4 are special cases:
+- d_j is the case θ = w, γ = id, which has m = 1: it measures the contrast between the averages of the w-flux over the two v_j-strips.
+- b_j is the contrast of the v_j-flux itself between D_t and D_s.
+
+**Theorem 3.** Suppose Q(γη) = 0 for every γ ∈ Γ (permanent blindness). Then for all j, all γ ∈ Γ and all rational θ:
+
+  ∫_X (f_θ ∘ γ) dμ_j = 0,  where μ_j = 1_{D_t}/Area(D_t) − 1_{D_s}/Area(D_s).
+
+**Proof of necessity.** Put x = γτ_jη − γη, which is absolute and lies in the Γ-module E spanned by the (γ'−1)η. Then
+
+  Q(N_θ x) = Q(Φγτ_jη) − Q(γτ_jη) − Q(Φγη) + Q(γη) = 0.
+
+Since γ is area-preserving and maps strips to strips, Avg_{γD} f_θ = ∫_D (f_θ∘γ)/Area(D). ∎
+
+**Converse (an explicit detecting event).** Suppose some test above is nonzero. Replace Φ by Φⁿ, which multiplies Q(N_θ x) by n.
+- Q(Φⁿγτ_jη) and Q(Φⁿγη) are affine functions of n.
+- If both vanished at two values of n, the four-term identity would force Q(N_θ x) = 0.
+- So for all but finitely many n, one of Φⁿγτ_jη or Φⁿγη has Q ≠ 0.
+
+These images are also non-wall-parallel for large n:
+- If the half-vector of γη (or γτ_jη) were parallel to θ, its N_θ increment would vanish. If both were, the test would vanish too.
+- Otherwise each of the at most four wall lines is hit by at most one n.
+
+Section 5 then supplies both slide signs.
+
+**How this improves on 9.4.**
+- It replaces the 2K residue coefficients relative to the single direction w with an all-θ, all-γ separation condition.
+- It applies to two-step words, which 9.4 does not cover.
+- The test pair (D_s, D_t) depends only on the seed, not on the pocket. Only f_θ depends on the pocket.
+
+---
+
+## 4. Proved: the shared-neighbour configuration reduces to one beam (Proposition 4)
+
+**Proposition 4.** In the connected-H configuration of Section 26.4 (S=(0,0), c₀=(2,1), T'=(4,2)), take the horizontal Bezout partner v₀ = (1,0), for which det = 1.
+
+(i) b_h = 0, because every horizontal core is Q-blind.
+
+(ii) D_t^h = K(D_s^h), where K is left multiplication by r_h.
+- Proof: K sends the first half in copy id to the physical segment S→c₀ in copy r_h.
+- That segment and the actual second half both lie in the open rectangle (0,4)×(0,1) of copy r_h. This rectangle is room interior (S star, the lower quadrants of M's upper half-star, T star) and contains no integer point.
+- K covers the torus map r_h, which preserves the horizontal leaf through 0, and K preserves the +x orientation.
+- Hence the two halves lie in the same refined strip of copy r_h.
+
+(iii) Writing D = D_s^h, we have z_h = ±(κ/n_D)(K* − I)c_D. Using f_θ∘K = r_h f_{r_h θ}, the θ-test becomes
+
+  Q(N_θ z_h) = ± κ² |θ_y| · Avg_D( r_h f_{r_h θ} − f_θ ).
+
+So the d_h test, and every θ-test generated from this partner, is a statement about the single horizontal beam through S in copy id. That beam is compared against the pair of directions θ and r_h θ = (θ_x, −θ_y).
+
+(iv) **Sub-obstruction.** If K(D) = D, then z_h = 0 and the horizontal partner gives nothing. This is decided by one horizontal beam alone.
+
+The turning-bridge configuration has no such reduction, since both halves lie in one copy and in distinct physical bands.
+
+---
+
+## 5. Conditional: normalized flux is constant on M\*-parallel classes (Proposition 5)
+
+**Proposition 5.** Assume, as Section 21.1 gives, that the slide line lies in one linear branch of M\* at X₀. Use Wright's M\*-parallelism (Cylinder deformations, 2015).
+
+If cylinders c_i and c_j are M\*-parallel, then hol(c_i) = (ℓ_i/ℓ_j) hol(c_j) holds on that branch. A holomorphic, real-valued ratio is constant. Differentiating along the slide gives Q(c_i)/ℓ_i = Q(c_j)/ℓ_j.
+
+**Consequences:**
+- f_θ is constant on each M\*-parallel class, and r_𝒞 = B(p(u_𝒞), ξ)/Area(𝒞), where ξ = x₁ + i y₁.
+- By Theorem 1, any direction with only one M\*-class is Q-blind.
+- A twist can help only in directions with at least two classes.
+
+**Conjecture (left open).** p(T M\*) is spanned by cylinder twist classes in all directions. If true, then together with Avila–Eskin–Möller nondegeneracy it would give a loaded direction. It is not claimed here.
+
+---
+
+## 6. Identified obstruction mechanism (Proposition 6)
+
+**Proposition 6 (proved implication; existence unknown).** Let σ be a translation automorphism of X₀ with the following properties:
+- it preserves π⁻¹(0);
+- Q∘σ* = Q;
+- it commutes with Γ;
+- σ(D_s) = D_t.
+
+Then every test in Theorem 3 vanishes for that j, and so does b_j.
+
+**Proof.** σ maps θ-strips to θ-strips, so f_θ∘σ = f_θ. It also commutes with each composition f_θ∘γ, so the two averages in each test coincide. ∎
+
+This blocks only the two-step tests. It does **not** make η blind. Whether such a σ exists in the raw class is open; it would require a hidden symmetry not coming from the room.
+
+---
+
+## 7. Status and next lemma
+
+**Proved here:**
+- Theorem 1 and Corollaries 1.1–1.2;
+- Lemma 2;
+- Theorem 3 (necessity and the explicit converse);
+- Proposition 4;
+- the implication in Proposition 6.
+
+**Conditional:** Proposition 5, which relies on Wright's theory and the single-branch hypothesis.
+
+**Conjecture:** the twist-span statement in §5.
+
+**Still open:**
+- existence of a seed for arbitrary W;
+- detection of an arbitrary pocket, even for W≤26;
+- any in-class counterexample.
+
+**Next lemma (Strip separation).** For the Section 26.4 seed, fix some Bezout partner v with D_s(v) ≠ D_t(v). Then the specified pocket has a rational θ (and γ = id) with
+
+  Avg_{D_t(v)} f_θ ≠ Avg_{D_s(v)} f_θ.
+
+In the connected-H case, by Proposition 4, this is the single-beam inequality Avg_D(r_h f_{r_h θ} − f_θ) ≠ 0.
+
+**Why it is stronger than the CRT/occupancy reformulation:**
+1. It quantifies over every direction θ, not just the residues relative to w.
+2. By Theorem 1, failure for all θ and γ means μ is orthogonal to a Γ-invariant space of zero-mean, cylinder-constant functions. That is a rigid condition with a named mechanism (Proposition 6).
+3. It is falsifiable on frozen rooms by linear algebra on cylinder decompositions alone. No event realization is involved.
+4. A positive instance immediately yields a detecting non-wall-parallel actual event via Theorem 3.
+
+**Prerequisite to settle first.** Show that some Bezout partner v has D_s(v) ≠ D_t(v). In the connected-H case, this means K does not fix the horizontal strip through S.

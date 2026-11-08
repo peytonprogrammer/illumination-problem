@@ -1,0 +1,21 @@
+{
+  "status": "PENDING_EXISTING_PEER_HAND_REVIEW",
+  "input": "four-chart.md",
+  "sha256": "ab3b2476e544b54f9c8df1c85fa5b9f9111793ad01992185c11e19cadfc603e4",
+  "dependency_receipt_sha256": {},
+  "source_sha256": {
+    "four-chart.py": "75d994c7ae900eb430627540cc9b5a11185ccda53b2adae153a67c153ed91a3c",
+    "four-chart.json": "7e71ed9d5adf82baf4138aa0f980769f2277bb1da8eb163eeb3817335db9ad4f",
+    "four-chart-corner-control.py": "861545cf2acb712bc4a814d1759597155c3f14cbccf5f9537fe8c1369081c592",
+    "four-chart-corner-control.json": "d0ab2dc9f57f8201efb3884efafe80daa178565bffd0f8292d310d8c7ccfaf0a",
+    "resumed-exact-check.py": "01f28a8a78e8c1546c924455ecef98a31ff456c3a25410ee3ce24e32f557d33a"
+  },
+  "scope": "Exact source-revisit purification and fixed rational chart arithmetic. NO universal four-band or W21 theorem.",
+  "review_targets": [
+    "sourcefloor corner identity permits actualSrestart",
+    "simultaneousfloor/rooftruncationsorder",
+    "completeperiodandtargetprogression proof for fixedrationalmetric",
+    "allphysicalleg/corner/velocitychecks;16positivepairsnotuniversalproof"
+  ],
+  "whole_goal_complete": false
+}

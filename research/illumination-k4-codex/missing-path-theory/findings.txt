@@ -1,0 +1,133 @@
+Missing paths after the angle-changing escape
+2026-11-02 — bounded hand theory; no optical discovery or computation.
+
+1. Retired first approach
+
+A finite path with several separated corner visits opens when all its selected signed corner determinants are negative, with other contacts strict. This is ALREADY main pocket-detection.md 30.1 and pocket-seal-review.txt Section5. The fixed-angle version is accepted. Merely replacing one inequality by a conjunction adds no new existence or sign control. Do not promote it as a discovery. Bounded-length compactness also leaves the already documented existence/length gap and is not pursued here.
+
+2. Distinct mechanism: rotational holonomy of a repeated circuit
+
+The old periodic and twist arguments hold wall directions fixed. A general perturbation changes the linear part of an even reflection word. A full circuit whose base unfolding is translation by (L,0), L>0, becomes
+
+    U_e(z) = R_{theta(e)} z + b(e),
+    theta(0)=0, theta'(0)=kappa,
+    b(0)=(L,0), b_y'(0)=q.
+
+Normalize the actual source to zero by a translation. This does not change billiards. Let a supplied target prefix develop its ACTUAL target lift to t_e with t_0=(a,0), 0<a<L, and transverse derivative beta_a. Let a corner prefix develop to c_e with c_0=(c,0), 0<c<L, and transverse derivative beta_c. The full circuit returns to the same physical copy/lift label at the base. The word consisting of n circuits followed by the target prefix develops the target to U_e^n(t_e), not to an arbitrary look-alike lift.
+
+All formulas below differentiate at e=0. Longitudinal first derivatives disappear from the transverse clearance because every base point has y=0.
+
+For r circuits before a corner prefix,
+
+    d_y U^r(c) = beta_c + r*q
+                  + kappa*(r*c + L*r*(r-1)/2).
+
+Reason: U^r(z)=R^r z + sum_{j=0}^{r-1} R^j b. Differentiate; the rotation sum contributes L*kappa*sum j. This is valid for every fixed integer r, with no asymptotic approximation in this derivative identity.
+
+Set D=nL+a and x=rL+c, restricting to occurrences 0<x<D. The derivative H_{r,c} of corner height MINUS the height of the source-to-target chord is
+
+    H_{r,c}=beta_c - (x/D)*beta_a
+           +(r-n*x/D)*q
+           +kappa*[r*c+L*r*(r-1)/2
+                    -(x/D)*(n*a+L*n*(n-1)/2)].
+
+Define psi(u)=u*(L-u)/(2L). Elementary expansion gives the exact identity
+
+    H_{r,c} = -kappa*x*(D-x)/(2L) + E_{r,c},
+
+    E_{r,c} = beta_c - (x/D)*beta_a
+            + ((a*x/D-c)/L)*q
+            + kappa*(psi(c)-(x/D)*psi(a)).
+
+For 0<a,c<L and 0<x<D, the remainder satisfies
+
+    |E_{r,c}| <= |beta_c|+|beta_a|+|q|+|kappa|*L/8.
+
+Here |(a*x/D-c)/L|<1, and both psi(c) and (x/D)psi(a) lie in [0,L/8]. Thus the remainder is bounded independently of n and r. The dominant curvature term is negative when kappa>0, positive when kappa<0. Away from the endpoint phases it grows quadratically in n; even the first/last corner grows at least linearly in n.
+
+3. Conditional simultaneous-opening proposition
+
+Supply a rational-direction cylinder boundary circuit through the actual source and target, both on ONE boundary component, together with its finite corner-resolving word. Make these hypotheses explicit:
+
+(a) The full base circuit has U_0(z)=z+(L,0), with its label closed. The target occurs at phase a in (0,L). Each actual corner encounter in one circuit has a phase c_j in (0,L), never a or zero. The source and target are regular interior room marks. Repeated occurrences may be the same physical vertex; parameter times are separated.
+(b) The chosen cylinder interior is on the same developed side sigma in {+1,-1} throughout. Other mirror crossings in the circuit and target prefix are transverse, strictly interior wall hits. The base direction is not wall-parallel.
+(c) Each prescribed corner resolution has a valid local open-side criterion under the angle-changing deformation: sigma times (corner height minus chord height)<0 makes that finite local passage legal. A sufficient case is a reflex corner with a zero- or one-reflection resolution and strict angular margins, as in angle-rigidity/findings.txt. Do not silently apply the fixed-angle intrinsic-pi lemma to arbitrary tilted cone sectors. Convex or several-reflection contacts require their own local check.
+
+If sigma*kappa>0, sufficiently many repetitions produce a word that connects the ACTUAL source and target for all sufficiently small POSITIVE e.
+
+Proof: there are finitely many phases c_j. Since none is 0 or a, there is delta>0, independent of n, such that every actual corner occurrence 0<x<D lies in [delta,D-delta]. For example take the minimum of c_j, L-c_j, and |a-c_j| over all j. The set of prefix derivatives beta_c is finite, so the remainder has a common bound B. Choose a FIXED finite n for which
+
+    |kappa|*delta*(D-delta)/(2L) > B.
+
+Then sigma*H_{r,c}<0 at EVERY corner occurrence of the n-circuit target word. Smoothness gives all the corresponding strict inequalities for sufficiently small positive e. Since n is now fixed, there are only finitely many other contact conditions; their strict margins persist. Hypothesis(c) transfers the resulting straight chord through all local passages, giving the connection. Actual endpoint identity is built into U_e^n(t_e). This proves the conditional proposition.
+
+Important order of quantifiers: choose n using the prescribed first-order deformation, then choose e small enough for THAT finite word. No n depending on e, infinite word, or uniform perturbation radius is assumed. A one-sided conclusion for sigma*kappa>0 does not imply the negative deformation also illuminates. Reversing the same path does not create a second independent sign.
+
+4. Why this addresses a different gap
+
+A short S-to-T event may move to its nonconnecting side because of the bounded terms beta_c, beta_a and q. Repeating an angle-defective circuit creates the -kappa*x*(D-x) term, which dominates those terms simultaneously. That term is identically zero for fixed-angle deformations. Consequently the old fixed-angle twist/period tests and the failed147-event extension do not themselves settle this mechanism.
+
+This is a conditional path-amplification lemma, NOT a construction of a new room, a proof of angle-changing isolation, or a wall lower bound. No cylinder circuit or reflection word has been discovered, enumerated, or replayed. No value of kappa has been evaluated for the saved strict tangent. We have not proved that one of its relevant cylinders has sigma*kappa>0. That is the first substantive remaining gate.
+
+5. Concrete strategy gate; no sampling campaign
+
+For an even physical reflection word with wall tangent angles phi_i,
+
+    theta = 2*(phi_1-phi_2+phi_3-...-phi_2m)
+
+for the composition R_phi1 ... R_phi2m, modulo 2pi. Hence kappa is a signed sum of wall-angle derivatives; it ignores pure wall-offset and mark motions. Changing composition order changes the convention, so bind its sign to U_e and sigma rather than to an unordered list of hit counts.
+
+The useful next HAND question is whether actual-S/T cylinder boundary circuits give oriented forms sigma_C*kappa_C that force a positive value against every nontrivial wall-angle change. Full linear rank is insufficient: we need a signed covering property. With at least one positive value and admissible corner resolutions, the proposition gives a missing connecting word in that deformation direction. A finite positive covering on the angular quotient could be combined with the old fixed-angle constraints; a neighborhood theorem additionally needs uniform constants and control of curves tangent to the known dark family. Raywise opening alone is not local isolation.
+
+Do not authorize a search merely because this formula exists. First independently challenge the actual-label construction, phase bound, sign, and local-corner hypotheses. Then identify whether the cylinder angular forms are forced to vanish (stable words), have only the wrong signs, or could supply the needed positive covering. The proof strategy changes only if this sign/realization gate is addressed. No claim of novelty is made.
+
+
+6. Conditional finite angular-circuit certificate for full local rigidity
+
+This section resolves a uniformity issue in Section5 CONDITIONALLY; it does not produce the missing circuits or angular sign cover.
+
+Near the known 22-wall dark family M use smooth local coordinates (m,h,a):
+- m: the five parameters of M (translation2, rotation1, independent axis scales2);
+- h in R^22: transverse offset/mark coordinates inside the orthogonal polygon family;
+- a in R^21: independent relative wall-angle coordinates. Set a_i equal to the tangent angle of edge i relative to edge0 and its prescribed base horizontal/vertical difference, for i=1,...,21. Locally a=0 means an orthogonal polygon, with arbitrary lengths and marks.
+
+Why this chart exists: the full room chart has48 coordinates; the relative-angle map has rank21 at the base. In edge-length/angle coordinates the two closure equations can be solved using two nonparallel edge lengths, leaving all22 absolute wall angles free. Removing the common angle leaves21. The orthogonal submanifold therefore has dimension27, and M is a five-dimensional embedded submanifold in it. Take a smooth local product chart. These are coordinates, NOT a claim that an anisotropic normalization preserves tilted billiards.
+
+The previously verified old147 gradients positively span the h quotient. Thus uniformly for nearby m there are constants c>0,C,M0 such that, for any h, some old event i obeys
+
+    f_i(m,h,a) <= -c*|h| + C*|a|
+                  + M0*(|h|+|a|)^2.
+
+All these functions vanish at (m,0,0), and f_i<0 gives a connection. For a sufficiently small neighborhood, darkness therefore forces
+
+    |h| <= K*|a|,
+
+with a fixed K (for example K=2C/c+1 after shrinking the neighborhood). Indeed absorb the quadratic remainder into (c/2)(|h|+|a|). In particular a=0 forces h=0. This estimate holds at nearby m as well, because the finite old certificate and the known dark family vary smoothly.
+
+Now SUPPLY a finite list of cylinder boundary circuits satisfying Section3 at each m in M near the base. Their persistence along M follows if they are transported from base circuits by the known orthogonal axis-affine equivalences and common rotations. Define their signed angular forms
+
+    beta_C(a) = sigma_C*kappa_C(a).
+
+Assume the crucial finite angular-cover condition
+
+    max_C beta_C(a) >= c0*|a|   for all a,
+
+for some c0>0. This is stronger than rank21: it is the positive-sign covering requirement. For an even reflection word kappa_C is exactly a linear combination of the relative wall angles, and pure h variations do not contribute to it.
+
+For a possible dark displacement with |h|<=K|a|, choose C with beta_C(a)>=c0|a|. In the repeated-circuit derivative formula every bounded phase term is a linear functional of (h,a), so its absolute value is at most B_C*(K+1)|a|. The main term at every corner has magnitude at least
+
+    c0*|a|*delta_C*(n L_C+a_C-delta_C)/(2 L_C).
+
+Choose a FIXED number n_C of repetitions large enough to dominate B_C*(K+1), with a strict margin. There are finitely many supplied circuits. On a small compact piece of M all phase gaps, period lengths and coefficient bounds have uniform positive/finite bounds; hence the n_C can be chosen uniformly. The resulting finitely many multi-corner words have, for the selected C, all their signed clearance derivatives <=-c1|a| for one common c1>0.
+
+Since n_C is fixed, each new word has finitely many contacts and a uniform O((|h|+|a|)^2) Taylor remainder. On the necessary dark wedge that is O(|a|^2), which the negative linear margin absorbs. Every corner passage of the selected repeated word then opens at once, and the other strict contacts persist. This contradicts darkness whenever a !=0. If a=0, the old certificate already gives h=0.
+
+CONDITIONAL CONCLUSION: the old fixed-angle certificate, together with a supplied finite actual-S/T cylinder list whose oriented rotational forms positively cover the21-angle quotient and whose corner resolutions remain valid under tilting, proves that the local dark set is exactly M among general22-vertex polygons. It handles curved sequences tangent to M; it is stronger than separate raywise opening assertions.
+
+UNRESOLVED PREMISE: no such cylinder list or angular-cover certificate has been supplied or checked. In particular, the147 one-corner events do not by themselves determine or certify these full-circuit angular forms. A stable circuit can have kappa identically zero, and a nonzero kappa can have the wrong sign. Actual target incidence on the selected boundary and all corner resolutions are essential. This theorem is a precise next proof target, not an accomplished full rigidity result.
+
+7. Decision after this bounded attempt
+
+The multiple-corner chamber alone is duplicate work and stays retired. The repeated-circuit angular mechanism survives the internal algebra and uniformity checks as a new candidate relative to the screened local notes. It merits one independent HAND challenge. Its bottleneck is a concrete signed-geometric statement about actual-S/T cylinder boundaries, not more samples or a larger generic matrix. No novelty assessment has been made.
+
+Do not proceed automatically from this conditional theorem to a cylinder/word discovery search. First assess the stated missing premise, especially circuits with convex or several-reflection corner resolutions. No two-sided illumination follows merely from reversing a word. No proof of a wall minimum, universal pocket detection, or full local rigidity is claimed here.

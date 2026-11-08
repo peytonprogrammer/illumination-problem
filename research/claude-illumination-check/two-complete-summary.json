@@ -1,0 +1,97 @@
+{
+  "status": "EXCLUDED_BELOW_24",
+  "attained_minimum_walls": 24,
+  "at_most_transparent_BC_vertices": 2,
+  "scope": "Simple finite assemblies of canonical congruent 45-45-90 tiles; distinct interior A marks; ordinary interior or smooth boundary B/C exceptions; no slits, holes or contacts.",
+  "interior_A_count_cases": {
+    "two": "Seven complete supports excluded",
+    "three": "Unique L equality case excluded by CP-SAT and independent fan enumeration",
+    "four_or_more": "Analytic wall bound at least 26"
+  },
+  "cases": [
+    {
+      "target_A_cell": [
+        1,
+        1
+      ],
+      "status": "INFEASIBLE",
+      "source": "two-pair-audit-1-1.json",
+      "classes": 45,
+      "additional_rays": 1076
+    },
+    {
+      "target_A_cell": [
+        2,
+        0
+      ],
+      "status": "INFEASIBLE",
+      "source": "two-pair-audit-2-0.json",
+      "classes": 38,
+      "additional_rays": 316
+    },
+    {
+      "target_A_cell": [
+        2,
+        1
+      ],
+      "status": "INFEASIBLE",
+      "source": "two-pair-audit-2-1.json",
+      "classes": 49,
+      "additional_rays": 258
+    },
+    {
+      "target_A_cell": [
+        3,
+        0
+      ],
+      "status": "INFEASIBLE",
+      "source": "two-global-final-audit.json",
+      "prior_rays": 0
+    },
+    {
+      "target_A_cell": [
+        2,
+        2
+      ],
+      "status": "INFEASIBLE",
+      "source": "two-global-final-audit.json",
+      "prior_rays": 76
+    },
+    {
+      "target_A_cell": [
+        3,
+        1
+      ],
+      "status": "INFEASIBLE",
+      "source": "two-global-final-audit.json",
+      "prior_rays": 0
+    },
+    {
+      "target_A_cell": [
+        4,
+        0
+      ],
+      "status": "INFEASIBLE",
+      "source": "two-global-final-audit.json",
+      "prior_rays": 0
+    }
+  ],
+  "counts": {
+    "prior_configurations": 977,
+    "new_configurations": 477,
+    "total_configurations": 1454,
+    "new_derived_rays": 1650,
+    "total_derived_rays": 3660,
+    "maximum_reflections": 48
+  },
+  "caveat": "Computer-assisted family result; no general polygon lower bound, formal UNSAT proof, historical priority claim, or improved construction.",
+  "receipts": {
+    "family-final-audit.json": "574a63d8a2b14ac6aed01e70664f1f8cc6fc31c8f445c71546fefca4478a263c",
+    "one-global-final-audit.json": "cfaace2df46edfdcaa70af8695c96f9937cd3708d790553a09011408755471e3",
+    "two-global-bound-audit.json": "12f2d40781a89ca4f774c7e4f9aa7ca4ec5ff0973e4fe1a1cdda8eec433a4e7a",
+    "two-three-star-independent.json": "e799ecaf947f97ee25aa8b69edbf11df65dbd89438708b3be62c27c261fb1dc1",
+    "two-global-final-audit.json": "864ffe4704dead2ef309c11208924dcf1a4c5632c296e715b0b5b2c9e604565d",
+    "two-pair-final-audit.json": "df144ea723d115e8e8f94d6158903265e4c205a91152f2e5c70dd684ebc635ab",
+    "two-control24.json": "fa07f83d66b62d276fe341179d0ff595bac858ff1772287509a7347c1d4b5b5d"
+  }
+}
