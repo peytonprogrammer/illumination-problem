@@ -4,6 +4,8 @@
 
 Working draft v0.2, November 2, 2026. Explicit construction; no general minimality or historical-priority claim.
 
+Primary author: **Peyton Wang**. Coauthor: Daniel Wang.
+
 These are byte-for-byte copies of the [archived PDF](../../research/illumination-k4-codex/preprint-review-codex/revised.pdf) and [source](../../research/illumination-k4-codex/preprint-review-codex/revised.tex). The file manifests and import provenance record the source paths and SHA-256 values.
 
 ## Build
