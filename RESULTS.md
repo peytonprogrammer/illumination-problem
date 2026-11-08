@@ -34,7 +34,7 @@ The computer-assisted argument derives finite support/geometry domains, validate
 
 Priority: unconfirmed for the restricted lower bound; the dark upper-bound mechanism is established prior art.
 
-Sources: [Restricted theorem](research/illumination-k4-codex/restricted-theorem-note/theorem.txt); [Reconciled verification](research/illumination-generalization-2026-11-06/construction/baseline-and-gap.md).
+Sources: [Restricted-minimum and strict-fold manuscript](preprints/restricted-minimum-k6/manuscript.pdf); [Restricted theorem](research/illumination-k4-codex/restricted-theorem-note/theorem.txt); [Reconciled verification](research/illumination-generalization-2026-11-06/construction/baseline-and-gap.md).
 
 <a id="r02"></a>
 
@@ -75,7 +75,7 @@ For integer rooms with teeth of height two, every interior A mark lies on the re
 
 The finite monotone floor-matching argument is a particularly compact proof ingredient worth extracting. Priority unassessed.
 
-Sources: [Comb proof](research/illumination-generalization-2026-11-06/construction/midheight-comb-proof.md); [Independent acceptance](research/illumination-generalization-2026-11-06/review/midheight-comb-independent-acceptance.json).
+Sources: [Middle-row comb manuscript](preprints/middle-row-combs/manuscript.pdf); [Comb proof](research/illumination-generalization-2026-11-06/construction/midheight-comb-proof.md); [Independent acceptance](research/illumination-generalization-2026-11-06/review/midheight-comb-independent-acceptance.json).
 
 <a id="r05"></a>
 
@@ -99,7 +99,7 @@ Two fixed arbitrary-real orthogonal chambers joined through smooth mouths by a p
 
 This gives a substantive way to exclude one type of degeneration of dark candidates. It is not a uniform threshold in wall count, and permits only the stated fixed-chamber regime. Priority unassessed.
 
-Sources: [Long-neck proof](research/illumination-generalization-2026-11-06/construction/long-neck-proof.md); [Acceptance](research/illumination-generalization-2026-11-06/review/long-neck-independent-acceptance.json); [Effective rational construction acceptance](research/illumination-generalization-2026-11-06/review/constructive-neck-acceptance.json).
+Sources: [Long-neck manuscript](preprints/long-neck-networks/manuscript.pdf); [Long-neck proof](research/illumination-generalization-2026-11-06/construction/long-neck-proof.md); [Acceptance](research/illumination-generalization-2026-11-06/review/long-neck-independent-acceptance.json); [Effective rational construction acceptance](research/illumination-generalization-2026-11-06/review/constructive-neck-acceptance.json).
 
 <a id="r07"></a>
 
@@ -109,7 +109,7 @@ For fixed three-chamber/two-neck families, possible long-neck failures concentra
 
 For a finite tree of fixed chambers joined by parallel, commensurate-width necks, one provided legal actual witness implies eventual illumination along nonnegative rational-affine length growth. Repeated passages, branches and same-side mouths are included. Witness existence and the finite initial range remain separate obligations. This conditional propagation theorem is useful, but not an unconditional all-network illumination theorem. Priority unassessed.
 
-Sources: [Precise network statement](research/illumination-generalization-2026-11-06/construction/neck-ray-propagation-parallel-tree.md); [Independent tree acceptance](research/illumination-generalization-2026-11-06/review/parallel-tree-independent-acceptance.json); [Affine-strip/network review map](research/illumination-generalization-2026-11-06/review/bridge-scope-report.md).
+Sources: [Conditional parallel-tree manuscript](preprints/long-neck-networks/manuscript.pdf); [Precise network statement](research/illumination-generalization-2026-11-06/construction/neck-ray-propagation-parallel-tree.md); [Independent tree acceptance](research/illumination-generalization-2026-11-06/review/parallel-tree-independent-acceptance.json); [Affine-strip/network review map](research/illumination-generalization-2026-11-06/review/bridge-scope-report.md).
 
 <a id="r08"></a>
 
@@ -137,7 +137,7 @@ For the exact construction class of whole congruent copies of a strict canonical
 
 The proof derives assembly/exception counts and normalizes seams, then uses the k<=6 theorem. It does not show that every dark room admits the required fold. This is a second restricted minimum with an explicit dependency on result 1, not a second proof of universal minimality. Priority unconfirmed.
 
-Sources: [Fold-class statement](research/illumination-generalization-2026-11-06/review/fold-class-theorem.md); [Normalization acceptance](research/illumination-generalization-2026-11-06/review/fold-normalization-acceptance.json); [Similarity extension review](research/illumination-generalization-2026-11-06/construction/fold-similarity-independent-review.md).
+Sources: [Strict-fold corollary manuscript](preprints/restricted-minimum-k6/manuscript.pdf); [Fold-class statement](research/illumination-generalization-2026-11-06/review/fold-class-theorem.md); [Normalization acceptance](research/illumination-generalization-2026-11-06/review/fold-normalization-acceptance.json); [Similarity extension review](research/illumination-generalization-2026-11-06/construction/fold-similarity-independent-review.md).
 
 <a id="r11"></a>
 
@@ -151,7 +151,7 @@ The proofs control actual walls, corner avoidance and exact target attainment. L
 
 The separately reviewed coprime-period construction illuminates every distinct native even-even pair in its specified thin-cap ten-wall family, under the stated integer and coprimality hypotheses. It does not cover arbitrary real endpoints or all ten-wall rooms; see the [exact family and proof](docs/FOLLOWUP-2026-11-08.md).
 
-Sources: [TR03 statement](research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-03.md); [TR04 statement](research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-04.md); [TR04 acceptance](research/illumination-generalization-2026-11-06/review/three-reflex-tr04-independent.json); [TR05 statement](research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-05.md); [TR05 acceptance](research/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.json); [TR06 countercontrol](research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-06.md); [Remaining gap](research/illumination-generalization-2026-11-06/construction/three-reflex-blocked-handoff.md); [Full independent review](research/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.md); [Acceptance](research/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.json); [Accepted November8 coprime-period follow-up](docs/FOLLOWUP-2026-11-08.md).
+Sources: [Tall-or-wide and coprime-period manuscript](preprints/ten-wall-spirals/manuscript.pdf); [TR03 statement](research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-03.md); [TR04 statement](research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-04.md); [TR04 acceptance](research/illumination-generalization-2026-11-06/review/three-reflex-tr04-independent.json); [TR05 statement](research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-05.md); [TR05 acceptance](research/illumination-generalization-2026-11-06/review/three-reflex-tr05-independent.json); [TR06 countercontrol](research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-06.md); [Remaining gap](research/illumination-generalization-2026-11-06/construction/three-reflex-blocked-handoff.md); [Full independent review](research/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.md); [Acceptance](research/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.json); [Accepted November8 coprime-period follow-up](docs/FOLLOWUP-2026-11-08.md).
 ## Supporting mathematical tools
 
 <a id="r12"></a>
@@ -280,7 +280,7 @@ These conclusions retain the hypotheses in the [reviewed affine note](docs/UPDAT
 
 Conditional exact endpoint transport; explicit L target/shear hypotheses provide a uniform-source seed mechanism. Existing all-real L illumination already gives broader room coverage.
 
-Sources: [Argument and exact scope](research/illumination-generalization-2026-11-06/coordination/general-proof-priority/affine-seed-reduction/pair-transport.md).
+Sources: [Affine endpoint-transport note](preprints/affine-endpoint-transport/manuscript.pdf); [Argument and exact scope](research/illumination-generalization-2026-11-06/coordination/general-proof-priority/affine-seed-reduction/pair-transport.md).
 
 <a id="r26"></a>
 

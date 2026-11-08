@@ -7,6 +7,10 @@
     "summary": "Every strictly simple canonical45 disk with W<=21 and k<=6 illuminates every pair of distinct interior A marks, for every support. The known dark 22-wall example has k=4 and attains the bound inside this model. Thus this is a genuine sharp restricted minimum, not just a search finding.\n\nThe computer-assisted argument derives finite support/geometry domains, validates continuous path guards and their clause provenance, and uses checked contradiction certificates. The final theorem records 64 refutations and 193,480 guard records. The cited theorem and verification records describe that certificate corpus; this catalog does not report a fresh replay of it. Removing k<=6 remains unproved.",
     "source_links": [
       [
+        "Restricted-minimum and strict-fold manuscript",
+        "preprints/restricted-minimum-k6/manuscript.pdf"
+      ],
+      [
         "Restricted theorem",
         "research/illumination-k4-codex/restricted-theorem-note/theorem.txt"
       ],
@@ -76,6 +80,10 @@
     "summary": "In any rectangular-spine comb with arbitrarily many teeth on one side, every distinct pair drawn from the spine and the middle horizontal lines of teeth illuminates. Dimensions, tooth heights, widths and endpoint depths may be arbitrary real numbers. Extra unused teeth do not enter the construction.\n\nFor integer rooms with teeth of height two, every interior A mark lies on the relevant tooth middle row or in the spine. Thus the theorem covers every actual interior A pair in that entire one-sided height-two class, without any W or k cap. It does not cover arbitrary off-middle-row marks in arbitrary real teeth.\n\nThe finite monotone floor-matching argument is a particularly compact proof ingredient worth extracting. Priority unassessed.",
     "source_links": [
       [
+        "Middle-row comb manuscript",
+        "preprints/middle-row-combs/manuscript.pdf"
+      ],
+      [
         "Comb proof",
         "research/illumination-generalization-2026-11-06/construction/midheight-comb-proof.md"
       ],
@@ -118,6 +126,10 @@
     "summary": "Two fixed arbitrary-real orthogonal chambers joined through smooth mouths by a positive-width rectangular neck illuminate each fixed opposing-chamber pair for every sufficiently large real neck length. The threshold depends on the chamber/mouth/mark data and is locally uniform under nondegenerate perturbations. A separate constructive rational-data result extracts explicit beam intervals and thresholds.\n\nThis gives a substantive way to exclude one type of degeneration of dark candidates. It is not a uniform threshold in wall count, and permits only the stated fixed-chamber regime. Priority unassessed.",
     "source_links": [
       [
+        "Long-neck manuscript",
+        "preprints/long-neck-networks/manuscript.pdf"
+      ],
+      [
         "Long-neck proof",
         "research/illumination-generalization-2026-11-06/construction/long-neck-proof.md"
       ],
@@ -140,6 +152,10 @@
     "category": "completed-theorem",
     "summary": "For fixed three-chamber/two-neck families, possible long-neck failures concentrate near finitely many rational length ratios, sharpened to finitely many weighted affine strips. Integer data leave finitely many offset arithmetic rays; those rays are not thereby illuminated.\n\nFor a finite tree of fixed chambers joined by parallel, commensurate-width necks, one provided legal actual witness implies eventual illumination along nonnegative rational-affine length growth. Repeated passages, branches and same-side mouths are included. Witness existence and the finite initial range remain separate obligations. This conditional propagation theorem is useful, but not an unconditional all-network illumination theorem. Priority unassessed.",
     "source_links": [
+      [
+        "Conditional parallel-tree manuscript",
+        "preprints/long-neck-networks/manuscript.pdf"
+      ],
       [
         "Precise network statement",
         "research/illumination-generalization-2026-11-06/construction/neck-ray-propagation-parallel-tree.md"
@@ -206,6 +222,10 @@
     "summary": "For the exact construction class of whole congruent copies of a strict canonical base, with literal inverse-copy agreement and actual interior marks mapping to two distinct smooth boundary A points, a dark pair requires W>=22. The known example attains it. Diagonal bases and arbitrary initial rigid placements are included; the common-similarity extension has separate acceptance.\n\nThe proof derives assembly/exception counts and normalizes seams, then uses the k<=6 theorem. It does not show that every dark room admits the required fold. This is a second restricted minimum with an explicit dependency on result 1, not a second proof of universal minimality. Priority unconfirmed.",
     "source_links": [
       [
+        "Strict-fold corollary manuscript",
+        "preprints/restricted-minimum-k6/manuscript.pdf"
+      ],
+      [
         "Fold-class statement",
         "research/illumination-generalization-2026-11-06/review/fold-class-theorem.md"
       ],
@@ -228,6 +248,10 @@
     "category": "completed-theorem",
     "summary": "TR01 covers specified pairs in protected subregions of an ordered three-reflex spiral for arbitrary real metrics. TR03 proves every distinct interior pair illuminates under an explicit sufficient upper-chamber height threshold. Independently accepted TR04 broadens the normal-form geometry to non-overlapping arms (`a<l OR c<b`) and proves all-pair illumination under either a tall or a transposed wide threshold. Neither threshold depends on the selected marks.\n\nIndependently accepted TR05 covers every upper-cap source `a<=s<=w, h<u<H` to every bottom target `l<t<A, 0<v<c`, at all metrics in that same normal form. With the protected-subregion results, the remaining arbitrary-metric pairs are left-terminal versus bottom-terminal pairs. The complementary metrics, other ten-wall types, and full eight-reflex goal remain unresolved.\n\nThe proofs control actual walls, corner avoidance and exact target attainment. Later first-exit and injection-margin controls show why arbitrarily many cap bounces do not automatically repair a short cap. TR06 presents an exact countercontrol to a particular nearest-period monotone iteration; its method-only negative conclusion received [independent acceptance](research/codex-proof-verification/specialist-ideas/terminal-resumption-2026-11-07/tr06-independent-review.md) and proves no dark room. General terminal-pair existence remains unresolved. Historical novelty is unassessed.\n\nThe separately reviewed coprime-period construction illuminates every distinct native even-even pair in its specified thin-cap ten-wall family, under the stated integer and coprimality hypotheses. It does not cover arbitrary real endpoints or all ten-wall rooms; see the [exact family and proof](docs/FOLLOWUP-2026-11-08.md).",
     "source_links": [
+      [
+        "Tall-or-wide and coprime-period manuscript",
+        "preprints/ten-wall-spirals/manuscript.pdf"
+      ],
       [
         "TR03 statement",
         "research/illumination-generalization-2026-11-06/construction/three-reflex-candidate-03.md"
@@ -538,6 +562,10 @@
     "category": "conditional-mechanism",
     "summary": "Conditional exact endpoint transport; explicit L target/shear hypotheses provide a uniform-source seed mechanism. Existing all-real L illumination already gives broader room coverage.",
     "source_links": [
+      [
+        "Affine endpoint-transport note",
+        "preprints/affine-endpoint-transport/manuscript.pdf"
+      ],
       [
         "Argument and exact scope",
         "research/illumination-generalization-2026-11-06/coordination/general-proof-priority/affine-seed-reduction/pair-transport.md"

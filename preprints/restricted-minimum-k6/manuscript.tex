@@ -1,0 +1,178 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.9in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,tikz,enumitem,booktabs,xurl}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!45!black]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=1.5em,topsep=4pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\intr}{\operatorname{int}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\hypersetup{pdfauthor={Daniel Wang and Peyton Wang}}
+
+\title{A restricted 22-wall minimum and a parity-fold corollary}
+\author{Daniel Wang \and Peyton Wang}
+\date{Working draft v0.1 --- November 8, 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We consolidate a computer-assisted lower bound in a fixed canonical triangulation of the integer plane. A strictly simple triangular-tile disk with at most 21 maximal walls and at most six transparent non-even-even lattice points illuminates every pair of distinct interior even-even marks. Euler and incidence identities bound the number of full stars by four and the number of triangles by 41. A finite support reduction yields 64 contradiction cases, with optical clauses justified by exact universal path guards. The known 22-wall dark construction attains the bound within this restricted model. As a geometric corollary, a literal whole-copy assembly of a strict canonical parity base, with actual interior preimages of two distinct smooth base marks, requires at least 22 walls for darkness. Neither result establishes a minimum for arbitrary polygons.
+\end{abstract}
+
+\section{The fixed lattice model}
+Split each unit square along the diagonal joining its even-even vertex to its odd-odd vertex. Call these parity classes $A$ and $B$, respectively; the mixed-parity vertices are $C$. Every resulting triangle has angles $45^\circ$ at $A,B$ and $90^\circ$ at $C$. A full $A$ star consists of the eight triangles around its vertex.
+
+Let $P$ be a finite edge-to-edge union of closed canonical triangles, with a strictly simple polygon boundary and no holes, slits, pinches or boundary self-contacts. Count maximal walls after merging consecutive collinear edges; write $W$ for this count. A non-$A$ lattice point is \emph{transparent} if it lies in the interior or at a smooth boundary point. Let $k$ count these points. Smooth or corner boundary $A$ points do not count toward $k$.
+
+Illumination means a finite path from the actual source to the actual target, with ordinary equal-angle reflections at smooth walls and no contact with any polygon corner. In particular a convex corner is not a legal reflection point.
+
+\begin{theorem}[Computer-assisted restricted lower bound]\label{thm:minimum}
+If $W\le21$ and $k\le6$, every distinct pair of interior $A$ points in $P$ illuminates.
+\end{theorem}
+
+The computational dependencies of the theorem are the finite classifications and contradiction certificates described in Sections~\ref{sec:supports}--\ref{sec:certificates}. The PDF gives the mathematical reduction and identifies the necessary evidence; it does not contain the multi-gigabyte contradiction proofs.
+
+\section{Incidence bounds and a finite geometric universe}
+Let $I$ count all interior $A$ points, $J$ all interior non-$A$ points, and $s_A,s_N$ the smooth boundary points of the respective classes. Thus $k=J+s_N$ and $I\ge2$ whenever there are two marks to consider. For each $A$ corner let $m_v$ be its incident triangle count, and put
+\[
+ Q=3s_A+\sum_{A\text{ corners }v}m_v.
+\]
+If $N$ is the triangle count, Euler's formula for the triangulated disk and incidence at the unique $A$ vertex of each triangle give
+\begin{align}
+ N&=2(I+J)+W+s_A+s_N-2,\label{eq:euler}\\
+ N&=8I+Q+s_A,\label{eq:astar}\\
+ W&=2+6I+Q-2J-s_N,\qquad 3s_A\le Q.\label{eq:wall}
+\end{align}
+Indeed, if $V_\partial=W+s_A+s_N$ and $V_{\intr}=I+J$, then $V-E+N=1$ and $3N=2E-V_\partial$ imply \eqref{eq:euler}. Interior and smooth $A$ points have respectively eight and four incident triangles, yielding \eqref{eq:astar}.
+
+Use cell coordinates $A/2$: the square of side two centered at each $A$ vertex is one cell. Let $F$ be the set of $I$ full cells. Let $R_F$ be their union with every external axis-neighbor cell; write $b=|R_F\setminus F|$. Every finite nonempty $F$ has at least four external neighbors. Each occupied external neighbor contributes at least one unit to $Q$; each empty one produces a distinct smooth $C$ midpoint of a full-star side. Therefore
+\[
+ Q+s_N\ge4,\qquad W\ge6+6I-2k.
+\]
+Under the theorem's bounds this gives $I\le4$. Equations~\eqref{eq:astar}--\eqref{eq:wall} also imply
+\[
+ 3N\le4(W-2+2k),\qquad N\le41.
+\]
+For the first inequality, substitute $W-2+2k=6I+Q+s_N$ and use $3s_A\le Q$.
+
+Let $P_c$ count occupied partial $A$ fans, and let $m$ count empty cells in $R_F\setminus F$. The occupied-cell graph joins cells whose triangles share a full $BC$ edge. Its connectivity follows from edge connectivity of the triangulated disk. A partial contiguous fan touches no more cell sides than its contribution to $Q$; full cells have degree at most four, reduced by empty neighbors. Graph edge counting gives
+\[
+ 2(I+P_c-1)\le4I-m+Q,\qquad m\le s_N.
+\]
+Combining with \eqref{eq:wall} yields
+\begin{equation}\label{eq:budget}
+ P_c+m\le\left\lfloor\frac{W-4I+2k}{2}\right\rfloor
+ \le\begin{cases}12&I=2,\\10&I=3,\\8&I=4.\end{cases}
+\end{equation}
+In particular $b\le P_c+m$. At most $P_c+m-b$ occupied cells lie outside $R_F$. A shortest occupied-cell path from such a cell to $R_F$ bounds its Manhattan distance by that same outside-cell budget. Each proposed $F$ consequently determines a finite triangle universe containing every eligible room with support $F$. The universe is allowed to contain extra ineligible tile sets.
+
+\section{Finite supports and marked pairs}\label{sec:supports}
+Translations and signed coordinate permutations preserve the tiling, the counts and illumination. Adjacent marked full cells have a direct interior connection. For nonadjacent marks, the finite support reduction is as follows.
+
+\begin{center}
+\begin{tabular}{@{}lrrl@{}}\toprule
+Interior stars & Support shapes & Marked cases & Final contradictions\\\midrule
+$I=2$ &18&18&18 optical/geometry\\
+$I=3$ &18&43&43 optical/geometry\\
+$I=4$ &3&---&3 geometry only\\\bottomrule
+\end{tabular}
+\end{center}
+
+For $I=2$, the external-neighbor and outside-cell budgets bound marked Manhattan separation by seven; normalization leaves 18 offsets. For $I=3$, the occupied cells together with $R_F$ form a connected set of at most 13 cells. Rooting one full cell places the others within Manhattan radius 12. The complete finite census with the external-neighbor budget and necessary connectivity leaves 18 support shapes and 43 marked cases. Five symmetry duplicates are retained, so the 61 raw $I=2,3$ cases represent 56 marked-pair orbits.
+
+For $I=4$, the complete finite boundary classification gives $b\ge8$, with exactly three equality shapes up to translation and grid symmetry. Equation~\eqref{eq:budget} forces equality and no occupied cell outside $R_F$. Each universe has 12 cells, hence 96 possible triangles. Necessary geometry constraints exclude all three cases, independently of which interior pair is marked.
+
+The two finite classifications are computer-assisted proof steps. Their domain bounds are the preceding mathematical inequalities; the saved census code, complete outputs and independent reconstruction records are part of the evidence. They are not empirical search cutoffs. Section~\ref{sec:records} identifies their locations.
+
+\section{Universal optical clauses and contradiction proofs}\label{sec:certificates}
+For each finite universe, a Boolean variable $x_t$ specifies whether triangle $t$ is occupied. Necessary geometry clauses encode the prescribed full-star support, legal local fans, budgets, reachability and turning angles. For every eligible room, its actual fan, distance, corner and exception data supply an extension satisfying these clauses. The completeness of the emitted cardinality and weighted arithmetic encodings is a separate dependency of this extension argument.
+
+An optical guard consists of an exact rational path and two finite triangle sets $U,Z$. Its verified implication is: if every $u\in U$ is present, every $z\in Z$ is absent, and the marked endpoint stars are present, then the path is a legal connection in every such completion. Thus every dark room satisfies
+\begin{equation}\label{eq:clause}
+ \bigvee_{u\in U}\neg x_u\ \vee\ \bigvee_{z\in Z}x_z.
+\end{equation}
+The rational guard checker verifies the path, reflection law, smooth contacts and universal required/forbidden triangle conditions. A lattice-point wall contact is allowed only when the forced local triangles make it physically smooth. Endpoint reversal and tiling symmetries preserve the implication. An out-of-universe required triangle makes a premise impossible; an out-of-universe forbidden triangle is automatically absent. These rules are included in the exact guard-to-clause provenance check.
+
+Suppose a dark eligible pair existed. The finite reduction places it in one of the 64 cases. Its actual triangle assignment extends to the necessary geometry clauses, and darkness forces all optical clauses \eqref{eq:clause}. A verified DRAT contradiction proof for that exact final formula rules out the assignment. The $I=4$ cases need only geometry clauses. All cases are excluded, proving Theorem~\ref{thm:minimum}, subject to the documented computational dependencies.
+
+The completed record contains 61 $I=2,3$ refutations and three $I=4$ geometric refutations. Complete independent rational checking covers 193,480 guard records across 52 files. Provenance reconstruction accounts for all 875,332 added optical clauses; 13 of the 61 formulas require no optical clauses. Arithmetic binding reconstructs 227 cardinality calls and 64 weighted equalities, matching 3,028,784 emitted arithmetic clauses. These counts describe the recorded complete checks, not a new replay performed to typeset this manuscript.
+
+\section{Sharpness inside the model}
+The explicit room in \cite{construction} is a strictly simple orthogonal 22-gon with two dark interior marks $(0,0)$ and $(2,2)$. In the canonical tiling it has 30 triangles, no interior $B/C$ points, and four smooth non-$A$ boundary points. Thus $k=4\le6$. Its hand darkness proof and independent lattice-membership check are distinct dependencies.
+
+\begin{corollary}
+Among rooms in the fixed canonical model with $k\le6$ and two distinct interior $A$ marks, the minimum wall count admitting a dark pair is 22.
+\end{corollary}
+The upper-bound construction is known in the literature at the 22-edge level; this paper makes no new upper-bound or priority claim. The statement is sharp only within the displayed model.
+
+\section{A strict whole-copy parity-fold corollary}
+Let $B$ be a strictly simple canonical triangle disk with two distinct smooth boundary $A$ marks $a,b$. Require every integer point of $B$ that is not a genuine corner to be an $A$ point. Assemble finitely many whole congruent copies $g_i(B)$ with disjoint interiors into a strictly simple disk $Q$. Require the literal inverse maps $g_i^{-1}$ to agree at every contact, as maps to $B$ itself, not merely modulo a symmetry of $B$. Let the actual distinct interior marks $S,T$ project to $a,b$.
+
+\begin{theorem}\label{thm:fold}
+If $S,T$ are dark in this class, then $Q$ has at least 22 maximal walls. Arbitrary initial rigid placements and diagonal base walls are allowed.
+\end{theorem}
+\begin{proof}
+Let $w$ be the base wall count and $m$ the number of copies. A positive-length contact fixes a segment under the relative isometry of the two copy maps. That isometry must be reflection in its supporting line: identity would overlap interiors. Literal inverse agreement makes the contacted base wall the same wall on both sides, and reflection matches the whole maximal wall. Thus seams are full walls.
+
+At a copy-corner junction all corners project to the same genuine base corner and share an angle $\theta$, an integer multiple of $\pi/4$. Smooth-copy points cannot participate there, since their inverse image would make the same base point smooth and corner simultaneously. Disjoint sectors fill a boundary sector or a full interior disk. Interior junctions therefore have four right-angle or eight $45^\circ$ sectors; smooth boundary junctions have two right-angle or four $45^\circ$ sectors.
+
+Let $E$ count internal seam edges, $I_c$ interior cellulation vertices, and $N_s$ smooth boundary junctions. Euler and seam-end counts give
+\[
+ E=m+I_c-1,\qquad
+ 2E=\sum_{\partial\text{ junctions}}(k_v-1)+\sum_{\intr\text{ junctions}}k_v.
+\]
+Counting lost copy corners yields
+\begin{align*}
+ W(Q)&=mw-2E-N_s=m(w-4)+4+D,\\
+ D&=\sum_{\partial\text{ junctions}}(k_v-1-\mathbf1_{k_v\theta_v=\pi})
+       +\sum_{\intr\text{ junctions}}(k_v-4)\ge0.
+\end{align*}
+At smooth boundary junctions $k_v\ge2$, and at interior junctions $k_v=4$ or $8$, so every summand is nonnegative. This retains cycles and shared seam endpoints.
+
+Apply \eqref{eq:wall} to the strict base: $J=s_N=0$ and $s_A\ge2$. Hence $w=2+6I+Q\ge8$. If $W(Q)\le21$, the assembly inequality gives $4m+4\le21$, so $m\le4$.
+
+Normalize one copy by $g_0^{-1}$. The positive-length contact graph is connected, since isolated point contacts cannot join the interiors into a disk. Along each seam the normalized placement changes by a reflection in a base-wall line. An axial line has integer coordinate; reflection has even translation part. A diagonal base wall has $x-y=c$ or $x+y=c$ with even integer $c$; its reflection also preserves the even-even class and the canonical triangulation. Thus every normalized copy and both actual marks lie in the same canonical presentation.
+
+Every transparent non-$A$ lattice point of the normalized union must be a copy corner: otherwise its inverse image is a noncorner integer base point, hence $A$, and remains $A$ under that copy map. It must consequently be an interior or smooth boundary seam junction. Each interior junction uses at least four seam ends and each smooth boundary junction at least one, giving
+\[
+ 2E\ge N_s+4I_c,\qquad
+ k_Q\le N_s+I_c\le2m-2-I_c\le2m-2\le6.
+\]
+Theorem~\ref{thm:minimum} now supplies a legal path between the actual normalized interior $A$ marks. The inverse rigid normalization preserves it, contradicting darkness. Therefore $W(Q)\ge22$.
+\end{proof}
+
+The three reflected five-square staircases of \cite{construction} realize this strict whole-copy class and attain 22 walls. Theorem~\ref{thm:fold} does not show that an arbitrary dark room has such a factor. Whole congruent pieces, literal seam agreement, a strict parity base and two distinct smooth base endpoint fibers remain essential assumptions. Common-similarity extensions and other folding conventions are separate statements.
+
+\section{Evidence, dependencies and reproducibility}\label{sec:records}
+The repository accompanying this paper is
+\url{https://github.com/peytonprogrammer/illumination-problem}. The neighboring README and \texttt{provenance.json} identify exact source versions. The main mathematical source is \path{research/illumination-k4-codex/restricted-theorem-note/theorem.txt}; later acceptance of the 22-wall membership count is reconciled in \texttt{baseline-and-gap.md}. Older pending banners do not supersede that later record.
+
+The required evidence groups are:
+\begin{enumerate}
+\item \textbf{Finite domains:} \texttt{k6-support-census/} for $I=2,3$, \texttt{global-route-review/} for the four-star boundary classification, and \texttt{k6-i4-review/} for the three geometric formulas and proof receipts.
+\item \textbf{Geometry extension:} \path{research/claude-illumination-check/encoder-necessity-audit/findings.md}, with the later arithmetic review closing its encoding dependency.
+\item \textbf{Arithmetic:} \path{lower-bound-proof-audit/arithmetic/}, including findings, source inventory and receipts, and \path{research/claude-illumination-check/arithmetic-review/findings.md}.
+\item \textbf{Optical implication and provenance:} \path{lower-bound-proof-audit/provenance/} and \path{research/claude-illumination-check/provenance-review/}. Their independent reconstruction binds each final optical clause to a checked guard and allowed transformation.
+\item \textbf{Complete verification:} \path{lower-bound-proof-audit/full-replay/}, with its final input binding in \path{final-binding.json}. The three $I=4$ cases have a separate binding. The 61-case DRAT inputs total 8,749,278,597 bytes. A status label alone does not replace these bindings.
+\end{enumerate}
+Unqualified directories in this list lie under \path{research/illumination-k4-codex/}. Large inputs are distributed as individual case packages rather than embedded in this PDF. The repository's \texttt{tools/archive.py} and data catalog locate, restore and verify selected packages. Historical replay scripts require the source layout and dependencies documented in the certificate appendix; there is no claim here of a new one-command portable full replay.
+
+The theorem trusts the finite reduction, extension argument, encoder completeness, exact guard logic and file binding, along with rational/integer arithmetic and the native \texttt{drat-trim} proof checker. Independent execution of that standard checker is distinct from a separately implemented DRAT verifier. The argument has not been formalized in a proof assistant or externally refereed.
+
+Integer dilation can increase $k$ without adding a physical wall. No argument bounds $k$ solely in terms of $W$, or converts every dark polygon into this lattice presentation. The general 22-wall minimum and historical novelty of this restricted lower bound remain unresolved.
+
+\begin{thebibliography}{9}
+\bibitem{construction} P. Wang and D. Wang, \emph{A simple orthogonal 22-gon with two non-illuminating interior points}, working draft v0.2 (2026). Included as \path{preprints/twenty-two-wall/manuscript.pdf} in the accompanying repository.
+\end{thebibliography}
+
+\smallskip\noindent\textbf{Acknowledgments.} The authors used AI tools, including OpenAI Codex and Anthropic Claude, to develop and revise this research, its theorem proofs, and the manuscript. The authors remain responsible for the content.
+\end{document}

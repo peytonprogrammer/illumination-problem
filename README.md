@@ -8,7 +8,7 @@ The universal minimum-wall problem remains open. The results have internal AI re
 
 | To… | Start with… |
 |---|---|
-| Read a manuscript | [Four theorem manuscripts and two supporting notes](preprints/README.md) |
+| Read a manuscript | [Eight theorem manuscripts, an affine research note and two supporting notes](preprints/README.md) |
 | Find a precise statement, hypotheses, and proof | [Results inventory](RESULTS.md) |
 | Understand failed approaches and open questions | [Negative findings](docs/NEGATIVE-RESULTS.md) |
 | Inspect or download supporting evidence | [Data catalog](docs/DATA.md) |
