@@ -1,30 +1,30 @@
 # Snapshot scope and provenance
 
-## Current layout: November 8 update
+The archive contains research statements, proofs, reviews, scripts, figures, failed approaches, and computational evidence. The [data catalog](DATA.md) gives current coverage and download sizes; [current-snapshot.json](../manifests/current-snapshot.json) contains the same counts in machine-readable form.
 
-Research is paused. The current view contains 140728 research paths: 134654 ordinary Git files and 6074 large paths in 246 independent case packages. See [the data browser](DATA.md) and `manifests/current-snapshot.json`. Dated manifests record source and exported hashes. The last record for each source path identifies its current version and location.
+## File organization
 
-The corrected eight-wall packet and later affine positive/negative results are described in [the reviewed update](UPDATE-2026-11-08.md). The full-group norm premise remains unproved and unrefuted. Older source bytes, claims and receipts remain historical records, not current active-goal states.
+- `preprints/` contains readable manuscripts and supporting notes, with their LaTeX sources and build instructions.
+- `research/` preserves the research file layout. A filename or old status banner is not evidence that a claim was accepted.
+- `manifests/files.jsonl` maps each research source path to its current Git location or case-package member.
+- `manifests/packages.json` identifies the independent release downloads and their checksums.
 
-## Coverage
+The [results inventory](../RESULTS.md) links statements to their hypotheses and review records. Later corrections supersede earlier claims only at the scope stated in their sources. The universal minimum-wall problem, general ten-wall illumination, and the proposed full-affine-group bound remain unresolved by this archive.
 
-- 140,728 research paths.
-- 134,654 research files stored directly in Git.
-- 6,074 research files in 246 independent case packages.
-- 7,168,412,225 compressed package bytes.
+## Provenance and review pins
 
-The 24-group index is a human summary, not a count of theorems or a claim that every historical experiment succeeded. It includes failed approaches and scope-limited controls. The latest TR04/TR05 acceptances and pending TR06 method countercontrol are indexed within the spiral group. Both peers ultimately recorded a blocked state at the unresolved terminal-pair existence argument. The general ten-wall, eight-reflex and universal 22-wall goals remain open.
+Source and exported SHA-256 values are recorded separately. Use the exported hash to verify a delivered file. A historical review pin applies to the exact source version it names. A different hash does not establish that a later version received the same review.
 
-The file manifest is authoritative about included files. Research roots include illumination-k4-codex, illumination-generalization-2026-11-06, claude-illumination-check and related selected illumination artifacts. Runtime environments, caches, executable binaries and selected downloaded dependencies are excluded. `manifests/exclusions.json` lists these dependencies and generated files; directory entries cover their descendants.
+Manuscript [import provenance](../preprints/provenance.json) identifies copied sources. The generated eight-wall manuscript has its own [source pin](../preprints/eight-wall/provenance.json) and [verification record](../preprints/eight-wall/verification.json). See [the manifest reference](../manifests/README.md) for field definitions.
 
-## Source and exported hashes
+## Dependencies and licenses
 
-Original source hashes and exported hashes are recorded separately. Use current exported hashes for file-integrity checks. A historical receipt identifies the source version it tested and does not establish that a later version was tested. Numerical data retain source bytes unless their manifest record specifies a change.
+No repository-wide license has been assigned. Existing author and dependency notices remain applicable. Runtime environments, caches, generated executables, and selected downloaded dependencies are excluded as listed in [exclusions.json](../manifests/exclusions.json).
 
-## Third-party material
+The retained historical Python SAT source subset includes its [license](../research/illumination-k4-codex/lower-bound-proof-audit/arithmetic/sources/python_sat-1.9.dev17/LICENSE.txt). The archived DRAT source retains its [license](../research/claude-illumination-check/k5-residual/own-drat/src/LICENSE). Some case packages contain downloaded dependency or literature artifacts; their existing notices apply. Inclusion does not relicense upstream material.
 
-No repository-wide license has been assigned. Historical author and dependency notices remain applicable. Most runtime/downloaded dependencies are excluded. A small historical `python_sat-1.9.dev17` source subset under `research/illumination-k4-codex/lower-bound-proof-audit/arithmetic/sources/` is retained with `LICENSE.txt`; its `solvers/minicard.tar.gz` is stored in the data archive. The historical own-drat source license is retained under `research/claude-illumination-check/k5-residual/own-drat/src/LICENSE`. These exceptions preserve provenance and do not relicense upstream material.
+## Verification limits
 
-## What publication verifies
+File checks cover Git hashes, compressed package hashes, and package-member paths, sizes, and hashes. Named reproduction suites run fixed geometric controls. These checks do not re-prove every theorem, replay the entire certificate corpus, establish historical novelty, or provide external expert refereeing.
 
-Publication verification checks Git file hashes, compressed package hashes, and every package member's path, size and SHA-256. It also checks top-level documentation links and delivery to the private GitHub repository/release. It does not freshly re-prove each theorem, rerun the entire SAT/DRAT corpus, establish novelty, or provide external expert refereeing. Reproduction can require adapting historical paths and installing the documented dependencies; see [reproduction guidance](REPRODUCIBILITY.md).
+See [reproduction](REPRODUCIBILITY.md) for commands and dependencies.

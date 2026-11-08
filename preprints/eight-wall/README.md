@@ -6,9 +6,9 @@
 
 The manuscript contains the full corrected proof, the six normal forms, four prescribed path illustrations, a referee checklist and reproduction instructions. It has no lattice or rationality assumption. It makes no claim about the universal 22-wall minimum or historical novelty.
 
-The proof was developed and cross-reviewed with AI agents. It has not been externally refereed or checked in a proof assistant. This is a manuscript for mathematical review, not a journal or arXiv submission. Author names follow the existing project drafts; author details and contributions should be settled before submission.
+The proof was developed and cross-reviewed with AI agents. It has not been externally refereed or checked in a proof assistant. This is a manuscript for mathematical review, not a journal or arXiv submission.
 
-## Source and editorial policy
+## Proof source and figures
 
 Sections 0–8 typeset the complete [corrected proof packet](../../research/illumination-generalization-2026-11-06/fable/eight-wall-review-packet/theorem-and-proof.md), retaining its proof and theorem numbering. `build.py` checks that packet's SHA-256 before generating the LaTeX. Mathematical variables in ASCII notation are translated into print notation; in particular, the packet's `Beta` is printed as capital B in its local roof argument. The original mathematical source remains unchanged.
 

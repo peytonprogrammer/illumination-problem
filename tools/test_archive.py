@@ -49,11 +49,11 @@ class ArchiveTests(unittest.TestCase):
         (self.root / 'manifests/packages.json').write_text(json.dumps(dict(packages=[meta])))
         return meta, path, rows
 
-    def test_latest_record_overrides_location_without_duplicate_restore(self):
-        self.manifest([dict(source_path='case/a.json', storage='dataset')])
-        self.manifest([dict(source_path='case/a.json', storage='git')], 'files-2026-new.jsonl')
-        self.assertEqual([r['storage'] for r in archive.records()], ['git'])
-        self.assertEqual(len(list(archive.manifest_records())), 2)
+    def test_current_manifest_retains_git_and_package_locations(self):
+        rows = [dict(source_path='case/a.json', storage='git', path='research/case/a.json'),
+                dict(source_path='case/large.cnf', storage='package', package='case.tar.zst')]
+        self.manifest(rows)
+        self.assertEqual(list(archive.records()), rows)
 
     def test_package_integrity_and_readable_member_names(self):
         meta, path, rows = self.package([('case/formula.cnf', b'p cnf 0 0\n')])

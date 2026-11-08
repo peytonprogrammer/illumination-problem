@@ -6,15 +6,10 @@ No research checker or archived shell command is executed by this tool.
 from pathlib import Path, PurePosixPath
 import argparse,functools,hashlib,json,shutil,subprocess,tarfile
 ROOT=Path(__file__).resolve().parents[1]
-def manifest_records():
- manifests=[ROOT/'manifests/files.jsonl']+sorted((ROOT/'manifests').glob('files-*.jsonl'))
- for manifest in manifests:
-  with manifest.open() as f:
-   for line in f:yield json.loads(line)
-def records():
- # Follow-ups replace the current version/location; old manifests remain history.
- latest={r['source_path']:r for r in manifest_records()}
- return latest.values()
+def records(root=None):
+ root=ROOT if root is None else root
+ with (root/'manifests/files.jsonl').open() as f:
+  for line in f:yield json.loads(line)
 def digest(path):
  h=hashlib.sha256()
  with path.open('rb') as f:
@@ -57,12 +52,8 @@ def package_file(meta,cache,download=False):
 @functools.lru_cache(maxsize=1)
 def package_members(root):
  grouped={}
- manifests=[root/'manifests/files.jsonl']+sorted((root/'manifests').glob('files-*.jsonl'))
- for manifest in manifests:
-  with manifest.open() as f:
-   for line in f:
-    r=json.loads(line)
-    if r['storage']=='package':grouped.setdefault(r['package'],{})[r['member']]=r
+ for r in records(root):
+  if r['storage']=='package':grouped.setdefault(r['package'],{})[r['member']]=r
  return grouped
 
 def read_package(meta,path,consumer):
@@ -99,7 +90,6 @@ def restore(destination,selected,cache):
  dest=destination.resolve()
  if dest.exists() and any(dest.iterdir()):raise ValueError('Restore workspace must be empty')
  if not selected:raise ValueError('No research files match the selection')
- if any(r['storage']=='dataset' for r in selected):raise ValueError('Selection has legacy-only data')
  # Resolve/download every needed package before writing the restored layout.
  catalog=package_catalog();ids=sorted({r['package'] for r in selected if r['storage']=='package'})
  paths={i:package_file(catalog[i],cache,download=True) for i in ids}

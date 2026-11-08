@@ -8,11 +8,10 @@ These are byte-for-byte copies of the [archived PDF](../../research/claude-illum
 
 ## Build
 
-From this directory, run a LaTeX engine with the packages listed in the source, for example:
+From this directory, build the included source with Tectonic:
 
 ```sh
-pdflatex manuscript.tex
-pdflatex manuscript.tex
+tectonic manuscript.tex
 ```
 
 Record the source and PDF hashes in the import provenance after rebuilding.

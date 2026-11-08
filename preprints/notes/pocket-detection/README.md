@@ -1,4 +1,4 @@
-# Pocket-detection discussion brief
+# Pocket-detection question
 
 [Read the PDF](note.pdf) · [LaTeX source](note.tex) · [Manuscript catalog](../../README.md)
 
@@ -8,11 +8,10 @@ These are byte-for-byte copies of the [archived PDF](../../../research/illuminat
 
 ## Build
 
-From this directory, run a LaTeX engine with the packages listed in the source, for example:
+From this directory, build the included source with Tectonic:
 
 ```sh
-pdflatex note.tex
-pdflatex note.tex
+tectonic note.tex
 ```
 
 Record the source and PDF hashes in the import provenance after rebuilding.

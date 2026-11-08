@@ -11,7 +11,7 @@ Start here for readable PDFs and their sources. Each manuscript has its own fold
 | Three-star surplus-four illumination | [PDF](three-star-surplus-four/manuscript.pdf) | [Fixed support, at most 21 walls and six transparent points](three-star-surplus-four/README.md) |
 | Twelve-wall corridor illumination | [PDF](twelve-wall-corridor/manuscript.pdf) | [Specified four-parameter family; outer-chamber pairs](twelve-wall-corridor/README.md) |
 
-## Historical and discussion notes
+## Supporting notes
 
 These are supporting records, separate from the theorem manuscripts.
 
@@ -24,23 +24,8 @@ These are supporting records, separate from the theorem manuscripts.
 
 The current k≤6 restricted minimum still needs a consolidated manuscript. Comb, long-neck/network, strict-fold and ten-wall spiral results remain in the [results inventory](../RESULTS.md) and linked proof records. Recent affine mechanisms and obstructions remain in the [November 8 update](../docs/UPDATE-2026-11-08.md). A theorem can have a completed proof record without a standalone PDF.
 
-## Repository layout
-
-```text
-preprints/
-  README.md                     Manuscript catalog and coverage
-  provenance.json               Original paths and hashes for imported files
-  eight-wall/                   Corrected eight-wall theorem
-  twenty-two-wall/               Dark-room construction
-  three-star-surplus-four/       Fixed-support lattice theorem
-  twelve-wall-corridor/          Outer-chamber corridor theorem
-  notes/
-    restricted-minimum-k4/       Historical construction/minimum note
-    pocket-detection/            Open-question discussion brief
-research/                       Frozen proofs, reviews, scripts and evidence
-manifests/                      Archive file and package records
-```
+## Sources and provenance
 
 [Import provenance](provenance.json) records each source and SHA-256. The eight-wall manuscript retains its own [provenance](eight-wall/provenance.json) and [verification record](eight-wall/verification.json).
 
-Read each folder's README before rebuilding. Research remains paused; this organization adds no theorem or proof claim.
+Read each folder's README before rebuilding. See [reproduction](../docs/REPRODUCIBILITY.md) for fixed controls and the distinction between file verification and mathematical review.
