@@ -13,7 +13,50 @@ Run these commands from the repository root. File verification checks delivery a
 | Validate PDFs and structured files | Python 3 and Poppler (`pdftotext`, `pdfinfo`) |
 | Build a manuscript | Tectonic; see its folder's README for additional regeneration dependencies |
 
+The supported validation environment is Python 3.11 or newer, a POSIX shell,
+`zstd`, and Poppler. It needs no third-party Python packages. Install the system
+tools on macOS with Homebrew:
+
+```sh
+brew install python zstd poppler
+```
+
+On Ubuntu 24.04:
+
+```sh
+sudo apt-get update
+sudo apt-get install --yes python3 zstd poppler-utils
+```
+
+Run checkers with assertions enabled. The shared geometry module rejects
+`python -O`, `python -OO`, and `PYTHONOPTIMIZE` values that disable assertions,
+because archived geometry, path, and certificate checks depend on them. This
+execution guard does not change any mathematical predicate or extend a
+historical review to different source bytes. Historical search and full
+SAT/DRAT pipelines can require additional dependencies outside this validation
+environment.
+
 ## Verify files and run fixed controls
+
+Run the complete supported validation with one command:
+
+```sh
+python3 tools/validate.py
+```
+
+It checks catalog consistency and research hashes, runs archive and verifier
+regressions, executes both fixed control suites, and validates publication
+formats. It stops at the first failed stage. To run the other stages without
+Poppler, use `python3 tools/validate.py --skip-publication`; the output explicitly
+reports the omitted structured-file and PDF checks.
+
+The [GitHub Actions workflow](../.github/workflows/validate.yml) runs that same
+complete command on pushes, pull requests, and manual dispatches, using Ubuntu
+24.04 and Python 3.13. It installs `zstd` and Poppler and uses actions pinned to
+commit hashes. It does not download case packages or replay the full SAT/DRAT
+corpus.
+
+Individual stages remain available:
 
 ```sh
 python3 tools/archive.py verify-git

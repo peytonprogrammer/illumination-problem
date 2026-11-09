@@ -21,11 +21,12 @@ Keep source and delivered hashes distinct. Link published literature and preserv
 
 ```sh
 python3 tools/update_catalog.py
-python3 tools/update_catalog.py --check
-python3 tools/archive.py verify-git
-python3 tools/check_publication.py
-python3 tools/test_archive.py
+python3 tools/validate.py
 ```
+
+The validation command runs integrity, regression, fixed-control, and
+publication-format checks. See [reproduction](docs/REPRODUCIBILITY.md) for its
+dependencies and individual commands. The same checks run in GitHub Actions.
 
 Review rendered PDFs and figures when they change. Update manuscript provenance after rebuilding. A historical check applies only to the exact version it tested.
 

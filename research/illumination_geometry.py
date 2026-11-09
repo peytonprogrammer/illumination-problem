@@ -1,4 +1,14 @@
 """Exact integer geometry and independent certificates; no solver dependency."""
+
+# Geometry, trajectory, and certificate checks in this module and its importers
+# use assertions as validation. Refuse optimized execution before any checker
+# can silently accept an invalid room or path with those checks disabled.
+if not __debug__:
+    raise RuntimeError(
+        'Illumination checkers require enabled assertions; run Python without '
+        '-O, -OO, or PYTHONOPTIMIZE.'
+    )
+
 from collections import defaultdict
 from fractions import Fraction
 from itertools import combinations

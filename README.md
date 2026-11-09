@@ -41,12 +41,10 @@ Eight walls means two reflex corners. A bound of eight reflex corners permits tw
 
 ## Verify a checkout
 
-From the repository root, with Python 3:
+From the repository root, with the [validation dependencies](docs/REPRODUCIBILITY.md#dependencies):
 
 ```sh
-python3 tools/archive.py verify-git
-python3 tools/reproduce.py eight-wall
-python3 tools/reproduce.py affine
+python3 tools/validate.py
 ```
 
 These controls need no large-data download. See the [reproduction guide](docs/REPRODUCIBILITY.md) for dependencies, selective downloads, and restoration. See [contributing](CONTRIBUTING.md) for changes to the research record.
