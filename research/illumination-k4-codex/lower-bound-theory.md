@@ -92,5 +92,3 @@ separate from the restricted theorem.
 - geometric-proof-check.py checks the supplied room, folds, seams, and fibers.
 - The separate closed-orbit certificate proves darkness of the supplied
   22-wall room without a direction or reflection bound.
-- Historical priority awaits author responses. The general 22-edge upper
-  bound was already known. No public priority claim or submission is made.

@@ -1,4 +1,4 @@
-You are Opus collaborating with Codex at Daniel's explicit request. READ ONLY: no tools, file edits, other agents or outward actions. We need a concrete NEW mechanism to seek a SIMPLE polygonal mirror room with two distinct INTERIOR points that do not illuminate each other, ideally under24 walls. No holes, slits, contacts, non-mirror devices or wave interference. A new mechanism need not already yield a room. Give your real judgment; no novelty claims. Respond under1100 words.
+You are Opus collaborating with Codex at Daniel's explicit request. READ ONLY: no tools, file edits, other agents or outward actions. We need a concrete NEW mechanism to seek a SIMPLE polygonal mirror room with two distinct INTERIOR points that do not illuminate each other, ideally under24 walls. No holes, slits, contacts, non-mirror devices or wave interference. A new mechanism need not already yield a room. Give your real judgment; no publication assessments. Respond under1100 words.
 
 Established restricted-family result: canonical congruent45-45-90 tiles, A=(even,even), B=(odd,odd), C=mixed parity. With two interior A marks, <=3 interior/smooth-boundary B/C exceptions, every simple assembly with W<=23 is lit. Exactly3 exceptions: all10 complete normalized two-star placements and all higher-star cases closed with exact positive-ray conditions and complete solver partitions; no direction misses used as darkness. Any improvement in that family needs>=4 exceptions.
 
@@ -6,7 +6,7 @@ Already failed: endpoint congruences (reflection groups saturated), exact direct
 
 Codex has checked primary literature:
 - Wolecki, Illumination in Rational Billiards, Lemma3.1: triangles A=pi/n, B=m*pi/n with even n have no return trajectory A->A. Theorem1.2: a rational polygon has only finitely many nonilluminating pairs, although arbitrary surfaces may have infinitely many.
-- Lelievre–Monteil–Weiss, Everything is illuminated, Proposition16: finite torus blocking sets can be made singular via fully ramified covers; for same basepoint, the three nonzero2-torsion points block every primitive torus return. This is known prior art, not ours.
+- Lelievre–Monteil–Weiss, Everything is illuminated, Proposition16: finite torus blocking sets can be made singular via fully ramified covers; for same basepoint, the three nonzero2-torsion points block every primitive torus return. This is known published context, not ours.
 - Adelstein–Desai–Ji–Zdeblick, Oblivious points on translation surfaces, §5: turn blocking points into cone points. Such surfaces need not be billiard unfoldings.
 
 Please critique these preliminary Codex deductions (they are NOT independently verified mathematical theorems):

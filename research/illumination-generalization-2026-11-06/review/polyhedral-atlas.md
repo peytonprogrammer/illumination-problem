@@ -50,7 +50,7 @@ For completeness, existence also follows directly from the rational Weyl–Minko
 
 Consequently ALL eligible canonical45 marked rooms atW<=21 have a finite list of base parameter vectors and finite lists of integer geometric growth directions. A growth direction itself may represent a degenerate polygon; its asserted property is that adding it to any associated base representation preserves the selected strict geometry cell. It is not asserted to be a corridor stretch or an optical equivalence. T can move according to its recorded parameter coordinates; S stays fixed. Every resulting mark is an actual interior mark of its resulting room, but there is NO automatic trajectory transfer between different parameter values.
 
-The finite atlas and its bases/generators have not been enumerated here, and their possible size is enormous. No practical small case list, bound on k, lattice diameter or reflection count follows. The coefficients n_j remain arbitrary nonnegative integers. The structural theorem is an application of standard polyhedral theory, not a claim of novelty.
+The finite atlas and its bases/generators have not been enumerated here, and their possible size is enormous. No practical small case list, bound on k, lattice diameter or reflection count follows. The coefficients n_j remain arbitrary nonnegative integers. The structural theorem is an application of standard polyhedral theory.
 
 ## 4. Compact primitive arithmetic escape defeats a geometric-only reduction
 

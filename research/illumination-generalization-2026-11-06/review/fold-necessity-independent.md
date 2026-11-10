@@ -38,4 +38,4 @@ This refutes only the UNRESTRICTED all-wall-count orthogonal-base converse. It d
 
 ## Remaining obligations
 
-No finding remains in this repaired packet. The main uncapped W<=21 theorem, local-to-global fold necessity and arbitrary-polygon bridge remain OPEN. No novelty or global minimum claim is accepted.
+No finding remains in this repaired packet. The main uncapped W<=21 theorem, local-to-global fold necessity and arbitrary-polygon bridge remain OPEN. No global minimum claim is accepted.

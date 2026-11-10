@@ -2,7 +2,7 @@
 
 Status: proof and exact controls completed by Codex; independent Opus review
 requested. This is an elementary local-flow reduction, not a global
-illumination theorem or a novelty claim.
+illumination theorem.
 
 ## Main result
 

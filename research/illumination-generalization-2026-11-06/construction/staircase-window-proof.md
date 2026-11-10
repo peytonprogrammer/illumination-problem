@@ -132,4 +132,4 @@ Finally swapping coordinates turns the staircase parameters into outer width H, 
 
 ## Limits
 
-This is a genuine all-interior-pair theorem for an unbounded metric subclass of eight-wall staircases, not all staircases. In particular, when ALL FOUR inequalities in Section1 fail, this proof gives only the pairwise regime(1) and its transpose; it does not cover every endpoint. The thin-middle geometry and the complete W<=21 objective remain open. No novelty claim is made. Exact prescribed controls supplement the hand proof; the earlier16-fixture test did not establish this theorem.
+This is a genuine all-interior-pair theorem for an unbounded metric subclass of eight-wall staircases, not all staircases. In particular, when ALL FOUR inequalities in Section1 fail, this proof gives only the pairwise regime(1) and its transpose; it does not cover every endpoint. The thin-middle geometry and the complete W<=21 objective remain open. Exact prescribed controls supplement the hand proof; the earlier16-fixture test did not establish this theorem.

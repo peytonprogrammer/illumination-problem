@@ -35,7 +35,7 @@ independent review. Previous symmetric proof packet is unchanged.
   independently varying horizontal coordinates, and one-portal resonances
   remain open. The arbitrary-endpoint theorem has NOT been completed.
 - [in progress] Universal wall minimality remains unresolved. No numerical
-  wall bound, novel generic-illumination theorem, or historical priority
+  wall bound, generic-illumination theorem
   claim follows from this packet.
 - [done] No discovery search, external message, worker, branch change,
   commit or frozen-input modification was performed.

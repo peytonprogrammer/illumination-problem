@@ -1,7 +1,7 @@
 A computer-assisted lower bound for a restricted lattice family
 Working theorem note — 2 November 2026
 
-Result: within the fixed canonical45-degree lattice model, two distinct interior A marks always illuminate each other if the room has at most21 maximal walls and at most6 transparent non-A lattice points. The finite reduction is mathematical; the remaining contradictions are checked computer certificates. Historical novelty is under review. This is not a universal22-wall minimum.
+Result: within the fixed canonical45-degree lattice model, two distinct interior A marks always illuminate each other if the room has at most21 maximal walls and at most6 transparent non-A lattice points. The finite reduction is mathematical; the remaining contradictions are checked computer certificates. This is not a universal22-wall minimum.
 
 1. Exact statement
 
@@ -15,7 +15,7 @@ THEOREM (computer-assisted). If W<=21 and k<=6, every pair of distinct interior 
 
 Equivalently, a dark pair of interior A marks in this family requires at least22 maximal walls or at least7 transparent non-A points.
 
-SHARPNESS. The previously hand-proved22wall orthogonal room belongs to this exact class: it has30canonical triangles, interior A marks(0,0),(2,2), no interior B/C points, and four smooth non-A boundary points. Thus k=4. Combining that example with the theorem,22 is the minimum wall count for a dark pair of distinct interior A marks within the stated k<=6 class. The fixed-geometry ledger is in attainment-check.txt; its new membership count is awaiting independent peer review. This sharp restricted minimum is not universal minimality or a new upper-bound construction.
+SHARPNESS. The previously hand-proved22wall orthogonal room belongs to this exact class: it has30canonical triangles, interior A marks(0,0),(2,2), no interior B/C points, and four smooth non-A boundary points. Thus k=4. Combining that example with the theorem,22 is the minimum wall count for a dark pair of distinct interior A marks within the stated k<=6 class. The fixed-geometry ledger is in attainment-check.txt; its new membership count is awaiting independent peer review. This sharp restricted minimum is not universal minimality.
 
 2. Why the case list is finite
 
@@ -75,7 +75,7 @@ The frozen packet contains61 I2/I3 refutations and3 I4 geometric refutations. Al
 
 These checks support a computer-assisted theorem under the stated model. They do not formalize the entire argument in a proof assistant or eliminate trust in the checker code/runtime. The records have not yet been packaged as a portable public supplement.
 
-No step proves that an arbitrary dark polygon has this lattice, these marks, or a presentation with k<=6. Integer dilation can increase k without adding a physical wall. The theorem therefore does not exclude all rooms with21 walls or fewer, and it does not settle the minimum among arbitrary polygons. The historical novelty of this restricted exclusion is separate from the known22-wall construction and remains unestablished.
+No step proves that an arbitrary dark polygon has this lattice, these marks, or a presentation with k<=6. Integer dilation can increase k without adding a physical wall. The theorem therefore does not exclude all rooms with21 walls or fewer, and it does not settle the minimum among arbitrary polygons. The of this restricted exclusion is separate from the known22-wall construction and remains unestablished.
 
 Review map
 Read certificate-appendix.txt for exact local files and reproduction stages. Existing source arguments are proofs/placement-enumeration.md, bounded-proof/support-proof.md, persisted-replay/findings.md (counting argument), k6-support-census/findings.md and global-route-review/findings.md section4. Their older numerical caps/status paragraphs are superseded here only where the later k6 audits explicitly do so.

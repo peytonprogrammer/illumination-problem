@@ -8,7 +8,7 @@ Primary author: **Peyton Wang**. Coauthor: Daniel Wang.
 
 The manuscript contains the staircase construction and folded-parity darkness proof, followed by the full cylinder argument for every other pair. A strip diagram explains why an interior source lift can reach any regular target in a cylinder's closure. Two finite permutations, in directions `(4,7)` and `(7,4)`, certify the cylinder decompositions. The four integrality conditions leave only interior lattice points as possible dark-pair endpoints.
 
-The [illustrated companion](explainer.html) lets you move the source and target, inspect the integrality conditions, and move a target onto the boundary of a covering strip. Open the HTML file locally in any modern browser; it needs no server or network connection. The existing nine-minute video explains the construction and darkness proof; the cylinder classification is covered by the manuscript and companion.
+The [illustrated companion](explainer.html) lets you move the source and target, inspect the integrality conditions, and move a target onto the boundary of a covering strip. Open the HTML file locally in any modern browser; it needs no server or network connection. The existing construction video explains the construction and darkness proof; the cylinder classification is covered by the manuscript and companion.
 
 The argument has independent AI review and fixed-certificate checks. It has not been formally verified or externally refereed. Its scope is distinct interior pairs in this polygon; boundary endpoints and self-return trajectories are excluded.
 

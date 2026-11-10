@@ -1,6 +1,6 @@
 # Bounded primary-source screen: global optical mechanism
 
-Result: no newly checked theorem in this screen resolves the unbounded-k W<=21 target. The screen did recover an existing stronger elementary dependency and exposed one tempting category error. It is not an exhaustive literature or novelty search.
+Result: no newly checked theorem in this screen resolves the unbounded-k W<=21 target. The screen did recover an existing stronger elementary dependency and exposed one tempting category error. It is not an exhaustive literature review.
 
 ## Duryev 2024
 

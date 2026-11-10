@@ -25,6 +25,6 @@ The retained historical Python SAT source subset includes its [license](../resea
 
 ## Verification limits
 
-File checks cover Git hashes, compressed package hashes, and package-member paths, sizes, and hashes. Named reproduction suites run fixed geometric controls. These checks do not re-prove every theorem, replay the entire certificate corpus, establish historical novelty, or provide external expert refereeing.
+File checks cover Git hashes, compressed package hashes, and package-member paths, sizes, and hashes. Named reproduction suites run fixed geometric controls. These checks do not re-prove every theorem, replay the entire certificate corpus, or provide external expert refereeing.
 
 See [reproduction](REPRODUCIBILITY.md) for commands and dependencies.

@@ -18,7 +18,7 @@ Completed three final searches over 288 triangles in [-4,8]², source (0,0), any
 
 Validation: seven saved certificates pass; 4,461 local states agree between two sector algorithms; four invalid certificate mutations fail. Exact data, scripts, dependency pins, rendered diagrams, solver statuses, and logs are saved in `.context/`.
 
-The 20-wall coordinates idealize a raster image; original creator coordinates/code and historical priority remain unverified. The search did not cover other triangle families, arbitrary rational or irrational rooms, larger patches, or alternative darkness certificates. Solver infeasibility has not been exported as a formally checked proof. No new global bound or record is claimed.
+The 20-wall coordinates idealize a raster image; original creator coordinates/code and The search did not cover other triangle families, arbitrary rational or irrational rooms, larger patches, or alternative darkness certificates. Solver infeasibility has not been exported as a formally checked proof. No new global bound or record is claimed.
 
 Primary literature: Wolecki v3 (November 30, 2024), especially Section 3 and Theorem 1.2; Lelièvre–Monteil–Weiss metadata checked earlier. Firsthand 20-wall upload metadata and image checked. No comprehensive bibliographic search or external communication.
 
@@ -28,7 +28,7 @@ Primary literature: Wolecki v3 (November 30, 2024), especially Section 3 and The
 
 All 939 reflection groups were computed exactly and equal the full even-translation square-symmetry group. A derived obstruction explains why a reflection-orbit coordinate test loses the information needed for these candidates. This is not a proof that arbitrary transparency is impossible. Related primary literature checked: Wolecki Section 3 and Tan, Codes for Square-Tiled Surfaces (arXiv:1207.3493); no square-tiled surface orbit enumeration was implemented.
 
-Audit artifacts include all witness records, 939 independent path validations, 20 cut patterns under 836 unrelated geometry mutations, the group calculations, and two examples that initially passed a small direction search before exact longer paths were found. No global bound, safe transparent construction, or new record is claimed. No outward communication or publication.
+Audit artifacts include all witness records, 939 independent path validations, 20 cut patterns under 836 unrelated geometry mutations, the group calculations, and two examples that initially passed a small direction search before exact longer paths were found. No global bound or safe transparent construction is claimed. No outward communication or publication.
 
 ## Two-vertex simple-room extension
 
@@ -88,7 +88,7 @@ Checked complete grid-preserving affine half-turn enumeration and all fixed-poin
 
 The final parent models use complete geometric supports and exact positive-ray cuts only; pair constraints guide discovery and do not restrict the final exclusion replays. Composing the final3 placements with the previous4, the three-star equality exclusion and the higher-star analytic bound rules out at most23 walls for exactly two exceptions at arbitrary assembly size. Previous zero/one-exception exclusions and the known24-wall control establish minimum24 for at most two exceptions. Summary: `two-complete-summary.json`; latest audit: `two-pair-final-audit.json`.
 
-No three-exception search, arbitrary non-A marks, different tiling, non-grid mirrors, holes, slits, contacts, general polygon lower bound, formal UNSAT proof, or literature-priority claim. All jobs stopped; no outward actions or tracked edits.
+No three-exception search, arbitrary non-A marks, different tiling, non-grid mirrors, holes, slits, contacts, general polygon lower bound, formal UNSAT proof. All jobs stopped; no outward actions or tracked edits.
 
 
 ## Three exception extension and connecting cell paths

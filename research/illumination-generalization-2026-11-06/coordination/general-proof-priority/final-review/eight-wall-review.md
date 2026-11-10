@@ -1,6 +1,6 @@
 # Independent hand review of the eight-wall packet
 
-Decision: no fatal mathematical gap found in the complete written proof chain after the corrections below. ACCEPT at the level of an independent AI hand reconstruction of the stated all-real orthogonal W<=8 theorem. This is not formal verification, external refereeing, novelty clearance, a reflection bound, or any W10 extension. Original packet bytes are preserved in before/ and pinned in inputs.json. All frozen research proofs and historical acceptance receipts remain unchanged.
+Decision: no fatal mathematical gap found in the complete written proof chain after the corrections below. ACCEPT at the level of an independent AI hand reconstruction of the stated all-real orthogonal W<=8 theorem. This is not formal verification, external refereeing, a reflection bound, or any W10 extension. Original packet bytes are preserved in before/ and pinned in inputs.json. All frozen research proofs and historical acceptance receipts remain unchanged.
 
 ## Highest-priority mathematical steps
 
@@ -34,7 +34,7 @@ These are explicit corrections to the derivative manuscript and its runner, not 
 
 The corrected runner executed all 12 existing prescribed checks successfully. An injected scratch-only Python failure with exit code 19 caused the runner to exit 19, with no success marker. This checks failure propagation, not mathematics. The independent ST10-E calculation is recorded separately in central-strip-check.json.
 
-The theorem remains an AI-reviewed draft awaiting external mathematical review. The existing proof convention permits revisiting the source; reaching the target earlier allows truncation. No upper bound on U reflections is needed because finite iteration is proved per input. No source is inferred from an independently accessible target state. No claim about historical priority is made.
+The theorem remains an AI-reviewed draft awaiting external mathematical review. The existing proof convention permits revisiting the source; reaching the target earlier allows truncation. No upper bound on U reflections is needed because finite iteration is proved per input. No source is inferred from an independently accessible target state. No claim about
 
 ## Mathematical referee addendum
 

@@ -2,7 +2,7 @@
 
 [done] Primary-source theorem checked and application written by Codex.
 [waiting on Claude] Independent review of the application requested.
-This is an application of published genus-two results, not a novelty claim.
+This is an application of published genus-two results,.
 
 ## Exact scope
 

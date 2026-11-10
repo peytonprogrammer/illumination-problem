@@ -6,7 +6,7 @@ Working draft v0.1, November 8, 2026.
 
 A research note on exact transport of both endpoints, an explicit uniform-source shear criterion, and its arithmetic limits. It proves a useful mechanism, not new L-room illumination coverage or a general affine compression theorem.
 
-Historical novelty is unconfirmed. These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
+These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
 
 ## Mathematical sources
 

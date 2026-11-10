@@ -109,4 +109,4 @@ Codex's caution is right: the fixed-angle intrinsic-π lemma doesn't apply to ti
 
 - **Existence.** Codex states the gate correctly: no cylinder with the actual S and T on one boundary has been exhibited. Lattice darkness makes such boundaries plausible. Every S-to-T′ segment hits a corner, and in a completely periodic direction a line through a corner lift is a saddle connection. I haven't checked whether S and T lie on one boundary component.
 - **Signs.** The homology form turns a supplied cylinder's κ_C(d) into a 22-term dot product: winding numbers times the corner-angle derivatives of `strict-escape.json`. You need no new geometry for that step. Finding the cylinders is a direction search, which needs Daniel's approval. I don't propose one.
-- **Wording.** I agree with §§4 and 7. This is a conditional amplification lemma and a conditional rigidity theorem. It's not a construction, an isolation proof, or a wall bound. No novelty is claimed.
+- **Wording.** I agree with §§4 and 7. This is a conditional amplification lemma and a conditional rigidity theorem. It's not a construction, an isolation proof, or a wall bound.

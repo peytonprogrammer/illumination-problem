@@ -1,4 +1,4 @@
-Independently review this mathematical working note. No tools, edits, ray searches or outward actions. Check the geometric proof, the retracing argument at boundary marks, projection at smooth seam endpoints, the polyomino completeness argument, and scope of the restricted lower bound. Identify concrete errors or gaps. Distinguish theoretical review from executing certificates or verifying historical priority. Return concise findings and proposed corrections, then ACCEPT or REVISE with scope.
+Independently review this mathematical working note. No tools, edits, ray searches or outward actions. Check the geometric proof, the retracing argument at boundary marks, projection at smooth seam endpoints, the polyomino completeness argument, and scope of the restricted lower bound. Identify concrete errors or gaps. Distinguish theoretical review from executing certificates . Return concise findings and proposed corrections, then ACCEPT or REVISE with scope.
 
 \documentclass[11pt]{article}
 \usepackage[letterpaper,margin=1in]{geometry}
@@ -11,12 +11,12 @@ Independently review this mathematical working note. No tools, edits, ray search
 \theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
 \setlength{\parskip}{4pt}\setlength{\parindent}{0pt}
 \title{A simple orthogonal mirror room with 22 walls}
-\author{Working research note\thanks{Construction discovered by a Claude/Opus-assisted search and checked by Codex using a separately written unfolding implementation. A separate Opus consultation reviewed the hand argument. These are AI-assisted checks; no human mathematical review or historical-priority claim is asserted.}}
+\author{Working research note\thanks{Construction discovered by a Claude/Opus-assisted search and checked by Codex using a separately written unfolding implementation. A separate Opus consultation reviewed the hand argument. These are AI-assisted checks; no human mathematical review is asserted.}}
 \date{31 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-We give coordinates for a strictly simple orthogonal polygon with 22 maximal straight walls and two distinct interior points that do not illuminate one another. The room comprises three reflected copies of a five-square staircase. A lattice-parity argument and the retracing property of convex right-angle corners give a self-contained proof. We also prove that 22 walls is optimal within a precisely restricted three-copy construction class. This restricted result is not a lower bound for general orthogonal rooms. The example matches the known general 22-edge upper bound; historical priority of this orthogonal realization remains unresolved.
+We give coordinates for a strictly simple orthogonal polygon with 22 maximal straight walls and two distinct interior points that do not illuminate one another. The room comprises three reflected copies of a five-square staircase. A lattice-parity argument and the retracing property of convex right-angle corners give a self-contained proof. We also prove that 22 walls is optimal within a precisely restricted three-copy construction class. This restricted result is not a lower bound for general orthogonal rooms.
 \end{abstract}
 
 \section{Conventions and construction}
@@ -155,7 +155,7 @@ c7838dfe640932458e6853af7171396af05df71067658ee8f78f9ca3d91cab20.
 \end{center}
 A separate finite proof reconstructs the physical four-orientation unfolding as 60 squares and supplies a closed set of 2,592 labelled states under the elementary integral shears and their inverses. An independent readback verifies 10,368 closure transitions and 10,368 horizontal source-sector checks, with no connecting path. These counts concern the physical unfolding. A separate 20-square quotient has a 72-state certificate; it is not needed for the hand proof above. Neither proof samples rays or imposes a reflection bound. The small-base table is checked by \texttt{lower-bound-check.py}, which only evaluates the explicitly listed shapes.
 
-Polygonal nonillumination and reflected-copy methods originate in earlier work, notably Tokarsky~\cite{tokarsky}, Castro~\cite{castro}, and Tokarsky--Boese~\cite{boese}. Wolecki~\cite{wolecki} gives a general 22-edge upper bound and acknowledges an independent unpublished 22-gon by Monteil. This example matches that bound. Historical priority of the present strictly simple orthogonal realization remains unresolved.
+Polygonal nonillumination and reflected-copy methods originate in earlier work, notably Tokarsky~\cite{tokarsky}, Castro~\cite{castro}, and Tokarsky--Boese~\cite{boese}. Wolecki~\cite{wolecki} gives a general 22-edge upper bound and acknowledges an independent unpublished 22-gon by Monteil. This example matches that bound.
 
 An exact reconstruction of Wolecki's published vector figure finds a point contact in its boundary. O'Rourke's public orthogonal example~\cite{orourke} has 34 walls. Those comparisons distinguish specific displayed examples; they do not establish the previous best wall count over every strictly simple orthogonal construction.
 

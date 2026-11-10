@@ -64,5 +64,5 @@ if __name__=='__main__':
    else:e=json.loads(json.dumps(events));e[0]['gradient'][0]=str(F(e[0]['gradient'][0])+1);geometry_and_gradients(model,e)
   except AssertionError:corrupt.append(kind)
  assert len(corrupt)==4
- out=dict(status='PASS',room_sha256=hashlib.sha256((B/'room.json').read_bytes()).hexdigest(),events=len(events),quadratic_derivative_coordinates_checked=len(events)*model.dim,rank_on_closure=34,closure_dimension=38,common_kernel_dimension=4,strict_positive_coefficients=len(coeff),one_corner_geometry_verified=True,corruptions_rejected=corrupt,scope='Checks a finite local rigidity certificate, not historical priority or a global minimum. No LP, direction search or peer executable used.')
+ out=dict(status='PASS',room_sha256=hashlib.sha256((B/'room.json').read_bytes()).hexdigest(),events=len(events),quadratic_derivative_coordinates_checked=len(events)*model.dim,rank_on_closure=34,closure_dimension=38,common_kernel_dimension=4,strict_positive_coefficients=len(coeff),one_corner_geometry_verified=True,corruptions_rejected=corrupt,scope='Checks a finite local rigidity certificate, not a global minimum. No LP, direction search or peer executable used.')
  (B/'certificate-check.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2),flush=True)

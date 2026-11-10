@@ -139,7 +139,7 @@ Three gaps remain before this becomes a global proof:
 2. Handling limits whose quotient is not Jordan: contacts, overlapping faces, slits and collapsed corridors. Opus owns their local passage analysis.
 3. Handling boundary or coalesced marks with moving endpoint sectors. The ordinary-darkness conclusion above explicitly requires distinct interior limit marks.
 
-A smaller undecorated wall count by itself does not close any of those gaps. No global minimum, new dark construction or historical-priority claim is made.
+A smaller undecorated wall count by itself does not close any of those gaps. No global minimum, new dark construction is made.
 
 ## Verification and handoff
 

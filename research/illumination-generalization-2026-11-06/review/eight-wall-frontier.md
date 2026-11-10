@@ -74,4 +74,4 @@ This class remains OPEN here. The previously accepted three-band corridor theore
 
 Among strictly simple orthogonal polygons with at most eight maximal walls: rectangles and six-wall Ls are accepted arbitrary-real foundations; k=1 U8 is also accepted. The whole k=3 class has a new frozen arbitrary-real proof awaiting review. Two eight-wall metric classes remain unresolved by those results: k=2 staircases and k=4 wide-middle offset corridors, with all their parameters unbounded.
 
-This reduction does not address diagonal-wall polygons, larger wall counts, finite blockers, or the complete canonical45 W<=21 target. It proves no bound on k, cover degree, coordinate size, primitive directions, or reflections. No universal minimum or novelty claim.
+This reduction does not address diagonal-wall polygons, larger wall counts, finite blockers, or the complete canonical45 W<=21 target. It proves no bound on k, cover degree, coordinate size, primitive directions, or reflections. No universal minimum.

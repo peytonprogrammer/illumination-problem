@@ -50,4 +50,4 @@ Integer dilation m multiplies periods, corners and all three forced positions by
 
 The universal ordered-pair ONE-COPY affine seed criterion is false already in a solved native six-wall family, even with all affine generators, moving sources, boundary seeds and no Z requirement. The conditional inverse-transport theorem remains valid; its seed hypothesis cannot always be met.
 
-No dark pair or new illumination theorem follows. The broad r<=8 goal remains OPEN. This gate is negative: do not extend this exact criterion to ten-wall rooms. A controlled multi-copy seed class or another actual-path mechanism would need a separate precise proof. This is internal independent AI hand review plus a prescribed exact control, not formal or external refereeing; no novelty claim.
+No dark pair or new illumination theorem follows. The broad r<=8 goal remains OPEN. This gate is negative: do not extend this exact criterion to ten-wall rooms. A controlled multi-copy seed class or another actual-path mechanism would need a separate precise proof. This is internal independent AI hand review plus a prescribed exact control, not formal or external refereeing;

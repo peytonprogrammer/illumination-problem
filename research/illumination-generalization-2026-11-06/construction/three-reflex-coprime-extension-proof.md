@@ -2,8 +2,7 @@
 
 Author proof pending independent review. This is an extension of the
 coordinator's COORD-COPRIME-01 selection, whose source packet is preserved.
-The reviewer separately owns that packet's audit. No independent acceptance
-or novelty claim is made for this extension.
+The reviewer separately owns that packet's audit. No independent acceptance is made for this extension.
 
 ## 1. Quantified geometry and target
 
@@ -211,9 +210,4 @@ protected coverage prove every native pair in this entire family. This
 includes the coordinator's L=2 case and adds all larger power-of-two
 bottom multipliers; it does not remove arbitrary coprimality conditions.
 
-For example a=4,L=3,N=5,b=1,c=4,h=5,H=6 gives geometry
-(a,l,w,A;b,c,h,H)=(4,8,16,20;1,4,5,6). Both old TR04 sufficient
-bounds fail (required H>=404, required A>=484). Its eight native
-marks and28 pairs are a prescribed verification fixture, not the
-quantified proof. This family neither closes all (1,1,8), all W10/r3,
-nor r<=8. No actual dark pair, external refereeing, or novelty is claimed.
+For example a=4,L=3,N=5,b=1,c=4,h=5,H=6 gives geometry (a,l,w,A;b,c,h,H)=(4,8,16,20;1,4,5,6). Both old TR04 sufficient bounds fail (required H>=404, required A>=484). Its eight native marks and28 pairs are a prescribed verification fixture, not the quantified proof. This family neither closes all (1,1,8), all W10/r3, nor r<=8. No actual dark pair or external refereeing is supplied.

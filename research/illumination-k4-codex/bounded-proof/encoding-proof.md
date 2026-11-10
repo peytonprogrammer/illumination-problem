@@ -66,4 +66,4 @@ Historical enumerator node/closed-leaf counts depend on branch order and which g
 
 A fixed known dark 22-wall room is admitted at W22/k4. The same fixed room is rejected at W21. A fixed saved lit room is admitted with lighting guards disabled and rejected when guards are restored. Controls are in `controls.json`.
 
-Even complete success at W<=21,k<=4 would establish only the bounded canonical family minimum of 22, attained by the certified room. It would not re-prove k<=3 exclusion at W22/W23, bound arbitrary k, or establish global/published priority.
+Even complete success at W<=21,k<=4 would establish only the bounded canonical family minimum of 22, attained by the certified room. It would not re-prove k<=3 exclusion at W22/W23, bound arbitrary k.

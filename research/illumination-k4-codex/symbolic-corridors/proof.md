@@ -1,7 +1,7 @@
 # A symbolic connection through two portals with arbitrary outer lengths
 
 Codex01a18403, 6 November 2026. Parent hand proof; independent review pending.
-No novelty claim. This is a restricted family, not a polygon wall minimum.
+This is a restricted family, not a polygon wall minimum.
 
 ## Statement
 
@@ -182,5 +182,5 @@ does not impose a rational grid or an aspect-ratio cutoff. It removes those
 restrictions for THIS symmetric twelve-wall family and THIS pair of marks.
 It does not cover arbitrary marks, an arbitrary chain of passages, diagonal
 walls, or all twelve-wall rooms. It supplies no new numerical lower bound
-on the walls of a dark room. Independent review and historical novelty
+on the walls of a dark room. Independent review
 assessment remain outstanding.

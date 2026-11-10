@@ -1,6 +1,6 @@
 # Fixed-shape darkness rigidity and boundary/coalescence tails
 
-A27. Application of a published theorem; no novelty or uncapped wall-minimum claim. Actual endpoints and the physical corner-stopping convention are used throughout.
+A27. Application of a published theorem; No uncapped wall-minimum claim. Actual endpoints and the physical corner-stopping convention are used throughout.
 
 ## Imported hypothesis checked in the primary source
 

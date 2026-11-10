@@ -89,4 +89,4 @@ By Section1, this43-wall room cannot be a pointwise whole-congruent-copy assembl
 
 It does NOT refute a converse restricted to W<=21, and it does NOT refute a converse allowing octilinear parity bases: B is itself such a base. A necessity theorem with that broader conclusion would need a new wall bound for the broader base/corner class; the accepted orthogonal formula W=m(w-4)+4+2t3 cannot simply be reused for225-degree corners. None of this produces a room with fewer than22walls or proves universal22minimality.
 
-No claim of historical novelty is made. This is a hand construction serving the requested converse-class audit, with no room/ray/direction/word/cylinder/orbit discovery computation. Independent proof review is required before counting it as established.
+No claim of This is a hand construction serving the requested converse-class audit, with no room/ray/direction/word/cylinder/orbit discovery computation. Independent proof review is required before counting it as established.

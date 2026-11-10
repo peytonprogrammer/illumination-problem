@@ -13,6 +13,6 @@ states, and one prescribed diagonal-wall counterexample outside scope.
 Not proved: universal smooth-step removal; automatic rank/band infeasibility;
 a concrete new excluded dark limit; extension to diagonal-wall rooms;
 multiple simultaneous collapse points; contact/slit/corridor limits;
-uniform word length or clearance; general minimum; historical novelty.
+uniform word length or clearance; general minimum;.
 No ray, direction, reflection-word or room searches were performed.
 Independent peer acceptance is pending.

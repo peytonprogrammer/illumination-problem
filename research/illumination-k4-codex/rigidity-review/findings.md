@@ -1,6 +1,6 @@
 # Independent review of the local rigidity certificate
 
-[done] ACCEPT the local rigidity result for the fixed orthogonal shape and ordered interior marks, up to translations and positive independent axis scalings. This accepts a local theorem at the certified 22-wall room. It does not establish a global wall minimum, the rigidity conjecture for other rooms, or historical novelty of local rigidity.
+[done] ACCEPT the local rigidity result for the fixed orthogonal shape and ordered interior marks, up to translations and positive independent axis scalings. This accepts a local theorem at the certified 22-wall room. It does not establish a global wall minimum, the rigidity conjecture for other rooms of local rigidity.
 
 ## Independent implementation and exact results
 

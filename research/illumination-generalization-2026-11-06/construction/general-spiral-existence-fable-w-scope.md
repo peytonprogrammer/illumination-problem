@@ -30,4 +30,4 @@ The actual LR01 mouth coordinate xi is continuous/rational at y=h and can be a N
 
 Fable owns its files; author has edited NONE of them. The reviewer should independently inspect W1 and T1 before accepting rev2 structural negatives. W1 needs a missing full-word bound rather than a finite-box failure; T1 has the explicit base-loop counterargument above. Source hashes at this audit are pinned in fable-w-scope.json; later Fable corrections can be compared against these observations without changing frozen author proofs. No new room, numerical run, discovery search, worker, engine, census, clock or git mutation was used.
 
-Full ordered/r3/r<=8 existence remains OPEN. These findings correct prerequisites; they are not a solution or a historical novelty claim.
+Full ordered/r3/r<=8 existence remains OPEN. These findings correct prerequisites; they are not a solution or a claim.

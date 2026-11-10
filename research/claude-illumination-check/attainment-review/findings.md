@@ -98,6 +98,6 @@ The four C points are the seam endpoints E₁ to E₄ of the preprint. The two A
 
 **Supported:** "22 is the minimum number of maximal walls among strictly simple canonical 45° lattice disks with k ≤ 6 that contain a dark pair of distinct interior A marks."
 - That statement rests on two parts: the certified exclusion for W ≤ 21 with k ≤ 6, and this room's membership.
-- It doesn't establish a universal minimum or historical novelty. See `../restricted-novelty/findings.md`.
+- It doesn't establish a universal minimum. See `../restricted-novelty/findings.md`.
 
 **Optional precision:** the room has k = 4. So the same minimum holds for any budget from k ≤ 4 to k ≤ 6.

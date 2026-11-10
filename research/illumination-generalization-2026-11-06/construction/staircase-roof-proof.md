@@ -101,4 +101,4 @@ Combined with the earlier independently accepted staircase-window theorem, all s
     b²>=aA; b(d-c)>=ac; d²>=cH;
     d(b-a)>=ca; H>=3d; A>=3b.
 
-If all six fail, this theorem does not assert illumination or darkness. In particular the remaining normalized geometry has A<3b and H<3d as well as b²<aA and d²<cH; these are restrictions on the unresolved class, not a denominator, k, endpoint-clearance or reflection bound. The full W<=21 objective remains open. No novelty claim.
+If all six fail, this theorem does not assert illumination or darkness. In particular the remaining normalized geometry has A<3b and H<3d as well as b²<aA and d²<cH; these are restrictions on the unresolved class, not a denominator, k, endpoint-clearance or reflection bound. The full W<=21 objective remains open.

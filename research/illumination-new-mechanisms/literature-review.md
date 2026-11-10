@@ -4,7 +4,7 @@
 
 ## Research judgment
 
-The priority is an obstruction theorem before another construction search. The literature suggests using covering maps, marked-point actions, and finite affine-group classification. Applying those tools here produced a proposed closure of our remaining SAME-surface 22-wall refolding route. See `refolding-lattice-obstruction.md` for the explicit proof and its dependencies. This is progress in eliminating a proposed mechanism, not a smaller dark room.
+The next task is an obstruction theorem before another construction search. The literature suggests using covering maps, marked-point actions, and finite affine-group classification. Applying those tools here produced a proposed closure of our remaining SAME-surface 22-wall refolding route. See `refolding-lattice-obstruction.md` for the explicit proof and its dependencies. This is progress in eliminating a proposed mechanism, not a smaller dark room.
 
 I did not locate a later primary-source construction that improves the relevant published 22-edge example or independently verifies a smaller simple Jordan room. This is a bounded literature-search finding, not a claim that the literature is exhaustive or that 24 is the global record under every definition.
 
@@ -20,7 +20,7 @@ I did not locate a later primary-source construction that improves the relevant 
 | [Gutiérrez-Romo–Pardo, August 2024 preprint](https://arxiv.org/html/2408.03832v1) | Classifies affine permutations of Prym fixed points in the stated low-genus families. | Reinforces the need to track permutations. A periodic point need not be fixed by every affine map. |
 | [Faraco, July 2026 preprint](https://arxiv.org/html/2607.14822v1) | Survey of topology, developing maps, strata, period realization, and deformation of translation surfaces. | Useful toolkit for a future change-of-surface mechanism. Its title “The dark side” is not an illumination improvement. No darkness-preserving surgery follows from the survey alone. |
 
-The 22-wall contact and 20-wall slit diagnoses come from our exact reconstruction, not an explicit topology disclaimer by those authors. No author contact or priority assertion was made.
+The 22-wall contact and 20-wall slit diagnoses come from our exact reconstruction, not an explicit topology disclaimer by those authors. No author contact was made.
 
 ## A finite classification is available if needed
 

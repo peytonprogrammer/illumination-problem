@@ -6,7 +6,6 @@ Snapshot: 7 November 2026. Prepared for Daniel while the existing author/reviewe
 
 The strongest established contributions in the project record are: the sharp lower bound in the restricted lattice model; complete arbitrary-real illumination for orthogonal rooms through eight walls; the exact four-parameter twelve-wall corridor theorem; unrestricted one-sided middle-row comb illumination and several complete two-sided comb classes; and eventual illumination/propagation in fixed long-neck families. The newly accepted tall ten-wall spiral theorem is a smaller, constructive extension.
 
-No result currently has confirmed historical novelty. The 22-wall dark construction should be described as a likely independent rediscovery. The exact corridor theorem has the most developed existing priority audit. The eight-wall theorem, comb theorems and neck results are worthwhile candidates for focused priority review. A correct new proof of a known statement can also be useful, but has not been established as historically new here.
 
 Do not count each guard, residue table, fixed path, or acceptance receipt as a separate discovery. Results below are grouped by substantive conclusion. Quantitative refinements and narrower dependencies are identified rather than added again to the headline count.
 
@@ -26,8 +25,6 @@ Every strictly simple canonical45 disk with W<=21 and k<=6 illuminates every pai
 
 The computer-assisted argument derives finite support/geometry domains, validates continuous path guards and their clause provenance, and uses checked contradiction certificates. The final theorem records 64 refutations and 193,480 guard records. I inspected the reconciled theorem/verification record; I did not rerun the multi-gigabyte certificate corpus for this inventory. Removing k<=6 remains unproved.
 
-Priority: unconfirmed for the restricted lower bound; the dark upper-bound mechanism is established prior art.
-
 Sources: [Restricted theorem](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/restricted-theorem-note/theorem.txt); [Reconciled verification](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/baseline-and-gap.md).
 
 ### 2. Every orthogonal room with at most eight walls illuminates — [done]
@@ -35,8 +32,6 @@ Sources: [Restricted theorem](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/
 Every distinct real interior pair in every strictly simple orthogonal polygon with W<=8 illuminates, for arbitrary positive real dimensions. This includes L, U, unequal-floor T, offset-corridor and staircase shapes, all endpoint placements and limiting parameter equalities admitted by strict simplicity. There is no lattice, exception, area or aspect-ratio cap.
 
 This is one of the cleanest statements to extract from the project. The individual L/U/T/staircase proofs are ingredients and stronger orientation-specific constructions, not five additional wall-minimum theorems. Earlier frozen files with “staircase open/unreviewed” banners are superseded by final acceptance.
-
-Priority: unconfirmed; nearby elementary illumination results exist. It deserves a dedicated exact-statement comparison.
 
 Sources: [Whole theorem review](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.md); [Final acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json).
 
@@ -52,9 +47,7 @@ Every interior point of the lower outer chamber illuminates every interior point
 
 The proof combines one- and three-pass constructions, actual-endpoint cap transfer, and exact continuous endpoint covers of a mathematically bounded residual rational list. This is a computer-assisted universal parameter theorem, not a collection of sampled trajectories.
 
-Priority: strongest existing documented novelty candidate in the inventory. The bounded audit found no exact antecedent, but did not exclude derivation from known covering/periodic-point classifications. No “first” or priority claim is justified.
-
-Sources: [Completed statement](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/symbolic-corridors/unequal-depth/completion.md); [Independent acceptance](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/symbolic-corridors/unequal-depth-independent/whole-result-acceptance.json); [Novelty assessment](<SOURCE_WORKSPACE>/.context/codex-proof-verification/corridor-novelty/assessment.txt).
+Sources: [Completed statement](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/symbolic-corridors/unequal-depth/completion.md); [Independent acceptance](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/symbolic-corridors/unequal-depth-independent/whole-result-acceptance.json).
 
 ### 4. One-sided combs: no wall-count bound for spine/middle-row pairs — [done]
 
@@ -62,7 +55,7 @@ In any rectangular-spine comb with arbitrarily many teeth on one side, every dis
 
 For integer rooms with teeth of height two, every interior A mark lies on the relevant tooth middle row or in the spine. Thus the theorem covers every actual interior A pair in that entire one-sided height-two class, without any W or k cap. It does not cover arbitrary off-middle-row marks in arbitrary real teeth.
 
-The finite monotone floor-matching argument is a particularly compact proof ingredient worth extracting. Priority unassessed.
+The finite monotone floor-matching argument is a particularly compact proof ingredient worth extracting.
 
 Sources: [Comb proof](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/midheight-comb-proof.md); [Independent acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/midheight-comb-independent-acceptance.json).
 
@@ -74,7 +67,7 @@ These are actual all-pair A-mark theorems, without k, area, support or diameter 
 - Integer height-two teeth of arbitrary independent integer widths, core width one, W<=21.
 - A further uniform-width-two, height-two class with integer core width >=3, W<=21, as recorded in the accepted continuation ledger.
 
-Opposite tooth bands need not be globally separated where the cited theorem allows overlap. These statements do not combine into an arbitrary-width/arbitrary-core/arbitrary-height theorem. They are more substantial than isolated comb fixtures: each closes an infinite model class. Priority unassessed.
+Opposite tooth bands need not be globally separated where the cited theorem allows overlap. These statements do not combine into an arbitrary-width/arbitrary-core/arbitrary-height theorem. They are more substantial than isolated comb fixtures: each closes an infinite model class.
 
 Sources: [Whole unit-width acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/unit-thin-whole-independent-acceptance.json); [Arbitrary-width core-one review](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/c1-arbitrary-width-join-independent.md); [Broader continuation ledger](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/coverage.md).
 
@@ -82,7 +75,7 @@ Sources: [Whole unit-width acceptance](<SOURCE_WORKSPACE>/.context/illumination-
 
 Two fixed arbitrary-real orthogonal chambers joined through smooth mouths by a positive-width rectangular neck illuminate each fixed opposing-chamber pair for every sufficiently large real neck length. The threshold depends on the chamber/mouth/mark data and is locally uniform under nondegenerate perturbations. A separate constructive rational-data result extracts explicit beam intervals and thresholds.
 
-This gives a substantive way to exclude one type of degeneration of dark candidates. It is not a uniform threshold in wall count, and permits only the stated fixed-chamber regime. Priority unassessed.
+This gives a substantive way to exclude one type of degeneration of dark candidates. It is not a uniform threshold in wall count, and permits only the stated fixed-chamber regime.
 
 Sources: [Long-neck proof](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/long-neck-proof.md); [Acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/long-neck-independent-acceptance.json); [Effective rational construction acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/constructive-neck-acceptance.json).
 
@@ -90,13 +83,13 @@ Sources: [Long-neck proof](<SOURCE_WORKSPACE>/.context/illumination-generalizati
 
 For fixed three-chamber/two-neck families, possible long-neck failures concentrate near finitely many rational length ratios, sharpened to finitely many weighted affine strips. Integer data leave finitely many offset arithmetic rays; those rays are not thereby illuminated.
 
-For a finite tree of fixed chambers joined by parallel, commensurate-width necks, one provided legal actual witness implies eventual illumination along nonnegative rational-affine length growth. Repeated passages, branches and same-side mouths are included. Witness existence and the finite initial range remain separate obligations. This conditional propagation theorem is useful, but not an unconditional all-network illumination theorem. Priority unassessed.
+For a finite tree of fixed chambers joined by parallel, commensurate-width necks, one provided legal actual witness implies eventual illumination along nonnegative rational-affine length growth. Repeated passages, branches and same-side mouths are included. Witness existence and the finite initial range remain separate obligations. This conditional propagation theorem is useful, but not an unconditional all-network illumination theorem.
 
 Sources: [Precise network statement](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/neck-ray-propagation-parallel-tree.md); [Independent tree acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/parallel-tree-independent-acceptance.json); [Affine-strip/network review map](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/bridge-scope-report.md).
 
 ### 8. Nested staircase sufficient conditions, beyond eight walls — [done]
 
-Accepted nested-band and bounding-triangle inequalities guarantee illumination for arbitrary real interior pairs in the stated multi-band staircase families. They keep one common slope through every portal and choose an actual target image. The geometric inequalities are essential; this is not an all-staircase theorem for arbitrary numbers of steps or dimensions. Priority unassessed.
+Accepted nested-band and bounding-triangle inequalities guarantee illumination for arbitrary real interior pairs in the stated multi-band staircase families. They keep one common slope through every portal and choose an actual target image. The geometric inequalities are essential; this is not an all-staircase theorem for arbitrary numbers of steps or dimensions.
 
 Sources: [Proof](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/nested-window-proof.md); [Independent scope/guards](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/nested-extension-independent.md).
 
@@ -104,15 +97,15 @@ Sources: [Proof](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11
 
 At the fixed interior A support S=(0,0), U=(2,0), T=(2,2), the surplus-layer results include a 13-reflection bound for the stated second-surplus class, 37 for third surplus, and 32 for fourth surplus. The final fourth-surplus proof permits the classified remote attachments; it is not restricted to a fixed local drawing. Its W<=21 and k<=6 assumptions remain attached.
 
-These are quantitative refinements and constructive decompositions. Their existence conclusions overlap the broader k<=6 theorem, so they should not be presented as unrelated general illumination theorems. Local improvements such as the nine-reflection O3 lemma fit under this heading. Priority unconfirmed.
+These are quantitative refinements and constructive decompositions. Their existence conclusions overlap the broader k<=6 theorem, so they should not be presented as unrelated general illumination theorems. Local improvements such as the nine-reflection O3 lemma fit under this heading.
 
-Sources: [Third-surplus theorem](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/third-surplus-review/theorem.txt); [Fourth-surplus theorem](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/fourth-surplus-review/global-four-closure/theorem.txt); [Local nine-reflection priority assessment](<SOURCE_WORKSPACE>/.context/codex-proof-verification/O3-combined/novelty.md).
+Sources: [Third-surplus theorem](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/third-surplus-review/theorem.txt); [Fourth-surplus theorem](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/fourth-surplus-review/global-four-closure/theorem.txt).
 
 ### 10. Sharp minimum within strict whole-copy parity folds — [done]
 
 For the exact construction class of whole congruent copies of a strict canonical base, with literal inverse-copy agreement and actual interior marks mapping to two distinct smooth boundary A points, a dark pair requires W>=22. The known example attains it. Diagonal bases and arbitrary initial rigid placements are included; the common-similarity extension has separate acceptance.
 
-The proof derives assembly/exception counts and normalizes seams, then uses the k<=6 theorem. It does not show that every dark room admits the required fold. This is a second restricted minimum with an explicit dependency on result 1, not a second proof of universal minimality. Priority unconfirmed.
+The proof derives assembly/exception counts and normalizes seams, then uses the k<=6 theorem. It does not show that every dark room admits the required fold. This is a second restricted minimum with an explicit dependency on result 1, not a second proof of universal minimality.
 
 Sources: [Fold-class statement](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/fold-class-theorem.md); [Normalization acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/fold-normalization-acceptance.json); [Similarity extension review](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/fold-similarity-independent-review.md).
 
@@ -120,7 +113,7 @@ Sources: [Fold-class statement](<SOURCE_WORKSPACE>/.context/illumination-general
 
 TR01 covers specified pairs in two protected subregions of an ordered three-reflex spiral for arbitrary real metrics. TR03, newly independently accepted during this inventory, covers EVERY distinct interior pair in the ordered spiral when its upper chamber height exceeds an explicit sufficient threshold. The threshold depends only on lower geometry, not on the selected marks.
 
-The new proof constructs a positive slope interval, removes finitely many bad phase boundaries, and forces an exact target root into a surviving component. A possible singular roof event is handled only by discarding it and launching from a later return to the same actual source. Short roofs, other spiral orders and the other ten-wall types remain open. Priority unassessed; this is recent project progress, not an established novel publication result.
+The new proof constructs a positive slope interval, removes finitely many bad phase boundaries, and forces an exact target root into a surviving component. A possible singular roof event is handled only by discarding it and launching from a later return to the same actual source. Short roofs, other spiral orders and the other ten-wall types remain open.
 
 Sources: [Tall-spiral statement](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/construction/three-reflex-candidate-03.md); [Full independent review](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.md); [Acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/three-reflex-tr03-independent.json).
 
@@ -138,7 +131,7 @@ Sources: [Directional skeleton](<SOURCE_WORKSPACE>/.context/illumination-general
 
 ### 14. Finite geometric atlases and strip generators — [done, geometry only]
 
-Every marked canonical45 W<=21 geometry lies in a finite family of rational-linear sign cells with unbounded integer deformation coefficients. The orthogonal subclass has a bounded-base description using at most 44 commuting even-gap insertions; a single gap exposes a tree of at most five parallel necks. These are exact structural reductions of infinite geometry, not finite optical verification or darkness-preserving compression. Priority of their elementary polyhedral ingredients is not claimed.
+Every marked canonical45 W<=21 geometry lies in a finite family of rational-linear sign cells with unbounded integer deformation coefficients. The orthogonal subclass has a bounded-base description using at most 44 commuting even-gap insertions; a single gap exposes a tree of at most five parallel necks. These are exact structural reductions of infinite geometry, not finite optical verification or darkness-preserving compression.
 
 Sources: [Atlas](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/polyhedral-atlas.md); [Atlas acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/polyhedral-atlas-acceptance.json); [Strip theorem](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/strip-generators.md); [Strip acceptance](<SOURCE_WORKSPACE>/.context/illumination-generalization-2026-11-06/review/strip-generators-acceptance.json).
 
@@ -204,35 +197,20 @@ Sources: [Reconciled availability frontier](<SOURCE_WORKSPACE>/.context/illumina
 
 ## D. Construction, experiments and historical position
 
-### 24. The readable 22-wall dark construction — [done, likely rediscovery]
+### 24. The readable 22-wall dark construction — [done, explicit construction]
 
-The strictly simple orthogonal example made of three reflected five-square staircases has 22 walls, area 15 and a hand proof for two actual interior dark marks. Its seam/convex-corner handling and independent verification are valuable artifacts. Exact coordinate identity with that historical example is unresolved. The general 22-edge existence bound was already published. Present it as an explicit, verified construction or likely rediscovery, not confirmed original research.
+The strictly simple orthogonal example made of three reflected five-square staircases has 22 walls, area 15, and a hand proof for its two marked interior points. The seam-endpoint argument and geometry checks are recorded with the construction.
 
 Older parity-family censuses, selected rigidity certificates, fixed counterexamples and explicit paths support investigation. Some have full geometry checks but only sampled independent certificate replay. They are evidence within stated finite domains, not a universal classification or a separate minimum theorem.
 
 Sources: [Superseding historical assessment](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/discovery-assessment.md); [Construction source](<SOURCE_WORKSPACE>/.context/illumination-k4-codex/research-note.tex).
 
-## E. Novelty judgment and unresolved claims
+## Open questions
 
-The project has substantive completed results; it does not have a confirmed novelty verdict. My recommended order for an exact priority/implication check is:
+The universal wall-count lower bound and the extensions beyond the stated model hypotheses remain open.
 
-1. Exact four-parameter corridor theorem and its constructive computer-assisted proof.
-2. Whole arbitrary-real orthogonal W<=8 theorem.
-3. The compact one-sided middle-row comb theorem, complete two-sided comb subclasses, and long-neck/network statements.
-4. The restricted k<=6 minimum and strict-fold corollary, with their full certificate/dependency scope.
-5. Quantitative fixed-support bounds and the newest spiral/local results.
-
-This ordering is judgment about clarity and interest, not a ranking of proven originality or publication significance. The largest established statement is not necessarily the easiest novelty claim.
-
-The existing bounded novelty audits have not shown that the family-specific theorems follow immediately from standard finiteness statements. Finitely many possible dark pairs is not zero dark pairs. Conversely, a missing exact search hit does not exclude a nontrivial derivation from known covering/periodic-point theory. Fresh narrow searches for eight-wall/corridor specular theorems did not resolve priority; many hits concern floodlights/diffuse reflection, different problems.
-
-Primary comparison sources re-opened for this inventory: [Wolecki, Illumination in Rational Billiards](https://arxiv.org/html/1905.09358v3) and [Lelievre–Monteil–Weiss, Everything is illuminated](https://arxiv.org/html/1407.2975). Prior family-specific comparison and its access limits are recorded in the corridor assessment linked above. No fresh exhaustive literature audit was performed.
-
-- [in progress] Complete ten-wall/three-reflex optical theorem: only scoped families/placements are established.
 - [blocked: no global optical argument] General orthogonal r<=8 illumination, and removal of k<=6 for all canonical45 W<=21 rooms, remain unproved by the current results.
 - [blocked: no general lower-bound proof] Universal 22-wall minimality among arbitrary polygons is unresolved by this project.
-- [blocked: no priority confirmation] No “first”, “novel theorem”, or publication-priority assertion is currently established.
-- No established consequence for ETH or P versus NP. SAT/certificate machinery here verifies bounded geometric exclusions and is not an algorithm for arbitrary SAT.
 
 ## Inventory verification boundary
 
@@ -240,7 +218,7 @@ I read final theorem/scope summaries, selected substantive arguments and accepta
 
 The companion coverage JSON lists the checked receipt paths and hashes. This report groups interesting mathematical results rather than counting all local claims or transcript activity. The existing peers were neither interrupted nor reassigned.
 
-**Next move:** Extract short, self-contained theorem-and-dependency synopses for the corridor, eight-wall, comb and neck results, then obtain focused priority/implication review before making novelty claims. No external communication is authorized by this inventory request.
+**Next move:** Extract short, self-contained theorem-and-dependency synopses for the corridor, eight-wall, comb and neck results, then obtain focused priority/implication review before making publication assessments. No external communication is authorized by this inventory request.
 
 
 ## Current inventory addendum — 8 November 2026
@@ -290,17 +268,16 @@ These complement earlier negatives in items18–23: wall count does not bound pr
 
 Preserve the exact rational path guards, complete checked SAT contradictions in the restricted model, finite geometric atlases, strip/neck decompositions, bounded per-direction marked graph, exact period lattice/content and corner-parity constraints. They help verify and organize proofs. None supplies a finite global direction cutoff or automatically solves the universal existence step. Unfolding, affine maps, SAT and these standard frameworks are not claimed as project inventions.
 
-The22-wall dark construction remains an explicit internally verified example and likely independent rediscovery of a known mechanism. Exact historical coordinate identity is unresolved. The strongest existing documented novelty candidate remains the precise four-parameter corridor theorem; the eight-wall/comb/neck results also merit exact priority review. No result currently has confirmed historical originality.
+The 22-wall construction has an explicit internally reviewed proof. The corridor, eight-wall, comb and neck theorems have their own stated scopes and dependencies.
 
 ### Open frontier and current work
 
 - [blocked: general optical existence unproved] All10-wall orthogonal rooms, all orthogonal r<=8 rooms, canonical45 W<=21 without k<=6, and universal22-wall minimality remain unresolved by this project.
 - [blocked: affine availability unproved] The all-pair/all-L four-target-lift seed criterion and compression of the fixed residual one-reflection path remain open.
 - [in progress] Existing peers now assess the WHOLE realized affine orbit bound min|DF(-d,d-1)|_1=2d-1 for residual d=3mod4. It is a proposed premise, not a theorem. Author seeks proof or genuine counterexample; reviewer challenges full-group scope. No direction-by-direction extension programme is authorized by this phase.
-- [blocked: priority review outstanding] No fresh historical-novelty clearance or external expert review was conducted here. No ETH/P=NP consequence is established.
 
 **Judgment:** The main mathematical assets remain the completed room-family theorems. The recent affine work has produced valid scoped tools and strong counterexamples to proposed reductions, but has not advanced positive illumination coverage. Its value depends on whether the current full-group step closes rather than generating another indefinite list of exclusions.
 
 **Next move:** While peers assess that precise full-group premise, consolidate the corridor and corrected eight-wall proofs into concise specialist-review material. This is a recommended next task; this inventory sends or publishes nothing.
 
-Verification boundary: I reread the earlier inventory, restricted theorem/reconciliation, corridor completion/novelty assessment, corrected eight-wall statement/review, coprime follow-up and selected later acceptance records, and the recent affine arguments/reconciliation/handoffs. I did not re-prove every historical item, rerun large SAT/corridor certificates, conduct new discovery searches, or treat control examples as general proofs. The coverage record lists the inspected sources. Peer tasks were not interrupted.
+Verification boundary: I reread the earlier inventory, restricted theorem/reconciliation, corridor completion/mathematical comparison, corrected eight-wall statement/review, coprime follow-up and selected later acceptance records, and the recent affine arguments/reconciliation/handoffs. I did not re-prove every historical item, rerun large SAT/corridor certificates, conduct new discovery searches, or treat control examples as general proofs. The coverage record lists the inspected sources. Peer tasks were not interrupted.

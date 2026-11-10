@@ -2,7 +2,7 @@
 
 Status: new hand argument, offered for independent review. No whole-room illumination theorem is claimed. This addresses the full two-sided programme rather than another fixed number of right returns. It supplies a history-independent necessary condition and an exact target-entry relation for one terminal placement, with unbounded bottom return count retained.
 
-The previously accepted two-sided A/B result concerns unbounded RIGHT-floor-cap circuits conditional on illumination. It expressly allows later bottom-only excursions but gives no bound below on their number. The following last-entry argument isolates those actual excursions. I found no equivalent last-bottom bound in the consulted two-sided packet or earlier stopped first-R proofs; no historical novelty claim is made.
+The previously accepted two-sided A/B result concerns unbounded RIGHT-floor-cap circuits conditional on illumination. It expressly allows later bottom-only excursions but gives no bound below on their number. The following last-entry argument isolates those actual excursions. I found no equivalent last-bottom bound in the consulted two-sided packet or earlier stopped first-R proofs;
 
 ## 1. Domain and actual last entry
 

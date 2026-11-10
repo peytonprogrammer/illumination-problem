@@ -65,4 +65,4 @@ More sharply, if an actual dark pair has S strictly inside the spine and T in a 
 
 In particular w<c-x_s<c. For a seam S at x_s=c, darkness forces 2c>2w-D. These are necessary conditions only. They do not establish darkness when violated, all comb illumination, a finite wall-count reduction, or the universal W<=21 theorem.
 
-The midpoint theorem and this entrance theorem remove different residual placements. All tooth/tooth off-middle pairs and narrow-tooth spine pairs outside (1) remain open in the general comb class. No novelty claim is made.
+The midpoint theorem and this entrance theorem remove different residual placements. All tooth/tooth off-middle pairs and narrow-tooth spine pairs outside (1) remain open in the general comb class.

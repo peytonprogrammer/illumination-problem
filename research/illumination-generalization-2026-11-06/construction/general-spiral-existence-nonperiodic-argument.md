@@ -2,7 +2,7 @@
 
 ## Scope and prior work
 
-This applies the previously accepted full-physical-fiber/zero-only formulation recorded in global-bridge-impasse.md. It is not a new darkness classification, new nonemptiness theorem or historical novelty claim. It settles a guard question in LR01 while retaining its frozen literal-path guards.
+This applies the previously accepted full-physical-fiber/zero-only formulation recorded in global-bridge-impasse.md. It is not a new darkness classification, new nonemptiness theorem. It settles a guard question in LR01 while retaining its frozen literal-path guards.
 
 Fix any finite strictly simple orthogonal room, distinct actual interior S,T, and tau>0. A completed path is a FINITE piecewise-linear path from actual S to actual T, at one fixed nonzero speed, lying in the room. Every ordinary reflection is at an actual open wall and obeys the specular law. At an actual convex right-angle vertex ONLY, allow the formal law v_out=-v_in (the two commuting perpendicular-wall reflections). No reflex-corner contact, grazing boundary segment, artificial mirror or arbitrary sector continuation is allowed. Every other segment/first-hit requirement remains physical. Multiple actual preimages in an unfolding are retained, not identified by a desired endpoint label.
 

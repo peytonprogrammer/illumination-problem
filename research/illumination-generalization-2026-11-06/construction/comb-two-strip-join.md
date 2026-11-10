@@ -65,4 +65,4 @@ This verifies an actual joint parameter reduction on a concrete family inside th
 
 Every point OUTSIDE(1) is rigorously illuminated by the accepted constructions. Entries INSIDE(1) still require actual illumination proofs or rigorously verified darkness certificates. A finite geometric list or failure to find a ray does not decide them. No all-comb result, many independent gap uniformity, moving mouth-height assertion, arbitrary nonrectangular chamber family, diagonal strip reduction or universal W<=21 conclusion follows.
 
-The proof imports published minimality through previously reviewed one-neck work. No novelty or external expert verification is claimed. It closes the conditional literal-decomposition/joint-tail implication, not the main illumination goal.
+The proof imports published minimality through previously reviewed one-neck work. No external expert verification is claimed. It closes the conditional literal-decomposition/joint-tail implication, not the main illumination goal.

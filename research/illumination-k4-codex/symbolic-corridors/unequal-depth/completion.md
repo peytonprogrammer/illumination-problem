@@ -27,7 +27,7 @@ Parent prescribed physical controls additionally verify2,043forward/reverse/scal
 
 All substantive objections are reconciled. Frozen q4 prose is read with the correction3d/2; the support theorem is read with its mandatory irrational clarification. Old freezes are preserved.
 
-This is a computer-assisted proof with independent AI review. It is not formal verification or external expert refereeing. No novelty, other room family, all-interior-pair theorem, surplus extension or universal wall minimum is claimed.
+This is a computer-assisted proof with independent AI review. It is not formal verification or external expert refereeing. No, other room family, all-interior-pair theorem, surplus extension or universal wall minimum is claimed.
 
 No numeric native token limit was configured or enforced. No earlier million-token allowance was inferred. No new search, worker, commit, branch change or outward communication follows completion.
 

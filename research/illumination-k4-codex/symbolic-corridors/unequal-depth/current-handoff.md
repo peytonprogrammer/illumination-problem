@@ -6,4 +6,4 @@ Read completion.md for the exact quantified statement and review limits. Frozen 
 
 Preserve every frozen source. Own files unequal-depth/; peer owns unequal-depth-independent/. No commits, branch changes, workers or outward communication. No automatic expansion beyond this corridor lower/upper endpoint class.
 
-The practical next step, only if Daniel requests more work, is external mathematical assessment or a shorter presentation of this accepted computer-assisted proof. This is not a new active objective and no novelty or universal minimum is implied.
+The practical next step, only if Daniel requests more work, is external mathematical assessment or a shorter presentation of this accepted computer-assisted proof. This is not a new active objective and No universal minimum is implied.

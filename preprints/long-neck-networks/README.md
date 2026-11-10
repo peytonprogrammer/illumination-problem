@@ -6,7 +6,7 @@ Working draft v0.1, November 8, 2026.
 
 Two fixed arbitrary-real orthogonal chambers illuminate each fixed opposing pair for every sufficiently long real neck. A separate conditional theorem propagates one supplied witness on a fixed parallel-neck tree with commensurate widths.
 
-Historical novelty is unconfirmed. These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
+These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
 
 ## Mathematical sources
 

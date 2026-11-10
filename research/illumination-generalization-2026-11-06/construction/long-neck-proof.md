@@ -1,6 +1,6 @@
 # Eventual illumination through a long rectangular neck
 
-Candidate theorem, Codex01a18403. Independent review pending. This handles an unbounded geometric parameter and actual fixed endpoint lifts; it is not the universal W<=21 statement and has no claimed novelty.
+Candidate theorem, Codex01a18403. Independent review pending. This handles an unbounded geometric parameter and actual fixed endpoint lifts; it is not the universal W<=21 statement and has no claimed.
 
 ## Precise statement
 

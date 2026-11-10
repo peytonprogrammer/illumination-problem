@@ -115,4 +115,4 @@ Transposition sends parameters (A,b,a;c,d,H) to (H,d,c;a,b,A) and carries F to F
 
 The new example (6,4,3;3,4,6) lies outside all four accepted earlier staircase conditions and outside H>=3d or A>=3b. Exact prescribed controls check both ordinary rounded windows and a deliberately admissible window where the first target candidate hits an actual floor corner and must be discarded. They are supporting arithmetic verification, not the arbitrary-real proof.
 
-The valid room (10,4,3;3,4,10) fails all four earlier conditions, F/Ft, and H>=3d/A>=3b. This identifies a remaining METRIC geometry, not a dark pair or an assertion that no other mechanism covers it. The full staircase and main W<=21 goal remain open. No novelty claim.
+The valid room (10,4,3;3,4,10) fails all four earlier conditions, F/Ft, and H>=3d/A>=3b. This identifies a remaining METRIC geometry, not a dark pair or an assertion that no other mechanism covers it. The full staircase and main W<=21 goal remain open.

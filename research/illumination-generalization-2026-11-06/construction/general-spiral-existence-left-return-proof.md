@@ -109,7 +109,7 @@ This is an exact signed optical obstruction under arbitrary original integer met
 
 ## 6. Interpretation and remaining general task
 
-Sections1–4 supply the genuine original-room position/velocity relation requested by nonemptiness-next.md. They are PREREQUISITES, not an existence theorem. Section5 proves a concrete obstruction: adding any number of genuine left returns does NOT make small perturbations of the common phase period produce an actual native target through the specified exit/tail. It is related to accepted GSE05's reverse-target boundary effect, now expressed through the actual repeated-left scattering relation. No claim of a new universal mechanism or historical novelty is made.
+Sections1–4 supply the genuine original-room position/velocity relation requested by nonemptiness-next.md. They are PREREQUISITES, not an existence theorem. Section5 proves a concrete obstruction: adding any number of genuine left returns does NOT make small perturbations of the common phase period produce an actual native target through the specified exit/tail. It is related to accepted GSE05's reverse-target boundary effect, now expressed through the actual repeated-left scattering relation. No universal mechanism follows.
 
 The full first-R route class across ALL slopes is NOT refuted. Further right/bottom scattering and more general original-room words are NOT excluded. A positive universal intersection/invariant for R_tau remains unproved. Future work must select a quantitatively different part of the slope/state relation, or prove an all-slope mechanism obstruction; generic escape near a periodic direction cannot by itself supply the exact target.
 

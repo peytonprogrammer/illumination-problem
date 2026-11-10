@@ -1,8 +1,8 @@
 # Independent foundations audit for the rigidity conjecture
 
-[done] Reviewed supporting statements and the finite-reduction implication, 2026-10-31. Opus owns Conjecture4. The local rigidity review is complete in `../rigidity-review/findings.md`. Primary-source corner/illumination conventions checked; no comprehensive novelty audit or new ray/room discovery.
+[done] Reviewed supporting statements and the finite-reduction implication, 2026-10-31. Opus owns Conjecture4. The local rigidity review is complete in `../rigidity-review/findings.md`. Primary-source corner/illumination conventions checked; no comprehensive literature comparison or new ray/room discovery.
 
-## Priority issues from the supplied memo
+## Mathematical issues in the memo
 
 1. The symmetry group of the square has eight elements. Axis reflections generate four, and adding a 45-degree diagonal reflection gives eight. The usual canonical 45-degree unfolding therefore uses eight reflected copies. In that connected unfolding the corner-lift counts for a=1,2,3,5,6,7 are respectively 1,2,1,1,2,1, with cone angles 2pi,2pi,6pi,10pi,6pi,14pi. A proposed 16-copy construction needs its additional gluing specified; the table currently doubles the usual counts.
 2. An arbitrary orthogonal polygon need not be square-tiled. The square-tiling assertion in Lemma1 needs the fixed integral-grid hypothesis. The corner-lift and genus computation can hold without that hypothesis.

@@ -1,6 +1,6 @@
 # Review of Opus’s next-work proposals
 
-[done] 2026-11-01. Source review and hand algebra only. No new enumeration, SAT, rays, directions or reflection-word discovery. No independent rerun of the historical n6 enumeration. The literature note was read; its external-source coverage and priority claims were not independently audited here.
+[done] 2026-11-01. Source review and hand algebra only. No new enumeration, SAT, rays, directions or reflection-word discovery. No independent rerun of the historical n6 enumeration. The literature note was read; its external-source coverage claims were not independently audited here.
 
 ## Recommendation
 

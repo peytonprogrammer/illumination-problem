@@ -1,6 +1,6 @@
 # Focused monotone-staircase literature screen: completed
 
-A14 ended within its original 840-second deadline. No applicable existence theorem was imported. This is a limited source screen, not an absence or novelty claim.
+A14 ended within its original 840-second deadline. No applicable existence theorem was imported. This is a limited source screen, not an absence.
 
 The inspected primary paper is Aanjaneya, Bishnu and Pal, *Directly Visible Pairs and Illumination by Reflections in Orthogonal Polygons* (EuroCG 2008), all four pages: https://pages.cs.wisc.edu/~aanjneya/papers/DVPIROP/vis.pdf .
 

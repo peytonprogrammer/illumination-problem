@@ -91,7 +91,7 @@ When A=lambda I, substituting b_i and I-R_i gives
 
 Thus delta h_i=lambda h_i+n_i dot a. The intersection of two adjacent supporting lines then has velocity delta c_i=lambda c_i+a. This proves the statement.
 
-The averaging argument is standard finite-group linear algebra. No novelty claim is made for that ingredient or for rigidity of fixed-angle torus-cover diagrams.
+The averaging argument is standard finite-group linear algebra. No is made for that ingredient or for rigidity of fixed-angle torus-cover diagrams.
 
 ## Finite generators for an exact check
 

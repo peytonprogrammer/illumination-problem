@@ -1,6 +1,6 @@
 # SC01: a legal source branch crossing the full thin gate forces an actual target hit
 
-Status: HAND optical implication and darkness-necessary constraint pending independent review. Uses the still-pending literal safe-target gate proof BD/GT. This is not a universal source-branch availability theorem. Full ordered/r3/r<=8 remains open. No historical novelty is claimed for the elementary residue-gap fact or affine root identity.
+Status: HAND optical implication and darkness-necessary constraint pending independent review. Uses the still-pending literal safe-target gate proof BD/GT. This is not a universal source-branch availability theorem. Full ordered/r3/r<=8 remains open.
 
 ## Domain and actual source prefix
 

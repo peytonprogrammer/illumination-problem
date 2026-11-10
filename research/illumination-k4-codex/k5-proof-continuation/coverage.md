@@ -16,4 +16,4 @@
 
 [waiting on Claude] Remaining I2 proof replays and final bounded-theorem scope review. Live peer already replayed 21 first-pass and three I3 continuation proofs, plus 360 guard samples and 600 corruption controls. It also accepts the orbit extraction by hand derivation and 970 room/800 D4 replay controls.
 
-Not covered: k≥6, arbitrary wall directions, arbitrary mark coordinates, the global minimum, global degeneration/classification, or historical novelty. No bounded-ray failure is used as evidence of darkness.
+Not covered: k≥6, arbitrary wall directions, arbitrary mark coordinates, the global minimum, global degeneration/classification. No bounded-ray failure is used as evidence of darkness.

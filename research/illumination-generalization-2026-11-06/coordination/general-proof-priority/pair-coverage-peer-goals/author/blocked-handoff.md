@@ -8,7 +8,7 @@ Preserve native thread[research-session], complete history/accounting, no-cap wa
 
 The exact assigned ordered-pair ONE-COPY affine seed assertion is FALSE in a native six-wall L. Use P=[0,8]x[0,4] union[0,4]x[4,8], original-copy S6,2 and T2,6. Whole-copy gluings and two real core loops give intrinsic absolute periods8Z squared. Five regular physical corner images have multiplicities3,1,1, forcing quotientzero fixed by every Sigma-preserving affine map. The unique cone fixes quotient(4,4), giving odd row sums in its integral derivative. Both transformed endpoints represented in one copy must be2mod4; invariant difference(4,4) forces the same two arm positions. Their unique straight segment hits the actual reflex4,4. Boundary seeds are impossible at these residues; copy involutions reduce any single copy to the original. This is a FULL-GROUP argument, with both endpoints movable, arbitrary compositions, orientation reversal and no Z-preservation assumption.
 
-This is not darkness: actualS->(0,5)->T is a legal one-reflection path. Separate prescribed replays pass12 finitewallguards using the SAME disclosed existing pure checker. Independent hand proofs, not the replay, supply the group invariant. No novelty claim or formal/external refereeing.
+This is not darkness: actualS->(0,5)->T is a legal one-reflection path. Separate prescribed replays pass12 finitewallguards using the SAME disclosed existing pure checker. Independent hand proofs, not the replay, supply the group invariant. No or formal/external refereeing.
 
 ## Proof and review record
 

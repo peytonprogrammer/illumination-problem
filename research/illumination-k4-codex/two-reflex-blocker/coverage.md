@@ -16,4 +16,4 @@
 
 [done] New all-height/all-U connection construction in `all-heights.md`: finite monotone matching, bounded remainders and a bottom-corner margin. Six fixed asymmetric/equality-level controls pass4908boundary-incidence checks, up to2177reflections. These evaluate one derived construction per fixture; they do not search rays. Separate tools-disabled Opus accepts the new opposite-arm proof; its all-pair corollary uses the already accepted L monotone theorem, which the separate reviewer did not re-review. Live coordinating peer review of this new result remains pending. Files: `all-heights.md`, `all-heights-check.py/json/log`, `all-heights-peer-review.txt`, with run/prompt receipt.
 
-[in progress] General U-room singleton removal: arbitrary nonsymmetric U rooms/marks and arbitrary finite blocker sets remain unresolved. No minimum-wall or novelty claim, and no ray/direction/word/room discovery search.
+[in progress] General U-room singleton removal: arbitrary nonsymmetric U rooms/marks and arbitrary finite blocker sets remain unresolved. No minimum-wall, and no ray/direction/word/room discovery search.

@@ -10,7 +10,7 @@
 2. Made the even-coordinate endpoint and repeated-halving instruction more explicit.
 3. Used arbitrary signed (p,q) in the endpoint-velocity table, distinct from the positive (u,v) used in the worked example.
 4. Clarified the retrace endpoint: during the retrace b would already have been visited; at its end the curve is at a, so the return is an interior visit.
-5. Removed an unnecessary historical-novelty comment from the supplementary proof.
+5. Removed an unnecessary comment from the supplementary proof.
 
 No change to the construction or mathematical conclusion. No new searches or mathematical changes. Existing separate mathematical peer review remains applicable; these are clarity edits, not a new peer review.
 

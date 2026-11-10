@@ -7,6 +7,6 @@
 - [done] Four-page main proof and two-page second-example PDF rendered and visually checked.
 - [done] Separate tools-disabled Opus review accepts all four mathematical parts after independently deriving the key claims; reviewer-requested clarity edits incorporated. The separate live peer executable geometry review remains requested, not claimed complete.
 
-Not covered: global minimality, historical priority, a second inequivalent 22-wall construction, or arbitrary copy attachments. No ray, direction, reflection-word or candidate-room discovery search was run. The proposed extra copy is a single prescribed analytic variation.
+Not covered: global minimality, a second inequivalent 22-wall construction, or arbitrary copy attachments. No ray, direction, reflection-word or candidate-room discovery search was run. The proposed extra copy is a single prescribed analytic variation.
 
 - [done] Final proofreading and PDF-object audit complete; wording edits and final six-page visual QA are recorded in `proofread.md/json`.

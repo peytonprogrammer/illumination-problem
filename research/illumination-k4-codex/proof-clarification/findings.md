@@ -20,7 +20,7 @@ Exact counts: 40 base-corner incidences = 17 ordinary convex + 12 ordinary conca
 
 Run `python3 -B check.py` from this directory, with its inputs subdirectory present. Results and complete coordinates are in check.json, inputs/room22.json and second-example.json. No optical discovery search is involved.
 
-PDF rendering and extracted text/metadata checks pass; see pdf-qa.json. Separate Opus review ACCEPTS all four parts (see peer-review.txt, exit 0). Incorporated explicit inverse-map parity, direct per-endpoint velocity table, copy-independent smooth billiard law, and a detailed retrace-time contradiction. The reviewer's extension census requests were already present in the supplementary PDF. Its incidental claim about finite-length reflection counts is not used. The live peer has also received a neutral verification request through the board; that executable replay remains pending. An external expert's conditional novelty comment is not proof acceptance or a priority check.
+PDF rendering and extracted text/metadata checks pass; see pdf-qa.json. Separate Opus review ACCEPTS all four parts (see peer-review.txt, exit 0). Incorporated explicit inverse-map parity, direct per-endpoint velocity table, copy-independent smooth billiard law, and a detailed retrace-time contradiction. The reviewer's extension census requests were already present in the supplementary PDF. Its incidental claim about finite-length reflection counts is not used. The live peer has also received a neutral verification request through the board; that executable replay remains pending.
 
 
 ## Final proofreading

@@ -22,5 +22,5 @@ Claude, 2026-11-01. This is a web search plus a reading of Wolecki (arXiv:1905.0
   - The marks are images of the 30° vertex, at the 12-fold points.
   - The parity condition is that every image of a 60° or 90° vertex in the closed room is a corner.
   - That makes these rooms dark by Wolecki's Lemma 3.1 with n = 6. The marks may be equal or distinct images of A.
-- The lemma is prior art, but a minimum-wall search in this family appears to be open. A result under 22 would beat the general bound of 22.
+- The lemma is published context, but a minimum-wall search in this family appears to be open. A result under 22 would beat the general bound of 22.
 - Caveats: Tokarsky's own paper and the 9-72-99 construction weren't read directly, and the search coverage is limited to the web.

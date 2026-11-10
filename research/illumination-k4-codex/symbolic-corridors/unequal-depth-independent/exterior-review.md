@@ -132,4 +132,4 @@ all rational, unequal endpoint depths, left-left horizontal marks not both
 centered. Equal depths and all centered pairs are already accepted.
 The four-cap-sheet covering conjecture is not used or accepted here.
 No full rational-class proof, dark pair, all-interior-pair result, another
-room family, novelty claim or universal wall minimum follows.
+room family, universal wall minimum follows.

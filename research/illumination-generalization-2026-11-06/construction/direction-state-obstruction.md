@@ -46,4 +46,4 @@ The number of combinatorial first-Xi-return edges is bounded by W, but the integ
 
 The directionwise skeleton remains useful as a BOUNDED-DIMENSION WEIGHTED representation. A genuine next proof would need an invariant or reduction for arbitrary integer weights, or parameter-dependent arithmetic acceleration with a proof of completeness. We have not supplied that invariant. No further finite direction census follows from this result.
 
-No dark pair, no uncapped lower bound, no global finite-case reduction and no novelty claim is established by this hostile family. It is an exact test that changes the admissible proof strategy.
+No dark pair, no uncapped lower bound, no global finite-case reduction and No is established by this hostile family. It is an exact test that changes the admissible proof strategy.

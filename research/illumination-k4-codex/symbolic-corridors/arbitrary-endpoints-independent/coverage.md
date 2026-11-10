@@ -10,4 +10,4 @@
 - [done] All source pins read back; no peer imports, execution or writes.
 - [in progress] NEW full unequal-depth goal: await frozen peer milestones, independently audit all exceptional/resonant/equality cases and final completeness.
 
-No general unequal-depth, all-interior-pairs, universal wall minimum or novelty verdict.
+No general unequal-depth, all-interior-pairs, universal wall minimum verdict.

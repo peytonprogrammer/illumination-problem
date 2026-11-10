@@ -34,4 +34,4 @@ For integral e, TR01/TR05 protected placement leaves only terminal S versus lowe
 
 For e2,P=K2,L4,N10,b1,c3,h6,H12,S2,4,T14,2: a=R4,A20,l12,w16. alpha1,beta6,f2,d9,H0=2. The basis coefficient pair is (-2/3,-1/12), giving half-up i1,m0,j0,q2. Direct substitution yields tau16/9,z0=-22/9,z1=-10/9. Centering right phase 38/9 modulo8 gives k1,z2=-34/9,J=-2. The seed does not yet reach T: E=-2 differs from z6 by -8. Lambda10,Gamma2 and p1 solve -1+5p=0 modulo2. Final tau376/9, indices i11,m12,k16 and J8 give E38=6 modulo8. Therefore the target is actual x20-6=14,y2. All residuals are strictly inside their actual windows; the roof is x74/9 strictly inside(0,20). This is a hand substitution, not a new physical replay or discovery run.
 
-Independent peer acceptance remains required. No full r3/r<=8 or novelty claim.
+Independent peer acceptance remains required. No full r3/r<=8.

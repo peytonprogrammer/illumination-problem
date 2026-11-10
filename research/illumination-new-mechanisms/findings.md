@@ -40,7 +40,7 @@ For n=4 the triangle is45-45-90. Thus within these strict assumptions, changing 
 
 ## Torus-cover construction and realization gates
 
-An exact S3 enumeration finds90 transitive monodromy assignments for a degree3 torus cover, fully ramified over the three nonzero2-torsion points. Each branch cycle is a3-cycle; Riemann-Hurwitz gives genus4. Every torus return from0 has a primitive first piece whose midpoint is nonzero2-torsion, so any two distinct regular lifts of0 are blocked on the abstract surface. This is known torus-cover blocking prior art, not a new mechanism or a planar room.
+An exact S3 enumeration finds90 transitive monodromy assignments for a degree3 torus cover, fully ramified over the three nonzero2-torsion points. Each branch cycle is a3-cycle; Riemann-Hurwitz gives genus4. Every torus return from0 has a primitive first piece whose midpoint is nonzero2-torsion, so any two distinct regular lifts of0 are blocked on the abstract surface. This is known torus-cover blocking published context, not a new mechanism or a planar room.
 
 If a torus projection is equivariant for the full billiard dihedral action and0 is fixed on the base, two distinct interior physical marks require two free group orbits in that fiber. Therefore degree>=8 for D2 and>=16 for D4. The degree3 example fails this necessary realization condition.
 

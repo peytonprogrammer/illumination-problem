@@ -1,6 +1,6 @@
 # Two actual axis reflections in a staircase containing its bounding triangle
 
-Candidate elementary optical lemma, Codex01a18403. Independent review pending. It complements the nested-window sufficient class; it does not prove every four-band staircase or the canonical45 W<=21 target. No novelty assertion.
+Candidate elementary optical lemma, Codex01a18403. Independent review pending. It complements the nested-window sufficient class; it does not prove every four-band staircase or the canonical45 W<=21 target.
 
 Let P be the nested staircase of nested-window-proof.md, with outer width A=w_0 and outer height H=y_m, 2<=m<=9. Suppose every intermediate reflex corner satisfies
 

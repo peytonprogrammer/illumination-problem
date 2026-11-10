@@ -16,4 +16,4 @@
 
 [done] Continued to31/31acceptedproofs; all10originalresiduals independently lit and all17868newguards verified. Finalpacket: `../k5-proof-continuation/`. Remaining live-peer I2proof replay/scope review is tracked there.
 
-Not covered in this initial pass (complete k5 exclusion is now in the continuation): arbitrary mark coordinates, arbitrary wall angles, all orbit sizes, global lower bound or novelty. No bounded-ray direction scan or new-room optical discovery was run by Codex.
+Not covered in this initial pass (complete k5 exclusion is now in the continuation): arbitrary mark coordinates, arbitrary wall angles, all orbit sizes, global lower bound. No bounded-ray direction scan or new-room optical discovery was run by Codex.

@@ -2,7 +2,7 @@
 
 Status: proof and fixed-room controls completed by Codex; independent Opus
 review requested. This is an enumeration completeness bound for a restricted
-class, not a global lower bound or a novelty claim.
+class, not a global lower bound.
 
 ## Exact identity
 

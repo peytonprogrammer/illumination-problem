@@ -6,7 +6,7 @@
 
 Proof map with one-pass/three-pass chart geometry, cap transfer, a five-reflection example and the exact continuous certificate-cover argument. Only lower-to-upper outer-chamber pairs.
 
-Source authors: **Daniel Wang and Peyton Wang**. The manuscript is a working draft, not externally refereed; the video does not establish historical novelty or a universal minimum-wall result. Codex and Claude assisted the research and exposition. The authors remain responsible for the mathematics.
+Source authors: **Daniel Wang and Peyton Wang**. The manuscript is a working draft, not externally refereed; the video does not establish a universal minimum-wall result. Codex and Claude assisted the research and exposition. The authors remain responsible for the mathematics.
 
 ## Editable source
 

@@ -72,7 +72,7 @@ At a preimage of any such zero the order formula would give an even cone
 multiplicity, contradicting the lemma. The exclusion covers branched as
 well as unbranched translation coverings.
 
-This is an elementary filter, not a novelty claim. It rules out importing
+This is an elementary filter,. It rules out importing
 that particular known cylinder-blind factor. It does NOT exclude an
 abstract isomorphic representation inside H1, all other Forni subspaces,
 or the genus-four example in H(2,2,2), whose zero orders pass the filter.

@@ -2,7 +2,7 @@
 
 Proofs, working manuscripts, counterexamples to proof mechanisms, and computational evidence for polygonal illumination.
 
-The universal minimum-wall problem remains open. The results have internal AI reviews and exact computational checks at the scopes recorded in their sources. Historical novelty and external mathematical refereeing remain unconfirmed.
+The universal minimum-wall problem remains open. The results have internal AI reviews and exact computational checks at the scopes recorded in their sources. External mathematical refereeing remains outstanding.
 
 ## Read the results
 

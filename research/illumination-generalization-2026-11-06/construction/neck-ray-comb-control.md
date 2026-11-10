@@ -1,6 +1,6 @@
 # Exact control: all integer stretches of the five-neck comb
 
-A prescribed hand control for A21 and the peer's R19 sharpness family. It is not a census, direction search, novelty claim or general base-illumination theorem.
+A prescribed hand control for A21 and the peer's R19 sharpness family. It is not a census, direction search, general base-illumination theorem.
 
 For integer n>=0 let P_n be the union of the spine [0,4]x[0,36] and five teeth
 

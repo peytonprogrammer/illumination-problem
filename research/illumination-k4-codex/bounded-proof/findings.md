@@ -6,7 +6,7 @@
 
 For a slit-free strictly simple room formed from the fixed canonical 45-degree triangle tiling, with two distinct dark interior A marks and **at most four noncorner B/C lattice points**, at least **22 maximal straight walls** are required. The already certified 15-square room attains 22.
 
-This is a computer-assisted result: the geometry-to-Boolean encoding and finite support theorem have written proofs; each Boolean contradiction has a DRAT trace checked by a separate verifier. Claude independently accepted the encoder source and support proof, regenerated every formula, and checked every contradiction. Codex then independently reproduced all 31 formulas byte for byte from frozen reviewed source and freshly checked all 31 adopted traces. The result does not claim a global minimum, arbitrary marked locations, arbitrary angles, or historical priority.
+This is a computer-assisted result: the geometry-to-Boolean encoding and finite support theorem have written proofs; each Boolean contradiction has a DRAT trace checked by a separate verifier. Claude independently accepted the encoder source and support proof, regenerated every formula, and checked every contradiction. Codex then independently reproduced all 31 formulas byte for byte from frozen reviewed source and freshly checked all 31 adopted traces. The result does not claim a global minimum, arbitrary marked locations, arbitrary angles.
 
 The new model uses at-most-four exceptions throughout. It therefore includes the zero-, one-, two- and three-exception cases at W<=21, without assuming the earlier solver-only minimum-24 results. It does not replace those older results at W22 or W23.
 
@@ -79,6 +79,6 @@ This reads only the Codex-owned frozen bundle after adoption and checks the exis
 
 [waiting on Claude] The unbounded-exception branch remains unresolved. Net charge is exactly redistributed ordinary corner-angle mass. Zero-net cells cannot simply be deleted, and scalar-gcd normalization does not remove independent axis stretches of orthogonal dark rooms. See `../proofs/zero-charge-reduction.md`.
 
-[waiting on Monteil and Tokarsky] Historical comparison and priority. No outward messages, publication, sharing or git mutation occurred in this verification.
+[waiting on Monteil and Tokarsky] Historical comparison. No outward messages, publication, sharing or git mutation occurred in this verification.
 
 **Next move:** preserve the bounded theorem and its reproducible evidence in the research note. Pursue an optical invariant or proved normalization for the unbounded-exception problem separately.

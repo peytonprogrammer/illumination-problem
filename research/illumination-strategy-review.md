@@ -14,7 +14,7 @@ Use one bounded second-central-cell split as a diagnostic, and inspect the remai
 
 Success should mean closing a whole placement or establishing a reusable geometric mechanism, rather than merely increasing the fraction of branches excluded. Do not indefinitely increase solve limits or recursively split fans without reassessing this return.
 
-If the priority is a smaller construction, a different geometry/blocking mechanism deserves separate effort. There is no better-supported specific construction proposal yet. A surface-only obstruction is insufficient: every target lift and a valid planar billiard realization must be handled. Wolecki explicitly distinguishes arbitrary translation surfaces from polygon unfoldings, so this is a substantive compatibility gate, not bookkeeping.
+If the target is a smaller construction, a different geometry/blocking mechanism deserves separate effort. There is no better-supported specific construction proposal yet. A surface-only obstruction is insufficient: every target lift and a valid planar billiard realization must be handled. Wolecki explicitly distinguishes arbitrary translation surfaces from polygon unfoldings, so this is a substantive compatibility gate, not bookkeeping.
 
 Primary source checked: [Wolecki, Illumination in Rational Billiards, sections1–2](https://arxiv.org/html/1905.09358v3). [Lelièvre–Monteil–Weiss, Everything is illuminated, Proposition16](https://arxiv.org/html/1407.2975v1#S6.SS1) supplies an alternative ramified-cover blocking mechanism; it does not supply a smaller simple planar room for this project.
 

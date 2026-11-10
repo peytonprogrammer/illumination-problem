@@ -101,4 +101,4 @@ Ordinary wall tangencies and motion along a seam would require an axis direction
 3. Step 3: show one velocity calculation, such as (u,v) -> (-u,v) -> (-u,-v), and say that the perpendicular seam is identical with coordinates interchanged.
 4. Step 3: “Each of the finitely many straight legs crosses each seam at most once, so the projected generalized path has finitely many events.”
 
-These are explanatory additions. The original document already contains the essential proof. Its conclusion is the stated exact dark pair under the stated corner convention; novelty, global minimality, and tolerance to perturbing the room are separate questions and are not claimed.
+These are explanatory additions. The original document already contains the essential proof. Its conclusion is the stated exact dark pair under the stated corner convention;, global minimality, and tolerance to perturbing the room are separate questions and are not claimed.

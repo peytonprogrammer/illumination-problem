@@ -32,7 +32,7 @@ Zero-net occupied cells remain. The local check finds one all-flags assignment m
 
 A promising next lemma would remove or normalize zero-net regions while preserving simple geometry, the marked A points, wall count and darkness. The charge identity supplies the finite charged skeleton only after such a lemma. Local transparency by itself does not establish a valid contraction; changing lengths or identifications can change billiard connections.
 
-This is an exact reformulation of the previously known wall identity with useful local nonnegativity. It is not yet an additional illumination obstruction or evidence of novelty.
+This is an exact reformulation of the previously known wall identity with useful local nonnegativity. It is not yet an additional illumination obstruction.
 
 ## Reproduction
 

@@ -24,7 +24,7 @@ Prescribed exact check: reuse the existing reviewer replay_actual first-wall rou
 2. For each N>=1, 0<epsilon<1/(2beta+2HN) forces the first N complete right-floor-cap circuits after FIRST R exit to remain in the open stripe (w,w+1) whenever they cross a native bottom target's height. The actual intermediate finite-wall guards must be proved; merely extrapolating LR01 is insufficient.
 3. Combining these yields already-lit pairs with illuminating directions requiring arbitrarily many right excursions, not an unbounded MINIMUM across all directions. The K1R01 control still has its accepted four-reflection route.
 
-Detailed proof and validation outcome will be appended only after the exact obligations are checked. No independent acceptance, novelty, new room coverage or general nonemptiness is claimed.
+Detailed proof and validation outcome will be appended only after the exact obligations are checked. No independent acceptance, new room coverage or general nonemptiness is claimed.
 
 ## Hand proof A: an already-lit terminal pair has full paths arbitrarily near P
 
@@ -114,6 +114,6 @@ The input room/pair was previously illuminated. The direction was derived before
 
 ## Review status and remaining proof gap
 
-The new deductions A/B and their combination are coordinator HAND arguments pending independent mathematical review. The exact replay corroborates one instance; it is not an independent review or a universal proof certificate. WR01 transfer and LR01 overshoot are accepted shared dependencies. Historical novelty is not assessed.
+The new deductions A/B and their combination are coordinator HAND arguments pending independent mathematical review. The exact replay corroborates one instance; it is not an independent review or a universal proof certificate. WR01 transfer and LR01 overshoot are accepted shared dependencies.
 
 The original general existence gap is unchanged: produce a legal path for an unknown residual pair without first assuming it is lit. The normalization alone does not force a source orbit to meet the actual target. A two-sided approach must accommodate unbounded right-return depth or derive a different sufficient direction family with its own existence proof; another fixed-depth patch cannot justify the near-period strategy.

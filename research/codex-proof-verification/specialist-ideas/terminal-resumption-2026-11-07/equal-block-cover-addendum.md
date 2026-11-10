@@ -17,8 +17,6 @@ Hence s+z-Na is an integer multiple2a: write s+z=J a with J-N even. A bad SOURCE
     s + r tau_q = [2s+(J+N+2q)a]/4
                 = a (mod 2a),
 
-or
-
     2s/a+J+N+2q = 4 (mod 8).
 
 Here J+N+2q is an even integer. This would force2s/a to be an even integer, impossible because0<2s/a<2. Thus the source bad class is EMPTY whenever the cap bad class is nonempty. The remaining cap/right classes cover at most1/2+1/4=3/4. Therefore no cover exists in the equal-four-block case either.
@@ -29,4 +27,4 @@ For the author's wider-bottom construction, retain gcd(G,N)=1 and gcd(N*d2,L)=1.
 
 In particular, the author's proposed whole native family B=3a,c=4,H=h+1,N>=5 odd and not divisible3 can include h=6 as well as h=5 or h>=7. The bottom native marks have v=2, hence d2=2 is coprime to3; the only equal-block case is h6,u4. The cap contains no integral-height interior marks. The same protected U/L join applies, subject to independent audit of this addendum and the author's full extension.
 
-No new room/ray search, deadline or worker is used. This is a proposed hand extension, not yet independently accepted, not all ten-wall rooms, and not a novelty assertion.
+No new room/ray search, deadline or worker is used. This is a proposed hand extension, not yet independently accepted, not all ten-wall rooms.

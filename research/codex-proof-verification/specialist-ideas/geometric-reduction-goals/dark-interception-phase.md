@@ -66,7 +66,7 @@ must be used if an abstract countercontrol lies outside the room class.
 
 Publish pinned candidate/proof/countercontrol for existing reviewer. The aim is
 one genuinely new structural necessary obstruction that advances the low-wall
-question, or the actual qualifying counterexample; no novelty claim by default.
+question, or the actual qualifying counterexample; No by default.
 No new room-family orbits/census or parity-factor catalogue as a substitute.
 
 ## Reviewer: NEW review/dark-interception-*

@@ -1,404 +1,403 @@
 {
- "theorem": "Every finite strictly simple orthogonal polygon with at most eight maximal walls illuminates every pair of distinct interior points by a finite corner-avoiding specular path.",
- "generated_utc": "2026-11-08T07:14:19+00:00",
- "review_kind": "AI hand review and prescribed exact computation by Codex and Claude agents; no proof-assistant verification; no human referee",
- "novelty_claim": "none",
- "mismatched_pins": 0,
- "sources": [
-  {
-   "role": "classification: W<=8 turn words and metric normal forms (Prop 1.1-1.2)",
-   "path": "illumination-generalization-2026-11-06/review/eight-wall-frontier.md",
-   "sha256": "d1d60daf29e36ae1e80819451922a5bb6e883a93d15ec0706f811a6fed1e47e2",
-   "pinned_in": "illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json",
-   "pinned_sha256": "d1d60daf29e36ae1e80819451922a5bb6e883a93d15ec0706f811a6fed1e47e2",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "classification: independent reconstruction review",
-   "path": "illumination-generalization-2026-11-06/construction/eight-wall-frontier-review.md",
-   "sha256": "78e393b2934eb4eccae17aeb8e1d099bf4f09a7e9112aadfdb725db30ea6771f",
-   "pinned_in": "illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json",
-   "pinned_sha256": "78e393b2934eb4eccae17aeb8e1d099bf4f09a7e9112aadfdb725db30ea6771f",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "classification: prescribed combinatorial check",
-   "path": "illumination-generalization-2026-11-06/review/eight-wall-turn-check.py",
-   "sha256": "b0a68ba24bb2c03ca48f11611e85c957bdaf05f01ea7f37d7c3d053d120527cc",
-   "pinned_in": "illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json",
-   "pinned_sha256": null,
-   "pin_status": "not pinned by name in that acceptance file; hash recorded here"
-  },
-  {
-   "role": "L theorem, two orientations (Thm 2.1)",
-   "path": "illumination-k4-codex/single-boundary-blocker/l-monotone-proof.md",
-   "sha256": "dc80c57e5d3d74c82863779913a4b6fc59256363391ff4e1bfbff506cd769db3",
-   "pinned_in": "illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
-   "pinned_sha256": "dc80c57e5d3d74c82863779913a4b6fc59256363391ff4e1bfbff506cd769db3",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "L theorem: independent hand reconstruction",
-   "path": "illumination-generalization-2026-11-06/review/all-real-L-dependency-review.md",
-   "sha256": "5ad9ecfde7282d4d69c6d3240399c2e42d7218520483f93463fd7a7d80efdc25",
-   "pinned_in": "illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
-   "pinned_sha256": "5ad9ecfde7282d4d69c6d3240399c2e42d7218520483f93463fd7a7d80efdc25",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "L theorem: prescribed exact check",
-   "path": "illumination-k4-codex/single-boundary-blocker/arithmetic-check.py",
-   "sha256": "9a946bc6c26102cc22281d7ac686fd9a8a325c305ce628c162a4cac40c6283dd",
-   "pinned_in": "illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
-   "pinned_sha256": null,
-   "pin_status": "not pinned by name in that acceptance file; hash recorded here"
-  },
-  {
-   "role": "U theorem, opposite arms and all pairs (Thm 3.1-3.2)",
-   "path": "illumination-k4-codex/two-reflex-blocker/all-heights.md",
-   "sha256": "25ae281ecec09edef135f51d6a4aac0308d1f7767505cca40fd5645afd492016",
-   "pinned_in": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
-   "pinned_sha256": "25ae281ecec09edef135f51d6a4aac0308d1f7767505cca40fd5645afd492016",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "U theorem: independent hand reconstruction",
-   "path": "illumination-generalization-2026-11-06/review/all-real-U-dependency-review.md",
-   "sha256": "16aa60f945c22c9588de002d3da8579aca601950d0da1889db22e8d4c0f02f34",
-   "pinned_in": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
-   "pinned_sha256": "16aa60f945c22c9588de002d3da8579aca601950d0da1889db22e8d4c0f02f34",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "U theorem: prescribed exact check",
-   "path": "illumination-k4-codex/two-reflex-blocker/all-heights-check.py",
-   "sha256": "0a80c273af38e533c7ec5ec139eb78e9b74096e5c2e480f129c3eeb966009435",
-   "pinned_in": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
-   "pinned_sha256": "0a80c273af38e533c7ec5ec139eb78e9b74096e5c2e480f129c3eeb966009435",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "U theorem: wall verifier used by the check",
-   "path": "illumination-k4-codex/two-reflex-blocker/check.py",
-   "sha256": "59d5a1c2ee352dea81b486f3f857cc43012eec51f0978dfa2b4319b2bc7db75d",
-   "pinned_in": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
-   "pinned_sha256": null,
-   "pin_status": "not pinned by name in that acceptance file; hash recorded here"
-  },
-  {
-   "role": "T theorem, independent floor heights (Thm 4.1)",
-   "path": "illumination-generalization-2026-11-06/review/uneven-T-theorem.md",
-   "sha256": "b6aa7bc342d58ed66a77df5fb8197540b5a401c37b93cec4700f4a3b5c755b88",
-   "pinned_in": "illumination-generalization-2026-11-06/review/uneven-T-acceptance.json",
-   "pinned_sha256": "b6aa7bc342d58ed66a77df5fb8197540b5a401c37b93cec4700f4a3b5c755b88",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "T theorem, equal floors (special case of Thm 4.1)",
-   "path": "illumination-generalization-2026-11-06/review/T-room-theorem.md",
-   "sha256": "3f072138196855768673e072a7ae771c06b40f309ebb7167beabc6b066f498b0",
-   "pinned_in": "illumination-generalization-2026-11-06/construction/T-whole-review.json",
-   "pinned_sha256": "3f072138196855768673e072a7ae771c06b40f309ebb7167beabc6b066f498b0",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "T theorem: independent review",
-   "path": "illumination-generalization-2026-11-06/construction/T-whole-review.md",
-   "sha256": "b5bc7b4bee094a9ef3dbc5fac288d6a92f064f9ed9e937a6f6167da46d932056",
-   "pinned_in": "illumination-generalization-2026-11-06/review/uneven-T-acceptance.json",
-   "pinned_sha256": "b5bc7b4bee094a9ef3dbc5fac288d6a92f064f9ed9e937a6f6167da46d932056",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "T theorem: prescribed exact checks",
-   "path": "illumination-generalization-2026-11-06/construction/T-whole-check.py",
-   "sha256": "b3df428299a752a900ac63514b70fe04d3ef9d02e474309315608b31341ae613",
-   "pinned_in": "illumination-generalization-2026-11-06/construction/T-whole-review.json",
-   "pinned_sha256": "b3df428299a752a900ac63514b70fe04d3ef9d02e474309315608b31341ae613",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "T theorem: prescribed exact check (reviewer)",
-   "path": "illumination-generalization-2026-11-06/review/uneven-T-check.py",
-   "sha256": "f3626478c8a44b5ff7eff5f3bba4361e330165777165ef56a4e004707af56d9d",
-   "pinned_in": "illumination-generalization-2026-11-06/review/uneven-T-acceptance.json",
-   "pinned_sha256": null,
-   "pin_status": "not pinned by name in that acceptance file; hash recorded here"
-  },
-  {
-   "role": "wide-middle theorem (Thm 5.1-5.2, Lemma 2.2)",
-   "path": "illumination-generalization-2026-11-06/review/wide-middle-onepass.md",
-   "sha256": "3c4deaacbecad241d19ffb034f0959cc30ea23e05c7ecce58d0ce25c0fe3b357",
-   "pinned_in": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
-   "pinned_sha256": "3c4deaacbecad241d19ffb034f0959cc30ea23e05c7ecce58d0ce25c0fe3b357",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "wide-middle: independent review",
-   "path": "illumination-generalization-2026-11-06/construction/wide-middle-review.md",
-   "sha256": "bf8a4e69e191757a356707706b74be66cf0d1562cc72c33d282b5a2eefedf2fa",
-   "pinned_in": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
-   "pinned_sha256": "bf8a4e69e191757a356707706b74be66cf0d1562cc72c33d282b5a2eefedf2fa",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "wide-middle: prescribed exact check",
-   "path": "illumination-generalization-2026-11-06/review/wide-middle-constructor-check.py",
-   "sha256": "16dbfec2b507abb2be87bfd3ed7a65ad8ede1d2d0360c310d39f2dfc460a8074",
-   "pinned_in": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
-   "pinned_sha256": "16dbfec2b507abb2be87bfd3ed7a65ad8ede1d2d0360c310d39f2dfc460a8074",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "wide-middle: rotation and seam controls",
-   "path": "illumination-generalization-2026-11-06/review/wide-middle-boundary-controls.py",
-   "sha256": "2496b483b6acb352e3127de327fbec8d49226a4c74198fbf58cab26907b6c801",
-   "pinned_in": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
-   "pinned_sha256": "2496b483b6acb352e3127de327fbec8d49226a4c74198fbf58cab26907b6c801",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase: nested windows and placement split (Lemmas 6.1, 6.2, 6.4)",
-   "path": "illumination-generalization-2026-11-06/construction/staircase-window-proof.md",
-   "sha256": "7b2a14e41e8d9183ddf46b915c85483a2bad0a91106d38c2af2ee0e006c2bd6b",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-window-acceptance.json",
-   "pinned_sha256": "7b2a14e41e8d9183ddf46b915c85483a2bad0a91106d38c2af2ee0e006c2bd6b",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase window: independent review",
-   "path": "illumination-generalization-2026-11-06/review/staircase-window-review.md",
-   "sha256": "b3dee009393b22259775d557ac6e6a3487d648bc9325d8f7fcd9b4bdd11e5564",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-window-acceptance.json",
-   "pinned_sha256": "b3dee009393b22259775d557ac6e6a3487d648bc9325d8f7fcd9b4bdd11e5564",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase window: prescribed exact check",
-   "path": "illumination-generalization-2026-11-06/review/staircase-window-check.py",
-   "sha256": "e96a69cb6b6692f776e4b8ac8d4171fa6bc46926949774b0e1ba701d7e3fca4f",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-window-acceptance.json",
-   "pinned_sha256": "e96a69cb6b6692f776e4b8ac8d4171fa6bc46926949774b0e1ba701d7e3fca4f",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase: partial window and roof chart (Lemma 6.3, Thm 6.8 Steps 2-3)",
-   "path": "illumination-generalization-2026-11-06/construction/staircase-roof-proof.md",
-   "sha256": "47ae4917212c5e1ca18c1e2ea95d370137d6f513cf2cb6628dcd63b1a7e2c21b",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json",
-   "pinned_sha256": "47ae4917212c5e1ca18c1e2ea95d370137d6f513cf2cb6628dcd63b1a7e2c21b",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase roof: independent review",
-   "path": "illumination-generalization-2026-11-06/review/staircase-roof-review.md",
-   "sha256": "26c59b0d351fb0971aefb1b00cb15643a38e334ff70840b02a991a1553b0d09e",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json",
-   "pinned_sha256": "26c59b0d351fb0971aefb1b00cb15643a38e334ff70840b02a991a1553b0d09e",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase roof: prescribed exact check",
-   "path": "illumination-generalization-2026-11-06/review/staircase-roof-check.py",
-   "sha256": "47ed1d019755e6b5558010dee20d6383a5db80a0da848c35436936f3694d4be3",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json",
-   "pinned_sha256": "47ed1d019755e6b5558010dee20d6383a5db80a0da848c35436936f3694d4be3",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase: floor chart under F/Ft (Thm 6.5-6.7)",
-   "path": "illumination-generalization-2026-11-06/review/staircase-floor-proof.md",
-   "sha256": "7c5ab2feb5668ffcc724bf46cfc88b2ccaafce44cea0cb0df64718d1b46514f2",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json",
-   "pinned_sha256": "7c5ab2feb5668ffcc724bf46cfc88b2ccaafce44cea0cb0df64718d1b46514f2",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase floor: independent review",
-   "path": "illumination-generalization-2026-11-06/construction/staircase-floor-review.md",
-   "sha256": "02cd513e961223d1e499a540f05a075d36014da68de46741e90940f59e549066",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json",
-   "pinned_sha256": "02cd513e961223d1e499a540f05a075d36014da68de46741e90940f59e549066",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase floor: prescribed exact check and wall verifier",
-   "path": "illumination-generalization-2026-11-06/review/staircase-floor-check.py",
-   "sha256": "7769928005b187f3b7c9263c2b76ea05f295fa5d0753a2bb7ff76f583c254a60",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json",
-   "pinned_sha256": "7769928005b187f3b7c9263c2b76ea05f295fa5d0753a2bb7ff76f583c254a60",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "staircase: single-image roof chart, earlier arrival, Rv/Rh, exhaustive algebra (Thm 6.8 Step 4, Prop 6.10)",
-   "path": "illumination-generalization-2026-11-06/review/whole-staircase-candidate.md",
-   "sha256": "e53cdd702d5b7f7ac197f31d8f09a8ff9bdc3b77d10f035db884d2e45bf08698",
-   "pinned_in": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
-   "pinned_sha256": "e53cdd702d5b7f7ac197f31d8f09a8ff9bdc3b77d10f035db884d2e45bf08698",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "whole staircase: independent review (author side)",
-   "path": "illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.md",
-   "sha256": "cce86a198c003df0d0b3cf90aba6babed87d0e245f32d9662d54a5508956f673",
-   "pinned_in": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
-   "pinned_sha256": "cce86a198c003df0d0b3cf90aba6babed87d0e245f32d9662d54a5508956f673",
-   "pin_status": "matches pin"
-  },
-  {
-   "role": "whole staircase: reviewer acceptance record",
-   "path": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
-   "sha256": "8d956c6aaa6a50e03fafc3763c739c84093a1761eb68acbeb38856fa96f0cc2e",
-   "pinned_in": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
-   "pinned_sha256": null,
-   "pin_status": "not pinned by name in that acceptance file; hash recorded here"
-  },
-  {
-   "role": "whole staircase: review request with pinned dependency hashes",
-   "path": "illumination-generalization-2026-11-06/review/whole-staircase-review-request.json",
-   "sha256": "5a0c530547b2dd256ef7bf99d3db26c4b635331ddcc1b497ac9a75dcbb3a6c77",
-   "pinned_in": "illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.json",
-   "pinned_sha256": null,
-   "pin_status": "not pinned by name in that acceptance file; hash recorded here"
-  },
-  {
-   "role": "whole staircase: prescribed symbolic identities and roof-corner controls",
-   "path": "illumination-generalization-2026-11-06/review/whole-staircase-check.py",
-   "sha256": "69c9c3ad482595e9dade5fe5f7e6b1a10ededb16a111f9b2662e048add3c3ba4",
-   "pinned_in": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
-   "pinned_sha256": null,
-   "pin_status": "not pinned by name in that acceptance file; hash recorded here"
-  },
-  {
-   "role": "not required by the final chain (superseded sufficient condition)",
-   "path": "illumination-generalization-2026-11-06/construction/staircase-overlap-supplement.md",
-   "sha256": "83a63d1f432dc949b6d9574299d3f91e1ff6b9e0af0318c6dd6bfa0516d6d433",
-   "pinned_in": "illumination-generalization-2026-11-06/review/staircase-overlap-acceptance.json",
-   "pinned_sha256": "83a63d1f432dc949b6d9574299d3f91e1ff6b9e0af0318c6dd6bfa0516d6d433",
-   "pin_status": "matches pin"
+  "theorem": "Every finite strictly simple orthogonal polygon with at most eight maximal walls illuminates every pair of distinct interior points by a finite corner-avoiding specular path.",
+  "generated_utc": "2026-11-08T07:14:19+00:00",
+  "review_kind": "AI hand review and prescribed exact computation by Codex and Claude agents; no proof-assistant verification; no human referee",
+  "mismatched_pins": 0,
+  "sources": [
+    {
+      "role": "classification: W<=8 turn words and metric normal forms (Prop 1.1-1.2)",
+      "path": "illumination-generalization-2026-11-06/review/eight-wall-frontier.md",
+      "sha256": "d1d60daf29e36ae1e80819451922a5bb6e883a93d15ec0706f811a6fed1e47e2",
+      "pinned_in": "illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json",
+      "pinned_sha256": "d1d60daf29e36ae1e80819451922a5bb6e883a93d15ec0706f811a6fed1e47e2",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "classification: independent reconstruction review",
+      "path": "illumination-generalization-2026-11-06/construction/eight-wall-frontier-review.md",
+      "sha256": "78e393b2934eb4eccae17aeb8e1d099bf4f09a7e9112aadfdb725db30ea6771f",
+      "pinned_in": "illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json",
+      "pinned_sha256": "78e393b2934eb4eccae17aeb8e1d099bf4f09a7e9112aadfdb725db30ea6771f",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "classification: prescribed combinatorial check",
+      "path": "illumination-generalization-2026-11-06/review/eight-wall-turn-check.py",
+      "sha256": "b0a68ba24bb2c03ca48f11611e85c957bdaf05f01ea7f37d7c3d053d120527cc",
+      "pinned_in": "illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json",
+      "pinned_sha256": null,
+      "pin_status": "not pinned by name in that acceptance file; hash recorded here"
+    },
+    {
+      "role": "L theorem, two orientations (Thm 2.1)",
+      "path": "illumination-k4-codex/single-boundary-blocker/l-monotone-proof.md",
+      "sha256": "dc80c57e5d3d74c82863779913a4b6fc59256363391ff4e1bfbff506cd769db3",
+      "pinned_in": "illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
+      "pinned_sha256": "dc80c57e5d3d74c82863779913a4b6fc59256363391ff4e1bfbff506cd769db3",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "L theorem: independent hand reconstruction",
+      "path": "illumination-generalization-2026-11-06/review/all-real-L-dependency-review.md",
+      "sha256": "5ad9ecfde7282d4d69c6d3240399c2e42d7218520483f93463fd7a7d80efdc25",
+      "pinned_in": "illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
+      "pinned_sha256": "5ad9ecfde7282d4d69c6d3240399c2e42d7218520483f93463fd7a7d80efdc25",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "L theorem: prescribed exact check",
+      "path": "illumination-k4-codex/single-boundary-blocker/arithmetic-check.py",
+      "sha256": "9a946bc6c26102cc22281d7ac686fd9a8a325c305ce628c162a4cac40c6283dd",
+      "pinned_in": "illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
+      "pinned_sha256": null,
+      "pin_status": "not pinned by name in that acceptance file; hash recorded here"
+    },
+    {
+      "role": "U theorem, opposite arms and all pairs (Thm 3.1-3.2)",
+      "path": "illumination-k4-codex/two-reflex-blocker/all-heights.md",
+      "sha256": "25ae281ecec09edef135f51d6a4aac0308d1f7767505cca40fd5645afd492016",
+      "pinned_in": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
+      "pinned_sha256": "25ae281ecec09edef135f51d6a4aac0308d1f7767505cca40fd5645afd492016",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "U theorem: independent hand reconstruction",
+      "path": "illumination-generalization-2026-11-06/review/all-real-U-dependency-review.md",
+      "sha256": "16aa60f945c22c9588de002d3da8579aca601950d0da1889db22e8d4c0f02f34",
+      "pinned_in": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
+      "pinned_sha256": "16aa60f945c22c9588de002d3da8579aca601950d0da1889db22e8d4c0f02f34",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "U theorem: prescribed exact check",
+      "path": "illumination-k4-codex/two-reflex-blocker/all-heights-check.py",
+      "sha256": "0a80c273af38e533c7ec5ec139eb78e9b74096e5c2e480f129c3eeb966009435",
+      "pinned_in": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
+      "pinned_sha256": "0a80c273af38e533c7ec5ec139eb78e9b74096e5c2e480f129c3eeb966009435",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "U theorem: wall verifier used by the check",
+      "path": "illumination-k4-codex/two-reflex-blocker/check.py",
+      "sha256": "59d5a1c2ee352dea81b486f3f857cc43012eec51f0978dfa2b4319b2bc7db75d",
+      "pinned_in": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
+      "pinned_sha256": null,
+      "pin_status": "not pinned by name in that acceptance file; hash recorded here"
+    },
+    {
+      "role": "T theorem, independent floor heights (Thm 4.1)",
+      "path": "illumination-generalization-2026-11-06/review/uneven-T-theorem.md",
+      "sha256": "b6aa7bc342d58ed66a77df5fb8197540b5a401c37b93cec4700f4a3b5c755b88",
+      "pinned_in": "illumination-generalization-2026-11-06/review/uneven-T-acceptance.json",
+      "pinned_sha256": "b6aa7bc342d58ed66a77df5fb8197540b5a401c37b93cec4700f4a3b5c755b88",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "T theorem, equal floors (special case of Thm 4.1)",
+      "path": "illumination-generalization-2026-11-06/review/T-room-theorem.md",
+      "sha256": "3f072138196855768673e072a7ae771c06b40f309ebb7167beabc6b066f498b0",
+      "pinned_in": "illumination-generalization-2026-11-06/construction/T-whole-review.json",
+      "pinned_sha256": "3f072138196855768673e072a7ae771c06b40f309ebb7167beabc6b066f498b0",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "T theorem: independent review",
+      "path": "illumination-generalization-2026-11-06/construction/T-whole-review.md",
+      "sha256": "b5bc7b4bee094a9ef3dbc5fac288d6a92f064f9ed9e937a6f6167da46d932056",
+      "pinned_in": "illumination-generalization-2026-11-06/review/uneven-T-acceptance.json",
+      "pinned_sha256": "b5bc7b4bee094a9ef3dbc5fac288d6a92f064f9ed9e937a6f6167da46d932056",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "T theorem: prescribed exact checks",
+      "path": "illumination-generalization-2026-11-06/construction/T-whole-check.py",
+      "sha256": "b3df428299a752a900ac63514b70fe04d3ef9d02e474309315608b31341ae613",
+      "pinned_in": "illumination-generalization-2026-11-06/construction/T-whole-review.json",
+      "pinned_sha256": "b3df428299a752a900ac63514b70fe04d3ef9d02e474309315608b31341ae613",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "T theorem: prescribed exact check (reviewer)",
+      "path": "illumination-generalization-2026-11-06/review/uneven-T-check.py",
+      "sha256": "f3626478c8a44b5ff7eff5f3bba4361e330165777165ef56a4e004707af56d9d",
+      "pinned_in": "illumination-generalization-2026-11-06/review/uneven-T-acceptance.json",
+      "pinned_sha256": null,
+      "pin_status": "not pinned by name in that acceptance file; hash recorded here"
+    },
+    {
+      "role": "wide-middle theorem (Thm 5.1-5.2, Lemma 2.2)",
+      "path": "illumination-generalization-2026-11-06/review/wide-middle-onepass.md",
+      "sha256": "3c4deaacbecad241d19ffb034f0959cc30ea23e05c7ecce58d0ce25c0fe3b357",
+      "pinned_in": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
+      "pinned_sha256": "3c4deaacbecad241d19ffb034f0959cc30ea23e05c7ecce58d0ce25c0fe3b357",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "wide-middle: independent review",
+      "path": "illumination-generalization-2026-11-06/construction/wide-middle-review.md",
+      "sha256": "bf8a4e69e191757a356707706b74be66cf0d1562cc72c33d282b5a2eefedf2fa",
+      "pinned_in": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
+      "pinned_sha256": "bf8a4e69e191757a356707706b74be66cf0d1562cc72c33d282b5a2eefedf2fa",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "wide-middle: prescribed exact check",
+      "path": "illumination-generalization-2026-11-06/review/wide-middle-constructor-check.py",
+      "sha256": "16dbfec2b507abb2be87bfd3ed7a65ad8ede1d2d0360c310d39f2dfc460a8074",
+      "pinned_in": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
+      "pinned_sha256": "16dbfec2b507abb2be87bfd3ed7a65ad8ede1d2d0360c310d39f2dfc460a8074",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "wide-middle: rotation and seam controls",
+      "path": "illumination-generalization-2026-11-06/review/wide-middle-boundary-controls.py",
+      "sha256": "2496b483b6acb352e3127de327fbec8d49226a4c74198fbf58cab26907b6c801",
+      "pinned_in": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
+      "pinned_sha256": "2496b483b6acb352e3127de327fbec8d49226a4c74198fbf58cab26907b6c801",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase: nested windows and placement split (Lemmas 6.1, 6.2, 6.4)",
+      "path": "illumination-generalization-2026-11-06/construction/staircase-window-proof.md",
+      "sha256": "7b2a14e41e8d9183ddf46b915c85483a2bad0a91106d38c2af2ee0e006c2bd6b",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-window-acceptance.json",
+      "pinned_sha256": "7b2a14e41e8d9183ddf46b915c85483a2bad0a91106d38c2af2ee0e006c2bd6b",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase window: independent review",
+      "path": "illumination-generalization-2026-11-06/review/staircase-window-review.md",
+      "sha256": "b3dee009393b22259775d557ac6e6a3487d648bc9325d8f7fcd9b4bdd11e5564",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-window-acceptance.json",
+      "pinned_sha256": "b3dee009393b22259775d557ac6e6a3487d648bc9325d8f7fcd9b4bdd11e5564",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase window: prescribed exact check",
+      "path": "illumination-generalization-2026-11-06/review/staircase-window-check.py",
+      "sha256": "e96a69cb6b6692f776e4b8ac8d4171fa6bc46926949774b0e1ba701d7e3fca4f",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-window-acceptance.json",
+      "pinned_sha256": "e96a69cb6b6692f776e4b8ac8d4171fa6bc46926949774b0e1ba701d7e3fca4f",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase: partial window and roof chart (Lemma 6.3, Thm 6.8 Steps 2-3)",
+      "path": "illumination-generalization-2026-11-06/construction/staircase-roof-proof.md",
+      "sha256": "47ae4917212c5e1ca18c1e2ea95d370137d6f513cf2cb6628dcd63b1a7e2c21b",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json",
+      "pinned_sha256": "47ae4917212c5e1ca18c1e2ea95d370137d6f513cf2cb6628dcd63b1a7e2c21b",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase roof: independent review",
+      "path": "illumination-generalization-2026-11-06/review/staircase-roof-review.md",
+      "sha256": "26c59b0d351fb0971aefb1b00cb15643a38e334ff70840b02a991a1553b0d09e",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json",
+      "pinned_sha256": "26c59b0d351fb0971aefb1b00cb15643a38e334ff70840b02a991a1553b0d09e",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase roof: prescribed exact check",
+      "path": "illumination-generalization-2026-11-06/review/staircase-roof-check.py",
+      "sha256": "47ed1d019755e6b5558010dee20d6383a5db80a0da848c35436936f3694d4be3",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json",
+      "pinned_sha256": "47ed1d019755e6b5558010dee20d6383a5db80a0da848c35436936f3694d4be3",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase: floor chart under F/Ft (Thm 6.5-6.7)",
+      "path": "illumination-generalization-2026-11-06/review/staircase-floor-proof.md",
+      "sha256": "7c5ab2feb5668ffcc724bf46cfc88b2ccaafce44cea0cb0df64718d1b46514f2",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json",
+      "pinned_sha256": "7c5ab2feb5668ffcc724bf46cfc88b2ccaafce44cea0cb0df64718d1b46514f2",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase floor: independent review",
+      "path": "illumination-generalization-2026-11-06/construction/staircase-floor-review.md",
+      "sha256": "02cd513e961223d1e499a540f05a075d36014da68de46741e90940f59e549066",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json",
+      "pinned_sha256": "02cd513e961223d1e499a540f05a075d36014da68de46741e90940f59e549066",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase floor: prescribed exact check and wall verifier",
+      "path": "illumination-generalization-2026-11-06/review/staircase-floor-check.py",
+      "sha256": "7769928005b187f3b7c9263c2b76ea05f295fa5d0753a2bb7ff76f583c254a60",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json",
+      "pinned_sha256": "7769928005b187f3b7c9263c2b76ea05f295fa5d0753a2bb7ff76f583c254a60",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "staircase: single-image roof chart, earlier arrival, Rv/Rh, exhaustive algebra (Thm 6.8 Step 4, Prop 6.10)",
+      "path": "illumination-generalization-2026-11-06/review/whole-staircase-candidate.md",
+      "sha256": "e53cdd702d5b7f7ac197f31d8f09a8ff9bdc3b77d10f035db884d2e45bf08698",
+      "pinned_in": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
+      "pinned_sha256": "e53cdd702d5b7f7ac197f31d8f09a8ff9bdc3b77d10f035db884d2e45bf08698",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "whole staircase: independent review (author side)",
+      "path": "illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.md",
+      "sha256": "cce86a198c003df0d0b3cf90aba6babed87d0e245f32d9662d54a5508956f673",
+      "pinned_in": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
+      "pinned_sha256": "cce86a198c003df0d0b3cf90aba6babed87d0e245f32d9662d54a5508956f673",
+      "pin_status": "matches pin"
+    },
+    {
+      "role": "whole staircase: reviewer acceptance record",
+      "path": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
+      "sha256": "8d956c6aaa6a50e03fafc3763c739c84093a1761eb68acbeb38856fa96f0cc2e",
+      "pinned_in": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
+      "pinned_sha256": null,
+      "pin_status": "not pinned by name in that acceptance file; hash recorded here"
+    },
+    {
+      "role": "whole staircase: review request with pinned dependency hashes",
+      "path": "illumination-generalization-2026-11-06/review/whole-staircase-review-request.json",
+      "sha256": "5a0c530547b2dd256ef7bf99d3db26c4b635331ddcc1b497ac9a75dcbb3a6c77",
+      "pinned_in": "illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.json",
+      "pinned_sha256": null,
+      "pin_status": "not pinned by name in that acceptance file; hash recorded here"
+    },
+    {
+      "role": "whole staircase: prescribed symbolic identities and roof-corner controls",
+      "path": "illumination-generalization-2026-11-06/review/whole-staircase-check.py",
+      "sha256": "69c9c3ad482595e9dade5fe5f7e6b1a10ededb16a111f9b2662e048add3c3ba4",
+      "pinned_in": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
+      "pinned_sha256": null,
+      "pin_status": "not pinned by name in that acceptance file; hash recorded here"
+    },
+    {
+      "role": "not required by the final chain (superseded sufficient condition)",
+      "path": "illumination-generalization-2026-11-06/construction/staircase-overlap-supplement.md",
+      "sha256": "83a63d1f432dc949b6d9574299d3f91e1ff6b9e0af0318c6dd6bfa0516d6d433",
+      "pinned_in": "illumination-generalization-2026-11-06/review/staircase-overlap-acceptance.json",
+      "pinned_sha256": "83a63d1f432dc949b6d9574299d3f91e1ff6b9e0af0318c6dd6bfa0516d6d433",
+      "pin_status": "matches pin"
+    }
+  ],
+  "acceptance_records": [
+    {
+      "path": "illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json",
+      "sha256": "848abaadf6a2e13a9a652b6059a4c72c2456dfbda4c8b405f2e235a586f98d3c",
+      "status": "INDEPENDENT_HAND_ACCEPTANCE_RECONCILED",
+      "agent": null,
+      "scope": "All strictly simple orthogonal8wall positive-length metric normal forms; no optical claim for open types",
+      "limits": null
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
+      "sha256": "7ee8342244b36ac3505e6369c3087181b00c8a7ac672cfc48c108105a1f69708",
+      "status": "ACCEPTED_HISTORICAL_THEOREM_WITH_NEW_INDEPENDENT_HAND_RECONSTRUCTION",
+      "agent": null,
+      "scope": "All real six-wall orthogonal rooms and all distinct real interior pairs; orthogonal W<=6 cap-free subclass",
+      "limits": "No diagonal six-wall claim; no two-reflex claim; historical controls not rerun."
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
+      "sha256": "31cd407a59dfd1a16e834a67d61f847b5cbd78423363b411f48464d053ff22c6",
+      "status": "ACCEPTED_WHOLE_ALL_REAL_U_ILLUMINATION_THEOREM",
+      "agent": null,
+      "scope": "Every finite U-shaped orthogonal eight-wall polygon with arbitrary positive real dimensions and every distinct real interior pair; no k bound",
+      "limits": "Not all eight-wall shapes, not a boundary-blocker theorem, not the full W<=21 exclusion."
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/uneven-T-acceptance.json",
+      "sha256": "05283ddbc034aaf3c8b4edce6e1073add2d2e6c47af0183a66f6d08095072057",
+      "status": "INDEPENDENT_HAND_ACCEPTANCE_RECONCILED",
+      "agent": null,
+      "scope": "ALLreal unequal-floor T8 rooms/all distinct interior pairs without k/height/scale restriction",
+      "limits": null
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/construction/T-whole-review.json",
+      "sha256": "dc555a9bad9c2b06e1b6068684d7168deec071716b39a165a9bbd368154b1608",
+      "status": "ACCEPTED_WHOLE_ALL_REAL_UNEQUAL_FLOOR_T8_ILLUMINATION",
+      "agent": null,
+      "scope": "All positive real parameters0<a<b<A and0<u,v<C; all distinct real interior pairs; no k or scale cap",
+      "limits": "Not all8-wall shapes, not allW<=21, no diagonal-wall conclusion"
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
+      "sha256": "ce985837e20ea61498d9e87fb076afa54990e154d3f0f76ba4ec5cd5748e0bbe",
+      "status": "INDEPENDENT_WHOLE_ARBITRARY_REAL_OPTICAL_ACCEPTANCE_RECONCILED",
+      "agent": null,
+      "scope": "All0<a,B<A and0<b<c<C, all distinct real interior pairs; no arm overlap or k bound",
+      "limits": "Not full staircase8, diagonalwall or fullW21 theorem."
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/staircase-window-acceptance.json",
+      "sha256": "71d323c23175489ad12e41a5a327144006808adfa51a2fedf9d547c326a9c9e1",
+      "status": "INDEPENDENTLY_ACCEPTED_ALL_STATED_REAL_METRIC_SUBCLASSES",
+      "agent": null,
+      "scope": "All real staircase8/all distinct actual interior pairs under b\u00b2>=aA OR b(d-c)>=ac OR d\u00b2>=cH OR d(b-a)>=ca; additional pairwise rho conditions accepted",
+      "limits": "All-four-fail thin-middle region remains open. Not full8wall or fullW21 theorem."
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json",
+      "sha256": "222a06841733492383bf72735d941314e6ae6e204e67c02e30adf4f106184d6f",
+      "status": "INDEPENDENTLY_ACCEPTED_WHOLE_STATED_REAL_ROOF_SUBCLASS",
+      "agent": null,
+      "scope": "All real staircase/all distinct interior pairs if H>=3d OR A>=3b; stated pairwise v>=2T0 accepted",
+      "limits": "Not full staircase or fullW21. First actual target may precede the developed endpoint; truncate valid path."
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json",
+      "sha256": "028ab2900048258bd084c385467e9f762a92846b344f7e64d59e2631c58a990b",
+      "status": "INDEPENDENT_WHOLE_SOURCE_FLOOR_ACCEPTANCE_RECONCILED",
+      "agent": null,
+      "scope": "ALLreal staircase/all actual interior pairs under F OR Ft",
+      "limits": "Not all staircases or main W21 theorem. Explicit accepted scope only."
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/staircase-overlap-acceptance.json",
+      "sha256": "dd75a590dd274dda5e3ec9e936676839a67b5ff2fd3a7c84da37e70fccf48e2d",
+      "status": "INDEPENDENTLY_ACCEPTED_WHOLE_STATED_OVERLAP_SUBCLASS",
+      "agent": null,
+      "scope": "No-roof pairwise Ht>=T0 and ALLreal staircase/allpairs if H>=5d/2 OR A>=5b/2",
+      "limits": "Not all staircases or main W21 theorem. Explicit accepted scope only."
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
+      "sha256": "8d956c6aaa6a50e03fafc3763c739c84093a1761eb68acbeb38856fa96f0cc2e",
+      "status": "ACCEPTED_WHOLE_REAL_ORTHOGONAL_W_LE_8",
+      "agent": "Codex01a1a00f",
+      "scope": "Every strictly simple real orthogonal polygon with at most eight maximal walls, every distinct interior pair; delivered independent peer acceptance reconciled",
+      "limits": null
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.json",
+      "sha256": "6c4b930bcc39ed3932915061ce944b039173b4203f05b363917ce49e90ffb790",
+      "status": "ACCEPTED_WHOLE_REAL_STAIRCASE_AND_ORTHOGONAL_W_LE_8",
+      "agent": "Codex01a18403",
+      "scope": "Every finite strictly simple orthogonal polygon with <=8 maximal straight walls; every distinct real interior pair",
+      "limits": null
+    },
+    {
+      "path": "illumination-generalization-2026-11-06/review/whole-staircase-review-request.json",
+      "sha256": "5a0c530547b2dd256ef7bf99d3db26c4b635331ddcc1b497ac9a75dcbb3a6c77",
+      "status": "FROZEN_UNREVIEWED_NEW_WHOLE_STAIRCASE_CANDIDATE",
+      "agent": null,
+      "scope": null,
+      "limits": null
+    }
+  ],
+  "packet_files": {
+    "cover-note.md": "d570037a9fbe75fd050cb3b1831233059858957e5aed7f8b8e038d0e3e8b0e4a",
+    "coverage.md": "116df2ddc2b2eff3d80a25f45b3091adb660a164507e5cb61580ab4522884e15",
+    "figures/fig-L.svg": "090baf8733a3eff24c102a2ff68e0c90b4fcfcfa89a2d76eab6fbf0cc5f588cb",
+    "figures/fig-T.svg": "9920d1a890a1935e7e6dec59a0fcc2954f8896efad1bc6af311e0b155a7c4d80",
+    "figures/fig-U.svg": "3c43d5c3031fe2de6d69b30ffb487670abc945610e9fbbec6646dfac99cbc45a",
+    "figures/fig-normal-forms.svg": "51a815e74a6a626f008e2df872ceb63cedc9ffa66b3fef86b656cadd9ed25240",
+    "figures/fig-staircase-floor.svg": "3de6063c75f56c135f9cc8958ffcc8b5466cb9bf8cbc0572e31714fb28b67b4e",
+    "figures/fig-staircase-roof.svg": "2c7b8f167bbf7488ff52888adda16fc47a7fb6d7cc46f48070cca58bd3bcaa10",
+    "figures/fig-wide-middle.svg": "1a936e842d6e79e6f2b7dcac84aacca9b87ec3e33effee4676f6343d12e9badd",
+    "figures/make_figures.py": "a82aecbd1b7eb63aa5ec115891ea8e73de685112dbdbfec1f27e431665434aba",
+    "figures/paths.json": "541c058e8d842c002d3cf74b1f875ba7b4b3ab612ccac220ded7147b98a2e43a",
+    "make_manifest.py": "5583866cc48f0db34024a12193446220021b661d1e41332112b7621f31defbd7",
+    "reproduce.md": "0490d0c36a71fb2f2998e6b5dd806a2bf88ce19dc1b00252907d8bde35a0d6c4",
+    "reproduce.sh": "133a74e8421ecc6e94d37ecb83dd9051c6e1ec92753f4519e7b49f15ac6133d3",
+    "theorem-and-proof.md": "40b7f9805789809592072679f5a30882b09812b8641a4f26069e5bb16f2aa0cf"
   }
- ],
- "acceptance_records": [
-  {
-   "path": "illumination-generalization-2026-11-06/review/eight-wall-frontier-acceptance.json",
-   "sha256": "848abaadf6a2e13a9a652b6059a4c72c2456dfbda4c8b405f2e235a586f98d3c",
-   "status": "INDEPENDENT_HAND_ACCEPTANCE_RECONCILED",
-   "agent": null,
-   "scope": "All strictly simple orthogonal8wall positive-length metric normal forms; no optical claim for open types",
-   "limits": null
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/all-real-L-dependency-acceptance.json",
-   "sha256": "7ee8342244b36ac3505e6369c3087181b00c8a7ac672cfc48c108105a1f69708",
-   "status": "ACCEPTED_HISTORICAL_THEOREM_WITH_NEW_INDEPENDENT_HAND_RECONSTRUCTION",
-   "agent": null,
-   "scope": "All real six-wall orthogonal rooms and all distinct real interior pairs; orthogonal W<=6 cap-free subclass",
-   "limits": "No diagonal six-wall claim; no two-reflex claim; historical controls not rerun."
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/all-real-U-dependency-acceptance.json",
-   "sha256": "31cd407a59dfd1a16e834a67d61f847b5cbd78423363b411f48464d053ff22c6",
-   "status": "ACCEPTED_WHOLE_ALL_REAL_U_ILLUMINATION_THEOREM",
-   "agent": null,
-   "scope": "Every finite U-shaped orthogonal eight-wall polygon with arbitrary positive real dimensions and every distinct real interior pair; no k bound",
-   "limits": "Not all eight-wall shapes, not a boundary-blocker theorem, not the full W<=21 exclusion."
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/uneven-T-acceptance.json",
-   "sha256": "05283ddbc034aaf3c8b4edce6e1073add2d2e6c47af0183a66f6d08095072057",
-   "status": "INDEPENDENT_HAND_ACCEPTANCE_RECONCILED",
-   "agent": null,
-   "scope": "ALLreal unequal-floor T8 rooms/all distinct interior pairs without k/height/scale restriction",
-   "limits": null
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/construction/T-whole-review.json",
-   "sha256": "dc555a9bad9c2b06e1b6068684d7168deec071716b39a165a9bbd368154b1608",
-   "status": "ACCEPTED_WHOLE_ALL_REAL_UNEQUAL_FLOOR_T8_ILLUMINATION",
-   "agent": null,
-   "scope": "All positive real parameters0<a<b<A and0<u,v<C; all distinct real interior pairs; no k or scale cap",
-   "limits": "Not all8-wall shapes, not allW<=21, no diagonal-wall conclusion"
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/wide-middle-onepass-acceptance.json",
-   "sha256": "ce985837e20ea61498d9e87fb076afa54990e154d3f0f76ba4ec5cd5748e0bbe",
-   "status": "INDEPENDENT_WHOLE_ARBITRARY_REAL_OPTICAL_ACCEPTANCE_RECONCILED",
-   "agent": null,
-   "scope": "All0<a,B<A and0<b<c<C, all distinct real interior pairs; no arm overlap or k bound",
-   "limits": "Not full staircase8, diagonalwall or fullW21 theorem."
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/staircase-window-acceptance.json",
-   "sha256": "71d323c23175489ad12e41a5a327144006808adfa51a2fedf9d547c326a9c9e1",
-   "status": "INDEPENDENTLY_ACCEPTED_ALL_STATED_REAL_METRIC_SUBCLASSES",
-   "agent": null,
-   "scope": "All real staircase8/all distinct actual interior pairs under b\u00b2>=aA OR b(d-c)>=ac OR d\u00b2>=cH OR d(b-a)>=ca; additional pairwise rho conditions accepted",
-   "limits": "All-four-fail thin-middle region remains open. Not full8wall or fullW21 theorem."
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/staircase-roof-acceptance.json",
-   "sha256": "222a06841733492383bf72735d941314e6ae6e204e67c02e30adf4f106184d6f",
-   "status": "INDEPENDENTLY_ACCEPTED_WHOLE_STATED_REAL_ROOF_SUBCLASS",
-   "agent": null,
-   "scope": "All real staircase/all distinct interior pairs if H>=3d OR A>=3b; stated pairwise v>=2T0 accepted",
-   "limits": "Not full staircase or fullW21. First actual target may precede the developed endpoint; truncate valid path."
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/staircase-floor-acceptance.json",
-   "sha256": "028ab2900048258bd084c385467e9f762a92846b344f7e64d59e2631c58a990b",
-   "status": "INDEPENDENT_WHOLE_SOURCE_FLOOR_ACCEPTANCE_RECONCILED",
-   "agent": null,
-   "scope": "ALLreal staircase/all actual interior pairs under F OR Ft",
-   "limits": "Not all staircases or main W21 theorem. Explicit accepted scope only."
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/staircase-overlap-acceptance.json",
-   "sha256": "dd75a590dd274dda5e3ec9e936676839a67b5ff2fd3a7c84da37e70fccf48e2d",
-   "status": "INDEPENDENTLY_ACCEPTED_WHOLE_STATED_OVERLAP_SUBCLASS",
-   "agent": null,
-   "scope": "No-roof pairwise Ht>=T0 and ALLreal staircase/allpairs if H>=5d/2 OR A>=5b/2",
-   "limits": "Not all staircases or main W21 theorem. Explicit accepted scope only."
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/whole-staircase-acceptance.json",
-   "sha256": "8d956c6aaa6a50e03fafc3763c739c84093a1761eb68acbeb38856fa96f0cc2e",
-   "status": "ACCEPTED_WHOLE_REAL_ORTHOGONAL_W_LE_8",
-   "agent": "Codex01a1a00f",
-   "scope": "Every strictly simple real orthogonal polygon with at most eight maximal walls, every distinct interior pair; delivered independent peer acceptance reconciled",
-   "limits": null
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/construction/whole-staircase-independent-review.json",
-   "sha256": "6c4b930bcc39ed3932915061ce944b039173b4203f05b363917ce49e90ffb790",
-   "status": "ACCEPTED_WHOLE_REAL_STAIRCASE_AND_ORTHOGONAL_W_LE_8",
-   "agent": "Codex01a18403",
-   "scope": "Every finite strictly simple orthogonal polygon with <=8 maximal straight walls; every distinct real interior pair",
-   "limits": null
-  },
-  {
-   "path": "illumination-generalization-2026-11-06/review/whole-staircase-review-request.json",
-   "sha256": "5a0c530547b2dd256ef7bf99d3db26c4b635331ddcc1b497ac9a75dcbb3a6c77",
-   "status": "FROZEN_UNREVIEWED_NEW_WHOLE_STAIRCASE_CANDIDATE",
-   "agent": null,
-   "scope": null,
-   "limits": null
-  }
- ],
- "packet_files": {
-  "cover-note.md": "d570037a9fbe75fd050cb3b1831233059858957e5aed7f8b8e038d0e3e8b0e4a",
-  "coverage.md": "116df2ddc2b2eff3d80a25f45b3091adb660a164507e5cb61580ab4522884e15",
-  "figures/fig-L.svg": "090baf8733a3eff24c102a2ff68e0c90b4fcfcfa89a2d76eab6fbf0cc5f588cb",
-  "figures/fig-T.svg": "9920d1a890a1935e7e6dec59a0fcc2954f8896efad1bc6af311e0b155a7c4d80",
-  "figures/fig-U.svg": "3c43d5c3031fe2de6d69b30ffb487670abc945610e9fbbec6646dfac99cbc45a",
-  "figures/fig-normal-forms.svg": "51a815e74a6a626f008e2df872ceb63cedc9ffa66b3fef86b656cadd9ed25240",
-  "figures/fig-staircase-floor.svg": "3de6063c75f56c135f9cc8958ffcc8b5466cb9bf8cbc0572e31714fb28b67b4e",
-  "figures/fig-staircase-roof.svg": "2c7b8f167bbf7488ff52888adda16fc47a7fb6d7cc46f48070cca58bd3bcaa10",
-  "figures/fig-wide-middle.svg": "1a936e842d6e79e6f2b7dcac84aacca9b87ec3e33effee4676f6343d12e9badd",
-  "figures/make_figures.py": "a82aecbd1b7eb63aa5ec115891ea8e73de685112dbdbfec1f27e431665434aba",
-  "figures/paths.json": "541c058e8d842c002d3cf74b1f875ba7b4b3ab612ccac220ded7147b98a2e43a",
-  "make_manifest.py": "5583866cc48f0db34024a12193446220021b661d1e41332112b7621f31defbd7",
-  "reproduce.md": "0490d0c36a71fb2f2998e6b5dd806a2bf88ce19dc1b00252907d8bde35a0d6c4",
-  "reproduce.sh": "133a74e8421ecc6e94d37ecb83dd9051c6e1ec92753f4519e7b49f15ac6133d3",
-  "theorem-and-proof.md": "40b7f9805789809592072679f5a30882b09812b8641a4f26069e5bb16f2aa0cf"
- }
 }

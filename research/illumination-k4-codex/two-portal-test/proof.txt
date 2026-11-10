@@ -62,4 +62,4 @@ My recommendation is to retire the forward-only compatibility claim and lower co
 
 6. Validation
 check.py is an independent direct geometric replay of the SINGLE analytically supplied path. It checks the12-edge boundary is orthogonal and strictly simple, exact area4, convex/reflex count8/4, interior marks, the earliest actual boundary contact on every leg, absence of corner hits, every specular reflection, and final target. It also checks the two affine interval branches and actual portal crossings exactly. check.json reports PASS,10reflections. It does not numerically test the real-parameter theorem: that is established by the argument in section3.
-No room/assignment/direction/reflection-word discovery search, solver, orbit traversal, archive lookup, worker or external communication was used. No new novelty assertion. Existing peerDelta3 work and GOALS.md were untouched.
+No room/assignment/direction/reflection-word discovery search, solver, orbit traversal, archive lookup, worker or external communication was used.  Existing peerDelta3 work and GOALS.md were untouched.

@@ -176,4 +176,4 @@ Prior surplus-four completion remains unchanged.
 No new discovery, whole-room/ray census, worker, peer-source edit, branch
 change, commit or external communication. No claim about unequal depths,
 all interior pairs in this twelve-wall room, other twelve-wall rooms,
-historical novelty, a uniform bound, or the universal22-wall minimum.
+historical, a uniform bound, or the universal22-wall minimum.

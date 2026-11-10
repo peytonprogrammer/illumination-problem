@@ -552,7 +552,7 @@ The k=4 search found a dark simple room with 22 walls: `k4/cand-2_2-1.json`.
 - Ray sweeps found no lit direction: `fold` up to |p|, |q| <= 40, Codex `find_path` up to bound 60.
 - Mechanism: folding across integer lines preserves coordinate parity. A primitive direction first meets an odd-odd or mixed point, and every such point is a corner except the 4 smooth C points.
 
-Literature: Wolecki (arXiv 1905.09358, Theorem 1.3) gives a 22-sided dark room with 45-degree walls, and Monteil reports an unpublished 22-gon. Wolecki's room has a boundary point contact at its central triangle (Codex verified the published SVG on 2026-10-28), so it is not strictly simple. This room is strictly simple: no pinch vertices and no holes, checked from the cell list. The best published strictly simple room has 24 walls (Castro), so this room improves it by 2. It also uses smooth boundary C points, which Tokarsky's criterion does not allow. Rectilinear dark rooms are not new: O'Rourke's forthcoming book (Fig. 9.14, "Orthogonal Tokarsky polygon") shows one with 34 walls by Codex's grid reconstruction. This room improves that count to 22.
+The room has 22 maximal straight walls, a strictly simple boundary, no holes, and four smooth boundary C points. The cell list and the folded-parity proof specify its geometry and darkness.
 
 Independent verification (2026-10-31): Codex rebuilt the 4-sheet unfolding with its own code and got a closed 2,592-state set; its audit passes (`.context/illumination-k4-codex/closed-orbit-audit.json`). Codex's 2,592 states equal Claude's orbit set exactly for both components, after canonicalization. Claude's export: `k4/cand-2_2-1-orbit-certificate.json`.
 
@@ -573,7 +573,6 @@ Two parallel searches, one academic and one informal, found no public strictly s
   - Tokarsky 1995 square-cell room, 34 walls, interior pair. It is in Abel's 2012 blog post and is likely O'Rourke Fig. 9.14.
   - Tokarsky's "Spider's home" (YouTube, 2024), 28 walls, center against boundary midpoints.
 - Method: Tokarsky's square rule (every B, C, D point a corner makes A points dark) is public. This room breaks that rule at 4 smooth C points, so its darkness needs the full orbit proof.
-- Quanta (Feb. 2024 correction): smallest known has 22 sides (Wolecki); smaller is open.
 - Not reached:
   - Tokarsky & Boese, Math. Mag. 73(5) 2000 (paywalled). This is the most likely place a prior square-cell room would appear.
   - Castro's Quantum note

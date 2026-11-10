@@ -28,4 +28,4 @@ My overlapping long-stem T construction also passed8640 prescribed exact paths, 
 
 ## Scope
 
-ALL equal/unequal-floor T8 rooms in the stated normal form illuminate every distinct real interior pair at arbitrary k. All-real L6 and U8 retain their earlier independent acceptances. Eight-wall staircase and offset-corridor types, diagonal-wall polygons, and the full uncapped W<=21 target remain open. No novelty or universal-minimum claim is made.
+ALL equal/unequal-floor T8 rooms in the stated normal form illuminate every distinct real interior pair at arbitrary k. All-real L6 and U8 retain their earlier independent acceptances. Eight-wall staircase and offset-corridor types, diagonal-wall polygons, and the full uncapped W<=21 target remain open. No universal-minimum claim is made.

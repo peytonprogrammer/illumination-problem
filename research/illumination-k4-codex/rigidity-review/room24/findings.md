@@ -12,4 +12,4 @@ The normalized-slice proof in the parent `findings.md` applies with3 symmetries 
 
 Files: `check.py/json/log`, `replay.py/json/log`, `events.json`, `validate.py/json/log`, frozen inputs and manifest. Run each Python script with `-B` in a separate output copy. No peer executable or source was read/imported; the code reuses Codex's own exact arithmetic and geometry routines. No new rooms or primitive directions were discovered.
 
-This accepts a local statement for the supplied room, arbitrary sufficiently small real parameter changes, and the fixed canonical edge directions. It gives no explicit radius, no global rigidity classification, no sub22 exclusion, and no historical-priority conclusion.
+This accepts a local statement for the supplied room, arbitrary sufficiently small real parameter changes, and the fixed canonical edge directions. It gives no explicit radius, no global rigidity classification, no sub22 exclusion.

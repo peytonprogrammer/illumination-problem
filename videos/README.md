@@ -17,4 +17,4 @@ The spiral video explains the tall-or-wide all-real theorem and the separate cop
 
 The native source is HTML/CSS/JavaScript: `index.html` mounts scenes from `compositions/`, whose SVG diagrams and paused GSAP timelines define every frame. Narration audio, scripts, timings, chapter markers, and project configuration are included. Open a project's README for preview and render commands. Python is used only by the shared delivery-render helper; it is not needed to edit scene HTML.
 
-[manifest.json](manifest.json) binds each MP4 to its duration, scope, HyperFrames version, manuscript source hash, and delivered video checksum. Each film's `SOURCES.md` identifies its mathematical source. These videos explain working manuscripts; they do not replace mathematical refereeing or establish novelty.
+[manifest.json](manifest.json) binds each MP4 to its duration, scope, HyperFrames version, manuscript source hash, and delivered video checksum. Each film's `SOURCES.md` identifies its mathematical source. These videos explain working manuscripts; they do not replace mathematical refereeing.

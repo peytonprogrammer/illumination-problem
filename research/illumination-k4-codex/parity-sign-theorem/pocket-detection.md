@@ -989,7 +989,7 @@ incorporated. No independent numerical execution by that reviewer is claimed.
 ## 18. Literature boundary for the new quotient route
 
 The rotational quotient of a rational polygon unfolding as its doubled
-sphere is established background, not a novelty claim here. It appears
+sphere is established background,  here. It appears
 explicitly in the proof of Proposition3.11 of
 [Apisa–Wright, Marked points on translation surfaces, Section3.2](https://websites.umich.edu/~alexmw/ApisaWright.pdf).
 Our use is the gonality test in Sections12-13 and the explicit halfturn and
@@ -1330,7 +1330,7 @@ and the quadratic-with-simple-poles version is used in the cited quadratic
 degeneration literature. The independent analytic-correspondence strategy
 is unnecessary for this proof. Review sources are archived in
 `inputs/pocket-periodic-first/`, `inputs/pocket-periodic-second/`, and the
-current `pocket-periodic-review.txt`. No novelty claim is made for the
+current `pocket-periodic-review.txt`. No is made for the
 periodicity consequence before a separate literature comparison.
 
 
@@ -4460,7 +4460,7 @@ Section2 ALREADY states the exact neutral slope interval and the
 t-independent D H D return map. This appendix supplies explicit hit
 coordinates, flight time and conditional finite-event persistence for
 that same channel. Independent review of these added details is pending.
-The prior description as a new exact-domain result overstated its novelty.
+The prior description as a new exact-domain result overstated its.
 No room/ray/word search or room counterexample is supplied.
 
 Normalize the literal triangle to vertices B=(0,0), A=(1,1), C=(0,1),

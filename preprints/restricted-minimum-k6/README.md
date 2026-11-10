@@ -6,7 +6,7 @@ Working draft v0.1, November 8, 2026.
 
 A computer-assisted lower bound for canonical45 triangle disks with at most six transparent non-A lattice points, followed by a strict whole-copy fold corollary. The finite support and optical certificate dependencies are explicit. This does not prove a minimum for arbitrary polygons.
 
-Historical novelty is unconfirmed. These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
+These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
 
 ## Mathematical sources
 

@@ -13,7 +13,7 @@ Each piece has a pinned source file and an acceptance record; see
 inequality by hand while writing this note. No step has been machine-verified
 in a proof assistant, and no human mathematician has refereed it. The exact
 checks listed in `reproduce.md` evaluate the formulas on fixed inputs; they
-are controls, not proofs. No novelty claim is made; see `cover-note.md`.
+are controls, not proofs. see `cover-note.md`.
 
 A subsequent coordinator hand review corrected the partial-window transcription
 and made the U-room seam case and smooth-wall contact bounds explicit. The
@@ -875,5 +875,4 @@ The theorem is restricted to orthogonal rooms with at most eight maximal
 walls. It says nothing about rooms with ten or more walls, rooms with
 diagonal walls, blockers on walls, or the illumination of boundary points.
 No bound on the number of reflections is claimed; the U construction in
-particular uses a number of reflections that depends on the marks. No
-priority or novelty is claimed; the result is elementary and may be known.
+particular uses a number of reflections that depends on the marks.

@@ -2,7 +2,7 @@
 
 [done] WHOLE assigned corridor theorem independently ACCEPTED. Read whole-result-review.md and whole-result-acceptance.json for the exact arbitrary-real statement, complete proof join, source hashes and limits. All historical open items below are superseded by this checkpoint; historical frozen receipts remain unchanged.
 
-[done] New independent checks: all10,000line assignments;8three-pass phase polygons;all74uniform family covers/3,952relativecells;complete22,538room support including166exceptional-point rectangles;all22,538continuous optical covers/770,912savedclauses/3,085,728guardidentities. Own153physicalpaths/6,363contacts pass. All326source/snapshotchecks PASS. No remaining mathematical gaps or review findings. No uniform reflection bound, all-interior-pair result, novelty or universal minimum claimed. Native numeric token budget absent.
+[done] New independent checks: all10,000line assignments;8three-pass phase polygons;all74uniform family covers/3,952relativecells;complete22,538room support including166exceptional-point rectangles;all22,538continuous optical covers/770,912savedclauses/3,085,728guardidentities. Own153physicalpaths/6,363contacts pass. All326source/snapshotchecks PASS. No remaining mathematical gaps or review findings. No uniform reflection bound, all-interior-pair result or universal minimum claimed. Native numeric token budget absent.
 
 **Next move:** No assigned obligation remains. Preserve accepted proof and exact replay artifacts; no new research scope starts automatically.
 

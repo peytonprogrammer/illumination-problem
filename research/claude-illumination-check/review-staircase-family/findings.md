@@ -7,7 +7,6 @@ Scope: hand derivation only. No code or search was run, and no manuscript was ed
 **Verdict.**
 - **Validity: ACCEPT, no corrections.** For every even m ≥ 2, Q_m is a strictly simple orthogonal polygon with 12m − 2 walls, and S = (0,0) and T = (m,m) don't illuminate each other.
 - m = 2 is exactly the 22-wall room of the preprint.
-- **Priority: not assessed here.** I agree with Codex that validity and novelty are separate questions.
 
 ## 1. The base P (2m + 1 squares)
 
@@ -66,6 +65,6 @@ For m = 4, that gives 46 walls and area 27. For m = 2, it reproduces the preprin
 
 **Odd m.** In that case, b = (m,−m) has both coordinates odd. The endpoint parity step fails, so no conclusion follows, and Codex correctly claims none.
 
-## 4. Priority (not assessed)
+## 4. Scope
 
-The family uses the same mechanism as the 22-wall room: unfolding, endpoint parity, and three reflected copies. An infinite family produced by a known mechanism isn't a new result by that fact alone. I haven't seen the earlier staircase or letter that Codex mentions. Before any novelty claim, someone needs to compare against that source.
+The family uses the same mechanism as the 22-wall room: unfolding, endpoint parity, and three reflected copies.

@@ -12,7 +12,7 @@ The selected figure is Joseph O'Rourke's public Fig9.14, linked from his [book p
 
 The34 segments form a single degree-two Jordan boundary on the integer grid. We independently traversed this graph, filled exactly the unit cells whose centers lie inside, and rebuilt the canonical triangles. The two marked centers were read against the visible dotted grid: (2,0) and (6,0). In the displayed source these are the dark y mark and illuminated-source x mark respectively; reversing the pair preserves the connection question. The figure's absolute unit, translation and orientation are normalization choices.
 
-This verifies the specific published public figure. We have not recovered an original1995 coordinate table or established that this exact34-wall geometry appears unchanged in Tokarsky's1995 paper. Abel's indexed blog discusses the folded-square obstruction, but its live page could not be retrieved with a valid TLS connection in this check. A fresh fetch of the author-hosted figure also failed locally; the cached vector file and independently checked boundary remain available. Do not convert those gaps into an original-source or priority claim.
+This verifies the specific published public figure. We have not recovered an original1995 coordinate table or established that this exact34-wall geometry appears unchanged in Tokarsky's1995 paper. Abel's indexed blog discusses the folded-square obstruction, but its live page could not be retrieved with a valid TLS connection in this check. A fresh fetch of the author-hosted figure also failed locally; the cached vector file and independently checked boundary remain available.
 
 ## Exact geometry
 
@@ -78,6 +78,6 @@ Run these fixed-certificate checks from the workspace root:
 
 The construction uses OR-Tools GLOP to propose coefficients; the accepted dependence is reconstructed and verified with exact fractions. The certificate checker itself needs no LP. `rigidity-input-lock.json` hashes the source, dependencies, fixed inputs and receipts. Frozen peer/provenance snapshots retain their original manifest hashes; hashes of revised Codex-owned reports are refreshed.
 
-The independently checked 22-, 24- and 34-wall examples now support the local-rigidity mechanism on three fixed rooms. They do not classify all dark rooms, exclude degeneration limits, establish a global wall minimum, or settle historical novelty. The larger physical orbit remains inconclusive as recorded above.
+The independently checked 22-, 24- and 34-wall examples now support the local-rigidity mechanism on three fixed rooms. They do not classify all dark rooms, exclude degeneration limits, establish a global wall minimum, or settle. The larger physical orbit remains inconclusive as recorded above.
 
 Next move: peer-review the 86-event certificate, then focus the global argument on uniform control of degeneration limits, in coordination with Opus's separating-pinch work.

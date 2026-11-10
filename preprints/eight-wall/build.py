@@ -10,7 +10,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 PACKET = ROOT / 'research/illumination-generalization-2026-11-06/fable/eight-wall-review-packet'
 SOURCE = PACKET / 'theorem-and-proof.md'
-PIN = '7b52c59cc6e3d1949b1347fb4d594aa93f6b4d4ca76d793050415a19f82526e8'
+PIN = '335e29267bdb3354ca43bd990094b2cbe9ca46d2d4f727b5fe927f1a818969f4'
 GREEK = set('tau rho theta alpha beta lambda mu delta ell eta sigma Sigma Lambda Beta'.split())
 WORDS = set('the first strictly greater than where in not or and with on way up length is to if for'.split())
 
@@ -112,7 +112,7 @@ FRONT = r'''\documentclass[11pt]{article}
 \begin{document}
 \maketitle
 \begin{abstract}
-Every finite strictly simple orthogonal polygon with at most eight maximal walls illuminates every pair of distinct interior points by a finite specular path avoiding every polygon corner. We present a constructive proof for arbitrary real dimensions and endpoints. A turning-angle classification gives six normal forms. Orientation-controlled paths in L rooms cover many endpoint placements; the remaining U, offset-corridor and staircase cases use explicit folding constructions. The staircase proof combines floor and roof charts whose sufficient inequalities exhaust all admissible metrics. Seam endpoints, rounding ties and potential floor or roof corner contacts are treated explicitly. There is no lattice or rationality assumption and no uniform bound on reflections is asserted. Historical priority is unconfirmed; no novelty claim is made.
+Every finite strictly simple orthogonal polygon with at most eight maximal walls illuminates every pair of distinct interior points by a finite specular path avoiding every polygon corner. We present a constructive proof for arbitrary real dimensions and endpoints. A turning-angle classification gives six normal forms. Orientation-controlled paths in L rooms cover many endpoint placements; the remaining U, offset-corridor and staircase cases use explicit folding constructions. The staircase proof combines floor and roof charts whose sufficient inequalities exhaust all admissible metrics. Seam endpoints, rounding ties and potential floor or roof corner contacts are treated explicitly. There is no lattice or rationality assumption and no uniform bound on reflections is asserted.
 \end{abstract}
 \begin{center}\small Draft for external mathematical review. Not submitted or externally refereed.\end{center}
 \section*{Reader's guide and provenance}
@@ -186,7 +186,7 @@ The runner copies inputs into a temporary workspace and runs twelve prescribed s
 \item Theorem 6.8, Step 4: a candidate roof-corner contact implies an earlier encounter with the actual target, including its seam case.
 \item Proposition 6.10: the four staircase conditions exhaust all positive real metrics.
 \end{enumerate}
-No literature-priority review is supplied by this typesetting update. A submission version would require a dedicated literature discussion, settled author details and an explicit record of any further mathematical revisions.
+A submission version would require a dedicated literature discussion, settled author details and an explicit record of any further mathematical revisions.
 
 \clearpage
 \section*{Appendix B. Prescribed example paths}
@@ -214,7 +214,7 @@ def main():
         figures.append(r'\begin{figure}[htbp]\centering\includegraphics[width=0.70\linewidth,height=0.30\textheight,keepaspectratio]{figures/'+name+r'.pdf}\caption{'+caption+r'}\end{figure}')
     tex=FRONT+render_body(body)+BACK.replace('FIGURES_HERE','\n'.join(figures))
     (HERE/'manuscript.tex').write_text(tex)
-    (HERE/'provenance.json').write_text(json.dumps({'source_path':str(SOURCE.relative_to(ROOT)),'source_sha256':sha,'body_start':'## 0. Conventions and statement','proof_text_policy':'all source proof paragraphs and displays retained; typesetting-only translation','mathematics_extended':False,'novelty_claim':False,'external_refereeing':False},indent=2)+'\n')
+    (HERE/'provenance.json').write_text(json.dumps({'source_path':str(SOURCE.relative_to(ROOT)),'source_sha256':sha,'body_start':'## 0. Conventions and statement','proof_text_policy':'all source proof paragraphs and displays retained; typesetting-only translation','mathematics_extended':False,'external_refereeing':False},indent=2)+'\n')
     print('Generated manuscript.tex from pinned corrected proof:',sha)
 
 

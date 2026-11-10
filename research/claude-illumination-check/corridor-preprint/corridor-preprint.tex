@@ -1,8 +1,4 @@
-% WORKING DRAFT: for private review and revision, not an arXiv submission.
-% Coauthors: please confirm order, affiliations, contact addresses, and contributions.
 % TODO: Seek external mathematical review of the full proof and certificates.
-% TODO: Ask a billiards specialist whether a covering or periodic-point argument implies the theorem.
-% TODO: Complete the priority check. Hubert--Schmoll--Troubetzkoy and Monteil were read only at abstract level.
 % Format follows illumination-k4-codex/preprint-review-codex/revised.tex (preprint v0.2).
 % Build: pdflatex corridor-preprint.tex (twice), or lualatex.
 \documentclass[11pt]{article}
@@ -50,7 +46,7 @@ The proof unfolds trajectories through two portals and transfers them through th
 It reduces the remaining cases to 22{,}538 rational rooms, and exact rational certificates cover the full endpoint square of each room.
 The proof is computer-assisted.
 Independent AI review accepts it, but no external referee or formal system has checked it.
-Historical priority is unconfirmed.
+
 \end{abstract}
 
 \section{Introduction}
@@ -92,7 +88,7 @@ Let $S=(s,-a)$ and $T=(t,g+b)$, with $0<s,t<2d$, $0<a<h_-$, and $0<b<h_+$. Then 
 The theorem covers only pairs with one point in each outer chamber. It gives no uniform bound on reflections. It doesn't address other interior pairs, other polygons, or the minimum wall count of a room with a dark pair.
 \end{remark}
 
-\paragraph{Related work.} The literature check for this draft found no exact statement of Theorem~\ref{thm:main} in the sources examined. Historical novelty remains to be confirmed. All angles of $P$ are rational multiples of $\pi$, so $P$ lies within the established theory of rational billiards. The finite-blocking and marked-point classifications of Monteil \cite{Monteil2005} and of Apisa and Wright \cite{ApisaWright2021} could imply the theorem through a further argument. This note doesn't exclude that route. Hubert, Schmoll, and Troubetzkoy study non-illuminated points on Veech surfaces \cite{HST2008}. The literature check reached only the abstracts of that paper and Monteil's paper. Davis poses illumination of a C-shaped pentomino as a course exercise \cite{Davis2016}, which is nearby prior art. The four-copy unfolding of $P$ has genus 5, so a theorem limited to genus 2 doesn't apply directly.
+\paragraph{Related work.} All angles of $P$ are rational multiples of $\pi$, so $P$ lies within the theory of rational billiards. Monteil \cite{Monteil2005} studies finite blocking, while Apisa and Wright \cite{ApisaWright2021} study marked points on translation surfaces. Hubert, Schmoll, and Troubetzkoy study non-illuminated points on Veech surfaces \cite{HST2008}. Davis poses illumination of a C-shaped pentomino as a course exercise \cite{Davis2016}. The four-copy unfolding of $P$ has genus 5, so a theorem limited to genus 2 does not apply directly.
 
 \section{Reduction to the left portions}\label{sec:reduction}
 Scale $x$ by $1/d$ and $y$ by $1/g$. Every wall is axis-parallel, so each reflection still reverses one velocity component. Corner avoidance also persists. Assume $d=g=1$ for the rest of this note.

@@ -1,6 +1,6 @@
 # Exact oblique illumination of the frozen ten-wall axis-obstruction control
 
-Status: own HAND construction, exact prescribed full-path verification PASS; offered for reciprocal review. This proves illumination of the ONE frozen room/pair. It does not prove all-metric staircase10, all native placements, allr3, or the broad r<=8 objective. No novelty claim.
+Status: own HAND construction, exact prescribed full-path verification PASS; offered for reciprocal review. This proves illumination of the ONE frozen room/pair. It does not prove all-metric staircase10, all native placements, allr3, or the broad r<=8 objective.
 
 ## Frozen geometry and actual marks
 

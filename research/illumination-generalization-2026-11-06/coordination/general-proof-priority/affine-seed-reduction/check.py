@@ -56,6 +56,6 @@ time = sum((b[1]-a[1])/9 for a,b in zip(path,path[1:]))
 assert time == 4
 portal = path[1][0]+(16-path[1][1])*(path[2][0]-path[1][0])/(path[2][1]-path[1][1])
 assert portal == portal_seed
-out = {'status':'PASS_PRESCRIBED_CALIBRATION','checker_source':str(source),'checker_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'source_image':list(S),'target_image':list(U),'corner_images':corner_images,'boundary_identity_checks':boundaries,'path':[[str(x),str(y)] for x,y in path],'launch_direction':[-25,9],'time':str(time),'portal_x':str(portal),**result,'scope':'One formula-derived path and affine calibration; gluing and integer-set arguments also require the written hand proof. No universal orbit coverage or novelty established.','search':False}
+out = {'status':'PASS_PRESCRIBED_CALIBRATION','checker_source':str(source),'checker_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'source_image':list(S),'target_image':list(U),'corner_images':corner_images,'boundary_identity_checks':boundaries,'path':[[str(x),str(y)] for x,y in path],'launch_direction':[-25,9],'time':str(time),'portal_x':str(portal),**result,'scope':'One formula-derived path and affine calibration; gluing and integer-set arguments also require the written hand proof. No universal orbit coverage established.','search':False}
 (HERE/'check.json').write_text(json.dumps(out,indent=2)+'\n')
 print(json.dumps(out,indent=2))

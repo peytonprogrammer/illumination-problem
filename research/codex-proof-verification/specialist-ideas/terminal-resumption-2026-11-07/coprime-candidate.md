@@ -16,7 +16,7 @@ The choice of actual slope is arithmetic: q in 0..D-1 avoids three congruence cl
 
 If a is a positive integer, c is odd and H=h+1, then EVERY distinct actual interior even-even S,T in this entire variable-metric room family illuminates. All other strict orders above remain. The cap has no integer-height interior marks, so accepted protected U/L coverage leaves only the terminal pairs of the lemma. The u=h artificial seam is included in the lemma.
 
-This is a proposed complete optical theorem for this precisely restricted family of ten-wall lattice rooms. It does not prove all ten-wall rooms, arbitrary real endpoint pairs, all r<=8 rooms, or novelty. Independent mathematical review is still required.
+This is a proposed complete optical theorem for this precisely restricted family of ten-wall lattice rooms. It does not prove all ten-wall rooms, arbitrary real endpoint pairs, all r<=8 rooms. Independent mathematical review is still required.
 
 ## Principal audit risks
 

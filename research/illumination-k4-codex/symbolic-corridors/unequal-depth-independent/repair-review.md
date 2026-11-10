@@ -76,4 +76,4 @@ Only s=t=d with b=a+g or a=b+g is repaired by this packet. Arbitrary
 horizontal coordinates, other unequal depths and the full exceptional-plane
 join remain for the peer to solve and this chat to review independently.
 The native goal remains active. No global reflection bound, all-interior-pair,
-other-room-family, novelty or universal wall-minimality conclusion follows.
+other-room-family or universal wall-minimality conclusion follows.

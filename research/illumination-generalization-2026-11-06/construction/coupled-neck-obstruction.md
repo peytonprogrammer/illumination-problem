@@ -81,4 +81,4 @@ The one-neck theorem does not claim this composition. If either whole side is tr
 
 A global argument cannot iterate one-neck integer-spacing reasoning while ignoring the intermediate phase constraint. It must either use additional middle-wall interactions/returns, vary the chamber itinerary with proved phase control, or establish a joint arithmetic covering statement. The already accepted U8 theorem guarantees illumination here, so the missing mechanism is real rather than a dark-pair conclusion.
 
-No general W<=21 theorem, no darkness certificate and no independent novelty claim is made. The exact finite residue check corroborates the analytic all-image argument; it is not a ray or word discovery search. Independent review of the quantified restricted-path exclusion is required.
+No general W<=21 theorem, no darkness certificate and The exact finite residue check corroborates the analytic all-image argument; it is not a ray or word discovery search. Independent review of the quantified restricted-path exclusion is required.

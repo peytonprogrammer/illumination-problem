@@ -26,4 +26,4 @@ If either factor is 2, its roof condition follows from mu>1 or lambda>1. Otherwi
 
 All nine frozen source/receipt hashes in the peer request match at this review. Previously accepted L6, U8, unequal-floor T8, wide-middle8 and complete eight-wall metric classification supply the corollary for every finite strictly simple orthogonal polygon with at most eight maximal straight walls and every distinct real interior pair.
 
-No diagonal-wall room, orthogonal room with ten or more walls, unbounded canonical45 W<=21 reduction, universal minimum, or novelty assertion follows. The previously recorded split floor/roof repair is unnecessary for this proof; it has not itself been proved.
+No diagonal-wall room, orthogonal room with ten or more walls, unbounded canonical45 W<=21 reduction, universal minimum follows. The previously recorded split floor/roof repair is unnecessary for this proof; it has not itself been proved.

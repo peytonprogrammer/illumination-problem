@@ -312,7 +312,7 @@ Exact kernel checks pass on all 34 frozen rooms. Fixing every absolute period le
 
 The resulting zero-period relation corollary is more concrete: choose two independent return periods, and subtract their rational combinations from every other return period. The resulting zero-holonomy cycles detect every wall motion except similarity. Their exact differential rank is W-3; four marked relative-profile equations give rank W+1. In the existing ear control, P=(0,4) and R=(0,8)=2P, but the ear motion changes R-2P by (0,2).
 
-Opus accepts the core algebra as standard finite-group and period-coordinate material, with corrections now incorporated. The reference corner must be included in fixed-profile data. The marked dimension count is a consequence of four equations fixing four new variables, not independent evidence that darkness preserves the marks. No new illumination theorem or literature novelty is claimed.
+Opus accepts the core algebra as standard finite-group and period-coordinate material, with corrections now incorporated. The reference corner must be included in fixed-profile data. The marked dimension count is a consequence of four equations fixing four new variables, not independent evidence that darkness preserves the marks. No illumination theorem follows.
 
 This may support a structural isolation proof if darkness can be shown to preserve the relevant period diagram. That implication is unproved, and actual isolation alone would not imply the stronger first-order sign theorem. [cover-rigidity.md](cover-rigidity.md) records the primary-literature check and the remaining gap.
 
@@ -378,15 +378,11 @@ The larger reduction also needs non-parity mechanisms, arbitrary directions or a
 
 No discovery searches were run. The ear phase independently verifies two prescribed words over a full parameter interval. The twist phase computes affine-orbit rows by homology and a proved transformation formula, then verifies all52already-prescribed affine-image trajectories and gradients without a direction scan. Other finite certificate checks inherit optical validity from the previously audited event packets.
 
-
 Directed fan-tree refinement (Section24): all34frozen rooms,68full fans,306portals and56local sectors pass exact incidence/count checks in pocket-fan.py/json/log. Two interior marks force an AC-ended merger fan on their tree path. This does not realize a straight event. Section25 is a NEW UNREVIEWED auxiliary branched-cover candidate for the marked field-of-definition gap; independent tools-disabled Opus review is live. No marked freeness or event conclusion adopted.
-
 
 Section24 is independently reviewed with parity/routing corrections recorded. Section24.1 rules out the naive same-class cut induction: the upstream cut makes C smooth and removes rawness; the merger A cannot be a primitive midpoint. Main event goal stays open. Section25 and25.1 propose the auxiliary branched-cover route to actual-mark orbit closures and a conditional rational graph criterion; review83639 is live, no conclusion adopted yet.
 
-
 Current continuation: directed fan identities and the local cut obstruction are reviewed. Exact incidence replay covers34frozen rooms,56local sectors and306portal cuts (280downstream pieces retain nonsmooth B). The naive same-raw-class merger induction is ruled out. First marked-cover review83639finished exit0 and exposed a period error: the lifted difference cycle has ZERO period; the marks remain in relative periods. Corrected Section25 uses uniqueness of a translation involution at a simple zero, turning the upstairs map into a closed embedding and removing the actual-label descent ambiguity. Second focused review41533is live. No marked-field conclusion is adopted yet; no free-mark or actual-event result is claimed. Goal remains active, no discovery runs.
-
 
 ## Latest checkpoint: actual marks retained in the common orbit closure
 
@@ -411,6 +407,5 @@ same-raw-class fan-cut induction is retired. Next: actual-event bridge,
 using the valid marked-module setting only if it yields a proved event
 or an in-class obstruction. No ray/direction/word/room discovery or
 origami-orbit enumeration. All review jobs are terminal; no live jobs.
-
 
 Section26 actual-event bridge is now a focused review candidate: use Sigma_c=ALL physical corner lifts, including regular ones, for the rational cylinder-boundary decomposition. Actual admissible events correspond to consecutive length2w marked saddle edges with the selected actual S/T midpoints and embedded pi-sector. Exact defect identity includes marked midpoint offsets r_s+r_t, which cannot be discarded. The34frozen directed fan records all have I2,Z0,one merger. Primary oblivious-point results do not apply directly to physical-corner blocking; no such literature shortcut adopted. Review93263live; main event remains open.

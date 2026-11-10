@@ -6,7 +6,7 @@ Working draft v0.1, November 8, 2026.
 
 Sufficient tall-or-wide conditions cover all real interior pairs in a stated spiral normal form. A separate arithmetic construction covers all native even-even pairs in an infinite thin-cap family, including metrics outside those thresholds. Neither result covers every ten-wall polygon.
 
-Historical novelty is unconfirmed. These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
+These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
 
 ## Mathematical sources
 

@@ -4,7 +4,7 @@
 
 Every one of147 previously saved illuminated rooms now has an exact ray that encounters just one exceptional B/C vertex, at the optical midpoint. This includes104 rooms matching the12 current residual neck types, with examples of every type. The other43 rooms belong to earlier neck patterns. These rooms were selected by earlier positive-ray searches; this is evidence for a common mechanism, not a proof that every remaining completion has such a ray.
 
-For a fixed primitive direction, a first-arrival ray has a justified reflection budget. With three exceptions it makes at most24 exceptional-vertex visits. There are still infinitely many primitive directions, so the result is not an all-direction decision procedure or darkness certificate. No literature-priority claim is made for the observation.
+For a fixed primitive direction, a first-arrival ray has a justified reflection budget. With three exceptions it makes at most24 exceptional-vertex visits. There are still infinitely many primitive directions, so the result is not an all-direction decision procedure or darkness certificate.
 
 ## What the wall and exception budget forces
 

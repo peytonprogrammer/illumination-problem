@@ -1,6 +1,6 @@
 # Every real T room illuminates every distinct interior pair
 
-Exact corollary of the independently accepted arbitrary-real L theorem. Independent review requested. No bound on k, size, endpoint arithmetic, reflection count or aspect ratio is imposed. No novelty claim is made.
+Exact corollary of the independently accepted arbitrary-real L theorem. Independent review requested. No bound on k, size, endpoint arithmetic, reflection count or aspect ratio is imposed.
 
 ## Statement
 

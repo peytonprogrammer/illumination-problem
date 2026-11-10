@@ -4,7 +4,7 @@ Checked: transparent corner angle divisibility; all18 local fold matrices; indep
 
 Not checked: independent exhaustive base/fold rerun; source/binary provenance; authenticated run commands or environmental threshold; all positive copy maps and marked-pair equivalence. No new search run or peer file write.
 
-Scope additions: coherent global fold; normalized invariant parity class; face disk cellulation; interface-collinear path treatment. No claim of global minimum or novelty.
+Scope additions: coherent global fold; normalized invariant parity class; face disk cellulation; interface-collinear path treatment. No claim of global minimum.
 
 Update: completed fresh base source build/run with authenticated local argv/hashes and exact saved-multiset comparison. Completed independent full-wall fold exhaustion through W22 for all412 bases. All2,096 assemblies checked and12 positive controls recovered. The earlier pending computational replay/provenance item is now closed by the new receipts; independent peer review of this new verifier remains requested. No optical tracing was used.
 

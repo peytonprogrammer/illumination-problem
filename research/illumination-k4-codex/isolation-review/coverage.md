@@ -10,5 +10,5 @@ primary Forni abstract for the limited scope of the proposed literature link.
 Not checked: independent full replay of all932 optical events in this audit
 (the prior certificates supply their event validity); peer empirical fitted
 exponents/weight experiments; asymptotics of homology classes; general KZ
-applicability; general isolation; a general signed-spanning theorem; novelty.
+applicability; general isolation; a general signed-spanning theorem;.
 No new directions, rays or rooms were searched. Peer files were not edited.

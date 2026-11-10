@@ -1,6 +1,6 @@
 READ-ONLY mathematical consultation for Daniel and Codex. No tools, edits, delegation, or claimed experiments. Answer within900 words. We need better IDEAS, not another search or verifier. Do not give a catalogue; give your single best construction mechanism, attack it, and state exactly what is missing. User rejected our earlier midpoint-target idea as weak.
 
-Goal: a SIMPLE JORDAN planar polygon with perfectly reflecting straight walls, distinct interior S,T, every specular path S->T hits a corner, ideally fewer than24 maximal boundary segments. No holes, slits, point contacts, optical devices, wave interference. No global novelty claim.
+Goal: a SIMPLE JORDAN planar polygon with perfectly reflecting straight walls, distinct interior S,T, every specular path S->T hits a corner, ideally fewer than24 maximal boundary segments. No holes, slits, point contacts, optical devices, wave interference.
 
 Work already done:
 -20-wall slit,22-wall contact,24-wall simple reconstruction controls.

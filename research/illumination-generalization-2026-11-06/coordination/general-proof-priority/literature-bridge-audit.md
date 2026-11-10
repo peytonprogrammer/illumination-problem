@@ -26,6 +26,6 @@ Two focused web searches covered specular illumination of ten-sided/three-reflex
 
 For every residual ordered ten-wall room and actual native S,T, prove that one direction and actual source germ produce a legal finite path to the actual target. If using LR01, establish intersection with its target-reaching exit relation under all first-hit and corner guards. If allowing later right returns, prove a positive existence statement for the enlarged itinerary. Failure of the restricted programme is not darkness.
 
-Existing author/reviewer blocked handoffs were read. Their stopping reason is mathematical, not missing permission. No new construction, counterexample, broad impossibility theorem, historical novelty determination, or independent review acceptance resulted from this investigation.
+Existing author/reviewer blocked handoffs were read. Their stopping reason is mathematical, not missing permission. No new construction, counterexample, broad impossibility theorem, determination, or independent review acceptance resulted from this investigation.
 
 **Next move:** develop a genuinely positive actual-target intersection argument before resuming the blocked goals. No such argument is ready in this audit.

@@ -10,4 +10,4 @@ Propose your single strongest surgery with an exact sufficient preservation lemm
 
 Possible starting point (do not assume true): choose a path-irrelevant mirror seam whose cut/glue changes the planar reflection quotient while preserving a dark pair on the same marked translation surface. Is there a different mirror fundamental domain of that surface with a simple boundary and fewer physical wall segments? When the canonical dihedral group is changed or conjugated by an affine surface map, is this merely an isometric copy with the same wall count? Could genuinely different antiholomorphic reflection actions evade that rigidity?
 
-Be concrete and adversarial. Label deductions versus conjectures; avoid novelty claims. Do not suggest larger blind searches, cusp enumeration, or changing target coordinates as the answer.
+Be concrete and adversarial. Label deductions versus conjectures; avoid publication assessments. Do not suggest larger blind searches, cusp enumeration, or changing target coordinates as the answer.

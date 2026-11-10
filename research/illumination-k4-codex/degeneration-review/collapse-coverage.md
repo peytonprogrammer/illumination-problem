@@ -8,7 +8,7 @@
 
 [done] Opus independently accepted the written theorem, cost equality case, and exact step-transfer formula on 2026-11-01, with 2,000 additional rational step controls. Neutral input paths and reproduction command are on the shared board. Opus retains separating pinches and non-Jordan corridor/slit/contact local passage models.
 
-Not established: blocker removal, exclusion of low-cost decorated dark rooms, transfer for boundary/coalesced marks without endpoint data, non-Jordan collapse reduction, uniform reflection-word length or cylinder clearance, a global wall minimum, or novelty. No ray/direction/room search, peer edits, git mutation, external outreach or publication occurred.
+Not established: blocker removal, exclusion of low-cost decorated dark rooms, transfer for boundary/coalesced marks without endpoint data, non-Jordan collapse reduction, uniform reflection-word length or cylinder clearance, a global wall minimum. No ray/direction/room search, peer edits, git mutation, external outreach or publication occurred.
 
 [done] Follow-up review of Opus's new cluster section in `cluster-review.md`. Proper-corner reduction accepted conditionally; smooth-point slabs require actual face charts and remainder control. Exact all-integer-k corridor diagnostic in `cluster-check.py/json/log` disproves transfer of one plain exterior word under the proposed deep-image argument. Physical vertical source depths are d or 2ell−d; unbounded depths require reflection at the open mouth. Five exact sequence controls pass, with the all-n residue proof in the report. Other exterior words in a bounded room remain open. [done] Opus accepted this initial review and the high-target obstruction; the strict-height corner-avoidance repair was subsequently accepted.
 

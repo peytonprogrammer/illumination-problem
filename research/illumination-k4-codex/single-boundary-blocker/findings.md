@@ -198,7 +198,7 @@ condition to retain.
 
 Their Proposition 3.1 already uses the two-fixed-points obstruction for an
 involution on a closed geodesic. The symmetry step in Section 2 above is related
-to this published argument; no novelty claim is made. Adelstein–Desai–Ji–Zdeblick
+to this published argument; Adelstein–Desai–Ji–Zdeblick
 construct oblivious points also on square-tiled surfaces. These abstract examples
 do not supply an orthogonal billiard realization or an essential boundary blocker.
 
@@ -240,4 +240,4 @@ The general question in this document is still open for higher-genus orthogonal 
 
 Every interior pair has a corner-free connection using only vertical-wall reflections, and another using only horizontal-wall reflections. The target-image spacing argument forces a strictly interior portal crossing with q=distance/(1+r). A boundary blocker on a horizontal wall is avoided by the first connection, and one on a vertical wall by the second. The same proof avoids any boundary blocker set contained in one wall orientation. No monodromy assumption, rationality restriction or primary classification theorem is needed.
 
-The separate Opus adversarial review accepts the proof, and the exact formula controls pass. The new statement rules out decorated dark six-wall limits with one retained smooth boundary blocker under our existing Jordan/mark/persistence hypotheses, including isolated8-to6 smooth-step limits. It does not settle mixed-orientation multiple-blocker sets, interior blockers, contacts/slits, boundary or merged marks, or higher genus. No novelty claim is made.
+The separate Opus adversarial review accepts the proof, and the exact formula controls pass. The new statement rules out decorated dark six-wall limits with one retained smooth boundary blocker under our existing Jordan/mark/persistence hypotheses, including isolated8-to6 smooth-step limits. It does not settle mixed-orientation multiple-blocker sets, interior blockers, contacts/slits, boundary or merged marks, or higher genus.

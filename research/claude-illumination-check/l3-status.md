@@ -49,11 +49,10 @@ As of 2026-11-01. Peyton Wang led this investigation, with Claude and Codex as t
 - **Isolation of every dark room.** Each known room is isolated, but there's no general argument yet. Lemma 27 writes each event as a taut string around a corner. Isolation then asks whether the classes `η_e` positively span. Straight-through events, cancelling pairs, and natural weights all fail to give it. The missing piece is a sign theorem: every nonsymmetric variation violates some event.
 - **Smooth steps.** This is the only point collapse that keeps the cost the same.
 - **Prescribed-target density.** Conjectures 13 and 24, and the joining corridor, all ask whether paths from a given place reach a given point in given directions, or uniformly as the room changes. Known density theorems pick the corner for you. That's why the draft question to Monteil asks about this (`monteil-followup-draft.txt`).
-- **Dark rooms with one point contact and at most 21 walls.** Wolecki's 22-wall room is the smallest known.
+- **Dark rooms with one point contact and at most 21 walls.** Wolecki's displayed room has 22 walls.
 - **Real rooms versus lattice rooms.** The induction needs claims about rooms with real-valued coordinates. The bounded theorem covers only lattice rooms with at most 4 transparent points.
 
 ## Not claimed
 
 - No global lower bound of 22.
-- No priority. The Monteil and Tokarsky replies are pending, and the 34-wall reconstruction isn't confirmed as Tokarsky's original room.
 - Nothing about polygons outside the 45° family.

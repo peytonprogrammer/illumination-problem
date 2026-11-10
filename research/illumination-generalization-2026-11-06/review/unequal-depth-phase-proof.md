@@ -81,4 +81,4 @@ The three levels are distinct, with successive gaps mu-h=s and G-h-mu=G-t. If q0
 
 If q0>=3, both selected teeth are NONFLUSH. The three opposite blockers are different and nonflush, since their centers lie in[2,G-2], whereas flush height2 tooth midpoints are1,G-1. Thus five distinct nonflush teeth force the ENTIRE-room maximal-wall count W>=4+4*5=24. Unused attachments cannot decrease it, and opposite band overlaps cannot merge boundary walls through the open core. This contradicts W<=23.
 
-All actual placements and all integer H/depth parameters in the theorem are therefore covered. The proof leaves equal depths and the three named small unordered depth pairs unresolved by this method; it supplies no universal polygon theorem, no darkness claim from finite failure, and no novelty or formal verification claim.
+All actual placements and all integer H/depth parameters in the theorem are therefore covered. The proof leaves equal depths and the three named small unordered depth pairs unresolved by this method; it supplies no universal polygon theorem, no darkness claim from finite failure, and No formal verification claim.

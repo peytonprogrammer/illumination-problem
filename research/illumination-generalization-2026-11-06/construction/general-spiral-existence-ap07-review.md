@@ -2,7 +2,7 @@
 
 ACCEPT the stated coprime right-width whole native family. This does not establish unrestricted right-return selection.
 
-I read the full frozen proof and request. My unpublished hand analysis independently reached the same orbit mechanism before reading this packet, but the reviewer claimed and authored AP07 first. This is a reciprocal proof audit with shared accepted AP01/AP05/TR01/TR05 foundations, not independent rediscovery credit or formal verification.
+I read the full frozen proof and request. My unpublished hand analysis independently reached the same orbit mechanism before reading this packet, but the reviewer claimed and authored AP07 first. This is a reciprocal proof audit with shared accepted AP01/AP05/TR01/TR05 foundations, not explicit construction credit or formal verification.
 
 For a lower native source, X=h-u is positive and even. M0 divides lcm(P,N). The dyadic g=gcd(M0*d,L) divides M0 because d=c-v is odd. Therefore the positive source/cap null shifts XM0/P, CM0/N, FM0/g are integral. The half-open seed has strict source and cap windows from g<=P<K and the exact weighted metric. No right-corner assumption enters that seed.
 

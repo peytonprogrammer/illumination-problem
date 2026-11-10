@@ -6,7 +6,7 @@
 
 Central finite matching proof, path construction, remaining endpoint cases, and the height-two lattice corollary. Only spine and tooth-middle-row endpoints are covered.
 
-Source authors: **Daniel Wang and Peyton Wang**. The manuscript is a working draft, not externally refereed; the video does not establish historical novelty or a universal minimum-wall result. Codex and Claude assisted the research and exposition. The authors remain responsible for the mathematics.
+Source authors: **Daniel Wang and Peyton Wang**. The manuscript is a working draft, not externally refereed; the video does not establish a universal minimum-wall result. Codex and Claude assisted the research and exposition. The authors remain responsible for the mathematics.
 
 ## Editable source
 

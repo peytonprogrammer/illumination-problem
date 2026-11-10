@@ -1,6 +1,6 @@
 # A cap-free illumination theorem for long-stem T rooms
 
-New candidate for independent review. The filename retains the initial working name; the final statement does not require a centered stem. This is a positive unbounded-size subclass of the active objective, not the whole W<=21 theorem. No novelty claim is made.
+New candidate for independent review. The filename retains the initial working name; the final statement does not require a centered stem. This is a positive unbounded-size subclass of the active objective, not the whole W<=21 theorem.
 
 ## Statement
 

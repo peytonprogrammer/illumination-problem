@@ -28,7 +28,7 @@ text='''# Five-exception exclusion: complete bounded result
 
 **Computed theorem.** A strictly simple, slit-free room in the canonical 45-degree triangle tiling, with two distinct interior A marks and at most five transparent non-A lattice vertices, cannot be dark with 21 or fewer maximal walls.
 
-Equivalently, a sub-22-wall dark example in this tiling and mark class would need at least six transparent B/C exceptions. Combined with the previously independently verified 22-wall construction, this gives minimum 22 within the class with at most five exceptions. It does not establish an unrestricted minimum or historical novelty.
+Equivalently, a sub-22-wall dark example in this tiling and mark class would need at least six transparent B/C exceptions. Combined with the previously independently verified 22-wall construction, this gives minimum 22 within the class with at most five exceptions. It does not establish an unrestricted minimum.
 
 Fix the canonical tiling by splitting each unit lattice square along its even-even to odd-odd diagonal. A vertices are even-even; the two other parity types are B/C. A transparent non-A vertex means a lattice vertex inside the room or in the relative interior of a straight wall, rather than an actual corner. Count both kinds in k. W counts maximal walls, not atomic triangle edges. Marks must be interior A vertices; arbitrary interior mark positions are outside the theorem.
 
@@ -111,7 +111,7 @@ The global classification and isolation/degeneration gaps remain open. This comp
 
 [waiting on Claude] Remaining I2 proof replays and final bounded-theorem scope review. Live peer already replayed 21 first-pass and three I3 continuation proofs, plus 360 guard samples and 600 corruption controls. It also accepts the orbit extraction by hand derivation and 970 room/800 D4 replay controls.
 
-Not covered: k≥6, arbitrary wall directions, arbitrary mark coordinates, the global minimum, global degeneration/classification, or historical novelty. No bounded-ray failure is used as evidence of darkness.
+Not covered: k≥6, arbitrary wall directions, arbitrary mark coordinates, the global minimum, global degeneration/classification. No bounded-ray failure is used as evidence of darkness.
 ''')
 # Supersede earlier open-loop status in this agent's reports without erasing history.
 p=PILOT/'findings.md';s=p.read_text();banner='''> **Completed continuation:** all ten originally unresolved cases are now excluded. The combined result is 31/31 accepted proofs for k≤5,W≤21. See `../k5-proof-continuation/findings.md` and `certified-summary.json`. The text below preserves the initial-pass record.

@@ -4,7 +4,7 @@
 
 **Working draft v0.1, November 8, 2026.** Every finite strictly simple orthogonal polygon with at most eight maximal walls illuminates every pair of distinct interior points by a finite specular path avoiding all corners. Dimensions and endpoints are arbitrary real numbers. Eight walls means at most two reflex corners.
 
-The manuscript contains the full corrected proof, the six normal forms, four prescribed path illustrations, a referee checklist and reproduction instructions. It has no lattice or rationality assumption. It makes no claim about the universal 22-wall minimum or historical novelty.
+The manuscript contains the full corrected proof, the six normal forms, four prescribed path illustrations, a referee checklist and reproduction instructions. It has no lattice or rationality assumption. It makes no claim about the universal 22-wall minimum.
 
 The proof was developed and cross-reviewed with AI agents. It has not been externally refereed or checked in a proof assistant. This is a manuscript for mathematical review, not a journal or arXiv submission.
 

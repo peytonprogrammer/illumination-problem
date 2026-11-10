@@ -279,10 +279,7 @@ What is additionally proved at parent level: all equal-depth, equal-horizontal-
 coordinate pairs, with explicit modular selection for rational depth ratios
 and a separate positive mechanism at the unique remaining placement.
 
-What remains: repair exceptional pairs with independently varying horizontal
-coordinates and depths; reconcile the one-portal exceptions.
-No proof of darkness follows from a failed criterion. No improvement to
-the numerical wall lower bound or historical novelty is claimed.
+What remains: repair exceptional pairs with independently varying horizontal coordinates and depths; reconcile the one-portal exceptions. No proof of darkness follows from a failed criterion. No numerical wall-count lower bound follows.
 
 The two attempts have reached their stated bounded outcomes. Further ray
 counts would not resolve the remaining universal implication. Independent

@@ -77,4 +77,4 @@ Take a,N,b,c,h integers, 0<b<c<h, N>=5 odd, c odd, H=h+1. Then G=2 and gcd(G,N)=
 
 For completeness, accepted TR01 protected U/L coverage covers all other pairs. In the present cap there are no integer-height interior marks with h<y<H. Thus every native mark is in G or int(R) in TR01; a pair outside both its same-region cases consists of a left terminal mark and a bottom mark (possibly with labels reversed). The lemma covers exactly these. Reversing a finite regular specular path is legal.
 
-This gives ALL distinct actual interior even-even pairs in this variable-size ten-wall family. It is not an arbitrary-real endpoint result or a complete ten-wall theorem. No novelty or independent acceptance is claimed yet.
+This gives ALL distinct actual interior even-even pairs in this variable-size ten-wall family. It is not an arbitrary-real endpoint result or a complete ten-wall theorem. No independent acceptance is claimed yet.

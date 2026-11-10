@@ -12,4 +12,4 @@ For a genuine derivative [[alpha,beta],[gamma,delta]], beta=0 preserves vertical
 
 On the self-dual obstruction family the weighted involution is exactly the diagonal isometry. Every successful affine map must consequently have four nonzero entries and a derivative outside the already excluded subgroup. This is necessary, not sufficient: many excluded subgroup products already have four nonzero entries.
 
-The provenance note is also reconciled as a scope correction: the J/fixed-point/antipodal structure is an accepted dependency, not a new availability mechanism. The unrestricted-kernel proof strengthens the domain of that dependency but does not close a seed-existence quantifier. This review makes no historical novelty claim.
+The provenance note is also reconciled as a scope correction: the J/fixed-point/antipodal structure is an accepted dependency, not a new availability mechanism. The unrestricted-kernel proof strengthens the domain of that dependency but does not close a seed-existence quantifier. This review makes no claim.

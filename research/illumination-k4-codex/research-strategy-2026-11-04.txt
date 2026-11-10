@@ -19,7 +19,7 @@ A concrete elementary transport formula is available. Consider a rectangular cap
  (u_out,v_out)=(F_a'(x+2h*u/v)*u,-v),
  F_a(z)=a-|((z mod 2a)-a)|.
 
-This treats every finite number of side bounces at once. Exclude x+h*u/v in aZ (a top corner), and x+2h*u/v in aZ (portal endpoint); take the derivative only off its breakpoints. These are the only possible cap corner encounters. If u=0, the same formula holds with interior x. Proof: the unfolded x-coordinate changes uniformly for total time2h/v; folding at multiples of a recovers the horizontal coordinate and velocity sign. This is standard rectangular unfolding, not a claimed novel result.
+This treats every finite number of side bounces at once. Exclude x+h*u/v in aZ (a top corner), and x+2h*u/v in aZ (portal endpoint); take the derivative only off its breakpoints. These are the only possible cap corner encounters. If u=0, the same formula holds with interior x. Proof: the unfolded x-coordinate changes uniformly for total time2h/v; folding at multiples of a recovers the horizontal coordinate and velocity sign. This is standard rectangular unfolding.
 
 The proposal is to use such exact maps to prove an overlap theorem for the source's reachable portal states and reversed target's states, allowing integer repetition counts. Our existing arbitrary-real L-room theorem succeeds by rounding a target image to land inside an open portal. The next method test is TWO successive portals with one common slope, arbitrary lengths and actual endpoints. Independent rounding at each portal is invalid: one slope must satisfy all conditions simultaneously. Success means a whole parameter-family theorem, not a supplied lit fixture. Failure means an exact geometric incompatibility or a counterexample to the proposed overlap criterion.
 
@@ -28,7 +28,7 @@ The map for a single cap is not a finite-state reduction for a whole room. Multi
 
 Important fixed control: do not count rectangles alone
 For a simple orthogonal polygon, W=2r+4, where r is the number of reflex corners. Thus the target is r<=8. A vertical decomposition uses at most r cuts and at most r+1 rectangles, but fewer rectangles can already support darkness.
-I checked the supplied known22-wall boundary Q in tokarsky-followup-2026-11-02/seam-endpoints.py. Its nine reflex corners are
+I checked the supplied known22-wall boundary Q from its explicit vertex cycle. Its nine reflex corners are
  (0,-1),(1,-2),(1,-1),(1,1),(3,1),(4,1),(3,2),(1,2),(0,1).
 The five distinct interior vertical cuts are
  x=0,y in[-1,1]; x=1,y in[-2,-1]; x=1,y in[1,2];
@@ -40,7 +40,7 @@ This is an existing hard route, not a new discovery. The147 saved corner events 
 The first decisive question is whether the known strict-escape deformation is detected by an actual source/target cylinder with the required opening sign. A formal closed wall word or unrelated periodic core is insufficient. This remains unproved; no cylinder discovery is authorized here. Even full local rigidity would concern a neighborhood of the known22-wall room and would not prove global minimality. This route is strategically useful for explaining why the known construction is special, but has less direct leverage on the wall minimum than Bet1.
 
 Recommendation
-Prioritize Bet1's two-portal analytic compatibility question. Leave the peer's explicitly authorized Delta3 work separate, and do not automatically accept ownership of its structural classification. If symbolic transport cannot handle two junctions, report that precise failure before promising a global corner theorem. No new claim of novelty, literature classification, finite-word completeness, or universal reduction is made.
+Prioritize Bet1's two-portal analytic compatibility question. Leave the peer's explicitly authorized Delta3 work separate, and do not automatically accept ownership of its structural classification. If symbolic transport cannot handle two junctions, report that precise failure before promising a global corner theorem. No new claim of, literature classification, finite-word completeness, or universal reduction is made.
 
 
 Follow-up: bounded20-gon brute-force feasibility
@@ -54,7 +54,7 @@ The audited k5/k6 pipeline supplies necessary tile/fan geometry, wall/exception 
 The current solver fixes all interior A stars and actual marks at their centers. It allows diagonal boundaries and has no ready general orthogonal20-gon mode in the read source. Pairing the two canonical triangles of every unit square with equal occupancy would enforce an orthogonal unit-square union, but that constraint and its completeness must be checked before adopting the variant. Non-A integer marks are supported by the reviewed decider, not automatically by the current support-based generator.
 
 Recommended first new tranche
-Strictly simple orthogonal rooms, W<=20, interior A marks, k=7. Reuse the old exclusion for k<=6, so those need not be rediscovered. Accepted counting bounds give
+Strictly simple orthogonal rooms, W<=20, interior A marks, k=7. Reuse the old exclusion for k<=6, so those need not be reproduced. Accepted counting bounds give
  N<=floor(4*(20-2+2*7)/3)=42 triangles,
  I<=floor((20-6+2*7)/6)=4,
  P+missing<=13,11,9 for I=2,3,4.

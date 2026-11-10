@@ -22,9 +22,9 @@ The transparency follow-ups now rule out the entire simple canonical family thro
 
 A wall is a maximal straight segment along a boundary traversal. A slit has two faces and contributes two walls. At a point contact, separate boundary sectors are counted separately. Consequently, these counts must be compared within the same room definition.
 
-The [20-side image](https://commons.wikimedia.org/wiki/File:Unilluminable_room_with_20_sides_purple.png), uploaded by Bhavya1805 on August 30, 2024, describes work under George Tokarsky's guidance. Its central descending segment is a slit. The integer reconstruction below verifies the intended geometric pattern, rather than the imperfect pixel coordinates of the raster. It does not establish a historical priority or global record.
+The [20-side image](https://commons.wikimedia.org/wiki/File:Unilluminable_room_with_20_sides_purple.png), uploaded by Bhavya1805 on August 30, 2024, describes work under George Tokarsky's guidance. Its central descending segment is a slit. The integer reconstruction below verifies the intended geometric pattern, rather than the imperfect pixel coordinates of the raster. It does not establish a global record.
 
-The [published Wolecki construction](https://arxiv.org/html/1905.09358v3#S3) uses reflected right-isosceles triangles. Parsing its [actual SVG](https://arxiv.org/html/1905.09358v3/22gon_vert.svg) gives a boundary contact at (2,0), boundary degree four there, and Euler characteristic zero for the tile complex. This figure is therefore not a simple Jordan polygon. The 24-wall search output is consistent with the previously reported 24-side benchmark; no novelty is claimed for it.
+The [published Wolecki construction](https://arxiv.org/html/1905.09358v3#S3) uses reflected right-isosceles triangles. Parsing its [actual SVG](https://arxiv.org/html/1905.09358v3/22gon_vert.svg) gives a boundary contact at (2,0), boundary degree four there, and Euler characteristic zero for the tile complex. This figure is therefore not a simple Jordan polygon. The 24-wall search output is consistent with the previously reported 24-side benchmark.
 
 ## Exact coordinates for the 20-wall room
 
@@ -158,7 +158,6 @@ For the broader question, Wolecki's theorem gives finitely many nonilluminating 
 
 The next two experiments test different source-target arrangements and the 30–60–90 geometry. Their outcomes follow.
 
-
 ## Placement sweep and 30–60–90 pilot
 
 [done] The authorized follow-up found no smaller dark room. It tested three additional non-axis placements and built an exact model for a second triangle family. All counts below use maximal straight boundary segments and count slit faces separately.
@@ -222,7 +221,6 @@ This addresses the specific information loss proved in the earlier arithmetic an
 
 The prototype below implements and tests this idea. No improved dark room or global wall-count lower bound has been established.
 
-
 ## Reflected-copy certificate prototype
 
 [done] Implemented an exact unfolded-sheet model, a finite sufficient darkness certificate, and a bounded exact direction-code search. It proves the three known dark controls dark and supplies independently verified paths for both earlier false survivors. It has not produced a smaller room or proved a new transparent dark example.
@@ -283,7 +281,6 @@ The reusable result is a checked unfolding/compiler and a three-outcome tool, `i
 
 The follow-up below tests a state reduction that preserves one coherent direction code and all its future compositions.
 
-
 ## Coherent direction-code state reduction
 
 [done] Implemented and validated an exact state quotient that retains the full action of both neighboring direction codes. It provides almost no reduction on the dark controls and does not remove the enumeration bottleneck.
@@ -311,18 +308,17 @@ Artifacts: `cover-code-quotient-audit.json`, `cover-code-quotient-summary.json`,
 
 **Next move:** shift effort toward a structural wall-count inequality or a genuinely different construction mechanism. The conservative endpoint relation and this exact relabeling quotient have both been tested; increasing their search caps alone has no demonstrated route to fewer walls.
 
-
 ## Research judgment: construct a midpoint obstruction first
 
 [done] Reassessed the next direction on 2026-10-29. No new room, search run, or improved wall count is claimed.
 
-The highest-upside construction proposal is to search for unfolded surfaces equipped with affine involutions of derivative -I, then ask whether they admit a planar mirror-room quotient with few walls. This is an inverse construction proposal, not a novel theorem. The midpoint argument appears explicitly in Lelièvre–Monteil–Weiss, Everything is illuminated, §6.3: https://arxiv.org/html/1407.2975v1#S6.SS3 . Their §6.1, Proposition 16, also constructs nonilluminating pairs by making every preimage of a common torus blocking set ramified.
+The highest-upside construction proposal is to search for unfolded surfaces equipped with affine involutions of derivative -I, then ask whether they admit a planar mirror-room quotient with few walls. This is an inverse construction proposal. The midpoint argument appears explicitly in Lelièvre–Monteil–Weiss, Everything is illuminated, §6.3: https://arxiv.org/html/1407.2975v1#S6.SS3 . Their §6.1, Proposition 16, also constructs nonilluminating pairs by making every preimage of a common torus blocking set ramified.
 
 Precise sufficient mechanism: let tau be an affine involution with derivative -I, sending regular point x to distinct regular point y. For a hypothetical unit-speed straight segment gamma:[0,L]→M from x to y avoiding blockers, tau(gamma(L-t)) starts at x with the same velocity as gamma. Uniqueness of straight continuation outside singularities makes the paths equal. Thus gamma(L/2) is fixed by tau. If every fixed point belongs to the absorbing set, no such segment exists. The affine map must respect the actual surface identifications; a coordinate half-turn alone is insufficient. The obstruction itself does not need a direction cutoff or direction-code orbit closure.
 
 The essential gate is billiard realization. Fix one source lift x in the unfolded room. Every target lift y must be blocked; a separate admissible involution tau_y may be required for each y. A dark pair on an arbitrary translation surface does not imply a dark pair in a room. The quotient must be a bounded planar region with connected interior, the intended boundary class, and the actual absorbing corner sectors. These compatibility conditions should be imposed before optimizing walls. One useful bounded pilot would seek such certificates on known controls and positive regression fixtures, then search small compatible gluings. Failure to certify a known dark control would limit the certificate rather than refute the control.
 
-The Veech-group alternative has sound prior art: square-tiled surfaces have finite-index modular stabilizers, and surface-dynamics computes their groups/cusps (https://flatsurf.github.io/surface-dynamics/examples/square_tiled_surfaces.html). Source/target/blocker markings must be preserved, including removable absorbing vertices. This does not yet justify another implementation: modular-orbit enumeration can reproduce the large permutation-pair orbit already encountered. No practical compression is established.
+The Veech-group alternative has sound published context: square-tiled surfaces have finite-index modular stabilizers, and surface-dynamics computes their groups/cusps (https://flatsurf.github.io/surface-dynamics/examples/square_tiled_surfaces.html). Source/target/blocker markings must be preserved, including removable absorbing vertices. This does not yet justify another implementation: modular-orbit enumeration can reproduce the large permutation-pair orbit already encountered. No practical compression is established.
 
 ### A separate finite-size observation for the strict simple family
 
@@ -331,7 +327,6 @@ There is a useful elementary bound that improves the theoretical framing of the 
 For a simple polygon with W walls, total horizontal boundary variation is at most 2W and at least twice the bounding-box width. Therefore width≤W; similarly height≤W. Translate its interior source A to (0,0), preserving the lattice labels. The entire room then lies in [-W,W]². Thus, for W≤23, the strict simple-family problem has a complete finite search domain of at most 4,232 available triangles, rather than an unbounded geometric search. This is an analytic size bound, not an executed search or a 24-wall lower bound. It does not cover transparent B/C vertices or general polygons. Contacts and slits require a separate boundary-occurrence argument before extending the statement to those classes.
 
 Recommendation: prioritize the midpoint-involution realization gate for a smaller construction. If the goal changes to the most reliable theorem within the existing family, use the finite-size bound to develop a complete boundary-based exclusion. Do not increase the existing direction-code cap merely because more resources are available.
-
 
 ## Midpoint-involution pilot: complete lift coverage fails
 
@@ -388,10 +383,9 @@ The physical partial-coverage witness is already saved; generating it used `illu
 
 Judgment after this pilot: the midpoint method works mathematically but requires substantially more suitable surface symmetry than any tested room supplies. A general inverse-gluing search is not implemented and is not ruled out. I would now prioritize the strict-simple-family finite-size bound and a boundary-based exclusion, rather than expanding this symmetry pilot or returning to larger direction-code caps. That is a recommendation, not a claim that 24 is globally minimal.
 
-
 ## Complete exclusion below 24 in the strict simple 45-degree family
 
-[done] Completed 2026-10-29. **The minimum wall count in this entire family is 24**, conditional on the mathematical model and solver correctness. The finite reduction is analytic; the seven finite exclusions are independently reproduced by two different integer solvers and formulations. No formal proof-assistant theorem or independently checked UNSAT proof file is provided. No novelty or literature-priority claim is made.
+[done] Completed 2026-10-29. **The minimum wall count in this entire family is 24**, conditional on the mathematical model and solver correctness. The finite reduction is analytic; the seven finite exclusions are independently reproduced by two different integer solvers and formulations. No formal proof-assistant theorem or independently checked UNSAT proof file is provided.
 
 ### Precisely which family is covered
 
@@ -484,7 +478,6 @@ The audit passes. `family-under24-summary.json`, `family-independent-summary.jso
 
 **Consequence for further construction work:** enlarging the patch or relocating the source and target cannot improve the strict simple 45-degree construction below 24. A smaller simple room must leave at least one of this family's defining assumptions. Transparent B/C points remain a possible escape; the earlier one/two-transparent-point exclusions were bounded-patch results and are not upgraded by this theorem.
 
-
 ## Complete one-exception exclusion
 
 [done] Completed 2026-10-29. **A single transparent B/C vertex cannot reduce the simple canonical 45-degree family below24 walls.** Combined with the strict-family result and its attained24-wall control,24 remains the minimum when at most one exception is allowed. This is a computer-assisted result conditional on the geometric model, finite reductions, path-cut implementation, and CP-SAT correctness. It is not a general polygon theorem or a formally checked UNSAT proof.
@@ -576,10 +569,9 @@ Search/resume uses the saved positive evidence and skips already exhausted cases
 .context/illumination-venv/bin/python .context/search_illumination_one_exception.py --seconds 90
 ```
 
-The result covers simple canonical45-degree rooms of any assembly size with distinct interior A marks and at most one nonabsorbing B/C point. It does not cover two or more exceptions, non-A marks, different tilings, non-grid mirrors, holes, slits, or contacts. No smaller room was found and no historical priority claim is made.
+The result covers simple canonical45-degree rooms of any assembly size with distinct interior A marks and at most one nonabsorbing B/C point. It does not cover two or more exceptions, non-A marks, different tilings, non-grid mirrors, holes, slits, or contacts. No smaller room was found.
 
 **Next construction threshold:** within this family, a simple room below24 walls now needs at least two transparent B/C vertices. The same general identity gives N<=33 for at most two exceptions and W<=23, providing a finite starting point for that next investigation. This33-triangle bound is derived; the complete two-exception family has not been searched. The older two-exception result remains confined to its original small patch.
-
 
 ## Two transparent vertices: complete reduction and search (2026-10-29)
 
@@ -619,10 +611,9 @@ These are the same support sets used for the strict zero-exception family. Their
 
 `illumination_two_exception_bound.py` constructs these complete supports. `search_illumination_two_exception.py` searches them with exact positive ray cuts. A capped solver or missed finite ray search remains incomplete. Historical rays are recompiled against the new triangle indexing before reuse. `audit_illumination_two_exception.py` reconstructs guards, verifies rays, checks fixed positive models and mutations, and replays exhausted cases. The earlier full14-case one-exception audit also passes after generalizing the shared model builder.
 
-
 ### Finite search outcome
 
-The final bounded run covers all seven complete supports. Four placements are exhausted: (3,0), (3,1), and (4,0) are geometrically INFEASIBLE; (2,2) is INFEASIBLE after42 saved exact-ray configurations supply76 cuts. The remaining A-cell placements (1,1), (2,0), and (2,1) remain open at60-second search caps per case (seed validation/build time is additional). The final run finds39,49,90 additional illuminated configurations in those cases, respectively. Earlier same-turn pilots also contribute newly found records; the independent audit measures novelty against historical transparency and placement files rather than adding overlapping run counts.
+The final bounded run covers all seven complete supports. Four placements are exhausted: (3,0), (3,1), and (4,0) are geometrically INFEASIBLE; (2,2) is INFEASIBLE after42 saved exact-ray configurations supply76 cuts. The remaining A-cell placements (1,1), (2,0), and (2,1) remain open at60-second search caps per case (seed validation/build time is additional). The final run finds39,49,90 additional illuminated configurations in those cases, respectively. Earlier same-turn pilots also contribute newly found records; the independent audit measures additional coverage against saved transparency and placement files rather than adding overlapping run counts.
 
 Source normalized to physical (0,0), any sub24 counterexample with at most two B/C exceptions therefore has target (2,2), (4,0), or (4,2), subject to grid symmetries and mark exchange. It has exactly two full A stars and exactly two exceptions. This conclusion uses the completed zero/one-exception results, the three-star exclusion, the connected-cell reduction, and the four completed finite cases. It does not claim the three capped cases are excluded.
 
@@ -637,13 +628,11 @@ python .context/audit_illumination_one_exception.py
 
 The search resumes saved positive rays, recompiles their guards for the current support, and skips saved exhausted cases. At that capped stage the complete two-exception family remained INCOMPLETE; the typed-pair follow-up below supersedes that status. No smaller dark construction, general polygon lower bound, or formal UNSAT proof was established by the capped experiment. The next useful target is the geometry of the two exceptional vertices within these three nearby mark placements; larger patches add no cases under the proved support bounds.
 
-
 ### Final audit
 
 `two-global-final-audit.json` passes: all977 distinct configurations and2010 symmetry-derived exact rays/cuts are rechecked, all335 historical two-exception geometries satisfy the connected-cell inequalities, all three exception combinations pass fixed positive model controls, three clipped/full-region guard comparisons agree, and64 guard-preserving tile mutations preserve their witnesses. Fresh CP-SAT models replay all four exhausted placements as INFEASIBLE. Against all preexisting transparency/placement screen records,193 configurations are new in this turn and784 are reused; the maximum saved path has34 reflections. The independent three-star fan audit passes separately, as does the full prior14-case one-exception audit after the shared model changes. The known24-wall strict control remains feasible with its fixed geometry (`two-control24.json`).
 
 All searches and audits have stopped. Artifacts stay local and gitignored. The tracked checkout is unchanged. No external publication or communication was made.
-
 
 ## Typed exception-pair classification (2026-10-29 follow-up)
 
@@ -658,7 +647,6 @@ A typed pair records the physical coordinates of both exceptional B/C points and
 The first bounded pass and resumed searches close all38 axis classes and all49 skew classes; each combined parent model is INFEASIBLE. The diagonal has four classes left after the8-second-per-class resumed pass; these receive30-second caps. The subsequent30-second-per-open-class diagonal pass closes all four remaining classes after21 additional rays. All three combined models are INFEASIBLE. Independent audits now pass for all three placements.
 
 `audit_illumination_exception_pairs.py` independently extracts exceptions by angle sums, uses explicit isometries rather than the classifier's group routine, fixes every projected witness in a fresh positive model, replays class coverage, reconstructs every new ray guard, compares clipped/full guards, mutates unconstrained tiles, and replays every claimed class and complete parent exclusion.
-
 
 ### Completed exclusion and audit
 
@@ -693,7 +681,6 @@ Search commands resume saved positive rays and previously closed classes. The st
 
 **Next construction threshold:** a sub24 simple room in this tiling now needs at least three transparent B/C points. The most structurally different next branch allows an additional unmarked full A star: unlike the two-exception case, three exceptions no longer make that branch impossible by the same wall-count bound. This is a proposed next direction, not a searched or proved three-exception result.
 
-
 ## Three exceptions and the cost of connecting marked neighborhoods
 
 [done] The three-full-A-star branch is excluded below 24 walls: all five complete arrangements and ten raw nonadjacent marked-pair cases pass CP-SAT and separate fan/SCIP exclusions. Its 23 configurations have exact rays. Claude independently rederived the finite reduction and confirmed every guard and exclusion in his own model (`claude-illumination-check/report.md`). The prior proposal to investigate this branch is therefore resolved.
@@ -710,7 +697,6 @@ Detailed derivation and reproduction: `three-two-star/findings.md`. Composed sta
 
 **Next move:** combine Claude's independent geometry projection with typed-exception searches on the four remaining nearby placements. Larger patches add no cases under the complete reduction.
 
-
 ## Complete cell partition closes the seventh three exception placement
 
 [done] Target A-cell (2,2), physical displacement (4,4), is excluded below 24 walls for simple canonical 45-degree rooms with distinct interior A marks and exactly three B/C exceptions. The typed-triple searches add 558 illuminated configurations and 1,988 exact guards across four placements; 150 fixed positive representative models and 128 class exclusions pass audit. Their projections remain incomplete, so closing all 63 listed diagonal classes does not itself prove that placement impossible.
@@ -723,7 +709,6 @@ Detailed derivation and receipts: `three-triples/findings.md`, `summary.json`, `
 
 **Next move:** use the complete 105-cell-set partition for target (2,1), then the two shorter mark separations. The complete partition avoids treating an unfinished triple projection as exhaustive.
 
-
 ## Complete cell partitions explained and the 105 set follow up
 
 [done] The breakthrough is complete coverage: the wall budget gives P+m≤10, and P+m=b+o with b=8 leaves at most two outside cells. Missing mandatory neighbors still consume the budget. Adding them to a real occupied-cell graph preserves connectivity, so the connected outside-set enumeration covers arbitrarily large assemblies in this canonical family. Each coarse set represents many possible rooms; exact illuminating-ray guards eliminate families within it. This closes the 40-set diagonal case despite an unfinished exception-triple projection. An explanatory diagram and derivation are in `three-triples/cell-2-1-findings.md` and `cell-partition-explanation.png`.
@@ -734,7 +719,6 @@ Claude independently checked the path-charge and cell-set lemmas. His earlier we
 
 **Next move:** split the three residual symmetry types by local cell fan patterns, including absence where allowed.
 
-
 ## Central-cell fan refinement narrows the skew placement
 
 [done] A complete 57-mask split at A-cell(1,0), including absence, refines all five residual target(2,1) outside sets into285 branches. The discovery passes exclude264; fresh audit excludes267 and leaves18 feasible-after-cuts branches. All57 fan masks are excluded for each of {(-1,-1)} and {(3,2)}, closing two more outside sets. Combined with the previous100 audited exclusions,102/105 sets are excluded. The remaining sets are empty, {(1,-1)}, {(1,2)}, forming two mark-exchange types.
@@ -744,7 +728,6 @@ The audit checks393 new illuminated configurations,786 exact guards,8 mutations 
 Detailed report: `three-triples/fan-findings-2-1.md`. Frozen94-input manifest: `fan-proof-inputs-2-1.json`. Fresh receipt: `fan-audit-2-1.json`. All Codex jobs stopped; independent peer check pending.
 
 **Next move:** split the18 residual branches at central cell(1,1), including absence.
-
 
 ## Double central-fan refinement and common-ray diagnostic
 
@@ -758,7 +741,6 @@ Report/figure: `three-triples/double-fan-findings-2-1.md`, `neck-patterns-2-1.pn
 
 **Next move:** seek a geometric illumination argument for the12 necessary neck types using the remaining wall/exception budget. The hoped-for common-ray shortcut remains unproved.
 
-
 ## Exceptional-state bound and a common midpoint-path candidate
 
 [done] A local budget/connectivity propagator preserves422 valid saved/half-turned room controls across all12 neck types.17,440 local fan masks,200 exhaustive budget fixtures and200 exhaustive connectivity fixtures pass audit. Types8–10 force one additional detour triangle, but no universal illumination conclusion follows from the local propagation.
@@ -770,7 +752,6 @@ All147 saved rooms now have exact paths with one exceptional encounter at their 
 No new room geometry or exclusion guard is added. Twelve neck types remain; cumulative102/105 outside sets and7/10 placements excluded are unchanged. All jobs stopped. Proof/findings: `three-triples/neck-budget-findings-2-1.md`; frozen123-input manifest: `neck-budget-proof-inputs-2-1.json`; receipts `neck-budget-audit-2-1.json` and `gate-bound-audit-2-1.json`.
 
 **Next move:** prove or disprove single-pass midpoint-gate sufficiency for every completion of the12 neck types under the wall/exception budget.
-
 
 ## First universal conditional midpoint cover
 
@@ -786,7 +767,6 @@ Of390 processed geometries,380 are genuinely new and10 revisited. The midpoint p
 
 **Next move:** a bounded sufficient-cover extension over the eleven remaining neck types, seeded by the peer survivor, with separate outputs and fresh audits.
 
-
 ## Midpoint extension closes seven of twelve residual neck types
 
 [done] The fresh geometry-only audit proves universal one-pass midpoint illumination for types5,7,9,10,12. New sufficient cores have147,91,91,105 guards for types5,9,10,12, respectively; the original type7 core has37. Fresh core-only replays and positive controls pass; none of these subsets is claimed minimum. The2,598-pattern catalogue includes1,066 inherited conditions, two peer seeds, and1,530 learned conditions. All765 recorded positive geometries and1,530 learned paths/guards pass exact checks and independent closed-triangle coverage; twelve fixed positive controls and8 mutation/8 corrupt-guard checks pass. New rays use at most24 reflections; inherited rays reach33. Both peer guards pass independent coverage checks.
@@ -799,7 +779,6 @@ Cross-phase reconciliation finds746 genuinely new geometries among765 (19 revisi
 
 **Next move:** focus the midpoint argument on the five live types, especially type8, the only surviving canonical outside-cell case. Avoid further universal-only work on already excluded types4 and11.
 
-
 ## Type 8 and type 6 reduce the remaining placement to three neck types
 
 [done] Both new searches exhausted and fresh audits passed. Type8 adds70 new geometries/140 guards; type6 adds26 new geometries/52 guards. All96 are new against frozen earlier inputs. Exact paths, independent triangle coverage, positive geometry controls and mutation/corrupt-guard checks pass. The composed parent has5,255 unique guards and remains feasible.
@@ -811,7 +790,6 @@ Cumulative three-triples totals:2,887 new geometries/6,348 new guards. Frozen in
 [waiting on Claude] Neutral reproduction commands for both phases posted on the board. Claude has independently confirmed the original type7 core and seven prior whole-placement exclusions; the new phase checks remain pending.
 
 **Next move:** search the shared empty-outside / first-mask12 parent, then require a fresh unrestricted-parent replay before claiming closure of placement(2,1).
-
 
 ## Eighth placement excluded by complete partition composition
 
@@ -827,7 +805,6 @@ Whole-placement count is now8/10. Only(1,1),(2,0) remain; the full three-excepti
 
 **Next move:** target(1,1). Try exact alternative single-event paths for its three saved multi-event rooms, then formulate a bounded midpoint-cover parent.
 
-
 ## Placement(1,1): one-pass samples and a complete two-family hub reduction
 
 [done] All three saved multi-event samples have alternative single-event midpoint rays; all37 original samples now have one-pass witnesses. A bounded complete-parent run adds110 illuminated configurations; fresh exact rays, independent triangle coverage, three positive controls,8 mutations and8 corrupt-guard checks pass.96 geometries are genuinely new,14 revisited. The588-pattern midpoint catalogue remains feasible as a geometry-only parent.
@@ -839,7 +816,6 @@ Whole-placement count is now8/10. Only(1,1),(2,0) remain; the full three-excepti
 [waiting on Claude] New193-input manifest `three-triples/midpoint-proof-inputs-1-1.json`; neutral check commands posted, with required `<root>/.context/` copy layout. Peer now independently confirms the earlier(2,1) midpoint extension, including all2,598 paths and four new standalone cores; newer eighth-placement phases remain pending. Peer files and all earlier frozen inputs untouched. All Codex jobs finished.
 
 **Next move:** target the denser seven-triangle hub family, canonical mask191. Reconstruct the merged parent from original2,001 + current448 + restored514 guards (2,963 total), apply the audited connected-cell table, then attempt a bounded exact one-pass cover. Do not restart from the incomplete2,001-cut base alone. No smaller dark construction or full three-exception minimum established.
-
 
 ## Seven-hub refinement excludes five of seven tip fans
 
@@ -853,7 +829,6 @@ Whole-placement count is now8/10. Only(1,1),(2,0) remain; the full three-excepti
 
 **Next move:** the union of tip masks4,5 fixes every tip bit except bit0. Test this residual parent under all3,259 guards and audit the full seven-fan composition.
 
-
 ## Two residual tip patterns differ by one fixed C exception
 
 [done] The residual union of masks4,5 adds30 genuinely new geometries/120 sufficient one-pass guards; fresh exact paths, independent coverage, three fixed positive controls,8 mutations/8 corrupt checks pass. Maximum new reflections22. The3,379-guard parent is closed under all four mark stabilizers. Both residuals remain feasible; the prior five fan exclusions replay intact. Whole seven-hub and whole(1,1) remain open; counts stay8/10 independently confirmed whole placements. Cumulative three-triples totals3,267 new geometries/7,460 new guards.
@@ -863,7 +838,6 @@ Whole-placement count is now8/10. Only(1,1),(2,0) remain; the full three-excepti
 [waiting on Claude] Frozen223-input certificate `three-triples/hub7-residual-proof-inputs-1-1.json` includes the current fresh audit and `tip-gate-1-1.json`; neutral nested-layout commands are on the board. Earlier inputs and peer files unchanged. All Codex jobs finished. Across this continuation104 new geometries and416 new guards; five of seven tip branches excluded, not an entire placement.
 
 **Next move:** target tip5 with fixed interior C(1,0); project the two remaining typed exceptional vertices under the3,379-guard parent. Keep tip4 and the six-hub family as separate open branches. Full three-exception minimum remains unproved.
-
 
 ## Forced-C case closes: six of seven tip fans excluded
 
@@ -877,7 +851,6 @@ Six of seven hub191 tip fans are now closed:5,7,23,87,215,247. Only one-triangle
 
 **Next move:** project the two free typed exceptions in tip4 with smooth C(2,1) fixed, ordinary concave C(1,0), and all3,411 guards.
 
-
 ## Last thin-tip projection retains an open remainder
 
 [done] After the verified tip5 exclusion, tip4 is the sole remaining fan within hub191. A finite local check confirms smooth C(2,1) is fixed and C(1,0) is ordinary concave. Two free exceptional vertices remain. Bounded projection lists25 typed pairs; fresh audit accepts physical/model controls and1,012 logical disjointness/complement assignments. The unlisted remainder is feasible (witness smooth(3,1),smooth(5,1)), so projection is incomplete. The25 listed branches plus their explicit complement form the complete partition.
@@ -885,7 +858,6 @@ Six of seven hub191 tip fans are now closed:5,7,23,87,215,247. Only one-triangle
 No new illumination cuts or placement exclusion. Whole count8/10 independently confirmed;3,411 current guards, cumulative3,270 new geometries/7,492 new guards. The six-hub family stays separately open. New247-input certificate `three-triples/thin-tip-pairs-proof-inputs-1-1.json` and prior239-input six-case exclusion frozen; neutral peer commands posted. All Codex jobs finished.
 
 **Next move:** targeted ray covers of25 known pair branches AND the explicit remainder, without treating capped enumeration as complete.
-
 
 ## Thin-tip ray phases:24 of25 listed pairs excluded
 
@@ -900,7 +872,6 @@ Across both thin-tip ray phases:114 verified configurations,100 genuinely new ge
 [waiting on Claude] Verify thin-tip-extension-proof-inputs-1-1.json, preserving the nested root/.context layout, with audit_illumination_thin_tip_extension.py. This manifest freezes all inputs and receipts.
 
 **Next move:** analyze the interior-C survivor pair geometrically, and refine or search the explicit unlisted complement. Any complete tip4 exclusion must close both. No smaller dark room or full three-exception minimum is established. All Codex jobs finished.
-
 
 # All originally listed pairs closed; complete remainder classification
 
@@ -917,7 +888,6 @@ Across this continuation:30 verified configurations,29 genuinely new geometries,
 Whole placements remain8/10 independently excluded. Tip4 and the six-hub family at(1,1) remain open; placement(2,0) remains open pending Claude's ongoing search. No smaller dark room or full three-exception minimum. All Codex jobs finished.
 
 **Next move:** inspect the surviving zero-interior group, where all three exceptional vertices lie on smooth boundary segments, and choose a complete geometric split of their boundary arrangement. Retain the one- and two-interior groups explicitly.
-
 
 ## Three-exception family completed (2026-10-30)
 

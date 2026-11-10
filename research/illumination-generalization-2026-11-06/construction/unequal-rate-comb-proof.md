@@ -133,4 +133,4 @@ The total reflection count is2k_s+2k_t+1+[sigma_s=-1]+[sigma_t=-1], finite for e
 
 This supplies a first actual path and an eventual tail on EVERY fixed positive real horizontal-rate ray for two equal-height selected comb teeth, including rationally resonant, irrational and extremely unequal fixed rates. The depth offsets, vertical mark offsets and other teeth are arbitrary as stated. It extends the equal-growth premise of the prior first-witness result; it is not a provided-witness propagation lemma.
 
-Finite prefixes, varying tooth heights, a cutoff uniform over ALL growth-rate ratios, and the full two-independent-depth orthant are NOT proved. Pointwise eventuality on all rays does not imply a compact or finite exceptional parameter set. The universal canonical45 W<=21 theorem remains open. There is no novelty claim.
+Finite prefixes, varying tooth heights, a cutoff uniform over ALL growth-rate ratios, and the full two-independent-depth orthant are NOT proved. Pointwise eventuality on all rays does not imply a compact or finite exceptional parameter set. The universal canonical45 W<=21 theorem remains open. There is

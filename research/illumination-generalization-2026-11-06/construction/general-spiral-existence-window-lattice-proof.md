@@ -2,7 +2,7 @@
 
 ## Scope and relationship to prior work
 
-This is a generalization/consolidation of the accepted projection/fiber method (LJ01), not a claimed new universal mechanism. It selects ALL source/cap/right/target indices at once, without preimposing a target divisor grid or a coprime right orbit. It proves actual path existence under the explicit inequalities below. Their universal availability is NOT proved. Full ordered-spiral, r3 and r<=8 goals remain open.
+This is a generalization/consolidation of the accepted projection/fiber method (LJ01). It selects ALL source/cap/right/target indices at once, without preimposing a target divisor grid or a coprime right orbit. It proves actual path existence under the explicit inequalities below. Their universal availability is NOT proved. Full ordered-spiral, r3 and r<=8 goals remain open.
 
 Use original ordered geometry 0<a<l<w<A,0<b<c<h<H, R=A-w, B=A-l. The accepted separated geometry a<l OR c<b is also allowed, with the remaining strict geometry as in GSE02. All widths and vertical coordinates, including source/target heights, are integral. Horizontal s,t may be arbitrary real interior positions. Put S=(s,u),0<s<a,b<u<H, T=(t,v),l<t<A,0<v<c and z=A-t.
 
@@ -94,6 +94,6 @@ The lower source has y>=u>b and x<=a; it cannot visit T before the final bands: 
 
 The sufficient criterion now jointly selects every branch state with full actual target matching and no nominated target-divisor or right-coprimality premise. It applies to arbitrary admissible integer metrics and every actual horizontal pair under explicit gcd/width inequalities. It can be applied after a proved global isometry/reversal, with the exact transformed geometry retained.
 
-It is related to accepted LJ01's projection/fiber construction; no claim of historical novelty or a new all-word mechanism is made. Unlike LJ01's chosen compatible grid followed by parity-based right-corner repair, this version includes the ACTUAL target index and strict right state as coordinates of the initial lattice selection. Both target images may separately enlarge coverage, but the theorem already works for a nominated +z.
+It is related to accepted LJ01's projection/fiber construction; no claim of a new all-word mechanism is made. Unlike LJ01's chosen compatible grid followed by parity-based right-corner repair, this version includes the ACTUAL target index and strict right state as coordinates of the initial lattice selection. Both target images may separately enlarge coverage, but the theorem already works for a nominated +z.
 
 The new inequalities have NOT been proved forced by r3, let alone r<=8. Failure of them says nothing about darkness, all-state existence, or repeated-contact paths. They are offset-free sufficient bounds; exact lattice-coset selection may succeed when a bound fails or is equal. This result must be independently reviewed and reconciled into the sufficient-route union. No census, numerical discovery, engine, new clock, worker, frozen-file edit or git mutation was used.

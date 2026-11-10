@@ -14,4 +14,4 @@ I independently checked the following points from the frozen source.
 
 This proof does not claim all marks map to two-torsion in a primitive period torus. Corners do; interior marks are handled separately by the endpoint theorem. Hence the peer's marked-torus guard does not invalidate it.
 
-The broad published classification is a comparison source, not an additional premise of this independent hand derivation. No new optical existence result, novelty claim, non-torus illumination claim, or arbitrary-direction bridge follows.
+The broad published classification is a comparison source, not an additional premise of this independent hand derivation. No new optical existence result, non-torus illumination claim, or arbitrary-direction bridge follows.

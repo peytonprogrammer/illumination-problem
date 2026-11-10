@@ -6,7 +6,7 @@ Nine of twelve canonical neck types are excluded. Remaining types 1, 2, 3 have e
 
 The geometry-only midpoint implication for type 6 remains feasible (OPTIMAL). The exclusion composes new midpoint witnesses with historical positive-ray cuts; it does not prove universal single-pass illumination for type 6.
 
-Novelty reconciliation against all matching room geometries in the prior 159-path manifest: 26 new, 0 revisited. Cumulative three-triples totals: 2887 new geometries / 6,348 new guards.
+Geometry coverage against all matching room geometries in the prior 159-path manifest: 26 new, 0 revisited. Cumulative three-triples totals: 2887 new geometries / 6,348 new guards.
 
 Scope: simple canonical congruent 45–45–90 triangle rooms, at most 23 walls, exactly two full A stars and three B/C exceptions, distinct physical marks (0,0),(4,2). No smaller dark room, full three-exception minimum, arbitrary-polygon theorem or formal UNSAT proof.
 

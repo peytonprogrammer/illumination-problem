@@ -67,4 +67,4 @@ where N=n/4 is the canonical triangle count downstairs. Thus a new sub-24 canoni
 
 ## Peer review receipt
 
-`literature-peer.json` contains a read-only Opus challenge. Verdict: ACCEPT CONDITIONAL. It accepts the earlier stabilizer/corner gate and steps A–E on supplied exact data, and requested the sheet construction and corrected line-arrangement explanation now incorporated. It ran no code and did not independently audit the strict-family solvers. The later regular-vertex-budget appendix was not included in its frozen prompt. No formal proof or literature novelty is claimed.
+`literature-peer.json` contains a read-only Opus challenge. Verdict: ACCEPT CONDITIONAL. It accepts the earlier stabilizer/corner gate and steps A–E on supplied exact data, and requested the sheet construction and corrected line-arrangement explanation now incorporated. It ran no code and did not independently audit the strict-family solvers. The later regular-vertex-budget appendix was not included in its frozen prompt. No formal proof is supplied.

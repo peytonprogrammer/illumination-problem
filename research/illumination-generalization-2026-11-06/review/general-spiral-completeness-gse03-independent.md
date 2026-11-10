@@ -38,7 +38,7 @@ For lower/mouth entry, a roof corner would return to the same h coordinate and c
 
 ## 5. Incremental scope and completeness — ACCEPT as explicitly partial
 
-The method generalizes the accepted LJ01 projection/fiber selection and coincides with the full-root lattice already recorded in the joint-root prerequisite. Its new useful content is a proved offset-free sufficient cover for ALL three guards and the actual endpoint at once, rather than independent candidate selection followed by unproved repair. It is not advertised as a new universal mechanism or historical novelty.
+The method generalizes the accepted LJ01 projection/fiber selection and coincides with the full-root lattice already recorded in the joint-root prerequisite. Its new useful content is a proved offset-free sufficient cover for ALL three guards and the actual endpoint at once, rather than independent candidate selection followed by unproved repair. It is not advertised as a new universal mechanism.
 
 The first projection bound is automatic, but the remaining gcd ratios have NOT been bounded universally. A failed or equality comparison does not imply an empty affine intersection, an empty chart union, or darkness. Other coordinate flags or exact cosets may succeed; repeated genuine returns may also be needed. The complete global availability assertion remains open and cannot be inferred from rank, small total covolume or the existence of a positive kernel.
 

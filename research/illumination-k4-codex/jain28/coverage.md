@@ -9,7 +9,7 @@ exact finite-word replay, gradient/rank/kernel/positive dependence; perturbed
 prescribed-word controls for wall-tangent and inward endpoints.
 
 Not checked: original saved geometry/settings file, pixel-to-exact-length
-identification, historical novelty, global minimality, arbitrary nonorthogonal
+identification, global minimality, arbitrary nonorthogonal
 deformations, global isolation, a numerical neighborhood radius, interior
 self-return rigidity, or a general isolation theorem.
 

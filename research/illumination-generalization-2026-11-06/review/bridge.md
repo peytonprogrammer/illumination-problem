@@ -38,7 +38,7 @@ A sufficient compactness bridge would bound reflection count and supply uniform 
 
 Wolecki, Illumination in Rational Billiards, arXiv1905.09358v3, Definition1.1, Theorem1.2(i) and Lemma2.1: rational means angles in Q*pi; trajectories stop at polygon vertices; only finitely many point pairs fail to illuminate. This includes the already accepted orthogonal22wall room with distinct rational interior S,T. Fix that S and choose rational targets T_n->T avoiding its finite dark-target set. Each pair S,T_n illuminates, but S,T does not. Thus billiard illumination need not be closed even for a fixed rational orthogonal polygon and rational approximating endpoints. This directly refutes an unconditional inference from nearby illuminated data to the limiting pair. It does not supply a W<=21 counterexample or rule out a stronger low-wall compactness theorem.
 
-Primary source: https://arxiv.org/html/1905.09358v3 (Definition1.1;Theorem1.2(i);Lemma2.1;Remark2.2 for removable vertices). Earlier fixed-source finiteness also appears in Lelièvre–Monteil–Weiss, Everything is illuminated, Corollary3: https://www.math.tau.ac.il/~barakw/papers/illumination.pdf . No new dark-pair construction or novelty claim is involved.
+Primary source: https://arxiv.org/html/1905.09358v3 (Definition1.1;Theorem1.2(i);Lemma2.1;Remark2.2 for removable vertices). Earlier fixed-source finiteness also appears in Lelièvre–Monteil–Weiss, Everything is illuminated, Corollary3: https://www.math.tau.ac.il/~barakw/papers/illumination.pdf . No new dark-pair construction is involved.
 
 ## B6. Arithmetic endpoint bridge independently accepted
 

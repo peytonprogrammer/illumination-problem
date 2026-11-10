@@ -6,6 +6,6 @@ Accepted foundations cover common-core marks, equal effective depths, irrational
 
 Proof: full-join.md with mandatory addenda. Final receipt: ../unequal-depth-independent/whole-result-acceptance.json. See completion.md and final-integrity.json.
 
-No mathematical obligation remains inside this scope. This is independently AI-reviewed exact computer-assisted mathematics, not formal verification or external expert refereeing. No uniform reflection bound, novelty, other family, all interior pairs or universal wall minimum is claimed.
+No mathematical obligation remains inside this scope. This is independently AI-reviewed exact computer-assisted mathematics, not formal verification or external expert refereeing. No uniform reflection bound, other family, all interior pairs or universal wall minimum is claimed.
 
 Native goal status is COMPLETE; no numeric configured/enforced token limit. No automatic expansion.

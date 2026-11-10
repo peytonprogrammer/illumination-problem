@@ -70,7 +70,7 @@ This audit accepts the witness layer, the finite bounds and placement coverage, 
 
 Accordingly, Claude's reported below22 exclusion is supported by independently validated certificates and necessary scope bounds. It remains a computer-assisted exclusion whose complete search execution has not been independently reproduced here. A fresh independent constraint-model replay using only these now-validated guards would strengthen the remaining execution evidence without discovering rays.
 
-The global minimum, arbitrary polygon rooms, and presentations with k>=5 remain open. Integer subdivision can make k arbitrarily large without changing the physical room, so extrapolation requires a proved normalization or a geometric theorem. Historical priority is still unresolved pending the authors' replies.
+The global minimum, arbitrary polygon rooms, and presentations with k>=5 remain open. Integer subdivision can make k arbitrarily large without changing the physical room, so extrapolation requires a proved normalization or a geometric theorem.
 
 ## Reproduce
 

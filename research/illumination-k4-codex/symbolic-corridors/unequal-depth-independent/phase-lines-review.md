@@ -178,7 +178,7 @@ The broader native goal remains OPEN: commensurable normalized a/g,b/g,
 unequal depths, both horizontal positions in the left portions, not both
 centered. Rational phase orbits are finite and do NOT have the closure used
 here. No claim about their coverage, a complete cap-sheet theorem, arbitrary
-interior pairs, another room family, novelty or universal wall minimality
+interior pairs, another room family or universal wall minimality
 follows from this acceptance. The real-parameter proof is independently
 AI-reviewed and computer-assisted in its finite residual cover; it is not a
 formal proof assistant certificate or external expert refereeing.

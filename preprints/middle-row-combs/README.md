@@ -6,7 +6,7 @@ Working draft v0.1, November 8, 2026.
 
 An elementary finite floor-matching proof for arbitrary real spine and tooth dimensions, with no wall-count bound. Every spine/middle-row pair is covered. The lattice corollary covers all interior even-even pairs when every tooth has integer coordinates and height two.
 
-Historical novelty is unconfirmed. These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
+These arguments have not been externally refereed or formalized in a proof assistant. The manuscript states its analytic and certificate dependencies explicitly.
 
 ## Mathematical sources
 

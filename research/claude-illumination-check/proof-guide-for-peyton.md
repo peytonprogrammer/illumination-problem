@@ -102,7 +102,6 @@ The first command builds and solves all 31 formulas. Each takes under 20 seconds
 
 - **More than 4 transparent points.** This case is open. Scaling a room up by an integer keeps it dark and keeps its wall count, but multiplies its transparent points. So a cap on transparent points can't settle it alone. See "The general case: progress since the theorem".
 - **Rooms outside the tiling.** The theorem says nothing about polygons with other angles or with corners off the lattice.
-- **Priority.** Public dark rooms with fewer than 24 walls all have a pinch, a slit, a post, or a hole. Tokarsky's 1995 square-cell room has 34 walls. Historical priority remains unresolved; compare the exact geometry with published earlier examples before claiming novelty.
 
 ## The general case: progress since the theorem
 

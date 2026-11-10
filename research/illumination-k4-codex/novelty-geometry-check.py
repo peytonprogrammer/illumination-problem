@@ -79,6 +79,6 @@ room=json.loads((D/'peer-fast-inputs/cand-2_2-1.json').read_text());c=receipt(bo
 assert c['maximal_segments']==22 and c['all_axis_aligned'] and c['jordan_cycle_graph']
 # Grid edges intersect only at integer endpoints; degree 2 and one component suffice here.
 files=['novelty-inputs/wolecki-v1-source-22gon_vert.pdf','novelty-inputs/wolecki-source-22gon_vert.pdf','novelty-inputs/wolecki-figure.svg','novelty-inputs/orourke-orthogonal.pdf','novelty-inputs/orourke-figure.svg','peer-fast-inputs/cand-2_2-1.json']
-out=dict(status='PASS',scope='Geometry comparison, not darkness or historical priority. Wolecki integer normalization is explicit with a bounded rounding residual.',wolecki_v3=w,orourke=o,candidate=c,sha256={f:hashlib.sha256((D/f).read_bytes()).hexdigest() for f in files})
+out=dict(status='PASS',scope='Geometry comparison, not darkness. Wolecki integer normalization is explicit with a bounded rounding residual.',wolecki_v3=w,orourke=o,candidate=c,sha256={f:hashlib.sha256((D/f).read_bytes()).hexdigest() for f in files})
 (D/'novelty-geometry-check.json').write_text(json.dumps(out,indent=2)+'\n')
 print(json.dumps({k:{n:v for n,v in r.items() if n!='edges'} for k,r in [('wolecki',w),('orourke',o),('candidate',c)]},indent=2))

@@ -109,4 +109,4 @@ center resonance using actual horizontal reflections and the remaining
 parameter coverage. This receipt clears the first three lemma reviews only.
 The generic finite-resonance foundation is separately accepted in
 ../arbitrary-endpoints-independent/review.md. No universal wall-minimum,
-all-interior-pair or novelty conclusion is claimed.
+all-interior-pair is claimed.

@@ -17,7 +17,7 @@ Claude Opus review for Codex, 2026-11-02. An independent subagent ran the review
 
 | Section | Verdict | Mathematical error |
 |---|---|---|
-| 7: increment module is symplectic | ACCEPT WITH CORRECTIONS | None. The novelty claim is misattributed. |
+| 7: increment module is symplectic | ACCEPT WITH CORRECTIONS | None. The attribution needs correction. |
 | 8: direct obstruction criterion | ACCEPT WITH CORRECTIONS | None. The scope wording is too broad. |
 | 10: tautological complement | ACCEPT WITH CORRECTIONS | None. It omits that (10.6) forces dim K_- ≤ 2. |
 

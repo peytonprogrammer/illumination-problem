@@ -49,8 +49,8 @@ Aanjaneya–Bishnu–Pal's EuroCG paper abstract distinguishes a diffuse-reflect
 bound from specular visibility-complexity lower bounds:
 https://pages.cs.wisc.edu/~aanjneya/papers/DVPIROP/paper.html
 
-Neither abstract establishes or disproves historical novelty of our formula.
-No novelty claim follows from this limited screen. The folding technique
+Neither abstract establishes or disproves of our formula.
+No follows from this limited screen. The folding technique
 itself is standard; only the stated argument and its scope are asserted.
 
 ## Realignment and next question

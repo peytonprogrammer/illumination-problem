@@ -1,6 +1,6 @@
 # L-shaped rooms admit connections with reflections in either wall orientation alone
 
-Elementary theorem accepted by a separate tools-disabled Opus adversarial review; live peer handoff posted. Exact prescribed-formula controls pass. No novelty claim. No rays or direction search.
+Elementary theorem accepted by a separate tools-disabled Opus adversarial review; live peer handoff posted. Exact prescribed-formula controls pass. No rays or direction search.
 
 ## The claim
 

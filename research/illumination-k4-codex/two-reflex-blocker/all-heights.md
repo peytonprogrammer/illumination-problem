@@ -1,6 +1,6 @@
 # A finite construction connecting arbitrary upper-arm marks in a U room
 
-[in progress] 2026-11-01. The new opposite-arm proposition (§1–4) is accepted by a separate tools-disabled Opus symbolic audit (`all-heights-peer-review.txt`). The all-interior-pair corollary additionally uses the previously accepted L-room theorem; the separate reviewer treated that unreproduced dependency as conditional. Live coordinating-peer review of this new proof is pending. This is an illumination theorem, not yet universal singleton-blocker removal or a novelty claim. No optical/direction discovery search.
+[in progress] 2026-11-01. The new opposite-arm proposition (§1–4) is accepted by a separate tools-disabled Opus symbolic audit (`all-heights-peer-review.txt`). The all-interior-pair corollary additionally uses the previously accepted L-room theorem; the separate reviewer treated that unreproduced dependency as conditional. Live coordinating-peer review of this new proof is pending. This is an illumination theorem, not yet universal singleton-blocker removal. No optical/direction discovery search.
 
 ## Geometry and statement
 
@@ -96,4 +96,4 @@ Every pair of interior points in a U room is illuminated. Opposite high-arm poin
 
 For the opposite-arm case, every horizontal boundary blocker except the constructed bottom hit is avoided. A prescribed blocker at that hit, or a vertical-wall blocker, still needs a second suitable connection. Changing phases/k supplies more candidates, but no empty-common-contact theorem is asserted here for arbitrary asymmetric U rooms.
 
-This proves the all-height matching and corner-avoidance step. It does not establish the global22wall minimum, resolve arbitrary single blockers, or establish priority in the literature.
+This proves the all-height matching and corner-avoidance step. It does not establish the global22wall minimum, resolve arbitrary single blockers.

@@ -78,4 +78,4 @@ c2-BC-four-bounce-check.py independently constructs(3) for all fourteen already 
 
 The source exit condition w<c was checked algebraically during authoring and is retained in the theorem. It cannot be dropped merely because the selected vertices appear to be inside a rectangular spine.
 
-Accepted A0 and the remaining peer-owned A1 must still be reconciled/closed before claiming the entire c2 thin-comb W21 theorem. General c1 combs, deeper or taller teeth, arbitrary octilinear rooms and the universal uncapped W21 goal remain OPEN. No novelty or universal minimum claim is made. All authoring and search belong to the original R38 interval ending06:28:30.804732Z.
+Accepted A0 and the remaining peer-owned A1 must still be reconciled/closed before claiming the entire c2 thin-comb W21 theorem. General c1 combs, deeper or taller teeth, arbitrary octilinear rooms and the universal uncapped W21 goal remain OPEN. No universal minimum claim is made. All authoring and search belong to the original R38 interval ending06:28:30.804732Z.

@@ -53,4 +53,4 @@ Run verify-receipts.py for the full source/receipt integrity join. Run the new c
 
 Discovery efforts and prescribed proof checks remain distinguished. The full new finite optical audit was a fixed frozen-certificate replay, not discovery, and completed in 39.81 seconds. No workers, commits, branch changes, outgoing messages or expansion to another family occurred. There is no configured numeric native token limit, and no earlier million-token allowance was inferred.
 
-This acceptance concerns only the specified lower-chamber to upper-chamber interior pairs. It does not claim all interior pairs, arbitrary orthogonal polygons, surplus-layer results, universal wall minimality, novelty, or external mathematical certification. Those are outside scope, not gaps in the accepted statement.
+This acceptance concerns only the specified lower-chamber to upper-chamber interior pairs. It does not claim all interior pairs, arbitrary orthogonal polygons, surplus-layer results, universal wall minimality, or external mathematical certification. Those are outside scope, not gaps in the accepted statement.

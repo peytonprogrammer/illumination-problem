@@ -211,5 +211,5 @@ parameters rational, unbounded denominators, unequal depths and noncentered
 left-left marks. The width ratio d/g remains arbitrary positive real under
 axis scaling. The separate fixed-rational-room continuous certificate is
 awaiting peer review and is not substituted for the universal rational class.
-No darkness, all-interior-pair, other-family, novelty or universal wall-minimum
+No darkness, all-interior-pair, other-family or universal wall-minimum
 claim is made here.

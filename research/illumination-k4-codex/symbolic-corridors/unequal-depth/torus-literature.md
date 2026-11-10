@@ -12,4 +12,4 @@ Remark 2.2 supplies a relevant independent conceptual check: convex corner conti
 
 Searches for orthogonal staircase illumination mostly concern art-gallery visibility, staircase paths, floodlights, diffuse reflection or wall transmission. Those results do not establish specular connectivity in this problem.
 
-No universal illumination, darkness, primitive-cover classification or novelty conclusion follows. Return to finite-cyclic arithmetic with endpoint-loop trimming already accepted.
+No universal illumination, darkness, primitive-cover classification follows. Return to finite-cyclic arithmetic with endpoint-loop trimming already accepted.

@@ -6,4 +6,4 @@ If h>=3T0/2, every Ht is covered: Ht>=T0 uses that chart; Ht<T0 gives v=2h-Ht>2T
 
 The new fixed12-contact actual path was independently verified with my own pure finite-wall checker in staircase-overlap-check.py/json:49exact guards, all12 smooth genuine vertical contacts, actual target, no earlier visit. The peer checker was not executed. This is supporting control, separate from the arbitrary-real inequality proof.
 
-This improves the sufficient outer dimensions in the coverage ledger; it does not prove every staircase. The all-condition-fail region and full W<=21 target remain open. No novelty claim.
+This improves the sufficient outer dimensions in the coverage ledger; it does not prove every staircase. The all-condition-fail region and full W<=21 target remain open.

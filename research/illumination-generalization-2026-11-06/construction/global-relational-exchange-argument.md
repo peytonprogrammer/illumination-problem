@@ -172,7 +172,7 @@ the reviewable results of this bounded effort.
 The r=9 obstruction does not disprove a formula restricted to r<=8,
 coefficients that vanish at r=9, identity-dependent tensor potentials, or all
 relational exchange methods. The square only requires a separate r=0
-argument. No low-wall dark counterexample, new wall bound or novelty claim
+argument. No low-wall dark counterexample, new wall bound
 has been established.
 
 The missing positive implication remains: for a full physical unfolding with

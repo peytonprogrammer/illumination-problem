@@ -1,6 +1,6 @@
 # COORD-COPRIME-01 independent review: ACCEPT
 
-The terminal-pair lemma and whole-native-pair corollary are accepted at exactly the pinned candidate's scope. No correction is needed. All fourteen supplied source hashes match before and after the independent replay. The separate JSON receipt records them and the review evidence hashes. Nothing here closes all W10/r3, r<=8, arbitrary-real endpoint pairs or a novelty question.
+The terminal-pair lemma and whole-native-pair corollary are accepted at exactly the pinned candidate's scope. No correction is needed. All fourteen supplied source hashes match before and after the independent replay. The separate JSON receipt records them and the review evidence hashes. Nothing here closes all W10/r3, r<=8, arbitrary-real endpoint pairs.
 
 ## Accepted statement
 

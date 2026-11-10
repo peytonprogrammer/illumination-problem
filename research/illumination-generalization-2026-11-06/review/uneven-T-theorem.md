@@ -74,4 +74,4 @@ All contacts have 1<y<2, so x=0 and x=5 are actual smooth mirrors. The final poi
 
 ## Scope
 
-This excludes all such unequal-floor T rooms without a k bound. It does not classify all eight-wall orthogonal shapes, prove the full W<=21 theorem, or supply any arbitrary-direction or universal-minimum conclusion. No novelty claim.
+This excludes all such unequal-floor T rooms without a k bound. It does not classify all eight-wall orthogonal shapes, prove the full W<=21 theorem, or supply any arbitrary-direction or universal-minimum conclusion.

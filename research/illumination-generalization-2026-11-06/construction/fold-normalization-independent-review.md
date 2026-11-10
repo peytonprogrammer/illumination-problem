@@ -12,4 +12,4 @@ The independently accepted incidence boundw>=8 and assembly inequality force m<=
 
 Thus PROVIDED literal strict canonical whole-copy parity folds with smooth distinct base A marks cannot realize dark actual interior preimages below22walls, including diagonal bases, seam cycles, shared endpoints and arbitrary initial Euclidean placements. The known22wall example supplies attainment in this class. No construction-class lower bound becomes a theorem for arbitrary canonical45 dark pairs without a separate factor-existence proof. Base-corner marks, noncongruent pieces, non-pointwise or symmetry-quotient folds and factors identifying the marked fibers remain outside the statement.
 
-No finding remains. This is independent complete hand review, using the already reconciled baseline as a dependency; no computation, scan, formalization or novelty claim was made.
+No finding remains. This is independent complete hand review, using the already reconciled baseline as a dependency; no computation, scan, formalization was made.

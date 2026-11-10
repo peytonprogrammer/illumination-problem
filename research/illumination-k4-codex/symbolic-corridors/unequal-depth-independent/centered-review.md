@@ -181,5 +181,5 @@ supplies the other two infinite exceptional lines.
 All source hashes were checked before and after the run. The exact theorem,
 parent checker and parent receipt are pinned in centered-check.json.
 No claim is made here about independent horizontal s,t, the complete cap-sheet
-cover, all interior pairs, other room families, historical novelty or a
+cover, all interior pairs, other room families or a
 universal polygon wall minimum. The full native review goal remains ACTIVE.

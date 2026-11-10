@@ -1,6 +1,6 @@
 # A true-zero dark correspondence of positive slope
 
-R60 hand construction, pending independent review. No novelty claim. This is a global translation-surface counterargument to a specified generic rigidity premise. No physical polygon, wall count or distinct physical-fiber counterexample is asserted. The universal W<=21 goal remains OPEN.
+R60 hand construction, pending independent review. This is a global translation-surface counterargument to a specified generic rigidity premise. No physical polygon, wall count or distinct physical-fiber counterexample is asserted. The universal W<=21 goal remains OPEN.
 
 ## 1. Exact candidate chain and what is disproved
 
@@ -75,6 +75,6 @@ A defensible next implication must use that additional physical structure explic
 
 ## Sources, deadline and review
 
-Primary definitions/theorem scope independently checked: [LMW, Everything is illuminated](https://msp.org/gt/2016/20-3/gt-v20-n3-p11-s.pdf), journal Theorems1,2,10; [Wolecki v3](https://arxiv.org/html/1905.09358v3), full physical-fiber and corner-stopping conventions. No published claim of this construction or novelty is imported; its gluing and exclusion are proved above. Square-cover conventions agree with the already accepted marked-origami geometric builder, but none of its historical orbit search was executed.
+Primary definitions/theorem scope independently checked: [LMW, Everything is illuminated](https://msp.org/gt/2016/20-3/gt-v20-n3-p11-s.pdf), journal Theorems1,2,10; [Wolecki v3](https://arxiv.org/html/1905.09358v3), full physical-fiber and corner-stopping conventions. No published claim of this construction or its gluing and exclusion are proved above. Square-cover conventions agree with the already accepted marked-origami geometric builder, but none of its historical orbit search was executed.
 
 Original R60 clock08:28–08:42 UTC includes the prior audit, source reading and setup; it is not renewed. Request independent scrutiny of the primitive-loop repetition, monodromy abelianization, exponent3, true-zero classification and exact physical limits. All conclusions remain candidates until review. The native goal and accounting are preserved.

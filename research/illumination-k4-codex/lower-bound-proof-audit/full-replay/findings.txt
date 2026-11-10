@@ -15,8 +15,7 @@ DRAT checks invoke the standard drat-trim binary independently on each saved fin
 Binding and interruption
 manifest.json fixes each guard file hash and record count, each CNF/proof hash, both checker hashes, and the runner hash. Per-file guard checkpoints record the verified prefix count; a PASS requires the full expected count and a post-run input hash check. Existing checkpoints are reused only under the same input/checker/runner binding. Proof receipts record the precise CNF/proof/checker hashes and are saved only after replay and post-run hash verification. Guard and DRAT logs are separate, so the independent processes do not write the same log.
 
-Limits
-These replays do not independently prove the mathematical finite-case census, geometry necessity, arithmetic completeness or guard-to-clause transformation. Those have separate audits. Full replay does not enlarge the restricted theorem, establish universal 22-wall minimality or establish historical novelty.
+Limits These replays do not independently prove the mathematical finite-case census, geometry necessity, arithmetic completeness or guard-to-clause transformation. Those have separate audits. Full replay does not enlarge the restricted theorem, or establish universal 22-wall minimality.
 
 Guard replay completed
 All52 files passed, covering193480/193480 records, with zero failures. Totals: {"checked": 193480, "reflections": 3363038, "room_checks": 17879, "vacuous": 0, "vertex_bounces": 160831}. Contradiction replay subsequently completed too; see the final result below.
@@ -33,7 +32,7 @@ Final reconciliation matched every expected guard/proof receipt by identity, che
 The optical checker is independently written relative to Opus's guard checker. The contradiction checks are independent executions of the standard drat-trim implementation, not an independently implemented second DRAT checker. Python, exact integer/rational arithmetic, the checker programs and file/hash transport remain trusted.
 
 What this closes
-Combined with the separate full clause provenance reconstruction, arithmetic extension proof accepted by Opus, and earlier mathematical coverage/geometry audits, this removes the earlier reliance on sampled independent path/proof replay. It strengthens validation of the restricted k<=6 exclusion, not its mathematical scope or historical novelty. Opus's requested hand review of the complete provenance checker remains pending; this replay does not impersonate that review.
+Combined with the separate full clause provenance reconstruction, arithmetic extension proof accepted by Opus, and earlier mathematical coverage/geometry audits, this removes the earlier reliance on sampled independent path/proof replay. It strengthens validation of the restricted k<=6 exclusion, not its mathematical scope. Opus's requested hand review of the complete provenance checker remains pending; this replay does not impersonate that review.
 
 Reproduction
  python3 -B .context/illumination-k4-codex/lower-bound-proof-audit/full-replay/replay.py init

@@ -14,4 +14,4 @@ The search stopped immediately after that FIRST candidate and FIRST verified phy
 
 Now every allowed h is either4, covered by this exact finite witness, or an even integer>=6, covered by independently accepted A41. These alternatives exhaust A0. Its only actual interior A pair is S/T, by the same integer unit-tooth and parity argument used in A41. Reversing the paths covers endpoint order, and actual Euclidean isometries cover its equivalent orientations in A42's necessary reduction.
 
-This is a full family join with no remaining A0 parameter, subject to independent acceptance of the h4 certificate and this join. A42's other normal forms A1,B,C1,C2 and the general universal objective remain separate open obligations. No novelty or universal minimality claim is made.
+This is a full family join with no remaining A0 parameter, subject to independent acceptance of the h4 certificate and this join. A42's other normal forms A1,B,C1,C2 and the general universal objective remain separate open obligations. No universal minimality claim is made.

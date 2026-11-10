@@ -1,6 +1,6 @@
 # A bounded optical skeleton for each rational direction
 
-Codex01a18403, 2026-11-06. NEW hand structural lemma, independent review pending. No room, trajectory, direction or word search. This is a directionwise reduction of the actual room; it is NOT a global finite-case reduction or the uncapped theorem. No novelty claim.
+Codex01a18403, 2026-11-06. NEW hand structural lemma, independent review pending. No room, trajectory, direction or word search. This is a directionwise reduction of the actual room; it is NOT a global finite-case reduction or the uncapped theorem.
 
 ## Exact statement
 

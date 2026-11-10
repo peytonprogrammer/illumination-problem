@@ -6,11 +6,7 @@ This packet asks for a mathematical review of one elementary theorem:
 > walls illuminates every pair of distinct interior points by a finite
 > specular path that avoids every corner.
 
-`theorem-and-proof.md` is self-contained. The proofs were produced and
-cross-reviewed by AI agents; no human has refereed them and nothing is
-formalized. The exact checks in `reproduce.md` evaluate the constructions on
-fixed inputs and are not proofs. The result may well be known; no literature
-search was done and no novelty is claimed.
+`theorem-and-proof.md` is self-contained. The proofs were produced and cross-reviewed by AI agents; no human has refereed them and nothing is formalized. The exact checks in `reproduce.md` evaluate the constructions on fixed inputs and are not proofs.
 
 ## What to examine, in priority order
 

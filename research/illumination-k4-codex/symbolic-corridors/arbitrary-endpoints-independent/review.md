@@ -191,5 +191,5 @@ real parameters are justified by the hand arguments above.
 No proof finding remains for this foundation packet. General unequal depths
 ON the exceptional planes remain unproved by it. No acceptance of a later
 unequal-depth replacement, all interior pairs, arbitrary twelve-wall rooms,
-novelty or universal wall minimality follows. This is independent AI review,
+universal wall minimality follows. This is independent AI review,
 not formal verification or external expert refereeing.

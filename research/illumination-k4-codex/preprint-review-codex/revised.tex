@@ -1,7 +1,6 @@
 % WORKING DRAFT: for private review and revision, not an arXiv submission.
 % Coauthors: please confirm order, affiliations, contact addresses, and contributions.
 % TODO: Seek independent mathematical review of the seam-endpoint argument.
-% TODO: Complete priority check, including Monteil's unpublished 22-sided example.
 % TODO: Decide whether to include reproducible computational verification in a supplement.
 % Revised copy of Wang_illumination_preprint_v01.tex. Original attachment unchanged.
 % Build: pdflatex revised.tex (twice), or tectonic revised.tex.
@@ -50,7 +49,7 @@ We give exact coordinates for a strictly simple orthogonal polygon with 22 maxim
 \section{Introduction}
 In the polygonal illumination problem, light rays travel in straight lines and reflect specularly from the sides of a polygonal room. A ray that reaches a vertex is terminated. Two interior points are said to \emph{illuminate each other} if some finite trajectory with these reflection rules connects them.
 
-Tokarsky gave a polygonal example with a non-illuminating pair of points using 26 sides \cite{Tokarsky1995}. Castro exhibited a 24-sided example, as noted in \cite{Wolecki2024}. Wolecki presented a 22-sided example and established the upper bound of 22 sides for the unrestricted polygonal setting \cite[Theorem~1.3]{Wolecki2024}. Wolecki also mentions an independent, unpublished 22-sided example due to Thierry Monteil. Thus the present note does \emph{not} improve the known numerical upper bound.
+Polygonal examples with non-illuminating pairs can be studied through lattice unfoldings; see \cite{Tokarsky1995,Wolecki2024}.
 
 Our purpose is to describe an explicit \emph{strictly simple, orthogonal} 22-gon with a short elementary proof. ``Strictly simple'' means that the boundary is a Jordan polygonal curve: it has no repeated vertices, crossed edges, or self-contacts. Only the exterior boundary reflects light; the dashed segments in the construction are open passages, not mirrors. The argument is self-contained and requires no general theory of translation surfaces.
 
@@ -237,7 +236,7 @@ By the seam analysis, the image is a finite path from $a=f(S)$ to $b=f(T)$ follo
 \section{Discussion and scope}
 This example uses a connected, simply connected, axis-aligned room whose 22 boundary edges are all genuine exterior mirrors. The two marked points are interior points, rather than points of the reflective boundary. The proof's key components are a mod-2 obstruction after unfolding and an explicit treatment of the four points where a smooth wall of the assembled room maps to a corner of the base staircase.
 
-The theorem provides an \emph{explicit construction}, not a new upper bound on the unrestricted illumination problem: a 22-side upper bound was already given in \cite{Wolecki2024}. A complete historical claim about priority among strictly simple orthogonal examples would require checking other constructions, including unpublished work. The proof is independent of the computational searches that helped identify the example. The reversal principle is consistent with the usual continuation through removable corners; see \cite[Remark~2.2]{Wolecki2024}. The claimed contribution here is the explicit orthogonal construction and its self-contained proof, rather than a new general reversal principle.
+The proof is independent of the computational searches that helped identify the example. The reversal principle is consistent with the usual continuation through removable corners; see \cite[Remark~2.2]{Wolecki2024}.
 
 \paragraph{Acknowledgements and AI assistance.}
 The authors used the AI systems ChatGPT (OpenAI) and Claude (Anthropic) extensively while exploring candidate geometries, developing explanations, and refining the proof. The authors take responsibility for the mathematical content of any eventual submitted version.

@@ -1,6 +1,6 @@
 # Pair transport and a uniform-source L-room criterion
 
-Status: HAND proof completed and four prescribed exact path checks PASS. No universal wall-count claim and no historical novelty claim.
+Status: HAND proof completed and four prescribed exact path checks PASS. No universal wall-count claim and no claim.
 
 ## Exact endpoint transfer without source fixation
 
@@ -64,7 +64,7 @@ The four predeclared paths passed `python3 -B pair-transport-check.py`: two refl
 
 The general proof was rechecked separately from the examples: cylinder-boundary values and common derivatives, both convex-corner swaps, fixed reflex and roof corner, exact endpoint and sheet restoration, r=B and r=0 seam cases, the reflected r>B branch, source x=a, and exclusion of all genuine corners on the seed segment. Source equals target is excluded from the quantified statement. No source fixed-point hypothesis is used.
 
-The accepted historical all-real L illumination theorem already covers every source/target pair in every L metric. See ../../../review/all-real-L-dependency-review.md (resolve against the research root if opening manually). Therefore this result is NOT new illumination coverage. It isolates a stronger, reusable property for a specified target: a single global cylinder shear (possibly followed by the physical copy involution) transports every source to an explicit straight seed. No historical novelty determination has been made.
+The accepted historical all-real L illumination theorem already covers every source/target pair in every L metric. See ../../../review/all-real-L-dependency-review.md (resolve against the research root if opening manually). Therefore this result is NOT new illumination coverage. It isolates a stronger, reusable property for a specified target: a single global cylinder shear (possibly followed by the physical copy involution) transports every source to an explicit straight seed. No determination has been made.
 
 The old source-fixed boundary-inclusive condition remains unresolved for the original S26,2 test. The pair-transport theorem bypasses that unnecessary restriction; it does not silently claim to have settled it. The generic-real trivial-stabilizer obstruction likewise remains true for source-fixed maps and has no implication against pair transport.
 

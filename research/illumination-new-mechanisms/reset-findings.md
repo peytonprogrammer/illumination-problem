@@ -10,7 +10,7 @@ An unexplored parameter or target class is not itself a construction mechanism. 
 
 ## Best conditional direction: a genuinely different mirror action
 
-Use the known dark marked translation surface, but change its mirror quotient rather than trying to rediscover darkness. This has an explicit sufficient transfer statement.
+Use the known dark marked translation surface, but change its mirror quotient rather than trying to reproduce darkness. This has an explicit sufficient transfer statement.
 
 Let X carry finite marked source and target sets A,B with no straight connecting segment in X\Sigma. Let H be a finite affine group that preserves A,B separately. Average a positive definite form over its derivatives:
 

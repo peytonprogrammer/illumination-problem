@@ -9,7 +9,7 @@
 [done] Peer dark-endpoint rationality proof independently accepted mathematically using imported LMW/Wolecki theorems. Bibliographic supplement requested: journalLMW Theorem10, arXivv1 Theorem11; finite-complement covers. Conditional consequence: uncapped target would cover ALL real interior pairs in rational-coordinate four-direction rooms, not only rational marks.
 [in progress] Entire W<=21,k>=7 unbounded class remains OPEN. Arbitrary I, support, surplus, size and diameter must be covered.
 [in progress] Candidate critical-skeleton strategy: exact junction relations, exhaustive decomposition, global phase/endpoint existence and any bound on critical visits are unproved.
-[in progress] Irrational wall coordinates and arbitrary slopes remain separate unresolved extensions. No universal minimum or novelty claim.
+[in progress] Irrational wall coordinates and arbitrary slopes remain separate unresolved extensions. No universal minimum.
 
 [done] Directionwise cap-free compression independently ACCEPTED: exact graph with E=q(W+2)/2<=92 for every rational direction atW21; actual S/T orbits, true-corner absorbers and unbounded integer lengths retained. This handles arbitrary k/I/area/diameter PER DIRECTION.
 [done] Exact four-wall arithmetic obstruction independently ACCEPTED: minimum primitive illuminating normsqrt(n²+1) on prescribed family, despite a zero-bounce connection. Therefore no uniformly bounded exact deterministic direction-state quotient under the specified fixedSL2Zgenerators; keep arithmetic weights.

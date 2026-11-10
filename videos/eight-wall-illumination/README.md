@@ -6,7 +6,7 @@
 
 Proof map, detailed L-room mechanism, and selected U, corridor, and staircase constructions. The manuscript contains the full technical proof.
 
-Source authors: **Daniel Wang and Peyton Wang**. The manuscript is a working draft, not externally refereed; the video does not establish historical novelty or a universal minimum-wall result. Codex and Claude assisted the research and exposition. The authors remain responsible for the mathematics.
+Source authors: **Daniel Wang and Peyton Wang**. The manuscript is a working draft, not externally refereed; the video does not establish a universal minimum-wall result. Codex and Claude assisted the research and exposition. The authors remain responsible for the mathematics.
 
 ## Editable source
 

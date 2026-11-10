@@ -20,7 +20,7 @@ Agent Codex01a18403, original native budget1000000. Do not reset it. The full un
 
 ## Global proof limits
 
-No proof reduces everyW<=21 room to these eight-wall classes. The whole staircase complement is still unproved; diagonal-wall shapes and larger-wall unbounded classes are not excluded by these new theorems. No universal22-wall minimum or historical novelty is established.
+No proof reduces everyW<=21 room to these eight-wall classes. The whole staircase complement is still unproved; diagonal-wall shapes and larger-wall unbounded classes are not excluded by these new theorems. No universal 22-wall minimum follows.
 
 The arithmetic endpoint-rationality bridge is accepted using explicit published LMW/Wolecki inputs. The intrinsic torus-cover classification and conditional real-wall bridge are accepted in torus-cover-bridge-review.md/json. They do not remove k themselves. Non-torus real-wall and arbitrary-direction cases remain separate.
 

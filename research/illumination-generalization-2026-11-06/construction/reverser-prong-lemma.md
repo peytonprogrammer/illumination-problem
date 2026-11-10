@@ -1,6 +1,6 @@
 # Global reversal does not supply the missing physical factor
 
-A23 hand result, pending independent review. No illumination minimum or historical novelty is claimed. Original effort deadline remains in reverser-prong-effort.json.
+A23 hand result, pending independent review. No illumination minimum or Original effort deadline remains in reverser-prong-effort.json.
 
 ## Definitions and accepted dependencies
 

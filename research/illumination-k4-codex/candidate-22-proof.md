@@ -89,6 +89,4 @@ direction bound, or reflection limit was used. The certificate includes input
 and source-file hashes.
 
 The independently verified candidate disproves the proposed 24-wall lower
-bound for the broader simple canonical family. It does not improve the published
-unrestricted 22-wall upper bound. Strict-simplicity priority and prior orthogonal
-constructions require separate literature work; see literature-22.md.
+bound for the broader simple canonical family.

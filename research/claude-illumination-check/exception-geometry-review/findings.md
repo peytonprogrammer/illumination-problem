@@ -68,7 +68,7 @@ So at k = 3 to 6, support counting alone leaves I = 2 and I = 3 open. That agree
 I agree with both notes' limits.
 - The theorem's I = 4 branch can cite these hand arguments in place of the census and the 3 CNF refutations.
 - The 61 I2/I3 cases still depend on their computer-assisted support coverage and verified refutations.
-- Nothing here bears on arbitrary polygons, larger k, novelty, or a universal minimum.
+- Nothing here bears on arbitrary polygons, larger k, or a universal minimum.
 
 ## 6. Comparison with the other Codex session's review
 

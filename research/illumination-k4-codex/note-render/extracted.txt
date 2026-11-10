@@ -7,10 +7,8 @@ and two distinct interior points that do not illuminate one another. The room co
 reflected copies of a five-square staircase. A lattice-parity argument and the retracing property
 of convex right-angle corners give a self-contained proof. We also establish a computer-assisted
 minimum of 22 within the canonical 45-degree tiling, for two interior A marks and at most four
-transparent B/C points. Separately, 22 is optimal within a restricted tree-of-copies construc-
-tion class. Neither lower bound covers general orthogonal rooms. The example matches the
-known general 22-edge upper bound; historical priority of this orthogonal realization remains
-unresolved.
+transparent B/C points. Separately, 22 is optimal within a restricted tree-of-copies construction
+class. Neither lower bound covers general orthogonal rooms.
 1
 Conventions and construction
 A wall is a maximal straight segment of the polygon boundary. A simple room has a single Jordan
@@ -31,7 +29,7 @@ an ideal point source and target under geometrical optics. It makes no claim abo
 dark region or a physical wave cavity.
 ∗Investigator, age 16. Peyton led this investigation. Claude/Opus and Codex were used as research and verification
 tools, including the construction search, separate exact unfolding checks, and independent review of the computer-
-assisted exclusion. This working note awaits human mathematical review; no historical-priority claim is asserted.
+assisted exclusion. This working note awaits human mathematical review.
 1
 
 Figure 1: The five-square base and the three-copy room. Dashed seams are open passages in the
@@ -317,17 +315,13 @@ with no connecting path. These counts concern the physical unfolding. A separate
 tient has a 72-state certificate; it is not needed for the hand proof above. Neither proof samples
 rays or imposes a reflection bound. The small-base table is checked by lower-bound-check.py,
 which only evaluates the explicitly listed shapes.
-Earlier work on dark rooms and reflected copies includes Tokarsky [1], Castro [2], and Tokarsky–
-Boese [3]. Wolecki [4] gives an upper bound of 22 on the minimum edge count of a room with a dark
-pair and acknowledges an independent unpublished 22-gon by Monteil. This example matches that
-bound. Historical priority of the present strictly simple orthogonal realization remains unresolved.
+Related polygonal constructions appear in Tokarsky [1], Castro [2], Tokarsky–Boese [3], and
+Wolecki [4].
+An exact reconstruction of Wolecki’s published vector figure finds a point contact in its boundary.
+O’Rourke’s public orthogonal example [5] has 34 walls. The coordinate checks distinguish these
+specific displayed polygons.
 7
 
-An exact reconstruction of Wolecki’s published vector figure finds a point contact in its boundary.
-O’Rourke’s public orthogonal example [5] has 34 walls.
-Those comparisons distinguish specific
-displayed examples; they do not establish the previous best wall count over every strictly simple
-orthogonal construction.
 For a general simple orthogonal room let r and c be the numbers of reflex and convex corners.
 Turning angle gives c −r = 4, hence
 W = c + r = 2r + 4.

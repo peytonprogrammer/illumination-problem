@@ -111,4 +111,4 @@ python3 tools/test_archive.py
 
 The catalog updater derives download tables and snapshot counts from the file and package manifests. It also synchronizes the machine-readable result descriptions with `RESULTS.md`. `--check` reports stale generated files without writing them.
 
-Source hashes, exported file hashes, and review pins have different roles; see [the manifest reference](../manifests/README.md). Passing file checks does not rerun the full SAT/DRAT corpus, establish novelty, or replace external mathematical refereeing.
+Source hashes, exported file hashes, and review pins have different roles; see [the manifest reference](../manifests/README.md). Passing file checks does not rerun the full SAT/DRAT corpus, or replace external mathematical refereeing.

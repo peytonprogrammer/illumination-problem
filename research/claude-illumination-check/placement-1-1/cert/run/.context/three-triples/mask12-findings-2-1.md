@@ -15,7 +15,7 @@ It verifies exact branch-key coverage at every level, independent57-mask catalog
 
 The geometry-only midpoint parent remains feasible (OPTIMAL), so universal single-pass illumination is not proved for these last types. The exclusion requires historical ray cuts and conditional midpoint covers together.
 
-Novelty: 180 new geometries and0 revisits against every matching room in the prior168-path manifest. All360 guards are new against the5,255-guard parent. Cumulative three-triples totals: 3067 new geometries /6,708 new guards.
+Geometry coverage: 180 new geometries and0 revisits against every matching room in the prior168-path manifest. All360 guards are new against the5,255-guard parent. Cumulative three-triples totals: 3067 new geometries /6,708 new guards.
 
 Eight of ten normalized placements are now excluded. Remaining placements: (1,1),(2,0), with physical mark displacements (2,2),(4,0). The24-wall minimum with at most two B/C exceptions remains established; the full three-exception extension remains open. No smaller dark construction has been found.
 

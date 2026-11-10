@@ -104,10 +104,6 @@ It cannot encounter b on that return: then it would already have passed through 
 
 This completes the proof. An axis-parallel ray cannot connect S and T because both coordinates differ. Every other finite ray crosses the seams transversely only finitely many times. Its folding is therefore a finite path of exactly the type we ruled out. No legal finite trajectory connects these two interior points.
 
-## What the theorem establishes
-
-The result gives an explicit, strictly simple orthogonal twenty-two-sided example, with a self-contained proof. It does not establish that twenty-two is the smallest possible number of sides. Twenty-two-sided examples were already known in the illumination literature. This working manuscript is not peer reviewed, and priority among related constructions is not settled here.
-
 ## Geometry turns into parity
 
 The entire mechanism is now visible. Three staircases put the marks inside one room. Folding reduces that room to a lattice problem. Parity forces an ordinary connecting path through a corner, and the only extra events merely reverse the route. Construction and manuscript: Peyton Wang, primary author, and Daniel Wang. Codex and Claude assisted the research and exposition.

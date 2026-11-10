@@ -70,7 +70,7 @@ Claude supplied a 44-reflection path for the original 21-wall pilot. `witness-ch
 
 The sole builder instrumentation exposes that initial derivative frame. `inputs/origami_frame.py` is checked to differ from the frozen original only by recording and returning it. A LIT orbit verdict is accepted as a usable witness only after the prescribed direction physically reaches the target and exact tiling requirements agree with the room.
 
-For the old 21-wall pilot, the successful L^6 state gives direction (−1,6), yielding a valid 14-reflection connection. This replaces a direction scan with a direction supplied by the symbolic orbit proof. Three fixed rectangle controls and four prescribed mixed-shear matrix controls pass, including composition order. This is a useful proof-producing implementation step, not a general new illumination theorem or a priority claim. Long orbit traversals can still exceed their cap; that returns UNDECIDED, never DARK.
+For the old 21-wall pilot, the successful L^6 state gives direction (−1,6), yielding a valid 14-reflection connection. This replaces a direction scan with a direction supplied by the symbolic orbit proof. Three fixed rectangle controls and four prescribed mixed-shear matrix controls pass, including composition order. This is a useful proof-producing implementation step, not a general new illumination theorem. Long orbit traversals can still exceed their cap; that returns UNDECIDED, never DARK.
 
 The additional 14-reflection universal guard requires 18 used and nine absent triangles. It is saved in `orbit-guard.json` and has not been used in the 31-case exclusion pass. Its compatible transforms cover none of the ten current residual packets, so it does not improve their status by itself.
 

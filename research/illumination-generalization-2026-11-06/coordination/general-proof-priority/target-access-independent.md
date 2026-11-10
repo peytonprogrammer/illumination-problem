@@ -95,7 +95,7 @@ The sufficient SC01 width condition therefore fails for THIS successful prefix, 
 
 **Remaining gap:** for each unknown residual actual S,T, produce a source prefix meeting one of those states at the SAME epsilon, position and signed velocity, inside all true-corner guards. SC01 gives a sufficient quantitative source condition; its universal availability is unproved, and SG01 rules out assuming it for an arbitrary chosen successful prefix.
 
-No new full room family, all-ordered proof, all-r3 proof, r<=8 proof, actual dark counterexample or historical novelty determination is supplied. Existing agent/native goal identities, accounting and clocks were not changed by this coordinator audit. Frozen peer proofs were not edited.
+No new full room family, all-ordered proof, all-r3 proof, r<=8 proof, actual dark counterexample is supplied. Existing agent/native goal identities, accounting and clocks were not changed by this coordinator audit. Frozen peer proofs were not edited.
 
 ## FT01 reciprocal qualification
 

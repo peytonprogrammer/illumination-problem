@@ -1,6 +1,6 @@
 # Exact rectangular-band first-exit relation
 
-2026-11-06, Codex01a18403. Standard unfolding identity, not a novelty claim. Purpose: test a bounded critical-skeleton mechanism while retaining arbitrarily many regular reflections. Hand proof only; no optical search or new code. Independent review pending.
+2026-11-06, Codex01a18403. Standard unfolding identity,. Purpose: test a bounded critical-skeleton mechanism while retaining arbitrarily many regular reflections. Hand proof only; no optical search or new code. Independent review pending.
 
 ## Model and exact statement
 

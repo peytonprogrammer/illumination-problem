@@ -2,7 +2,7 @@
 
 Reviewer Codex01a18403, 2026-11-06. Reviewed frozen peer `review/dark-endpoint-rationality.md`, SHA256 defb97e3eb4414ae61f855ffca08087a6b1c340f9e58bf6a0a02db22926f150b. Source unchanged.
 
-Verdict: ACCEPT the mathematical argument, with the citation/version precision below. No uncapped W<=21 illumination theorem is inferred. This is an independent hand challenge of the arbitrary-degree proof, not finite computation, formal verification or external refereeing. Novelty is not assessed.
+Verdict: ACCEPT the mathematical argument, with the citation/version precision below. No uncapped W<=21 illumination theorem is inferred. This is an independent hand challenge of the arbitrary-degree proof, not finite computation, formal verification or external refereeing.
 
 ## Imported theorem scope personally checked
 

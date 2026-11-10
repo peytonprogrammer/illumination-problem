@@ -338,7 +338,7 @@ Further candidate, not yet a theorem in the note: X/C4 is not just genus0; the p
 
 ## Persistent-goal checkpoint: planar quotient and exact arithmetic split
 
-The universal midpoint seed remains the target. Accepted new restrictions are in `pocket-detection.md` Sections10-16: exclude the explicit perfect-central control by the disk's low gonality; retain the real B/C fibers; use genus(X/halfturn)=diagonal_runs-1. The independent34-room cell-gluing check agrees. The sphere double itself is standard background, not a novelty claim.
+The universal midpoint seed remains the target. Accepted new restrictions are in `pocket-detection.md` Sections10-16: exclude the explicit perfect-central control by the disk's low gonality; retain the real B/C fibers; use genus(X/halfturn)=diagonal_runs-1. The independent34-room cell-gluing check agrees. The sphere double itself is standard background,.
 
 Section17's arithmetic dichotomy passed separate Opus review with corrections incorporated. Irrational slides cannot be torus covers, but that does not rule out exceptional periodic marked pairs. Rational slides remain dense and need a fixed-target argument too. A generic-stratum theorem cannot supply the one-corner event without orbit-closure hypotheses. The most direct missing step remains: exploit the planar real branch graph to realize an actual S/T event whose pocket flux is nonzero. Continuous cycles and rational partitions do not satisfy that step.
 

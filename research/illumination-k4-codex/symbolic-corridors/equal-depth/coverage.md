@@ -86,7 +86,7 @@ separately claimed directory. No new room/ray census is needed.
 ## Outside scope
 
 Unequal outer depths, arbitrary interior marks in this twelve-wall room,
-other twelve-wall rooms, a universal reflection bound, novelty, and a universal
+other twelve-wall rooms, a universal reflection bound, and a universal
 22-wall minimum are not established by this packet. No external expert has
 reviewed this new follow-up result. Prior surplus-four completion is unchanged.
 
@@ -98,4 +98,4 @@ in full and verified all four acceptance.json source pins. This supersedes
 the pending-review statements above. Own proof and exact sources remain frozen.
 Independent controls:1350 prescribed/scaled/reversed paths plus12 L-subroom
 paths,17318 contacts. These are controls, not a uniform reflection bound.
-Independent AI review is complete; external expert review and novelty are not asserted.
+Independent AI review is complete; external expert review are not asserted.

@@ -2,7 +2,7 @@
 
 Accepted historical baseline: restricted-theorem-note/theorem.txt and certificate-appendix.txt, all W<=21,k<=6 disks/all interior A pairs. See baseline-check.json for source pins, current checker hashes, all52guard+61DRATreceipt bindings/logs and3I4/291arithmetic/875332provenance reconciliation. No fresh8.75GB proof replay this goal. Hand reviews, independent optical/provenance implementations and standard DRAT checker executions are distinguished in baseline-review.md.
 
-Accepted prior upper bound: 22wall,k4 rational orthogonal room, membership independently handaccepted in claude-illumination-check/attainment-review/findings.md; darkness separately accepted in review-preprint-v02/findings.md. No fresh darkness proof or novelty claim.
+Accepted prior upper bound: 22wall,k4 rational orthogonal room, membership independently handaccepted in claude-illumination-check/attainment-review/findings.md; darkness separately accepted in review-preprint-v02/findings.md. No fresh darkness proof.
 
 New bounded hand milestones independently accepted: scale-normal-form-acceptance.json; affine-obstruction-acceptance.json; rectangular-band-transfer-acceptance.json. They do not prove uncappedillumination.
 
@@ -99,7 +99,7 @@ The whole-staircase delivered review is reconciled in whole-staircase-acceptance
 ## Positive prefix and verifier checkpoint — 2026-11-07T05:42:48.826496+00:00
 
 [done] R32 uniform joint-growth accepted; R33 eight-class exact finite criterion and entire shallow n,q quadrant accepted/reconciled. A32 all-real spine/midrow comb theorem independently ACCEPTED, including every interior A pair in integer height2-tooth combs;13ownactualpaths/319reflections/5632guards.
-[waiting on Codex01a18403] R34 independent affine builder and complete known22 closure verifier packet. Existing finite-orbit theorem imported accepted prior art.
+[waiting on Codex01a18403] R34 independent affine builder and complete known22 closure verifier packet. Existing finite-orbit theorem imported accepted published context.
 [in progress] Main uncapped W21, arbitrary offmidpoint comb finite-prefix and arbitrary chamber/diagonal strip witness bridges OPEN. No universal finite witness or state bound inferred.
 
 ## Current class joins 2026-11-07T06:24:47.419880+00:00

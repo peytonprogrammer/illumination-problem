@@ -1,6 +1,6 @@
 # Intrinsic arithmetic bridge for four-direction rooms
 
-Candidate exact hand proof for independent review. This specializes an existing published torus-cover classification; it is not a novelty claim. Its illumination consequence is conditional on the still-open uncapped canonical45 theorem.
+Candidate exact hand proof for independent review. This specializes an existing published torus-cover classification; it is. Its illumination consequence is conditional on the still-open uncapped canonical45 theorem.
 
 ## 1. Exact classification
 

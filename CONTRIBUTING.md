@@ -30,4 +30,4 @@ dependencies and individual commands. The same checks run in GitHub Actions.
 
 Review rendered PDFs and figures when they change. Update manuscript provenance after rebuilding. A historical check applies only to the exact version it tested.
 
-Use a new release version for a changed dataset and update its file records and package checksums together. Add new result IDs only with a category, scope, and cited evidence. No novelty, universal minimum, external referee approval, or formal verification claim follows from packaging or a successful control run.
+Use a new release version for a changed dataset and update its file records and package checksums together. Add new result IDs only with a category, scope, and cited evidence. No universal minimum, external referee approval, or formal verification claim follows from packaging or a successful control run.

@@ -39,7 +39,7 @@ For canonical45 disk Q formed from whole congruent copies of a strict canonical4
 
 ## Repaired43-wall control independently accepted — 2026-11-07T01:57:40.726435+00:00
 
-The17-wall beveled octilinear parity base and its three-copy43-wall canonical45 room have a genuine actual dark pair S=(0,0),T=(4,4). Independent HAND acceptance covers the original candidate ONLYWITH the mandatory axis-case supplement; allfivepinsreconciled. This is above21walls and retains an octilinear parity fold. It refutes only the unrestricted orthogonal-base whole-copy converse, not broad octilinear factor necessity or the active low-wall theorem. No novelty claim.
+The17-wall beveled octilinear parity base and its three-copy43-wall canonical45 room have a genuine actual dark pair S=(0,0),T=(4,4). Independent HAND acceptance covers the original candidate ONLYWITH the mandatory axis-case supplement; allfivepinsreconciled. This is above21walls and retains an octilinear parity fold. It refutes only the unrestricted orthogonal-base whole-copy converse, not broad octilinear factor necessity or the active low-wall theorem.
 
 ## Arbitrary-placement literal-factor class — 2026-11-07T01:58:25.136421+00:00
 
@@ -55,7 +55,7 @@ Peer R23, independently accepted here: every Sigma-preserving derivative-I autom
 
 Peer R22, independently accepted here: any strict Euclidean-similarity whole-copy factor at W<=22 has a normalized realization with <=34 canonical triangles and wall ratio <=34sqrt(2). The prescribed anisotropic stretch diag(100,1) of the known22room remains exactly dark, canonical and strictly simple, but has wall ratio200. Thus the UNRESTRICTED Euclidean factor converse is false already at22. This is an affine parity example, not a new optical mechanism or a W<=21 counterexample. See fold-area-independent-review.md/json.
 
-None of these results derives a factor or a legal actual trajectory for an arbitrary alleged dark W<=21 room. Do not treat elimination of shortcuts as completion, extend to arbitrary polygons, or infer novelty.
+None of these results derives a factor or a legal actual trajectory for an arbitrary alleged dark W<=21 room. Do not treat elimination of shortcuts as completion, extend to arbitrary polygons, or infer.
 
 ## One intrinsic-reversing quotient obstruction — 2026-11-07T04:23:00.825791+00:00
 R24 independently accepted with exact inverse-forbidden-set guard C and equivariance E. A SINGLE relation f(y)=tau f(x) cannot cover a full physical A×B rectangle, regardless of cover degree. It covers at most half of its entries; two relations are only a necessary minimum for a union. This does not exclude the accepted parity-fold proofs, general correspondences or a finite union. No W21 optical coverage increase. See equivariant-correspondence-independent.md/json.

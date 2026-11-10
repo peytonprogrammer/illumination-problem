@@ -6,7 +6,7 @@
 
 **Computed theorem.** A strictly simple, slit-free room in the canonical 45-degree triangle tiling, with two distinct interior A marks and at most five transparent non-A lattice vertices, cannot be dark with 21 or fewer maximal walls.
 
-Equivalently, a sub-22-wall dark example in this tiling and mark class would need at least six transparent B/C exceptions. Combined with the previously independently verified 22-wall construction, this gives minimum 22 within the class with at most five exceptions. It does not establish an unrestricted minimum or historical novelty.
+Equivalently, a sub-22-wall dark example in this tiling and mark class would need at least six transparent B/C exceptions. Combined with the previously independently verified 22-wall construction, this gives minimum 22 within the class with at most five exceptions. It does not establish an unrestricted minimum.
 
 Fix the canonical tiling by splitting each unit lattice square along its even-even to odd-odd diagonal. A vertices are even-even; the two other parity types are B/C. A transparent non-A vertex means a lattice vertex inside the room or in the relative interior of a straight wall, rather than an actual corner. Count both kinds in k. W counts maximal walls, not atomic triangle edges. Marks must be interior A vertices; arbitrary interior mark positions are outside the theorem.
 

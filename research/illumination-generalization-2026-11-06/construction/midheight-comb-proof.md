@@ -108,4 +108,4 @@ Suppose the comb has integer axial boundary coordinates and EVERY tooth has heig
 
 This holds for arbitrary finite numbers of teeth and walls, arbitrary integer widths, vertical gaps, endpoint depths, area, k and lattice diameter. It applies in particular to all members of this class having W<=21, without a transparent-exception cap or finite prefix. A tooth of height1 has no integer interior row, so allowing such extra teeth does not alter this conclusion; the stated height2 class already suffices.
 
-The result does not assert illumination for arbitrary off-middle tooth endpoints, every canonical comb, changing diagonal-wall patterns or all canonical45 W<=21 rooms. No general minimum or historical novelty is claimed. Its entire class proof is elementary exact matching plus actual-wall guards, with independent review still required.
+The result does not assert illumination for arbitrary off-middle tooth endpoints, every canonical comb, changing diagonal-wall patterns or all canonical45 W<=21 rooms. No general minimum or Its entire class proof is elementary exact matching plus actual-wall guards, with independent review still required.

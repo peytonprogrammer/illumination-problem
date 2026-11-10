@@ -134,6 +134,5 @@ the quotient closes in 72 states and stays dark. The geometric proof explains
 why those transparent fibers remain harmless. The 72-state count belongs to the
 20-square base quotient; the 2,592-state count belongs to the physical unfolding.
 
-This is a simpler construction and proof, not a claim to lower the published
-unrestricted 22-wall upper bound or establish historical priority. The earlier
+The earlier
 <=3-exception theorem remains intact; this room has four exceptions.

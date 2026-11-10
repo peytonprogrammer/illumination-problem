@@ -5,7 +5,7 @@
 - [done] Rational-grid reduction to corner-ended critical leaves.
 - [done] Conditional primitive non-torus reduction using primary-source statements.
 - [done] 6,361 independent exact algebra controls.
-- [done] Prescribed-point cylinder literature checked; scope and prior-art cautions recorded.
+- [done] Prescribed-point cylinder literature checked; scope and literature cautions recorded.
 - [waiting on Claude] Independent geometric proof review.
 - [blocked: no general cylinder-existence theorem or explicit critical-leaf example] Universal smooth-boundary-blocker removal or counterexample.
 

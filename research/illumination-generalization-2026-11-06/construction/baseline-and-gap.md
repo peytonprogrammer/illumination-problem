@@ -10,7 +10,7 @@ The earlier full-replay findings end with provenance hand review pending. The la
 
 ## Upper bound
 
-The fixed 22-wall strictly simple orthogonal room is an accepted hand construction with two distinct interior A marks, 30 canonical triangles and k=4. Attainment membership has explicit independent hand ACCEPT in claude-illumination-check/attainment-review/findings.md. Darkness depends separately on the preprint hand proof and review-preprint-v02. Its existence gives a sharp minimum ONLY within the established k<=6 model. Historical novelty is not claimed.
+The fixed 22-wall strictly simple orthogonal room is an accepted hand construction with two distinct interior A marks, 30 canonical triangles and k=4. Attainment membership has explicit independent hand ACCEPT in claude-illumination-check/attainment-review/findings.md. Darkness depends separately on the preprint hand proof and review-preprint-v02. Its existence gives a sharp minimum ONLY within the established k<=6 model.
 
 ## What is missing
 

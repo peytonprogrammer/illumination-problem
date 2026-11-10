@@ -10,12 +10,12 @@
 \setlength{\emergencystretch}{1em}
 \setlength{\parskip}{4pt}\setlength{\parindent}{0pt}
 \title{A simple orthogonal mirror room with 22 walls}
-\author{Peyton Wang\thanks{Investigator, age 16. Peyton led this investigation. Claude/Opus and Codex were used as research and verification tools, including the construction search, separate exact unfolding checks, and independent review of the computer-assisted exclusion. This working note awaits human mathematical review; no historical-priority claim is asserted.}}
+\author{Peyton Wang\thanks{Investigator, age 16. Peyton led this investigation. Claude/Opus and Codex were used as research and verification tools, including the construction search, separate exact unfolding checks, and independent review of the computer-assisted exclusion. This working note awaits human mathematical review. }}
 \date{31 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-We give coordinates for a strictly simple orthogonal polygon with 22 maximal straight walls and two distinct interior points that do not illuminate one another. The room comprises three reflected copies of a five-square staircase. A lattice-parity argument and the retracing property of convex right-angle corners give a self-contained proof. We also establish a computer-assisted minimum of 22 within the canonical 45-degree tiling, for two interior A marks and at most four transparent B/C points. Separately, 22 is optimal within a restricted tree-of-copies construction class. Neither lower bound covers general orthogonal rooms. The example matches the known general 22-edge upper bound; historical priority of this orthogonal realization remains unresolved.
+We give coordinates for a strictly simple orthogonal polygon with 22 maximal straight walls and two distinct interior points that do not illuminate one another. The room comprises three reflected copies of a five-square staircase. A lattice-parity argument and the retracing property of convex right-angle corners give a self-contained proof. We also establish a computer-assisted minimum of 22 within the canonical 45-degree tiling, for two interior A marks and at most four transparent B/C points. Separately, 22 is optimal within a restricted tree-of-copies construction class. Neither lower bound covers general orthogonal rooms.
 \end{abstract}
 
 \section{Conventions and construction}
@@ -207,9 +207,9 @@ c7838dfe640932458e6853af7171396af05df71067658ee8f78f9ca3d91cab20.
 \end{center}
 A separate finite proof reconstructs the physical four-orientation unfolding as 60 squares and supplies a closed set of 2,592 labelled states under the elementary integral shears and their inverses. An independent readback verifies 10,368 closure transitions and 10,368 horizontal source-sector checks, with no connecting path. These counts concern the physical unfolding. A separate 20-square quotient has a 72-state certificate; it is not needed for the hand proof above. Neither proof samples rays or imposes a reflection bound. The small-base table is checked by \texttt{lower-bound-check.py}, which only evaluates the explicitly listed shapes.
 
-Earlier work on dark rooms and reflected copies includes Tokarsky~\cite{tokarsky}, Castro~\cite{castro}, and Tokarsky--Boese~\cite{boese}. Wolecki~\cite{wolecki} gives an upper bound of 22 on the minimum edge count of a room with a dark pair and acknowledges an independent unpublished 22-gon by Monteil. This example matches that bound. Historical priority of the present strictly simple orthogonal realization remains unresolved.
+Related polygonal constructions appear in Tokarsky~\cite{tokarsky}, Castro~\cite{castro}, Tokarsky--Boese~\cite{boese}, and Wolecki~\cite{wolecki}.
 
-An exact reconstruction of Wolecki's published vector figure finds a point contact in its boundary. O'Rourke's public orthogonal example~\cite{orourke} has 34 walls. Those comparisons distinguish specific displayed examples; they do not establish the previous best wall count over every strictly simple orthogonal construction.
+An exact reconstruction of Wolecki's published vector figure finds a point contact in its boundary. O'Rourke's public orthogonal example~\cite{orourke} has 34 walls. The coordinate checks distinguish these specific displayed polygons.
 
 For a general simple orthogonal room let $r$ and $c$ be the numbers of reflex and convex corners. Turning angle gives $c-r=4$, hence
 \[

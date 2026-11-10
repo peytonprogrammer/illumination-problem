@@ -1,6 +1,6 @@
 # Candidate reduction: source-fixed affine orbits to directly visible seeds
 
-Status after the follow-up audit: the conditional transfer proposition stands. The universal INTERIOR-seed assertion is REFUTED at W=6; a boundary-inclusive native assertion remains UNRESOLVED. The original word "inside" was ambiguous about smooth boundary seeds; see obstruction.md before using the universal candidate. This is not a proof of all W10, r<=8 or canonical45 W<=21. No historical novelty claim.
+Status after the follow-up audit: the conditional transfer proposition stands. The universal INTERIOR-seed assertion is REFUTED at W=6; a boundary-inclusive native assertion remains UNRESOLVED. The original word "inside" was ambiguous about smooth boundary seeds; see obstruction.md before using the universal candidate. This is not a proof of all W10, r<=8 or canonical45 W<=21. No claim.
 
 ## Precise setting and sufficient proposition
 
@@ -74,7 +74,7 @@ The finite-crossing argument in the conditional proposition uses the actual fini
 
 ### Assessment
 
-The conditional transfer is a valid sufficient mechanism; the explicit L example proves it is nonvacuous for a hidden target. It keeps the room fixed and simplifies the target's position, so it is not yet a reduction in reflex count. It supplies neither universal orbit coverage nor a descending complexity measure. The existing WR01 proof already supplies whole-path affine transport; the difference here is allowing a nontrivial permutation of target marks while fixing one exact source lift and demanding a sheet-correct visible seed. That distinction is not a historical novelty claim.
+The conditional transfer is a valid sufficient mechanism; the explicit L example proves it is nonvacuous for a hidden target. It keeps the room fixed and simplifies the target's position, so it is not yet a reduction in reflex count. It supplies neither universal orbit coverage nor a descending complexity measure. The existing WR01 proof already supplies whole-path affine transport; the difference here is allowing a nontrivial permutation of target marks while fixing one exact source lift and demanding a sheet-correct visible seed. That distinction is not a claim.
 
 A decisive next obligation is an all-parameter proof of orbit coverage in an already-solved nonconvex family, or a rigorous counterexample to this stronger condition in such a family. Another isolated successful path would not discharge it. The full r<=8 and canonical45 W<=21 targets remain open, and the peer native goals remain blocked.
 

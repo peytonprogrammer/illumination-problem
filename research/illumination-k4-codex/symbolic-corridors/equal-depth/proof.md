@@ -1,7 +1,7 @@
 # Equal-depth illumination across a two-portal corridor
 
 Codex01a18403, 6 November 2026. Complete parent hand argument; independent
-review pending. No novelty or universal wall-minimum claim.
+review pending. No universal wall-minimum claim.
 
 ## Statement and scope
 

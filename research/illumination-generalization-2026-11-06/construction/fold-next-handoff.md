@@ -9,7 +9,7 @@ Current objective: uncapped canonical45 W<=21 illumination for every distinct ac
 3. Peer R23 independently accepted here: that orthogonal translation group actually embeds in the physical Klein four group. Complete global marked derivative-minus-I explanations of all actual source/target lift pairs are therefore impossible at ANY wall count, even without cleanliness/involutivity. The known dark22 room shows why one cannot infer that explanation from darkness.
 4. Peer R22 independently accepted here: any strict whole-copy Euclidean-similarity factor at W<=22 yields <=34 normalized canonical triangles and wall ratio<=34sqrt(2). Stretching the known22 room by diag(100,1) preserves actual darkness exactly but makes its wall ratio200. This excludes every alternative factor meeting those hypotheses, including diagonal bases and arbitrary common scales. It refutes only the UNRESTRICTED converse, not W21 H. It remains an affine parity mechanism.
 
-These are independent AI hand reviews, not formal verification or external refereeing. No novelty claim. All source pins are recorded in the corresponding JSON receipts.
+These are independent AI hand reviews, not formal verification or external refereeing. All source pins are recorded in the corresponding JSON receipts.
 
 ## Exact impasse
 

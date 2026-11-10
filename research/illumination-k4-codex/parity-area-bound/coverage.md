@@ -14,5 +14,5 @@ control. Wolecki's contact room is diagnostic only, outside theorem scope.
 
 Not checked: a new enumeration, recursion/pruning completeness of Opus's
 implementation, global minimum, arbitrary real-size tilings, all dark
-rooms, all contact rooms or historical novelty. No ray or room discovery.
+rooms, all contact rooms. No ray or room discovery.
 Independent peer acceptance is pending.

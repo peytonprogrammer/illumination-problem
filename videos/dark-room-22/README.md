@@ -2,11 +2,11 @@
 
 [Watch or download the video](dark-room-22.mp4) · [Read the manuscript](../../preprints/twenty-two-wall/manuscript.pdf) · [Transcript](narration.md) · [All explainers](../README.md)
 
-**9:00 · 1920×1080 · 30 fps · narrated for math students.**
+**8:37 · 1920×1080 · 30 fps · narrated for math students.**
 
 Construction, parity obstruction, seam reversals, and the no-help argument. The [updated manuscript](../../preprints/twenty-two-wall/manuscript.pdf) also proves that this is the only dark pair among distinct real interior points. Its cylinder argument is explained in the [illustrated companion](../../preprints/twenty-two-wall/explainer.html); it is not part of this video.
 
-Source authors: **Peyton Wang and Daniel Wang**. The manuscript is a working draft, not externally refereed; the video does not establish historical novelty or a universal minimum-wall result. Codex and Claude assisted the research and exposition. The authors remain responsible for the mathematics.
+Source authors: **Peyton Wang and Daniel Wang**. The manuscript is a working draft, not externally refereed; the video does not establish a universal minimum-wall result. Codex and Claude assisted the research and exposition. The authors remain responsible for the mathematics.
 
 ## Editable source
 
