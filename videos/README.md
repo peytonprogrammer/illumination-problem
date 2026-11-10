@@ -4,7 +4,7 @@ Narrated mathematical explainers with the editable HyperFrames projects used to 
 
 | Video | Length | Manuscript | Editable project |
 |---|---:|---|---|
-| [The 22-sided dark room](dark-room-22/dark-room-22.mp4) | 9:00 | [PDF](../preprints/twenty-two-wall/manuscript.pdf) | [Source and transcript](dark-room-22/README.md) |
+| [The 22-sided dark room](dark-room-22/dark-room-22.mp4) | 8:37 | [PDF](../preprints/twenty-two-wall/manuscript.pdf) | [Source and transcript](dark-room-22/README.md) |
 | [When darkness is impossible](eight-wall-illumination/eight-wall-illumination.mp4) | 9:00 | [PDF](../preprints/eight-wall/manuscript.pdf) | [Source and transcript](eight-wall-illumination/README.md) |
 | [Light through comb rooms](comb-illumination/comb-illumination.mp4) | 8:30 | [PDF](../preprints/middle-row-combs/manuscript.pdf) | [Source and transcript](comb-illumination/README.md) |
 | [Why a longer corridor guarantees a route](long-neck-illumination/long-neck-illumination.mp4) | 9:00 | [PDF](../preprints/long-neck-networks/manuscript.pdf) | [Source and transcript](long-neck-illumination/README.md) |
