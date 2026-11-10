@@ -1,6 +1,8 @@
 # Illumination problem
 
-Proofs, working manuscripts, counterexamples to proof mechanisms, and computational evidence for polygonal illumination.
+This is a hobby research project that **Peyton Wang**, who owns this repository, and his father, **[Daniel Wang](https://www.linkedin.com/in/ddwang/)**, work on together. Peyton is a **16-year-old student at Francis Parker School**. Daniel is **CTO at Citizen Health**.
+
+We’re exploring the polygonal illumination problem: in a room with mirrored walls, which pairs of points can be connected by a reflected light ray that avoids corners? This repository collects our working manuscripts, proofs, verification code, computational evidence, and animated explainers as we work through the mathematics together.
 
 The universal minimum-wall problem remains open. The results have internal AI reviews and exact computational checks at the scopes recorded in their sources. External mathematical refereeing remains outstanding.
 
