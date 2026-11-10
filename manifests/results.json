@@ -538,21 +538,28 @@
   },
   {
     "id": "R24",
-    "title": "The readable 22-wall dark construction (likely rediscovery)",
-    "recorded_status": "[done, likely rediscovery]",
-    "category": "historical-construction",
-    "summary": "The strictly simple orthogonal example made of three reflected five-square staircases has 22 walls, area 15 and a hand proof for two actual interior dark marks. Its seam/convex-corner handling and independent verification are valuable artifacts. Exact coordinate identity with that historical example is unresolved. The general 22-edge existence bound was already published. Present it as an explicit, verified construction or likely rediscovery, not confirmed original research.\n\nOlder parity-family censuses, selected rigidity certificates, fixed counterexamples and explicit paths support investigation. Some have full geometry checks but only sampled independent certificate replay. They are evidence within stated finite domains, not a universal classification or a separate minimum theorem.",
+    "title": "A 22-wall room with exactly one dark pair",
+    "recorded_status": "[done]",
+    "category": "construction-and-classification",
+    "summary": "The strictly simple orthogonal room made of three reflected five-square staircases has 22 walls and area 15. Among all unordered pairs of distinct real interior points, its only dark pair is `{(0,0), (2,2)}`. Folded parity proves darkness; the two-cylinder visibility lemma and finite strip permutations in directions `(4,7)` and `(7,4)` prove illumination for every other pair. The exceptional-source conditions force integer coordinates, and the two marks are the only interior lattice points. Boundary endpoints and self-return trajectories are outside this statement.",
     "source_links": [
       [
-        "Superseding historical assessment",
-        "research/illumination-k4-codex/discovery-assessment.md"
+        "Full manuscript",
+        "preprints/twenty-two-wall/manuscript.pdf"
       ],
       [
-        "Construction source",
-        "research/illumination-k4-codex/research-note.tex"
+        "Certificate checker",
+        "preprints/twenty-two-wall/verify_cylinders.py"
+      ],
+      [
+        "Finite certificates",
+        "preprints/twenty-two-wall/certificate.json"
+      ],
+      [
+        "Illustrated companion",
+        "preprints/twenty-two-wall/explainer.html"
       ]
     ],
-    "novelty": "unconfirmed; see exact inventory discussion",
     "inventory": "RESULTS.md"
   },
   {

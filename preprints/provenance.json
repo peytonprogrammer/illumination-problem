@@ -1,16 +1,6 @@
 {
-  "policy": "Curated copies of the archived PDFs and LaTeX sources, identified by SHA-256.",
+  "policy": "Unchanged imports are listed in files. Revised and newly composed manuscripts carry folder-level provenance.",
   "files": [
-    {
-      "path": "preprints/twenty-two-wall/manuscript.pdf",
-      "source": "research/illumination-k4-codex/preprint-review-codex/revised.pdf",
-      "sha256": "542268448a565966e7552ddf009e47166afb9e2d63ff245073f9c020dde39120"
-    },
-    {
-      "path": "preprints/twenty-two-wall/manuscript.tex",
-      "source": "research/illumination-k4-codex/preprint-review-codex/revised.tex",
-      "sha256": "04ca8b2cd0ad06d425c9feefee004ea492908d7beeb346b352ab4dd072436f57"
-    },
     {
       "path": "preprints/three-star-surplus-four/manuscript.pdf",
       "source": "research/claude-illumination-check/triangle-preprint/triangle-preprint.pdf",
@@ -56,5 +46,8 @@
       "source": "research/illumination-k4-codex/preprint-review-codex/research-brief.tex",
       "sha256": "afb30a829dcfd5d4348b32143df3baf0c37aae901497ab84ae8291e4544cc128"
     }
+  ],
+  "revised_manuscripts": [
+    "preprints/twenty-two-wall/provenance.json"
   ]
 }

@@ -1,13 +1,13 @@
 # Manuscripts and research notes
 
-Start here for readable PDFs and their sources. Each manuscript has its own folder with `manuscript.pdf`, `manuscript.tex`, a README, and any required figures. These are working drafts for review; historical novelty is unconfirmed and external mathematical refereeing remains outstanding.
+Start here for readable PDFs and their sources. Each manuscript has its own folder with `manuscript.pdf`, `manuscript.tex`, a README, and any required figures. These are working drafts for review; external mathematical refereeing remains outstanding.
 
 ## Theorem manuscripts
 
 | Manuscript | PDF | Source and scope |
 |---|---|---|
 | Eight-wall illumination | [PDF](eight-wall/manuscript.pdf) | [Full corrected proof, arbitrary real dimensions and interior endpoints](eight-wall/README.md) |
-| Twenty-two-wall dark-room construction | [PDF](twenty-two-wall/manuscript.pdf) | [Explicit construction; likely independent rediscovery](twenty-two-wall/README.md) |
+| Twenty-two-wall room: exactly one dark pair | [PDF](twenty-two-wall/manuscript.pdf) | [Construction, all-real cylinder classification, and finite certificates](twenty-two-wall/README.md) |
 | Three-star surplus-four illumination | [PDF](three-star-surplus-four/manuscript.pdf) | [Fixed support, at most 21 walls and six transparent points](three-star-surplus-four/README.md) |
 | Twelve-wall corridor illumination | [PDF](twelve-wall-corridor/manuscript.pdf) | [Specified four-parameter family; outer-chamber pairs](twelve-wall-corridor/README.md) |
 | Restricted 22-wall minimum and parity folds | [PDF](restricted-minimum-k6/manuscript.pdf) | [Current k≤6 theorem, finite reduction, certificate dependencies and strict-fold corollary](restricted-minimum-k6/README.md) |
@@ -19,7 +19,7 @@ Start here for readable PDFs and their sources. Each manuscript has its own fold
 
 | Manuscript | Video | Editable source and transcript |
 |---|---|---|
-| [Twenty-two-wall dark-room construction](twenty-two-wall/README.md) | [9:00 MP4](../videos/dark-room-22/dark-room-22.mp4) | [HyperFrames project](../videos/dark-room-22/README.md) |
+| [Twenty-two-wall room: exactly one dark pair](twenty-two-wall/README.md) | [9:00 MP4](../videos/dark-room-22/dark-room-22.mp4) | [HyperFrames project](../videos/dark-room-22/README.md) |
 | [Eight-wall illumination](eight-wall/README.md) | [9:00 MP4](../videos/eight-wall-illumination/eight-wall-illumination.mp4) | [HyperFrames project](../videos/eight-wall-illumination/README.md) |
 | [Rectangular-spine comb illumination](middle-row-combs/README.md) | [8:30 MP4](../videos/comb-illumination/comb-illumination.mp4) | [HyperFrames project](../videos/comb-illumination/README.md) |
 | [Why a longer corridor guarantees a route](long-neck-networks/README.md) | [9:00 MP4](../videos/long-neck-illumination/long-neck-illumination.mp4) | [HyperFrames project](../videos/long-neck-illumination/README.md) |

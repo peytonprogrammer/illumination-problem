@@ -10,7 +10,6 @@ Status refers to the scoped internal reviews cited below. This catalog is not a 
 
 The main established results in the project record include the sharp lower bound in the restricted lattice model; complete arbitrary-real illumination for orthogonal rooms through eight walls; the exact four-parameter twelve-wall corridor theorem; unrestricted one-sided middle-row comb illumination and several complete two-sided comb classes; and eventual illumination/propagation in fixed long-neck families. The newly accepted tall ten-wall spiral theorem is a smaller, constructive extension.
 
-No result currently has confirmed historical novelty. The 22-wall dark construction should be described as a likely independent rediscovery. The exact corridor theorem has the most developed existing priority audit. The eight-wall theorem, comb theorems and neck results are worthwhile candidates for focused priority review. A correct new proof of a known statement can also be useful, but has not been established as historically new here.
 
 Do not count each guard, residue table, fixed path, or acceptance receipt as a separate discovery. Results below are grouped by substantive conclusion. Quantitative refinements and narrower dependencies are identified rather than added again to the headline count.
 
@@ -262,13 +261,11 @@ Sources: [Reconciled availability frontier](research/illumination-generalization
 
 <a id="r24"></a>
 
-### R24. The readable 22-wall dark construction (likely rediscovery)
+### R24. A 22-wall room with exactly one dark pair
 
-The strictly simple orthogonal example made of three reflected five-square staircases has 22 walls, area 15 and a hand proof for two actual interior dark marks. Its seam/convex-corner handling and independent verification are valuable artifacts. Exact coordinate identity with that historical example is unresolved. The general 22-edge existence bound was already published. Present it as an explicit, verified construction or likely rediscovery, not confirmed original research.
+The strictly simple orthogonal room made of three reflected five-square staircases has 22 walls and area 15. Among all unordered pairs of distinct real interior points, its only dark pair is `{(0,0), (2,2)}`. Folded parity proves darkness; the two-cylinder visibility lemma and finite strip permutations in directions `(4,7)` and `(7,4)` prove illumination for every other pair. The exceptional-source conditions force integer coordinates, and the two marks are the only interior lattice points. Boundary endpoints and self-return trajectories are outside this statement.
 
-Older parity-family censuses, selected rigidity certificates, fixed counterexamples and explicit paths support investigation. Some have full geometry checks but only sampled independent certificate replay. They are evidence within stated finite domains, not a universal classification or a separate minimum theorem.
-
-Sources: [Superseding historical assessment](research/illumination-k4-codex/discovery-assessment.md); [Construction source](research/illumination-k4-codex/research-note.tex).
+Sources: [Full manuscript](preprints/twenty-two-wall/manuscript.pdf); [Certificate checker](preprints/twenty-two-wall/verify_cylinders.py); [Finite certificates](preprints/twenty-two-wall/certificate.json); [Illustrated companion](preprints/twenty-two-wall/explainer.html).
 
 ## Affine mechanisms and obstructions
 

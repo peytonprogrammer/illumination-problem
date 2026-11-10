@@ -15,7 +15,7 @@ The universal minimum-wall problem remains open. The results have internal AI re
 | Inspect or download supporting evidence | [Data catalog](docs/DATA.md) |
 | Verify files or run prescribed controls | [Reproduction guide](docs/REPRODUCIBILITY.md) |
 
-The manuscript catalog distinguishes the explicit 22-wall construction from the restricted minimum theorem. The construction alone does not establish universal minimality.
+The [22-wall manuscript](preprints/twenty-two-wall/README.md) proves that the specified room has exactly one dark pair among distinct real interior points. Its cylinder argument has a standalone checker and an illustrated companion. The restricted minimum theorem is a separate result.
 
 ## Repository layout
 

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The only dark pair · 22-wall room</title>
+<style>
+:root{color-scheme:light;--ink:#17353d;--muted:#526a70;--paper:#f6f3ea;--teal:#007e7c;--red:#b13f37;--line:#cbd4cf}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.55 system-ui,sans-serif}main{max-width:1160px;margin:auto;padding:40px 32px 70px}a{color:var(--teal)}.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.14em;font-weight:700}h1{font:600 clamp(38px,6vw,68px)/1.06 Georgia,serif;max-width:850px;margin:18px 0}h2{font:600 29px/1.2 Georgia,serif;margin:0 0 16px}p{max-width:820px}.lede{font-size:22px;color:var(--muted)}.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin-top:30px}.card{border:1px solid var(--line);border-radius:18px;background:#fffdf7;padding:26px}.wide{grid-column:1/-1}svg{display:block;width:100%;height:auto}.equation{font:26px/1.5 Georgia,serif;white-space:normal}.small{font-size:14px;color:var(--muted)}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--teal);border-radius:8px;padding:8px 14px;background:white;color:var(--ink)}button[aria-pressed=true]{background:var(--teal);color:white}input[type=number]{width:95px;padding:5px;border:1px solid var(--line);border-radius:5px}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:14px 0}.status{border-left:4px solid var(--teal);padding:10px 15px;background:#e9f3ec;font-weight:600;min-height:80px}.status.dark{border-color:var(--red);background:#f8ebe5}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.number{display:block;color:var(--teal);font:bold 42px Georgia,serif}.strip{fill:#e5f1ec;stroke:var(--teal);stroke-width:2}input[type=range]{width:100%}footer{margin-top:32px;border-top:1px solid var(--line);padding-top:20px}.live{font-variant-numeric:tabular-nums} @media(max-width:780px){main{padding:26px 18px}.grid,.steps{grid-template-columns:1fr}.card{padding:20px}.equation{font-size:22px}}
+</style>
+<main>
+<div class="eyebrow">Polygonal billiards / a proof companion</div>
+<h1>One dark pair in a room of 22 walls.</h1>
+<p class="lede">The marks (0, 0) and (2, 2) cannot see each other. Every other pair of distinct interior points can be connected by a finite reflected ray that avoids corners.</p>
+<p><a href="manuscript.pdf">Read the complete proof</a> · <a href="certificate.json">Inspect the finite certificates</a> · <a href="../../videos/dark-room-22/README.md">Watch the construction and darkness proof</a></p>
+<div class="grid">
+<section class="card"><h2>Move a point. The result changes.</h2>
+<p class="small">Choose which point to move, then click inside the room. Dashed seams are open passages.</p>
+<div class="controls"><button id="chooseS" aria-pressed="true">Move source A</button><button id="chooseT" aria-pressed="false">Move target B</button><button id="reset">Reset dark pair</button></div>
+<svg id="room" viewBox="0 0 560 510" role="img" aria-label="Interactive diagram of the 22-wall room, with movable source and target">
+<defs><pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse"><path d="M70 0H0V70" fill="none" stroke="#d9dfd9" stroke-width="1"/></pattern><clipPath id="roomclip"><path id="clipshape"/></clipPath></defs>
+<path id="roomshape" fill="#e5f1ec" stroke="#17353d" stroke-width="3"/><rect x="0" y="0" width="560" height="510" fill="url(#grid)" clip-path="url(#roomclip)"/>
+<path d="M70 260H210 M280 190V50" stroke="#ac8550" stroke-width="2" stroke-dasharray="7 6"/>
+<g id="source"><circle r="8" fill="#007e7c" stroke="white" stroke-width="2"/><text x="12" y="-12" font-size="21" fill="#17353d">A</text></g>
+<g id="target"><circle r="8" fill="#b13f37" stroke="white" stroke-width="2"/><text x="12" y="-12" font-size="21" fill="#17353d">B</text></g>
+<text x="25" y="495" fill="#526a70" font-size="15">15 unit squares · four sheets in the unfolding</text></svg>
+<div class="controls"><label>A: <input aria-label="Source x" id="sx" type="number" step="0.01" value="0"> <input aria-label="Source y" id="sy" type="number" step="0.01" value="0"></label></div>
+<div class="controls"><label>B: <input aria-label="Target x" id="tx" type="number" step="0.01" value="2"> <input aria-label="Target y" id="ty" type="number" step="0.01" value="2"></label></div>
+<div id="status" class="status dark" aria-live="polite"></div>
+<p class="small">Controls use coordinates in hundredths. The proof covers all real interior points. This diagram reports the theorem's conclusion; it does not compute the connecting ray.</p>
+</section>
+<section class="card"><h2>Two directions isolate the exceptions.</h2>
+<p>A source outside these four integrality conditions has a regular lift in one of two certified cylinder decompositions:</p>
+<div class="equation">7x − 4y, 7x + 4y ∈ ℤ<br>4x − 7y, 4x + 7y ∈ ℤ</div>
+<p>The conditions hold together exactly when x and y are integers. This room has only two interior lattice points.</p>
+<div class="controls"><label>Direction <select id="direction"><option value="4,7">(4, 7)</option><option value="7,4">(7, 4)</option></select></label></div>
+<div id="values" class="live"></div>
+<p class="small">A noninteger value certifies a regular leaf through a lift. An integer value alone does not prove the leaf is singular.</p>
+<h2 style="margin-top:30px">What the finite check proves</h2>
+<p>The four-copy unfolding has 60 unit squares. The bottom-edge strip permutation has:</p>
+<div id="cycles" class="equation"></div>
+<p>Two strip cycles force exactly two cylinders. A half-turn exchanges them, while projecting to the same point in the room.</p>
+<p><a href="verify_cylinders.py">Standalone Python checker</a> · <a href="manuscript.pdf#page=6">Cylinder proof in the manuscript</a></p>
+</section>
+<section class="card wide"><h2>A cylinder becomes a strip. Then draw a straight line.</h2>
+<p>Choose a source lift inside one cylinder. The target has a lift in its closure, using the half-turn if needed. In the covering strip, the segment stays inside until it reaches the target. Its projection is a legal reflected path.</p>
+<svg viewBox="0 0 1000 270" role="img" aria-label="A straight segment from an interior source to a movable target in a closed strip"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#b13f37"/></marker></defs><rect class="strip" x="30" y="40" width="940" height="170"/><g stroke="#9ebdb4" stroke-dasharray="7 7"><path d="M220 40V210 M410 40V210 M600 40V210 M790 40V210"/></g><path id="segment" stroke="#b13f37" stroke-width="4" marker-end="url(#arrow)" fill="none"/><circle cx="125" cy="105" r="7" fill="#007e7c"/><circle id="stripTarget" r="7" fill="#b13f37"/><text x="110" y="86" font-size="22">Â</text><text id="stripLabel" font-size="22">B̂</text><text x="30" y="250" font-size="18" fill="#526a70">Dashed lines mark periods, not mirrors. This is a schematic covering strip.</text></svg>
+<label for="height">Target height: move it onto the lower boundary</label><input id="height" type="range" min="0" max="100" value="0">
+<p class="small">The source is strictly inside. Even when the target is on the boundary, every point before the endpoint remains strictly inside. The target itself is a regular point because it projects to an interior point of the room.</p>
+</section>
+<section class="card wide"><h2>The whole proof, in three steps.</h2><div class="steps"><div><span class="number">01</span><strong>Prove the marked pair is dark.</strong><p>Parity blocks a path in the staircase. The four seam-endpoint reversals cannot create a connection after folding.</p></div><div><span class="number">02</span><strong>Light every non-lattice source.</strong><p>Two cylinder directions and the strip argument illuminate every source outside the four integrality conditions.</p></div><div><span class="number">03</span><strong>Count the remaining points.</strong><p>The conditions force integer coordinates. Only (0, 0) and (2, 2) are interior lattice points. Their pair is already known to be dark.</p></div></div></section>
+</div><footer class="small">Peyton Wang and Daniel Wang · Companion to the 22-wall manuscript, v0.3 · Distinct interior pairs only. This statement does not classify boundary points, self-return trajectories, or other polygons.</footer>
+</main>
+<script>
+const vertices=[[-1,-1],[0,-1],[0,-2],[1,-2],[1,-3],[2,-3],[2,-1],[1,-1],[1,1],[3,1],[3,0],[5,0],[5,1],[4,1],[4,2],[3,2],[3,3],[1,3],[1,2],[0,2],[0,1],[-1,1]];
+const $=id=>document.getElementById(id),xy=([x,y])=>[140+70*x,260-70*y];
+const shape=vertices.map((v,i)=>(i?'L':'M')+xy(v).join(' ')).join(' ')+'Z';$('roomshape').setAttribute('d',shape);$('clipshape').setAttribute('d',shape);
+let moving='s';const ids=['sx','sy','tx','ty'];
+function inside(x,y){let hit=false;for(let i=0,j=vertices.length-1;i<vertices.length;j=i++){let [ax,ay]=vertices[j].map(n=>n*100),[bx,by]=vertices[i].map(n=>n*100);if((x-ax)*(by-ay)===(y-ay)*(bx-ax)&&x>=Math.min(ax,bx)&&x<=Math.max(ax,bx)&&y>=Math.min(ay,by)&&y<=Math.max(ay,by))return false;if((ay>y)!==(by>y)&&x<(bx-ax)*(y-ay)/(by-ay)+ax)hit=!hit;}return hit;}
+function coords(prefix){return ['x','y'].map(k=>Math.round(Number($(prefix+k).value)*100));}
+function format(n){return (n/100).toFixed(2).replace(/\.00$/,'');}
+function render(){const s=coords('s'),t=coords('t');for(const [id,v] of [['source',s],['target',t]])$(id).setAttribute('transform',`translate(${xy(v.map(n=>n/100))})`);const valid=ids.every(id=>$(id).value!==''&&Number.isFinite(Number($(id).value))&&$(id).validity.valid)&&inside(...s)&&inside(...t);let dark=false,text='Choose two distinct points strictly inside the room.';if(valid&&!(s[0]===t[0]&&s[1]===t[1])){dark=[s,t].every(v=>v[0]%100===0&&v[1]%100===0);text=dark?'Dark pair: no finite corner-avoiding billiard path connects A and B.':'Illuminated: the theorem guarantees a finite corner-avoiding path between A and B.';}$('status').textContent=text;$('status').className='status'+(dark?' dark':'');const [p,q]=$('direction').value.split(',').map(Number);$('values').replaceChildren();for(const [name,v] of [['A',s],['B',t]]){const lo=q*v[0]-p*v[1],hi=q*v[0]+p*v[1];const el=document.createElement('p');el.textContent=`${name}: ${q}x − ${p}y = ${format(lo)}; ${q}x + ${p}y = ${format(hi)}. `+(lo%100||hi%100?'A regular lift is certified.':'Both values are integers in this direction.');$('values').append(el);}$('cycles').textContent=q===7?'420 slots → 210 + 210':'240 slots → 120 + 120';}
+for(const id of ids)$(id).addEventListener('input',render);$('direction').addEventListener('change',render);for(const prefix of ['s','t'])$('choose'+prefix.toUpperCase()).onclick=()=>{moving=prefix;for(const k of ['s','t'])$('choose'+k.toUpperCase()).setAttribute('aria-pressed',String(k===moving));};$('reset').onclick=()=>{[0,0,2,2].forEach((v,i)=>$(ids[i]).value=v);render();};$('room').addEventListener('click',e=>{const pt=$('room').createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;const local=pt.matrixTransform($('room').getScreenCTM().inverse());const x=Math.round((local.x-140)/70*100),y=Math.round((260-local.y)/70*100);if(inside(x,y)){$(moving+'x').value=(x/100).toFixed(2);$(moving+'y').value=(y/100).toFixed(2);render();}});
+function strip(){const y=210-Number($('height').value)*1.5;$('segment').setAttribute('d',`M125 105L875 ${y}`);$('stripTarget').setAttribute('cx',875);$('stripTarget').setAttribute('cy',y);$('stripLabel').setAttribute('x',886);$('stripLabel').setAttribute('y',y-8);}
+$('height').addEventListener('input',strip);render();strip();
+</script></html>

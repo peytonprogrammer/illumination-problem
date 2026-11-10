@@ -1,10 +1,3 @@
-% WORKING DRAFT: for private review and revision, not an arXiv submission.
-% Coauthors: please confirm order, affiliations, contact addresses, and contributions.
-% TODO: Seek independent mathematical review of the seam-endpoint argument.
-% TODO: Complete priority check, including Monteil's unpublished 22-sided example.
-% TODO: Decide whether to include reproducible computational verification in a supplement.
-% Revised copy of Wang_illumination_preprint_v01.tex. Original attachment unchanged.
-% Build: pdflatex revised.tex (twice), or tectonic revised.tex.
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -36,26 +29,26 @@
 \newcommand{\corners}{\operatorname{Vert}}
 \newcommand{\pathQ}{\gamma}
 
-\title{A Simple Orthogonal 22-Gon with\\Two Non-Illuminating Interior Points}
+\title{A Simple Orthogonal 22-Gon with\\Exactly One Non-Illuminating Pair}
 \author{Peyton Wang\\\small Francis Parker High School \and Daniel Wang\\\small Citizen Health}
-\date{Working draft v0.2 for discussion --- 2 November 2026\\\small Not submitted or peer reviewed}
+\date{Working draft v0.3 --- 10 November 2026\\\small Not submitted or peer reviewed}
 
 \begin{document}
 \maketitle
 \vspace{-1.2em}
 \begin{abstract}
-We give exact coordinates for a strictly simple orthogonal polygon with 22 maximal sides and two distinct interior points that cannot be joined by any finite billiard trajectory avoiding polygon vertices. The room is assembled from three reflected copies of a five-square staircase. Folding a hypothetical trajectory onto the staircase reduces the problem to an elementary lattice-parity obstruction. Four smooth boundary points of the assembled room project to staircase corners; we show explicitly that reflection at these exceptional points produces only trajectory reversal and cannot evade the obstruction. The construction uses neither interior mirror partitions nor boundary self-contacts. We make no claim that 22 sides is minimal.
+We give exact coordinates for a strictly simple orthogonal polygon with 22 maximal sides and two distinct interior points that cannot be joined by any finite billiard trajectory avoiding polygon vertices. The room is assembled from three reflected copies of a five-square staircase. Folding a hypothetical trajectory onto the staircase reduces the problem to an elementary lattice-parity obstruction. Four smooth boundary points of the assembled room project to staircase corners; we show explicitly that reflection at these exceptional points produces only trajectory reversal and cannot evade the obstruction. The construction uses neither interior mirror partitions nor boundary self-contacts. We then prove that this is the only unordered pair of distinct real interior points that do not illuminate one another. The additional argument uses two rational cylinder decompositions, certified by explicit finite permutations, and an elementary integrality calculation.
 \end{abstract}
 
 \section{Introduction}
 In the polygonal illumination problem, light rays travel in straight lines and reflect specularly from the sides of a polygonal room. A ray that reaches a vertex is terminated. Two interior points are said to \emph{illuminate each other} if some finite trajectory with these reflection rules connects them.
 
-Tokarsky gave a polygonal example with a non-illuminating pair of points using 26 sides \cite{Tokarsky1995}. Castro exhibited a 24-sided example, as noted in \cite{Wolecki2024}. Wolecki presented a 22-sided example and established the upper bound of 22 sides for the unrestricted polygonal setting \cite[Theorem~1.3]{Wolecki2024}. Wolecki also mentions an independent, unpublished 22-sided example due to Thierry Monteil. Thus the present note does \emph{not} improve the known numerical upper bound.
+Lattice obstructions give polygonal examples with mutually non-illuminating points \cite{Tokarsky1995}. General results on illumination in rational polygons appear in \cite{Wolecki2024}. For this particular polygon, we determine the entire relation on distinct interior points by combining a folding obstruction with two explicit cylinder decompositions.
 
-Our purpose is to describe an explicit \emph{strictly simple, orthogonal} 22-gon with a short elementary proof. ``Strictly simple'' means that the boundary is a Jordan polygonal curve: it has no repeated vertices, crossed edges, or self-contacts. Only the exterior boundary reflects light; the dashed segments in the construction are open passages, not mirrors. The argument is self-contained and requires no general theory of translation surfaces.
+``Strictly simple'' means that the boundary is a Jordan polygonal curve: it has no repeated vertices, crossed edges, or self-contacts. Only the exterior boundary reflects light; the dashed segments in the construction are open passages, not mirrors. Sections 2--5 give an elementary proof of darkness. Section 6 proves illumination for every other pair, using a four-copy translation unfolding defined there.
 
 \begin{theorem}[Main result]\label{thm:main}
-There exists a strictly simple orthogonal polygon $Q$ with exactly 22 maximal sides, without holes or interior mirror partitions, containing two distinct points $S,T\in\interior(Q)$ such that no finite billiard trajectory avoiding the vertices of $Q$ connects $S$ to $T$.
+The polygon $Q$ constructed below is strictly simple and orthogonal, with exactly 22 maximal sides and no holes or interior mirror partitions. Among all unordered pairs of distinct points in $\interior(Q)$, its only non-illuminating pair is $\{(0,0),(2,2)\}$.
 \end{theorem}
 
 \section{The construction}
@@ -226,7 +219,7 @@ Assume $\gamma$ has a corner reversal, and choose the first one. Up to that even
 Hence $\gamma$ has no reversals and is an ordinary corner-avoiding billiard path from $a$ to $b$, contrary to Lemma~\ref{lem:parity}.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{thm:main}]
+\begin{proof}[Proof of the darkness assertion in Theorem~\ref{thm:main}]
 The explicit construction and boundary cycle establish that $Q$ is a strictly simple orthogonal polygon with 22 maximal sides, no holes, and $S,T\in\interior(Q)$.
 
 Suppose a finite billiard trajectory joins $S$ to $T$ in $Q$. It cannot be axis-parallel: reflecting in a horizontal or vertical wall preserves the property that one velocity component vanishes, whereas $S$ and $T$ differ in both coordinates. Consequently every straight leg meets either seam transversely, if at all. Since the trajectory has finitely many legs and each leg crosses each seam at most once, its folding by $f$ splits into finitely many straight segments and events.
@@ -234,10 +227,158 @@ Suppose a finite billiard trajectory joins $S$ to $T$ in $Q$. It cannot be axis-
 By the seam analysis, the image is a finite path from $a=f(S)$ to $b=f(T)$ following the rules of Lemma~\ref{lem:nohelp}. That lemma forbids such a path. Therefore no finite corner-avoiding billiard trajectory joins $S$ and $T$.
 \end{proof}
 
-\section{Discussion and scope}
-This example uses a connected, simply connected, axis-aligned room whose 22 boundary edges are all genuine exterior mirrors. The two marked points are interior points, rather than points of the reflective boundary. The proof's key components are a mod-2 obstruction after unfolding and an explicit treatment of the four points where a smooth wall of the assembled room maps to a corner of the base staircase.
 
-The theorem provides an \emph{explicit construction}, not a new upper bound on the unrestricted illumination problem: a 22-side upper bound was already given in \cite{Wolecki2024}. A complete historical claim about priority among strictly simple orthogonal examples would require checking other constructions, including unpublished work. The proof is independent of the computational searches that helped identify the example. The reversal principle is consistent with the usual continuation through removable corners; see \cite[Remark~2.2]{Wolecki2024}. The claimed contribution here is the explicit orthogonal construction and its self-contained proof, rather than a new general reversal principle.
+\section{Every other interior pair is illuminated}\label{sec:cylinders}
+Here and throughout, a pair means two \emph{distinct} interior points. Self-return trajectories and boundary sources are not part of the classification.
+
+\subsection{The four-copy unfolding}
+Form a translation surface $M$ from four copies of $Q$, labelled by
+$\varepsilon=(\varepsilon_1,\varepsilon_2)\in\{1,-1\}^2$.
+In the copy labelled $\varepsilon$, use developing coordinates
+$(\varepsilon_1x,\varepsilon_2y)$, up to integer translations.
+Across a vertical exterior wall, glue to the copy with the first sign reversed;
+across a horizontal exterior wall, reverse the second sign. Internal unit-cell
+edges are ordinary translation identifications on the same sheet.
+The resulting surface consists of 60 unit squares. Let $\Sigma$ be the set
+of all lifts of actual polygon vertices. Include convex vertices in $\Sigma$
+even though their lifts have total angle $2\pi$.
+Smooth boundary lattice points and interior lattice points are not in $\Sigma$.
+A straight geodesic avoiding $\Sigma$ projects to a legal billiard trajectory.
+
+The map $\tau$ that replaces $\varepsilon$ by $-\varepsilon$ is an isometry
+with derivative $-I$, and projects to the same point of $Q$.
+It has no fixed point outside $\Sigma$: an interior point has four distinct
+lifts, while a smooth wall point identifies only one of the two sign changes.
+Only at polygon vertices can the two simultaneous sign changes be identified.
+
+A \emph{regular cylinder} in a rational direction is a maximal open annulus
+of parallel closed geodesics avoiding $\Sigma$. In coordinates it is
+$(\mathbb R/L\mathbb Z)\times(0,h)$; its closure is the image of a closed strip.
+The involution $\tau$ cannot preserve a regular cylinder. Indeed, on such a
+cylinder it would have the form $(u,v)\mapsto(c-u,h-v)$, which has two fixed
+points at $v=h/2$, contrary to the preceding observation.
+
+\begin{lemma}[Two-cylinder visibility]\label{lem:cylinder}
+Suppose a rational direction decomposes $M$ into two regular cylinders,
+exchanged by $\tau$, whose closures cover $M$.
+If an interior point $A$ has a lift on a regular leaf in that direction,
+then $A$ illuminates every other interior point $B$ of $Q$.
+\end{lemma}
+\begin{proof}
+Let $\widehat A$ lie in the open cylinder $C$. Choose a lift $\widehat B$;
+replace it by $\tau\widehat B$ if necessary so that it lies in $\overline C$.
+Represent these points in a closed strip $\mathbb R\times[0,h]$, with
+$\widehat A$ strictly between the boundary lines. The straight segment between
+the representatives has its entire open segment inside the open strip.
+Its image avoids $\Sigma$ in its interior; the endpoint also avoids $\Sigma$
+because $B$ is interior to $Q$. Projection to $Q$ gives a finite legal
+billiard path. Compactness of the segment and its avoidance of the finite
+marked set ensure that only finitely many wall crossings occur.
+\end{proof}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex]
+\fill[pieceone] (0,0) rectangle (10,2.1);
+\draw[outline,thick] (0,0)--(10,0) (0,2.1)--(10,2.1);
+\foreach \x in {2,4,6,8} {\draw[outline!35,dashed] (\x,0)--(\x,2.1);}
+\fill[markcolor] (1,1.35) circle(2pt) node[above] {$\widehat A$};
+\fill[markcolor] (8.7,0) circle(2pt) node[below] {$\widehat B$};
+\draw[markcolor,very thick,-{Latex}] (1,1.35)--(8.7,0);
+\node[above] at (5,2.15) {closed strip covering one cylinder};
+\node[below,align=center] at (5,-.55) {\small The open segment stays strictly inside the strip.\\
+\small The target may lie on its boundary.};
+\end{tikzpicture}
+\caption{The visibility step, shown schematically in a cylinder's covering strip.
+Dashed lines indicate repeated periods, not mirrors. No assertion is made
+that the connecting segment follows the cylinder's periodic direction.}
+\label{fig:strip}
+\end{figure}
+
+\subsection{Two finite cylinder certificates}\label{sec:certificate}
+For this room, the directions $(p,q)=(4,7)$ and $(7,4)$ satisfy the hypothesis
+of Lemma~\ref{lem:cylinder}. Here is an explicit finite prescription for
+checking this input; it requires no search over rooms or possible billiard paths.
+
+Let $\mathcal C$ be the 15 cell lower-left corners determined by
+\eqref{eq:squares}--\eqref{eq:copies}. Order the 60 squares of $M$
+lexicographically by cell, then by sheet in the order
+$(+,+),(-,+),(+,-),(-,-)$, numbering from 0.
+The right-neighbour permutation $r$ sends square $((a,b),(e_1,e_2))$ to
+$((a+e_1,b),(e_1,e_2))$ when that cell is in $\mathcal C$, and otherwise to
+$((a,b),(-e_1,e_2))$. Similarly the up-neighbour permutation $u$ moves to
+$((a,b+e_2),(e_1,e_2))$ when possible, and otherwise to
+$((a,b),(e_1,-e_2))$.
+
+In each square divide its bottom edge into $q$ open intervals
+$(j/q,(j+1)/q)$, $0\le j<q$. Following direction $(p,q)$ from one bottom
+crossing to the next induces the permutation
+\[
+ (i,j)\longmapsto
+ \left(u\left(r^{\lfloor(j+p)/q\rfloor}(i)\right),\ (j+p)\bmod q\right).
+\]
+The permutation preserves the within-interval offset $t-j/q$, so each cycle closes every leaf in its open interval. A cycle therefore describes an open annular strip of regular leaves. These strips
+cover every leaf whose transverse coordinate $qx-py$ is nonintegral.
+All marked points have integral developing coordinates, so none lies
+inside such a strip. The complete cycle lists are included in
+\texttt{certificate.json}, and the standalone standard-library Python program
+\texttt{verify\_cylinders.py} regenerates them from the cell formulas.
+The results are
+\[
+\begin{array}{c|r|c|c}
+(p,q)&\text{slots}&\text{cycle lengths}&\text{number of cycles}\\\hline
+(4,7)&420&210,210&2\\
+(7,4)&240&120,120&2
+\end{array}
+\]
+Every regular cylinder contains one of these strips: the complement of the
+integral transverse levels is dense. Thus there are at most two regular
+cylinders. There are at least two, since $\tau$ cannot preserve a cylinder.
+Consequently there are exactly two, exchanged by $\tau$; their closures cover
+$M$, again by density. This proves the required cylinder input from the
+finite permutations.
+
+\subsection{Eliminating all other sources}
+Fix one of these directions $(p,q)$. The transverse values at the four lifts
+of $A=(x,y)$ are, modulo integers,
+\[
+ \pm(qx-py),\qquad \pm(qx+py).
+\]
+If either $qx-py$ or $qx+py$ is nonintegral, a lift of $A$ lies on a regular
+leaf, since every leaf through a marked point has integral transverse value.
+Lemma~\ref{lem:cylinder} then shows that $A$ illuminates every other
+interior point. Therefore each endpoint of a dark pair must satisfy
+\[
+ 7x-4y,\ 7x+4y,\ 4x-7y,\ 4x+7y\ \in\mathbb Z.
+\]
+Adding and subtracting gives $14x,8x,8y,14y\in\mathbb Z$, hence
+$2x,2y\in\mathbb Z$. Write $x=a/2$, $y=b/2$ with $a,b\in\mathbb Z$.
+Integrality of $(7a+4b)/2$ forces $a$ even; integrality of $(4a+7b)/2$
+forces $b$ even. Thus $(x,y)\in\mathbb Z^2$. Conversely every lattice point
+satisfies the four conditions.
+
+The cell construction has only two interior lattice points, $S=(0,0)$ and
+$T=(2,2)$. This can be checked directly from the 15 squares: $(x,y)$ is an
+interior lattice point exactly when all four cells with lower-left corners
+in $\{x-1,x\}\times\{y-1,y\}$ occur. The included program checks this as well.
+Every other interior point illuminates every other distinct interior point.
+The preceding darkness proof excludes a connection between $S$ and $T$.
+This completes the proof of Theorem~\ref{thm:main}.
+
+\section{Scope and reproduction}
+The classification covers distinct real interior endpoints in the specified
+polygon. It does not classify boundary endpoints or self-return trajectories,
+and it gives no lower bound for other polygons.
+The darkness argument is analytic; the illumination argument combines the
+strip lemma and the integrality calculation with the two finite permutation
+certificates. Run
+\begin{verbatim}
+python3 verify_cylinders.py --check
+\end{verbatim}
+from the manuscript directory to regenerate and compare both certificates.
+The program requires only Python 3 and the included JSON file.
+The illustrated companion \texttt{explainer.html} shows the strip construction
+and the exceptional-source conditions.
 
 \paragraph{Acknowledgements and AI assistance.}
 The authors used the AI systems ChatGPT (OpenAI) and Claude (Anthropic) extensively while exploring candidate geometries, developing explanations, and refining the proof. The authors take responsibility for the mathematical content of any eventual submitted version.
@@ -250,7 +391,7 @@ G.~W. Tokarsky, ``Polygonal Rooms Not Illuminable from Every Point,''
 
 \bibitem{Wolecki2024}
 A.~Wolecki, ``Illumination in Rational Billiards,''
-\emph{arXiv:1905.09358v3} (2024), Theorem~1.3, Figure~1, and Acknowledgements.
+\emph{arXiv:1905.09358v3} (2024), Theorem~1.3 and Figure~1.
 \url{https://arxiv.org/abs/1905.09358v3}.
 \end{thebibliography}
 \end{document}
