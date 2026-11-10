@@ -1,6 +1,6 @@
 # Illumination through long rectangular necks
 
-[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md)
+[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md) · [Explainer video](../../videos/long-neck-illumination/long-neck-illumination.mp4) · [Video source](../../videos/long-neck-illumination/README.md)
 
 Working draft v0.1, November 8, 2026.
 

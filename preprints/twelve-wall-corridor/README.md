@@ -1,6 +1,6 @@
 # Twelve-wall outer-chamber corridor illumination
 
-[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md)
+[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md) · [Explainer video](../../videos/twelve-wall-corridor/twelve-wall-corridor.mp4) · [Video source](../../videos/twelve-wall-corridor/README.md)
 
 Working draft v0.1, November 6, 2026. The specified four-parameter family, lower-to-upper outer-chamber pairs, arbitrary real dimensions and endpoints; computer-assisted proof.
 

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "s01",
+    "chapter": "The question",
+    "title": "Light through three offset chambers",
+    "visual": "corridor",
+    "lead": "A twelve-wall family",
+    "detail": "Any lower-to-upper interior pair",
+    "narration": "Put a source in the lower chamber and a target in the upper chamber of this offset mirrored corridor. The theorem guarantees a legal finite connecting ray for every such pair, with arbitrary positive real dimensions. The proof combines explicit unfolding geometry with exact computer certificates. It is a statement about a particular room family, not every twelve-sided polygon.",
+    "voice_duration": 24.341333333333335
+  },
+  {
+    "id": "s02",
+    "chapter": "The question",
+    "title": "Four parameters define the room",
+    "visual": "parameters",
+    "lead": "d, g, h₋, h₊ > 0",
+    "detail": "Portal width d; chamber width 2d",
+    "narration": "The lower chamber spans x from zero to two d and has depth h minus. The middle spans d to three d, over height g. The upper returns to zero through two d and has depth h plus. The overlap intervals at the joins are open portals. The exterior boundary has twelve maximal walls and four reflex corners.",
+    "voice_duration": 21.077333333333332
+  },
+  {
+    "id": "s03",
+    "chapter": "The question",
+    "title": "What counts as a connection?",
+    "visual": "corridor",
+    "lead": "Straight legs; equal-angle reflections",
+    "detail": "Physical corners terminate a ray",
+    "narration": "A legal path reflects only at smooth exterior wall points and avoids every physical corner. The source and target lie strictly inside their outer chambers. The dashed portals are passages, not mirrors. There is no uniform bound on reflection count, and the theorem does not assert illumination for every other pair of points throughout the room.",
+    "voice_duration": 21.461333333333332
+  },
+  {
+    "id": "s04",
+    "chapter": "Normalize and reduce",
+    "title": "Why axial scaling is allowed",
+    "visual": "scaling",
+    "lead": "Normalize d = g = 1",
+    "detail": "Axis-aligned reflection laws commute with scaling",
+    "narration": "Scale horizontal coordinates by one over d and vertical coordinates by one over g. For horizontal and vertical mirrors, reflection simply reverses one velocity component. This diagonal scaling commutes with those sign changes, so legal reflected paths and corner avoidance survive. This special argument does not justify arbitrary affine shears of billiard rooms.",
+    "voice_duration": 24.426666666666666
+  },
+  {
+    "id": "s05",
+    "chapter": "Normalize and reduce",
+    "title": "Reduce to the left portions",
+    "visual": "reduction",
+    "lead": "0 < s ≤ 1; 0 < t ≤ 1",
+    "detail": "Direct visibility and the L lemma handle the rest",
+    "narration": "In normalized coordinates the outer chambers have width two and the portals run from one to two. If both marks are in the right portions, a direct segment works. Mixed left and right placements reduce to an orientation-controlled L-room construction using genuine walls. The remaining domain has both horizontal coordinates positive and at most one.",
+    "voice_duration": 22.506666666666668
+  },
+  {
+    "id": "s06",
+    "chapter": "Build folding charts",
+    "title": "Unfold a route through the portals",
+    "visual": "one-pass",
+    "lead": "Effective depths U, V > 0",
+    "detail": "A pass count ℓ = 1 or 3",
+    "narration": "The proof first works with effective endpoint depths U and V in unbounded outer strips. An admissible chart will produce an outer-simple connection: it reaches each portal strictly, has no earlier portal visit in the initial outer piece, and stays in the middle rectangle between the first and last crossings. End-wall caps are handled afterwards.",
+    "voice_duration": 21.333333333333332
+  },
+  {
+    "id": "s07",
+    "chapter": "Build folding charts",
+    "title": "One straight developed line",
+    "visual": "chart",
+    "lead": "H = U + ℓ + V",
+    "detail": "Limg = u + εt + 4M",
+    "narration": "Choose u equal to zero or two, epsilon equal to plus or minus one, and an integer M. The horizontal target image is u plus epsilon t plus four M. A straight line from the developed source to that image determines the horizontal coordinate X of z. The four-unit period comes from reflecting a strip of width two.",
+    "voice_duration": 21.696
+  },
+  {
+    "id": "s08",
+    "chapter": "Build folding charts",
+    "title": "The portal values are affine",
+    "visual": "chart",
+    "lead": "X(z) = s + (Limg−s)(z+U)/H",
+    "detail": "Eⱼ = X(j)",
+    "narration": "Evaluate that line at the portal and ledge levels, calling the values E sub j. Their residues modulo four determine which folded copies match. The admissibility conditions are strict open boxes in these portal residues. A table in the manuscript specifies the compatible folding signs, so positions and velocities agree when the ray crosses a portal.",
+    "voice_duration": 22.698666666666668
+  },
+  {
+    "id": "s09",
+    "chapter": "Build folding charts",
+    "title": "A one-pass chart",
+    "visual": "one-pass-ray",
+    "lead": "Both portal crossings lie in (1, 2)",
+    "detail": "Vertical-wall reflections are smooth",
+    "narration": "For one pass, the physical height simply increases through the middle band. The compatible portal box puts both crossings strictly inside the open intervals from one to two. Horizontal folding may add vertical-wall reflections, but none occurs at a portal corner. The displayed fixed example is obtained from one of the manuscript’s equal-depth charts.",
+    "voice_duration": 21.632
+  },
+  {
+    "id": "s10",
+    "chapter": "Build folding charts",
+    "title": "Why allow three middle passes?",
+    "visual": "three-pass",
+    "lead": "Up, down, then up",
+    "detail": "Two additional ledge guards are required",
+    "narration": "One-pass charts alone are not the complete proof strategy. A three-pass chart unfolds the middle rectangle through three vertical bands. After folding, the ray goes up, down, and up through the middle. The two intermediate ledge contacts must lie strictly between x equals two and x equals three, avoiding both endpoints.",
+    "voice_duration": 20.565333333333335
+  },
+  {
+    "id": "s11",
+    "chapter": "Build folding charts",
+    "title": "Every extra bounce needs a strict guard",
+    "visual": "three-pass-ray",
+    "lead": "E₁ and E₂ avoid ledge endpoints",
+    "detail": "No artificial portal reflection",
+    "narration": "At the middle ceiling and floor, a three-pass route reflects on the actual ledges to the right of the portals. The strict ledge guards exclude the reflex and convex corners there. At an open portal, adjacent formulas match position and derivative. We do not bend the ray by hand or insert a mirror across a passage.",
+    "voice_duration": 20.053333333333335
+  },
+  {
+    "id": "s12",
+    "chapter": "Transfer back to actual marks",
+    "title": "The four endpoint sheets",
+    "visual": "sheets",
+    "lead": "A = 2h₋ − a; B = 2h₊ − b",
+    "detail": "(a,b), (A,b), (a,B), (A,B)",
+    "narration": "The actual source depth is a and target depth is b. Reflecting them in the outer end walls supplies alternative effective depths A and B. Their four combinations are called sheets. A chart on any one of those sheets can be transferred back to a path between the actual source and target in the finite room.",
+    "voice_duration": 19.17866666666667
+  },
+  {
+    "id": "s13",
+    "chapter": "Transfer back to actual marks",
+    "title": "Fold across the end-wall caps",
+    "visual": "caps",
+    "lead": "A smooth cap adds a real reflection",
+    "detail": "The middle portion is unchanged",
+    "narration": "If a sheet uses the reflected source depth, fold the portion below the lower end wall back into the chamber. The symmetric operation handles the upper end wall. Ordinary cap contacts add legitimate smooth reflections. The edits take place outside the portals and preserve the middle chart, including all of its strict guards.",
+    "voice_duration": 20.096
+  },
+  {
+    "id": "s14",
+    "chapter": "Transfer back to actual marks",
+    "title": "A candidate cap corner is not allowed",
+    "visual": "cap-corner",
+    "lead": "Retain an actual source visit",
+    "detail": "Or stop at an earlier actual target hit",
+    "narration": "The proof does not permit a ray to reflect at a cap corner. Instead, symmetry of the triangular fold shows that a lower cap-corner candidate returns to the actual source after that event; discard the prefix. At the upper cap, the actual target is reached before the candidate corner, so stop there. This removes the forbidden event from the connecting subpath.",
+    "voice_duration": 22.357333333333333
+  },
+  {
+    "id": "s15",
+    "chapter": "Transfer back to actual marks",
+    "title": "A complete five-reflection example",
+    "visual": "three-pass-ray",
+    "lead": "d = g = 1; h₋ = 3/4; h₊ = 7/8",
+    "detail": "S = (1/3,−1/2); T = (2/3,7/4)",
+    "narration": "The manuscript’s displayed example uses effective depths one and one, with three middle passes. After cap transfer, the actual ray has five reflections: the lower end wall, three middle walls, and the upper end wall. Its source and target are the exact marked points shown here, and both portal crossings are strict.",
+    "voice_duration": 19.264
+  },
+  {
+    "id": "s16",
+    "chapter": "Prove that charts suffice",
+    "title": "Equal depths have a separate argument",
+    "visual": "equal",
+    "lead": "If one sheet has U = V",
+    "detail": "That pair is already illuminated",
+    "narration": "The universal proof next shows that some chart succeeds, or supplies a separate explicit connection. Equal effective depths are handled first using arithmetic progression windows. Irrational phases are dense modulo four; sufficiently fine rational grids hit a window; and the few small denominators have explicit formulas. Thus a hypothetical failure cannot have an equal-depth sheet.",
+    "voice_duration": 24.192
+  },
+  {
+    "id": "s17",
+    "chapter": "Prove that charts suffice",
+    "title": "Irrational data: use the orbit closure",
+    "visual": "torus",
+    "lead": "Dense in the appropriate level set",
+    "detail": "Not always dense in the whole torus",
+    "narration": "For a sheet, define alpha as U over H and beta as U plus one over H. If the phases have no integer relation, their joint orbit is dense in the torus. With an integer relation, the closure is instead the full corresponding level set, including its components. The proof must check that this closure actually meets an admissible open portal box.",
+    "voice_duration": 22.890666666666668
+  },
+  {
+    "id": "s18",
+    "chapter": "Prove that charts suffice",
+    "title": "Short relations need exact coverage",
+    "visual": "relations",
+    "lead": "Large relation norm gives room",
+    "detail": "Thirty short-relation cases remain",
+    "narration": "When the relation coefficients have total absolute size at least five, the relevant open box is large enough to meet the closure. Thirty short primitive triples remain. Certificate C one checks their continuous endpoint domain, with two centered exceptions. The manuscript handles the remaining centered case by an explicit path. This is not a numerical sampling argument.",
+    "voice_duration": 23.637333333333334
+  },
+  {
+    "id": "s19",
+    "chapter": "Reduce the rational cases",
+    "title": "Rational phases give a finite grid",
+    "visual": "rational",
+    "lead": "A uniform sampling lemma",
+    "detail": "Large denominator or a short relation",
+    "narration": "For rational vertical data, the orbit is finite. A sampling lemma shows that when the phase denominator exceeds one hundred and there is no short relation, every translated orbit meets each open unit square. Short relations are handled using strict-margin covers and their own denominator cutoffs. Only a bounded arithmetic remainder remains.",
+    "voice_duration": 22.122666666666667
+  },
+  {
+    "id": "s20",
+    "chapter": "Reduce the rational cases",
+    "title": "A necessary support, not a dark set",
+    "visual": "support",
+    "lead": "Ten lines and eleven isolated points",
+    "detail": "Failure of a chart is not darkness",
+    "narration": "The finite-support proposition says that failure of all one-pass charts forces the effective depth pair onto one of ten lines or eleven isolated points. Being on that support does not mean the pair is dark. It only identifies where this particular chart method needs further work. The four endpoint sheets must all lie in that support if illumination fails.",
+    "voice_duration": 22.933333333333334
+  },
+  {
+    "id": "s21",
+    "chapter": "Reduce the rational cases",
+    "title": "Four sheets form a rectangle",
+    "visual": "sheets",
+    "lead": "Every sheet corner lies in the support",
+    "detail": "Classify the possible rectangles exactly",
+    "narration": "The four depth pairs form the corners of a rectangle in the U,V plane. Exact elimination over assignments of the ten support lines gives ninety one-parameter families and isolated cases, with no higher-dimensional solution. Sixteen families have an equal-depth sheet and are already covered. Seventy-four families remain for the next reduction.",
+    "voice_duration": 22.208
+  },
+  {
+    "id": "s22",
+    "chapter": "Reduce the rational cases",
+    "title": "A positive margin bounds the remainder",
+    "visual": "margin",
+    "lead": "Shrink windows by η = 1/8",
+    "detail": "One-pass and three-pass charts work together",
+    "narration": "On those families, the proof combines one-pass and three-pass windows with a fixed positive margin. Certificate C five covers the closed endpoint square by three hundred twenty-four clauses. The margin gives enough room for rational orbit spacing to force a hit above a bounded denominator. This turns infinite parameter families into finitely many exceptional rooms.",
+    "voice_duration": 24.213333333333335
+  },
+  {
+    "id": "s23",
+    "chapter": "Reduce the rational cases",
+    "title": "Exactly 22,538 residual rooms",
+    "visual": "finite",
+    "lead": "22,328 + 44 + 166 = 22,538",
+    "detail": "A proved reduction, not a cutoff guess",
+    "narration": "Certificate C six enumerates the remaining list: twenty-two thousand three hundred twenty-eight family members, forty-four further isolated rectangles, and one hundred sixty-six additional rectangles through the exceptional support points. The finite list follows from the analytic and arithmetic bounds. Merely trying rooms up to a chosen size would not prove this reduction.",
+    "voice_duration": 22.997333333333334
+  },
+  {
+    "id": "s24",
+    "chapter": "Cover every endpoint pair",
+    "title": "A chart covers a continuous region",
+    "visual": "guards",
+    "lead": "Each chart gives strict affine inequalities",
+    "detail": "Four guards for one pass; eight for three",
+    "narration": "In a fixed rational room, every selected chart supplies four or eight strict rational affine inequalities in s and t. Their conjunction describes an open region of actual endpoint coordinates. The picture shows the four exact guards of one equal-depth chart, not an arbitrary grid of tested point pairs. A single valid region covers infinitely many endpoint pairs.",
+    "voice_duration": 24.064
+  },
+  {
+    "id": "s25",
+    "chapter": "Cover every endpoint pair",
+    "title": "Boundary pieces must survive subtraction",
+    "visual": "cover",
+    "lead": "Subtract open guard regions exactly",
+    "detail": "Keep segments and isolated points",
+    "narration": "Certificate C seven starts with the closed endpoint square and subtracts the chart regions using exact rational arithmetic. It retains boundary segments and isolated points rather than dropping them through numerical tolerance. Only pieces on the excluded axes s equals zero or t equals zero may be discarded without a chart. Every final admissible complement is empty.",
+    "voice_duration": 25.173333333333332
+  },
+  {
+    "id": "s26",
+    "chapter": "Cover every endpoint pair",
+    "title": "What the computer-assisted claim means",
+    "visual": "certificates",
+    "lead": "770,912 clauses in the proof record",
+    "detail": "3,085,728 integer guard identities",
+    "narration": "The manuscript records seven certificate stages, including seven hundred seventy thousand nine hundred twelve saved clauses and over three million integer guard identities in the final cover. These counts describe the archived proof record; this video is not a fresh replay of that full corpus. The reasoning depends on the exact reductions and guards, not on the counts alone.",
+    "voice_duration": 22.912
+  },
+  {
+    "id": "s27",
+    "chapter": "Conclusion",
+    "title": "Geometry and certificates complete the route",
+    "visual": "corridor-ray",
+    "lead": "Arbitrary positive real parameters",
+    "detail": "Only lower-to-upper outer-chamber pairs",
+    "narration": "The proof now closes. Normalize and reduce the endpoint placement. Use folding charts and cap transfer. Resolve equal and irrational data, reduce the rational remainder to a finite list, and cover its continuous endpoint domains exactly. This establishes the stated outer-chamber theorem, without a uniform reflection bound or a claim about every twelve-wall polygon.",
+    "voice_duration": 24.426666666666666
+  },
+  {
+    "id": "s28",
+    "chapter": "Conclusion",
+    "title": "A proof map for a precise family",
+    "visual": "corridor-ray",
+    "lead": "Daniel Wang · Peyton Wang",
+    "detail": "Research assisted by Codex and Claude",
+    "narration": "The visible ray constructions explain what the certificates certify: genuine smooth-wall paths to the actual target, with strict portal and ledge clearance. The manuscript contains the full chart tables, arithmetic reductions, and certificate dependencies. It is by Daniel Wang and Peyton Wang, with Codex and Claude assistance, and remains a working draft without external refereeing.",
+    "voice_duration": 23.530666666666665
+  }
+]
