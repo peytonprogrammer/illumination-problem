@@ -52,8 +52,29 @@ def certificate():
             assert cur == first
             cycles.append(cycle)
         assert len(cycles) == 2
+        # First return to residue j=0: exactly q steps because gcd(p,q)=1.
+        return_map = []
+        for i in range(60):
+            cur = q*i
+            for _ in range(q):
+                cur = perm[cur]
+            assert cur % q == 0
+            return_map.append(cur // q)
+        return_cycles = []
+        unseen_return = set(range(60))
+        while unseen_return:
+            first = min(unseen_return)
+            cycle, cur = [], first
+            while cur in unseen_return:
+                unseen_return.remove(cur)
+                cycle.append(cur)
+                cur = return_map[cur]
+            assert cur == first
+            return_cycles.append(cycle)
+        assert [len(c) for c in return_cycles] == [30, 30]
         directions.append({'p': p, 'q': q, 'slots': 60*q,
-                           'cycle_lengths': [len(c) for c in cycles], 'cycles': cycles})
+                           'cycle_lengths': [len(c) for c in cycles], 'cycles': cycles,
+                           'return_map': return_map, 'return_cycles': return_cycles})
     return {'cells': sorted(cells), 'sheets': SHEETS, 'right': right, 'up': up,
             'interior_lattice_points': interior, 'directions': directions}
 

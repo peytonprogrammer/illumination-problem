@@ -2,7 +2,7 @@
 
 [Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Illustrated companion](explainer.html) · [Manuscript catalog](../README.md) · [Construction video](../../videos/dark-room-22/dark-room-22.mp4)
 
-**Working draft v0.3, November 10, 2026.** Among all unordered pairs of distinct real interior points in this strictly simple orthogonal room, the only dark pair is `{(0,0), (2,2)}`.
+**Working draft v0.4, November 10, 2026.** Among all unordered pairs of distinct real interior points in this strictly simple orthogonal room, the only dark pair is `{(0,0), (2,2)}`.
 
 Primary author: **Peyton Wang**. Coauthor: Daniel Wang.
 
@@ -20,7 +20,7 @@ From this directory, with standard-library Python 3:
 python3 verify_cylinders.py --check
 ```
 
-The checker rebuilds the room and the right/up neighbour permutations, lists every strip-permutation cycle, and compares the result with [certificate.json](certificate.json). The cycle lengths are `210 + 210` for `(4,7)` and `120 + 120` for `(7,4)`. It also checks that the only interior lattice points are `(0,0)` and `(2,2)`.
+The checker rebuilds the room and the right/up neighbour permutations, lists every strip-permutation cycle, and compares the result with [certificate.json](certificate.json). The cycle lengths are `210 + 210` for `(4,7)` and `120 + 120` for `(7,4)`. The manuscript also prints the equivalent first-return certificates on 60 squares: two 30-cycles in each direction. The checker regenerates these reduced permutations too. It also checks that the only interior lattice points are `(0,0)` and `(2,2)`.
 
 To print a regenerated certificate:
 
