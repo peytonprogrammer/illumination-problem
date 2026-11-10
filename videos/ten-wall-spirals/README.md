@@ -29,6 +29,8 @@ npm run check
 npm run render
 ```
 
+The preview command uses HyperFrames 0.9.28, tested after an editor update-loop error with 0.9.27. Checks and delivery rendering retain the original 0.9.27 version.
+
 The render command writes `renders/ten-wall-spirals.mp4`, preserves the authored narration, and adds chapter metadata. It leaves the checked-in video unchanged. The first use downloads the pinned HyperFrames runtime; project-specific audio and diagrams are included. Rendered bytes may vary with browser, encoder, and platform versions.
 
 ## Chapters
