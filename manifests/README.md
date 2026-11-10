@@ -28,6 +28,6 @@ Use current delivered hashes for integrity checks. A proof or review receipt can
 
 ## Result records
 
-`R01` through `R28` group substantive conclusions rather than individual fixtures or certificates. A `recorded_status` refers to the scoped internal review in the cited record; it does not imply external refereeing or. Conditional mechanisms and negative results remain distinct from completed illumination theorems.
+`R01` through `R29` group substantive conclusions rather than individual fixtures or certificates. A `recorded_status` refers to the scoped internal review in the cited record; it does not imply external refereeing or formal verification. Conditional mechanisms and negative results remain distinct from completed illumination theorems.
 
 Run `python3 tools/update_catalog.py` after changing the file or package catalogs or the results inventory. It refreshes derived counts, download tables, and result descriptions. Run it with `--check` to detect drift without writing files. See [reproduction](../docs/REPRODUCIBILITY.md) for integrity checks.

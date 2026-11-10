@@ -8,7 +8,7 @@ The universal minimum-wall problem remains open. The results have internal AI re
 
 | To… | Start with… |
 |---|---|
-| Read a manuscript | [Eight theorem manuscripts, an affine research note and two supporting notes](preprints/README.md) |
+| Read a manuscript | [Nine theorem manuscripts, an affine research note and two supporting notes](preprints/README.md) |
 | Watch an explainer | [Narrated videos with editable HyperFrames source](videos/README.md) |
 | Find a precise statement, hypotheses, and proof | [Results inventory](RESULTS.md) |
 | Understand failed approaches and open questions | [Negative findings](docs/NEGATIVE-RESULTS.md) |
@@ -35,6 +35,7 @@ Research paths retain their original names so source references and restored scr
 ## Selected established results
 
 - Every strictly simple orthogonal room with at most eight maximal walls illuminates every pair of distinct real interior points.
+- In a fixed orthogonal lattice room, illumination of every distinct rational interior pair implies illumination of every distinct real interior pair.
 - The specified four-parameter twelve-wall corridor family illuminates every lower-to-upper outer-chamber pair.
 - The canonical45 lattice model with at most six transparent non-A exceptions has a sharp restricted 22-wall minimum.
 - Comb, long-neck, strict-fold, and restricted ten-wall spiral results hold under the hypotheses in the [full inventory](RESULTS.md).

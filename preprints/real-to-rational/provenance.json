@@ -1,0 +1,44 @@
+{
+  "title": "Rational Pairs Suffice for Illumination in Orthogonal Lattice Rooms",
+  "version": "0.1",
+  "date": "2026-11-10",
+  "scope": "All-rational-pair illumination implies all-real-pair illumination for distinct interior endpoints in a fixed strictly simple orthogonal polygon with integer vertices. Includes local dark-pair slide and dilation-closed-class corollary.",
+  "derivation_records": [
+    {
+      "record": "d16-real-to-rational/reduction.md",
+      "sha256": "08a423e9bb60bc6d83720df11969e47f50848cb6e4d0cb3e91eb56db0206ef27"
+    },
+    {
+      "record": "d16-review/review.md",
+      "sha256": "9c9aac23a4b81df14f029117c2167e6f29735383e21f0dd93b494ed1577de112"
+    },
+    {
+      "record": "Independent review of the complete manuscript",
+      "sha256": "a17e7a8041c45b5e508d3bf3864597a958a0db73ead50715cd89b8916d708a1b",
+      "reviewed_tex_sha256": "9117a53f6da917ebb3a7aa042e592c2046b1c7cba14ea13b61181bd9263150fb",
+      "verdict": "ACCEPT at stated scope; independent AI review"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "manuscript.tex",
+      "sha256": "9117a53f6da917ebb3a7aa042e592c2046b1c7cba14ea13b61181bd9263150fb"
+    },
+    {
+      "path": "manuscript.pdf",
+      "sha256": "adefb319880f34f2ad8df54c8f37dc8fdba673130a36f4ee8c9cd80f38612785"
+    },
+    {
+      "path": "README.md",
+      "sha256": "519b1dd208da2523198cc3b30cb55171bcc918d8deb1fb1f21316f3c825df4ef"
+    }
+  ],
+  "pages": 6,
+  "verification": {
+    "proof": "Analytic; no computational inputs required",
+    "build": "Tectonic 0.17.0; no TeX warnings",
+    "layout": "All six pages rendered and visually inspected",
+    "external_refereeing": false,
+    "formal_verification": false
+  }
+}

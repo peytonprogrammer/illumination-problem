@@ -6,6 +6,7 @@ Start here for readable PDFs and their sources. Each manuscript has its own fold
 
 | Manuscript | PDF | Source and scope |
 |---|---|---|
+| Rational-to-real reduction | [PDF](real-to-rational/manuscript.pdf) | [All distinct interior pairs in orthogonal lattice rooms; full elementary proof](real-to-rational/README.md) |
 | Eight-wall illumination | [PDF](eight-wall/manuscript.pdf) | [Full corrected proof, arbitrary real dimensions and interior endpoints](eight-wall/README.md) |
 | Twenty-two-wall room: exactly one dark pair | [PDF](twenty-two-wall/manuscript.pdf) | [Construction, all-real cylinder classification, and finite certificates](twenty-two-wall/README.md) |
 | Three-star surplus-four illumination | [PDF](three-star-surplus-four/manuscript.pdf) | [Fixed support, at most 21 walls and six transparent points](three-star-surplus-four/README.md) |

@@ -2,7 +2,7 @@
 
 Readable PDFs and their sources are collected in the [manuscript catalog](preprints/README.md), with coverage gaps and historical notes identified.
 
-This inventory groups 28 research conclusions by scope. Entries R01–R24 cover the main proof record; R25–R28 describe later affine mechanisms and obstructions. The [coprime-period spiral note](docs/FOLLOWUP-2026-11-08.md) explains the additional restricted family in R11. The [eight-wall and affine note](docs/UPDATE-2026-11-08.md) gives the later proof and review links.
+This inventory groups 29 research conclusions by scope. Entries R01–R24 cover the main proof record; R25–R28 describe later affine mechanisms and obstructions; R29 gives the rational-to-real reduction. The [coprime-period spiral note](docs/FOLLOWUP-2026-11-08.md) explains the additional restricted family in R11. The [eight-wall and affine note](docs/UPDATE-2026-11-08.md) gives the later proof and review links.
 
 Status refers to the scoped internal reviews cited below. This catalog is not a fresh proof review or external refereeing. The [machine-readable index](manifests/results.json) uses the same stable result IDs.
 
@@ -296,6 +296,18 @@ Sources: [Argument and exact scope](research/illumination-generalization-2026-11
 Absolute symplectic/period compatibility admits unrealizable shortening actions; an actual nonaffine same-surface deformation compresses a path. Neither refutes the whole-group minimum.
 
 Sources: [Argument and exact scope](research/illumination-generalization-2026-11-06/coordination/general-proof-priority/full-affine-bound-peer-goals/reviewer/blocked-handoff.md).
+
+## Rational-to-real reduction
+
+<a id="r29"></a>
+
+### R29. Rational pairs suffice in orthogonal lattice rooms
+
+In every fixed strictly simple orthogonal polygon with integer vertices, illumination of all distinct rational interior pairs implies illumination of all distinct real interior pairs. Any dark pair with an irrational coordinate belongs locally to an explicit sliding family containing rational dark pairs arbitrarily nearby. The proof uses the marked four-copy unfolding, two multi-twists, and elementary orbit-density and rational-relation arguments.
+
+Consequently an all-size lattice-pair theorem for a class closed under integer dilation gives an all-real theorem for that class. The reduction supplies no bound on denominators, room area, directions or reflections. It does not extend a finite-area census to every real pair, prove that all dark pairs are rational, or establish a wall-count minimum.
+
+Sources: [Full elementary proof](preprints/real-to-rational/manuscript.pdf); [Source and scope](preprints/real-to-rational/README.md); [Source and review provenance](preprints/real-to-rational/provenance.json).
 
 ## Open questions
 

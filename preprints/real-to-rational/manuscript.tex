@@ -1,0 +1,399 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[letterpaper,margin=.9in]{geometry}
+\usepackage{hyperref}
+\hypersetup{pdfauthor={Peyton Wang and Daniel Wang},pdftitle={Rational Pairs Suffice for Illumination in Orthogonal Lattice Rooms},colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt plus 1pt minus 1pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\interior}{\operatorname{int}}
+\DeclareMathOperator{\diag}{diag}
+\title{Rational Pairs Suffice for Illumination\\in Orthogonal Lattice Rooms}
+\author{Peyton Wang\\\small Francis Parker School \and Daniel Wang}
+\date{Working draft v0.1 --- 10 November 2026\\\small Not submitted or peer reviewed}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $P$ be a strictly simple orthogonal polygon with integer vertices.
+We prove that if every pair of distinct rational interior points illuminates,
+then every pair of distinct real interior points illuminates.
+More precisely, any dark pair with an irrational coordinate belongs locally
+to a one-parameter family of dark pairs containing rational pairs arbitrarily
+nearby. The proof uses the four-copy square-tiled unfolding, horizontal and
+vertical multi-twists, and elementary density arguments on circles and tori.
+The reduction gives no bound on rational denominators and requires no
+limiting deformation of the room.
+\end{abstract}
+
+\section{Statement and conventions}
+A room is the closed region bounded by a Jordan polygonal curve.
+Throughout, $P$ is orthogonal, has integer vertices, and has no holes,
+self-contacts, or interior mirrors. A legal billiard path has finitely many
+straight legs, reflects specularly at smooth boundary points, and never
+meets a polygon vertex. Distinct interior points \emph{illuminate} one another
+if a legal path connects them; otherwise the pair is \emph{dark}.
+A point is rational when both coordinates are rational.
+
+\begin{theorem}[Rational-pair reduction]\label{thm:reduction}
+If every pair of distinct rational points in $\interior(P)$ illuminates,
+then every pair of distinct points in $\interior(P)$ illuminates.
+\end{theorem}
+
+We prove the following stronger local statement.
+\begin{theorem}[A dark irrational pair slides]\label{thm:slide}
+Suppose $(S,T)$ is a dark pair of distinct interior points and $S$ is not
+rational. After exchanging the coordinate axes if necessary, there are
+$x\in\R\setminus\Q$, $y,v,c\in\Q$, and $\rho\in\Q\setminus\{0\}$ such that
+\[
+ S=(x,y),\qquad T=(\rho x+c,v).
+\]
+For all sufficiently small real $\delta$, the distinct interior pair
+\[
+ S_\delta=(x+\delta,y),\qquad
+ T_\delta=(\rho x+c+\rho\delta,v)
+\]
+is dark. In particular, there are rational dark pairs arbitrarily close
+to $(S,T)$.
+\end{theorem}
+
+The result concerns a fixed room. It does not say that dark pairs are
+rational, that their number is finite, or that a bounded-denominator grid
+can certify illumination. No wall-count bound is imposed.
+
+\section{The marked four-copy unfolding}
+Let $K=\{1,-1\}^2$. Form $M$ from four copies of $P$ labelled by
+$e=(e_1,e_2)\in K$, with developing charts $(e_1x,e_2y)$.
+Glue vertical boundary edges to the sheet with $e_1$ reversed, and horizontal
+boundary edges to the sheet with $e_2$ reversed. The resulting connected
+translation surface is tiled by unit squares. The map
+\[
+ \pi:M\longrightarrow\T^2=\R^2/\Z^2,
+ \qquad \pi(S,e)=(e_1x,e_2y)\pmod{\Z^2}
+\]
+is a finite covering away from $0$. Put $L=\pi^{-1}(0)$ and let
+$\Sigma\subset L$ consist of all lifts of polygon vertices.
+The lifts of convex vertices are regular metric points, but remain
+\emph{marked forbidden points}. Smooth boundary lattice points and
+interior lattice points are not forbidden.
+
+Call a pair of distinct points in $M\setminus\Sigma$ \emph{surface-lit}
+if a straight geodesic segment joins them while avoiding $\Sigma$.
+For distinct room points $S,T$, fix $s=(S,(1,1))$ and write $t_e=(T,e)$.
+Then
+\begin{equation}\label{eq:unfold}
+ (S,T)\text{ illuminates}\quad\Longleftrightarrow\quad
+ (s,t_e)\text{ is surface-lit for some }e\in K.
+\end{equation}
+Indeed, reflect each successive billiard leg into the adjacent sheet;
+conversely project a geodesic through the sheet identifications.
+Marking all vertex lifts makes corner avoidance identical in both directions.
+A compact geodesic avoiding the finite marked set has only finitely many
+crossings of the finite polygon edges. For interior endpoints, a segment
+cannot run along a boundary edge. This is the usual unfolding correspondence;
+see also \cite[Lemma 2.1 and Remark 2.2]{Wolecki}.
+
+\begin{lemma}[Openness]\label{lem:open}
+The surface-lit pairs form an open subset of
+$(M\setminus\Sigma)^2$ minus the diagonal.
+\end{lemma}
+\begin{proof}
+A legal segment is compact and has positive distance from $\Sigma$.
+Continue it slightly at both ends and develop a sufficiently thin strip
+around it by parallel transport. The strip maps locally isometrically to
+$M\setminus\Sigma$; global injectivity is unnecessary.
+Small changes of the two endpoints in this strip are joined by a straight
+segment remaining inside the strip. Its image is a legal geodesic.
+The endpoint charts are local homeomorphisms, proving openness.
+\end{proof}
+
+\subsection{Two multi-twists}
+Cut $M$ along all horizontal grid edges. Each component is a horizontal
+row cylinder of height $1$ and integer circumference. Choose a positive
+integer $A$ divisible by every such circumference. On a cylinder with
+coordinates $(u,\eta)\in(\R/\ell\Z)\times[0,1]$, set
+\[
+ h(u,\eta)=(u+A\eta,\eta).
+\]
+The boundary values are the identity, so the maps glue to an affine
+homeomorphism of $M$ fixing every horizontal grid edge pointwise.
+Similarly there is a vertical multi-twist $v$, with a positive integer
+parameter $B$, fixing every vertical grid edge pointwise. Their derivatives
+and torus actions are
+\[
+ Dh=\begin{pmatrix}1&A\\0&1\end{pmatrix}=H,
+ \qquad Dv=\begin{pmatrix}1&0\\B&1\end{pmatrix}=V,
+ \qquad \pi h=H\pi,\quad\pi v=V\pi.
+\]
+Both fix $L$, and hence $\Sigma$, pointwise.
+Every element of $G=\langle h,v\rangle$ preserves surface illumination:
+it maps straight segments to straight segments and preserves the forbidden
+set. The diagonal action of $G$ on $M\times M$ will be used below.
+We do not assume that this action descends to pairs of room points.
+
+\section{Density under horizontal and vertical twists}
+We use the elementary torus-rotation fact that multiples of a vector
+$(\alpha_1,\ldots,\alpha_d)$ are dense modulo a period lattice when
+$1,\alpha_1,\ldots,\alpha_d$ are rationally independent after normalizing
+the periods. For a circle this is the irrational-rotation theorem;
+for a product of circles it is Kronecker's theorem.
+
+\begin{lemma}[One-point density]\label{lem:one}
+Let $X$ be a compact connected square-tiled translation surface, with tile
+side $1/N$ and tiling map to $\T^2$. Suppose affine maps $h_0,v_0$ fix all
+tile vertices and have derivatives
+$\left(\begin{smallmatrix}1&a\\0&1\end{smallmatrix}\right)$ and
+$\left(\begin{smallmatrix}1&0\\b&1\end{smallmatrix}\right)$,
+where $a,b$ are nonzero integers. Every point with an irrational torus
+coordinate has dense $\langle h_0,v_0\rangle$-orbit.
+\end{lemma}
+\begin{proof}
+First pass to positive powers that fix every horizontal, respectively
+vertical, tile edge pointwise. Such powers exist: there are finitely many
+edges, each is mapped to an edge of the same direction and length, and
+an edge preserved with its orientation is fixed pointwise. Fixing vertices
+alone would not suffice, since different prongs can be permuted.
+The derivatives of these powers still have nonzero integral shear parameters.
+It suffices to prove density for the resulting subgroup.
+
+Suppose the second torus coordinate is irrational. The point lies in an
+open row cylinder at an irrational transverse height. The horizontal twist
+acts on its horizontal leaf by an irrational rotation, because the
+circumference and tile offsets are rational. Thus the orbit closure $Y$
+contains that entire leaf. It crosses each tile it meets horizontally.
+In any column cylinder met by the leaf, points on the leaf with irrational
+first coordinate have dense vertical-twist orbits on their vertical leaves.
+These leaves are dense in that column cylinder, so its closure lies in $Y$.
+
+Call a row or column cylinder full if its closure lies in $Y$. If a full
+cylinder and one of the other direction share a tile, the second is full:
+use the irrational transverse coordinates in their common tile and the
+corresponding twist. Every pair of edge-adjacent tiles belongs to a common
+row or column cylinder. Connectedness propagates fullness through every
+tile. If only the first coordinate is irrational, interchange the axes.
+\end{proof}
+
+\begin{lemma}[Mixed rationality]\label{lem:mixed}
+If $\pi(s)$ is rational and $\pi(t)$ is not, then $(s,t)$ is surface-lit.
+\end{lemma}
+\begin{proof}
+The $G$-orbit of $s$ is finite: its torus coordinates have a fixed bounded
+denominator, and $\pi$ has finite fibres. Choose $n>0$ such that both
+$h^n$ and $v^n$ fix $s$. Lemma~\ref{lem:one} makes the orbit of $t$ under
+$\langle h^n,v^n\rangle$ dense. Move it into a sufficiently small flat disc
+around the regular point $s$, disjoint from $\Sigma$. The distinct endpoints
+then join by a segment. Apply the inverse affine map.
+\end{proof}
+
+A pair $(z,w)\in\T^2\times\T^2$ is \emph{generic} here if no nonzero
+$(a,b)\in\Z^2$ satisfies $az+bw\in\Q^2/\Z^2$.
+
+\begin{lemma}[Generic-pair density]\label{lem:generic}
+If $(\pi(s),\pi(t))$ is generic, the diagonal $G$-orbit of $(s,t)$ is dense
+in $M\times M$.
+\end{lemma}
+\begin{proof}
+Write $\pi(s)=(x,y)$ and $\pi(t)=(u,w)$, and let $Y$ be the orbit closure.
+Let $r_x$ be the rank of $x,u$ in the vector space $\R/\Q$ over $\Q$,
+and $r_y$ the rank of $y,w$.
+
+If $r_y=2$, then $1,y,w$ are rationally independent. Horizontal twisting
+fills the product of the horizontal leaves through $s,t$: their
+circumferences are integers, so period normalization preserves the
+independence. On this product, points with $1,x',u'$ rationally independent
+are dense. Vertical twisting fills their products of vertical leaves.
+Hence $Y$ contains the product of the closures of every pair of column
+cylinders met by those horizontal leaves.
+
+A pair of cylinders of the same direction is full if the product of its
+closures lies in $Y$. If $(C_1,C_2)$ is full and each $C_i'$ intersects
+$C_i$ in a tile, with the opposite direction, then $(C_1',C_2')$ is full:
+apply the same independent-rotation argument in the product of the two
+intersection tiles. This propagates to every tile pair. To move one tile
+factor while holding the other, alternate horizontal and vertical cylinder
+steps; in the stationary factor use its row and column through its fixed
+tile. A step can be padded by staying in that tile, so both factors can
+follow the same alternating schedule. Connectedness of the tile adjacency
+graph therefore gives $Y=M\times M$.
+The case $r_x=2$ follows by exchanging axes.
+
+The only remaining generic case is $r_x=r_y=1$. Write
+\[
+ (x,u)=q'+\xi\beta,\qquad (y,w)=q+\eta\alpha,
+\]
+with $q,q',\alpha,\beta\in\Q^2$, $\alpha,\beta\ne0$, and $\xi,\eta$
+irrational. Genericity forces $\det(\alpha,\beta)\ne0$, since otherwise
+one nonzero rational row vector annihilates both irrational parts.
+After taking a multiple to kill the rational offsets, horizontal twisting
+has a circle orbit closure in direction $\alpha$. Consequently $Y$
+contains pairs obtained by moving the first and second points horizontally
+by $r\alpha_1,r\alpha_2$, respectively, for every sufficiently small real
+$r$ (and by continuation along the leaves for all $r$).
+Choose such $r$ with $1,\xi,r$ rationally independent. A rational relation
+between the new first coordinates would annihilate both $\beta$ and
+$\alpha$, which is impossible. The moved pair has $r_x=2$ and its orbit
+closure is $M\times M$. If one original rank is zero, genericity forces
+the other to be two, already treated.
+\end{proof}
+
+\begin{corollary}\label{cor:relation}
+Every surface-dark pair $(s,t)$ satisfies
+$a\pi(s)+b\pi(t)\in\Q^2/\Z^2$ for some nonzero integer pair $(a,b)$.
+If both torus coordinates are irrational, then $ab\ne0$.
+\end{corollary}
+\begin{proof}
+Surface-lit pairs form a nonempty open invariant set. A dense orbit must
+meet that set. If $a=0$ or $b=0$, the corresponding coordinate is rational.
+\end{proof}
+
+\section{Rational relation surfaces}
+Put $M^\circ=M\setminus L$.
+\begin{lemma}[A dark relation component]\label{lem:relation}
+Suppose $z=\pi(s)$ is irrational, $a,b$ are relatively prime nonzero
+integers, and $az+b\pi(t)=c\in\Q^2/\Z^2$.
+Let $F_0$ be the connected component through $(s,t)$ of
+\[
+ F=\{(s',t')\in M^\circ\times M^\circ:
+                   a\pi(s')+b\pi(t')=c\}.
+\]
+If $(s,t)$ is surface-dark, every distinct pair in $F_0$ is surface-dark.
+\end{lemma}
+\begin{proof}
+Choose rational $z_0,w_0\in\T^2$ with $az_0+bw_0=c$.
+Since $\gcd(a,b)=1$, the solution torus downstairs is parametrized
+bijectively by
+\begin{equation}\label{eq:param}
+ z'=z_0+b\zeta,\qquad w'=w_0-a\zeta,
+ \qquad \zeta\in\T^2.
+\end{equation}
+For example, Bezout coefficients give an inverse to the map
+$\zeta\mapsto(b\zeta,-a\zeta)$.
+Remove the finite rational set $E$ where $z'$ or $w'$ is zero.
+The pullback $F$ is a finite covering of $\T^2\setminus E$.
+Completing each connected component adds finitely many points and produces
+a compact translation surface branched only over rational points.
+After subdividing a rational grid, it is tiled by squares of side $1/N$.
+The parameter $\zeta$ of $(s,t)$ is irrational because $z$ is irrational.
+
+A power of the diagonal action $h\times h$ preserves the rational relation
+and the component $F_0$: the orbit of $c$ on its finite rational torus grid
+is finite, and there are finitely many components. In the chart $\zeta$
+its action is affine with derivative a power of $H$ and rational
+translation part. Taking another power makes this translation part zero
+modulo $\Z^2$ and fixes every vertex of a sufficiently fine rational tile
+grid upstairs. To justify the first step, the affine action permutes a finite
+rational grid containing $0$; a power fixes $0$. To justify the second,
+its action on the finite set of preimages of the grid has finite order.
+The same construction applies to $v\times v$ and $V$.
+When applying Lemma~\ref{lem:one}, take further powers to fix tile edges
+pointwise as well. That lemma makes the orbit of $(s,t)$ under the resulting
+subgroup dense in the completed component, and hence dense in $F_0$.
+
+If a distinct pair in $F_0$ were surface-lit, its open illumination
+neighbourhood would meet this orbit. Affine invariance would make $(s,t)$
+surface-lit, a contradiction.
+\end{proof}
+
+\section{Proof of the reduction}
+\begin{proof}[Proof of Theorem~\ref{thm:slide}]
+Write $S=(x,y)$, $T=(u,w)$, $s=(S,(1,1))$, and $t_e=(T,e)$.
+All four pairs $(s,t_e)$ are surface-dark by~\eqref{eq:unfold}.
+If $T$ were rational, Lemma~\ref{lem:mixed} would contradict darkness.
+Thus both $S$ and $T$ are irrational points.
+
+For each $e$ the relation corollary supplies nonzero integers $a_e,b_e$ with
+\begin{equation}\label{eq:allrelations}
+ a_e(x,y)+b_e(e_1u,e_2w)\in\Q^2.
+\end{equation}
+Divide by their greatest common divisor to make them relatively prime;
+this preserves rationality of the right-hand side.
+Suppose both $x$ and $y$ were irrational. From $e=(1,1)$ we obtain
+$u=r x$ and $w=r y$ modulo $\Q$, for nonzero rational $r$.
+From $e=(-1,1)$ we obtain $u=r'x$ and $w=-r'y$ modulo $\Q$.
+Then $(r-r')x$ and $(r+r')y$ are rational, forcing $r=r'$ and $r=-r'$,
+a contradiction. Exactly one coordinate of $S$ is irrational.
+Exchange axes so that it is $x$.
+The relation for $e=(1,1)$ now gives $y,w\in\Q$ and
+$u=\rho x+c$, with $\rho\in\Q\setminus\{0\}$ and $c\in\Q$.
+Set $v=w$ to match the statement.
+
+For any sheet $e$, the first coordinate of~\eqref{eq:allrelations} implies
+$a_e+e_1b_e\rho=0$, since $x$ is irrational. Therefore the path
+\[
+ \delta\longmapsto(s_\delta,t_{e,\delta})
+\]
+obtained from the stated room slides keeps its rational relation constant.
+For sufficiently small $\delta$ it remains in $M^\circ\times M^\circ$,
+with distinct interior room endpoints. It consequently remains in the
+same relation component. Lemma~\ref{lem:relation} makes all four lift pairs
+surface-dark, so~\eqref{eq:unfold} gives darkness in the room.
+
+For an explicit permissible neighbourhood, take $|\delta|$ smaller than
+\[
+ \min\left\{\operatorname{dist}(x,\Z),
+ \frac{\operatorname{dist}(u,\Z)}{|\rho|},
+ \operatorname{dist}(S,\partial P),
+ \frac{\operatorname{dist}(T,\partial P)}{|\rho|},
+ \frac{|S-T|}{1+|\rho|}\right\}.
+\]
+Every entry is positive. Choosing $x+\delta$ rational gives rational
+coordinates for both endpoints and can be done arbitrarily close to zero.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:reduction}]
+If a dark distinct interior pair exists and both endpoints are rational,
+it already contradicts the hypothesis. Otherwise name an irrational
+endpoint $S$ and apply Theorem~\ref{thm:slide} to obtain a rational dark pair.
+\end{proof}
+
+\begin{corollary}[Scaling formulation]\label{cor:scaling}
+Fix a class of strictly simple orthogonal lattice rooms closed under
+positive integer dilations. If every pair of distinct interior lattice
+points illuminates in every room of the class, then every distinct real
+interior pair illuminates in every room of the class.
+\end{corollary}
+\begin{proof}
+In a fixed room, any rational pair becomes a lattice pair after a common
+integer dilation. Dilation preserves legal billiard paths. Apply
+Theorem~\ref{thm:reduction}.
+\end{proof}
+
+\section{Scope and verification}
+The argument is analytic and concerns all real coordinates. It does not
+sample the endpoints, enumerate rooms, or impose a reflection cutoff.
+The scaling corollary does not convert an area-bounded census into an
+all-real theorem: scaling can exceed every given area bound.
+Similarly the proof supplies no universal finite list of directions,
+reflection words, or rational denominators.
+
+All convex vertex lifts remain forbidden throughout. Interior lattice lifts
+and smooth wall lattice lifts are regular, allowed points. The affine maps
+used in the proof fix every lattice lift, so they preserve the complete
+forbidden set. Their action is used on the unfolding rather than assumed
+to act on room pairs.
+
+The source reduction has independent AI mathematical review. This manuscript
+incorporates the review's finite-power corrections and the explicit small-slide
+bound. The folder provenance identifies the source and review versions.
+No computer calculation is needed to establish the quantified theorem.
+
+\paragraph{Acknowledgments and AI assistance.}
+The authors used ChatGPT and Claude to develop and check arguments and
+prepare the manuscript. The authors take responsibility for its content.
+
+\begin{thebibliography}{9}
+\bibitem{Wolecki}
+A.~Wolecki, \emph{Illumination in Rational Billiards},
+\texttt{arXiv:1905.09358v3} (2024), Lemma~2.1 and Remark~2.2.
+\url{https://arxiv.org/abs/1905.09358}.
+\end{thebibliography}
+\end{document}
