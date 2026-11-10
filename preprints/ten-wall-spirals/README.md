@@ -1,6 +1,6 @@
 # Illumination in tall and coprime-period ten-wall spirals
 
-[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md)
+[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md) · [Explainer video](../../videos/ten-wall-spirals/ten-wall-spirals.mp4) · [Video source](../../videos/ten-wall-spirals/README.md)
 
 Working draft v0.1, November 8, 2026.
 

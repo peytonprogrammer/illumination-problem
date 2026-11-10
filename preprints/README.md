@@ -24,6 +24,7 @@ Start here for readable PDFs and their sources. Each manuscript has its own fold
 | [Rectangular-spine comb illumination](middle-row-combs/README.md) | [8:30 MP4](../videos/comb-illumination/comb-illumination.mp4) | [HyperFrames project](../videos/comb-illumination/README.md) |
 | [Why a longer corridor guarantees a route](long-neck-networks/README.md) | [9:00 MP4](../videos/long-neck-illumination/long-neck-illumination.mp4) | [HyperFrames project](../videos/long-neck-illumination/README.md) |
 | [Light through a twelve-wall corridor](twelve-wall-corridor/README.md) | [9:30 MP4](../videos/twelve-wall-corridor/twelve-wall-corridor.mp4) | [HyperFrames project](../videos/twelve-wall-corridor/README.md) |
+| [The ten-wall spiral puzzle](ten-wall-spirals/README.md) | [10:00 MP4](../videos/ten-wall-spirals/ten-wall-spirals.mp4) | [HyperFrames project](../videos/ten-wall-spirals/README.md) |
 
 ## Research notes
 
