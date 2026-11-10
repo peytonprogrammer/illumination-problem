@@ -31,7 +31,7 @@
 
 \title{A Simple Orthogonal 22-Gon with\\Exactly One Non-Illuminating Pair}
 \author{Peyton Wang\\\small Francis Parker High School \and Daniel Wang\\\small Citizen Health}
-\date{Working draft v0.4 --- 10 November 2026\\\small Not submitted or peer reviewed}
+\date{Working draft v0.5 --- 10 November 2026\\\small Not submitted or peer reviewed}
 
 \begin{document}
 \maketitle
@@ -303,8 +303,18 @@ of Lemma~\ref{lem:cylinder}. Here is an explicit finite prescription for
 checking this input; it requires no search over rooms or possible billiard paths.
 
 Let $\mathcal C$ be the 15 cell lower-left corners determined by
-\eqref{eq:squares}--\eqref{eq:copies}. Order the 60 squares of $M$
-lexicographically by cell, then by sheet in the order
+\eqref{eq:squares}--\eqref{eq:copies}. In lexicographic order they are
+\[
+\begin{gathered}
+(-1,-1),\ (-1,0),\ (0,-2),\ (0,-1),\ (0,0),\ (0,1),\\
+(1,-3),\ (1,-2),\ (1,1),\ (1,2),\ (2,1),\ (2,2),\\
+(3,0),\ (3,1),\ (4,0).
+\end{gathered}
+\]
+Reflection across $y=0$ sends the unit cell with lower-left corner $(a,b)$
+to the cell with lower-left corner $(a,-b-1)$; reflecting a cell is not the
+same as reflecting its lower-left corner.
+Order the 60 squares of $M$ lexicographically by cell, then by sheet in the order
 $(+,+),(-,+),(+,-),(-,-)$, numbering from 0.
 Because $Q$ is the union of its cells with no internal mirrors, a shared
 unit edge is an open passage between the adjacent cells.
