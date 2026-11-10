@@ -1,6 +1,6 @@
 # Illumination in rectangular-spine combs
 
-[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md)
+[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md) · [Explainer video](../../videos/comb-illumination/comb-illumination.mp4) · [Video source](../../videos/comb-illumination/README.md)
 
 Working draft v0.1, November 8, 2026.
 

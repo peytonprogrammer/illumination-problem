@@ -1,6 +1,6 @@
 # Twenty-two-wall dark-room construction
 
-[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md)
+[Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Manuscript catalog](../README.md) · [Explainer video](../../videos/dark-room-22/dark-room-22.mp4) · [Video source](../../videos/dark-room-22/README.md)
 
 Working draft v0.2, November 2, 2026. Explicit construction; no general minimality or historical-priority claim.
 

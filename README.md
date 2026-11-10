@@ -9,6 +9,7 @@ The universal minimum-wall problem remains open. The results have internal AI re
 | To… | Start with… |
 |---|---|
 | Read a manuscript | [Eight theorem manuscripts, an affine research note and two supporting notes](preprints/README.md) |
+| Watch an explainer | [Three narrated videos with editable HyperFrames source](videos/README.md) |
 | Find a precise statement, hypotheses, and proof | [Results inventory](RESULTS.md) |
 | Understand failed approaches and open questions | [Negative findings](docs/NEGATIVE-RESULTS.md) |
 | Inspect or download supporting evidence | [Data catalog](docs/DATA.md) |
@@ -20,6 +21,7 @@ The manuscript catalog distinguishes the explicit 22-wall construction from the 
 
 ```text
 preprints/       Readable PDFs, LaTeX sources, figures, and build instructions
+videos/          Narrated MP4s, editable HyperFrames projects, and transcripts
 research/        Archived proofs, reviews, scripts, and small evidence files
 manifests/       Current file locations, hashes, package metadata, and result IDs
 docs/            Reading guides, reference catalogs, and dated research notes

@@ -15,6 +15,14 @@ Start here for readable PDFs and their sources. Each manuscript has its own fold
 | Long rectangular necks and networks | [PDF](long-neck-networks/manuscript.pdf) | [Eventual single-neck illumination; conditional propagation on parallel-neck trees](long-neck-networks/README.md) |
 | Tall and coprime-period ten-wall spirals | [PDF](ten-wall-spirals/manuscript.pdf) | [All-real tall-or-wide theorem and a separate thin-cap lattice family](ten-wall-spirals/README.md) |
 
+## Explainer videos
+
+| Manuscript | Video | Editable source and transcript |
+|---|---|---|
+| [Twenty-two-wall dark-room construction](twenty-two-wall/README.md) | [9:00 MP4](../videos/dark-room-22/dark-room-22.mp4) | [HyperFrames project](../videos/dark-room-22/README.md) |
+| [Eight-wall illumination](eight-wall/README.md) | [9:00 MP4](../videos/eight-wall-illumination/eight-wall-illumination.mp4) | [HyperFrames project](../videos/eight-wall-illumination/README.md) |
+| [Rectangular-spine comb illumination](middle-row-combs/README.md) | [8:30 MP4](../videos/comb-illumination/comb-illumination.mp4) | [HyperFrames project](../videos/comb-illumination/README.md) |
+
 ## Research notes
 
 | Note | PDF | Source and scope |
