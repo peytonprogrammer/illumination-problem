@@ -1,8 +1,6 @@
 # Illumination problem
 
-This is a hobby research project that **Peyton Wang**, who owns this repository, and his father, **[Daniel Wang](https://www.linkedin.com/in/ddwang/)**, work on together. Peyton is a **16-year-old student at Francis Parker School**. Daniel is **CTO at Citizen Health**.
-
-We’re exploring the polygonal illumination problem: in a room with mirrored walls, which pairs of points can be connected by a reflected light ray that avoids corners? This repository collects our working manuscripts, proofs, verification code, computational evidence, and animated explainers as we work through the mathematics together.
+The polygonal illumination problem asks which pairs of points in a mirrored room can be connected by a reflected light ray that avoids corners. This repository contains our proofs, working manuscripts, verification code, computational evidence, and animated explainers.
 
 The universal minimum-wall problem remains open. The results have internal AI reviews and exact computational checks at the scopes recorded in their sources. External mathematical refereeing remains outstanding.
 
@@ -56,3 +54,7 @@ These controls need no large-data download. See the [reproduction guide](docs/RE
 ## AI assistance
 
 OpenAI Codex and Anthropic Claude were used to develop, review, and update the research, theorem proofs, and manuscripts in this archive. The authors remain responsible for the content.
+
+## About us
+
+I’m Peyton Wang, a 16-year-old student at Francis Parker School. I work on this project with my dad, [Daniel Wang](https://www.linkedin.com/in/ddwang/), who’s CTO at Citizen Health. It’s a hobby we share, and this is where we keep our proofs, code, and explainers.
