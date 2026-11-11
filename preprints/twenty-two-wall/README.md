@@ -2,7 +2,7 @@
 
 [Read the PDF](manuscript.pdf) · [LaTeX source](manuscript.tex) · [Illustrated companion](explainer.html) · [Manuscript catalog](../README.md) · [Construction video](../../videos/dark-room-22/dark-room-22.mp4)
 
-**Working draft v0.6, November 10, 2026.** Among all unordered pairs of distinct real interior points in this strictly simple orthogonal room, the only dark pair is `{(0,0), (2,2)}`.
+**Working draft v0.7, November 10, 2026.** Among all unordered pairs of distinct real interior points in this strictly simple orthogonal room, the only dark pair is `{(0,0), (2,2)}`.
 
 Primary author: **Peyton Wang**. Coauthor: Daniel Wang.
 
