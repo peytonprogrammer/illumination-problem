@@ -31,19 +31,21 @@
 
 \title{A Simple Orthogonal 22-Gon with\\Exactly One Non-Illuminating Pair}
 \author{Peyton Wang\\\small Francis Parker High School \and Daniel Wang\\\small Citizen Health}
-\date{Working draft v0.5 --- 10 November 2026\\\small Not submitted or peer reviewed}
+\date{Working draft v0.6 --- 10 November 2026\\\small Not submitted or peer reviewed}
 
 \begin{document}
 \maketitle
 \vspace{-1.2em}
 \begin{abstract}
-We give exact coordinates for a strictly simple orthogonal polygon with 22 maximal sides and two distinct interior points that cannot be joined by any finite billiard trajectory avoiding polygon vertices. The room is assembled from three reflected copies of a five-square staircase. Folding a hypothetical trajectory onto the staircase reduces the problem to an elementary lattice-parity obstruction. Four smooth boundary points of the assembled room project to staircase corners; we show explicitly that reflection at these exceptional points produces only trajectory reversal and cannot evade the obstruction. The construction uses neither interior mirror partitions nor boundary self-contacts. We then prove that this is the only unordered pair of distinct real interior points that do not illuminate one another. The additional argument uses two rational cylinder decompositions, certified by explicit finite permutations, and an elementary integrality calculation.
+We classify all unordered pairs of distinct real interior points in an explicitly specified strictly simple orthogonal 22-gon: exactly one pair, $\{(0,0),(2,2)\}$, does not illuminate. The room consists of three reflected copies of a five-square staircase, with no interior mirror partitions or boundary self-contacts. A lattice-parity obstruction proves darkness after folding onto the staircase. Four smooth seam endpoints fold to convex corners; their reflected continuations reverse and retrace, so they do not evade the obstruction. To illuminate every other pair, we use two rational cylinder decompositions of the four-copy translation unfolding. Explicit finite permutation certificates and an elementary integrality calculation confine dark endpoints to the room's two interior lattice points. The complete reduced cycle lists are printed in the paper.
 \end{abstract}
 
 \section{Introduction}
 In the polygonal illumination problem, light rays travel in straight lines and reflect specularly from the sides of a polygonal room. A ray that reaches a vertex is terminated. Two interior points are said to \emph{illuminate each other} if some finite trajectory with these reflection rules connects them.
 
-Lattice obstructions give polygonal examples with mutually non-illuminating points \cite{Tokarsky1995}. General results on illumination in rational polygons appear in \cite{Wolecki2024}. For this particular polygon, we determine the entire relation on distinct interior points by combining a folding obstruction with two explicit cylinder decompositions.
+Our goal is the exact classification of distinct interior pairs in this particular room. The darkness argument uses the unfolding obstruction underlying Tokarsky's constructions \cite{Tokarsky1995}; Wolecki gives a related triangle return-path lemma in \cite[Lemma~3.1]{Wolecki2024}. We give the staircase parity argument explicitly and account for its smooth seam endpoints. General finiteness results for rational polygons appear in \cite[Theorem~1.2]{Wolecki2024}.
+
+Illumination and finite blocking on translation surfaces are studied by Hubert--Schmoll--Troubetzkoy \cite{HST} and Leli\`evre--Monteil--Weiss \cite{LMW}. Our four-copy unfolding is square tiled and is a translation cover of the flat torus. The proof below uses explicit cylinder certificates on that unfolding, with every actual polygon vertex marked as forbidden, including the metrically regular convex-vertex lifts.
 
 ``Strictly simple'' means that the boundary is a Jordan polygonal curve: it has no repeated vertices, crossed edges, or self-contacts. Only the exterior boundary reflects light; the dashed segments in the construction are open passages, not mirrors. Sections 2--5 give an elementary proof of darkness. Section 6 proves illumination for every other pair, using a four-copy translation unfolding defined there.
 
@@ -120,7 +122,11 @@ f|_{P_0}(x,y)=(x,y),\qquad
 f|_{P_1}(x,y)=(x,-y),\qquad
 f|_{P_2}(x,y)=(4-x,-y).
 \end{equation}
-These formulas agree on the seams, so $f$ is well defined and continuous. In particular, $f(S)=a$ and $f(T)=b$.
+These formulas agree on the seams, so $f$ is well defined and continuous. In particular, $f(S)=a$ and $f(T)=b$. The complete preimages of the base marks are
+\[
+ f^{-1}(a)=\{S,(4,0)\},\qquad f^{-1}(b)=\{(2,-2),T\}.
+\]
+Visits to a base mark are therefore counted after folding, even when the physical trajectory reaches another preimage.
 
 \section{The lattice obstruction on the staircase}
 The next lemma concerns \emph{ordinary} billiard motion in $P$, reflecting only at smooth boundary points and never touching a vertex. Paths have finitely many nonzero straight legs. At each intermediate smooth-wall contact the incoming and outgoing legs satisfy the specular reflection rule.
@@ -140,7 +146,7 @@ and its three reflex corners are
 
 Suppose an ordinary billiard path from $a$ to $b$ exists. Unfold its finitely many reflections, reflecting the staircase instead of bending the path. The result is a single straight segment starting at $a=(0,0)$ and ending at an image $B$ of $b$. Reflection across any wall $x=c$ or $y=d$, where $c,d\in\mathbb{Z}$, preserves both coordinate parities. Since $b$ has even coordinates, $B\in(2\mathbb{Z})^2$. Further, $B\ne(0,0)$ because unfolding preserves the positive length of the path.
 
-Write $B=2^r z$, where $r\ge 1$ and $z\in\mathbb{Z}^2$ has at least one odd coordinate; choose $r$ maximal. Then $z$ is a lattice point strictly between $0$ and $B$ on the unfolded segment. Fold $z$ back to $P$ along the proposed itinerary. All inverse unfolding maps are compositions of reflections in integer-coordinate lines and therefore preserve integrality and coordinate parities. The image of $z$ is an integer point of $P$ with an odd coordinate. It is neither $a$ nor $b$, hence must be a vertex of $P$. This would make the original path hit a vertex, a contradiction.
+Write $B=2^r z$, where $r\ge 1$ and $z\in\mathbb{Z}^2$ has at least one odd coordinate; choose $r$ maximal. Then $z$ is a lattice point strictly between $0$ and $B$ on the unfolded segment. Fold $z$ back to $P$ along the proposed itinerary. All inverse unfolding maps are compositions of reflections in integer-coordinate lines and therefore preserve integrality and coordinate parities. The image of $z$ lies on the original path and is an integer point of $P$ with an odd coordinate. It is neither $a$ nor $b$, hence must be a vertex of $P$. This would make the original path hit a vertex, a contradiction.
 \end{proof}
 
 \begin{remark}
@@ -174,7 +180,7 @@ If a corner-avoiding billiard trajectory in $Q$ reflects at a seam endpoint $E_j
 \begin{proof}
 For example, consider $E_2=(1,0)$. A ray approaching from $P_1$ with physical velocity $(u,-v)$ ($u,v>0$) folds via $(x,y)\mapsto(x,-y)$ to incoming velocity $(u,v)$ in $P$. At $E_2$, the actual exterior mirror is vertical, so the physical outgoing velocity becomes $(-u,-v)$ and the ray travels into $P_0$. Folding this outgoing segment by the identity gives $(-u,-v)$, the negative of the incoming folded velocity. Reversing the time orientation gives the same conclusion for arrivals from $P_0$.
 
-At $E_1$ the same two reflections occur in the opposite horizontal direction. At $E_3$ and $E_4$, interchange the horizontal and vertical coordinates: the physical exterior reflection negates the vertical component, while switching copies across the vertical seam negates the horizontal component. In every case, the combined effect is $(p,q)\mapsto(-p,-q)$.
+At $E_1$ the same two reflections occur in the opposite horizontal direction. At $E_3$ and $E_4$, interchange the horizontal and vertical coordinates: the physical exterior reflection negates the vertical component, while switching copies across the vertical seam negates the horizontal component. In every case, the combined effect is $(\alpha,\beta)\mapsto(-\alpha,-\beta)$.
 \end{proof}
 
 \begin{figure}[htbp]
@@ -261,7 +267,7 @@ points at $v=h/2$, contrary to the preceding observation.
 \begin{lemma}[Two-cylinder visibility]\label{lem:cylinder}
 Suppose a rational direction decomposes $M$ into two regular cylinders,
 exchanged by $\tau$, whose closures cover $M$.
-If an interior point $A$ has a lift on a regular leaf in that direction,
+If an interior point $A$ has a lift in one of the open cylinders,
 then $A$ illuminates every other interior point $B$ of $Q$.
 \end{lemma}
 \begin{proof}
@@ -299,8 +305,9 @@ that the connecting segment follows the cylinder's periodic direction.}
 
 \subsection{Two finite cylinder certificates}\label{sec:certificate}
 For this room, the directions $(p,q)=(4,7)$ and $(7,4)$ satisfy the hypothesis
-of Lemma~\ref{lem:cylinder}. Here is an explicit finite prescription for
-checking this input; it requires no search over rooms or possible billiard paths.
+of Lemma~\ref{lem:cylinder}. They were found by a finite scan of primitive integer directions; the strip permutation below certifies the two selected inputs. The proof needs only the two displayed certificates, not completeness of that scan.
+
+The reason for using two directions is arithmetic. In one direction, a dark endpoint must satisfy $qx-py,qx+py\in\mathbb Z$, which implies $2qx,2py\in\mathbb Z$ but can leave nonintegral candidates. The two chosen directions together force $(x,y)\in\mathbb Z^2$, as shown in Section~\ref{sec:eliminate}. Here is an explicit finite prescription for checking the two cylinder inputs.
 
 Let $\mathcal C$ be the 15 cell lower-left corners determined by
 \eqref{eq:squares}--\eqref{eq:copies}. In lexicographic order they are
@@ -311,18 +318,18 @@ Let $\mathcal C$ be the 15 cell lower-left corners determined by
 (3,0),\ (3,1),\ (4,0).
 \end{gathered}
 \]
-Reflection across $y=0$ sends the unit cell with lower-left corner $(a,b)$
-to the cell with lower-left corner $(a,-b-1)$; reflecting a cell is not the
+Reflection across $y=0$ sends the unit cell with lower-left corner $(m,n)$
+to the cell with lower-left corner $(m,-n-1)$; reflecting a cell is not the
 same as reflecting its lower-left corner.
 Order the 60 squares of $M$ lexicographically by cell, then by sheet in the order
 $(+,+),(-,+),(+,-),(-,-)$, numbering from 0.
 Because $Q$ is the union of its cells with no internal mirrors, a shared
 unit edge is an open passage between the adjacent cells.
-The right-neighbour permutation $r$ sends square $((a,b),(e_1,e_2))$ to
-$((a+e_1,b),(e_1,e_2))$ when that cell is in $\mathcal C$, and otherwise to
-$((a,b),(-e_1,e_2))$. Similarly the up-neighbour permutation $u$ moves to
-$((a,b+e_2),(e_1,e_2))$ when possible, and otherwise to
-$((a,b),(e_1,-e_2))$.
+The right-neighbour permutation $r$ sends square $((m,n),(\varepsilon_1,\varepsilon_2))$ to
+$((m+\varepsilon_1,n),(\varepsilon_1,\varepsilon_2))$ when that cell is in $\mathcal C$, and otherwise to
+$((m,n),(-\varepsilon_1,\varepsilon_2))$. Similarly the up-neighbour permutation $u$ moves to
+$((m,n+\varepsilon_2),(\varepsilon_1,\varepsilon_2))$ when possible, and otherwise to
+$((m,n),(\varepsilon_1,-\varepsilon_2))$.
 
 In each square divide its bottom edge into $q$ open intervals
 $(j/q,(j+1)/q)$, $0\le j<q$. Following direction $(p,q)$ from one bottom
@@ -345,6 +352,7 @@ The results are
 (7,4)&240&120,120&2
 \end{array}
 \]
+The strips need not initially be maximal relative to $\Sigma$.
 Every regular cylinder contains one of these strips: the complement of the
 integral transverse levels is dense. Thus there are at most two regular
 cylinders. There are at least two, since $\tau$ cannot preserve a cylinder.
@@ -392,23 +400,23 @@ cycle lengths in the table. The included checker also regenerates these
 reduced permutations and compares them with \texttt{certificate.json}.
 
 
-\subsection{Eliminating all other sources}
-Fix one of these directions $(p,q)$. On sheet $(e_1,e_2)$, the transverse value at a lift of $A=(x,y)$ is
-$e_1qx-e_2py$ modulo integers. Thus the four values are
+\subsection{Eliminating all other sources}\label{sec:eliminate}
+Fix one of these directions $(p,q)$. On sheet $(\varepsilon_1,\varepsilon_2)$, the transverse value at a lift of $A=(x,y)$ is
+$\varepsilon_1qx-\varepsilon_2py$ modulo integers. Thus the four values are
 \[
  \pm(qx-py),\qquad \pm(qx+py).
 \]
-If either $qx-py$ or $qx+py$ is nonintegral, a lift of $A$ lies on a regular
-leaf, since every leaf through a marked point has integral transverse value.
+If either $qx-py$ or $qx+py$ is nonintegral, a lift of $A$ lies in an open strip, hence in an open regular
+cylinder: the strips cover the nonintegral transverse levels.
 Lemma~\ref{lem:cylinder} then shows that $A$ illuminates every other
 interior point. Therefore each endpoint of a dark pair must satisfy
 \[
  7x-4y,\ 7x+4y,\ 4x-7y,\ 4x+7y\ \in\mathbb Z.
 \]
 Adding and subtracting gives $14x,8x,8y,14y\in\mathbb Z$, hence
-$2x,2y\in\mathbb Z$. Write $x=a/2$, $y=b/2$ with $a,b\in\mathbb Z$.
-Integrality of $(7a+4b)/2$ forces $a$ even; integrality of $(4a+7b)/2$
-forces $b$ even. Thus $(x,y)\in\mathbb Z^2$. Conversely every lattice point
+$2x,2y\in\mathbb Z$. Write $x=k/2$, $y=\ell/2$ with $k,\ell\in\mathbb Z$.
+Integrality of $(7k+4\ell)/2$ forces $k$ even; integrality of $(4k+7\ell)/2$
+forces $\ell$ even. Thus $(x,y)\in\mathbb Z^2$. Conversely every lattice point
 satisfies the four conditions.
 
 The cell construction has only two interior lattice points, $S=(0,0)$ and
@@ -425,7 +433,10 @@ polygon. It does not classify boundary endpoints or self-return trajectories,
 and it gives no lower bound for other polygons.
 The darkness argument is analytic; the illumination argument combines the
 strip lemma and the integrality calculation with the two finite permutation
-certificates. Run
+certificates. The cell formulas, return-map words and complete reduced cycle
+lists printed here suffice to verify those finite inputs without external
+files. The JSON certificate and Python checker are supplementary
+reproduction tools. Run
 \begin{verbatim}
 python3 verify_cylinders.py --check
 \end{verbatim}
@@ -445,7 +456,19 @@ G.~W. Tokarsky, ``Polygonal Rooms Not Illuminable from Every Point,''
 
 \bibitem{Wolecki2024}
 A.~Wolecki, ``Illumination in Rational Billiards,''
-\emph{arXiv:1905.09358v3} (2024), Theorem~1.3 and Figure~1.
+\emph{arXiv:1905.09358v3} (2024), Theorem~1.2 and Lemma~3.1.
 \url{https://arxiv.org/abs/1905.09358v3}.
+
+\bibitem{HST}
+P.~Hubert, M.~Schmoll and S.~Troubetzkoy,
+``Modular Fibers and Illumination Problems,''
+\emph{International Mathematics Research Notices} (2008), Article ID rnn011.
+\url{https://arxiv.org/abs/math/0602394}.
+
+\bibitem{LMW}
+S.~Leli\`evre, T.~Monteil and B.~Weiss,
+``Everything is illuminated,''
+\emph{Geometry \& Topology} \textbf{20} (2016), 1737--1762.
+\url{https://doi.org/10.2140/gt.2016.20.1737}.
 \end{thebibliography}
 \end{document}
