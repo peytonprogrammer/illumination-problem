@@ -380,6 +380,65 @@ def J_groupring(pieces, gates, x0, xs):
     return total
 
 
+def J_witness(pieces, gates, x0, xs):
+    """Group-ring evaluation that also keeps one witness (eps, zs) per element."""
+    s = len(pieces)
+    D = sum(p[0] for p in pieces)
+    Ns = [2 * B * D for _, _, B in pieces]
+    dv = [p[0] for p in pieces]
+
+    def canon(e):
+        e = [e[j] % Ns[j] for j in range(s)]
+        step = list(dv)
+        for j in range(s):
+            N = Ns[j]
+            dj = step[j] % N
+            if dj == 0:
+                continue
+            g = gcd(dj, N)
+            k = (((e[j] % g) - e[j]) // g * pow(dj // g, -1, N // g)) % (N // g)
+            e = [(e[i] + k * step[i]) % Ns[i] for i in range(s)]
+            step = [st * (N // g) for st in step]
+        return tuple(e)
+
+    total, wit = 0, None
+    zero = tuple([0] * s)
+    for eps in product((1, -1), repeat=s + 1):
+        c = [0] * s
+        for j in range(1, s + 1):
+            f = pieces[j - 1][1]
+            c[j - 1] += -eps[j] * D * f + eps[j - 1] * D * f
+        c[0] += -eps[0] * D * x0
+        c[s - 1] += eps[s] * D * xs
+        ring = {canon(c): (1, ())}
+        for i, (a, b) in enumerate(gates, start=1):
+            gcol = [0] * s
+            gcol[i - 1] += eps[i]
+            gcol[i] -= eps[i]
+            new = {}
+            for el, (co, w) in ring.items():
+                for zz in range(D * a + 1, D * b):
+                    e2 = canon([el[j] + zz * gcol[j] for j in range(s)])
+                    if e2 in new:
+                        new[e2] = (new[e2][0] + co, new[e2][1])
+                    else:
+                        new[e2] = (co, w + (zz,))
+            ring = new
+        if zero in ring:
+            total += ring[zero][0]
+            if wit is None:
+                wit = (eps, ring[zero][1])
+    if wit is None:
+        return 0, D, None
+    eps, zs = wit
+    z = [D * x0] + list(zs) + [D * xs]
+    eqs = []
+    for j in range(1, s + 1):
+        d, f, B = pieces[j - 1]
+        eqs.append((d, eps[j] * (z[j] - D * f) - eps[j - 1] * (z[j - 1] - D * f), 2 * B * D))
+    return total, D, (eps, zs, solve_lin(eqs))
+
+
 def pos_at(segs, Q, T_long, axis):
     """transverse coordinate (scaled by Q) at cumulative longitudinal travel."""
     cum = 0
@@ -948,15 +1007,15 @@ def partK_residuals():
         for S, T in pairs:
             pos = []
             for nm, pc, gt in vertical_itins(R, S, T):
-                sols, D = J_enum(pc, gt, S[1], T[1])
-                if sols:
-                    pos.append((nm, len(sols), pc, gt, D, sols[0]))
+                cnt, D, w = J_witness(pc, gt, S[1], T[1])
+                if cnt:
+                    pos.append((nm, cnt, pc, gt, D, w))
             if S[0] != 1 and T[0] != 1:
                 SS, TT = (S, T) if S[0] == 0 else (T, S)
                 for nm, pc, gt, imS, imT in horizontal_itins(R, SS, TT):
-                    sols, D = J_enum(pc, gt, SS[2], TT[2])
-                    if sols:
-                        pos.append((nm, len(sols), pc, gt, D, sols[0]))
+                    cnt, D, w = J_witness(pc, gt, SS[2], TT[2])
+                    if cnt:
+                        pos.append((nm, cnt, pc, gt, D, w))
             log(f'  pair {S[1:]}->{T[1:]}: positive itineraries: {[(p[0], p[1]) for p in pos]}')
             if pos:
                 nm, cnt, pc, gt, D, (eps, zs, (n0, per)) = pos[0]

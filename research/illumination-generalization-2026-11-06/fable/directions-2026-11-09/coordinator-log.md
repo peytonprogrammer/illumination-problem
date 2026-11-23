@@ -1753,3 +1753,10 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 12:10 — route switch
 - Daniel asked whether L1 is the only path. I recommended per-pattern decidability (d159's Presburger idea) plus a bounded census extension; both computations need his approval. Switched Astra to the path-length theorem (theory only). Output goes to bbbb/decide-path-bound.md. Recorded in PROGRAM.md.
 - d203 is still running: checks are done, review.md not yet filled in.
+
+## 2026-11-23 12:32 — path-bound note
+- bbbb/decide-path-bound.md. Claims:
+  - the Presburger reduction fails even with a linear bound: the zero-reflection predicate on the one-neck word defines u > m(m+1);
+  - a finite (huge) witness bound for all rooms via the SL2(Z) orbit;
+  - a linear witness on the quadratic family.
+- This undercuts the premise of the route I recommended to Daniel. Launched Opus review d204-review-pathbound and claimed it on the board. Asked Astra for a 1-page assessment of whether any decidable encoding exists.
