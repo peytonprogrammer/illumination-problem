@@ -1651,3 +1651,9 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - 2026-11-23 08:40 — Daniel closed the old Astra session (e380bb94) and started a new one: 49fa6670-83db-4258-af09-a722a6cb0e5f. Sent a compact handoff brief (PROGRAM, d182–d195 one-liners, crossing reduction theorem, N0 stopping rule). Tick cron now targets the new session and detects compaction loops.
 - 2026-11-23 08:45 — New Astra finished in 4 min: l1-crossing-reduction.md. Stopping test: NO numerical N0 for LLLRLLLRLR (d187 sharpens to 16·G(C)², G(C) unbounded). Per PROGRAM the crossing chain stops; Astra proposes a new route (small actual-area witness per dark chart family). d196 review launched, claimed. Reported to Daniel.
 - 2026-11-23 08:55 — d196 done: PASS WITH CORRECTIONS (27 checks re-run, 0 fail). No N0, so the crossing chain stops. Estimate 9–11% → 8–10%. Claim released. Astra asked for a 1-page route proposal (shrink descent) while Daniel decides. Slack posted.
+
+## 2026-11-23 08:50 — shrink-descent proposal received
+- Astra wrote bbbb/l1-route-shrink-descent.md, a 1-page L1 route proposal. It isn't a lemma result, so it gets no review subagent.
+- The conjecture: every dark room with W ≤ 20 and area > 20 has a 1- or 2-unit gap shrink that keeps the room normalized, strictly simple and dark. The area loss is the invariant.
+- First test: the primitive rank-one factor (n,n+1,n+2,n+3) in LLLRLLLRLR. Stop by 2026-11-25 20:00.
+- Daniel's route decision is pending. Astra started the first test provisionally (symbolic only, no searches) so she isn't idle.
