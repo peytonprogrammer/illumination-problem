@@ -1715,3 +1715,14 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 11:00 — d200 verdict: three-chamber family lit
 - CORRECT. Re-ran checks.py: 0 failures. RESULTS §11 and STATE are updated, the claim is released, and the verdict is sent to Astra. The L1 lighting tail moved, so I posted to Slack. Estimate unchanged.
+
+## 2026-11-23 11:04 — pocket lemma
+- bbbb/l1-pocket-lemma.md (L1, lighting tail). Claims:
+  - a pocket return map, with an exact matching criterion (congruence plus interval);
+  - every aligned three-chamber room of 3×3 chambers with unit corridors and any lengths D₁, D₂ ≥ 4 is fully lit;
+  - an R22 control: the dark base room has no full integral pocket.
+- Launched Opus review d201-review-pocket and claimed it on the board. Briefed Astra on displaced apertures and general chamber sizes.
+
+## 2026-11-23 11:08 — pocket-general note
+- bbbb/l1-pocket-general.md (L1): the ledger-word dictionary F L^j F L^(4−j), and a sufficient condition for displaced apertures. The opposite-side word isn't certified; the residual is disjoint unit mouths with long necks. Added to the d201 review scope.
+- Briefed Astra on a neck phase map (bouncing legs) combined with the pocket return. Output goes to bbbb/l1-neck-phase.md.

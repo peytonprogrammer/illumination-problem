@@ -11,7 +11,15 @@ Suppose the pocket mouth is (0,w) above a clear horizontal band of height g. Put
 
 Indeed these conditions put entry and return strictly inside the aperture, fix positive speed ratio c, and give a+2hc ≡ b with rightward exit. Also 2(a+hc) ≡ a+b=M modulo 2w. Since 0<M<2w, roof clearance is automatic. Conversely a legal path with these legs and this single roof excursion satisfies both conditions. For a partial mouth additionally require a and M−a to lie in the actual opening. For a full mouth, solutions to the congruence are spaced by wg/(g+h); a strict interval longer than this spacing guarantees a solution. An explicit choice is the first progression value strictly above the lower endpoint, obtained by one floor operation. This is a condition on pocket dimensions, corridor distances **and mark offsets**. A nonzero shift alone does not guarantee matching. This itinerary can reverse horizontal velocity inside the pocket, so a midpoint obstruction derived for a monotone transit does not apply.
 
-### Unequal corridors: all interior lattice pairs
+### First tests after d200
+
+Write X,Y for the positive corridor lengths, so D₁=X+3 and D₂=Y+3. D200 confirms the equal-length proof for X=Y=3k+1, k≥1. The following extensions use the pocket criterion above.
+
+1. **X=Y=1.** The adjacent midpoint bounce hits a corner precisely for equal offsets u=v. Orient the pair in the first two chambers and unfold the source at x=0. Take U=−u, V=4+u and entry a=(5−u)/2 in the first chamber’s upper pocket. The exit b=4−a is in (0,3), and a+2(a+u)−b=6, so the ray exits rightward. The unfolded roof contact is 2a+u=5, clear of the roof corners at multiples of 3. This repairs the exceptional adjacent placements. For the outer pair the argument below at Δ=0 either gives a smooth bounce or M=u+v in {2,3,4}.
+2. **X=Y not congruent to 1 modulo 3.** Here D₁=D₂≥5, so every adjacent same-row midpoint clears the ends. In the outer-pocket case the congruence is 4a ≡ u+v+2(u−D₁) modulo 6. Changing the common length shifts the progression, but its spacing stays 3/2 and the available open interval has length at least 2. Thus every residue is covered.
+3. **X unequal to Y.** The argument below treats all independent positive lengths. After the outer-wall bounces, the only unequal residual has (u,v)=(1,2) and Δ=±1. Then M=2 or 4 and the same strict spacing inequality applies. An adjacent corridor of length one uses the first test's repair even when the other corridor has a different length.
+
+### Uniform proof for all interior lattice pairs
 
 Take three 3×3 chambers starting at 0,D₁,D₁+D₂ with unit-height corridors at 1<y<2. Here Dᵢ are integral start-to-start distances, so the actual corridor lengths are Dᵢ−3. The proof covers all Dᵢ≥4 independently, including equality, without any congruence assumption. Each mark has horizontal offset 1 or 2 and height 1 or 2. Same-chamber pairs connect directly. Different-row pairs connect by an open segment in the common band. Reflect vertically to put the remaining pairs at height 1.
 
