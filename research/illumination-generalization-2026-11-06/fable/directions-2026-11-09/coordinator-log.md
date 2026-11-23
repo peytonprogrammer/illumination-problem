@@ -1628,3 +1628,4 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - 2026-11-22 21:34 — New Astra note l1-crossing-gate-resultants.md (L1, occupied-crossing route switching) → d189 Opus review launched, claimed. Astra briefed: scale-separated upper approach (remove given first-hit interval hypothesis). Estimate 11–13% unchanged.
 - 2026-11-22 21:45 — d189 done: PASS WITH CORRECTIONS (134 checks re-run, 0 fail). Claim released, verdict forwarded. Estimate 11–13% unchanged.
 - 2026-11-22 21:54 — New Astra note l1-crossing-scale-step.md (L1: bound on a/gcd(a,2d); uniform first-hit interval impossible) → d190 Opus review launched, claimed. Astra briefed: unbounded a/gcd(a,2d) case via lower side-wall period. Estimate 11–13% unchanged.
+- 2026-11-22 22:05 — d190 done: PASS WITH CORRECTIONS (48 checks re-run, 0 fail). Claim released. Corrected my 21:54 brief: the open case is bounded a/gcd(a,2d) (fixed ratio), not unbounded. Estimate 11–13%.

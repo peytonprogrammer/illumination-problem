@@ -1466,6 +1466,8 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
   MEDIUM: transfer hypothesis proved only for disjoint insertions (d184). Missing: fixed-period mixed transfer at occupied crossings with explicit seed constants, or a version accepting bounded-modulus gate congruences.
 - **d189** (2026-11-22, bbbb/l1-crossing-gate-resultants.md, snapshot sha256 5a2e76a1) PASS WITH CORRECTIONS (~85%). Route switching through a fixed upper chamber at an occupied crossing: periodic first-hit approach, explicit finite box for dark gap pairs given one upper first-hit interval; extends d186 cap budget to several mouths in [0,R]. checks.py 134 PASS, re-run by coordinator.
   MEDIUM: open-case list must add growing source depth d and d188's two-gaps-per-axis product. LOW: P over all upper runs (30 at st279, example uses 6); far-wall bound loses factor 2; state R≤D, positive-sheet routes, one gap per axis. No FPT, no K(C)/G(C); estimate unchanged.
+- **d190** (2026-11-22, bbbb/l1-crossing-scale-step.md, sha256 835be639) PASS WITH CORRECTIONS (~85%). With a stretched upper template (ux,ty), a dark placement forces a/gcd(a,2d) ≤ 16PC²/η³, uniform in u,t and growing floor depth d. So any dark linear family fixes the ratio a:2d. checks.py 48 PASS, re-run by coordinator.
+  MEDIUM: 'uniform first-hit interval impossible at separated scales' needs w/b→0 (with u=t the theorem gives width η). LOW: template has no openings beyond labelled mouths; open list should add far roof opening outside D=O(a), t=o(a), fixed d. First open: fixed-ratio growth (e.g. a=2d), d188 two-gap product, two growing upper depths. Estimate unchanged.
 
 ### Proved, not yet reviewed
 

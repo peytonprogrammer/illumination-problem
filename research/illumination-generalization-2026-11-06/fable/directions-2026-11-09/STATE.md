@@ -380,3 +380,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-22 21:08 d187 SOUND: L1 = finite-flat (d132/d134 + classifying-map completion) + one estimate H(C). Estimate 9-11% -> 11-13%.
 - 2026-11-22 21:30 d188 SOUND: mixed seed removes probe obstruction. H(C) needs occupied-crossing transfer (or bounded-modulus gate version). Estimate 11-13%.
 - 2026-11-22 21:45 d189 PASS WITH CORRECTIONS: occupied-crossing route switching via fixed upper chamber (given one first-hit interval). Open: growing upper run, growing source depth d, two-gaps-per-axis. Estimate 11-13%.
+- 2026-11-22 22:05 d190 PASS WITH CORRECTIONS: dark ⇒ a/gcd(a,2d) bounded (uniform in template scaling, growing d). Open: fixed-ratio growth a:2d, two-gap product, two growing upper depths, far roof opening. Estimate 11-13%.
