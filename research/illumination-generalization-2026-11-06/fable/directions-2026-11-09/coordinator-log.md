@@ -1741,3 +1741,11 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 11:50 — chamber-general note
 - bbbb/l1-chamber-general.md (L1). A group-ring arithmetic test for prescribed strip transits, exact for its constructions. Dimension-only lighting under gcd(P, lcm(w)) = 1. Width-2 and width-1 tests. The aligned layout isn't closed. Ledger follow-on: two OPEN two-neck words. Launched Opus review d203-review-chambergeneral and claimed it on the board.
 - Briefed Astra on two-pocket coverage of the complement, with a follow-on long-neck lemma for general W ≤ 20 rooms.
+
+## 2026-11-23 11:58 — busy-work check (Daniel's reminder)
+- Assessment: the aligned three-chamber work (d200–d203) had drifted into per-word closing. That's four notes on one ledger word, which PROGRAM classes as busy work beyond the first reusable mechanism (the pocket lemma).
+- Stopped the two-pocket task. Astra's main task is now the long-neck lemma for general W ≤ 20 rooms, which is L1's "large ⇒ lit" form. It must locate the 8-versus-9 step or stop. d203 finishes as the last review on this word; no more per-word reviews.
+
+## 2026-11-23 12:08 — long-neck lemma stopped
+- bbbb/l1-long-neck.md: there's no absolute C. Pocket absence doesn't separate R22 (6-reflex counterexample), and dilation makes the unnormalized statement equivalent to the full goal. The early-stop clause applies. Not reviewed: it's a stop note, and its counterexample is explicit and simple.
+- Estimate 8–10% → 6–8%. Asked Daniel the strategy question. Astra is held until he answers, rather than given another local route.

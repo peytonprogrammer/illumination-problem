@@ -93,3 +93,6 @@ Stopped on the d199 recommendation: at W ≤ 20 its lemma restates the goal. Rou
 
 ## Lighting-tail route on the three-chamber family (started 2026-11-23)
 L1 in its "every way of being large forces lit" form, for d152's 20-wall family X=Y=3k+1, k ≥ 6. Primitive monodromy holds for most k, so factor certificates can't exist. Target: uniform in k, every interior lattice pair is joined by a legal path. The first open piece is the pair in bbbb/l1-primitive-family-lit.md, whose connection needs a horizontal reversal clearing both corridor apertures. Stopping rule: by 2026-11-26 20:00 HST, a symbolic construction uniform in k for that pair class, or the first failed step. Stop earlier if it needs a slope-denominator bound, a factor-height bound or any search.
+
+## Long-neck route (2026-11-23): stopped
+Stopped at its early-stop clause: no 8-versus-9 mechanism. A 6-reflex long-neck room has no pocket. Route tally for 2026-11-23: chart descent, shrink descent, shear counting (not run), dark structure and long neck all lack an 8-versus-9 step. Lighting tails (d200–d202) are per-family.
