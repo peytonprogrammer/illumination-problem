@@ -1,0 +1,45 @@
+Advances: L1 — An occupied rectangle with a fixed lattice chamber above it admits route switching through arbitrarily many upper gates. For a fixed source depth and mouths in a bounded span from one side, the possible dark gap pairs lie in an explicit finite box once one upper first-hit interval is given.
+
+# An upper chamber can replace the upper run
+
+Let the lower box be [0,D] × [0,h], with solid sides and floor. All openings in its roof lie in [0,R] in horizontal coordinate. Write S=(c,d), 0<c<D, d a fixed positive integer, a=h−d>0. The target is an interior lattice point in a fixed connected orthogonal lattice end chamber above the roof, accessed through one or more open roof intervals. Its shape, target and horizontal offsets are fixed relative to the roof and the near side x=0. Sealing its mouths gives a strictly simple room. Other roof openings, if any, also lie in [0,R]. The conclusion is uniform over c. Only this placement of the two marks is asserted.
+
+**A periodic upper approach.** In the sealed upper chamber, launch backwards from T in a minimal irrational direction and stop on its first crossing of any mouth. A direction avoiding all developed lattice vertices exists; in the square-tiled unfolding such a direction with irrational slope has no saddle connection. The upstream open set for a smaller portal segment ensures a finite hit. The stable first-hit argument is the one used in the reviewed corridor proof. Every visit to a horizontal integer level after launch has integral positive elapsed vertical travel and nonintegral abscissa, since the initial coordinates are integral and the slope is irrational. Stop in the interior of the mouth. On a bounded open interval of nearby slopes the finite sequence of these level events, their signs and all open seam inequalities persist. [First portal hit and its stability](README.md)
+
+Use signed horizontal speed v with unit absolute vertical speed, measured at the seam **forward from S to T**. For this upper path the required seam abscissa is z=e−Bv on some bounded interval J of length η>0. Here B is the positive integer total vertical travel to T, including every reversal, and e is an integer unfolded target abscissa. Choose J strictly inside the stability interval. Let P be any integer multiple of twice the widths of all horizontal unit-height runs in the fixed upper chamber.
+
+For every v₀∈J and integer k the speed v=v₀+kP admits the same upper approach starting at the very same z and with the specified vertical sign. To check this, trace backwards from T. In each unit of vertical travel, the lateral coordinate folds into a single interval of integral width W. Changing the incoming signed horizontal speed by ±kP changes the unfolded unit-step exit by a multiple of 2W. The folded coordinate and the parity of lateral reflections agree at the next level. Thus passage versus reflection at that level is unchanged. Induct over the B steps. Interior side reflections are smooth because the run has constant sides between levels. The signed change in launch speed is chosen with the orientation of the base development so its transported change at the seam is kP. This argument preserves the signs relative to the velocity parameter (the derivative of the folding map); v itself may change sign. The exact same z values are obtained on the shifted interval, whose intercept is e+BkP. It is the open interval of *one upper path*, not independent clearance assumptions at each upper gate.
+
+## Two short routes, and a bounded modulus along affine rays
+
+For direct ascent or floor-first ascent let A=a or a+2d. A positive-sheet solution in the lower box satisfies c+A(v₀+kP)≡e−Bv₀ modulo 2D. Eliminating k gives exactly
+
+    (A+B)v₀ ∈ e−c + g_A ℤ,      g_A=gcd(2D,AP),     v₀∈J.
+
+Every direct solution is legal. For a floor solution the additional forbidden equality is c+d(v₀+kP)∈Dℤ. If g_A>2dP, change k by 2D/g_A: the gate is unchanged and the floor phase changes by 2dP/g_A in units of D, strictly between 0 and 1. If g_A≤2dP, a bad floor hit gives v₀+kP=(jD−c)/d; hence its seam z modulo 2D is determined by j modulo 2d. There are at most 2d bad z values, while z=e−Bv₀ is injective on J and in the physical mouth. Thus for aη>2dP(2d+1), failure of both routes implies (A+B)η≤g_A for both travels. Their gcd divides 2dP and their lcm divides 2D. Consequently
+
+    (a+B)(a+2d+B)η² ≤ 4dPD.                           (1)
+
+There is also a genuine bounded-modulus result. Along D=D₀+pn, a=a₀+qn with positive integer p,q, put Δ_j=qD₀−p(a₀+j), j=0,2d. At least one Δ_j is nonzero because their difference is 2dp. On that route g_(a+j) divides 2PΔ_j, by taking an integer linear combination of 2D and P(a+j). Its modulus is bounded for the entire ray. If only a subsequence is needed, let R₀=2P|Δ_j| and take n divisible by R₀. Then g_(a+j) is exactly its value at n=0: it divides R₀ and both inputs agree with their base values modulo R₀. The enlargement of the window and the floor-corner count above then give an eventual legal shot. This result concerns the specified affine slice with fixed transverse data, not a full homogeneous dark flat.
+
+## Far-wall return, including other mouths
+
+Translate the speed interval by a sufficiently negative kP that v<0 everywhere, e'=e+BkP<0, and Rs<1 for s=−1/v. The resulting positive s interval has explicit length δ=|1/v_left−1/v_right|. It gives a backwards upper path to z=e'+B/s, heading toward the far wall on entry into the lower box. The interval, B, P and δ depend only on the fixed upper data. Launch S toward x=D and upward. After one lateral reflection, the exact seam arrival equation is
+
+    d+s(2D−c−e')−B = (2j+1)h.
+
+During the outward part, any visit to x≤R precedes a rise of 1, so cannot escape through the roof. On return, successive roof hits have horizontal spacing 2h/s>R. Only the final one can be in [0,R]. This guards *every* other mouth in the span even when the upper itinerary has turns. Two consecutive roots suffice: the far-wall height changes by 2h(D−c)/(2D−c−e') strictly between 0 and h, so both cannot be corner contacts. Dδ>4h guarantees two roots. Combining failure with (1) gives the explicit residual
+
+    a ≤ max{d, 2dP(2d+1)/η, 32dP/(δη²)},      D ≤ 4(a+d)/δ.
+
+For a≥d the last term follows from a²η²≤16dP(a+d)/δ≤32dPa/δ. A first-hit interval can in principle be obtained from a single prescribed irrational trajectory and rational interior endpoints checked against its finite strict gates. No such trace or discovery search was run. [Predecessor with one upper run](l1-cross-cap-budget.md)
+
+## Why this does not yet give the chart height
+
+There is a distinction even within the named st279 geometry. Set d=1, P=6 and take odd a tending to infinity with D=a(a+2), in its already specified two-gap slice. Both short-route gate moduli gcd(2D,6a) and gcd(2D,6(a+2)) are at least 2a; the far-wall equation has period 2h in unfolded height. Thus a universal bound on these **raw** moduli over the two-gap cone is false for this three-route list, although the far-wall route lights its wide end. This example uses the same st279 formulas, not a claim about every possible itinerary. On the reviewed ray D=3a, instead, the floor gate has spacing gcd(6a,6(a+2))=6 for odd a; the open-unit-door argument eliminates floor corners and the entire reviewed ray a=7+2n is lit. [D188 review](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d188-review-mixedseed/review.md)
+
+For a finite menu to feed d188 it would suffice that for every generic integral product direction there be an infinite sequence of dilations and a route from that menu on which a common fixed phase window implies lighting for every slope matching it, with any auxiliary residue requirements already met. Pass to a subsequence with that route. The nonstationary and stationary-phase estimates survive subselection. With a uniform window radius the resulting bound uses k≤22. As in d188 one seed forces **at least one** independent normal; further independent normals require new valid seeds on the successive restrictions. A bounded gcd in an eliminated seam equation neither guarantees those simultaneous slope windows at other gates nor ensures compatibility of arbitrary seed and dilation residues.
+
+**First open case.** Let the upper approach also cross a growing run. Its unit-step period P, its first-hit travel B and the usable slope width η can now depend on the same ray as D,a. The determinant bound and (1) no longer supply a uniform phase window or a bound on a homogeneous dark factor. Another unresolved geometry has an extra roof opening outside the fixed near-side span. The theorem above covers multiple mouths in a bounded span and fixed upper turns. No chart-wide K(C), G(C), or numerical census ceiling follows. The finite-flat application still depends on d132/d134 and the pointed chart map.
+
+**What is the smallest W ≤ 20 room this result doesn't cover?** It does not establish all-length illumination of the W=10 word LLLRLLLRLR, with ledger realization (2,0),(4,0),(4,1),(3,1),(3,4),(0,4),(0,3),(1,3),(1,2),(2,2). No ledger word changes status.
