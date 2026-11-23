@@ -1737,3 +1737,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 11:35 — d202 verdict
 - CORRECT WITH GAPS. Re-ran checks.py: 0 failures. The status claim "first open area 32" was wrong (it's 21), and I repeated it from d201 in my report and Slack. Fixed in RESULTS. Claim released, verdict sent to Astra.
+
+## 2026-11-23 11:50 — chamber-general note
+- bbbb/l1-chamber-general.md (L1). A group-ring arithmetic test for prescribed strip transits, exact for its constructions. Dimension-only lighting under gcd(P, lcm(w)) = 1. Width-2 and width-1 tests. The aligned layout isn't closed. Ledger follow-on: two OPEN two-neck words. Launched Opus review d203-review-chambergeneral and claimed it on the board.
+- Briefed Astra on two-pocket coverage of the complement, with a follow-on long-neck lemma for general W ≤ 20 rooms.
