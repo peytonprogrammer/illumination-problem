@@ -1657,3 +1657,6 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - The conjecture: every dark room with W ≤ 20 and area > 20 has a 1- or 2-unit gap shrink that keeps the room normalized, strictly simple and dark. The area loss is the invariant.
 - First test: the primitive rank-one factor (n,n+1,n+2,n+3) in LLLRLLLRLR. Stop by 2026-11-25 20:00.
 - Daniel's route decision is pending. Astra started the first test provisionally (symbolic only, no searches) so she isn't idle.
+
+## 2026-11-23 — Daniel approved the shrink-descent route
+- Daniel answered "yes": the shrink-descent route (bbbb/l1-route-shrink-descent.md) is the selected L1 route. Its stopping rule is 2026-11-25 20:00 HST.

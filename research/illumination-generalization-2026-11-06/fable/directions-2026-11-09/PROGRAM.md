@@ -83,3 +83,6 @@ searches, and reports a numerical N0. If no number comes out, or N0 exceeds
 about 40, stop the crossing chain and report to Daniel with a proposed new route.
 The 2026-11-22 resonance stopping rule fired on 2026-11-23: the estimate dropped
 from 11-13% to 9-11%.
+
+## Shrink-descent route (selected 2026-11-23)
+Daniel approved this route after the chart-descent stopping rule fired. The proposal is bbbb/l1-route-shrink-descent.md. Stopping rule: by 2026-11-25 20:00 HST, deliver a symbolic proof for the primitive (n,n+1,n+2,n+3) family in LLLRLLLRLR, uniform in n, or the first precise implication that fails. Stop earlier if the transfer must keep the shortened point on the original line or needs an unbounded factor-height estimate. No searches.
