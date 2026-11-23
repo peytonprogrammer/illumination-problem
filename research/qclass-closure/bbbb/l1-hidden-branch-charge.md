@@ -27,3 +27,23 @@ The source-class reflexes are shared across X and may only be counted once. Thes
 **Consequence if the missing bound is proved.** For a normalized dark pair at n≥49, d81 gives H≥2⌈2n/3⌉−2r−⌊n/2⌋≥5n/6−2r. Thus H≤cr implies n≤6(c+2)r/5 in that range. For r≤8, c=3 excludes every n≥49, while c=4 gives n≤57. An arbitrary linear bound gives a finite cutoff, whose value depends on its coefficient. The room-level hidden-point finiteness result counts targets hidden from one mark downstairs and does not bound H upstairs.
 
 **First open case.** Exact area 22 is still the first open area overall. For the crux independently of the low-degree gap, at n=49 a dark same-class pair would have at least 26 hidden off-class branches. The first missing implication is that *simultaneous* darkness at all targets forces access to one of them or limits them to 25. The three controls distinguish the relevant quantifiers, but none has both a globally dark pair and positive H. The low-degree condition-(i) pass is closed without further casework.
+
+### Can one physical corner intercept routes to every off-class candidate?
+
+There is a geometric exclusion for **non-source-parity** corners. Count only branches for which a synchronized relaxed straight route actually exists. For a fixed corner C let N(C) count distinct off-class regular branches for which at least one such route encounters C. This permissive definition includes a branch even if a different route avoids C. If C has parity y≠a, then
+
+    N(C) ≤ R_y ≤ m_y = (n−c_y)/2 ≤ ⌊n/2⌋.
+
+Indeed, develop the entire route through its allowed straight reflex contacts. Its lattice hits alternate between a and its midpoint parity x. Meeting C forces x=y. At a regular point of the double there is just one off-diagonal coincidence germ, giving the second inequality. The same bound holds for the union of *arbitrarily many* corners of that one non-source parity. It is an upper bound with slope 1/2 on the part chargeable to those corners.
+
+For n≥49 a hypothetical dark same-class pair therefore has at least
+
+    2⌈2n/3⌉ − 2r − m_a − m_y ≥ 2⌈2n/3⌉ − 16 − 2⌊n/2⌋
+
+off-class candidates outside the reach of that charge. The right side is at least two at 49 and positive throughout n≥49 (it is at least n/3−16). This conclusion counts *candidates outside a blocking explanation*. It does not furnish routes to them. In particular, even when no source-parity reflex exists and every reflex lies in class y, a candidate with no synchronized relaxed straight route has no available charge in the first place.
+
+For a **source-parity** corner C, the alternation argument instead says C occurs at an even primitive step and the off-class midpoint at an odd step. This separates their positions along a route but places no restriction on which off-class the midpoint occupies. Shared-reflex demonstrates simultaneous use of all three classes. I have no proof excluding one common source-parity corner for every realizable candidate. Even ruling out each single common blocker would leave a family intercepted by the union of several corners; that fact alone gives no bound on H.
+
+One distinction can be proved without any test rooms. On a normalized marked component of the ordered-pair curve containing a branch b, choose an incident starting germ that selected this component. Remove the finite set of points projecting to physical corners in either coordinate, and remove other points over the base poles except the chosen ends. The connected component surface stays path connected after these punctures. The ends are accessible along their own local germs. A joining arc can be taken piecewise straight in regular flat charts, using finitely many bends. Its two projections follow the same broken base path, avoiding *every* physical corner simultaneously. Thus there is no topological requirement to cross C. It is exactly the demand for one straight developed direction that prevents this avoidance argument from proving illumination.
+
+For the three requested controls, R22 has H=0, cov4181's seven candidates in relative d have just one **source-parity** compatible reflex and no d-reflex, and the failed cov2929 chord ends its first half at a reflex rather than a regular branch. None supplies a globally dark pair with positive H. No additional room test was run. The quantitative result is N(C)≤n/2 for non-source C, not H≤n/2. A bound H≤αn+K with α<5/6 for the full dark-pair set remains open. [Shared-reflex construction](shared-reflex.md) · [d207 review](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d207-review-bbbb-area-bound/review.md)
