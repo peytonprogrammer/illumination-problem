@@ -1760,3 +1760,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
   - a finite (huge) witness bound for all rooms via the SL2(Z) orbit;
   - a linear witness on the quadratic family.
 - This undercuts the premise of the route I recommended to Daniel. Launched Opus review d204-review-pathbound and claimed it on the board. Asked Astra for a 1-page assessment of whether any decidable encoding exists.
+
+## 2026-11-23 12:45 — d204 verdict
+- CORRECT WITH GAPS. Re-ran checks.py. The Presburger premise I recommended to Daniel is false; PROGRAM.md is corrected. The claim is released, the verdict is forwarded to Astra, and Slack is posted (wrong claim).
+- 12:50 bbbb/decide-encoding.md: no uniform decision procedure. The surviving route is a per-word least-dark-area bound, which is L1 per word. Briefed Astra on a one-neck word COVER test (stopping 2026-11-25 20:00) to see whether the lighting-tail tools scale.
