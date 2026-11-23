@@ -1764,3 +1764,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 12:45 — d204 verdict
 - CORRECT WITH GAPS. Re-ran checks.py. The Presburger premise I recommended to Daniel is false; PROGRAM.md is corrected. The claim is released, the verdict is forwarded to Astra, and Slack is posted (wrong claim).
 - 12:50 bbbb/decide-encoding.md: no uniform decision procedure. The surviving route is a per-word least-dark-area bound, which is L1 per word. Briefed Astra on a one-neck word COVER test (stopping 2026-11-25 20:00) to see whether the lighting-tail tools scale.
+
+## 2026-11-23 12:55 — one-neck cover test
+- Stopped at the first uncovered region (u=6, v=12, L=6, deep unequal marks). The tools don't scale to whole words. Estimate 6–8% → 5–7%. Astra is briefed on a design-only census-extension plan (bbbb/census-extension-plan.md); nothing runs without Daniel's approval.
+- d203 has been running ~1 hour; told it to wrap up.

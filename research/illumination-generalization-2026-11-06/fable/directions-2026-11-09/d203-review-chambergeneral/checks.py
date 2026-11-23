@@ -637,6 +637,15 @@ def partE_coprime_grid():
                         r = run_pair(R, Mk[a], Mk[b], stats, 'grid')
                         if r == 'exception':
                             audit_exception(R, Mk[a], Mk[b], stats)
+                            S, T = Mk[a], Mk[b]
+                            RR = R
+                            if S[2] >= 1:
+                                RR, S, T = flipped(R), (S[0], S[1], 1 - S[2]), (T[0], T[1], 1 - T[2])
+                            fb = J_fallback(RR, S, T)
+                            key = 'fallback ' + (fb.split(' (')[0].split(' via ')[0] + (' hit' if fb.endswith('bounces)') and '-> hit' in fb else ''))
+                            stats[key] = stats.get(key, 0) + 1
+                            if '-> hit' not in fb:
+                                stats.setdefault('fallback-open', []).append((tuple(R.ws), tuple(R.bs), tuple(R.ts), tuple(R.Ls), Mk[a], Mk[b], fb))
     log(f'  coprime rooms={nrooms}')
     for k, v in sorted(((k, v) for k, v in stats.items() if isinstance(k, tuple)), key=str):
         log(f'   {k}: {v}')
@@ -645,6 +654,12 @@ def partE_coprime_grid():
         log('    ', f)
     exc = stats.get('zero-exception', [])
     log(f'   zero-drift exceptions (equal-parity same-side pairs, P odd): {len(exc)}')
+    for k, v in sorted((k, v) for k, v in stats.items() if isinstance(k, str) and k.startswith('fallback ')):
+        log(f'   J fallback on exceptions: {k}: {v}')
+    fo = stats.get('fallback-open', [])
+    log(f'   exceptions with no positive J itinerary (<=5 pieces): {len(fo)}')
+    for f in fo[:20]:
+        log('    ', f)
     log(f'   exceptions with both roots at seams (never 0 or P): {stats.get("exc-seams", 0)}; '
         f'inside the 64-pair outer bound: {stats.get("exc-bound", 0)}; rooms: {sorted(stats.get("exc-rooms", set()))}')
     return stats
@@ -983,16 +998,50 @@ def horizontal_itins(R, S, T):
     return out
 
 
+def J_fallback(R, S, T, maxpieces=5):
+    """Evaluate the note's equal-label itineraries (<= maxpieces pieces) for
+    lower marks S, T in order of size; trace the first positive one."""
+    its = [(nm, pc, gt) for nm, pc, gt in vertical_itins(R, S, T)]
+    if S[0] != 1 and T[0] != 1:
+        A, B = (S, T) if S[0] == 0 else (T, S)
+        its += [(nm, pc, gt) for nm, pc, gt, a, b in horizontal_itins(R, A, B)]
+    its.sort(key=lambda t: len(t[1]))
+    tried = skipped = 0
+    for nm, pc, gt in its:
+        if len(pc) > maxpieces:
+            skipped += 1
+            continue
+        tried += 1
+        if nm.startswith('h'):
+            A, B = (S, T) if S[0] == 0 else (T, S)
+            cnt, D, w = J_witness(pc, gt, A[2], B[2])
+        else:
+            A, B = S, T
+            cnt, D, w = J_witness(pc, gt, S[1], T[1])
+        if not cnt:
+            continue
+        eps, zs, (n0, per) = w
+        n = n0 if n0 > 0 else n0 + per
+        if nm.startswith('h'):
+            sx = -1 if 'imS=1' in nm else 1
+            st, bl, _ = trace(R, A[1:], B[1:], (D, n), sx, eps[0])
+        else:
+            sy = -1 if nm.startswith('floor') else 1
+            st, bl, _ = trace(R, A[1:], B[1:], (n, D), eps[0], sy)
+        return f'J>0 via {nm} (J={cnt}); traced n/D={Fr(n, D)} -> {st} ({len(bl)} bounces)'
+    return f'no positive itinerary among {tried} evaluated ({skipped} with >{maxpieces} pieces skipped)'
+
+
 def partK_residuals():
     log('== Part K: note tests on named pairs outside the dimension-only statements ==')
-    cases = [('area21 (3,1,2) necks (1,2) h3', aligned((3, 1, 2), (1, 1, 1), (1, 1, 1), (1, 2)), [((0, 2, 0), (2, 8, 0))]),
+    cases = [('area21 (3,1,2) necks (1,2) h3', aligned((3, 1, 2), (1, 1, 1), (1, 1, 1), (1, 2)), None),
              ('area23 (2,1,4) necks (1,1) h3', aligned((2, 1, 4), (1, 1, 1), (1, 1, 1), (1, 1)), None),
              ('area23 (1,4,2) necks (1,1) h3', aligned((1, 4, 2), (1, 1, 1), (1, 1, 1), (1, 1)), None),
              ('area22 (2,2,2) necks (2,2) h3', aligned((2, 2, 2), (1, 1, 1), (1, 1, 1), (2, 2)), None)]
     for name, R, pairs in cases:
         if pairs is None:
             # lower-side cross-chamber pairs not covered by the coprime constructions
-            Mk = [m for m in marks(R) if m[2] <= 0]
+            Mk = marks(R)
             pairs = []
             for a in range(len(Mk)):
                 for b in range(a + 1, len(Mk)):
@@ -1000,34 +1049,38 @@ def partK_residuals():
                     if S[0] == T[0]:
                         continue
                     st = {}
-                    r = run_pair(R, S, T, st, 'K')
+                    try:
+                        r = run_pair(R, S, T, st, 'K')
+                    except TypeError:  # modular solve impossible outside coprimality
+                        r = 'n/a'
                     if not r.endswith('hit'):
                         pairs.append((S, T))
-        log(f' {name}: P={R.P} area={R.area} gcd(P,lcm)={gcd(R.P, lcm(*R.ws))}; uncovered lower pairs: {[(S[1:], T[1:]) for S, T in pairs]}')
+        log(f' {name}: P={R.P} area={R.area} gcd(P,lcm)={gcd(R.P, lcm(*R.ws))}; pairs outside the coprime constructions: {[(S[1:], T[1:]) for S, T in pairs]}')
         for S, T in pairs:
-            pos = []
-            for nm, pc, gt in vertical_itins(R, S, T):
-                cnt, D, w = J_witness(pc, gt, S[1], T[1])
+            RR, SS, TT = R, S, T
+            if (S[2] <= 0) != (T[2] <= 0):
+                if S[2] >= 1:
+                    SS, TT = T, S
+                a, b = -SS[2], TT[2] - 1
+                pc, gt = [], []
+                if a:
+                    pc.append((a, R.l[SS[0]], R.ws[SS[0]])); gt.append((R.l[SS[0]], R.l[SS[0]] + R.ws[SS[0]]))
+                pc.append((1, 0, R.P))
+                if b:
+                    pc.append((b, R.l[TT[0]], R.ws[TT[0]])); gt.append((R.l[TT[0]], R.l[TT[0]] + R.ws[TT[0]]))
+                cnt, D, w = J_witness(pc, gt, SS[1], TT[1])
                 if cnt:
-                    pos.append((nm, cnt, pc, gt, D, w))
-            if S[0] != 1 and T[0] != 1:
-                SS, TT = (S, T) if S[0] == 0 else (T, S)
-                for nm, pc, gt, imS, imT in horizontal_itins(R, SS, TT):
-                    cnt, D, w = J_witness(pc, gt, SS[2], TT[2])
-                    if cnt:
-                        pos.append((nm, cnt, pc, gt, D, w))
-            log(f'  pair {S[1:]}->{T[1:]}: positive itineraries: {[(p[0], p[1]) for p in pos]}')
-            if pos:
-                nm, cnt, pc, gt, D, (eps, zs, (n0, per)) = pos[0]
-                n = n0 if n0 > 0 else n0 + per
-                if nm.startswith('h'):
-                    SS, TT = (S, T) if S[0] == 0 else (T, S)
-                    sx = -1 if 'imS=1' in nm else 1
-                    st, bl, _ = trace(R, SS[1:], TT[1:], (D, n), sx, eps[0])
+                    eps, zs, (n0, per) = w
+                    n = n0 if n0 > 0 else n0 + per
+                    stt, bl, _ = trace(R, SS[1:], TT[1:], (n, D), eps[0], 1)
+                    log(f'  pair {S[1:]}->{T[1:]}: opposite labels J={cnt}; traced -> {stt}')
                 else:
-                    sy = -1 if nm.startswith('floor') else 1
-                    st, bl, _ = trace(R, S[1:], T[1:], (n, D), eps[0], sy)
-                log(f'   traced first solution of {nm}: n/D={Fr(n, D)} -> {st} ({len(bl)} bounces)')
+                    log(f'  pair {S[1:]}->{T[1:]}: opposite labels J=0')
+                continue
+            if S[2] >= 1:
+                RR, SS, TT = flipped(R), (S[0], S[1], 1 - S[2]), (T[0], T[1], 1 - T[2])
+            res = J_fallback(RR, SS, TT)
+            log(f'  pair {S[1:]}->{T[1:]}: {res}')
 
 
 if __name__ == '__main__':
