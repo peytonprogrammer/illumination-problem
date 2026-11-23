@@ -1,0 +1,7 @@
+Advances: L2 — archived parity coverage for strictly simple orthogonal lattice rooms, W ≤ 20.
+
+D9 Part A tabulated both parities through area 16. Its [table header](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d9-census-w22/partA-totals.md#L1) has separate same/same_lit and diff/diff_lit columns. Line 10 records one same-class and two different-class pairs for (area 8,W=4). Line 104 records 117,309 and 1,126,268 respectively for (16,20), all lit. The table ends its room rows at area 16 (line 110).
+
+The [d9 phase-one totals](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d9-census-w22/census_totals.md#L3) count only the one same-class pair at (8,4). Line 10 likewise counts 30 pairs at (20,4), all same-class: the eligible 2×10 and 4×5 rectangles contribute 16 and 14 respectively (the 1×20 rectangle is vacuous). D29 reused this scope: its [area-19 run log](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d29-rigidity-test/runs/a19.out#L2) again counts one at (8,4), and line 298 closes the run. D29's [survivor log](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d29-rigidity-test/ortho_a19.log#L1) records the same-class 22-wall control.
+
+**Coverage gap: exact areas 17, 18, 19 and 20 lack an exhaustive different-parity result in d9/d29.** This is a census-wide gap even though special subclasses may have later proofs. Area 21 can stand independently. Audit based only on archived outputs; no missing-area pair runs performed.

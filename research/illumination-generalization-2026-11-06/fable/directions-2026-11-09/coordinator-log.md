@@ -1770,3 +1770,6 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - d203 has been running ~1 hour; told it to wrap up.
 - 13:00 d203 verdict recorded, CORRECT WITH GAPS. Not re-run by the coordinator because the reviewer's final run of its 42 KB script is still going. Claim released. Not forwarded as a task, since that line is stopped.
 - 13:10 d203 final run: all checks pass (269 CPU-s). RESULTS updated.
+
+## 2026-11-23 13:10 — area-21 census approved
+- Daniel: "yes go, don't always wait for me." Approved the area-21 census slice and the parity-coverage audit. Astra is implementing it in d205-census-a21 (validate, then run in the background, ≤ 8 processes). Recorded in PROGRAM.md.
