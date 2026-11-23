@@ -8,15 +8,14 @@ out = {}
 # 1. L room (4x4 minus top-right 2x2): straight segment (3,1)->(1,3) passes reflex corner (2,2).
 L = [(x, y) for x in range(4) for y in range(4) if not (x >= 2 and y >= 2)]
 R = Room(L)
-cases = [(L, (3, 1), (-1, 1), 2, (1, 3)),    # through reflex corner: must be 0
-         (L, (1, 3), (1, -1), 2, (3, 1)),    # reverse: must be 0
-         (L, (1, 1), (1, 1), 1, (2, 2)) if False else (L, (2, 1), (-1, 1), 1, (1, 2)),  # legit: must be 1
-        ]
-# 2. 3x3 square, diagonal into convex corner (3,3) then "back" to (1,1)/(2,2): must be 0
+cases = [(L, (3, 1), (-1, 1), 2, (1, 3)),   # straight through reflex corner (2,2): must be 0
+         (L, (1, 3), (1, -1), 2, (3, 1)),   # reverse direction: must be 0
+         (L, (2, 1), (-1, 1), 1, (1, 2))]   # legitimate one-step path: must be 1
+# 2. 3x3 square: diagonals that run into a convex corner and would fold back onto a mark: must be 0
 Sq = [(x, y) for x in range(3) for y in range(3)]
-cases += [(Sq, (1, 1), (1, 1), 4, (1, 1)) if False else (Sq, (2, 2), (1, 1), 2, (2, 2)) if False else (Sq, (1, 2), (1, 1), 2, (1, 2)),
+cases += [(Sq, (1, 2), (1, 1), 2, (1, 2)),
           (Sq, (1, 1), (1, 1), 3, (2, 2))]
-# 3. 2x? corridor: grazing path along a wall line is impossible from interior; axis bounce legit
+# 3. axis path bouncing perpendicularly off a flat wall: must be 1
 cases += [(Sq, (1, 1), (0, 1), 3, (1, 2))]
 queries = [vp(*c) for c in cases]
 tr = []
