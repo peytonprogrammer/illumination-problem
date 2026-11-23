@@ -1768,3 +1768,5 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 12:55 — one-neck cover test
 - Stopped at the first uncovered region (u=6, v=12, L=6, deep unequal marks). The tools don't scale to whole words. Estimate 6–8% → 5–7%. Astra is briefed on a design-only census-extension plan (bbbb/census-extension-plan.md); nothing runs without Daniel's approval.
 - d203 has been running ~1 hour; told it to wrap up.
+- 13:00 d203 verdict recorded, CORRECT WITH GAPS. Not re-run by the coordinator because the reviewer's final run of its 42 KB script is still going. Claim released. Not forwarded as a task, since that line is stopped.
+- 13:10 d203 final run: all checks pass (269 CPU-s). RESULTS updated.
