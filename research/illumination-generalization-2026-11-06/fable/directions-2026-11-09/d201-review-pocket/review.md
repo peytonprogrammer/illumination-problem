@@ -267,3 +267,89 @@ lengths are still missing:
   1 < y < 2 in all four walls, so the two corridors are aligned).
 
 Real (L3) marks are also missing for every assignment.
+
+## Follow-up: snapshot2.md (l1-pocket-general.md)
+
+The coordinator added this scope after the main review. `snapshot2.md` is a
+copy of `.context/qclass-closure/bbbb/l1-pocket-general.md`. Code:
+[checks2.py](checks2.py), log [checks2.log](checks2.log). It makes 0.02
+CPU-seconds of arithmetic checks and traces two prescribed rays in one named
+room. It runs no search.
+
+**Verdict: correct.** The dictionary, the strip test and the obstructions all
+hold. The note limits each obstruction to the prescribed legs, as it should.
+There is one vague sentence, and one bound isn't sharp.
+
+### (a) Word dictionary: correct
+
+F = RRLLLLRR is the right insertion for a neck that is strictly inset at both
+ends. The word F L^j F L^(4−j) has W = 20 and r = 8, and j ↔ 4 − j is the
+reflection, so j = 0, 1, 2 are all the cases.
+
+- The canonical forms (least rotation or reversal) for j = 0..4 equal the
+  three listed keys. All three keys are in `ledger.json`, and all three are
+  OPEN there. j = 2 is "one-direction convex". j = 0 and j = 1 are
+  "two-direction dented".
+- `checks2.py` builds a named 3 × 3 assembly for each position: opposite,
+  adjacent, and same-side with a 7 × 3 middle chamber. Each boundary word
+  equals its listed key.
+- The note says correctly that `STATUS.md` holds only aggregate counts and
+  that it changes no status.
+
+### (b) Strip transit test: correct
+
+The middle chamber has one aperture per side, so the left wall is solid above
+r₁ and the right wall is solid below l₂. The strip r₁ < y < l₂ therefore has
+solid flanks.
+
+- The return-map argument from Part 1 applies with one pass and no roof. Side
+  hits are strictly between the two levels unless a or b is in wℤ. Both are
+  excluded.
+- a = U + g₁c and b = V − g₂c give (g₁ + δ + g₂)c ≡ V − U (mod 2w). The
+  interval is right, and the spacing in c is 2w/(g₁ + δ + g₂).
+- The placement g ≤ aperture height keeps each leg inside its neck's height
+  range.
+- For g₁ = g₂ = 1, the interval is (max(A, K), w + min(A, K)), with length
+  w − |A − K|. So |A − K| < wδ/(δ + 2) suffices, and A = K works for every
+  δ > 0. "Every integral δ ≥ 1" is true but narrower than necessary.
+
+`checks2.log` uses the room with a 3 × 6 middle chamber, necks (1, 2) and
+(4, 5), and δ = 2. Both prescribed rays reach their targets:
+
+| Pair | Ray | Bounces |
+|---|---|---:|
+| A = K = 3 | c = 15/4 | 2 |
+| A = 4, K = 3 | c = 11/2 | 4 |
+
+### (c) Obstructions: correct, and not overstated
+
+- **|A − K| ≥ w.** With g₁ = g₂ = 1, the interval length w − |A − K| ≤ 0, so
+  the interval is empty. `checks2.py` confirms this for every w ≤ 7 and
+  A, K ≤ 19.
+- **δL ≥ w.** A straight leg through a unit neck of length L has
+  |dy/dx| < 1/L. It enters the middle chamber below r₁ and must reach the
+  upper mouth at r₂ = l₂ + 1 within a run less than w. So it fails when
+  δL ≥ w.
+  - *Not sharp (observation).* The leg must climb more than r₂ − r₁ = δ + 1,
+    so (δ + 1)L ≥ w already blocks it.
+- **Scope.** Both obstructions are stated for the prescribed legs only. The
+  note says explicitly that they don't exclude wall bounces, other middle
+  itineraries, or illumination.
+- *Vague (low).* "The reflected lower-pocket obstruction applies from the right
+  when its neck is comparably long" should state its bound: δL₂ ≥ w, by the
+  same argument.
+
+**Width-1 family.** This family realizes the opposite-side word without the
+R22 comparison pocket. `checks2.py` confirms this for H = 5, 6 and 9:
+
+- The family has W = 20 and the opposite-side key.
+- It has no integral full-mouth pocket of width ≥ 3 and height ≥ 1 in any
+  orientation.
+- The listed marks are interior.
+
+The note doesn't claim that this family is lit, so the remark only shows that
+the corner budget alone gives no pocket.
+
+**Ledger effect of snapshot2.** None. The note proves only sufficient
+conditions for specified pairs. All three words stay OPEN in `ledger.json`.
+Word j = 2 should be PARTIAL through d200 and d201, as the main review says.

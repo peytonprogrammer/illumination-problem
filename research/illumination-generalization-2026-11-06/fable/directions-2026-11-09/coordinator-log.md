@@ -1726,3 +1726,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 11:08 — pocket-general note
 - bbbb/l1-pocket-general.md (L1): the ledger-word dictionary F L^j F L^(4−j), and a sufficient condition for displaced apertures. The opposite-side word isn't certified; the residual is disjoint unit mouths with long necks. Added to the d201 review scope.
 - Briefed Astra on a neck phase map (bouncing legs) combined with the pocket return. Output goes to bbbb/l1-neck-phase.md.
+
+## 2026-11-23 11:15 — d201 verdict
+- CORRECT. Re-ran checks.py and checks2.py: 0 failures. Ledger STATUS.md updated: 6/274/4,294, d152 word PARTIAL. This corrects my d200 note, which called the word already PARTIAL. Its ledger status was OPEN.
+- Estimate 7–9% → 8–10%. Claim released, verdict sent to Astra, Slack posted.

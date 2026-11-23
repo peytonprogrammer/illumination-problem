@@ -17,3 +17,4 @@ Notes from d165:
 | 2026-11-22 (d169) | 6 | 271 | 4,297 | d15 Theorem 3 reviewed; LLLLLRLRLR PARTIAL confirmed. W=10 open position-type pairs: 578 (work list in d169-review-d15r3/checks.log) |
 | 2026-11-22 (d170) | 6 | 271 | 4,297 | LLLLLRLRLR PARTIAL region grows (d170); residual named rooms: grids (0,10,11,13,100), (0,2,3,4,6), (2,3,4,5;1,1,1,5) |
 | 2026-11-22 (d172) | 6 | 273 | 4,295 | LLLLRLLRLR (pyramid) PARTIAL by d172; LLLRLLRLLR (3-4 corners) PARTIAL by d169's 3 fully certified order types |
+| 2026-11-23 (d200, d201) | 6 | 274 | 4,294 | LLLLRRLLRRLLLLRRLLRR (d152 three-chamber chain) PARTIAL: aligned 3×3 chambers with unit corridors and any lengths D₁, D₂ ≥ 4 are fully lit (d200, d201). Chamber sizes, neck heights, aperture positions and real marks are open. |

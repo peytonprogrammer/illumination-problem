@@ -1,3 +1,32 @@
 Advances: L1 — Coupled neck and middle-chamber phase tests for a pair across disjoint unit mouths.
 
 Take the middle chamber to occupy 0<x<w. Its left opening is (0,1) in height and its right opening is (1+δ,2+δ), with integral δ>0. The middle roof is h>0 above the upper opening. Let S be in the left outer chamber at height 0 and T in the right outer chamber at height δ+2, the residual row placement. Their horizontal distances to the outer neck mouths are e and f; the neck lengths are L and R. Write A=e+L, K=f+R. All these lengths are positive. Use r=|dy/dx|. The tests below prescribe straight stubs only inside the outer chambers; both necks may have arbitrarily many reflections.
+
+**Neck map.** Launch S up/right, and trace backwards from T down/left. Require er<1 and fr<1 for these particular outer stubs. Measured up from the lower left-neck wall and down from the upper right-neck wall, the two unfolded phases at the middle chamber are Ar and Kr modulo 2. Folding sends a residue z in (0,1) to depth z with the launch sign, and a residue z in (1,2) to depth 2−z with the opposite sign. Integer phases hit mouth endpoints and are excluded. Inside the necks all intervening horizontal-wall bounces are smooth. The same r must satisfy both phase conditions.
+
+**Opposite sides, displacement strip.** Take residues α=Ar−2i and β=Kr−2j both in (0,1), so the forward path points up on both sides of the middle chamber. The left entry height is α and the right exit height is δ+2−β. On reaching height 1 the horizontal position is a=(1−α)/r. Tracing back from the right to height 1+δ gives b=w−(1−β)/r. Require a,b∈(0,w); this makes both short end pieces inside the middle chamber free of side contacts. Between those levels the full vertical sides are solid. The middle translation a+δ/r ≡ b (mod 2w) joins the two pieces with matching velocity. Equivalently, for nonnegative integers i,j,m the candidate is
+
+    r=(δ+2+2i+2j)/(A+K+(2m+1)w).
+
+It works precisely on this branch when er,fr<1, α,β∈(0,1), and 1−α,1−β<wr. Indeed the unfolded horizontal travel across the entire middle rectangle is (2m+1)w; 2m side reversals leave the exit rightward. The tests keep all those reversals in the solid-sided strip.
+
+**Opposite sides, upper roof pocket.** Keep 0<α=Ar−2i<1 but take 1<Kr−2j<2 and put β=2j+2−Kr. The backward ray from T now leaves its neck pointing up/left, giving a forward exit down/right. At height δ+2 the left and right legs require a=(δ+2−α)/r and b=w−β/r. For 0<a,b<w these legs cross no middle vertical wall before reaching the pocket base. The roof excursion translates a to a+2h/r modulo 2w. Matching b on the rightward sheet gives
+
+    r=(δ+4+2i+2j+2h)/(A+K+(2m+1)w).
+
+The exact tests for this itinerary are er,fr<1, the two strict residue conditions above, and δ+2−α<wr, β<wr. Roof clearance follows from 2(a+h/r) ≡ a+b (mod 2w) with 0<a+b<2w. Thus the congruence handles the velocity and both potential corner events. These two formulas are existence criteria for specified itineraries; the following parameter choices establish nonemptiness symbolically.
+
+**Reflected-neck connections in the previous residual.** Set e=f=1 and prescribe r=1/2.
+
+* Take w=2, δ any positive even integer, and L,R independently positive multiples of four. Both phases are 1/2, so a=b=1. The displacement strip adds 2δ, a multiple of 2w. This connects the marks even for |A−K| arbitrarily large, for which the earlier direct-leg interval is empty.
+* For a nonzero pocket shift, take any integral δ≥1, w=2δ+8, h=δ+5, L a positive multiple of four and R≡2 (mod 4). The neck residues are 1/2 and 3/2. Here a=2δ+3 and b=2δ+7, both strictly interior. The roof shift 4h=2w+4 gives exactly the required four-unit displacement. These lengths can also be arbitrarily mismatched.
+
+**First simultaneous obstruction.** For integral data with K=2A and max(e,f)≥3w, both tests above fail for every admissible straight-stub slope, regardless of how many bounces occur in either neck. Indeed wr<1/3. The strip test requires α>2/3, but then Kr modulo 2 equals 2α∈(4/3,2), on the wrong velocity sheet. The roof test requires wr>δ+2−α>1. These conditions occur with arbitrarily long necks, for example e=f=3w and R=2L+3w. The neck maps remove the earlier long-neck clearance restriction, yet their two outputs are correlated. Resolving this obstruction requires another history, such as a reflected outer-chamber stub or a middle path touching a side wall before reaching the separating strip. It is not evidence that the marks are dark.
+
+### Adjacent mouths (j=1)
+
+For a left entrance (l,l+1) and a top exit (t,t+1) in a middle rectangle [0,w]×[0,H], the two phases instead advance by Lr and R/r. As one exact branch, use a middle leg with no wall hit. If the forward left-neck exit is (0,y) moving up/right and the backward top-neck exit is (x,H) moving down/left, the necessary and sufficient matching equation is x=(H−y)/r. Both mouth coordinates must be strictly interior; convexity then guarantees that the middle leg stays inside. This also shows a difference for the two straight outer stubs: if both start at transverse edge heights and travel inward from the edges of unit-width apertures, the strict requirements er<1 and f/r<1 are incompatible for integral e,f≥1. General outer marks can supply different phases.
+
+For an explicit positive family prescribe r=2/3. Put S one unit to the left of the outer left-neck mouth at height l, choose L a positive multiple of 3, and launch up/right. It reaches the middle entrance at y=l+2/3 moving up/right. Choose H−l an odd integer ≥3, t=3(H−l−1)/2, and w>t+1. The upper intersection has x=t+1/2. Put T one unit beyond the far end of the top neck at transverse coordinate t+2, inside a sufficiently wide end chamber, and take R a positive multiple of four. Backwards, T travels down/left to x=t+1/2 at the outer neck mouth; traversing the neck adds 3R/2, an even integer, to the leftward phase. It reaches the same x=t+1/2 at the middle chamber moving down/left. This gives a legal connection with unbounded lengths on both axes. Neither this construction nor the opposite-side pocket condition covers arbitrary adjacent-side pairs.
+
+**Verdict.** L1 gains reflected-neck lighting families and an explicit joint phase obstruction for two natural middle itineraries. The first unresolved opposite-side family above has K=2A, long stubs and disjoint mouths. The full word LLLLRRLLRRLLLLRRLLRR remains open, as does adjacent-side LLLLRRLLLRRLLLLRRLRR. No denominator cutoff or enumeration was used.
