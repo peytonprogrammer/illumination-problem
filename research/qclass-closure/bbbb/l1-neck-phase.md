@@ -1,0 +1,3 @@
+Advances: L1 — Coupled neck and middle-chamber phase tests for a pair across disjoint unit mouths.
+
+Take the middle chamber to occupy 0<x<w. Its left opening is (0,1) in height and its right opening is (1+δ,2+δ), with integral δ>0. The middle roof is h>0 above the upper opening. Let S be in the left outer chamber at height 0 and T in the right outer chamber at height δ+2, the residual row placement. Their horizontal distances to the outer neck mouths are e and f; the neck lengths are L and R. Write A=e+L, K=f+R. All these lengths are positive. Use r=|dy/dx|. The tests below prescribe straight stubs only inside the outer chambers; both necks may have arbitrarily many reflections.
