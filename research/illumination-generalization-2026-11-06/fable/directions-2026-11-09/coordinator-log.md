@@ -1704,3 +1704,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 10:40 — dark-structure test; route approval
 - bbbb/l1-dark-structure-test.md stopped early. Sheet count N = 29+6k, and block size d ≤ 8 gives d ∈ {5,7}. Monodromy is primitive for k = 35j without any darkness hypothesis. No property of darkness forces a block. Launched Opus review d199-review-darkstructure and claimed it on the board.
 - Daniel asked why routes needed his approval. They don't: the stopping rule only required reporting the route. Route choices now proceed without approval. Astra is briefed on the primitive subfamily k = 35j (prove all pairs lit); output goes to bbbb/l1-primitive-family-lit.md, stopping 2026-11-26 20:00.
+
+## 2026-11-23 10:45 — d199 verdict; dark-structure route stopped
+- d199 CORRECT WITH GAPS. Re-ran checks.py: all pass. The route restates the goal at W ≤ 20 and is stopped early. The claim is released and the verdict sent to Astra.
+- New route (coordinator's choice under the new rule): lighting tail on the three-chamber family, uniform in k, starting from the reversal problem. Stopping 2026-11-26 20:00. Estimate unchanged at 7–9%.

@@ -87,3 +87,9 @@ from 11-13% to 9-11%.
 ## Shrink-descent route (selected 2026-11-23)
 Daniel approved this route after the chart-descent stopping rule fired. The proposal is bbbb/l1-route-shrink-descent.md. Stopping rule: by 2026-11-25 20:00 HST, deliver a symbolic proof for the primitive (n,n+1,n+2,n+3) family in LLLRLLLRLR, uniform in n, or the first precise implication that fails. Stop earlier if the transfer must keep the shortened point on the original line or needs an unbounded factor-height estimate. No searches.
 Stopped 2026-11-23 09:40 HST under the early-stop clause (d198): marked transfer needs a slope-denominator bound. Limits: bbbb/l1-shrink-route-limits.md.
+
+## Dark-structure route (2026-11-23): stopped
+Stopped on the d199 recommendation: at W ≤ 20 its lemma restates the goal. Route choices no longer need Daniel's approval (Daniel, 2026-11-23). The coordinator picks a route, sets a dated stopping rule and reports the choice.
+
+## Lighting-tail route on the three-chamber family (started 2026-11-23)
+L1 in its "every way of being large forces lit" form, for d152's 20-wall family X=Y=3k+1, k ≥ 6. Primitive monodromy holds for most k, so factor certificates can't exist. Target: uniform in k, every interior lattice pair is joined by a legal path. The first open piece is the pair in bbbb/l1-primitive-family-lit.md, whose connection needs a horizontal reversal clearing both corridor apertures. Stopping rule: by 2026-11-26 20:00 HST, a symbolic construction uniform in k for that pair class, or the first failed step. Stop earlier if it needs a slope-denominator bound, a factor-height bound or any search.
