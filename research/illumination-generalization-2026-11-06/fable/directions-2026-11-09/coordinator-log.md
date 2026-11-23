@@ -1660,3 +1660,17 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 — Daniel approved the shrink-descent route
 - Daniel answered "yes": the shrink-descent route (bbbb/l1-route-shrink-descent.md) is the selected L1 route. Its stopping rule is 2026-11-25 20:00 HST.
+
+## 2026-11-23 09:12 — primitive shrink test received
+- bbbb/l1-shrink-primitive-test.md (L1). Moves exist. The same-product fallback is blocked. Terminal-rectangle transfer works iff s·r ∈ hZ. A parity obstruction (4 | h, odd mark difference) blocks same-exit transfer. The implication from all shrinks being lit remains open.
+- Launched an Opus review, d197-review-shrinkprimitive, and claimed it on the board.
+- Briefed Astra on forward darkness transfer: P dark ⇒ some shrink dark. Output goes to bbbb/l1-shrink-dark-transfer.md.
+- Sync pushed f6295d75a.
+
+## 2026-11-23 09:15 — dark-transfer note received
+- bbbb/l1-shrink-dark-transfer.md (L1). Forward darkness transfer fails locally: one cap excursion already moves the exit phase. Exact one-visit gluing criterion: (A_d + 2dr) ∩ B_T ≠ ∅. Added it to the d197 review scope instead of launching a second subagent.
+- Briefed Astra on exterior induction: with the mouth closed, the exterior is a room with fewer walls. Output goes to bbbb/l1-shrink-exterior-induction.md.
+
+## 2026-11-23 09:25 — d197 verdict
+- CORRECT WITH MINOR GAPS for both notes. Re-ran checks.py: 28 PASS, 0 FAIL. It needs sympy, so I ran it under `uv run --with sympy`.
+- It's an L1 method limit, and the estimate stays at 8–10%. RESULTS §11 and STATE are updated, and the claim is released. The verdict went to Astra, with the reviewer's stop condition: a slope-denominator bound counts as an early stop.
