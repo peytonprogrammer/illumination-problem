@@ -1674,3 +1674,13 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 09:25 — d197 verdict
 - CORRECT WITH MINOR GAPS for both notes. Re-ran checks.py: 28 PASS, 0 FAIL. It needs sympy, so I ran it under `uv run --with sympy`.
 - It's an L1 method limit, and the estimate stays at 8–10%. RESULTS §11 and STATE are updated, and the claim is released. The verdict went to Astra, with the reviewer's stop condition: a slope-denominator bound counts as an early stop.
+
+## 2026-11-23 09:32 — exterior-induction note received
+- bbbb/l1-shrink-exterior-induction.md (L1, method limit). Closing the cap gives an 8-wall exterior. A lit family breaks the fixed-slope one-visit implication. The number of cap visits needed at a fixed slope is unbounded (q = 2mL), so finite-return induction needs a denominator bound. Astra stopped at that bound, per the d197 stop condition.
+- Launched Opus review d198-review-exterior and claimed it on the board. Next brief: one cap-avoidance test, per the d197 reviewer.
+- Sync pushed b6eb50c22.
+
+## 2026-11-23 09:40 — d198 verdict; shrink route stopped
+- d198 CORRECT WITH MINOR GAPS. Re-ran checks.py: 25 PASS. The reviewer recommends stopping the route, and its early-stop clause applies. The claim is released.
+- Astra's last allowed test, bbbb/l1-shrink-cap-avoidance.md, is logged without review. It's partial (adjacent columns only), and the route is stopped. Her route-limits summary is in bbbb/l1-shrink-route-limits.md.
+- Estimate 8–10% → 7–9%: the second L1 descent route failed its first test. Reported to Daniel on Slack. Astra is drafting a 1-page proposal for a new route, with no long proof until Daniel picks.
