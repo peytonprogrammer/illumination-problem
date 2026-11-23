@@ -1464,6 +1464,8 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
   Fixed-period mixed seed bounds at least one axis equation of any dark product (van der Corput on u, 1/u); needs no slice through the product, removing d187's probe obstruction. Model span(1,m)^2 excluded for m>K.
   st279: seed route fails to transfer on a=7+2n, D=3a, but the floor gate (spacing 6) lights every n>=0; the ray is lit.
   MEDIUM: transfer hypothesis proved only for disjoint insertions (d184). Missing: fixed-period mixed transfer at occupied crossings with explicit seed constants, or a version accepting bounded-modulus gate congruences.
+- **d189** (2026-11-22, bbbb/l1-crossing-gate-resultants.md, snapshot sha256 5a2e76a1) PASS WITH CORRECTIONS (~85%). Route switching through a fixed upper chamber at an occupied crossing: periodic first-hit approach, explicit finite box for dark gap pairs given one upper first-hit interval; extends d186 cap budget to several mouths in [0,R]. checks.py 134 PASS, re-run by coordinator.
+  MEDIUM: open-case list must add growing source depth d and d188's two-gaps-per-axis product. LOW: P over all upper runs (30 at st279, example uses 6); far-wall bound loses factor 2; state R≤D, positive-sheet routes, one gap per axis. No FPT, no K(C)/G(C); estimate unchanged.
 
 ### Proved, not yet reviewed
 
