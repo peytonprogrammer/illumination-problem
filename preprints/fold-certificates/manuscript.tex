@@ -1,0 +1,1176 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[letterpaper,margin=.9in]{geometry}
+\usepackage{booktabs,array}
+\usepackage{hyperref}
+\hypersetup{pdfauthor={Peyton Wang and Daniel Wang},pdftitle={No Fold Certificate of Darkness Below 21 Walls in Orthogonal Lattice Rooms},colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt plus 1pt minus 1pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Par}{\mathrm{Par}}
+\newcommand{\Rig}{\mathrm{Rig}}
+\newcommand{\Cut}{\mathrm{Cut}}
+\newcommand{\Rr}{R_{22}}
+\newcommand{\src}[1]{\path{#1}}
+\title{No Fold Certificate of Darkness Below 21 Walls\\in Orthogonal Lattice Rooms}
+\author{Peyton Wang\\\small Francis Parker School \and Daniel Wang}
+\date{Working draft v0.1 --- 23 November 2026\\\small Not submitted or peer reviewed}
+\begin{document}
+\maketitle
+\begin{abstract}
+A pair of interior points of a polygonal room is dark when no billiard path
+that avoids the corners joins them. For orthogonal rooms with integer
+vertices, the double of the room is a square-tiled cover of a pillowcase, and
+three algebraic certificates (Par, Cut, and Rig) over a pillowcase base each
+prove that a pair is dark at one target parity class. We prove, with computer
+assistance, that no strictly simple orthogonal lattice room with at most
+20 walls has a pair of rational interior points certified dark by these
+certificates over any pillowcase base. The proof combines lemmas on
+pillowcase bases with exhaustive checks of about $14.4$ billion rooms and at
+least $59.4$ billion point pairs, which find no certified pair. A second proof
+of the core case enumerates fold quotients and their covers instead of rooms.
+The known 22-wall dark room serves as the positive control: its dark pair is
+certified. We also record the fold-converse lemma, which describes exactly
+when two points with equal images in a factor are joined, and a later result
+that an R22-type parity fold needs at least nine reflex corners. The theorem
+shows only that this certificate mechanism produces no dark pair below
+21 walls. It does not show that every pair is lit.
+\end{abstract}
+
+\section{Statement and conventions}\label{sec:statement}
+
+\paragraph{Rooms.}
+A \emph{room} $P$ is a finite union of closed unit lattice squares (cells)
+whose interior is connected, with no hole and no \emph{pinch}: a lattice point
+with exactly two diagonally opposite cells. Its boundary is then one simple
+closed curve, and we call $P$ \emph{strictly simple}. The wall count $W$ is the
+number of maximal straight walls; it equals the number of corners. With $r$
+reflex corners, $W=2r+4$, so $W\le 20$ means $r\le 8$. The \emph{area} $n$ is
+the number of cells. The room is \emph{normalized} when its horizontal edge
+lengths have gcd $1$ and its vertical edge lengths have gcd $1$. A lattice
+point is a convex corner, a smooth wall point, a reflex corner, or an interior
+point when $1$, $2$, $3$, or $4$ cells meet there.
+
+\paragraph{Light.}
+A \emph{lighting path} for distinct points $S,T$ is a billiard path from $S$ to
+$T$ that reflects specularly off walls and never meets a corner. Corner
+avoidance applies to every corner, convex corners included. The pair is
+\emph{lit} when such a path exists and \emph{dark} otherwise.
+
+\paragraph{Main result.}
+Section~\ref{sec:certificates} defines pillowcase bases $P_\Lambda$, the
+three certificates, and what it means for a pair to be \emph{certified dark}.
+
+\begin{theorem}[Fold side at $W\le 20$; computer-assisted]\label{thm:main}
+Let $P$ be a strictly simple orthogonal lattice room with $W\le 20$. Then no
+pair of distinct rational interior points of $P$ is certified dark. That is,
+for no admissible lattice $\Lambda$ do all four lift pairs of the pair have,
+at every target, a $\Par$, $\Cut$, or $\Rig$ certificate over the pillowcase
+base $P_\Lambda$.
+\end{theorem}
+
+The 22-wall room $\Rr$ of \cite{Q22} has $r=9$ and one dark pair, and that
+pair is certified dark by $\Par$ at all three targets
+(Section~\ref{sec:controls}). So the wall bound in Theorem~\ref{thm:main}
+can't be raised to $22$.
+
+\begin{remark}[What the theorem does not say]\label{rem:scope}
+Theorem~\ref{thm:main} is a statement about certificates. It shows that this
+certificate mechanism produces no dark pair below 21 walls. It does not show
+that every pair is lit. A pair that carries no certificate may still be dark.
+The statement that every dark pair is certified is the open conjecture $U^*$
+of Section~\ref{sec:converse}; its per-class form is the realization lemma
+there. Theorem~\ref{thm:main} also says nothing about irrational pairs
+directly, because a pillowcase base exists only for rational pairs
+(Section~\ref{sec:bases}).
+\end{remark}
+
+\paragraph{Sources and status.}
+Every lemma below is taken from a numbered research memo or referee report in
+the public repository. Section~\ref{sec:repro} gives the path convention.
+Each theory input has had one independent AI referee and no human referee.
+Where a referee repaired a step, we state the repaired version; those repairs
+have not been reviewed again. The finite parts are computations. We mark each
+result as \emph{proved}, \emph{computed}, or \emph{computer-assisted} (a proof
+whose finite part is a computation).
+
+\paragraph{Organization.}
+Section~\ref{sec:double} sets up the double as a cover of the pillowcase.
+Section~\ref{sec:certificates} defines certificates and pillowcase bases.
+Section~\ref{sec:proof} proves Theorem~\ref{thm:main} from its lemmas and the
+computations of Section~\ref{sec:computation}. Section~\ref{sec:second} gives
+the second proof by fold enumeration. Section~\ref{sec:converse} states the
+fold-converse lemma. Section~\ref{sec:r9} records the later result that an
+R22-type parity fold needs $r\ge 9$. Section~\ref{sec:limits} lists the
+limitations, and Section~\ref{sec:repro} explains how to reproduce the
+computations.
+
+\section{The double as a cover of the pillowcase}\label{sec:double}
+
+\paragraph{The pillowcase and the double.}
+Let $B$ be the unit pillowcase: two unit squares glued along their boundary.
+Its four corners are the classes of $\Z^2/2\Z^2$. The double $DP$ is two
+copies of $P$ glued along the boundary. It is an $n$-sheeted square-tiled
+cover $DP\to B$, branched over the four corners, whose sheets are the cells of
+$P$. The seam reflection $\iota$ of $DP$ exchanges the two copies.
+
+\paragraph{Monodromy.}
+Each corner $x$ of $B$ has a monodromy permutation $g_x$ of the cells. It
+rotates by $\pi$ about the class-$x$ lattice points, and its cycles are the
+stars of those points:
+a $1$-cycle (\emph{pole}) is a convex corner;
+a $2$-cycle (\emph{regular point}) is a smooth wall point or one half of an
+interior point;
+a $3$-cycle (\emph{zero}) is a reflex corner.
+An interior point gives two $2$-cycles, so it has two \emph{lifts} in $DP$, and
+a pair $(S,T)$ has four \emph{lift pairs}. The surface $DP$ has genus $0$. Room
+corners are exactly the non-regular points of $DP$, so corner avoidance means
+that a light path passes only through regular points.
+
+\paragraph{Parity classes and targets.}
+Translate so that the class of $S$ is $a=(0,0)$, and call the other three
+classes $b$, $c$, $d$. A lighting path from $S$ to $T$ unfolds to a segment of
+primitive slope $(p,q)$. Its image in $B$ runs back and forth along one saddle
+connection from $a$ to the corner $x$ given by $(p,q)\bmod 2$. This $x$ is the
+\emph{target} of the path. For a same-class pair the targets are the three
+other classes; for a different-class pair the only target is the class of $T$.
+
+\paragraph{Factors.}
+A \emph{factor} is a quotient $\phi\colon Q\to N=Q/\Pi$ by a block system $\Pi$
+of the monodromy group $G$. Here $Q$ is $DP$ or an intermediate cover. $N$ is
+again a genus-$0$ pillowcase cover. Write $\delta=\deg(Q\to N)$,
+$d=\deg(N\to B)$, so $n=\delta d$, and let $z$ and $p$ count the zeros and
+poles of $N$. Gauss--Bonnet gives $p=z+4$.
+
+\begin{lemma}[Fact L; d10, reviewed]\label{lem:factL}
+Let $q\in Q$ lie over $u=\phi(q)$ with local degree $e$. Then the cycle length
+of $q$ is $e$ times that of $u$. So over a regular point of $N$ every point of
+$Q$ is regular with $e=1$; over a zero every point is a zero with $e=1$; over a
+pole a point is a pole, a regular point ($e=2$), or a zero ($e=3$). In
+particular $\phi$ is branched only over poles of $N$.
+\end{lemma}
+
+A point of $N$ is \emph{live} when a regular point of $Q$ lies over it.
+Regular points of $N$ are live, zeros never are, and a pole is live when it has
+a preimage with $e=2$. For a simple arc $\alpha$ from $a$ to a corner $x$, the
+graph $\Gamma_\alpha(Q)$ is the bipartite graph of lifts of $\alpha$. The
+\emph{live component} $K_N(\alpha,u)$ is the component of $u$ in the subgraph of
+$\Gamma_\alpha(N)$ induced on live vertices.
+
+\begin{lemma}[Projection; d10]\label{lem:proj}
+$\phi$ maps the component of $\sigma$ in the regular subgraph of
+$\Gamma_\alpha(Q)$ into $K_N(\alpha,\phi(\sigma))$.
+\end{lemma}
+\begin{proof}
+$\phi$ maps lifts of $\alpha$ to lifts of $\alpha$, so it is a graph map.
+Regular vertices go to live vertices, and the image of a connected set is
+connected.
+\end{proof}
+
+\section{Certificates}\label{sec:certificates}
+
+\subsection{Pillowcase bases}\label{sec:bases}
+For a lattice $\Lambda\subset\R^2$ put
+$P_\Lambda=\R^2/\langle 2\Lambda,-1\rangle$. Its corners are the images of
+$\Lambda$, in the four classes $\Lambda/2\Lambda$. Write
+$m=[\Lambda:\Z^2]$ for the \emph{index} and
+$\Lambda_r=(\Lambda\cap\Q e_1)+(\Lambda\cap\Q e_2)$ for the largest
+rectangular sublattice. Let $\rho(x,y)=(x,-y)$.
+
+\begin{proposition}[Classification of bases; d47 Prop.~1.1, checked in d48]\label{prop:bases}
+Let $R$ be a normalized strictly simple orthogonal lattice polygon with a
+vertex at the origin. The pillowcases that $DR$ covers by a half-translation
+map are, up to isometry, exactly the $P_\Lambda$ with $\Lambda\supseteq\Z^2$.
+For a normalized room, the only pillowcase factor of $DR\to B$ is $B$ itself
+(d10 R1, corrected in the d10--d12 review).
+\end{proposition}
+
+\begin{proof}[Proof summary]
+Normalize the front chart to the identity; the back chart is $\rho$ up to a
+translation. Gluing along a horizontal or vertical edge forces $(0,y_0)$ and
+$(x_0,0)$ into $\Lambda$ for every vertex coordinate. Normalization makes these
+generate $\Z^2$. Conversely the identity and $\rho$ glue correctly for every
+$\Lambda\supseteq\Z^2$.
+\end{proof}
+
+Every lattice room is $P=\operatorname{diag}(g,g')R$ plus a translation for a
+unique normalized $R$, where $g,g'$ are the axis gcds. $DP$ and $DR$ are the
+same flat surface up to this affine map, and straight segments and cone points
+correspond (d47 \S1). So we may work with $R$.
+
+\begin{definition}[Admissible base; d47 Def.~1.2 with the d48 correction]\label{def:admissible}
+Let $S\ne T$ be interior points of $R$. A lattice $\Lambda$ is
+\emph{admissible} for $(S,T)$ when all four lifts lie over corners of
+$P_\Lambda$, that is, $S,T,\rho S,\rho T\in\Lambda$. An admissible lattice
+exists if and only if $S$ and $T$ are rational.
+\end{definition}
+
+The d48 referee found that d47's original condition
+$\Lambda\supseteq\Z^2+\Z S+\Z T$ places only the front lifts over corners;
+the condition above is the corrected one.
+
+\subsection{The three certificates}
+Fix a pillowcase base $P'$ (for example $P_\Lambda$) such that the lifts
+$\sigma$ of $S$ and $\tau$ of $T$ lie over corners $c_s$ and $c_t$ of $P'$.
+The targets are the three corners other than $c_s$ when $c_s=c_t$, and $c_t$
+alone otherwise. A factor $\phi\colon Q\to N\to P'$ is a \emph{certificate at
+the target $x$} when one of the following holds (d10 \S2.1).
+\begin{itemize}
+\item[$\Par(x)$:] $c_s=c_t$, $\phi(\sigma)\ne\phi(\tau)$, and $N$ has no
+regular point over $x$.
+\item[$\Rig(x)$:] $N\to P'$ has identity monodromy at a corner $y\notin\{c_s,x\}$,
+and $\phi(\tau)\notin K_N(\alpha,\phi(\sigma))$ for one arc $\alpha$ from $c_s$
+to $x$.
+\item[$\Cut(x)$:] $c_s=c_t$ and $\phi(\sigma)=\phi(\tau)$; every regular point
+of $Q$ over $c_s$ and over $x$ maps to a regular point of $N$; and the
+monodromy of $N$ at a corner outside $\{c_s,x\}$ is a single cycle.
+\end{itemize}
+
+\begin{definition}[Certified dark]\label{def:certified}
+A target is \emph{certified} for a lift pair when some factor is a certificate
+there; the factor may change with the target. A rational pair $(S,T)$ is
+\emph{certified dark} when, for some admissible $\Lambda$, every target of every
+one of the four lift pairs is certified over $P_\Lambda$.
+\end{definition}
+
+\begin{theorem}[Soundness, Theorem U; d10, reviewed]\label{thm:U}
+If some pillowcase base has a certificate at every target, the pair is dark.
+\end{theorem}
+
+\begin{proof}[Proof (d10 \S2.2)]
+A light path projects to $P'$ as a straight path from $c_s$ that runs back and
+forth along one saddle connection to a target $x$. It suffices to show that
+$\tau$ is outside the regular component of $\sigma$ in $\Gamma_\alpha(Q)$ for
+every arc $\alpha$ from $c_s$ to $x$.
+\emph{Par.} A live vertex of $\Gamma_\alpha(N)$ over $x$ is a pole, hence a
+leaf. So $\phi(\sigma)$ is the only vertex of its live component over $c_s$,
+and Lemma~\ref{lem:proj} finishes.
+\emph{Rig.} $N\to P'$ is unbranched over $y$, so $N$ covers the sphere minus
+the other three corners. All simple arcs from $c_s$ to $x$ are isotopic there
+and the isotopy lifts, so one arc decides all arcs.
+\emph{Cut.} Let $C$ be the component of $\phi(\sigma)$ in the regular subgraph
+of $\Gamma_\alpha(N)$. Every vertex of the light component maps to a regular
+point, so $\phi$ is injective on it when $C$ is a path. When $C$ is a cycle,
+the arc $\beta$ between the other two corners has connected preimage disjoint
+from $C$, and one disc bounded by $C$ contains no pole. By
+Lemma~\ref{lem:factL}, $\phi$ is unbranched over that disc, the lift of $C$ is
+closed, and $\phi$ is again injective. In both cases $\tau\ne\sigma$ cannot share
+the image of $\sigma$ in the component.
+\end{proof}
+
+The proof never uses $P'=B$, so it applies over every admissible base
+(d47 \S1, remark after Def.~1.2). A $\Cut$ certificate has
+$\deg(N\to P')\le 3$ (d10; reworded in d50).
+
+\subsection{Canonical factors}
+For a same-class pair over $B$, let $B_x$ be the finest block system that
+merges every $2$-cycle of $g_x$, and $N_x=DP/B_x$. Let $R_y$ be the finest
+block system that merges every cycle of $g_y$.
+
+\begin{proposition}[R3; d10, reviewed]\label{prop:R3}
+(1) $N_x$ has no regular point over $x$, and $\Par(x)$ holds for some factor
+exactly when $B_x$ separates the lift pair, that is, when the two lifts have
+different images in $N_x$.
+(2) $\Rig(x)$ with identity at $y$ holds for some factor exactly when it holds
+over $DP/R_y$.
+(3) $B_x$ and $R_y$ are invariant under $\iota$, so $N_x$ is the double of a
+fold target $K_x=N_x/\iota$ of $P$.
+\end{proposition}
+
+\begin{remark}[Class types]
+$B_x$ is one block, so $N_x=B$, or $B_x$ is discrete, so $N_x=DP$, or
+$1<\deg N_x<n$. The second case occurs exactly when class $x$ has no interior
+or smooth wall point (d68 Lemma B, as recorded in the results record).
+\end{remark}
+
+\section{Proof of the main theorem}\label{sec:proof}
+
+The proof has five parts, following the assembly in the results record
+(\src{d70-writeup/RESULTS.md}, \S3.3) and the coordinator's record of
+17 November 2026 (\src{coordinator-log-archive-1.md}).
+
+\begin{center}
+\small
+\begin{tabular}{@{}lp{0.5\textwidth}ll@{}}
+\toprule
+Part & Content & Status & Source \\
+\midrule
+F1 & Reduction of a certified same-class pair to three $\Par$ separations & proved (reviewed) & d39, d43 \\
+F2 & Filter $F^*$ on area and reflex classes & proved (reviewed) & d44, d45 \\
+F3 & Room enumeration at $W=20$, areas allowed by $F^*$ & computed & d46 \\
+F4 & Pillowcase bases: odd index, even index, different-class marks & proved (reviewed once each) & d47--d50 \\
+F5 & The two residual finite checks (Sets A and E) & computed & d56 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Lemmas on pillowcase bases (d47 to d50)}
+
+\begin{lemma}[Corner classes; d47 Lemmas 1.3 and 1.4]\label{lem:classes}
+Let $g,g'$ be the axis gcds of a lattice room. Its corners occupy at least
+$3$ parity classes if and only if $g$ and $g'$ are both odd. Over a base
+$P_\Lambda$ with $\Lambda\supseteq\Z^2$, the vertices of $R$ occupy at least
+$3$ classes of $\Lambda/2\Lambda$ if and only if $m$ is odd; then
+$\Z^2/2\Z^2\to\Lambda/2\Lambda$ is a bijection.
+\end{lemma}
+
+\begin{proposition}[Rectangular reduction; d47 Prop.~2.1]\label{prop:rect}
+Let $\Lambda=\frac1a\Z\times\frac1b\Z$ be admissible and
+$A=\operatorname{diag}(a,b)$. Then $R_{a,b}=AR$ is a strictly simple orthogonal
+lattice room with the same $W$ and $r$ and area $ab\,n_R$, the points $AS,AT$
+are lattice points, and a certificate system over $P_\Lambda$ is the same thing
+as an ordinary certificate system over the unit pillowcase for
+$(R_{a,b},AS,AT)$.
+\end{proposition}
+
+\begin{lemma}[Transfer; d47 Lemma 3.2 with the d48 fixes]\label{lem:transfer}
+Let $\Lambda'\subseteq\Lambda$ be lattices with $[\Lambda:\Lambda']$ odd, such
+that all four lifts lie in $\Lambda'$. Then every full certificate system over
+$P_\Lambda$ yields one over $P_{\Lambda'}$.
+\end{lemma}
+
+The d47 proof is a sketch in five steps (corners, factor, $\Par$, $\Cut$,
+$\Rig$). The d48 referee re-derived each step: the factor is the meet of the
+two block systems; the $\Rig$ arc is a saddle connection from a point of class
+$c_s$ along a vector primitive in both lattices; and the cyclic hypothesis is
+removed by composing prime-index steps. The d48 referee also proved that, for
+odd $[\Lambda:\Lambda_r]$, $\Lambda\cap\rho\Lambda=\Lambda_r$. So for odd index
+an admissible pair has $S,T\in\Lambda_r$, and Lemma~\ref{lem:transfer} with
+$\Lambda'=\Lambda_r$ and Proposition~\ref{prop:rect} give:
+
+\begin{corollary}[Odd index; d47 Cor.~3.3, d48]\label{cor:odd}
+If $m$ is odd, a certificate system over $P_\Lambda$ reduces to an ordinary
+certificate system over the unit pillowcase of $R_{a,b}$, where
+$\Lambda_r=\frac1a\Z\times\frac1b\Z$ with $a,b$ odd. The room $R_{a,b}$ has
+corners in at least $3$ classes, and same-class marks stay same-class
+(d47 \S2).
+\end{corollary}
+
+For even index, write $\Lambda_{(2)}$ for the preimage of the $2$-primary part
+of $\Lambda/\Z^2$, $M_0=\Z^2+\Z S+\Z T$, and $V$ for the image of $\Z^2$ in
+$\Lambda/2\Lambda$. Room vertices lie over $V$, and $|V|\le 2$ for even $m$.
+
+\begin{lemma}[Odd-part reduction; d48, d49 \S2, d50 fix]\label{lem:oddpart}
+A certificate over $P_\Lambda$ transfers to one over $P_{\Lambda'}$ with
+$\Lambda'=\Lambda_{(2)}+M_0+\rho M_0$. For lattice marks
+$[\Lambda':\Z^2]$ is a power of $2$. For non-dyadic marks it is $2^k$ times an
+odd number at least $3$, so $[\Lambda':\Z^2]\ge 6$.
+\end{lemma}
+
+The term $\rho M_0$ is the d50 referee's fix; without it $\rho S$ can fall
+outside $\Lambda'$.
+
+\begin{lemma}[Lemma Z; d49, reviewed by d50]\label{lem:Z}
+Over any base $P_\Lambda$, let a certificate have degree $n=\delta d$ with $z$
+zeros. If $z\ge 1$, then $n\le 8r$ for $\Par$, $n\le 5r$ for $\Rig$, and
+$n\le 3r$ for $\Cut$. A zero-free $\Cut$ has $d=2$, forces $n\le 4r+4$, and its
+target class is vertex-only.
+\end{lemma}
+
+\begin{proof}[Proof summary]
+Put $w_j=p_j+3z_j$ for each base class $j$. Then
+$\sum_j w_j=p+3z=4z+4$. For $\Par$ at $x$, $d=w_x\le 4z+4\le 8z$, and each
+zero of $N$ has $\delta$ zero preimages, so $\delta z\le r$ and $n\le 8r$. For
+$\Rig$ with identity at $y$, $d=p_y\le z+4\le 5z$. For $\Cut$, a single cycle
+has length at most $3$ (Lemma~\ref{lem:factL}), so $d\le 3$; $d=3$ puts a zero
+at the cut class, and $d=2$ is zero-free with no regular point of $Q$ over $x$,
+so every point over $x$ is a vertex. The d50 referee corrected d49's wording
+``$\Cut$ forces $d=3$'', which holds only with a zero.
+\end{proof}
+
+\begin{lemma}[Lemma Z$'$; d49, reviewed by d50]\label{lem:Zprime}
+At a target outside $V$, any certificate with a zero has $n\le 4r$; the same
+bound holds for any $\Rig$ certificate with a zero.
+\end{lemma}
+
+\begin{lemma}[Lemma R0; d49, reviewed by d50]\label{lem:R0}
+A zero-free $\Rig$ needs $d=4$, $\Lambda\supseteq\frac12\Z^2$, and every vertex
+regular. So no zero-free $\Rig$ exists for lattice marks or at $m=2$.
+\end{lemma}
+
+\begin{lemma}[Witness lemma; d49, reviewed by d50]\label{lem:witness}
+Zero-free $\Par$ and zero-free $\Rig$ certificates depend only on $\Lambda$,
+the factor lattice, the lift pair, and the classes of $S,T$ modulo $2\Z^2$.
+For any such data, the L-hexagon $[-2K,2K+1]^2\setminus[2K,2K+1]^2$, translated
+to put a vertex at the origin, lights the lift pair. So no certificate that
+depends only on lattice data separates all targets of a lift pair.
+\end{lemma}
+
+The per-target version of Lemma~\ref{lem:witness} is false: for
+$\Lambda=\frac12\Z\times\Z$ and lattice marks with odd $T_x-S_x$, the factor
+$B$ separates at the target in $V$ in every room (d49 \S4). The d50 referee
+fixed the wording ``classes mod $2\Z^2$'' and noted that zero-free $\Cut$ is
+room data, not lattice data.
+
+\begin{proposition}[Even-index bounds; d49 \S5 with the d50 repairs]\label{prop:even}
+Let $m'=[\Lambda':\Z^2]$ be even as in Lemma~\ref{lem:oddpart}, and suppose all
+four lift pairs are certified over $P_{\Lambda'}$. Then $n_R\le 2r\le 16$.
+\end{proposition}
+
+\begin{proof}[Proof summary]
+At $m'=2$, a zero-free factor is $P_{\Lambda''}$ with $d\mid m'$. For $d=1$ no
+certificate exists; for $d=2$, $N=B_R$ has one regular point over each non-$V$
+corner and no vertex over it, and $\Rig$ is excluded by Lemma~\ref{lem:R0}.
+Every lift pair with $c_s=c_t$ has a non-$V$ target, since $|V|\le 2$. So a
+certificate there has a zero, and Lemma~\ref{lem:Zprime} gives $2n_R\le 4r$.
+For $c_s\ne c_t$ only $\Rig$ applies, and Lemma~\ref{lem:R0} forces a zero. At
+$m'\ge 4$, Lemma~\ref{lem:witness} forces some target to carry a certificate
+with a zero or a zero-free $\Cut$, so $n\le 8r$ by Lemma~\ref{lem:Z} and
+$n_R\le 8r/m'\le 2r$. This $m'=2$ argument is the d50 referee's repair; d49's
+own citation did not cover $\Par$.
+\end{proof}
+
+\subsection{Different-class marks}
+
+\begin{proposition}[d47 Prop.~4.1, corrected in d48]\label{prop:diffclass}
+Let $R'$ have corners in at least $3$ classes and $r\le 8$, and let $S,T$ be
+interior lattice points in different classes. A certificate for a lift pair
+over the unit pillowcase exists only if $n\le 16$, or $n=20$ with $r=8$ and
+$(\delta,d,z)=(4,5,2)$.
+\end{proposition}
+
+\begin{proof}[Proof summary]
+With $c_s\ne c_t$ only $\Rig$ can certify, over $N=Q/R_y$ by
+Proposition~\ref{prop:R3}. For $z=0$, $N$ is a pillowcase factor, so $N=B$ and
+the single arc lift joins the two live corners. For $z=1$, $d\le 5$; at $d=3$
+the arc graph is the path pole--regular--regular--pole with every vertex live,
+and $d=4,5$ fail by cycle-type arguments that do not involve the marks. For
+$z\ge 2$, $\delta z\le r$, $d\le z+4$, $\delta$ is even by the off-seam-pole
+step of d39, and $d=6$ is excluded by the seam argument of d43. This leaves
+$(\delta,z)=(2,\le 4)$ with $n\le 16$, and $(4,2)$ with $r=8$, $n=4d$. The d48
+referee corrected d47's ``$d\in\{3,4,5\}$'' to $d=5$.
+\end{proof}
+
+\subsection{Same-class marks over the unit pillowcase (F1, F2)}
+
+\begin{proposition}[F1; d39 Claims 2 to 4, reviewed in d43]\label{prop:F1}
+Let $P$ be a strictly simple orthogonal lattice room with $r\le 8$ whose
+corners occupy at least $3$ parity classes, and let $S\ne T$ be interior
+lattice points of one class. Suppose every lift pair has, at each of $b,c,d$, a
+$\Par$, $\Cut$, or $\Rig$ certificate over the unit pillowcase. Then $B_b$,
+$B_c$, $B_d$ each separate all four lift pairs, and $5\le r\le 8$ and
+$21\le n\le 5r\le 40$.
+\end{proposition}
+
+\begin{proof}[Proof summary]
+\emph{Cut.} If class $x$ has no transparent point, $B_x$ is discrete and
+$\Par$ already holds. Otherwise $\Cut$ forces $d\le 3$; $d=1$ has no regular
+$a$ point, $d=2$ gives genus $1$ by Riemann--Hurwitz, and at $d=3$ the
+patched R4 argument of the d10--d12 review forces the 12-wall cross, whose
+pair is lit. So genuine $\Cut$ never appears in a full triple.
+\emph{Essential Rig.} Over $N=DP/R_y$, zeros of $N$ lie on the seam, off-seam
+poles come in at most one conjugate pair, and a $\Rig$ target has exactly one
+interior $\pi$-cone, so $\delta$ is even. A target with $z=1$ gives no
+essential $\Rig$. With $\delta z\le r$, $d\le z+4$, $z\ge 2$, and the exclusion
+of $d=6$ (the regular $S_3$ cover, whose order-$3$ deck group puts at least
+four poles off the seam), one gets $n\le 20$. The d43 referee filled two gaps:
+the domino and square cases of the one-star step, and the proof that the
+degree-$6$ cover is regular.
+\emph{Census.} The d9 census finds no dark same-class interior pair at
+$W\le 21$ and area at most $20$. By Theorem~\ref{thm:U}, a certified pair is
+dark, so $n\ge 21$. Then every target is certified by $\Par$, which holds
+exactly when $B_x$ separates (Proposition~\ref{prop:R3}). The d36.4 bound
+$n\le 5r$ for a separating class quotient gives $r\ge 5$.
+\end{proof}
+
+\begin{proposition}[Filter $F^*$; d44, reviewed by d45]\label{prop:Fstar}
+In the situation of Proposition~\ref{prop:F1}, let $\rho_y$ count reflex
+corners in parity class $y$. Some factorization $n=\delta d$ with
+$\delta\ge 3$ satisfies
+\[
+\sum_y\left\lfloor\rho_y/\delta\right\rfloor\ge z_{\min}(d),\qquad
+z_{\min}(d)\,\delta\le r,
+\]
+where $z_{\min}(d)=\lceil (d-1)/4\rceil$ for odd $d$ and $\lceil d/4\rceil$ for
+even $d$.
+\end{proposition}
+
+\begin{proof}[Proof summary]
+If all three class quotients were Galois, d36.3 would make $B_b,B_c,B_d$ a
+chain, so their join separates; the parity-factor theorem of d2 (claim 4)
+excludes a common separating parity factor at $r\le 8$. So some target class
+$x$ has a non-Galois quotient, hence $\delta\ge 3$. Each zero of $N_x$ has
+$\delta$ reflex preimages in its own parity class, so $z\le\sum_y\lfloor
+\rho_y/\delta\rfloor$, and d36.4 gives $z\ge z_{\min}(d)$. The d45 referee
+checked that d2 applies to the d36.3 join and recomputed the area lists.
+\end{proof}
+
+At $r\le 8$, $F^*$ forces $z\le 2$ and $d\le 9$, and the allowed areas are:
+
+\begin{center}
+\small
+\begin{tabular}{@{}cl@{}}
+\toprule
+$r$ & Areas allowed by $F^*$ in $21\le n\le 5r$ \\
+\midrule
+5 & 25 \\
+6 & 21, 24, 25, 27, 30 \\
+7 & 21, 24, 25, 27, 28, 30, 35 \\
+8 & 21, 24, 25, 27, 28, 30, 32, 35, 36, 40 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Assembly}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $(S,T)$ be rational and suppose it is certified dark over an admissible
+$\Lambda$. Pass to the normalized room $R$; then $\Lambda\supseteq\Z^2$ by
+Proposition~\ref{prop:bases}, and $W$ and $r\le 8$ are unchanged.
+
+\emph{Odd index.} By Corollary~\ref{cor:odd} the system is an ordinary
+certificate system for lattice marks of $R_{a,b}$, which has the same $W$ and
+corners in at least $3$ classes. If the marks are in one class,
+Proposition~\ref{prop:F1} puts $R_{a,b}$ in the range $5\le r\le 8$,
+$21\le n\le 5r$, with all three $B_x$ separating all four lift pairs.
+Proposition~\ref{prop:Fstar} restricts $n$ to the listed areas. The d46 runs
+(Section~\ref{sec:computation}) find no such room and pair. The d46 enumeration
+covers all widths and heights, so non-normalized rooms with odd gcds are
+included (d47 \S4a). If the marks are in different classes,
+Proposition~\ref{prop:diffclass} gives $n\le 16$ or the residue D20 ($W=20$,
+area $20$). For $n\le 16$, the d9 Part~A census lights every different-class
+interior lattice pair at area at most $16$; for D20, the d56 Set~A run lights
+every pair. An odd rescaling with $ab>1$ cannot reach D20, because it would need
+a $W=20$ room of area $4$ (d47 \S4b). A lit pair has a lit lift pair, which
+carries no full certificate by Theorem~\ref{thm:U}. This contradicts the
+assumption.
+
+\emph{Even index.} By Lemma~\ref{lem:oddpart} the system transfers to
+$\Lambda'$, and Proposition~\ref{prop:even} gives $n_R\le 2r\le 16$. For
+lattice marks, the d9 census (same class, area at most $20$) and Part~A
+(different class, area at most $16$) light the pair, a contradiction (d49
+\S6, d50 \S5). For non-lattice marks, the index of $\Lambda'$ is $2$ or $4$, or
+$6$ for non-dyadic marks, which need $n_R\le\lfloor 8r/6\rfloor\le 10$ and
+leave one $W=16$, area-$8$ room. Rooms in Part~A's one-cylinder classes (i) and
+(ii) and rooms with $W\le 8$ have all pairs lit by d9 Part~A Task~2 and the
+eight-wall theorem (d15). The remaining normalized class (iii) rooms with
+$n_R\le 2r$ number $945{,}884$ (d50 \S7). The d56 Set~E run lights every
+admissible non-lattice pair in them, a contradiction.
+\end{proof}
+
+\begin{remark}[Other bases]
+The d48 referee also showed, as a sketch, that $\Par$ and $\Rig$ certificates
+over a $(2,4,4)$ orbifold base reduce to pillowcase certificates, and that no
+$\Cut$ is defined there. So Theorem~\ref{thm:main} needs no extra case for
+those bases. The d51 memo, which is not reviewed, finds no comparable bound for
+rooms with $45$-degree walls.
+\end{remark}
+
+\begin{remark}[Bases chosen per lift pair]
+Definition~\ref{def:certified} uses one base for all four lift pairs. The d48
+and d50 referees state that the conclusion also holds when each lift pair
+chooses its own base, for lattice marks, except D20 when every lift pair uses
+$\Z^2$; D20 is closed by Set~A. The d50 referee closed the remaining odd-index
+per-lift-pair residue for marks outside $\Lambda_r$ by the d9 Part~A grids.
+We state Theorem~\ref{thm:main} for one base.
+\end{remark}
+
+\section{The computation}\label{sec:computation}
+
+\subsection{The room check (d46)}
+The d46 program \src{d46-cert-check/cert_check.c} enumerates compressed
+shapes (no two adjacent rows or columns equal) with positive column widths and
+row heights. It applies $F^*$ per parity pattern and per area before any room
+is built, then materializes each surviving room and tests whether some
+same-class pair of interior lattice points has all four lift pairs separated
+by each of $B_b$, $B_c$, $B_d$. Such a room and pair is a \emph{positive}.
+Rooms with at most $2$ corner classes are skipped; by Lemma~\ref{lem:classes}
+and Proposition~\ref{prop:bases} they are handled through their normal forms.
+Each free room is generated once, up to the $8$ lattice symmetries. The design
+and its sizing are in \src{d44-cert-check-sizing/README.md}.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+Area & Rooms checked (free) & Fixed rooms & Pairs & Positives \\
+\midrule
+21 & 105,347,581 & 842,729,700 & 52,924,264 & 0 \\
+24 & 961,558,778 & 7,692,288,677 & 1,013,958,816 & 0 \\
+25 & 219,938,227 & 1,759,502,724 & 362,992,628 & 0 \\
+27 & 6,106,330,113 & 48,850,258,466 & 11,508,487,504 & 0 \\
+28 & 99,057,215 & 792,340,041 & 272,682,085 & 0 \\
+30 & 289,576,463 & 2,316,525,088 & 1,231,691,360 & 0 \\
+32 & 787,331,513 & 6,298,310,531 & 3,669,618,239 & 0 \\
+35 & 123,433,861 & 987,469,564 & 1,089,342,824 & 0 \\
+36 & 4,578,115,956 & 36,624,090,676 & 33,277,901,167 & 0 \\
+40 & 15,380,590 & 123,017,620 & 246,266,377 & 0 \\
+\midrule
+Total & 13,286,070,297 & & 52,725,865,264 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{The d46 full run at $W=20$ ($r=8$), by area. There are
+$1{,}058{,}080{,}070$ canonical shapes; $500$ jobs; $87{,}829.7$ CPU seconds.
+Source: \protect\src{d46-cert-check/runs/full_W20/aggregate.md}.}
+\label{tab:d46}
+\end{table}
+
+\subsection{The residual checks (d56)}
+The d56 checker \src{d56-final-check/src/check.c} handles the two residues
+left by Section~\ref{sec:proof}. Set~A is D20: all strictly simple rooms with
+$W=20$ and area $20$, with different-class interior lattice pairs over $\Z^2$.
+Set~E is the normalized class (iii) rooms with $12\le W\le 20$ and
+$n_R\le 2r$, with marks not both in $\Z^2$ that are admissible for one of the
+$10$ lattices of index $2$ or $4$, plus the index-$6$ lattices for the one
+$W=16$, area-$8$ room. Pairs in $\frac12\Z^2$ are skipped at area at most $14$,
+because Part~A already lit them (d50 \S7). For each pair, the checker shoots
+billiard paths in the four-fold unfolding with $p+q\le 40$, and then up to
+$120$. An independent verifier \src{d56-final-check/src/verify_plane.c}
+re-checks every lighting path and rejects any path through a corner. A lit pair
+needs no certificate test: by Theorem~\ref{thm:U} it is not certified.
+Survivors and a deterministic $1\%$ sample go to a certificate fallback.
+
+\subsection{Counts}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Run & Rooms & Pairs & CPU seconds \\
+\midrule
+d46 full, $W=20$, areas allowed by $F^*$ & 13,286,070,297 & 52,725,865,264 & 87,830 \\
+d46 pilot, $W=14$, $16$, $18$ & 471,475,261 & 1,148,517,174 & 1,606 \\
+d46 recheck, $W\le 20$, area $\le 20$, $F^*$ off & 427,403,072 & 135,236,864 & 1,094 \\
+d56 Set A (D20) & 169,672,127 & 285,299,577 & 4,095 \\
+d56 Set E (non-lattice marks) & 945,884 & 5,238,044,332 & 12,845 \\
+\midrule
+Total & 14,355,566,641 & 59,532,963,211 & \\
+\bottomrule
+\end{tabular}
+\caption{All runs, with $0$ positives, $0$ survivors, and $0$ certified pairs.
+Without the recheck row the pair total is $59{,}397{,}726{,}347$, the figure
+behind ``at least $59.4$ billion'' in the results record. Sources:
+\protect\src{d46-cert-check/runs/*/aggregate.md},
+\protect\src{d56-final-check/runs/full/aggregate.md}.}
+\label{tab:counts}
+\end{table}
+
+The pilot splits as $14{,}686$ rooms and $64{,}921$ pairs at $W=14$;
+$12{,}231{,}060$ and $37{,}817{,}546$ at $W=16$; and $459{,}229{,}515$ and
+$1{,}110{,}634{,}707$ at $W=18$. In Set~A all $285{,}299{,}577$ pairs are lit
+at bound $40$. In Set~E, $5{,}236{,}565{,}128$ pairs are lit at bound $40$ and
+$1{,}479{,}204$ need bound $120$. Set~E also ran an index-$3$ regression on
+$9{,}631$ rooms ($43{,}623{,}736$ pairs) and $8{,}296$ index-$6$ pairs, all lit.
+The certificate sample tested $55{,}231{,}932$ pairs ($2{,}852{,}044$ in Set~A
+and $52{,}379{,}888$ in Set~E): $0$ were fully certified. Set~E recorded
+$3{,}454{,}268$ single-target $\Par$ instances and $16$ $\Cut$ instances, none
+completing a lift pair. $42{,}693{,}277$ sampled pairs were admissible only for
+a sheared lattice, which the certificate code does not implement; they are lit,
+so this does not affect the result.
+
+\subsection{Independent checks}
+\begin{itemize}
+\item \emph{File checks.} For d46, all $500$ job files are present and all
+$5{,}500$ per-cell lines read ``positives 0''. For d56, $920$ summary lines read
+OK and the sums give $0$ survivors, $0$ certified pairs, $0$ tripwires, and
+$0$ verification failures. The d56 \texttt{aggregate.py} crashed in its
+reconciliation step; the coordinator fixed an operator-precedence bug and
+reran the aggregation. No job was rerun.
+\item \emph{Counts.} The d46 recheck reproduces the d9 census room and pair
+counts at $W\le 20$, area at most $20$, and finds $0$ positives in
+$427{,}403{,}072$ rooms. Set~A's room count equals the census count
+$169{,}672{,}127$ in total and per job residue. Set~E's room counts match the
+d50 table for each $W$: $22$, $287$, $3{,}875$, $59{,}893$, $881{,}807$.
+\item \emph{Filter.} With and without $F^*$ at $W=14$, all
+$54{,}305{,}681$ rooms ($126{,}988{,}441$ pairs) give $0$ positives
+(\src{d46-cert-check/runs/val_W14_nofilter/aggregate.md}).
+\item \emph{Shooting.} The d56 shooter agrees with the exact decider
+\texttt{orbitc} on $32{,}127$ pairs, including the dark pair of $\Rr$
+(\src{d56-final-check/README.md}).
+\item \emph{Lemma tripwires.} d56 tests each sampled certificate against
+Lemmas~\ref{lem:Z}, \ref{lem:Zprime}, \ref{lem:R0} and the D20 shape
+$(4,5,2)$. All tripwire counts are $0$.
+\item \emph{Reruns for this manuscript.} We reran
+\texttt{d46-cert-check/aggregate.py} on the full run and the d45 and d62 check
+scripts; the outputs match the stored records. Section~\ref{sec:repro} lists
+the commands.
+\end{itemize}
+
+\subsection{Controls}\label{sec:controls}
+The 22-wall room $\Rr$ has $W=22$, $r=9$, area $15$, and one dark pair,
+$(0,0)$ and $(2,2)$ in the coordinates of \cite{Q22}. In the d9 census
+coordinates its cells are $(0,2)$, $(0,3)$, $(1,1)$, $(1,2)$, $(1,3)$,
+$(1,4)$, $(2,0)$, $(2,1)$, $(2,4)$, $(2,5)$, $(3,4)$, $(3,5)$, $(4,3)$,
+$(4,4)$, $(5,3)$, and the pair is $S=(1,3)$, $T=(3,5)$.
+\begin{itemize}
+\item \emph{Certified.} $B_b$, $B_c$, $B_d$ have $5$, $15$, $5$ blocks and
+separate all four lift pairs; $(\delta_b,\delta_c,\delta_d)=(3,1,3)$. So the
+pair is certified dark by $\Par$ at all three targets over $B$.
+\item \emph{d46 pipeline.} An end-to-end run at $r=9$, area $15$, with $F^*$ on
+checks $556{,}286$ rooms and $3{,}789$ pairs and finds exactly one positive:
+$S=(1,3)$, $T=(3,5)$, blocks $5,15,5$
+(\src{d46-cert-check/runs/e2e_r9_a15/aggregate.md}
+and \src{d46-cert-check/positive_e2e.txt}). The census-range run at $W=22$, area
+at most $16$, finds the same single positive in $3{,}326{,}713$ rooms. $F^*$
+passes every room at $r=9$, $n=15$, so this run tests the pipeline but not the
+pruning.
+\item \emph{d56 checker.} On $\Rr$ the pair survives shooting to bound $120$,
+$\Par$ certifies it at $b$, $c$, $d$ for all four lift pairs ($12$
+instances), and the checker exits with its positive code.
+\item \emph{Second proof.} At $r=9$ the fold enumeration of
+Section~\ref{sec:second} finds three positive covers, all equal to $\Rr$ up to
+lattice isometry.
+\item \emph{Negative control.} The 12-wall cross
+$([0,4]\times[1,3])\cup([1,3]\times[0,4])$ with $S=(1,2)$, $T=(3,2)$ has $\Par$
+at $d$, $\Cut$ at $c$, and nothing at $b$: it is lit and uncertified.
+\item \emph{Second dark room.} The room P6 ($W=28$, area $20$) is positive at
+$S=(1,0)$, $T=(3,-2)$ with blocks $5,5,5$. It lies outside the enumerator's
+range and was checked by direct input
+(\src{d46-cert-check/val_named.py}).
+\end{itemize}
+
+\section{A second proof by fold enumeration}\label{sec:second}
+
+The d52 memo proves the core case again without enumerating rooms. The d54
+referee re-checked it, completed its validation, and removed one input.
+
+\begin{theorem}[d52, as signed in d54; computer-assisted]\label{thm:second}
+(1) Let $P$ be a strictly simple orthogonal lattice room with $r\le 8$ whose
+corners lie in at least $3$ parity classes. Assume Theorem~\ref{thm:U},
+Proposition~\ref{prop:R3}, Lemma~\ref{lem:factL}, d36.3, and the d39/d43
+reduction (Proposition~\ref{prop:F1}, which uses the d9 census for essential
+$\Rig$). Then no two distinct interior lattice points of one class are dark by
+$\Par$, $\Cut$, or $\Rig$ certificates over the unit pillowcase. This holds at
+every area.
+
+(2) Under the same inputs except the d39/d43 $\Rig$ reduction: any strictly
+simple room with $r=9$, corners in at least $3$ classes, and a same-class
+interior pair certified dark by three $\Par$ certificates is $\Rr$ up to
+lattice isometry, with its one pair.
+\end{theorem}
+
+\paragraph{Method.}
+Write $K_x=N_x/\iota$. Case~A: some target class $x\ne a$ has
+$\delta_x\ge 3$. Fix $x=(0,0)$ by translation and enumerate the small
+quotient $K_x$ by a low-index search for transitive sets under the four edge
+reflections. The constraints are Lemma~\ref{lem:factL}, the seam conditions,
+at most one interior $\pi$-cone, $\delta z\le r$ with $\delta$ even when there
+is a cone, singular points in at least $3$ classes, and two non-reflex
+class-$a$ points. Then enumerate every degree-$\delta$ cover of $K_x$ by one
+involution per boundary arc between convex corners and a fixed-point-free
+involution across a slit from the cone. For each cover, recompute $B_y$ for all
+four classes on the cover itself and test separation.
+Case~B: all three targets have $\delta\le 2$. Each quotient is then Galois,
+d36.3 makes them a chain, and the coarsest $B_*$ separates, has $\delta_*\le 2$,
+and has no regular point over any target. Summing over the three targets gives
+$3d\le 4z+4$, so $n\le 12$.
+
+\paragraph{Results.}
+At $r\le 8$, Case~A has $106$ admissible quotient shapes ($56$ up to mirror),
+with $d$ from $3$ to $9$ and $z\in\{1,2\}$; $63$ have an interior cone. Over
+$185$ (shape, $\delta$) cases the search finds $4{,}710$ covers per case,
+$4{,}541$ with corners in at least $3$ classes; these are $4{,}420$ and
+$4{,}275$ distinct W-sets, $1{,}744$ discs up to lattice isometry, and $1{,}113$
+strictly simple rooms. No mark pair is separated in all three classes; the best
+is $2$ of $3$ ($8$ pairs). Case~B (d54) has $190$ quotient shapes, $43$
+in-scope degree-$1$ rooms and $23$ in-scope degree-$2$ covers, and $0$
+positives. At $r=9$, Case~A covers $12{,}488$ discs and finds $3$ positive
+covers, all equal to $\Rr$; Case~B at $r=9$ finds $0$ positives.
+
+\paragraph{Validation.}
+A second, model-free cover enumerator agrees with the arc model on $185$ of
+$185$ cases ($10$ of them finished by d54). A brute-force pass over all
+$13{,}876$ immersed W-sets with $n\le 9$ recovers all $24$ incidences; d54
+notes this test exercises only $d=3$. Every $\delta\ge 3$, $d\ge 2$ quotient of
+a found cover ($4{,}018$) lies in the shape list, and every cover with
+$5\le r\le 8$, $n\ge 21$ passes $F^*$ ($2{,}845$ of $2{,}845$). Two
+independent separation codes agree on all $4{,}275$ in-scope covers.
+
+\paragraph{Independence.}
+The code shares nothing with d44 or d46, and the method enumerates quotients,
+not rooms. With Case~B, the proof needs neither $F^*$ nor d2 claim~4, which
+rests on the computer-assisted theorem of \cite{K6}. It still shares with d46:
+Theorem~\ref{thm:U}, Proposition~\ref{prop:R3}, Lemma~\ref{lem:factL}, the
+d39/d43 reduction with the d9 census for essential $\Rig$, the bound
+$\delta z\le r$, and the scope (same-class lattice marks, unit pillowcase, at
+least $3$ corner classes). The no-positive part also holds for immersed,
+slit, and pinched discs with room-local types.
+
+\paragraph{Not covered.}
+Theorem~\ref{thm:second} does not treat other pillowcase bases, different-class
+marks, or non-lattice marks; for those, Theorem~\ref{thm:main} uses d47 to d50
+and d56. At $r=9$ it does not treat rooms certified with essential $\Rig$, so it
+does not prove that $\Rr$ is the only certified-dark room with $22$ walls. The
+d54 referee did not rerun d52's own enumerations; the counts above are quoted
+from d52's logs and d54's checks.
+
+\section{The fold converse}\label{sec:converse}
+
+Theorem~\ref{thm:main} would decide the $W\le 20$ case of the illumination
+question if every dark pair were certified. That is conjecture $U^*$ of d10
+\S2.4. The d61 memo studies the remaining step one target at a time.
+
+\paragraph{States.}
+A \emph{state} is a basis in the pure-braid orbit of the monodromy tuple. Each
+state gives a tail arc $\alpha\colon a\to x$. Every isotopy class of arc
+$a\to x$ is a tail arc in some state, because the pure braid group acts on
+slopes through $\Gamma(2)$ (d62 \S1). A pair is \emph{$x$-lit} when some lift
+pair is joined along some tail arc to $x$, and \emph{$x$-dark} otherwise.
+
+\begin{lemma}[Lemma FC; d61, reviewed in d62]\label{lem:FC}
+Fix a state and an arc $\alpha\colon a\to x$. Let $\tilde S\ne\tilde T$ be regular
+points of $Q$ over $a$ with the same image $u$ in a factor $N$, and let
+$K=K_N(\alpha,u)$.
+\begin{enumerate}
+\item $K$ is a path or a cycle. If it is a cycle, every vertex is
+$N$-regular.
+\item \emph{Cycle case.} Let $\mu$ be the monodromy of $Q\to N$ around $K$,
+acting on the fibre over $u$. Then $\tilde S$ and $\tilde T$ are joined along
+$\alpha$ exactly when $\tilde T$ lies in the $\langle\mu\rangle$-orbit of $\tilde S$.
+\item \emph{Path case.} For each live-pole end $p$ of $K$, let $\tau_p$ be the
+local monodromy of $Q\to N$ at $p$, transported to the block of $u$ along $K$
+and restricted to its $2$-cycles. If $u$ is a pole, $\tau_u$ is $g_a$ on the
+block of $u$, restricted to $2$-cycles. These maps act on the sheets in the
+block of $u$. Then $\tilde S$ and $\tilde T$ are joined along $\alpha$ exactly when
+an alternating word in the at most two $\tau_p$ carries some sheet of $\tilde S$
+to some sheet of $\tilde T$.
+\item The image in $N$ of a light path is a closed walk at $u$ inside $K$ that
+reverses only at live-pole ends and never meets a point over an $N$-zero.
+\item If $\mu$ moves $\tilde S$, both discs of $N$ bounded by $K$ contain a pole
+over which $Q\to N$ is branched.
+\item Replacing $\tau_p$ by the full local monodromy changes the verdict only
+through its $3$-cycles, which are reflex corners.
+\end{enumerate}
+\end{lemma}
+
+The statement on sheets in part~3 is the d62 referee's fix G1: when $u$ is a
+pole, the two sheets of a regular point lie in one block, and the maps do not
+descend to points. The proof uses Lemma~\ref{lem:factL} and genus $0$ only; $N$
+need not be minimal. Over an $N$-regular vertex, $Q$ has $e=1$ and the image
+walk passes straight through; over a live pole only an $e=2$ point continues,
+and the image walk reverses. Part~5 is the last step of the $\Cut$ proof in
+Theorem~\ref{thm:U}.
+
+\paragraph{Consequences.}
+So a pair is $x$-lit exactly when, in some state, the partial dihedral or
+cyclic action of Lemma~\ref{lem:FC} joins two of its lifts. No group replaces
+this family: the monodromy group of $Q\to N$ is transitive on the fibre, and
+using full local permutations, which ignores corner avoidance, lights the dark
+pairs of $\Rr$ and P6 (d61 \S3).
+
+\begin{proposition}[Degree bound; d61 \S6, reviewed in d62]\label{prop:degN}
+$N_x$ has no regular point over $x$, and
+$\deg N_x\le (r+4)+3r_x\le 4r+4\le 36$ at $r\le 8$, where $r_x$ counts reflex
+corners of class $x$.
+\end{proposition}
+\begin{proof}
+Points of $N_x$ over $x$ have length $1$ or $3$, so $\deg N_x=P_x+3Z_x$.
+Gauss--Bonnet gives $P-Z=4$, and Lemma~\ref{lem:factL} gives $Z\le r$ and
+$Z_x\le r_x$.
+\end{proof}
+
+\paragraph{The open direction.}
+By Proposition~\ref{prop:R3}, ``$x$-dark implies a certificate at $x$'' is
+equivalent to the following \emph{realization lemma} (d61 \S5, with the d62
+fix G3 to its quantifiers): let $\tilde S\ne\tilde T$ be regular $a$-points with
+one image $u$ in $N_x$; if $\Rig(x)$ fails over $DP/R_y$ for both
+$y\notin\{a,x\}$ and $\Cut(x)$ holds for no factor, then in some state the
+$2$-cycles of $g_a$ and $g_x$ inside the blocks of $u$ connect $\tilde S$ to
+$\tilde T$. The realization lemma is \textbf{open}. Proposition~\ref{prop:degN}
+makes $N_x$ range over a finite set, but $Q\to N_x$ has unbounded degree, so
+the lemma is not a finite check. If it were proved for orthogonal lattice rooms,
+Theorem~\ref{thm:main} and the rational-to-real reduction \cite{RR} would give
+illumination of every pair at $W\le 20$ (d61 \S6).
+
+\paragraph{Tests.}
+On the four named rooms (cross12, dumb12, $\Rr$, P6), d61 compares the lemma's
+verdict with a direct walk on $405$ rows and $992{,}988$ (state, arc, lift pair)
+instances, with $0$ disagreements. The d62 referee found that d61's verdict is
+a segmented re-simulation of the same walk, so these counts test
+Lemma~\ref{lem:factL} and Lemma~\ref{lem:proj} more than the algebraic form
+(finding G2). The referee's own implementation of the stated form agrees with a
+direct walk on $969{,}372$ instances, and an exact integer billiard program
+agrees with d61's rows at $N=B$ with $0$ mismatches. Every $x$-dark row in the
+tests carries a certificate: $147$ by $\Par$ and $56$ by $\Cut$.
+
+\section{Fold mechanism needs \texorpdfstring{$r\ge 9$}{r >= 9}}\label{sec:r9}
+
+This section records a later result, written on 20 November 2026 in
+\src{research/qclass-closure/bbbb/fold-converse.md} and reviewed in d105
+(verdict: sound, with one fixable gap). It is separate from
+Theorem~\ref{thm:main} and uses its own inputs.
+
+\paragraph{Setting.}
+Let $P$ be a strictly simple orthogonal lattice room, $Q=DP$, and $S\ne T$
+interior lattice points of one class $a$, with lifts $s,\iota s$ and
+$t,\iota t$. An \emph{R22-type parity fold} is a factor
+$f\colon Q\to N\to B$ of inner degree $k\ge 2$ and outer degree $m>1$ such that:
+all four lift images are regular points over $a$; the image sets
+$\{f(s),f(\iota s)\}$ and $\{f(t),f(\iota t)\}$ are disjoint; and $N$ has no
+regular point over any of the three off-classes $b,c,d$. Such a factor is a
+$\Par$ certificate at all three targets, so the pair is dark by
+Theorem~\ref{thm:U}.
+
+\begin{proposition}[Fold mechanism needs $r\ge 9$; d105, sound with fix]\label{prop:r9}
+If $P$ has an R22-type parity fold for some interior pair, then $r\ge 9$.
+The bound is attained by $\Rr$, with $(k,m,z)=(3,5,3)$.
+\end{proposition}
+
+The separation hypothesis is the d105 fix. The source's main hypothesis
+asked only for two distinct regular marked images; d105 shows the inner-degree-two
+step needs separation, and notes that the mechanism supplies it.
+
+\begin{proof}[Proof (from the source, with the d105 fix)]
+\emph{Counting.} $N\to B$ has local degrees in $\{1,2,3\}$ and $N$ is a sphere.
+With $q$ regular points and $z$ zeros, Riemann--Hurwitz gives $q+2z=2m-2$, and
+the poles number $z+4$. All $q$ regular points lie over $a$ and use two sheets
+each, and the marks need $q\ge 2$. So $2\le q\le m/2$ and
+$z+2\le m\le 4(z+1)/3$. Over a zero of $N$ every preimage has $e=1$, so each
+zero has $k$ reflex preimages; with $c_j$ points of local degree $j$ over
+poles, $r=kz+c_3$ and $c_2+2c_3=2k-2$. At $r\le 8$ the only possibilities are
+$(z,m,k)\in\{(2,4,2),(2,4,3),(2,4,4),(3,5,2),(4,6,2)\}$, each with $q=2$. The
+d105 script \src{d105-review-fold/step2.py} confirms this list.
+
+\emph{Refinement.} Replace the partition by
+$\Pi'=B_b\vee B_c\vee B_d$, the finest monodromy-invariant equivalence that
+merges every $2$-cycle at the three off-classes. It refines the given
+partition, its quotient still has no regular off-class point, the marked images
+stay regular and separated, and its outer degree is at least $m$. It is
+invariant under the edge involutions by Proposition~\ref{prop:R3}(3).
+
+\emph{Discrete case.} If $\Pi'$ is discrete, the three off-classes are
+corner-only in $P$. Each of the four cardinal neighbours of $S$ and of $T$ has
+two cells of the mark's star, so it is a reflex corner. A coincidence of a
+neighbour of $S$ with one of $T$ would put an interior point at a corner-only
+class, so the eight are distinct (d105 corrects the source here: the case is
+vacuous, not ``directly visible''). A diagonal neighbour of $S$ in class $d$
+is a ninth reflex corner (d14 Lemma R6). So $r\ge 9$.
+
+\emph{Inner degree two.} In the rows with $k=2$, $q=2$ and separation put both
+lifts of each mark over one quotient point. The deck involution exchanges the
+halves at both marks; by the axis lemma of d91 and d99 (\src{research/qclass-closure/bbbb/bbbb-split.md}),
+it is an axial reflection of the room fixing both marks. The interior of a
+simply connected room symmetric in a line meets the line in one interval, so
+the segment $ST$ is interior and the pair is lit. This contradicts darkness.
+
+\emph{Outer degree four.} In the row $m=4$, $z=2$, label the four blocks. At
+$a$ the corner permutation has type $(2,2)$; the two zeros give type $(3,1)$ at
+two off-classes, and the third off-class has the identity. All four corner
+permutations are even, so the four edge involutions have one sign; even
+involutions lie in $V_4$, which has no $3$-cycle, so all four are
+transpositions. At the mark over the $a$-cycle $(12)$, the two eastern cells
+share one label in $\{1,2\}$ and the two western cells the other. A $3$-cycle
+at the horizontally adjacent class contains exactly one of $1,2$, so on that
+side two cells with one label meet at a reflex corner, whose upstairs cycle
+must carry three distinct labels. This contradiction forces the identity at the
+horizontally adjacent class; the other mark forces it at the vertically
+adjacent class. Only one off-class has the identity, a contradiction. The d105
+script finds $72$ tuples in $S_4$ with the required cycle types, none with the
+identity at both adjacent classes.
+\end{proof}
+
+\begin{remark}[Census route]
+The source also gives a shorter route: in every row of the table the upstairs
+area $km$ is at most $16$, and the d9 census excludes dark same-class interior
+pairs at $r\le 8$ and area at most $20$. The source also eliminates the
+$z=2$, $m=4$ row for a physical polygon base by a direct check of the two
+tetrominoes with two reflex corners; d105 reproduces it.
+\end{remark}
+
+\begin{proposition}[A proper fold is not necessary; source Step 1, confirmed in d105]\label{prop:R34}
+The strictly simple room R34-base, with $19$ cells, $19$ convex and $15$ reflex
+corners ($W=34$), interior points $(2,0)$, $(6,0)$, and smooth lattice points
+$(4,0)$, $(8,-2)$, has a dark pair, and $\deg(Q\to B)=19$ is prime. So its
+darkness comes from no factor with $k\ge 2$ and $m\ge 2$.
+\end{proposition}
+\begin{proof}[Proof summary]
+All four regular lattice sites are even--even. For any proposed shot between
+the two interior points, the unfolded displacement is even--even and nonzero,
+so its first primitive lattice step lies strictly before the target and is not
+even--even. Reflection in integer lines preserves parity, so the folded image
+is a corner. Since $19$ is prime, the monodromy group has no proper block
+system. This is a parity argument in the sense of Tokarsky \cite{Tokarsky}.
+The d105 script \src{d105-review-fold/step1.py} reproduces the star count.
+\end{proof}
+
+\begin{remark}[Scope of Proposition~\ref{prop:r9}]
+In a room where every class quotient $N_x$ is $B$ (type BBBB), a factor with
+no regular point over an off-class is coarser than $B_x$, so $m=1$. So
+Proposition~\ref{prop:r9} is vacuous on BBBB rooms at every $r$, and it rules
+out nothing in the open core. At $r\le 8$ it reproves, without the census, a
+part of a case that the Q-class closure (d102) and d64 already close (d105).
+\end{remark}
+
+\section{Scope and limitations}\label{sec:limits}
+
+\paragraph{Computer assistance.}
+Theorem~\ref{thm:main} is computer-assisted. Its finite part runs C and Python
+programs that are not formally verified. The full $W=20$ room check (d46) has
+one implementation; the coordinator checked its output files but did not rerun
+it. Theorem~\ref{thm:second} reproduces the core case with independent code,
+and d54 did not rerun d52's own enumerations. The d56 shooter is validated
+against an exact decider on $32{,}127$ pairs, not on every pair. No d56 test
+produced a positive $\Rig$ separation, so its $\Rig$ code is checked against a
+reference only in the ``not separated'' direction.
+
+\paragraph{Review.}
+Every theory input has one independent AI referee, usually on the same model
+family as the author. No human mathematician has refereed any part. The
+referees' repairs in d43, d48, d50, d54, d62, and d105 are themselves
+unreviewed. Some inputs carry recorded author confidence below certainty: d47
+gave $75\%$ for the transfer lemma and for Proposition~\ref{prop:diffclass}
+before review. The d9 census, which Propositions~\ref{prop:F1} and
+\ref{prop:even} use, has computer re-checks but no line-by-line review. The
+parity-factor input d2 claim~4 rests on the computer-assisted theorem of
+\cite{K6}; Theorem~\ref{thm:second} avoids it, but $F^*$ in
+Theorem~\ref{thm:main} does not.
+
+\paragraph{Gaps flagged in the sources.}
+\begin{itemize}
+\item The d62 referee did not re-verify that d46, d52, and d56 allow the
+certifying factor to change with the target and the lift pair (finding C4).
+Proposition~\ref{prop:F1} allows this change; we found no separate check of it
+in the d46 or d56 code records.
+\item The completeness argument for the d56 D20 shortcut
+(\src{d56-final-check/shortcut/NOTES.md}) is not refereed. It is not load-bearing:
+the full Set~A run lights every D20 pair.
+\item The d48 treatment of $(2,4,4)$ bases and the witness-route bounds are
+sketches.
+\item Lemma~\ref{lem:FC}: the d62 fixes G1 and G3 are not written into d61.
+\item Proposition~\ref{prop:r9} uses the d91/d99 axis lemma and d14 Lemma R6,
+which we cite without restating their proofs.
+\end{itemize}
+
+\paragraph{What the theorem does not cover.}
+\begin{itemize}
+\item \emph{The lit side.} Theorem~\ref{thm:main} shows that no pair is
+certified dark. It does not show that uncertified pairs are lit. That is
+conjecture $U^*$, or per class the realization lemma of
+Section~\ref{sec:converse}, and it is open.
+\item \emph{Other mechanisms.} Only $\Par$, $\Cut$, and $\Rig$ over pillowcase
+bases are covered. A dark pair certified by some other mechanism is not
+excluded.
+\item \emph{Irrational pairs.} Certificates need rational marks. The
+rational-to-real reduction \cite{RR} transfers illumination, not certificates.
+\item \emph{Boundary marks.} The marks are interior points. Statements such as
+R4 are false for smooth wall marks.
+\item \emph{45-degree walls.} Rooms with $45$-degree walls are not covered; d51
+(unreviewed) finds no comparable bound.
+\item \emph{$W\ge 22$.} $\Rr$ shows the statement fails at $W=22$.
+\end{itemize}
+
+\paragraph{Discrepancies between sources.}
+\begin{itemize}
+\item The results record lists the pair count of the d46 recheck as ``not
+stated''; the run aggregate gives $135{,}236{,}864$. Including it raises the
+total from $59{,}397{,}726{,}347$ to $59{,}532{,}963{,}211$.
+\item d52 reports $4{,}710$ covers; these are counted per (shape, $\delta$)
+case with repeats. d54 counts $4{,}420$ distinct W-sets ($4{,}275$ in scope).
+\item d52 states the $r=9$ classification under ``some class has
+$\delta\ge 3$''; d54 requires a target class $x\ne a$.
+\item d47 Proposition~4.1 lists $d\in\{3,4,5\}$; d48 shows $d=5$.
+\item d49 says ``$\Cut$ forces $d=3$'' and counts $2{,}052{,}226$ rooms for
+its finite check; d50 corrects the first to ``with a zero'' and the room set to
+$945{,}884$.
+\item The source of Section~\ref{sec:r9} omits the separation hypothesis and
+calls the discrete coincidence case ``directly visible''; d105 corrects both.
+\item An older status file tags d61's lit direction as unreviewed; d62
+records the review.
+\end{itemize}
+
+\section{Reproduction}\label{sec:repro}
+
+The repository mirrors the research directory at
+\[\text{\src{research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/}}\]
+Below, paths that begin with \texttt{research/} are relative to the
+repository root, and all other source paths are relative to that directory.
+Some original logs and the d46 README are not in the mirror; the run
+aggregates and scripts cited here are. To run a script that expects the
+original layout, use the restoration command in \src{docs/REPRODUCIBILITY.md}.
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.6\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}@{}}
+\toprule
+Result & Command (from the named directory) & Cost \\
+\midrule
+Room check (F3) & In \texttt{d46-cert-check/}: \texttt{./run\_full.sh 8 24}; then \texttt{python3 aggregate.py runs/full\_W20 --cells} & 24.4 CPU-h \\
+Residual checks (F5) & In \texttt{d56-final-check/}: \texttt{./run\_full.sh 8 10}; the script compiles \texttt{check} from \texttt{src/} when no binary is present & 4.7 CPU-h \\
+Second proof & In \texttt{d52-fold-enumeration/}: \texttt{python3 -B enum\_K.py 2 12 data/K\_z2\_d12.json}, \texttt{analyze\_K.py data/K\_z2\_d12.json 8 2 data/K\_adm\_r8.json}, \texttt{enum\_P.py data/K\_adm\_r8.json 8 data/P\_r8.json} & about 30 CPU-min \\
+Case B & In \texttt{d54-review-d52/}: \texttt{python3 -B case\_b.py 8} & 21 CPU-s \\
+$F^*$ check & In \texttt{d45-review-fstar/}: \texttt{python3 -B check\_fstar.py} & under 1 CPU-s \\
+Lemma FC & \texttt{d61-fold-converse/fold\_converse.py}; \texttt{d62-review-d61/check\_fc.py ROOM CAP}, \texttt{billiard.py} & about 3 CPU-min \\
+Degree bound & In \texttt{d62-review-d61/}: \texttt{python3 -B deg\_bound.py} & under 1 CPU-s \\
+$r\ge 9$, R34 & In \texttt{d105-review-fold/}: \texttt{python3 -B step1.py}, \texttt{python3 -B step2.py} & about 2 CPU-s \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{sloppypar}
+For this manuscript we reran, in a temporary copy of the original layout,
+\texttt{aggregate.py} on
+\texttt{runs/full\_W20}, \texttt{check\_fstar.py}, \texttt{deg\_bound.py},
+\texttt{step1.py}, \texttt{step2.py}, and \texttt{case\_b.py 8}. Each output
+matches its stored record, apart from CPU times and one log header. We did not
+rerun the d46, d52, or d56 enumerations.
+\end{sloppypar}
+
+The main sources are listed below; \texttt{provenance.json} records their
+SHA-256 values. The results record is cited for \S\S2.3--2.7, 3.3--3.7, 5,
+10, and 11.
+\begin{itemize}\setlength{\itemsep}{0pt}\small
+\item \src{d70-writeup/RESULTS.md}
+\item \src{d10-mechanisms/theory.md}
+\item \src{d2-review/review.md}
+\item \src{d36-amalgamation/astra.md}
+\item \src{d39-mixed-class/astra.md}
+\item \src{d43-review-d39/review.md}
+\item \src{d44-cert-check-sizing/README.md}
+\item \src{d45-review-fstar/review.md}
+\item \src{d46-cert-check/runs/full_W20/aggregate.md}
+\item \src{d47-cert-gaps/opus.md}
+\item \src{d48-review-d47/review.md}
+\item \src{d49-even-index/memo.md}
+\item \src{d50-review-d49/review.md}
+\item \src{d52-fold-enumeration/memo.md}
+\item \src{d54-review-d52/review.md}
+\item \src{d56-final-check/README.md}
+\item \src{d56-final-check/runs/full/aggregate.md}
+\item \src{d61-fold-converse/README.md}
+\item \src{d62-review-d61/review.md}
+\item \src{d105-review-fold/review.md}
+\item \src{d9-census-w22/README.md}
+\item \src{d9-census-w22/partA-README.md}
+\item \src{coordinator-log-archive-1.md}
+\item \src{research/qclass-closure/bbbb/fold-converse.md}
+\end{itemize}
+
+\paragraph{Acknowledgments and AI assistance.}
+The authors used ChatGPT and Claude to develop and check arguments, write and
+run the programs, and prepare the manuscript. The authors take responsibility
+for its content.
+
+\begin{thebibliography}{9}
+\bibitem{Tokarsky}
+G.~W. Tokarsky, ``Polygonal Rooms Not Illuminable from Every Point,''
+\emph{The American Mathematical Monthly} \textbf{102} (1995), no.~10, 867--879.
+\url{https://doi.org/10.1080/00029890.1995.12004679}.
+
+\bibitem{Q22}
+P.~Wang and D.~Wang, \emph{A Simple Orthogonal 22-Gon with Exactly One
+Non-Illuminating Pair}, working draft v0.7 (2026), \texttt{preprints/twenty-two-wall/} in this repository.
+
+\bibitem{RR}
+P.~Wang and D.~Wang, \emph{Rational Pairs Suffice for Illumination in
+Orthogonal Lattice Rooms}, working draft v0.1 (2026),
+\texttt{preprints/real-to-rational/} in this repository.
+
+\bibitem{K6}
+D.~Wang and P.~Wang, \emph{A restricted 22-wall minimum and a parity-fold
+corollary}, working draft v0.1 (2026), \texttt{preprints/restricted-minimum-k6/} in this repository,
+Theorem~1.1.
+\end{thebibliography}
+\end{document}

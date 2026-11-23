@@ -1,0 +1,317 @@
+{
+  "title": "No Fold Certificate of Darkness Below 21 Walls in Orthogonal Lattice Rooms",
+  "version": "0.1",
+  "date": "2026-11-23",
+  "scope": "Computer-assisted: no strictly simple orthogonal lattice room with W <= 20 has a rational interior pair certified dark by Par, Cut, or Rig certificates over any pillowcase base. Includes a second proof of the core case by fold enumeration, the fold-converse lemma, and a separate result that an R22-type parity fold needs r >= 9. Shows only that this certificate mechanism produces no dark pair; does not show that every pair is lit.",
+  "derivation_records": [
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d70-writeup/RESULTS.md",
+      "sha256": "a55d7ba321274b6ba83a8cda78e56a216749e6bf6e4628f20d43a832e194648a",
+      "role": "Results record; assembly of Theorem F (sections 3.3-3.7), reproduction table (section 7)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d10-mechanisms/theory.md",
+      "sha256": "0e1dd2373a9288807c0401f9c913c9d1874a06853e1057467f9d4d93e51136d3",
+      "role": "Certificates, Fact L, Lemmas 1-2, Theorem U, R3, conjecture U*"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d10-d12-review/review.md",
+      "sha256": "08d48f1d070f51697ddc12a8c3ebf9f2d29579858ba6d5fd9e5e3ea0c61904fc",
+      "role": "Review of d10; R1 correction and patched R4"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d2-review/review.md",
+      "sha256": "1e3aabe954cac3f44c424c4a2a9b3bf9d13e2133d58749c791f195de85104721",
+      "role": "Review of d2 claim 4 (no separating parity factor at r <= 8)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d36-amalgamation/astra.md",
+      "sha256": "85c5ffba4764dd7fb4518242401a3b123ca1c94ab356e73126508dee46726d63",
+      "role": "d36.3 chain lemma and d36.4 bound n <= 5r"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d39-mixed-class/astra.md",
+      "sha256": "7a6c342a3d98c6027ed24efb629ed83c7b1ba58c56269587895be9ed0b1a0e0f",
+      "role": "F1 reduction (Claims 2-4)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d43-review-d39/review.md",
+      "sha256": "44a0f76619aaf42515799ae10b6aa70922842440c88b65d0616d02722ced3e1b",
+      "role": "Review of d39; fills d = 6 and domino/square gaps"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d44-cert-check-sizing/README.md",
+      "sha256": "8b2ec8711b01fa2fd0e96a60382b65551c7181250c4a18bcf56ed0cb337fb94c",
+      "role": "Filter F* and room-check design"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d45-review-fstar/review.md",
+      "sha256": "2fa8827b2254a3ee59275def213de32a161935485debed447e32ad8706c6f0cb",
+      "role": "Review of F*; verdict SAFE TO USE"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d45-review-fstar/check_fstar.py",
+      "sha256": "fb837241c133cc337929623cfadb667daf2954b95208d56a35c3db4e6aabaaeb",
+      "role": "F* area-list check (rerun; output identical)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/cert_check.c",
+      "sha256": "dc39782a267bbc9987dd5911c4ad947c6e835ed61a93e9e3cbafa2b768a545c3",
+      "role": "Room check program"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/aggregate.py",
+      "sha256": "19188ca1e3adc982a621f707addfac3fabaf1da1c49d2ec92d75ff714423333d",
+      "role": "Run aggregator (rerun on runs/full_W20 --cells; output identical)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/runs/full_W20/aggregate.md",
+      "sha256": "a5c14b53b18a76144c4147a95d9f14879f93b870408ce90ef1d9cabc0e011c48",
+      "role": "Full W = 20 run counts (Table 1)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/runs/pilot_W14/aggregate.md",
+      "sha256": "6a5973ff52577c60f24d99a4427d08457af537060c2c52c2c75c493b4fb00f1b",
+      "role": "Pilot W = 14"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/runs/pilot_W16/aggregate.md",
+      "sha256": "f87ffd3d2d3a29f1620b407e1ffc923cfbadfb6bd49d14e59244920112b84445",
+      "role": "Pilot W = 16"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/runs/pilot_W18/aggregate.md",
+      "sha256": "94d9b2d44ca91d8bb9ee7c6ca8c1d69e8a7702a0797d2950133b876b916c71a5",
+      "role": "Pilot W = 18"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/runs/val_census_w20/aggregate.md",
+      "sha256": "2da802851e87d348ba4746518509063352686313abaa1785344af982b6ff7b00",
+      "role": "Recheck W <= 20, area <= 20, F* off"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/runs/val_census_w22/aggregate.md",
+      "sha256": "0ecdbfcc5611a4e95c572b051401b9c22cec20abd70697733d297498d78ab437",
+      "role": "Census-range control at W = 22 (1 positive, R22)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/runs/e2e_r9_a15/aggregate.md",
+      "sha256": "7b04c1d029875e6f414a5bb5ffbb7def5c8733d25b459dc1ba287837e30e294c",
+      "role": "End-to-end control at r = 9, area 15 (1 positive, R22)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/runs/val_W14_nofilter/aggregate.md",
+      "sha256": "d04d2956804f3eb51125843db148bae48141eddd9e598806e9136064ac83df93",
+      "role": "F* on/off comparison at W = 14"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/positive_e2e.txt",
+      "sha256": "7caf4f21ede83365d6e28c2f8904c7885da968a7aab5efa057bc164fd913daf9",
+      "role": "R22 positive record"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d46-cert-check/val_named.py",
+      "sha256": "96d23b2024beac207b773f3b546f2fe649791120929ddee16721206f6adccf6b",
+      "role": "Named-room controls (R22, P6, cross)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d47-cert-gaps/opus.md",
+      "sha256": "68059a45cbdc97c54d9c710d4c6f2c5c206456a8d7f37d8727651bcc40253ecb",
+      "role": "Pillowcase bases: Prop 1.1, Lemmas 1.3-1.4, Prop 2.1, Lemma 3.2, Cor 3.3, Prop 4.1"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d48-review-d47/review.md",
+      "sha256": "bd43cf948d56b7526b9dedfe564907a0a9688d9ad4cc1eed62009c73eca008c1",
+      "role": "Review of d47; admissibility, transfer and Prop 4.1 corrections"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d49-even-index/memo.md",
+      "sha256": "57320f5669f3afd0373045e15bd39e5eb166f325704edbff60765031fa670d9b",
+      "role": "Even index: Lemmas Z, Z', R0, witness lemma, bounds"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d50-review-d49/review.md",
+      "sha256": "6604d29bdfcb839062cd446524f33c6ae1b6b6e137b1588cf2e6b639674fc9dc",
+      "role": "Review of d49; m = 2 repair, rho M0 fix, Set E count 945,884"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d51-triangle-base/memo.md",
+      "sha256": "e8b65d2f20aa0ce567e9f83321103da367c57ba607384af641dc02459724623f",
+      "role": "45-degree bases (unreviewed); cited as out of scope"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d52-fold-enumeration/memo.md",
+      "sha256": "5e54d20bd3d9351d4440cfae5414ed1c11ff241aa7f11ee4383b492735d77f36",
+      "role": "Second proof by fold enumeration"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d54-review-d52/review.md",
+      "sha256": "14b50cccbcb8d9b2d163f3349895d10ae4f7a14d1fbc2221513ef16a134af334",
+      "role": "Review of d52; Case B; signed statements"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d54-review-d52/case_b.py",
+      "sha256": "21a1192f5da9c675c59b4fc07792ec0f7f518b8d6e59f95c47d427c968dee9a3",
+      "role": "Case B check (rerun with argument 8; counts identical)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d56-final-check/README.md",
+      "sha256": "be7e5c563ddbffed20bc4ea2651f71474bff3fe1d4c984390303b077e430e0ee",
+      "role": "Residual checks (Sets A and E), validation"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d56-final-check/runs/full/aggregate.md",
+      "sha256": "d5a9966f320e7813142bc880cadbdafaeaa1a6b33980711ee74f372edc60b630",
+      "role": "Residual check counts"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d56-final-check/src/check.c",
+      "sha256": "9b8f7dd195475a16523f82a624108a6beea99720cd58af258be40520f90f88f5",
+      "role": "Residual checker"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d56-final-check/src/verify_plane.c",
+      "sha256": "59e8ef7f84d43a80a44f43423309ed1465c54ea6d8bdb702607b94b5877d6177",
+      "role": "Independent lighting-path verifier"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d56-final-check/shortcut/NOTES.md",
+      "sha256": "7d97769161fd36639b3656db58c967b707a2b479067d035d53728848cf05c858",
+      "role": "D20 shortcut (unrefereed, not load-bearing)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d61-fold-converse/README.md",
+      "sha256": "af220bc0c088901a56fa0647335ef9e654b318c1bc56f095df1bdce1ca576020",
+      "role": "Lemma FC, degree bound, realization lemma"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d62-review-d61/review.md",
+      "sha256": "b345ab1a86169b9328f3fc2e9bfddbc930b711dda0bd264210bc910ec9777adb",
+      "role": "Review of d61; fixes G1, G3; finding G2"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d62-review-d61/deg_bound.py",
+      "sha256": "5c51577189d8a0012d8c5380d8cb3d11d2e175831c26e91039d9f9332104bea5",
+      "role": "Degree-bound check (rerun; output identical)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d62-review-d61/log_deg_bound.txt",
+      "sha256": "be7816aeab340a747d46cb08b06043252e6ae31a8be053c08152f4bc5818caa1",
+      "role": "Stored degree-bound output"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d9-census-w22/README.md",
+      "sha256": "4cdb0caf0dccedc91e9c3b0b41dac0a08780644ee1e04fd4a6276113bf547ba5",
+      "role": "Census C9 (same-class pairs, area <= 20)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d9-census-w22/partA-README.md",
+      "sha256": "ea205d9828788ebc416300f6cd9326a2d8b0338e69d565cc4dd3bd3638ca8c04",
+      "role": "Part A (different-class pairs, area <= 16)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d15-small-r/theorems.md",
+      "sha256": "a78b1c05fb416a4050c0a29bc7e8ea2a4ec1a3fac8afa41d49ecffe615a8d9d3",
+      "role": "Eight-wall theorem"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d14-lemma-h/proof.md",
+      "sha256": "978e56e66a6f5e1047cafe5c64fbbd03141a9da84819c35e5ab61e084c6ba727",
+      "role": "Lemma R6 (diagonal reflex corner)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d99-review-split/review.md",
+      "sha256": "d058d496686d625d4936e42f6bbbc9671ff24498469335bf6563834702686620",
+      "role": "Review of the axis-reflection lemma"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d105-review-fold/review.md",
+      "sha256": "16c0307433413fd38decb0159704a2db9bc776286174c64cf7aa2d221600704d",
+      "role": "Review of fold-converse.md; verdict sound with one fixable gap"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d105-review-fold/step1.py",
+      "sha256": "5308af5ea240b32bba1e61f8d61289e6f247b18eeb916423e44612da6f151587",
+      "role": "R34-base check (rerun; output identical)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d105-review-fold/step2.py",
+      "sha256": "8f929c776f3749f252db1c46067570b032223edb1f9b6b5e5a16af29032393cf",
+      "role": "Counting-table and S4 check (rerun; output identical)"
+    },
+    {
+      "record": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/coordinator-log-archive-1.md",
+      "sha256": "ea536245e308d20fc6dd6f75da2ac4d06d97f5f3751191fd55ebb3b406679322",
+      "role": "Coordinator records of the d46 and d56 runs"
+    },
+    {
+      "record": "research/qclass-closure/bbbb/fold-converse.md",
+      "sha256": "9d36938287a9d0b7c1dd8c5ab9b4da0e09261efb8077269cb5825be814b871e9",
+      "role": "Fold mechanism needs r >= 9 (source of Section 8)"
+    },
+    {
+      "record": "research/qclass-closure/bbbb/bbbb-split.md",
+      "sha256": "6354f371d8b18d752a452232ebc964d9d28ec1103ebe0819a6a87dcf9149b7f8",
+      "role": "Axis-reflection lemma (d91/d99)"
+    }
+  ],
+  "not_in_repository": [
+    "d46-cert-check/README.md (original d46 design notes; the manuscript cites the run aggregates instead)",
+    "Original run logs for d45, d54, and d105 (the scripts are included and were rerun)"
+  ],
+  "computations": {
+    "rooms_total": "14,355,566,641 (13,286,070,297 + 471,475,261 + 427,403,072 + 169,672,127 + 945,884)",
+    "pairs_total": "59,532,963,211 including the d46 recheck; 59,397,726,347 without it",
+    "positives_below_W22": 0,
+    "cpu_seconds_reported": "d46 full 87,829.7; d46 pilots about 1,606; d46 recheck 1,093.5; d56 16,940",
+    "reruns_for_this_manuscript": [
+      {
+        "command": "python3 aggregate.py runs/full_W20 --cells (d46-cert-check)",
+        "result": "identical to runs/full_W20/aggregate.md"
+      },
+      {
+        "command": "python3 -B check_fstar.py (d45-review-fstar)",
+        "result": "identical to the original log (not in this repository)"
+      },
+      {
+        "command": "python3 -B deg_bound.py (d62-review-d61)",
+        "result": "identical to log_deg_bound.txt"
+      },
+      {
+        "command": "python3 -B step1.py (d105-review-fold)",
+        "result": "identical to the original log (not in this repository)"
+      },
+      {
+        "command": "python3 -B step2.py (d105-review-fold)",
+        "result": "identical to the original log (not in this repository)"
+      },
+      {
+        "command": "python3 -B case_b.py 8 (d54-review-d52)",
+        "result": "same counts; CPU-time line and label formatting differ"
+      }
+    ],
+    "not_rerun": "d46, d52, and d56 enumerations"
+  },
+  "artifacts": [
+    {
+      "path": "manuscript.tex",
+      "sha256": "2394c4995b125e9c9b1abdcac70f548c679cdc2611a2f95455fd2a54d955e205"
+    },
+    {
+      "path": "manuscript.pdf",
+      "sha256": "a314c586409c272e8defc629d2a8460c0d2275cdb019463108c92ae27c825829"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a76edac685b9059e3acb823556a9a0d2caf2c767dabdc4af2dc0d2c1d20462bb"
+    }
+  ],
+  "pages": 18,
+  "verification": {
+    "proof": "Computer-assisted; theory inputs have one independent AI review each, and referee repairs are unreviewed",
+    "build": "Tectonic 0.17.0; no TeX errors or overfull boxes",
+    "layout": "Sample pages rendered and inspected",
+    "external_refereeing": false,
+    "formal_verification": false
+  }
+}

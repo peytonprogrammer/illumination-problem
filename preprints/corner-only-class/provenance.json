@@ -1,0 +1,320 @@
+{
+  "title": "Twenty-Two Walls Is Exact for Rooms with a Corner-Only Parity Class",
+  "version": "0.1",
+  "date": "2026-11-23",
+  "scope": "Computer-assisted. (1) A strictly simple orthogonal lattice room with a corner-only parity class and a dark pair of distinct interior lattice points, of any classes, has at least 22 walls; the 22-wall room attains it. (2) Every 15-cell such room with fewer than 22 walls lights every pair of distinct real interior points. Includes the proper-factor branch (normalized rooms, W <= 20) for lattice pairs of any classes. Excludes BBBB rooms, non-lattice marks above 15 cells, real side lengths, and 45-degree walls.",
+  "derivation_records": [
+    {
+      "record": "qclass-closure/README.md",
+      "role": "Lattice computation: method and counts",
+      "sha256": "f93fd1884d14854490e802dbf97841289251433074e7d4182beaad3f9fbcb445",
+      "path": "research/qclass-closure/README.md"
+    },
+    {
+      "record": "qclass-closure/audit.log",
+      "role": "Pair, room and area counts (rerun 2026-11-23: identical)",
+      "sha256": "768d486eefcde2526e142018022b295eb2bd1d27dc0e44c01822259e78b08520",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/compare.log",
+      "role": "144 census comparisons",
+      "sha256": "6f03defbd55570d017555448f80a1234bca28c151f8677da8c8533a641283484",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/brute15.log",
+      "role": "Polyomino counts through area 15",
+      "sha256": "21494b3c1535bf99773d4a6bb48fe76145b0e62b55ad9ab26cff492f47fa434f",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/phase-0.log",
+      "role": "Enumerator records, alignment 0",
+      "sha256": "75951948c1f3ac92c67612efa956c291432125b9149cf15c9db9e308aede7dc2",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/phase-1.log",
+      "role": "Enumerator records, alignment 1",
+      "sha256": "5376a104497fb6c45bd57c0cd68a1b755c2da1a01152d4c803686a19df2ca8ff",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/phase-2.log",
+      "role": "Enumerator records, alignment 2",
+      "sha256": "97e3f1b6ac5eabc44d0465ca025ca131f9424e0c6418605db3a54e3716216912",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/phase-3.log",
+      "role": "Enumerator records, alignment 3",
+      "sha256": "2c205f27c980cdaa5c3987c8c0e254e87d9ab2c6261342fbf6c11c58568ed517",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/control.log",
+      "role": "R22 shooter control",
+      "sha256": "bac366c48215b521a95807b8efb818ee121efa13af1945f5e97a9358cac2dba8",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/enumerate.cpp",
+      "role": "Block enumerator",
+      "sha256": "949b5501ee66047376beb0b5eb5dd8541fbdcbeee5539f7738207f367a6080f6",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/independent.c",
+      "role": "Independent cell-by-cell census",
+      "sha256": "8c0619cc7634cbdef4fb69efec633b3ce683a5eaeeefa8b7da85faa3f64350f4",
+      "path": "research/qclass-closure/independent.c"
+    },
+    {
+      "record": "qclass-closure/all-pairs.patch",
+      "role": "Shooter patch: all interior pairs",
+      "sha256": "aa3d260db527fa5c23ebe86665ecde8446ed700d66df065abb0506ef646d8b17",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/audit.py",
+      "role": "Witness audit",
+      "sha256": "05be42a5c979927746c4b0eed3ba7ea60134da581f1df8e02f74bd19cd1e98e6",
+      "path": "research/qclass-closure/audit.py"
+    },
+    {
+      "record": "qclass-closure/covers_input.py",
+      "role": "Proper-factor room export",
+      "sha256": "078c03198681d4f55221fbe386ef368c2ecf17f7516502aadcde5b00b5fae734",
+      "path": "research/qclass-closure/covers_input.py"
+    },
+    {
+      "record": "qclass-closure/reproduce.sh",
+      "role": "Reproduction script",
+      "sha256": "d05d352584890680e38f0ae78587754ac339d28059ab9d2dc1e44f720ed006c0",
+      "path": "research/qclass-closure/reproduce.sh"
+    },
+    {
+      "record": "qclass-closure/raw-sha256.txt",
+      "role": "Digests of uncompressed run outputs",
+      "sha256": "4506257308eed7c5c703561397e368971098db7d43df52e10bb9579ed8ce90fd",
+      "path": "research/qclass-closure/raw-sha256.txt"
+    },
+    {
+      "record": "qclass-closure/r22-control.room",
+      "role": "R22 control room",
+      "sha256": "c764033d32e12e9c3145467cdd5d94cb77ee948976889fd696a984b5a0a09747",
+      "in_repository": true
+    },
+    {
+      "record": "qclass-closure/witnesses.txt.gz",
+      "role": "First-pass witnesses (B = 12)",
+      "sha256": "60fbcce57558a753407e69196a98580d0330e6cd53109337cd84074ce58d4692",
+      "in_repository": false
+    },
+    {
+      "record": "qclass-closure/witnesses-retry.txt.gz",
+      "role": "Second-pass witnesses (B = 60)",
+      "sha256": "378db0225e2cc2964b5d18c07920ead05f02397968afab76e58619c922dc6e89",
+      "in_repository": false
+    },
+    {
+      "record": "qclass-closure/witnesses-covers.txt.gz",
+      "role": "Proper-factor witnesses: 3,889 rooms, 43,524 pairs",
+      "sha256": "45f0c56142cbaf2424c5ac0d9a5f326aa71fb2678e485184d29a176a1b395e00",
+      "in_repository": false
+    },
+    {
+      "record": "qclass-closure/off-grid.md",
+      "role": "Area-15 computation: method",
+      "sha256": "ba7d28adcc6c668d84dbc7335b04afe26ec2b98c544d766a61af6e557866ae8f",
+      "path": "research/qclass-closure/off-grid.md"
+    },
+    {
+      "record": "qclass-closure/offgrid/results/audit.txt",
+      "role": "Area-15 audit (rerun 2026-11-23: identical)",
+      "sha256": "cae88acab1c7d4cb8ff8986a02cad05ccc8ab77a995911484f9549854b9f8fbb",
+      "path": "research/qclass-closure/offgrid/results/audit.txt"
+    },
+    {
+      "record": "qclass-closure/offgrid/audit_area15.py",
+      "role": "Area-15 audit script",
+      "sha256": "6ce0ee95fea0187bcc3c6fb3cf494dfc760df8ba6bd741284896fc1c4d702c5c",
+      "path": "research/qclass-closure/offgrid/audit_area15.py"
+    },
+    {
+      "record": "qclass-closure/offgrid/replay_area15.sh",
+      "role": "Area-15 replay script",
+      "sha256": "5333951c5ded7201d8746c9bc0041c65eba1a435d6099cf2ccd02503082c95b6",
+      "path": "research/qclass-closure/offgrid/replay_area15.sh"
+    },
+    {
+      "record": "qclass-closure/offgrid/fifteen-hard.rooms",
+      "role": "Six hard area-15 rooms",
+      "sha256": "ed0b73989e08c1ef88b4d9b6350416033b9f289156186efe2420e24df550eb43",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d70-writeup/RESULTS.md",
+      "role": "Results record, sections 2, 3.10, 3.12, 11",
+      "sha256": "a55d7ba321274b6ba83a8cda78e56a216749e6bf6e4628f20d43a832e194648a",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d70-writeup/RESULTS.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d68-one-target/README.md",
+      "role": "Counting identity (Lemma A)",
+      "sha256": "ee5b94da8a5c800648bf60603daf989329cc08fbf278ba0ce04985bbe38f6720",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d68-one-target/README.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d97-review-counting/review.md",
+      "role": "Review: counting identity and area bound (sound)",
+      "sha256": "498ec11717354a5c3731d3f658621e4e65237120ab2ea254ae21cc8441546f20",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d97-review-counting/review.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d97-review-counting/count.py",
+      "role": "Counting check (rerun 2026-11-23: 0 failures)",
+      "sha256": "963196236b1a2e7997570d011d1e194d6827c48374057273a7b973fca32b940e",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d97-review-counting/count.py"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d97-review-counting/count.log",
+      "role": "Counting check log",
+      "sha256": "af262bd5d4e7a41a94124aa95145b397263e2884c076839c1177f9e9e1a75fbf",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d102-qclass-replay/review.md",
+      "role": "Review: completeness and full replay (sound; 0 failures)",
+      "sha256": "f76d556f0c7cb8040bd9332c515203d1e2723732d2beec5383ea24b2a8d89a0f",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d102-qclass-replay/replay.py",
+      "role": "Full witness replay (rerun 2026-11-23: identical, 76.5 CPU s)",
+      "sha256": "e303506fc3d6d8b2813b47c70a52e6ddac86de9e2ba235a03f972072c4ef903d",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d102-qclass-replay/control.py",
+      "role": "Corruption control (rerun 2026-11-23: identical)",
+      "sha256": "3d48075fc0239d31e53ad8c59b1518ddb7d667fa17bb5ed9c7936923c9c7439a",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d102-qclass-replay/control.py"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d102-qclass-replay/full.log",
+      "role": "Full replay log",
+      "sha256": "deeabb79978d4af4a7dbeb189dfb9a1751ec6bf572d0ae9ca964bddee2139368",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d102-qclass-replay/control.log",
+      "role": "Corruption control log",
+      "sha256": "0cab8014a6a4c8c51d9caab049ff33f19f0974014c0c321f3fdb754b84e3a058",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d102-qclass-replay/brute13.log",
+      "role": "Independent polyomino counts, areas 1-13",
+      "sha256": "8aa5d0c8f66a3e0ffa14255a3011f52293bc61581ea867a905709885888d237a",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d74-continuum-check/README.md",
+      "role": "Independent continuum check of six hard rooms",
+      "sha256": "6b9484459a7f78cf2dcb4032f9fa87c587eb487bd95d45092d6489e79515d28f",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d74-continuum-check/README.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d74-continuum-check/lattice_pairs.log",
+      "role": "Exact paths for residual lattice pairs",
+      "sha256": "421a2180521e7bbe6ed49754422a1052101be36b4def84ac396f48fd950017fc",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d74-continuum-check/validate.log",
+      "role": "987 certificate validations",
+      "sha256": "2b15cd5fa56f2df08f2b1894747710e4ec4aac9835d51b528969f8d86da11532",
+      "in_repository": true
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d13-cylinder-cover/theory.md",
+      "role": "Lemma A-prime and Theorem C",
+      "sha256": "86f102ba00a0397487e68dfa6eb7b928e0e6edd3b7d5bdd5c56273924e2ba9d9",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d13-cylinder-cover/theory.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d96-review-d13/review.md",
+      "role": "Review: Lemma A-prime, Theorem C, cover.c (sound)",
+      "sha256": "e3390cf6a9c2c843c7b76342c6e954224fd1fb917a9a7619372b13b240086fb7",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d96-review-d13/review.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d64-finite-case/README.md",
+      "role": "Proper-factor finite case",
+      "sha256": "5e6d66dd2bddc090224046a38f5aee50f23ef463081949ccc0d971a35c662a70",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d64-finite-case/README.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d67-review-d64/review.md",
+      "role": "Review of d64 (sound, fixable gaps)",
+      "sha256": "9b038fc2bfa6c734c051f184de6717203d24599c4beac0130d843ebed925491e",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d67-review-d64/review.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d98-check-enumK/README.md",
+      "role": "Independent z = 4 quotient check (match)",
+      "sha256": "8bffa425cdbbad3e91e3401bb44a3970ffa3c2c74c4f1ce9f97dbd4e6cc52236",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d98-check-enumK/README.md"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d9-census-w22/shoot.c",
+      "role": "Shooter",
+      "sha256": "6e81a7ffa2e25adb8e4d67d8abdc3f70d279a0bf76b5d3099871bb739ff2e047",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d9-census-w22/shoot.c"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d9-census-w22/verify_plane.c",
+      "role": "Independent planar tracer",
+      "sha256": "da6cf08532cfd0d7866ab7a5e3183fc46898398787bf880c728b2768ac9fff10",
+      "path": "research/illumination-generalization-2026-11-06/fable/directions-2026-11-09/d9-census-w22/verify_plane.c"
+    },
+    {
+      "record": "illumination-generalization-2026-11-06/fable/directions-2026-11-09/d71-check-qclass/s2.log",
+      "role": "Sampled independent search, 20,000 rooms",
+      "sha256": "815c27013c61b258ef1462ec6dcfbb0e7255909bf1f3c68adedd3bd7a88bfc05",
+      "in_repository": true
+    },
+    {
+      "record": "preprints/twenty-two-wall/manuscript.tex",
+      "role": "Upper bound: R22 has exactly one dark pair",
+      "path": "preprints/twenty-two-wall/manuscript.tex",
+      "sha256": "617e666a99e773ff8671842780951d491281a22017d59a428019621a600064fc"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "manuscript.tex",
+      "sha256": "da6c3fb1eb9ad0fad5638c2554a7f47f830ba8cf4b6880b238bfec1a30d9c8ae"
+    },
+    {
+      "path": "manuscript.pdf",
+      "sha256": "c8508050f56718bb68f44435869d0240adeefeb75c6881d2cf3ba4d5320b877f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ceb6c24266dcdaf937a4e10ef8779c16dcbd5095d7d594858bbd7d5a5143fe8c"
+    }
+  ],
+  "pages": 10,
+  "verification": {
+    "proof": "Finite reduction analytic (counting identity, reviewed in d97). Lit side computed: witnesses replayed by verify_plane.c and by the d67 billiard (d102). Area-15 continuum step: single implementation except six hard rooms (d74).",
+    "reruns_2026_11_23": "audit.py, offgrid/audit_area15.py, d97 count.py, d102 replay.py (full) and control.py; outputs identical to recorded logs",
+    "enumeration_completeness": "Checked by reading (d102) and by count agreement of independent enumerations",
+    "build": "Tectonic 0.17.0; no TeX warnings",
+    "layout": "All ten pages rendered and visually inspected",
+    "external_refereeing": false,
+    "formal_verification": false
+  }
+}

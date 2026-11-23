@@ -1,0 +1,687 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[letterpaper,margin=.9in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\hypersetup{pdfauthor={Peyton Wang and Daniel Wang},pdftitle={Twenty-Two Walls Is Exact for Rooms with a Corner-Only Parity Class},colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt plus 1pt minus 1pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\interior}{\operatorname{int}}
+\newcommand{\cvx}{\mathrm{cvx}}
+\newcommand{\rfx}{\mathrm{rfx}}
+\newcommand{\smooth}{\mathrm{smooth}}
+\newcommand{\intr}{\mathrm{int}}
+\newcommand{\pinch}{\mathrm{pinch}}
+\newcommand{\Dir}{\path{research/illumination-generalization-2026-11-06/fable/directions-2026-11-09}}
+\newcommand{\Qdir}{\path{research/qclass-closure}}
+\title{Twenty-Two Walls Is Exact for Rooms\\with a Corner-Only Parity Class}
+\author{Peyton Wang\\\small Francis Parker School \and Daniel Wang}
+\date{Working draft v0.1 --- 23 November 2026\\\small Not submitted or peer reviewed}
+\begin{document}
+\maketitle
+\begin{abstract}
+Consider strictly simple orthogonal polygons with integer vertices, and
+call a parity class of $\Z^2$ \emph{corner-only} in such a room when every
+point of that class in the closed room is a polygon corner. We give two
+computer-assisted results. First, a room with a corner-only class and a dark
+pair of distinct interior lattice points, of any parity, has at least 22
+walls. A known 22-wall room with a corner-only class attains the bound. A
+counting identity bounds the area of every such room below 22 walls by 36,
+so a finite enumeration of 780{,}565 rooms and 3{,}933{,}192 pairs suffices.
+Two further exact tracers, which share no code with the search, replay
+every witness.
+Second, every 15-cell room with a corner-only class and fewer than 22 walls
+lights every pair of distinct interior points, with real coordinates. The
+finite reduction has a complete proof. The computations have independent
+AI review and independent reimplementation of key steps, but no human
+referee.
+\end{abstract}
+
+\section{Statement and conventions}
+\paragraph{Rooms.}
+A \emph{room} $P$ is a finite union of closed unit lattice squares (cells)
+whose boundary is one Jordan polygonal curve. Equivalently, the interior is
+connected, there is no hole, and there is no \emph{pinch}: a lattice point
+whose only cells are two diagonally opposite ones. We call such rooms
+\emph{strictly simple orthogonal lattice rooms}. The grid $\Z^2$ is fixed.
+Write $n$ for the number of cells (the \emph{area}). A \emph{wall} is a
+maximal straight segment of the boundary, and $W$ is the number of walls.
+
+For a lattice point $p$, let $k(p)$ be the number of cells of $P$ that
+contain $p$. A point with $k=1$ is a \emph{convex corner}, $k=3$ a
+\emph{reflex corner}, $k=2$ with edge-adjacent cells a \emph{smooth wall
+point}, and $k=4$ an \emph{interior lattice point}. The corners are exactly
+the polygon vertices. Write $v$ and $r$ for the numbers of convex and
+reflex corners.
+
+\paragraph{Light.}
+A \emph{lighting path} from $S$ to $T$ is a billiard path with finitely
+many straight legs. It reflects specularly from walls and never meets a
+corner, convex corners included. Passing through a smooth wall point is a
+legal reflection, and passing through an interior lattice point is legal.
+Distinct points $S,T\in\interior(P)$ are \emph{lit} if a lighting path
+joins them, and \emph{dark} otherwise. The relation is symmetric. Marks
+are always interior points; boundary endpoints are out of scope.
+
+\paragraph{Parity classes.}
+The four \emph{parity classes} are the cosets of $2\Z^2$ in $\Z^2$.
+Fix a class $y$. Write $\cvx_y$, $\smooth_y$, $\rfx_y$, $\intr_y$ for the
+numbers of class-$y$ lattice points of $P$ that are convex corners, smooth
+wall points, reflex corners, and interior lattice points.
+
+\begin{definition}
+A parity class $y$ is \emph{corner-only} in $P$ if every class-$y$ lattice
+point of the closed room is a corner of $P$. Equivalently,
+$\smooth_y=\intr_y=0$.
+\end{definition}
+
+In the project's research record a corner-only class is a class of
+\emph{type Q}: its canonical factor is the whole double cover
+\cite[\S2.5 and \S3.12]{results}. This manuscript doesn't use factors
+except in Proposition~\ref{prop:proper}.
+
+\paragraph{The 22-wall room.}
+Let $R_{22}$ be the room of \cite{q22}. It has 15 cells and 22 walls, so
+$r=9$. Translated by $(1,3)$, its cells have lower-left corners
+\[
+(0,2),(0,3),(1,1),(1,2),(1,3),(1,4),(2,0),(2,1),(2,4),(2,5),(3,4),(3,5),(4,3),(4,4),(5,3).
+\]
+In the coordinates of \cite{q22}, the class of odd--odd points is
+corner-only, with six convex and three reflex corners. The main theorem
+of \cite{q22} says that the only dark pair of distinct interior points of
+$R_{22}$ is $\{(0,0),(2,2)\}$. Both are interior lattice points.
+
+\paragraph{Background.}
+Tokarsky constructed polygonal rooms containing points that don't
+illuminate each other \cite{Tokarsky1995}. Illumination on translation
+surfaces is studied by Leli\`evre, Monteil and Weiss \cite{LMW}, and
+Wolecki gives general finiteness results for rational polygons
+\cite[Theorem~1.2]{Wolecki}. The four-copy unfolding used in
+Section~\ref{sec:area15} is the usual correspondence between billiard
+paths and straight segments \cite[Lemma~2.1 and Remark~2.2]{Wolecki}.
+This manuscript asks for the fewest walls of a strictly simple orthogonal
+lattice room with a dark pair, and answers it in a restricted class.
+
+\subsection{Main results}
+\begin{theorem}[Corner-only class closure; computer-assisted]\label{thm:closure}
+Let $P$ be a strictly simple orthogonal lattice room with a corner-only
+parity class. If $P$ has a dark pair of distinct interior lattice points,
+of the same or of different parity classes, then $P$ has at least 22
+walls. The room $R_{22}$ satisfies the hypotheses with exactly 22 walls,
+so 22 is the minimum for this class of rooms.
+\end{theorem}
+
+\begin{theorem}[Area-15 off-grid theorem; computer-assisted]\label{thm:area15}
+Let $P$ be a strictly simple orthogonal lattice room with exactly 15 cells,
+a corner-only parity class, and fewer than 22 walls. Then every pair of
+distinct points of $\interior(P)$ is lit, with arbitrary real coordinates.
+Since $R_{22}$ has 15 cells, 22 is the minimum wall count among 15-cell
+rooms with a corner-only class and a dark pair of distinct interior points.
+\end{theorem}
+
+The theorems allow every area in Theorem~\ref{thm:closure}, and no bound on
+path length or reflection count in either theorem. Theorem~\ref{thm:closure}
+concerns lattice marks only. Section~\ref{sec:scope} lists what the results
+don't cover.
+
+Both proofs have a finite computational part. Section~\ref{sec:reduction}
+proves the finite reduction for Theorem~\ref{thm:closure} without a
+computer. Section~\ref{sec:computation} describes the computation and its
+independent checks. Section~\ref{sec:area15} gives the argument for
+Theorem~\ref{thm:area15}.
+
+\section{The finite reduction}\label{sec:reduction}
+The reduction is the counting identity of \cite[\S1]{d68}, with the
+corner-only bound reviewed in \cite{d97}.
+
+\begin{lemma}[Corner count]\label{lem:corners}
+In a strictly simple orthogonal lattice room, $v=r+4$ and $W=v+r=2r+4$.
+\end{lemma}
+\begin{proof}
+Traverse the boundary counterclockwise. It turns by $+\pi/2$ at each convex
+corner and by $-\pi/2$ at each reflex corner. Its turning number is 1, so
+$(v-r)\pi/2=2\pi$. Each wall ends at two corners and each corner ends two
+walls, so $W$ equals the number of corners, $v+r$.
+\end{proof}
+
+\begin{lemma}[Local patterns]\label{lem:patterns}
+In a strictly simple orthogonal lattice room, every lattice point $p$ with
+$k(p)\ge1$ is a convex corner, a smooth wall point, a reflex corner, or an
+interior lattice point.
+\end{lemma}
+\begin{proof}
+The cell patterns around $p$ are: one cell; two edge-adjacent cells; two
+diagonal cells; three cells; four cells. Two diagonal cells form a pinch,
+which strict simplicity excludes. With four cells, no slit can run between
+them, since a slit makes the boundary non-Jordan. So $p$ is interior.
+This is the table in \cite[\S1]{d97}.
+\end{proof}
+
+\begin{lemma}[Counting identity]\label{lem:count}
+Let $P$ be a strictly simple orthogonal lattice room and $y$ a parity class.
+Then
+\[
+n=\cvx_y+2\,\smooth_y+3\,\rfx_y+4\,\intr_y.
+\]
+\end{lemma}
+\begin{proof}
+Each cell $[i,i+1]\times[j,j+1]$ has four corners, one in each parity
+class. So the number of pairs (cell, class-$y$ corner of that cell) is $n$.
+Count the same pairs by the class-$y$ point $p$ instead: $p$ contributes
+$k(p)$. Lemma~\ref{lem:patterns} lists the possible values $1,2,3,4$ with
+their names.
+\end{proof}
+
+For a general orthogonal lattice polygon the same count gives an extra term
+$2\,\pinch_y$ \cite[\S1]{d97}. The bound below needs strict simplicity.
+A control in \cite[\S2]{d97}, two $2\times2$ squares meeting at one point,
+has $n=8$ while $4r+4=4$ under the convention that a pinch isn't a corner.
+
+\begin{proposition}[Area bound]\label{prop:area}
+Let $P$ be a strictly simple orthogonal lattice room with a corner-only
+class $y$. Then $n\le 4r+4$. If $W\le 20$, then $r\le8$ and $n\le36$.
+\end{proposition}
+\begin{proof}
+Since $\smooth_y=\intr_y=0$, Lemma~\ref{lem:count} gives
+$n=\cvx_y+3\,\rfx_y$. Class-$y$ corners are a subset of all corners, so
+$\cvx_y\le v=r+4$ and $\rfx_y\le r$ by Lemma~\ref{lem:corners}. Hence
+$n\le (r+4)+3r=4r+4$. If $W\le20$ then $2r+4\le20$, so $r\le8$ and
+$n\le36$.
+\end{proof}
+
+The bound is attained: the enumerated room with census index 780{,}546 has
+$n=36$, $r=8$, and all 8 reflex and all 12 convex corners in its
+corner-only class \cite[\S2--3]{d97}. $R_{22}$ has $r=9$, outside this
+range, and satisfies $15=3\cdot3+6$.
+
+\begin{corollary}[Finite reduction]\label{cor:finite}
+Let $\mathcal C$ be the set of strictly simple orthogonal lattice rooms
+with a corner-only class, $r\le 8$, $n\le36$, and at least two interior
+lattice points, taken up to translation by $\Z^2$ and the eight symmetries
+of the square. If every pair of distinct interior lattice points is lit in
+every room of $\mathcal C$, then the lower bound of
+Theorem~\ref{thm:closure} holds.
+\end{corollary}
+\begin{proof}
+Let $P$ satisfy the hypotheses of Theorem~\ref{thm:closure} with $W<22$.
+By Lemma~\ref{lem:corners}, $W$ is even, so $W\le20$, and
+Proposition~\ref{prop:area} gives $r\le8$ and $n\le36$. A dark pair needs
+two distinct interior lattice points. Translations by $\Z^2$ and the
+symmetries of the square map lattice rooms to lattice rooms, map lighting
+paths to lighting paths, and permute the parity classes. So they preserve
+the corner-only condition and the dark pairs. Hence $P$ is congruent to a
+member of $\mathcal C$, which has no dark pair.
+\end{proof}
+
+\section{The computation}\label{sec:computation}
+This section describes the computation that verifies the hypothesis of
+Corollary~\ref{cor:finite}. The sources are \cite{qreadme} and the review
+\cite{d102}. All counts in this section are copied from the cited logs.
+
+\subsection{Enumerator}
+Fix the corner-only class $y$ and translate so that the lowest row's
+leftmost cell is an anchor cell. Each cell has exactly one class-$y$ vertex,
+so the $2\times2$ blocks of cells centred at class-$y$ points partition the
+cell grid. By Lemma~\ref{lem:patterns}, class $y$ is corner-only exactly
+when every block meets the room in 0, 1, or 3 cells. The block masks
+offered are the four single cells and the four L-shaped triples; the
+diagonal masks are pinches and are excluded \cite[\S1, item 1]{d102}.
+
+The enumerator \texttt{enumerate.cpp} \cite{qreadme} tries the four
+alignments of $y$ relative to the anchor. Starting from the anchor, it
+queries the edge-neighbour cells of the current connected set in a fixed
+order. Each query branches on ``absent'' or ``present, through one allowed
+block mask containing it''. It prunes only impossible vertex stars,
+inevitable excess corner counts, and $n>36$. At completion it rejects
+pinches and holes (it requires $v-r=4$), requires at least two interior
+lattice points, and keeps the lexicographically least of the eight square
+orientations. The four alignment runs emitted 250{,}590, 82{,}228,
+283{,}071 and 164{,}941 records; after removing rooms emitted by two
+alignments, the list has \textbf{780{,}565} rooms.
+
+\paragraph{Completeness.}
+The review \cite[\S1]{d102} reads the argument against the code and finds
+it complete. In outline: for a target room, the branch that follows that
+room's own blocks is always consistent; connectivity ensures every cell of
+the room is queried; the pruning tests use a superset of the true
+completions, so they never cut a real room; and the least orientation of
+a qualifying room is itself qualifying, so some alignment emits it.
+Completeness is checked by reading only. Section~\ref{sec:checks} lists
+the count comparisons that support it.
+
+\subsection{Tracer and witness format}
+The first tracer is the shooter \texttt{shoot.c} of \cite{d9shoot}, patched
+to pair all interior lattice points of the room regardless of class
+\cite{qreadme}. It works in the four-copy unfolding of $P$, a square-tiled
+surface whose squares are (cell, sheet) pairs. From each lift of $S$ it
+follows every primitive direction $(p,q)$ with $p,q\ge0$ and $p+q\le B$,
+lattice step by lattice step. It stops at a lift of a corner or on return
+to the start. A lift of $T$ reached first gives a witness.
+
+Each witness is re-checked by \texttt{verify\_plane.c} \cite{d9shoot}. It
+traces in the room itself, not in an unfolding, and shares no code with the
+shooter. Within one lattice step it orders grid-line crossings by exact
+integer event times. It rejects any path through a corner, crosses interior
+lattice points straight, and reflects at smooth wall points.
+
+A witness record has the form
+\[
+\texttt{P}\ S_x\ S_y\ T_x\ T_y\ \texttt{L}\ \textit{sep}\ d_x\ d_y\ m\ \textit{k}\ \textit{nblk},
+\]
+where $(d_x,d_y)$ is the signed primitive launch direction and $m$ is the
+number of lattice steps from $S$ to $T$. The fields \textit{sep}, \textit{k}
+and \textit{nblk} are statistics of the original shooter and play no role.
+Each room is preceded by a line \texttt{R} giving its index, area, wall
+count, reflex count and cell list. An unresolved pair is recorded with
+\texttt{U} in place of \texttt{L}.
+
+\subsection{Counts}
+The first pass used $B=12$ (47 directions). It left 4{,}655 pairs
+unresolved in 4{,}502 rooms. A second pass with $B=60$ (1{,}103 directions)
+on those rooms found witnesses for every remaining pair. Both passes report
+zero \texttt{verify\_plane} failures.
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity & Count \\
+\midrule
+Rooms in $\mathcal C$ (areas 8 to 36) & 780{,}565 \\
+\quad of which area $>20$ & 261{,}564 \\
+Pairs of distinct interior lattice points & 3{,}933{,}192 \\
+\quad same parity class & 907{,}567 \\
+\quad different parity classes & 3{,}025{,}625 \\
+Pairs unresolved after the first pass ($B=12$) & 4{,}655 \\
+Rooms in the second pass ($B=60$) & 4{,}502 \\
+Pairs unresolved after the second pass & 0 \\
+\texttt{verify\_plane} failures, both passes & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Independent checks}\label{sec:checks}
+\begin{enumerate}
+\item \emph{Audit.} \texttt{audit.py} \cite{qreadme} reads the compressed
+witness files independently of the shooter. For each room it recomputes
+the lattice points from the cell list, checks $W\le20$ and the corner-only
+condition, and checks that the recorded pairs are exactly all unordered
+pairs of interior lattice points. Every first-pass miss has a lit record in
+the retry file. Its output reproduces the counts in the table.
+\item \emph{Independent census.} \texttt{independent.c} adds single cells,
+never blocks, and checks topology at the end by Euler characteristic. Its
+counts agree with the enumeration for every area 1 to 36 and every
+alignment, after expanding isometric copies: 144 comparisons
+\cite{qreadme}.
+\item \emph{Polyomino counts.} A patched copy of the polyomino enumerator
+\texttt{polyo.c} of \cite{d67} counts fixed in-scope polyominoes through
+area 15. The counts match the oriented census at every area; at areas 8 to
+15 they are 14, 112, 474, 1{,}828, 7{,}107, 25{,}984, 82{,}890 and
+205{,}548. The review \cite{d102} adds a separate Redelmeier enumeration in
+Python, sharing no code with the other three. It matches the room list at
+every area 1 to 13, with 3, 16, 63, 234, 907 and 3{,}262 rooms at areas 8
+to 13.
+\item \emph{Full independent replay.} The review \cite[\S2]{d102} replays
+all 3{,}933{,}192 witnesses in all 780{,}565 rooms with the integer
+billiard of \cite{d67}, which imports nothing from the shooter or from
+\texttt{verify\_plane.c}. It checks the hypotheses of each room again. It
+reports 0 hypothesis failures, 0 replay failures, 0 step-count mismatches,
+and 0 missing, extra or duplicate pairs; all 4{,}655 first-pass misses
+resolve from the retry file. The recorded run took 72.5 CPU seconds.
+\item \emph{Sampled independent search.} An earlier coordinator check
+using the same independent billiard, with its own directions, lit all
+141{,}882 pairs in 20{,}200 sampled rooms with $\max(p,q)\le20$
+\cite[\S11]{results}.
+\end{enumerate}
+
+\subsection{Controls}
+\begin{itemize}
+\item \emph{Corruption control} \cite[\S2]{d102}. On 2{,}000 rooms the
+replay rejects all 9{,}587 wrong-target corruptions and all 4{,}877
+off-by-one step counts. It accepts 28 of 10{,}268 sign flips. These are
+expected: in a mirror-symmetric room a reflected direction can reach $T$
+in the same number of steps.
+\item \emph{Dark-room control.} The shooter, run on $R_{22}$ at $B=60$
+(1{,}103 directions), finds no witness for its dark pair, as it must
+\cite{qreadme}. The independent billiard finds none with
+$\max(p,q)\le40$ \cite[\S11]{results}. These controls test the programs;
+the darkness of the pair rests on the proof in \cite{q22}.
+\end{itemize}
+
+\begin{proof}[Proof of Theorem~\ref{thm:closure}]
+By Corollary~\ref{cor:finite}, the lower bound follows once every pair of
+distinct interior lattice points is lit in every room of $\mathcal C$. The
+enumeration lists $\mathcal C$, and the computation supplies an exact
+lighting path for every such pair, each replayed by two tracers. Each
+replayed witness is itself a proof that its pair is lit. Sharpness is the
+main theorem of \cite{q22}, together with the corner-only class of
+$R_{22}$ recorded in \cite[\S3]{d97}.
+\end{proof}
+
+\subsection{Rooms with a proper canonical factor}
+A side computation in \cite{qreadme} extends an earlier finite result to
+pairs of different classes. We state it in the language of
+\cite[\S2.3--2.5]{results}. Let $DP$ be two copies of $P$ glued
+along the boundary, an $n$-sheeted cover of the unit pillowcase branched
+over its four corners. For a class $x$, let $g_x$ be the monodromy at the
+corner of class $x$, let $B_x$ be the finest block system merging every
+2-cycle of $g_x$, and let $N_x=DP/B_x$. The room is \emph{normalized} when
+the horizontal edge lengths have gcd 1 and so do the vertical ones.
+
+\begin{proposition}[Proper-factor branch; computed]\label{prop:proper}
+Let $P$ be a normalized strictly simple orthogonal lattice room with
+$W\le20$ in which some class $x$ has $1<\deg N_x<n$. Then every pair of
+distinct interior lattice points of $P$ is lit, of the same or different
+classes.
+\end{proposition}
+
+The source d64 lists every such room by enumerating quotients and their
+covers, with a written completeness argument \cite[\S2]{d64}. It found
+4{,}776 rooms, 4{,}581 normalized and 2{,}800 in scope, and lit all
+6{,}680 same-class pairs. The review d67 finds the completeness argument
+correct step by step, and reproduces the counts and the lighting with its
+own billiard and its own polyomino count through $n\le16$ \cite{d67}. The
+one evidence gap d67 recorded, the $z=4$ quotients, was closed by an
+independent enumerator that matches all 3{,}663 cases object by object
+\cite{d98}. For pairs of different classes, \cite{qreadme} runs the
+patched shooter ($B=45$, 629 directions) on all 3{,}889 saved d64 rooms
+with at least two interior lattice points. All 43{,}524 pairs have
+witnesses, with 0 \texttt{verify\_plane} failures. These rooms overlap
+$\mathcal C$, so the counts must not be added. The covering-room witnesses
+were not part of the full replay in \cite{d102}.
+
+\section{The area-15 off-grid theorem}\label{sec:area15}
+The sources are \cite{offgrid} for the computation, \cite{d13} and its
+review \cite{d96} for the cylinder lemma, and \cite{d74} for the
+independent check.
+
+\subsection{The cylinder certificate}
+Let $M$ be the four-copy unfolding of $P$ and $\Sigma\subset M$ the set of
+lifts of corners, convex corners included. For a rational direction
+$\theta=(p,q)$ with $p,q\ge1$, the leaves through $\Sigma$ are finitely
+many saddle connections, and their complement is a finite union of open
+maximal cylinders. Let $\tau$ be the sheet flip $e\mapsto -e$. A
+\emph{DP cylinder} $D$ is the image of $C\cup\tau C$ for an $M$-cylinder
+$C$. For $S\in\interior(P)$, let $\Lambda_\theta(S)$ be the set of DP
+cylinders whose open $M$-cylinders contain a lift of $S$, and let $K_D$ be
+the projection to $P$ of the closures of the $M$-cylinders of $D$.
+
+\begin{lemma}[Lemma A$'$ of \cite{d13}]\label{lem:A}
+Let $S\ne T$ be points of $\interior(P)$, $\theta$ a rational direction,
+$D\in\Lambda_\theta(S)$ and $T\in K_D$. Then $S$ and $T$ are lit.
+\end{lemma}
+\begin{proof}[Proof sketch from \cite{d13}]
+Choose a lift $\tilde s$ in an open cylinder $C$ of $D$ and a lift
+$\tilde t$ in the closure of $C$, replacing it by $\tau\tilde t$ if needed.
+Develop $C$ as a strip $\mathbb R\times(0,h)$ modulo a translation. Join
+the preimages of $\tilde s$ and $\tilde t$ by a straight segment, using a
+translate that makes the endpoints differ. Its relative interior lies in
+the open strip, whose image avoids $\Sigma$. So it projects to a lighting
+path.
+\end{proof}
+
+For a finite set $\Theta$ of directions, put
+$\operatorname{Ill}_\Theta(S)=\bigcup_{\theta\in\Theta,\,D\in\Lambda_\theta(S)}K_D$.
+
+\begin{theorem}[Theorem C of \cite{d13}]\label{thm:C}
+(1) $S$ lights every $T\ne S$ in $\operatorname{Ill}_\Theta(S)\cap\interior(P)$.
+(2) If $(S,T)$ is dark, then $T\notin\operatorname{Ill}_\Theta(S)$ and
+$S\notin\operatorname{Ill}_\Theta(T)$.
+\end{theorem}
+Part (1) is Lemma~\ref{lem:A}; part (2) is its contrapositive with the
+symmetry of light. The review \cite{d96} finds Lemma A$'$, Theorem C, and
+the soundness argument of the exact cylinder program \texttt{cover.c}
+sound, with four wording points that change no result.
+
+\subsection{The computation}
+\begin{enumerate}
+\item \emph{Rooms.} The block enumerator, with the two-interior-point
+filter removed, lists the 15-cell rooms with a corner-only class and
+$W\le20$, including rooms with zero or one interior lattice point. A
+separate cell-by-cell enumeration, filtered by area, topology, wall count
+and parity, gives the same set of rooms after canonicalizing under
+translation and the eight square symmetries \cite{offgrid}. The counts by
+wall number are below; other wall counts below 22 contribute zero.
+\begin{center}
+\begin{tabular}{lrrrrrr}
+\toprule
+$W$ & 12 & 14 & 16 & 18 & 20 & total\\
+\midrule
+Rooms & 13 & 327 & 3{,}413 & 18{,}966 & 55{,}006 & 77{,}725\\
+\bottomrule
+\end{tabular}
+\end{center}
+\item \emph{Covering.} For each direction, the program partitions
+$\interior(P)$ into relatively open faces, edges and points. Each source
+piece carries closed polygons with exact rational vertices that contain
+every target not yet certified by Lemma~\ref{lem:A}.
+\item \emph{Reciprocity.} By Theorem~\ref{thm:C}(2), a dark pair $(S,T)$
+needs $T$ uncovered for $S$ and $S$ uncovered for $T$. If a source bucket
+$A$ has possible targets in $B$, but no surviving source in $B$ has a
+possible target in $A$, then the bucket pair contains no dark pair. The
+implementation bounds each polygon by all half-grid buckets meeting its
+bounding box. It can discard an expensive refinement and restore the
+previous state, which only forgoes a certificate \cite[step 3]{offgrid}.
+\item \emph{Tile pairs.} Six rooms were run separately on each unordered
+pair of cells (tiles), both orders included. Each interior source belongs
+to one tile by a consistent assignment of shared open edges and vertices,
+and each target ranges over its whole closed tile. A point of a tile
+outside a finite union of closed lit sets has an open neighbourhood of
+positive area in that tile, so the positive-area test survives the
+restriction \cite[step 4]{offgrid}.
+\item \emph{Acceptance.} A run is accepted only when its remaining source
+pieces are isolated points and every mutually uncovered pair consists of
+lattice points. Such pairs are settled by the lattice census of
+Section~\ref{sec:computation}.
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Stage & Rooms in & Rooms not yet accepted \\
+\midrule
+Pass 1: unmodified \texttt{cover.c} & 77{,}725 & 4{,}842 \\
+Pass 2: \texttt{cover.c} with reverse pruning & 4{,}842 & 112 \\
+Pass 3: variant that skips expensive refinements & 112 & 6 \\
+Tile pairs (120 per room) & 6 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+All 720 tile pairs clear. All 15{,}571 rooms whose accepted result keeps
+lattice pairs match rooms of the lattice census by exact cell coordinates,
+and that census replays a lighting path for every pair of distinct
+interior lattice points. The audit script reproduces each line of this
+paragraph and the tables \cite{offgrid}. As a control, the same program
+keeps exactly the known pair of $R_{22}$.
+
+\subsection{Independent check of the six hardest rooms}
+The check d74 \cite{d74} reimplements the certifier from the prose of
+\cite{d13} and \cite{offgrid} only, without reading their code. It uses
+exact rational arithmetic, in Python and in a C++ port that stops on
+overflow. Its soundness argument maintains the invariant that every
+uncovered target of a source lies in that source's polygons, and drops a
+piece only when it has no live mutual partner. It runs on whole rooms, so
+it doesn't need the tile-pair restriction.
+\begin{itemize}
+\item On the six rooms that needed tile pairs, at $B=16$ it clears five
+rooms completely. Room 1 keeps the single lattice pair $(2,1)$--$(4,3)$ at
+$B=10$ and $B=16$. Room 5 keeps $(1,2)$--$(4,5)$ at $B=10$ only. Exact
+paths in directions $(-2,3)$ and $(1,-3)$ light these two pairs.
+\item On $R_{22}$ at $B=8$, the Python and C++ versions both leave exactly
+the known pair.
+\item A validation samples 987 certificates and finds an explicit path for
+each, with 0 failures. This tests for false merges of cylinder labels.
+\end{itemize}
+
+\begin{proof}[Proof of Theorem~\ref{thm:area15}]
+Let $P$ satisfy the hypotheses. Its area is 15 and $W\le20$, so $P$ is
+congruent to one of the 77{,}725 enumerated rooms. Every room is accepted
+at some stage. In an accepted room, Theorem~\ref{thm:C} lights every pair
+except possibly mutually uncovered lattice pairs. Those are lit by the
+replayed lattice witnesses. For the six rooms of the last stage, d74
+independently confirms the result on whole rooms. Sharpness follows from
+\cite{q22}.
+\end{proof}
+
+\section{Scope and limitations}\label{sec:scope}
+\paragraph{Status.}
+Both theorems are computer-assisted. Each source step has independent AI
+review: the counting bound in \cite{d97}, completeness and the full replay
+in \cite{d102}, the cylinder lemma in \cite{d96}, and the six hard rooms in
+\cite{d74}. Each referee was one AI agent, usually from the same model
+family as the author. No human mathematician has refereed any step, and
+nothing is formally verified. The upper bound rests on \cite{q22}, which
+has the same review status.
+
+\paragraph{Stated gaps.}
+\begin{itemize}
+\item Completeness of the block enumerator is checked by reading the code
+\cite[\S1]{d102}. The independent enumerations agree in counts per area
+and alignment, not room by room, except at area 15 in
+Section~\ref{sec:area15}, where the sets agree shape by shape.
+\item For Theorem~\ref{thm:area15}, only the six hardest rooms have an
+independent recomputation. The other 77{,}719 rooms rest on one
+implementation. Pass 1 uses \texttt{cover.c}, whose soundness argument
+\cite{d96} reviewed. Passes 2 and 3 use patched versions with reverse
+pruning and a refinement skip. The review \cite{d96} states that these
+patches are outside its scope, and no source records a separate review of
+them for area 15. Their soundness argument is \cite[step 3]{offgrid}, and
+d74 proves the same pruning rule for its own code.
+\item A second tile-pair run with the unmodified cylinder predicates and
+undefined-behaviour checks completed 708 of 720 tile pairs within its
+resource limit \cite{offgrid}. The source itself calls a separate
+end-to-end implementation of the continuum proof desirable.
+\item The witnesses for Proposition~\ref{prop:proper} have one tracer
+re-check (\texttt{verify\_plane.c}); the full replay of \cite{d102} didn't
+include them.
+\end{itemize}
+
+\paragraph{What is not covered.}
+\begin{itemize}
+\item \emph{BBBB rooms.} Rooms in which every parity class has an interior
+lattice point or a smooth wall point. Theorem~\ref{thm:closure} shows that
+a room below 22 walls with a dark lattice pair must have a regular point
+in every class. It doesn't exclude such a room. This set is infinite.
+\item \emph{Non-lattice marks} in Theorem~\ref{thm:closure}, except at
+area 15 by Theorem~\ref{thm:area15}.
+\item \emph{Non-lattice rooms}: real side lengths, and rooms whose vertices
+lie off the fixed grid.
+\item \emph{45-degree walls}, slit rooms, pinched rooms, rooms with holes,
+and boundary endpoints.
+\end{itemize}
+
+\paragraph{Further work in the sources.}
+The research record lists further corner-only results that this
+manuscript doesn't claim. An 18-wall real-mark result is recorded as
+computer-assisted with an independent check of its shear step, with stated
+gaps \cite[\S11]{results}. A run over all 913{,}622 rooms at 20 walls is
+recorded as proved but not yet reviewed, with partial independent
+confirmation \cite[\S11]{results}.
+
+\section{Reproduction}
+\sloppy\hbadness=10000
+All paths are relative to the repository root. Write $D$ for the directory
+\begin{center}\small\Dir\end{center}
+The following files exist in the repository:
+\begin{itemize}
+\item \path{research/qclass-closure/README.md}: the lattice computation;
+\path{reproduce.sh}, \path{audit.py}, \path{independent.c},
+\path{covers_input.py}, and \path{raw-sha256.txt} in the same directory.
+\item \path{research/qclass-closure/off-grid.md}: the area-15 computation;
+\path{offgrid/replay_area15.sh}, \path{offgrid/audit_area15.py}, and
+\path{offgrid/results/audit.txt} in the same directory.
+\item $D$\path{/d70-writeup/RESULTS.md}, sections 2, 3.10, 3.12 and 11.
+\item $D$\path{/d68-one-target/README.md} and
+$D$\path{/d97-review-counting/review.md}, \path{count.py}.
+\item $D$\path{/d102-qclass-replay/control.py}.
+\item $D$\path{/d74-continuum-check/README.md}, \path{certify.py},
+\path{geom.py}, \path{validate.py}.
+\item $D$\path{/d13-cylinder-cover/theory.md}, \path{cover.c}, and
+$D$\path{/d96-review-d13/review.md}.
+\item $D$\path{/d9-census-w22/shoot.c}, \path{verify_plane.c};
+$D$\path{/d67-review-d64/indep.py}, \path{polyo.c}, \path{review.md};
+$D$\path{/d64-finite-case/README.md}; $D$\path{/d98-check-enumK/README.md}.
+\item \path{preprints/twenty-two-wall/}: the room $R_{22}$ and its proof.
+\end{itemize}
+
+\paragraph{Files outside this repository.}
+The research mirror holds the programs, patches, run logs and room files
+cited here. It lacks the three compressed witness files
+(\texttt{witnesses*.txt.gz}, 15.9\,MB in total), so the d102 full replay
+doesn't run from this repository alone. Their SHA-256 digests are in the
+folder provenance record. On 23 November 2026,
+\texttt{audit.py}, \texttt{audit\_area15.py}, the counting check, and
+the d102 full replay and control were rerun on the full research tree.
+The outputs matched the recorded logs; the full replay took 76.5 CPU seconds.
+
+\paragraph{Acknowledgments and AI assistance.}
+The authors used ChatGPT and Claude to develop and check arguments, write
+and review programs, and prepare the manuscript. The authors take
+responsibility for its content.
+
+\begin{thebibliography}{99}
+\bibitem{q22}
+P.~Wang and D.~Wang, \emph{A Simple Orthogonal 22-Gon with Exactly One
+Non-Illuminating Pair}, working draft v0.7 (2026),
+\path{preprints/twenty-two-wall/manuscript.pdf}.
+\bibitem{results}
+Research record, \emph{Illumination in strictly simple orthogonal lattice
+rooms: results record}, $D$\path{/d70-writeup/RESULTS.md}.
+\bibitem{qreadme}
+Research note, \emph{A sharp 22-wall minimum under one parity condition},
+\path{research/qclass-closure/README.md}.
+\bibitem{offgrid}
+Research note, \emph{A sharp 22-wall minimum at area 15 with arbitrary
+real marks}, \path{research/qclass-closure/off-grid.md}.
+\bibitem{d68}
+Research note d68, \emph{The one-B-target sub-case},
+$D$\path{/d68-one-target/README.md}.
+\bibitem{d97}
+Review d97, \emph{The counting identity and the corner-only area bound},
+$D$\path{/d97-review-counting/review.md}.
+\bibitem{d102}
+Review d102, \emph{Q-class closure completeness and full witness replay},
+$D$\path{/d102-qclass-replay/review.md}.
+\bibitem{d9shoot}
+Research programs \path{shoot.c} and \path{verify_plane.c},
+$D$\path{/d9-census-w22/}.
+\bibitem{d64}
+Research note d64, \emph{The finite case of the realization lemma},
+$D$\path{/d64-finite-case/README.md}.
+\bibitem{d67}
+Review d67, \emph{Referee report on d64}, with programs \path{indep.py}
+and \path{polyo.c}, $D$\path{/d67-review-d64/}.
+\bibitem{d98}
+Check d98, \emph{Independent check of d64 enum\_K.c at z = 4},
+$D$\path{/d98-check-enumK/README.md}.
+\bibitem{d13}
+Research note d13, \emph{Cylinder certificates beyond one-cylinder
+directions: theory}, $D$\path{/d13-cylinder-cover/theory.md}.
+\bibitem{d96}
+Review d96, \emph{Referee review of d13 and cover.c},
+$D$\path{/d96-review-d13/review.md}.
+\bibitem{d74}
+Check d74, \emph{Independent continuum check of the area-15 result},
+$D$\path{/d74-continuum-check/README.md}.
+\bibitem{Tokarsky1995}
+G.~W. Tokarsky, ``Polygonal Rooms Not Illuminable from Every Point,''
+\emph{The American Mathematical Monthly} \textbf{102} (1995), no.~10,
+867--879. \url{https://doi.org/10.1080/00029890.1995.12004679}.
+\bibitem{LMW}
+S.~Leli\`evre, T.~Monteil and B.~Weiss, ``Everything is illuminated,''
+\emph{Geometry \& Topology} \textbf{20} (2016), 1737--1762.
+\texttt{arXiv:1407.2975}. \url{https://arxiv.org/abs/1407.2975}.
+\bibitem{Wolecki}
+A.~Wolecki, \emph{Illumination in Rational Billiards},
+\texttt{arXiv:1905.09358v3} (2024). \url{https://arxiv.org/abs/1905.09358}.
+\end{thebibliography}
+\end{document}

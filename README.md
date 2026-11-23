@@ -8,7 +8,7 @@ The universal minimum-wall problem remains open. The results have internal AI re
 
 | To… | Start with… |
 |---|---|
-| Read a manuscript | [Nine theorem manuscripts, an affine research note and two supporting notes](preprints/README.md) |
+| Read a manuscript | [Twelve theorem manuscripts, an affine research note and two supporting notes](preprints/README.md) |
 | Watch an explainer | [Narrated videos with editable HyperFrames source](videos/README.md) |
 | Find a precise statement, hypotheses, and proof | [Results inventory](RESULTS.md) |
 | Understand failed approaches and open questions | [Negative findings](docs/NEGATIVE-RESULTS.md) |
@@ -30,6 +30,9 @@ The [full inventory](RESULTS.md) groups 29 results, including supporting lemmas,
 | [Rectangular-spine combs](preprints/middle-row-combs/README.md) | Spine and tooth-middle-row pairs illuminate with arbitrarily many one-sided teeth and arbitrary real dimensions. |
 | [Long necks and networks](preprints/long-neck-networks/README.md) | Fixed opposing-chamber pairs illuminate across sufficiently long necks; conditional propagation results extend to specified networks. |
 | [Ten-wall spirals](preprints/ten-wall-spirals/README.md) | All-real illumination under tall-or-wide conditions, plus a separate integer coprime-period family. |
+| [Corner-only parity class](preprints/corner-only-class/README.md) | A dark lattice pair in a room with a corner-only parity class needs at least 22 walls, so 22 is exact for this class (computer-assisted). |
+| [Fold certificates](preprints/fold-certificates/README.md) | No room with at most 20 walls has a pair certified dark by a parity-fold certificate (computer-assisted). |
+| [Chamber pockets](preprints/chamber-pockets/README.md) | Every lattice pair is lit in an infinite family of 20-wall three-chamber rooms, through a pocket path over the middle chamber. |
 
 The inventory also covers [two-sided comb subclasses](RESULTS.md#r05), [nested staircases](RESULTS.md#r08), and [affine endpoint transport](preprints/affine-endpoint-transport/README.md). Each statement retains its geometric and endpoint hypotheses. The rational-to-real reduction gives no bound on denominators and does not turn a finite-area census into an all-real theorem.
 

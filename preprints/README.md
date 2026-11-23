@@ -15,6 +15,9 @@ Start here for readable PDFs and their sources. Each manuscript has its own fold
 | Rectangular-spine comb illumination | [PDF](middle-row-combs/manuscript.pdf) | [All real spine/middle-row pairs, arbitrary tooth count; height-two lattice corollary](middle-row-combs/README.md) |
 | Long rectangular necks and networks | [PDF](long-neck-networks/manuscript.pdf) | [Eventual single-neck illumination; conditional propagation on parallel-neck trees](long-neck-networks/README.md) |
 | Tall and coprime-period ten-wall spirals | [PDF](ten-wall-spirals/manuscript.pdf) | [All-real tall-or-wide theorem and a separate thin-cap lattice family](ten-wall-spirals/README.md) |
+| 22 walls is exact for rooms with a corner-only parity class | [PDF](corner-only-class/manuscript.pdf) | [Computer-assisted closure for lattice pairs; area-15 theorem for all real pairs](corner-only-class/README.md) |
+| No fold certificate of darkness below 21 walls | [PDF](fold-certificates/manuscript.pdf) | [Computer-assisted fold-side theorem at W ≤ 20, second proof, and why folds need nine reflex corners](fold-certificates/README.md) |
+| Chamber pockets and a lit family of 20-wall rooms | [PDF](chamber-pockets/manuscript.pdf) | [Three-chamber rooms lit at every size; pocket lemma, neck phase maps and group-ring test](chamber-pockets/README.md) |
 
 ## Explainer videos
 
