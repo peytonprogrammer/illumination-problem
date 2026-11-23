@@ -385,3 +385,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-22 23:05 d192 PASS WITH CORRECTIONS: h/t>H* lights all source depths. With d190/d191: fixed upper template at an occupied crossing ⇒ finitely many dark placements. Open: u or t growing with the lower box (comparable scales). Estimate 11-13%.
 - 2026-11-22 23:30 d193 PASS WITH CORRECTIONS (3 notes): explicit area bound on both stretches u,t in the anchored overlap class, for lower-wing sources with transverse target approach. Open: source inside template-width column. Estimate 11-13%.
 - 2026-11-23 05:38 d194 PASS WITH CORRECTIONS: first-entry lemma; inside-column source bounded when opposite side solid or H≥b. Open: H<b two-component return. Estimate 11-13%.
+- 2026-11-23 07:05 d195 PASS WITH CORRECTIONS (partial, conditional strip return). Reviewer: crossing line fragmenting; Astra redirected to a crossing reduction theorem with a decreasing invariant. Estimate 11-13%.
