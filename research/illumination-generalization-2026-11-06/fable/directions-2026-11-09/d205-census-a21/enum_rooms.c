@@ -37,7 +37,11 @@ static long long rooms[MAXN + 1][4 * MAXN + 8];
 static long long elig[MAXN + 1][4 * MAXN + 8];
 static long long fixed_nodes = 0;
 static long long fixed_by_size[MAXN + 1];
-static FILE *out;
+static int shoot_mode, min_area;
+void start_shoot(void);
+void shoot_room(int area,int walls,int width,int height,const uint32_t *rows,int marks);
+void finish_shoot(FILE *out);
+static long long expected_pairs[MAXN+1][64];
 
 static inline int cid(int x, int y) { return (y + 1) * GW + (x + NMAX + 1); }
 static inline int pid(int x, int y) { return (y + 1) * PW + (x + NMAX + 1); }
@@ -76,56 +80,37 @@ static int key_cmp(const Key *A, const Key *B) {
     return 0;
 }
 
-static void process(int k) {
-    fixed_nodes++; fixed_by_size[k]++;
-    /* lattice point masks */
-    for (int i = 0; i < k; i++) {
-        int x = px[i], y = py[i];
-        pm[pid(x, y)] |= 8; pm[pid(x + 1, y)] |= 4;
-        pm[pid(x, y + 1)] |= 2; pm[pid(x + 1, y + 1)] |= 1;
-    }
-    int V = 0, W = 0, pinch = 0, icls[4] = {0, 0, 0, 0};
-    for (int i = 0; i < k; i++) {
-        for (int d = 0; d < 4; d++) {
-            int X = px[i] + (d & 1), Y = py[i] + (d >> 1);
-            int p = pid(X, Y);
-            int m = pm[p];
-            if (!m) continue;
-            pm[p] = 0;
-            V++;
-            int c = __builtin_popcount(m);
-            if (c == 1 || c == 3) W++;
-            else if (c == 4) icls[((X & 1) << 1) | (Y & 1)]++;
-            else if (m == 9 || m == 6) pinch = 1;
+/* Maintain the same vertex masks and Euler test as d9 incrementally.
+ * A cell toggles corner parity at its four vertices. */
+static uint64_t rowbits[MAXN+1];
+static int corner[16],pinch[16];
+static void process(int k,int W,int holes_test,int pinches,int marks,int xmin,int xmax,int ymax) {
+    if(k<min_area || W>WMAX || pinches || holes_test!=1) return;
+    Key K0,K;
+    K0.w=xmax-xmin+1; K0.h=ymax+1;
+    if(K0.w>K0.h) return;
+    int shift=xmin+MAXN;
+    for(int r=0;r<K0.h;r++) K0.row[r]=rowbits[r]>>shift;
+    if(K0.row[0]>K0.row[ymax]) return;
+    for(int t=1;t<(K0.w==K0.h?8:4);t++) {
+        if(t==2) {
+            for(int r=0;r<K0.h;r++) K.row[r]=K0.row[ymax-r];
+        } else {
+            for(int r=0;r<K0.h;r++) {
+                int from=t==3?ymax-r:r;
+                if(t<4) K.row[r]=__builtin_bitreverse32(K0.row[from])>>(32-K0.w);
+            }
+            if(t>=4) make_key(k,t,&K);
         }
-    }
-    if (pinch || W > WMAX) return;
-    int adj = 0;
-    for (int i = 0; i < k; i++) {
-        if (occ[cid(px[i] + 1, py[i])]) adj++;
-        if (occ[cid(px[i], py[i] + 1)]) adj++;
-    }
-    int E = 4 * k - adj;
-    if (V - E + k != 1) return;          /* hole */
-    Key K0, K;
-    make_key(k, 0, &K0);
-    for (int t = 1; t < 8; t++) {
-        make_key(k, t, &K);
-        if (key_cmp(&K, &K0) < 0) return;  /* not the canonical representative */
+        K.w=K0.w; K.h=K0.h;
+        if(key_cmp(&K,&K0)<0) return;
     }
     rooms[k][W]++;
-    int e = 0;
-    for (int c = 0; c < 4; c++) if (icls[c] >= 2) e = 1;
-    if (!e) return;
+    if(marks<2) return;
     elig[k][W]++;
-    /* write normalised cells from the canonical key */
-    fprintf(out, "%d %d", k, W);
-    for (int r = 0; r < K0.h; r++)
-        for (int c = 0; c < K0.w; c++)
-            if (K0.row[r] >> c & 1) fprintf(out, " %d %d", c, r);
-    fputc('\n', out);
+    expected_pairs[k][W]+=marks*(marks-1)/2;
+    if(shoot_mode) shoot_room(k,W,K0.w,K0.h,K0.row,marks);
 }
-
 static int allowed(int x, int y) {
     if (y < 0 || y >= NMAX) return 0;
     if (y == 0 && x < 0) return 0;
@@ -133,7 +118,7 @@ static int allowed(int x, int y) {
     return 1;
 }
 
-static void rec(int n, const int *untried, int nu) {
+static void rec(int n, const int *untried, int nu,int W,int chi,int pinches,int marks,int xmin,int xmax,int ymax) {
     int buf[4 * MAXN + 8];
     int U[4 * MAXN + 8];
     memcpy(U, untried, sizeof(int) * nu);
@@ -146,7 +131,24 @@ static void rec(int n, const int *untried, int nu) {
             if (me % NJ != J) continue;
         }
         px[n] = x; py[n] = y; occ[c] = 1;
-        if (s >= SPLIT || J == 0) process(s);
+        const int loc=pid(x,y), offsets[4]={0,1,PW,PW+1};
+        int newW=W,newPinch=pinches,newMarks=marks,newChi=chi-3;
+        for(int i=0;i<4;i++) {
+            int old=pm[loc+offsets[i]], next=old | (8>>i);
+            newW+=corner[next]-corner[old];
+            newPinch+=pinch[next]-pinch[old];
+            newMarks+=(next==15);
+            newChi+=!old;
+            pm[loc+offsets[i]]=next;
+        }
+        newChi+=occ[c+1]+occ[c-1]+occ[c+GW]+occ[c-GW];
+        rowbits[y]|=1ULL<<(x+MAXN);
+        int mn=x<xmin?x:xmin,mx=x>xmax?x:xmax,my=y>ymax?y:ymax;
+        if(s>=SPLIT || J==0) {
+            fixed_nodes++; fixed_by_size[s]++;
+            process(s,newW,newChi,newPinch,newMarks,mn,mx,my);
+        }
+        /* Preserve d9's complete Redelmeier node counts for validation. */
         if (s < NMAX) {
             int m = nu, added = 0;
             memcpy(buf, U, sizeof(int) * nu);
@@ -159,9 +161,11 @@ static void rec(int n, const int *untried, int nu) {
                 if (seen[q]) continue;
                 seen[q] = 1; buf[m++] = q; addl[added++] = q;
             }
-            rec(s, buf, m);
+            rec(s,buf,m,newW,newChi,newPinch,newMarks,mn,mx,my);
             for (int d = 0; d < added; d++) seen[addl[d]] = 0;
         }
+        rowbits[y]^=1ULL<<(x+MAXN);
+        for(int i=0;i<4;i++) pm[loc+offsets[i]]^=8>>i;
         occ[c] = 0;
     }
 }
@@ -170,7 +174,10 @@ int main(int argc, char **argv) {
     if (argc < 7) { fprintf(stderr, "usage: enum_rooms NMAX WMAX NJ J outfile countsfile\n"); return 1; }
     NMAX = atoi(argv[1]); WMAX = atoi(argv[2]); NJ = atoi(argv[3]); J = atoi(argv[4]);
     if (NMAX > MAXN || NMAX < SPLIT) { fprintf(stderr, "NMAX out of range\n"); return 1; }
-    out = strcmp(argv[5], "-") ? fopen(argv[5], "w") : stdout;
+    min_area=atoi(argv[5]);
+    shoot_mode=(argc==8 && strcmp(argv[7],"shoot")==0);
+    if(NMAX>21 || WMAX!=20 || NJ<=0 || J<0 || J>=NJ || min_area<1) return 2;
+    if(shoot_mode) start_shoot();
     GW = 2 * NMAX + 4; PW = 2 * NMAX + 6;
     seen = calloc((size_t)GW * (NMAX + 4), 1);
     occ = calloc((size_t)GW * (NMAX + 4), 1);
@@ -178,7 +185,8 @@ int main(int argc, char **argv) {
     int start = cid(0, 0);
     seen[start] = 1;
     int U[1] = {start};
-    rec(0, U, 1);
+    for(int m=0;m<16;m++) {corner[m]=__builtin_popcount(m)%2;pinch[m]=(m==6||m==9);}
+    rec(0,U,1,0,0,0,0,0,0,0);
     FILE *cf = fopen(argv[6], "w");
     fprintf(cf, "# fixed_nodes_processed %lld\n", fixed_nodes);
     for (int k = 1; k <= NMAX; k++) fprintf(cf, "# fixed area %d %lld\n", k, fixed_by_size[k]);
@@ -186,8 +194,9 @@ int main(int argc, char **argv) {
         for (int w = 4; w <= WMAX; w += 2)
             if (rooms[k][w])
                 fprintf(cf, "# count area %d W %d rooms %lld eligible %lld\n", k, w, rooms[k][w], elig[k][w]);
+    for(int a=min_area;a<=NMAX;a++) for(int w=4;w<=WMAX;w+=2) if(expected_pairs[a][w]) fprintf(cf,"EXPECT %d %d %lld\n",a,w,expected_pairs[a][w]);
+    if(shoot_mode) finish_shoot(cf);
     fprintf(cf, "# DONE\n");
-    fclose(cf);
-    fclose(out);
+    if(ferror(cf) || fclose(cf)) return 5;
     return 0;
 }

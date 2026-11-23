@@ -1773,3 +1773,4 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 13:10 — area-21 census approved
 - Daniel: "yes go, don't always wait for me." Approved the area-21 census slice and the parity-coverage audit. Astra is implementing it in d205-census-a21 (validate, then run in the background, ≤ 8 processes). Recorded in PROGRAM.md.
+- 13:12 Parity audit: L2 gap at areas 17–20 (different-parity pairs untested). PROGRAM L2 line corrected. Gap fill added to d205, ordered before area 21, under Daniel's census approval. Slack posted (wrong claim).

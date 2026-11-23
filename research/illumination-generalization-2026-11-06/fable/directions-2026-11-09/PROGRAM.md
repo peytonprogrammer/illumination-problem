@@ -10,7 +10,7 @@ Goal: every strictly simple lattice room with W <= 20, orthogonal or with
   descent (darkness survives shortening some length; d152 says a uniform
   tail can't work, so descent must use W <= 20), or "every way of being
   large forces lit" (the lighting tails d162, d172, d174 are pieces of this).
-- **L2, finite check below the bound.** Done for area <= 20 at W <= 21
+- **L2, finite check below the bound.** CORRECTION 2026-11-23 (census-parity-audit): different-parity pairs are verified only through area 16; areas 17–20 cover same-parity pairs only. Gap fill is running in d205. Originally recorded as done for area <= 20 at W <= 21
   (945 million rooms, d9/d29). Extending N0 needs Daniel's approval.
 - **L3, marks.** Real and rational non-lattice marks, wherever the census
   covers lattice marks only.
