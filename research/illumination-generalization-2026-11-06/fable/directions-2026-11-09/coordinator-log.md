@@ -1684,3 +1684,11 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - d198 CORRECT WITH MINOR GAPS. Re-ran checks.py: 25 PASS. The reviewer recommends stopping the route, and its early-stop clause applies. The claim is released.
 - Astra's last allowed test, bbbb/l1-shrink-cap-avoidance.md, is logged without review. It's partial (adjacent columns only), and the route is stopped. Her route-limits summary is in bbbb/l1-shrink-route-limits.md.
 - Estimate 8–10% → 7–9%: the second L1 descent route failed its first test. Reported to Daniel on Slack. Astra is drafting a 1-page proposal for a new route, with no long proof until Daniel picks.
+
+## 2026-11-23 09:50 — new route proposal
+- bbbb/l1-route-next.md proposes shear-orbit counting: sum over the SL2(Z) shear orbit of the decorated 4-copy unfolding, and prove Σ C > Σ B. Proposed stopping rule: 2026-11-26 20:00. Sent to Daniel for a decision; no review subagent.
+- Coordinator concern: dark 22-wall rooms must violate the inequality, so it has to be sharp at 8 versus 9 reflex corners. Asked Astra for a 1-page sharpness check (bbbb/l1-route-next-sharpness.md) before Daniel decides.
+- Sync pushed c170957d3.
+
+## 2026-11-23 10:07 — sharpness check
+- bbbb/l1-route-next-sharpness.md: Astra found no mechanism separating 8 reflex corners from 9. The corner budget enters only as the number of blocker terms, not their sizes. Added as objection 3 in l1-route-next.md. Astra has been idle since 09:50, waiting on Daniel's route decision.

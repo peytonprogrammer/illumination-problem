@@ -12,7 +12,8 @@ On each orbit member, follow the cyclic rows of unit squares to the right, readi
 
 **Stopping rule.** If Daniel selects this route, by **2026-11-26 20:00 HST** deliver a symbolic proof of the strict inequality for the whole named family, or identify the first uncontrolled incidence and stop. Stop earlier if the comparison requires enumerating an orbit, directions or rooms, or bounding a slope denominator or factor height. No proof run before selection.
 
-**Two strongest objections.**
+**Objections.**
 
 1. A single blocked arc can pass several corners. That multiplicity can overwhelm a genuine clear arc in the sum. A nonpositive difference defeats this sufficient test and leaves illumination undecided.
 2. A small corner count controls how many corners exist, not how frequently the shears place a particular corner between these particular marks. Uniform distribution in the full fiber cannot be assumed. An incidence bound has to respect the actual decorated orbit, including parity and any invariant subsets.
+3. No sharp eight-versus-nine mechanism has been identified. The corner budget counts terms in the blocker sum, while strict positivity depends on their multiplicities. A dark nine-reflex pair forces a nonpositive margin but does not explain why eight reflex corners would force a positive one. [Sharpness check](l1-route-next-sharpness.md)
