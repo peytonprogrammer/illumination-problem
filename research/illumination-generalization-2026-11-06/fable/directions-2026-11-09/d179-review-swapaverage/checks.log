@@ -1,0 +1,51 @@
+==============================================================================
+Room DB55 p=53: n=53, N=binom(n,2)=1378
+==============================================================================
+   site (0, 0): q_x=24; q_x/N = 24/1378 = 0.01742; 1/(n-1) = 0.01923; q_x/N <= 1/(n-1): True
+   site (0, 1): q_x=24; q_x/N = 24/1378 = 0.01742; 1/(n-1) = 0.01923; q_x/N <= 1/(n-1): True
+   site (1, 0): q_x=24; q_x/N = 24/1378 = 0.01742; 1/(n-1) = 0.01923; q_x/N <= 1/(n-1): True
+   site (1, 1): q_x=24; q_x/N = 24/1378 = 0.01742; 1/(n-1) = 0.01923; q_x/N <= 1/(n-1): True
+==============================================================================
+Check 1: counting lemma on named primitive segments
+==============================================================================
+   start site (0, 0) -> v=(1, 0) ends at site (1, 0): successes 24 (q_b=24), matching True, equals pulled-back 2-cycles True
+   start site (0, 0) -> v=(0, 1) ends at site (0, 1): successes 24 (q_b=24), matching True, equals pulled-back 2-cycles True
+   start site (0, 0) -> v=(1, 1) ends at site (1, 1): successes 24 (q_b=24), matching True, equals pulled-back 2-cycles True
+   start site (0, 0) -> v=(1, 2) ends at site (1, 0): successes 24 (q_b=24), matching True, equals pulled-back 2-cycles True
+   start site (0, 0) -> v=(2, 1) ends at site (0, 1): successes 24 (q_b=24), matching True, equals pulled-back 2-cycles True
+   start site (0, 0) -> v=(1, -1) ends at site (1, 1): successes 24 (q_b=24), matching True, equals pulled-back 2-cycles True
+   start site (0, 0) -> v=(-1, 2) ends at site (1, 0): successes 24 (q_b=24), matching True, equals pulled-back 2-cycles True
+   start site (0, 0) -> v=(3, 2) ends at site (1, 0): successes 24 (q_b=24), matching True, equals pulled-back 2-cycles True
+   all 32 (start site, direction) cases satisfy the lemma: True
+   sanity: reverse of (0,0)->(1,2) is inverse transport: True
+   sanity: reverse of (0,0)->(3,2) is inverse transport: True
+==============================================================================
+Check 2: marked set M = sheets(S) x sheets(T); cross edges among pulled-back swaps
+==============================================================================
+   S=(2, 2) sheets by copy [[6, 12], [7, 11]]; T=(10, 2) sheets by copy [[34, 40], [35, 39]]; |M|=16
+      v=(1, 0): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(0, 1): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(1, 1): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(1, 2): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(2, 1): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(1, -1): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(-1, 2): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(3, 2): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+   S=(2, 2) sheets by copy [[6, 12], [7, 11]]; T=(12, 4) sheets by copy [[46, 52], [47, 51]]; |M|=16
+      v=(1, 0): 24 swap edges; cross S-T 0 []; inside S []; inside T [(51, 52)]
+      v=(0, 1): 24 swap edges; cross S-T 0 []; inside S []; inside T [(47, 52)]
+      v=(1, 1): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(1, 2): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(2, 1): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(1, -1): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(-1, 2): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+      v=(3, 2): 24 swap edges; cross S-T 0 []; inside S []; inside T []
+   abstract example: average of two within-set perfect matchings, mass on cross edges = 0; total mass = 4.0 (=q=4)
+==============================================================================
+Check 3: straightening lemma on named instances (v=(2,1) and v=(3,2) from site 00)
+==============================================================================
+   v=(2, 1) y=(2.1,1.15): |y-v|=0.180 |v||y-v|=0.403 |det(v,y-v)|=0.200; lattice pts in triangle besides 0,v: []; broken path vs chord: labels False, Q-point per sheet True, Y-point per pair True; M-hits (S=(2,2),T=(10,2)) chord 0 broken 0
+   v=(2, 1) y=(1.9,0.9): |y-v|=0.141 |v||y-v|=0.316 |det(v,y-v)|=0.100; lattice pts in triangle besides 0,v: []; broken path vs chord: labels True, Q-point per sheet True, Y-point per pair True; M-hits (S=(2,2),T=(10,2)) chord 0 broken 0
+   v=(3, 2) y=(3.1,1.97): |y-v|=0.104 |v||y-v|=0.376 |det(v,y-v)|=0.290; lattice pts in triangle besides 0,v: []; broken path vs chord: labels True, Q-point per sheet True, Y-point per pair True; M-hits (S=(2,2),T=(10,2)) chord 0 broken 0
+   v=(2, 1) y=(1.7,1.8): |y-v|=0.854 |v||y-v|=1.910 |det(v,y-v)|=1.900; lattice pts in triangle besides 0,v: [(1, 1)]; broken path vs chord: labels False, Q-point per sheet False, Y-point per pair False; M-hits (S=(2,2),T=(10,2)) chord 0 broken 0
+CPU seconds: 0.01

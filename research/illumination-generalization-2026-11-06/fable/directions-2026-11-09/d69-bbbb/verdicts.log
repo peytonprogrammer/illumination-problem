@@ -1,0 +1,9 @@
+DB55 n 53 r 4 W 12 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 112, 'max_states': 79, 'pair_lit': 112, 'iota_check_ok': 336} CPU 1.3 s
+DBas n 48 r 4 W 12 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 81, 'max_states': 89, 'pair_lit': 81, 'iota_check_ok': 243} CPU 0.8 s
+DBw2 n 63 r 4 W 12 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 190, 'max_states': 84, 'pair_lit': 190, 'iota_check_ok': 570} CPU 1.7 s
+CR34 n 57 r 4 W 12 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 144, 'max_states': 29, 'pair_lit': 144, 'iota_check_ok': 432} CPU 0.8 s
+c4181s n 41 r 8 W 20 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 27, 'max_states': 346, 'pair_lit': 27, 'iota_check_ok': 81} CPU 0.7 s
+U2 n 46 r 3 W 10 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 52, 'max_states': 35, 'pair_lit': 52, 'iota_check_ok': 156} CPU 0.2 s
+st279 n 56 r 6 W 16 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 120, 'max_states': 371, 'pair_lit': 120, 'iota_check_ok': 360} CPU 3.1 s
+st279b n 26 r 6 W 16 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 17, 'max_states': 100, 'pair_lit': 17, 'iota_check_ok': 51} CPU 0.2 s
+python3 -B verdicts.py DB55 DBas DBw2 CR34 c4181s U2 st279 st279b  8.71s user 0.05s system 99% cpu 8.790 total

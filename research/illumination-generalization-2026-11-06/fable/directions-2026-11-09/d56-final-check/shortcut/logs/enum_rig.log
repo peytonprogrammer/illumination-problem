@@ -1,0 +1,17 @@
+stage 1: 12 K shapes (labelled classes, up to relabelling), 12 (K, y) pairs, CPU 1.6 s
+K0 cone=1 rig_y=[(0, 0)] types={'00': ['cvx', 'cvx', 'cvx', 'cone'], '10': ['smooth', 'rfx'], '01': ['smooth', 'rfx'], '11': ['int', 'cvx']}: 2 covers
+K1 cone=2 rig_y=[(1, 0)] types={'00': ['smooth', 'rfx'], '10': ['cone', 'cone', 'cvx'], '01': ['smooth', 'rfx'], '11': ['int', 'cvx']}: 0 covers
+K2 cone=1 rig_y=[(0, 1)] types={'00': ['smooth', 'rfx'], '10': ['int', 'cvx'], '01': ['cvx', 'cvx', 'cvx', 'cone'], '11': ['smooth', 'rfx']}: 2 covers
+K3 cone=2 rig_y=[(1, 1)] types={'00': ['smooth', 'rfx'], '10': ['int', 'cvx'], '01': ['smooth', 'rfx'], '11': ['cone', 'cone', 'cvx']}: 0 covers
+K4 cone=2 rig_y=[(0, 0)] types={'00': ['cvx', 'cone', 'cone'], '10': ['cvx', 'int'], '01': ['rfx', 'smooth'], '11': ['rfx', 'smooth']}: 0 covers
+K5 cone=2 rig_y=[(1, 0)] types={'00': ['cvx', 'int'], '10': ['cvx', 'cone', 'cone'], '01': ['rfx', 'smooth'], '11': ['rfx', 'smooth']}: 0 covers
+K6 cone=2 rig_y=[(0, 1)] types={'00': ['rfx', 'smooth'], '10': ['rfx', 'smooth'], '01': ['cvx', 'cone', 'cone'], '11': ['cvx', 'int']}: 0 covers
+K7 cone=2 rig_y=[(1, 1)] types={'00': ['rfx', 'smooth'], '10': ['rfx', 'smooth'], '01': ['cvx', 'int'], '11': ['cvx', 'cone', 'cone']}: 0 covers
+K8 cone=2 rig_y=[(0, 0)] types={'00': ['cvx', 'cone', 'cone'], '10': ['rfx', 'smooth'], '01': ['cvx', 'int'], '11': ['rfx', 'smooth']}: 0 covers
+K9 cone=2 rig_y=[(0, 1)] types={'00': ['cvx', 'int'], '10': ['rfx', 'smooth'], '01': ['cvx', 'cone', 'cone'], '11': ['rfx', 'smooth']}: 0 covers
+K10 cone=1 rig_y=[(1, 1)] types={'00': ['cvx', 'int'], '10': ['rfx', 'smooth'], '01': ['rfx', 'smooth'], '11': ['cone', 'cvx', 'cvx', 'cvx']}: 2 covers
+K11 cone=1 rig_y=[(1, 0)] types={'00': ['rfx', 'smooth'], '10': ['cone', 'cvx', 'cvx', 'cvx'], '01': ['cvx', 'int'], '11': ['rfx', 'smooth']}: 2 covers
+stage 2: 8 distinct cover W-sets (genus 0, room local types, r <= 8), CPU 1.8 s
+stage 3: {'r8': 8, 'room': 8, 'classes3': 8} rooms up to lattice isometry: 1, CPU 1.8 s
+peak RSS MB 18
+python3 -B enum_rig.py  1.84s user 0.01s system 99% cpu 1.867 total

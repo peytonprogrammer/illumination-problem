@@ -1,0 +1,76 @@
+== R22 (R22-base): n=15 v=13 r=9 v-r=4 W=22 pinch_points=0
+  y=(0, 0): cvx=3 smooth=2 pinch=0 rfx=0 int=2 -> rhs=15 OK
+  y=(0, 1): cvx=2 smooth=2 pinch=0 rfx=3 int=0 -> rhs=15 OK
+  y=(1, 0): cvx=2 smooth=2 pinch=0 rfx=3 int=0 -> rhs=15 OK
+  y=(1, 1): cvx=6 smooth=0 pinch=0 rfx=3 int=0 -> rhs=15 OK | corner-only: 3rfx+cvx+2pinch=15 <= 4r+4=40: True
+== cross P_7: n=96 v=8 r=4 v-r=4 W=12 pinch_points=0
+  y=(0, 0): cvx=0 smooth=16 pinch=0 rfx=4 int=13 -> rhs=96 OK
+  y=(0, 1): cvx=4 smooth=10 pinch=0 rfx=0 int=18 -> rhs=96 OK
+  y=(1, 0): cvx=4 smooth=10 pinch=0 rfx=0 int=18 -> rhs=96 OK
+  y=(1, 1): cvx=0 smooth=8 pinch=0 rfx=0 int=20 -> rhs=96 OK
+== cross P_9: n=128 v=8 r=4 v-r=4 W=12 pinch_points=0
+  y=(0, 0): cvx=0 smooth=24 pinch=0 rfx=4 int=17 -> rhs=128 OK
+  y=(0, 1): cvx=4 smooth=14 pinch=0 rfx=0 int=24 -> rhs=128 OK
+  y=(1, 0): cvx=4 smooth=14 pinch=0 rfx=0 int=24 -> rhs=128 OK
+  y=(1, 1): cvx=0 smooth=8 pinch=0 rfx=0 int=28 -> rhs=128 OK
+== U2 (k=0): n=46 v=7 r=3 v-r=4 W=10 pinch_points=0
+  y=(0, 0): cvx=1 smooth=13 pinch=0 rfx=1 int=4 -> rhs=46 OK
+  y=(0, 1): cvx=2 smooth=10 pinch=0 rfx=0 int=6 -> rhs=46 OK
+  y=(1, 0): cvx=1 smooth=11 pinch=0 rfx=1 int=5 -> rhs=46 OK
+  y=(1, 1): cvx=3 smooth=6 pinch=0 rfx=1 int=7 -> rhs=46 OK
+== census R1 (area 10, W 10, align 3): n=10 v=7 r=3 v-r=4 W=10 pinch_points=0
+  y=(0, 0): cvx=3 smooth=2 pinch=0 rfx=1 int=0 -> rhs=10 OK
+  y=(0, 1): cvx=0 smooth=3 pinch=0 rfx=0 int=1 -> rhs=10 OK
+  y=(1, 0): cvx=4 smooth=0 pinch=0 rfx=2 int=0 -> rhs=10 OK | corner-only: 3rfx+cvx+2pinch=10 <= 4r+4=16: True
+  y=(1, 1): cvx=0 smooth=3 pinch=0 rfx=0 int=1 -> rhs=10 OK
+== census R1205 (area 13, W 10, align 3): n=13 v=7 r=3 v-r=4 W=10 pinch_points=0
+  y=(0, 0): cvx=1 smooth=4 pinch=0 rfx=0 int=1 -> rhs=13 OK
+  y=(0, 1): cvx=1 smooth=6 pinch=0 rfx=0 int=0 -> rhs=13 OK
+  y=(1, 0): cvx=1 smooth=4 pinch=0 rfx=0 int=1 -> rhs=13 OK
+  y=(1, 1): cvx=4 smooth=0 pinch=0 rfx=3 int=0 -> rhs=13 OK | corner-only: 3rfx+cvx+2pinch=13 <= 4r+4=16: True
+== census R40597 (area 16, W 12, align 4): n=16 v=8 r=4 v-r=4 W=12 pinch_points=0
+  y=(0, 0): cvx=4 smooth=6 pinch=0 rfx=0 int=0 -> rhs=16 OK
+  y=(0, 1): cvx=0 smooth=6 pinch=0 rfx=0 int=1 -> rhs=16 OK
+  y=(1, 0): cvx=4 smooth=0 pinch=0 rfx=4 int=0 -> rhs=16 OK | corner-only: 3rfx+cvx+2pinch=16 <= 4r+4=20: True
+  y=(1, 1): cvx=0 smooth=4 pinch=0 rfx=0 int=2 -> rhs=16 OK
+== census R284965 (area 19, W 14, align 5): n=19 v=9 r=5 v-r=4 W=14 pinch_points=0
+  y=(0, 0): cvx=1 smooth=7 pinch=0 rfx=0 int=1 -> rhs=19 OK
+  y=(0, 1): cvx=3 smooth=8 pinch=0 rfx=0 int=0 -> rhs=19 OK
+  y=(1, 0): cvx=1 smooth=5 pinch=0 rfx=0 int=2 -> rhs=19 OK
+  y=(1, 1): cvx=4 smooth=0 pinch=0 rfx=5 int=0 -> rhs=19 OK | corner-only: 3rfx+cvx+2pinch=19 <= 4r+4=24: True
+== census R518983 (area 21, W 14, align 5): n=21 v=9 r=5 v-r=4 W=14 pinch_points=0
+  y=(0, 0): cvx=1 smooth=6 pinch=0 rfx=0 int=2 -> rhs=21 OK
+  y=(0, 1): cvx=1 smooth=10 pinch=0 rfx=0 int=0 -> rhs=21 OK
+  y=(1, 0): cvx=1 smooth=6 pinch=0 rfx=0 int=2 -> rhs=21 OK
+  y=(1, 1): cvx=6 smooth=0 pinch=0 rfx=5 int=0 -> rhs=21 OK | corner-only: 3rfx+cvx+2pinch=21 <= 4r+4=24: True
+== census R725636 (area 24, W 16, align 6): n=24 v=10 r=6 v-r=4 W=16 pinch_points=0
+  y=(0, 0): cvx=4 smooth=10 pinch=0 rfx=0 int=0 -> rhs=24 OK
+  y=(0, 1): cvx=0 smooth=8 pinch=0 rfx=0 int=2 -> rhs=24 OK
+  y=(1, 0): cvx=6 smooth=0 pinch=0 rfx=6 int=0 -> rhs=24 OK | corner-only: 3rfx+cvx+2pinch=24 <= 4r+4=28: True
+  y=(1, 1): cvx=0 smooth=6 pinch=0 rfx=0 int=3 -> rhs=24 OK
+== census R774722 (area 27, W 18, align 7): n=27 v=11 r=7 v-r=4 W=18 pinch_points=0
+  y=(0, 0): cvx=3 smooth=8 pinch=0 rfx=0 int=2 -> rhs=27 OK
+  y=(0, 1): cvx=1 smooth=5 pinch=0 rfx=0 int=4 -> rhs=27 OK
+  y=(1, 0): cvx=6 smooth=0 pinch=0 rfx=7 int=0 -> rhs=27 OK | corner-only: 3rfx+cvx+2pinch=27 <= 4r+4=32: True
+  y=(1, 1): cvx=1 smooth=7 pinch=0 rfx=0 int=3 -> rhs=27 OK
+== census R780206 (area 30, W 20, align 8): n=30 v=12 r=8 v-r=4 W=20 pinch_points=0
+  y=(0, 0): cvx=12 smooth=0 pinch=0 rfx=6 int=0 -> rhs=30 OK | corner-only: 3rfx+cvx+2pinch=30 <= 4r+4=36: True
+  y=(0, 1): cvx=0 smooth=9 pinch=0 rfx=0 int=3 -> rhs=30 OK
+  y=(1, 0): cvx=0 smooth=12 pinch=0 rfx=2 int=0 -> rhs=30 OK
+  y=(1, 1): cvx=0 smooth=5 pinch=0 rfx=0 int=5 -> rhs=30 OK
+== census R780542 (area 33, W 20, align 8): n=33 v=12 r=8 v-r=4 W=20 pinch_points=0
+  y=(0, 0): cvx=1 smooth=8 pinch=0 rfx=0 int=4 -> rhs=33 OK
+  y=(0, 1): cvx=1 smooth=16 pinch=0 rfx=0 int=0 -> rhs=33 OK
+  y=(1, 0): cvx=1 smooth=8 pinch=0 rfx=0 int=4 -> rhs=33 OK
+  y=(1, 1): cvx=9 smooth=0 pinch=0 rfx=8 int=0 -> rhs=33 OK | corner-only: 3rfx+cvx+2pinch=33 <= 4r+4=36: True
+== census R780546 (area 36, W 20, align 8): n=36 v=12 r=8 v-r=4 W=20 pinch_points=0
+  y=(0, 0): cvx=12 smooth=0 pinch=0 rfx=8 int=0 -> rhs=36 OK | corner-only: 3rfx+cvx+2pinch=36 <= 4r+4=36: True
+  y=(0, 1): cvx=0 smooth=10 pinch=0 rfx=0 int=4 -> rhs=36 OK
+  y=(1, 0): cvx=0 smooth=10 pinch=0 rfx=0 int=4 -> rhs=36 OK
+  y=(1, 1): cvx=0 smooth=0 pinch=0 rfx=0 int=9 -> rhs=36 OK
+== CONTROL pinched shape (two 2x2 squares touching at a point): n=8 v=6 r=0 v-r=6 W=6 pinch_points=1
+  y=(0, 0): cvx=6 smooth=0 pinch=1 rfx=0 int=0 -> rhs=8 OK | corner-only: 3rfx+cvx+2pinch=8 <= 4r+4=4: False
+  y=(0, 1): cvx=0 smooth=4 pinch=0 rfx=0 int=0 -> rhs=8 OK
+  y=(1, 0): cvx=0 smooth=4 pinch=0 rfx=0 int=0 -> rhs=8 OK
+  y=(1, 1): cvx=0 smooth=0 pinch=0 rfx=0 int=2 -> rhs=8 OK
+identity failures: 0

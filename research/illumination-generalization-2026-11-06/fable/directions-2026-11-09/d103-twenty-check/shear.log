@@ -1,0 +1,15 @@
+# Transcribed from the D103 run on 2026-11-20 (commands in run.sh, steps 3-4).
+# 20 walls: python3 -B shear_check.py work/twenty/hard work/leaves-twenty.txt ; bin/leafchk < work/leaves-twenty.txt
+pixel-finished room (not checked here): 2-266 54 boxes
+pixel-finished room (not checked here): 5-0 99 boxes
+pixel-finished room (not checked here): 7-230 9 boxes
+shear-trees {'rooms': 24, 'boxes': 458, 'trees': 3652, 'W': 246639, 'E': 24, 'standalone_boxes': 3, 'pixel_rooms': 3, 'pixel_boxes': 162}
+lattice center pairs 0
+leaves 246639 failed 0 directions 1247
+# leafchk CPU 4.0 s
+# Below 18 walls: same commands on work/lower/hard
+lattice center pairs 0
+leaves 122865 failed 0 directions 622
+# Negative control: every witness mutated j -> j+1 (shear_check.py --mutate)
+FAIL 0-10/0_3_1_2_4096/ax0/m0/f1:26
+leaves 246639 failed 232884 directions 1247

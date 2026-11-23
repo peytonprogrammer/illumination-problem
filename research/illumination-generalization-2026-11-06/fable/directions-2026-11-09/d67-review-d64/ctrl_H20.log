@@ -1,0 +1,41 @@
+P6 cells 20 interior points [(1, 0), (3, -2)]
+P6 (1, 0) (3, -2) same-class=True : NO WITNESS at H<=20
+PL room 1843 (1, 2) (3, 2) x=d reached by classes ['b', 'c'] ok
+PL room 1843 (1, 4) (3, 4) x=d reached by classes ['b', 'c'] ok
+PL room 4026 (1, 2) (1, 18) x=d reached by classes ['b', 'c'] ok
+PL room 4026 (1, 8) (1, 12) x=d reached by classes ['b', 'c'] ok
+PL room 4230 (1, 2) (1, 18) x=d reached by classes ['b', 'c'] ok
+PL room 4230 (1, 8) (1, 12) x=d reached by classes ['b', 'c'] ok
+PL room 4444 (1, 6) (1, 18) x=d reached by classes ['b', 'c'] ok
+PL room 4474 (2, 2) (10, 2) x=c reached by classes ['b', 'd'] ok
+PL room 4474 (4, 2) (8, 2) x=c reached by classes ['b', 'd'] ok
+PL room 4474 (1, 2) (11, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4474 (5, 2) (7, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4554 (2, 2) (2, 18) x=c reached by classes ['b', 'd'] ok
+PL room 4554 (2, 8) (2, 12) x=c reached by classes ['b', 'd'] ok
+PL room 4554 (1, 2) (1, 18) x=d reached by classes ['b', 'c'] ok
+PL room 4554 (1, 8) (1, 12) x=d reached by classes ['b', 'c'] ok
+PL room 4561 (1, 2) (11, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4561 (5, 2) (7, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4564 (2, 6) (2, 18) x=c reached by classes ['b', 'd'] ok
+PL room 4564 (1, 6) (1, 18) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (1, 2) (3, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (1, 2) (3, 10) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (1, 4) (3, 4) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (1, 4) (3, 8) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (1, 8) (3, 4) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (1, 8) (3, 8) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (1, 10) (3, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (1, 10) (3, 10) x=d reached by classes ['b', 'c'] ok
+PL room 4578 (2, 5) (2, 7) x=b reached by classes ['c', 'd'] ok
+PL room 4578 (2, 3) (2, 9) x=b reached by classes ['c', 'd'] ok
+PL room 4580 (1, 2) (3, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4580 (1, 2) (5, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4580 (1, 4) (3, 4) x=d reached by classes ['b', 'c'] ok
+PL room 4580 (1, 4) (5, 4) x=d reached by classes ['b', 'c'] ok
+PL room 4580 (3, 2) (7, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4580 (3, 4) (7, 4) x=d reached by classes ['b', 'c'] ok
+PL room 4580 (5, 2) (7, 2) x=d reached by classes ['b', 'c'] ok
+PL room 4580 (5, 4) (7, 4) x=d reached by classes ['b', 'c'] ok
+point-level contradictions 0 CPU 0.7
+python3 -B ctrl.py 20  0.73s user 0.01s system 97% cpu 0.760 total

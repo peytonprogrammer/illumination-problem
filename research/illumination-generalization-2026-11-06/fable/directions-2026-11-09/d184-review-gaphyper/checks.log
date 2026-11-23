@@ -1,0 +1,88 @@
+# 0. Base seed on DBas (L=4): (1,3) -> (11,3), velocity (7,-2), X=14, Y=4, s0=2/7
+  PASS base: end at (11,3), contacts [('(8,1)', 'h'), ('(13,17/7)', 'v')]
+
+# 1. Lattice threshold t > XPq - X/M (margin 1/(2q)) and t > XP/(2mu) - X/M
+  PASS cut x=13/4 (= integer + 1/(2p), p=2): crossing heights [Fraction(33, 14)] are odd multiples of 1/(2q)=1/14
+  PASS cut x=25/4 (= integer + 1/(2p), p=2): crossing heights [Fraction(3, 2)] are odd multiples of 1/(2q)=1/14
+  PASS cut x=49/4 (= integer + 1/(2p), p=2): crossing heights [Fraction(31, 14), Fraction(37, 14)] are odd multiples of 1/(2q)=1/14
+  PASS seed heights at integer abscissas are multiples of 1/7
+  PASS measured mu = 1/7 >= 1/(2q) = 1/14
+  PASS named control: t > 84 (mu=1/7), t > 182 (q only)
+  PASS corridor ray t=183 (> 182): s=56/197; end at (194,3); base pattern kept True
+  PASS corridor ray t=185 (> 182): s=56/199; end at (196,3); base pattern kept True
+  PASS corridor ray t=200 (> 182): s=31/107; end at (211,3); base pattern kept True
+  PASS corridor ray t=500 (> 182): s=73/257; end at (511,3); base pattern kept True
+   d182 D1 ray (corridor + right box, M=3, P=12): lattice threshold t > 3514/3 ~ 1171.3
+  PASS D1 ray t=1172: s=506/1765; end at (1183,3); 450 contacts
+  PASS D1 ray t=1500: s=650/2257; end at (1511,3); 578 contacts
+
+# 2. Exact fixed-word test for (t1, t2) = (left box, corridor), cuts c1=13/4, c2=25/4
+   Drop D(x) = 3 - y in the positive development. Seed word gates (retained x):
+   cut c1: D in (-1,3) both banks; mouth x=5: 4s+e1 in (1,2); cut c2: 21s/4+e1 in (1,2) and +e2 in (1,2);
+   right mouth x=9: 8s+e1+e2 in (2,3); cap x=13 in (0,6); endpoint 14s+e1+e2 = 4.
+   With e1 = t1 s - 8k1, e2 = t2 s - 2k2 the endpoint gives s = (4+8k1+2k2)/N, N = 14+t1+t2.
+   Eliminating e2: chart test  <=> exists even m, s=m/N in (8/35,1/3), t1 s mod 8 in (1-4s, 2-21s/4).
+   Word test (cut-c2 sheet dropped) <=> s in (1/6,1/3), t1 s mod 8 in (1-4s, 2-4s).
+   (37,61): N=112; 9 endpoint slopes of the word in (1/6,1/3); chart-feasible m [26]; word-feasible m [26]; traced: reach target [26, 34], with the seed's contacts and cut-bank sheets [26]
+  PASS (37,61): traced 'seed chart itinerary' (outside contacts + sheets at all 4 banks) agrees with the chart test on all 9 slopes
+  PASS (37,61): direct gate evaluation agrees
+   (45,40): N=99; 8 endpoint slopes of the word in (1/6,1/3); chart-feasible m []; word-feasible m [20]; traced: reach target [20, 26], with the seed's contacts and cut-bank sheets []
+  PASS (45,40): traced 'seed chart itinerary' (outside contacts + sheets at all 4 banks) agrees with the chart test on all 8 slopes
+  PASS (45,40): direct gate evaluation agrees
+   (120,133): N=267; 22 endpoint slopes of the word in (1/6,1/3); chart-feasible m [72]; word-feasible m [54, 72]; traced: reach target [54, 62, 72, 78], with the seed's contacts and cut-bank sheets [72]
+  PASS (120,133): traced 'seed chart itinerary' (outside contacts + sheets at all 4 banks) agrees with the chart test on all 22 slopes
+  PASS (120,133): direct gate evaluation agrees
+
+   Exceptional lines of this seed (chart test, cuts at 13/4 and 25/4). Directions with Delta < 5/7 never fail (window >= 5/7).
+   direction (0,1), Delta=8: failing a in [-82,82]: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+   direction (1,0), Delta=2: failing a in [-68,96]: []
+   direction (1,1), Delta=1: failing a in [-149,177]: [4, 5, 6]
+   direction (2,1), Delta=4/3: failing a in [-217,273]: [7, 8, 9, 10, 11, 21, 22, 23, 24, 25]
+   direction (2,3), Delta=4/5: failing a in [-379,435]: [11]
+   direction (4,1), Delta=8/5: failing a in [-351,463]: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 74, 75]
+   direction (4,3), Delta=8/7: failing a in [-514,626]: [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 46, 47, 48, 49]
+   direction (4,5), Delta=8/9: failing a in [-677,789]: [18, 19, 20, 21, 22, 23]
+   direction (8,1), Delta=8/9: failing a in [-621,845]: [74, 75, 76, 77, 78, 79]
+   direction (4,7), Delta=8/11: failing a in [-839,951]: []
+   direction (8,3), Delta=8/11: failing a in [-783,1007]: []
+   total 95 exceptional lines. (line: beta*t1 - alpha*t2 = a; (0,1): t1=a; (1,0): t2=-a; (1,1): t2=t1-a)
+
+   Exceptional lines of this seed (word test, cut sheets dropped). Directions with Delta < 1 never fail (window >= 1).
+   direction (0,1), Delta=8: failing a in [-53,53]: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+   direction (1,0), Delta=2: failing a in [-39,67]: []
+   direction (1,1), Delta=1: failing a in [-92,120]: [6]
+   direction (2,1), Delta=4/3: failing a in [-131,187]: [10]
+   direction (4,1), Delta=8/5: failing a in [-209,321]: [18, 48, 49, 50, 51]
+   direction (4,3), Delta=8/7: failing a in [-315,427]: [22]
+   total 24 exceptional lines. (line: beta*t1 - alpha*t2 = a; (0,1): t1=a; (1,0): t2=-a; (1,1): t2=t1-a)
+
+  PASS (1,1) a=5: t2=t1-5 (500,495): on exceptional lines [(1, 1, 5)]; chart-feasible slopes 0, word-feasible 10; note slope at u=s0 (K=144,144) s=292/1009: end at (1006,3), seed pattern False
+  PASS (1,1) a=5 (1000,995): on exceptional lines [(1, 1, 5)]; chart-feasible slopes 0, word-feasible 21; note slope at u=s0 (K=288,288) s=580/2009: end at (2006,3), seed pattern False
+  PASS (1,1) a=4 (1000,996): on exceptional lines [(1, 1, 4)]; chart-feasible slopes 0, word-feasible 21; note slope at u=s0 (K=288,288) s=58/201: end at (2007,3), seed pattern False
+  PASS t1=10 (10,500): on exceptional lines [(0, 1, 10)]; chart-feasible slopes 0, word-feasible 0; note slope at u=s0 (K=0,144) s=37/131: wall-end at (495,1), seed pattern False
+  PASS t1=10 (10,1001): on exceptional lines [(0, 1, 10)]; chart-feasible slopes 0, word-feasible 0; note slope at u=s0 (K=0,288) s=292/1025: wall-end at (996,1), seed pattern False
+  PASS d182 offset c=1 (500,501): on exceptional lines []; chart-feasible slopes 3, word-feasible 10; trace of s=276/1015 (k1=17,k2=68): reach True, seed itinerary True, 172 contacts; common-P=8 slopes (m = 4 mod 8) 3; note slope at u=s0 (K=144,144) s=292/1015: end at (6,1), seed pattern False
+  PASS d182 offset c=1 (1000,1001): on exceptional lines []; chart-feasible slopes 7, word-feasible 21; trace of s=564/2015 (k1=35,k2=140): reach True, seed itinerary True, 352 contacts; common-P=8 slopes (m = 4 mod 8) 7; note slope at u=s0 (K=288,288) s=116/403: end at (6,1), seed pattern False
+  PASS d182 offset c=7 (1000,1007): on exceptional lines []; chart-feasible slopes 10, word-feasible 21; trace of s=582/2021 (k1=36,k2=145): reach True, seed itinerary True, 364 contacts; common-P=8 slopes (m = 4 mod 8) 0; note slope at u=s0 (K=288,288) s=580/2021: end at (12,1), seed pattern False
+  PASS offset c=-1 (2000,1999): on exceptional lines []; chart-feasible slopes 26, word-feasible 42; trace of s=1140/4013 (k1=71,k2=284): reach True, seed itinerary True, 712 contacts; common-P=8 slopes (m = 4 mod 8) 26; note slope at u=s0 (K=568,568) s=1140/4013: end at (4010,3), seed pattern True
+  PASS generic (777,1234): on exceptional lines []; chart-feasible slopes 8, word-feasible 21; trace of s=584/2025 (k1=28,k2=178): reach True, seed itinerary True, 414 contacts; common-P=8 slopes (m = 4 mod 8) 1; note slope at u=s0 (K=224,352) s=116/405: end at (462,1), seed pattern False
+  PASS generic (1500,400): on exceptional lines []; chart-feasible slopes 10, word-feasible 20; trace of s=281/957 (k1=55,k2=59): reach True, seed itinerary True, 230 contacts; common-P=8 slopes (m = 4 mod 8) 2; note slope at u=s0 (K=432,112) s=274/957: end at (1095,1), seed pattern False
+  PASS generic (1234,2345): on exceptional lines []; chart-feasible slopes 15, word-feasible 38; trace of s=1026/3593 (k1=44,k2=335): reach True, seed itinerary True, 760 contacts; common-P=8 slopes (m = 4 mod 8) 4; note slope at u=s0 (K=352,672) s=1028/3593: end at (1116,1), seed pattern False
+  PASS (2,1) a=21 (821,400): on exceptional lines [(2, 1, 21)]; chart-feasible slopes 0, word-feasible 18; note slope at u=s0 (K=232,112) s=348/1235: end at (416,1), seed pattern False
+  PASS (4,1) a=41 (1641,400): on exceptional lines [(4, 1, 41)]; chart-feasible slopes 0, word-feasible 34; note slope at u=s0 (K=472,112) s=196/685: end at (1236,1), seed pattern False
+  PASS (1000,995) word slope s=580/2009: end at (2006,3); outside contacts [('h', Fraction(1, 1)), ('h', Fraction(1, 1)), ('v', Fraction(13, 1))], cut-bank sheets [('c1', 1, -1), ("c1'", 1, -1), ('c2', 1, 1), ("c2'", 1, -1)] (seed chart: [('c1', 1, -1), ("c1'", 1, -1), ('c2', 1, -1), ("c2'", 1, -1)])
+
+# 3. Perpendicular insertions with disjoint strips: corridor x-cut (tx), y=5/2 cut through both boxes (ty)
+  PASS note control (tx,ty)=(1401,80): K=400, B=280, s=564/1975; x-error 164/1975 (0.0830), y horizontal error 20/141 (0.1418); end at (1412,83); 528 reflections, 127 vertical
+  PASS phases near P*Z at u=s0: (tx,ty)=(2801,160): K=800, B=560, s=1124/3935; x-error 324/3935 (0.0823), y horizontal error 40/281 (0.1423); end at (2812,163); 1054 reflections, 253 vertical
+  INFO u=s0 is not a valid trial slope here (a phase error exceeds 1/2): (tx,ty)=(4201,241): K=1200, B=840, s=562/1965; x-error 2962/1965 (1.5074), y horizontal error 1485/562 (2.6423); wall-end at (1626,2); 1321 reflections, 854 vertical
+  INFO u=s0 is not a valid trial slope here (a phase error exceeds 1/2): (tx,ty)=(2000,123): K=560, B=440, s=405/1447; x-error -320/1447 (-0.2211), y horizontal error -73/135 (-0.5407); end at (2011,126); 760 reflections, 199 vertical
+  INFO u=s0 is not a valid trial slope here (a phase error exceeds 1/2): (tx,ty)=(700,35): K=200, B=120, s=137/477; x-error 500/477 (1.0482), y horizontal error 255/137 (1.8613); wall-end at (5,2); 197 reflections, 190 vertical
+  INFO u=s0 is not a valid trial slope here (a phase error exceeds 1/2): (tx,ty)=(999,400): K=280, B=1400, s=1084/3813; x-error 5092/1271 (4.0063), y horizontal error 1900/271 (7.0111); wall-end at (1012,393); 917 reflections, 630 vertical
+  PASS endpoint identity Y - sX = sum_x e - sum_y s*f holds exactly
+
+# 4. L2 scope: a W=20 staircase chart has 45 occupied unit cells, so no member has area <= 20
+  PASS staircase with 20 walls, strictly simple True, unit-gap area 45 > 20
+  PASS the two-gap DBas family has area 48 + 4 t1 + t2 >= 48, so the area<=20 census holds none of its members
+
+CPU 0.43s; failures: 0

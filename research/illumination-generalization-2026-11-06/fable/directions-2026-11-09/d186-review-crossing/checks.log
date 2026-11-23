@@ -1,0 +1,64 @@
+# 0. Named rooms
+  PASS st(4,5) is st279 m=5: area 56 = 2m^2+6 = 56, strictly simple, wall gcds (1, 1)
+  PASS st(7,21): strictly simple, wall gcds (1,1), S=(4,-2) T=(6,6) same parity, area 199
+  PASS st(7,22): strictly simple, wall gcds (1,1), S=(4,-2) T=(6,6) same parity, area 207
+  PASS st(7,35): strictly simple, wall gcds (1,1), S=(4,-2) T=(6,6) same parity, area 311
+  PASS st(11,33): strictly simple, wall gcds (1,1), S=(4,-6) T=(6,6) same parity, area 427
+  PASS st(13,78): strictly simple, wall gcds (1,1), S=(4,-8) T=(6,6) same parity, area 1123
+  PASS st(13,90): strictly simple, wall gcds (1,1), S=(4,-8) T=(6,6) same parity, area 1291
+  PASS st(101,303): strictly simple, wall gcds (1,1), S=(4,-96) T=(6,6) same parity, area 30937
+
+# 1a. Direct-ascent gate (a+1)z in c + a e + gcd(2D,6a)Z, z in (0,1); c in {1,-1}, e in {-1,-3}
+  PASS (a,D)=(4,5): spacing 2 < a+1=5; all 4 (c,e) gates open; (c,e)=(1,-1) z=1/5 v=24/5: exact trace reaches T with only lateral reflections (6)
+  PASS (a,D)=(7,22): spacing 2 < a+1=8; all 4 (c,e) gates open; (c,e)=(1,-1) z=1/4 v=427/4: exact trace reaches T with only lateral reflections (70)
+  PASS (a,D)=(11,34): spacing 2 < a+1=12; all 4 (c,e) gates open; (c,e)=(1,-1) z=1/6 v=1001/6: exact trace reaches T with only lateral reflections (110)
+  PASS (a,D)=(13,90): spacing 6 < a+1=14; all 4 (c,e) gates open; (c,e)=(1,-1) z=3/7 v=872/7: exact trace reaches T with only lateral reflections (60)
+  PASS prime a=7, D=21: spacing 6a=42, residues [20, 22, 34, 36] all > a+1; direct gate closed
+  PASS prime a=7, D=42: spacing 6a=42, residues [20, 22, 34, 36] all > a+1; direct gate closed
+  PASS prime a=11, D=33: spacing 6a=66, residues [32, 34, 54, 56] all > a+1; direct gate closed
+  PASS prime a=11, D=66: spacing 6a=66, residues [32, 34, 54, 56] all > a+1; direct gate closed
+  PASS prime a=13, D=39: spacing 6a=78, residues [38, 40, 64, 66] all > a+1; direct gate closed
+  PASS prime a=13, D=78: spacing 6a=78, residues [38, 40, 64, 66] all > a+1; direct gate closed
+  PASS prime a=101, D=303: spacing 6a=606, residues [302, 304, 504, 506] all > a+1; direct gate closed
+  PASS prime a=101, D=606: spacing 6a=606, residues [302, 304, 504, 506] all > a+1; direct gate closed
+  PASS row a=7: fail at D=21, succeed at D+P=23 (P=2, a does not divide P)
+  PASS row a=13: fail at D=78, succeed at D+P=90 (P=12, a does not divide P)
+  PASS row a=101: fail at D=303, succeed at D+P=363 (P=60, a does not divide P)
+
+# 1c. DBas line t1=10: s = (least even > (L+28)/14)/(L+28), L = 4 + t2; launch (1,-s) from (1,3)
+  PASS t2=0: s=1/8, reach T with 4 smooth reflections, itinerary corridor + cap/portal(y>2)/cap True, d184 trace agrees True; note claims s=1/8, 4 reflections
+  PASS t2=56: s=1/11, reach T with 8 smooth reflections, itinerary corridor + cap/portal(y>2)/cap True, d184 trace agrees True; note claims s=1/11, 8 reflections
+  PASS t2=500: s=10/133, reach T with 40 smooth reflections, itinerary corridor + cap/portal(y>2)/cap True, d184 trace agrees True; note claims s=10/133, 40 reflections
+  PASS t2=1001: s=74/1033, reach T with 74 smooth reflections, itinerary corridor + cap/portal(y>2)/cap True, d184 trace agrees True; note claims s=74/1033, 74 reflections
+  PASS t2=1/2: s=8/65, reach T with 4 smooth reflections, itinerary corridor + cap/portal(y>2)/cap True, d184 trace agrees True
+  PASS t2=3: s=4/35, reach T with 4 smooth reflections, itinerary corridor + cap/portal(y>2)/cap True, d184 trace agrees True
+  PASS t2=57: s=8/89, reach T with 8 smooth reflections, itinerary corridor + cap/portal(y>2)/cap True, d184 trace agrees True
+  PASS t2=10007: s=718/10039, reach T with 718 smooth reflections, itinerary corridor + cap/portal(y>2)/cap True, d184 trace agrees True
+  PASS L=1/1000: ((L+28)/14,(L+28)/7) has length 28001/14000 > 2
+  PASS L=4: ((L+28)/14,(L+28)/7) has length 16/7 > 2
+  PASS L=60: ((L+28)/14,(L+28)/7) has length 44/7 > 2
+
+# 2. Cap budget: st279 specialization c=d=b=w=1, i=0, W=3, h=a+1
+  PASS (7,21): 2gcd(bD,aW)=42 equals crossing-note spacing gcd(2D,6a)
+  PASS (101,303): 2gcd(bD,aW)=606 equals crossing-note spacing gcd(2D,6a)
+  PASS A=9,b=1,D=21,W=3: v -> v+2DW/g_A=42 preserves both legs
+  PASS d=1: corner gate z depends only on j mod 2d
+  PASS A=12,b=2,D=35,W=5: v -> v+2DW/g_A=35 preserves both legs
+  PASS d=2: corner gate z depends only on j mod 2d
+  PASS (7,21): floor corner j=3 gives v=62, z=559 integral, so not in (0,1)
+  PASS (101,303): floor corner j=7 gives v=2120, z=218361 integral, so not in (0,1)
+  PASS D=35,c=1,e=-1,h=8: corner increment 2h(D-c)/(2D-c-e)=272/35 in (0,h)
+  PASS D=21,c=1,e=-1,h=8: corner increment 2h(D-c)/(2D-c-e)=160/21 in (0,h)
+  PASS D=40,c=3,e=-7,h=6: corner increment 2h(D-c)/(2D-c-e)=37/7 in (0,h)
+  PASS (a+1)(a+3)/24 <= 4(a+1) iff a <= 93: a=93 gives 376 <= 376; a=94 gives 9215/24 > 380
+  PASS D <= 4(a+1) <= 376
+  PASS e=-1: delta=1/2; hypothesis (i+w)b/(i-e)<1 holds with equality only (1) -- see review Low 1
+  PASS general theorem at st279 data gives a <= 384, D <= 8(a+1); specialization sharpens to 93 and 4(a+1)
+
+# 2b. Replay rows (velocities from the note, recomputed from the gate / far-wall equations)
+  PASS a=7, D=21: velocity (-23/5,-1) recomputed (-23/5,-1); route floor; reaches T with 5 reflections (note 5)
+  PASS a=7, D=35: velocity (-1,4/7) recomputed (-1,4/7); route far wall; reaches T with 5 reflections (note 5)
+  PASS a=101, D=303: velocity (-2753/52,-1) recomputed (-2753/52,-1); route floor; reaches T with 37 reflections (note 37)
+  PASS direct gate closed at (7,21) and (101,303)
+
+CPU 0.04 s; failures: 0

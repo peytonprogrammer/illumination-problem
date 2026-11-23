@@ -1,0 +1,59 @@
+tracer negative controls (corner hits detected): ok
+== U2 stretches, direction (-1, 1)
+k=0 area=46 walls=10 r=3 reflex=[(2, 2), (7, 2), (7, 5)] simple=True normalized=True all4classes=True 2n=92 C=(92,92) trees=True reflex/convex per side=((2, 4), (1, 3)) occurrences=10,6 pass=[True, True] leafmax=[15, 29] lens=[[2, 2, 2, 2, 2, 2, 15, 15, 25, 25], [2, 2, 15, 15, 29, 29]]
+   k=0: same-parity interior lattice pairs traced via rim path: 52, failures 0
+   k=0: real pairs on bottom rim (abscissa = integer + 1/3) traced: 91, all reach T legally
+k=1 area=54 walls=10 r=3 reflex=[(2, 2), (11, 2), (11, 5)] simple=True normalized=True all4classes=True 2n=108 C=(108,108) trees=True reflex/convex per side=((2, 4), (1, 3)) occurrences=10,6 pass=[True, True] leafmax=[19, 33] lens=[[2, 2, 2, 2, 2, 2, 19, 19, 29, 29], [2, 2, 19, 19, 33, 33]]
+   k=1: same-parity interior lattice pairs traced via rim path: 80, failures 0
+   k=1: real pairs on bottom rim (abscissa = integer + 1/3) traced: 120, all reach T legally
+k=2 area=62 walls=10 r=3 reflex=[(2, 2), (15, 2), (15, 5)] simple=True normalized=True all4classes=True 2n=124 C=(124,124) trees=True reflex/convex per side=((2, 4), (1, 3)) occurrences=10,6 pass=[True, True] leafmax=[23, 37] lens=[[2, 2, 2, 2, 2, 2, 23, 23, 33, 33], [2, 2, 23, 23, 37, 37]]
+k=3 area=70 walls=10 r=3 reflex=[(2, 2), (19, 2), (19, 5)] simple=True normalized=True all4classes=True 2n=140 C=(140,140) trees=True reflex/convex per side=((2, 4), (1, 3)) occurrences=10,6 pass=[True, True] leafmax=[27, 41] lens=[[2, 2, 2, 2, 2, 2, 27, 27, 37, 37], [2, 2, 27, 27, 41, 41]]
+   k=3: same-parity interior lattice pairs traced via rim path: 160, failures 0
+   k=3: real pairs on bottom rim (abscissa = integer + 1/3) traced: 190, all reach T legally
+k=4 area=78 walls=10 r=3 reflex=[(2, 2), (23, 2), (23, 5)] simple=True normalized=True all4classes=True 2n=156 C=(156,156) trees=True reflex/convex per side=((2, 4), (1, 3)) occurrences=10,6 pass=[True, True] leafmax=[31, 45] lens=[[2, 2, 2, 2, 2, 2, 31, 31, 41, 41], [2, 2, 31, 31, 45, 45]]
+k=5 area=86 walls=10 r=3 reflex=[(2, 2), (27, 2), (27, 5)] simple=True normalized=True all4classes=True 2n=172 C=(172,172) trees=True reflex/convex per side=((2, 4), (1, 3)) occurrences=10,6 pass=[True, True] leafmax=[35, 49] lens=[[2, 2, 2, 2, 2, 2, 35, 35, 45, 45], [2, 2, 35, 35, 49, 49]]
+k=6 area=94 walls=10 r=3 reflex=[(2, 2), (31, 2), (31, 5)] simple=True normalized=True all4classes=True 2n=188 C=(188,188) trees=True reflex/convex per side=((2, 4), (1, 3)) occurrences=10,6 pass=[True, True] leafmax=[39, 53] lens=[[2, 2, 2, 2, 2, 2, 39, 39, 49, 49], [2, 2, 39, 39, 53, 53]]
+== interval multisets vs rim-trees.txt formulas
+k=0: own rim intervals equal the stated linear formulas (up to orientation/side order): True
+k=1: own rim intervals equal the stated linear formulas (up to orientation/side order): True
+k=2: own rim intervals equal the stated linear formulas (up to orientation/side order): True
+k=3: own rim intervals equal the stated linear formulas (up to orientation/side order): True
+k=5: own rim intervals equal the stated linear formulas (up to orientation/side order): True
+== R22 controls (own rim walk)
+R22 facts {'area': 15, 'walls': 22, 'r': 9, 'simple': True, 'normalized': True}
+R22 (4, 7) w (1, 2) (C, tree, reflex, convex, pass, #gaps, first gaps): [(30, True, 3, 5, False, 15, ['4', '9/2', '5', '11/2', '6', '14']), (30, True, 6, 8, False, 33, ['2', '5/2', '3', '7/2', '4', '6'])]
+R22 (7, 4) w (-2, -1) (C, tree, reflex, convex, pass, #gaps, first gaps): [(30, True, 3, 5, False, 15, ['4', '9/2', '5', '11/2', '6', '14']), (30, True, 6, 8, False, 33, ['2', '5/2', '3', '7/2', '4', '6'])]
+== DBas single-cylinder claim (own rim walk, Q-height 1 bands)
+DBas {'area': 48, 'walls': 12, 'r': 4, 'simple': True, 'normalized': True} 2n= 96 rims (C, tree, reflex, convex, edge occurrences): [(96, True, 4, 6, 18), (96, True, 0, 2, 2)]
+DBas+bays(2,3) {'area': 58, 'walls': 20, 'r': 8, 'simple': True, 'normalized': True} 2n= 116 rims (C, tree, reflex, convex, edge occurrences): [(116, True, 8, 10, 34), (116, True, 0, 2, 2)]
+== 23 newly closed pairs: own tracer on the saved/derived displacements
+DBw2 (2, 2) (6, 2) (4, 14) True [((2, 2), (4, 14), (4, 1), True)]
+DBw2 (2, 2) (10, 2) (8, 2) True [((2, 2), (8, 2), (6, 3), True)]
+DBw2 (2, 2) (10, 4) (426, -7666) True [((10, 4), (426, 7666), (1, 1), True)]
+DBw2 (2, 4) (6, 2) (324, 1946) True [((6, 2), (324, -1946), (0, 3), True)]
+DBw2 (2, 4) (10, 2) (356, -4270) True [((10, 2), (356, -4270), (8, 3), True)]
+DBw2 (2, 4) (10, 4) (204, 1226) True [((2, 4), (204, 1226), (8, 1), True)]
+DBw2 (4, 2) (8, 2) (4, 2) True [((4, 2), (4, 2), (6, 3), True)]
+DBw2 (4, 2) (12, 2) (76, 2) True [((12, 2), (76, 2), (6, 3), True)]
+DBw2 (4, 2) (12, 4) (88, 530) True [((12, 4), (88, -530), (0, 3), True)]
+DBw2 (4, 4) (8, 2) (352, -2110) True [((4, 4), (352, 2110), (0, 1), True)]
+DBw2 (4, 4) (12, 2) (76, -910) True [((12, 2), (76, 910), (6, 1), True)]
+DBw2 (4, 4) (12, 4) (472, -2830) True [((4, 4), (472, 2830), (0, 1), True)]
+DBw2 (6, 2) (10, 2) (80, 2) True [((10, 2), (80, 2), (6, 3), True)]
+DBw2 (6, 2) (10, 4) (80, 482) True [((10, 4), (80, 482), (6, 3), True)]
+DBw2 (8, 2) (12, 2) (4, 10) True [((8, 2), (4, -10), (10, 5), True)]
+DBw2 (8, 2) (12, 4) (4, 2) True [((8, 2), (4, 2), (10, 3), True)]
+st279 (1, 1) (9, 9) (1434, 1844) True [((1, 1), (1434, -1844), (0, 3), True)]
+st279 (2, 2) (8, 8) (-38, 28) True [((8, 8), (-38, -28), (1, 2), True)]
+st279 (2, 4) (10, 8) (642, -2086) True [((10, 8), (642, -2086), (11, 9), True)]
+st279 (3, 3) (11, 11) (246, -316) True [((3, 3), (246, -316), (12, 9), True)]
+st279 (4, 2) (8, 10) (-54, -40) True [((4, 2), (-54, -40), (11, 10), True)]
+st279 (4, 4) (8, 8) (74, 56) True [((4, 4), (74, 56), (9, 10), True)]
+st279 (4, 4) (10, 10) (314, 236) True [((4, 4), (314, 236), (1, 2), True)]
+newly closed pairs re-traced: 23, certified by own tracer: 23
+== convex-cylinder.md: 37 newly covered pairs, own tracer
+pairs in BBBB rooms: 747; not covered by the old audit but covered by chart/leaf tests: 37; certified by own tracer: 37
+CPU 3.1 s
+real 3.14
+user 3.08
+sys 0.03

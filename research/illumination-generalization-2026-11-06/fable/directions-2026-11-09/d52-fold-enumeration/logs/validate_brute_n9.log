@@ -1,0 +1,4 @@
+immersed room W-sets with n <= 9, r <= 8: 13876 (CPU 34.3 s)
+{'rooms': 13876, 'true_room': 13460, 'class_delta>=3': 48880, 'K_not_adm_d=1_z=0_in_scope': 48600, 'K_not_adm_d=1_z=0_out_of_scope': 128, 'K_not_adm_d=2_z=0_out_of_scope': 128, 'found_as_cover': 24}
+positives among brute-force rooms: 0  total CPU 36.4 s
+python3 -B validate_brute.py 9 8 data/K_adm_r8.json  36.33s user 0.07s system 99% cpu 36.475 total

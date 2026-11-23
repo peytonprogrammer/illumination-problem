@@ -1,0 +1,28 @@
+distinct disc covers with r <= 8 (up to lattice isometry): 1816
+in scope (>= 3 corner classes): 1744, of which true strictly simple rooms: 1113
+mark pairs by number of classes y != a whose B_y separates the pair (count, true room):
+   separated in 0 of 3 classes, true room=False: 711 pairs
+   separated in 0 of 3 classes, true room=True: 1857 pairs
+   separated in 1 of 3 classes, true room=False: 558 pairs
+   separated in 1 of 3 classes, true room=True: 1790 pairs
+   separated in 2 of 3 classes, true room=True: 8 pairs
+distinct (delta, d, z) triples for y != a, over (room, a) with >= 2 interior a-points: 67
+triples with all three separating some pair: {}
+most common triples:
+    ((7, 4, 1), (28, 1, 0), (28, 1, 0)) 311
+    ((7, 5, 1), (35, 1, 0), (35, 1, 0)) 224
+    ((6, 5, 1), (30, 1, 0), (30, 1, 0)) 177
+    ((6, 4, 1), (24, 1, 0), (24, 1, 0)) 173
+    ((8, 4, 1), (32, 1, 0), (32, 1, 0)) 119
+    ((8, 5, 1), (40, 1, 0), (40, 1, 0)) 107
+    ((1, 21, 8), (7, 3, 1), (21, 1, 0)) 88
+    ((1, 28, 8), (28, 1, 0), (28, 1, 0)) 72
+    ((1, 24, 8), (8, 3, 1), (24, 1, 0)) 64
+    ((4, 7, 2), (28, 1, 0), (28, 1, 0)) 51
+    ((1, 24, 8), (24, 1, 0), (24, 1, 0)) 47
+    ((1, 18, 8), (6, 3, 1), (18, 1, 0)) 45
+true rooms with a pair separated in 2 of 3 classes: 6
+    n=16 r=8 triple=((1, 16, 8), (1, 16, 8), (16, 1, 0))
+    n=16 r=8 triple=((1, 16, 8), (2, 8, 4), (16, 1, 0))
+    n=24 r=8 triple=((1, 24, 8), (8, 3, 1), (24, 1, 0))
+python3 -B triples.py 8 data/K_adm_r8.json  21.12s user 0.04s system 99% cpu 21.181 total

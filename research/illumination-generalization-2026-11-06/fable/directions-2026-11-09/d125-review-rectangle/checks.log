@@ -1,0 +1,76 @@
+======================================================================
+Part A. Opposite doors: large-rectangle-access.md
+======================================================================
+d=4 w=2 rho0=1 I=[1/4,3/4] delta=1/2
+B=64 k0=24 P=2^30 Q=2^35 H0=2^174 (exact True)
+PASS Bertrand primes odd and <= P
+PASS product of the 24 primes exceeds Q^d
+PASS product bound and Q^d identity as stated
+PASS H >= H0 and W/H >= rho0
+  door L1: side L, y in [2H/7, 2H/7 + 2], center/H = 2/7 + 1/H
+  door L2: side L, y in [4H/7, 4H/7 + 2], center/H = 4/7 + 1/H
+  door R1: side R, y in [5H/7, 5H/7 + 2], center/H = 5/7 + 1/H
+  door R2: side R, y in [6H/7, 6H/7 + 2], center/H = 6/7 + 1/H
+  room polygon has 20 vertices; marks are lattice points
+PASS 1 <= D <= Q^d
+PASS |c_i - C_i/D| <= 1/(QD) for all four centers
+  D=7, C={'L1': 2, 'L2': 4, 'R1': 5, 'R2': 6}, p=67
+PASS access heights within w/(2H) of centers on I
+PASS middle half holds >= 2 consecutive k (13..20)
+  k=13, residue (B1-A+2kD) mod p = 51
+PASS IVT: mismatch changes sign on I
+PASS endpoint mismatch >= q rho delta/4 - w/H
+PASS matching root s = 0.394456289979 in I
+PASS w/H + 2/(QD) < 1/(2pD)
+PASS dist(Y_j,(1/D)Z) >= 1/(pD) for all 0<j<67
+PASS every intermediate crossing misses doors and corners; min clearance 0.006397 >= proof bound 0.002132
+PASS exact physical trace from S reaches T (66 vertical, 26 horizontal reflections)
+PASS vertical reflections = p - 1 as the proof prescribes
+PASS traced vertical-contact heights equal the predicted y_j exactly
+PASS control: door moved onto crossing 2 -> path enters the L2 stub at event 2 and never reaches T (status max)
+
+======================================================================
+Part B. Perpendicular doors: rectangle-windings.md
+======================================================================
+PASS det(v,d) = 1/3 != 0
+  |F| = 12, N = 24
+  layout: left a=1/6, top b=1/6, bottom x=2/3, right y=1/2; v=(1, 1)
+PASS no frozen center lies in the open rectangle, so the direct chord is clear
+PASS 2 collision congruences <= N
+PASS K = 0 violates none (original chord clear)
+    congruence K*3/4 = 29/48 (mod 1)
+    congruence K*1/2 = 11/24 (mod 1)
+PASS h = 4 <= (2N+1)^N
+PASS K0 = 3; slope in middle half beyond K0
+PASS some K among the N+1 multiples survives (25 of 25)
+PASS congruence prediction matches direct incidence for K = 0..27 (blocked: [])
+PASS K = 4 within K0 + (N+1)h
+  developed displacement D = (49/6, 53/6), tau = 53/49
+PASS 16 intermediate crossings clear of frozen centers and corners; c = 19/318
+PASS explicit rational bound c >= 1/(d^2 max(1,Dx,Dy)) = 1/318
+  e* (actual c) = 931/64872, threshold H > 69.680
+  e* (rational lower bound) = 49/64872, threshold H > 1323.918
+PASS chosen H = W = 1326
+PASS e = w/(2 min(W,H)) below the explicit margin
+PASS endpoint mismatch has opposite signs on I
+PASS matching root s = 23427/21659
+PASS exact physical trace reaches T (16 reflections)
+PASS reflection count equals predicted crossing count
+
+======================================================================
+Part C. Shared corner: doors at fixed physical offsets 2 from (0,H)
+======================================================================
+PASS H=1000: root s=0.666499917 in access range (1/2,2)
+PASS   trace reaches T; contacts: bottom at 3.125469 left of corner (W,0), right wall at height 2.083125
+PASS   bottom miss = 5(1+s)/(4s) exactly
+  note's c-test: c/(2+2max) = 0.5208/H vs e = 1.0000/H -> fails
+PASS H=1000000000: root s=0.666666666 in access range (1/2,2)
+PASS   trace reaches T; contacts: bottom at 3.125000 left of corner (W,0), right wall at height 2.083333
+PASS   bottom miss = 5(1+s)/(4s) exactly
+  note's c-test: c/(2+2max) = 0.5208/H vs e = 1.0000/H -> fails
+PASS H=2^200: root s=0.666666667 in access range (1/2,2)
+PASS   trace reaches T; contacts: bottom at 3.125000 left of corner (W,0), right wall at height 2.083333
+PASS   bottom miss = 5(1+s)/(4s) exactly
+  note's c-test: c/(2+2max) = 0.5208/H vs e = 1.0000/H -> fails
+
+ALL PASS

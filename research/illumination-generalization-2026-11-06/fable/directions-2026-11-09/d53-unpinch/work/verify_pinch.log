@@ -1,0 +1,18 @@
+tiles 24 pinch type C
+   A point (0, 4) type C
+   A point (2, 2) type C
+   A point (2, 4) type I
+   A point (2, 6) type C
+   A point (4, 0) type C
+   A point (4, 2) type I
+   A point (4, 4) type C
+   A point (6, 2) type C
+1. fold condition: B/C points that are not corners: []
+2. shootall 400 ndir=48679 nel=2 pairs=1 lit=0 unlit=1 lastsum=400 first=none best=none | U 0 1
+3. plane tracer, pinch die     from S: directions 1112 {'corner': 1112, 'visits Q': 0} reaching the other mark: []
+3. plane tracer, pinch die     from T: directions 1112 {'corner': 1112, 'visits Q': 0} reaching the other mark: []
+3. plane tracer, pinch reflect from S: directions 1112 {'corner': 1112, 'visits Q': 0} reaching the other mark: []
+3. plane tracer, pinch reflect from T: directions 1112 {'corner': 1112, 'visits Q': 0} reaching the other mark: []
+4. orbit45 line written, nsq 96
+5. control from (3, 9/2) direction (2,-1), pinch die    : ('Q', 0, 1)
+5. control from (3, 9/2) direction (2,-1), pinch reflect: ('corner', 1, 1)

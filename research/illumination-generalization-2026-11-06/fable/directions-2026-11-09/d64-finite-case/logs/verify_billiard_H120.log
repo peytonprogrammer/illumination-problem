@@ -1,0 +1,9 @@
+room 1843 n=20 groups 18 dark groups 2 mismatches 0
+room 4455 n=32 groups 99 dark groups 12 mismatches 0
+room 4458 n=32 groups 92 dark groups 11 mismatches 0
+room 4462 n=32 groups 77 dark groups 9 mismatches 0
+room 4576 n=40 groups 146 dark groups 16 mismatches 0
+room 4578 n=40 groups 90 dark groups 28 mismatches 0
+room 4580 n=40 groups 74 dark groups 8 mismatches 0
+H=120 total groups 596 mismatches 0
+python3 -B verify_billiard.py 120 1843 4455 4458 4462 4576 4578 4580  128.42s user 0.12s system 99% cpu 2:08.76 total

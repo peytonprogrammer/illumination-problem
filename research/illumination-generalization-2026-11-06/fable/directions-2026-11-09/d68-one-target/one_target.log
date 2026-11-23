@@ -1,0 +1,26 @@
+rooms read: 4776 normalized: 4581
+(1) star identity failures over all classes: 0
+(2) geometric Q vs block type Q (pair_level rooms): agree 7124 disagree 0
+(3) normalized rooms with >= 2 Q classes: 43  max n 16  max (n - 2r - 2) -2
+    by #Q: {2: 42, 3: 1}  Q-pair difference: {(0, 1): 17, (1, 0): 13, (1, 1): 13}  R*: 35
+    area histogram: {8: 6, 10: 7, 12: 7, 14: 8, 15: 3, 16: 12}
+    in R*, area histogram: {8: 3, 10: 3, 12: 7, 14: 8, 15: 3, 16: 11}
+    all 4,776 rooms: max (n - 2r - 2) over rooms with >= 2 Q classes: 0
+(4) OL1 pairs: 15 in 12 rooms; max area 16 ; area >= 21: 0
+    cov249 n 14 r 8 a (0, 0) x (0, 1) S (2, 2) T (2, 4) direct True room pairs lit 1 / 1
+    cov250 n 14 r 8 a (0, 0) x (0, 1) S (2, 2) T (2, 4) direct True room pairs lit 1 / 1
+    cov338 n 14 r 8 a (0, 0) x (1, 0) S (2, 2) T (4, 2) direct True room pairs lit 2 / 2
+    cov338 n 14 r 8 a (1, 0) x (0, 0) S (1, 2) T (3, 2) direct True room pairs lit 2 / 2
+    cov372 n 14 r 8 a (0, 0) x (1, 1) S (2, 2) T (4, 4) direct True room pairs lit 1 / 1
+    cov394 n 14 r 8 a (0, 0) x (1, 1) S (2, 2) T (4, 4) direct True room pairs lit 1 / 1
+    cov732 n 16 r 8 a (0, 0) x (0, 1) S (2, 2) T (6, 2) direct False room pairs lit 1 / 1
+    cov735 n 16 r 8 a (0, 0) x (0, 1) S (2, 2) T (6, 4) direct True room pairs lit 1 / 1
+    cov813 n 16 r 8 a (0, 0) x (1, 0) S (2, 2) T (2, 6) direct False room pairs lit 2 / 2
+    cov813 n 16 r 8 a (1, 0) x (0, 0) S (1, 2) T (1, 6) direct False room pairs lit 2 / 2
+    cov820 n 16 r 8 a (1, 0) x (0, 0) S (1, 2) T (3, 6) direct True room pairs lit 1 / 1
+    cov856 n 16 r 8 a (0, 1) x (1, 1) S (2, 3) T (4, 3) direct True room pairs lit 1 / 1
+    cov884 n 16 r 8 a (0, 1) x (1, 1) S (2, 3) T (4, 3) direct True room pairs lit 1 / 1
+    cov901 n 16 r 8 a (1, 0) x (1, 1) S (3, 2) T (3, 4) direct True room pairs lit 2 / 2
+    cov901 n 16 r 8 a (1, 1) x (1, 0) S (3, 1) T (3, 3) direct True room pairs lit 2 / 2
+    direct segment lights: 12 of 15
+CPU 0.25 s

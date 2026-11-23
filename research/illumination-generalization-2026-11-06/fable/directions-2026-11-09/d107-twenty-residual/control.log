@@ -1,0 +1,21 @@
+# 1. residual control: 0-32 boxes shrunk to r = 3856
+0-32-shrunk-control: residual open pairs 2, box tile pairs 2, same set True, products 30464, uncovered 3800
+  BAD uncovered PROD 1 4 1 | 0 33 17 0 31 16 1 1119 577 | 37 54 18 2 3 1 34 50 17
+
+  BAD uncovered PROD 1 4 1 | 0 33 17 1 1119 577 1 1057 545 | 37 54 18 2 3 1 34 50 17
+
+  BAD uncovered PROD 1 4 1 | 0 33 17 1 1119 577 | 37 54 18 2 3 1 34 50 17
+
+  BAD uncovered PROD 1 4 1 | 0 33 17 1 1057 545 1 1026 529 | 37 54 18 2 3 1 34 50 17
+
+  BAD uncovered PROD 1 4 1 | 0 33 17 1 1057 545 | 37 54 18 2 3 1 34 50 17
+
+  boxes used 2, boxes never needed 0
+  boxes whose radius equals ceil(65536 * reached displacement): 2 of 2
+  box 1 4 2 2 r=3856/65536: reached 1/17 and 1/17
+  box 14 17 3 3 r=3856/65536: reached 1/17 and 1/17
+RESULT 0-32-shrunk-control FAIL
+# 2. label control, 7-230 receipts with j -> j+1 in every L and K leaf
+queries 11681 failed 11606 directions 55
+# 3. label control, 5-0 near-corner trees with j -> j+1 (D103 --mutate)
+leaves 6452 failed 5086 directions 60

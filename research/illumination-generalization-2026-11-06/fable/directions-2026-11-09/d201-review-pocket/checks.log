@@ -1,0 +1,35 @@
+d201 checks. Pocket w=3, h=g=1, spacing wg/(g+h) = 3/2
+  room D1= 4 D2= 4: {'adjacent-bounce': 8, 'adjacent-repair': 8, 'different-rows': 24, 'outer-left-wall': 2, 'outer-pocket': 6, 'same-chamber': 18}
+  room D1= 4 D2= 5: {'adjacent-bounce': 12, 'adjacent-repair': 4, 'different-rows': 24, 'outer-pocket': 2, 'outer-right-wall': 6, 'same-chamber': 18}
+  room D1= 4 D2=30: {'adjacent-bounce': 12, 'adjacent-repair': 4, 'different-rows': 24, 'outer-right-wall': 8, 'same-chamber': 18}
+  room D1= 5 D2= 4: {'adjacent-bounce': 12, 'adjacent-repair': 4, 'different-rows': 24, 'outer-left-wall': 6, 'outer-pocket': 2, 'same-chamber': 18}
+  room D1= 7 D2= 7: {'adjacent-bounce': 16, 'different-rows': 24, 'outer-left-wall': 2, 'outer-pocket': 6, 'same-chamber': 18}
+  room D1=13 D2=14: {'adjacent-bounce': 16, 'different-rows': 24, 'outer-pocket': 2, 'outer-right-wall': 6, 'same-chamber': 18}
+  room D1=30 D2=30: {'adjacent-bounce': 16, 'different-rows': 24, 'outer-left-wall': 2, 'outer-pocket': 6, 'same-chamber': 18}
+rooms traced: 729; pairs per room: 66; all prescribed rays reach their targets, no corner hits, bounce lists equal the predicted ones
+pair totals by construction: {'adjacent-bounce': 11448, 'adjacent-repair': 216, 'different-rows': 17496, 'outer-left-wall': 2810, 'outer-pocket': 266, 'outer-right-wall': 2756, 'same-chamber': 13122}
+residual pocket / repair stats: {'bounces max': 21, 'pocket M=2': 106, 'pocket M=3': 54, 'pocket M=4': 106, 'repair a=2 u=1': 108, 'repair a=3/2 u=2': 108}
+
+Controls (expected failures of the plain bounce):
+  D=(4,4) (1, 1)->(5, 1) plain bounce: corner at (Fraction(3, 1), Fraction(2, 1))
+  D=(4,4) (2, 1)->(6, 1) plain bounce: corner at (Fraction(4, 1), Fraction(2, 1))
+  D=(7,7) (1, 1)->(15, 1) plain bounce: corner at (Fraction(7, 1), Fraction(2, 1))
+  D=(6,7) (1, 1)->(15, 1) plain bounce: corner at (Fraction(9, 1), Fraction(3, 1))
+  D=(6,6) (1,1)->(13,1) pocket entry a=1: hit
+  D=(6,6) (1,1)->(13,1) pocket entry a=5/4: corner
+
+Item 1 (D=4): a = (5-u)/2 is the first criterion value above 1 for u=1,2; roof contact 2a+u = 5; a+2c-b = 6 (asserted).
+Item 2 (D1=D2): 4a == u+v+2(u-D1) mod 6 holds for every chosen a (asserted).
+d200 cross-check: for D = 3k+1 in 7..28, the criterion's first value equals d200's a = u - 1/2 in 16 of 16 cases
+
+R22 control (d8 rooms.json, R22-base):
+  cells: 15 bbox (-1, -3, 5, 3)
+  class (0, 0) {'interior': 2, 'smooth': 2, 'corner': 3, 'pinch': 0}
+  class (1, 0) {'interior': 0, 'smooth': 2, 'corner': 5, 'pinch': 0}
+  class (0, 1) {'interior': 0, 'smooth': 2, 'corner': 5, 'pinch': 0}
+  class (1, 1) {'interior': 0, 'smooth': 0, 'corner': 9, 'pinch': 0}
+  integral full-mouth pockets with width>=3, height>=1: 0 []
+
+Ledger: three-chamber word LLLLRRLLRRLLLLRRLLRR W=20 status ('OPEN', [], 'one-direction convex')
+
+CPU seconds: 3.2

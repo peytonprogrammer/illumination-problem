@@ -1,0 +1,25 @@
+g (0, 0) cycles [(0, 4), (1, 3), (6, 7), (8, 11), (9, 10), (12, 14)] fixed 3
+g (0, 1) cycles [(0, 3, 2), (1, 4, 5), (8, 10), (9, 11), (12, 13, 14)] fixed 2
+g (1, 0) cycles [(0, 1), (2, 7, 6), (3, 4), (5, 8, 9), (10, 11, 13)] fixed 2
+g (1, 1) cycles [(2, 3, 7), (4, 8, 5), (10, 13, 12)] fixed 6
+poles (convex corners) = 13  zeros (reflex) = 9  walls = 22
+A cycles [(0, 4), (1, 3), (12, 14)]  B cycles [(8, 11), (9, 10), (6, 7)]
+choice (0, 1, 12) block sizes [15] nblocks 1 A joins [[0]] B joins [[0]] 
+choice (0, 1, 14) block sizes [3] nblocks 5 A joins [[0, 2]] B joins [[3, 4]] ACCEPT
+choice (0, 3, 12) block sizes [15] nblocks 1 A joins [[0]] B joins [[0]] 
+choice (0, 3, 14) block sizes [15] nblocks 1 A joins [[0]] B joins [[0]] 
+accepted partition (cells): [[(-1, -1), (-1, 0), (4, 0)], [(0, -2), (0, 1), (3, 1)], [(0, -1), (0, 0), (3, 0)], [(1, -3), (1, 2), (2, 2)], [(1, -2), (1, 1), (2, 1)]]
+block systems of G (from pairs {0,j}): [(1, 15), (5, 3)]
+size-3 systems: [((0, 1, 14), (2, 5, 13), (3, 4, 12), (6, 9, 11), (7, 8, 10))]
+|G| = 233280  |W| = 466560
+Sigma W-invariant: True
+fold image cells: [(-1, 0), (0, 0), (0, 1), (1, 1), (1, 2)]  blocks per image cell: {(-1, 0): [0], (0, 0): [2], (0, 1): [1], (1, 1): [4], (1, 2): [3]}
+fibres of fold: [[(-1, -1), (-1, 0), (4, 0)], [(0, -2), (0, 1), (3, 1)], [(0, -1), (0, 0), (3, 0)], [(1, -3), (1, 2), (2, 2)], [(1, -2), (1, 1), (2, 1)]]
+B_x class (0, 0) blocks 1 size 15 
+B_x class (0, 1) blocks 5 size 3 = Sigma
+B_x class (1, 0) blocks 5 size 3 = Sigma
+B_x class (1, 1) blocks 15 size 1 
+induced g (0, 0) on Sigma blocks: cycle type [1, 2, 2]  (2 = regular point of N over this pole)
+induced g (0, 1) on Sigma blocks: cycle type [1, 1, 3]  (2 = regular point of N over this pole)
+induced g (1, 0) on Sigma blocks: cycle type [1, 1, 3]  (2 = regular point of N over this pole)
+induced g (1, 1) on Sigma blocks: cycle type [1, 1, 3]  (2 = regular point of N over this pole)

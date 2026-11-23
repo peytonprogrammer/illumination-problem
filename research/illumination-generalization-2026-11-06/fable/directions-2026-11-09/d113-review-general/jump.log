@@ -1,0 +1,63 @@
+== room ==
+  W = 20
+  r = 8
+  area = 142
+  gcd_h = 1
+  gcd_v = 1
+  no_corner_only_class = True
+  reflex = [(1, 0), (3, 0), (5, 1), (9, 1), (9, 2), (5, 2), (3, 4), (1, 4)]
+  classes = {(0, 0): {'convex': 2, 'smooth': 6, 'interior': 32}, (0, 1): {'smooth': 9, 'interior': 31}, (1, 0): {'smooth': 50, 'reflex': 6, 'interior': 5, 'convex': 4}, (1, 1): {'convex': 6, 'smooth': 53, 'interior': 6, 'reflex': 2}}
+  S kind False T kind False S,T parity (0, 1) (0, 1)
+== exact slope s0 ==
+  source ray at s0 hits vertex (Fraction(3, 1), Fraction(4, 1))
+== one-sided mismatches (own tracer) vs formulas ==
+  below eps=1/100: F=3.479394 formula_ok=True yA=1.98576- yB=1.70697- bouncesA=20 F-4=-0.520606
+  above eps=1/100: F=4.521212 formula_ok=True yA=1.04394- yB=1.68697- bouncesA=16 F-4=+0.521212
+  below eps=1/1000: F=3.893394 formula_ok=True yA=1.61676- yB=1.69797- bouncesA=20 F-4=-0.106606
+  above eps=1/1000: F=4.161212 formula_ok=True yA=1.35894- yB=1.69597- bouncesA=16 F-4=+0.161212
+  below eps=1/10000: F=3.934794 formula_ok=True yA=1.57986- yB=1.69707- bouncesA=20 F-4=-0.065206
+  above eps=1/10000: F=4.125212 formula_ok=True yA=1.39044- yB=1.69687- bouncesA=16 F-4=+0.125212
+  below eps=1/1000000: F=3.939348 formula_ok=True yA=1.57580- yB=1.69697- bouncesA=20 F-4=-0.060652
+  above eps=1/1000000: F=4.121252 formula_ok=True yA=1.39390- yB=1.69697- bouncesA=16 F-4=+0.121252
+  below eps=1/1000000000: F=3.939394 formula_ok=True yA=1.57576- yB=1.69697- bouncesA=20 F-4=-0.060606
+  above eps=1/1000000000: F=4.121212 formula_ok=True yA=1.39394- yB=1.69697- bouncesA=16 F-4=+0.121212
+  below eps=1/200: F=3.709394 formula_ok=True yA=1.78076- yB=1.70197- bouncesA=20 F-4=-0.290606
+  above eps=1/200: F=4.321212 formula_ok=True yA=1.21894- yB=1.69197- bouncesA=16 F-4=+0.321212
+  below eps=1/300: F=3.786061 formula_ok=True yA=1.71242- yB=1.70030- bouncesA=20 F-4=-0.213939
+  above eps=1/300: F=4.254545 formula_ok=True yA=1.27727- yB=1.69364- bouncesA=16 F-4=+0.254545
+  s0-1/10000: yA=521353/330000 F=649241/165000
+  s0+1/10000: yA=91769/66000 F=34033/8250
+  limits 130/33 136/33  required 4 = 4  roots 30/23 13/10
+== branch extent on grid step 1/3300 ==
+  below: formula holds for j=1..34 (|s-s0|<= 34/3300), fails/corner at j=35
+  above: formula holds for j=1..37 (|s-s0|<= 37/3300), fails/corner at j=38
+  formula mismatches in eps table: 0
+== d103 cross-check: unfolded displacement to x-developed 41 / 35 ==
+  s=s0-e dev=41: end=(Fraction(5, 1), Fraction(521353, 330000)) (expect x=5, y in (1,2))
+  s=s0+e dev=35: end=(Fraction(5, 1), Fraction(91769, 66000)) (expect x=5, y in (1,2))
+== candidate full-room traces (claim 1, natural candidates only) ==
+  root of below formula s=30/23 dir=(+,-1): true first-door F=96/23 -> corner (Fraction(9, 1), Fraction(1, 1))
+  root of below formula s=30/23 dir=(+,+1): true first-door F=None -> corner (Fraction(9, 1), Fraction(1, 1))
+  root of above formula s=13/10 dir=(+,-1): true first-door F=19/5 -> REACH after 227 bounces, 3 crossings of x=5, d103 replay of v=(Fraction(440, 1), Fraction(-572, 1)): end=(Fraction(10, 1), Fraction(3, 1)) ok=True
+  root of above formula s=13/10 dir=(+,+1): true first-door F=None -> corner (Fraction(0, 1), Fraction(4, 1))
+  below formula = 2 s=29/23 dir=(+,-1): true first-door F=corner (Fraction(3, 1), Fraction(0, 1)) -> corner (Fraction(3, 1), Fraction(0, 1))
+  below formula = 2 s=29/23 dir=(+,+1): true first-door F=None -> corner (Fraction(5, 1), Fraction(0, 1))
+  below formula = 6 s=31/23 dir=(+,-1): true first-door F=114/23 -> corner (Fraction(1, 1), Fraction(4, 1))
+  below formula = 6 s=31/23 dir=(+,+1): true first-door F=None -> REACH after 26 bounces, 1 crossings of x=5, d103 replay of v=(Fraction(46, 1), Fraction(62, 1)): end=(Fraction(10, 1), Fraction(3, 1)) ok=True
+  above formula = 2 s=5/4 dir=(+,-1): true first-door F=corner no door crossing -> no reach in 5000 bounces
+  above formula = 2 s=5/4 dir=(+,+1): true first-door F=None -> REACH after 62 bounces, 1 crossings of x=5, d103 replay of v=(Fraction(120, 1), Fraction(150, 1)): end=(Fraction(10, 1), Fraction(3, 1)) ok=True
+  above formula = 6 s=27/20 dir=(+,-1): true first-door F=23/5 -> corner (Fraction(0, 1), Fraction(0, 1))
+  above formula = 6 s=27/20 dir=(+,+1): true first-door F=None -> REACH after 109 bounces, 3 crossings of x=5, d103 replay of v=(Fraction(200, 1), Fraction(270, 1)): end=(Fraction(10, 1), Fraction(3, 1)) ok=True
+== claim 2: L = 4+66k ==
+  k=1 L=70 W=20 r=8 BBBB-free=True: limits 2968/33,2974/33 required 90; traced F(s0-+1e-6)-req = -0.060718, +0.121318
+     below = req-2: s=9/7 (s-s0=-1.73e-02) true F=corner (Fraction(3, 1), Fraction(0, 1)) -> full trace corner (Fraction(3, 1), Fraction(0, 1))
+     above = req+2: s=71/53 (s-s0=+3.66e-02) true F=4948/53 -> full trace REACH after 818 bounces, 5 crossings of x=5, d103 replay of v=(Fraction(1060, 1), Fraction(-1420, 1)): end=(Fraction(76, 1), Fraction(3, 1)) ok=True
+  k=3 L=202 W=20 r=8 BBBB-free=True: limits 8644/33,8650/33 required 262; traced F(s0-+1e-6)-req = -0.060850, +0.121450
+     below = req-2: s=79/61 (s-s0=-7.95e-03) true F=260 -> full trace REACH after 281 bounces, 1 crossings of x=5, d103 replay of v=(Fraction(244, 1), Fraction(-316, 1)): end=(Fraction(208, 1), Fraction(3, 1)) ok=True
+     above = req+2: s=157/119 (s-s0=+1.63e-02) true F=31524/119 -> full trace corner (Fraction(1, 1), Fraction(0, 1))
+  k=10 L=664 W=20 r=8 BBBB-free=True: limits 28510/33,28516/33 required 864; traced F(s0-+1e-6)-req = -0.061312, +0.121912
+     below = req-2: s=459/353 (s-s0=-2.75e-03) true F=862 -> full trace REACH after 883 bounces, 1 crossings of x=5, d103 replay of v=(Fraction(706, 1), Fraction(-918, 1)): end=(Fraction(670, 1), Fraction(3, 1)) ok=True
+     above = req+2: s=229/175 (s-s0=+5.54e-03) true F=868 -> full trace REACH after 885 bounces, 1 crossings of x=5, d103 replay of v=(Fraction(700, 1), Fraction(-916, 1)): end=(Fraction(670, 1), Fraction(3, 1)) ok=True
+  k=30 L=1984 W=20 r=8 BBBB-free=True: limits 85270/33,85276/33 required 2584; traced F(s0-+1e-6)-req = -0.062632, +0.123232
+     below = req-2: s=1319/1013 (s-s0=-9.57e-04) true F=2582 -> full trace REACH after 2603 bounces, 1 crossings of x=5, d103 replay of v=(Fraction(2026, 1), Fraction(-2638, 1)): end=(Fraction(1990, 1), Fraction(3, 1)) ok=True
+     above = req+2: s=659/505 (s-s0=+1.92e-03) true F=2588 -> full trace REACH after 2605 bounces, 1 crossings of x=5, d103 replay of v=(Fraction(2020, 1), Fraction(-2636, 1)): end=(Fraction(1990, 1), Fraction(3, 1)) ok=True

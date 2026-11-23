@@ -1,0 +1,31 @@
+# D117 checks (exact Fraction arithmetic)
+## 1. Room facts at t = 3/q, q = 12j+4
+j=1 q=16 {'reflex': 6, 'walls': 16, 'hgcd': 1, 'area': Fraction(211, 1), 'area_formula': 211, 'S': (Fraction(8, 1), Fraction(1, 1)), 'T': (Fraction(48, 1), Fraction(3, 1)), 'par': (Fraction(0, 1), 1, Fraction(0, 1), 1)}
+j=2 q=28 {'reflex': 6, 'walls': 16, 'hgcd': 1, 'area': Fraction(367, 1), 'area_formula': 367, 'S': (Fraction(14, 1), Fraction(1, 1)), 'T': (Fraction(84, 1), Fraction(3, 1)), 'par': (Fraction(0, 1), 1, Fraction(0, 1), 1)}
+j=3 q=40 {'reflex': 6, 'walls': 16, 'hgcd': 1, 'area': Fraction(523, 1), 'area_formula': 523, 'S': (Fraction(20, 1), Fraction(1, 1)), 'T': (Fraction(120, 1), Fraction(3, 1)), 'par': (Fraction(0, 1), 1, Fraction(0, 1), 1)}
+j=4 q=52 {'reflex': 6, 'walls': 16, 'hgcd': 1, 'area': Fraction(679, 1), 'area_formula': 679, 'S': (Fraction(26, 1), Fraction(1, 1)), 'T': (Fraction(156, 1), Fraction(3, 1)), 'par': (Fraction(0, 1), 1, Fraction(0, 1), 1)}
+j=5 q=64 {'reflex': 6, 'walls': 16, 'hgcd': 1, 'area': Fraction(835, 1), 'area_formula': 835, 'S': (Fraction(32, 1), Fraction(1, 1)), 'T': (Fraction(192, 1), Fraction(3, 1)), 'par': (Fraction(0, 1), 1, Fraction(0, 1), 1)}
+## 2. Translate-formula shots and 4. determinant argument
+q=16 t=3/16 c=15/8 D=779/8 refl=92 first_cross=15/8 det0=17 ea=1/4 eb=33/2 bound=77213.250 lowerbound(m+1)>=0.333
+q=16 t=3/16 c=31/16 D=87/16 refl=4 first_cross=31/16 det0=1 ea=1/8 eb=3/4 bound=191.250 lowerbound(m+1)>=0.333
+q=28 t=3/28 c=27/14 D=1158/7 refl=160 first_cross=27/14 det0=17 ea=1/7 eb=117/7 bound=132687.000 lowerbound(m+1)>=0.441
+q=28 t=3/28 c=55/28 D=265/28 refl=8 first_cross=55/28 det0=1 ea=1/14 eb=6/7 bound=381.857 lowerbound(m+1)>=0.441
+q=40 t=3/40 c=39/20 D=4669/20 refl=228 first_cross=39/20 det0=17 ea=1/10 eb=84/5 bound=188169.300 lowerbound(m+1)>=0.527
+q=40 t=3/40 c=79/40 D=539/40 refl=12 first_cross=79/40 det0=1 ea=1/20 eb=9/10 bound=573.300 lowerbound(m+1)>=0.527
+q=52 t=3/52 c=51/26 D=3919/13 refl=296 first_cross=51/26 det0=17 ea=1/13 eb=219/13 bound=243654.231 lowerbound(m+1)>=0.601
+q=52 t=3/52 c=103/52 D=909/52 refl=16 first_cross=103/52 det0=1 ea=1/26 eb=12/13 bound=765.000 lowerbound(m+1)>=0.601
+q=64 t=3/64 c=63/32 D=11823/32 refl=364 first_cross=63/32 det0=17 ea=1/16 eb=135/8 bound=299140.312 lowerbound(m+1)>=0.667
+q=64 t=3/64 c=127/64 D=1375/64 refl=20 first_cross=127/64 det0=1 ea=1/32 eb=15/16 bound=956.812 lowerbound(m+1)>=0.667
+## 3. Exact-check shots, slope 4m + 3/2 - t/3, t = 3/(12m+4)
+m=1 t=3/16 slope=87/16 c=31/16 (2-t/3=31/16) refl=4 vertical=4 det0=1 bound=191.250 need m+1>=0.333
+m=2 t=3/28 slope=265/28 c=55/28 (2-t/3=55/28) refl=8 vertical=8 det0=1 bound=381.857 need m+1>=0.441
+m=3 t=3/40 slope=539/40 c=79/40 (2-t/3=79/40) refl=12 vertical=12 det0=1 bound=573.300 need m+1>=0.527
+m=4 t=3/52 slope=909/52 c=103/52 (2-t/3=103/52) refl=16 vertical=16 det0=1 bound=765.000 need m+1>=0.601
+m=5 t=3/64 slope=1375/64 c=127/64 (2-t/3=127/64) refl=20 vertical=20 det0=1 bound=956.812 need m+1>=0.667
+m=6 t=3/76 slope=1937/76 c=151/76 (2-t/3=151/76) refl=24 vertical=24 det0=1 bound=1148.684 need m+1>=0.726
+m=7 t=3/88 slope=2595/88 c=175/88 (2-t/3=175/88) refl=28 vertical=28 det0=1 bound=1340.591 need m+1>=0.782
+m=8 t=3/100 slope=3349/100 c=199/100 (2-t/3=199/100) refl=32 vertical=32 det0=1 bound=1532.520 need m+1>=0.833
+## 5. Same slopes off the parameter: m=2 slope at t=3/28 +- 1/1000 miss T
+t=757/7000: no hit within 200 reflections (too long)
+t=743/7000: no hit within 200 reflections (too long)
+CPU seconds: 0.02

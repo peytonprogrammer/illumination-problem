@@ -1,0 +1,75 @@
+# 1. Class definition: one hall [0,3]x[0,2], all 16 arm subsets (depths R=2,T=3,L=1,B=4)
+   arms -   : walls  4, reflex 0
+   arms R   : walls  4, reflex 0
+   arms T   : walls  4, reflex 0
+   arms L   : walls  4, reflex 0
+   arms B   : walls  4, reflex 0
+   arms RT  : walls  6, reflex 1
+   arms RL  : walls  4, reflex 0
+   arms RB  : walls  6, reflex 1
+   arms TL  : walls  6, reflex 1
+   arms TB  : walls  4, reflex 0
+   arms LB  : walls  6, reflex 1
+   arms RTL : walls  8, reflex 2
+   arms RTB : walls  8, reflex 2
+   arms RLB : walls  8, reflex 2
+   arms TLB : walls  8, reflex 2
+   arms RTLB: walls 12, reflex 4
+   (polygon() asserts strict simplicity for every subset)
+
+# 2. Window/gap arithmetic
+   gap set {2jH+-U}: gaps 2U, 2H-2U; window length H(1+X/V) >= 2H iff X >= V
+   X=V=1,U=1,H=2,Y=1: window (1,5); single progression U+4j gives 5 (strictly inside: False); both progressions give 3
+   X=V=1,U=1,H=2,Y=5: window (5,9); single progression U+4j gives 9 (strictly inside: False); both progressions give 7
+   right-arm-only ablation (no reversal) on L(3,3,3) roles X=z,U=1,V=x,Y=y is in section 3
+
+# 3a. Six-wall L(3,3,3): S=(-3,3), T=(3,-1)
+   L(3,3,3) equals hall [-5,0]x[-2,0] + top arm depth 4 + right arm depth 4: True; walls 6
+   note formula: least of 2j*5+-3 above yz=9 is Z=13; window (9,29)
+   traced from T toward (-13,3): end, path (-3, 3) -> (0, 9/4) -> (-5, 1) -> (3, -1)
+   matches note (-3,3)->(0,9/4)->(-5,1)->(3,-1): True
+   mouth crossing at y=0: x=-1 (in (-5,0): True)
+   generic constructor on this pair: case right, Z=13, unfolded end (-13, 3)
+   direct shot S->T: end at (-3, -1) after 1 contacts
+   one-reflection image across wall (-5, -2)-(4, -2): corner, contacts 0, legal 1-reflection shot: False
+   one-reflection image across wall (4, -2)-(4, 0): wall-end, contacts 1, legal 1-reflection shot: False
+   one-reflection image across wall (4, 0)-(0, 0): end, contacts 1, legal 1-reflection shot: False
+   one-reflection image across wall (0, 0)-(0, 4): end, contacts 0, legal 1-reflection shot: False
+   one-reflection image across wall (0, 4)-(-5, 4): end, contacts 2, legal 1-reflection shot: False
+   one-reflection image across wall (-5, 4)-(-5, -2): end, contacts 2, legal 1-reflection shot: False
+
+# 3b. Odd cross P_7: S=(6,0), T=(0,6)
+   constructor: case right, X,U,V,Y,W,H = 4,2,2,4,4,4, window 8,20, Z=10, image (6, -8)
+   traced from T: end, contacts ['(24/7, -2)', '(36/7, 2)'], end (6, 0)
+   unfolded line crosses x=2 at (2, 4/3)
+   unfolded line crosses y=2 at (12/7, 2)
+
+# 4. Exhaustive tests: all unordered pairs of distinct lattice and half-lattice interior points
+   L(3,3,3) (6 walls): 123 points, 7503 pairs; cases [traced, failed] {'bar': [6180, 0], 'direct': [449, 0], 'right': [839, 0], 'upper': [35, 0]}; XY=UV pairs 60, X=V right-arm pairs 84, max reflections 5; failures 0
+      reversal-needed pairs where the S-arm window alone holds no image: 18
+   T: hall [0,3]x[0,2], L=4,R=1,T=5 (8 walls): 95 points, 4465 pairs; cases [traced, failed] {'bar': [3385, 0], 'right': [702, 0], 'direct': [222, 0], 'upper': [156, 0]}; XY=UV pairs 50, X=V right-arm pairs 123, max reflections 16; failures 0
+      reversal-needed pairs where the S-arm window alone holds no image: 16
+   P_7 (12 walls): 329 points, 53956 pairs; cases [traced, failed] {'bar': [38080, 0], 'right': [8648, 0], 'direct': [5636, 0], 'upper': [1592, 0]}; XY=UV pairs 516, X=V right-arm pairs 1176, max reflections 11; failures 0
+      reversal-needed pairs where the S-arm window alone holds no image: 376
+   plus: hall [0,3]x[0,4], R=1,T=6,L=3,B=2 (12 walls): 171 points, 14535 pairs; cases [traced, failed] {'bar': [11595, 0], 'right': [1238, 0], 'direct': [1399, 0], 'upper': [303, 0]}; XY=UV pairs 135, X=V right-arm pairs 320, max reflections 8; failures 0
+      reversal-needed pairs where the S-arm window alone holds no image: 69
+
+# 5. Random rational points (seed 161), 1500 pairs per member, denominators up to 997
+   L(3,3,3): cases {'bar': [1145, 0], 'right': [160, 0], 'direct': [146, 0], 'upper': [49, 0]}, max reflections 140, failures 0
+   T: hall [0,3]x[0,2], L=4,R=1,T=5: cases {'bar': [1048, 0], 'upper': [50, 0], 'right': [270, 0], 'direct': [132, 0]}, max reflections 831, failures 0
+   P_7: cases {'bar': [954, 0], 'direct': [213, 0], 'right': [266, 0], 'upper': [67, 0]}, max reflections 126, failures 0
+   plus: hall [0,3]x[0,4], R=1,T=6,L=3,B=2: cases {'bar': [1057, 0], 'direct': [233, 0], 'right': [163, 0], 'upper': [47, 0]}, max reflections 605, failures 0
+   seam points on x=3 to top-arm points in plus: hall [0,3]x[0,4], R=1,T=6,L=3,B=2: bar-case [traced, failed] [1500, 0], failures 0
+
+# 6. Sections of R22-base and DB55
+   R22-base: 22 walls; rows (y=k+1/2) with >1 component: {Fraction(1, 2): [[-1, 1], [3, 5]]}
+      columns (x=k+1/2) with >1 component: {Fraction(3, 2): [[-3, -1], [1, 3]]}
+   DB55: 12 walls; rows (y=k+1/2) with >1 component: {Fraction(1, 2): [[0, 5], [8, 13]], Fraction(3, 2): [[0, 5], [8, 13]], Fraction(7, 2): [[0, 5], [8, 13]], Fraction(9, 2): [[0, 5], [8, 13]]}
+      columns (x=k+1/2) with >1 component: {}
+   DB55 line y=1 (integer, between rows 0 and 1): components [[0, 5], [8, 13]] and [[0, 5], [8, 13]] (rows agree)
+   R22 cells (0,1) [centre (1/2,3/2)] in room: True; (1,0) [centre (3/2,1/2)] in room: False
+   R22 marks [[0, 0], [2, 2]]
+   S-tetromino: 8 walls, rows/columns with >1 component: none (orthoconvex, not hall+arms)
+   3-step staircase: 8 walls, rows/columns with >1 component: none (orthoconvex, not hall+arms)
+
+CPU 4.0s

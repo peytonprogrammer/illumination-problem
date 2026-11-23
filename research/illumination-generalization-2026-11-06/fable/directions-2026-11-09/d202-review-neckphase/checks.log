@@ -1,0 +1,45 @@
+Part A: 3x4 middle chamber, X,Y in 1..25 (D = X+3)
+  room X=Y=1: area 32, W=20, canonical word LLLLRRLLRRLLLLRRLLRR, key match True
+  rooms 625, pairs 56875
+    adjacent-bounce                        9800
+    adjacent-repair (end pocket)            200
+    different-rows                        15000
+    outer-left-wall                        2402
+    outer-middle-pocket h=1                 123
+    outer-middle-pocket h=2                 123
+    outer-right-wall                       2352
+    row1-to-row3 pocket base               5000
+    row2-to-row3 fast slope m=1            2500
+    row2-to-row3 fast slope m=2            2500
+    same-chamber                          16875
+  sub-statistics: {'pocket h=1 M=2': 49, 'pocket h=1 M=3': 25, 'pocket h=1 M=4': 49, 'pocket h=2 M=2': 49, 'pocket h=2 M=3': 25, 'pocket h=2 M=4': 49, 'row1->row3 sign +1': 4150, 'row1->row3 sign -1': 850}
+  max bounces on a prescribed ray: 311
+  failures (corner or miss): 0
+  controls (expected failures):
+    X=Y=4 (1,1)->(15,1) with d201 h=1 entry a=1/2 in the h=2 pocket: corner
+    same pair with the note's h=2 entry a=1/3: hit
+    X=2 (1,2)->(6,3) slope 6m-1/B with m=1 (unfolded 1+6m=7): corner
+    X=2 (1,2)->(6,3) slope 6m-1/B with m=3 (unfolded 1+6m=19): hit
+
+Part B: row-2 source, slope 2*H0*m - 1/B, target (D1+v, y) in the middle
+  H0=3 floor=0 H=4 w=3: condition holds 40, traced hits 40, failures 0; (v,y) without condition: [(1, 2), (2, 2)]
+  H0=3 floor=0 H=5 w=3: condition holds 40, traced hits 40, failures 0; (v,y) without condition: [(1, 2), (1, 4), (2, 2), (2, 4)]
+  H0=3 floor=0 H=6 w=3: condition holds 30, traced hits 30, failures 0; (v,y) without condition: [(1, 2), (1, 3), (1, 4), (2, 2), (2, 3), (2, 4), (2, 5)]
+  H0=4 floor=0 H=5 w=4: condition holds 60, traced hits 60, failures 0; (v,y) without condition: [(1, 2), (1, 4), (2, 2), (2, 4), (3, 2), (3, 4)]
+  H0=5 floor=-1 H=6 w=3: condition holds 60, traced hits 60, failures 0; (v,y) without condition: [(1, 2), (1, 4), (2, 2), (2, 4)]
+  H0=4 floor=-1 H=7 w=5: condition holds 120, traced hits 120, failures 0; (v,y) without condition: [(1, 2), (1, 4), (1, 6), (2, 2), (2, 4), (2, 6), (3, 2), (3, 4), (3, 6), (4, 2), (4, 4), (4, 6)]
+
+Part C: neck-phase families (one prescribed ray per named room)
+  strip family w=2, delta even, L,R = 0 mod 4: rooms 64, hits 64, failures 0, max bounces 80
+  roof family w=2d+8, h=d+5, L=0, R=2 mod 4: rooms 72, hits 72, failures 0, max bounces 26
+  reflected-stub K=2A family, r=1/4 (148 with e,f >= 3w): rooms 188, hits 188, failures 0, max bounces 88
+  displaced-mouth rooms: canonical words ['LLLLRRLLRRLLLLRRLLRR'] (opposite key: True)
+  adjacent-mouth family r=2/3: rooms 108, hits 108, failures 0, max bounces 24
+  adjacent rooms: canonical words ['LLLLRRLLLRRLLLLRRLRR'] (adjacent key: True)
+
+Part D: structural check of the 'first outstanding area' claim (no rays)
+  chambers 3x3, 1x3, 3x3, necks 1,1: area 23, word key True, lattice marks 8
+  chambers 2x3, 2x3, 2x3, necks 1,2: area 21, word key True, lattice marks 6
+  chambers 3x3, 3x3, 3x3, necks 1,1: area 29, word key True, lattice marks 12
+
+CPU seconds: 26.7

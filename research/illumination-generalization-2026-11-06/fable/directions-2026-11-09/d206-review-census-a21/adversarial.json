@@ -1,0 +1,58 @@
+{
+ "hand_cases": [
+  {
+   "case": "((3, 1), (-1, 1), 2, (1, 3))",
+   "verify_plane": 0,
+   "tracer": 0
+  },
+  {
+   "case": "((1, 3), (1, -1), 2, (3, 1))",
+   "verify_plane": 0,
+   "tracer": 0
+  },
+  {
+   "case": "((2, 1), (-1, 1), 1, (1, 2))",
+   "verify_plane": 1,
+   "tracer": 1
+  },
+  {
+   "case": "((1, 2), (1, 1), 2, (1, 2))",
+   "verify_plane": 0,
+   "tracer": 0
+  },
+  {
+   "case": "((1, 1), (1, 1), 3, (2, 2))",
+   "verify_plane": 0,
+   "tracer": 0
+  },
+  {
+   "case": "((1, 1), (0, 1), 3, (1, 2))",
+   "verify_plane": 1,
+   "tracer": 1
+  }
+ ],
+ "control_room": {
+  "walls": 22,
+  "hole": false,
+  "pinch": false,
+  "marks": [
+   [
+    1,
+    3
+   ],
+   [
+    3,
+    5
+   ]
+  ]
+ },
+ "control_verify_plane": {
+  "queries": 235200,
+  "accepted": 0
+ },
+ "control_tracer": {
+  "rays": 3920,
+  "tmax": 60,
+  "reached_target_before_corner": 0
+ }
+}

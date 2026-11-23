@@ -1,0 +1,86 @@
+==============================================================================
+1. cov4181: monodromy over the pillowcase, block systems, the unique proper quotient
+==============================================================================
+cell list == qclass-closure/offgrid/cov4181.room: True
+[cov4181] n=28 W=20 r=8 gcd(h)=1 gcd(v)=1 normalized=True
+   site cycle types (length: count): {(0, 0): {2: 12, 1: 4}, (0, 1): {3: 1, 2: 12, 1: 1}, (1, 0): {3: 7, 1: 7}, (1, 1): {2: 14}}
+   canonical B_x: {(0, 0): 'B (universal)', (0, 1): 'B (universal)', (1, 0): 'Q (no 2-cycles)', (1, 1): 'B (universal)'}
+   block systems: 2; outer degrees present: [1, 4]; proper: 1; BBBB=False
+     proper quotient outer degree 4 (inner 7): types {(0, 0): (2, 1, 1), (0, 1): (2, 1, 1), (1, 0): (3, 1), (1, 1): (2, 2)}
+S=(2, 3) count 4, T=(4, 3) count 4 (4 = interior)
+site labels relative to S: {'a': (0, 1), 'b': (1, 1), 'd': (0, 0), 'c': (1, 0)}
+block sizes: [7, 7, 7, 7]
+   N over a=(0, 1): (01)  type (2, 1, 1)
+   N over b=(1, 1): (01)(23)  type (2, 2)
+   N over c=(1, 0): (132)  type (3, 1)
+   N over d=(0, 0): (12)  type (2, 1, 1)
+   relation g00 g10^-1 g11 g01^-1 = id upstairs: True ; in N: True
+   S copy 0: Q-point sheets [7, 8] -> N letters {3}; fixed by A: True; fixed by D: True
+   S copy 1: Q-point sheets [6, 9] -> N letters {3}; fixed by A: True; fixed by D: True
+   T copy 0: Q-point sheets [13, 18] -> N letters {2}; fixed by A: True; fixed by D: False
+   T copy 1: Q-point sheets [12, 19] -> N letters {2}; fixed by A: True; fixed by D: False
+   N has a 2-cycle over d: True
+   canonical closure of all upstairs d-transpositions: blocks 1
+   N zero over c = letters [1, 2, 3]: upstairs cycles [3, 3, 3, 3, 3, 3, 3]
+   physical reflexes of parity c: 7 [(1, 2), (1, 4), (3, 2), (3, 4), (5, 2), (5, 4), (7, 2)]; those over the N-zero: 7
+   all reflexes: 8; reflexes over the c-zero = all parity-c reflexes: True
+   N pole over c: upstairs cycle lengths [1, 1, 1, 1, 1, 1, 1] (7 convex corners)
+==============================================================================
+2. Arc components: S4 lemma, then the actual preimage graphs in Q and N
+==============================================================================
+S4 lemma: 1728 (tuple, order) solutions of the product relation; A,D supports not meeting in exactly one letter: 0
+arc L (direction (0,1)) in Q: 5 components, sizes [3, 3, 4, 6, 12]
+   ('S', 0): component [1]
+   ('S', 1): component [1]
+   ('T', 0): component [2]
+   ('T', 1): component [2]
+   S lifts and T lifts in different components of the preimage of L: True
+   in N, components = orbits of <A,D>: [[0, 1, 2], [3]]
+   arc class (2,1): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+   arc class (2,-1): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+   arc class (2,3): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+   arc class (4,1): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+   arc class (4,-3): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+   arc class (2,5): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+   arc class (6,1): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+   arc class (8,3): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+   arc class (10,-7): Q edges 28 (= n: True); S-lifts separated from T-lifts: True
+all tested arcs separate S from T in Q: True
+==============================================================================
+3. Structural charge r >= k = n/4 for the four-sheet mechanism
+==============================================================================
+   inner degree k = 7; distinct reflexes over the c-zero = 7; r = 8 >= k: True; W = 2r+4 = 20 >= n/2+4 = 18
+   r <= 8 forces n = 4k <= 4r <= 32
+==============================================================================
+4. Named normalized BBBB rooms: all pillowcase factors
+==============================================================================
+[DB55] n=53 W=12 r=4 gcd(h)=1 gcd(v)=1 normalized=True
+   site cycle types (length: count): {(0, 0): {3: 1, 2: 24, 1: 2}, (0, 1): {3: 1, 2: 24, 1: 2}, (1, 0): {3: 1, 2: 24, 1: 2}, (1, 1): {3: 1, 2: 24, 1: 2}}
+   canonical B_x: {(0, 0): 'B (universal)', (0, 1): 'B (universal)', (1, 0): 'B (universal)', (1, 1): 'B (universal)'}
+   block systems: 1; outer degrees present: [1]; proper: 0; BBBB=True
+[DBas] n=48 W=12 r=4 gcd(h)=1 gcd(v)=1 normalized=True
+   site cycle types (length: count): {(0, 0): {2: 23, 1: 2}, (0, 1): {2: 24}, (1, 0): {3: 2, 2: 20, 1: 2}, (1, 1): {3: 2, 2: 19, 1: 4}}
+   canonical B_x: {(0, 0): 'B (universal)', (0, 1): 'B (universal)', (1, 0): 'B (universal)', (1, 1): 'B (universal)'}
+   block systems: 1; outer degrees present: [1]; proper: 0; BBBB=True
+[U2] n=46 W=10 r=3 gcd(h)=1 gcd(v)=1 normalized=True
+   site cycle types (length: count): {(0, 0): {3: 1, 2: 21, 1: 1}, (0, 1): {2: 22, 1: 2}, (1, 0): {3: 1, 2: 21, 1: 1}, (1, 1): {3: 1, 2: 20, 1: 3}}
+   canonical B_x: {(0, 0): 'B (universal)', (0, 1): 'B (universal)', (1, 0): 'B (universal)', (1, 1): 'B (universal)'}
+   block systems: 1; outer degrees present: [1]; proper: 0; BBBB=True
+[c4181s] n=41 W=20 r=8 gcd(h)=1 gcd(v)=1 normalized=True
+   site cycle types (length: count): {(0, 0): {2: 19, 1: 3}, (0, 1): {3: 1, 2: 18, 1: 2}, (1, 0): {3: 7, 2: 8, 1: 4}, (1, 1): {2: 19, 1: 3}}
+   canonical B_x: {(0, 0): 'B (universal)', (0, 1): 'B (universal)', (1, 0): 'B (universal)', (1, 1): 'B (universal)'}
+   block systems: 1; outer degrees present: [1]; proper: 0; BBBB=True
+[cross7] n=96 W=12 r=4 gcd(h)=1 gcd(v)=1 normalized=True
+   site cycle types (length: count): {(0, 0): {3: 4, 2: 42}, (0, 1): {2: 46, 1: 4}, (1, 0): {2: 46, 1: 4}, (1, 1): {2: 48}}
+   canonical B_x: {(0, 0): 'B (universal)', (0, 1): 'B (universal)', (1, 0): 'B (universal)', (1, 1): 'B (universal)'}
+   block systems: 5; outer degrees present: [1, 24, 48]; proper: 4; BBBB=True
+     proper quotient outer degree 48 (inner 2): types {(0, 0): (3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1), (0, 1): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1), (1, 0): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1), (1, 1): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)}
+     proper quotient outer degree 48 (inner 2): types {(0, 0): (3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2), (0, 1): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1), (1, 0): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1), (1, 1): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)}
+     proper quotient outer degree 48 (inner 2): types {(0, 0): (3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2), (0, 1): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1), (1, 0): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1), (1, 1): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)}
+     proper quotient outer degree 24 (inner 4): types {(0, 0): (3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1), (0, 1): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1), (1, 0): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1), (1, 1): (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)}
+summary (BBBB, proper outer degrees, small 2..4): {'DB55': (True, [], []), 'DBas': (True, [], []), 'U2': (True, [], []), 'c4181s': (True, [], []), 'cross7': (True, [24, 48, 48, 48], [])}
+   cross7 factor outer 48: zeros 2, poles 6, poles-zeros = 4; sites with both 2- and 3-cycles [(0, 0)]
+   cross7 factor outer 48: zeros 2, poles 6, poles-zeros = 4; sites with both 2- and 3-cycles [(0, 0)]
+   cross7 factor outer 48: zeros 2, poles 6, poles-zeros = 4; sites with both 2- and 3-cycles [(0, 0)]
+   cross7 factor outer 24: zeros 1, poles 5, poles-zeros = 4; sites with both 2- and 3-cycles [(0, 0)]
+CPU seconds: 0.07

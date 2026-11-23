@@ -1,0 +1,156 @@
+§0 setup
+  PASS st(7,21) strictly simple, wall gcds (1,1)
+  INFO upper runs above the roof y=5 in z=5-x: (5,6)x z[-2,1] width 3; (6,7)x z[-3,0] width 3; (7,12) width 5
+  INFO P per the note's literal definition (all upper runs) = lcm(6,6,10) = 30; the note uses P = 6
+§1 periodic upper approach in st279: same seam z, v = v0 + kP, reach T with no horizontal contact
+  PASS v0=-3/2, k=-10: v=-123/2, z=1/2, reaches T, 20 lateral reflections, intercept e+BkP=-61
+  PASS v0=-3/2, k= -3: v=-39/2, z=1/2, reaches T, 6 lateral reflections, intercept e+BkP=-19
+  PASS v0=-3/2, k= -2: v=-27/2, z=1/2, reaches T, 4 lateral reflections, intercept e+BkP=-13
+  PASS v0=-3/2, k= -1: v=-15/2, z=1/2, reaches T, 2 lateral reflections, intercept e+BkP=-7
+  PASS v0=-3/2, k=  0: v=-3/2, z=1/2, reaches T, 0 lateral reflections, intercept e+BkP=-1
+  PASS v0=-3/2, k=  1: v=9/2, z=1/2, reaches T, 2 lateral reflections, intercept e+BkP=5
+  PASS v0=-3/2, k=  2: v=21/2, z=1/2, reaches T, 4 lateral reflections, intercept e+BkP=11
+  PASS v0=-3/2, k=  3: v=33/2, z=1/2, reaches T, 6 lateral reflections, intercept e+BkP=17
+  PASS v0=-3/2, k= 10: v=117/2, z=1/2, reaches T, 20 lateral reflections, intercept e+BkP=59
+  PASS v0=-5/4, k=-10: v=-245/4, z=1/4, reaches T, 20 lateral reflections, intercept e+BkP=-61
+  PASS v0=-5/4, k= -3: v=-77/4, z=1/4, reaches T, 6 lateral reflections, intercept e+BkP=-19
+  PASS v0=-5/4, k= -2: v=-53/4, z=1/4, reaches T, 4 lateral reflections, intercept e+BkP=-13
+  PASS v0=-5/4, k= -1: v=-29/4, z=1/4, reaches T, 2 lateral reflections, intercept e+BkP=-7
+  PASS v0=-5/4, k=  0: v=-5/4, z=1/4, reaches T, 0 lateral reflections, intercept e+BkP=-1
+  PASS v0=-5/4, k=  1: v=19/4, z=1/4, reaches T, 2 lateral reflections, intercept e+BkP=5
+  PASS v0=-5/4, k=  2: v=43/4, z=1/4, reaches T, 4 lateral reflections, intercept e+BkP=11
+  PASS v0=-5/4, k=  3: v=67/4, z=1/4, reaches T, 6 lateral reflections, intercept e+BkP=17
+  PASS v0=-5/4, k= 10: v=235/4, z=1/4, reaches T, 20 lateral reflections, intercept e+BkP=59
+  PASS v0=-7/4, k=-10: v=-247/4, z=3/4, reaches T, 20 lateral reflections, intercept e+BkP=-61
+  PASS v0=-7/4, k= -3: v=-79/4, z=3/4, reaches T, 6 lateral reflections, intercept e+BkP=-19
+  PASS v0=-7/4, k= -2: v=-55/4, z=3/4, reaches T, 4 lateral reflections, intercept e+BkP=-13
+  PASS v0=-7/4, k= -1: v=-31/4, z=3/4, reaches T, 2 lateral reflections, intercept e+BkP=-7
+  PASS v0=-7/4, k=  0: v=-7/4, z=3/4, reaches T, 0 lateral reflections, intercept e+BkP=-1
+  PASS v0=-7/4, k=  1: v=17/4, z=3/4, reaches T, 2 lateral reflections, intercept e+BkP=5
+  PASS v0=-7/4, k=  2: v=41/4, z=3/4, reaches T, 4 lateral reflections, intercept e+BkP=11
+  PASS v0=-7/4, k=  3: v=65/4, z=3/4, reaches T, 6 lateral reflections, intercept e+BkP=17
+  PASS v0=-7/4, k= 10: v=233/4, z=3/4, reaches T, 20 lateral reflections, intercept e+BkP=59
+  PASS k=7: 14 = 2k lateral reflections (even parity, kP/W = 2k)
+§2 v-form gate (A+B)v0 in e-c+g_A Z, g_A = gcd(2D, A P), on the d188 ray a=7+2n, D=3a
+  PASS n=0: st(7,21) strictly simple, gcds (1,1)
+  PASS n=0: direct g_a = gcd(2D,6a) = 6a = 42; no direct v-gate solution
+  PASS n=0: floor g = gcd(6a, 6(a+2)) = 6
+  PASS n=0: floor phase c+dv = 28/5 not in DZ (no floor corner)
+  PASS n=0: floor shot v0=-7/5, k=1, seam v=23/5: reaches T, only horizontal contact is the floor; 5 reflections
+  PASS n=1: st(9,27) strictly simple, gcds (1,1)
+  PASS n=1: direct g_a = gcd(2D,6a) = 6a = 54; no direct v-gate solution
+  PASS n=1: floor g = gcd(6a, 6(a+2)) = 6
+  PASS n=1: floor phase c+dv = 106/3 not in DZ (no floor corner)
+  PASS n=1: floor shot v0=-5/3, k=6, seam v=103/3: reaches T, only horizontal contact is the floor; 27 reflections
+  PASS n=5: st(17,51) strictly simple, gcds (1,1)
+  PASS n=5: direct g_a = gcd(2D,6a) = 6a = 102; no direct v-gate solution
+  PASS n=5: floor g = gcd(6a, 6(a+2)) = 6
+  PASS n=5: floor phase c+dv = 171/10 not in DZ (no floor corner)
+  PASS n=5: floor shot v0=-19/10, k=3, seam v=161/10: reaches T, only horizontal contact is the floor; 13 reflections
+  PASS n=20: st(47,141) strictly simple, gcds (1,1)
+  PASS n=20: direct g_a = gcd(2D,6a) = 6a = 282; no direct v-gate solution
+  PASS n=20: floor g = gcd(6a, 6(a+2)) = 6
+  PASS n=20: floor phase c+dv = 1176/25 not in DZ (no floor corner)
+  PASS n=20: floor shot v0=-49/25, k=8, seam v=1151/25: reaches T, only horizontal contact is the floor; 33 reflections
+  PASS n=31: st(69,207) strictly simple, gcds (1,1)
+  PASS n=31: direct g_a = gcd(2D,6a) = 6a = 414; no direct v-gate solution
+  PASS n=31: floor g = gcd(6a, 6(a+2)) = 6
+  PASS n=31: floor phase c+dv = 4951/18 not in DZ (no floor corner)
+  PASS n=31: floor shot v0=-35/18, k=46, seam v=4933/18: reaches T, only horizontal contact is the floor; 187 reflections
+  PASS n=44: st(95,285) strictly simple, gcds (1,1)
+  PASS n=44: direct g_a = gcd(2D,6a) = 6a = 570; no direct v-gate solution
+  PASS n=44: floor g = gcd(6a, 6(a+2)) = 6
+  PASS n=44: floor phase c+dv = 4656/49 not in DZ (no floor corner)
+  PASS n=44: floor shot v0=-97/49, k=16, seam v=4607/49: reaches T, only horizontal contact is the floor; 65 reflections
+  PASS n=47: st(101,303) strictly simple, gcds (1,1)
+  PASS n=47: direct g_a = gcd(2D,6a) = 6a = 606; no direct v-gate solution
+  PASS n=47: floor g = gcd(6a, 6(a+2)) = 6
+  PASS n=47: floor phase c+dv = 5253/52 not in DZ (no floor corner)
+  PASS n=47: floor shot v0=-103/52, k=17, seam v=5201/52: reaches T, only horizontal contact is the floor; 69 reflections
+  PASS n=100: st(207,621) strictly simple, gcds (1,1)
+  PASS n=100: direct g_a = gcd(2D,6a) = 6a = 1242; no direct v-gate solution
+  PASS n=100: floor g = gcd(6a, 6(a+2)) = 6
+  PASS n=100: floor phase c+dv = 86837/105 not in DZ (no floor corner)
+  PASS n=100: floor shot v0=-208/105, k=138, seam v=86732/105: reaches T, only horizontal contact is the floor; 555 reflections
+  INFO (n, a, D, seam v, reflections): (0,7,21,23/5,5); (1,9,27,103/3,27); (5,17,51,161/10,13); (20,47,141,1151/25,33); (31,69,207,4933/18,187); (44,95,285,4607/49,65); (47,101,303,5201/52,69); (100,207,621,86732/105,555)
+§3 bounded modulus on D = 21 + 6n, a = 7 + 2n (p=6, q=2, D0=21, a0=7)
+  PASS Delta_0 = 0, Delta_2 = -12, difference 2dp = 12
+  PASS n=0: qD - p(a+2) = -12 constant
+  PASS n=0: g_(a+2) = 6 divides 2P|Delta_2| = 144
+  PASS n=1: qD - p(a+2) = -12 constant
+  PASS n=1: g_(a+2) = 6 divides 2P|Delta_2| = 144
+  PASS n=5: qD - p(a+2) = -12 constant
+  PASS n=5: g_(a+2) = 6 divides 2P|Delta_2| = 144
+  PASS n=20: qD - p(a+2) = -12 constant
+  PASS n=20: g_(a+2) = 6 divides 2P|Delta_2| = 144
+  PASS n=31: qD - p(a+2) = -12 constant
+  PASS n=31: g_(a+2) = 6 divides 2P|Delta_2| = 144
+  PASS n=44: qD - p(a+2) = -12 constant
+  PASS n=44: g_(a+2) = 6 divides 2P|Delta_2| = 144
+  PASS n=47: qD - p(a+2) = -12 constant
+  PASS n=47: g_(a+2) = 6 divides 2P|Delta_2| = 144
+  PASS n=100: qD - p(a+2) = -12 constant
+  PASS n=100: g_(a+2) = 6 divides 2P|Delta_2| = 144
+  PASS n=144 (R0=144 | n): g_(a+2) = base value 6
+  PASS n=288 (R0=144 | n): g_(a+2) = base value 6
+  PASS n=1008 (R0=144 | n): g_(a+2) = base value 6
+  INFO direct route: Delta_0 = 0, so g_a = 6a is unbounded on this ray, as the "at least one Delta_j" clause allows
+  INFO P=30, n=0: floor g = gcd(6a,30(a+2)) = 6 (= 6*gcd(a,5) for odd a)
+  PASS P=30, n=0: floor modulus 6*gcd(a,5), still bounded
+  INFO P=30, n=1: floor g = gcd(6a,30(a+2)) = 6 (= 6*gcd(a,5) for odd a)
+  PASS P=30, n=1: floor modulus 6*gcd(a,5), still bounded
+  INFO P=30, n=5: floor g = gcd(6a,30(a+2)) = 6 (= 6*gcd(a,5) for odd a)
+  PASS P=30, n=5: floor modulus 6*gcd(a,5), still bounded
+  INFO P=30, n=20: floor g = gcd(6a,30(a+2)) = 6 (= 6*gcd(a,5) for odd a)
+  PASS P=30, n=20: floor modulus 6*gcd(a,5), still bounded
+§4 family D = a(a+2), odd a: gcd(2D,6a) and gcd(2D,6(a+2)) >= 2a
+  PASS a=7: g_a = 42 = 2a*gcd(a+2,3), g_(a+2) = 18 = 2(a+2)*gcd(a,3)
+  PASS a=7, P=30: moduli 42, 18 still >= 2a
+  PASS a=9: g_a = 18 = 2a*gcd(a+2,3), g_(a+2) = 66 = 2(a+2)*gcd(a,3)
+  PASS a=9, P=30: moduli 18, 66 still >= 2a
+  PASS a=11: g_a = 22 = 2a*gcd(a+2,3), g_(a+2) = 26 = 2(a+2)*gcd(a,3)
+  PASS a=11, P=30: moduli 22, 26 still >= 2a
+  PASS a=13: g_a = 78 = 2a*gcd(a+2,3), g_(a+2) = 30 = 2(a+2)*gcd(a,3)
+  PASS a=13, P=30: moduli 390, 30 still >= 2a
+  PASS a=15: g_a = 30 = 2a*gcd(a+2,3), g_(a+2) = 102 = 2(a+2)*gcd(a,3)
+  PASS a=15, P=30: moduli 30, 510 still >= 2a
+  PASS a=101: g_a = 202 = 2a*gcd(a+2,3), g_(a+2) = 206 = 2(a+2)*gcd(a,3)
+  PASS a=101, P=30: moduli 202, 206 still >= 2a
+  PASS a=1001: g_a = 2002 = 2a*gcd(a+2,3), g_(a+2) = 2006 = 2(a+2)*gcd(a,3)
+  PASS a=1001, P=30: moduli 2002, 2006 still >= 2a
+§5 far-wall return: d + s(2D-c-e') - B = (2j+1)h, s in (1/2,1) (k=0: v in (-2,-1) already negative, e'=-1)
+  PASS delta = |1/v_l - 1/v_r| = 1/2; R s < 1 on the open interval
+  PASS closed form: a=9 is the least odd a with D*delta > 4h on D=a(a+2) (a=7 gives 31.5 <= 32)
+  PASS a=9: st(9,99) strictly simple, gcds (1,1)
+  PASS a=9: two consecutive roots 5/9, 65/99 in (1/2,1)
+  PASS a=9: far-wall height step 2h(D-c)/(2D-c-e') = 980/99 in (0,h=10)
+  PASS a=9: corner flags [False, False]; not both corners
+  PASS a=9: far-wall s=5/9: reaches T, one lower lateral reflection at x=5-D, 10 roof/floor contacts, all roof contacts at z > R; 11 reflections
+  PASS a=9: seam z = e' + B/s = 4/5 in the mouth
+  PASS a=9: far-wall s=65/99: reaches T, one lower lateral reflection at x=5-D, 12 roof/floor contacts, all roof contacts at z > R; 13 reflections
+  PASS a=9: seam z = e' + B/s = 34/65 in the mouth
+  INFO a=9: direct v-gate none, floor v-gate none
+  PASS a=101: st(101,10403) strictly simple, gcds (1,1)
+  PASS a=101: two consecutive roots 51/101, 5355/10403 in (1/2,1)
+  PASS a=101: far-wall height step 2h(D-c)/(2D-c-e') = 1061004/10403 in (0,h=102)
+  PASS a=101: corner flags [False, False]; not both corners
+  PASS a=101: far-wall s=51/101: reaches T, one lower lateral reflection at x=5-D, 102 roof/floor contacts, all roof contacts at z > R; 103 reflections
+  PASS a=101: seam z = e' + B/s = 50/51 in the mouth
+  PASS a=101: far-wall s=5355/10403: reaches T, one lower lateral reflection at x=5-D, 104 roof/floor contacts, all roof contacts at z > R; 105 reflections
+  PASS a=101: seam z = e' + B/s = 5048/5355 in the mouth
+  INFO a=101: direct v-gate none, floor v-gate none
+§6 explicit residual constants
+  INFO st279 instance (d=1,B=1,P=6,eta=1,delta=1/2): a <= 384, D <= 4(a+d)/delta = 8(a+1)
+  PASS st279 instance of the note's box: a <= max{1, 36, 384} = 384
+  PASS (1) at st279: (a+1)(a+3) <= 24 D, identical to d186-reviewed cap-budget (1)
+  PASS b=1: 2dP(2d+1)/eta = cap 4dW(2d+1)/w
+  PASS b=1: 32dP/(delta eta^2) = cap 64bdW/(w^2 delta)
+  PASS (a,D)=(7,21): gcd(g_a,g_(a+2d))=6 | 2dP, lcm=42 | 2D, product 252 <= 4dPD = 504
+  PASS (a,D)=(9,27): gcd(g_a,g_(a+2d))=6 | 2dP, lcm=54 | 2D, product 324 <= 4dPD = 648
+  PASS (a,D)=(9,99): gcd(g_a,g_(a+2d))=6 | 2dP, lcm=198 | 2D, product 1188 <= 4dPD = 2376
+  PASS (a,D)=(101,303): gcd(g_a,g_(a+2d))=6 | 2dP, lcm=606 | 2D, product 3636 <= 4dPD = 7272
+  PASS (a,D)=(101,10403): gcd(g_a,g_(a+2d))=2 | 2dP, lcm=20806 | 2D, product 41612 <= 4dPD = 249672
+  INFO the a-bound uses a^2 eta^2 < (a+B)(a+2d+B) eta^2 <= 16dP(a+d)/delta <= 32dPa/delta for a >= d
+
+CPU seconds: 0.04
+FAILURES: 0

@@ -1,0 +1,137 @@
+== Part A: named rooms (area-21, area-23) ==
+ area21: area=21 P=9 seams=[2, 3, 5, 7] walls=20 marks=6
+ area23: area=23 P=9 seams=[3, 4, 5, 6] walls=20 marks=8
+== Part B: area-21 room, every lattice pair, note constructions ==
+  (1, 0) -> (1, 1): direct:axis
+  (1, 0) -> (4, 0): same-odd:hit
+  (1, 0) -> (4, 1): opp:hit
+  (1, 0) -> (8, 0): same-odd:hit
+  (1, 0) -> (8, 1): opp:hit
+  (1, 1) -> (4, 0): opp:hit
+  (1, 1) -> (4, 1): same-odd:hit
+  (1, 1) -> (8, 0): opp:hit
+  (1, 1) -> (8, 1): same-odd:hit
+  (4, 0) -> (4, 1): direct:axis
+  (4, 0) -> (8, 0): zero:hit
+  (4, 0) -> (8, 1): opp:hit
+  (4, 1) -> (8, 0): opp:hit
+  (4, 1) -> (8, 1): zero:hit
+  (8, 0) -> (8, 1): direct:axis
+  area21 pairs lit by note constructions: 15/15
+== Part C: width-one middle family (3,1,3), heights 3, necks L=L ==
+  L=1 P=9 area=23: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=2 P=11 area=25: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=3 P=13 area=27: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=4 P=15 area=29: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=5 P=17 area=31: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=6 P=19 area=33: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=7 P=21 area=35: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=8 P=23 area=37: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=9 P=25 area=39: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=10 P=27 area=41: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=11 P=29 area=43: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=12 P=31 area=45: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=13 P=33 area=47: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=14 P=35 area=49: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=15 P=37 area=51: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=16 P=39 area=53: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=17 P=41 area=55: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=18 P=43 area=57: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=19 P=45 area=59: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=20 P=47 area=61: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=21 P=49 area=63: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=22 P=51 area=65: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=23 P=53 area=67: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=24 P=55 area=69: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=25 P=57 area=71: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=26 P=59 area=73: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=27 P=61 area=75: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=28 P=63 area=77: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  L=29 P=65 area=79: oddB/hit:4, outer+neck/hit:4, rows/hit:8, same/axis:8, same/hit:4 | endpocket n=1: 2-5P mod 6 = 1, trace hit
+  L=30 P=67 area=81: endpocket/hit:4, oddB/hit:4, rows/hit:8, same/axis:8, same/hit:4
+  width-one family all pairs lit for L<= 30: True
+== Part D: width-two family, L1 odd, L2 = 2 mod 4, arbitrary heights ==
+  rooms=96 cross-chamber pairs traced=3504 all hit=True
+   ('w2', 'opp', 'hit'): 1920
+   ('w2', 'same-odd', 'hit'): 1080
+   ('w2', 'zero', 'hit'): 504
+   max bounces 316
+== Part E: coprime theorems on a parameter grid ==
+  coprime rooms=789
+   ('grid', 'opp', 'hit'): 25774
+   ('grid', 'same-odd', 'hit'): 12084
+   ('grid', 'zero', 'hit'): 8972
+   max bounces 1867; failures: 0
+   zero-drift exceptions (equal-parity same-side pairs, P odd): 1218
+   J fallback on exceptions: fallback J>0 hit: 1218
+   exceptions with no positive J itinerary (<=5 pieces): 0
+   exceptions with both roots at seams (never 0 or P): 1218; inside the 64-pair outer bound: 1218; rooms: [((1, 3, 3), (3, 3), 27), ((1, 3, 3), (3, 3), 40), ((1, 4, 2), (1, 1), 23), ((1, 4, 2), (1, 1), 36), ((1, 4, 3), (3, 2), 29), ((1, 4, 3), (3, 2), 44), ((1, 4, 4), (1, 1), 29), ((1, 4, 4), (1, 1), 46), ((2, 1, 4), (1, 1), 23), ((2, 1, 4), (1, 1), 35), ((2, 1, 4), (2, 2), 25), ((2, 1, 4), (2, 2), 37), ((2, 1, 4), (3, 1), 25), ((2, 1, 4), (3, 1), 37), ((2, 2, 3), (3, 1), 25), ((2, 2, 3), (3, 1), 37), ((2, 2, 3), (3, 3), 27), ((2, 2, 3), (3, 3), 39), ((2, 2, 4), (1, 2), 27), ((2, 2, 4), (1, 2), 41), ((2, 2, 4), (3, 2), 29), ((2, 2, 4), (3, 2), 43), ((2, 3, 2), (1, 3), 25), ((2, 3, 2), (1, 3), 37), ((2, 3, 2), (3, 1), 25), ((2, 3, 2), (3, 1), 37), ((2, 3, 3), (2, 1), 27), ((2, 3, 3), (2, 1), 41), ((2, 3, 3), (2, 3), 29), ((2, 3, 3), (2, 3), 43), ((2, 3, 4), (1, 1), 29), ((2, 3, 4), (1, 1), 45), ((2, 3, 4), (3, 1), 31), ((2, 3, 4), (3, 1), 47), ((2, 4, 1), (1, 1), 23), ((2, 4, 1), (1, 1), 35), ((2, 4, 2), (1, 2), 27), ((2, 4, 2), (1, 2), 41), ((2, 4, 2), (2, 1), 27), ((2, 4, 2), (2, 1), 41), ((2, 4, 3), (1, 1), 29), ((2, 4, 3), (1, 1), 45), ((2, 4, 3), (2, 2), 31), ((2, 4, 3), (2, 2), 47), ((2, 4, 3), (3, 1), 31), ((2, 4, 3), (3, 1), 47), ((2, 4, 4), (2, 1), 33), ((2, 4, 4), (2, 1), 51), ((3, 1, 4), (1, 2), 27), ((3, 1, 4), (1, 2), 40), ((3, 1, 4), (2, 1), 27), ((3, 1, 4), (2, 1), 40), ((3, 2, 2), (1, 3), 25), ((3, 2, 2), (1, 3), 36), ((3, 2, 2), (3, 3), 27), ((3, 2, 2), (3, 3), 38), ((3, 2, 3), (1, 2), 27), ((3, 2, 3), (1, 2), 40), ((3, 2, 3), (2, 1), 27), ((3, 2, 3), (2, 1), 40), ((3, 2, 3), (2, 3), 29), ((3, 2, 3), (2, 3), 42), ((3, 2, 3), (3, 2), 29), ((3, 2, 3), (3, 2), 42), ((3, 2, 4), (1, 1), 29), ((3, 2, 4), (1, 1), 44), ((3, 2, 4), (1, 3), 31), ((3, 2, 4), (1, 3), 46), ((3, 2, 4), (2, 2), 31), ((3, 2, 4), (2, 2), 46), ((3, 2, 4), (3, 1), 31), ((3, 2, 4), (3, 1), 46), ((3, 3, 1), (3, 3), 27), ((3, 3, 1), (3, 3), 38), ((3, 3, 2), (1, 2), 27), ((3, 3, 2), (1, 2), 40), ((3, 3, 2), (3, 2), 29), ((3, 3, 2), (3, 2), 42), ((3, 3, 3), (1, 3), 31), ((3, 3, 3), (1, 3), 46), ((3, 3, 3), (3, 1), 31), ((3, 3, 3), (3, 1), 46), ((3, 3, 4), (2, 1), 33), ((3, 3, 4), (2, 1), 50), ((3, 4, 1), (2, 3), 29), ((3, 4, 1), (2, 3), 42), ((3, 4, 2), (1, 1), 29), ((3, 4, 2), (1, 1), 44), ((3, 4, 2), (1, 3), 31), ((3, 4, 2), (1, 3), 46), ((3, 4, 2), (2, 2), 31), ((3, 4, 2), (2, 2), 46), ((3, 4, 3), (1, 2), 33), ((3, 4, 3), (1, 2), 50), ((3, 4, 3), (2, 1), 33), ((3, 4, 3), (2, 1), 50), ((3, 4, 4), (1, 1), 35), ((3, 4, 4), (1, 1), 54), ((3, 4, 4), (3, 3), 39), ((3, 4, 4), (3, 3), 58), ((4, 1, 2), (1, 1), 23), ((4, 1, 2), (1, 1), 33), ((4, 1, 2), (1, 3), 25), ((4, 1, 2), (1, 3), 35), ((4, 1, 2), (2, 2), 25), ((4, 1, 2), (2, 2), 35), ((4, 1, 3), (1, 2), 27), ((4, 1, 3), (1, 2), 39), ((4, 1, 3), (2, 1), 27), ((4, 1, 3), (2, 1), 39), ((4, 1, 4), (1, 1), 29), ((4, 1, 4), (1, 1), 43), ((4, 1, 4), (1, 3), 31), ((4, 1, 4), (1, 3), 45), ((4, 1, 4), (2, 2), 31), ((4, 1, 4), (2, 2), 45), ((4, 1, 4), (3, 1), 31), ((4, 1, 4), (3, 1), 45), ((4, 2, 2), (2, 1), 27), ((4, 2, 2), (2, 1), 39), ((4, 2, 2), (2, 3), 29), ((4, 2, 2), (2, 3), 41), ((4, 2, 3), (1, 1), 29), ((4, 2, 3), (1, 1), 43), ((4, 2, 3), (1, 3), 31), ((4, 2, 3), (1, 3), 45), ((4, 2, 3), (2, 2), 31), ((4, 2, 3), (2, 2), 45), ((4, 2, 3), (3, 1), 31), ((4, 2, 3), (3, 1), 45), ((4, 2, 4), (1, 2), 33), ((4, 2, 4), (1, 2), 49), ((4, 2, 4), (2, 1), 33), ((4, 2, 4), (2, 1), 49), ((4, 2, 4), (2, 3), 35), ((4, 2, 4), (2, 3), 51), ((4, 2, 4), (3, 2), 35), ((4, 2, 4), (3, 2), 51), ((4, 3, 2), (1, 1), 29), ((4, 3, 2), (1, 1), 43), ((4, 3, 2), (1, 3), 31), ((4, 3, 2), (1, 3), 45), ((4, 3, 3), (1, 2), 33), ((4, 3, 3), (1, 2), 49), ((4, 4, 1), (1, 1), 29), ((4, 4, 1), (1, 1), 43), ((4, 4, 2), (1, 2), 33), ((4, 4, 2), (1, 2), 49), ((4, 4, 3), (1, 1), 35), ((4, 4, 3), (1, 1), 53), ((4, 4, 3), (3, 3), 39), ((4, 4, 3), (3, 3), 57)]
+== Part F: exceptional set arithmetic and the 4,6,4+156k example ==
+  k=1: P=173 odd=True coprime=True seams=[4, 6, 12, 13] roots={(8, 16): 12, (8, -16): 342, (-8, 16): 4, (-8, -16): 334} folds=[4, 12] all seams=True
+  k=2: P=329 odd=True coprime=True seams=[4, 6, 12, 13] roots={(8, 16): 12, (8, -16): 654, (-8, 16): 4, (-8, -16): 646} folds=[4, 12] all seams=True
+  k=3: P=485 odd=True coprime=True seams=[4, 6, 12, 13] roots={(8, 16): 12, (8, -16): 966, (-8, 16): 4, (-8, -16): 958} folds=[4, 12] all seams=True
+  k=4: P=641 odd=True coprime=True seams=[4, 6, 12, 13] roots={(8, 16): 12, (8, -16): 1278, (-8, 16): 4, (-8, -16): 1270} folds=[4, 12] all seams=True
+  k=5: P=797 odd=True coprime=True seams=[4, 6, 12, 13] roots={(8, 16): 12, (8, -16): 1590, (-8, 16): 4, (-8, -16): 1582} folds=[4, 12] all seams=True
+  k=6: P=953 odd=True coprime=True seams=[4, 6, 12, 13] roots={(8, 16): 12, (8, -16): 1902, (-8, 16): 4, (-8, -16): 1894} folds=[4, 12] all seams=True
+  k=1: |E|=8, outer-bound abscissa pairs=64 (<=64)
+  k=1: equal-parity cross-chamber abscissa pairs missed by zero-drift: [(2, 10), (8, 16), (10, 2), (16, 8)]
+  control: zero-drift ray through seam root z=12 (c=29760): corner after 172 bounces
+== Part G: group-ring test vs enumeration vs tracing ==
+  area21 horizontal (1, 0)->(8, 1): D=7 J(groupring)=2 J(enum)=2 agree=True; traced 2 solutions, 2 reach T with predicted gates
+  area21 horizontal (1, 0)->(8, 0): D=7 J(groupring)=2 J(enum)=2 agree=True; traced 2 solutions, 2 reach T with predicted gates
+  area21 horizontal (1, 1)->(8, 0): D=7 J(groupring)=2 J(enum)=2 agree=True; traced 2 solutions, 2 reach T with predicted gates
+  area21 vertical (4,0)->(8,0) neck1 bounce: D=2 J(groupring)=0 J(enum)=0 agree=True; traced 0 solutions, 0 reach T with predicted gates
+  area21 vertical (4,0)->(8,0) neck2 bounce: D=2 J(groupring)=2 J(enum)=2 agree=True; traced 2 solutions, 2 reach T with predicted gates
+  area21 vertical (4,0)->(8,0) excursion chamber1: D=4 J(groupring)=0 J(enum)=0 agree=True; traced 0 solutions, 0 reach T with predicted gates
+  area21 vertical (4,0)->(8,0) excursion chamber2: D=4 J(groupring)=0 J(enum)=0 agree=True; traced 0 solutions, 0 reach T with predicted gates
+  area21 vertical (4,0)->(8,0) excursion chamber3: D=4 J(groupring)=0 J(enum)=0 agree=True; traced 0 solutions, 0 reach T with predicted gates
+  room(2,3,2;b=2,t=1;1,2) vertical (1,-1)->(9,-1) neck1: D=4 J(groupring)=0 J(enum)=0 agree=True; traced 0 solutions, 0 reach T with predicted gates
+  room(2,3,2;b=2,t=1;1,2) vertical (1,-1)->(9,-1) neck2: D=4 J(groupring)=0 J(enum)=0 agree=True; traced 0 solutions, 0 reach T with predicted gates
+  room(2,3,2;b=2,t=1;1,2) vertical (1,-1)->(9,2): D=3 J(groupring)=12 J(enum)=12 agree=True; traced 12 solutions, 12 reach T with predicted gates
+  room(2,3,2;b=2,t=1;1,2) horizontal (1,-1)->(9,1): D=8 J(groupring)=0 J(enum)=0 agree=True; traced 0 solutions, 0 reach T with predicted gates
+  group-ring = enumeration in all cases: True; all traced solutions reach T: True
+== Part H: d202 height-5 gap (3x3, 3x5, 3x3, necks 1,1) ==
+  P=11 coprime=True
+  gcd lift v=1: gcd(2Mv,2H)=2, F+-(yT-F)-z=[3, -5], divisible=[False, False]
+  gcd lift v=2: gcd(2Mv,2H)=2, F+-(yT-F)-z=[3, -5], divisible=[False, False]
+  end (1,1) -> middle (5,3): zero:hit
+  end (1,1) -> middle (6,3): same-odd:hit
+  end (2,1) -> middle (5,3): same-odd:hit
+  end (2,1) -> middle (6,3): zero:hit
+== Part I: mixed construction (folded neck legs + middle roof) ==
+  area21: outer pairs=4, pairs with a mixed solution=3, solutions (q<=41)=8, traced hits=8
+  area23: outer pairs=16, pairs with a mixed solution=10, solutions (q<=41)=80, traced hits=80
+  3x3,3x4,3x3 X=Y=2: outer pairs=16, pairs with a mixed solution=16, solutions (q<=41)=71, traced hits=71
+  2x4,3x6,3x3 L=3,2: outer pairs=12, pairs with a mixed solution=11, solutions (q<=41)=64, traced hits=64
+  area21 flipped: outer pairs=4, pairs with a mixed solution=3, solutions (q<=41)=8, traced hits=8
+  area23 flipped: outer pairs=16, pairs with a mixed solution=10, solutions (q<=41)=80, traced hits=80
+  3x3,3x4,3x3 X=Y=2 flipped: outer pairs=16, pairs with a mixed solution=12, solutions (q<=41)=34, traced hits=34
+  2x4,3x6,3x3 L=3,2 flipped: outer pairs=12, pairs with a mixed solution=8, solutions (q<=41)=23, traced hits=23
+  mixed: 368/368 prescribed rays reach T
+== Part J: ledger words ==
+  j=0 (same side): LLLLRRLLLLRRLLLLRRRR ledger status=OPEN W=20
+  j=1 (adjacent): LLLLRRLLLRRLLLLRRLRR ledger status=OPEN W=20
+  j=2 (opposite): LLLLRRLLRRLLLLRRLLRR ledger status=OPEN W=20
+  one neck: LLLLRRLLLLRR ledger status=PARTIAL by=['d112', 'd111', 'd108', 'd77']
+  rectangle LLLL status=COVERED
+== Part K: note tests on named pairs outside the dimension-only statements ==
+ area21 (3,1,2) necks (1,2) h3: P=9 area=21 gcd(P,lcm)=3; pairs outside the coprime constructions: [((1, 0), (8, 0)), ((1, 1), (8, 1)), ((2, 0), (8, 0)), ((2, 1), (8, 1))]
+  pair (1, 0)->(8, 0): J>0 via edge/neck1/edge (J=2); traced n/D=27/2 -> hit (4 bounces)
+  pair (1, 1)->(8, 1): J>0 via edge/neck1/edge (J=2); traced n/D=27/2 -> hit (4 bounces)
+  pair (2, 0)->(8, 0): J>0 via edge/neck2/edge (J=2); traced n/D=4 -> hit (2 bounces)
+  pair (2, 1)->(8, 1): J>0 via edge/neck2/edge (J=2); traced n/D=4 -> hit (2 bounces)
+ area23 (2,1,4) necks (1,1) h3: P=9 area=23 gcd(P,lcm)=1; pairs outside the coprime constructions: [((1, 0), (7, 0)), ((1, 1), (7, 1))]
+  pair (1, 0)->(7, 0): J>0 via edge/excursion3/edge (J=8); traced n/D=81/2 -> hit (30 bounces)
+  pair (1, 1)->(7, 1): J>0 via edge/excursion3/edge (J=8); traced n/D=81/2 -> hit (30 bounces)
+ area23 (1,4,2) necks (1,1) h3: P=9 area=23 gcd(P,lcm)=1; pairs outside the coprime constructions: [((4, 0), (8, 0)), ((4, 1), (8, 1))]
+  pair (4, 0)->(8, 0): J>0 via edge/excursion2/edge (J=8); traced n/D=23/2 -> hit (9 bounces)
+  pair (4, 1)->(8, 1): J>0 via edge/excursion2/edge (J=8); traced n/D=23/2 -> hit (9 bounces)
+ area22 (2,2,2) necks (2,2) h3: P=10 area=22 gcd(P,lcm)=2; pairs outside the coprime constructions: [((1, 0), (5, 0)), ((1, 0), (9, 0)), ((1, 1), (5, 1)), ((1, 1), (9, 1)), ((5, 0), (9, 0)), ((5, 1), (9, 1))]
+  pair (1, 0)->(5, 0): J>0 via edge/neck1/edge (J=2); traced n/D=2 -> hit (1 bounces)
+  pair (1, 0)->(9, 0): J>0 via edge/excursion2/edge (J=4); traced n/D=4 -> hit (5 bounces)
+  pair (1, 1)->(5, 1): J>0 via edge/neck1/edge (J=2); traced n/D=2 -> hit (1 bounces)
+  pair (1, 1)->(9, 1): J>0 via edge/excursion2/edge (J=4); traced n/D=4 -> hit (5 bounces)
+  pair (5, 0)->(9, 0): J>0 via edge/neck1/edge (J=2); traced n/D=12 -> hit (3 bounces)
+  pair (5, 1)->(9, 1): J>0 via edge/neck1/edge (J=2); traced n/D=12 -> hit (3 bounces)
+SUMMARY B=True C=True D=True F=True G=True H=True I=True
+CPU seconds: 269.2

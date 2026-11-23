@@ -1,0 +1,25 @@
+== parity counts mu in order (00,10,01,11), level sums (L=0, L=1)
+R22: walls 22 r 9 mu [3, -1, -1, 3] sum 4 levels {'L=y': (2, 2), 'L=x': (2, 2), 'L=x+y': (6, -2)}
+DBas: walls 12 r 4 mu [2, 0, 0, 2] sum 4 levels {'L=y': (2, 2), 'L=x': (2, 2), 'L=x+y': (4, 0)}
+U2: walls 10 r 3 mu [0, 0, 2, 2] sum 4 levels {'L=y': (0, 4), 'L=x': (2, 2), 'L=x+y': (2, 2)}
+cross b=3: walls 12 r 4 mu [-4, 4, 4, 0] sum 4 levels {'L=y': (0, 4), 'L=x': (0, 4), 'L=x+y': (-4, 8)}
+cross b=5: walls 12 r 4 mu [-4, 4, 4, 0] sum 4 levels {'L=y': (0, 4), 'L=x': (0, 4), 'L=x+y': (-4, 8)}
+cross b=7: walls 12 r 4 mu [-4, 4, 4, 0] sum 4 levels {'L=y': (0, 4), 'L=x': (0, 4), 'L=x+y': (-4, 8)}
+cross b=9: walls 12 r 4 mu [-4, 4, 4, 0] sum 4 levels {'L=y': (0, 4), 'L=x': (0, 4), 'L=x+y': (-4, 8)}
+cross b=11: walls 12 r 4 mu [-4, 4, 4, 0] sum 4 levels {'L=y': (0, 4), 'L=x': (0, 4), 'L=x+y': (-4, 8)}
+cross b=21: walls 12 r 4 mu [-4, 4, 4, 0] sum 4 levels {'L=y': (0, 4), 'L=x': (0, 4), 'L=x+y': (-4, 8)}
+
+== controls: half-offset leaf census (N, tau-swapped pairs, tau-fixed leaves)
+R22 (4, 7): (2, 1, 0)
+R22 (7, 4): (2, 1, 0)
+DBas (-4, 1): (2, 1, 0)
+U2 (-1, 1): (2, 1, 0)
+
+== cross sweep: directions p in 1..R, |q| <= R, plus axis (0,1) via transpose
+  b=7: 128 directions; N histogram {4: 68, 8: 16, 12: 26, 14: 2, 24: 8, 28: 4, 44: 4}; directions with N=2 swapped: []
+  b=9: 88 directions; N histogram {4: 40, 8: 12, 12: 34, 18: 2}; directions with N=2 swapped: []
+
+== path (6,0) -> (4,-2) -> (-2,4) -> (0,6)
+  legal for b = 7..39 odd; contacts (4,-2), (-2,4); midpoint (1,1), interior, class (1,1)
+  (3,3) inside room: False
+cpu 4.5s

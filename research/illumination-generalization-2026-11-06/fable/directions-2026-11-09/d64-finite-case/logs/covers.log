@@ -1,0 +1,4 @@
+K 0..4290 cases 4475 TOTAL {'nodes': 1686776, 'covers': 59653, 'rooms': 14458, 'in_scope': 13973, 'true_room': 10366, 'not_disc': 45195, 'room_covers': 10645, 'disc_not_room': 3495, 'le2_classes': 485} unique rooms 4776 (normalized 4581) CPU s 19.2
+python3 -B covers.py data/K_adm.json 8 0 4290 data/covers.json  19.27s user 0.07s system 99% cpu 19.412 total
+rooms 4776 normalized 4581
+normalized by n: [(6, 3), (8, 11), (9, 4), (10, 31), (12, 113), (14, 234), (15, 57), (16, 492), (18, 734), (20, 765), (21, 96), (22, 606), (24, 582), (25, 33), (26, 258), (27, 6), (28, 273), (30, 146), (32, 35), (34, 3), (35, 72), (36, 10), (40, 17)]

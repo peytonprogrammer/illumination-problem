@@ -1,0 +1,85 @@
+# Note 1: overhang-escape.md
+## 1. Necessity in B
+   B polygon vertices: [(0, 0), (6, 0), (6, 32), (3, 32), (3, 33), (5, 33), (5, 34), (2, 34), (2, 33), (1, 33), (1, 32), (0, 32)]
+  PASS upper lips (2,33) and (3,33) are polygon vertices (rays stop there)
+  PASS line through (e,33) e=2 meets y=32 at 3e-8=-2
+  PASS line through (e,33) e=5/2 meets y=32 at 3e-8=-1/2
+  PASS line through (e,33) e=29/10 meets y=32 at 3e-8=7/10
+  PASS line through (e,33) e=3 meets y=32 at 3e-8=1
+  PASS 3e-8 < 1 on a 1/1000 grid of (2,3); affine in e with value 1 only at e=3
+   directions |p|,|q|<=100 from (4,67/2): 24352; first events {'child h': 19023, 'parent v': 760, 'child v': 4564, 'corner (2,33)': 1, 'corner (2,34)': 1, 'corner (3,33)': 1, 'corner (5,33)': 1, 'corner (5,34)': 1}
+  PASS no direction reaches the hall (y<32) before its first contact
+  PASS for 3+2d < x < 5 the lower-crossing sup 3+(3-x)/d < 1 (strict failure)
+  PASS for x = 3+2d-1/100 a straight escape exists (bound is sharp)
+  PASS the displayed mark (4,67/2) has x = 3+2d exactly: boundary of the open set, failure rests on the lip
+## 1b. Constructed witness (4,67/2) -> (1/2,1/2), direction (-149,-66)
+  PASS direction through (379/132,33) is (-149,-66)
+  PASS lower crossing 27/44 folds to 61/44
+  PASS developed hall abscissa 145/2 folds mod 12 to 1/2
+   trace: end at (1/2,1/2); contacts {'parent side': 1, 'hall side': 12}
+  PASS witness reaches (1/2,1/2) exactly: 1 parent-side bounce, no horizontal bounce
+## 2. Sufficient condition L(B) > 2A: construction from the proof, traced exactly
+### B (d164); A=6, H=32, v=2, h=1, w=1
+   polygon [(0, 0), (6, 0), (6, 32), (3, 32), (3, 33), (5, 33), (5, 34), (2, 34), (2, 33), (1, 33), (1, 32), (0, 32)]
+   {'claimed rows': 210, 'claimed pairs': 2310, 'claimed lit': 2310, 'below rows': 20, 'below pairs': 220, 'below lit (largest piece)': 220, 'below lit (all pieces)': 220}
+   nearest-to-equality claimed row: L/2A = 25/24 (1.0417) mark (5/2,67/2) depth 11
+  PASS B (d164): every half-lattice target on every row with L>2A lit by the largest-piece shot
+### R2: hall [0,5]x[0,30], parent [2,3]x[30,32], child [1,4]x[32,33]; A=5, H=30, v=1, h=2, w=1
+   polygon [(0, 0), (5, 0), (5, 30), (3, 30), (3, 32), (4, 32), (4, 33), (1, 33), (1, 32), (2, 32), (2, 30), (0, 30)]
+   {'claimed rows': 70, 'claimed pairs': 630, 'claimed lit': 630, 'below rows': 50, 'below pairs': 450, 'below lit (largest piece)': 448, 'below lit (all pieces)': 450}
+   nearest-to-equality claimed row: L/2A = 51/50 (1.0200) mark (3/2,65/2) depth 23
+  PASS R2: hall [0,5]x[0,30], parent [2,3]x[30,32], child [1,4]x[32,33]: every half-lattice target on every row with L>2A lit by the largest-piece shot
+### R3: hall [0,7]x[0,42], parent [1,4]x[42,43], child [3,6]x[43,45]; A=7, H=42, v=3, h=1, w=1
+   polygon [(0, 0), (7, 0), (7, 42), (4, 42), (4, 43), (6, 43), (6, 45), (3, 45), (3, 43), (1, 43), (1, 42), (0, 42)]
+   {'claimed rows': 465, 'claimed pairs': 6045, 'claimed lit': 6045, 'below rows': 120, 'below pairs': 1560, 'below lit (largest piece)': 1560, 'below lit (all pieces)': 1560}
+   nearest-to-equality claimed row: L/2A = 85/84 (1.0119) mark (7/2,89/2) depth 40
+  PASS R3: hall [0,7]x[0,42], parent [1,4]x[42,43], child [3,6]x[43,45]: every half-lattice target on every row with L>2A lit by the largest-piece shot
+### equality row in B: mark (4,67/2), depth 21/2 (L = 12 = 2A, not claimed)
+  PASS L(21/2) = 2A exactly at d=1/2
+   targets on y=43/2 missed by the largest-piece family: []
+### floor extension in B (bonus): rows with L(B) <= 2A, mark row d=1/2, via the reflected row B'=2H-B
+   rows 105, pairs 1155, lit via reflected row 1155; floor bounces used [1]
+  PASS floor construction (one floor bounce) lights every half-lattice target on rows where direct descent is not claimed
+  PASS B application: L(t) > (2+t)/2, direct for B>=22, floor (L(B')>24 needs B'>=46) for B<=18
+
+# Note 2: nonspanning-entry.md
+  PASS ledger vertices = boundary of runs (0,1),(0,5),(3,5),(2,5),(4,5)
+  PASS turn word LLLRLLLRLLRR is LLLRLLLRLLRR up to rotation/reversal
+## 3. Crossing sequence and perturbation rectangle
+   crossings at y=2,3,4 (pos, sign): [('37/10', 1), ('31/10', -1), ('41/10', 1)]
+  PASS sequence 37/10, 31/10, 41/10, final sign +
+  PASS closed forms e+s, 10-e-2s, e+3s-6 match
+   baseline margins ['7/10', '1/10', '1/10']
+  PASS min margin 1/10; closed rectangle corners keep the same sheets and signs (affine, so whole rectangle)
+   developed coords per band [('37/10', 0, 5), ('69/10', 3, 2), ('-1/10', 2, 3)]: distances to sheet lines ['13/10', '1/10', '9/10']
+  PASS s -> s+60k (k=0..5) leaves every signed mouth crossing unchanged on a 7x7 grid of the rectangle
+  PASS doubled widths 10, 4, 6 divide 60
+## 3b. Exact replay S=(3/10,3/4) -> T=(43/10,9/2), direction (-16,5)
+   end at (43/10,9/2), contacts ['(0,27/32)', '(5,77/32)', '(2,107/32)', '(5,137/32)']
+  PASS tracer returns T exactly with reflections (0,27/32),(5,77/32),(2,107/32),(5,137/32)
+## 3c. CRT replay a=1/101, b=1/103, x=3/4, z=17/4
+   nearest translate: k=2740, max error 9/2020, de=559/125652, ds=-211/314130
+   CRT with per-coordinate rounding: k=2740
+  PASS CRT k = 2740
+  PASS slope 16/5+60*2740+ds = 10328795401/62826
+   endpoints (Fraction(3, 4), 1), (Fraction(17, 4), 1); mouths ['155129/41884', '389131/125652', '515479/125652']
+  PASS folding gives exactly 3/4 and 17/4
+  PASS mouth abscissas 63385/125652, 155129/41884, 389131/125652, 515479/125652 and final sign +
+  PASS corrections inside the rectangle
+   full Fraction trace: end at (17/4,413/103); 173106 reflections; 3.9s
+  PASS exact tracer reaches (17/4, 4+1/103) from (3/4, 100/101)
+## 4. Full-row theorem: which rows, which pairs
+  PASS case 2 (a=1/101,b=1/103): construction hits all 25 test pairs exactly (25)
+   half-lattice rows y=1/2 (bottom tip) and y=9/2 (top tip); interior half-lattice marks ['(1/2,1/2)'] ['(9/2,9/2)']
+   30a = 15, 30b = 15: integers, so conditions 1 and 2 both fail; 60k*a = 30k = 0 mod 2 (no rotation)
+   theorem family for (1/2,1/2)-(9/2,9/2): not in the certified patch image
+  PASS the half-lattice pair is outside the certified patch (nearest error 2/5 vs radius ~1/100)
+   certified set at a=b=1/2: (x,z) near fold(-11/10)=(Fraction(9, 10), 1), fold(57/10)=(Fraction(43, 10), -1); image of |de|,|ds|<1/100 under (de - ds/2, de + 7ds/2): parallelogram of half-widths 3/200, 9/200
+   bounded search (|p|,|q|<=12, <=60 reflections) for (1/2,1/2)-(9/2,9/2): (direction, reflections before T, retrace status, retrace hits T, retrace contacts) = ((-12, -11), 33, 'end', True, 33); 0.0s
+  PASS the half-lattice pair is lit by another path (independent full retrace)
+   a=1/97 (q=97<101), b=1/103: construction fails on 5 of 273 grid pairs (condition 2 threshold matters: True)
+## 5. Generalization determinant
+  PASS a=1/101,b=1/103: sign-corrected Jacobian [[Fraction(1, 1), Fraction(-1, 101)], [Fraction(1, 1), Fraction(310, 103)]], det 31413/10403 = D+a+b
+  PASS a=1/2,b=1/2: sign-corrected Jacobian [[Fraction(1, 1), Fraction(-1, 2)], [Fraction(1, 1), Fraction(7, 2)]], det 4 = D+a+b
+
+## done: 0 failures []; CPU 32.4s

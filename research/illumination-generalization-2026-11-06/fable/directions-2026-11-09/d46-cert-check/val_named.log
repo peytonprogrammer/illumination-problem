@@ -1,0 +1,33 @@
+== 22-wall n 15 r 9 W 22 rho [0, 3, 3, 3] fstar(no r cap) True
+  C  : room 1 n 15 r 9 corner_classes 4 rho 0 3 3 3 pairs 1 positives 1 fstar 1 | o(0,0) marks 2 bcd 5 15 5
+       POSITIVE origin_parity (0,0) S (0,0) T (2,2)
+  I  : blocks {(0, 0): [5, 15, 5]} positives [((0, 0), (0, 0), (2, 2))]
+  II : blocks {(0, 0): [5, 15, 5]} positives [((0, 0), (0, 0), (2, 2))]
+  C vs I vs II positives agree: True
+  8 images: C positive pairs [1, 1, 1, 1, 1, 1, 1, 1] | block multisets equal (I): True -> OK
+== P6 n 20 r 12 W 28 rho [4, 4, 0, 4] fstar(no r cap) True
+  C  : room 1 n 20 r 12 corner_classes 4 rho 4 4 0 4 pairs 1 positives 1 fstar 1 | o(1,0) marks 2 bcd 5 5 5
+       POSITIVE origin_parity (1,0) S (1,0) T (3,-2)
+  I  : blocks {(1, 0): [5, 5, 5]} positives [((1, 0), (1, 0), (3, -2))]
+  II : blocks {(1, 0): [5, 5, 5]} positives [((1, 0), (1, 0), (3, -2))]
+  C vs I vs II positives agree: True
+  8 images: C positive pairs [1, 1, 1, 1, 1, 1, 1, 1] | block multisets equal (I): True -> OK
+== cross n 12 r 4 W 12 rho [0, 0, 0, 4] fstar(no r cap) True
+  C  : room 1 n 12 r 4 corner_classes 3 rho 0 0 0 4 pairs 2 positives 0 fstar 1 | o(0,1) marks 2 bcd 12 1 0 | o(1,0) marks 2 bcd 3 0 0
+  I  : blocks {(0, 1): [12, 1, 3], (1, 0): [3, 1, 12]} positives []
+  II : blocks {(0, 1): [12, 1, 3], (1, 0): [3, 1, 12]} positives []
+  C vs I vs II positives agree: True
+  8 images: C positive pairs [0, 0, 0, 0, 0, 0, 0, 0] | block multisets equal (I): True -> OK
+== cross x2 n 48 r 4 W 12 rho [4, 0, 0, 0] fstar(no r cap) False
+  C  : room 1 n 48 r 4 corner_classes 1 rho 4 0 0 0 pairs 132 positives 0 fstar 0 | o(0,0) marks 5 bcd 2 2 2 | o(0,1) marks 8 bcd 2 0 0 | o(1,0) marks 8 bcd 4 2 0 | o(1,1) marks 12 bcd 2 0 0
+  I  : blocks {(0, 0): [2, 2, 2], (0, 1): [2, 2, 4], (1, 0): [4, 2, 2], (1, 1): [2, 4, 2]} positives []
+  II : blocks {(0, 0): [2, 2, 2], (0, 1): [2, 2, 4], (1, 0): [4, 2, 2], (1, 1): [2, 4, 2]} positives []
+  C vs I vs II positives agree: True
+  8 images: C positive pairs [0, 0, 0, 0, 0, 0, 0, 0] | block multisets equal (I): True -> OK
+== cross x3 n 108 r 4 W 12 rho [0, 0, 0, 4] fstar(no r cap) False
+  C  : room 1 n 108 r 4 corner_classes 3 rho 0 0 0 4 pairs 862 positives 0 fstar 0 | o(0,0) marks 21 bcd 1 0 0 | o(0,1) marks 22 bcd 1 0 0 | o(1,0) marks 22 bcd 1 0 0 | o(1,1) marks 20 bcd 1 0 0
+  I  : blocks {(0, 0): [1, 1, 1], (0, 1): [1, 1, 1], (1, 0): [1, 1, 1], (1, 1): [1, 1, 1]} positives []
+  II : blocks {(0, 0): [1, 1, 1], (0, 1): [1, 1, 1], (1, 0): [1, 1, 1], (1, 1): [1, 1, 1]} positives []
+  C vs I vs II positives agree: True
+  8 images: C positive pairs [0, 0, 0, 0, 0, 0, 0, 0] | block multisets equal (I): True -> OK
+FAILURES 0

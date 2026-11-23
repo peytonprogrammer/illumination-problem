@@ -1,0 +1,40 @@
+== Check 1: cov279 slice q=4u, S=(4,1), T=(12,1), p=8v ==
+Room bands from thin-room.md: (0,2q)x(0,2), (2q-3,4q)x(2,3), (2q,5q)x(3,4), (4q,6q)x(4,6)
+q=16 (u=4): area 211 = 13q+3, reflex 6, convex 10, pinch 0
+  v=1:L@t2 v=2:D v=3:L@t2 v=4:D v=5:L@t2 v=6:D v=7:L@t2 v=8:D v=9:L@t2 v=10:D v=11:L@t2
+  mismatches vs gcd(u,v)=1: none; launches stopped at a corner/cap: 0; launches leaving the bottom rectangle: 0
+q=28 (u=7): area 367 = 13q+3, reflex 6, convex 10, pinch 0
+  v=1:L@t2 v=2:L@t6 v=3:L@t4 v=4:L@t4 v=5:L@t6 v=6:L@t2 v=7:D v=8:L@t2 v=9:L@t6 v=10:L@t4 v=11:L@t4 v=12:L@t6 v=13:L@t2 v=14:D v=15:L@t2 v=16:L@t6 v=17:L@t4
+  mismatches vs gcd(u,v)=1: none; launches stopped at a corner/cap: 0; launches leaving the bottom rectangle: 0
+q=40 (u=10): area 523 = 13q+3, reflex 6, convex 10, pinch 0
+  v=1:L@t2 v=2:D v=3:L@t6 v=4:D v=5:D v=6:D v=7:L@t6 v=8:D v=9:L@t2 v=10:D v=11:L@t2 v=12:D v=13:L@t6 v=14:D v=15:D v=16:D v=17:L@t6 v=18:D v=19:L@t2 v=20:D v=21:L@t2 v=22:D v=23:L@t6
+  mismatches vs gcd(u,v)=1: none; launches stopped at a corner/cap: 0; launches leaving the bottom rectangle: 0
+q=52 (u=13): area 679 = 13q+3, reflex 6, convex 10, pinch 0
+  v=1:L@t2 v=2:L@t12 v=3:L@t8 v=4:L@t6 v=5:L@t10 v=6:L@t4 v=7:L@t4 v=8:L@t10 v=9:L@t6 v=10:L@t8 v=11:L@t12 v=12:L@t2 v=13:D v=14:L@t2 v=15:L@t12 v=16:L@t8 v=17:L@t6 v=18:L@t10 v=19:L@t4 v=20:L@t4 v=21:L@t10 v=22:L@t6 v=23:L@t8 v=24:L@t12 v=25:L@t2 v=26:D v=27:L@t2 v=28:L@t12 v=29:L@t8
+  mismatches vs gcd(u,v)=1: none; launches stopped at a corner/cap: 0; launches leaving the bottom rectangle: 0
+Check 1 result: PASS (lit iff gcd(u,v)=1 on every tested (u,v))
+q=16, v=3 launches (sx, sy, verdict, time, ymax): [(1, 1, 'lit', 2, 2), (1, -1, 'lit', 2, 1), (-1, 1, 'lit', 6, 2), (-1, -1, 'lit', 6, 2)]
+  developed abscissa 4+24*2=52; fold mod 64 -> 12
+q=16, v=4 launches: [(1, 1, 'periodic', 4, 2), (1, -1, 'periodic', 4, 2), (-1, 1, 'periodic', 4, 2), (-1, -1, 'periodic', 4, 2)]
+  v=4 folded abscissae at height-one returns: [4]
+
+== Check 2: st279 end-stretch m, S=(2,1), T=(6,1), p multiple of 4 ==
+Bands from stabilizer-orbits.md: (0,m)x[0,m], (m,m+1)x[m-1,m+2], (m+1,m+2)x[m,m+3], (m+2,2m+2)x[m+2,2m+2]
+m=32: area 2054, reflex 6, convex 10; lit p in [4,128]: [4, 28, 36, 60, 68, 92, 100, 124]; mismatches vs p=+-4 mod m: none
+m=48: area 4614, reflex 6, convex 10; lit p in [4,192]: [4, 44, 52, 92, 100, 140, 148, 188]; mismatches vs p=+-4 mod m: none
+m=32, p=36 launches: [(1, 1, 'lit', 62, 32), (1, -1, 'periodic', 64, 32), (-1, 1, 'periodic', 64, 32), (-1, -1, 'lit', 2, 1)]
+m=32, p=40 launches: [(1, 1, 'periodic', 64, 32), (1, -1, 'periodic', 64, 32), (-1, 1, 'periodic', 64, 32), (-1, -1, 'periodic', 64, 32)]
+Check 2 result: PASS
+
+== Check 3: Schwarz-Christoffel and orientation-cover arithmetic ==
+r=6: prevertices 16, f' exponent sum -2 (needs -2), genus 7 (needs r+1=7), ord omega convex 0, reflex 2, total zeros 12 = 2g-2 12
+r=8: prevertices 20, f' exponent sum -2 (needs -2), genus 9 (needs r+1=9), ord omega convex 0, reflex 2, total zeros 16 = 2g-2 16
+
+== Check 4: Presburger shift witnesses ==
+cov279: u=3P+1 gives gcd(u,P)=1 and u=1 mod 3 for P=1..199; st279: 1+P not +-1 mod M>2P+4. failures: none
+
+== Check 5: Cramer/Hadamard denominator bound on small random rational subspaces ==
+1189 vertices checked; max denominator/Delta = 0.3333; violations 0
+W=20: distinct coords per axis <= 10+2, gaps d = 22
+
+CPU seconds: 0.3

@@ -1,0 +1,84 @@
+# Item 1: floor-return theorem (A)
+  PASS gate formulas E, ((e+B)E+dz)/L, (BE+(d+e)z)/L, source congruence, |E|<w, floor value (4000 random rooms)
+  PASS gate-bound equivalences with B in place of h (4000 random rooms)
+  PASS under (A): |g2|<u, |g3|<v and 0<floor crossing<W (1363 random rooms satisfying (A))
+  U1 (2,3,5,6); (7,1,1,3): (A) 3<=4, 2<=9
+  U2 (1,2,3,4); (13,2,1,4): (A) 4<=5, 3<=8
+  E1 (2,3,5,7); (2,1,1,3): (A) 4<=4, 4<=9
+  E2 (1,2,3,5); (1,1,1,2): (A) 3<=3, 4<=4
+  PASS U1 satisfies (A): 3<=4, 2<=9 (as note)
+  PASS U2 satisfies (A): 4<=5, 3<=8 (as note)
+  PASS (A) fails on U2b (6>5) and T1 (9>2)
+  PASS U1 note shot (1,17/2)->(11/2,3/2): slope 17/20 (note 17/20), 3 reflections (note 3), floor at x=169/40
+  PASS U2 note shot (1/2,27/2)->(7/2,2): slope 14/31 (note 14/31), 5 reflections (note 5), floor at x=161/62
+  PASS U1 half-lattice: 195/195 (A) shots end at T, gates strict, one floor contact at the predicted x in (0,W), max 5 reflections
+  PASS U1 random rational: 40/40 (A) shots end at T, gates strict, one floor contact at the predicted x in (0,W), max 5 reflections
+  PASS U2 half-lattice: 175/175 (A) shots end at T, gates strict, one floor contact at the predicted x in (0,W), max 7 reflections
+  PASS U2 random rational: 40/40 (A) shots end at T, gates strict, one floor contact at the predicted x in (0,W), max 7 reflections
+  PASS E1 half-lattice: 135/135 (A) shots end at T, gates strict, one floor contact at the predicted x in (0,W), max 3 reflections
+  PASS E1 random rational: 40/40 (A) shots end at T, gates strict, one floor contact at the predicted x in (0,W), max 3 reflections
+  PASS E2 half-lattice: 9/9 (A) shots end at T, gates strict, one floor contact at the predicted x in (0,W), max 1 reflections
+  PASS E2 random rational: 40/40 (A) shots end at T, gates strict, one floor contact at the predicted x in (0,W), max 3 reflections
+  control T1 (A fails): 2/5 half-lattice (A) shots fail some gate/trace condition
+
+# Item 2: prime-power equality case of the terminal strip test
+  PASS a prime power dividing lcm(q1,q2) divides q1 or q2 (q1,q2<80)
+  PASS den(r1+r2) divides lcm(den r1, den r2) (q<30)
+  PASS spacing 2W/q <= 2w iff q >= W/w (named (W,w,q) incl. equality 5/1 and 10/2)
+  PASS gate values X+tau(Z-X)/D are strictly inside (-w,w) for |X|<w, |Z|=w, 0<tau<D (2000 random)
+  PASS w=1, 0<x<1: x+Ma and -x+Ma are never both at the boundary +-w (x=i/7, Ma=j/3)
+  U2b: P0=6, P0 h/W=24/5, q=5, prime powers [5], W/w=5, floor(W/w)^2=25: Bp=True B(d168)=False
+  T1: P0=24, P0 h/W=24/13, q=13, prime powers [13], W/w=13/3, floor(W/w)^2=16: Bp=True B(d168)=False
+  PASS U2b: P=6, Ph/W=24/5, 5=W/w; prime-power case holds, d168 B fails
+  PASS T1: q=13 >= 13/3, so the prime-power case covers T1 (note attributes T1 only to d170 transpose)
+  PASS U2b note shot: b=5/3, B=19/3, M=18, Z=0, dx/descent=1065/59, 57 reflections (note 1065/59, 57)
+  PASS U2b half-lattice: 21/21 prime-power shots end at T (3 floor routes, 0 early stops at a floor-corner aim, max 89 reflections)
+  PASS U2b half-lattice (floor route preferred): 21/21 prime-power shots end at T (15 floor routes, 0 early stops at a floor-corner aim, max 113 reflections)
+  PASS U2b random rational: 40/40 prime-power shots end at T (0 floor routes, 0 early stops at a floor-corner aim, max 530 reflections)
+  PASS U2b random rational (floor route preferred): 40/40 prime-power shots end at T (38 floor routes, 0 early stops at a floor-corner aim, max 367 reflections)
+  PASS T1 half-lattice: 5/5 prime-power shots end at T (0 floor routes, 0 early stops at a floor-corner aim, max 12 reflections)
+  PASS T1 half-lattice (floor route preferred): 5/5 prime-power shots end at T (5 floor routes, 0 early stops at a floor-corner aim, max 15 reflections)
+  PASS T1 random rational: 40/40 prime-power shots end at T (0 floor routes, 0 early stops at a floor-corner aim, max 146 reflections)
+  PASS T1 random rational (floor route preferred): 40/40 prime-power shots end at T (40 floor routes, 0 early stops at a floor-corner aim, max 1091 reflections)
+  U2b floor-corner aims, M=30, b=1/5: [(1, '-1/2', '19/75', '319/75', 24), (-1, '1/2', '-19/75', '281/75', 24)]
+    sign 1, X=-1/2, Z=19/75, z=319/75: gates ['-7/15', '-1/3', '-4/15']; full trace corner at (0,0); truncated trace end at (319/75,19/5), 57 reflections
+    sign -1, X=1/2, Z=-19/75, z=281/75: gates ['7/15', '1/3', '4/15']; full trace corner at (0,0); truncated trace end at (281/75,19/5), 56 reflections
+  PASS U2b: when the line aims at a floor corner, the truncated path (travel a+d+e+b) already ends at T
+  PASS B and Bp are incomparable: W=60, w=8, q=60 passes B (60>49) but every prime power (4,3,5) is < 7.5
+  PASS and U2b passes Bp but not B
+  PASS the lcm test (q is not lcm(q1,q2) with q1,q2 < W/w) implies-from both B and Bp (W<60)
+
+# Item 4: coverage of LLLLLRLRLR by C, A170, A170t, B, Bt, An, Ant, Bp, Bpt
+  PASS An transposed = (v-u)(c+d) <= eu and (v-w)c <= w(d+e) (4000 random rooms)
+  PASS An holds iff W <= min{u+(u-w)(e+h)/d, v+h(v-w)/(d+e)} (4000 random rooms)
+  PASS An transposed holds iff c <= min{eu/(v-u)-d, w(d+e)/(v-w)} (4000 random rooms)
+  PASS C, A170, A170t do not depend on W or c (4000 random rooms)
+  room   widths; heights              C  A170 A170t     B    Bt    An   Ant    Bp   Bpt
+  O1     (2,3,4,5); (1,1,1,5)         1     0     0     0     0     1     1     0     0
+  O2     (2,3,4,6); (2,1,1,2)         1     0     0     0     0     1     1     0     0
+  S1     (2,3,4,6); (3,1,3,2)         1     0     0     0     0     0     1     0     0
+  N1     (1,2,3,4); (1,1,1,1)         1     1     1     0     0     1     1     0     0
+  D17    (3,4,9,12); (3,4,2,3)        0     1     0     0     0     0     0     0     0
+  RES    (10,11,13,100); (87,2,1,10)     0     0     0     0     0     0     0     0     0
+  T1     (3,4,12,13); (1,1,1,1)       0     0     1     0     0     0     0     1     0
+  U1     (2,3,5,6); (7,1,1,3)         0     0     0     0     0     1     0     0     0
+  U1b    (2,3,5,9); (1,1,1,3)         0     0     0     0     0     0     0     0     1
+  U2     (1,2,3,4); (13,2,1,4)        0     0     0     0     0     1     0     0     0
+  U2b    (1,2,3,5); (1,2,1,4)         0     0     0     0     0     0     0     1     1
+  G2860  (10,11,13,2860); (2847,2,1,10)     0     0     0     0     0     0     0     0     0
+  V1     (2,3,5,9); (3,1,1,3)         0     0     0     0     0     0     0     0     0
+  V2     (1,2,3,6); (3,2,1,4)         0     0     0     0     0     0     0     0     0
+  PASS U1, U2 covered by (A); U2b, T1 covered by the prime-power case (no transpose needed)
+  PASS RES still fails every test (covered only by the d171 certificate)
+  PASS G2860 fails all nine tests (both orientations, with and without transposes)
+  PASS V1 fails all nine tests (both orientations, with and without transposes)
+  PASS V2 fails all nine tests (both orientations, with and without transposes)
+  V1: P0=30, q=den(P0 h/W)=1; transposed P0=20, q=1; An first ineq 6>4, Ant first ineq 8>3
+  V2: P0=6, q=den(P0 h/W)=1; transposed P0=70, q=1; An first ineq 8>5, Ant first ineq 5>2
+  G2860: P0=286, q=den(P0 h/W)=1; transposed P0=286, q=1; An first ineq 5698>11, Ant first ineq 5698>11
+  PASS family (2,3,5,90m; 40n-5,1,1,3) fails all nine tests, m,n = 1..5 (q=m, transposed q=n)
+  PASS note's grid (0,10,11,13,2860k), k=1..5, fails all nine tests
+  control V1 pair (1,13/2)-(7,3/2): rotations ['5/2', '15/2'] (dens < 9/2); the (A) shot still has gates ['-9/8', '1/8', '11/8'] inside (2,3,5) and traces end at (7,3/2): tests are sufficient only
+  PASS note polygon has turn word LLLRLLLRLR (cyclic class contains LLLRLLLRLR), area 8
+
+0 FAIL; CPU 0.9 s

@@ -1,0 +1,26 @@
+== fh_star_cross12.json | pairs 10 (same class 2)
+  N minimal: (room, N, pair) rows 30  WEAK verdicts {'lifts': 30}  STRONG {holds: 26, fails: 4, not computed: 0}  violations with equal images: 0
+  N non-minimal: (room, N, pair) rows 10  WEAK verdicts {'lifts': 8, 'VIOLATION': 2}  STRONG {holds: 8, fails: 0, not computed: 2}  violations with equal images: 2
+  ground truth: 10 lit, 0 dark; certified-but-lit 0; same-class dark-uncertified 0
+== fh_star_dumb12.json | pairs 28 (same class 4)
+  N minimal: (room, N, pair) rows 28  WEAK verdicts {'lifts': 28}  STRONG {holds: 0, fails: 4, not computed: 24}  violations with equal images: 0
+  ground truth: 28 lit, 0 dark; certified-but-lit 0; same-class dark-uncertified 0
+== fh_star_R22.json | pairs 1 (same class 1)
+  N minimal: (room, N, pair) rows 1  WEAK verdicts {'n/a': 1}  STRONG {holds: 0, fails: 0, not computed: 0}  violations with equal images: 0
+  ground truth: 0 lit, 1 dark; certified-but-lit 0; same-class dark-uncertified 0
+   cert (0, 0)-(2, 2): ['one parity factor']
+== fh_star_P6.json | pairs 1 (same class 1)
+  N minimal: (room, N, pair) rows 1  WEAK verdicts {'n/a': 1}  STRONG {holds: 0, fails: 0, not computed: 0}  violations with equal images: 0
+  ground truth: 0 lit, 1 dark; certified-but-lit 0; same-class dark-uncertified 0
+   cert (1, 0)-(3, -2): ['one parity factor']
+== fh_star_wall_cross12.json | pairs 36 (same class 12)
+  N minimal: (room, N, pair) rows 108  WEAK verdicts {'lifts': 108}  STRONG {holds: 28, fails: 4, not computed: 76}  violations with equal images: 0
+  N non-minimal: (room, N, pair) rows 36  WEAK verdicts {'lifts': 32, 'VIOLATION': 4}  STRONG {holds: 8, fails: 0, not computed: 28}  violations with equal images: 4
+  ground truth: 36 lit, 0 dark; certified-but-lit 0; same-class dark-uncertified 0
+== fh_star_wall_R22.json | pairs 28 (same class 8)
+  N minimal: (room, N, pair) rows 28  WEAK verdicts {'lifts': 22, 'n/a': 4, 'VIOLATION': 2}  STRONG {holds: 2, fails: 0, not computed: 22}  violations with equal images: 2
+  ground truth: 24 lit, 4 dark; certified-but-lit 0; same-class dark-uncertified 0
+   cert (0, 0)-(2, -2): ['one parity factor']
+   cert (0, 0)-(2, 2): ['one parity factor']
+   cert (2, -2)-(4, 0): ['one parity factor']
+   cert (2, 2)-(4, 0): ['one parity factor']

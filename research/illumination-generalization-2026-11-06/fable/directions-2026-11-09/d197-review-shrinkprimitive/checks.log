@@ -1,0 +1,43 @@
+== 1. Admissible moves on v=(n,n+1,n+2,n+3) ==
+PASS n=3..50, j=1..4, s=1,2: all gaps stay positive
+PASS n=3..50: the three unchanged gaps have gcd 1 (two consecutive integers)
+PASS n=3..50: successor horizontal gap vector is normalized (gcd 1)
+PASS removing any one index of 0..3 leaves two consecutive indices
+== 2. v - s e_j leaves span(v) ==
+PASS n=3..50: v - s e_j not parallel to v (s=1,2, all j)
+PASS symbolic: v_i = lam v_i, v_j - s = lam v_j has no solution with s > 0 (lam=1 forces s=0)  [[]]
+PASS without the sign restriction the only solution is lam=1, s=0  [[{lam: 1, s0: 0}]]
+PASS vertical analog, named b=(1,b2,b3,4k): positive-gap shrinks leave span(b)
+== 3. Affine side test, averaging identity ==
+PASS det(T*-S, C-S) is affine in t after 4 moving reflections
+PASS still affine when S itself moves (S right of the strip)
+PASS F0>0, B<0: F(s)>0 <=> F0 > s|B| (affine endpoint test)
+PASS sum_j (v_j/L)(v - e_j) = (1 - 1/L) v
+PASS two-unit version: sum_j (v_j/L)(v - 2e_j) = (1 - 2/L) v
+PASS linear f: sum (v_j/L) f(v-e_j) = (1-1/L) f(v)
+== 4. Terminal rectangle: s r in hZ ==
+PASS exit phase mod 2h unchanged <=> s r in hZ (exact, 13920 named cases h<=8, w<=7, |p|<=7, q<=6)
+PASS under s r in hZ, restored far-wall contact is a corner iff old one is
+PASS restored minus old: exit 2sr, far wall sr
+== 5. Parity ==
+PASS reflection x -> 2c - x preserves x mod 2 for integer c
+PASS integral displacement with odd dy => primitive p is odd
+PASS 4|h (h=4..100), s in {1,2}, q|s, p odd: h never divides (s/q)p
+PASS contrast: s=4, h=4, q=1, p odd satisfies the criterion (the step bound is the culprit)
+PASS general: p odd and v2(h) > v2(s) => no same-exit transfer (h<=64, s<=8)
+== 6. Chart 3,4,2,0,1 with v x (1,b2,b3,4k) ==
+   n=3 gy=(1, 1, 1, 4): word ok=True, w=6, h=4, left side of cap open=True, marks S=(11, 4) T=(11, 5) interior=True
+   n=3 gy=(1, 2, 3, 8): word ok=True, w=6, h=8, left side of cap open=True, marks S=(11, 7) T=(11, 8) interior=True
+   n=3 gy=(1, 5, 2, 12): word ok=True, w=6, h=12, left side of cap open=True, marks S=(11, 9) T=(11, 10) interior=True
+   n=10 gy=(1, 1, 1, 4): word ok=True, w=13, h=4, left side of cap open=True, marks S=(32, 4) T=(32, 5) interior=True
+   n=10 gy=(1, 2, 3, 8): word ok=True, w=13, h=8, left side of cap open=True, marks S=(32, 7) T=(32, 8) interior=True
+   n=10 gy=(1, 5, 2, 12): word ok=True, w=13, h=12, left side of cap open=True, marks S=(32, 9) T=(32, 10) interior=True
+PASS named realizations: cap is (x0,x1)x(y0,y1), w=n+3, h=b4=4k, left side open, odd-difference marks exist
+== 7. snapshot2: exit phase, disjointness, additive order ==
+PASS same entry: short and long exits differ <=> 2sr not in 2hZ
+PASS 2sr in 2hZ <=> hq | s|p|
+PASS long entry theta - 2sr reproduces the short exit theta + 2(w-s)r
+PASS additive order of 2sr on R/2hZ equals hq/gcd(hq, s|p|) (2112 exact cases, h<=12, q<=6, p<=11)
+PASS 4|h, p odd: order is a multiple of 4 (s=1) and of 2 (s=2)
+
+SUMMARY: 28 PASS, 0 FAIL, CPU 0.253 s

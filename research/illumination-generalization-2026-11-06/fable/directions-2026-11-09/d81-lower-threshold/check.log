@@ -1,0 +1,61 @@
+self-test: R22 dark pair (0,0),(2,2) visible = False
+rooms with n>=21 and r<=8: 2145 ; same-parity interior pairs: 9851
+D72 BBBB rooms in range (dumb12 has n=20): ['CR34', 'DB55', 'DBas', 'DBw2', 'U2', 'c4181s', 'st279', 'st279b']
+
+structure of the maximal block system (rooms):
+    128  k=2 m=11 quotient zeros [1, 1, 2]
+     12  k=2 m=11 quotient zeros [1, 2]
+    420  k=2 m=11 quotient zeros [1, 3]
+     26  k=2 m=11 quotient zeros [2, 2]
+     20  k=2 m=11 quotient zeros [3]
+     21  k=2 m=12 quotient zeros [1, 1, 2]
+    310  k=2 m=12 quotient zeros [1, 3]
+      6  k=2 m=12 quotient zeros [2, 2]
+      6  k=2 m=12 quotient zeros [3]
+     13  k=2 m=12 quotient zeros [4]
+      8  k=2 m=13 quotient zeros [1, 1, 2]
+    189  k=2 m=13 quotient zeros [1, 3]
+      2  k=2 m=13 quotient zeros [3]
+     59  k=2 m=13 quotient zeros [4]
+     47  k=2 m=14 quotient zeros [1, 3]
+     39  k=2 m=14 quotient zeros [4]
+     12  k=2 m=15 quotient zeros [1, 3]
+     47  k=2 m=15 quotient zeros [4]
+      5  k=2 m=16 quotient zeros [4]
+      3  k=2 m=17 quotient zeros [4]
+      1  k=2 m=28 quotient zeros [1, 1, 1]
+      6  k=3 m=7 quotient zeros [1, 1]
+     18  k=3 m=7 quotient zeros [2]
+      6  k=3 m=9 quotient zeros [2]
+     33  k=4 m=6 quotient zeros [1, 1]
+      1  k=4 m=6 quotient zeros [2]
+     14  k=4 m=7 quotient zeros [1, 1]
+     33  k=4 m=7 quotient zeros [2]
+      1  k=4 m=8 quotient zeros [2]
+     10  k=4 m=9 quotient zeros [2]
+     33  k=5 m=5 quotient zeros [1]
+    168  k=6 m=4 quotient zeros [1]
+     87  k=6 m=5 quotient zeros [1]
+     72  k=7 m=3 quotient zeros [1]
+    140  k=7 m=4 quotient zeros [1]
+     72  k=7 m=5 quotient zeros [1]
+     24  k=8 m=3 quotient zeros [1]
+     29  k=8 m=4 quotient zeros [1]
+     17  k=8 m=5 quotient zeros [1]
+      7  primitive, 2-transitive
+
+pairs with 3d < 2n: 3
+  of which not directly visible: 0
+  of which all 8 marked sheets lie in one maximal block: 3
+   n=24  k=8 m=3 quotient zeros [1]               visible=True  pairs=2
+   n=32  k=8 m=4 quotient zeros [1]               visible=True  pairs=1
+
+low pairs (name, n, r, S, T, d, visible, all-8-in-one-block, structure):
+   ('cov3397', 24, 8, (2, 2), (6, 2), 6, True, True, 'k=8 m=3 quotient zeros [1]', '')
+   ('cov3608', 24, 8, (2, 2), (2, 6), 6, True, True, 'k=8 m=3 quotient zeros [1]', '')
+   ('cov4474', 32, 8, (3, 2), (9, 2), 6, True, True, 'k=8 m=4 quotient zeros [1]', '')
+
+minimum d/n over all pairs: (Fraction(3, 16), 'cov4474', 32, 8, (3, 2), (9, 2), 6)
+minimum d/n over pairs whose 8 marked sheets are not in one maximal block: (Fraction(2, 3), 'cov2493', 21, 7, (2, 4), (4, 4), 14, 'k=7 m=3 quotient zeros [1]')
+BBBB rooms: {'CR34': 'primitive, 2-transitive', 'DB55': 'primitive, 2-transitive', 'DBas': 'primitive, 2-transitive', 'DBw2': 'primitive, 2-transitive', 'U2': 'primitive, 2-transitive', 'c4181s': 'primitive, 2-transitive', 'st279': 'k=2 m=28 quotient zeros [1, 1, 1]', 'st279b': 'primitive, 2-transitive'}
+CPU seconds: 3.7

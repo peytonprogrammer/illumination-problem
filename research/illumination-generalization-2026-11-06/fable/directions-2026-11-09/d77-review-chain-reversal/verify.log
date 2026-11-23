@@ -1,0 +1,65 @@
+
+(a) index formula: one DBw2 instance l=11, S=(1,1), T=(19,3); travels 4, 11, 3
+  D=9, h1=2 (direct first-coordinate gcd 2), h2=108, h2/h1=54, direct kernel step 54 (box |m|<=40)
+  spacings: seam1 2/9, seam2 6; both windows have width 2
+
+DBw2 delta lower bounds with g = gcd(10b,12a) (rows a, cols b); 4/delta - a - b:
+  a=1: 1(2)  1/2(5)  1/3(8)  1/2(3)
+  a=2: 1(1)  1/2(4)  1/3(7)  1/4(10)
+  a=3: 2/3(2)  1/2(3)  1/3(6)  5/12(13/5)
+  a=4: 1/2(3)  1/2(2)  1/3(5)  1/4(8)
+  max 4/delta-a-b = 10 at (a,b)=(2, 4)
+
+DBw2 proof coverage at short lengths (L-R pairs, positive sheets):
+  l= 4: g-test (endpoint-free) fails for 160/320 pairs, (a,b) [(1, 2), (1, 3), (2, 2), (2, 3), (2, 4), (3, 3), (4, 3), (4, 4)]; exact-e test fails for  50/320
+  l= 5: g-test (endpoint-free) fails for 140/320 pairs, (a,b) [(1, 2), (1, 3), (2, 3), (2, 4), (3, 3), (4, 3), (4, 4)]; exact-e test fails for  40/320
+  l= 6: g-test (endpoint-free) fails for 100/320 pairs, (a,b) [(1, 3), (2, 3), (2, 4), (3, 3), (4, 4)]; exact-e test fails for  32/320
+  l= 7: g-test (endpoint-free) fails for  80/320 pairs, (a,b) [(1, 3), (2, 3), (2, 4), (4, 4)]; exact-e test fails for  22/320
+  l= 8: g-test (endpoint-free) fails for  60/320 pairs, (a,b) [(1, 3), (2, 4), (4, 4)]; exact-e test fails for  18/320
+  l= 9: g-test (endpoint-free) fails for  20/320 pairs, (a,b) [(2, 4)]; exact-e test fails for   4/320
+        e-test failures e.g. [((3, 1), (18, 2)), ((3, 2), (18, 4)), ((3, 3), (18, 2)), ((3, 4), (18, 4))]
+  l=10: g-test (endpoint-free) fails for  20/320 pairs, (a,b) [(2, 4)]; exact-e test fails for   4/320
+        e-test failures e.g. [((3, 1), (19, 2)), ((3, 2), (19, 4)), ((3, 3), (19, 2)), ((3, 4), (19, 4))]
+  l=11: g-test (endpoint-free) fails for   0/320 pairs, (a,b) []; exact-e test fails for   0/320
+
+Sanity at the original length 4 (proof not claimed there; its L-R failures are expected):
+DBw2 l=4: 41 interior points (16 L, 20 R, 5 on y=2), 820 pairs, same-class 190; L-R traced 160, chamber-corridor traced 144, direct 356, failures 160, max reflections 80
+   FAIL ((1, 1), (12, 1), 'length test fails')
+   FAIL ((1, 1), (12, 2), 'length test fails')
+   FAIL ((1, 1), (12, 3), 'length test fails')
+   FAIL ((1, 1), (12, 4), 'length test fails')
+   FAIL ((1, 1), (12, 5), 'length test fails')
+   FAIL ((1, 1), (13, 1), 'length test fails')
+   FAIL ((1, 1), (13, 2), 'length test fails')
+   FAIL ((1, 1), (13, 3), 'length test fails')
+   FAIL ((1, 1), (13, 4), 'length test fails')
+   FAIL ((1, 1), (13, 5), 'length test fails')
+DBw2 l=11: 48 interior points (16 L, 20 R, 12 on y=2), 1128 pairs, same-class 272; L-R traced 320, chamber-corridor traced 396, direct 412, failures 0, max reflections 174
+DBw2 l=12: 49 interior points (16 L, 20 R, 13 on y=2), 1176 pairs, same-class 286; L-R traced 320, chamber-corridor traced 432, direct 424, failures 0, max reflections 188
+DBw2 l=13: 50 interior points (16 L, 20 R, 14 on y=2), 1225 pairs, same-class 300; L-R traced 320, chamber-corridor traced 468, direct 437, failures 0, max reflections 202
+DBw2 l=17: 54 interior points (16 L, 20 R, 18 on y=2), 1431 pairs, same-class 362; L-R traced 320, chamber-corridor traced 612, direct 499, failures 0, max reflections 256
+DBw2 l=25: 62 interior points (16 L, 20 R, 26 on y=2), 1891 pairs, same-class 510; L-R traced 320, chamber-corridor traced 900, direct 671, failures 0, max reflections 364
+
+DB55 reversal: interval for t from x_left=5/2+4t, y_right=21/8-9t in (2,3)
+  t in (-1/24, 5/72), width 1/9; mirror height 39/2-4t in [173/9, 59/3]
+  1+4s0 = -35/2 -> mod 10 = 5/2; target image backward 9: 1-9s0 = 341/8 -> mod 10 = 21/8
+  l=3 placement at t=0: x_left + 3 s0 - y_right = -14
+  threshold: (13+l)/9 > 2 iff l > 5
+  l=3: t=0, s=-37/8; traced: True (hit T); 26 horizontal contacts, vertical: x=13 y=1/2; strictly inside right wall: True
+  l=11/2: t=-7/296, s=-172/37; traced: True (hit T); 38 horizontal contacts, vertical: x=31/2 y=15/37; strictly inside right wall: True
+  l=6: t=-1/152, s=-88/19; traced: True (hit T); 40 horizontal contacts, vertical: x=16 y=9/19; strictly inside right wall: True
+  l=63/10: t=101/1544, s=-880/193; traced: True (hit T); 40 horizontal contacts, vertical: x=163/10 y=147/193; strictly inside right wall: True
+  l=7: t=1/40, s=-23/5; traced: True (hit T); 44 horizontal contacts, vertical: x=17 y=3/5; strictly inside right wall: True
+  l=20: t=5/264, s=-152/33; traced: True (hit T); 104 horizontal contacts, vertical: x=30 y=19/33; strictly inside right wall: True
+  l=5: open phase image (-24, -22) has no even integer: no path from this branch
+  l=51/10: t=-23/1448, s=-840/181; traced: True (hit T); 36 horizontal contacts, vertical: x=151/10 y=79/181; strictly inside right wall: True
+  l=3 witness s=-37/8: True; left 4 contacts (y=['0', '5', '0', '5']), corridor 14 (first y=2), right before 5 (first y=0), mirror at y=1/2, right after 3 (y=['5', '0', '5']); total horizontal 26
+  corridor exit height at x=8: 21/8
+
+cov2929: 22 cells; matches D69 diagram: True
+  walls 20, corners 20
+  (3, 1)->(5, 3) V=(-2, 3) (saved lit dir [-2, 3]): True hit T; contacts (2,5/2) [vertical wall x=2, y in (2,4), strict True], (3,4), (13/3,2)
+  (3, 3)->(5, 5) V=(2, 3) (saved lit dir [2, 3]): True hit T; contacts (11/3,4), (5,2), (6,7/2) [vertical wall x=6, y in (2,4), strict True]
+
+DBw2 total failures over l = 11, 12, 13, 17, 25: 0
+CPU 2.2 s

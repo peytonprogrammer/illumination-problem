@@ -1,0 +1,27 @@
+A. Bookkeeping for Y in Q(1^z, -1^(z+4)), X its orientation double
+ z  g  W=2g+2  2g-2  dimQ  rankQ  hr-thresh  dimPM  dimA2  #forms  Pdim  codim  exp.dim
+ 1  2      6     2     4      2        2.0      3      3       6     1      0        3
+ 2  3      8     4     6      3        2.5      3      3      28     2      1        2
+ 3  4     10     6     8      4        3.0      3      3     120     3      2        1
+ 4  5     12     8    10      5        3.5      3      3     495     4      3        0
+ 5  6     14    10    12      6        4.0      3      3    2002     5      4       -1
+ 6  7     16    12    14      7        4.5      3      3    8008     6      5       -2
+ 7  8     18    14    16      8        5.0      3      3   31824     7      6       -3
+ 8  9     20    16    18      9        5.5      3      3  125970     8      7       -4
+  rankQ = g, so rank 2 is proper for z >= 2; hr-thresh > 2 for g >= 4.
+  exp.dim = heuristic dimension of the zero-pattern locus over A_2;
+  a minimal rank-two locus needs exp.dim = 3 identically.
+
+B. Degree-two branch on explicit sphere models
+  exchange: commute fails 0, f.iota=tau.f fails 0, (tau u=u) != (delta s=iota s) 0, axis collapses 2000
+    ramification 1: branch value (2+0j), tau-fixed True
+    ramification -1: branch value (-2+0j), tau-fixed True
+  preserve: commute fails 0, f.iota=tau.f fails 0, (tau u=u) != (delta s=iota s) 0, axis collapses 0
+    ramification 0: branch value 0j, tau-fixed n/a (0 <-> inf)
+  preserve: branch values 0 and inf are swapped by tau(u)=1/conj(u),
+  so they form the unique nonreal (off-seam) branch pair.
+
+C. Axis lemma: winding of gamma * reflect(gamma)^-1 about p on the axis
+  loops with odd winding: 500/500
+  Odd winding means the loop encloses p, so a simply connected
+  symmetric room has no gap point: the axis meets it in one interval.

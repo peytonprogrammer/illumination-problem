@@ -1,0 +1,167 @@
+
+========================================================================
+1. Rooms, the map F, corner types, marks, paths
+========================================================================
+
+[M] vertices [(0, 0), (3, 0), (4, 1), (4, 2), (2, 4), (0, 4)]
+  strictly simple: True  W=6  area=27/2  scalar content=1
+  diagonal walls [('x-y', 3), ('x+y', 6)]  intercept parities [0, 1]  mixed=True
+  angles (pi/4 units) [2, 3, 3, 3, 3, 2]
+  F image [(0, 0), (3, 3), (3, 5), (2, 6), (-2, 6), (-4, 4)]
+  F image strictly simple: True  W=6  area=27  ratio=2
+  F image diagonal intercepts [('x-y', 0), ('x+y', 8), ('x-y', -8), ('x+y', 0)]  all even: True
+  F image angles [2, 3, 3, 3, 3, 2]  same as original: True
+  canonical45 tiles in F image: N=54; 4*area(P)=54
+  interior lattice points: 8; images A/B with class = checkerboard parity: True
+  F maps interior lattice points onto interior A/B points of F image: True  (C points in image: 12, preimages are square centres)
+  traced 9 rays from (1, 1) (target (3, 2)): F(trace) == trace of F image in 9/9; stop reasons {'corner': 6, 'bounce-limit': 1, 'hit-target': 2}
+
+[R2 (two 225-degree corners)] vertices [(1, 0), (4, 0), (4, 2), (2, 2), (1, 3), (1, 4), (0, 4), (0, 1)]
+  strictly simple: True  W=8  area=10  scalar content=1
+  diagonal walls [('x+y', 4), ('x+y', 1)]  intercept parities [0, 1]  mixed=True
+  angles (pi/4 units) [3, 2, 2, 5, 5, 2, 2, 3]
+  F image [(1, 1), (4, 4), (2, 6), (0, 4), (-2, 4), (-3, 5), (-4, 4), (-1, 1)]
+  F image strictly simple: True  W=8  area=20  ratio=2
+  F image diagonal intercepts [('x-y', 0), ('x+y', 8), ('x-y', -4), ('x+y', 2), ('x-y', -8), ('x+y', 0)]  all even: True
+  F image angles [3, 2, 2, 5, 5, 2, 2, 3]  same as original: True
+  canonical45 tiles in F image: N=40; 4*area(P)=40
+  interior lattice points: 4; images A/B with class = checkerboard parity: True
+  F maps interior lattice points onto interior A/B points of F image: True  (C points in image: 9, preimages are square centres)
+  traced 9 rays from (1, 1) (target (3, 1)): F(trace) == trace of F image in 9/9; stop reasons {'hit-target': 5, 'corner': 4}
+
+[R3 (270-degree notch)] vertices [(0, 0), (2, 0), (2, 1), (3, 1), (4, 2), (4, 4), (1, 4), (0, 3)]
+  strictly simple: True  W=8  area=13  scalar content=1
+  diagonal walls [('x-y', 2), ('x-y', -3)]  intercept parities [0, 1]  mixed=True
+  angles (pi/4 units) [2, 2, 6, 3, 3, 2, 3, 3]
+  F image [(0, 0), (2, 2), (1, 3), (2, 4), (2, 6), (0, 8), (-3, 5), (-3, 3)]
+  F image strictly simple: True  W=8  area=26  ratio=2
+  F image diagonal intercepts [('x-y', 0), ('x+y', 4), ('x-y', -2), ('x+y', 8), ('x-y', -8), ('x+y', 0)]  all even: True
+  F image angles [2, 2, 6, 3, 3, 2, 3, 3]  same as original: True
+  canonical45 tiles in F image: N=52; 4*area(P)=52
+  interior lattice points: 7; images A/B with class = checkerboard parity: True
+  F maps interior lattice points onto interior A/B points of F image: True  (C points in image: 12, preimages are square centres)
+  traced 9 rays from (1, 1) (target (3, 3)): F(trace) == trace of F image in 9/9; stop reasons {'corner': 5, 'hit-target': 4}
+
+[C1 canonical c=1] vertices [(0, 0), (3, 0), (3, 1), (2, 2), (0, 2)]
+  strictly simple: True  W=5  area=11/2  scalar content=1
+  diagonal walls [('x+y', 4)]  intercept parities [0]  mixed=False
+  angles (pi/4 units) [2, 2, 3, 3, 2]
+
+[C2 canonical c=2 pentagon] vertices [(0, 0), (2, 0), (2, 2), (1, 3), (0, 2)]
+  strictly simple: True  W=5  area=5  scalar content=1
+  diagonal walls [('x+y', 4), ('x-y', -2)]  intercept parities [0]  mixed=False
+  angles (pi/4 units) [2, 2, 3, 2, 3]
+
+========================================================================
+2. Minimality: obstruction and integrality of the candidate similarities
+========================================================================
+[M] parity sets over D4 x (Z/2)^2 translations: [(0, 1)]
+  vertex colours (x+y mod 2): [0, 1]; gcd anchored entries: 1; gcd of F(anchored) entries: 1
+  odd t keeps mixed parity: True; (1/2)F integral: False; => least canonical area 27 = 2*area via F (t=1); t*Id needs t>=2, area 54
+[R2 (two 225-degree corners)] parity sets over D4 x (Z/2)^2 translations: [(0, 1)]
+  vertex colours (x+y mod 2): [0, 1]; gcd anchored entries: 1; gcd of F(anchored) entries: 1
+  odd t keeps mixed parity: True; (1/2)F integral: False; => least canonical area 20 = 2*area via F (t=1); t*Id needs t>=2, area 40
+[R3 (270-degree notch)] parity sets over D4 x (Z/2)^2 translations: [(0, 1)]
+  vertex colours (x+y mod 2): [0, 1]; gcd anchored entries: 1; gcd of F(anchored) entries: 1
+  odd t keeps mixed parity: True; (1/2)F integral: False; => least canonical area 26 = 2*area via F (t=1); t*Id needs t>=2, area 52
+[3M control, content 3] area 243/2; (1/3)F(3M)=F(M) has canonical area 27 < 2*area(3M)=243: primitivity hypothesis needed
+
+========================================================================
+3. Periods: unfolding cycles vs translation subgroup; degrees; sites
+========================================================================
+
+[M] area 27/2, faces 432 (= 8 x 54 quarter-squares)
+  Lambda_abs (cycles) HNF ((1, 1), (0, 2)), covol 2; translation subgroup of G (O=(3, 0), |linear group|=8) HNF ((1, 1), (0, 2)); equal: True
+  Lambda_rel HNF ((1, 0), (0, 1)), covol 1; index 2; Lambda_abs == checkerboard: True; == 2Z^2: False
+  2*Lambda_rel inside Lambda_abs (half-turn lemma): True
+  d_abs counted 54 (2nd point 54), 8*area/covol = 54, 4*area = 54, 2*area = 27
+  d_rel counted 108, 8*area/covol = 108
+  corner lifts project to sites [(0, 0), (0, 1)]
+  interior lattice marks: 8; each has 8 lifts; marks whose lifts all project to the single site S mod Lambda_abs: 8/8
+  same-checkerboard pairs: 12; all 16 lifts on one site: True
+  quarter turn fixes both sites: True
+    corner (0, 0) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+    corner (3, 0) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+    corner (4, 1) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+    corner (4, 2) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+    corner (2, 4) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+    corner (0, 4) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+  lifts = gcd(4,a) and cone = 2pi a/gcd(4,a), total germs = a: True
+
+[R2 (two 225-degree corners)] area 10, faces 320 (= 8 x 40 quarter-squares)
+  Lambda_abs (cycles) HNF ((1, 1), (0, 2)), covol 2; translation subgroup of G (O=(1, 0), |linear group|=8) HNF ((1, 1), (0, 2)); equal: True
+  Lambda_rel HNF ((1, 0), (0, 1)), covol 1; index 2; Lambda_abs == checkerboard: True; == 2Z^2: False
+  2*Lambda_rel inside Lambda_abs (half-turn lemma): True
+  d_abs counted 40 (2nd point 40), 8*area/covol = 40, 4*area = 40, 2*area = 20
+  d_rel counted 80, 8*area/covol = 80
+  corner lifts project to sites [(0, 0), (0, 1)]
+  interior lattice marks: 4; each has 8 lifts; marks whose lifts all project to the single site S mod Lambda_abs: 4/4
+  same-checkerboard pairs: 2; all 16 lifts on one site: True
+  quarter turn fixes both sites: True
+    corner (1, 0) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+    corner (4, 0) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+    corner (4, 2) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+    corner (2, 2) angle 5pi/4: 1 lifts, cone angles ['10pi'], outgoing germs per direction 5
+    corner (1, 3) angle 5pi/4: 1 lifts, cone angles ['10pi'], outgoing germs per direction 5
+    corner (1, 4) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+    corner (0, 4) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+    corner (0, 1) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+  lifts = gcd(4,a) and cone = 2pi a/gcd(4,a), total germs = a: True
+
+[R3 (270-degree notch)] area 13, faces 416 (= 8 x 52 quarter-squares)
+  Lambda_abs (cycles) HNF ((1, 1), (0, 2)), covol 2; translation subgroup of G (O=(3, 1), |linear group|=8) HNF ((1, 1), (0, 2)); equal: True
+  Lambda_rel HNF ((1, 0), (0, 1)), covol 1; index 2; Lambda_abs == checkerboard: True; == 2Z^2: False
+  2*Lambda_rel inside Lambda_abs (half-turn lemma): True
+  d_abs counted 52 (2nd point 52), 8*area/covol = 52, 4*area = 52, 2*area = 26
+  d_rel counted 104, 8*area/covol = 104
+  corner lifts project to sites [(0, 0), (0, 1)]
+  interior lattice marks: 7; each has 8 lifts; marks whose lifts all project to the single site S mod Lambda_abs: 7/7
+  same-checkerboard pairs: 9; all 16 lifts on one site: True
+  quarter turn fixes both sites: True
+    corner (0, 0) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+    corner (2, 0) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+    corner (2, 1) angle 6pi/4: 2 lifts, cone angles ['6pi', '6pi'], outgoing germs per direction 6
+    corner (3, 1) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+    corner (4, 2) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+    corner (4, 4) angle 2pi/4: 2 lifts, cone angles ['2pi', '2pi'], outgoing germs per direction 2
+    corner (1, 4) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+    corner (0, 3) angle 3pi/4: 1 lifts, cone angles ['6pi'], outgoing germs per direction 3
+  lifts = gcd(4,a) and cone = 2pi a/gcd(4,a), total germs = a: True
+
+[C1 canonical c=1] area 11/2, faces 176 (= 8 x 22 quarter-squares)
+  Lambda_abs (cycles) HNF ((2, 0), (0, 2)), covol 4; translation subgroup of G (O=(3, 1), |linear group|=8) HNF ((2, 0), (0, 2)); equal: True
+  Lambda_rel HNF ((1, 0), (0, 1)), covol 1; index 4; Lambda_abs == checkerboard: False; == 2Z^2: True
+  2*Lambda_rel inside Lambda_abs (half-turn lemma): True
+  d_abs counted 11 (2nd point 11), 8*area/covol = 11, 4*area = 22, 2*area = 11
+  d_rel counted 44, 8*area/covol = 44
+  corner lifts project to sites [(0, 0), (0, 1), (1, 0), (1, 1)]
+
+[C2 canonical c=2 pentagon] area 5, faces 160 (= 8 x 20 quarter-squares)
+  Lambda_abs (cycles) HNF ((2, 2), (0, 4)), covol 8; translation subgroup of G (O=(2, 2), |linear group|=8) HNF ((2, 2), (0, 4)); equal: True
+  Lambda_rel HNF ((1, 1), (0, 2)), covol 2; index 4; Lambda_abs == checkerboard: False; == 2Z^2: False
+  2*Lambda_rel inside Lambda_abs (half-turn lemma): True
+  d_abs counted 5 (2nd point 5), 8*area/covol = 5, 4*area = 20, 2*area = 10
+  d_rel counted 20, 8*area/covol = 20
+  corner lifts project to sites [(0, 0), (0, 2), (1, 1), (1, 3)]
+
+[F(M)] area 27, faces 864 (= 8 x 108 quarter-squares)
+  Lambda_abs (cycles) HNF ((2, 0), (0, 2)), covol 4; translation subgroup of G (O=(3, 3), |linear group|=8) HNF ((2, 0), (0, 2)); equal: True
+  Lambda_rel HNF ((1, 1), (0, 2)), covol 2; index 2; Lambda_abs == checkerboard: False; == 2Z^2: True
+  2*Lambda_rel inside Lambda_abs (half-turn lemma): True
+  d_abs counted 54 (2nd point 54), 8*area/covol = 54, 4*area = 108, 2*area = 54
+  d_rel counted 108, 8*area/covol = 108
+  corner lifts project to sites [(0, 0), (1, 1)]
+
+========================================================================
+4. Direction classes mod 2 on the checkerboard torus (M)
+========================================================================
+  physical (1,0) -> D-basis (1,1); both odd: True; leaf from 0 meets odd site: True
+  physical (0,1) -> D-basis (1,-1); both odd: True; leaf from 0 meets odd site: True
+  physical (2,1) -> D-basis (3,1); both odd: True; leaf from 0 meets odd site: True
+  physical (1,2) -> D-basis (3,-1); both odd: True; leaf from 0 meets odd site: True
+  physical (3,2) -> D-basis (5,1); both odd: True; leaf from 0 meets odd site: True
+  physical (1,1) -> D-basis (1,0); both odd: False; leaf from 0 meets odd site: False
+  physical (1,-1) -> D-basis (0,1); both odd: False; leaf from 0 meets odd site: False
+  physical (3,1) -> D-basis (2,1); both odd: False; leaf from 0 meets odd site: False
+  physical (1,3) -> D-basis (2,-1); both odd: False; leaf from 0 meets odd site: False
+  physical (5,3) -> D-basis (4,1); both odd: False; leaf from 0 meets odd site: False

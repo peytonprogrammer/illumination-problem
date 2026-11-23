@@ -1,0 +1,76 @@
+== 0. tracer and cylinder model sanity
+DB55 horizontal strips (a,b,y0,y1): [(0, 5, 0, 2), (8, 13, 0, 2), (0, 13, 2, 3), (0, 5, 3, 5), (8, 13, 3, 5)]
+  heights/circumferences: [(2, 10), (2, 10), (1, 26), (2, 10), (2, 10)]
+walk vs d148 trace, lattice-point sequences: 426 rays, 0 mismatches
+
+== 1a. fixed-crossing criterion, pure arithmetic (exhaustive small cases)
+cases 483296 iff failures 0 | P*h non-integral 0
+
+== 2. DB55, S=(2,2), T=(10,2): horizontal frame, horizontal core class
+strip 2<y<3 spans x in [0,13]: True | C = 26 H = 1 | stops on y=2 and y=3 (2*theta): [10, 16, 36, 42] [10, 16, 36, 42]
+corners on the two boundary levels: [(5, 2), (5, 3), (8, 2), (8, 3)]
+legal S->T shots with |p|<=30, transverse travel h<=40: other class 119 | core class 51
+  physical classes of the other-class seeds: {'c': 53, 'd': 66}
+  seeds with sum(H_i)=h: 119 / 119 | seeds with a strip leg H=1, C=26: 119 / 119
+  v2(P) over seeds: {1: 119} (criterion needs v2(P)<0)
+  shifts U -> U +- P*h traced physically: (same chain & legal, class) {(True, 'other'): 238}
+  core-class shots also using the strip: 51 / 51
+(3,2) shot: displacement (48, 32) frame class core | legs (strip, H, C): [(2, 1, 26), (3, 2, 10), (3, 2, 10), (2, 1, 26), (0, 2, 10), (0, 2, 10), (2, 1, 26), (3, 2, 10), (3, 2, 10), (2, 1, 26), (2, 1, 26), (2, 1, 26), (1, 2, 10), (1, 2, 10), (2, 1, 26), (4, 2, 10), (4, 2, 10), (2, 1, 26), (1, 2, 10), (1, 2, 10)]
+  P = 130 v2(P) = 1 | strip legs with H=1: 8
+
+== 3a. sliding test, DB55 (3,2) chain
+DB55 (3,2): h=32, b=5, g=2, P=130, Ph=4160, period in m=2080, joint period=2080, legs=20
+  passing (U,h) with class: [((48, 32), 'b')]
+  residues tested 2080 | (test, physics-same-chain) counts {(False, False): 2079, (True, True): 1}
+  test outcomes: hit a seam endpoint (stop) 71 | wrong arc 2008 | wrong terminal coordinate 0 | pass 1 | stop-hit residues physically blocked: 71 of 71
+  passing slopes 1 by frame class: {'core': 1} | witness passes: True
+  periodic with period Ph/g on first 400 residues: True
+  same-chain physical arrivals with U != U0 mod g in |U-U0|<=300: 0
+
+== 3b. sliding test on other-class seed chains
+  seeds whose chain is class-rigid because v2(h) <= v2(g): 83 / 119
+  seed (28, 12) class c: h=12, b=2, g=2, P=130, Ph=1560, period in m=780, joint period=780, legs=8
+  passing (U,h) with class: [((28, 12), 'c')]
+  residues tested 780 | (test, physics-same-chain) counts {(False, False): 779, (True, True): 1}
+  test outcomes: hit a seam endpoint (stop) 70 | wrong arc 709 | wrong terminal coordinate 0 | pass 1 | stop-hit residues physically blocked: 70 of 70
+  passing slopes 1 by frame class: {'other': 1} | witness passes: True
+  periodic with period Ph/g on first 400 residues: True
+  same-chain physical arrivals with U != U0 mod g in |U-U0|<=60: 0
+  seed (-32, 12) class d: h=12, b=2, g=2, P=130, Ph=1560, period in m=780, joint period=780, legs=8
+  passing (U,h) with class: [((-680, 12), 'd'), ((-346, 12), 'b'), ((-42, 12), 'b'), ((-32, 12), 'd'), ((272, 12), 'd'), ((576, 12), 'd')]
+  residues tested 780 | (test, physics-same-chain) counts {(False, False): 774, (True, True): 6}
+  test outcomes: hit a seam endpoint (stop) 81 | wrong arc 688 | wrong terminal coordinate 5 | pass 6 | stop-hit residues physically blocked: 81 of 81
+  passing slopes 6 by frame class: {'other': 4, 'core': 2} | witness passes: True
+  periodic with period Ph/g on first 400 residues: True
+  same-chain physical arrivals with U != U0 mod g in |U-U0|<=60: 0
+  seed (44, 12) class c: h=12, b=2, g=2, P=130, Ph=1560, period in m=780, joint period=780, legs=8
+  passing (U,h) with class: [((-574, 12), 'b'), ((-270, 12), 'b'), ((44, 12), 'c'), ((378, 12), 'b'), ((682, 12), 'b')]
+  residues tested 780 | (test, physics-same-chain) counts {(False, False): 775, (True, True): 5}
+  test outcomes: hit a seam endpoint (stop) 30 | wrong arc 742 | wrong terminal coordinate 3 | pass 5 | stop-hit residues physically blocked: 30 of 30
+  passing slopes 5 by frame class: {'core': 4, 'other': 1} | witness passes: True
+  periodic with period Ph/g on first 400 residues: True
+  same-chain physical arrivals with U != U0 mod g in |U-U0|<=60: 0
+  seed (-52, 12) class c: h=12, b=2, g=2, P=130, Ph=1560, period in m=780, joint period=780, legs=8
+  passing (U,h) with class: [((-670, 12), 'b'), ((-660, 12), 'c'), ((-356, 12), 'c'), ((-52, 12), 'c'), ((586, 12), 'b')]
+  residues tested 780 | (test, physics-same-chain) counts {(False, False): 775, (True, True): 5}
+  test outcomes: hit a seam endpoint (stop) 79 | wrong arc 690 | wrong terminal coordinate 6 | pass 5 | stop-hit residues physically blocked: 79 of 79
+  passing slopes 5 by frame class: {'core': 2, 'other': 3} | witness passes: True
+  periodic with period Ph/g on first 400 residues: True
+  same-chain physical arrivals with U != U0 mod g in |U-U0|<=60: 0
+  {'chains': 4, 'with core residue': 3}
+
+== 3c. a d148 lost row (pencil-relaxed, no legal pencil), DB55
+DB55 lost rows in classes b/d (d148 total is 64): 64 | first few: [(1, (2, 2), (10, 2)), (1, (2, 2), (10, 4)), (1, (2, 2), (12, 2)), (1, (2, 2), (12, 4)), (1, (2, 4), (10, 2)), (1, (2, 4), (10, 4))]
+  classes of the lost rows: {1: 64} (1 = horizontal b)
+chosen row: class b, S=(2, 2), T=(10, 4) (T inside the open cylinder 3<y<5); physical frame
+  lowest core-class witness: (-12, 8) | legs (H,C): [(2, 10), (2, 10), (1, 26), (1, 26), (1, 26), (1, 10)]
+lost-row witness chain: h=8, b=3, g=2, P=130, Ph=1040, period in m=520, joint period=520, legs=6
+  passing (U,h) with class: [((-12, 8), 'b')]
+  residues tested 520 | (test, physics-same-chain) counts {(False, False): 519, (True, True): 1}
+  test outcomes: hit a seam endpoint (stop) 87 | wrong arc 431 | wrong terminal coordinate 1 | pass 1 | stop-hit residues physically blocked: 87 of 87
+  passing slopes 1 by frame class: {'core': 1} | witness passes: True
+  periodic with period Ph/g on first 400 residues: True
+  same-chain physical arrivals with U != U0 mod g in |U-U0|<=300: 0
+  fixed-crossing criterion on its other-class seeds (|p|<=15, h<=40): 53 seeds, v2(P) counts {1: 53}
+
+CPU seconds 10.2

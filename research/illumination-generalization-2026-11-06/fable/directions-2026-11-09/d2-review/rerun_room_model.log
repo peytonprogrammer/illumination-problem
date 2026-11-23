@@ -1,0 +1,91 @@
+=== five-square staircase: area 5, walls 10, origin of A class (0, 0)
+   reflex r=3, convex=7
+   regular A points: [((0, 0), 'smooth'), ((2, -2), 'smooth')]
+   transparent non-A points: []
+   cycle types on DP: {'A': (1, 2, 2), 'C1': (1, 1, 3), 'B': (1, 1, 3), 'C2': (1, 1, 3)}
+   |monodromy group| = 60
+   block systems from pairs (0,b): sizes [1] blocks
+   B_min: 5 blocks of size [1]
+   N_min cycle types: {'A': (1, 2, 2), 'C1': (1, 1, 3), 'B': (1, 1, 3), 'C2': (1, 1, 3)}
+   N_min perms: lam=(2, 1, 0, 4, 3) rho=(0, 3, 2, 4, 1) the=(0, 2, 1, 4, 3)
+     block system with 1 blocks: parity property True; types {'A': (1,), 'C1': (1,), 'B': (1,), 'C2': (1,)}
+   phi_min((0, 0)) = [(2, 0)]   (cone angle/pi, id)
+   phi_min((2, -2)) = [(2, 3)]   (cone angle/pi, id)
+   SL2Z orbit (up to relabelling): 24 states, 20 squares
+   exact illumination among regular A points (x = lit, . = dark):
+        (0, 0): . .
+       (2, -2): . .
+   conjecture 'dark <=> separated by N_min' on these points: HOLDS
+=== 22-wall room: area 15, walls 22, origin of A class (0, 0)
+   reflex r=9, convex=13
+   regular A points: [((0, 0), 'interior'), ((2, -2), 'smooth'), ((2, 2), 'interior'), ((4, 0), 'smooth')]
+   transparent non-A points: [((-1, 0), 'smooth', 'C1'), ((1, 0), 'smooth', 'C1'), ((2, 1), 'smooth', 'C2'), ((2, 3), 'smooth', 'C2')]
+   cycle types on DP: {'A': (1, 1, 1, 2, 2, 2, 2, 2, 2), 'C1': (1, 1, 2, 2, 3, 3, 3), 'B': (1, 1, 1, 1, 1, 1, 3, 3, 3), 'C2': (1, 1, 2, 2, 3, 3, 3)}
+   |monodromy group| = 233280
+   block systems from pairs (0,b): sizes [1, 5] blocks
+   B_min: 5 blocks of size [3]
+   N_min cycle types: {'A': (1, 2, 2), 'C1': (1, 1, 3), 'B': (1, 1, 3), 'C2': (1, 1, 3)}
+   N_min perms: lam=(2, 1, 0, 4, 3) rho=(0, 3, 2, 4, 1) the=(0, 2, 1, 4, 3)
+     block system with 5 blocks: parity property True; types {'A': (1, 2, 2), 'C1': (1, 1, 3), 'B': (1, 1, 3), 'C2': (1, 1, 3)}
+     block system with 1 blocks: parity property True; types {'A': (1,), 'C1': (1,), 'B': (1,), 'C2': (1,)}
+   phi_min((0, 0)) = [(2, 0), (2, 0)]   (cone angle/pi, id)
+   phi_min((2, -2)) = [(2, 3)]   (cone angle/pi, id)
+   phi_min((2, 2)) = [(2, 3), (2, 3)]   (cone angle/pi, id)
+   phi_min((4, 0)) = [(2, 0)]   (cone angle/pi, id)
+   SL2Z orbit (up to relabelling): 2592 states, 60 squares
+   exact illumination among regular A points (x = lit, . = dark):
+        (0, 0): x . . x
+       (2, -2): . . x .
+        (2, 2): . x x .
+        (4, 0): x . . .
+   conjecture 'dark <=> separated by N_min' on these points: HOLDS
+=== 22-wall room: area 15, walls 22, origin of A class (1, 0)
+   reflex r=9, convex=13
+   regular A points: [((-1, 0), 'smooth'), ((1, 0), 'smooth')]
+   transparent non-A points: [((0, 0), 'interior', 'C1'), ((2, -2), 'smooth', 'C1'), ((2, 1), 'smooth', 'B'), ((2, 2), 'interior', 'C1'), ((2, 3), 'smooth', 'B'), ((4, 0), 'smooth', 'C1')]
+   cycle types on DP: {'A': (1, 1, 2, 2, 3, 3, 3), 'C1': (1, 1, 1, 2, 2, 2, 2, 2, 2), 'B': (1, 1, 2, 2, 3, 3, 3), 'C2': (1, 1, 1, 1, 1, 1, 3, 3, 3)}
+   |monodromy group| = 233280
+   block systems from pairs (0,b): sizes [1, 5] blocks
+   B_min: 1 blocks of size [15]
+   N_min cycle types: {'A': (1,), 'C1': (1,), 'B': (1,), 'C2': (1,)}
+   N_min perms: lam=(0,) rho=(0,) the=(0,)
+     block system with 5 blocks: parity property False; types {'A': (1, 1, 3), 'C1': (1, 2, 2), 'B': (1, 1, 3), 'C2': (1, 1, 3)}
+     block system with 1 blocks: parity property True; types {'A': (1,), 'C1': (1,), 'B': (1,), 'C2': (1,)}
+   phi_min((-1, 0)) = [(1, 0)]   (cone angle/pi, id)
+   phi_min((1, 0)) = [(1, 0)]   (cone angle/pi, id)
+   SL2Z orbit (up to relabelling): 576 states, 60 squares
+   exact illumination among regular A points (x = lit, . = dark):
+       (-1, 0): . x
+        (1, 0): x .
+   conjecture 'dark <=> separated by N_min' on these points: HOLDS
+=== 22-wall room: area 15, walls 22, origin of A class (0, 1)
+   reflex r=9, convex=13
+   regular A points: [((2, 1), 'smooth'), ((2, 3), 'smooth')]
+   transparent non-A points: [((-1, 0), 'smooth', 'B'), ((0, 0), 'interior', 'C2'), ((1, 0), 'smooth', 'B'), ((2, -2), 'smooth', 'C2'), ((2, 2), 'interior', 'C2'), ((4, 0), 'smooth', 'C2')]
+   cycle types on DP: {'A': (1, 1, 2, 2, 3, 3, 3), 'C1': (1, 1, 1, 1, 1, 1, 3, 3, 3), 'B': (1, 1, 2, 2, 3, 3, 3), 'C2': (1, 1, 1, 2, 2, 2, 2, 2, 2)}
+   |monodromy group| = 233280
+   block systems from pairs (0,b): sizes [1, 5] blocks
+   B_min: 1 blocks of size [15]
+   N_min cycle types: {'A': (1,), 'C1': (1,), 'B': (1,), 'C2': (1,)}
+   N_min perms: lam=(0,) rho=(0,) the=(0,)
+     block system with 5 blocks: parity property False; types {'A': (1, 1, 3), 'C1': (1, 1, 3), 'B': (1, 1, 3), 'C2': (1, 2, 2)}
+     block system with 1 blocks: parity property True; types {'A': (1,), 'C1': (1,), 'B': (1,), 'C2': (1,)}
+   phi_min((2, 1)) = [(1, 0)]   (cone angle/pi, id)
+   phi_min((2, 3)) = [(1, 0)]   (cone angle/pi, id)
+   SL2Z orbit (up to relabelling): 576 states, 60 squares
+   exact illumination among regular A points (x = lit, . = dark):
+        (2, 1): . x
+        (2, 3): x .
+   conjecture 'dark <=> separated by N_min' on these points: HOLDS
+=== 22-wall room: area 15, walls 22, origin of A class (1, 1)
+   reflex r=9, convex=13
+   regular A points: []
+   transparent non-A points: [((-1, 0), 'smooth', 'C2'), ((0, 0), 'interior', 'B'), ((1, 0), 'smooth', 'C2'), ((2, -2), 'smooth', 'B'), ((2, 1), 'smooth', 'C1'), ((2, 2), 'interior', 'B'), ((2, 3), 'smooth', 'C1'), ((4, 0), 'smooth', 'B')]
+   cycle types on DP: {'A': (1, 1, 1, 1, 1, 1, 3, 3, 3), 'C1': (1, 1, 2, 2, 3, 3, 3), 'B': (1, 1, 1, 2, 2, 2, 2, 2, 2), 'C2': (1, 1, 2, 2, 3, 3, 3)}
+   |monodromy group| = 233280
+   block systems from pairs (0,b): sizes [1, 5] blocks
+   B_min: 1 blocks of size [15]
+   N_min cycle types: {'A': (1,), 'C1': (1,), 'B': (1,), 'C2': (1,)}
+   N_min perms: lam=(0,) rho=(0,) the=(0,)
+     block system with 5 blocks: parity property False; types {'A': (1, 1, 3), 'C1': (1, 1, 3), 'B': (1, 2, 2), 'C2': (1, 1, 3)}
+     block system with 1 blocks: parity property True; types {'A': (1,), 'C1': (1,), 'B': (1,), 'C2': (1,)}

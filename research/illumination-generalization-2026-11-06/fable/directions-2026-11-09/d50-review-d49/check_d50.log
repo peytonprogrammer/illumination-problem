@@ -1,0 +1,23 @@
+cross (1,2),(2,2): interior interior
+== 12-wall cross, S=(1,2), T=(2,2), base Lambda = (1/2)Z x (1/1)Z, m = 2, n = m n_R = 24, r = 4, 8r = 32, 5r = 20, 4r+4 = 20
+  corners with no regular point of Q (all vertices): []
+  Par(b): B_x blocks d = 1, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Par(c): B_x blocks d = 1, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Par(d): B_x blocks d = 2, delta = 12, z = 0, p = 4, separates [True, True, True, True]
+  Rig(c) via R_b: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_c: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 2, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 2, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: False 
+  targets certified per lift pair (Par/Rig): {(0, 0): ['d'], (0, 1): ['d'], (1, 0): ['d'], (1, 1): ['d']}
+  lift pairs with all 3 targets certified by Par/Rig: []
+  claim violations: []
+  CPU 0.001
+== 12-wall cross, S=(1,2), T=(2,2), base Lambda = (1/1)Z x (1/2)Z, m = 2, n = m n_R = 24, r = 4, 8r = 32, 5r = 20, 4r+4 = 20
+  marks in different classes over this base: only Rig(t) applies; not tested here
+22-wall (0,0),(1, 2): interior reflex
+22-wall (0,0),(2, 0): interior outside
+22-wall (0,0),(2, 1): interior smooth
+total CPU 0.029

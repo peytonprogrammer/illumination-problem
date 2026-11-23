@@ -1,0 +1,182 @@
+# Item 1: cap-character-lock
+ 1a. Rotations (A,B),(C-A,B),(A,E-B),(C-A,E-B) with A=Pa/(2w), B=Pb/(2V), C=Pc/w, E=Ph/V.
+  PASS (1,0) annihilates all four rotations whenever A and C are integers (2000 random B,E)
+  PASS source cap travel 2c-a gives P(2c-a)/(2w) = C-A (identity)
+ 1b. Symmetric staircase grid (0,1,2,3,N); S=(1/2,4), T=(4,1/2).
+  PASS N=5: room equals its transpose (diagonal symmetry), 10 walls: True
+  PASS N=5: d170 (1) holds: w(e+h)=2 <= ud=2, (u+w)h(e+h)=6 <= ve(d+e+h)=9
+  PASS N=5: P=12, A=6, C=24 (note)
+  PASS N=5: (1,0) annihilates all four rotations [('6', '3/5'), ('18', '3/5'), ('6', '9/5'), ('18', '9/5')]
+  PASS N=5: transposed pair is the same pair, so both axes have the same relations
+   N=5: terminal projection dist(z, PBZ+2WZ) vs w=1: B=1/2: PB=6, lattice 2Z, dist 0, B=3/2: PB=18, lattice 2Z, dist 0; common-strip chart admits a lift
+  PASS N=5: a terminal lift exists (gcd(6,2N)=2), so the d173 chart test can pass
+  PASS N=5: pair LIT, dir (-1, -1), 2 reflections (1 on vertical walls, 1 on horizontal walls); y-chart: monotone between caps [Fraction(0, 1)]; x-chart: monotone between caps [Fraction(0, 1)]; verbatim trace() replay ends at T
+  PASS N=6: room equals its transpose (diagonal symmetry), 10 walls: True
+  PASS N=6: d170 (1) holds: w(e+h)=2 <= ud=2, (u+w)h(e+h)=6 <= ve(d+e+h)=9
+  PASS N=6: P=12, A=6, C=36 (note)
+  PASS N=6: (1,0) annihilates all four rotations [('6', '1/2'), ('30', '1/2'), ('6', '3/2'), ('30', '3/2')]
+  PASS N=6: transposed pair is the same pair, so both axes have the same relations
+   N=6: terminal projection dist(z, PBZ+2WZ) vs w=1: B=1/2: PB=6, lattice 6Z, dist 2, B=3/2: PB=18, lattice 6Z, dist 2; common-strip chart MISSES on both axes
+  PASS N=6: both direct and floor-return terminal lifts miss by margin 1 on both axes (z=4, lattice 6Z)
+  PASS N=6: pair LIT, dir (-1, -1), 2 reflections (1 on vertical walls, 1 on horizontal walls); y-chart: monotone between caps [Fraction(0, 1)]; x-chart: monotone between caps [Fraction(0, 1)]; verbatim trace() replay ends at T
+  PASS N=7: room equals its transpose (diagonal symmetry), 10 walls: True
+  PASS N=7: d170 (1) holds: w(e+h)=2 <= ud=2, (u+w)h(e+h)=6 <= ve(d+e+h)=9
+  PASS N=7: P=12, A=6, C=48 (note)
+  PASS N=7: (1,0) annihilates all four rotations [('6', '3/7'), ('42', '3/7'), ('6', '9/7'), ('42', '9/7')]
+  PASS N=7: transposed pair is the same pair, so both axes have the same relations
+   N=7: terminal projection dist(z, PBZ+2WZ) vs w=1: B=1/2: PB=6, lattice 2Z, dist 0, B=3/2: PB=18, lattice 2Z, dist 0; common-strip chart admits a lift
+  PASS N=7: a terminal lift exists (gcd(6,2N)=2), so the d173 chart test can pass
+  PASS N=7: pair LIT, dir (-1, -1), 2 reflections (1 on vertical walls, 1 on horizontal walls); y-chart: monotone between caps [Fraction(0, 1)]; x-chart: monotone between caps [Fraction(0, 1)]; verbatim trace() replay ends at T
+ 1c. Named controls: (P,C) in each orientation, A=1 by a=2w/P.
+  PASS U1: a=2w/P=2/15 lies strictly inside (0,c=7)
+  PASS U1': a=2w/P=3/10 lies strictly inside (0,c=1)
+  PASS U1: (P,C) = [(30, Fraction(105, 1)), (20, Fraction(20, 3))] matches the table
+  PASS U2: a=2w/P=1/3 lies strictly inside (0,c=13)
+  PASS U2': a=2w/P=4/35 lies strictly inside (0,c=1)
+  PASS U2: (P,C) = [(6, Fraction(78, 1)), (70, Fraction(35, 2))] matches the table
+  PASS U2b: a=2w/P=1/3 lies strictly inside (0,c=1)
+  PASS U2b': a=2w/P=4/35 lies strictly inside (0,c=2)
+  PASS U2b: (P,C) = [(6, Fraction(6, 1)), (70, Fraction(35, 1))] matches the table
+  PASS T1: a=2w/P=1/4 lies strictly inside (0,c=1)
+  PASS T1': a=2w/P=1/3 lies strictly inside (0,c=1)
+  PASS T1: (P,C) = [(24, Fraction(8, 1)), (6, Fraction(6, 1))] matches the table
+  PASS largest pure source character over the table is 3 <= 3 < 4
+
+# Item 2: simultaneous-strip-misses
+  PASS V1: S=(6/5,7) in the open top cell, T=(7,12/5) in the open bottom-right cell
+   V1: P=30, P'=20; original (B,PB,lattice,dist)=[('3/5', '18', '18', '7'), ('27/5', '162', '18', '7')] vs w=2; transposed=[('4/5', '16', '16', '7'), ('16/5', '64', '16', '7')] vs h=3
+  PASS V1: misses on both axes, direct and cap, margins 5, 4
+  PASS V1: pair LIT anyway, dir (-1, 3), 38 reflections (5 on vertical walls, 33 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1), Fraction(4, 1)] (33 reversals); x-chart: monotone between caps [Fraction(0, 1), Fraction(9, 1), Fraction(0, 1), Fraction(9, 1), Fraction(0, 1)]; replay ends at T
+  PASS V2: S=(5/7,8) in the open top cell, T=(5,2) in the open bottom-right cell
+   V2: P=6, P'=70; original (B,PB,lattice,dist)=[('2', '12', '12', '5'), ('6', '36', '12', '5')] vs w=1; transposed=[('2/7', '20', '20', '8'), ('12/7', '120', '20', '8')] vs h=4
+  PASS V2: misses on both axes, direct and cap, margins 4, 4
+  PASS V2: pair LIT anyway, dir (-6, -7), 13 reflections (10 on vertical walls, 3 on horizontal walls); y-chart: monotone between caps [Fraction(0, 1), Fraction(10, 1), Fraction(0, 1)]; x-chart: turns back at inner step levels [Fraction(1, 1)] (10 reversals); replay ends at T
+  PASS Fam(m=1,n=1): S=(1,10) in the open top cell, T=(15,2) in the open bottom-right cell
+   Fam(m=1,n=1): P=30, P'=20; original (B,PB,lattice,dist)=[('1', '30', '30', '15'), ('5', '150', '30', '15')] vs w=2; transposed=[('1', '20', '20', '10'), ('3', '60', '20', '10')] vs h=3
+  PASS Fam(m=1,n=1): misses on both axes, direct and cap, margins 13, 7
+  PASS Fam(m=1,n=1): pair LIT anyway, dir (-1, -1), 7 reflections (3 on vertical walls, 4 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1)] (4 reversals); x-chart: turns back at inner step levels [Fraction(2, 1)] (3 reversals); replay ends at T
+  PASS Fam(m=1,n=2): S=(1,10) in the open top cell, T=(15,2) in the open bottom-right cell
+   Fam(m=1,n=2): P=30, P'=20; original (B,PB,lattice,dist)=[('1', '30', '30', '15'), ('5', '150', '30', '15')] vs w=2; transposed=[('1', '20', '20', '10'), ('3', '60', '20', '10')] vs h=3
+  PASS Fam(m=1,n=2): misses on both axes, direct and cap, margins 13, 7
+  PASS Fam(m=1,n=2): pair LIT anyway, dir (-1, -1), 7 reflections (3 on vertical walls, 4 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1)] (4 reversals); x-chart: turns back at inner step levels [Fraction(2, 1)] (3 reversals); replay ends at T
+  PASS Fam(m=2,n=1): S=(1,10) in the open top cell, T=(15,2) in the open bottom-right cell
+   Fam(m=2,n=1): P=30, P'=20; original (B,PB,lattice,dist)=[('1', '30', '30', '15'), ('5', '150', '30', '15')] vs w=2; transposed=[('1', '20', '20', '10'), ('3', '60', '20', '10')] vs h=3
+  PASS Fam(m=2,n=1): misses on both axes, direct and cap, margins 13, 7
+  PASS Fam(m=2,n=1): pair LIT anyway, dir (-1, -1), 7 reflections (3 on vertical walls, 4 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1)] (4 reversals); x-chart: turns back at inner step levels [Fraction(2, 1)] (3 reversals); replay ends at T
+  PASS Fam(m=2,n=2): S=(1,10) in the open top cell, T=(15,2) in the open bottom-right cell
+   Fam(m=2,n=2): P=30, P'=20; original (B,PB,lattice,dist)=[('1', '30', '30', '15'), ('5', '150', '30', '15')] vs w=2; transposed=[('1', '20', '20', '10'), ('3', '60', '20', '10')] vs h=3
+  PASS Fam(m=2,n=2): misses on both axes, direct and cap, margins 13, 7
+  PASS Fam(m=2,n=2): pair LIT anyway, dir (-1, -1), 7 reflections (3 on vertical walls, 4 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1)] (4 reversals); x-chart: turns back at inner step levels [Fraction(2, 1)] (3 reversals); replay ends at T
+
+# Item 3: per-gate-rank-one
+  PASS Helly numbers 3,4,4 for R^2, RxZ, Z^2
+  PASS four constraints can be needed in Z^2 (no 3-subset witnesses failure): the bound 4 is tight
+  PASS eta = sqrt(2)/10 lies in (0.1414, 0.1415)
+  PASS m=5,n=3 orig B=1: envelope 17/2 < required distance g/2-eta = 15-eta (lattice 30Z)
+  PASS m=5,n=3 orig B=5: envelope 45/2 < required distance g/2-eta = 75-eta (lattice 150Z)
+  PASS m=5,n=3 transp B=1: envelope 23/3 < required distance g/2-eta = 10-eta (lattice 20Z)
+  PASS m=5,n=3 transp B=3: envelope 13 < required distance g/2-eta = 30-eta (lattice 60Z)
+   m=5,n=3: (axis,B,envelope,lattice,z0 mod lattice) [('orig', '1', '17/2', '30', '15'), ('orig', '5', '45/2', '150', '75'), ('transp', '1', '23/3', '20', '10'), ('transp', '3', '13', '60', '30')]
+  PASS m=10,n=6 orig B=1: envelope 17/2 < required distance g/2-eta = 15-eta (lattice 30Z)
+  PASS m=10,n=6 orig B=5: envelope 45/2 < required distance g/2-eta = 75-eta (lattice 150Z)
+  PASS m=10,n=6 transp B=1: envelope 23/3 < required distance g/2-eta = 10-eta (lattice 20Z)
+  PASS m=10,n=6 transp B=3: envelope 13 < required distance g/2-eta = 30-eta (lattice 60Z)
+   m=10,n=6: (axis,B,envelope,lattice,z0 mod lattice) [('orig', '1', '17/2', '30', '15'), ('orig', '5', '45/2', '150', '75'), ('transp', '1', '23/3', '20', '10'), ('transp', '3', '13', '60', '30')]
+  PASS m=5,n=6 orig B=1: envelope 17/2 < required distance g/2-eta = 15-eta (lattice 30Z)
+  PASS m=5,n=6 orig B=5: envelope 45/2 < required distance g/2-eta = 75-eta (lattice 150Z)
+  PASS m=5,n=6 transp B=1: envelope 23/3 < required distance g/2-eta = 10-eta (lattice 20Z)
+  PASS m=5,n=6 transp B=3: envelope 13 < required distance g/2-eta = 30-eta (lattice 60Z)
+   m=5,n=6: (axis,B,envelope,lattice,z0 mod lattice) [('orig', '1', '17/2', '30', '15'), ('orig', '5', '45/2', '150', '75'), ('transp', '1', '23/3', '20', '10'), ('transp', '3', '13', '60', '30')]
+  PASS m=15,n=3 orig B=1: envelope 17/2 < required distance g/2-eta = 15-eta (lattice 30Z)
+  PASS m=15,n=3 orig B=5: envelope 45/2 < required distance g/2-eta = 75-eta (lattice 150Z)
+  PASS m=15,n=3 transp B=1: envelope 23/3 < required distance g/2-eta = 10-eta (lattice 20Z)
+  PASS m=15,n=3 transp B=3: envelope 13 < required distance g/2-eta = 30-eta (lattice 60Z)
+   m=15,n=3: (axis,B,envelope,lattice,z0 mod lattice) [('orig', '1', '17/2', '30', '15'), ('orig', '5', '45/2', '150', '75'), ('transp', '1', '23/3', '20', '10'), ('transp', '3', '13', '60', '30')]
+  PASS source depth a=25+eta and 2c-a are irrational; terminal depth b=1 is rational, so the relation group is rank one (by inspection)
+  PASS extrapolation Z=F+B(F-E)/(d+e) and its bound |Z| <= v+B(w+v)/(d+e) (500 random)
+
+# Item 4: what lights the framework-failing pairs
+   Stair6: 589 lighting directions within bounds; single-pass y-chart 57, single-pass x-chart 53
+      single-pass y: dir (-1, -1), 2 refl, contacts [('(0,7/2)', 'v'), ('(7/2,0)', 'h')], gate crossings (level, transverse) [('3', '1/2'), ('2', '3/2'), ('1', '5/2')]
+      single-pass y: dir (-1, 1), 7 refl, contacts [('(0,9/2)', 'v'), ('(1,11/2)', 'v'), ('(1/2,6)', 'h'), ('(0,11/2)', 'v'), ('(1,9/2)', 'v'), ('(0,7/2)', 'v'), ('(7/2,0)', 'h')], gate crossings (level, transverse) [('3', '1/2'), ('2', '3/2'), ('1', '5/2')]
+      single-pass y: dir (-3, -1), 5 refl, contacts [('(0,23/6)', 'v'), ('(1,7/2)', 'v'), ('(0,19/6)', 'v'), ('(2,5/2)', 'v'), ('(0,11/6)', 'v')], gate crossings (level, transverse) [('3', '1/2'), ('2', '1/2')]
+      single-pass x: dir (-1, -1), 2 refl, contacts [('(0,7/2)', 'v'), ('(7/2,0)', 'h')], gate crossings (level, transverse) [('3', '1/2'), ('2', '3/2'), ('1', '5/2')]
+      single-pass x: dir (1, -3), 5 refl, contacts [('(11/6,0)', 'h'), ('(5/2,2)', 'h'), ('(19/6,0)', 'h'), ('(7/2,1)', 'h'), ('(23/6,0)', 'h')], gate crossings (level, transverse) [('1', '5/2'), ('2', '1/2'), ('3', '1/2')]
+      single-pass x: dir (-1, 5), 11 refl, contacts [('(1/10,6)', 'h'), ('(0,11/2)', 'v'), ('(11/10,0)', 'h'), ('(17/10,3)', 'h'), ('(23/10,0)', 'h'), ('(27/10,2)', 'h'), ('(31/10,0)', 'h'), ('(33/10,1)', 'h'), ('(7/2,0)', 'h'), ('(37/10,1)', 'h'), ('(39/10,0)', 'h')], gate crossings (level, transverse) [('1', '1/2'), ('2', '3/2'), ('3', '1/2')]
+  PASS Stair6: single-pass (one-chart, monotone, caps only at the ends) lighting paths exist on BOTH axes
+      first path contacts: [('(0,7/2)', 'v'), ('(7/2,0)', 'h')]
+   Stair6 (1/2,4)-(4,1/2): dir (-1, -1), 2 reflections (1 on vertical walls, 1 on horizontal walls); y-chart: monotone between caps [Fraction(0, 1)]; x-chart: monotone between caps [Fraction(0, 1)]
+      y-chart slope |dx/dy| = 1; middle-band windings (d/(2u), e/(2v) units) = ['1/4', '1/6']; common period P=12 would need both to be multiples of P*(d/2u, e/2v) = ['3', '2']
+   V1: 118 lighting directions within bounds; single-pass y-chart 10, single-pass x-chart 10
+      single-pass y: dir (13, -1), 21 refl, contacts [('(2,451/65)', 'v'), ('(0,441/65)', 'v'), ('(2,431/65)', 'v'), ('(0,421/65)', 'v'), ('(2,411/65)', 'v'), ('(0,401/65)', 'v'), ('(2,391/65)', 'v'), ('(0,381/65)', 'v'), ('(2,371/65)', 'v'), ('(0,361/65)', 'v'), ('(2,27/5)', 'v'), ('(0,341/65)', 'v'), ('(2,331/65)', 'v'), ('(0,321/65)', 'v'), ('(3,306/65)', 'v'), ('(0,291/65)', 'v'), ('(3,276/65)', 'v'), ('(0,261/65)', 'v'), ('(5,236/65)', 'v'), ('(0,211/65)', 'v'), ('(9,166/65)', 'v')], gate crossings (level, transverse) [('5', '4/5'), ('4', '1/5'), ('3', '16/5')]
+      single-pass y: dir (-17, -1), 27 refl, contacts [('(0,589/85)', 'v'), ('(2,579/85)', 'v'), ('(0,569/85)', 'v'), ('(2,559/85)', 'v'), ('(0,549/85)', 'v'), ('(2,539/85)', 'v'), ('(0,529/85)', 'v'), ('(2,519/85)', 'v'), ('(0,509/85)', 'v'), ('(2,499/85)', 'v'), ('(0,489/85)', 'v'), ('(2,479/85)', 'v'), ('(0,469/85)', 'v'), ('(2,27/5)', 'v'), ('(0,449/85)', 'v'), ('(2,439/85)', 'v'), ('(0,429/85)', 'v'), ('(3,414/85)', 'v'), ('(0,399/85)', 'v'), ('(3,384/85)', 'v'), ('(0,369/85)', 'v'), ('(3,354/85)', 'v'), ('(0,339/85)', 'v'), ('(5,314/85)', 'v'), ('(0,17/5)', 'v'), ('(5,264/85)', 'v'), ('(0,239/85)', 'v')], gate crossings (level, transverse) [('5', '4/5'), ('4', '1/5'), ('3', '16/5')]
+      single-pass y: dir (23, 19), 6 refl, contacts [('(2,881/115)', 'v'), ('(151/95,8)', 'h'), ('(0,769/115)', 'v'), ('(2,579/115)', 'v'), ('(0,389/115)', 'v'), ('(389/95,0)', 'h')], gate crossings (level, transverse) [('5', '186/95'), ('4', '71/95'), ('3', '44/95')]
+      single-pass x: dir (-1, -7), 23 refl, contacts [('(1/5,0)', 'h'), ('(0,7/5)', 'v'), ('(33/35,8)', 'h'), ('(73/35,0)', 'h'), ('(14/5,5)', 'h'), ('(123/35,0)', 'h'), ('(143/35,4)', 'h'), ('(163/35,0)', 'h'), ('(178/35,3)', 'h'), ('(193/35,0)', 'h'), ('(208/35,3)', 'h'), ('(223/35,0)', 'h'), ('(34/5,3)', 'h'), ('(253/35,0)', 'h'), ('(268/35,3)', 'h'), ('(283/35,0)', 'h'), ('(298/35,3)', 'h'), ('(313/35,0)', 'h'), ('(9,2/5)', 'v'), ('(302/35,3)', 'h'), ('(41/5,0)', 'h'), ('(272/35,3)', 'h'), ('(257/35,0)', 'h')], gate crossings (level, transverse) [('2', '3/5'), ('3', '18/5'), ('5', '12/5')]
+      single-pass x: dir (1, 7), 11 refl, contacts [('(47/35,8)', 'h'), ('(87/35,0)', 'h'), ('(107/35,4)', 'h'), ('(127/35,0)', 'h'), ('(21/5,4)', 'h'), ('(167/35,0)', 'h'), ('(26/5,3)', 'h'), ('(197/35,0)', 'h'), ('(212/35,3)', 'h'), ('(227/35,0)', 'h'), ('(242/35,3)', 'h')], gate crossings (level, transverse) [('2', '17/5'), ('3', '18/5'), ('5', '8/5')]
+      single-pass x: dir (-1, 13), 43 refl, contacts [('(73/65,8)', 'h'), ('(33/65,0)', 'h'), ('(0,33/5)', 'v'), ('(7/65,8)', 'h'), ('(47/65,0)', 'h'), ('(87/65,8)', 'h'), ('(127/65,0)', 'h'), ('(152/65,5)', 'h'), ('(177/65,0)', 'h'), ('(197/65,4)', 'h'), ('(217/65,0)', 'h'), ('(237/65,4)', 'h'), ('(257/65,0)', 'h'), ('(277/65,4)', 'h'), ('(297/65,0)', 'h'), ('(317/65,4)', 'h'), ('(337/65,0)', 'h'), ('(352/65,3)', 'h'), ('(367/65,0)', 'h'), ('(382/65,3)', 'h'), ('(397/65,0)', 'h'), ('(412/65,3)', 'h'), ('(427/65,0)', 'h'), ('(34/5,3)', 'h'), ('(457/65,0)', 'h'), ('(472/65,3)', 'h'), ('(487/65,0)', 'h'), ('(502/65,3)', 'h'), ('(517/65,0)', 'h'), ('(532/65,3)', 'h'), ('(547/65,0)', 'h'), ('(562/65,3)', 'h'), ('(577/65,0)', 'h'), ('(9,8/5)', 'v'), ('(578/65,3)', 'h'), ('(563/65,0)', 'h'), ('(548/65,3)', 'h'), ('(41/5,0)', 'h'), ('(518/65,3)', 'h'), ('(503/65,0)', 'h'), ('(488/65,3)', 'h'), ('(473/65,0)', 'h'), ('(458/65,3)', 'h')], gate crossings (level, transverse) [('2', '3/5'), ('3', '18/5'), ('5', '12/5')]
+  PASS V1: single-pass (one-chart, monotone, caps only at the ends) lighting paths exist on BOTH axes
+      first path contacts: [('(13/15,8)', 'h'), ('(0,27/5)', 'v'), ('(9/5,0)', 'h'), ('(47/15,4)', 'h'), ('(67/15,0)', 'h'), ('(82/15,3)', 'h'), ('(97/15,0)', 'h'), ('(112/15,3)', 'h'), ('(127/15,0)', 'h'), ('(9,8/5)', 'v'), ('(128/15,3)', 'h'), ('(113/15,0)', 'h'), ('(98/15,3)', 'h'), ('(83/15,0)', 'h'), ('(21/5,4)', 'h'), ('(43/15,0)', 'h'), ('(1/5,8)', 'h'), ('(0,37/5)', 'v'), ('(37/15,0)', 'h'), ('(19/5,4)', 'h'), ('(77/15,0)', 'h'), ('(92/15,3)', 'h'), ('(107/15,0)', 'h'), ('(122/15,3)', 'h'), ('(9,2/5)', 'v'), ('(133/15,0)', 'h'), ('(118/15,3)', 'h'), ('(103/15,0)', 'h'), ('(88/15,3)', 'h'), ('(73/15,0)', 'h'), ('(53/15,4)', 'h'), ('(11/5,0)', 'h'), ('(0,33/5)', 'v'), ('(7/15,8)', 'h'), ('(47/15,0)', 'h'), ('(67/15,4)', 'h'), ('(29/5,0)', 'h'), ('(34/5,3)', 'h')]
+   V1 (6/5,7)-(7,12/5): dir (-1, 3), 38 reflections (5 on vertical walls, 33 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1), Fraction(4, 1)] (33 reversals); x-chart: monotone between caps [Fraction(0, 1), Fraction(9, 1), Fraction(0, 1), Fraction(9, 1), Fraction(0, 1)]
+      y-chart slope |dx/dy| = 1/3; middle-band windings (d/(2u), e/(2v) units) = ['1/18', '1/30']; common period P=30 would need both to be multiples of P*(d/2u, e/2v) = ['5', '3']
+   V2: 198 lighting directions within bounds; single-pass y-chart 35, single-pass x-chart 27
+      single-pass y: dir (-4, -7), 2 refl, contacts [('(0,27/4)', 'v'), ('(27/7,0)', 'h')], gate crossings (level, transverse) [('7', '1/7'), ('5', '1'), ('4', '11/7')]
+      single-pass y: dir (12, -7), 4 refl, contacts [('(1,47/6)', 'v'), ('(0,29/4)', 'v'), ('(2,73/12)', 'v'), ('(0,59/12)', 'v')], gate crossings (level, transverse) [('7', '3/7'), ('5', '1/7')]
+      single-pass y: dir (-16, -7), 6 refl, contacts [('(0,123/16)', 'v'), ('(1,29/4)', 'v'), ('(0,109/16)', 'v'), ('(2,95/16)', 'v'), ('(0,81/16)', 'v'), ('(6,39/16)', 'v')], gate crossings (level, transverse) [('7', '3/7'), ('5', '1/7'), ('4', '17/7')]
+      single-pass x: dir (-4, -7), 2 refl, contacts [('(0,27/4)', 'v'), ('(27/7,0)', 'h')], gate crossings (level, transverse) [('3', '3/2'), ('2', '13/4'), ('1', '5')]
+      single-pass x: dir (-3, -7), 5 refl, contacts [('(0,19/3)', 'v'), ('(19/7,0)', 'h'), ('(31/7,4)', 'h'), ('(6,1/3)', 'v'), ('(41/7,0)', 'h')], gate crossings (level, transverse) [('2', '5/3'), ('1', '4'), ('3', '2/3')]
+      single-pass x: dir (1, -7), 10 refl, contacts [('(13/7,0)', 'h'), ('(18/7,5)', 'h'), ('(23/7,0)', 'h'), ('(27/7,4)', 'h'), ('(31/7,0)', 'h'), ('(5,4)', 'h'), ('(39/7,0)', 'h'), ('(6,3)', 'v'), ('(41/7,4)', 'h'), ('(37/7,0)', 'h')], gate crossings (level, transverse) [('1', '6'), ('2', '1'), ('3', '2')]
+  PASS V2: single-pass (one-chart, monotone, caps only at the ends) lighting paths exist on BOTH axes
+      first path contacts: [('(0,43/6)', 'v'), ('(6,1/6)', 'v'), ('(41/7,0)', 'h'), ('(0,41/6)', 'v'), ('(1,8)', 'v'), ('(0,55/6)', 'v'), ('(5/7,10)', 'h'), ('(1,29/3)', 'v'), ('(0,17/2)', 'v'), ('(1,22/3)', 'v'), ('(0,37/6)', 'v'), ('(37/7,0)', 'h'), ('(6,5/6)', 'v')]
+   V2 (5/7,8)-(5,2): dir (-6, -7), 13 reflections (10 on vertical walls, 3 on horizontal walls); y-chart: monotone between caps [Fraction(0, 1), Fraction(10, 1), Fraction(0, 1)]; x-chart: turns back at inner step levels [Fraction(1, 1)] (10 reversals)
+      y-chart slope |dx/dy| = 6/7; middle-band windings (d/(2u), e/(2v) units) = ['3/7', '1/7']; common period P=6 would need both to be multiples of P*(d/2u, e/2v) = ['3', '1']
+   Fam(m=1,n=1): 267 lighting directions within bounds; single-pass y-chart 12, single-pass x-chart 20
+      single-pass y: dir (-7, -3), 8 refl, contacts [('(0,67/7)', 'v'), ('(2,61/7)', 'v'), ('(0,55/7)', 'v'), ('(2,7)', 'v'), ('(0,43/7)', 'v'), ('(2,37/7)', 'v'), ('(0,31/7)', 'v'), ('(31/3,0)', 'h')], gate crossings (level, transverse) [('5', '4/3'), ('4', '1'), ('3', '10/3')]
+      single-pass y: dir (12, -1), 36 refl, contacts [('(2,119/12)', 'v'), ('(0,39/4)', 'v'), ('(2,115/12)', 'v'), ('(0,113/12)', 'v'), ('(2,37/4)', 'v'), ('(0,109/12)', 'v'), ('(2,107/12)', 'v'), ('(0,35/4)', 'v'), ('(2,103/12)', 'v'), ('(0,101/12)', 'v'), ('(2,33/4)', 'v'), ('(0,97/12)', 'v'), ('(2,95/12)', 'v'), ('(0,31/4)', 'v'), ('(2,91/12)', 'v'), ('(0,89/12)', 'v'), ('(2,29/4)', 'v'), ('(0,85/12)', 'v'), ('(2,83/12)', 'v'), ('(0,27/4)', 'v'), ('(2,79/12)', 'v'), ('(0,77/12)', 'v'), ('(2,25/4)', 'v'), ('(0,73/12)', 'v'), ('(2,71/12)', 'v'), ('(0,23/4)', 'v'), ('(2,67/12)', 'v'), ('(0,65/12)', 'v'), ('(2,21/4)', 'v'), ('(0,61/12)', 'v'), ('(3,29/6)', 'v'), ('(0,55/12)', 'v'), ('(3,13/3)', 'v'), ('(0,49/12)', 'v'), ('(5,11/3)', 'v'), ('(0,13/4)', 'v')], gate crossings (level, transverse) [('5', '1'), ('4', '1')]
+      single-pass y: dir (13, -6), 7 refl, contacts [('(2,124/13)', 'v'), ('(0,112/13)', 'v'), ('(2,100/13)', 'v'), ('(0,88/13)', 'v'), ('(2,76/13)', 'v'), ('(0,64/13)', 'v'), ('(32/3,0)', 'h')], gate crossings (level, transverse) [('5', '1/6'), ('4', '2'), ('3', '25/6')]
+      single-pass x: dir (-1, -2), 9 refl, contacts [('(0,8)', 'v'), ('(4,0)', 'h'), ('(11/2,3)', 'h'), ('(7,0)', 'h'), ('(17/2,3)', 'h'), ('(10,0)', 'h'), ('(23/2,3)', 'h'), ('(13,0)', 'h'), ('(29/2,3)', 'h')], gate crossings (level, transverse) [('3', '2'), ('2', '4'), ('5', '2')]
+      single-pass x: dir (1, -6), 24 refl, contacts [('(8/3,0)', 'h'), ('(10/3,4)', 'h'), ('(4,0)', 'h'), ('(14/3,4)', 'h'), ('(16/3,0)', 'h'), ('(35/6,3)', 'h'), ('(19/3,0)', 'h'), ('(41/6,3)', 'h'), ('(22/3,0)', 'h'), ('(47/6,3)', 'h'), ('(25/3,0)', 'h'), ('(53/6,3)', 'h'), ('(28/3,0)', 'h'), ('(59/6,3)', 'h'), ('(31/3,0)', 'h'), ('(65/6,3)', 'h'), ('(34/3,0)', 'h'), ('(71/6,3)', 'h'), ('(37/3,0)', 'h'), ('(77/6,3)', 'h'), ('(40/3,0)', 'h'), ('(83/6,3)', 'h'), ('(43/3,0)', 'h'), ('(89/6,3)', 'h')], gate crossings (level, transverse) [('2', '4'), ('3', '2'), ('5', '2')]
+      single-pass x: dir (-2, -9), 20 refl, contacts [('(0,11/2)', 'v'), ('(11/9,0)', 'h'), ('(7/3,5)', 'h'), ('(31/9,0)', 'h'), ('(13/3,4)', 'h'), ('(47/9,0)', 'h'), ('(53/9,3)', 'h'), ('(59/9,0)', 'h'), ('(65/9,3)', 'h'), ('(71/9,0)', 'h'), ('(77/9,3)', 'h'), ('(83/9,0)', 'h'), ('(89/9,3)', 'h'), ('(95/9,0)', 'h'), ('(101/9,3)', 'h'), ('(107/9,0)', 'h'), ('(113/9,3)', 'h'), ('(119/9,0)', 'h'), ('(125/9,3)', 'h'), ('(131/9,0)', 'h')], gate crossings (level, transverse) [('2', '7/2'), ('3', '2'), ('5', '1')]
+  PASS Fam(m=1,n=1): single-pass (one-chart, monotone, caps only at the ends) lighting paths exist on BOTH axes
+      first path contacts: [('(0,9)', 'v'), ('(2,7)', 'v'), ('(0,5)', 'v'), ('(5,0)', 'h'), ('(8,3)', 'h'), ('(11,0)', 'h'), ('(14,3)', 'h')]
+   Fam(m=1,n=1) (1,10)-(15,2): dir (-1, -1), 7 reflections (3 on vertical walls, 4 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1)] (4 reversals); x-chart: turns back at inner step levels [Fraction(2, 1)] (3 reversals)
+      y-chart slope |dx/dy| = 1; middle-band windings (d/(2u), e/(2v) units) = ['1/6', '1/10']; common period P=30 would need both to be multiples of P*(d/2u, e/2v) = ['5', '3']
+   Fam(m=1,n=2): 195 lighting directions within bounds; single-pass y-chart 12, single-pass x-chart 20
+      single-pass y: dir (-7, -3), 8 refl, contacts [('(0,67/7)', 'v'), ('(2,61/7)', 'v'), ('(0,55/7)', 'v'), ('(2,7)', 'v'), ('(0,43/7)', 'v'), ('(2,37/7)', 'v'), ('(0,31/7)', 'v'), ('(31/3,0)', 'h')], gate crossings (level, transverse) [('5', '4/3'), ('4', '1'), ('3', '10/3')]
+      single-pass y: dir (12, -1), 36 refl, contacts [('(2,119/12)', 'v'), ('(0,39/4)', 'v'), ('(2,115/12)', 'v'), ('(0,113/12)', 'v'), ('(2,37/4)', 'v'), ('(0,109/12)', 'v'), ('(2,107/12)', 'v'), ('(0,35/4)', 'v'), ('(2,103/12)', 'v'), ('(0,101/12)', 'v'), ('(2,33/4)', 'v'), ('(0,97/12)', 'v'), ('(2,95/12)', 'v'), ('(0,31/4)', 'v'), ('(2,91/12)', 'v'), ('(0,89/12)', 'v'), ('(2,29/4)', 'v'), ('(0,85/12)', 'v'), ('(2,83/12)', 'v'), ('(0,27/4)', 'v'), ('(2,79/12)', 'v'), ('(0,77/12)', 'v'), ('(2,25/4)', 'v'), ('(0,73/12)', 'v'), ('(2,71/12)', 'v'), ('(0,23/4)', 'v'), ('(2,67/12)', 'v'), ('(0,65/12)', 'v'), ('(2,21/4)', 'v'), ('(0,61/12)', 'v'), ('(3,29/6)', 'v'), ('(0,55/12)', 'v'), ('(3,13/3)', 'v'), ('(0,49/12)', 'v'), ('(5,11/3)', 'v'), ('(0,13/4)', 'v')], gate crossings (level, transverse) [('5', '1'), ('4', '1')]
+      single-pass y: dir (13, -6), 7 refl, contacts [('(2,124/13)', 'v'), ('(0,112/13)', 'v'), ('(2,100/13)', 'v'), ('(0,88/13)', 'v'), ('(2,76/13)', 'v'), ('(0,64/13)', 'v'), ('(32/3,0)', 'h')], gate crossings (level, transverse) [('5', '1/6'), ('4', '2'), ('3', '25/6')]
+      single-pass x: dir (-1, -2), 9 refl, contacts [('(0,8)', 'v'), ('(4,0)', 'h'), ('(11/2,3)', 'h'), ('(7,0)', 'h'), ('(17/2,3)', 'h'), ('(10,0)', 'h'), ('(23/2,3)', 'h'), ('(13,0)', 'h'), ('(29/2,3)', 'h')], gate crossings (level, transverse) [('3', '2'), ('2', '4'), ('5', '2')]
+      single-pass x: dir (1, -6), 24 refl, contacts [('(8/3,0)', 'h'), ('(10/3,4)', 'h'), ('(4,0)', 'h'), ('(14/3,4)', 'h'), ('(16/3,0)', 'h'), ('(35/6,3)', 'h'), ('(19/3,0)', 'h'), ('(41/6,3)', 'h'), ('(22/3,0)', 'h'), ('(47/6,3)', 'h'), ('(25/3,0)', 'h'), ('(53/6,3)', 'h'), ('(28/3,0)', 'h'), ('(59/6,3)', 'h'), ('(31/3,0)', 'h'), ('(65/6,3)', 'h'), ('(34/3,0)', 'h'), ('(71/6,3)', 'h'), ('(37/3,0)', 'h'), ('(77/6,3)', 'h'), ('(40/3,0)', 'h'), ('(83/6,3)', 'h'), ('(43/3,0)', 'h'), ('(89/6,3)', 'h')], gate crossings (level, transverse) [('2', '4'), ('3', '2'), ('5', '2')]
+      single-pass x: dir (-2, -9), 20 refl, contacts [('(0,11/2)', 'v'), ('(11/9,0)', 'h'), ('(7/3,5)', 'h'), ('(31/9,0)', 'h'), ('(13/3,4)', 'h'), ('(47/9,0)', 'h'), ('(53/9,3)', 'h'), ('(59/9,0)', 'h'), ('(65/9,3)', 'h'), ('(71/9,0)', 'h'), ('(77/9,3)', 'h'), ('(83/9,0)', 'h'), ('(89/9,3)', 'h'), ('(95/9,0)', 'h'), ('(101/9,3)', 'h'), ('(107/9,0)', 'h'), ('(113/9,3)', 'h'), ('(119/9,0)', 'h'), ('(125/9,3)', 'h'), ('(131/9,0)', 'h')], gate crossings (level, transverse) [('2', '7/2'), ('3', '2'), ('5', '1')]
+  PASS Fam(m=1,n=2): single-pass (one-chart, monotone, caps only at the ends) lighting paths exist on BOTH axes
+      first path contacts: [('(0,9)', 'v'), ('(2,7)', 'v'), ('(0,5)', 'v'), ('(5,0)', 'h'), ('(8,3)', 'h'), ('(11,0)', 'h'), ('(14,3)', 'h')]
+   Fam(m=1,n=2) (1,10)-(15,2): dir (-1, -1), 7 reflections (3 on vertical walls, 4 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1)] (4 reversals); x-chart: turns back at inner step levels [Fraction(2, 1)] (3 reversals)
+      y-chart slope |dx/dy| = 1; middle-band windings (d/(2u), e/(2v) units) = ['1/6', '1/10']; common period P=30 would need both to be multiples of P*(d/2u, e/2v) = ['5', '3']
+   Fam(m=2,n=1): 204 lighting directions within bounds; single-pass y-chart 12, single-pass x-chart 20
+      single-pass y: dir (-7, -3), 8 refl, contacts [('(0,67/7)', 'v'), ('(2,61/7)', 'v'), ('(0,55/7)', 'v'), ('(2,7)', 'v'), ('(0,43/7)', 'v'), ('(2,37/7)', 'v'), ('(0,31/7)', 'v'), ('(31/3,0)', 'h')], gate crossings (level, transverse) [('5', '4/3'), ('4', '1'), ('3', '10/3')]
+      single-pass y: dir (12, -1), 36 refl, contacts [('(2,119/12)', 'v'), ('(0,39/4)', 'v'), ('(2,115/12)', 'v'), ('(0,113/12)', 'v'), ('(2,37/4)', 'v'), ('(0,109/12)', 'v'), ('(2,107/12)', 'v'), ('(0,35/4)', 'v'), ('(2,103/12)', 'v'), ('(0,101/12)', 'v'), ('(2,33/4)', 'v'), ('(0,97/12)', 'v'), ('(2,95/12)', 'v'), ('(0,31/4)', 'v'), ('(2,91/12)', 'v'), ('(0,89/12)', 'v'), ('(2,29/4)', 'v'), ('(0,85/12)', 'v'), ('(2,83/12)', 'v'), ('(0,27/4)', 'v'), ('(2,79/12)', 'v'), ('(0,77/12)', 'v'), ('(2,25/4)', 'v'), ('(0,73/12)', 'v'), ('(2,71/12)', 'v'), ('(0,23/4)', 'v'), ('(2,67/12)', 'v'), ('(0,65/12)', 'v'), ('(2,21/4)', 'v'), ('(0,61/12)', 'v'), ('(3,29/6)', 'v'), ('(0,55/12)', 'v'), ('(3,13/3)', 'v'), ('(0,49/12)', 'v'), ('(5,11/3)', 'v'), ('(0,13/4)', 'v')], gate crossings (level, transverse) [('5', '1'), ('4', '1')]
+      single-pass y: dir (13, -6), 7 refl, contacts [('(2,124/13)', 'v'), ('(0,112/13)', 'v'), ('(2,100/13)', 'v'), ('(0,88/13)', 'v'), ('(2,76/13)', 'v'), ('(0,64/13)', 'v'), ('(32/3,0)', 'h')], gate crossings (level, transverse) [('5', '1/6'), ('4', '2'), ('3', '25/6')]
+      single-pass x: dir (-1, -2), 9 refl, contacts [('(0,8)', 'v'), ('(4,0)', 'h'), ('(11/2,3)', 'h'), ('(7,0)', 'h'), ('(17/2,3)', 'h'), ('(10,0)', 'h'), ('(23/2,3)', 'h'), ('(13,0)', 'h'), ('(29/2,3)', 'h')], gate crossings (level, transverse) [('3', '2'), ('2', '4'), ('5', '2')]
+      single-pass x: dir (1, -6), 24 refl, contacts [('(8/3,0)', 'h'), ('(10/3,4)', 'h'), ('(4,0)', 'h'), ('(14/3,4)', 'h'), ('(16/3,0)', 'h'), ('(35/6,3)', 'h'), ('(19/3,0)', 'h'), ('(41/6,3)', 'h'), ('(22/3,0)', 'h'), ('(47/6,3)', 'h'), ('(25/3,0)', 'h'), ('(53/6,3)', 'h'), ('(28/3,0)', 'h'), ('(59/6,3)', 'h'), ('(31/3,0)', 'h'), ('(65/6,3)', 'h'), ('(34/3,0)', 'h'), ('(71/6,3)', 'h'), ('(37/3,0)', 'h'), ('(77/6,3)', 'h'), ('(40/3,0)', 'h'), ('(83/6,3)', 'h'), ('(43/3,0)', 'h'), ('(89/6,3)', 'h')], gate crossings (level, transverse) [('2', '4'), ('3', '2'), ('5', '2')]
+      single-pass x: dir (-2, -9), 20 refl, contacts [('(0,11/2)', 'v'), ('(11/9,0)', 'h'), ('(7/3,5)', 'h'), ('(31/9,0)', 'h'), ('(13/3,4)', 'h'), ('(47/9,0)', 'h'), ('(53/9,3)', 'h'), ('(59/9,0)', 'h'), ('(65/9,3)', 'h'), ('(71/9,0)', 'h'), ('(77/9,3)', 'h'), ('(83/9,0)', 'h'), ('(89/9,3)', 'h'), ('(95/9,0)', 'h'), ('(101/9,3)', 'h'), ('(107/9,0)', 'h'), ('(113/9,3)', 'h'), ('(119/9,0)', 'h'), ('(125/9,3)', 'h'), ('(131/9,0)', 'h')], gate crossings (level, transverse) [('2', '7/2'), ('3', '2'), ('5', '1')]
+  PASS Fam(m=2,n=1): single-pass (one-chart, monotone, caps only at the ends) lighting paths exist on BOTH axes
+      first path contacts: [('(0,9)', 'v'), ('(2,7)', 'v'), ('(0,5)', 'v'), ('(5,0)', 'h'), ('(8,3)', 'h'), ('(11,0)', 'h'), ('(14,3)', 'h')]
+   Fam(m=2,n=1) (1,10)-(15,2): dir (-1, -1), 7 reflections (3 on vertical walls, 4 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1)] (4 reversals); x-chart: turns back at inner step levels [Fraction(2, 1)] (3 reversals)
+      y-chart slope |dx/dy| = 1; middle-band windings (d/(2u), e/(2v) units) = ['1/6', '1/10']; common period P=30 would need both to be multiples of P*(d/2u, e/2v) = ['5', '3']
+   Fam(m=2,n=2): 132 lighting directions within bounds; single-pass y-chart 12, single-pass x-chart 20
+      single-pass y: dir (-7, -3), 8 refl, contacts [('(0,67/7)', 'v'), ('(2,61/7)', 'v'), ('(0,55/7)', 'v'), ('(2,7)', 'v'), ('(0,43/7)', 'v'), ('(2,37/7)', 'v'), ('(0,31/7)', 'v'), ('(31/3,0)', 'h')], gate crossings (level, transverse) [('5', '4/3'), ('4', '1'), ('3', '10/3')]
+      single-pass y: dir (12, -1), 36 refl, contacts [('(2,119/12)', 'v'), ('(0,39/4)', 'v'), ('(2,115/12)', 'v'), ('(0,113/12)', 'v'), ('(2,37/4)', 'v'), ('(0,109/12)', 'v'), ('(2,107/12)', 'v'), ('(0,35/4)', 'v'), ('(2,103/12)', 'v'), ('(0,101/12)', 'v'), ('(2,33/4)', 'v'), ('(0,97/12)', 'v'), ('(2,95/12)', 'v'), ('(0,31/4)', 'v'), ('(2,91/12)', 'v'), ('(0,89/12)', 'v'), ('(2,29/4)', 'v'), ('(0,85/12)', 'v'), ('(2,83/12)', 'v'), ('(0,27/4)', 'v'), ('(2,79/12)', 'v'), ('(0,77/12)', 'v'), ('(2,25/4)', 'v'), ('(0,73/12)', 'v'), ('(2,71/12)', 'v'), ('(0,23/4)', 'v'), ('(2,67/12)', 'v'), ('(0,65/12)', 'v'), ('(2,21/4)', 'v'), ('(0,61/12)', 'v'), ('(3,29/6)', 'v'), ('(0,55/12)', 'v'), ('(3,13/3)', 'v'), ('(0,49/12)', 'v'), ('(5,11/3)', 'v'), ('(0,13/4)', 'v')], gate crossings (level, transverse) [('5', '1'), ('4', '1')]
+      single-pass y: dir (13, -6), 7 refl, contacts [('(2,124/13)', 'v'), ('(0,112/13)', 'v'), ('(2,100/13)', 'v'), ('(0,88/13)', 'v'), ('(2,76/13)', 'v'), ('(0,64/13)', 'v'), ('(32/3,0)', 'h')], gate crossings (level, transverse) [('5', '1/6'), ('4', '2'), ('3', '25/6')]
+      single-pass x: dir (-1, -2), 9 refl, contacts [('(0,8)', 'v'), ('(4,0)', 'h'), ('(11/2,3)', 'h'), ('(7,0)', 'h'), ('(17/2,3)', 'h'), ('(10,0)', 'h'), ('(23/2,3)', 'h'), ('(13,0)', 'h'), ('(29/2,3)', 'h')], gate crossings (level, transverse) [('3', '2'), ('2', '4'), ('5', '2')]
+      single-pass x: dir (1, -6), 24 refl, contacts [('(8/3,0)', 'h'), ('(10/3,4)', 'h'), ('(4,0)', 'h'), ('(14/3,4)', 'h'), ('(16/3,0)', 'h'), ('(35/6,3)', 'h'), ('(19/3,0)', 'h'), ('(41/6,3)', 'h'), ('(22/3,0)', 'h'), ('(47/6,3)', 'h'), ('(25/3,0)', 'h'), ('(53/6,3)', 'h'), ('(28/3,0)', 'h'), ('(59/6,3)', 'h'), ('(31/3,0)', 'h'), ('(65/6,3)', 'h'), ('(34/3,0)', 'h'), ('(71/6,3)', 'h'), ('(37/3,0)', 'h'), ('(77/6,3)', 'h'), ('(40/3,0)', 'h'), ('(83/6,3)', 'h'), ('(43/3,0)', 'h'), ('(89/6,3)', 'h')], gate crossings (level, transverse) [('2', '4'), ('3', '2'), ('5', '2')]
+      single-pass x: dir (-2, -9), 20 refl, contacts [('(0,11/2)', 'v'), ('(11/9,0)', 'h'), ('(7/3,5)', 'h'), ('(31/9,0)', 'h'), ('(13/3,4)', 'h'), ('(47/9,0)', 'h'), ('(53/9,3)', 'h'), ('(59/9,0)', 'h'), ('(65/9,3)', 'h'), ('(71/9,0)', 'h'), ('(77/9,3)', 'h'), ('(83/9,0)', 'h'), ('(89/9,3)', 'h'), ('(95/9,0)', 'h'), ('(101/9,3)', 'h'), ('(107/9,0)', 'h'), ('(113/9,3)', 'h'), ('(119/9,0)', 'h'), ('(125/9,3)', 'h'), ('(131/9,0)', 'h')], gate crossings (level, transverse) [('2', '7/2'), ('3', '2'), ('5', '1')]
+  PASS Fam(m=2,n=2): single-pass (one-chart, monotone, caps only at the ends) lighting paths exist on BOTH axes
+      first path contacts: [('(0,9)', 'v'), ('(2,7)', 'v'), ('(0,5)', 'v'), ('(5,0)', 'h'), ('(8,3)', 'h'), ('(11,0)', 'h'), ('(14,3)', 'h')]
+   Fam(m=2,n=2) (1,10)-(15,2): dir (-1, -1), 7 reflections (3 on vertical walls, 4 on horizontal walls); y-chart: turns back at inner step levels [Fraction(3, 1)] (4 reversals); x-chart: turns back at inner step levels [Fraction(2, 1)] (3 reversals)
+      y-chart slope |dx/dy| = 1; middle-band windings (d/(2u), e/(2v) units) = ['1/6', '1/10']; common period P=30 would need both to be multiples of P*(d/2u, e/2v) = ['5', '3']
+ 4b. Developed k=0 single-pass shots: per-gate windows hold, the common strip |offset| < w fails somewhere.
+  PASS Stair6 dir (-1, -1): k=0 developed slope -1, gate offsets ['-1/2', '-3/2', '-5/2'] inside full windows ['1', '2', '3'], source lift 1/2 (source cap False, source-run winding 0), terminal -4 (cap True); endpoints/gates leave the common strip |.|<=w=1
+  PASS V1 dir (23, 19): k=0 developed slope 23/19, gate offsets ['-186/95', '-71/95', '44/95'] inside full windows ['2', '3', '5'], source lift -34/5 (source cap True, source-run winding -2), terminal 7 (cap True); endpoints/gates leave the common strip |.|<=w=2
+  PASS V2 dir (-4, -7): k=0 developed slope -4/7, gate offsets ['1/7', '-1', '-11/7'] inside full windows ['1', '2', '3'], source lift 5/7 (source cap False, source-run winding 0), terminal -5 (cap True); endpoints/gates leave the common strip |.|<=w=1
+  PASS Fam(m=1,n=1) dir (-7, -3): k=0 developed slope 7/3, gate offsets ['-4/3', '1', '10/3'] inside full windows ['2', '3', '5'], source lift -13 (source cap False, source-run winding -3), terminal 15 (cap True); endpoints/gates leave the common strip |.|<=w=2
+
+CPU 61.9s; FAIL 0

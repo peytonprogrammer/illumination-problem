@@ -1,0 +1,15 @@
+d200 checks: three-chamber room X=Y=3k+1, D=3k+4, k=6..40
+
+  k=6 D=22 X=Y=19 area=65 W=20 reflex=8 marks=12 pairs=66 {'adjacent': 8, 'adjacent/refl': 8, 'diff-row': 24, 'distinct': 2, 'distinct/refl': 2, 'pocket': 2, 'pocket/refl': 2, 'same-chamber': 18}; pocket bounces=15 (2k+3=15), distinct(1,2) bounces=121
+  k=7 D=25 X=Y=22 area=71 W=20 reflex=8 marks=12 pairs=66 {'adjacent': 8, 'adjacent/refl': 8, 'diff-row': 24, 'distinct': 2, 'distinct/refl': 2, 'pocket': 2, 'pocket/refl': 2, 'same-chamber': 18}; pocket bounces=17 (2k+3=17), distinct(1,2) bounces=139
+  k=20 D=64 X=Y=61 area=149 W=20 reflex=8 marks=12 pairs=66 {'adjacent': 8, 'adjacent/refl': 8, 'diff-row': 24, 'distinct': 2, 'distinct/refl': 2, 'pocket': 2, 'pocket/refl': 2, 'same-chamber': 18}; pocket bounces=43 (2k+3=43), distinct(1,2) bounces=373
+  k=40 D=124 X=Y=121 area=269 W=20 reflex=8 marks=12 pairs=66 {'adjacent': 8, 'adjacent/refl': 8, 'diff-row': 24, 'distinct': 2, 'distinct/refl': 2, 'pocket': 2, 'pocket/refl': 2, 'same-chamber': 18}; pocket bounces=83 (2k+3=83), distinct(1,2) bounces=733
+
+pairs traced: 2310 (66 unordered pairs x 35 rooms)
+one-reversal (2,1) remark traced for each k
+failures (corner hit, wall miss, target miss, prediction mismatch): 0
+
+scope: k=0 (D=4) adjacent u=v=1 bounce abscissa = 3 = corridor end x=3, a corner; the note needs k>=1 for this step
+control 1 (k=6, horizontal ray from (1,1) along y=1): corner [('v', (Fraction(3, 1), Fraction(1, 1)))]
+control 2 (k=0, adjacent u=v=1 ray toward (3,2)): corner [('h', (Fraction(3, 1), Fraction(2, 1)))]
+CPU seconds: 2.51

@@ -1,0 +1,131 @@
+LP self-test passed (4 cases)
+==============================================================================
+ROOM Lroom 4x4 notch 2 (lit control) | walls 6 | axial | chart dim 10
+  trivial motions (translations + admissible scalings): 4
+  N= 4: dirs 44, corner-first 12, periodic 32, cap 0, direct legal dirs 43, templates 15, chart rank 6, kernel dim 4  [0.0s]
+        max |row . trivial| = 0
+  N= 6: dirs 92, corner-first 28, periodic 64, cap 0, direct legal dirs 71, templates 35, chart rank 6, kernel dim 4  [0.1s]
+        max |row . trivial| = 0
+  N= 8: dirs 172, corner-first 52, periodic 120, cap 0, direct legal dirs 125, templates 65, chart rank 6, kernel dim 4  [0.3s]
+        max |row . trivial| = 0
+  N=10: dirs 252, corner-first 76, periodic 176, cap 0, direct legal dirs 187, templates 95, chart rank 6, kernel dim 4  [0.6s]
+        max |row . trivial| = 0
+  chart: kernel dim 4; trivial dim 4; kernel == trivial span: True
+  chart: kernel directions beyond trivial: 0
+  weak-order cell: 5 x-values + 5 y-values = 10 params (unanchored); rank 6; kernel dim 4 (trivial = 4: two translations + two axis scalings)
+  templates with nonzero row: 95 of 95; distinct rho values: [Fraction(1, 5), Fraction(1, 3), Fraction(3, 5), Fraction(1, 1), Fraction(5, 3), Fraction(3, 1), Fraction(5, 1)]
+  opening-lemma replay (perturb along v, eps=1/4000, both signs; legal-by-sign? / template itinerary reaches T before any corner?):
+    dir (-9, -5) corner v4 (regular a=2) side +1 rho 5/3: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-7, -5) corner v3 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-7, 5) corner v4 (regular a=2) side +1 rho 1/5: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-5, -1) corner v2 (regular a=2) side -1 rho 3/5: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-3, -5) corner v3 (singular a=6) side -1 rho 1: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (-1, -9) corner v2 (regular a=2) side +1 rho 1/5: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-1, 3) corner v4 (regular a=2) side -1 rho 5/3: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (1, -3) corner v2 (regular a=2) side +1 rho 1/3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+    dir (1, 5) corner v2 (regular a=2) side -1 rho 1/3: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (3, -1) corner v2 (regular a=2) side -1 rho 3/5: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (5, -3) corner v2 (regular a=2) side -1 rho 5/3: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (5, 9) corner v4 (regular a=2) side -1 rho 3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+  lemma replay, singular corners: predicted legal == itinerary legal in 4/4
+  lemma replay, regular forbidden corners: itinerary legal in 20/20 (both signs expected)
+  one-sided dark tangent cone {v: sigma_i l_i(v) <= 0} equals the kernel: True (171 sign rows; True means no one-sided nontrivial first-order dark direction, any cell)
+==============================================================================
+ROOM dumbbell U=4 L=1, S=(2,1), T=(U+L+2,3) | walls 12 | axial | chart dim 16
+  trivial motions (translations + admissible scalings): 4
+  N= 4: dirs 44, corner-first 44, periodic 0, cap 0, direct legal dirs 1, templates 5, chart rank 4, kernel dim 12  [0.1s]
+        max |row . trivial| = 0
+  N= 6: dirs 92, corner-first 78, periodic 14, cap 0, direct legal dirs 5, templates 17, chart rank 12, kernel dim 4  [0.3s]
+        max |row . trivial| = 0
+  N= 8: dirs 172, corner-first 156, periodic 16, cap 0, direct legal dirs 14, templates 32, chart rank 12, kernel dim 4  [0.9s]
+        max |row . trivial| = 0
+  N=10: dirs 252, corner-first 226, periodic 26, cap 0, direct legal dirs 17, templates 58, chart rank 12, kernel dim 4  [1.6s]
+        max |row . trivial| = 0
+  chart: kernel dim 4; trivial dim 4; kernel == trivial span: True
+  chart: kernel directions beyond trivial: 0
+  weak-order cell: 6 x-values + 5 y-values = 11 params (unanchored); rank 7; kernel dim 4 (trivial = 4: two translations + two axis scalings)
+  templates with nonzero row: 58 of 58; distinct rho values: [Fraction(3, 14), Fraction(2, 9), Fraction(4, 9), Fraction(1, 2), Fraction(9, 16), Fraction(4, 7), Fraction(2, 3), Fraction(11, 14)] ...
+  opening-lemma replay (perturb along v, eps=1/4000, both signs; legal-by-sign? / template itinerary reaches T before any corner?):
+    dir (-9, -10) corner v8 (singular a=6) side +1 rho 2/9: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (-7, -10) corner v8 (singular a=6) side +1 rho 4: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-7, -4) corner v8 (singular a=6) side -1 rho 6: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (-7, 4) corner v8 (singular a=6) side -1 rho 6/7: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-3, -4) corner v9 (singular a=6) side +1 rho 3/2: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (-3, 8) corner v9 (singular a=6) side -1 rho 1/2: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-3, 10) corner v8 (singular a=6) side -1 rho 6/5: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (3, 10) corner v8 (singular a=6) side -1 rho 4: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (5, -2) corner v9 (singular a=6) side +1 rho 23/2: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (5, 2) corner v10 (regular a=2) side -1 rho 7/2: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+    dir (5, 4) corner v10 (regular a=2) side -1 rho 1/2: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+    dir (7, -10) corner v8 (singular a=6) side -1 rho 4/5: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+  lemma replay, singular corners: predicted legal == itinerary legal in 20/20
+  lemma replay, regular forbidden corners: itinerary legal in 4/4 (both signs expected)
+  one-sided dark tangent cone {v: sigma_i l_i(v) <= 0} equals the kernel: True (78 sign rows; True means no one-sided nontrivial first-order dark direction, any cell)
+==============================================================================
+ROOM R22 (room Q, dark pair (0,0),(2,2)) | walls 22 | axial | chart dim 26
+  trivial motions (translations + admissible scalings): 4
+  N= 4: dirs 44, corner-first 40, periodic 4, cap 0, direct legal dirs 0, templates 27, chart rank 18, kernel dim 8  [0.1s]
+        max |row . trivial| = 0
+  N= 6: dirs 92, corner-first 84, periodic 8, cap 0, direct legal dirs 0, templates 45, chart rank 22, kernel dim 4  [0.3s]
+        max |row . trivial| = 0
+  N= 8: dirs 172, corner-first 160, periodic 12, cap 0, direct legal dirs 0, templates 87, chart rank 22, kernel dim 4  [0.9s]
+        max |row . trivial| = 0
+  N=10: dirs 252, corner-first 236, periodic 16, cap 0, direct legal dirs 0, templates 135, chart rank 22, kernel dim 4  [1.5s]
+        max |row . trivial| = 0
+  chart: kernel dim 4; trivial dim 4; kernel == trivial span: True
+  chart: kernel directions beyond trivial: 0
+  weak-order cell: 7 x-values + 7 y-values = 14 params (unanchored); rank 10; kernel dim 4 (trivial = 4: two translations + two axis scalings)
+  templates with nonzero row: 135 of 135; distinct rho values: [Fraction(1, 3), Fraction(1, 1), Fraction(3, 1)]
+  opening-lemma replay (perturb along v, eps=1/4000, both signs; legal-by-sign? / template itinerary reaches T before any corner?):
+    dir (-10, 1) corner v19 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-8, -9) corner v19 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-7, 2) corner v14 (singular a=6) side -1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-5, 9) corner v8 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-3, 1) corner v7 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-2, 1) corner v19 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (1, -6) corner v17 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (2, -9) corner v0 (singular a=6) side -1 rho 3: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (3, -4) corner v2 (singular a=6) side +1 rho 3: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (4, 9) corner v12 (singular a=6) side -1 rho 3: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (7, 2) corner v14 (singular a=6) side +1 rho 1/3: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (8, 7) corner v19 (singular a=6) side -1 rho 3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+  lemma replay, singular corners: predicted legal == itinerary legal in 24/24
+  lemma replay, regular forbidden corners: itinerary legal in 0/0 (both signs expected)
+  one-sided dark tangent cone {v: sigma_i l_i(v) <= 0} equals the kernel: True (135 sign rows; True means no one-sided nontrivial first-order dark direction, any cell)
+==============================================================================
+ROOM mixed V-notch (d135 B), S=(1,2), T=(3,2) | walls 5 | mixed | chart dim 9
+  trivial motions (translations + admissible scalings): 3
+  N= 4: dirs 40, corner-first 16, periodic 24, cap 0, direct legal dirs 23, templates 22, chart rank 6, kernel dim 3  [0.1s]
+        max |row . trivial| = 0
+  N= 6: dirs 88, corner-first 32, periodic 56, cap 0, direct legal dirs 64, templates 36, chart rank 6, kernel dim 3  [0.2s]
+        max |row . trivial| = 0
+  N= 8: dirs 168, corner-first 60, periodic 108, cap 0, direct legal dirs 124, templates 74, chart rank 6, kernel dim 3  [0.4s]
+        max |row . trivial| = 0
+  N=10: dirs 248, corner-first 88, periodic 160, cap 0, direct legal dirs 183, templates 104, chart rank 6, kernel dim 3  [0.7s]
+        max |row . trivial| = 0
+  chart: kernel dim 3; trivial dim 3; kernel == trivial span: True
+  chart: kernel directions beyond trivial: 0
+  templates with nonzero row: 104 of 104; distinct rho values: [Fraction(1, 3), Fraction(1, 1), Fraction(3, 1)]
+  opening-lemma replay (perturb along v, eps=1/4000, both signs; legal-by-sign? / template itinerary reaches T before any corner?):
+    dir (-9, -10) corner v0 (regular a=2) side +1 rho 3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+    dir (-9, 4) corner v3 (singular a=6) side -1 rho 1: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (-7, -2) corner v2 (regular a=1) side -1 rho 1/3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+    dir (-5, 2) corner v0 (regular a=2) side -1 rho 3: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (-3, -2) corner v1 (regular a=2) side +1 rho 1/3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+    dir (-1, -6) corner v4 (regular a=1) side +1 rho 3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+    dir (-1, 8) corner v3 (singular a=6) side +1 rho 1/3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (1, -4) corner v3 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (1, 8) corner v3 (singular a=6) side -1 rho 1: s=+1: sign(sigma*D)=- itinerary=blocked | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+    dir (3, 4) corner v3 (singular a=6) side +1 rho 1: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=blocked
+    dir (5, -2) corner v1 (regular a=2) side -1 rho 1/3: s=+1: sign(sigma*D)=+ itinerary=LEGAL | s=-1: sign(sigma*D)=- itinerary=LEGAL
+    dir (7, 2) corner v4 (regular a=1) side -1 rho 3: s=+1: sign(sigma*D)=- itinerary=LEGAL | s=-1: sign(sigma*D)=+ itinerary=LEGAL
+  lemma replay, singular corners: predicted legal == itinerary legal in 10/10
+  lemma replay, regular forbidden corners: itinerary legal in 14/14 (both signs expected)
+  one-sided dark tangent cone {v: sigma_i l_i(v) <= 0} equals the kernel: True (140 sign rows; True means no one-sided nontrivial first-order dark direction, any cell)
+==============================================================================
+SUMMARY (chart = wall offsets + marks, unanchored; trivial = translations + admissible scalings)
+  Lroom 4x4 notch 2 (lit control): chart dim 10, kernel dim 4, trivial dim 4
+  dumbbell U=4 L=1, S=(2,1), T=(U+L+2,3): chart dim 16, kernel dim 4, trivial dim 4
+  R22 (room Q, dark pair (0,0),(2,2)): chart dim 26, kernel dim 4, trivial dim 4
+  mixed V-notch (d135 B), S=(1,2), T=(3,2): chart dim 9, kernel dim 3, trivial dim 3
+CPU seconds: 62.0

@@ -1,0 +1,85 @@
+# T1/T2: generic parameters, thin corridor w = 2^-k (A) and thin viewer gap D = 2^-k (B)
+119 (1, 1) (3, 5) A H reflections by k: 1:1 2:2 3:4 4:8 5:16 6:32 7:64 8:128 9:256 10:512 11:1024 12:2048
+119 (1, 1) (3, 5) B H reflections by k: 1:2 2:4 3:9 4:17 5:34 6:69 7:137 8:274 9:549 10:1097 11:2194 12:4389
+122 (1, 3) (3, 1) A H reflections by k: 1:1 2:2 3:4 4:8 5:16 6:32 7:64 8:128 9:256 10:512 11:1024 12:2048
+122 (1, 3) (3, 1) B H reflections by k: 1:2 2:4 3:9 4:17 5:34 6:69 7:137 8:274 9:549 10:1097 11:2194 12:4389
+122 (1, 4) (3, 1) A H reflections by k: 1:1 2:2 3:4 4:8 5:16 6:32 7:64 8:128 9:256 10:512 11:1024 12:2048
+122 (1, 4) (3, 1) B H reflections by k: 1:2 2:4 3:9 4:17 5:34 6:69 7:137 8:274 9:549 10:1097 11:2194 12:4389
+1238 (1, 5) (3, 1) A H reflections by k: 1:1 2:2 3:4 4:8 5:16 6:32 7:64 8:128 9:256 10:512 11:1024 12:2048
+1238 (1, 5) (3, 1) B H reflections by k: 1:2 2:4 3:9 4:17 5:34 6:69 7:137 8:274 9:549 10:1097 11:2194 12:4389
+1238 (1, 5) (4, 1) A H reflections by k: 1:1 2:2 3:4 4:8 5:16 6:32 7:64 8:128 9:256 10:512 11:1024 12:2048
+1238 (1, 5) (4, 1) B H reflections by k: 1:2 2:4 3:9 4:17 5:34 6:69 7:137 8:274 9:549 10:1097 11:2194 12:4389
+971 (1, 1) (3, 5) A H reflections by k: 1:1 2:1 3:2 4:4 5:8 6:16 7:32 8:64 9:128 10:256 11:512 12:1024
+971 (1, 1) (3, 5) B H reflections by k: 1:1 2:2 3:4 4:9 5:17 6:34 7:69 8:137 9:274 10:549 11:1097 12:2194
+971 (1, 1) (4, 5) A H reflections by k: 1:1 2:2 3:5 4:9 5:19 6:37 7:75 8:149 9:299 10:597 11:1195 12:2389
+971 (1, 1) (4, 5) B H reflections by k: 1:3 2:5 3:10 4:20 5:40 6:80 7:160 8:320 9:640 10:1280 11:2560 12:5120
+971 (1, 1) (5, 5) A H reflections by k: 1:2 2:3 3:7 4:13 5:27 6:53 7:107 8:213 9:427 10:853 11:1707 12:3413
+971 (1, 1) (5, 5) B H reflections by k: 1:3 2:7 3:14 4:29 5:57 6:114 7:229 8:457 9:914 10:1829 11:3657 12:7314
+1275 (3, 7) (5, 3) A H reflections by k: 1:1 2:2 3:4 4:8 5:16 6:32 7:64 8:128 9:256 10:512 11:1024 12:2048
+1275 (3, 7) (5, 3) B H reflections by k: 1:2 2:4 3:9 4:17 5:34 6:69 7:137 8:274 9:549 10:1097 11:2194 12:4389
+719 (1, 1) (3, 5) A H reflections by k: 1:1 2:2 3:4 4:8 5:16 6:32 7:64 8:128 9:256 10:512 11:1024 12:2048
+719 (1, 1) (3, 5) B H reflections by k: 1:2 2:4 3:9 4:17 5:34 6:69 7:137 8:274 9:549 10:1097 11:2194 12:4389
+T1/T2 summary: 240/240 instances lit by a traced Lemma H path
+
+# T3: resonant instances where Lemma H fails (n = L h/(w D) integer, D = 16 h)
+119 (1, 1) (3, 5) long 4 construction n/a 1328/1305
+119 (1, 1) (3, 5) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/394 (n=2496, kappa=>=1, tried 1)
+119 (1, 1) (3, 5) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/6634 (n=39936, kappa=>=1, tried 1)
+122 (1, 3) (3, 1) long k=4 n=4 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=4, kappa=<1, tried 0) E:valid/4 (n=156, kappa=>=1, tried 1)
+122 (1, 3) (3, 1) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/394 (n=2496, kappa=>=1, tried 1)
+122 (1, 3) (3, 1) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/6634 (n=39936, kappa=>=1, tried 1)
+122 (1, 4) (3, 1) long k=4 n=4 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=4, kappa=<1, tried 0) E:valid/4 (n=156, kappa=>=1, tried 1)
+122 (1, 4) (3, 1) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/394 (n=2496, kappa=>=1, tried 1)
+122 (1, 4) (3, 1) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/6634 (n=39936, kappa=>=1, tried 1)
+1238 (1, 5) (3, 1) long 4 construction n/a 1328/1305
+1238 (1, 5) (3, 1) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/394 (n=2496, kappa=>=1, tried 1)
+1238 (1, 5) (3, 1) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/6634 (n=39936, kappa=>=1, tried 1)
+1238 (1, 5) (4, 1) long 4 construction n/a 1328/1305
+1238 (1, 5) (4, 1) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/394 (n=2496, kappa=>=1, tried 1)
+1238 (1, 5) (4, 1) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/6634 (n=39936, kappa=>=1, tried 1)
+971 (1, 1) (3, 5) long 4 construction n/a 1328/1305
+971 (1, 1) (3, 5) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/798 (n=5056, kappa=>=1, tried 1)
+971 (1, 1) (3, 5) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/13438 (n=80896, kappa=>=1, tried 1)
+971 (1, 1) (4, 5) long 4 construction n/a 1328/1305
+971 (1, 1) (4, 5) long k=8 n=64 grid-line Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+971 (1, 1) (4, 5) long k=12 n=1024 grid-line Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+971 (1, 1) (5, 5) long 4 construction n/a 1328/1305
+971 (1, 1) (5, 5) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/391 (n=non-int, kappa=<1, tried 1)
+971 (1, 1) (5, 5) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/478 (n=non-int, kappa=<1, tried 1)
+1275 (3, 7) (5, 3) long 4 construction n/a 1328/1305
+1275 (3, 7) (5, 3) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/394 (n=2496, kappa=>=1, tried 1)
+1275 (3, 7) (5, 3) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/6634 (n=39936, kappa=>=1, tried 1)
+719 (1, 1) (3, 5) long 4 construction n/a 1328/1305
+719 (1, 1) (3, 5) long k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/394 (n=2496, kappa=>=1, tried 1)
+719 (1, 1) (3, 5) long k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/6634 (n=39936, kappa=>=1, tried 1)
+119 (1, 1) (3, 5) double 4 construction n/a 1328/1305
+119 (1, 1) (3, 5) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+119 (1, 1) (3, 5) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+122 (1, 3) (3, 1) double k=4 n=4 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=4, kappa=<1, tried 0) E:none-window/None (n=12, kappa=<1, tried 0)
+122 (1, 3) (3, 1) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+122 (1, 3) (3, 1) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+122 (1, 4) (3, 1) double k=4 n=4 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=4, kappa=<1, tried 0) E:none-window/None (n=12, kappa=<1, tried 0)
+122 (1, 4) (3, 1) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+122 (1, 4) (3, 1) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+1238 (1, 5) (3, 1) double 4 construction n/a 1328/1305
+1238 (1, 5) (3, 1) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+1238 (1, 5) (3, 1) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+1238 (1, 5) (4, 1) double 4 construction n/a 1328/1305
+1238 (1, 5) (4, 1) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+1238 (1, 5) (4, 1) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+971 (1, 1) (3, 5) double 4 construction n/a 1328/1305
+971 (1, 1) (3, 5) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/72 (n=448, kappa=<1, tried 1)
+971 (1, 1) (3, 5) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/1192 (n=7168, kappa=<1, tried 1)
+971 (1, 1) (4, 5) double 4 construction n/a 1328/1305
+971 (1, 1) (4, 5) double k=8 n=64 grid-line Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+971 (1, 1) (4, 5) double k=12 n=1024 grid-line Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+971 (1, 1) (5, 5) double 4 construction n/a 1328/1305
+971 (1, 1) (5, 5) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:valid/59 (n=non-int, kappa=<1, tried 1)
+971 (1, 1) (5, 5) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:valid/284 (n=non-int, kappa=<1, tried 1)
+1275 (3, 7) (5, 3) double 4 construction n/a 1328/1305
+1275 (3, 7) (5, 3) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+1275 (3, 7) (5, 3) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+719 (1, 1) (3, 5) double 4 construction n/a 1328/1305
+719 (1, 1) (3, 5) double k=8 n=64 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=64, kappa=<1, tried 0) E:none-window/None (n=192, kappa=<1, tried 0)
+719 (1, 1) (3, 5) double k=12 n=1024 row-interior Hwin=False Hpred_fail=True H:none-window/None (n=1024, kappa=<1, tried 0) E:none-window/None (n=3072, kappa=<1, tried 0)
+cpu 3.5

@@ -1,0 +1,27 @@
+== the two DBas paths at L = 21 printed in the note ==
+indices 1 14 2 17
+F(1/13) = 0
+  S->T v=(13, -1): own 7 hits, d110 7, d109 8 events; door crossings [(5, Fraction(25, 13)), (26, Fraction(22, 13))]
+  S->(6,3/2) v=(10, -3): own 0 hits, d110 0, d109 1 events; door crossings [(5, Fraction(9, 5))]
+
+== constructed witnesses for all cross-chamber lattice pairs plus real pairs ==
+DBas L=21 (4d=20): 224/224 pairs reach T (d110 tracer agrees on 224); max thresholds crossed 63, max wall hits 30
+DB55 L=21 (4d=20): 300/300 pairs reach T (d110 tracer agrees on 300); max thresholds crossed 64, max wall hits 24
+DBw2 L=21 (4d=20): 364/364 pairs reach T (d110 tracer agrees on 364); max thresholds crossed 32, max wall hits 14
+DB55 L=25 (4d=20): 300/300 pairs reach T (d110 tracer agrees on 300); max thresholds crossed 26, max wall hits 28
+DB55 L=30 (4d=20): 300/300 pairs reach T (d110 tracer agrees on 300); max thresholds crossed 35, max wall hits 36
+DB55 L=35 (4d=20): 300/300 pairs reach T (d110 tracer agrees on 300); max thresholds crossed 34, max wall hits 36
+DBas L=22 (4d=20): 224/224 pairs reach T (d110 tracer agrees on 224); max thresholds crossed 36, max wall hits 30
+DBw2 L=40 (4d=20): 364/364 pairs reach T (d110 tracer agrees on 364); max thresholds crossed 28, max wall hits 26
+DB55 L=105 (4d=20): 300/300 pairs reach T (d110 tracer agrees on 300); max thresholds crossed 78, max wall hits 82
+
+thresholds checked: 20824, all downward: True
+
+== chamber mark to corridor point, every length (note's progression choice of A) ==
+  DBas: 300/300 chamber-to-corridor pairs reach the target (L in 1,2,3,5,21)
+  DB55: 300/300 chamber-to-corridor pairs reach the target (L in 1,2,3,5,21)
+  DBw2: 300/300 chamber-to-corridor pairs reach the target (L in 1,2,3,5,21)
+
+== outside the theorem: DB55 and DBas at L <= 4d (construction only, no claim) ==
+DB55 pairs where the construction has no start/end bracket or no root: [(1, 256), (2, 256), (3, 248), (4, 232), (5, 208), (6, 176), (7, 152), (8, 136), (9, 128), (10, 128), (11, 128), (12, 128), (13, 120), (14, 104), (15, 80), (16, 48), (17, 24), (18, 8), (19, 0), (20, 0)]
+DBas pairs where the construction has no start/end bracket or no root: [(1, 162), (2, 153), (3, 147), (4, 142), (5, 135), (6, 123), (7, 111), (8, 102), (9, 93), (10, 85), (11, 75), (12, 63), (13, 54), (14, 47), (15, 39), (16, 27), (17, 15), (18, 6), (19, 0), (20, 0)]

@@ -1,0 +1,33 @@
+cross b=7: M has 384 squares, 376 vertices; Q lattice points 194; translation lifts of K: ['id', 'rot', 'rx', 'ry']
+[Q] Veech index 12672; distinct generator actions 9544; |Aut|=4; |F.s|=40; |F_s.t|=36, |F_s.it|=36; e(S)=|F_s.is|=2; e(T)=2; cpu 17s
+
+[N = Q/<ry>] inner degree k=2; M_N 192 squares; N lattice points 98; z=2, poles=6 (z+4=6); branch poles (images of regular Q points)=2
+  S: f(s)=93 (regular), f(is)=93 (regular), collapsed=True
+  T: f(s)=55 (regular), f(is)=43 (regular), collapsed=False
+  Veech index 12672; distinct generator actions 9465; |Aut(M_N, sigma, poles)|=2; F_N orbit sizes on lattice points [24, 22, 22, 20, 4, 2, 2, 1, 1]
+  |F_N.u|=20; |(F_N)_u.v|=18, |(F_N)_u.v'|=18; |(F_N)_u.u'|=1; |(F_N)_v.v'|=1
+  liftable index I = |F_N-orbit of branch pair| = 2 (bound C(z+4,2) = 15)
+  cpu 24s
+
+[N = Q/<rx>] inner degree k=2; M_N 192 squares; N lattice points 98; z=2, poles=6 (z+4=6); branch poles (images of regular Q points)=2
+  S: f(s)=96 (regular), f(is)=5 (regular), collapsed=False
+  T: f(s)=68 (regular), f(is)=68 (regular), collapsed=True
+  Veech index 12672; distinct generator actions 9529; |Aut(M_N, sigma, poles)|=2; F_N orbit sizes on lattice points [24, 22, 22, 20, 4, 2, 2, 1, 1]
+  |F_N.u|=20; |(F_N)_u.v|=18, |(F_N)_u.v'|=18; |(F_N)_u.u'|=1; |(F_N)_v.v'|=1
+  liftable index I = |F_N-orbit of branch pair| = 2 (bound C(z+4,2) = 15)
+  cpu 31s
+
+[N = Q/<rot>] inner degree k=2; M_N 192 squares; N lattice points 98; z=2, poles=6 (z+4=6); branch poles (images of regular Q points)=2
+  S: f(s)=5 (regular), f(is)=64 (regular), collapsed=False
+  T: f(s)=56 (regular), f(is)=91 (regular), collapsed=False
+  Veech index 12672; distinct generator actions 9413; |Aut(M_N, sigma, poles)|=2; F_N orbit sizes on lattice points [44, 24, 20, 4, 2, 2, 2]
+  |F_N.u|=20; |(F_N)_u.v|=18, |(F_N)_u.v'|=18; |(F_N)_u.u'|=1; |(F_N)_v.v'|=1
+  liftable index I = |F_N-orbit of branch pair| = 1 (bound C(z+4,2) = 15)
+  cpu 38s
+
+[N = Q/<rx,ry,rot>] inner degree k=4; M_N 96 squares; N lattice points 50; z=1, poles=5 (z+4=5); branch poles (images of regular Q points)=3
+  S: f(s)=5 (regular), f(is)=5 (regular), collapsed=True
+  T: f(s)=43 (regular), f(is)=43 (regular), collapsed=True
+  Veech index 3168; distinct generator actions 2096; |Aut(M_N, sigma, poles)|=1; F_N orbit sizes on lattice points [22, 12, 10, 4, 1, 1]
+  |F_N.u|=10; |(F_N)_u.v|=9, |(F_N)_u.v'|=9; |(F_N)_u.u'|=1; |(F_N)_v.v'|=1
+  cpu 39s

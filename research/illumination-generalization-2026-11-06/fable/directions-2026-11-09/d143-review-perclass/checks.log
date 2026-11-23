@@ -1,0 +1,157 @@
+==============================================================================
+1. Two-site lemma: step counting and site rule (pure lattice arithmetic)
+==============================================================================
+  lattices tested 5, (v primitive, k<=7) cases 3360, failures 0
+  midpoint of k*v lies over p for even k and over p + c/2 (c = v mod 2L) for odd k: True
+  sharper form: the site is p + w/2, determined by w mod 2L alone (4 holonomy classes, one site each)
+==============================================================================
+2. Exact replay on the V-notch B and the octagon O
+==============================================================================
+
+[B  V-notch (d141)] vertices [(0, 0), (4, 0), (4, 4), (2, 2), (0, 4)]
+  X: 96 unit squares, genus 3, 92 vertex classes, 8 forbidden corner lifts; Per(X) HNF ((4, 4), 8) (index 32 in Z^2)
+  block systems of <r,u> on X squares: 26 (genus>=2 quotients 4, genus-1 quotients 22)
+  quotients Y of genus >= 2: (squares, genus, #-I involutions, #with all fixed preimages forbidden)
+    deg  1: Y  96 squares, genus 3, 4 involutions, 1 full-fiber clean
+    deg  2: Y  48 squares, genus 2, 1 involutions, 0 full-fiber clean
+    deg  2: Y  48 squares, genus 2, 1 involutions, 0 full-fiber clean
+    deg  2: Y  48 squares, genus 2, 1 involutions, 0 full-fiber clean
+  genus-1 quotients (squares): [1, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8, 8, 8, 8, 8, 16, 16, 16, 32]
+  per involution: Y-sites (4 sites z with 2z = C_e mod Per(Y)) and fixed preimages [forbidden/regular]
+    deg 1, Y genus 3, Per(Y) index 32: 1/4,0:3/0*  1/4,1/2:3/0*  3/4,0:1/0*  3/4,1/2:1/0*   FULL-CLEAN
+    deg 1, Y genus 3, Per(Y) index 32: 1/4,1/4:0/1  1/4,3/4:0/1  3/4,-1/4:0/1  3/4,1/4:0/1
+    deg 1, Y genus 3, Per(Y) index 32: 1/4,1/4:0/1  1/4,3/4:0/1  3/4,-1/4:0/1  3/4,1/4:0/1
+    deg 1, Y genus 3, Per(Y) index 32: 1/4,1/4:0/1  1/4,3/4:0/1  3/4,-1/4:0/1  3/4,1/4:0/1
+    deg 2, Y genus 2, Per(Y) index 16: 1/4,1/4:6/0*  1/4,3/4:0/2  3/4,1/4:0/2  3/4,3/4:2/0*
+    deg 2, Y genus 2, Per(Y) index 16: 1/4,1/4:6/0*  1/4,3/4:0/2  3/4,1/4:0/2  3/4,3/4:2/0*
+    deg 2, Y genus 2, Per(Y) index 16: 1/4,1/4:6/0*  1/4,3/4:0/2  3/4,1/4:0/2  3/4,3/4:2/0*
+    (site label = coordinates of z in the HNF basis of Per(Y); '*' = clean site)
+  half-integer X-sites (mod Per(X)) carrying only forbidden points: 4 of 128: ["('1', '1')", "('1', '5')", "('3', '3')", "('3', '7')"]
+  full cosets z0 + (1/2)Per(X) of corner-only sites (fixed sites of a torus involution z -> 2 z0 - z with every fixed preimage forbidden): 1
+  [setup 0.3 CPU-s]
+  max number of full-fiber-clean involutions on one quotient Y: 1 (a generic mark has 8 distinct images on every Y, so all-lift full-fiber blocking needs >= 8)
+  full-fiber-clean mechanisms (degree, squares of Y): [(1, 96)]
+  interior marks in (1/2)Z^2: 33: (1/2,1/2) (1/2,1) (1/2,3/2) (1/2,2) (1/2,5/2) (1/2,3) (1,1/2) (1,1) (1,3/2) (1,2) (1,5/2) (3/2,1/2) (3/2,1) (3/2,3/2) (3/2,2) (2,1/2) (2,1) (2,3/2) (5/2,1/2) (5/2,1) (5/2,3/2) (5/2,2) (3,1/2) (3,1) (3,3/2) (3,2) (3,5/2) (7/2,1/2) (7/2,1) (7/2,3/2) (7/2,2) (7/2,5/2) (7/2,3)
+  pairs 528; (target lift, holonomy class) cells 16896
+    blocked by a full-fiber-clean involution: 0
+    blocked by the note's two-site test but not full-fiber: 0
+    blocked by the one-site (per holonomy class) test but not full-fiber: 0
+    blocked by the X-site-sorted test but not by SITE or full-fiber: 0
+    blocked only by a corner-only X-site (genus-1 quotient, no involution content): 108
+    blocked by the one-site test but by neither the note's two-site test nor full-fiber: 0
+    (source on sheet I, target lift) cases with some exchanging -I involution on a genus>=2 quotient: 42 of 4224
+    pairs with every (lift, class) blocked by some midpoint test: 0 []
+    pairs satisfying the all-lift full-fiber hypothesis on some Y: 0
+  direct chords on sheet I: 480; chord classes reported blocked (would contradict the lemma): 0; (chord, exchanging e) cases with midpoint e-fixed and over p + w/2: 0
+
+[O  four-chamfer octagon (d141)] vertices [(1, 0), (2, 0), (3, 1), (3, 2), (2, 3), (1, 3), (0, 2), (0, 1)]
+  X: 56 unit squares, genus 9, 40 vertex classes, 8 forbidden corner lifts; Per(X) HNF ((1, 1), 2) (index 2 in Z^2)
+  block systems of <r,u> on X squares: 12 (genus>=2 quotients 10, genus-1 quotients 2)
+  quotients Y of genus >= 2: (squares, genus, #-I involutions, #with all fixed preimages forbidden)
+    deg  1: Y  56 squares, genus 9, 6 involutions, 1 full-fiber clean
+    deg  2: Y  28 squares, genus 5, 2 involutions, 0 full-fiber clean
+    deg  2: Y  28 squares, genus 5, 2 involutions, 0 full-fiber clean
+    deg  2: Y  28 squares, genus 5, 2 involutions, 0 full-fiber clean
+    deg  2: Y  28 squares, genus 5, 4 involutions, 1 full-fiber clean
+    deg  2: Y  28 squares, genus 5, 2 involutions, 0 full-fiber clean
+    deg  4: Y  14 squares, genus 3, 2 involutions, 0 full-fiber clean
+    deg  4: Y  14 squares, genus 3, 2 involutions, 0 full-fiber clean
+    deg  4: Y  14 squares, genus 3, 2 involutions, 0 full-fiber clean
+    deg  8: Y   7 squares, genus 2, 1 involutions, 0 full-fiber clean
+  genus-1 quotients (squares): [1, 2]
+  per involution: Y-sites (4 sites z with 2z = C_e mod Per(Y)) and fixed preimages [forbidden/regular]
+    deg 1, Y genus 9, Per(Y) index 2: 0,0:0/0*  0,1/2:0/0*  1/2,0:0/4  1/2,1/2:0/4
+    deg 1, Y genus 9, Per(Y) index 2: 0,0:4/0*  0,1/2:4/0*  1/2,0:0/0*  1/2,1/2:0/0*   FULL-CLEAN
+    deg 1, Y genus 9, Per(Y) index 2: 0,1/4:0/2  0,3/4:0/2  1/2,-1/4:0/2  1/2,1/4:0/2
+    deg 1, Y genus 9, Per(Y) index 2: 0,1/4:0/2  0,3/4:0/2  1/2,-1/4:0/2  1/2,1/4:0/2
+    deg 1, Y genus 9, Per(Y) index 2: 0,0:0/0*  0,1/2:0/0*  1/2,0:0/4  1/2,1/2:0/4
+    deg 1, Y genus 9, Per(Y) index 2: 0,0:0/0*  0,1/2:0/0*  1/2,0:0/4  1/2,1/2:0/4
+    deg 2, Y genus 5, Per(Y) index 2: 0,0:4/0*  0,1/2:4/0*  1/2,0:0/4  1/2,1/2:0/4
+    deg 2, Y genus 5, Per(Y) index 2: 0,0:0/0*  0,1/2:0/0*  1/2,0:0/8  1/2,1/2:0/8
+    deg 2, Y genus 5, Per(Y) index 1: 0,0:8/0*  0,1/2:0/4  1/2,0:0/4  1/2,1/2:0/0*
+    deg 2, Y genus 5, Per(Y) index 1: 0,0:0/0*  0,1/2:0/4  1/2,0:0/4  1/2,1/2:0/8
+    deg 2, Y genus 5, Per(Y) index 1: 0,0:8/0*  0,1/2:0/4  1/2,0:0/4  1/2,1/2:0/0*
+    deg 2, Y genus 5, Per(Y) index 1: 0,0:0/0*  0,1/2:0/4  1/2,0:0/4  1/2,1/2:0/8
+    deg 2, Y genus 5, Per(Y) index 2: 0,0:0/0*  0,1/2:0/0*  1/2,0:0/8  1/2,1/2:0/8
+    deg 2, Y genus 5, Per(Y) index 2: 0,0:4/0*  0,1/2:4/0*  1/2,0:0/4  1/2,1/2:0/4
+    deg 2, Y genus 5, Per(Y) index 2: 0,1/4:0/0*  0,3/4:0/0*  1/2,-1/4:0/0*  1/2,1/4:0/0*   FULL-CLEAN
+    deg 2, Y genus 5, Per(Y) index 2: 0,1/4:0/4  0,3/4:0/4  1/2,-1/4:0/4  1/2,1/4:0/4
+    deg 2, Y genus 5, Per(Y) index 2: 0,0:0/0*  0,1/2:0/0*  1/2,0:0/8  1/2,1/2:0/8
+    deg 2, Y genus 5, Per(Y) index 2: 0,0:4/0*  0,1/2:4/0*  1/2,0:0/4  1/2,1/2:0/4
+    deg 4, Y genus 3, Per(Y) index 2: 0,0:4/0*  0,1/2:4/0*  1/2,0:0/12  1/2,1/2:0/12
+    deg 4, Y genus 3, Per(Y) index 2: 0,1/4:0/4  0,3/4:0/4  1/2,-1/4:0/4  1/2,1/4:0/4
+    deg 4, Y genus 3, Per(Y) index 1: 0,0:0/0*  0,1/2:0/0*  1/2,0:0/0*  1/2,1/2:0/16
+    deg 4, Y genus 3, Per(Y) index 1: 0,0:8/0*  0,1/2:0/8  1/2,0:0/8  1/2,1/2:0/8
+    deg 4, Y genus 3, Per(Y) index 1: 0,0:0/0*  0,1/2:0/8  1/2,0:0/8  1/2,1/2:0/16
+    deg 4, Y genus 3, Per(Y) index 1: 0,0:8/0*  0,1/2:0/0*  1/2,0:0/0*  1/2,1/2:0/8
+    deg 8, Y genus 2, Per(Y) index 1: 0,0:8/0*  0,1/2:0/8  1/2,0:0/8  1/2,1/2:0/24
+    (site label = coordinates of z in the HNF basis of Per(Y); '*' = clean site)
+  half-integer X-sites (mod Per(X)) carrying only forbidden points: 0 of 8: []
+  full cosets z0 + (1/2)Per(X) of corner-only sites (fixed sites of a torus involution z -> 2 z0 - z with every fixed preimage forbidden): 0
+  [setup 0.0 CPU-s]
+  max number of full-fiber-clean involutions on one quotient Y: 1 (a generic mark has 8 distinct images on every Y, so all-lift full-fiber blocking needs >= 8)
+  full-fiber-clean mechanisms (degree, squares of Y): [(1, 56), (2, 28)]
+  interior marks in (1/2)Z^2: 21: (1/2,1) (1/2,3/2) (1/2,2) (1,1/2) (1,1) (1,3/2) (1,2) (1,5/2) (3/2,1/2) (3/2,1) (3/2,3/2) (3/2,2) (3/2,5/2) (2,1/2) (2,1) (2,3/2) (2,2) (2,5/2) (5/2,1) (5/2,3/2) (5/2,2)
+  pairs 210; (target lift, holonomy class) cells 6720
+    blocked by a full-fiber-clean involution: 80
+    blocked by the note's two-site test but not full-fiber: 40
+    blocked by the one-site (per holonomy class) test but not full-fiber: 56
+    blocked by the X-site-sorted test but not by SITE or full-fiber: 0
+    blocked only by a corner-only X-site (genus-1 quotient, no involution content): 0
+    blocked by the one-site test but by neither the note's two-site test nor full-fiber: 16
+    (source on sheet I, target lift) cases with some exchanging -I involution on a genus>=2 quotient: 64 of 1680
+    example (S, T, target sheet, w0, classes blocked by SITE only, tests per class, note classes per e):
+      ('(1/2,3/2)', '(3/2,1/2)', '-swap', '(Fraction(0, 1), Fraction(0, 1))', [(1, 0), (1, 1)], {(0, 0): [], (0, 1): [], (1, 0): ['SITE', 'XSITE'], (1, 1): ['SITE', 'XSITE']}, [('deg 1', []), ('deg 2', []), ('deg 2', []), ('deg 2', []), ('deg 4', []), ('deg 4', []), ('deg 4', []), ('deg 8', [])])
+    pairs with every (lift, class) blocked by some midpoint test: 0 []
+    pairs satisfying the all-lift full-fiber hypothesis on some Y: 0
+  direct chords on sheet I: 210; chord classes reported blocked (would contradict the lemma): 0; (chord, exchanging e) cases with midpoint e-fixed and over p + w/2: 100
+==============================================================================
+3. R22: is the dark pair S=(0,0), T=(2,2) blocked class by class?
+==============================================================================
+
+[R22 (manuscript vertex list)] vertices [(-1, -1), (0, -1), (0, -2), (1, -2), (1, -3), (2, -3), (2, -1), (1, -1), (1, 1), (3, 1), (3, 0), (5, 0), (5, 1), (4, 1), (4, 2), (3, 2), (3, 3), (1, 3), (1, 2), (0, 2), (0, 1), (-1, 1)]
+  X: 60 unit squares, genus 10, 42 vertex classes, 22 forbidden corner lifts; Per(X) HNF ((2, 0), 2) (index 4 in Z^2)
+  block systems of <r,u> on X squares: 7 (genus>=2 quotients 2, genus-1 quotients 5)
+  quotients Y of genus >= 2: (squares, genus, #-I involutions, #with all fixed preimages forbidden)
+    deg  1: Y  60 squares, genus 10, 1 involutions, 1 full-fiber clean
+    deg  3: Y  20 squares, genus 4, 1 involutions, 0 full-fiber clean
+  genus-1 quotients (squares): [1, 2, 2, 2, 4]
+  half-integer X-sites (mod Per(X)) carrying only forbidden points: 1 of 16: ["('1', '1')"]
+  full cosets z0 + (1/2)Per(X) of corner-only sites (fixed sites of a torus involution z -> 2 z0 - z with every fixed preimage forbidden): 0
+  [setup 0.0 CPU-s]
+  marks inside: True True; sheets 4
+  X-sites (mod Per(X)) of S lifts: ['(Fraction(0, 1), Fraction(0, 1))']; of T lifts: ['(Fraction(0, 1), Fraction(0, 1))']
+  X points over each lattice class mod 2Z^2 (forbidden / regular), physical points of the regular ones:
+    class (0, 0): 3 forbidden, 12 regular ['(0,0)', '(2,-2)', '(2,2)', '(4,0)']
+    class (0, 1): 5 forbidden, 4 regular ['(2,1)', '(2,3)']
+    class (1, 0): 5 forbidden, 4 regular ['(-1,0)', '(1,0)']
+    class (1, 1): 9 forbidden, 0 regular []
+  quotients with a -I involution exchanging f(s) and f(t) for some lift pair:
+   target sheet -I         w0=(Fraction(0, 1), Fraction(0, 1)): exchanging (Y,e) 0 (same-site 0); note-blocked direction classes per e: -
+      holonomy class w0+(0, 0): blocked by NOTHING
+      holonomy class w0+(0, 1): blocked by NOTHING
+      holonomy class w0+(1, 0): blocked by NOTHING
+      holonomy class w0+(1, 1): blocked by ['TORUS']
+   target sheet diag(-1,1) w0=(Fraction(0, 1), Fraction(0, 1)): exchanging (Y,e) 0 (same-site 0); note-blocked direction classes per e: -
+      holonomy class w0+(0, 0): blocked by NOTHING
+      holonomy class w0+(0, 1): blocked by NOTHING
+      holonomy class w0+(1, 0): blocked by NOTHING
+      holonomy class w0+(1, 1): blocked by ['TORUS']
+   target sheet diag(1,-1) w0=(Fraction(0, 1), Fraction(0, 1)): exchanging (Y,e) 0 (same-site 0); note-blocked direction classes per e: -
+      holonomy class w0+(0, 0): blocked by NOTHING
+      holonomy class w0+(0, 1): blocked by NOTHING
+      holonomy class w0+(1, 0): blocked by NOTHING
+      holonomy class w0+(1, 1): blocked by ['TORUS']
+   target sheet I          w0=(Fraction(0, 1), Fraction(0, 1)): exchanging (Y,e) 0 (same-site 0); note-blocked direction classes per e: -
+      holonomy class w0+(0, 0): blocked by NOTHING
+      holonomy class w0+(0, 1): blocked by NOTHING
+      holonomy class w0+(1, 0): blocked by NOTHING
+      holonomy class w0+(1, 1): blocked by ['TORUS']
+  (target lift, holonomy class) cells: 16; unblocked by every midpoint test: 12
+  R22's own obstruction is not a midpoint: a path with holonomy w in 2Z^2 \ 0, w = k v (v primitive in Z^2),
+  has k even and passes over s + v, an odd lattice class; check that class membership:
+    odd class (0, 1) regular X points: ['(2,1)', '(2,3)']
+    odd class (1, 0) regular X points: ['(-1,0)', '(1,0)']
+    odd class (1, 1) regular X points: none
+
+Total CPU time 2.4 s

@@ -1,0 +1,75 @@
+# 1. Two-rectangle theorem: construction of the note, traced exactly on 4 named rooms
+
+## L  (rect [0,5]x[0,2] + [0,2]x[2,6], door width 2): walls W=6, H=6, D=5, bound 6HD+5=185, events bound 12HD+11=371; 8 interior lattice marks
+   cases: {'direct': 22, 'onewing': 6}
+   constructed nondirect shots failing (corner, miss, or > bound): 0 []
+   max reflections used by the construction: 6 (pair, case, direction ((1, 5), (4, 1), 'onewing', (3, -16))); max reflections+door passages 7
+   brute (|p|,|q|<=6, <=25 reflections): pairs lit 28/28; max over pairs of min reflections 2
+
+## T  (rect [0,7]x[0,3] + [2,5]x[3,7], door width 3): walls W=8, H=7, D=7, bound 6HD+5=299, events bound 12HD+11=599; 20 interior lattice marks
+   cases: {'direct': 176, 'onewing': 14}
+   constructed nondirect shots failing (corner, miss, or > bound): 0 []
+   max reflections used by the construction: 3 (pair, case, direction ((1, 1), (3, 5), 'onewing', (1, -6))); max reflections+door passages 4
+   brute (|p|,|q|<=6, <=25 reflections): pairs lit 190/190; max over pairs of min reflections 1
+
+## Z1 (rect [0,3]x[0,2] + [2,6]x[2,7], door width 1, B<E): walls W=8, H=7, D=6, bound 6HD+5=257, events bound 12HD+11=515; 14 interior lattice marks
+   cases: {'direct': 78, 'onewing': 7, 'opposite': 6}
+   constructed nondirect shots failing (corner, miss, or > bound): 0 []
+   max reflections used by the construction: 16 (pair, case, direction ((1, 1), (4, 6), 'opposite', (3, 59))); max reflections+door passages 19
+   brute (|p|,|q|<=6, <=25 reflections): pairs lit 91/91; max over pairs of min reflections 6
+
+## Z2 (rect [0,6]x[0,3] + [4,10]x[3,6], door width 2, B=E): walls W=8, H=6, D=10, bound 6HD+5=365, events bound 12HD+11=731; 21 interior lattice marks
+   cases: {'direct': 160, 'onewing': 36, 'opposite': 14}
+   constructed nondirect shots failing (corner, miss, or > bound): 0 []
+   max reflections used by the construction: 15 (pair, case, direction ((3, 1), (9, 4), 'opposite', (6, 55))); max reflections+door passages 18
+   brute (|p|,|q|<=6, <=25 reflections): pairs lit 210/210; max over pairs of min reflections 5
+
+   parity classes of constructed pairs are unrestricted: every pair above, of any parity, was lit.
+
+# 3. DB55: slope -37/8 from S=(1,1) to T=(9,1)
+   DB55 polygon (12 walls): [(0, 0), (5, 0), (5, 2), (8, 2), (8, 0), (13, 0), (13, 5), (8, 5), (8, 3), (5, 3), (5, 5), (0, 5)]
+   event target at (9, 1) after 27 reflections
+   crossings of x=5: [('5', '5/2')]; of x=8: [('8', '21/8')]
+   vertical-wall bounces: [('13', '1/2')]  (expect only the cap x=13 at y=1/2)
+   bounces in corridor 14, in left chamber 4, total 27
+   delta=       -5/56: first x=5 height 15/7 (formula 15/7), x=8 height 2 (formula 2); stop corner (Fraction(8, 1), Fraction(2, 1)); cap contact [] (formula phys of -151/7)
+   delta= -6243/70000: first x=5 height 37507/17500 (formula 37507/17500), x=8 height 20007/10000 (formula 20007/10000); stop limit ; cap contact ['27479/17500'] (formula phys of -377479/17500)
+   delta=           0: first x=5 height 5/2 (formula 5/2), x=8 height 21/8 (formula 21/8); stop corner (Fraction(5, 1), Fraction(2, 1)); cap contact ['1/2'] (formula phys of -41/2)
+   delta=  3743/70000: first x=5 height 47493/17500 (formula 47493/17500), x=8 height 29993/10000 (formula 29993/10000); stop limit ; cap contact ['2479/17500'] (formula phys of -347521/17500)
+   delta=        3/56: first x=5 height 19/7 (formula 19/7), x=8 height 3 (formula 3); stop corner (Fraction(8, 1), Fraction(3, 1)); cap contact [] (formula phys of -139/7)
+   delta=        -1/8: first x=5 height 2 (formula 2), x=8 height None (formula 7/4); stop corner (Fraction(5, 1), Fraction(2, 1)); cap contact [] (formula phys of -22)
+   delta=        1/20: first x=5 height 27/10 (formula 27/10), x=8 height 119/40 (formula 119/40); stop corner (Fraction(5, 1), Fraction(3, 1)); cap contact ['1/10'] (formula phys of -199/10)
+   B=16, C=12, 2C/B=3/2 in (1,2): True
+   k with s_k in I (sigma=+,u=1): [-4]; s_k=['-37/8']; cap (19+15k)/2 mod 5 never 0 for k in -50..50: True
+   B*len(I)=16/7 vs 4H=20
+   sigma=+1: k in I [-4]
+   sigma=-1: k in I []
+   rightward-monotone shots S->T in DB55, |dx|,|dy|<=40: [] (expect none)
+   x2 dilation, S=(2,2), T=(18,2): [] (expect none)
+   parity: developed T ordinates 2c-1 are odd; halfway (1+y')/2 integer; mouth (2,3) has no integer.
+
+# 4. R22: upward-monotone and top-cap words, S=(0,0), T=(2,2)
+   R22 polygon (22 walls): [(-1, -1), (0, -1), (0, -2), (1, -2), (1, -3), (2, -3), (2, -1), (1, -1), (1, 1), (3, 1), (3, 0), (5, 0), (5, 1), (4, 1), (4, 2), (3, 2), (3, 3), (1, 3), (1, 2), (0, 2), (0, 1), (-1, 1)]
+   S, T interior: True, True
+   chord S->(1/2,1) clear: True; chord T->(1/2,1) clear: True
+   upward-monotone shots S->T, |dx|,|dy|<=40: [] (expect none)
+   top-cap candidates x' even in [-40,40]: reaching T: [] (expect none)
+     x'= -40: corner at ('0', '1'); first y=1 crossing x=0 (developed -10), first y=2 crossing x=None
+     x'= -38: corner at ('1', '2'); first y=1 crossing x=-1/2 (developed -19/2), first y=2 crossing x=1
+     x'= -36: corner at ('-1', '1'); first y=1 crossing x=-1 (developed -9), first y=2 crossing x=None
+     x'= -34: corner at ('1', '2'); first y=1 crossing x=-1/2 (developed -17/2), first y=2 crossing x=1
+     x'= -32: corner at ('0', '1'); first y=1 crossing x=0 (developed -8), first y=2 crossing x=None
+     x'= -30: corner at ('1', '2'); first y=1 crossing x=1/2 (developed -15/2), first y=2 crossing x=1
+     x'=  -4: corner at ('-1', '1'); first y=1 crossing x=-1 (developed -1), first y=2 crossing x=None
+     x'=  -2: corner at ('1', '2'); first y=1 crossing x=-1/2 (developed -1/2), first y=2 crossing x=1
+     x'=   2: corner at ('1', '2'); first y=1 crossing x=1/2 (developed 1/2), first y=2 crossing x=1
+     x'=   4: corner at ('1', '1'); first y=1 crossing x=1 (developed 1), first y=2 crossing x=None
+     x'=   6: corner at ('1', '2'); first y=1 crossing x=1/2 (developed 3/2), first y=2 crossing x=1
+     x'=   8: corner at ('0', '1'); first y=1 crossing x=0 (developed 2), first y=2 crossing x=None
+   developed outward y=2 abscissa x'/2 integral for all even x' in [-200,200]: True; integers in (1,3): [2] -> only T
+     x'=2: path [('0', '0'), ('1', '2')] ... stop corner at ('1', '2')
+     x'=-2: path [('0', '0'), ('-1/2', '1'), ('-1', '0'), ('-1/2', '-1'), ('1', '2')] ... stop corner at ('1', '2')
+     x'=6: path [('0', '0'), ('1', '2/3'), ('0', '4/3'), ('1', '2')] ... stop corner at ('1', '2')
+     x'=10: path [('0', '0'), ('1', '2/5'), ('-1/2', '1'), ('-1', '4/5'), ('1', '0')] ... stop corner at ('3', '2')
+
+CPU seconds: 0.63

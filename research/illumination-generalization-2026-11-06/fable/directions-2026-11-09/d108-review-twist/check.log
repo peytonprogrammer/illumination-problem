@@ -1,0 +1,41 @@
+== Claim 2: DB55 witness (l=3) ==
+V lift of S=(1,1) sheet (+,-): (1, 1, 1)
+V lift of T=(9,1) sheet (+,+): (1, 1, 3)
+band: p=60 c=1 g=2 runs (0, 5) (0, 13) I=(0, 5)
+d8 tracer sigma (1,1)+(64,2): end (Fraction(9, 1), Fraction(3, 1)) ok True lattice sites [(3, 2), (9, 3)]
+lower leg end (Fraction(3, 1), Fraction(2, 1)) True
+note p=32 pullback: physical velocity (64, 126) region -> (Fraction(9, 1), Fraction(1, 1)) True ; d8 -> (Fraction(9, 1), Fraction(1, 1)) True sites [(3, 4), (9, 1)]
+pullback V^-1 sigma: physical velocity from S (Fraction(120, 1), Fraction(238, 1)) -> reaches (9,1) legally (both tracers)
+  d8 tracer lattice sites on pulled-back path: [(1, 0), (9, 1)]
+
+== Controls ==
+perturbed velocity (Fraction(120, 1), Fraction(-234, 1)) -> (5, Fraction(2, 1)) False (should not be (9,1) legal)
+region vs d8 cell tracer: 720 / 720 agree (ok flag and endpoint)
+l=5: band test fails in 8 of 64 (marks, sheets) at heights 1,3
+l=15: band test fails in 8 of 64 (marks, sheets) at heights 1,3
+
+== Claim 3: stretches ==
+l=3 gcd(5,l)=1: 64 same-class cross pairs; note recipe lit 48, not applicable 16; with free sheets lit 64, failed 0
+   note recipe gap: ((1, 1), (11, 1), 'sheet-mismatch')
+   note recipe gap: ((1, 2), (9, 2), 'sheet-mismatch')
+   note recipe gap: ((1, 3), (9, 3), 'sheet-mismatch')
+l=7 gcd(5,l)=1: 64 same-class cross pairs; note recipe lit 48, not applicable 16; with free sheets lit 64, failed 0
+   note recipe gap: ((1, 1), (15, 1), 'sheet-mismatch')
+   note recipe gap: ((1, 2), (13, 2), 'sheet-mismatch')
+   note recipe gap: ((1, 3), (13, 3), 'sheet-mismatch')
+l=9 gcd(5,l)=1: 64 same-class cross pairs; note recipe lit 48, not applicable 16; with free sheets lit 64, failed 0
+   note recipe gap: ((1, 1), (17, 1), 'sheet-mismatch')
+   note recipe gap: ((1, 2), (15, 2), 'sheet-mismatch')
+   note recipe gap: ((1, 3), (15, 3), 'sheet-mismatch')
+l=21 gcd(5,l)=1: 64 same-class cross pairs; note recipe lit 48, not applicable 16; with free sheets lit 64, failed 0
+   note recipe gap: ((1, 1), (29, 1), 'sheet-mismatch')
+   note recipe gap: ((1, 2), (27, 2), 'sheet-mismatch')
+   note recipe gap: ((1, 3), (27, 3), 'sheet-mismatch')
+l=451 gcd(5,l)=1: 64 same-class cross pairs; note recipe lit 48, not applicable 16; with free sheets lit 64, failed 0
+   note recipe gap: ((1, 1), (459, 1), 'sheet-mismatch')
+   note recipe gap: ((1, 2), (457, 2), 'sheet-mismatch')
+   note recipe gap: ((1, 3), (457, 3), 'sheet-mismatch')
+l=457 gcd(5,l)=1: 64 same-class cross pairs; note recipe lit 48, not applicable 16; with free sheets lit 64, failed 0
+   note recipe gap: ((1, 1), (465, 1), 'sheet-mismatch')
+   note recipe gap: ((1, 2), (463, 2), 'sheet-mismatch')
+   note recipe gap: ((1, 3), (463, 3), 'sheet-mismatch')

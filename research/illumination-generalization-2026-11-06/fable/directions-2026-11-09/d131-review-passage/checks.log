@@ -1,0 +1,75 @@
+D131 checks: passage-complexity snapshot 2026-11-21-2125
+
+== A. Room facts and marks ==
+m=  8 area=134 (2m^2+6=134) loop=True vertices=16 reflex=6 convex=10 gcd_h=1 gcd_v=1 | S=(4, 4) T_j j=-1..1: (12, 12)..(16, 12) count=3 even=True S_in_lower=True T_in_upper=True
+m= 16 area=518 (2m^2+6=518) loop=True vertices=16 reflex=6 convex=10 gcd_h=1 gcd_v=1 | S=(8, 8) T_j j=-2..2: (22, 22)..(30, 22) count=5 even=True S_in_lower=True T_in_upper=True
+m= 24 area=1158 (2m^2+6=1158) loop=True vertices=16 reflex=6 convex=10 gcd_h=1 gcd_v=1 | S=(12, 12) T_j j=-2..2: (34, 32)..(42, 32) count=5 even=True S_in_lower=True T_in_upper=True
+m= 32 area=2054 (2m^2+6=2054) loop=True vertices=16 reflex=6 convex=10 gcd_h=1 gcd_v=1 | S=(16, 16) T_j j=-2..2: (46, 42)..(54, 42) count=5 even=True S_in_lower=True T_in_upper=True
+m= 64 area=8198 (2m^2+6=8198) loop=True vertices=16 reflex=6 convex=10 gcd_h=1 gcd_v=1 | S=(32, 32) T_j j=-4..4: (90, 82)..(106, 82) count=9 even=True S_in_lower=True T_in_upper=True
+
+== B. Slope-shift lemma: events for s vs s+24 (and controls) ==
+m=8: rays from S (4 senses, s=a/b in (0,24], b<=30, 60 passages) = 26688
+  no targets: event lists identical for s+24: 26688; s+12: 26688; s+8: 6360
+  rays entering the neck: 20880; reaching the upper square: 11600; returning down through an interface: 9024; with a mirror event: 26592; mirror in a middle band: 14592
+  with the target row: (status, target, k) identical for s+24 on 26688/26688 (6028 rays hit some T_j); for s+12 on 22716/26688
+  hits with s in (0,24]: R > 26k on 0; largest R/k = 1242/55 = 22.58
+m=16: rays from S (4 senses, s=a/b in (0,24], b<=30, 60 passages) = 26688
+  no targets: event lists identical for s+24: 26688; s+12: 26688; s+8: 9528
+  rays entering the neck: 17640; reaching the upper square: 9632; returning down through an interface: 6672; with a mirror event: 26592; mirror in a middle band: 11976
+  with the target row: (status, target, k) identical for s+24 on 26688/26688 (3972 rays hit some T_j); for s+12 on 23160/26688
+  hits with s in (0,24]: R > 26k on 0; largest R/k = 1301/57 = 22.82
+
+== C. Horizontal decomposition: lit T_j, passages, replay ==
+m=8: search s=a/b in (0,24], b<=60, <= 60 passages, 2.0s CPU
+   j=-1 T=(12, 12): lit, dir=(-29,-8) s=29/8 k=7 R=18 <=26k:True cell-replay(R,hpass,vpass)=(18, 7, 32) match=True | s+24,s+48 same target & k: [True, True] R=[124, 230]
+   j=+0 T=(14, 12): lit, dir=(13,-8) s=13/8 k=5 R=3 <=26k:True cell-replay(R,hpass,vpass)=(3, 5, 9) match=True | s+24,s+48 same target & k: [True, True] R=[61, 119]
+   j=+1 T=(16, 12): lit, dir=(-23,6) s=23/6 k=7 R=22 <=26k:True cell-replay(R,hpass,vpass)=(22, 7, 38) match=True | s+24,s+48 same target & k: [True, True] R=[140, 258]
+m=16: search s=a/b in (0,24], b<=60, <= 60 passages, 2.6s CPU
+   j=-2 T=(22, 22): lit, dir=(51,-31) s=51/31 k=7 R=8 <=26k:True cell-replay(R,hpass,vpass)=(8, 7, 14) match=True | s+24,s+48 same target & k: [True, True] R=[114, 220]
+   j=-1 T=(24, 22): lit, dir=(-32,23) s=32/23 k=6 R=5 <=26k:True cell-replay(R,hpass,vpass)=(5, 6, 10) match=True | s+24,s+48 same target & k: [True, True] R=[87, 169]
+   j=+0 T=(26, 22): lit, dir=(41,23) s=41/23 k=6 R=6 <=26k:True cell-replay(R,hpass,vpass)=(6, 6, 13) match=True | s+24,s+48 same target & k: [True, True] R=[88, 170]
+   j=+1 T=(28, 22): lit, dir=(60,23) s=60/23 k=6 R=12 <=26k:True cell-replay(R,hpass,vpass)=(12, 6, 21) match=True | s+24,s+48 same target & k: [True, True] R=[94, 176]
+   j=+2 T=(30, 22): lit, dir=(-73,-31) s=73/31 k=7 R=15 <=26k:True cell-replay(R,hpass,vpass)=(15, 7, 23) match=True | s+24,s+48 same target & k: [True, True] R=[121, 227]
+m=24: search s=a/b in (0,24], b<=60, <= 60 passages, 2.7s CPU
+   j=-2 T=(34, 32): lit, dir=(28,29) s=28/29 k=7 R=6 <=26k:True cell-replay(R,hpass,vpass)=(6, 7, 8) match=True | s+24,s+48 same target & k: [True, True] R=[92, 178]
+   j=-1 T=(36, 32): lit, dir=(61,34) s=61/34 k=6 R=8 <=26k:True cell-replay(R,hpass,vpass)=(8, 6, 15) match=True | s+24,s+48 same target & k: [True, True] R=[90, 172]
+   j=+0 T=(38, 32): lit, dir=(85,-46) s=85/46 k=7 R=9 <=26k:True cell-replay(R,hpass,vpass)=(9, 7, 17) match=True | s+24,s+48 same target & k: [True, True] R=[115, 221]
+   j=+1 T=(40, 32): lit, dir=(-75,34) s=75/34 k=6 R=9 <=26k:True cell-replay(R,hpass,vpass)=(9, 6, 16) match=True | s+24,s+48 same target & k: [True, True] R=[91, 173]
+   j=+2 T=(42, 32): lit, dir=(-125,-46) s=125/46 k=7 R=16 <=26k:True cell-replay(R,hpass,vpass)=(16, 7, 26) match=True | s+24,s+48 same target & k: [True, True] R=[122, 228]
+m=32: search s=a/b in (0,24], b<=60, <= 60 passages, 2.7s CPU
+   j=-2 T=(46, 42): lit, dir=(-194,-53) s=194/53 k=6 R=17 <=26k:True cell-replay(R,hpass,vpass)=(17, 6, 30) match=True | s+24,s+48 same target & k: [True, True] R=[111, 205]
+   j=-1 T=(48, 42): lit, dir=(48,-29) s=48/29 k=5 R=3 <=26k:True cell-replay(R,hpass,vpass)=(3, 5, 9) match=True | s+24,s+48 same target & k: [True, True] R=[61, 119]
+   j=+0 T=(50, 42): lit, dir=(49,51) s=49/51 k=11 R=14 <=26k:True cell-replay(R,hpass,vpass)=(14, 11, 16) match=True | s+24,s+48 same target & k: [True, True] R=[196, 378]
+   j=+1 T=(52, 42): lit, dir=(-68,-29) s=68/29 k=5 R=8 <=26k:True cell-replay(R,hpass,vpass)=(8, 5, 14) match=True | s+24,s+48 same target & k: [True, True] R=[66, 124]
+   j=+2 T=(54, 42): lit, dir=(-406,-53) s=406/53 k=6 R=32 <=26k:True cell-replay(R,hpass,vpass)=(32, 6, 61) match=True | s+24,s+48 same target & k: [True, True] R=[126, 220]
+summary m: (lit found, targets, min k, max k) = {8: (3, 3, 5, 7), 16: (5, 5, 6, 7), 24: (5, 5, 6, 7), 32: (5, 5, 5, 11)}
+
+== D. Explicit constant of the determinant bound ==
+m=           8: inequality forces R >=      0; passages k >= max(4, ceil(R/26)) = 4
+m=          64: inequality forces R >=      0; passages k >= max(4, ceil(R/26)) = 4
+m=       10000: inequality forces R >=      1; passages k >= max(4, ceil(R/26)) = 4
+m=     1000000: inequality forces R >=      9; passages k >= max(4, ceil(R/26)) = 4
+m=   100000000: inequality forces R >=     98; passages k >= max(4, ceil(R/26)) = 4
+m=   400000000: inequality forces R >=    196; passages k >= max(4, ceil(R/26)) = 8
+m=  1000000000: inequality forces R >=    311; passages k >= max(4, ceil(R/26)) = 12
+m= 10000000000: inequality forces R >=    983; passages k >= max(4, ceil(R/26)) = 38
+smallest m with forced k >= 5 (beats the trivial 4): about 1.139e+08
+
+== E. Vertical decomposition of the same room ==
+m=8: 3/3 targets lit with <= 9 vertical passages (slopes a/b, b<=16, a<=40m), 0.1s CPU; (j, fewest vertical passages): [(-1, 6), (0, 6), (1, 6)]
+   j=-1 T=(12, 12) original dir=(5,-17) vertical k=6 R=13 | cell replay: R=13 vpass=6 hpass=18
+   j=+1 T=(16, 12) original dir=(-5,-12) vertical k=6 R=7 | cell replay: R=7 vpass=6 hpass=12
+   j=+0 T=(14, 12) original dir=(-9,-34) vertical k=6 R=13 | cell replay: R=13 vpass=6 hpass=18
+m=16: 4/5 targets lit with <= 9 vertical passages (slopes a/b, b<=16, a<=40m), 0.1s CPU; (j, fewest vertical passages): [(-2, 5), (-1, 6), (1, 6), (2, 5)]
+   j=+2 T=(30, 22) original dir=(11,-34) vertical k=5 R=7 | cell replay: R=7 vpass=5 hpass=13
+   j=-2 T=(22, 22) original dir=(7,-50) vertical k=5 R=12 | cell replay: R=12 vpass=5 hpass=22
+   j=-1 T=(24, 22) original dir=(-16,-615) vertical k=6 R=110 | cell replay: R=110 vpass=6 hpass=155
+m=32: 3/5 targets lit with <= 9 vertical passages (slopes a/b, b<=16, a<=40m), 0.2s CPU; (j, fewest vertical passages): [(-2, 6), (-1, 9), (1, 9)]
+   j=-2 T=(46, 42) original dir=(7,484) vertical k=6 R=217 | cell replay: R=217 vpass=6 hpass=292
+   j=-1 T=(48, 42) original dir=(3,-689) vertical k=9 R=907 | cell replay: R=907 vpass=9 hpass=1163
+   j=+1 T=(52, 42) original dir=(5,-356) vertical k=9 R=291 | cell replay: R=291 vpass=9 hpass=371
+m=64: 3/9 targets lit with <= 9 vertical passages (slopes a/b, b<=16, a<=40m), 0.5s CPU; (j, fewest vertical passages): [(-3, 5), (1, 9), (3, 5)]
+m=128: 1/11 targets lit with <= 9 vertical passages (slopes a/b, b<=16, a<=40m), 1.2s CPU; (j, fewest vertical passages): [(2, 9)]
+m=256: 0/17 targets lit with <= 9 vertical passages (slopes a/b, b<=16, a<=40m), 2.8s CPU; (j, fewest vertical passages): []
+
+Total CPU 23.1s

@@ -1,0 +1,140 @@
+== Part A: rational affine mark motion vs three absolute periods ==
+-- cross (b=7+t)
+   horizontal core periods (slab: 2*width): [((Fraction(-7, 1), Fraction(-2, 1)), '8'), ((Fraction(-2, 1), Fraction(2, 1)), '28+4t'), ((Fraction(2, 1), Fraction(7, 1)), '8')]
+   vertical core periods (slab: 2*height, times i): [((Fraction(-7, 1), Fraction(-2, 1)), '8'), ((Fraction(-2, 1), Fraction(2, 1)), '28'), ((Fraction(2, 1), Fraction(7, 1)), '8')]
+   chosen P1=8, P2=28+4t, V=i*8; minor e1u2-e2u1 = 32
+   rank of affine horizontal period span = 2 (so x0 and v are separated)
+   mark center O: displacement (7+1t, 2) = 0*P1 + 1/4*P2 + 1/4*V  identity=True samples=True
+   mark (6,0): displacement (13+2t, 2) = -1/8*P1 + 1/2*P2 + 1/4*V  identity=True samples=True
+   mark (0,6): displacement (7+1t, 8) = 0*P1 + 1/4*P2 + 1*V  identity=True samples=True
+   control: 1000 random rational motions (a+vt, c), failures to fit = 0
+-- DB55 (l=3+t)
+   horizontal core periods (slab: 2*width): [((Fraction(0, 1), Fraction(2, 1)), '10'), ((Fraction(0, 1), Fraction(2, 1)), '10'), ((Fraction(2, 1), Fraction(3, 1)), '26+2t'), ((Fraction(3, 1), Fraction(5, 1)), '10'), ((Fraction(3, 1), Fraction(5, 1)), '10')]
+   vertical core periods (slab: 2*height, times i): [((Fraction(0, 1), Fraction(5, 1)), '10'), ((Fraction(5, 1), Fraction(8, 1)), '2'), ((Fraction(8, 1), Fraction(13, 1)), '10')]
+   chosen P1=10, P2=26+2t, V=i*10; minor e1u2-e2u1 = 20
+   rank of affine horizontal period span = 2 (so x0 and v are separated)
+   mark (1,1): displacement (1, 1) = 1/10*P1 + 0*P2 + 1/10*V  identity=True samples=True
+   mark (5+l+1,1): displacement (9+1t, 1) = -2/5*P1 + 1/2*P2 + 1/10*V  identity=True samples=True
+   mark (5+l+3,3): displacement (11+1t, 3) = -1/5*P1 + 1/2*P2 + 3/10*V  identity=True samples=True
+   control: 1000 random rational motions (a+vt, c), failures to fit = 0
+-- DBas (l=4+t)
+   horizontal core periods (slab: 2*width): [((Fraction(-1, 1), Fraction(0, 1)), '8'), ((Fraction(0, 1), Fraction(1, 1)), '10'), ((Fraction(0, 1), Fraction(1, 1)), '8'), ((Fraction(1, 1), Fraction(2, 1)), '26+2t'), ((Fraction(2, 1), Fraction(4, 1)), '10'), ((Fraction(2, 1), Fraction(4, 1)), '8'), ((Fraction(4, 1), Fraction(5, 1)), '8')]
+   vertical core periods (slab: 2*height, times i): [((Fraction(0, 1), Fraction(5, 1)), '8'), ((Fraction(5, 1), Fraction(9, 1)), '2'), ((Fraction(9, 1), Fraction(13, 1)), '12')]
+   chosen P1=8, P2=26+2t, V=i*8; minor e1u2-e2u1 = 16
+   rank of affine horizontal period span = 2 (so x0 and v are separated)
+   mark (1,3): displacement (1, 3) = 1/8*P1 + 0*P2 + 3/8*V  identity=True samples=True
+   mark (11+t,3): displacement (11+1t, 3) = -1/4*P1 + 1/2*P2 + 3/8*V  identity=True samples=True
+   control: 1000 random rational motions (a+vt, c), failures to fit = 0
+-- cross center check: 7+t = (1/4)*(28+4t) True
+   2*wall 4 = 1*8 + 0*(28+4t)
+   2*wall 5+1t = -1/2*8 + 1/2*(28+4t)
+
+== Part B: Riemann-Hurwitz for f: Q -> Y, Q in Q(1^r,-1^(r+4)), r <= 8 ==
+   allowed (downstairs order a, local degree e): [(-1, 1), (-1, 2), (-1, 3), (0, 1), (1, 1)]
+   (k, z, r, c2, c3) feasible by RH and fibre partitions (monodromy not checked):
+     (1, 0, 0, 0, 0)
+     (1, 1, 1, 0, 0)
+     (1, 2, 2, 0, 0)
+     (1, 3, 3, 0, 0)
+     (1, 4, 4, 0, 0)
+     (1, 5, 5, 0, 0)
+     (1, 6, 6, 0, 0)
+     (1, 7, 7, 0, 0)
+     (1, 8, 8, 0, 0)
+     (2, 0, 0, 2, 0)
+     (2, 1, 2, 2, 0)
+     (2, 2, 4, 2, 0)
+     (2, 3, 6, 2, 0)
+     (2, 4, 8, 2, 0)
+     (3, 0, 2, 0, 2)
+     (3, 0, 1, 2, 1)
+     (3, 0, 0, 4, 0)
+     (3, 1, 5, 0, 2)
+     (3, 1, 4, 2, 1)
+     (3, 1, 3, 4, 0)
+     (3, 2, 8, 0, 2)
+     (3, 2, 7, 2, 1)
+     (3, 2, 6, 4, 0)
+     (4, 0, 3, 0, 3)
+     (4, 0, 2, 2, 2)
+     (4, 0, 1, 4, 1)
+     (4, 0, 0, 6, 0)
+     (4, 1, 7, 0, 3)
+     (4, 1, 6, 2, 2)
+     (4, 1, 5, 4, 1)
+     (4, 1, 4, 6, 0)
+     (4, 2, 8, 6, 0)
+     (5, 0, 4, 0, 4)
+     (5, 0, 3, 2, 3)
+     (5, 0, 2, 4, 2)
+     (5, 0, 1, 6, 1)
+     (5, 0, 0, 8, 0)
+     (5, 1, 8, 2, 3)
+     (5, 1, 7, 4, 2)
+     (5, 1, 6, 6, 1)
+     (5, 1, 5, 8, 0)
+     (6, 0, 5, 0, 5)
+     (6, 0, 4, 2, 4)
+     (6, 0, 3, 4, 3)
+     (6, 0, 2, 6, 2)
+     (6, 0, 1, 8, 1)
+     (6, 0, 0, 10, 0)
+     (6, 1, 8, 6, 2)
+     (6, 1, 7, 8, 1)
+     (6, 1, 6, 10, 0)
+     (7, 0, 6, 0, 6)
+     (7, 0, 5, 2, 5)
+     (7, 0, 4, 4, 4)
+     (7, 0, 3, 6, 3)
+     (7, 0, 2, 8, 2)
+     (7, 0, 1, 10, 1)
+     (7, 0, 0, 12, 0)
+     (7, 1, 8, 10, 1)
+     (7, 1, 7, 12, 0)
+     (8, 0, 7, 0, 7)
+     (8, 0, 6, 2, 6)
+     (8, 0, 5, 4, 5)
+     (8, 0, 4, 6, 4)
+     (8, 0, 3, 8, 3)
+     (8, 0, 2, 10, 2)
+     (8, 0, 1, 12, 1)
+     (8, 0, 0, 14, 0)
+     (8, 1, 8, 14, 0)
+     (9, 0, 8, 0, 8)
+     (9, 0, 7, 2, 7)
+     (9, 0, 6, 4, 6)
+     (9, 0, 5, 6, 5)
+     (9, 0, 4, 8, 4)
+     (9, 0, 3, 10, 3)
+     (9, 0, 2, 12, 2)
+     (9, 0, 1, 14, 1)
+     (9, 0, 0, 16, 0)
+   rows with z = 0 (pillowcase base, torus cover, excluded at irrational t): 44
+   rows with z >= 3: [(1, 3, 3, 0, 0), (1, 4, 4, 0, 0), (1, 5, 5, 0, 0), (1, 6, 6, 0, 0), (1, 7, 7, 0, 0), (1, 8, 8, 0, 0), (2, 3, 6, 2, 0), (2, 4, 8, 2, 0)]
+   (z, k>=2) support: [(1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 2), (2, 3), (2, 4), (3, 2), (4, 2)]
+   equals d22 finite list: True
+   z<=2, k>=2: (k,z) with some c2 >= 4 (census needed): [(3, 1), (3, 2), (4, 1), (4, 2), (5, 1), (6, 1), (7, 1), (8, 1)]
+   z<=2, k>=2: (k,z) with every c2 <= 3 (counting alone closes): [(2, 1), (2, 2)]
+
+== Part C: dimensions and rank ranges ==
+   z=1: dim Q(1^z,-1^(z+4))=4, orientation genus=2, dim H(2^z)=4, 2z+2<3z+1: False, proper non-high ranks []
+   z=2: dim Q(1^z,-1^(z+4))=6, orientation genus=3, dim H(2^z)=7, 2z+2<3z+1: True, proper non-high ranks [2]
+   z=3: dim Q(1^z,-1^(z+4))=8, orientation genus=4, dim H(2^z)=10, 2z+2<3z+1: True, proper non-high ranks [2]
+   z=4: dim Q(1^z,-1^(z+4))=10, orientation genus=5, dim H(2^z)=13, 2z+2<3z+1: True, proper non-high ranks [2, 3]
+   z=5: dim Q(1^z,-1^(z+4))=12, orientation genus=6, dim H(2^z)=16, 2z+2<3z+1: True, proper non-high ranks [2, 3]
+   z=6: dim Q(1^z,-1^(z+4))=14, orientation genus=7, dim H(2^z)=19, 2z+2<3z+1: True, proper non-high ranks [2, 3, 4]
+   z=7: dim Q(1^z,-1^(z+4))=16, orientation genus=8, dim H(2^z)=22, 2z+2<3z+1: True, proper non-high ranks [2, 3, 4]
+   z=8: dim Q(1^z,-1^(z+4))=18, orientation genus=9, dim H(2^z)=25, 2z+2<3z+1: True, proper non-high ranks [2, 3, 4, 5]
+   upstairs bound h < (r+3)/2 from d89:
+     r=1: h in []
+     r=2: h in [2]
+     r=3: h in [2]
+     r=4: h in [2, 3]
+     r=5: h in [2, 3]
+     r=6: h in [2, 3, 4]
+     r=7: h in [2, 3, 4]
+     r=8: h in [2, 3, 4, 5]
+   table rows: k=1,r=3 -> z=3, h in [2] ; k=2,r=6 -> z=3, downstairs h in [2] ; k=2,r=8 -> z=4, downstairs h in [2, 3]
+   k=2: at most c2=2 e=2 points; 4 distinct regular lifts s+-,t+- => >=2 map to regular points of Y
+
+ALL ASSERTIONS PASSED

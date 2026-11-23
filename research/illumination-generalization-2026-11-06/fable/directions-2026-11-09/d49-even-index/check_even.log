@@ -1,0 +1,129 @@
+== 22-wall room (normal form of 22-wall x 2), S=(0,0), T=(2,2), base Lambda = (1/1)Z x (1/1)Z, m = 1, n = m n_R = 15, r = 9, 8r = 72, 5r = 45, 4r+4 = 40
+  corners with no regular point of Q (all vertices): ['c']
+  Par(b): B_x blocks d = 5, delta = 3, z = 3, p = 7, separates [True, True, True, True]
+  Par(c): B_x blocks d = 15, delta = 1, z = 9, p = 13, separates [True, True, True, True]
+  Par(d): B_x blocks d = 5, delta = 3, z = 3, p = 7, separates [True, True, True, True]
+  Rig(c) via R_b: d = 1, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 1, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_c: d = 1, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 1, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 1, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 1, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: True (not searched)
+  targets certified per lift pair (Par/Rig): {(0, 0): ['b', 'c', 'd'], (0, 1): ['b', 'c', 'd'], (1, 0): ['b', 'c', 'd'], (1, 1): ['b', 'c', 'd']}
+  lift pairs with all 3 targets certified by Par/Rig: [(0, 0), (0, 1), (1, 0), (1, 1)]
+  claim violations: []
+  CPU 0.0
+== 22-wall room (normal form of 22-wall x 2), S=(0,0), T=(2,2), base Lambda = (1/2)Z x (1/1)Z, m = 2, n = m n_R = 30, r = 9, 8r = 72, 5r = 45, 4r+4 = 40
+  corners with no regular point of Q (all vertices): []
+  Par(b): B_x blocks d = 1, delta = 30, z = 0, p = 4, separates [False, False, False, False]
+  Par(c): B_x blocks d = 1, delta = 30, z = 0, p = 4, separates [False, False, False, False]
+  Par(d): B_x blocks d = 10, delta = 3, z = 3, p = 7, separates [True, True, True, True]
+  Rig(c) via R_b: d = 1, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 1, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_c: d = 1, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 1, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 2, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 2, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: False 
+  targets certified per lift pair (Par/Rig): {(0, 0): ['d'], (0, 1): ['d'], (1, 0): ['d'], (1, 1): ['d']}
+  lift pairs with all 3 targets certified by Par/Rig: []
+  claim violations: []
+  CPU 0.001
+== 22-wall room (normal form of 22-wall x 2), S=(0,0), T=(2,2), base Lambda = (1/1)Z x (1/2)Z, m = 2, n = m n_R = 30, r = 9, 8r = 72, 5r = 45, 4r+4 = 40
+  corners with no regular point of Q (all vertices): []
+  Par(b): B_x blocks d = 10, delta = 3, z = 3, p = 7, separates [True, True, True, True]
+  Par(c): B_x blocks d = 1, delta = 30, z = 0, p = 4, separates [False, False, False, False]
+  Par(d): B_x blocks d = 1, delta = 30, z = 0, p = 4, separates [False, False, False, False]
+  Rig(c) via R_b: d = 2, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 2, delta = 15, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_c: d = 1, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 1, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 1, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 1, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: False 
+  targets certified per lift pair (Par/Rig): {(0, 0): ['b'], (0, 1): ['b'], (1, 0): ['b'], (1, 1): ['b']}
+  lift pairs with all 3 targets certified by Par/Rig: []
+  claim violations: []
+  CPU 0.001
+== 22-wall room (normal form of 22-wall x 2), S=(0,0), T=(2,2), base Lambda = (1/2)Z x (1/2)Z, m = 4, n = m n_R = 60, r = 9, 8r = 72, 5r = 45, 4r+4 = 40
+  corners with no regular point of Q (all vertices): []
+  Par(b): B_x blocks d = 2, delta = 30, z = 0, p = 4, separates [False, False, False, False]
+  Par(c): B_x blocks d = 2, delta = 30, z = 0, p = 4, separates [False, False, False, False]
+  Par(d): B_x blocks d = 2, delta = 30, z = 0, p = 4, separates [False, False, False, False]
+  Rig(c) via R_b: d = 2, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 2, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_c: d = 2, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 2, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 2, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 2, delta = 30, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: False 
+  targets certified per lift pair (Par/Rig): {(0, 0): [], (0, 1): [], (1, 0): [], (1, 1): []}
+  lift pairs with all 3 targets certified by Par/Rig: []
+  claim violations: []
+  CPU 0.001
+== 12-wall cross (normal form of cross x 2), S=(1,2), T=(3,2), base Lambda = (1/1)Z x (1/1)Z, m = 1, n = m n_R = 12, r = 4, 8r = 32, 5r = 20, 4r+4 = 20
+  corners with no regular point of Q (all vertices): ['d']
+  Par(b): B_x blocks d = 3, delta = 4, z = 1, p = 5, separates [False, False, False, False]
+  Par(c): B_x blocks d = 1, delta = 12, z = 0, p = 4, separates [False, False, False, False]
+  Par(d): B_x blocks d = 12, delta = 1, z = 4, p = 8, separates [True, True, True, True]
+  Rig(c) via R_b: d = 3, delta = 4, z = 1, p = 5, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 3, delta = 4, z = 1, p = 5, poles over a,x = 1, separates [False, False, False, False]
+  Rig(b) via R_c: d = 1, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 1, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 1, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 1, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: True (not searched)
+  targets certified per lift pair (Par/Rig): {(0, 0): ['d'], (0, 1): ['d'], (1, 0): ['d'], (1, 1): ['d']}
+  lift pairs with all 3 targets certified by Par/Rig: []
+  claim violations: []
+  CPU 0.0
+== 12-wall cross (normal form of cross x 2), S=(1,2), T=(3,2), base Lambda = (1/2)Z x (1/1)Z, m = 2, n = m n_R = 24, r = 4, 8r = 32, 5r = 20, 4r+4 = 20
+  corners with no regular point of Q (all vertices): []
+  Par(b): B_x blocks d = 1, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Par(c): B_x blocks d = 1, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Par(d): B_x blocks d = 2, delta = 12, z = 0, p = 4, separates [False, False, False, False]
+  Rig(c) via R_b: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_c: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 2, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 2, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: False 
+  targets certified per lift pair (Par/Rig): {(0, 0): [], (0, 1): [], (1, 0): [], (1, 1): []}
+  lift pairs with all 3 targets certified by Par/Rig: []
+  claim violations: []
+  CPU 0.0
+== 12-wall cross (normal form of cross x 2), S=(1,2), T=(3,2), base Lambda = (1/1)Z x (1/2)Z, m = 2, n = m n_R = 24, r = 4, 8r = 32, 5r = 20, 4r+4 = 20
+  corners with no regular point of Q (all vertices): []
+  Par(b): B_x blocks d = 2, delta = 12, z = 0, p = 4, separates [False, False, False, False]
+  Par(c): B_x blocks d = 1, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Par(d): B_x blocks d = 1, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Rig(c) via R_b: d = 2, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 2, delta = 12, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_c: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 1, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: False 
+  targets certified per lift pair (Par/Rig): {(0, 0): [], (0, 1): [], (1, 0): [], (1, 1): []}
+  lift pairs with all 3 targets certified by Par/Rig: []
+  claim violations: []
+  CPU 0.0
+== 12-wall cross (normal form of cross x 2), S=(1,2), T=(3,2), base Lambda = (1/2)Z x (1/2)Z, m = 4, n = m n_R = 48, r = 4, 8r = 32, 5r = 20, 4r+4 = 20
+  corners with no regular point of Q (all vertices): []
+  Par(b): B_x blocks d = 2, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Par(c): B_x blocks d = 2, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Par(d): B_x blocks d = 2, delta = 24, z = 0, p = 4, separates [False, False, False, False]
+  Rig(c) via R_b: d = 2, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_b: d = 2, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_c: d = 2, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(d) via R_c: d = 2, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(b) via R_d: d = 2, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Rig(c) via R_d: d = 2, delta = 24, z = 0, p = 4, poles over a,x = 2, separates [False, False, False, False]
+  Cut possible by Lemma Z: False 
+  targets certified per lift pair (Par/Rig): {(0, 0): [], (0, 1): [], (1, 0): [], (1, 1): []}
+  lift pairs with all 3 targets certified by Par/Rig: []
+  claim violations: []
+  CPU 0.001
+total CPU 0.032

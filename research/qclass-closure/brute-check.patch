@@ -1,0 +1,68 @@
+--- polyo.c
++++ brute.c
+@@ -65,7 +65,7 @@
+         if (cy[i] > maxy) maxy = cy[i];
+     }
+     /* vertices: pinch, reflex count, Euler characteristic */
+-    int V = 0, E = 0, r = 0;
++    int V = 0, E = 0, r = 0, transparent = 0, interior = 0;
+     for (int x = minx; x <= maxx + 1; x++)
+         for (int y = miny; y <= maxy + 1; y++) {
+             int a = has(x - 1, y - 1), b = has(x, y - 1), c = has(x - 1, y), d = has(x, y);
+@@ -74,6 +74,8 @@
+             V++;
+             if (k == 2 && ((a && d) || (b && c))) return;     /* pinch */
+             if (k == 3) r++;
++            if(k==4) interior++;
++            if(k==2||k==4)transparent |= 1<<((x&1)+2*(y&1));
+         }
+     if (r > 8) return;
+     for (int x = minx; x <= maxx; x++)          /* horizontal unit edges [x,x+1] at height y */
+@@ -81,45 +83,8 @@
+     for (int x = minx; x <= maxx + 1; x++)
+         for (int y = miny; y <= maxy; y++) if (has(x - 1, y) || has(x, y)) E++;
+     if (V - E + n != 1) return;                 /* hole */
+-    /* normalization: maximal boundary runs, broken at corners (vertex count 1 or 3) */
+-    int gh = 0, gv = 0;
+-    for (int y = miny; y <= maxy + 1; y++) {
+-        int run = 0;
+-        for (int x = minx; x <= maxx + 1; x++) {
+-            /* vertex (x, y) ends the run if it is a corner */
+-            int k = has(x - 1, y - 1) + has(x, y - 1) + has(x - 1, y) + has(x, y);
+-            if (run && (k == 1 || k == 3)) { gh = gcd(gh, run); run = 0; }
+-            if (x <= maxx && (has(x, y - 1) != has(x, y))) run++;
+-            else if (run) { fprintf(stderr, "run error\n"); exit(3); }
+-        }
+-    }
+-    for (int x = minx; x <= maxx + 1; x++) {
+-        int run = 0;
+-        for (int y = miny; y <= maxy + 1; y++) {
+-            int k = has(x - 1, y - 1) + has(x, y - 1) + has(x - 1, y) + has(x, y);
+-            if (run && (k == 1 || k == 3)) { gv = gcd(gv, run); run = 0; }
+-            if (y <= maxy && (has(x - 1, y) != has(x, y))) run++;
+-            else if (run) { fprintf(stderr, "run error v\n"); exit(3); }
+-        }
+-    }
+-    if (gh != 1 || gv != 1) return;
+-    nroom[n]++;
+-    int G[4][NM + 1];
+-    for (int i = 0; i < n; i++) idx_of[cx[i] + OFF][cy[i] + 1] = i;
+-    for (int i = 0; i < n; i++) {
+-        int x = cx[i], y = cy[i];
+-        for (int pp = 0; pp < 2; pp++) {
+-            int nx = (((x % 2) + 2) % 2 == pp) ? x - 1 : x + 1;
+-            G[pp][i] = has(nx, y) ? idx_of[nx + OFF][y + 1] : i;
+-            int ny = (((y % 2) + 2) % 2 == pp) ? y - 1 : y + 1;
+-            G[2 + pp][i] = has(x, ny) ? idx_of[x + OFF][ny + 1] : i;
+-        }
+-    }
+-    for (int p = 0; p < 2; p++)
+-        for (int q = 0; q < 2; q++) {
+-            int k = nblocks(n, G, p, q);
+-            if (k > 1 && k < n) { nscope[n]++; return; }
+-        }
++    if(interior>=2 && transparent!=15)nscope[n]++;
++
+ }
+ 
+ /* Redelmeier: cells with y > 0, or y == 0 and x >= 0 */

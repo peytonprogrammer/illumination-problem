@@ -1,0 +1,66 @@
+# Item 1: lemma algebra on 4000 random rational instances
+  PASS |R - c| <= ub/L with i nearest to (dz - cL)/(2ub)
+  PASS X in [-w, w), X - Ma congruent to x mod 2w (even copy, so physical slope = developed slope)
+  PASS joint coordinates XL/D, R + Xb/D (after -2ui), final coordinate z
+  PASS wb <= ud gives strict gates |g1| < w, |g2 - c| < u
+  PASS broad winding: residual numerator dz - cL + 2dVj - 2ubi = L(R - c)
+  PASS middle and final folding maps agree on (c-u, c+u) for c = 0 and c = u
+  PASS min(ub,dV)+wb <= u(d+b) iff b <= ud/w or b >= d(V-u)/(u-w); always true when wV <= u^2
+
+# Item 2: the 7 open pairs, sweep form at unit gaps
+   mask 761 rows [(0, 1), (0, 3), (0, 2), (0, 1)] pair (1, 7)-(5, 3): (w,u,V)=(1,2,3) c=0 wV<=u^2: True; w*hT<=u*d: True
+   mask 763 rows [(0, 2), (0, 3), (0, 2), (0, 1)] pair (1, 7)-(5, 3): (w,u,V)=(1,2,3) c=0 wV<=u^2: True; w*hT<=u*d: True
+   mask 8051 rows [(0, 2), (0, 3), (0, 4), (0, 1)] pair (1, 1)-(7, 5): (w,u,V)=(2,3,4) c=0 wV<=u^2: True; w*hT<=u*d: True
+   mask 8051 rows [(0, 2), (0, 3), (0, 4), (0, 1)] pair (2, 1)-(7, 5): (w,u,V)=(2,3,4) c=0 wV<=u^2: True; w*hT<=u*d: True
+   mask 8051 rows [(0, 2), (0, 3), (0, 4), (0, 1)] pair (3, 1)-(7, 5): (w,u,V)=(2,3,4) c=0 wV<=u^2: True; w*hT<=u*d: True
+   mask 6131 rows [(0, 2), (0, 4), (0, 3), (0, 1)] pair (1, 7)-(7, 3): (w,u,V)=(1,3,4) c=0 wV<=u^2: True; w*hT<=u*d: True
+   mask 5111 rows [(0, 3), (0, 4), (0, 2), (0, 1)] pair (1, 7)-(7, 3): (w,u,V)=(1,2,4) c=0 wV<=u^2: True; w*hT<=u*d: True
+  PASS every open pyramid pair has the nested three-run form with c = 0 (asserts in params())
+
+# Item 3: exact replay in named lattice rooms
+ room A761: mask 761 x gaps (2, 3, 5) y gaps (1, 4, 1, 3), polygon [(2, 0), (2, 1), (10, 1), (10, 5), (5, 5), (5, 6), (2, 6), (2, 9), (0, 9), (0, 0)]
+   pair (1, 7)-(5, 3): wV<=u^2 True, w*hT<=u*d False; 13 marks, lemma applies to 13, lit by note shot 13, outside lemma lit by one-middle family 0, undecided 0
+  PASS A761 (1, 7)-(5, 3): every mark inside the lemma hypothesis traces to T with strict gates
+  PASS A761 (1, 7)-(5, 3): length condition holds so the lemma applies to every mark
+ room B8051: mask 8051 x gaps (1, 1, 2, 3) y gaps (2, 1, 5, 3), polygon [(2, 0), (2, 2), (4, 2), (4, 3), (7, 3), (7, 8), (1, 8), (1, 11), (0, 11), (0, 0)]
+   pair (1, 1)-(7, 5): wV<=u^2 True, w*hT<=u*d False; 13 marks, lemma applies to 13, lit by note shot 13, outside lemma lit by one-middle family 0, undecided 0
+  PASS B8051 (1, 1)-(7, 5): every mark inside the lemma hypothesis traces to T with strict gates
+  PASS B8051 (1, 1)-(7, 5): length condition holds so the lemma applies to every mark
+   pair (2, 1)-(7, 5): wV<=u^2 True, w*hT<=u*d False; 13 marks, lemma applies to 13, lit by note shot 13, outside lemma lit by one-middle family 0, undecided 0
+  PASS B8051 (2, 1)-(7, 5): every mark inside the lemma hypothesis traces to T with strict gates
+  PASS B8051 (2, 1)-(7, 5): length condition holds so the lemma applies to every mark
+   pair (3, 1)-(7, 5): wV<=u^2 True, w*hT<=u*d False; 13 marks, lemma applies to 13, lit by note shot 13, outside lemma lit by one-middle family 0, undecided 0
+  PASS B8051 (3, 1)-(7, 5): every mark inside the lemma hypothesis traces to T with strict gates
+  PASS B8051 (3, 1)-(7, 5): length condition holds so the lemma applies to every mark
+ room C6131: mask 6131 x gaps (1, 2, 1, 5) y gaps (2, 3, 1, 2), polygon [(3, 0), (3, 2), (9, 2), (9, 5), (4, 5), (4, 6), (1, 6), (1, 8), (0, 8), (0, 0)]
+   pair (1, 7)-(7, 3): wV<=u^2 True, w*hT<=u*d True; 13 marks, lemma applies to 13, lit by note shot 13, outside lemma lit by one-middle family 0, undecided 0
+  PASS C6131 (1, 7)-(7, 3): every mark inside the lemma hypothesis traces to T with strict gates
+  PASS C6131 (1, 7)-(7, 3): length condition holds so the lemma applies to every mark
+ room D5111: mask 5111 x gaps (2, 2, 1, 3) y gaps (1, 3, 2, 2), polygon [(5, 0), (5, 1), (8, 1), (8, 4), (4, 4), (4, 6), (2, 6), (2, 8), (0, 8), (0, 0)]
+   pair (1, 7)-(7, 3): wV<=u^2 True, w*hT<=u*d True; 13 marks, lemma applies to 13, lit by note shot 13, outside lemma lit by one-middle family 0, undecided 0
+  PASS D5111 (1, 7)-(7, 3): every mark inside the lemma hypothesis traces to T with strict gates
+  PASS D5111 (1, 7)-(7, 3): length condition holds so the lemma applies to every mark
+ room E763: mask 763 x gaps (3, 1, 6) y gaps (1, 2, 3, 1), polygon [(4, 0), (4, 1), (10, 1), (10, 3), (4, 3), (4, 6), (3, 6), (3, 7), (0, 7), (0, 0)]
+   pair (1, 7)-(5, 3): wV<=u^2 False, w*hT<=u*d True; 13 marks, lemma applies to 13, lit by note shot 13, outside lemma lit by one-middle family 0, undecided 0
+  PASS E763 (1, 7)-(5, 3): every mark inside the lemma hypothesis traces to T with strict gates
+  PASS E763 (1, 7)-(5, 3): length condition holds so the lemma applies to every mark
+ room V1-761: mask 761 x gaps (3, 1, 6) y gaps (1, 5, 1, 2), polygon [(3, 0), (3, 1), (10, 1), (10, 6), (4, 6), (4, 7), (3, 7), (3, 9), (0, 9), (0, 0)]
+   pair (1, 7)-(5, 3): wV<=u^2 False, w*hT<=u*d False; 13 marks, lemma applies to 4, lit by note shot 4, outside lemma lit by one-middle family 9, undecided 0
+  PASS V1-761 (1, 7)-(5, 3): every mark inside the lemma hypothesis traces to T with strict gates
+ room V2-8051: mask 8051 x gaps (2, 2, 1, 6) y gaps (2, 1, 4, 2), polygon [(4, 0), (4, 2), (5, 2), (5, 3), (11, 3), (11, 7), (2, 7), (2, 9), (0, 9), (0, 0)]
+   pair (1, 1)-(7, 5): wV<=u^2 False, w*hT<=u*d False; 13 marks, lemma applies to 3, lit by note shot 3, outside lemma lit by one-middle family 10, undecided 0
+  PASS V2-8051 (1, 1)-(7, 5): every mark inside the lemma hypothesis traces to T with strict gates
+   pair (2, 1)-(7, 5): wV<=u^2 False, w*hT<=u*d False; 13 marks, lemma applies to 5, lit by note shot 5, outside lemma lit by one-middle family 8, undecided 0
+  PASS V2-8051 (2, 1)-(7, 5): every mark inside the lemma hypothesis traces to T with strict gates
+   pair (3, 1)-(7, 5): wV<=u^2 False, w*hT<=u*d False; 13 marks, lemma applies to 5, lit by note shot 5, outside lemma lit by one-middle family 8, undecided 0
+  PASS V2-8051 (3, 1)-(7, 5): every mark inside the lemma hypothesis traces to T with strict gates
+ room V3-5111: mask 5111 x gaps (3, 1, 1, 5) y gaps (1, 4, 1, 2), polygon [(5, 0), (5, 1), (10, 1), (10, 5), (4, 5), (4, 6), (3, 6), (3, 8), (0, 8), (0, 0)]
+   pair (1, 7)-(7, 3): wV<=u^2 False, w*hT<=u*d False; 13 marks, lemma applies to 3, lit by note shot 3, outside lemma lit by one-middle family 10, undecided 0
+  PASS V3-5111 (1, 7)-(7, 3): every mark inside the lemma hypothesis traces to T with strict gates
+
+# Item 3b: note example mask 8052, unit horizontal gaps, uneven vertical gaps, opposite shared sides
+ polygon [(3, 0), (3, 4), (4, 4), (4, 8), (1, 8), (1, 10), (0, 10), (0, 3), (2, 3), (2, 0)]
+  PASS 8052 (5,1)->(1, 5): c = u, 13/13 marks lit with strict gates
+  PASS 8052 (5,1)->(1, 6): c = u, 13/13 marks lit with strict gates
+
+CPU 0.4s; FAIL 0

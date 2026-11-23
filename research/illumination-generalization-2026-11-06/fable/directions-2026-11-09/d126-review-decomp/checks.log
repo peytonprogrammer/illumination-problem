@@ -1,0 +1,98 @@
+== A-C. Normalized cov279 stretch at q = 12j+4 ==
+q=16: area=211 (13q+3=211), reflex=6, convex=10, pinch=0, connected=True, hole-free=True, width=96 (6q=96), height=6, gcd horiz walls=1, gcd vert walls=1, walls=16
+  reflex corners: [(29, 2), (32, 2), (32, 3), (64, 3), (64, 4), (80, 4)]
+  V: r=6, cuts=4 (<= r: True), pieces=5 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,29]x[0,2] L=29 H=2 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 153, 2, 20, True)]; B=153; Z_B=~10^767; T*=17712; Z*=2509719552; far-cell travel >= 66.0; L>=Z*? False; min side 2
+    piece 1: [29,32]x[0,3] L=3 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 58, 2, 9, True), ('R', 144, 1, 20, True)]; B=144; Z_B=~10^722; T*=17712; Z*=3764579328; far-cell travel >= 63.0; L>=Z*? False; min side 3
+    piece 2: [32,64]x[2,4] L=32 H=2 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 67, 1, 12, True), ('R', 80, 1, 19, True)]; B=80; Z_B=~10^401; T*=10947; Z*=958694472; far-cell travel >= 31.0; L>=Z*? False; min side 2
+    piece 3: [64,80]x[3,6] L=16 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 131, 1, 21, True), ('R', 32, 2, 7, True)]; B=131; Z_B=~10^657; T*=28658; Z*=9855371568; far-cell travel >= 63.0; L>=Z*? False; min side 3
+    piece 4: [80,96]x[4,6] L=16 H=2 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 179, 2, 26, True)]; B=179; Z_B=~10^897; T*=317812; Z*=808035738752; far-cell travel >= 79.0; L>=Z*? False; min side 2
+  H: r=6, cuts=3 (<= r: True), pieces=4 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,2]x[0,32] L=2 H=32 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 147, 3, 22, True)]; B=147; Z_B=~10^738; T*=46369; Z*=275210772608; far-cell travel >= 3.0; L>=Z*? False; min side 2
+    piece 1: [2,3]x[29,64] L=1 H=35 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 64, 3, 11, True), ('R', 112, 32, 21, True)]; B=112; Z_B=~10^562; T*=28658; Z*=114979334960; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 2: [3,4]x[32,80] L=1 H=48 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 99, 32, 13, True), ('R', 64, 16, 9, True)]; B=99; Z_B=~10^497; T*=611; Z*=71677632; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 3: [4,6]x[64,96] L=2 H=32 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 147, 16, 19, True)]; B=147; Z_B=~10^738; T*=10947; Z*=15339111552; far-cell travel >= 3.0; L>=Z*? False; min side 2
+  pieces meeting L >= Z* (hence L >= Z_B) in either decomposition: 0; pieces with both sides > 3: 0
+q=28: area=367 (13q+3=367), reflex=6, convex=10, pinch=0, connected=True, hole-free=True, width=168 (6q=168), height=6, gcd horiz walls=1, gcd vert walls=1, walls=16
+  reflex corners: [(53, 2), (56, 2), (56, 3), (112, 3), (112, 4), (140, 4)]
+  V: r=6, cuts=4 (<= r: True), pieces=5 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,53]x[0,2] L=53 H=2 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 261, 2, 15, True)]; B=261; Z_B=~10^1308; T*=1598; Z*=20428832; far-cell travel >= 114.0; L>=Z*? False; min side 2
+    piece 1: [53,56]x[0,3] L=3 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 106, 2, 10, True), ('R', 252, 1, 15, True)]; B=252; Z_B=~10^1263; T*=1598; Z*=30643248; far-cell travel >= 111.0; L>=Z*? False; min side 3
+    piece 2: [56,112]x[2,4] L=56 H=2 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 115, 1, 13, True), ('R', 140, 1, 15, True)]; B=140; Z_B=~10^701; T*=1598; Z*=20428832; far-cell travel >= 55.0; L>=Z*? False; min side 2
+    piece 3: [112,140]x[3,6] L=28 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 227, 1, 21, True), ('R', 56, 2, 9, True)]; B=227; Z_B=~10^1138; T*=28658; Z*=9855371568; far-cell travel >= 111.0; L>=Z*? False; min side 3
+    piece 4: [140,168]x[4,6] L=28 H=2 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 311, 2, 21, True)]; B=311; Z_B=~10^1559; T*=28658; Z*=6570247712; far-cell travel >= 139.0; L>=Z*? False; min side 2
+  H: r=6, cuts=3 (<= r: True), pieces=4 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,2]x[0,56] L=2 H=56 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 255, 3, 17, True)]; B=255; Z_B=~10^1280; T*=4182; Z*=3917563776; far-cell travel >= 3.0; L>=Z*? False; min side 2
+    piece 1: [2,3]x[53,112] L=1 H=59 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 112, 3, 12, True), ('R', 196, 56, 17, True)]; B=196; Z_B=~10^984; T*=4182; Z*=4127433264; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 2: [3,4]x[56,140] L=1 H=84 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 171, 56, 16, True), ('R', 112, 28, 11, True)]; B=171; Z_B=~10^859; T*=2585; Z*=2245227600; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 3: [4,6]x[112,168] L=2 H=56 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 255, 28, 17, True)]; B=255; Z_B=~10^1280; T*=4182; Z*=3917563776; far-cell travel >= 3.0; L>=Z*? False; min side 2
+  pieces meeting L >= Z* (hence L >= Z_B) in either decomposition: 0; pieces with both sides > 3: 0
+q=40: area=523 (13q+3=523), reflex=6, convex=10, pinch=0, connected=True, hole-free=True, width=240 (6q=240), height=6, gcd horiz walls=1, gcd vert walls=1, walls=16
+  reflex corners: [(77, 2), (80, 2), (80, 3), (160, 3), (160, 4), (200, 4)]
+  V: r=6, cuts=4 (<= r: True), pieces=5 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,77]x[0,2] L=77 H=2 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 369, 2, 15, True)]; B=369; Z_B=~10^1850; T*=1598; Z*=20428832; far-cell travel >= 162.0; L>=Z*? False; min side 2
+    piece 1: [77,80]x[0,3] L=3 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 154, 2, 11, True), ('R', 360, 1, 15, True)]; B=360; Z_B=~10^1805; T*=1598; Z*=30643248; far-cell travel >= 159.0; L>=Z*? False; min side 3
+    piece 2: [80,160]x[2,4] L=80 H=2 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 163, 1, 14, True), ('R', 200, 1, 14, True)]; B=200; Z_B=~10^1002; T*=988; Z*=7809152; far-cell travel >= 79.0; L>=Z*? False; min side 2
+    piece 3: [160,200]x[3,6] L=40 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 323, 1, 15, True), ('R', 80, 2, 9, True)]; B=323; Z_B=~10^1620; T*=1598; Z*=30643248; far-cell travel >= 159.0; L>=Z*? False; min side 3
+    piece 4: [200,240]x[4,6] L=40 H=2 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 443, 2, 15, True)]; B=443; Z_B=~10^2221; T*=1598; Z*=20428832; far-cell travel >= 199.0; L>=Z*? False; min side 2
+  H: r=6, cuts=3 (<= r: True), pieces=4 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,2]x[0,80] L=2 H=80 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 363, 3, 17, True)]; B=363; Z_B=~10^1822; T*=4182; Z*=5596519680; far-cell travel >= 3.0; L>=Z*? False; min side 2
+    piece 1: [2,3]x[77,160] L=1 H=83 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 160, 3, 13, True), ('R', 280, 80, 16, True)]; B=280; Z_B=~10^1405; T*=2585; Z*=2218498700; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 2: [3,4]x[80,200] L=1 H=120 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 243, 80, 16, True), ('R', 160, 40, 11, True)]; B=243; Z_B=~10^1220; T*=2585; Z*=3207468000; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 3: [4,6]x[160,240] L=2 H=80 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 363, 40, 16, True)]; B=363; Z_B=~10^1822; T*=2585; Z*=2138312000; far-cell travel >= 3.0; L>=Z*? False; min side 2
+  pieces meeting L >= Z* (hence L >= Z_B) in either decomposition: 0; pieces with both sides > 3: 0
+q=52: area=679 (13q+3=679), reflex=6, convex=10, pinch=0, connected=True, hole-free=True, width=312 (6q=312), height=6, gcd horiz walls=1, gcd vert walls=1, walls=16
+  reflex corners: [(101, 2), (104, 2), (104, 3), (208, 3), (208, 4), (260, 4)]
+  V: r=6, cuts=4 (<= r: True), pieces=5 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,101]x[0,2] L=101 H=2 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 477, 2, 19, True)]; B=477; Z_B=~10^2392; T*=10947; Z*=958694472; far-cell travel >= 210.0; L>=Z*? False; min side 2
+    piece 1: [101,104]x[0,3] L=3 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 202, 2, 11, True), ('R', 468, 1, 19, True)]; B=468; Z_B=~10^2347; T*=10947; Z*=1438041708; far-cell travel >= 207.0; L>=Z*? False; min side 3
+    piece 2: [104,208]x[2,4] L=104 H=2 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 211, 1, 15, True), ('R', 260, 1, 14, True)]; B=260; Z_B=~10^1303; T*=1598; Z*=20428832; far-cell travel >= 103.0; L>=Z*? False; min side 2
+    piece 3: [208,260]x[3,6] L=52 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 419, 1, 18, True), ('R', 104, 2, 10, True)]; B=419; Z_B=~10^2101; T*=6766; Z*=549345072; far-cell travel >= 207.0; L>=Z*? False; min side 3
+    piece 4: [260,312]x[4,6] L=52 H=2 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 575, 2, 18, True)]; B=575; Z_B=~10^2883; T*=6766; Z*=366230048; far-cell travel >= 259.0; L>=Z*? False; min side 2
+  H: r=6, cuts=3 (<= r: True), pieces=4 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,2]x[0,104] L=2 H=104 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 471, 3, 21, True)]; B=471; Z_B=~10^2363; T*=28658; Z*=341652881024; far-cell travel >= 3.0; L>=Z*? False; min side 2
+    piece 1: [2,3]x[101,208] L=1 H=107 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 208, 3, 13, True), ('R', 364, 104, 16, True)]; B=364; Z_B=~10^1827; T*=2585; Z*=2859992300; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 2: [3,4]x[104,260] L=1 H=156 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 315, 104, 16, True), ('R', 208, 52, 12, True)]; B=315; Z_B=~10^1581; T*=2585; Z*=4169708400; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 3: [4,6]x[208,312] L=2 H=104 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 471, 52, 21, True)]; B=471; Z_B=~10^2363; T*=28658; Z*=341652881024; far-cell travel >= 3.0; L>=Z*? False; min side 2
+  pieces meeting L >= Z* (hence L >= Z_B) in either decomposition: 0; pieces with both sides > 3: 0
+q=64: area=835 (13q+3=835), reflex=6, convex=10, pinch=0, connected=True, hole-free=True, width=384 (6q=384), height=6, gcd horiz walls=1, gcd vert walls=1, walls=16
+  reflex corners: [(125, 2), (128, 2), (128, 3), (256, 3), (256, 4), (320, 4)]
+  V: r=6, cuts=4 (<= r: True), pieces=5 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,125]x[0,2] L=125 H=2 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 585, 2, 17, True)]; B=585; Z_B=~10^2933; T*=4182; Z*=139912992; far-cell travel >= 258.0; L>=Z*? False; min side 2
+    piece 1: [125,128]x[0,3] L=3 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 250, 2, 12, True), ('R', 576, 1, 17, True)]; B=576; Z_B=~10^2889; T*=4182; Z*=209869488; far-cell travel >= 255.0; L>=Z*? False; min side 3
+    piece 2: [128,256]x[2,4] L=128 H=2 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 259, 1, 16, True), ('R', 320, 1, 16, True)]; B=320; Z_B=~10^1604; T*=2585; Z*=53457800; far-cell travel >= 127.0; L>=Z*? False; min side 2
+    piece 3: [256,320]x[3,6] L=64 H=3 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 515, 1, 17, True), ('R', 128, 2, 10, True)]; B=515; Z_B=~10^2583; T*=4182; Z*=209869488; far-cell travel >= 255.0; L>=Z*? False; min side 3
+    piece 4: [320,384]x[4,6] L=64 H=2 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 707, 2, 20, True)]; B=707; Z_B=~10^3545; T*=17712; Z*=2509719552; far-cell travel >= 319.0; L>=Z*? False; min side 2
+  H: r=6, cuts=3 (<= r: True), pieces=4 (<= r+1: True), all rectangles True, dual tree True, doors separated True
+    piece 0: [0,2]x[0,128] L=2 H=128 walls-on-long-sides=True doors on R; attach (side,area,width,k*,transitive)=[('R', 579, 3, 19, True)]; B=579; Z_B=~10^2905; T*=10947; Z*=61356446208; far-cell travel >= 3.0; L>=Z*? False; min side 2
+    piece 1: [2,3]x[125,256] L=1 H=131 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 256, 3, 14, True), ('R', 448, 128, 18, True)]; B=448; Z_B=~10^2248; T*=6766; Z*=23988068144; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 2: [3,4]x[128,320] L=1 H=192 walls-on-long-sides=True doors on LR; attach (side,area,width,k*,transitive)=[('L', 387, 128, 20, True), ('R', 256, 64, 12, True)]; B=387; Z_B=~10^1942; T*=17712; Z*=240933076992; far-cell travel >= 2.0; L>=Z*? False; min side 1
+    piece 3: [4,6]x[256,384] L=2 H=128 walls-on-long-sides=True doors on L; attach (side,area,width,k*,transitive)=[('L', 579, 64, 21, True)]; B=579; Z_B=~10^2905; T*=28658; Z*=420495853568; far-cell travel >= 3.0; L>=Z*? False; min side 2
+  pieces meeting L >= Z* (hence L >= Z_B) in either decomposition: 0; pieces with both sides > 3: 0
+
+== D. Decomposition-independent block argument ==
+q=16: blocks inside room, areas 64,64 (4q=64); bottom-height cells with x>=2q all outside: True; B >= ceil(2q/3)=11; Z_B >= 4(1+F_131)^2 ~10^54 > 6q=96: True
+q=28: blocks inside room, areas 112,112 (4q=112); bottom-height cells with x>=2q all outside: True; B >= ceil(2q/3)=19; Z_B >= 4(1+F_227)^2 ~10^94 > 6q=168: True
+q=40: blocks inside room, areas 160,160 (4q=160); bottom-height cells with x>=2q all outside: True; B >= ceil(2q/3)=27; Z_B >= 4(1+F_323)^2 ~10^134 > 6q=240: True
+q=52: blocks inside room, areas 208,208 (4q=208); bottom-height cells with x>=2q all outside: True; B >= ceil(2q/3)=35; Z_B >= 4(1+F_419)^2 ~10^175 > 6q=312: True
+q=64: blocks inside room, areas 256,256 (4q=256); bottom-height cells with x>=2q all outside: True; B >= ceil(2q/3)=43; Z_B >= 4(1+F_515)^2 ~10^215 > 6q=384: True
+generic refined bound: 4(q/18-1)^2 > 6q for all q >= 522 (horizontal pieces fail since L <= 6 < 16 <= 4H(1+F_2)^2)
+
+== E. Threshold algebra and census arithmetic ==
+H=1 T=2: closed end two-leg span (2Z)d=4 vs 2H=2; one-leg depth span Z*d=2 vs 2H; opposite-end span Z*d=2; same-end far-wall span 2Z*d=4 vs 4H=4
+H=1 T=90: closed end two-leg span (2Z)d=4 vs 2H=2; one-leg depth span Z*d=2 vs 2H; opposite-end span Z*d=2; same-end far-wall span 2Z*d=4 vs 4H=4
+H=1 T=145: closed end two-leg span (2Z)d=4 vs 2H=2; one-leg depth span Z*d=2 vs 2H; opposite-end span Z*d=2; same-end far-wall span 2Z*d=4 vs 4H=4
+H=2 T=2: closed end two-leg span (2Z)d=8 vs 2H=4; one-leg depth span Z*d=4 vs 2H; opposite-end span Z*d=4; same-end far-wall span 2Z*d=8 vs 4H=8
+H=2 T=90: closed end two-leg span (2Z)d=8 vs 2H=4; one-leg depth span Z*d=4 vs 2H; opposite-end span Z*d=4; same-end far-wall span 2Z*d=8 vs 4H=8
+H=2 T=145: closed end two-leg span (2Z)d=8 vs 2H=4; one-leg depth span Z*d=4 vs 2H; opposite-end span Z*d=4; same-end far-wall span 2Z*d=8 vs 4H=8
+H=3 T=2: closed end two-leg span (2Z)d=12 vs 2H=6; one-leg depth span Z*d=6 vs 2H; opposite-end span Z*d=6; same-end far-wall span 2Z*d=12 vs 4H=12
+H=3 T=90: closed end two-leg span (2Z)d=12 vs 2H=6; one-leg depth span Z*d=6 vs 2H; opposite-end span Z*d=6; same-end far-wall span 2Z*d=12 vs 4H=12
+H=3 T=145: closed end two-leg span (2Z)d=12 vs 2H=6; one-leg depth span Z*d=6 vs 2H; opposite-end span Z*d=6; same-end far-wall span 2Z*d=12 vs 4H=12
+H=6 T=2: closed end two-leg span (2Z)d=24 vs 2H=12; one-leg depth span Z*d=12 vs 2H; opposite-end span Z*d=12; same-end far-wall span 2Z*d=24 vs 4H=24
+H=6 T=90: closed end two-leg span (2Z)d=24 vs 2H=12; one-leg depth span Z*d=12 vs 2H; opposite-end span Z*d=12; same-end far-wall span 2Z*d=24 vs 4H=24
+H=6 T=145: closed end two-leg span (2Z)d=24 vs 2H=12; one-leg depth span Z*d=12 vs 2H; opposite-end span Z*d=12; same-end far-wall span 2Z*d=24 vs 4H=24
+fractions p/q, q<=T, within 1/(3T^2) of alpha: checked in d124; delta/2 = 1/(4T^2) < 1/(3T^2)
+area cutoff: L >= (n-rB)/D and 4DT^2 <= (n-rB)/D iff n >= rB+4D^2T^2 (identity)
+census: 3,933,192/72.5 = 54250.9/s; 1e11 -> 512 CPU-h; 1e12 -> 5120 CPU-h
+summary (q, pieces meeting L>=Z*, pieces with both sides >3): [(16, 0, 0), (28, 0, 0), (40, 0, 0), (52, 0, 0), (64, 0, 0)]
+CPU seconds: 0.29

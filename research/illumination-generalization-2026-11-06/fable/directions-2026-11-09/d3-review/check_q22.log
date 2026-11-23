@@ -1,0 +1,32 @@
+walls (vertices): 22
+vertex cycle equals manuscript list: True
+convex/reflex: 13 9  area: 15
+interior lattice points: [(0, 0), (2, 2)]
+flat (removable) boundary lattice points: [(-1, 0), (1, 0), (2, -2), (2, 1), (2, 3), (4, 0)]
+corner classes C: [(0, 0), (0, 1), (1, 0), (1, 1)]
+staircase P integer points and types: [((-1, -1), 'convex'), ((-1, 0), 'convex'), ((0, -2), 'convex'), ((0, -1), 'reflex'), ((0, 0), 'flat-h'), ((1, -3), 'convex'), ((1, -2), 'reflex'), ((1, -1), 'reflex'), ((1, 0), 'convex'), ((2, -3), 'convex'), ((2, -2), 'flat-v'), ((2, -1), 'convex')]
+
+squares in M: 60
+direction (4,7): strips=2 cylinders on M=2 -> on DP=1
+direction (7,4): strips=2 cylinders on M=2 -> on DP=1
+direction (4,-7): strips=2 cylinders on M=2 -> on DP=1
+direction (7,-4): strips=2 cylinders on M=2 -> on DP=1
+direction (-4,7): strips=2 cylinders on M=2 -> on DP=1
+direction (-7,-4): strips=2 cylinders on M=2 -> on DP=1
+
+controls:
+  square: hist #cyl(DP) for 1<=p,q<=8: [(1, 43)]; one-cyl: [(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 1), (2, 3), (2, 5), (2, 7)]
+  L3: hist #cyl(DP) for 1<=p,q<=8: [(1, 13), (2, 30)]; one-cyl: [(1, 1), (1, 3), (1, 5), (1, 7), (3, 1), (3, 5), (3, 7), (5, 1), (5, 3), (5, 7), (7, 1), (7, 3)]
+  cross: hist #cyl(DP) for 1<=p,q<=8: [(3, 30), (4, 13)]; one-cyl: []
+  stair5: hist #cyl(DP) for 1<=p,q<=8: [(1, 15), (3, 28)]; one-cyl: [(1, 1), (1, 3), (1, 5), (1, 7), (2, 3), (2, 5), (3, 1), (3, 2), (4, 7), (5, 1), (5, 2), (7, 1)]
+
+q22 #cyl(DP) histogram, max(p,q)<=14, both signs: [(1, 16), (3, 98), (5, 100), (6, 40)]
+q22 one-cylinder directions: [(4, 7), (4, -7), (4, 9), (4, -9), (7, 4), (7, -4), (8, 11), (8, -11), (8, 13), (8, -13), (9, 4), (9, -4), (11, 8), (11, -8), (13, 8), (13, -8)]
+
+X mod Z^2 (brute force over (1/56)Z^2, which contains X by the 2q s1, 2p s2 bound): [('0', '0')]
+
+leaves through lifts of the marks (lift = lower-left corner of a square):
+  mark (0, 0), direction (4,7): ['singular', 'singular', 'singular', 'singular']
+  mark (0, 0), direction (7,4): ['singular', 'singular', 'singular', 'singular']
+  mark (2, 2), direction (4,7): ['singular', 'singular', 'singular', 'singular']
+  mark (2, 2), direction (7,4): ['singular', 'singular', 'singular', 'singular']

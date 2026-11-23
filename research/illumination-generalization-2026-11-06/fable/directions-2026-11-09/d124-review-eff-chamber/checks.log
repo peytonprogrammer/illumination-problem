@@ -1,0 +1,104 @@
+== A. Thresholds for the named chamber pairs ==
+DBas: areas 20,24; m=96; w=1
+  T = 1+F_287 = 426547842461739379460149980002442288124894678853713953114434  (60 digits)
+  lattice threshold 4wT^2 = 727772247635059343853981809908056794786201395140693461379174565347258162648330900459440931421920707627112056033196561424  (120 digits)
+  H = 2F_288+1 has 61 digits; real threshold 36wH^2 has 122 digits
+DB55: areas 25,25; m=100; w=1
+  T = 1+F_299 = 137347080577163115432025771710279131845700275212767467264610202  (63 digits)
+  lattice threshold 4wT^2 = 75456882172278950038802473094035179982789266577289366872363958091696039663996064278154731437310441298432295655260908009923216  (125 digits)
+  H = 2F_300+1 has 63 digits; real threshold 36wH^2 has 127 digits
+DBw2: areas 25,30; m=120; w=2
+  T = 1+F_359 = 475420437734698220747368027166749382927701417016557193662268716376935476242  (75 digits)
+  lattice threshold 4wT^2 = 1808196740926816543051630589761888368393120734754735981695969188757904071647534903750467937939893795197892248727813483015401770282848350350266771540512  (151 digits)
+  H = 2F_360+1 has 76 digits; real threshold 36wH^2 has 153 digits
+
+== B. Fibonacci word phase, substitution, Diophantine bounds ==
+first letter (k=0): 0
+|W_24| = 121393 = F_26 = 121393
+tail agrees with fixed point W_inf on 100000 letters: True
+|W_k| = F_(k+2) for k<=24: True
+m-th one at floor(m phi^2), all ones in prefix: True
+|alpha-p/q| > 1/(3q^2) for all q<=20000 and both neighbours p: True
+min over these of q^2|alpha-p/q| (float) = 0.381966
+length-2F_(k+3) windows (20000 starts) contain W_k: [(1, 6, True), (2, 10, True), (3, 16, True), (4, 26, True), (5, 42, True), (6, 68, True), (7, 110, True), (8, 178, True), (9, 288, True), (10, 466, True)]
+
+== C. Cover automaton for the five named sealed chambers ==
+DBasA: M=80, |P_0|=2, transitive=True, recurrence=brute True, perm True, nested True, 3-step growth True; first full k=10 (proof bound 3(M-1)=237); worst first-hit travel <= 1+F_12=145
+DBasB: M=96, |P_0|=2, transitive=True, recurrence=brute True, perm True, nested True, 3-step growth True; first full k=11 (proof bound 3(M-1)=285); worst first-hit travel <= 1+F_13=234
+DB55A: M=100, |P_0|=2, transitive=True, recurrence=brute True, perm True, nested True, 3-step growth True; first full k=9 (proof bound 3(M-1)=297); worst first-hit travel <= 1+F_11=90
+DB55B: M=100, |P_0|=2, transitive=True, recurrence=brute True, perm True, nested True, 3-step growth True; first full k=9 (proof bound 3(M-1)=297); worst first-hit travel <= 1+F_11=90
+DBw2A: M=100, |P_0|=4, transitive=True, recurrence=brute True, perm True, nested True, 3-step growth True; first full k=9 (proof bound 3(M-1)=297); worst first-hit travel <= 1+F_11=90
+DBw2B: M=120, |P_0|=4, transitive=True, recurrence=brute True, perm True, nested True, 3-step growth True; first full k=10 (proof bound 3(M-1)=357); worst first-hit travel <= 1+F_12=145
+
+== D. Lattice replay at L = 4wT^2 exactly, all cross lattice pairs ==
+  DBas L=120-digit  S=(1, 3) T=(x2+2,3): alpha-legs a=94, b=58 (cover steps 94,58); A exit y=(-104 + 47*sqrt5) sign -1, B back exit y=(66 + -29*sqrt5) sign 1
+     F(alpha) = c + kappa*alpha with c=-58, kappa=L+(152 + 0*sqrt5); M=138992131263843694893719167918969531861327633098525216580808178222191285576111265472067259683399518086159950900952146700 (120 digits)
+     s*: numerator 120 digits, denominator 120 digits
+     s* in alpha+-1/(4T^2): True; 4T^2|s*-alpha| = 0.2022
+     legs at s* keep alpha words: True; A exit y~1.095194942490, B back exit y~1.154028652506
+     F(s*) = 2wM exactly: True; arrival height at B mouth ~0.154028652506 sign -1; ~120-digit number of corridor wall contacts
+     forward trace in B from mouth reaches T: target; contacts before T: 18 in B, 27 in A
+  DBas L=120-digit  S=(4, 1) T=(x2+3,4): alpha-legs a=1, b=11 (cover steps 1,11); A exit y=(5/2 + -1/2*sqrt5) sign 1, B back exit y=(-21/2 + 11/2*sqrt5) sign -1
+     F(alpha) = c + kappa*alpha with c=-5, kappa=L+(12 + 0*sqrt5); M=138992131263843694893719167918969531861327633098525216580808178222191285576111265472067259683399518086159950900952146700 (120 digits)
+     s*: numerator 120 digits, denominator 120 digits
+     s* in alpha+-1/(4T^2): True; 4T^2|s*-alpha| = 0.6774
+     legs at s* keep alpha words: True; A exit y~1.381966011250, B back exit y~1.798373876249
+     F(s*) = 2wM exactly: True; arrival height at B mouth ~0.798373876249 sign 1; ~120-digit number of corridor wall contacts
+     forward trace in B from mouth reaches T: target; contacts before T: 3 in B, 0 in A
+DBas: constructed path legal for 180/180 cross lattice pairs; tracer and cover first-hit travel agree 180/180; max leg travel 155 (proof bound T has 60 digits)
+  DB55 L=125-digit  S=(1, 1) T=(x2+3,1): alpha-legs a=4, b=3 (cover steps 4,3); A exit y=(7 + -2*sqrt5) sign 1, B back exit y=(11/2 + -3/2*sqrt5) sign 1
+     F(alpha) = c + kappa*alpha with c=-2, kappa=L+(7 + 0*sqrt5); M=14410982152357280147648054097895519351527319435133857097752022118068492516941823012440980934271590277773402166483697760205612 (125 digits)
+     s*: numerator 125 digits, denominator 125 digits
+     s* in alpha+-1/(4T^2): True; 4T^2|s*-alpha| = 0.4128
+     legs at s* keep alpha words: True; A exit y~2.527864045000, B back exit y~2.145898033750
+     F(s*) = 2wM exactly: True; arrival height at B mouth ~0.145898033750 sign -1; ~125-digit number of corridor wall contacts
+     forward trace in B from mouth reaches T: target; contacts before T: 0 in B, 0 in A
+  DB55 L=125-digit  S=(2, 4) T=(x2+1,2): alpha-legs a=23, b=1 (cover steps 23,1); A exit y=(57/2 + -23/2*sqrt5) sign 1, B back exit y=(7/2 + -1/2*sqrt5) sign 1
+     F(alpha) = c + kappa*alpha with c=-8, kappa=L+(24 + 0*sqrt5); M=14410982152357280147648054097895519351527319435133857097752022118068492516941823012440980934271590277773402166483697760205612 (125 digits)
+     s*: numerator 124 digits, denominator 124 digits
+     s* in alpha+-1/(4T^2): True; 4T^2|s*-alpha| = 0.9062
+     legs at s* keep alpha words: True; A exit y~2.785218258752, B back exit y~2.381966011250
+     F(s*) = 2wM exactly: True; arrival height at B mouth ~0.381966011250 sign -1; ~125-digit number of corridor wall contacts
+     forward trace in B from mouth reaches T: target; contacts before T: 0 in B, 6 in A
+DB55: constructed path legal for 256/256 cross lattice pairs; tracer and cover first-hit travel agree 256/256; max leg travel 74 (proof bound T has 63 digits)
+  DBw2 L=151-digit  S=(1, 1) T=(x2+4,5): alpha-legs a=4, b=14 (cover steps 4,14); A exit y=(7 + -2*sqrt5) sign 1, B back exit y=(-14 + 7*sqrt5) sign -1
+     F(alpha) = c + kappa*alpha with c=-6, kappa=L+(18 + 0*sqrt5); M=172667424171813969560928482164121819335107248298103780288333134551109101155507711981242721615120024702355794613379678599527180539573196391551004867532 (150 digits)
+     s*: numerator 150 digits, denominator 150 digits
+     s* in alpha+-1/(4T^2): True; 4T^2|s*-alpha| = 0.1767
+     legs at s* keep alpha words: True; A exit y~2.527864045000, B back exit y~1.652475842499
+     F(s*) = 2wM exactly: True; arrival height at B mouth ~0.652475842499 sign 1; ~150-digit number of corridor wall contacts
+     forward trace in B from mouth reaches T: target; contacts before T: 3 in B, 0 in A
+  DBw2 L=151-digit  S=(3, 2) T=(x2+2,2): alpha-legs a=2, b=2 (cover steps 2,2); A exit y=(5 + -1*sqrt5) sign 1, B back exit y=(5 + -1*sqrt5) sign 1
+     F(alpha) = c + kappa*alpha with c=2, kappa=L+(4 + 0*sqrt5); M=172667424171813969560928482164121819335107248298103780288333134551109101155507711981242721615120024702355794613379678599527180539573196391551004867533 (150 digits)
+     s*: numerator 150 digits, denominator 150 digits
+     s* in alpha+-1/(4T^2): True; 4T^2|s*-alpha| = 0.4971
+     legs at s* keep alpha words: True; A exit y~2.763932022500, B back exit y~2.763932022500
+     F(s*) = 2wM exactly: True; arrival height at B mouth ~1.763932022500 sign -1; ~150-digit number of corridor wall contacts
+     forward trace in B from mouth reaches T: target; contacts before T: 0 in B, 0 in A
+DBw2: constructed path legal for 320/320 cross lattice pairs; tracer and cover first-hit travel agree 320/320; max leg travel 123 (proof bound T has 75 digits)
+
+  DBas marked pair (1,3)-(x2+2,3), all four source sheets x two backward sheets:
+  legal for 8/8 launch-sheet combinations
+section D CPU s: 2.0
+
+== E. Real-mark replay at L = 36wH^2 (stand-in for the excluded-slope step) ==
+  DBas S=(Fraction(7, 3), Fraction(13, 5)) T=(x2+5/7,31/9): a=158/3, b=397/7; s* in I: True; words kept: True; reaches T: target
+  DBas S=(Fraction(1, 2), Fraction(1, 2)) T=(x2+7/2,9/2): a=29/2, b=23/2; s* in I: True; words kept: True; reaches T: target
+  DBas S=(Fraction(22, 7), Fraction(10, 3)) T=(x2+3/11,-12/13): a=503/7, b=267/11; s* in I: True; words kept: True; reaches T: target
+  DBas: 3/3 real pairs legal
+  DB55 S=(Fraction(7, 3), Fraction(13, 5)) T=(x2+5/7,31/9): a=38/3, b=75/7; s* in I: True; words kept: True; reaches T: target
+  DB55 S=(Fraction(1, 2), Fraction(1, 2)) T=(x2+7/2,9/2): a=9/2, b=67/2; s* in I: True; words kept: True; reaches T: target
+  DB55 S=(Fraction(22, 7), Fraction(10, 3)) T=(x2+3/11,1/13): a=83/7, b=223/11; s* in I: True; words kept: True; reaches T: target
+  DB55: 3/3 real pairs legal
+  DBw2 S=(Fraction(7, 3), Fraction(13, 5)) T=(x2+5/7,31/9): a=38/3, b=355/7; s* in I: True; words kept: True; reaches T: target
+  DBw2 S=(Fraction(1, 2), Fraction(1, 2)) T=(x2+7/2,9/2): a=9/2, b=27/2; s* in I: True; words kept: True; reaches T: target
+  DBw2 S=(Fraction(22, 7), Fraction(10, 3)) T=(x2+3/11,1/13): a=83/7, b=773/11; s* in I: True; words kept: True; reaches T: target
+  DBw2: 3/3 real pairs legal
+
+== F. Section 3 and 4 arithmetic ==
+max parity-class count of interior points of u-by-v = floor(u/2)floor(v/2), u,v<=30: True
+folded midpoint abscissae and ordinates <= 4 each (200 random rational endpoint pairs): True
+no lattice rectangle with both sides >= 5 has all corners in P_b, b=7,9,11: True
+2(n-8)-16-floor(n/2) at n=120: 148 ; >= 3n/2-32 for n in 120..10^4: True
+d102 rate 54250.9 witnesses/s; CPU-h per witness 5.1202e-09; 1e11 rooms -> 512 h; 1e12 -> 5120 h
+total CPU s: 2.1

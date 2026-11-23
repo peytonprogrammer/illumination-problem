@@ -1,0 +1,60 @@
+# 1. Fixed-period lemma
+  PASS alpha=3, beta=2, u=3/2: second difference = 2beta/(u(u^2-h^2)) -> 2beta/u^3 = 32/27
+  PASS alpha=0, beta=-5, u=1/3: second difference = 2beta/(u(u^2-h^2)) -> 2beta/u^3 = -270
+  PASS alpha=1/2, beta=7, u=4: second difference = 2beta/(u(u^2-h^2)) -> 2beta/u^3 = 7/32
+  decay of |avg_J e(lam(alpha u+beta/u))|, J=[1/2,2]:
+    beta!=0, stationary point u=1: lam=30: 8.198e-02 (x sqrt(lam) 0.449, x lam 2.460), lam=300: 2.680e-02 (x sqrt(lam) 0.464, x lam 8.041), lam=3000: 8.565e-03 (x sqrt(lam) 0.469, x lam 25.695)
+    alpha=0, beta!=0: lam=30: 1.326e-02 (x sqrt(lam) 0.073, x lam 0.398), lam=300: 1.326e-03 (x sqrt(lam) 0.023, x lam 0.398), lam=3000: 1.326e-04 (x sqrt(lam) 0.007, x lam 0.398)
+    beta=0, alpha!=0: lam=30: 3.750e-16 (x sqrt(lam) 0.000, x lam 0.000), lam=300: 6.082e-17 (x sqrt(lam) 0.000, x lam 0.000), lam=3000: 5.486e-16 (x sqrt(lam) 0.000, x lam 0.000)
+  PASS stationary case: sqrt(lam)*|avg| stays within factor 2, lam*|avg| grows -> rate lam^(-1/2) is attained, not better
+  PASS beta=0: average equals closed form |e(2lam)-e(lam/2)|/(2 pi lam |J|) = O(1/lam)
+  PASS k=2, rho=1/4: K=105, d184 tail bound 2k/(pi^2 K rho^(k+1)) = 0.2470 < 1/4
+  PASS k=2, rho=1/8: K=832, d184 tail bound 2k/(pi^2 K rho^(k+1)) = 0.2494 < 1/4
+  PASS k=4, rho=1/4: K=3322, d184 tail bound 2k/(pi^2 K rho^(k+1)) = 0.2499 < 1/4
+  PASS lam=2: t=(1, 3), h.z=0, h.t=-1 (mode frozen at -u/P)
+  PASS lam=10: t=(9, 19), h.z=0, h.t=-1 (mode frozen at -u/P)
+  PASS lam=1000: t=(999, 1999), h.z=0, h.t=-1 (mode frozen at -u/P)
+  PASS lam=1000001: t=(1000000, 2000001), h.z=0, h.t=-1 (mode frozen at -u/P)
+  PASS P=1, rho=1/10, u=2/5: dist(u/P,Z)=2/5 > 3rho and the two x phases never both match (lam=2,10,1000,10^6+1)
+  PASS P=1, rho=1/10, u=1/2: dist(u/P,Z)=1/2 > 3rho and the two x phases never both match (lam=2,10,1000,10^6+1)
+  PASS P=1, rho=1/10, u=3/5: dist(u/P,Z)=2/5 > 3rho and the two x phases never both match (lam=2,10,1000,10^6+1)
+  PASS rho >= 1/6 gives 3rho >= 1/2 >= dist(u/P,Z): the example needs rho < 1/6 (review Low 2)
+  PASS m=3: primitive annihilator of span(1,m) is (m,-1), height m; excluded iff m > K
+  PASS m=50: primitive annihilator of span(1,m) is (m,-1), height m; excluded iff m > K
+  PASS m=10000: primitive annihilator of span(1,m) is (m,-1), height m; excluded iff m > K
+
+# 2. st279 occupied crossing
+  PASS seed room st(7,5): strictly simple, wall gcds (1, 1), S=(4,-2), T=(6,6) same parity, area 71
+  PASS (1+7v) mod 10 = 1/2, (-1-v) mod 6 = 1/2
+  PASS z=1/2, v=57/2 satisfy both legs: z - c - a v in 2D Z and z - e + v in 6Z
+  PASS seed gate (c,e)=(1,-1): spacing gcd(10,42)=2, gate values z in {1/4,1/2,3/4}; z=1/2 is the window midpoint
+  PASS with v = -3/2 + 6l, the lower leg forces l in 5Z; l=0 gives v=-3/2 (rightward launch), l=5 gives v=57/2, the least positive solution
+  PASS exact trace of the seed (-57/2,1) from S: reaches T with 50 lateral reflections only; crosses y=5 once at x=9/2 (z=5-x=1/2)
+  INFO seed: 40 lateral reflections in the lower box (horizontal travel a v = 399/2 over width 5), 10 in the (5,6) band; vertical rise 8
+  INFO seed vertical-travel phase a/(2D u) = 7/(10u); on the ray it is a/(6a u) = 1/(6u)
+
+# 2b. Ray a=7+2n, D=3a: increments, direct-ascent failure, phase
+  PASS n=1: (a,D)=(9,27) strictly simple, gcds (1,1), increments (16+6n,2n)=(22,2), spacing 6a=54, residues [26, 28, 44, 46] outside (0,10); direct gate closed; a/(2D)=1/6
+  PASS n=5: (a,D)=(17,51) strictly simple, gcds (1,1), increments (16+6n,2n)=(46,10), spacing 6a=102, residues [50, 52, 84, 86] outside (0,18); direct gate closed; a/(2D)=1/6
+  PASS n=20: (a,D)=(47,141) strictly simple, gcds (1,1), increments (16+6n,2n)=(136,40), spacing 6a=282, residues [140, 142, 234, 236] outside (0,48); direct gate closed; a/(2D)=1/6
+  PASS n=44: (a,D)=(95,285) strictly simple, gcds (1,1), increments (16+6n,2n)=(280,88), spacing 6a=570, residues [284, 286, 474, 476] outside (0,96); direct gate closed; a/(2D)=1/6
+  PASS n=47: (a,D)=(101,303) strictly simple, gcds (1,1), increments (16+6n,2n)=(298,94), spacing 6a=606, residues [302, 304, 504, 506] outside (0,102); direct gate closed; a/(2D)=1/6
+  PASS n=100: (a,D)=(207,621) strictly simple, gcds (1,1), increments (16+6n,2n)=(616,200), spacing 6a=1242, residues [620, 622, 1034, 1036] outside (0,208); direct gate closed; a/(2D)=1/6
+  (symbolic) gcd(2D,6a)=gcd(6a,6a)=6a for every a; 3a-1 > a+1 for a > 1, so no primality is needed
+
+# 2c. Phase matches exist on the ray (averaging, fixed seed periods P=2D0=10, P'=6, rho=1/4, J=[1,2])
+  PASS n=20: average of the two-bump product over J = 0.9221 > 0, so some u in J matches both phases
+  PASS n=100: average of the two-bump product over J = 1.0498 > 0, so some u in J matches both phases
+
+# 2d. d186 floor route (gate with A=a+2, (c,e)=(1,-1), launch (-v,-1)) on the ray
+  PASS n=0: (a,D)=(7,21) floor spacing gcd(2D,6(a+2))=6, z=2/5, v=23/5; exact trace reaches T; the only horizontal contact is the floor (event 0); 5 reflections; in d186 residual box: True
+  PASS n=1: (a,D)=(9,27) floor spacing gcd(2D,6(a+2))=6, z=1/6, v=29/6; exact trace reaches T; the only horizontal contact is the floor (event 0); 5 reflections; in d186 residual box: True
+  PASS n=5: (a,D)=(17,51) floor spacing gcd(2D,6(a+2))=6, z=3/10, v=107/10; exact trace reaches T; the only horizontal contact is the floor (event 0); 9 reflections; in d186 residual box: True
+  PASS n=20: (a,D)=(47,141) floor spacing gcd(2D,6(a+2))=6, z=3/25, v=4172/25; exact trace reaches T; the only horizontal contact is the floor (event 1); 115 reflections; in d186 residual box: True
+  PASS n=31: (a,D)=(69,207) floor spacing gcd(2D,6(a+2))=6, z=1/36, v=1259/36; exact trace reaches T; the only horizontal contact is the floor (event 0); 25 reflections; in d186 residual box: False
+  PASS n=44: (a,D)=(95,285) floor spacing gcd(2D,6(a+2))=6, z=3/49, v=16412/49; exact trace reaches T; the only horizontal contact is the floor (event 1); 227 reflections; in d186 residual box: False
+  PASS n=47: (a,D)=(101,303) floor spacing gcd(2D,6(a+2))=6, z=3/52, v=2753/52; exact trace reaches T; the only horizontal contact is the floor (event 0); 37 reflections; in d186 residual box: False
+  PASS n=100: (a,D)=(207,621) floor spacing gcd(2D,6(a+2))=6, z=1/105, v=76124/105; exact trace reaches T; the only horizontal contact is the floor (event 1); 487 reflections; in d186 residual box: False
+  PASS D=3a lies in the d186 residual box only for a <= 67 (a=67: 595/3 <= 201; a=69: 210 > 207), so the cap theorem alone lights n >= 31
+
+CPU 0.73 s; failures: 0

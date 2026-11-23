@@ -1,0 +1,6 @@
+status S,T,m: 4 4 4  (4=interior)
+chord (2, 3)->(4, 2): D=(2, -1), gcd=1, legal=True, end=(Fraction(4, 1), Fraction(2, 1)), |D|^2=5
+chord (4, 3)->(4, 2): D=(0, -1), gcd=1, legal=True, end=(Fraction(4, 1), Fraction(2, 1)), |D|^2=1
+legal S->T paths with |D|<=40, by absolute midpoint parity: {(0, 1): 31, (1, 1): 55}
+shortest per class: {(0, 1): (4, -8), (1, 1): (2, 0)}
+class (0,0) midpoints found: []

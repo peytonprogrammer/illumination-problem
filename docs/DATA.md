@@ -4,8 +4,8 @@ Small supporting files are directly readable under [research/](../research/READM
 
 | Coverage | Current value |
 |---|---:|
-| Research source paths | 143,434 |
-| Research files in Git | 137,360 |
+| Research source paths | 144,121 |
+| Research files in Git | 138,047 |
 | Research files in packages | 6,074 |
 | Independent packages | 246 |
 | All packages, compressed | 7,168,412,225 bytes |

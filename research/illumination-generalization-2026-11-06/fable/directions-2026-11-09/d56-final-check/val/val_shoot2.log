@@ -1,0 +1,11 @@
+== positive control
+SURVIVOR OPEN scale 1 S 1 3 T 3 5 | 15 22 0 2 0 3 1 1 1 2 1 3 1 4 2 0 2 1 2 4 2 5 3 4 3 5 4 3 4 4 5 3
+POSITIVE certified pair | scale 1 S 1 3 T 3 5 lit 0 | room 15 22 0 2 0 3 1 1 1 2 1 3 1 4 2 0 2 1 2 4 2 5 3 4 3 5 4 3 4 4
+SUMMARY POSITIVE set X job 0 enum_count 0 fixed_nodes 0 rooms 1 rooms_with_pairs 1 reduced 0 c3 0 pairs 1 lit40 0 lit120
+exit 10
+== corrupted
+corrupt_rejected 523
+pairs 523 lit40 0 lit120 0 survivors 523 verifyfail 523
+== orbit
+rooms 328 pairs 2431 agree 2431 disagree 0 orbitc LIT 2430 DARK 1
+rooms 185 pairs 29696 agree 29696 disagree 0 orbitc LIT 29696 DARK 0

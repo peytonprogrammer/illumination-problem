@@ -1,0 +1,39 @@
+== 1. Word and template ==
+PASS word gives E,N,W,S,W,S,E,N,E,N and closes  [E,N,W,S,W,S,E,N,E,N]
+PASS 7 L and 3 R (net +4 quarter turns)
+== 2. Ledger realization ==
+PASS realization turn word is a cyclic rotation of LLLRLLLRLR  [LLRLLLRLRL = rotation by 1]
+PASS realization directions are NOT the note's E,N,W,S,... from its own first vertex (frame is rotated)  [E,N,W,N,W,S,E,S,E,S]
+PASS a rotation of the realization matches the template directions
+PASS template vertex pattern reproduces the rotated realization  [x=[-2, 0, -1, -4, -3] y=[2, 4, 3, 0, 1]]
+PASS realization: 5 distinct x and 5 distinct y, so 4 wall gaps per axis  [a=[1, 1, 1, 1] b=[1, 1, 1, 1]]
+PASS realization simple
+PASS area = sum M_ij a_i b_j  [area=8, sum M=8 of 16]
+   occupancy (rows = x gaps): [[0, 0, 0, 1], [0, 0, 1, 1], [1, 1, 1, 1], [1, 0, 0, 0]]
+== 3. Bounds ==
+PASS 5 vertical edges => at most 5 x lines => k_x <= 4; d187 81 G^2 -> 16 G^2
+   G=1: d187 81G^2=81, box 16G^2=16, cell bound 15G^2=15
+   G=2: d187 81G^2=324, box 16G^2=64, cell bound 15G^2=60
+   G=3: d187 81G^2=729, box 16G^2=144, cell bound 15G^2=135
+PASS sum M_ij <= 15 always when 4x4 chart (16 means rectangle, 4 walls)  [a full 4x4 occupancy is the bounding rectangle, whose boundary has 4 edges, not 10]
+== 4. Chart with both axes ordered 3,4,2,0,1 ==
+PASS gaps (1, 1, 1, 1) x (1, 1, 1, 1): simple, word LLLRLLLRLR, area = sum M a b, occupancy unchanged  [area=7]
+PASS gaps (2, 3, 5, 7) x (11, 13, 17, 19): simple, word LLLRLLLRLR, area = sum M a b, occupancy unchanged  [area=465]
+PASS gaps (19, 1, 1, 19) x (1, 19, 19, 1): simple, word LLLRLLLRLR, area = sum M a b, occupancy unchanged  [area=457]
+PASS gaps (10, 11, 12, 13) x (13, 11, 10, 12): simple, word LLLRLLLRLR, area = sum M a b, occupancy unchanged  [area=913]
+PASS gaps (1000, 1001, 1002, 1003) x (1003, 1001, 1000, 1002): simple, word LLLRLLLRLR, area = sum M a b, occupancy unchanged  [area=7020013]
+   occupancy (rows = x gaps g1..g4, cols = y gaps): [[1, 1, 0, 0], [0, 1, 0, 0], [0, 1, 1, 1], [0, 0, 0, 1]] count 7
+PASS slab x-intervals bottom to top are (x3,x4),(x3,x0),(x2,x0),(x2,x1)  [[(0, 0), (0, 2), (2, 2), (2, 3)]]
+PASS consecutive slabs overlap in a positive-length x interval
+PASS every x gap column and every y gap row has an occupied cell (so area >= max(sum a, sum b))
+PASS chart cell count gives witness area <= 7 m(U)m(V); G=2 gives 28 (< 40)
+== 5. Rank-one example v=(n,n+1,n+2,n+3) ==
+PASS n=5: v primitive, min largest gap on line = 8, normals h1,h2,h3 annihilate v, rank 3  [minors=[-5, -6, -7, -8]]
+PASS n=100: v primitive, min largest gap on line = 103, normals h1,h2,h3 annihilate v, rank 3  [minors=[-100, -101, -102, -103]]
+PASS n=1000000: v primitive, min largest gap on line = 1000003, normals h1,h2,h3 annihilate v, rank 3  [minors=[-1000000, -1000001, -1000002, -1000003]]
+PASS H=1, n=7: n > 6H forces bounded normals into rank-2 span
+PASS H=2, n=13: n > 6H forces bounded normals into rank-2 span
+PASS H=10, n=61: n > 6H forces bounded normals into rank-2 span
+PASS Cramer: 3 independent rows of height <= H give v up to scale with entries <= 6H^3, so n+3 <= 6H^3  [third normal height >= ((n+3)/6)^(1/3); the dichotomy is height, not dimension]
+== Summary ==
+27 checks, 0 failed; CPU 0.001 s

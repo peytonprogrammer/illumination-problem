@@ -1,0 +1,81 @@
+== Claim 1: absorbing-band choice in cov279, route travels (1,2,1,1,1) ==
+q=  4  mid width 2q+3: P=48 g=2 | mid width 3q: P=176 g=8  g/2q=1
+q=  8  mid width 2q+3: P=96 g=2 | mid width 3q: P=608 g=16  g/2q=1
+q= 10  mid width 2q+3: P=120 g=2 | mid width 3q: P=920 g=20  g/2q=1
+q= 14  mid width 2q+3: P=168 g=2 | mid width 3q: P=1736 g=28  g/2q=1
+q= 16  mid width 2q+3: P=192 g=2 | mid width 3q: P=2240 g=32  g/2q=1
+q= 20  mid width 2q+3: P=240 g=2 | mid width 3q: P=3440 g=40  g/2q=1
+q= 22  mid width 2q+3: P=264 g=2 | mid width 3q: P=4136 g=44  g/2q=1
+q= 28  mid width 2q+3: P=336 g=2 | mid width 3q: P=6608 g=56  g/2q=1
+q= 40  mid width 2q+3: P=480 g=2 | mid width 3q: P=13280 g=80  g/2q=1
+q= 52  mid width 2q+3: P=624 g=2 | mid width 3q: P=22256 g=104  g/2q=1
+q= 64  mid width 2q+3: P=768 g=2 | mid width 3q: P=33536 g=128  g/2q=1
+For 3 | q (e.g. q=6, 12): gcd(12q,4q+6) = [Fraction(6, 1), Fraction(18, 1), Fraction(6, 1)]
+
+Explicit legal outer placements where the width-3q band cannot absorb F:
+  q=8 S=(1,1) T=(33,5) slope 14/3: x2=15 x3=59/3 x4=107/3 all legal; F=-28, F mod 2q=4 -> no shift absorbs
+  q=8 S=(1,1) T=(33,5) slope 206/3: x2=15 x3=55/3 x4=107/3 all legal; F=-86, F mod 2q=10 -> no shift absorbs
+  q=8: 26 such placements among the step-3 alternatives of the sampled pairs
+  q=10 S=(1,1) T=(41,5) slope 6: x2=19 x3=25 x4=45 all legal; F=-36, F mod 2q=4 -> no shift absorbs
+  q=10 S=(1,1) T=(41,5) slope 86: x2=19 x3=21 x4=45 all legal; F=-110, F mod 2q=10 -> no shift absorbs
+  q=10: 53 such placements among the step-3 alternatives of the sampled pairs
+  q=14 S=(1,1) T=(57,5) slope 26/3: x2=27 x3=107/3 x4=191/3 all legal; F=-52, F mod 2q=4 -> no shift absorbs
+  q=14 S=(1,1) T=(57,5) slope 194/3: x2=27 x3=89/3 x4=191/3 all legal; F=-102, F mod 2q=10 -> no shift absorbs
+  q=14: 101 such placements among the step-3 alternatives of the sampled pairs
+  q=16 S=(1,1) T=(65,5) slope 10: x2=31 x3=41 x4=73 all legal; F=-60, F mod 2q=4 -> no shift absorbs
+  q=16 S=(1,1) T=(65,5) slope 74: x2=31 x3=35 x4=73 all legal; F=-118, F mod 2q=10 -> no shift absorbs
+  q=16: 137 such placements among the step-3 alternatives of the sampled pairs
+  q=20 S=(1,1) T=(81,5) slope 38/3: x2=39 x3=155/3 x4=275/3 all legal; F=-76, F mod 2q=4 -> no shift absorbs
+  q=20 S=(1,1) T=(81,5) slope 278/3: x2=39 x3=137/3 x4=275/3 all legal; F=-150, F mod 2q=10 -> no shift absorbs
+  q=20: 210 such placements among the step-3 alternatives of the sampled pairs
+
+Uninterrupted upward route S=(2q-1,1), T=(6q-1,5): exact window test
+  q= 4  backward images lie in (19,24); intersect (4q,5q)=(16,20): True
+  q= 5  backward images lie in (25,30); intersect (4q,5q)=(20,25): False
+  q= 6  backward images lie in (31,36); intersect (4q,5q)=(24,30): False
+  q= 8  backward images lie in (43,48); intersect (4q,5q)=(32,40): False
+  q=16  backward images lie in (91,96); intersect (4q,5q)=(64,80): False
+  q=28  backward images lie in (163,168); intersect (4q,5q)=(112,140): False
+
+== Claim 2: P = lcm(2u_i/d_i), absorption iff F in gcd(dP,2u)Z ==
+  outer [(6, 4), (10, 3)]            mid (u=15,d=2): P=60 (brute force 60), g=30, 2/g integral: False, 121 F values agree
+  outer [(9, 2), (4, 3), (5, 5)]     mid (u=12,d=3): P=72 (brute force 72), g=24, 2/g integral: False, 97 F values agree
+  outer [(14, 4), (21, 6)]           mid (u=35,d=2): P=7 (brute force 7), g=14, 2/g integral: False, 281 F values agree
+  outer [(8, 1), (11, 1)]            mid (u=24,d=1): P=176 (brute force 176), g=16, 2/g integral: False, 193 F values agree
+  outer [(7, 3), (7, 2)]             mid (u=14,d=5): P=14 (brute force 14), g=14, 2/g integral: False, 113 F values agree
+  outer [(6, 2), (6, 4), (15, 3)]    mid (u=10,d=4): P=30 (brute force 30), g=20, 2/g integral: False, 81 F values agree
+  outer [(4, 1)]                     mid (u=3,d=1): P=8 (brute force 8), g=2, 2/g integral: True, 25 F values agree
+  outer [(2, 3)]                     mid (u=5,d=1): P=4/3 (brute force 4/3), g=2/3, 2/g integral: True, 121 F values agree
+  Folding check: one run of width u, travel d; phase shift dDs preserves (x,e) iff dDs in 2uZ
+  ok
+  Parity telescoping: F in 2Z on the actual sheets of the cov279 four-band certificates
+  q=8: 113 pairs, F in 2Z and 6s in 2Z each time
+  q=14: 365 pairs, F in 2Z and 6s in 2Z each time
+
+== Claim 3: CRT placement on a pairwise-coprime monotone chain ==
+  widths [5, 7, 9, 4] overlaps (2,5),(5,9),(11,14)
+  S=(1, 1) T=(13, 8) sites=[3, 7, 13]: k=708 <= prod u = 1260, slope 1416; traced, vertical travel 7, hits T, no corner
+  S=(3, 2) T=(13, 8) sites=[3, 7, 13]: k=960 <= prod u = 1260, slope 1920; traced, vertical travel 6, hits T, no corner
+  S=(4, 1) T=(12, 8) sites=[4, 6, 12]: k=60 <= prod u = 1260, slope 120; traced, vertical travel 7, hits T, no corner
+  S=(2, 2) T=(14, 8) sites=[4, 8, 12]: k=1 <= prod u = 1260, slope 2; traced, vertical travel 6, hits T, no corner
+  Polynomial bound: k <= prod u_i <= U^m; m <= 9 bands gives slope <= 2 U^9
+  Generalized CRT test against brute force:
+    [(2, 6, 4), (3, 9, 3)] solvable: False
+    [(1, 6, 1), (1, 10, 3)] solvable: True
+    [(4, 6, 2), (2, 9, 4)] solvable: True
+    [(3, 12, 6), (5, 8, 1)] solvable: False
+
+== Claim 4: cov279 replays, own certificates, own tracer ==
+  q= 8 coprime to 3: True | same-parity pairs 502, (1,5) pairs 113, traced lit 502, labels {'plain': 218, 'flipS': 14, 'cap': 1}
+  q=10 coprime to 3: True | same-parity pairs 811, (1,5) pairs 181, traced lit not traced, labels {}
+  q=14 coprime to 3: True | same-parity pairs 1651, (1,5) pairs 365, traced lit 1651, labels {'plain': 716, 'flipS': 26, 'cap': 1}
+  q=20 coprime to 3: True | same-parity pairs 3466, (1,5) pairs 761, traced lit not traced, labels {}
+
+== Claim 5: odd cross, bands 4x(b-2), 2bx4, 4x(b-2) ==
+  b= 5 bands [(4, 3), (10, 4), (4, 3)], max band height 4, max shorter side over contained lattice rectangles 4
+  b= 7 bands [(4, 5), (14, 4), (4, 5)], max band height 5, max shorter side over contained lattice rectangles 4
+  b= 9 bands [(4, 7), (18, 4), (4, 7)], max band height 7, max shorter side over contained lattice rectangles 4
+  b=11 bands [(4, 9), (22, 4), (4, 9)], max band height 9, max shorter side over contained lattice rectangles 4
+  cross b=9: shot from (6,0) direction (-1,-1) reaches (0,6), vertical travel 10, horizontal-wall events [(Fraction(4, 1), Fraction(-2, 1))]
+
+CPU seconds: 9.0

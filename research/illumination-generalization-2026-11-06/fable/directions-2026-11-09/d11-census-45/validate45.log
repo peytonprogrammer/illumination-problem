@@ -1,0 +1,25 @@
+rooms loaded 851 {'dark': 4, 'census_dark': 327, 'lit': 520}
+  castro24           tiles 27 strictly_simple True W(boundary walk) 24 polygon_W 24 cycles 1
+  tokarsky26         tiles 29 strictly_simple True W(boundary walk) 26 polygon_W 26 cycles 1
+  room22_tri         tiles 30 strictly_simple True W(boundary walk) 22 polygon_W 22 cycles 1
+  wolecki22_pinched  tiles 24 strictly_simple False W(boundary walk) 22 polygon_W 22 cycles 2
+rooms whose boundary-walk W differs from the record W: []
+shoot45 verify_fail 0 max_steps 10
+shoot45 on marked pairs: {'census_dark/SURVIVOR': 327, 'dark/SURVIVOR': 4, 'lit/LIT': 520}
+N_min separation on marked pairs: {'dark sep=0': 0, 'dark sep=1': 4, 'census_dark sep=0': 0, 'census_dark sep=1': 327, 'lit sep=0': 520, 'lit sep=1': 0}
+lit controls with a separating N_min: []
+orbit45 results:
+  castro24             expect DARK orbit45 UNDECIDED_CAP states 3000000 k 0 sep 1 shoot SURVIVOR
+  tokarsky26           expect DARK orbit45 UNDECIDED_CAP states 3000000 k 0 sep 1 shoot SURVIVOR
+  room22_tri           expect DARK orbit45 DARK states 2592 k 4 sep 1 shoot SURVIVOR
+  wolecki22_pinched    expect DARK orbit45 UNDECIDED_CAP states 3000000 k 0 sep 1 shoot SURVIVOR
+  parity-W24-0         expect DARK orbit45 UNDECIDED_CAP states 3000000 k 0 sep 1 shoot SURVIVOR
+  parity-W24-1         expect DARK orbit45 UNDECIDED_CAP states 3000000 k 0 sep 1 shoot SURVIVOR
+  parity-W24-10        expect DARK orbit45 UNDECIDED_CAP states 3000000 k 0 sep 1 shoot SURVIVOR
+orbit45 agrees with expectation on 50 of 56 chosen pairs (lit ones not listed agree)
+  d6 castro24           {'verdict': 'DARK', 'basis': 'k=0 (no transparent vertex in any basis)', 'states': [200001], 'complete': [False], 'k': [0]} (12 s)
+  d6 tokarsky26         {'verdict': 'DARK', 'basis': 'k=0 (no transparent vertex in any basis)', 'states': [200001], 'complete': [False], 'k': [0]} (13 s)
+  d6 room22_tri         {'verdict': 'DARK', 'basis': 'full orbit exhausted', 'states': [3456, 3456], 'complete': [True, True], 'k': [4, 4]} (1 s)
+  d6 wolecki22_pinched  {'verdict': 'DARK', 'basis': 'k=0 (no transparent vertex in any basis)', 'states': [200001], 'complete': [False], 'k': [0]} (11 s)
+negative tracer test: certificates 747 replayed 747 | wrong target 747 rejected 747 | rotated direction 747 rejected 741 
+done in 534 s

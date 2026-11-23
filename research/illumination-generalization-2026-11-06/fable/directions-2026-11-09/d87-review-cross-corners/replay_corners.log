@@ -1,0 +1,28 @@
+R22 reflex [(0, -1), (0, 1), (1, -2), (1, -1), (1, 1), (1, 2), (3, 1), (3, 2), (4, 1)] count 9 convex count 13 walls 22
+(0, -1) S-leg t=1 T-leg t=3 arrival (-8, 11) / (8, -11) sites [(0, -1), (2, -2), (2, 1)] incid [3, 2, 2, 3] class (0, 1) Cclass (0, 1) provenance True midpoint-is-C False
+(0, 1) S-leg t=1 T-leg t=1 arrival (2, 1) / (-2, -1) sites [(0, 1)] incid [3, 3] class (0, 1) Cclass (0, 1) provenance True midpoint-is-C True
+(1, -2) S-leg t=1 T-leg t=1 arrival (-7, 4) / (7, -4) sites [(1, -2)] incid [3, 3] class (1, 0) Cclass (1, 0) provenance True midpoint-is-C True
+(1, -1) S-leg t=1 T-leg t=1 arrival (-9, 5) / (9, -5) sites [(1, -1)] incid [3, 3] class (1, 1) Cclass (1, 1) provenance True midpoint-is-C True
+(1, 1) S-leg t=1 T-leg t=1 arrival (1, 1) / (-1, -1) sites [(1, 1)] incid [3, 3] class (1, 1) Cclass (1, 1) provenance True midpoint-is-C True
+(1, 2) S-leg t=1 T-leg t=1 arrival (3, 2) / (-3, -2) sites [(1, 2)] incid [3, 3] class (1, 0) Cclass (1, 0) provenance True midpoint-is-C True
+(3, 1) S-leg t=1 T-leg t=1 arrival (9, -5) / (-9, 5) sites [(3, 1)] incid [3, 3] class (1, 1) Cclass (1, 1) provenance True midpoint-is-C True
+(3, 2) S-leg t=1 T-leg t=1 arrival (-9, 2) / (9, -2) sites [(3, 2)] incid [3, 3] class (1, 0) Cclass (1, 0) provenance True midpoint-is-C True
+(4, 1) S-leg t=1 T-leg t=1 arrival (4, -7) / (-4, 7) sites [(4, 1)] incid [3, 3] class (0, 1) Cclass (0, 1) provenance True midpoint-is-C True
+intermediate site sets pairwise disjoint; sizes [3, 1, 1, 1, 1, 1, 1, 1, 1]
+
+eps repair (eps = 1/N), whole route from S:
+  N=11: 9/9 legal
+  N=12: 9/9 legal
+  N=13: 9/9 legal
+  N=24: 9/9 legal
+
+nearest non-corner wall contact to C along C's two walls:
+  (0, -1) v=(-8, 11) nearest 1/4 (1/max|component| = 1/11)
+  (0, 1) v=(-2, 1) nearest None (1/max|component| = 1/2)
+  (1, -2) v=(7, -4) nearest 6/7 (1/max|component| = 1/7)
+  (1, -1) v=(9, -5) nearest 4/9 (1/max|component| = 1/9)
+  (1, 1) v=(1, 1) nearest None (1/max|component| = 1)
+  (1, 2) v=(3, 2) nearest 4/3 (1/max|component| = 1/3)
+  (3, 1) v=(9, 5) nearest 14/9 (1/max|component| = 1/9)
+  (3, 2) v=(9, 2) nearest 2/9 (1/max|component| = 1/9)
+  (4, 1) v=(4, 7) nearest 6/7 (1/max|component| = 1/7)

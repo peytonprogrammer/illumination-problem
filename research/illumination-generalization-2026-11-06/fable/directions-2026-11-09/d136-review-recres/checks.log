@@ -1,0 +1,88 @@
+== A. Pencil height bound 4J^2 (exhaustive over abstract coefficient tuples) ==
+J=1: 5856 systems with both determinants nonzero, 4944 affine rational solutions; max height 3 (bound 4J^2=4, 2J^2=2); max height when a constant term vanishes 3
+J=2: 383456 systems with both determinants nonzero, 308880 affine rational solutions; max height 11 (bound 4J^2=16, 2J^2=8); max height when a constant term vanishes 11
+J/(M E^2) over 2000 random two-term identities: max 2.00 (note uses 4; 2 suffices)
+
+Reciprocal example: x=(u1,u2), y=(d1,d2).  Identity d1/u1=d2/u2 -> C=[[0,-1],[1,0]] (x rows).
+  transposed test is -1 times the same form: True
+  N=1: widths/depths (N,N+1) satisfy it: True; height 2
+  N=10: widths/depths (N,N+1) satisfy it: True; height 11
+  N=1000: widths/depths (N,N+1) satisfy it: True; height 1001
+  rank test: t=1, dim K=3, dim X=2, dim Y=2 (true factors are lines)
+
+== B. Cramer spanning vectors of K and defining rows: entry bounds ==
+150 random integer systems: kernel vectors integral, span K, entries <= Delta; max entry/Delta = 1.00e+00; defining rows <= ceil((sqrt(j) Delta)^j): all PASS
+
+== C. Exactness of the dimension test ==
+C1. 53 random instances: (dim X=dim Vx and dim Y=dim Vy) <=> K = Vx(x)Vy, i.e. t = ab - jx*jy.  PASS
+C2. identities x2y2=0, x1y2-x2y1=0: t=2, dim K=2, dim X=2, dim Y=2; K basis [['1', '0', '0', '0'], ['0', '1', '1', '0']]
+    product solutions (lines) with entries in [-3,3]: [(('1', '0'), ('1', '0'))]
+    => the factors are pinned to (e1, e1) with height 1, but X = Y = Q^2: test is sufficient, not necessary.
+
+== D. Rank test on the named rooms (route identities on each family span) ==
+-- cov279 slice q=4u, S=(4,1), T=(12,1) [parametric-orbits directional pair]
+   gaps a=7 (x), b=5 (y); family span dims jx=2, jy=1; area at sample 211
+   horizontal route: direct (marks in one closed rectangle)
+   vertical route: direct (marks in one closed rectangle)
+   rank test: t=0 independent identities (equality needs t = ab - jx*jy = 33); dim X=7 vs jx=2, dim Y=5 vs jy=1; fully free directions: 7 in x, 5 in y
+   test verdict: NOT recovered; known: all-direction pair directly visible; directional orbit (p,1)=(8v,1) lit iff gcd(u,v)=1
+-- cov279 stretch q=12j+4, S=(q/2,1), T=(3q,3) [d130 pair]
+   gaps a=7 (x), b=5 (y); family span dims jx=2, jy=1; area at sample 211
+   horizontal route: 2 rectangles ['partial', 'partial']; resonance-relation space on the flat: dim 0
+   vertical route: 3 rectangles ['partial', 'full', 'partial']; resonance-relation space on the flat: dim 1 basis [['-2/3', '-1', '1']]
+   rank test: t=0 independent identities (equality needs t = ab - jx*jy = 33); dim X=7 vs jx=2, dim Y=5 vs jy=1; fully free directions: 7 in x, 5 in y
+   test verdict: NOT recovered; known: lit for every q=12j+4 (d127 all same-parity pairs, 3 does not divide q; d130 witnesses)
+-- cov279 stretch q=12j+4, S=(q/2,1), T=(9q/2,5) [cross pair, same parity]
+   gaps a=7 (x), b=6 (y); family span dims jx=2, jy=1; area at sample 211
+   horizontal route: 4 rectangles ['partial', 'full', 'full', 'partial']; resonance-relation space on the flat: dim 2 basis [['-2/3', '0', '1', '0'], ['-1', '0', '0', '1']]
+     two-term identity on rectangles (0, 2) with n=(-2, 3); max|C|=3
+     two-term identity on rectangles (0, 3) with n=(-1, 1); max|C|=1
+     two-term identity on rectangles (2, 3) with n=(-3, 2); max|C|=3
+   vertical route: 4 rectangles ['partial', 'full', 'full', 'partial']; resonance-relation space on the flat: dim 2 basis [['-4/3', '-2', '1', '0'], ['-2/9', '-1/3', '0', '1']]
+     two-term identity on rectangles (2, 3) with n=(-1, 6); max|C|=6
+   rank test: t=4 independent identities (equality needs t = ab - jx*jy = 40); dim X=7 vs jx=2, dim Y=6 vs jy=1; fully free directions: 2 in x, 1 in y
+   test verdict: NOT recovered; known: lit for every q=12j+4 (d127: all same-parity pairs when 3 does not divide q)
+-- st279 slice m, S=(2,1), T=(6,1) [parametric-orbits directional pair]
+   gaps a=7 (x), b=5 (y); family span dims jx=2, jy=2; area at sample 2054
+   horizontal route: direct (marks in one closed rectangle)
+   vertical route: direct (marks in one closed rectangle)
+   rank test: t=0 independent identities (equality needs t = ab - jx*jy = 31); dim X=7 vs jx=2, dim Y=5 vs jy=2; fully free directions: 7 in x, 5 in y
+   test verdict: NOT recovered; known: all-direction pair directly visible; directional orbit lit iff p = +-4 mod m
+-- st279 end-square stretch m, S=(m/2,m/2), T=(3m/2+2,3m/2+2) [square centres]
+   gaps a=7 (x), b=6 (y); family span dims jx=2, jy=2; area at sample 2054
+   horizontal route: 4 rectangles ['partial', 'full', 'full', 'partial']; resonance-relation space on the flat: dim 2 basis [['0', '-1', '1', '0'], ['-1', '0', '0', '1']]
+     two-term identity on rectangles (0, 3) with n=(-1, 1); max|C|=1
+     two-term identity on rectangles (1, 2) with n=(-1, 1); max|C|=1
+   vertical route: 5 rectangles ['partial', 'full', 'full', 'full', 'partial']; resonance-relation space on the flat: dim 2 basis [['0', '-1', '0', '1', '0'], ['-1', '0', '0', '0', '1']]
+     two-term identity on rectangles (0, 4) with n=(-1, 1); max|C|=1
+     two-term identity on rectangles (1, 3) with n=(-1, 1); max|C|=1
+   rank test: t=4 independent identities (equality needs t = ab - jx*jy = 38); dim X=7 vs jx=2, dim Y=6 vs jy=2; fully free directions: 0 in x, 0 in y
+   test verdict: NOT recovered; known: all-direction status of this pair not reviewed; d130 proves the named fat pairs lit (Omega(sqrt m) reflections)
+-- dumbbell U, U+1, height 5, S=(2,1), T=(U+L+2,3) [length-periodicity marks]
+   gaps a=5 (x), b=4 (y); family span dims jx=3, jy=1; area at sample 52
+   horizontal route: 2 rectangles ['partial', 'partial']; resonance-relation space on the flat: dim 0
+   vertical route: 3 rectangles ['partial', 'full', 'partial']; resonance-relation space on the flat: dim 0
+   rank test: t=0 independent identities (equality needs t = ab - jx*jy = 17); dim X=5 vs jx=3, dim Y=4 vs jy=1; fully free directions: 5 in x, 4 in y
+   test verdict: NOT recovered; known: opposite-chamber pairs lit for all L >= K (period-one tail; resonant-gluing K=21 for the reviewed dumbbells)
+
+== E. Directional controls (exact replay, capped) ==
+cov279 u=4,7: mismatches vs gcd(u,v)=1: 0; directional-dark (u,v) points [(4, 2), (4, 4), (4, 6), (4, 8), (4, 10), (7, 7), (7, 14)]; their rational span has dim 2
+st279 m=32: lit p = [4, 28, 36, 60, 68, 92, 100, 124]; mismatches vs p=+-4 mod m: 0
+Both marks pairs share the bottom band, so the flat-resonance route is empty (direct chord).
+
+== F. Scale of the conditional constants ==
+  eps=0.125, k=2: least M = 191
+  eps=0.125, k=9: least M = 1110
+  eps=0.0156, k=4: least M = 46895
+  eps=0.000977, k=4: least M = 18259197
+  eps=0.000244, k=4: least M = 341270963
+  cov279 cross route at q=16: eps <= 0.000977 -> M >= 18259197
+  cov279 cross route at q=40: eps <= 0.000391 -> M >= 126821591
+  cov279 cross route at q=100: eps <= 0.000156 -> M >= 871586740
+  cov279 cross route at q=1000: eps <= 1.56e-05 -> M >= 106856019279
+  cov279 cross route at the flat point with door offset c=q (gaps stay positive): eps <= 0.00521 -> M >= 510027 for every q
+  M=1, a=b=11, t=ab-1=120: log10 Delta=160.9, log10 H=1775.3, log10(d133 witness pairs per cell)=4.3e+05, log10(d132 area bound)=7.82e+04
+  M=10, a=b=11, t=ab-1=120: log10 Delta=280.9, log10 H=3095.3, log10(d133 witness pairs per cell)=7.49e+05, log10(d132 area bound)=1.36e+05
+  two-term identities from both tree routes, k<=9 each: at most 72; equality needs ab - jx*jy <= 72, i.e. jx*jy >= 49 at a=b=11
+
+CPU seconds: 3.1

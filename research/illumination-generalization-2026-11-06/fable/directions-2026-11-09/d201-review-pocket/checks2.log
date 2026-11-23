@@ -1,0 +1,24 @@
+(a) cyclic-word dictionary, F = RRLLLLRR
+  j=0 canon LLLLRRLLLLRRLLLLRRRR claimed-match=True ledger=('OPEN', 'two-direction dented', 20, 8)
+  j=1 canon LLLLRRLLLRRLLLLRRLRR claimed-match=True ledger=('OPEN', 'two-direction dented', 20, 8)
+  j=2 canon LLLLRRLLRRLLLLRRLLRR claimed-match=True ledger=('OPEN', 'one-direction convex', 20, 8)
+  j=3 canon LLLLRRLLLRRLLLLRRLRR claimed-match=True ledger=('OPEN', 'two-direction dented', 20, 8)
+  j=4 canon LLLLRRLLLLRRLLLLRRRR claimed-match=True ledger=('OPEN', 'two-direction dented', 20, 8)
+  realization opposite  W=20 word LLLLRRLLRRLLLLRRLLRR
+  realization adjacent  W=20 word LLLLRRLLLRRLLLLRRLRR
+  realization same-side W=20 word LLLLRRLLLLRRLLLLRRRR
+  width-1 family:
+    H=5 W=20 word=True full-mouth pockets(w>=3,h>=1)=0 marks interior=True
+    H=6 W=20 word=True full-mouth pockets(w>=3,h>=1)=0 marks interior=True
+    H=9 W=20 word=True full-mouth pockets(w>=3,h>=1)=0 marks interior=True
+
+(b) displaced strip transit
+  room: middle 3x6, left neck (1,2), right neck (4,5), delta=2, W=20
+  S=(-3, 1) T=(6, 5) A=3 K=3 |A-K|<w*d/(d+2)=True interval=(3,6) c=15/4 a=3/4 b=9/4 -> hit, 2 bounces
+  S=(-4, 1) T=(6, 5) A=4 K=3 |A-K|<w*d/(d+2)=True interval=(4,6) c=11/2 a=3/2 b=1/2 -> hit, 4 bounces
+
+(c) obstructions
+  g1=g2=1, |A-K|>=w gives an empty interval: counterexamples 0
+  straight unit-neck leg of length L has |dy/dx| < 1/L; the upper pocket needs climb > delta within run < w; impossible iff delta*L >= w (stated for that leg only)
+
+CPU seconds: 0.02

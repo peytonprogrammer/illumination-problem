@@ -1,0 +1,38 @@
+(n,b)=(8,2) E=['B'] k=7: 12 T candidates up to symmetry
+{
+ "n": 8,
+ "b": 2,
+ "k": 7,
+ "E": [
+  "B"
+ ],
+ "min_W_all": 32,
+ "min_W_clean": 32,
+ "stats": {
+  "T_tried": 12,
+  "T_star_ok": 7,
+  "sets": 267383,
+  "valid": 131919,
+  "by_W": {
+   "32": 5,
+   "33": 270,
+   "34": 4890,
+   "35": 29096,
+   "36": 64296,
+   "37": 33362
+  },
+  "by_W_clean": {
+   "32": 2,
+   "33": 48,
+   "34": 484,
+   "35": 2760,
+   "36": 10600,
+   "37": 33362
+  },
+  "seconds": 80.2
+ }
+}
+clean 32 34 {'A2': 1, 'B2': 14, 'B6': 1, 'C2': 14, 'C3': 2} clean True transpE 0
+clean 32 34 {'A2': 1, 'B2': 14, 'B6': 1, 'C2': 14, 'C3': 2} clean True transpE 0
+all 32 34 {'A2': 1, 'B2': 14, 'B6': 1, 'C2': 14, 'C3': 2} clean True transpE 0
+all 32 36 {'A2': 2, 'B2': 14, 'C2': 12, 'C3': 4} clean False transpE 1

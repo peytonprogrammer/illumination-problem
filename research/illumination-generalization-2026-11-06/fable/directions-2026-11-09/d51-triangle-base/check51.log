@@ -1,0 +1,149 @@
+========================================================================
+room22_tri (22-wall orthogonal room, canonical45 tiles) tiles N = 30  non-regular Q points (corners) = 22
+  class A: regular Q points t=6, corner profile {2: 3}, sum k = 6, fibre check 4t+K = 30
+  class B: regular Q points t=0, corner profile {2: 6, 6: 3}, sum k = 30, fibre check 4t+K = 30
+  class C: regular Q points t=4, corner profile {1: 4, 3: 6}, sum k = 22, fibre check 4t+K = 30
+  marks (0, 0) (2, 2) class A
+  B_A: d=2 delta=15 kappa-invariant=True profiles A{2: 1} B{2: 1} C{1: 2} rigid=0
+  R_A: d=1 delta=30 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_B: d=30 delta=1 kappa-invariant=True profiles A{2: 3, 4: 6} B{2: 6, 6: 3} C{1: 4, 2: 4, 3: 6} rigid=9
+      rigid point over B, e_M=6, preimages (e_Q, point): [(6, (1, -1))]
+      rigid point over B, e_M=6, preimages (e_Q, point): [(6, (1, 1))]
+      rigid point over B, e_M=6, preimages (e_Q, point): [(6, (3, 1))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (0, -1))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (0, 1))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (1, -2))]
+      ... 3 more
+      Par(B): no regular point over B; all 4 lift pairs separated: True
+      (3.1) regular Q points over B: t=0 <= RH budget 0 : True ; N=30 <= 4*0 + 30 = 30 : True
+  R_B: d=1 delta=30 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_C: d=10 delta=3 kappa-invariant=True profiles A{2: 1, 4: 2} B{2: 2, 6: 1} C{1: 4, 3: 2} rigid=3
+      rigid point over B, e_M=6, preimages (e_Q, point): [(6, (1, -1)), (6, (1, 1)), (6, (3, 1))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (1, -2)), (3, (1, 2)), (3, (3, 2))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (0, -1)), (3, (0, 1)), (3, (4, 1))]
+      Par(C): no regular point over C; all 4 lift pairs separated: True
+      (3.1) regular Q points over C: t=4 <= RH budget 4 : True ; N=30 <= 2*4 + 22 = 30 : True
+  R_C: d=2 delta=15 kappa-invariant=True profiles A{2: 1} B{2: 1} C{1: 2} rigid=0
+      Rig(B), identity at C: all lift pairs separated: False
+      (3.1) regular Q points over C: t=4 <= RH budget 28 : True ; N=30 <= 2*28 + 22 = 78 : True
+========================================================================
+castro24 tiles N = 27  non-regular Q points (corners) = 24
+  class A: regular Q points t=5, corner profile {1: 7}, sum k = 7, fibre check 4t+K = 27
+  class B: regular Q points t=0, corner profile {2: 2, 3: 4, 5: 1, 6: 1}, sum k = 27, fibre check 4t+K = 27
+  class C: regular Q points t=0, corner profile {3: 9}, sum k = 27, fibre check 4t+K = 27
+  marks (2, -2) (6, -2) class A
+  B_A: d=1 delta=27 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  R_A: d=1 delta=27 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_B: d=27 delta=1 kappa-invariant=True profiles A{1: 7, 4: 5} B{2: 2, 3: 4, 5: 1, 6: 1} C{3: 9} rigid=15
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, -3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, -1))]
+      rigid point over B, e_M=6, preimages (e_Q, point): [(6, (3, -3))]
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (5, -3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (7, -3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (7, -1))]
+      ... 9 more
+      Par(B): no regular point over B; all 4 lift pairs separated: True
+      (3.1) regular Q points over B: t=0 <= RH budget 0 : True ; N=27 <= 4*0 + 27 = 27 : True
+  R_B: d=1 delta=27 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_C: d=27 delta=1 kappa-invariant=True profiles A{1: 7, 4: 5} B{2: 2, 3: 4, 5: 1, 6: 1} C{3: 9} rigid=15
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, -3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, -1))]
+      rigid point over B, e_M=6, preimages (e_Q, point): [(6, (3, -3))]
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (5, -3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (7, -3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (7, -1))]
+      ... 9 more
+      Par(C): no regular point over C; all 4 lift pairs separated: True
+      (3.1) regular Q points over C: t=0 <= RH budget 0 : True ; N=27 <= 2*0 + 27 = 27 : True
+  R_C: d=1 delta=27 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+========================================================================
+tokarsky26 tiles N = 29  non-regular Q points (corners) = 26
+  class A: regular Q points t=5, corner profile {1: 5, 2: 2}, sum k = 9, fibre check 4t+K = 29
+  class B: regular Q points t=0, corner profile {2: 3, 3: 1, 5: 4}, sum k = 29, fibre check 4t+K = 29
+  class C: regular Q points t=0, corner profile {1: 2, 3: 9}, sum k = 29, fibre check 4t+K = 29
+  marks (2, -2) (6, -2) class A
+  B_A: d=1 delta=29 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  R_A: d=1 delta=29 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_B: d=29 delta=1 kappa-invariant=True profiles A{1: 5, 2: 2, 4: 5} B{2: 3, 3: 1, 5: 4} C{1: 2, 3: 9} rigid=14
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (1, -1))]
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (3, -3))]
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (5, -3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (7, -3))]
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (7, -1))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (1, -2))]
+      ... 8 more
+      Par(B): no regular point over B; all 4 lift pairs separated: True
+      (3.1) regular Q points over B: t=0 <= RH budget 0 : True ; N=29 <= 4*0 + 29 = 29 : True
+  R_B: d=1 delta=29 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_C: d=29 delta=1 kappa-invariant=True profiles A{1: 5, 2: 2, 4: 5} B{2: 3, 3: 1, 5: 4} C{1: 2, 3: 9} rigid=14
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (1, -1))]
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (3, -3))]
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (5, -3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (7, -3))]
+      rigid point over B, e_M=5, preimages (e_Q, point): [(5, (7, -1))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (1, -2))]
+      ... 8 more
+      Par(C): no regular point over C; all 4 lift pairs separated: True
+      (3.1) regular Q points over C: t=0 <= RH budget 0 : True ; N=29 <= 2*0 + 29 = 29 : True
+  R_C: d=1 delta=29 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+========================================================================
+monteil slit room (not strictly simple) tiles N = 22  non-regular Q points (corners) = 20
+  class A: regular Q points t=4, corner profile {1: 6}, sum k = 6, fibre check 4t+K = 22
+  class B: regular Q points t=0, corner profile {2: 2, 3: 4, 6: 1}, sum k = 22, fibre check 4t+K = 22
+  class C: regular Q points t=0, corner profile {3: 6, 4: 1}, sum k = 22, fibre check 4t+K = 22
+  marks (2, 2) (4, 2) class A
+  B_A: d=1 delta=22 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  R_A: d=1 delta=22 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_B: d=22 delta=1 kappa-invariant=True profiles A{1: 6, 4: 4} B{2: 2, 3: 4, 6: 1} C{3: 6, 4: 1} rigid=12
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, 3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, 1))]
+      rigid point over B, e_M=6, preimages (e_Q, point): [(6, (3, 3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (5, 1))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (5, 3))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (1, 2))]
+      ... 6 more
+      Par(B): no regular point over B; all 4 lift pairs separated: True
+      (3.1) regular Q points over B: t=0 <= RH budget 0 : True ; N=22 <= 4*0 + 22 = 22 : True
+  R_B: d=1 delta=22 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_C: d=22 delta=1 kappa-invariant=True profiles A{1: 6, 4: 4} B{2: 2, 3: 4, 6: 1} C{3: 6, 4: 1} rigid=12
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, 3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, 1))]
+      rigid point over B, e_M=6, preimages (e_Q, point): [(6, (3, 3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (5, 1))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (5, 3))]
+      rigid point over C, e_M=3, preimages (e_Q, point): [(3, (1, 2))]
+      ... 6 more
+      Par(C): no regular point over C; all 4 lift pairs separated: True
+      (3.1) regular Q points over C: t=0 <= RH budget 0 : True ; N=22 <= 2*0 + 22 = 22 : True
+  R_C: d=1 delta=22 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+========================================================================
+wolecki22 pinched (not strictly simple) tiles N = 24  non-regular Q points (corners) = 22
+  class A: regular Q points t=4, corner profile {1: 6, 2: 1}, sum k = 8, fibre check 4t+K = 24
+  class B: regular Q points t=0, corner profile {2: 1, 3: 5, 7: 1}, sum k = 24, fibre check 4t+K = 24
+  class C: regular Q points t=0, corner profile {3: 8}, sum k = 24, fibre check 4t+K = 24
+  marks (0, 0) (2, 2) class A
+  B_A: d=1 delta=24 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  R_A: d=1 delta=24 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_B: d=24 delta=1 kappa-invariant=True profiles A{1: 6, 2: 1, 4: 4} B{2: 1, 3: 5, 7: 1} C{3: 8} rigid=14
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (-1, 1))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (-1, -1))]
+      rigid point over B, e_M=7, preimages (e_Q, point): [(7, (1, 1))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, 3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (3, 1))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (3, 3))]
+      ... 8 more
+      Par(B): no regular point over B; all 4 lift pairs separated: True
+      (3.1) regular Q points over B: t=0 <= RH budget 0 : True ; N=24 <= 4*0 + 24 = 24 : True
+  R_B: d=1 delta=24 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+  B_C: d=24 delta=1 kappa-invariant=True profiles A{1: 6, 2: 1, 4: 4} B{2: 1, 3: 5, 7: 1} C{3: 8} rigid=14
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (-1, 1))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (-1, -1))]
+      rigid point over B, e_M=7, preimages (e_Q, point): [(7, (1, 1))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (1, 3))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (3, 1))]
+      rigid point over B, e_M=3, preimages (e_Q, point): [(3, (3, 3))]
+      ... 8 more
+      Par(C): no regular point over C; all 4 lift pairs separated: True
+      (3.1) regular Q points over C: t=0 <= RH budget 0 : True ; N=24 <= 2*0 + 24 = 24 : True
+  R_C: d=1 delta=24 kappa-invariant=True profiles A{1: 1} B{1: 1} C{1: 1} rigid=0
+CPU seconds: 0.01

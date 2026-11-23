@@ -1,0 +1,54 @@
+== Room R34-base
+cells 19 convex 19 reflex 15 W 34 pinches 0
+S interior T interior
+
+== Parity classes (claim: each off-class has 5 reflexes and 4 convex)
+(0, 0) reflex 0 convex 7 regular [((2, 0), 'interior'), ((4, 0), 'smooth'), ((6, 0), 'interior'), ((8, -2), 'smooth')]
+    reflexes []
+(1, 0) reflex 5 convex 4 regular []
+    reflexes [(1, 0), (3, 0), (5, 0), (7, -2), (7, 0)]
+(0, 1) reflex 5 convex 4 regular []
+    reflexes [(2, -1), (2, 1), (4, -1), (6, -1), (6, 1)]
+(1, 1) reflex 5 convex 4 regular []
+    reflexes [(1, 1), (3, -1), (5, -1), (7, -1), (7, 1)]
+
+== Strip [1,7]x[-1,0]
+cells (1..6,-1) all present: True
+left end x=1 is a wall: True  right end x=7 is a wall: True
+
+== Indispensability certificates (strip legs from the bottom midpoints)
+C (3, -1) reflex class (1, 1) quadrants {'NE': True, 'NW': True, 'SW': True, 'SE': False}
+   leg (-3, 1) -> first lattice point (2, 0) bounces [('x', ('1', '-1/3'))] arrive v (3, 1) OK
+   leg (3, 1) -> first lattice point (6, 0) bounces [] arrive v (3, 1) OK
+   |components| equal: True ; vertical mirror of S-leg (-3, -1) is -T-leg: True ; physical rays differ: True
+C (4, -1) reflex class (0, 1) quadrants {'NE': True, 'NW': True, 'SW': False, 'SE': True}
+   leg (-2, 1) -> first lattice point (2, 0) bounces [] arrive v (-2, 1) OK
+   leg (2, 1) -> first lattice point (6, 0) bounces [] arrive v (2, 1) OK
+   |components| equal: True ; vertical mirror of S-leg (-2, -1) is -T-leg: True ; physical rays differ: True
+C (5, -1) reflex class (1, 1) quadrants {'NE': True, 'NW': True, 'SW': True, 'SE': False}
+   leg (-3, 1) -> first lattice point (2, 0) bounces [] arrive v (-3, 1) OK
+   leg (3, 1) -> first lattice point (6, 0) bounces [('x', ('7', '-1/3'))] arrive v (-3, 1) OK
+   |components| equal: True ; vertical mirror of S-leg (-3, -1) is -T-leg: True ; physical rays differ: True
+
+== Link check at C=(3,-1): room wedge is [0, 3pi/2] (SE missing)
+   room copy: theta_T = t, theta_S = pi - t, gap = pi - 2t (not pi): no straight passage
+   vertically mirrored copy (sector [-3pi/2, 0]): theta_S = -(pi - t), gap to theta_T = pi exactly
+   that pi-arc [-(pi - t), t] contains the sector boundary 0, so the note's affine move is needed
+
+== Ten accessible reflexes from S at the first primitive step
+   (1, 0) reflex dir (-1, 0) first lattice point (1, 0) bounces 0 OK
+   (3, 0) reflex dir (1, 0) first lattice point (3, 0) bounces 0 OK
+   (2, 1) reflex dir (0, 1) first lattice point (2, 1) bounces 0 OK
+   (2, -1) reflex dir (0, -1) first lattice point (2, -1) bounces 0 OK
+   (1, 1) reflex dir (-1, 1) first lattice point (1, 1) bounces 0 OK
+   (3, -1) reflex dir (1, -1) first lattice point (3, -1) bounces 0 OK
+   (4, -1) reflex dir (2, -1) first lattice point (4, -1) bounces 0 OK
+   (5, -1) reflex dir (3, -1) first lattice point (5, -1) bounces 0 OK
+   (6, -1) reflex dir (4, -1) first lattice point (6, -1) bounces 0 OK
+   (7, -1) reflex dir (5, -1) first lattice point (7, -1) bounces 0 OK
+   reflexes not in the list: [(5, 0), (6, 1), (7, -2), (7, 0), (7, 1)]
+
+== Convex-corner fold (Section 1): product of the two perpendicular reflections
+   Rx*Ry = ((-1, 0), (0, -1)) == -I: True
+
+all checks passed

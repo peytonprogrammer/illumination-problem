@@ -1,0 +1,33 @@
+== Item 2: area, double, pillowcase degree, gcd with 6 (k = 6..300)
+  k=6 X=Y=19 area=65 n=65 W=20 r=8 convex=12 regQ=112 gcd=(1,1)
+  k=7 X=Y=22 area=71 n=71 W=20 r=8 convex=12 regQ=124 gcd=(1,1)
+  k=8 X=Y=25 area=77 n=77 W=20 r=8 convex=12 regQ=136 gcd=(1,1)
+  k=9 X=Y=28 area=83 n=83 W=20 r=8 convex=12 regQ=148 gcd=(1,1)
+  k=299 X=Y=898 area=1823 n=1823 W=20 r=8 convex=12 regQ=3628 gcd=(1,1)
+  k=300 X=Y=901 area=1829 n=1829 W=20 r=8 convex=12 regQ=3640 gcd=(1,1)
+  all k=6..300: area=27+X+Y, n=2*area/2=29+6k, W=20, r=8, no pinch, gcd 1, gcd(n,6)=1, RH fibre identities hold: True failures: []
+  n mod 6 values: [5]
+  cross-check d153: k=9 (X=Y=28) n = 83 ; X=Y=26 area = 79
+
+== Item 3: admissible block sizes d (1<d<n, d|n, d<=r=8)
+  union of admissible d over k=6..300: [5, 7]
+  d=5 admissible iff k=1 mod 5: True ; d=7 admissible iff k=1 mod 7: True
+  max zeros on N, floor(r/d), for admissible d: [1]
+  k with both 5 and 7 admissible (k=1 mod 35): [36, 71, 106, 141, 176] ...
+  number of blocks m=n/d when d admissible (first five): [(6, 5, 13), (8, 7, 11), (11, 5, 19), (15, 7, 17), (16, 5, 25)]
+  (if m<=8 were the bound instead) k with some m in 2..8 dividing n, count: 101 same set of k as d-bound: True
+
+== Item 4: primitivity (no admissible d), no darkness hypothesis
+  k=35j (j=1..8) all primitive: True
+  primitive k in 6..300: 202 of 295 ; density 24/35 = 0.6857 observed 0.6847
+  first primitive k: [7, 9, 10, 12, 13, 14, 17, 18, 19, 20]
+  primitive iff k!=1 mod 5 and k!=1 mod 7: True
+  primitive k whose n is prime (primitive for trivial reasons), first: [7, 9, 10, 12, 13, 14, 17, 18]
+  k=6: n=65, admissible d=[5]; k=7: n=71, admissible d=[]
+
+== Item 1: R22 numbers (quoted from d154 log)
+  n=15, inner degree d=3, outer degree m=5; RH budget 2d-2=4; sum q over J=4; saturated: True
+  zeros on N = r/d = 3 ; poles on N by Gauss-Bonnet = 4+zeros = 7
+  proposal bound r >= 3d >= 9 vs W<=20 (r<=8): conclusion unsatisfiable: True
+
+CPU seconds: 0.48

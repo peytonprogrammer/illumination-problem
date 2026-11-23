@@ -1,0 +1,87 @@
+## 1. Ledger bookkeeping (ledger.json, original d163 statuses)
+realization word / dent-count mismatches: 0
+target 1 (OPEN, all dents parallel): 1020 = 935 dented + 85 undented
+  by W: {10: 7, 12: 20, 14: 44, 16: 115, 18: 246, 20: 588}
+dented target-1 words whose ledger realization has no spanning hall strip (strip parallel to the dents): 296
+  ... with no spanning strip in either direction: 18
+  smallest W = 12, words there: ['LLLRLLLRLLRR', 'LLLRLLRLLLRR']
+  first in ledger order: LLLRLLLRLLRR [(0, 2), (0, 0), (1, 0), (1, 1), (5, 1), (5, 5), (4, 5), (4, 4), (2, 4), (2, 3), (3, 3), (3, 2)]
+  LLLRLLLRLLRR: W=12, status=OPEN, coords match note: True, word check True
+smallest OPEN W = 10; OPEN words there: 7; all in target 1: True
+  LLLRLLLRLR: W=10, status=OPEN, polygon matches note: True, first in ledger order among W=10 OPEN: LLLLLLRLRR
+S10 word LLLRLRLLLRLR: status OPEN, in target 1: True, W=12, area=10
+
+## 2b. The note's explicit examples
+S-tetromino: omega=1/2, p=3/16, q=3/16, g=2, residues ['1/8', '1/2', '7/8'], criterion False, tracer hits (|dx|<=12) 0
+   floor-bounce path: end at ('11/8', '3/2'), contacts [(('5/8', '0'), 'h')]
+S10 polygon [(0, 2), (1, 2), (1, 1), (2, 1), (2, 0), (4, 0), (4, 2), (3, 2), (3, 3), (2, 3), (2, 4), (0, 4)], word True
+   runs at y=1/2: [('2', '4')]
+   runs at y=3/2: [('1', '4')]
+   runs at y=5/2: [('0', '3')]
+   runs at y=7/2: [('0', '2')]
+   S10 joint: omega=1/2, p=1/8, q=1/8, g=3, criterion False
+   S10 full room, monotone shots S->T with |n|<=30: 0
+   cap path direction (Fraction(-1, 1), Fraction(4, 1)): end at ('1/4', '5/2'), contacts [(('5/8', '4'), 'h')]
+   extreme horizontal sections [[(Fraction(2, 1), Fraction(4, 1))], [(Fraction(0, 1), Fraction(2, 1))]], vertical sections [[(Fraction(2, 1), Fraction(4, 1))], [(Fraction(0, 1), Fraction(2, 1))]]
+
+## 2c. All-abscissa corollary vs grid evaluation of the open criterion
+J1 S-tetromino (note example): all-clear: 8/8 as predicted, flush endpoints change failures at 0 levels; boundary: 2/2 as predicted, flush endpoints change failures at 0 levels, e.g. (a,b,g,#pred fails,#fails with flush) [('1/4', '1/2', '4/3', 0, 0), ('1/2', '1/4', '4/3', 0, 0)]; open-fail: 3/3 as predicted, flush endpoints change failures at 0 levels
+J2 staggered, punctured mouth |I|=g at a=b: all-clear: 28/28 as predicted, flush endpoints change failures at 0 levels; boundary: 9/9 as predicted, flush endpoints change failures at 0 levels, e.g. (a,b,g,#pred fails,#fails with flush) [('1/4', '1/4', '1', 1, 1), ('1/4', '3/4', '3/2', 0, 0)]; open-fail: 2/2 as predicted, flush endpoints change failures at 0 levels
+J3 T-nested, v=17/12: all-clear: 39/39 as predicted, flush endpoints change failures at 0 levels
+J4 flush L: all-clear: 31/31 as predicted, flush endpoints change failures at 0 levels; boundary: 8/8 as predicted, flush endpoints change failures at 0 levels, e.g. (a,b,g,#pred fails,#fails with flush) [('1/4', '1/4', '1', 0, 0), ('1/2', '1/4', '4/3', 0, 0)]
+J5 flush right, v=99/70: all-clear: 39/39 as predicted, flush endpoints change failures at 0 levels
+J6 staggered S, u=7/5: all-clear: 19/19 as predicted, flush endpoints change failures at 0 levels
+J2 at a=b=1: boundary, g=1, predicted failing (p,q) [('1/2', '1')]
+   S=('1', '1'), T=('3', '3'): tracer monotone hits (|dx|<=16) 0; neighbour (xi+1/100) criterion True
+
+## 4. Greedy bank decomposition on named ledger realizations
+L6 (6-wall L, d160/d161): W=6, bands 2 (<= W/2-1=2), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=1), sizes [2]
+cross12 b=7 (d87/d147): W=12, bands 3 (<= W/2-1=5), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=3), sizes [3]
+CR34 (d69): W=12, bands 3 (<= W/2-1=5), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=3), sizes [3]
+DB55: W=12, bands 3 (<= W/2-1=5), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=3), sizes [3]
+DBas: W=12, bands 3 (<= W/2-1=5), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=3), sizes [3]
+DBw2: W=12, bands 3 (<= W/2-1=5), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=3), sizes [3]
+S10 (d65): W=12, bands 4 (<= W/2-1=5), consecutive overlap True, groups 2 (<= ceil((r+1)/2)=3), sizes [3, 1]
+room 1843 (d64): W=12, bands 3 (<= W/2-1=5), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=3), sizes [3]
+cov279: W=16, bands 4 (<= W/2-1=7), consecutive overlap True, groups 2 (<= ceil((r+1)/2)=4), sizes [2, 2]
+cov446: W=18, bands 6 (<= W/2-1=8), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=4), sizes [6]
+cov2929: W=20, bands 6 (<= W/2-1=9), consecutive overlap True, groups 2 (<= ceil((r+1)/2)=5), sizes [3, 3]
+cov4181: W=20, bands 6 (<= W/2-1=9), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=5), sizes [6]
+cov4269: W=20, bands 6 (<= W/2-1=9), consecutive overlap True, groups 1 (<= ceil((r+1)/2)=5), sizes [6]
+LLLRLLLRLLRR (ledger): W=12, bands 5 (<= W/2-1=5), consecutive overlap True, groups 2 (<= ceil((r+1)/2)=3), sizes [2, 3]
+
+## 3. Criterion vs exact tracer on explicit two-band joints
+tracer: every target image +-T.x + 2*lam*n (lam = gcd of wall abscissas), |dx| <= dmax, physical exact trace; a hit must end at T with vertical-wall contacts only.
+J1 S-tetromino (note example): staggered [], I=('1', '2'), lam=1, dmax=12, P=[('0', '0'), ('2', '0'), ('2', '1'), ('3', '1'), ('3', '2'), ('1', '2'), ('1', '1'), ('0', '1')]
+   pairs 69, tracer-lit 63; disagreements: open criterion 0, open+flush-endpoint criterion 0; bounded vs exact(residue) criterion 4; lit only through a flush endpoint 0 e.g. []
+J2 staggered, punctured mouth |I|=g at a=b: staggered [], I=('1', '2'), lam=1, dmax=12, P=[('0', '0'), ('2', '0'), ('2', '2'), ('4', '2'), ('4', '7/2'), ('1', '7/2'), ('1', '2'), ('0', '2')]
+   pairs 150, tracer-lit 146; disagreements: open criterion 0, open+flush-endpoint criterion 0; bounded vs exact(residue) criterion 2; lit only through a flush endpoint 0 e.g. []
+J3 T-nested, v=17/12: staggered [], I=('1', '29/12'), lam=1/12, dmax=12, P=[('0', '0'), ('3', '0'), ('3', '2'), ('29/12', '2'), ('29/12', '7/2'), ('1', '7/2'), ('1', '2'), ('0', '2')]
+   pairs 120, tracer-lit 120; disagreements: open criterion 0, open+flush-endpoint criterion 0; bounded vs exact(residue) criterion 0; lit only through a flush endpoint 0 e.g. []
+J4 flush L: flush [Fraction(0, 1)], I=('0', '1'), lam=1, dmax=12, P=[('0', '0'), ('2', '0'), ('2', '2'), ('1', '2'), ('1', '7/2'), ('0', '7/2')]
+   pairs 78, tracer-lit 76; disagreements: open criterion 0, open+flush-endpoint criterion 0; bounded vs exact(residue) criterion 2; lit only through a flush endpoint 0 e.g. []
+J5 flush right, v=99/70: flush [Fraction(3, 1)], I=('111/70', '3'), lam=3/70, dmax=8, P=[('0', '0'), ('3', '0'), ('3', '7/2'), ('111/70', '7/2'), ('111/70', '3/2'), ('0', '3/2')]
+   pairs 100, tracer-lit 98; disagreements: open criterion 0, open+flush-endpoint criterion 0; bounded vs exact(residue) criterion 2; lit only through a flush endpoint 0 e.g. []
+J6 staggered S, u=7/5: staggered [], I=('1/2', '7/5'), lam=1/10, dmax=12, P=[('0', '0'), ('7/5', '0'), ('7/5', '3/2'), ('3/2', '3/2'), ('3/2', '5/2'), ('1/2', '5/2'), ('1/2', '3/2'), ('0', '3/2')]
+   pairs 64, tracer-lit 64; disagreements: open criterion 0, open+flush-endpoint criterion 0; bounded vs exact(residue) criterion 0; lit only through a flush endpoint 0 e.g. []
+TOTAL {'n': 581, 'open_vs_tr': 0, 'flush_vs_tr': 0, 'bounded_vs_exact': 10, 'lit': 567, 'flushonly': 0}   cpu 459.8s
+
+cpu 459.8s
+
+
+## 5. Supplement (run with --extra, appended): long witnesses and flush-endpoint probe
+J1 S-tetromino (note example): S=('32/97', '63/89') T=('113/83', '103/79'): exact criterion lit, min witness |dx|=168817/8051 > dmax=12; physical trace of S.x+-|dx| reaches T monotonically: [False, True]
+J1 S-tetromino (note example): S=('144/97', '19/89') T=('241/83', '141/79'): exact criterion lit, min witness |dx|=2886935/8051 > dmax=12; physical trace of S.x+-|dx| reaches T monotonically: [False, True]
+J1 S-tetromino (note example): S=('60/97', '87/89') T=('95/83', '137/79'): exact criterion lit, min witness |dx|=130723/8051 > dmax=12; physical trace of S.x+-|dx| reaches T monotonically: [True, False]
+J1 S-tetromino (note example): S=('4/97', '24/89') T=('225/83', '81/79'): exact criterion lit, min witness |dx|=182513/8051 > dmax=12; physical trace of S.x+-|dx| reaches T monotonically: [True, False]
+J2 staggered, punctured mouth |I|=g at a=b: S=('4/97', '172/89') T=('323/83', '511/158'): exact criterion lit, min witness |dx|=175917/8051 > dmax=12; physical trace of S.x+-|dx| reaches T monotonically: [True, False]
+J2 staggered, punctured mouth |I|=g at a=b: S=('82/97', '132/89') T=('323/83', '164/79'): exact criterion lit, min witness |dx|=121137/8051 > dmax=12; physical trace of S.x+-|dx| reaches T monotonically: [True, False]
+J4 flush L: S=('170/97', '170/89') T=('78/83', '272/79'): exact criterion lit, min witness |dx|=118288/8051 > dmax=12; physical trace of S.x+-|dx| reaches T monotonically: [False, True]
+J4 flush L: S=('168/97', '172/89') T=('53/83', '257/79'): exact criterion lit, min witness |dx|=115697/8051 > dmax=12; physical trace of S.x+-|dx| reaches T monotonically: [False, True]
+J5 flush right, v=99/70: S=('39/97', '249/178') T=('7131/2905', '449/158'): exact criterion lit, min witness |dx|=4870953/281785 > dmax=8; physical trace of S.x+-|dx| reaches T monotonically: [True, False]
+J5 flush right, v=99/70: S=('123/97', '132/89') T=('2001/1162', '365/158'): exact criterion lit, min witness |dx|=1933359/112714 > dmax=8; physical trace of S.x+-|dx| reaches T monotonically: [True, False]
+J7 flush right (0,2)/(1,2): 108241 (level, mark) placements on a 1/8 x 1/48 grid; open criterion fails but a flush-endpoint crossing exists: 0
+J8 flush right (0,3)/(1,3): 108241 (level, mark) placements on a 1/8 x 1/48 grid; open criterion fails but a flush-endpoint crossing exists: 0
+J5 flush right, v=99/70: 108241 (level, mark) placements on a 1/8 x 1/48 grid; open criterion fails but a flush-endpoint crossing exists: 0
+J4 flush L: 108241 (level, mark) placements on a 1/8 x 1/48 grid; open criterion fails but a flush-endpoint crossing exists: 0
+supplement cpu 25.0s

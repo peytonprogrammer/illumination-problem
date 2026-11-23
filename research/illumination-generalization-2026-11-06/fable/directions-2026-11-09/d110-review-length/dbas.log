@@ -1,0 +1,51 @@
+== claim 2: DBas L=4, S=(1,3), T=(11,3), directions (7+1040j,-2) ==
+j=0 (7,-2): [2, 3]
+j=1 dir=(1047,-2) T(p,q)=1047 reach: own/d109 = [316, 317]; corridor crossings=162
+     insert D=1047: same direction reaches translated T? own/d109 = [478, 479]
+     insert D=2094: same direction reaches translated T? own/d109 = [640, 641]
+     insert D=1: same direction reaches translated T? own/d109 = ['vertex hit at (Fraction(5, 1), Fraction(', 'corner hit at (Fraction(5, 1), Fraction(']
+     insert D=2: same direction reaches translated T? own/d109 = ['vertex hit at (Fraction(15, 1), Fraction', 'corner hit at (Fraction(15, 1), Fraction']
+     insert D=1045: same direction reaches translated T? own/d109 = ['vertex hit at (Fraction(1054, 1), Fracti', 'corner hit at (Fraction(1054, 1), Fracti']
+j=2 dir=(2087,-2) T(p,q)=2087 reach: own/d109 = [630, 631]; corridor crossings=322
+     insert D=2087: same direction reaches translated T? own/d109 = [952, 953]
+     insert D=4174: same direction reaches translated T? own/d109 = [1274, 1275]
+     insert D=1: same direction reaches translated T? own/d109 = ['vertex hit at (Fraction(10, 1), Fraction', 'corner hit at (Fraction(10, 1), Fraction']
+     insert D=2: same direction reaches translated T? own/d109 = ['vertex hit at (Fraction(5, 1), Fraction(', 'corner hit at (Fraction(5, 1), Fraction(']
+     insert D=2085: same direction reaches translated T? own/d109 = ['vertex hit at (Fraction(2098, 1), Fracti', 'corner hit at (Fraction(2098, 1), Fracti']
+j=3 dir=(3127,-2) T(p,q)=3127 reach: own/d109 = [944, 945]; corridor crossings=482
+     insert D=3127: same direction reaches translated T? own/d109 = [1426, 1427]
+     insert D=6254: same direction reaches translated T? own/d109 = [1908, 1909]
+     insert D=1: same direction reaches translated T? own/d109 = ['vertex hit at (Fraction(5, 1), Fraction(', 'corner hit at (Fraction(5, 1), Fraction(']
+     insert D=2: same direction reaches translated T? own/d109 = [2476, 2477]
+     insert D=3125: same direction reaches translated T? own/d109 = [3122, 3123]
+
+== claim 3: DBas family, mark (1,3) -> (5+L+c,3) ==
+L=2 b=6 branch-2 interval (7/3,14/3) even k: [4]
+   k=4 m=2/7 dir=(-7, -2) own/d109=[3, 4] door heights=['9/7', '9/7']
+   branch-1 interval (3,4) even k: []
+L=3 b=7 branch-2 interval (8/3,32/7) even k: [4]
+   k=4 m=1/4 dir=(-4, -1) own/d109=[3, 4] door heights=['3/2', '5/4']
+   branch-1 interval (7/2,4) even k: []
+L=10 b=6 branch-2 interval (11/3,22/3) even k: [4, 6]
+   k=4 m=2/11 dir=(-11, -2) own/d109=[3, 4] door heights=['21/11', '21/11']
+   k=6 m=3/11 dir=(-11, -3) own/d109=[5, 6] door heights=['15/11', '15/11']
+   branch-1 interval (5,20/3) even k: [6]
+   branch-1 k=6 m=3/10 own/d109=[4, 5]
+L=45 b=7 branch-2 interval (29/3,116/7) even k: [10, 12, 14, 16]
+   k=10 m=5/29 dir=(-29, -5) own/d109=[9, 10] door heights=['57/29', '52/29']
+   k=12 m=6/29 dir=(-29, -6) own/d109=[11, 12] door heights=['51/29', '45/29']
+   k=14 m=7/29 dir=(-29, -7) own/d109=[13, 14] door heights=['45/29', '38/29']
+   k=16 m=8/29 dir=(-29, -8) own/d109=[15, 16] door heights=['39/29', '31/29']
+   branch-1 interval (14,16) even k: []
+   branch-1 endpoint k=14 m=1/4: own/d109=['vertex hit at (Fraction(5, 1), Fraction(', 'corner hit at (Fraction(5, 1), Fraction(']
+   branch-1 endpoint k=16 m=2/7: own/d109=['vertex hit at (Fraction(50, 1), Fraction', 'corner hit at (Fraction(50, 1), Fraction']
+L=47 b=7 branch-2 interval (10,120/7) even k: [12, 14, 16]
+   k=12 m=1/5 dir=(-5, -1) own/d109=[11, 12] door heights=['9/5', '8/5']
+   k=14 m=7/30 dir=(-30, -7) own/d109=[13, 14] door heights=['8/5', '41/30']
+   k=16 m=4/15 dir=(-15, -4) own/d109=[15, 16] door heights=['7/5', '17/15']
+   branch-1 interval (29/2,116/7) even k: [16]
+   branch-1 k=16 m=8/29 own/d109=[14, 15]
+L=23 k=8: leftward developed displacement (-36,-8)
+L=29 k=8: leftward developed displacement (-42,-8)
+L=45 k=10: leftward developed displacement (-58,-10)
+branch-2 scan L=1..300: lengths with no even k: [1] ; all admissible k traced to T

@@ -1,0 +1,84 @@
+# 1. Classification: gap count and the W=10 ledger realization
+  PASS W=20: 10 vertical and 10 horizontal walls -> at most 10 lines and 9 gaps per axis; total 18, 22 with marks
+  PASS W=10 realization is strictly simple with turn word LLLRLLLRLR ~ LLLRLLLRLR
+  PASS DBas and one monotone gap change of DBas are strictly simple
+
+# 2-3. Transfer theorem: exact traces on DBas with insertions
+  PASS base DBas shot (1,3)->(11,3) velocity (7,-2): end at (11,3), contacts ['(8,1)', '(13,17/7)']
+  PASS t=100: k=14, s=16/57 (note: k=14, s=16/57)
+  PASS entry height at x=5: 107/57 (note: 107/57)
+  PASS unfolded corridor height change rel. floor = -538/19; signed (upward-positive) phase mod 2 = 6/19 (note: 18/57)
+  PASS corridor exit at x=109: height 25/19, upward=True (note: 75/57 upward)
+  PASS cap height 139/57, target height 3
+  PASS t=100 trace: end at (111,3), 30 contacts, last contact ['(113,139/57)']
+  PASS only vertical contact is the cap at ['(113,139/57)']
+  PASS all 29 horizontal contacts lie on the corridor's long walls
+   fixed slope 2/7 at t=98: end at (109,3); reaches target: True
+   fixed slope 2/7 at t=100: end at (111,25/7); reaches target: False
+
+## A: named DBas shot, cut x=6 in the corridor: s0=2/7, travel=14, M=1, P=2, margin mu=1/7; guaranteed for t > 84 ~ 84.0
+  PASS t=0: k=0, s=2/7, e=0; end at (11,3) (target (11,3)); identity True, |s-s0| bound True, |e| bound True; 2 contacts, 2 outside strips, base pattern kept True
+  INFO t=1 (below threshold): k=0, s=4/15; end at (12,3); reaches target True; base itinerary kept True; identity True, bounds True
+  INFO t=2 (below threshold): k=0, s=1/4; corner at (5,2); reaches target False; base itinerary kept False; identity True, bounds True
+  INFO t=3 (below threshold): k=0, s=4/17; end at (2,1); reaches target False; base itinerary kept False; identity True, bounds True
+  INFO t=4 (below threshold): k=1, s=1/3; corner at (13,1); reaches target False; base itinerary kept False; identity True, bounds True
+  INFO t=5 (below threshold): k=1, s=6/19; end at (16,3); reaches target True; base itinerary kept True; identity True, bounds True
+  INFO t=6 (below threshold): k=1, s=3/10; end at (17,3); reaches target True; base itinerary kept True; identity True, bounds True
+  INFO t=8 (below threshold): k=1, s=3/11; end at (19,3); reaches target True; base itinerary kept True; identity True, bounds True
+  INFO t=10 (below threshold): k=1, s=1/4; corner at (5,2); reaches target False; base itinerary kept False; identity True, bounds True
+  INFO t=12 (below threshold): k=2, s=4/13; end at (23,3); reaches target True; base itinerary kept True; identity True, bounds True
+  INFO t=37 (below threshold): k=5, s=14/51; end at (48,3); reaches target True; base itinerary kept True; identity True, bounds True
+  PASS t=100: k=14, s=16/57, e=4/57; end at (111,3) (target (111,3)); identity True, |s-s0| bound True, |e| bound True; 30 contacts, 2 outside strips, base pattern kept True
+  PASS t=250: k=36, s=19/66, e=-1/33; end at (261,3) (target (261,3)); identity True, |s-s0| bound True, |e| bound True; 74 contacts, 2 outside strips, base pattern kept True
+  PASS t=2003/3: k=95, s=582/2045, e=32/2045; end at (2036/3,3) (target (2036/3,3)); identity True, |s-s0| bound True, |e| bound True; 192 contacts, 2 outside strips, base pattern kept True
+  PASS t=999: k=143, s=290/1013, e=-8/1013; end at (1010,3) (target (1010,3)); identity True, |s-s0| bound True, |e| bound True; 288 contacts, 2 outside strips, base pattern kept True
+  PASS t=1001: k=143, s=2/7, e=0; end at (1012,3) (target (1012,3)); identity True, |s-s0| bound True, |e| bound True; 288 contacts, 2 outside strips, base pattern kept True
+   named shot, t = 0..60: failures [(2, 'corner'), (3, 'end'), (4, 'corner'), (10, 'corner')]
+  PASS every failure is at or below the per-gate threshold t > 14 for this shot
+  PASS base two-crossing shot (1,3/2) slope 1/12 up, X=22: end at (3,4/3), contacts ['(7,2)', '(13,3/2)', '(7,1)']
+
+## C: two crossings of the corridor cut x=6 (rightward, then leftward after the cap): s0=1/12, travel=22, M=2, P=2, margin mu=1/6; guaranteed for t > 121 ~ 121.0
+  PASS t=0: k=0, s=1/12, e=0; end at (3,4/3) (target (3,4/3)); identity True, |s-s0| bound True, |e| bound True; 3 contacts, 3 outside strips, base pattern kept True
+  INFO t=37 (below threshold): k=2, s=59/576; end at (3,4/3); reaches target True; base itinerary kept False; identity True, bounds True
+  INFO t=100 (below threshold): k=4, s=107/1332; end at (3,4/3); reaches target True; base itinerary kept True; identity True, bounds True
+  PASS t=250: k=10, s=251/3132, e=55/1566; end at (3,4/3) (target (3,4/3)); identity True, |s-s0| bound True, |e| bound True; 43 contacts, 3 outside strips, base pattern kept True
+  PASS t=999: k=42, s=1019/12120, e=-33/4040; end at (3,4/3) (target (3,4/3)); identity True, |s-s0| bound True, |e| bound True; 171 contacts, 3 outside strips, base pattern kept True
+  PASS t=1001: k=42, s=1019/12144, e=-7/1104; end at (3,4/3) (target (3,4/3)); identity True, |s-s0| bound True, |e| bound True; 171 contacts, 3 outside strips, base pattern kept True
+
+## D: cuts x=6 (weight 1, height 1) and x=12 (weight 1, height 6, crossed twice); P=lcm(2,12): s0=2/7, travel=14, M=3, P=12, margin mu=1/7; guaranteed for t > 1750/3 ~ 583.3
+  PASS t=0: k=0, s=2/7, e=0; end at (11,3) (target (11,3)); identity True, |s-s0| bound True, |e| bound True; 2 contacts, 2 outside strips, base pattern kept True
+  INFO t=37 (below threshold): k=1, s=8/25; end at (48,3); reaches target True; base itinerary kept True; identity True, bounds True
+  INFO t=100 (below threshold): k=2, s=38/157; wall-end at (181,5); reaches target False; base itinerary kept False; identity True, bounds True
+  INFO t=250 (below threshold): k=6, s=55/191; end at (261,3); reaches target True; base itinerary kept True; identity True, bounds True
+  PASS t=1001: k=24, s=124/431, e=-4/431; end at (1012,3) (target (1012,3)); identity True, |s-s0| bound True, |e| bound True; 386 contacts, 2 outside strips, base pattern kept True
+  PASS t=5000: k=119, s=2144/7507, e=4/7507; end at (5011,3) (target (5011,3)); identity True, |s-s0| bound True, |e| bound True; 1906 contacts, 2 outside strips, base pattern kept True
+
+## D: cuts x=6 (weight 1, height 1) and x=12 (weight 3, height 6, crossed twice); P=lcm(2,12): s0=2/7, travel=14, M=7, P=12, margin mu=1/7; guaranteed for t > 586 ~ 586.0
+  PASS t=0: k=0, s=2/7, e=0; end at (11,3) (target (11,3)); identity True, |s-s0| bound True, |e| bound True; 2 contacts, 2 outside strips, base pattern kept True
+  INFO t=37 (below threshold): k=1, s=88/273; end at (48,3); reaches target True; base itinerary kept True; identity True, bounds True
+  INFO t=100 (below threshold): k=2, s=86/357; wall-end at (181,-1); reaches target False; base itinerary kept False; identity True, bounds True
+  INFO t=250 (below threshold): k=6, s=127/441; end at (261,3); reaches target True; base itinerary kept True; identity True, bounds True
+  PASS t=1001: k=24, s=2020/7021, e=-4/1003; end at (1012,3) (target (1012,3)); identity True, |s-s0| bound True, |e| bound True; 578 contacts, 2 outside strips, base pattern kept True
+  PASS t=5000: k=119, s=5000/17507, e=4/17507; end at (5011,3) (target (5011,3)); identity True, |s-s0| bound True, |e| bound True; 2858 contacts, 2 outside strips, base pattern kept True
+
+## E: transposed, cut y=5/2 crossing widths 5 and 4 (down, then up); P=lcm(10,8)=40: s0=7/2, travel=4, M=2, P=40, margin mu=1/2; guaranteed for t > 158 ~ 158.0
+  PASS t=0: k=0, s=7/2, e=0; end at (11,3) (target (11,3)); identity True, |s-s0| bound True, |e| bound True; 2 contacts, 2 outside strips, base pattern kept True
+  INFO t=37 (below threshold): k=3, s=127/39; end at (11,40); reaches target True; base itinerary kept False; identity True, bounds True
+  INFO t=100 (below threshold): k=9, s=367/102; end at (11,103); reaches target True; base itinerary kept True; identity True, bounds True
+  PASS t=250: k=22, s=887/252, e=-5/126; end at (11,253) (target (11,253)); identity True, |s-s0| bound True, |e| bound True; 398 contacts, 2 outside strips, base pattern kept True
+  PASS t=1001: k=88, s=3527/1003, e=-33/1003; end at (11,1004) (target (11,1004)); identity True, |s-s0| bound True, |e| bound True; 1586 contacts, 2 outside strips, base pattern kept True
+  PASS t=5000: k=438, s=17527/5002, e=-20/2501; end at (11,5003) (target (11,5003)); identity True, |s-s0| bound True, |e| bound True; 7886 contacts, 2 outside strips, base pattern kept True
+
+   control: E with P a multiple of only one crossed width (P=10 or P=8)
+   P=10: reaches target [(37, False), (100, False), (250, True), (1001, True), (5000, True)]; k*P mod 8 (right-chamber doubled width) = [2, 6, 0, 4, 4], mod 10 (left) = [0, 0, 0, 0, 0]
+  PASS P=10 (not a multiple of both doubled widths) misses at some t
+   P=8: reaches target [(37, False), (100, False), (250, False), (1001, False), (5000, False)]; k*P mod 8 (right-chamber doubled width) = [0, 0, 0, 0, 0], mod 10 (left) = [8, 2, 2, 4, 4]
+  PASS P=8 (not a multiple of both doubled widths) misses at some t
+   P=10 successes have k*P = 0 or 4 mod 8. A shift of 4 is half the doubled width 8: it mirrors the
+   right chamber about x=11, which is the target's abscissa. So these are coincidences of a centred target.
+
+# 4. Consequence: contrapositive bookkeeping on the named shot
+  PASS re-based at t0=37 (s0=14/51, X=51): insert 100 more -> s=42/151, end at (148,3)
+  PASS re-based at t0=37 (s0=14/51, X=51): insert 1001 more -> s=72/263, end at (1049,3)
+
+CPU 0.74s; failures: 0

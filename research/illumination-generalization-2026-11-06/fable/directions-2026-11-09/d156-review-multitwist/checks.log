@@ -1,0 +1,135 @@
+# 0. Tracer sanity (independent of the d155 tracer)
+   a=10 d=(11, 1): target at (32,2) after 1 reflections, |dx|=22, |dy|=2
+   a=10 d=(1, 1): corner at (20,2) after 2 reflections, |dx|=10, |dy|=10
+   a=10 d=(1, 7): corner at (20,2) after 14 reflections, |dx|=10, |dy|=70
+   a=10 d=(-1, 3): corner at (20,2) after 19 reflections, |dx|=30, |dy|=90
+   a=10 d=(2, 5): corner at (20,3) after 5 reflections, |dx|=10, |dy|=25
+   a=10 d=(-2, -9): corner at (20,3) after 28 reflections, |dx|=30, |dy|=135
+   expected: (11,1) reaches T with |dx|=22, |dy|=2; the others stop at (20,2) (d155 table).
+
+# a=10 (2a=20), S=(10, 2), T=(32, 2), W=12
+## 1. Horizontal corner-cut cylinders (4-copy unfolding; each band rectangle gives two)
+   y in (0,2), x in (0,20): circumference 40, height 2, C/gcd(C,h)=20
+   y in (0,2), x in (22,43): circumference 42, height 2, C/gcd(C,h)=21
+   y in (2,3), x in (0,43): circumference 86, height 1, C/gcd(C,h)=86
+   y in (3,5), x in (0,20): circumference 40, height 2, C/gcd(C,h)=20
+   y in (3,5), x in (22,43): circumference 42, height 2, C/gcd(C,h)=21
+   least pointwise rim-fixing shear c = 18060; note's lcm(2a,2a+1,8a+6) = 18060; equal: True
+   rim ordinates [0, 2, 3, 5]; S and T on rims: True
+   corner-SET-preserving variant (y=0, y=5 leaves uncut, bands merged to height 4): c' = 9030, c/c' = 2
+     merged C=40: rim shift 0, convex mid-leaf shift 20 (its corner lifts sit at 0 and 20, so the set is preserved)
+     merged C=42: rim shift 0, convex mid-leaf shift 0 (its corner lifts sit at 0 and 21, so the set is preserved)
+     merged C=40: rim shift 0, convex mid-leaf shift 20 (its corner lifts sit at 0 and 20, so the set is preserved)
+     merged C=42: rim shift 0, convex mid-leaf shift 0 (its corner lifts sit at 0 and 21, so the set is preserved)
+## 1b. Direction family (p,1), exact traces
+   p=0: vertical ray keeps x=a (not a corner abscissa), closes after |dy|=10, T.x != a: MISS
+   p=1c=18060: closed at (10,2) after 8066 reflections, |dx|=180600, |dy|=10  [expect closed, |dy|=10]
+   p=-1c=-18060: closed at (10,2) after 8066 reflections, |dx|=180600, |dy|=10  [expect closed, |dy|=10]
+   p=2c=36120: closed at (10,2) after 16130 reflections, |dx|=361200, |dy|=10  [expect closed, |dy|=10]
+   p=a+1+1c=18071: target at (32,2) after 841 reflections, |dx|=36142, |dy|=2  [expect target, |dy|=2]
+   p=a+1+-1c=-18049: target at (32,2) after 841 reflections, |dx|=36098, |dy|=2  [expect target, |dy|=2]
+   p=a+1+2c=36131: target at (32,2) after 1681 reflections, |dx|=72262, |dy|=2  [expect target, |dy|=2]
+   p=a+1+-2c=-36109: target at (32,2) after 1681 reflections, |dx|=72218, |dy|=2  [expect target, |dy|=2]
+   p=a+1+1c'=9041: target at (32,2) after 421 reflections, |dx|=18082, |dy|=2
+   p=1c'=9030: closed at (10,2) after 4034 reflections, |dx|=90300, |dy|=10
+   p=a+1+-1c'=-9019: target at (32,2) after 421 reflections, |dx|=18038, |dy|=2
+   p=-1c'=-9030: closed at (10,2) after 4034 reflections, |dx|=90300, |dy|=10
+   all p in [-150,150] with (p,1) reaching T: [-148, -143, -141, -136, -134, -109, -103, -101, -75, -67, -59, -57, -56, -51, -49, -48, -37, -35, -27, -21, -19, 11, 20, 22, 27, 31, 52, 60, 62, 66, 69, 79, 91, 94, 97, 99, 106, 109, 113, 114, 137, 144, 145, 148, 149]
+## 2. Stabilizer obstruction ingredients
+   distinct circumferences [40, 42, 86]; cylinders per circumference in the unfolding: {40: 4, 42: 4, 86: 2}
+   cylinder closures containing S: [(40, (0, 20), (0, 2)), (86, (0, 43), (2, 3))]
+   cylinder closures containing T: [(42, (22, 43), (0, 2)), (86, (0, 43), (2, 3))]
+   x-projection of circumference-40 closures: [0, 20]
+   x-projection of circumference-42 closures: [22, 43]
+   transposed pencil (+-1,m), 1<=|m|<=60: all stop at lower lip (20,2): True []
+## 2b. Probe beyond the horizontal stabilizer: holonomy multiplicities in direction (a+1,1)
+   vertical corner-cut cylinders have holonomy (0,m) with m in [2, 10]
+   sampled closed orbits in direction (11, 1): holonomy multiplicities m -> count {Fraction(414, 1): 56}
+   any m outside [2, 10]: True
+   successful p in [-150,150]: sampled multiplicities all in [2, 10] (necessary for being an affine image of vertical) for p = []
+   sample: {-148: [Fraction(54, 1), Fraction(90, 1)], -143: [Fraction(132, 1)], -141: [Fraction(52, 1), Fraction(310, 1)], -136: [Fraction(70, 1), Fraction(150, 1)], -134: [Fraction(414, 1)], -109: [Fraction(42, 1), Fraction(100, 1), Fraction(130, 1)]}
+
+# a=20 (2a=40), S=(20, 2), T=(62, 2), W=12
+## 1. Horizontal corner-cut cylinders (4-copy unfolding; each band rectangle gives two)
+   y in (0,2), x in (0,40): circumference 80, height 2, C/gcd(C,h)=40
+   y in (0,2), x in (42,83): circumference 82, height 2, C/gcd(C,h)=41
+   y in (2,3), x in (0,83): circumference 166, height 1, C/gcd(C,h)=166
+   y in (3,5), x in (0,40): circumference 80, height 2, C/gcd(C,h)=40
+   y in (3,5), x in (42,83): circumference 82, height 2, C/gcd(C,h)=41
+   least pointwise rim-fixing shear c = 136120; note's lcm(2a,2a+1,8a+6) = 136120; equal: True
+   rim ordinates [0, 2, 3, 5]; S and T on rims: True
+   corner-SET-preserving variant (y=0, y=5 leaves uncut, bands merged to height 4): c' = 68060, c/c' = 2
+     merged C=80: rim shift 0, convex mid-leaf shift 40 (its corner lifts sit at 0 and 40, so the set is preserved)
+     merged C=82: rim shift 0, convex mid-leaf shift 0 (its corner lifts sit at 0 and 41, so the set is preserved)
+     merged C=80: rim shift 0, convex mid-leaf shift 40 (its corner lifts sit at 0 and 40, so the set is preserved)
+     merged C=82: rim shift 0, convex mid-leaf shift 0 (its corner lifts sit at 0 and 41, so the set is preserved)
+## 1b. Direction family (p,1), exact traces
+   p=0: vertical ray keeps x=a (not a corner abscissa), closes after |dy|=10, T.x != a: MISS
+   p=1c=136120: closed at (20,2) after 30506 reflections, |dx|=1361200, |dy|=10  [expect closed, |dy|=10]
+   p=-1c=-136120: closed at (20,2) after 30506 reflections, |dx|=1361200, |dy|=10  [expect closed, |dy|=10]
+   p=2c=272240: closed at (20,2) after 61010 reflections, |dx|=2722400, |dy|=10  [expect closed, |dy|=10]
+   p=a+1+1c=136141: target at (62,2) after 3281 reflections, |dx|=272282, |dy|=2  [expect target, |dy|=2]
+   p=a+1+-1c=-136099: target at (62,2) after 3281 reflections, |dx|=272198, |dy|=2  [expect target, |dy|=2]
+   p=a+1+2c=272261: target at (62,2) after 6561 reflections, |dx|=544522, |dy|=2  [expect target, |dy|=2]
+   p=a+1+-2c=-272219: target at (62,2) after 6561 reflections, |dx|=544438, |dy|=2  [expect target, |dy|=2]
+   p=a+1+1c'=68081: target at (62,2) after 1641 reflections, |dx|=136162, |dy|=2
+   p=1c'=68060: closed at (20,2) after 15254 reflections, |dx|=680600, |dy|=10
+   p=a+1+-1c'=-68039: target at (62,2) after 1641 reflections, |dx|=136078, |dy|=2
+   p=-1c'=-68060: closed at (20,2) after 15254 reflections, |dx|=680600, |dy|=10
+## 2. Stabilizer obstruction ingredients
+   distinct circumferences [80, 82, 166]; cylinders per circumference in the unfolding: {80: 4, 82: 4, 166: 2}
+   cylinder closures containing S: [(80, (0, 40), (0, 2)), (166, (0, 83), (2, 3))]
+   cylinder closures containing T: [(82, (42, 83), (0, 2)), (166, (0, 83), (2, 3))]
+   x-projection of circumference-80 closures: [0, 40]
+   x-projection of circumference-82 closures: [42, 83]
+   transposed pencil (+-1,m), 1<=|m|<=60: all stop at lower lip (40,2): True []
+## 2b. Probe beyond the horizontal stabilizer: holonomy multiplicities in direction (a+1,1)
+   vertical corner-cut cylinders have holonomy (0,m) with m in [2, 10]
+   sampled closed orbits in direction (21, 1): holonomy multiplicities m -> count {Fraction(814, 1): 56}
+   any m outside [2, 10]: True
+
+# a=60 (2a=120), S=(60, 2), T=(182, 2), W=12
+## 1. Horizontal corner-cut cylinders (4-copy unfolding; each band rectangle gives two)
+   y in (0,2), x in (0,120): circumference 240, height 2, C/gcd(C,h)=120
+   y in (0,2), x in (122,243): circumference 242, height 2, C/gcd(C,h)=121
+   y in (2,3), x in (0,243): circumference 486, height 1, C/gcd(C,h)=486
+   y in (3,5), x in (0,120): circumference 240, height 2, C/gcd(C,h)=120
+   y in (3,5), x in (122,243): circumference 242, height 2, C/gcd(C,h)=121
+   least pointwise rim-fixing shear c = 1176120; note's lcm(2a,2a+1,8a+6) = 1176120; equal: True
+   rim ordinates [0, 2, 3, 5]; S and T on rims: True
+   corner-SET-preserving variant (y=0, y=5 leaves uncut, bands merged to height 4): c' = 588060, c/c' = 2
+     merged C=240: rim shift 0, convex mid-leaf shift 120 (its corner lifts sit at 0 and 120, so the set is preserved)
+     merged C=242: rim shift 0, convex mid-leaf shift 0 (its corner lifts sit at 0 and 121, so the set is preserved)
+     merged C=240: rim shift 0, convex mid-leaf shift 120 (its corner lifts sit at 0 and 120, so the set is preserved)
+     merged C=242: rim shift 0, convex mid-leaf shift 0 (its corner lifts sit at 0 and 121, so the set is preserved)
+## 1b. Direction family (p,1), exact traces
+   p=0: vertical ray keeps x=a (not a corner abscissa), closes after |dy|=10, T.x != a: MISS
+   p=1c=1176120: closed at (60,2) after 88090 reflections, |dx|=11761200, |dy|=10  [expect closed, |dy|=10]
+   p=-1c=-1176120: closed at (60,2) after 88090 reflections, |dx|=11761200, |dy|=10  [expect closed, |dy|=10]
+   p=2c=2352240: closed at (60,2) after 176178 reflections, |dx|=23522400, |dy|=10  [expect closed, |dy|=10]
+   p=a+1+1c=1176181: target at (182,2) after 9681 reflections, |dx|=2352362, |dy|=2  [expect target, |dy|=2]
+   p=a+1+-1c=-1176059: target at (182,2) after 9681 reflections, |dx|=2352118, |dy|=2  [expect target, |dy|=2]
+   p=a+1+2c=2352301: target at (182,2) after 19361 reflections, |dx|=4704602, |dy|=2  [expect target, |dy|=2]
+   p=a+1+-2c=-2352179: target at (182,2) after 19361 reflections, |dx|=4704358, |dy|=2  [expect target, |dy|=2]
+   p=a+1+1c'=588121: target at (182,2) after 4841 reflections, |dx|=1176242, |dy|=2
+   p=1c'=588060: closed at (60,2) after 44046 reflections, |dx|=5880600, |dy|=10
+   p=a+1+-1c'=-587999: target at (182,2) after 4841 reflections, |dx|=1175998, |dy|=2
+   p=-1c'=-588060: closed at (60,2) after 44046 reflections, |dx|=5880600, |dy|=10
+## 2. Stabilizer obstruction ingredients
+   distinct circumferences [240, 242, 486]; cylinders per circumference in the unfolding: {240: 4, 242: 4, 486: 2}
+   cylinder closures containing S: [(240, (0, 120), (0, 2)), (486, (0, 243), (2, 3))]
+   cylinder closures containing T: [(242, (122, 243), (0, 2)), (486, (0, 243), (2, 3))]
+   x-projection of circumference-240 closures: [0, 120]
+   x-projection of circumference-242 closures: [122, 243]
+   transposed pencil (+-1,m), 1<=|m|<=60: all stop at lower lip (120,2): True []
+## 2b. Probe beyond the horizontal stabilizer: holonomy multiplicities in direction (a+1,1)
+   vertical corner-cut cylinders have holonomy (0,m) with m in [2, 10]
+   sampled closed orbits in direction (61, 1): holonomy multiplicities m -> count {Fraction(2414, 1): 56}
+   any m outside [2, 10]: True
+
+# Summary (a, c, p=0 mod c all closed-miss, p=a+1 mod c all hit)
+   (10, 18060, True, True)
+   (20, 136120, True, True)
+   (60, 1176120, True, True)
+
+CPU seconds: 0.88

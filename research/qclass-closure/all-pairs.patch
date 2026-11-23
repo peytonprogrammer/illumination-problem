@@ -1,0 +1,17 @@
+--- shoot.c
++++ all_pairs.c
+@@ -205,12 +205,12 @@
+         fputc('\n', ro);
+         st_rooms[area][W]++;
+         int room_k7 = 0;
+-        for (int cl = 0; cl < 4; cl++) {
++        for (int cl = 0; cl < 1; cl++) {
+             int ox = cl >> 1, oy = cl & 1;
+             int ip[4 * MAXC], ni = 0, k = 0;
+             for (int i = 0; i < npt; i++) {
+                 int same = ((ptx[i] - ox) & 1) == 0 && ((pty[i] - oy) & 1) == 0;
+-                if (same && ptk[i] == 4) ip[ni++] = i;
++                if (ptk[i] == 4) ip[ni++] = i;
+                 if (!same && (ptk[i] == 2 || ptk[i] == 4)) k++;
+             }
+             if (ni < 2) continue;

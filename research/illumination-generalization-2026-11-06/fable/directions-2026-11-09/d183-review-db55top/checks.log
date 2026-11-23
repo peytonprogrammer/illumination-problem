@@ -1,0 +1,132 @@
+# 1. Room: d110 dumbbell(5,0,H,5,0,H,2,1,3) against the note's union and the d181 family
+  PASS H=4: vertices = note's union, area 43 = 10H+3, vertical lengths [1, 2, 4], horizontal [3, 5], gcds 1; H parity even (beyond d181 family)
+  PASS H=5: vertices = note's union, area 53 = 10H+3, vertical lengths [2, 5], horizontal [3, 5], gcds 1; H parity odd (in d181 family)
+  PASS H=7: vertices = note's union, area 73 = 10H+3, vertical lengths [2, 4, 7], horizontal [3, 5], gcds 1; H parity odd (in d181 family)
+  PASS H=15: vertices = note's union, area 153 = 10H+3, vertical lengths [2, 12, 15], horizontal [3, 5], gcds 1; H parity odd (in d181 family)
+  PASS H=31: vertices = note's union, area 313 = 10H+3, vertical lengths [2, 28, 31], horizontal [3, 5], gcds 1; H parity odd (in d181 family)
+  PASS H=101: vertices = note's union, area 1013 = 10H+3, vertical lengths [2, 98, 101], horizontal [3, 5], gcds 1; H parity odd (in d181 family)
+  PASS H=5 equals d181 ROOMS['DB55'] at L=3
+
+# 2. Upward section y=5/2: one return equals u -> u+2t mod 26, at adversarial phases
+   Phases: eps=1/1000 either side of each integer u whose upper seam abscissa u+t/2 or lower seam
+   abscissa u+3t/2 folds to a corner abscissa 5 or 8, plus eps off the outer walls u=0,13.
+  PASS t=10, H=4: 12 phases return to u+2t with predicted vertical travel
+  PASS t=10, H=5: 12 phases return to u+2t with predicted vertical travel
+  PASS t=10, H=7: 12 phases return to u+2t with predicted vertical travel
+  PASS t=10, H=15: 12 phases return to u+2t with predicted vertical travel
+  PASS t=10, H=31: 12 phases return to u+2t with predicted vertical travel
+  PASS t=10, H=101: 12 phases return to u+2t with predicted vertical travel
+  PASS t=10: gcd(2t,26)=2, 13 does not divide k=1
+  PASS t=20, H=4: 20 phases return to u+2t with predicted vertical travel
+  PASS t=20, H=5: 20 phases return to u+2t with predicted vertical travel
+  PASS t=20, H=7: 20 phases return to u+2t with predicted vertical travel
+  PASS t=20, H=15: 20 phases return to u+2t with predicted vertical travel
+  PASS t=20, H=31: 20 phases return to u+2t with predicted vertical travel
+  PASS t=20, H=101: 20 phases return to u+2t with predicted vertical travel
+  PASS t=20: gcd(2t,26)=2, 13 does not divide k=2
+  PASS t=100, H=4: 20 phases return to u+2t with predicted vertical travel
+  PASS t=100, H=5: 20 phases return to u+2t with predicted vertical travel
+  PASS t=100, H=7: 20 phases return to u+2t with predicted vertical travel
+  PASS t=100, H=15: 20 phases return to u+2t with predicted vertical travel
+  PASS t=100, H=31: 20 phases return to u+2t with predicted vertical travel
+  PASS t=100, H=101: 20 phases return to u+2t with predicted vertical travel
+  PASS t=100: gcd(2t,26)=2, 13 does not divide k=10
+
+   Full 13-return cycle at H=101, t=100, from u=5-1/1000 (next to the mouth tip)
+  PASS 13 returns close up exactly at u=4999/1000; period vertical travel 2026
+
+# 3. Invariant: first upward section phase u = sx - t*ty + 5t/2 mod 2 for all four lifts
+  PASS H=4, t=10: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+  PASS H=4, t=20: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+  PASS H=4, t=100: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+  PASS H=7, t=10: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+  PASS H=7, t=20: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+  PASS H=7, t=100: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+  PASS H=31, t=10: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+  PASS H=31, t=20: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+  PASS H=31, t=100: 24 lifts reach the section at the predicted class; negating both signs swaps cylinders
+
+# 4. Cylinder chords built from the unrolled cylinder, traced exactly
+  PASS H=15, t=10, next to reflex (5,3) -> next to cap corner (13,H): (4999/1000,3001/1000) -> (12960/997,14864/991); lift signs, m, delta, (dX,dY), contacts = (1, 1, 3, Fraction(-92703, 988027000), Fraction(777659997, 997000), Fraction(77298009, 991000), 155, 'end')
+  PASS H=101, t=10, next to floor corner (0,0) -> corridor: (1/997,1/991) -> (19/3,15/7); lift signs, m, delta, (dX,dY), contacts = (1, 1, 3, Fraction(-4751576, 20748567), Fraction(17941012, 2991), Fraction(4161202, 6937), 1197, 'end')
+  PASS H=7, t=10, next to reflex (8,2) -> just inside the left mouth: (8001/1000,1999/1000) -> (49/10,2001/1000); lift signs, m, delta, (dX,dY), contacts = (1, 1, 5, Fraction(879, 1000), Fraction(460899, 1000), Fraction(23001, 500), 90, 'end')
+  PASS H=5, t=20, t=10-rim marks (x+-10y integral) that are off-rim at t=20: (1/2,1/20) -> (25/2,99/20); lift signs, m, delta, (dX,dY), contacts = (1, 1, 8, Fraction(0, 1), Fraction(1178, 1), Fraction(589, 10), 212, 'end')
+  PASS H=31, t=20, t=10-rim marks near cap corner and near reflex (8,2): (1/2,619/20) -> (17/2,41/20); lift signs, m, delta, (dX,dY), contacts = (1, 1, 12, Fraction(0, 1), Fraction(11942, 1), Fraction(5971, 10), 2352, 'end')
+  PASS H=4, t=100, t=100 opposite rims: x parities 0,1 at the reflex seams: (4,3) -> (9,2); lift signs, m, delta, (dX,dY), contacts = (1, 1, 0, Fraction(1, 1), Fraction(-99, 1), Fraction(-1, 1), 8, 'end')
+  PASS H=15, t=100, t=100 opposite rims near floor and cap corners: (1,1/10) -> (12,149/10); lift signs, m, delta, (dX,dY), contacts = (1, 1, 8, Fraction(1, 1), Fraction(19881, 1), Fraction(994, 5), 3782, 'end')
+
+# 5. Exceptional-grid shots: speed (100k, +-1), k from the note's congruences, exact trace
+  PASS H=4 both on seams, left mark beside reflex (5,3), zero legs: (4,3) -> (10,2), opposite banks, k=5, speed (500, -1), 38 smooth contacts, end
+  PASS H=4 near cap and floor corners: (1,39/10) -> (11,1/10), opposite banks, k=3, speed (300, -1), 191 smooth contacts, end
+  PASS H=4 one tenth off both mouth-lip levels: (4,31/10) -> (10,19/10), opposite banks, k=5, speed (500, -1), 58 smooth contacts, end
+  PASS H=4 seam y=2 to just under the cap: (3,2) -> (11,39/10), opposite banks, k=10, speed (1000, 1), 257 smooth contacts, end
+  PASS H=4 same top bank, (1,11): eps=-1 fails: (1,39/10) -> (11,39/10), same bank, eps=1, z=19, intermediate corridor, k=2, speed (200, -1), 103 smooth contacts, end
+  PASS H=4 same top bank on the seam, (2,12): eps=-1 fails: (2,3) -> (12,3), same bank, eps=1, z=20, intermediate corridor, k=2, speed (200, -1), 31 smooth contacts, end
+  PASS H=4 same bottom bank, (1,11): (1,2) -> (11,1/10), same bank, eps=1, z=19, intermediate corridor, k=2, speed (200, 1), 107 smooth contacts, end
+  PASS H=4 same bottom bank near floor corners, (2,12): (2,1/10) -> (12,1/10), same bank, eps=1, z=20, intermediate corridor, k=2, speed (200, 1), 183 smooth contacts, end
+  PASS H=4 same top bank, b-a=8: (4,31/10) -> (12,39/10), same bank, eps=-1, z=22, intermediate box excursion, k=2, speed (200, -1), 232 smooth contacts, end
+  PASS H=4 same bottom seam, b-a=6: (4,2) -> (10,2), same bank, eps=-1, z=10, intermediate box excursion, k=5, speed (500, 1), 278 smooth contacts, end
+  PASS H=4 bank on seam, band mark j=1 under the upper lip: (4,3) -> (10,29/10), one in band, j=1, k=9, speed (900, -1), 7 smooth contacts, end
+  PASS H=4 bottom bank to band, j=1 over the lower lip: (1,1/10) -> (11,21/10), one in band, j=1, k=1, speed (100, 1), 38 smooth contacts, end
+  PASS H=4 cap to band, j=9: (4,39/10) -> (10,21/10), one in band, j=9, k=1, speed (100, -1), 25 smooth contacts, end
+  PASS H=4 band mark on the left, bank mark on the right (mirrored): (9,39/10) -> (3,5/2), one in band, j=5, k=7, speed (-700, -1), 153 smooth contacts, end
+  PASS H=4 bank mark on the right, band j=9 (mirrored): (10,1/10) -> (2,29/10), one in band, j=9, k=1, speed (-100, 1), 45 smooth contacts, end
+  PASS H=4: 15/15 grid shots reach the target
+  PASS H=5: 15/15 grid shots reach the target
+  PASS H=7: 15/15 grid shots reach the target
+  PASS H=15: 15/15 grid shots reach the target
+  PASS H=31: 15/15 grid shots reach the target
+  PASS H=101 both on seams, left mark beside reflex (5,3), zero legs: (4,3) -> (10,2), opposite banks, k=5, speed (500, -1), 38 smooth contacts, end
+  PASS H=101 near cap and floor corners: (1,1009/10) -> (11,1/10), opposite banks, k=3, speed (300, -1), 6011 smooth contacts, end
+  PASS H=101 one tenth off both mouth-lip levels: (4,31/10) -> (10,19/10), opposite banks, k=5, speed (500, -1), 58 smooth contacts, end
+  PASS H=101 seam y=2 to just under the cap: (3,2) -> (11,1009/10), opposite banks, k=10, speed (1000, 1), 19657 smooth contacts, end
+  PASS H=101 same top bank, (1,11): eps=-1 fails: (1,1009/10) -> (11,1009/10), same bank, eps=1, z=19, intermediate corridor, k=2, speed (200, -1), 7863 smooth contacts, end
+  PASS H=101 same top bank on the seam, (2,12): eps=-1 fails: (2,3) -> (12,3), same bank, eps=1, z=20, intermediate corridor, k=2, speed (200, -1), 31 smooth contacts, end
+  PASS H=101 same bottom bank, (1,11): (1,2) -> (11,1/10), same bank, eps=1, z=19, intermediate corridor, k=2, speed (200, 1), 107 smooth contacts, end
+  PASS H=101 same bottom bank near floor corners, (2,12): (2,1/10) -> (12,1/10), same bank, eps=1, z=20, intermediate corridor, k=2, speed (200, 1), 183 smooth contacts, end
+  PASS H=101 same top bank, b-a=8: (4,31/10) -> (12,1009/10), same bank, eps=-1, z=22, intermediate box excursion, k=2, speed (200, -1), 4112 smooth contacts, end
+  PASS H=101 same bottom seam, b-a=6: (4,2) -> (10,2), same bank, eps=-1, z=10, intermediate box excursion, k=5, speed (500, 1), 19678 smooth contacts, end
+  PASS H=101 bank on seam, band mark j=1 under the upper lip: (4,3) -> (10,29/10), one in band, j=1, k=9, speed (900, -1), 7 smooth contacts, end
+  PASS H=101 bottom bank to band, j=1 over the lower lip: (1,1/10) -> (11,21/10), one in band, j=1, k=1, speed (100, 1), 38 smooth contacts, end
+  PASS H=101 cap to band, j=9: (4,1009/10) -> (10,21/10), one in band, j=9, k=1, speed (100, -1), 1965 smooth contacts, end
+  PASS H=101 band mark on the left, bank mark on the right (mirrored): (9,1009/10) -> (3,5/2), one in band, j=5, k=7, speed (-700, -1), 13733 smooth contacts, end
+  PASS H=101 bank mark on the right, band j=9 (mirrored): (10,1/10) -> (2,29/10), one in band, j=9, k=1, speed (-100, 1), 45 smooth contacts, end
+  PASS H=101: 15/15 grid shots reach the target
+
+   Control: same bank with eps=-1 at (a,b)=(1,11), H=7: the intermediate seam phase is a corner
+  PASS H=7: eps=-1 gives k=8, z=21 (z mod 13 = 8); trace stops at corner (5,2) as the note predicts
+  PASS H=101: eps=-1 gives k=8, z=21 (z mod 13 = 8); trace stops at corner (5,2) as the note predicts
+
+# 6. The note's five exact checks, replayed with the d181 tracer
+  PASS H=5 (1,1)->(9,1): construction gives speed (1100, 1) (note (1100, 1)), 1490 contacts (note 1490), end
+  PASS H=7 (1,51/10)->(11,43/10): construction gives speed (200, -1) (note (200, -1)), 167 contacts (note 167), end
+  PASS H=15 (2,121/10)->(12,133/10): construction gives speed (200, -1) (note (200, -1)), 807 contacts (note 807), end
+  PASS H=7 (2,11/10)->(10,61/10): construction gives speed (1100, 1) (note (1100, 1)), 964 contacts (note 964), end
+  PASS H=7 (3,41/10)->(9,13/5): construction gives speed (600, -1) (note (600, -1)), 150 contacts (note 150), end
+
+# 7. Residue arithmetic behind the three opposite-box cases (all a in 1..4, b in 9..12, same parity)
+  PASS opposite banks: a+100k = +-b mod 26 solvable for all 8 pairs
+  PASS same bank: eps=-1 fails only at [(1, 11), (2, 12)]; eps=+1 sums mod 13 [12, 1] are good
+  PASS one-in-band: gcd(10j,26)=2 and a+10jk = +-b solvable for j=1..9 and all pairs
+  PASS bad intermediate residues z = 0,+-5 mod 13 double to 0,+-3 = {0,3,10}
+   mark (1/2,1/20): all-rim at t=10: True, at t=20: False, survivor: False
+   mark (3,7/10): all-rim at t=10: True, at t=20: True, survivor: True
+   mark (5,23/10): all-rim at t=10: True, at t=20: True, survivor: True
+  PASS t=100: 100y and 5t/2 even on the tenths grid
+
+# 8. Box mark to corridor or mouth mark: reviewed d112 A' slope, exact trace
+  PASS H=4 floor corner side to far mouth lip: (4,1/10) -> (8,21/10), A, velocity, contacts = (Fraction(61, 1), (Fraction(64, 1), Fraction(2, 1)), 12, 'end')
+  PASS H=4 cap to far mouth under the upper lip: (1,39/10) -> (8,29/10), A, velocity, contacts = (Fraction(34, 1), (Fraction(37, 1), Fraction(-1, 1)), 6, 'end')
+  PASS H=4 just above the right reflex to far left mouth lip: (12,3001/1000) -> (5,2001/1000), A, velocity, contacts = (Fraction(4, 1), (Fraction(-7, 1), Fraction(-1, 1)), 0, 'end')
+  PASS H=4 right floor to corridor near roof: (9,1/997) -> (13/2,2972/991), A, velocity, contacts = (Fraction(11, 1), (Fraction(-25, 2), Fraction(2962093, 988027)), 2, 'end')
+  PASS H=31 floor corner side to far mouth lip: (4,1/10) -> (8,21/10), A, velocity, contacts = (Fraction(61, 1), (Fraction(64, 1), Fraction(2, 1)), 12, 'end')
+  PASS H=31 cap to far mouth under the upper lip: (1,309/10) -> (8,29/10), A, velocity, contacts = (Fraction(844, 1), (Fraction(847, 1), Fraction(-28, 1)), 168, 'end')
+  PASS H=31 just above the right reflex to far left mouth lip: (12,3001/1000) -> (5,2001/1000), A, velocity, contacts = (Fraction(4, 1), (Fraction(-7, 1), Fraction(-1, 1)), 0, 'end')
+  PASS H=31 right floor to corridor near roof: (9,1/997) -> (13/2,2972/991), A, velocity, contacts = (Fraction(11, 1), (Fraction(-25, 2), Fraction(2962093, 988027)), 2, 'end')
+  PASS H=101 floor corner side to far mouth lip: (4,1/10) -> (8,21/10), A, velocity, contacts = (Fraction(61, 1), (Fraction(64, 1), Fraction(2, 1)), 12, 'end')
+  PASS H=101 cap to far mouth under the upper lip: (1,1009/10) -> (8,29/10), A, velocity, contacts = (Fraction(2944, 1), (Fraction(2947, 1), Fraction(-98, 1)), 588, 'end')
+  PASS H=101 just above the right reflex to far left mouth lip: (12,3001/1000) -> (5,2001/1000), A, velocity, contacts = (Fraction(4, 1), (Fraction(-7, 1), Fraction(-1, 1)), 0, 'end')
+  PASS H=101 right floor to corridor near roof: (9,1/997) -> (13/2,2972/991), A, velocity, contacts = (Fraction(11, 1), (Fraction(-25, 2), Fraction(2962093, 988027)), 2, 'end')
+  PASS all 180 grid marks are interior points
+
+CPU 6.2 s; failures: 0

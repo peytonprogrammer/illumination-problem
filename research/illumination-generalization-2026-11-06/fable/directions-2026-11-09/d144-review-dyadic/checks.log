@@ -1,0 +1,44 @@
+   y=5 #..##...
+   y=4 #..##...
+   y=3 ######..
+   y=2 ########
+   y=1 #..##..#
+   y=0 #..##..#
+[cov4181] chord (2,3)-(4,3): midpoint (3,3) kind interior ; unit edges y=3 x in [2,4] open: True
+[cov4181] n=28 connected=True boundary_deg2=True one_boundary_cycle=True pinches=0 convex=12 reflex=8 W=20 maximal_edges=20 gcd_h=1 gcd_v=1 normalized=True
+[cov4181] S=(2, 3) interior  T=(4, 3) interior  parity S (0, 1) T (0, 1)
+[cov4181] parity (0, 0): regular 10 (interior 2, smooth 8), corners 4, closed-room lattice pts 14
+[cov4181] parity (0, 1): regular 8 (interior 4, smooth 4), corners 2, closed-room lattice pts 10
+[cov4181] parity (1, 0): regular 0 (interior 0, smooth 0), corners 14, closed-room lattice pts 14
+[cov4181] parity (1, 1): regular 11 (interior 3, smooth 8), corners 0, closed-room lattice pts 11
+[cov4181] 4-copy origami: 112 squares (4n=112), 96 vertices, 88 angle-2pi lattice points (<= 4n: True), 76 regular non-corner lattice points
+[cov4181] complete orbit: 3888 (origami, M mod 2) states, CPU 0.7s; shear-vs-direct cross-checks 341/341 agree (|dir| <= 12)
+[cov4181] primitive parity (1, 0) -> target parity (1, 1): LIT; min travel count 2; finite j set [1, 2]; tail from j>=None; max cycle length 16; cutoff floor(log2 4n)=6
+[cov4181] primitive parity (1, 1) -> target parity (1, 0): dark; min travel count None; finite j set []; tail from j>=None; max cycle length None; cutoff floor(log2 4n)=6
+[cov4181] primitive parity (0, 1) -> target parity (0, 0): dark; min travel count None; finite j set []; tail from j>=None; max cycle length 12; cutoff floor(log2 4n)=6
+[R22] n=15 connected=True boundary_deg2=True one_boundary_cycle=True pinches=0 convex=13 reflex=9 W=22 maximal_edges=22 gcd_h=1 gcd_v=1 normalized=True
+[R22] S=(0, 0) interior  T=(2, 2) interior  parity S (0, 0) T (0, 0)
+[R22] parity (0, 0): regular 4 (interior 2, smooth 2), corners 3, closed-room lattice pts 7
+[R22] parity (0, 1): regular 2 (interior 0, smooth 2), corners 5, closed-room lattice pts 7
+[R22] parity (1, 0): regular 2 (interior 0, smooth 2), corners 5, closed-room lattice pts 7
+[R22] parity (1, 1): regular 0 (interior 0, smooth 0), corners 9, closed-room lattice pts 9
+[R22] 4-copy origami: 60 squares (4n=60), 42 vertices, 33 angle-2pi lattice points (<= 4n: True), 20 regular non-corner lattice points
+[R22] complete orbit: 5184 (origami, M mod 2) states, CPU 0.6s; shear-vs-direct cross-checks 360/360 agree (|dir| <= 12)
+[R22] primitive parity (1, 0) -> target parity (1, 0): dark; min travel count None; finite j set []; tail from j>=None; max cycle length 4; cutoff floor(log2 4n)=5
+[R22] primitive parity (1, 1) -> target parity (1, 1): dark; min travel count None; finite j set []; tail from j>=None; max cycle length None; cutoff floor(log2 4n)=5
+[R22] primitive parity (0, 1) -> target parity (0, 1): dark; min travel count None; finite j set []; tail from j>=None; max cycle length 4; cutoff floor(log2 4n)=5
+[rect2x4] n=8 connected=True boundary_deg2=True one_boundary_cycle=True pinches=0 convex=4 reflex=0 W=4 maximal_edges=4 gcd_h=2 gcd_v=4 normalized=False
+[rect2x4] S=(1, 1) interior  T=(1, 3) interior  parity S (1, 1) T (1, 1)
+[rect2x4] parity (0, 0): regular 2 (interior 0, smooth 2), corners 4, closed-room lattice pts 6
+[rect2x4] parity (0, 1): regular 4 (interior 0, smooth 4), corners 0, closed-room lattice pts 4
+[rect2x4] parity (1, 0): regular 3 (interior 1, smooth 2), corners 0, closed-room lattice pts 3
+[rect2x4] parity (1, 1): regular 2 (interior 2, smooth 0), corners 0, closed-room lattice pts 2
+[rect2x4] 4-copy origami: 32 squares (4n=32), 32 vertices, 32 angle-2pi lattice points (<= 4n: True), 28 regular non-corner lattice points
+[rect2x4] complete orbit: 12 (origami, M mod 2) states, CPU 0.0s; shear-vs-direct cross-checks 12/12 agree (|dir| <= 12)
+[rect2x4] primitive parity (1, 0) -> target parity (0, 1): LIT; min travel count 2; finite j set [1]; tail from j>=None; max cycle length 4; cutoff floor(log2 4n)=5
+[rect2x4] primitive parity (1, 1) -> target parity (0, 0): LIT; min travel count 2; finite j set [1]; tail from j>=None; max cycle length None; cutoff floor(log2 4n)=5
+[rect2x4] primitive parity (0, 1) -> target parity (1, 0): LIT; min travel count 2; finite j set [1, 2]; tail from j>=None; max cycle length 8; cutoff floor(log2 4n)=5
+[rect2x4] developed vertical displacements to images of y=3, mod 8: [2, 4] nu2 set [1, 2]
+[claim2] D/2^nu2(k) parity == v parity and odd multiple: 1680/1680 even D in [-40,40]^2
+TOTAL CPU 1.3s
+python3 -B checks.py  1.33s user 0.02s system 98% cpu 1.368 total

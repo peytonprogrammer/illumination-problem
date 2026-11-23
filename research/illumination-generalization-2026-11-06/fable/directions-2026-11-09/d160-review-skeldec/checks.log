@@ -1,0 +1,61 @@
+# 1. Chart coverage: R22 launch (2,3) from (0,0)
+   d159 tracer poly: ['(0, 0)', '(2, 3)', '(4, 0)', '(14/3, 1)', '(5, 1/2)', '(14/3, 0)', '(4, 1)']  end event: corner
+   contact (2, 3): lattice status smooth; vertex of R22: False
+   contact (4, 0): lattice status smooth; vertex of R22: False
+   third contact (14/3, 1) lies in the open horizontal wall [((5, 1), (4, 1))]
+   x=1: y=3/2  cut interior (piece 1,2)
+   x=2: y=3  cut endpoint; vertical velocity + -> -
+   x=3: y=3/2  cut interior (piece 1,2)
+   x=4: y=0  cut endpoint; vertical velocity - -> +
+   germ rule at (2, 3): incoming cell (1, 2) in room True; outgoing cell (2, 2) in room True; reflected cells above/below wall: False/True
+   germ rule at (4, 0): incoming cell (3, 0) in room True; outgoing cell (4, 0) in room True; reflected cells above/below wall: True/False
+   strict column chart for this ray: reference ray meets a piece endpoint at u=2, point (Fraction(2, 1), Fraction(3, 1))
+   sweep from (0,0) in R22, |p|<=3, |q|<=4, 8 reflections: smooth contacts 88 (of which at lattice smooth points, i.e. cut endpoints, 14); vertex stops 32; disagreements with local rule []
+
+# 1c. Physical-word slope intervals in R22-L1-005: archived word (18,-12) and d159 witness (-24,-16)
+   direction (3, -2), D=18: physical word length 11, reaches section: True; column-chart I_S = (Fraction(-11, 16), Fraction(-11, 17))
+     slope -11/16 (-0.68750): reaches section False, same physical word False
+     slope -1373/2000 (-0.68650): reaches section True, same physical word True
+     slope -15/22 (-0.68182): reaches section True, same physical word True
+     slope -74989/110000 (-0.68172): reaches section True, same physical word True
+     slope -150023/230000 (-0.65227): reaches section True, same physical word True
+     slope -15/23 (-0.65217): reaches section True, same physical word True
+     slope -11017/17000 (-0.64806): reaches section True, same physical word True
+     slope -11/17 (-0.64706): reaches section False, same physical word False
+     same direction in R22 ends: corner at (1, -2)
+   direction (-3, -2), D=24: physical word length 16, reaches section: True; column-chart I_S = (Fraction(-15, 22), Fraction(-15, 23))
+     slope -11/16 (-0.68750): reaches section False, same physical word False
+     slope -1373/2000 (-0.68650): reaches section True, same physical word False
+     slope -15/22 (-0.68182): reaches section False, same physical word False
+     slope -74989/110000 (-0.68172): reaches section True, same physical word True
+     slope -150023/230000 (-0.65227): reaches section True, same physical word True
+     slope -15/23 (-0.65217): reaches section False, same physical word False
+     slope -11017/17000 (-0.64806): reaches section True, same physical word False
+     slope -11/17 (-0.64706): reaches section True, same physical word False
+     same direction in R22 ends: corner at (1, -2)
+
+# 2. Six-wall L(x,y,z): rectangle [-x-2,z+1]x[-2,y+1] minus open NE quadrant, S=(-x,y), T=(z,-1)
+   grid x in 3..15, y,z in 1..15 (odd): 448 rooms; lit(<=1 refl) <=> zy<3x fails in 0: []
+   shots lit by a wall other than bottom where bottom fails: [] (count 0)
+   notch walls ever give a shot: []; a wall condition outside zy<3x: []
+   stated wall condition is the exact iff on the grid: {'direct': True, 'bottom': True, 'left': True, 'right': True, 'top': True}
+   L(9,3,3) [zy = x: chord through reflex]: {'bottom': True, 'left': True}
+   L(15,5,3) [zy = x]: {'bottom': True, 'left': True}
+   L(3,3,3) [zy = 3x: bottom image chord through reflex]: no <=1 shot
+   L(5,3,5) [zy = 3x]: no <=1 shot
+   L(3,1,1) [x = z(y+2): bottom bounce at x=0]: {'direct': True, 'bottom': True, 'left': True}
+   L(15,3,3) [x = z(y+2)]: {'direct': True, 'bottom': True, 'left': True}
+   x = 1 (excluded by the note): rooms where lit != (zy<3): [(1, 3, ['left']), (3, 1, ['left'])]
+
+# 3. Slices
+   z=y: least odd x>=3 with a <=1-reflection shot (traced near the threshold), monotone, equals least odd x with y^2<3x
+   y=1:3; y=3:5; y=5:9; y=7:17; y=9:29; y=11:41; y=13:57; y=15:77; y=17:97; y=19:121; y=21:149; y=23:177; y=25:209; y=27:245; y=29:281; y=31:321; y=33:365; y=35:409; y=37:457; y=39:509; y=41:561
+   threshold monotone in x for all y<=41: True; equals y^2<3x formula: True
+   y=z=6b+3: (b, y, traced least c, 6b^2+6b+2) = [(0, 3, 2, 2), (1, 9, 14, 14), (2, 15, 38, 38), (3, 21, 74, 74)]
+   direct shot, y=z=2b+1: (b, traced least c, 2b^2+2b+1) = [(0, 1, 1), (1, 5, 5), (2, 13, 13), (3, 25, 25), (4, 41, 41)]
+   second differences of 6b^2+6b+2 over b<1000: {12}
+
+# 4. Turn skeletons: binary bracelets of length n=2r+4, weight r
+   Burnside r=0..8: [1, 1, 4, 8, 29, 79, 280, 912, 3260], total 4574; brute force: [1, 1, 4, 8, 29, 79, 280, 912, 3260], total 4574
+
+Total CPU: 1.7s

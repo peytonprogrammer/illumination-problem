@@ -1,0 +1,18 @@
+cells 15 S (2, 6) T (6, 10)
+(0, 0, 0) S viewer viewer (2, 6) corr pt (6, 10) corridor [2,10] mouth 8 reflex ends (True, True) channel [0,4] up to 8 configs [] channel [0,4] does not contain door [2,10]
+(0, 0, 0) T viewer fails: corridor point not above viewer
+(0, 0, 1) S viewer fails: corridor point not above viewer
+(0, 0, 1) T viewer viewer (6, 2) corr pt (2, 6) corridor [0,4] mouth 4 reflex ends (False, True) channel [2,10] up to 4 configs [] channel [2,10] does not contain door [0,4]
+(0, 1, 0) S viewer viewer (10, 6) corr pt (6, 10) corridor [2,10] mouth 8 reflex ends (True, True) channel [8,12] up to 8 configs [] channel [8,12] does not contain door [2,10]
+(0, 1, 0) T viewer fails: corridor point not above viewer
+(0, 1, 1) S viewer fails: corridor point not above viewer
+(0, 1, 1) T viewer viewer (6, 2) corr pt (10, 6) corridor [8,12] mouth 4 reflex ends (True, False) channel [2,10] up to 4 configs [] channel [2,10] does not contain door [8,12]
+(1, 0, 0) S viewer viewer (6, 2) corr pt (10, 6) corridor [8,12] mouth 4 reflex ends (True, False) channel [2,10] up to 4 configs [] channel [2,10] does not contain door [8,12]
+(1, 0, 0) T viewer fails: corridor point not above viewer
+(1, 0, 1) S viewer viewer (6, 2) corr pt (2, 6) corridor [0,4] mouth 4 reflex ends (False, True) channel [2,10] up to 4 configs [] channel [2,10] does not contain door [0,4]
+(1, 0, 1) T viewer fails: corridor point not above viewer
+(1, 1, 0) S viewer fails: corridor point not above viewer
+(1, 1, 0) T viewer viewer (10, 6) corr pt (6, 10) corridor [2,10] mouth 8 reflex ends (True, True) channel [8,12] up to 8 configs [] channel [8,12] does not contain door [2,10]
+(1, 1, 1) S viewer fails: corridor point not above viewer
+(1, 1, 1) T viewer viewer (2, 6) corr pt (6, 10) corridor [2,10] mouth 8 reflex ends (True, True) channel [0,4] up to 8 configs [] channel [0,4] does not contain door [2,10]
+Lemma H configurations in all frames: 0

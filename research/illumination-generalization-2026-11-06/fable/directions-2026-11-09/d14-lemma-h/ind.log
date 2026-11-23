@@ -1,0 +1,89 @@
+4
+    (orbit, maximal factor) incidences 12
+    imprimitive orbits 6
+    orbits: FH holds for every factor 6
+    orbits: FH holds for every maximal factor 6
+    ('F-classes', 'all LIT') 9
+    ('FH holds', 'rigid factor, pillowcase factor, deck') 12
+    ('S-classes', 'all LIT') 3
+    ('verdict uniform on N-classes', 'rigid factor, pillowcase factor, deck') 12
+5
+6
+    (orbit, maximal factor) incidences 78
+    imprimitive orbits 54
+    orbits: FH holds for every factor 51
+    orbits: FH holds for every maximal factor 51
+    ('F-classes', 'all LIT') 66
+    ('FH fails', 'rigid factor, pillowcase factor, deck') 3
+    ('FH holds', 'no rigid factor, deck') 3
+    ('FH holds', 'rigid factor, deck') 21
+    ('FH holds', 'rigid factor, pillowcase factor') 15
+    ('FH holds', 'rigid factor, pillowcase factor, deck') 36
+    ('S-classes', 'all DARK') 3
+    ('S-classes', 'all LIT') 36
+    ('verdict uniform on N-classes', 'no rigid factor, deck') 3
+    ('verdict uniform on N-classes', 'rigid factor, deck') 21
+    ('verdict uniform on N-classes', 'rigid factor, pillowcase factor') 15
+    ('verdict uniform on N-classes', 'rigid factor, pillowcase factor, deck') 39
+7
+8
+    (orbit, maximal factor) incidences 196
+    imprimitive orbits 154
+    orbits: FH holds for every factor 127
+    orbits: FH holds for every maximal factor 133
+    ('F-classes', 'all DARK') 6
+    ('F-classes', 'all LIT') 186
+    ('FH fails', 'rigid factor, deck') 3
+    ('FH fails', 'rigid factor, pillowcase factor, deck') 24
+    ('FH holds', 'no rigid factor, deck') 58
+    ('FH holds', 'rigid factor, deck') 9
+    ('FH holds', 'rigid factor, pillowcase factor') 48
+    ('FH holds', 'rigid factor, pillowcase factor, deck') 54
+    ('S-classes', 'all DARK') 13
+    ('S-classes', 'all LIT') 114
+    ('verdict uniform on N-classes', 'no rigid factor, deck') 58
+    ('verdict uniform on N-classes', 'rigid factor, deck') 12
+    ('verdict uniform on N-classes', 'rigid factor, pillowcase factor') 48
+    ('verdict uniform on N-classes', 'rigid factor, pillowcase factor, deck') 78
+9
+    (orbit, maximal factor) incidences 161
+    imprimitive orbits 149
+    orbits: FH holds for every factor 146
+    orbits: FH holds for every maximal factor 146
+    ('F-classes', 'all DARK') 24
+    ('F-classes', 'all LIT') 101
+    ('FH fails', 'rigid factor') 6
+    ('FH holds', 'no rigid factor') 18
+    ('FH holds', 'no rigid factor, pillowcase factor') 17
+    ('FH holds', 'no rigid factor, pillowcase factor, deck') 6
+    ('FH holds', 'rigid factor') 90
+    ('FH holds', 'rigid factor, deck') 24
+    ('S-classes', 'all DARK') 12
+    ('S-classes', 'all LIT') 65
+    ('S-classes', 'mixed') 6
+    ('verdict NOT uniform on N-classes', 'rigid factor') 6
+    ('verdict uniform on N-classes', 'no rigid factor') 18
+    ('verdict uniform on N-classes', 'no rigid factor, pillowcase factor') 17
+    ('verdict uniform on N-classes', 'no rigid factor, pillowcase factor, deck') 6
+    ('verdict uniform on N-classes', 'rigid factor') 90
+    ('verdict uniform on N-classes', 'rigid factor, deck') 24
+10
+    (orbit, maximal factor) incidences 503
+    imprimitive orbits 473
+    orbits: FH holds for every factor 446
+    orbits: FH holds for every maximal factor 446
+    ('F-classes', 'all DARK') 3
+    ('F-classes', 'all LIT') 462
+    ('FH fails', 'rigid factor, pillowcase factor') 3
+    ('FH fails', 'rigid factor, pillowcase factor, deck') 30
+    ('FH holds', 'no rigid factor, deck') 260
+    ('FH holds', 'rigid factor, deck') 45
+    ('FH holds', 'rigid factor, pillowcase factor') 135
+    ('FH holds', 'rigid factor, pillowcase factor, deck') 30
+    ('S-classes', 'all DARK') 31
+    ('S-classes', 'all LIT') 295
+    ('verdict uniform on N-classes', 'no rigid factor, deck') 260
+    ('verdict uniform on N-classes', 'rigid factor, deck') 45
+    ('verdict uniform on N-classes', 'rigid factor, pillowcase factor') 138
+    ('verdict uniform on N-classes', 'rigid factor, pillowcase factor, deck') 60
+python3 -B ind.py 4 5 6 7 8 9 10  0.37s user 0.03s system 87% cpu 0.455 total

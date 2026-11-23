@@ -1,0 +1,12 @@
+periods {'00': 8, '01': 16, '10': 8, '11': 12}
+residual: 146308 polygon products, 36 tile pairs, max displacement 1/17
+00: period 8, 36 trees, 192 witness leaves, 8 empty leaves
+01: period 16, 36 trees, 270 witness leaves, 18 empty leaves
+10: period 8, 36 trees, 195 witness leaves, 4 empty leaves
+11: period 12, 36 trees, 196 witness leaves, 0 empty leaves
+TOTAL: 144 trees, 853 illuminated (W) boxes, 30 empty (E) boxes
+spot check (residual pairs): 200 pairs traced, 0 failures; per tag {'00': 59, '01': 47, '10': 49, '11': 45}; max K 1; max |Vx|+|Vy| 986
+spot check (small-A pairs, A <= 1/100): 40 pairs traced, 0 failures; per tag {'00': 10, '01': 11, '10': 7, '11': 12}; max K 171; max |Vx|+|Vy| 170334
+ALL CHECKS PASSED
+mutations: 2552 perturbed witnesses, 2147 rejected
+bash run.sh  27.73s user 0.55s system 95% cpu 29.603 total

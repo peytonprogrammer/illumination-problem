@@ -1,0 +1,105 @@
+# Part A: k = 2..15 own counts vs placement.txt; explicit traced path per instance
+  trace (119, (1, 1), (3, 5)) k=2 m=[-302, -40, -11] inside=True ok=True refl=706 end
+  trace (119, (1, 1), (3, 5)) k=3 m=[-302, -40, -11] inside=True ok=True refl=706 end
+  trace (119, (1, 1), (3, 5)) k=6 m=[-874, -213, -2] inside=True ok=True refl=2178 end
+  trace (119, (1, 1), (3, 5)) k=7 m=[8130, 1617, 7] inside=True ok=True refl=19508 end
+  trace (119, (1, 1), (3, 5)) k=9 m=[-44570, -7288, -8] inside=True ok=True refl=103732 end
+(119, (1, 1), (3, 5)) 181 181 - - 3726 7272 17909 35629 24875 49686 301469 602765 1208898 2417607 MATCH
+  trace (122, (1, 3), (3, 1)) k=2 m=[7, 0] inside=True ok=True refl=14 end
+  trace (122, (1, 3), (3, 1)) k=3 m=[7, 0] inside=True ok=True refl=14 end
+  trace (122, (1, 3), (3, 1)) k=6 m=[137, 0] inside=True ok=True refl=274 end
+  trace (122, (1, 3), (3, 1)) k=7 m=[267, 0] inside=True ok=True refl=534 end
+  trace (122, (1, 3), (3, 1)) k=9 m=[1307, 0] inside=True ok=True refl=2614 end
+  trace (122, (1, 3), (3, 1)) k=12 m=[11057, 0] inside=True ok=True refl=22114 end
+  trace (122, (1, 3), (3, 1)) k=15 m=[88667, 0] inside=True ok=True refl=177334 end
+(122, (1, 3), (3, 1)) 12 12 12 12 252 492 1212 2412 5052 10092 20412 40812 81852 163692 MATCH
+  trace (122, (1, 4), (3, 1)) k=2 m=[6, 0] inside=True ok=True refl=12 end
+  trace (122, (1, 4), (3, 1)) k=3 m=[6, 0] inside=True ok=True refl=12 end
+  trace (122, (1, 4), (3, 1)) k=6 m=[126, 0] inside=True ok=True refl=252 end
+  trace (122, (1, 4), (3, 1)) k=7 m=[246, 0] inside=True ok=True refl=492 end
+  trace (122, (1, 4), (3, 1)) k=9 m=[1206, 0] inside=True ok=True refl=2412 end
+  trace (122, (1, 4), (3, 1)) k=12 m=[10206, 0] inside=True ok=True refl=20412 end
+  trace (122, (1, 4), (3, 1)) k=15 m=[81846, 0] inside=True ok=True refl=163692 end
+(122, (1, 4), (3, 1)) 11 11 11 11 224 437 1077 2144 4491 8971 18144 36277 72757 145504 MATCH
+  trace (1238, (1, 5), (3, 1)) k=2 m=[-110, -18, -5] inside=True ok=True refl=266 end
+  trace (1238, (1, 5), (3, 1)) k=3 m=[-110, -18, -5] inside=True ok=True refl=266 end
+  trace (1238, (1, 5), (3, 1)) k=6 m=[-5686, -1707, -13] inside=True ok=True refl=14812 end
+  trace (1238, (1, 5), (3, 1)) k=7 m=[-40156, -9829, -45] inside=True ok=True refl=100060 end
+  trace (1238, (1, 5), (3, 1)) k=12 m=[-20675, -3964, -1] inside=True ok=True refl=49280 end
+(1238, (1, 5), (3, 1)) 588 588 - - 12108 23628 58188 115788 80836 161476 979788 1958988 3928908 7857228 MATCH
+  trace (1238, (1, 5), (4, 1)) k=2 m=[-142, -26, -7] inside=True ok=True refl=350 end
+  trace (1238, (1, 5), (4, 1)) k=3 m=[-142, -26, -7] inside=True ok=True refl=350 end
+  trace (1238, (1, 5), (4, 1)) k=6 m=[1391, 470, 3] inside=True ok=True refl=3728 end
+  trace (1238, (1, 5), (4, 1)) k=7 m=[-4631, -1275, -6] inside=True ok=True refl=11824 end
+  trace (1238, (1, 5), (4, 1)) k=9 m=[14001, 3170, 3] inside=True ok=True refl=34348 end
+(1238, (1, 5), (4, 1)) 86 86 - - 1792 3499 8619 17152 35924 71762 145152 290219 582059 1164030 MATCH
+(971, (1, 1), (3, 5)) outside outside - - outside outside outside outside outside outside outside outside outside outside MATCH
+  trace (971, (1, 1), (4, 5)) k=2 m=[3416, 437, 115] inside=True ok=True refl=7936 end
+  trace (971, (1, 1), (4, 5)) k=3 m=[3416, 437, 115] inside=True ok=True refl=7936 end
+  trace (971, (1, 1), (4, 5)) k=6 m=[-105939, -24847, -186] inside=True ok=True refl=261944 end
+  trace (971, (1, 1), (4, 5)) k=7 m=[45327, 8668, 39] inside=True ok=True refl=108068 end
+(971, (1, 1), (4, 5)) 4740 4740 - - 96900 189060 465540 926340 646700 1291820 7838340 15671940 31431300 62857860 MATCH
+(971, (1, 1), (5, 5)) outside outside - - outside outside outside outside outside outside outside outside outside outside MATCH
+  trace (1275, (3, 7), (5, 3)) k=2 m=[455, 42, 11] inside=True ok=True refl=1016 end
+  trace (1275, (3, 7), (5, 3)) k=3 m=[455, 42, 11] inside=True ok=True refl=1016 end
+  trace (1275, (3, 7), (5, 3)) k=6 m=[-22208, -3750, -29] inside=True ok=True refl=51974 end
+  trace (1275, (3, 7), (5, 3)) k=7 m=[-15065, -2074, -10] inside=True ok=True refl=34298 end
+(1275, (3, 7), (5, 3)) 260 260 - - 16140 10500 25860 154380 323340 645900 1306380 870660 1746180 10476300 MATCH
+  trace (719, (1, 1), (3, 5)) k=2 m=[-4288, -746, -197] inside=True ok=True refl=10462 end
+  trace (719, (1, 1), (3, 5)) k=3 m=[-4288, -746, -197] inside=True ok=True refl=10462 end
+  trace (719, (1, 1), (3, 5)) k=6 m=[3489, 1113, 8] inside=True ok=True refl=9220 end
+(719, (1, 1), (3, 5)) 2364 2364 - - 48444 94524 232764 463164 323348 645908 3919164 7835964 15715644 31428924 MATCH
+Part A: 0 rows differ; traced 40/40 valid
+
+# Part B: k >= 16 argument, exact arithmetic
+16 (119, (1, 1), (3, 5)) cols=3 per=('13/2', '6', '78') widths=['3', '3'] err=[0.00755, 0.00136] bounds=True inside=True m=[190937, 29562, 0] traced=False refl=400001 cap
+16 (122, (1, 3), (3, 1)) cols=2 per=('8',) widths=['3'] err=[0.0] bounds=True inside=True m=[177456, 0] traced=True refl=354912 end
+16 (122, (1, 4), (3, 1)) cols=2 per=('6',) widths=['2'] err=[0.0] bounds=True inside=True m=[163806, 0] traced=True refl=327612 end
+16 (1238, (1, 5), (3, 1)) cols=3 per=('8', '6', '24') widths=['3', '3'] err=[0.00434, 0.00608] bounds=True inside=True m=[154685, 29476, 0] traced=True refl=368322 end
+16 (1238, (1, 5), (4, 1)) cols=3 per=('6', '4', '12') widths=['2', '2'] err=[0.00051, 0.00775] bounds=True inside=True m=[142335, 30513, 0] traced=True refl=345696 end
+16 (971, (1, 1), (3, 5)) outside
+16 (971, (1, 1), (4, 5)) cols=3 per=('25/4', '6', '150') widths=['3', '3'] err=[0.00494, 0.00477] bounds=True inside=True m=[198158, 29500, 0] traced=False refl=400001 cap
+16 (971, (1, 1), (5, 5)) outside
+16 (1275, (3, 7), (5, 3)) cols=3 per=('6', '8', '24') widths=['3', '4'] err=[0.0013, 0.00777] bounds=True inside=True m=[271711, 29124, 0] traced=False refl=400001 cap
+16 (719, (1, 1), (3, 5)) cols=3 per=('17/2', '6', '102') widths=['3', '3'] err=[0.00511, 0.01251] bounds=True inside=True m=[145008, 29359, 0] traced=True refl=348734 end
+17 (119, (1, 1), (3, 5)) cols=3 per=('13/2', '6', '78') widths=['3', '3'] err=[0.00619, 0.00139] bounds=True inside=True m=[381869, 59111, 0] traced=False refl=400001 cap
+17 (122, (1, 3), (3, 1)) cols=2 per=('8',) widths=['3'] err=[0.0] bounds=True inside=True m=[354906, 0] traced=False refl=400001 cap
+17 (122, (1, 4), (3, 1)) cols=2 per=('6',) widths=['2'] err=[0.0] bounds=True inside=True m=[327606, 0] traced=False refl=400001 cap
+17 (1238, (1, 5), (3, 1)) cols=3 per=('8', '6', '24') widths=['3', '3'] err=[0.00039, 0.0062] bounds=True inside=True m=[309350, 58936, 0] traced=False refl=400001 cap
+17 (1238, (1, 5), (4, 1)) cols=3 per=('6', '4', '12') widths=['2', '2'] err=[0.0004, 0.00775] bounds=True inside=True m=[284673, 61014, 0] traced=False refl=400001 cap
+17 (971, (1, 1), (3, 5)) outside
+17 (971, (1, 1), (4, 5)) cols=3 per=('25/4', '6', '150') widths=['3', '3'] err=[0.00809, 0.00444] bounds=True inside=True m=[396398, 59000, 0] traced=False refl=400001 cap
+17 (971, (1, 1), (5, 5)) outside
+17 (1275, (3, 7), (5, 3)) cols=3 per=('6', '8', '24') widths=['3', '4'] err=[0.0008, 0.00776] bounds=True inside=True m=[543423, 58236, 0] traced=False refl=400001 cap
+17 (719, (1, 1), (3, 5)) cols=3 per=('17/2', '6', '102') widths=['3', '3'] err=[0.00786, 0.01219] bounds=True inside=True m=[290076, 58718, 0] traced=False refl=400001 cap
+20 (119, (1, 1), (3, 5)) cols=3 per=('13/2', '6', '78') widths=['3', '3'] err=[0.0008, 0.00153] bounds=True inside=True m=[3055421, 472875, 0] traced=False refl=400001 cap
+20 (122, (1, 3), (3, 1)) cols=2 per=('8',) widths=['3'] err=[0.0] bounds=True inside=True m=[2839856, 0] traced=False refl=400001 cap
+20 (122, (1, 4), (3, 1)) cols=2 per=('6',) widths=['2'] err=[0.0] bounds=True inside=True m=[2621406, 0] traced=False refl=400001 cap
+20 (1238, (1, 5), (3, 1)) cols=3 per=('8', '6', '24') widths=['3', '3'] err=[8e-05, 0.00619] bounds=True inside=True m=[2475395, 471516, 0] traced=False refl=400001 cap
+20 (1238, (1, 5), (4, 1)) cols=3 per=('6', '4', '12') widths=['2', '2'] err=[0.0001, 0.00774] bounds=True inside=True m=[2277937, 488142, 0] traced=False refl=400001 cap
+20 (971, (1, 1), (3, 5)) outside
+20 (971, (1, 1), (4, 5)) cols=3 per=('25/4', '6', '150') widths=['3', '3'] err=[0.00105, 0.00462] bounds=True inside=True m=[3171590, 471975, 0] traced=False refl=400001 cap
+20 (971, (1, 1), (5, 5)) outside
+20 (1275, (3, 7), (5, 3)) cols=3 per=('6', '8', '24') widths=['3', '4'] err=[6e-05, 0.00774] bounds=True inside=True m=[4348371, 465909, 0] traced=False refl=400001 cap
+20 (719, (1, 1), (3, 5)) cols=3 per=('17/2', '6', '102') widths=['3', '3'] err=[0.00042, 0.01239] bounds=True inside=True m=[2320860, 469710, 0] traced=False refl=400001 cap
+30 (119, (1, 1), (3, 5)) cols=3 per=('13/2', '6', '78') widths=['3', '3'] err=[0.0, 0.00155] bounds=True inside=True m=[3128763629, 484213431, 0]
+30 (122, (1, 3), (3, 1)) cols=2 per=('8',) widths=['3'] err=[0.0] bounds=True inside=True m=[2908050736, 0]
+30 (122, (1, 4), (3, 1)) cols=2 per=('6',) widths=['2'] err=[0.0] bounds=True inside=True m=[2684354526, 0]
+30 (1238, (1, 5), (3, 1)) cols=3 per=('8', '6', '24') widths=['3', '3'] err=[0.0, 0.00619] bounds=True inside=True m=[2534848574, 482828312, 0]
+30 (1238, (1, 5), (4, 1)) cols=3 per=('6', '4', '12') widths=['2', '2'] err=[0.0, 0.00774] bounds=True inside=True m=[2332650513, 499853694, 0]
+30 (971, (1, 1), (3, 5)) outside
+30 (971, (1, 1), (4, 5)) cols=3 per=('25/4', '6', '150') widths=['3', '3'] err=[0.0, 0.00464] bounds=True inside=True m=[3247708886, 483290025, 0]
+30 (971, (1, 1), (5, 5)) outside
+30 (1275, (3, 7), (5, 3)) cols=3 per=('6', '8', '24') widths=['3', '4'] err=[0.0, 0.00774] bounds=True inside=True m=[4452801191, 477085854, 0]
+30 (719, (1, 1), (3, 5)) cols=3 per=('17/2', '6', '102') widths=['3', '3'] err=[0.0, 0.01238] bounds=True inside=True m=[2376614376, 480981493, 0]
+41 (119, (1, 1), (3, 5)) cols=3 per=('13/2', '6', '78') widths=['3', '3'] err=[0.0, 0.00155] bounds=True inside=True m=[6407707975961, 991669091530, 0]
+41 (122, (1, 3), (3, 1)) cols=2 per=('8',) widths=['3'] err=[0.0] bounds=True inside=True m=[5955687983706, 0]
+41 (122, (1, 4), (3, 1)) cols=2 per=('6',) widths=['2'] err=[0.0] bounds=True inside=True m=[5497558138806, 0]
+41 (1238, (1, 5), (3, 1)) cols=3 per=('8', '6', '24') widths=['3', '3'] err=[0.0, 0.00619] bounds=True inside=True m=[5191369964591, 988832374220, 0]
+41 (1238, (1, 5), (4, 1)) cols=3 per=('6', '4', '12') widths=['2', '2'] err=[0.0, 0.00774] bounds=True inside=True m=[4777268336215, 1023700357773, 0]
+41 (971, (1, 1), (3, 5)) outside
+41 (971, (1, 1), (4, 5)) cols=3 per=('25/4', '6', '150') widths=['3', '3'] err=[0.0, 0.00464] bounds=True inside=True m=[6651307801406, 989777946650, 0]
+41 (971, (1, 1), (5, 5)) outside
+41 (1275, (3, 7), (5, 3)) cols=3 per=('6', '8', '24') widths=['3', '4'] err=[0.0, 0.00774] bounds=True inside=True m=[9119336959095, 977071817058, 0]
+41 (719, (1, 1), (3, 5)) cols=3 per=('17/2', '6', '102') widths=['3', '3'] err=[0.0, 0.01238] bounds=True inside=True m=[4867306299684, 985050084472, 0]
+cpu 99.9

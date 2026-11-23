@@ -1,0 +1,253 @@
+# 0. Room: d110 dumbbell(5,0,H1,5,0,H2,2,1,L) against the note's description
+  PASS L=1 (H1,H2)=(5,9): 12 vertices match the note, area 71 = 5H1+5H2+L, horizontal lengths [1, 5], horizontal gcd 1
+  PASS L=3 (H1,H2)=(5,9): 12 vertices match the note, area 73 = 5H1+5H2+L, horizontal lengths [3, 5], horizontal gcd 1
+  PASS L=7 (H1,H2)=(5,9): 12 vertices match the note, area 77 = 5H1+5H2+L, horizontal lengths [5, 7], horizontal gcd 1
+  PASS L=9 (H1,H2)=(5,9): 12 vertices match the note, area 79 = 5H1+5H2+L, horizontal lengths [5, 9], horizontal gcd 1
+  PASS L=11 (H1,H2)=(5,9): 12 vertices match the note, area 81 = 5H1+5H2+L, horizontal lengths [5, 11], horizontal gcd 1
+  PASS L=21 (H1,H2)=(5,9): 12 vertices match the note, area 91 = 5H1+5H2+L, horizontal lengths [5, 21], horizontal gcd 1
+  PASS L=2 (H1,H2)=(5,9): 12 vertices match the note, area 72 = 5H1+5H2+L, horizontal lengths [2, 5], horizontal gcd 1
+  PASS L=5 (H1,H2)=(5,9): 12 vertices match the note, area 75 = 5H1+5H2+L, horizontal lengths [5], horizontal gcd 5
+   L=5 has horizontal gcd 5, so it is not horizontally normalized; it is a control only.
+
+# 1. Cycle count of u -> u+2t on Z/2C (= gcd(2t,2C)) for t = 5, 10 and the shot moduli
+   L : C : #cycles t=5 : #cycles t=10 : gcd(50,2C) : gcd(100,2C)
+    1 : 11 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+    2 : 12 :  2 :  4 :  2 :  4
+    3 : 13 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+    4 : 14 :  2 :  4 :  2 :  4
+    5 : 15 : 10 : 10 : 10 : 10
+    6 : 16 :  2 :  4 :  2 :  4
+    7 : 17 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+    8 : 18 :  2 :  4 :  2 :  4
+    9 : 19 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   10 : 20 : 10 : 20 : 10 : 20
+   11 : 21 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   12 : 22 :  2 :  4 :  2 :  4
+   13 : 23 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   14 : 24 :  2 :  4 :  2 :  4
+   15 : 25 : 10 : 10 : 50 : 50
+   16 : 26 :  2 :  4 :  2 :  4
+   17 : 27 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   18 : 28 :  2 :  4 :  2 :  4
+   19 : 29 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   20 : 30 : 10 : 20 : 10 : 20
+   21 : 31 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   22 : 32 :  2 :  4 :  2 :  4
+   23 : 33 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   24 : 34 :  2 :  4 :  2 :  4
+   25 : 35 : 10 : 10 : 10 : 10
+   26 : 36 :  2 :  4 :  2 :  4
+   27 : 37 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   28 : 38 :  2 :  4 :  2 :  4
+   29 : 39 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   30 : 40 : 10 : 20 : 10 : 20
+   31 : 41 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   32 : 42 :  2 :  4 :  2 :  4
+   33 : 43 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   34 : 44 :  2 :  4 :  2 :  4
+   35 : 45 : 10 : 10 : 10 : 10
+   36 : 46 :  2 :  4 :  2 :  4
+   37 : 47 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   38 : 48 :  2 :  4 :  2 :  4
+   39 : 49 :  2 :  2 :  2 :  2   <- odd, coprime to 5
+   40 : 50 : 10 : 20 : 50 : 100
+  PASS for L = 1..1000: t=5 gives two cycles iff 5 does not divide L; t=10 and the same-bank modulus gcd(100,2C) give 2 iff L is odd and coprime to 5
+
+# 2. Upward section y=2: one traced return equals u -> u+2t mod 2C, phases eps=1/1000 either side of
+   every integer u in [0,2C) (this includes every phase whose seam, floor, roof or section abscissa is a corner)
+  PASS L=1 (H1,H2)=(5,5) t=5: 44 phases return to u+2t with the predicted vertical travel
+  PASS L=1 (H1,H2)=(5,5) t=10: 44 phases return to u+2t with the predicted vertical travel
+  PASS L=1 (H1,H2)=(5,9) t=5: 44 phases return to u+2t with the predicted vertical travel
+  PASS L=1 (H1,H2)=(5,9) t=10: 44 phases return to u+2t with the predicted vertical travel
+  PASS L=1 (H1,H2)=(7,15) t=5: 44 phases return to u+2t with the predicted vertical travel
+  PASS L=1 (H1,H2)=(7,15) t=10: 44 phases return to u+2t with the predicted vertical travel
+  PASS L=1 (H1,H2)=(31,4) t=5: 44 phases return to u+2t with the predicted vertical travel
+  PASS L=1 (H1,H2)=(31,4) t=10: 44 phases return to u+2t with the predicted vertical travel
+  PASS L=3 (H1,H2)=(5,5) t=5: 52 phases return to u+2t with the predicted vertical travel
+  PASS L=3 (H1,H2)=(5,5) t=10: 52 phases return to u+2t with the predicted vertical travel
+  PASS L=3 (H1,H2)=(5,9) t=5: 52 phases return to u+2t with the predicted vertical travel
+  PASS L=3 (H1,H2)=(5,9) t=10: 52 phases return to u+2t with the predicted vertical travel
+  PASS L=3 (H1,H2)=(7,15) t=5: 52 phases return to u+2t with the predicted vertical travel
+  PASS L=3 (H1,H2)=(7,15) t=10: 52 phases return to u+2t with the predicted vertical travel
+  PASS L=3 (H1,H2)=(31,4) t=5: 52 phases return to u+2t with the predicted vertical travel
+  PASS L=3 (H1,H2)=(31,4) t=10: 52 phases return to u+2t with the predicted vertical travel
+  PASS L=7 (H1,H2)=(5,5) t=5: 68 phases return to u+2t with the predicted vertical travel
+  PASS L=7 (H1,H2)=(5,5) t=10: 68 phases return to u+2t with the predicted vertical travel
+  PASS L=7 (H1,H2)=(5,9) t=5: 68 phases return to u+2t with the predicted vertical travel
+  PASS L=7 (H1,H2)=(5,9) t=10: 68 phases return to u+2t with the predicted vertical travel
+  PASS L=7 (H1,H2)=(7,15) t=5: 68 phases return to u+2t with the predicted vertical travel
+  PASS L=7 (H1,H2)=(7,15) t=10: 68 phases return to u+2t with the predicted vertical travel
+  PASS L=7 (H1,H2)=(31,4) t=5: 68 phases return to u+2t with the predicted vertical travel
+  PASS L=7 (H1,H2)=(31,4) t=10: 68 phases return to u+2t with the predicted vertical travel
+  PASS L=9 (H1,H2)=(5,5) t=5: 76 phases return to u+2t with the predicted vertical travel
+  PASS L=9 (H1,H2)=(5,5) t=10: 76 phases return to u+2t with the predicted vertical travel
+  PASS L=9 (H1,H2)=(5,9) t=5: 76 phases return to u+2t with the predicted vertical travel
+  PASS L=9 (H1,H2)=(5,9) t=10: 76 phases return to u+2t with the predicted vertical travel
+  PASS L=9 (H1,H2)=(7,15) t=5: 76 phases return to u+2t with the predicted vertical travel
+  PASS L=9 (H1,H2)=(7,15) t=10: 76 phases return to u+2t with the predicted vertical travel
+  PASS L=9 (H1,H2)=(31,4) t=5: 76 phases return to u+2t with the predicted vertical travel
+  PASS L=9 (H1,H2)=(31,4) t=10: 76 phases return to u+2t with the predicted vertical travel
+  PASS L=11 (H1,H2)=(5,5) t=5: 84 phases return to u+2t with the predicted vertical travel
+  PASS L=11 (H1,H2)=(5,5) t=10: 84 phases return to u+2t with the predicted vertical travel
+  PASS L=11 (H1,H2)=(5,9) t=5: 84 phases return to u+2t with the predicted vertical travel
+  PASS L=11 (H1,H2)=(5,9) t=10: 84 phases return to u+2t with the predicted vertical travel
+  PASS L=11 (H1,H2)=(7,15) t=5: 84 phases return to u+2t with the predicted vertical travel
+  PASS L=11 (H1,H2)=(7,15) t=10: 84 phases return to u+2t with the predicted vertical travel
+  PASS L=11 (H1,H2)=(31,4) t=5: 84 phases return to u+2t with the predicted vertical travel
+  PASS L=11 (H1,H2)=(31,4) t=10: 84 phases return to u+2t with the predicted vertical travel
+  PASS L=21 (H1,H2)=(5,5) t=5: 124 phases return to u+2t with the predicted vertical travel
+  PASS L=21 (H1,H2)=(5,5) t=10: 124 phases return to u+2t with the predicted vertical travel
+  PASS L=21 (H1,H2)=(5,9) t=5: 124 phases return to u+2t with the predicted vertical travel
+  PASS L=21 (H1,H2)=(5,9) t=10: 124 phases return to u+2t with the predicted vertical travel
+  PASS L=21 (H1,H2)=(7,15) t=5: 124 phases return to u+2t with the predicted vertical travel
+  PASS L=21 (H1,H2)=(7,15) t=10: 124 phases return to u+2t with the predicted vertical travel
+  PASS L=21 (H1,H2)=(31,4) t=5: 124 phases return to u+2t with the predicted vertical travel
+  PASS L=21 (H1,H2)=(31,4) t=10: 124 phases return to u+2t with the predicted vertical travel
+  PASS L=2 (H1,H2)=(5,5) t=5: 48 phases return to u+2t with the predicted vertical travel
+  PASS L=2 (H1,H2)=(5,5) t=10: 48 phases return to u+2t with the predicted vertical travel
+  PASS L=2 (H1,H2)=(5,9) t=5: 48 phases return to u+2t with the predicted vertical travel
+  PASS L=2 (H1,H2)=(5,9) t=10: 48 phases return to u+2t with the predicted vertical travel
+  PASS L=2 (H1,H2)=(7,15) t=5: 48 phases return to u+2t with the predicted vertical travel
+  PASS L=2 (H1,H2)=(7,15) t=10: 48 phases return to u+2t with the predicted vertical travel
+  PASS L=2 (H1,H2)=(31,4) t=5: 48 phases return to u+2t with the predicted vertical travel
+  PASS L=2 (H1,H2)=(31,4) t=10: 48 phases return to u+2t with the predicted vertical travel
+  PASS L=5 (H1,H2)=(5,5) t=5: 60 phases return to u+2t with the predicted vertical travel
+  PASS L=5 (H1,H2)=(5,5) t=10: 60 phases return to u+2t with the predicted vertical travel
+  PASS L=5 (H1,H2)=(5,9) t=5: 60 phases return to u+2t with the predicted vertical travel
+  PASS L=5 (H1,H2)=(5,9) t=10: 60 phases return to u+2t with the predicted vertical travel
+  PASS L=5 (H1,H2)=(7,15) t=5: 60 phases return to u+2t with the predicted vertical travel
+  PASS L=5 (H1,H2)=(7,15) t=10: 60 phases return to u+2t with the predicted vertical travel
+  PASS L=5 (H1,H2)=(31,4) t=5: 60 phases return to u+2t with the predicted vertical travel
+  PASS L=5 (H1,H2)=(31,4) t=10: 60 phases return to u+2t with the predicted vertical travel
+
+   Traced cycle structure: permutation of the 2C unit intervals induced by the traced return of j+1/2
+  PASS L=1 (H1,H2)=(5,9) t=5: traced permutation has 2 cycles of lengths [11] (gcd(2t,2C) = 2)  [claim range]
+  PASS L=1 (H1,H2)=(5,9) t=10: traced permutation has 2 cycles of lengths [11] (gcd(2t,2C) = 2)  [claim range]
+  PASS L=3 (H1,H2)=(31,4) t=5: traced permutation has 2 cycles of lengths [13] (gcd(2t,2C) = 2)  [claim range]
+  PASS L=3 (H1,H2)=(31,4) t=10: traced permutation has 2 cycles of lengths [13] (gcd(2t,2C) = 2)  [claim range]
+  PASS L=7 (H1,H2)=(7,15) t=5: traced permutation has 2 cycles of lengths [17] (gcd(2t,2C) = 2)  [claim range]
+  PASS L=7 (H1,H2)=(7,15) t=10: traced permutation has 2 cycles of lengths [17] (gcd(2t,2C) = 2)  [claim range]
+  PASS L=21 (H1,H2)=(5,5) t=5: traced permutation has 2 cycles of lengths [31] (gcd(2t,2C) = 2)  [claim range]
+  PASS L=21 (H1,H2)=(5,5) t=10: traced permutation has 2 cycles of lengths [31] (gcd(2t,2C) = 2)  [claim range]
+  PASS L=2 (H1,H2)=(5,9) t=5: traced permutation has 2 cycles of lengths [12] (gcd(2t,2C) = 2)  [control]
+  PASS L=2 (H1,H2)=(5,9) t=10: traced permutation has 4 cycles of lengths [6] (gcd(2t,2C) = 4)  [control]
+  PASS L=4 (H1,H2)=(7,15) t=5: traced permutation has 2 cycles of lengths [14] (gcd(2t,2C) = 2)  [control]
+  PASS L=4 (H1,H2)=(7,15) t=10: traced permutation has 4 cycles of lengths [7] (gcd(2t,2C) = 4)  [control]
+  PASS L=5 (H1,H2)=(5,9) t=5: traced permutation has 10 cycles of lengths [3] (gcd(2t,2C) = 10)  [control]
+  PASS L=5 (H1,H2)=(5,9) t=10: traced permutation has 10 cycles of lengths [3] (gcd(2t,2C) = 10)  [control]
+
+   Full cycle closes exactly: C returns from u = 5 - 1/1000, (L,H1,H2) = (21,31,4), t = 10
+  PASS 31 returns close at u=4999/1000; period vertical travel 392
+
+# 3. Invariant: first upward section phase u = sx*x - t*sy*y + 2t (mod 2) for all four lifts
+  PASS L=1 (H1,H2)=(5,9) t=5: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=1 (H1,H2)=(5,9) t=10: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=3 (H1,H2)=(31,4) t=5: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=3 (H1,H2)=(31,4) t=10: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=7 (H1,H2)=(7,15) t=5: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=7 (H1,H2)=(7,15) t=10: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=11 (H1,H2)=(5,5) t=5: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=11 (H1,H2)=(5,5) t=10: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=21 (H1,H2)=(5,9) t=5: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=21 (H1,H2)=(5,9) t=10: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=2 (H1,H2)=(7,15) t=5: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+  PASS L=2 (H1,H2)=(7,15) t=10: 32 lifts reach the section in the predicted class; negating both signs swaps cylinders
+
+   Half-integer survivor at t=5 (x and 5y strict half-integers): its lifts sit on rims of both parities
+  PASS L=7 (H1,H2)=(7,15) mark (5/2,7/10): reached section phases ['33', '30', '4', '1'], rim parities [0, 1]
+  PASS L=1 (H1,H2)=(5,9) mark (19/2,71/10): reached section phases ['14', '15', '18'], rim parities [0, 1]
+  PASS L=2 (H1,H2)=(5,9) mark (7/2,1/10): reached section phases ['3', '4', '20', '21'], rim parities [0, 1]
+
+# 4. Cylinder chords built from the unrolled cylinder, traced exactly
+  PASS L=7 (H1,H2)=(7,15) t=5 off-rim: next to reflex (5,3) -> next to the right cap corner (C,H2): (4999/1000,3001/1000) -> (16948/997,14864/991); signs, m, delta, (dX,dY), contacts = (1, 1, 8, Fraction(-23919, 494013500), Fraction(578259997, 997000), Fraction(114956009, 991000), 121, 'end')
+  PASS L=1 (H1,H2)=(31,4) t=5 off-rim: next to floor corner (0,0) -> corridor, L=1: (1/997,1/991) -> (16/3,15/7); signs, m, delta, (dX,dY), contacts = (1, 1, 7, Fraction(-904153, 20748567), Fraction(3112631, 2991), Fraction(1443880, 6937), 213, 'end')
+  PASS L=21 (H1,H2)=(5,9) t=5 off-rim: next to reflex (C-5,2) -> inside the far left mouth: (26001/1000,1999/1000) -> (49/10,2001/1000); signs, m, delta, (dX,dY), contacts = (1, 1, 5, Fraction(889, 1000), Fraction(140899, 1000), Fraction(14001, 500), 30, 'end')
+  PASS L=7 (H1,H2)=(7,15) t=5 opposite rims: half-integer survivor -> grid mark (2,1): (5/2,7/10) -> (2,1); signs, m, delta, (dX,dY), contacts = (1, -1, 0, Fraction(1, 1), Fraction(19, 2), Fraction(17, 10), 3, 'end')
+  PASS L=3 (H1,H2)=(5,9) t=5 opposite rims: half-integer survivor -> grid mark (12,44/5), unequal heights: (1/2,37/10) -> (12,44/5); signs, m, delta, (dX,dY), contacts = (1, -1, 6, Fraction(-1, 1), Fraction(667, 2), Fraction(669, 10), 70, 'end')
+  PASS L=9 (H1,H2)=(31,4) t=10 opposite rims on the residual grid: x parities 1, 0 near floor and cap corners: (1,1/5) -> (16,19/5); signs, m, delta, (dX,dY), contacts = (1, 1, 9, Fraction(1, 1), Fraction(1537, 1), Fraction(768, 5), 298, 'end')
+  PASS L=11 (H1,H2)=(7,15) t=10 opposite rims: seam marks beside both reflex corner levels, x parities 0, 1: (4,3) -> (17,2); signs, m, delta, (dX,dY), contacts = (1, 1, 17, Fraction(-1, 1), Fraction(2029, 1), Fraction(203, 1), 387, 'end')
+
+# 5. Residual-grid shots: speed (50k, +-1), k from the note's congruences, exact trace
+   For each named room: all 8 (a,d) with a+d odd, at 6 named height pairs (seams beside the reflex
+   corners, 1/5 off both seams, 1/5 under the caps, 1/5 over the floors, mixed).
+  PASS L=1 (H1,H2)=(5,5): 48/48 reach the target; cases {'same bank, eps=-1': 24, 'opposite banks': 16, 'same bank, eps=+1': 8}
+  PASS L=1 (H1,H2)=(5,9): 48/48 reach the target; cases {'same bank, eps=-1': 24, 'opposite banks': 16, 'same bank, eps=+1': 8}
+  PASS L=1 (H1,H2)=(7,15): 48/48 reach the target; cases {'same bank, eps=-1': 24, 'opposite banks': 16, 'same bank, eps=+1': 8}
+  PASS L=1 (H1,H2)=(31,4): 48/48 reach the target; cases {'same bank, eps=-1': 24, 'opposite banks': 16, 'same bank, eps=+1': 8}
+  PASS L=3 (H1,H2)=(5,5): 48/48 reach the target; cases {'same bank, eps=+1': 24, 'opposite banks': 16, 'same bank, eps=-1': 8}
+  PASS L=3 (H1,H2)=(5,9): 48/48 reach the target; cases {'same bank, eps=+1': 24, 'opposite banks': 16, 'same bank, eps=-1': 8}
+  PASS L=3 (H1,H2)=(7,15): 48/48 reach the target; cases {'same bank, eps=+1': 24, 'opposite banks': 16, 'same bank, eps=-1': 8}
+  PASS L=3 (H1,H2)=(31,4): 48/48 reach the target; cases {'same bank, eps=+1': 24, 'opposite banks': 16, 'same bank, eps=-1': 8}
+  PASS L=7 (H1,H2)=(5,5): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=7 (H1,H2)=(5,9): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=7 (H1,H2)=(7,15): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=7 (H1,H2)=(31,4): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=9 (H1,H2)=(5,5): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=9 (H1,H2)=(5,9): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=9 (H1,H2)=(7,15): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=9 (H1,H2)=(31,4): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=11 (H1,H2)=(5,5): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=11 (H1,H2)=(5,9): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=11 (H1,H2)=(7,15): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=11 (H1,H2)=(31,4): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=21 (H1,H2)=(5,5): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=21 (H1,H2)=(5,9): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=21 (H1,H2)=(7,15): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+  PASS L=21 (H1,H2)=(31,4): 48/48 reach the target; cases {'same bank, eps=+1': 32, 'opposite banks': 16}
+   total 1152/1152; largest smooth-contact count 8677
+
+   The note's four exact replays, with the d183 tracer
+  PASS (L,H)=(1,7) (1,21/5)->(9,31/5): same bank, eps=-1, z=7 (box excursion), k=1 (note 1), speed (50, -1), 94 contacts (note 94), end
+  PASS (L,H)=(3,5) (1,1)->(9,1): same bank, eps=-1, z=9 (box excursion), k=9 (note 9), speed (450, 1), 610 contacts (note 610), end
+  PASS (L,H)=(7,7) (3,21/5)->(15,32/5): same bank, eps=+1, z=9 (corridor), k=11 (note 11), speed (550, -1), 571 contacts (note 571), end
+  PASS (L,H)=(9,15) (2,1)->(16,61/5): opposite banks, k=17 (note 17), speed (850, 1), 1778 contacts (note 1778), end
+
+   Controls on the intermediate-corner test
+   L=1 (1,16/5)->(9,41/5) eps=+1: k=8, z=5, a+eps*b mod C = 10, test fails; trace corner at (5,2)
+  PASS L=1 eps=+1: note's residue test predicts the trace (corner)
+   L=1 (1,16/5)->(9,41/5) eps=-1: k=1, z=7, a+eps*b mod C = 3, test passes; trace end
+  PASS L=1 eps=-1: note's residue test predicts the trace (lit)
+   L=3 (4,1/5)->(12,1/5) eps=+1: k=11, z=8, a+eps*b mod C = 3, test fails; trace corner at (8,3)
+  PASS L=3 eps=+1: note's residue test predicts the trace (corner)
+   L=3 (4,1/5)->(12,1/5) eps=-1: k=4, z=22, a+eps*b mod C = 5, test passes; trace end
+  PASS L=3 eps=-1: note's residue test predicts the trace (lit)
+   L=7 (2,16/5)->(16,16/5) eps=+1: k=10, z=26, a+eps*b mod C = 1, test passes; trace end
+  PASS L=7 eps=+1: note's residue test predicts the trace (lit)
+   L=7 (2,16/5)->(16,16/5) eps=-1: k=9, z=10, a+eps*b mod C = 3, test passes; trace end
+  PASS L=7 eps=-1: note's residue test predicts the trace (lit)
+
+# 6. Residue arithmetic of the bank cases, all odd C = L+10 coprime to 5 with L <= 989
+  PASS opposite banks solvable; both same-bank congruences solvable; one sign passes the corner test for every (a,d) and every such C
+  PASS eps=+1 fails only at L=1 (|a-d|=1) and L=3 (|a-d|=3): {1: [(1, 2), (2, 1), (2, 3), (3, 2), (3, 4), (4, 3)], 3: [(1, 4), (4, 1)]}
+
+   Even-L reduction and the note's L=2 example
+   L=2, t=5 section phases of (2,1) and (8,1): {((2, 1), 1, 1): '21', ((2, 1), 1, -1): '21', ((2, 1), -1, 1): '3', ((2, 1), -1, -1): '3', ((8, 1), 1, 1): '13', ((8, 1), 1, -1): '13', ((8, 1), -1, 1): '11', ((8, 1), -1, -1): '11'}
+  PASS both marks sit only on odd rims at t=5 (x-5y odd at both)
+  PASS L=2: 100k = +-8 - 2 (mod 24) has no solution, as the note says
+  PASS L=2: t=10 gives gcd(20,24) = 4 cycles (traced in section 2)
+   Even L in the normalized range below 21: [2, 4, 6, 8, 12, 14, 16, 18]
+
+   L=5 control: the t=5 return has 10 cycles; the shot congruences fail for some residual pairs
+  PASS C=15: gcd(10,30)=10; 50k = b-a (mod 30) unsolvable for [(1, 2), (2, 1), (3, 4), (4, 3)]
+
+# 7. Box bank mark to a band mark in the far box: d112 A' slope with the strip extended, exact trace
+  PASS L=1 (H1,H2)=(5,9) left floor side to far outer wall, lower lip level: (4,1/10) -> (10999/1000,2001/1000), (A, z, velocity, contacts) = (Fraction(11401, 1), Fraction(5999, 1000), (Fraction(11406999, 1000), Fraction(1901, 1000)), 2280, 'end')
+  PASS L=1 (H1,H2)=(5,9) left cap to just past the far mouth, upper lip: (1,49/10) -> (6001/1000,2999/1000), (A, z, velocity, contacts) = (Fraction(1904, 1), Fraction(1001, 1000), (Fraction(1905001, 1000), Fraction(-1901, 1000)), 380, 'end')
+  PASS L=1 (H1,H2)=(5,9) just above the right reflex to the far outer wall: (10,3001/1000) -> (1/1000,2001/1000), (A, z, velocity, contacts) = (Fraction(4, 1), Fraction(5999, 1000), (Fraction(-9999, 1000), Fraction(-1, 1)), 0, 'end')
+  PASS L=1 (H1,H2)=(5,9) right floor to the middle of the far box band: (7,1/997) -> (5/2,2972/991), (A, z, velocity, contacts) = (Fraction(11, 1), Fraction(7, 2), (Fraction(-29, 2), Fraction(2962093, 988027)), 2, 'end')
+  PASS L=1 (H1,H2)=(5,9) right cap corner to far box band: (32/3,62/7) -> (1/2,5/2), (A, z, velocity, contacts) = (Fraction(194, 3), Fraction(11, 2), (Fraction(-421, 6), Fraction(-89, 14)), 12, 'end')
+  PASS L=1 (H1,H2)=(5,9) residual-grid bank mark to residual-grid band mark: (2,16/5) -> (9,5/2), (A, z, velocity, contacts) = (Fraction(3, 1), Fraction(4, 1), (Fraction(7, 1), Fraction(-7, 10)), 0, 'end')
+  PASS L=1 (H1,H2)=(5,9): 6/6 extended-strip shots reach the target
+  PASS L=3 (H1,H2)=(31,4): 6/6 extended-strip shots reach the target
+  PASS L=7 (H1,H2)=(7,15): 6/6 extended-strip shots reach the target
+  PASS L=21 (H1,H2)=(5,5) left floor side to far outer wall, lower lip level: (4,1/10) -> (30999/1000,2001/1000), (A, z, velocity, contacts) = (Fraction(49401, 1), Fraction(25999, 1000), (Fraction(49426999, 1000), Fraction(1901, 1000)), 9880, 'end')
+  PASS L=21 (H1,H2)=(5,5) left cap to just past the far mouth, upper lip: (1,49/10) -> (26001/1000,2999/1000), (A, z, velocity, contacts) = (Fraction(39904, 1), Fraction(21001, 1000), (Fraction(39925001, 1000), Fraction(-1901, 1000)), 7980, 'end')
+  PASS L=21 (H1,H2)=(5,5) just above the right reflex to the far outer wall: (30,3001/1000) -> (1/1000,2001/1000), (A, z, velocity, contacts) = (Fraction(4, 1), Fraction(25999, 1000), (Fraction(-29999, 1000), Fraction(-1, 1)), 0, 'end')
+  PASS L=21 (H1,H2)=(5,5) right floor to the middle of the far box band: (27,1/997) -> (5/2,2972/991), (A, z, velocity, contacts) = (Fraction(51, 1), Fraction(47, 2), (Fraction(-149, 2), Fraction(2962093, 988027)), 10, 'end')
+  PASS L=21 (H1,H2)=(5,5) right cap corner to far box band: (92/3,34/7) -> (1/2,5/2), (A, z, velocity, contacts) = (Fraction(314, 3), Fraction(51, 2), (Fraction(-781, 6), Fraction(-33, 14)), 20, 'end')
+  PASS L=21 (H1,H2)=(5,5) residual-grid bank mark to residual-grid band mark: (2,16/5) -> (29,5/2), (A, z, velocity, contacts) = (Fraction(13, 1), Fraction(24, 1), (Fraction(37, 1), Fraction(-7, 10)), 2, 'end')
+  PASS L=21 (H1,H2)=(5,5): 6/6 extended-strip shots reach the target
+  PASS L=2 (H1,H2)=(5,9): 6/6 extended-strip shots reach the target
+  PASS L=5 (H1,H2)=(7,15): 6/6 extended-strip shots reach the target
+
+CPU 14.7 s; failures: 0

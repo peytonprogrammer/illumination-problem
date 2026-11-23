@@ -1,0 +1,25 @@
+== named rooms
+cross12 n 12 r 4 W 12 norm True types {'00': 3, '01': 'B', '10': 'B', '11': 'Q'} R* False {'pairs': 2, 'max_states': 3, 'pair_lit': 2, 'room_pair_x_dark_at_B': 2, 'room_pair_x_dark_but_pair_lit_at_B': 2, 'dark_rows_at_B': 8, 'dark_rows_rigRy': 0, 'dark_rows_delta_pair': 8, 'delta_rows_relay_class_lit': 8, 'delta_rows_relay_class_checked': 8, 'iota_check_ok': 4}
+dumb12 n 20 r 4 W 12 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 'B'} R* True {'pairs': 4, 'max_states': 52, 'pair_lit': 4, 'iota_check_ok': 12}
+R22 n 15 r 9 W 22 norm True types {'00': 'B', '01': 5, '10': 5, '11': 'Q'} R* False {'pairs': 1, 'max_states': 864, 'pair_DARK': 1, 'room_pair_x_dark_at_proper': 2, 'dark_rows_at_proper': 8, 'dark_rows_rigRy': 0, 'iota_check_ok': 2}
+P6 n 20 r 12 W 28 norm True types {'00': 5, '01': 5, '10': 'B', '11': 5} R* False {'pairs': 1, 'max_states': 4608, 'pair_DARK': 1, 'room_pair_x_dark_at_proper': 3, 'dark_rows_at_proper': 12, 'dark_rows_rigRy': 0, 'iota_check_ok': 3}
+P6found n 20 r 12 W 28 norm True types {'00': 5, '01': 'B', '10': 5, '11': 5} R* False {'pairs': 1, 'max_states': 4608, 'pair_DARK': 1, 'room_pair_x_dark_at_proper': 3, 'dark_rows_at_proper': 12, 'dark_rows_rigRy': 0, 'iota_check_ok': 3}
+Lroom n 12 r 1 W 6 norm False types {'00': 4, '01': 2, '10': 2, '11': 2} R* False {'pairs': 3, 'max_states': 18, 'pair_lit': 3, 'dark_rows_at_proper': 6, 'dark_rows_rigRy': 0, 'iota_check_ok': 9}
+Z12 n 10 r 4 W 12 norm True types {'00': 'B', '01': 5, '10': 'B', '11': 'B'} R* False {}
+S10 n 10 r 4 W 12 norm True types {'00': 5, '01': 'B', '10': 'B', '11': 'B'} R* False {'pairs': 1, 'max_states': 20, 'pair_lit': 1, 'dark_rows_at_B': 4, 'dark_rows_rigRy': 0, 'dark_rows_delta_pair': 4, 'delta_rows_relay_class_lit': 4, 'delta_rows_relay_class_checked': 4, 'dark_rows_at_proper': 2, 'iota_check_ok': 3}
+T8 n 8 r 2 W 8 norm False types {'00': 2, '01': 'Q', '10': 'B', '11': 'B'} R* False {}
+Z8 n 8 r 2 W 8 norm False types {'00': 2, '01': 'Q', '10': 'B', '11': 'B'} R* False {}
+R24 n 8 r 0 W 4 norm False types {'00': 4, '01': 2, '10': 2, '11': 2} R* False {'pairs': 1, 'max_states': 2, 'pair_lit': 1, 'dark_rows_at_proper': 4, 'dark_rows_rigRy': 0, 'dark_rows_delta_pair': 4, 'delta_rows_relay_class_lit': 4, 'delta_rows_relay_class_checked': 4, 'iota_check_ok': 3}
+room1843 n 20 r 4 W 12 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 5} R* False {'pairs': 9, 'max_states': 144, 'pair_lit': 9, 'room_pair_x_dark_at_proper': 4, 'room_pair_x_dark_but_pair_lit_at_proper': 4, 'dark_rows_at_proper': 24, 'dark_rows_rigRy': 0, 'iota_check_ok': 27, 'dark_rows_delta_pair': 6, 'delta_rows_relay_class_lit': 6, 'delta_rows_relay_class_checked': 6, 'dark_rows_at_B': 2}
+room1490 n 18 r 8 W 20 norm True types {'00': 3, '01': 'B', '10': 'B', '11': 'Q'} R* False {'pairs': 2, 'max_states': 108, 'pair_lit': 2, 'dark_rows_at_proper': 4, 'dark_rows_rigRy': 0, 'dark_rows_delta_pair': 4, 'dark_rows_at_B': 4, 'iota_check_ok': 4, 'delta_rows_relay_class_lit': 2, 'delta_rows_relay_class_checked': 2}
+room453 n 16 r 4 W 12 norm True types {'00': 'B', '01': 'B', '10': 'B', '11': 4} R* False {}
+== d64 normalized rooms outside the d64 scope (R* candidates)
+cov80 n 12 r 6 {'00': 'B', '01': 'B', '10': 'B', '11': 'Q'} {'pairs': 1, 'max_states': 144, 'pair_lit': 1, 'dark_rows_at_B': 2, 'dark_rows_rigRy': 0, 'dark_rows_delta_pair': 2, 'delta_rows_relay_class_lit': 2, 'delta_rows_relay_class_checked': 2, 'iota_check_ok': 2}
+cov82 n 12 r 6 {'00': 'B', '01': 'B', '10': 'B', '11': 'Q'} {'pairs': 1, 'max_states': 144, 'pair_lit': 1, 'dark_rows_at_B': 2, 'dark_rows_rigRy': 0, 'dark_rows_delta_pair': 2, 'delta_rows_relay_class_lit': 2, 'delta_rows_relay_class_checked': 2, 'iota_check_ok': 2}
+cov137 n 12 r 6 {'00': 'B', '01': 'B', '10': 'B', '11': 'Q'} {'pairs': 1, 'max_states': 144, 'pair_lit': 1, 'dark_rows_at_B': 2, 'dark_rows_rigRy': 0, 'dark_rows_delta_pair': 2, 'delta_rows_relay_class_lit': 2, 'delta_rows_relay_class_checked': 2, 'iota_check_ok': 2}
+cov4181 n 28 r 8 {'00': 'B', '01': 'B', '10': 'Q', '11': 'B'} {'pairs': 10, 'max_states': 1296, 'pair_lit': 10, 'iota_check_ok': 20, 'room_pair_x_dark_at_B': 1, 'room_pair_x_dark_but_pair_lit_at_B': 1, 'dark_rows_at_B': 4, 'dark_rows_rigRy': 0}
+cov4269 n 28 r 8 {'00': 'B', '01': 'Q', '10': 'B', '11': 'B'} {'pairs': 16, 'max_states': 1296, 'pair_lit': 16, 'iota_check_ok': 32, 'room_pair_x_dark_at_B': 1, 'room_pair_x_dark_but_pair_lit_at_B': 1, 'dark_rows_at_B': 4, 'dark_rows_rigRy': 0}
+R* rooms in covers.json: 1781
+aggregate: {'dark_rows_at_B': 14, 'dark_rows_delta_pair': 6, 'dark_rows_rigRy': 0, 'delta_rows_relay_class_checked': 6, 'delta_rows_relay_class_lit': 6, 'iota_check_ok': 9499, 'max_states': 1296, 'pair_lit': 4757, 'pairs': 4757, 'room_pair_x_dark_at_B': 2, 'room_pair_x_dark_but_pair_lit_at_B': 2, 'type BBBQ': 1746, 'type BBQQ': 35}
+CPU 27.0 s
+python3 -B pair_level.py 20000  26.97s user 0.04s system 99% cpu 27.081 total

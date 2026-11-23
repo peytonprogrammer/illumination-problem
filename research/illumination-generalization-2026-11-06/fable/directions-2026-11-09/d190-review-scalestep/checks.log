@@ -1,0 +1,65 @@
+§0 constants of the theorem
+  INFO lattice area n=1: m=4, T=1+F_11=90, eta=1/(4T^2)=1/32400
+  INFO lattice area n=2: m=8, T=1+F_23=28658, eta=1/(4T^2)=1/3285123856
+  INFO lattice area n=3: m=12, T=1+F_35=9227466, eta=1/(4T^2)=1/340584515124624
+  PASS F_0=0, F_1=1, F_11=89 (n=1 gives T=90)
+  PASS alpha +- 1/(4T^2) contains no p/q with q <= T = 90 (closed interval width 1/(2T^2))
+  PASS p^2-3pq+q^2 != 0 for 0<=p<=q<=90 (the d124 quadratic estimate numerator)
+  PASS st279: visited-run period lcm(6)=6; all upper runs lcm(6,6,10)=30
+  PASS P=2 lcm(1..W) is divisible by 2w for every run width w<=W (W=8 shown, P=1680)
+§1 gate elimination: u(A+tB)v in t(ue-c)+g_A Z, explicit v_phys, index (2Dt l - AuP k)/g_A
+  PASS seam congruence and v_phys=u(v+kP)/t hold on all 6912 grid lifts
+  PASS u(A+tB)v - t(ue-c) = 2Dt l - AuP k, an integer multiple of g_A, on all 6912 lifts
+  PASS index map (l,k) -> (2Dt l - AuP k)/g_A attains +-1 (onto Z) on all 576 tuples
+§2 floor-route corner lemma
+  PASS incrementing l moves the floor coordinate by 2Dd/(A+tB), strictly in (0,D), on 96 grid points
+  PASS 60 consecutive index pairs on 6 small tuples: never both fibres all-corner (lifts in |l|,|k|<=40)
+§3 gcd/lcm step: gcd(g_a,g_L) | uP gcd(a,2d); lcm | 2Dt; hence (1)
+  PASS on 864 grid tuples: gcd | uP*gamma, lcm | 2Dt, g_a g_L <= 2uP gamma D t
+  PASS gcd(a, a+2d) = gcd(a, 2d) for 1<=a<40, 1<=d<20
+  INFO (1): u^2(a+tB)(L+tB)eta^2 <= 2 g_a g_L <= 4 u P gamma D t, i.e. D >= u(a+tB)(L+tB)eta^2/(4 gamma P t)
+§4 far-wall: Q, C, delta, e' < 0, s uR < L, height step, final ratio bound
+  PASS on 2592 grid cases: sup|v'| <= C(1+t/L), e' < 0, s uR < L, delta >= t eta/[u C^2 (1+t/L)^2]
+  PASS far-wall height step 2h(D-c)/(2D-c-ue') in (0,h), and 2D-c-ue' > D, on 72 cases
+  PASS return roof spacing: 2h > L, so 2h/s > uR follows from s uR < L
+  PASS (a+tB)(L+tB)/(1+t/L)^2 >= aL for B>=1, a<=L on 108 cases
+  PASS joint failure (Dmin <= Dmax) implies a/gamma <= K on 108 cases
+  INFO symbolic: Dmin<=Dmax <=> (a+tB)(L+tB)eta^3 <= 16 h gamma P C^2 (1+t/L)^2; u and t cancel exactly
+§5 growing-depth consequences
+  PASS gamma = gcd(a,2d) <= 2d
+  PASS a:2d = 2:2 family: a/gcd(a,2d) is constant 1 (bounded, so open)
+  PASS a:2d = 1:1 family: a/gcd(a,2d) is constant 1 (bounded, so open)
+  PASS a:2d = 2:1 family: a/gcd(a,2d) is constant 2 (bounded, so open)
+  PASS a:2d = 3:4 family: a/gcd(a,2d) is constant 3 (bounded, so open)
+  PASS a:2d = 5:6 family: a/gcd(a,2d) is constant 5 (bounded, so open)
+§6 the note's two-rectangle junction
+  PASS b=2, D=a=(b+1)^2+1=10: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=2: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,11); straight-branch window has length 1/b
+  PASS b=2, D=a=b+2=4: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=2: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,5); straight-branch window has length 1/b
+  PASS b=4, D=a=(b+1)^2+1=26: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=4: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,27); straight-branch window has length 1/b
+  PASS b=4, D=a=b+2=6: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=4: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,7); straight-branch window has length 1/b
+  PASS b=6, D=a=(b+1)^2+1=50: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=6: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,51); straight-branch window has length 1/b
+  PASS b=6, D=a=b+2=8: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=6: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,9); straight-branch window has length 1/b
+  PASS b=8, D=a=(b+1)^2+1=82: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=8: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,83); straight-branch window has length 1/b
+  PASS b=8, D=a=b+2=10: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=8: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,11); straight-branch window has length 1/b
+  PASS b=10, D=a=(b+1)^2+1=122: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=10: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,123); straight-branch window has length 1/b
+  PASS b=10, D=a=b+2=12: strictly simple, W=8, 2 reflex, wall gcds (1,1), gcd(a+1,b+1)=1, marks interior, same parity
+  PASS b=10: speed 3/(2b) crosses the width-1 seam at x=1/2 with no contact; speed 1/b hits the reflex corner (0,13); straight-branch window has length 1/b
+  PASS b/a -> 0 on D=a=(b+1)^2+1 (b = o(a))
+  PASS exact stretch u=t: physical window (u/t)eta = eta for every t, even with t=o(a); the impossibility needs w/b -> 0
+§7 appendage phase: excursion of height H in an arm of width w adds 2Hv mod 2w
+  PASS return to entry coordinate with original horizontal sign iff 2Hv = 0 mod 2w, on 90 cases
+  PASS l_j = ((2j+1)h+d)/s reaches unfolded roof height (2j+1)h from -d; x_j = D-|D-(c+l_j)| folds once (30 cases)
+§8 W=10 ledger realization
+  PASS strictly simple, 10 walls, turn word LLLRLLLRLR is a rotation of LLLRLLLRLR; area 8
+
+CPU seconds: 0.17
+FAILURES: 0

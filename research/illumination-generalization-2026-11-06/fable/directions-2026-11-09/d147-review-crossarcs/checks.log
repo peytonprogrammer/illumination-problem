@@ -1,0 +1,119 @@
+cells 96 lattice pts 125 interior 69 reflex 4 convex 8
+orders with product identity 4 ((0, 0), (1, 0), (1, 1), (0, 1))
+site cycle types {(0, 0): [(2, 42), (3, 4)], (0, 1): [(1, 4), (2, 46)], (1, 0): [(1, 4), (2, 46)], (1, 1): [(2, 48)]}
+ord(HV) 28 ord(HH) 28
+nontrivial block systems by #blocks [1, 24, 48, 48, 48]
+
+== check 1: table ==
+24 [(-7, -2), (-7, 1), (6, -2), (6, 1)] {'rows': 1722, 'base': 1014, 'closure': 292, 'one contact': 416}
+48 [(-7, -2), (6, -2)] {'rows': 1722, 'base': 876, 'closure': 431, 'one contact': 411, 'remaining': 4}
+   residual 48 ((0, 1), 'b', (0, -5), (0, 1))
+   residual 48 ((0, 1), 'b', (0, -5), (0, 5))
+   residual 48 ((0, 1), 'b', (0, -3), (0, 3))
+   residual 48 ((0, 1), 'b', (0, -1), (0, 5))
+48 [(-7, -2), (6, 1)] {'rows': 1722, 'base': 998, 'closure': 292, 'one contact': 432}
+48 [(-7, -2), (-7, 1)] {'rows': 1722, 'base': 876, 'closure': 431, 'one contact': 411, 'remaining': 4}
+   residual 48 ((1, 0), 'd', (-5, 0), (1, 0))
+   residual 48 ((1, 0), 'd', (-5, 0), (5, 0))
+   residual 48 ((1, 0), 'd', (-3, 0), (3, 0))
+   residual 48 ((1, 0), 'd', (-1, 0), (5, 0))
+96 [(-7, -2)] {'rows': 1722, 'base': 722, 'closure': 614, 'one contact': 370, 'remaining': 16}
+   residual 96 ((0, 1), 'b', (0, -5), (0, 1))
+   residual 96 ((0, 1), 'b', (0, -5), (0, 5))
+   residual 96 ((0, 1), 'b', (0, -3), (0, 3))
+   residual 96 ((0, 1), 'b', (0, -1), (0, 5))
+   residual 96 ((1, 0), 'd', (-5, 0), (1, 0))
+   residual 96 ((1, 0), 'd', (-5, 0), (5, 0))
+   residual 96 ((1, 0), 'd', (-3, 0), (3, 0))
+   residual 96 ((1, 0), 'd', (-1, 0), (5, 0))
+   residual 96 ((1, 1), 'b', (-5, -1), (-5, 1))
+   residual 96 ((1, 1), 'b', (-3, -1), (-3, 1))
+   residual 96 ((1, 1), 'b', (3, -1), (3, 1))
+   residual 96 ((1, 1), 'b', (5, -1), (5, 1))
+   residual 96 ((1, 1), 'd', (-1, -5), (1, -5))
+   residual 96 ((1, 1), 'd', (-1, -3), (1, -3))
+   residual 96 ((1, 1), 'd', (-1, 3), (1, 3))
+   residual 96 ((1, 1), 'd', (-1, 5), (1, 5))
+dictionary/closure tests {'dict ok': 1440, 'closure ok': 131520, 'zero slice ok': 80}
+identity: rows with unrestricted pencil hit 1706  restricted hit 1706  rows where restricted != unrestricted 668
+identity restricted: physical pairs covered 574 of 574
+CPU so far 2.1s
+
+== check 3: identity pencil slices vs physical rays ==
+  class b pencil c twist sign -1 per-lift match=True  574
+  class b pencil c twist sign -1 row      match=True  574
+  class b pencil c twist sign +1 per-lift match=True  574
+  class b pencil c twist sign +1 row      match=True  574
+  class d pencil c twist sign -1 per-lift match=True  574
+  class d pencil c twist sign -1 row      match=True  574
+  class d pencil c twist sign +1 per-lift match=True  574
+  class d pencil c twist sign +1 row      match=True  574
+  class c, origin (0, 0), pencil b: exact maps (eps, offset) = [(1, 0), (1, 7), (1, 14), (1, -7), (-1, 6), (-1, 13), (-1, -8), (-1, -1)]
+  class c, origin (0, 0), pencil d: exact maps (eps, offset) = [(1, 0), (1, 7), (1, 14), (1, -7), (-1, 6), (-1, 13), (-1, -8), (-1, -1)]
+  class c, origin (0, 1), pencil b: exact maps (eps, offset) = [(1, 13), (1, -1), (-1, 0), (-1, 14)]
+  class c, origin (0, 1), pencil d: exact maps (eps, offset) = [(1, 0), (1, 14), (-1, 13), (-1, -1)]
+  class c, origin (1, 0), pencil b: exact maps (eps, offset) = [(1, 0), (1, 14), (-1, 13), (-1, -1)]
+  class c, origin (1, 0), pencil d: exact maps (eps, offset) = [(1, 13), (1, -1), (-1, 0), (-1, 14)]
+  class c, origin (1, 1), pencil b: exact maps (eps, offset) = [(1, -1), (-1, 0)]
+  class c, origin (1, 1), pencil d: exact maps (eps, offset) = [(1, -1), (-1, 0)]
+periodicity j vs j+ord(h) on marks: {'same': 72}
+
+-- explicit witnesses --
+row origin=(0, 0) class=b pencil=c power j=2: (-6, 0) -> (0, -6) along (-1, -4), 8 arcs, corners on path=[]
+   lattice points: [(-6, 0), (-7, 0), (-6, 0), (-5, 0), (-4, 0), (-3, 0), (-2, 0), (-1, -4), (0, -6)]
+row origin=(0, 0) class=c pencil=b power j=3: (-6, 0) -> (0, 0) along (1, 7), 6 arcs, corners on path=[]
+   lattice points: [(-6, 0), (-5, -1), (-4, -2), (-3, -1), (-2, 0), (-1, -7), (0, 0)]
+row origin=(0, 0) class=d pencil=c power j=3: (-6, 0) -> (-4, 0) along (6, 1), 4 arcs, corners on path=[]
+   lattice points: [(-6, 0), (0, 1), (6, 2), (2, 1), (-4, 0)]
+
+== check 4: Riemann-Hurwitz ==
+24 [(-7, -2), (-7, 1), (6, -2), (6, 1)] per site (fixed, 3-cycles, 2-cycles): {(0, 0): (1, 1, 10), (0, 1): (2, 0, 11), (1, 0): (2, 0, 11), (1, 1): (0, 0, 12)}
+   sites (0, 0),(0, 1): bound 1, components over pencil [4, 5, 8]
+   sites (0, 0),(1, 0): bound 1, components over pencil [4, 5, 8]
+   sites (0, 0),(1, 1): bound 0, components over pencil [1]
+   sites (0, 1),(1, 0): bound 2, components over pencil [2]
+   sites (0, 1),(1, 1): bound 1, components over pencil [4, 10]
+   sites (1, 0),(1, 1): bound 1, components over pencil [4, 10]
+48 [(-7, -2), (6, -2)] per site (fixed, 3-cycles, 2-cycles): {(0, 0): (0, 2, 21), (0, 1): (4, 0, 22), (1, 0): (2, 0, 23), (1, 1): (0, 0, 24)}
+   sites (0, 0),(0, 1): bound 1, components over pencil [4, 5, 7, 8]
+   sites (0, 1),(1, 0): bound 3, components over pencil [3]
+   sites (0, 1),(1, 1): bound 2, components over pencil [8, 20]
+   sites (1, 0),(1, 1): bound 1, components over pencil [4, 10]
+48 [(-7, -2), (6, 1)] per site (fixed, 3-cycles, 2-cycles): {(0, 0): (2, 2, 20), (0, 1): (2, 0, 23), (1, 0): (2, 0, 23), (1, 1): (0, 0, 24)}
+   sites (0, 0),(0, 1): bound 1, components over pencil [4, 5, 7, 8]
+   sites (0, 0),(1, 0): bound 1, components over pencil [4, 5, 7, 8]
+   sites (0, 1),(1, 0): bound 2, components over pencil [3]
+   sites (0, 1),(1, 1): bound 1, components over pencil [4, 10]
+   sites (1, 0),(1, 1): bound 1, components over pencil [4, 10]
+48 [(-7, -2), (-7, 1)] per site (fixed, 3-cycles, 2-cycles): {(0, 0): (0, 2, 21), (0, 1): (2, 0, 23), (1, 0): (4, 0, 22), (1, 1): (0, 0, 24)}
+   sites (0, 0),(1, 0): bound 1, components over pencil [4, 5, 7, 8]
+   sites (0, 1),(1, 0): bound 3, components over pencil [3]
+   sites (0, 1),(1, 1): bound 1, components over pencil [4, 10]
+   sites (1, 0),(1, 1): bound 2, components over pencil [8, 20]
+
+== check 5: residuals ==
+  (0, 1) class b (0, -5)-(0, 1): straight chord (0, 1) class d interior=True; specified-class witness (-5, -2)
+  (0, 1) class b (0, -5)-(0, 5): straight chord (0, 1) class d interior=True; specified-class witness (-3, 4)
+  (0, 1) class b (0, -3)-(0, 3): straight chord (0, 1) class d interior=True; specified-class witness (-3, 4)
+  (0, 1) class b (0, -1)-(0, 5): straight chord (0, 1) class d interior=True; specified-class witness (-5, -2)
+  (1, 0) class d (-5, 0)-(1, 0): straight chord (1, 0) class b interior=True; specified-class witness (-2, 5)
+  (1, 0) class d (-5, 0)-(5, 0): straight chord (1, 0) class b interior=True; specified-class witness (-4, -3)
+  (1, 0) class d (-3, 0)-(3, 0): straight chord (1, 0) class b interior=True; specified-class witness (-4, -3)
+  (1, 0) class d (-1, 0)-(5, 0): straight chord (1, 0) class b interior=True; specified-class witness (-2, 5)
+  (1, 1) class b (-5, -1)-(-5, 1): straight chord (0, 1) class d interior=True; specified-class witness (-3, -2)
+  (1, 1) class b (-3, -1)-(-3, 1): straight chord (0, 1) class d interior=True; specified-class witness (-3, -2)
+  (1, 1) class b (3, -1)-(3, 1): straight chord (0, 1) class d interior=True; specified-class witness (-3, -2)
+  (1, 1) class b (5, -1)-(5, 1): straight chord (0, 1) class d interior=True; specified-class witness (-3, -2)
+  (1, 1) class d (-1, -5)-(1, -5): straight chord (1, 0) class b interior=True; specified-class witness (-2, 3)
+  (1, 1) class d (-1, -3)-(1, -3): straight chord (1, 0) class b interior=True; specified-class witness (-2, 3)
+  (1, 1) class d (-1, 3)-(1, 3): straight chord (1, 0) class b interior=True; specified-class witness (-2, 3)
+  (1, 1) class d (-1, 5)-(1, 5): straight chord (1, 0) class b interior=True; specified-class witness (-2, 3)
+
+== check 6: physical illumination, all interior pairs ==
+same-parity pairs 574 unlit with |p|,|q|<=12: 0
+mixed-parity pairs 1772 unlit with |p|,|q|<=12: 0 []
+reversibility violations 0
+same-parity rows physically lit in their specified class (|p|,|q|<=12): {('b', True): 574, ('c', True): 574, ('d', True): 574}
+residual (-5,0)->(1,0), class d, direction (-2,5): [(-5, 0), (-7, -1), (-5, 2), (-3, -1), (-1, 4), (1, 5), (1, 0)] statuses [2, 2, 4, 4, 4, 4]
+
+CPU total 3.3s

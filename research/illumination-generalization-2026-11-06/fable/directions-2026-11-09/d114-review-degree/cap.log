@@ -1,0 +1,49 @@
+
+== P_7: arm [2,7]x[-2,2], w=4, l=5; double across x=7 ==
+  P_7: W=12 r=4;  double: one boundary cycle, W=20 r=8; cap ends are vertices of P: True, of the double: False
+  double reflex corners: [(-2, -2), (2, -2), (12, -2), (16, -2), (16, 2), (12, 2), (2, 2), (-2, 2)]
+  junction-junction S=('-5', '1') T=('0', '5'): double path slope 42/61 signs (1, 1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 1 = double time
+  junction-junction S=('-1', '-1') T=('1', '-6'): double path slope 1/2 signs (1, 1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 11 = double time
+  junction-junction S=('-3/2', '1/3') T=('1/7', '29/5'): double path slope 5432/8265 signs (1, 1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 1/210 = double time
+  junction-junction S=('0', '-6') T=('0', '6'): double path slope 4/5 signs (1, -1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 6 = double time
+  junction-strip S=('-6', '1') T=('4', '-1'): double path slope 3/8 signs (1, 1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 2 = double time
+  junction-strip S=('1', '5') T=('6', '1'): double path slope 2/3 signs (1, 1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 11 = double time
+  junction-strip S=('-1/3', '-7/5') T=('62/9', '3/2'): double path slope 261/670 signs (1, 1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 1/90 = double time
+  junction-mouth S=('-3', '0') T=('2', '1'): double path slope 19/31 signs (1, 1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 1 = double time
+  junction-mouth S=('1', '-5') T=('2', '-3/2'): double path slope 59/90 signs (1, 1) (root #1), crossings of x=7: 1; fold legal, reaches T at time 1/2 = double time
+  strip/mouth pair (3, 1)-(6, -1): direct segment, 0 reflections
+  strip/mouth pair (2, 0)-(5, 1): direct segment, 0 reflections
+  strip/mouth pair (2, 1)-(2, -1): direct segment, 0 reflections
+  deliberate cap-endpoint cases (S=(0,1), direction (b,1) through the cap end (b,2)):
+    tau=3/2: T'=('21/2', '3/2') -> T=('7/2', '3/2'): T is reached on the incoming leg at time 1/2 before the cap corner at time 1; 2a - D = 1/2: True
+    tau=23/10: T'=('161/10', '7/10') -> T=('-21/10', '7/10'): fold hits cap corner ('7', '2') at time 1 < D-a; reversed ray from S reaches T at time 3/10 = D - 2a: True
+    tau=37/10: T'=('161/10', '-7/10') -> T=('-21/10', '-7/10'): fold hits cap corner ('7', '2') at time 1 < D-a; reversed ray from S reaches T at time 17/10 = D - 2a: True
+  all projections legal: True
+
+== P_9: arm [2,9]x[-2,2], w=4, l=7; double across x=9 ==
+  P_9: W=12 r=4;  double: one boundary cycle, W=20 r=8; cap ends are vertices of P: True, of the double: False
+  double reflex corners: [(-2, -2), (2, -2), (16, -2), (20, -2), (20, 2), (16, 2), (2, 2), (-2, 2)]
+  junction-junction S=('-5', '1') T=('0', '5'): double path slope 20/47 signs (1, 1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 1 = double time
+  junction-junction S=('-1', '-1') T=('1', '-8'): double path slope 21/26 signs (1, 1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 1 = double time
+  junction-junction S=('-3/2', '1/3') T=('1/7', '39/5'): double path slope 51772/74205 signs (1, -1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 1/210 = double time
+  junction-junction S=('0', '-8') T=('0', '8'): double path slope 36/47 signs (1, 1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 2 = double time
+  junction-strip S=('-8', '1') T=('4', '-1'): double path slope 29/23 signs (1, 1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 2 = double time
+  junction-strip S=('1', '7') T=('8', '1'): double path slope 16/25 signs (1, 1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 1 = double time
+  junction-strip S=('-1/3', '-7/5') T=('80/9', '3/2'): double path slope 261/850 signs (1, 1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 1/90 = double time
+  junction-mouth S=('-3', '0') T=('2', '1'): double path slope 25/43 signs (1, 1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 1 = double time
+  junction-mouth S=('1', '-7') T=('2', '-3/2'): double path slope 27/46 signs (1, 1) (root #1), crossings of x=9: 1; fold legal, reaches T at time 1/2 = double time
+  strip/mouth pair (3, 1)-(8, -1): direct segment, 0 reflections
+  strip/mouth pair (2, 0)-(5, 1): direct segment, 0 reflections
+  strip/mouth pair (2, 1)-(2, -1): direct segment, 0 reflections
+  deliberate cap-endpoint cases (S=(0,1), direction (b,1) through the cap end (b,2)):
+    tau=3/2: T'=('27/2', '3/2') -> T=('9/2', '3/2'): T is reached on the incoming leg at time 1/2 before the cap corner at time 1; 2a - D = 1/2: True
+    tau=23/10: T'=('207/10', '7/10') -> T=('-27/10', '7/10'): fold hits cap corner ('9', '2') at time 1 < D-a; reversed ray from S reaches T at time 3/10 = D - 2a: True
+    tau=37/10: T'=('207/10', '-7/10') -> T=('-27/10', '-7/10'): fold hits cap corner ('9', '2') at time 1 < D-a; reversed ray from S reaches T at time 17/10 = D - 2a: True
+  all projections legal: True
+
+== notched square (Limit-of-structural-conclusion paragraph) ==
+  notched square m=5: W=8 r=2 reflex=[(3, 4), (2, 4)] area=24 (m^2-1=24); interior-or-smooth points per class {(0, 0): 7, (0, 1): 7, (1, 0): 7, (1, 1): 7}; x-gaps [2, 1, 2] y-gaps [4, 1]
+  notched square m=9: W=8 r=2 reflex=[(5, 8), (4, 8)] area=80 (m^2-1=80); interior-or-smooth points per class {(0, 0): 23, (0, 1): 23, (1, 0): 23, (1, 1): 23}; x-gaps [4, 1, 4] y-gaps [8, 1]
+  notched square m=21: W=8 r=2 reflex=[(11, 20), (10, 20)] area=440 (m^2-1=440); interior-or-smooth points per class {(0, 0): 119, (0, 1): 119, (1, 0): 119, (1, 1): 119}; x-gaps [10, 1, 10] y-gaps [20, 1]
+
+CPU 1.5s

@@ -1,0 +1,44 @@
+== 1. Linear algebra of the dichotomy ==
+I+R: CC^T = C^TC = [[2, 1, 1], [1, 2, 1], [1, 1, 2]]; on (1,1,1) -> [4, 4, 4]; on sum-zero basis -> [[1, -1, 0], [0, 1, -1]]; det C = 2
+I-R: CC^T = C^TC = [[2, -1, -1], [-1, 2, -1], [-1, -1, 2]]; on (1,1,1) -> [0, 0, 0]; on sum-zero basis -> [[3, -3, 0], [0, 3, -3]]; det C = 0
+1a. all 64 sign arrays reduce by row/column signs; cycle-sign counts: {1: 32, -1: 32}
+1b. I+R, |entries|<=12: 544 solutions = 4 constant + 540 sum-zero; additive weights same multiset in both triples: True; 1:1:2 occurs: True; all additive triples have distinct |weights|: False
+    sample additive pairs: [((-3, 1, 2), (-1, -2, 3)), ((-3, 1, 2), (1, 2, -3))]
+1b. I-R, |entries|<=12: 244 solutions = 4 constant + 240 sum-zero; additive weights same multiset in both triples: False; 1:1:2 occurs: False; all additive triples have distinct |weights|: True
+    sample additive pairs: [((-3, 1, 2), (-5, 4, 1)), ((-3, 1, 2), (5, -4, -1))]
+1c. note's example: C=I+R, a=(1,1,-2): C^T a = [-1, 2, -1]  C b = [1, 1, -2]
+    same a with C=I-R: C^T a = [3, 0, -3] (has a zero entry, so excluded)
+
+== 2. Explicit hyperelliptic hexagon: which normal form occurs? ==
+poles inside hexagon = 0: C = [[1, 0, -1], [-1, 1, 0], [0, -1, 1]], |det C| = 0, normal form I-R
+poles inside hexagon = 1: C = [[1, 0, -1], [-1, 1, 0], [0, -1, -1]], |det C| = 2, normal form I+R
+poles inside hexagon = 2: C = [[1, 0, -1], [1, 1, 0], [0, -1, -1]], |det C| = 0, normal form I-R
+poles inside hexagon = 3: C = [[1, 0, 1], [1, 1, 0], [0, 1, 1]], |det C| = 2, normal form I+R
+poles inside hexagon = 4: C = [[1, 0, 1], [1, -1, 0], [0, 1, 1]], |det C| = 0, normal form I-R
+nonconvex hexagon, poles inside = 0: |det C| = 0, normal form I-R
+nonconvex hexagon, poles inside = 1: |det C| = 2, normal form I+R
+nonconvex hexagon, poles inside = 2: |det C| = 0, normal form I-R
+
+== 3. Sphere family q_s in Q(1^3,-1^7) with vanishing periods (t,t,2t) ==
+leading coefficients dPer_i/ds_i at s=0 (nonzero): ['0.0294214', '0.0277877', '0.0305139']
+t=0.01: s = [(0.3214134291-0.0690346233j), (0.3952116963-0.1003361098j), (0.5879210731-0.2085752126j)]
+   Per2/Per1 - 1 = 2.38e-16, Per3/Per1 - 2 = 8.88e-16, Per1/t - 1 = 2.57e-16
+   exact: 3 simple zeros, 7 simple poles, all 10 points distinct; deg(den)-deg(num) = 7-3 = 4 so q is regular and nonzero at infinity; orders sum to -4 = -4
+t=0.001: s = [(0.032192812-0.0106090609j), (0.03509927-0.0097540954j), (0.0628196965-0.0174798503j)]
+   Per2/Per1 - 1 = 2.17e-16, Per3/Per1 - 2 = 2.17e-16, Per1/t - 1 = 2.47e-16
+   exact: 3 simple zeros, 7 simple poles, all 10 points distinct; deg(den)-deg(num) = 7-3 = 4 so q is regular and nonzero at infinity; orders sum to -4 = -4
+t=(0.0001+0.0001j): s = [(0.0043095417+0.0021128205j), (0.0044372343+0.0025028547j), (0.0080452707+0.0046076014j)]
+   Per2/Per1 - 1 = 6.78e-17, Per3/Per1 - 2 = 1.36e-16, Per1/t - 1 = 1.11e-16
+   exact: 3 simple zeros, 7 simple poles, all 10 points distinct; deg(den)-deg(num) = 7-3 = 4 so q is regular and nonzero at infinity; orders sum to -4 = -4
+limit area estimate on [-60,60]^2 (positive, finite): 0.0684
+
+== 4. Dimension count for Q(1^s,-1^(s+4)) and a counterexample to the broad wording ==
+s=1: dim Q = 4, cover genus 2, dim H^1_- = 4, rel = 0
+s=2: dim Q = 6, cover genus 3, dim H^1_- = 6, rel = 0
+s=3: dim Q = 8, cover genus 4, dim H^1_- = 8, rel = 0
+s=4: dim Q = 10, cover genus 5, dim H^1_- = 10, rel = 0
+s=5: dim Q = 12, cover genus 6, dim H^1_- = 12, rel = 0
+s=6: dim Q = 14, cover genus 7, dim H^1_- = 14, rel = 0
+Q(2,-1^6): dim Q = 5, dim H^1_-(abs) = 4, rel = 1 (nonzero)
+
+all assertions passed

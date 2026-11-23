@@ -1,0 +1,158 @@
+# 1. Clean-site area bound on named mixed rooms
+Bound under test: d*|J| <= 4(W-2), i.e. area <= V(W-2)/(2|J|); and V <= 8 when content = 1.
+For each room, every lattice Gamma between Lambda_abs and Z^2 is tested (finite list).
+
+## B (V-notch): W=5, angles(pi/4)=[2, 2, 1, 6, 1], content=2, area=12
+   Lambda_abs HNF=(4, 4, 8) covol=32; Lambda_rel HNF=(2, 2, 4) covol=8; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=96 (generic count 96, match True) clean sites J=0
+   Gamma=(2, 0, 1) V=2 deg=48 (generic count 48, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=48 (generic count 48, match True) clean sites J=0
+   Gamma=(1, 0, 2) V=2 deg=48 (generic count 48, match True) clean sites J=0
+   Gamma=(2, 0, 2) V=4 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(4, 0, 1) V=4 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(1, 0, 4) V=4 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(2, 1, 2) V=4 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(1, 2, 4) V=4 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(1, 3, 4) V=4 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(1, 1, 4) V=4 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(2, 2, 4) V=8 deg=12 (generic count 12, match True) clean sites J=1 at [(0, 0)], D_x=deg for all: True, area 12 <= bound 12 EQUALITY
+   Gamma=(2, 0, 4) V=8 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(1, 3, 8) V=8 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(1, 1, 8) V=8 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(4, 0, 2) V=8 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(1, 5, 8) V=8 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(1, 7, 8) V=8 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(4, 0, 4) V=16 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (2, 2)], D_x=deg for all: True, area 12 <= bound 12 EQUALITY
+   Gamma=(2, 2, 8) V=16 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (0, 4)], D_x=deg for all: True, area 12 <= bound 12 EQUALITY
+   Gamma=(2, 6, 8) V=16 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (0, 4)], D_x=deg for all: True, area 12 <= bound 12 EQUALITY
+   Gamma=(4, 4, 8) V=32 deg=3 (generic count 3, match True) clean sites J=4 at [(0, 0), (0, 4), (2, 2), (2, 6)], D_x=deg for all: True, area 12 <= bound 12 EQUALITY
+
+## B/2: W=5, angles(pi/4)=[2, 2, 1, 6, 1], content=1, area=3
+   Lambda_abs HNF=(2, 2, 4) covol=8; Lambda_rel HNF=(1, 1, 2) covol=2; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=12 (generic count 12, match True) clean sites J=1 at [(0, 0)], D_x=deg for all: True, area 3 <= bound 3 EQUALITY
+   Gamma=(2, 0, 1) V=2 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(1, 0, 2) V=2 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(2, 0, 2) V=4 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (1, 1)], D_x=deg for all: True, area 3 <= bound 3 EQUALITY
+   Gamma=(1, 3, 4) V=4 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (0, 2)], D_x=deg for all: True, area 3 <= bound 3 EQUALITY
+   Gamma=(1, 1, 4) V=4 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (0, 2)], D_x=deg for all: True, area 3 <= bound 3 EQUALITY
+   Gamma=(2, 2, 4) V=8 deg=3 (generic count 3, match True) clean sites J=4 at [(0, 0), (0, 2), (1, 1), (1, 3)], D_x=deg for all: True, area 3 <= bound 3 EQUALITY
+
+## F^-1(B/2): W=5, angles(pi/4)=[2, 2, 1, 6, 1], content=1, area=3/2
+   Lambda_abs HNF=(2, 0, 2) covol=4; Lambda_rel HNF=(1, 0, 1) covol=1; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=12 (generic count 12, match True) clean sites J=1 at [(0, 0)], D_x=deg for all: True, area 3/2 <= bound 3/2 EQUALITY
+   Gamma=(1, 1, 2) V=2 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (0, 1)], D_x=deg for all: True, area 3/2 <= bound 3/2 EQUALITY
+   Gamma=(2, 0, 1) V=2 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (1, 0)], D_x=deg for all: True, area 3/2 <= bound 3/2 EQUALITY
+   Gamma=(1, 0, 2) V=2 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (0, 1)], D_x=deg for all: True, area 3/2 <= bound 3/2 EQUALITY
+   Gamma=(2, 0, 2) V=4 deg=3 (generic count 3, match True) clean sites J=4 at [(0, 0), (0, 1), (1, 0), (1, 1)], D_x=deg for all: True, area 3/2 <= bound 3/2 EQUALITY
+
+## M (d138): W=6, angles(pi/4)=[2, 3, 3, 3, 3, 2], content=1, area=27/2
+   Lambda_abs HNF=(1, 1, 2) covol=2; Lambda_rel HNF=(1, 0, 1) covol=1; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=108 (generic count 108, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=54 (generic count 54, match True) clean sites J=0
+
+## A (d135): W=5, angles(pi/4)=[2, 2, 3, 3, 2], content=1, area=7/2
+   Lambda_abs HNF=(2, 0, 2) covol=4; Lambda_rel HNF=(1, 0, 1) covol=1; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=28 (generic count 28, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=14 (generic count 14, match True) clean sites J=0
+   Gamma=(2, 0, 1) V=2 deg=14 (generic count 14, match True) clean sites J=0
+   Gamma=(1, 0, 2) V=2 deg=14 (generic count 14, match True) clean sites J=0
+   Gamma=(2, 0, 2) V=4 deg=7 (generic count 7, match True) clean sites J=0
+
+## C (d135): W=7, angles(pi/4)=[2, 2, 2, 5, 5, 2, 2], content=1, area=25/2
+   Lambda_abs HNF=(2, 0, 2) covol=4; Lambda_rel HNF=(1, 0, 1) covol=1; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=100 (generic count 100, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=50 (generic count 50, match True) clean sites J=0
+   Gamma=(2, 0, 1) V=2 deg=50 (generic count 50, match True) clean sites J=0
+   Gamma=(1, 0, 2) V=2 deg=50 (generic count 50, match True) clean sites J=0
+   Gamma=(2, 0, 2) V=4 deg=25 (generic count 25, match True) clean sites J=0
+
+## D (d135): W=7, angles(pi/4)=[2, 2, 2, 3, 7, 2, 2], content=1, area=31/2
+   Lambda_abs HNF=(2, 0, 2) covol=4; Lambda_rel HNF=(1, 0, 1) covol=1; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=124 (generic count 124, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=62 (generic count 62, match True) clean sites J=0
+   Gamma=(2, 0, 1) V=2 deg=62 (generic count 62, match True) clean sites J=0
+   Gamma=(1, 0, 2) V=2 deg=62 (generic count 62, match True) clean sites J=0
+   Gamma=(2, 0, 2) V=4 deg=31 (generic count 31, match True) clean sites J=0
+
+## R2 (d139): W=8, angles(pi/4)=[3, 2, 2, 5, 5, 2, 2, 3], content=1, area=10
+   Lambda_abs HNF=(1, 1, 2) covol=2; Lambda_rel HNF=(1, 0, 1) covol=1; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=80 (generic count 80, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=40 (generic count 40, match True) clean sites J=0
+
+## R3 (d139): W=8, angles(pi/4)=[2, 2, 6, 3, 3, 2, 3, 3], content=1, area=13
+   Lambda_abs HNF=(1, 1, 2) covol=2; Lambda_rel HNF=(1, 0, 1) covol=1; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=104 (generic count 104, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=52 (generic count 52, match True) clean sites J=0
+
+## C1 (d139): W=5, angles(pi/4)=[2, 2, 3, 3, 2], content=1, area=11/2
+   Lambda_abs HNF=(2, 0, 2) covol=4; Lambda_rel HNF=(1, 0, 1) covol=1; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=44 (generic count 44, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=22 (generic count 22, match True) clean sites J=0
+   Gamma=(2, 0, 1) V=2 deg=22 (generic count 22, match True) clean sites J=0
+   Gamma=(1, 0, 2) V=2 deg=22 (generic count 22, match True) clean sites J=0
+   Gamma=(2, 0, 2) V=4 deg=11 (generic count 11, match True) clean sites J=0
+
+## C2 (d139): W=5, angles(pi/4)=[2, 2, 3, 2, 3], content=1, area=5
+   Lambda_abs HNF=(2, 2, 4) covol=8; Lambda_rel HNF=(1, 1, 2) covol=2; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=40 (generic count 40, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=20 (generic count 20, match True) clean sites J=0
+   Gamma=(2, 0, 1) V=2 deg=20 (generic count 20, match True) clean sites J=0
+   Gamma=(1, 0, 2) V=2 deg=20 (generic count 20, match True) clean sites J=0
+   Gamma=(2, 0, 2) V=4 deg=10 (generic count 10, match True) clean sites J=1 at [(0, 0)], D_x=deg for all: True, area 5 <= bound 6
+   Gamma=(1, 3, 4) V=4 deg=10 (generic count 10, match True) clean sites J=0
+   Gamma=(1, 1, 4) V=4 deg=10 (generic count 10, match True) clean sites J=0
+   Gamma=(2, 2, 4) V=8 deg=5 (generic count 5, match True) clean sites J=2 at [(0, 0), (0, 2)], D_x=deg for all: True, area 5 <= bound 6
+
+## hexagon (d138): W=6, angles(pi/4)=[3, 3, 2, 3, 3, 2], content=1, area=6
+   Lambda_abs HNF=(2, 2, 4) covol=8; Lambda_rel HNF=(1, 1, 2) covol=2; 2*Lrel in Labs: True
+   Gamma=(1, 0, 1) V=1 deg=48 (generic count 48, match True) clean sites J=0
+   Gamma=(1, 1, 2) V=2 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(2, 0, 1) V=2 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(1, 0, 2) V=2 deg=24 (generic count 24, match True) clean sites J=0
+   Gamma=(2, 0, 2) V=4 deg=12 (generic count 12, match True) clean sites J=1 at [(0, 0)], D_x=deg for all: True, area 6 <= bound 8
+   Gamma=(1, 3, 4) V=4 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(1, 1, 4) V=4 deg=12 (generic count 12, match True) clean sites J=0
+   Gamma=(2, 2, 4) V=8 deg=6 (generic count 6, match True) clean sites J=2 at [(0, 0), (0, 2)], D_x=deg for all: True, area 6 <= bound 8
+
+# 2. Axis span <= area + 1
+   B (V-notch): spans (4,4), area 12, max span - area = -8, holds: True
+   B/2: spans (2,2), area 3, max span - area = -1, holds: True
+   F^-1(B/2): spans (2,2), area 3/2, max span - area = 1/2, holds: True
+   M (d138): spans (4,4), area 27/2, max span - area = -19/2, holds: True
+   A (d135): spans (2,2), area 7/2, max span - area = -3/2, holds: True
+   C (d135): spans (4,4), area 25/2, max span - area = -17/2, holds: True
+   D (d135): spans (4,4), area 31/2, max span - area = -23/2, holds: True
+   R2 (d139): spans (4,4), area 10, max span - area = -6, holds: True
+   R3 (d139): spans (4,4), area 13, max span - area = -9, holds: True
+   C1 (d139): spans (3,2), area 11/2, max span - area = -5/2, holds: True
+   C2 (d139): spans (2,3), area 5, max span - area = -2, holds: True
+   hexagon (d138): spans (4,2), area 6, max span - area = -2, holds: True
+   diagonal strip L=3 [(0, 0), (1, 0), (3, 2), (3, 3)]: angles [1, 3, 3, 1], area 5/2, span 3, span-area = 1/2 (bound allows 1)
+   diagonal strip L=10 [(0, 0), (1, 0), (10, 9), (10, 10)]: angles [1, 3, 3, 1], area 19/2, span 10, span-area = 1/2 (bound allows 1)
+   diagonal strip L=40 [(0, 0), (1, 0), (40, 39), (40, 40)]: angles [1, 3, 3, 1], area 79/2, span 40, span-area = 1/2 (bound allows 1)
+   W=20, J=1, V<=8: area <= 72, span <= 73
+   W=20, J=1, V<=4 (c=1 normalization after F^-1): area <= 36, span <= 37
+   higher-genus line: floor((3W-8)/2)*4(W-2) = 1872
+
+# 3. Dumbbell: bounded-|p| directions all stop at the lower doorway lip (U,2)
+
+## b=1: a=10, U=20, W=12, area=207 (20a+7=207), reflexes=4, axis gcds=(1,1), S=(10, 2) i, T=(32, 2) i
+   162 primitive directions with 1<=|p|<=1, |q|<=40: all stop at (U,2): True []
+   vertical (0, 1): limit at (Fraction(10, 1), Fraction(0, 1))
+   vertical (0, -1): limit at (Fraction(10, 1), Fraction(5, 1))
+   witness (a+1,1)=(11,1): target after 1 reflections
+
+## b=2: a=20, U=40, W=12, area=407 (20a+7=407), reflexes=4, axis gcds=(1,1), S=(20, 2) i, T=(62, 2) i
+   242 primitive directions with 1<=|p|<=2, |q|<=40: all stop at (U,2): True []
+   vertical (0, 1): limit at (Fraction(20, 1), Fraction(0, 1))
+   vertical (0, -1): limit at (Fraction(20, 1), Fraction(5, 1))
+   witness (a+1,1)=(21,1): target after 1 reflections
+
+## b=3: a=60, U=120, W=12, area=1207 (20a+7=1207), reflexes=4, axis gcds=(1,1), S=(60, 2) i, T=(182, 2) i
+   350 primitive directions with 1<=|p|<=3, |q|<=40: all stop at (U,2): True []
+   vertical (0, 1): limit at (Fraction(60, 1), Fraction(0, 1))
+   vertical (0, -1): limit at (Fraction(60, 1), Fraction(5, 1))
+   witness (a+1,1)=(61,1): target after 1 reflections
+
+Done.

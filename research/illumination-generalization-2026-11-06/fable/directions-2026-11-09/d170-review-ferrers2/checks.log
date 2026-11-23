@@ -1,0 +1,56 @@
+# Item 1: proof identities on 3000 random rational instances
+  PASS LM-2ui-2vj = z; R1 = -2u(e+b)(i-i0)/L; R2 = (ez-2vbj)/(e+b) - 2ub(i-i0)/L
+  PASS gate tests: (u+w)(e+b)/L<=u iff w(e+b)<=ud; vb/(e+b)+(u+w)b/L<=v iff (u+w)b(e+b)<=veL
+  PASS b(e+b)/(d+e+b) strictly increasing in b
+  PASS source correction: X(1-t/D) gives XL/D, X(e+b)/D, Xb/D at joints, 0 at target
+# Item 2: named rooms
+   G grid (0,2,10,23,230): (1) direct (True, True) transposed (True, True); d168 direct False transposed False
+   N1 ledger (1,2,3,4; 1,1,1,1): (1) direct (True, True) transposed (True, True); d168 direct False transposed False
+   N2 d17 (3,4,9,12; 3,4,2,3): (1) direct (True, True) transposed (True, False); d168 direct False transposed False
+   A1 (1,3,5,7; 1,2,1,1): (1) direct (True, True) transposed (True, True); d168 direct False transposed False
+   A2 (2,5,9,12; 2,3,2,2): (1) direct (True, True) transposed (True, True); d168 direct False transposed False
+   T1 (3,4,12,13; 1,1,1,1): (1) direct (False, True) transposed (True, True); d168 direct False transposed False
+   RES grid (0,10,11,13,100): (1) direct (False, False) transposed (False, False); d168 direct False transposed False
+   R1 (2,3,4,5; 1,1,1,1): (1) direct (False, True) transposed (False, False); d168 direct True transposed False
+  PASS G satisfies (1): 20<=130, 240<=4232
+  PASS N1 satisfies (1) with EQUALITY in the first test (2=2)
+  PASS N2 satisfies (1): 15<=16, 105<=162
+  PASS A1, A2 satisfy (1)
+  PASS T1 fails (1) directly, passes transposed (second test with equality 36=36)
+  PASS RES fails d170 and d168 in both orientations
+## G: the note pair (1,115)-(115,1)
+  PASS G note pair: j=20 i=75 M=2535/22 X=21/11 slope=2189/19, trace end at (115,1)
+  PASS G note pair: 5490 side reflections (note says 5,490)
+   gates ['7/19', '-36/19', '-4/19'] vs widths 2,10,23
+  PASS G 16 half-lattice + 6 random rational pairs: construction + exact trace reaches T, gates and bounds hold, joint abscissae = |gate|, for 22/22 pairs (max 22032 reflections)
+   G CPU 4.8s
+  PASS N1 ledger (1,2,3,4; 1,1,1,1): all half-lattice open-pair marks + 10 random: construction + exact trace reaches T, gates and bounds hold, joint abscissae = |gate|, for 11/11 pairs (max 20 reflections)
+  PASS N2 d17 (3,4,9,12; 3,4,2,3): all half-lattice open-pair marks + 10 random: construction + exact trace reaches T, gates and bounds hold, joint abscissae = |gate|, for 91/91 pairs (max 146 reflections)
+  PASS A1 (1,3,5,7; 1,2,1,1): all half-lattice open-pair marks + 10 random: construction + exact trace reaches T, gates and bounds hold, joint abscissae = |gate|, for 12/12 pairs (max 52 reflections)
+  PASS A2 (2,5,9,12; 2,3,2,2): all half-lattice open-pair marks + 10 random: construction + exact trace reaches T, gates and bounds hold, joint abscissae = |gate|, for 34/34 pairs (max 102 reflections)
+## T1 via the transpose
+  PASS T1 (3,4,12,13; 1,1,1,1)' (transposed frame): construction + exact trace reaches T, gates and bounds hold, joint abscissae = |gate|, for 13/13 pairs (max 78 reflections)
+  PASS T1 original frame: all 13 mapped shots go from the bottom-right mark to the top mark
+## Control: construction where (1) fails
+   RES grid (0,10,11,13,100) (5,55)-(55,5): gates ['37/25', '-41/25', '39/5'] widths 10,11,13; trace end at (55,5)
+   R1 (2,3,4,5; 1,1,1,1) (1/2,7/2)-(9/2,1/2): gates ['1/6', '3/2', '5/6'] widths 2,3,4; trace end at (9/2,1/2)
+   RES: nearest-rounding shot succeeds for 9/18 named pairs
+# Item 3: coverage of named rooms by d168 u d170 (both orientations)
+   G grid (0,2,10,23,230): {'d168': False, 'd168T': False, 'd170': True, 'd170T': True} -> COVERED
+   N1 ledger (1,2,3,4; 1,1,1,1): {'d168': False, 'd168T': False, 'd170': True, 'd170T': True} -> COVERED
+   N2 d17 (3,4,9,12; 3,4,2,3): {'d168': False, 'd168T': False, 'd170': True, 'd170T': False} -> COVERED
+   A1 (1,3,5,7; 1,2,1,1): {'d168': False, 'd168T': False, 'd170': True, 'd170T': True} -> COVERED
+   A2 (2,5,9,12; 2,3,2,2): {'d168': False, 'd168T': False, 'd170': True, 'd170T': True} -> COVERED
+   T1 (3,4,12,13; 1,1,1,1): {'d168': False, 'd168T': False, 'd170': False, 'd170T': True} -> COVERED
+   RES grid (0,10,11,13,100): {'d168': False, 'd168T': False, 'd170': False, 'd170T': False} -> OUTSIDE
+   R1 (2,3,4,5; 1,1,1,1): {'d168': True, 'd168T': False, 'd170': False, 'd170T': False} -> COVERED
+   R2: {'d168': True, 'd168T': False, 'd170': False, 'd170T': False} -> COVERED
+   R3: {'d168': True, 'd168T': True, 'd170': False, 'd170T': False} -> COVERED
+   R4: {'d168': True, 'd168T': False, 'd170': False, 'd170T': False} -> COVERED
+   O1 (2,3,4,5; 1,1,1,5): {'d168': False, 'd168T': False, 'd170': False, 'd170T': False} -> OUTSIDE
+   O2 grid (0,2,3,4,6): {'d168': False, 'd168T': False, 'd170': False, 'd170T': False} -> OUTSIDE
+  PASS transposed (1) == [hu <= (e+h)(v-u), (e+2h)wu <= v(u-w)(d+e+h)] (3000 random rooms)
+  PASS O1 (2,3,4,5; 1,1,1,5) is OUTSIDE d168 u d170
+  PASS O2 grid (0,2,3,4,6) is OUTSIDE d168 u d170
+
+## done: 0 failures []; CPU 5.7s

@@ -1,0 +1,64 @@
+§0 snapshots
+  INFO snapshot-l1-overlap-phase.md sha256 0ff49116974112199dee036f88bd484bd3f59d3655cb770546888e4b99b36ee2
+  PASS snapshot-l1-overlap-phase.md is byte-identical to bbbb/l1-overlap-phase.md and matches brief prefix 0ff49116
+  INFO snapshot-l1-projective-crossing.md sha256 19909ad50a7895a809a63cfcf31d09448add704d783e848e38e06d256f9bbd1b
+  PASS snapshot-l1-projective-crossing.md is byte-identical to bbbb/l1-projective-crossing.md and matches brief prefix 19909ad5
+  INFO snapshot-l1-comparable-width-bound.md sha256 92402b95ca10c5ff44caa05bf6f1f282513b6e839c11c2dee4cf14a45a53043b
+  PASS snapshot-l1-comparable-width-bound.md is byte-identical to bbbb/l1-comparable-width-bound.md and matches brief prefix 92402b95
+§1 overlap-phase: lower phase -> tall phase embedding adds 0 or 2*beta
+  PASS folded height and vertical sign agree on 456 lower phases (upward sheet +0, downward sheet +2beta)
+§2 overlap-phase: uniform window constants and the mismatch correction
+  PASS all constants positive and the three margin inequalities hold on 256 parameter tuples
+  PASS component count <= N, longest component >= 8l, midpoint clearance >= 4 l x_min on 3072 cases
+  PASS mismatch <= 2(2a_max+b)rho, |correction| <= r/4, sheet drift <= m0/2 on 4608 synthetic offsets
+  Fourier truncation: K = 1+ceil(16/(pi^2 rho^3)), tail <= 4/(pi^2 rho^3 K)
+  PASS omitted product mass 2*(1/rho)*2/(pi^2 rho^2 K) < 1/4 at four rho values and three stand-ins for pi^2 (d184 with k=2)
+§3 overlap-phase: identity (2), consequence (3), D/u formula
+  PASS (1) equals p z0 + (P eps/2)[q/(a+b) - p/a] on 2352 cases
+  PASS correction zero <=> alpha = beta p/(q-p); numerator <= beta|p|, denominator <= |q-p| on 60 (p,q,beta)
+  PASS D/u = 2 beta n j/[P(q-p)(j-i)] with P=2 on all generated cases
+  PASS p=q=1: z0 = n + (P eps/2)(1/a - 1/(a+b)) satisfies (2) exactly for every alpha
+  PASS heights M, M+1 with unit travel: period 2M(M+1); in units of M it is 2(M+1), M=2..59
+§4 projective crossing: gcd facts and L | Pqw on all small tuples satisfying (1)
+  PASS gcd(T,n)=1, gcd(T,m)=gcd(m,beta), gcd(T/g, m/g)=1 for coprime m,n<60 and six beta
+  PASS (1) integral => L | Pqw on all 151090 satisfying tuples
+  PASS and n <= |q| P w, m <= beta |q| P w on the same tuples (bounded-mouth theorem with K >= |q|)
+  two-generator presentation: gcd(D,u)=1 => u <= Bn and w/u > 1/(BKP)
+  PASS on 31574 (m,n,A,B,beta,P,q,w) with L | Pqw
+  symbolic family: t=m, h=m+1, N=2m+3, u=mN, D=(m+1)N, beta=1, P=2, w=2m+1, D-w-c=(m+1)(N-1)/2
+  PASS odd m in 5..79: integral, 0<c<D-w, gcd(D,u,w)=1, gcd(h,t)=1, kappa=1, (1)=(N-1)/N+1/N=1, L=w, gcd(D,u)=N
+  INFO the same identities fail for some even m or m<5: False (odd m >= 5 is not needed)
+  template-aligned w=u with gcd(D,u)=L (independent offset needed for normalization), kappa=1
+  PASS m=2..79: (p,q)=(1,2) satisfies (1) with c=m; L divides u; so an offset that restores gcd(D,u,o)=1 defeats note 3 even for a template-aligned mouth
+  rational-period example: lcm(2, (2s+1)/s) = 2(2s+1); L = 2s+1 at H=(s+1)/s, beta=1
+  PASS s=1..199
+  PASS rational P = Pn/Pd: (1) integral => L | Pn q w on the grid
+§5 comparable width bound: L | Pq(jB - iA beta) and the explicit bounds
+  PASS L | Pqw => L | Pq(jB - iA beta) on 20621 normalized tuples (D=Am/g, u=Bn/g, rw=iD+ju)
+  PASS h<=beta S, t<=S, D<=A beta S, u<=B S, Dh+Vut<=(A beta^2+VB)S^2 on 17843 tuples with Delta != 0
+  Delta = 0 with r = 1 forces w >= D (so it cannot occur for a lower-wing source)
+  PASS every integral (i,j) parallel to (B, A beta) gives w <= 0 or w > D (3920 cases)
+  PASS w = D - ku: Delta = -kB - A beta != 0 for k >= 0
+  PASS every positive min(D, r1 u) - max(0, l u) is ju (j>0) or D - ku (k>=0)
+  INFO k = 0 gives w = D: no source with 0 < c < D - w exists; only the source-inside paragraph applies
+  source inside the column: rational gcd(2(H+beta), lP) <= lP, and an open interval longer than it meets every coset
+  PASS 324 cases
+  PASS eps < B eta / P and l <= eps imply (l+B) eta > l P
+  INFO template-aligned column eps = j >= 1 vs B eta/P at st279 (B=1, eta=1/32400, P=6): 5.14e-06; the thin-column alternative covers only l < B eta/(P - eta) there
+§6 size of K and S (INFO)
+  INFO alpha_max=10^6, m0=1e-40: K ~ 10^140; area ~ S^2 >= K^2 ~ 10^280
+  INFO alpha_max=10^20, m0=1e-40: K ~ 10^182; area ~ S^2 >= K^2 ~ 10^364
+  INFO d192: H* is roughly a double exponential in 10^37 at st279, so K and the area bound are at least a fixed power of H*
+§7 text checks
+  PASS note 3 states w = D - ku with k >= 0 (k = 0 is w = D)
+  PASS note 1 cites d124 first hit with axes interchanged as the upper input
+  PASS note 3 scope sentence present
+  PASS note 2 labels the symbolic family as not refuting illumination
+  INFO note 2 restricts the family to odd m: True
+  INFO note 3 mentions the two-rectangle (eight-wall) theorem: False
+§8 W=10 ledger realization
+  PASS strictly simple, 10 walls, turn word LLLRLLLRLR is a rotation of LLLRLLLRLR; area 8
+  PASS all three notes quote the same realization
+
+CPU seconds: 23.33
+FAILURES: 0

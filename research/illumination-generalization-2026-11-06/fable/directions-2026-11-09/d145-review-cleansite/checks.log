@@ -1,0 +1,92 @@
+==============================================================================
+1. R22: clean site contents, and replay of the six axial-reflex routes
+==============================================================================
+R22 cells (d144 manuscript construction) == d8 R22-base cells: True
+[R22] area n=15, walls W=22, convex=13, reflex=9, W==2r+4: True; gcd(horizontal lengths)=1, gcd(vertical lengths)=1 -> Per(X)=2Z^2: True
+   class (0, 0): interior 2, smooth 2, convex 3, reflex 0; fiber 4i+2b+f+3r = 15 (= n: True); regular points [(0, 0), (2, -2), (2, 2), (4, 0)]
+   class (1, 0): interior 0, smooth 2, convex 2, reflex 3; fiber 4i+2b+f+3r = 15 (= n: True); regular points [(-1, 0), (1, 0)]
+   class (0, 1): interior 0, smooth 2, convex 2, reflex 3; fiber 4i+2b+f+3r = 15 (= n: True); regular points [(2, 1), (2, 3)]
+   class (1, 1): interior 0, smooth 0, convex 6, reflex 3; fiber 4i+2b+f+3r = 15 (= n: True); CLEAN: n = f+3r = 6+3*3
+   clean sites [(1, 1)]; d|Z| = 15 <= M(W-2)/2 = 40: True
+odd-odd reflexes (permanently stopped): [(1, -1), (1, 1), (3, 1)]
+  C=(0, -1) [axial] steps 1+3; lattice points from S: [(0, -1), (2, -2), (2, 1), (2, 2)]; corners met [(0, -1)]; other points smooth/interior: True; straight join: True
+      developed D=(-32, 44), target sheet diag(1, 1), lift consistent: True, holonomy class D mod 4Z^2=(0, 0); midpoint site (0, 0) at physical (2, -2); in clean-site class (2,2): False
+  C=(0, 1) [axial] steps 1+1; lattice points from S: [(0, 1), (2, 2)]; corners met [(0, 1)]; other points smooth/interior: True; straight join: True
+      developed D=(-4, 2), target sheet diag(-1, 1), lift consistent: True, holonomy class D mod 4Z^2=(0, 2); midpoint site (0, 1) at physical (0, 1); in clean-site class (2,2): False
+  C=(1, -2) [axial] steps 1+1; lattice points from S: [(1, -2), (2, 2)]; corners met [(1, -2)]; other points smooth/interior: True; straight join: True
+      developed D=(14, -8), target sheet diag(1, -1), lift consistent: True, holonomy class D mod 4Z^2=(2, 0); midpoint site (1, 0) at physical (1, -2); in clean-site class (2,2): False
+  C=(1, -1) [odd-odd] steps 1+1; lattice points from S: [(1, -1), (2, 2)]; corners met [(1, -1)]; other points smooth/interior: True; straight join: True
+      developed D=(18, -10), target sheet diag(1, 1), lift consistent: True, holonomy class D mod 4Z^2=(2, 2); midpoint site (1, 1) at physical (1, -1); in clean-site class (2,2): True
+  C=(1, 1) [odd-odd] steps 1+1; lattice points from S: [(1, 1), (2, 2)]; corners met [(1, 1)]; other points smooth/interior: True; straight join: True
+      developed D=(2, 2), target sheet diag(1, 1), lift consistent: True, holonomy class D mod 4Z^2=(2, 2); midpoint site (1, 1) at physical (1, 1); in clean-site class (2,2): True
+  C=(1, 2) [axial] steps 1+1; lattice points from S: [(1, 2), (2, 2)]; corners met [(1, 2)]; other points smooth/interior: True; straight join: True
+      developed D=(6, 4), target sheet diag(-1, -1), lift consistent: True, holonomy class D mod 4Z^2=(2, 0); midpoint site (1, 0) at physical (1, 2); in clean-site class (2,2): False
+  C=(3, 1) [odd-odd] steps 1+1; lattice points from S: [(3, 1), (2, 2)]; corners met [(3, 1)]; other points smooth/interior: True; straight join: True
+      developed D=(18, 10), target sheet diag(-1, -1), lift consistent: True, holonomy class D mod 4Z^2=(2, 2); midpoint site (1, 1) at physical (3, 1); in clean-site class (2,2): True
+  C=(3, 2) [axial] steps 1+1; lattice points from S: [(3, 2), (2, 2)]; corners met [(3, 2)]; other points smooth/interior: True; straight join: True
+      developed D=(18, 4), target sheet diag(-1, -1), lift consistent: True, holonomy class D mod 4Z^2=(2, 0); midpoint site (1, 0) at physical (3, 2); in clean-site class (2,2): False
+  C=(4, 1) [axial] steps 1+1; lattice points from S: [(4, 1), (2, 2)]; corners met [(4, 1)]; other points smooth/interior: True; straight join: True
+      developed D=(8, 14), target sheet diag(-1, 1), lift consistent: True, holonomy class D mod 4Z^2=(0, 2); midpoint site (0, 1) at physical (4, 1); in clean-site class (2,2): False
+  supports are singletons: True
+  residual (sheet, class) cells hit by the six axial routes: {((1, 1), (0, 0)): 1, ((-1, 1), (0, 2)): 2, ((1, -1), (2, 0)): 1, ((-1, -1), (2, 0)): 2} -> 4 of 12 residual cells carry a certificate
+  axial reflexes available in R22: 6. Lower bound from singleton routes: 6; upper bound (all stopped = original room, dark per manuscript): 6. "Exactly six" = "all of them".
+==============================================================================
+2. n = f_x + 3 r_x at a clean parity (torus fiber count); cov4181, R22, L-room
+==============================================================================
+cov4181 (d144 list) == d64 normalized index 4181 (up to translation): True ; translation (0, 0)
+[cov4181] area n=28, walls W=20, convex=12, reflex=8, W==2r+4: True; gcd(horizontal lengths)=1, gcd(vertical lengths)=1 -> Per(X)=2Z^2: True
+   class (0, 0): interior 2, smooth 8, convex 4, reflex 0; fiber 4i+2b+f+3r = 28 (= n: True); regular points [(0, 2), (0, 4), (2, 2), (2, 4), (4, 0), (4, 2), (4, 4), (4, 6), (6, 2), (8, 2)]
+   class (1, 0): interior 0, smooth 0, convex 7, reflex 7; fiber 4i+2b+f+3r = 28 (= n: True); CLEAN: n = f+3r = 7+3*7
+   class (0, 1): interior 4, smooth 4, convex 1, reflex 1; fiber 4i+2b+f+3r = 28 (= n: True); regular points [(0, 1), (0, 3), (0, 5), (2, 3), (4, 1), (4, 3), (4, 5), (8, 1)]
+   class (1, 1): interior 3, smooth 8, convex 0, reflex 0; fiber 4i+2b+f+3r = 28 (= n: True); regular points [(1, 1), (1, 3), (1, 5), (3, 1), (3, 3), (3, 5), (5, 1), (5, 3), (5, 5), (7, 1), (7, 3)]
+   clean sites [(1, 0)]; d|Z| = 28 <= M(W-2)/2 = 36: True
+[L-room] area n=3, walls W=6, convex=5, reflex=1, W==2r+4: True; gcd(horizontal lengths)=1, gcd(vertical lengths)=1 -> Per(X)=2Z^2: True
+   class (0, 0): interior 0, smooth 0, convex 3, reflex 0; fiber 4i+2b+f+3r = 3 (= n: True); CLEAN: n = f+3r = 3+3*0
+   class (1, 0): interior 0, smooth 1, convex 1, reflex 0; fiber 4i+2b+f+3r = 3 (= n: True); regular points [(1, 0)]
+   class (0, 1): interior 0, smooth 1, convex 1, reflex 0; fiber 4i+2b+f+3r = 3 (= n: True); regular points [(0, 1)]
+   class (1, 1): interior 0, smooth 0, convex 0, reflex 1; fiber 4i+2b+f+3r = 3 (= n: True); CLEAN: n = f+3r = 0+3*1
+   clean sites [(0, 0), (1, 1)]; d|Z| = 6 <= M(W-2)/2 = 8: True
+  Pick check (all rooms): sum over classes of fibers = 4n holds by the asserts above.
+==============================================================================
+3. Fold budget  sum_{x in J} (q_x + 2 (r_x mod k)) <= 2k-2  on R22
+==============================================================================
+  class (1, 0): (q_x, r_x) = (2, 3), convex f_x = 2
+  class (0, 1): (q_x, r_x) = (2, 3), convex f_x = 2
+  class (1, 1): (q_x, r_x) = (0, 3), convex f_x = 6
+  k=2: k does not divide n=15, so no fold of inner degree 2 exists; inequality shown anyway:
+  k=2 J=((1, 0),): cost 4 vs budget 2: EXCLUDED
+  k=2 J=((0, 1),): cost 4 vs budget 2: EXCLUDED
+  k=2 J=((1, 1),): cost 2 vs budget 2: allowed
+  k=2 J=((1, 0), (0, 1)): cost 8 vs budget 2: EXCLUDED
+  k=2 J=((1, 0), (1, 1)): cost 6 vs budget 2: EXCLUDED
+  k=2 J=((0, 1), (1, 1)): cost 6 vs budget 2: EXCLUDED
+  k=2 J=((1, 0), (0, 1), (1, 1)): cost 10 vs budget 2: EXCLUDED
+  k=3 J=((1, 0),): cost 2 vs budget 4: allowed
+  k=3 J=((0, 1),): cost 2 vs budget 4: allowed
+  k=3 J=((1, 1),): cost 0 vs budget 4: allowed
+  k=3 J=((1, 0), (0, 1)): cost 4 vs budget 4: allowed
+  k=3 J=((1, 0), (1, 1)): cost 2 vs budget 4: allowed
+  k=3 J=((0, 1), (1, 1)): cost 2 vs budget 4: allowed
+  k=3 J=((1, 0), (0, 1), (1, 1)): cost 4 vs budget 4: allowed
+  k=5 J=((1, 0),): cost 8 vs budget 8: allowed
+  k=5 J=((0, 1),): cost 8 vs budget 8: allowed
+  k=5 J=((1, 1),): cost 6 vs budget 8: allowed
+  k=5 J=((1, 0), (0, 1)): cost 16 vs budget 8: EXCLUDED
+  k=5 J=((1, 0), (1, 1)): cost 14 vs budget 8: EXCLUDED
+  k=5 J=((0, 1), (1, 1)): cost 14 vs budget 8: EXCLUDED
+  k=5 J=((1, 0), (0, 1), (1, 1)): cost 22 vs budget 8: EXCLUDED
+  forced k=3 structure (J = three off-source classes, budget tight):
+    (1, 0): zeros 1, poles 2, (b1,b2,b3)=(2,2,0); b1 == f_x: True
+    (0, 1): zeros 1, poles 2, (b1,b2,b3)=(2,2,0); b1 == f_x: True
+    (1, 1): zeros 1, poles 2, (b1,b2,b3)=(6,0,0); b1 == f_x: True
+    (0,0): poles 1, regular N points 2, N-degree 5 (= 5: True)
+    ramification used 4 = 2k-2 = 4; N: poles 7, simple zeros 3, poles - zeros = 4 (sphere needs 4)
+    canonical double of N: 2 - 2g = -2*3 -> genus 4; area 20 unit squares d143 lists one genus-4, 20-square quotient of X: genus match True
+  d143 block systems of R22 X (60 squares): genus>=2 quotients of degree 1, 3; genus-1 of 1,2,2,2,4 squares.
+  A degree-2 fold Q->N would give a degree-2 (30-square) translation quotient of X: none exists.
+==============================================================================
+4. V-notch B: angle bound d|Z| <= M(W-2)/2 (M = 8)
+==============================================================================
+  sum_C M*theta/2pi = 12; M(W-2)/2 = 12; d|Z| = 3*4 = 12 -> equality: True
+  lifts: (0,0),(4,0): 2 each of degree 1; (4,4),(0,4): 1 each of degree 1; (2,2): 2 of degree 3
+Total CPU 0.03s

@@ -1,0 +1,66 @@
+# 2. R22 chart: S=(0,0) leftward, cap x=-1, upper opening (1,2) at x=1, T=(2,2), D=4
+   R22 walls=22; R22-L1-005 walls=20; L1-005 minus R22 cells: [(0, -3)]
+   status S,T in R22: interior, interior; in L1-005: interior, interior
+   vertex (1,2): R22 reflex, L1-005 reflex; window endpoints (0,-1),(0,1),(1,1): ['reflex', 'reflex', 'reflex']
+
+   [R22] reference ray direction (-8,15) (s=15/8). windows W_u (developed v):
+     u=0: W=(-1, 1)  sheet y = +1*v + 0
+     u=1: W=(1, 3)  sheet y = -1*v + 2
+     u=2: W=(3, 5)  sheet y = +1*v + -4
+     u=3: W=(5, 6)  sheet y = +1*v + -4
+     u=4: W=(7, 9)  sheet y = -1*v + 10
+     vT = 8; s0 = 2; I_S = (7/4, 2); I_T = (2, 9/4); overlap = None
+     s0 in I_S: False, s0 in I_T: False; closures touch at 2: True
+     pairing u=1 vs 3: W_1=(1, 3), reflected W_3=(2, 3), disjoint=False
+     pairing u=2 vs 2: W_2=(3, 5), reflected W_2=(3, 5), disjoint=False
+     broken line symmetric about (2,4): True; in all windows: True; bounce times at levels 1,3,7: ['4/9', '10/7', '32/9'] in (0,1),(1,2),(3,4): True
+     own tracer d=(-1, 2): event corner stop (Fraction(1, 1), Fraction(2, 1)); point at u=4: []; back at S at u=['2']; poly [('0', '0'), ('-1/2', '1'), ('-1', '0'), ('-1/2', '-1'), ('1', '2')]
+     own tracer d=(-8, 15): event corner stop (Fraction(4, 1), Fraction(1, 1)); point at u=4: [(Fraction(2, 1), Fraction(5, 2))]; back at S at u=[]; poly [('0', '0'), ('-8/15', '1'), ('-1', '1/8'), ('-2/5', '-1'), ('26/15', '3'), ('14/5', '1')]
+     d8 tracer displacement (-4, 8): end (1, 2), ok False, lattice pts visited [(-1, 0), (0, 0), (1, 2)]
+     d8 tracer displacement (-4,15/2): end (Fraction(2, 1), Fraction(5, 2)), ok True, lattice pts visited []
+
+   [R22-L1-005] reference ray direction (-8,15) (s=15/8). windows W_u (developed v):
+     u=0: W=(-1, 1)  sheet y = +1*v + 0
+     u=1: W=(1, 3)  sheet y = -1*v + 2
+     u=2: W=(3, 5)  sheet y = +1*v + -4
+     u=3: W=(5, 6)  sheet y = +1*v + -4
+     u=4: W=(7, 9)  sheet y = -1*v + 10
+     vT = 8; s0 = 2; I_S = (7/4, 2); I_T = (2, 9/4); overlap = None
+     s0 in I_S: False, s0 in I_T: False; closures touch at 2: True
+     pairing u=1 vs 3: W_1=(1, 3), reflected W_3=(2, 3), disjoint=False
+     pairing u=2 vs 2: W_2=(3, 5), reflected W_2=(3, 5), disjoint=False
+     broken line symmetric about (2,4): True; in all windows: True; bounce times at levels 1,3,7: ['4/9', '10/7', '32/9'] in (0,1),(1,2),(3,4): True
+     own tracer d=(-1, 2): event corner stop (Fraction(1, 1), Fraction(2, 1)); point at u=4: []; back at S at u=['2']; poly [('0', '0'), ('-1/2', '1'), ('-1', '0'), ('-1/2', '-1'), ('1', '2')]
+     own tracer d=(-8, 15): event corner stop (Fraction(4, 1), Fraction(1, 1)); point at u=4: [(Fraction(2, 1), Fraction(5, 2))]; back at S at u=[]; poly [('0', '0'), ('-8/15', '1'), ('-1', '1/8'), ('-2/5', '-1'), ('26/15', '3'), ('14/5', '1')]
+     d8 tracer displacement (-4, 8): end (1, 2), ok False, lattice pts visited [(-1, 0), (0, 0), (1, 2)]
+     d8 tracer displacement (-4,15/2): end (Fraction(2, 1), Fraction(5, 2)), ok True, lattice pts visited []
+
+   charts identical in both rooms: True
+   physical column 0 range: R22 (Fraction(-2, 1), Fraction(2, 1)), L1-005 (Fraction(-3, 1), Fraction(2, 1)) (note says (-2,2) for both; only the upper part is used)
+
+# 3. R22-L1-005 is lit for (0,0)-(2,2); R22 is dark
+   d8 certify L1-005 witness (24, -16): (-24, -16); in R22: None
+   d8 decider R22-L1-005: status EARLY, states 42, (0,0)-(2,2) lit True, witness (18, -12)
+   d8 decider R22: status DONE, states 5184, (0,0)-(2,2) lit False, witness None
+   own tracer R22-L1-005 d=(-3, -2): event corner stop (Fraction(1, 1), Fraction(2, 1)); reaches T at u=[24]
+   own tracer R22 d=(-3, -2): event corner stop (Fraction(1, 1), Fraction(-2, 1)); reaches T at u=[]
+   L1-005 witness bounces on the new floor y=-3 with 0<x<1 (cell (0,-3)): [('1/2', '-3')]
+   witness column chart, D=24: ok
+   vT=-16, s0=-2/3, I_S=(-15/22, -15/23), I_T=(-15/22, -15/23), s0 in both: True
+   same direction in R22: reference ray stops (corner (Fraction(1, 1), Fraction(-2, 1))) before u=24
+
+# 1. Joint-interval lemma: three known DB55 shots, then an exhaustive chart/target check
+   DB55 S=(1,1) T=(9,1): legal shots with |dx-step|<=12, |dy-step|<=40 (first T arrival u): 171; first five [(10, (-5, -32)), (10, (-5, -7)), (10, (-5, 18)), (16, (8, -37)), (16, (8, 3))]; slope -37/8 present: True
+   shot d=(8, -37), D=16: s0=-37/8 (= dy/|dx| -37/8); I_S=(-65/14, -60/13); I_T=(-51/11, -23/5); overlap=(-51/11, -60/13); s0 in I_S True, in I_T True, in overlap True
+   shot d=(-5, -32), D=10: s0=-32/5 (= dy/|dx| -32/5); I_S=(-45/7, -51/8); I_T=(-58/9, -19/3); overlap=(-45/7, -51/8); s0 in I_S True, in I_T True, in overlap True
+   shot d=(-5, -7), D=10: s0=-7/5 (= dy/|dx| -7/5); I_S=(-10/7, -11/8); I_T=(-13/9, -4/3); overlap=(-10/7, -11/8); s0 in I_S True, in I_T True, in overlap True
+   [DB55] S=(1, 1): (chart, target) instances 1500; overlap <=> s0 in I_S <=> s0 in I_T <=> chord legal on chart: 1500/1500; mismatches []; legal chords on another chart 382; reference rays dead before D: 471
+   [R22] S=(0, 0): (chart, target) instances 90; overlap <=> s0 in I_S <=> s0 in I_T <=> chord legal on chart: 90/90; mismatches []; legal chords on another chart 0; reference rays dead before D: 498
+   [R22-L1-005] S=(0, 0): (chart, target) instances 197; overlap <=> s0 in I_S <=> s0 in I_T <=> chord legal on chart: 197/197; mismatches []; legal chords on another chart 22; reference rays dead before D: 481
+
+# 1b. Column cut x=4 in R22: door (0,1) between columns 3 and 4 ends at (4,0), which is smooth, not a corner
+   rays from regular points of R22 whose first 3 bounces include the smooth point (4,0): [((0, 0), (2, 3))]
+   ray (0, 0) d=(2, 3): poly [('0', '0'), ('2', '3'), ('4', '0'), ('14/3', '1'), ('5', '1/2')]; column chart: reference ray meets a piece endpoint at u=2, point (Fraction(2, 1), Fraction(3, 1))
+   such rays are legal but belong to no strict column chart; maximal-rectangle charts avoid this only when every door endpoint is a vertex
+
+Total CPU: 1.1s

@@ -1,0 +1,25 @@
+== DB55 cells 53 S (2, 2) T (4, 4)
+(1) directions (1,2j), |j|<=60: 121 | lit iff 5 does not divide j: mismatches 0 []
+    max x of any visited lattice point: 5 | cells with x>=5 entered: 0
+    ray endings over all signed rays: {'stop': 290, 'periodic': 192}
+    for 5|j every visited lattice point has y=2 and each ray stops at a corner
+    j=0 hits (signed dir, step): [] | +x ray ends stop at (5, 2)
+    j=1 hits (signed dir, step): [((1, 2), 2), ((1, -2), 4), ((-1, 2), 6)] | +x ray ends stop at (5, 2)
+    j=2 hits (signed dir, step): [((1, -4), 2)] | +x ray ends periodic
+    j=3 hits (signed dir, step): [((1, 6), 2)] | +x ray ends stop at (5, 0)
+    j=4 hits (signed dir, step): [((1, 8), 4), ((1, -8), 2), ((-1, -8), 6)] | +x ray ends periodic
+    j=5 hits (signed dir, step): [] | +x ray ends stop at (5, 2)
+    j=10 hits (signed dir, step): [] | +x ray ends stop at (5, 2)
+(2) box model vs billiard for all (1,q), |q|<=120: 241 directions, mismatches 0 []
+    box model on even q=2j: lit set equals {5 does not divide j}: True (|j|<=500)
+    odd q lit in box model for |q|<=120: 96 of 120
+(3) N in 1..60 coprime to 5 with p_0=(1,0) dark and p_N=(1,2N) lit (agree mod 2N): 48 of 48 | failures []
+    2^k cases: k=1..5 -> [True, True, True, True, True] (p_(2^k) lit, p_0 dark)
+(4) lattice points on [(2,2),(10,2)] and their kind: [((5, 2), 'reflex'), ((6, 2), 'smooth'), ((7, 2), 'smooth'), ((8, 2), 'reflex')]
+    direction (3,2) lights (2,2)->(10,2): [((3, 2), 16), ((-3, -2), 6)]
+(5) R=5: primitive directions 24, lit 20, fraction 0.833
+(5) R=10: primitive directions 96, lit 74, fraction 0.771
+(5) R=20: primitive directions 384, lit 280, fraction 0.729
+(5) R=30: primitive directions 852, lit 618, fraction 0.725
+(5) R=40: primitive directions 1532, lit 1106, fraction 0.722
+cpu total 0.3s

@@ -1,0 +1,73 @@
+== Part A: genus-2 prime-degree examples ==
+
+p=7: h=(0 1 ... 6), v=(0 1)
+ connected: True  genus: 2  cone angles (2pi units) by vertex: [3, 1, 1, 1, 1]
+ commutator v^-1 h^-1 v h nontrivial cycles: [(0, 6, 1)]
+ h^k v h^-k = (k k+1) for k=0..p-2 (so group = S_p): True
+ absolute period lattice index in Z^2: 1
+ sigma with sigma h sigma^-1 = h^-1, sigma v sigma^-1 = v^-1: [[1, 0, 6, 5, 4, 3, 2]]
+ sigma^2 = id: True
+ iota-fixed half-lattice points: [('C', 4), ('R', 0), ('T', 0), ('T', 1), ('T', 4), ('V', 0)]  count: 6  zero vertex: [0]
+ RH quotient genus: 2g-2 = 2(2g'-2)+#fix -> 0
+ iota involutive on half-lattice points: True
+ reflection square maps: r_x candidates [[1, 0, 6, 5, 4, 3, 2]]  r_y = identity valid: True
+   fixed ('C', 4): fixed by r_x True, by r_y True
+   fixed ('R', 0): fixed by r_x True, by r_y True
+   fixed ('T', 0): fixed by r_x False, by r_y False
+   fixed ('T', 1): fixed by r_x False, by r_y False
+   fixed ('T', 4): fixed by r_x True, by r_y True
+   fixed ('V', 0): fixed by r_x True, by r_y True
+ iota-fixed points on no mirror (interior pi-cone points of X/D2): [('T', 0), ('T', 1)]
+ fast vs independent slow tracer, all starts, |a|,|b|<=8: mismatches 0
+  x=C(0) y=C(1): segments 14640, reach y 2783, legal to y 0, midpoint forbidden 2783, legal (x,other centre) pairs 5
+  x=C(1) y=C(0): segments 14640, reach y 2783, legal to y 0, midpoint forbidden 2783, legal (x,other centre) pairs 5
+  x=C(2) y=C(6): segments 14640, reach y 2310, legal to y 0, midpoint forbidden 2310, legal (x,other centre) pairs 5
+  x=C(3) y=C(5): segments 14640, reach y 2447, legal to y 0, midpoint forbidden 2447, legal (x,other centre) pairs 5
+  x=C(5) y=C(3): segments 14640, reach y 2447, legal to y 0, midpoint forbidden 2447, legal (x,other centre) pairs 5
+  x=C(6) y=C(2): segments 14640, reach y 2310, legal to y 0, midpoint forbidden 2310, legal (x,other centre) pairs 5
+
+p=11: h=(0 1 ... 10), v=(0 1)
+ connected: True  genus: 2  cone angles (2pi units) by vertex: [3, 1, 1, 1, 1, 1, 1, 1, 1]
+ commutator v^-1 h^-1 v h nontrivial cycles: [(0, 10, 1)]
+ h^k v h^-k = (k k+1) for k=0..p-2 (so group = S_p): True
+ absolute period lattice index in Z^2: 1
+ sigma with sigma h sigma^-1 = h^-1, sigma v sigma^-1 = v^-1: [[1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2]]
+ sigma^2 = id: True
+ iota-fixed half-lattice points: [('C', 6), ('R', 0), ('T', 0), ('T', 1), ('T', 6), ('V', 0)]  count: 6  zero vertex: [0]
+ RH quotient genus: 2g-2 = 2(2g'-2)+#fix -> 0
+ iota involutive on half-lattice points: True
+ reflection square maps: r_x candidates [[1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2]]  r_y = identity valid: True
+   fixed ('C', 6): fixed by r_x True, by r_y True
+   fixed ('R', 0): fixed by r_x True, by r_y True
+   fixed ('T', 0): fixed by r_x False, by r_y False
+   fixed ('T', 1): fixed by r_x False, by r_y False
+   fixed ('T', 6): fixed by r_x True, by r_y True
+   fixed ('V', 0): fixed by r_x True, by r_y True
+ iota-fixed points on no mirror (interior pi-cone points of X/D2): [('T', 0), ('T', 1)]
+ fast vs independent slow tracer, all starts, |a|,|b|<=8: mismatches 0
+  x=C(0) y=C(1): segments 10200, reach y 1421, legal to y 0, midpoint forbidden 1421, legal (x,other centre) pairs 9
+  x=C(1) y=C(0): segments 10200, reach y 1421, legal to y 0, midpoint forbidden 1421, legal (x,other centre) pairs 9
+  x=C(2) y=C(10): segments 10200, reach y 1001, legal to y 0, midpoint forbidden 1001, legal (x,other centre) pairs 9
+  x=C(3) y=C(9): segments 10200, reach y 1136, legal to y 0, midpoint forbidden 1136, legal (x,other centre) pairs 9
+  x=C(4) y=C(8): segments 10200, reach y 1065, legal to y 0, midpoint forbidden 1065, legal (x,other centre) pairs 9
+  x=C(5) y=C(7): segments 10200, reach y 1039, legal to y 0, midpoint forbidden 1039, legal (x,other centre) pairs 9
+  x=C(7) y=C(5): segments 10200, reach y 1039, legal to y 0, midpoint forbidden 1039, legal (x,other centre) pairs 9
+  x=C(8) y=C(4): segments 10200, reach y 1065, legal to y 0, midpoint forbidden 1065, legal (x,other centre) pairs 9
+  x=C(9) y=C(3): segments 10200, reach y 1136, legal to y 0, midpoint forbidden 1136, legal (x,other centre) pairs 9
+  x=C(10) y=C(2): segments 10200, reach y 1001, legal to y 0, midpoint forbidden 1001, legal (x,other centre) pairs 9
+
+== Part B: degree-8p genus-9 cyclic cover (p=7) ==
+p=7: degree 56, connected True, genus 9, cone angles [3, 3, 3, 3, 3, 3, 3, 3, 1, 1]...
+ lifts of zero: 8  period lattice index: 1
+ forbidden points upstairs: 48
+  8 lifts of C(0) -> 8 lifts of C(1): segments 29760, reach a target 6008, legal 0, midpoint forbidden 6008, legal (source, other centre) pairs 312
+ block systems of upstairs monodromy (number of blocks, block size): [(28, 2), (14, 4), (7, 8), (1, 56)]
+ nontrivial systems with fewer than p blocks: []
+
+== Part C: R22 block claim (re-run of d93 systems.py, read-only) ==
+  R22-base n = 15 G-block systems (nblocks, size): [(1, 15), (5, 3)]
+    B_x (0, 0) nblocks 1
+    B_x (0, 1) nblocks 5
+    B_x (1, 0) nblocks 5
+    B_x (1, 1) nblocks 15
+    proper Sigma 5 x 3 W-inv True classes with no regular point in Q/Sigma: [(0, 1), (1, 0)]

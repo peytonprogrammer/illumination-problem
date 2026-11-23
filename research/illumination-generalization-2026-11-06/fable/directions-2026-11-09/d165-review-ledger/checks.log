@@ -1,0 +1,76 @@
+# d165 checks
+## 1. Enumeration by bitmask orbits (rotation + reversal), independent of ledger.py
+W= 4: bracelets 1 (expected 1), necklaces 1, chiral pairs merged 0
+W= 6: bracelets 1 (expected 1), necklaces 1, chiral pairs merged 0
+W= 8: bracelets 4 (expected 4), necklaces 4, chiral pairs merged 0
+W=10: bracelets 8 (expected 8), necklaces 12, chiral pairs merged 4
+W=12: bracelets 29 (expected 29), necklaces 43, chiral pairs merged 14
+W=14: bracelets 79 (expected 79), necklaces 143, chiral pairs merged 64
+W=16: bracelets 280 (expected 280), necklaces 504, chiral pairs merged 224
+W=18: bracelets 912 (expected 912), necklaces 1768, chiral pairs merged 856
+W=20: bracelets 3260 (expected 3260), necklaces 6310, chiral pairs merged 3050
+ledger word set equals bitmask orbit set at every W: True
+## 1b. Mirror convention
+mirror image (reflect + re-orient CCW) has the reversed word: 4574/4574
+reversal with L/R swap gives #L-#R = -4 on 4574/4574 words (not an equivalence on CCW words)
+chiral words (word and its mirror differ up to rotation): 4212
+## 2. Realizations (own simplicity test, own raster, own boundary walk)
+spot sample (all W<=12 plus 200 random W>=14): {'checked': 243, 'lattice': 243, 'simple': 243, 'ccw': 243, 'word_exact': 243, 'area_match': 243, 'walk_match': 243}
+all 4574 realizations: failures 0 []
+## 4. Families (own heading-based rules)
+family mismatches vs ledger: 0 []
+  L: [0, 1, 0, 0, 0, 0, 0, 0, 0] total 1
+  T: [0, 0, 1, 0, 0, 0, 0, 0, 0] total 1
+  Z/S: [0, 0, 1, 0, 0, 0, 0, 0, 0] total 1
+  orthoconvex 3-4 corners: [0, 0, 0, 1, 2, 5, 9, 13, 20] total 50
+  other: [0, 0, 0, 0, 6, 34, 163, 665, 2671] total 3539
+  plus: [0, 0, 0, 0, 1, 0, 0, 0, 0] total 1
+  pyramid: [0, 0, 0, 1, 2, 2, 3, 3, 4] total 15
+  rectangle: [1, 0, 0, 0, 0, 0, 0, 0, 0] total 1
+  spiral: [0, 0, 0, 1, 1, 1, 1, 1, 1] total 6
+  stacked hall (one bank): [0, 0, 1, 2, 7, 13, 32, 60, 131] total 246
+  staircase (Ferrers): [0, 0, 1, 1, 1, 1, 1, 1, 1] total 7
+  staircase band: [0, 0, 0, 1, 2, 2, 3, 3, 4] total 15
+  two-bank: [0, 0, 0, 1, 7, 21, 68, 166, 428] total 691
+dent lemma (rows intervals <=> no horizontal dent) on all realizations: mismatches 0
+target 1 (all dents parallel, OPEN): [0, 0, 0, 7, 20, 44, 115, 246, 588] total 1020; of these dent-free (orthoconvex) 85, with >= 1 dent 935
+target 2 (exactly one dent per direction, OPEN): [0, 0, 0, 0, 6, 26, 86, 240, 586] total 944; all statuses 945
+target 3 (histograms, OPEN): [0, 0, 0, 4, 10, 16, 36, 64, 136] total 266; dent-free among them 21
+## 4b. Named rooms (cells from source dirs, own boundary walk)
+cov4181 index matches d66 cells: True; room 1843 matches d64 log: True; sizes cov279 14, cov446 15, cov2929 22, cov4269 28
+  L6: W=6 word class matches ledger table True; family L; dents (cls0, cls1) (0, 0); ledger status COVERED (table says COVERED)
+  cross12 b=7: W=12 word class matches ledger table True; family plus; dents (cls0, cls1) (0, 0); ledger status PARTIAL (table says PARTIAL)
+  DB55: W=12 word class matches ledger table True; family two-bank; dents (cls0, cls1) (0, 2); ledger status PARTIAL (table says PARTIAL)
+  DBas: W=12 word class matches ledger table True; family two-bank; dents (cls0, cls1) (0, 2); ledger status PARTIAL (table says PARTIAL)
+  DBw2: W=12 word class matches ledger table True; family two-bank; dents (cls0, cls1) (0, 2); ledger status PARTIAL (table says PARTIAL)
+  U2: W=10 word class matches ledger table True; family spiral; dents (cls0, cls1) (1, 1); ledger status PARTIAL (table says PARTIAL)
+  room 1843: W=12 word class matches ledger table True; family two-bank; dents (cls0, cls1) (0, 1); ledger status OPEN (table says OPEN)
+  cov279: W=16 word class matches ledger table True; family staircase band; dents (cls0, cls1) (0, 0); ledger status PARTIAL (table says PARTIAL)
+  cov446: W=18 word class matches ledger table True; family two-bank; dents (cls0, cls1) (0, 1); ledger status OPEN (table says OPEN)
+  cov2929: W=20 word class matches ledger table True; family two-bank; dents (cls0, cls1) (0, 2); ledger status OPEN (table says OPEN)
+  cov4181: W=20 word class matches ledger table True; family two-bank; dents (cls0, cls1) (0, 3); ledger status OPEN (table says OPEN)
+  cov4269: W=20 word class matches ledger table True; family two-bank; dents (cls0, cls1) (0, 2); ledger status OPEN (table says OPEN)
+## 3. Statuses
+ledger status counts per W: {4: {'COVERED': 1}, 6: {'COVERED': 1}, 8: {'COVERED': 4}, 10: {'PARTIAL': 1, 'OPEN': 7}, 12: {'OPEN': 27, 'PARTIAL': 2}, 14: {'OPEN': 79}, 16: {'OPEN': 279, 'PARTIAL': 1}, 18: {'OPEN': 912}, 20: {'OPEN': 3260}}
+PARTIAL words: [(10, 'LLLLLLLRRR', ['d84']), (12, 'LLLLRRLLLLRR', ['d112', 'd111', 'd108', 'd77']), (12, 'LLRLLRLLRLLR', ['d161']), (16, 'LLLRLRLRLLLRLRLR', ['d127'])]
+d15 types_r0.txt: 1 order types -> 1 words; ledger words at W=4: 1; equal True
+d15 types_r1.txt: 1 order types -> 1 words; ledger words at W=6: 1; equal True
+d15 types_r2.txt: 8 order types -> 4 words; ledger words at W=8: 4; equal True
+d15 types_r3.txt: 70 order types -> 8 words; ledger words at W=10: 8; equal True
+## 3b. d162 reach: explicit class members per word (word, simplicity, metric hypothesis checked)
+one-sided stacked hall (d162 main theorem): words with an explicit member, W=10..20 [4, 10, 16, 36, 64, 136], total 266, ledger statuses {'OPEN': 266}
+two-sided, mouths in [A/4,A/3] (d162 second step): words with an explicit member, W=10..20 [0, 1, 0, 2, 0, 7], total 10, ledger statuses {'PARTIAL': 1, 'OPEN': 9}
+construction failures: one-sided 0, two-sided 0
+OPEN words that d162 (sound with gaps) gives an all-pairs metric member: 275 (per W [4, 10, 16, 38, 64, 143]); overlap of the two classes 0
+  by ledger subfamily: {'orthoconvex 3-4 corners': 3, 'pyramid': 15, 'stacked hall (one bank)': 245, 'staircase (Ferrers)': 6, 'two-bank': 6}
+  room 1843: one-sided False, two-sided False
+  cov446: one-sided False, two-sided False
+  cov2929: one-sided False, two-sided False
+  cov4181: one-sided False, two-sided False
+  cov4269: one-sided False, two-sided True
+  cov279: one-sided False, two-sided False
+  DB55: one-sided False, two-sided False
+## 5. Two-sided stacked hall (M2) vs the one-direction-convex word class
+OPEN one-direction-convex words with >= 1 dent: 935; ledger realization has no spanning hall band (so not a stacked hall at those lengths): 296
+  smallest: LLLRLLLRLLRR W=12 vertices [[0, 2], [0, 0], [1, 0], [1, 1], [5, 1], [5, 5], [4, 5], [4, 4], [2, 4], [2, 3], [3, 3], [3, 2]]
+## done: 0 failures; CPU 2.7 s

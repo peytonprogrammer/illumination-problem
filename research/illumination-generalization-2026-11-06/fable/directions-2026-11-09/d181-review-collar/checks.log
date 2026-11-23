@@ -1,0 +1,88 @@
+# 1. Open-collar thresholds: note's m = 4*ceil(D^2) against d124's m = 4*max(area)
+  PASS DBas: max area 24 <= D^2 = 52; m(d124)=96, m(note)=208
+   DBas d124: H = 1+2F_288 has 61 digits; Z = 36wH^2 has 122 digits
+   DBas note: H = 1+2F_624 has 131 digits; Z = 36wH^2 has 263 digits
+  PASS DBas: w=1 <= D
+  PASS DB55: max area 25 <= D^2 = 50; m(d124)=100, m(note)=200
+   DB55 d124: H = 1+2F_300 has 63 digits; Z = 36wH^2 has 127 digits
+   DB55 note: H = 1+2F_600 has 126 digits; Z = 36wH^2 has 253 digits
+  PASS DB55: w=1 <= D
+  PASS one-leg component >= |I|/2 = 1/(12H^2) >= 1/(18H^2); two removals give |I|/3 = 1/(18H^2)
+  PASS (z+a)/(18H^2) > 2w at z = 36wH^2 for any a > 0
+
+# 2. d161 shots in the L(3,3,3) test domain with the right arm extended to a far cap
+  PASS strip mark (3,-1) (depth 2.000) <-> A mark (-3,3): case right, 2 contacts, reaches target, no cap contact, only parallel-side contacts
+  PASS strip mark (50,-3/2) (depth 49.000) <-> A mark (-3,3): case right, 25 contacts, reaches target, no cap contact, only parallel-side contacts
+  PASS strip mark (997,-1/3) (depth 996.000) <-> A mark (-1/2,7/2): case right, 3489 contacts, reaches target, no cap contact, only parallel-side contacts
+  PASS strip mark (1,-1/4) (depth 0.000) <-> A mark (-4,3): case upper, 2 contacts, reaches target, no cap contact, only parallel-side contacts
+  PASS strip mark (3/2,-1/2) (depth 0.500) <-> A mark (-9/2,1/2): case direct, 0 contacts, reaches target, no cap contact, only parallel-side contacts
+  PASS strip mark (1,-1) (depth 0.000) <-> A mark (-1,1/3): case direct, 0 contacts, reaches target, no cap contact, only parallel-side contacts
+   The direct-chord cases (bar pairs, seam points) have no contacts by convexity of the bar.
+
+# 3. Remote-wall return: algebra, then exact traces on DBas and DB55 at several corridor lengths
+
+## 3a m=1: DBas, A = left chamber, S_rel=(1,6/5), signs (1,1), s0=1/20, X=6
+   sealed reference ends at T=(3,3/2) after 1 contacts; mouth heights y_i=['2/5'] (m=1), vertical signs [1]; d=4, d*s0=1/5; return hypothesis [y_i-d s0, y_i+d s0] in (0,w): True
+  PASS L=30: k=1, s=43/740 (|s-s0|=0.00810811 <= bound 0.02702703: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 5 contacts, far-wall bounces 1 at rel. heights ['0.408108'], B horizontal-wall contacts 0
+  PASS L=101: k=3, s=41/720 (|s-s0|=0.00694444 <= bound 0.00925926: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 13 contacts, far-wall bounces 1 at rel. heights ['0.406944'], B horizontal-wall contacts 0
+   control at L=101 keeping slope s0: end at (3.0000,2.0000), reaches T: False
+  PASS L=2003/3: k=17, s=2049/40480 (|s-s0|=0.00061759 <= bound 0.00148221: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 69 contacts, far-wall bounces 1 at rel. heights ['0.400618'], B horizontal-wall contacts 0
+  PASS L=5000: k=125, s=5003/100140 (|s-s0|=0.00003994 <= bound 0.00019972: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 501 contacts, far-wall bounces 1 at rel. heights ['0.399960'], B horizontal-wall contacts 0
+   predicted first-visit entrance/bounce/exit heights -> 0.2000, 0.4000, 0.6000; observed bounce 0.399960
+
+## 3b m=2 (mouth, left wall, mouth): DBas, A = left chamber, S_rel=(1,13/10), signs (1,1), s0=1/50, X=17
+   sealed reference ends at T=(2,41/25) after 3 contacts; mouth heights y_i=['19/50', '29/50'] (m=2), vertical signs [1, 1]; d=4, d*s0=2/25; return hypothesis [y_i-d s0, y_i+d s0] in (0,w): True
+  PASS L=30: k=0, s=1/450 (|s-s0|=0.01777778 <= bound 0.02614379: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 3 contacts, far-wall bounces 2 at rel. heights ['0.384444', '0.557778'], B horizontal-wall contacts 0
+  PASS L=101: k=1, s=417/21850 (|s-s0|=0.00091533 <= bound 0.00915332: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 11 contacts, far-wall bounces 2 at rel. heights ['0.380229', '0.578856'], B horizontal-wall contacts 0
+   control at L=101 keeping slope s0: end at (2.0000,2.0400), reaches T: False
+  PASS L=2003/3: k=7, s=8451/405550 (|s-s0|=0.00083837 <= bound 0.00147947: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 59 contacts, far-wall bounces 2 at rel. heights ['0.379790', '0.581048'], B horizontal-wall contacts 0
+  PASS L=5000: k=50, s=20017/1001650 (|s-s0|=0.00001597 <= bound 0.00019967: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 403 contacts, far-wall bounces 2 at rel. heights ['0.380004', '0.579980'], B horizontal-wall contacts 0
+   predicted first-visit entrance/bounce/exit heights -> 0.3000, 0.3800, 0.4600; observed bounce 0.380004
+
+## 3c m=1, A = right chamber, B depth 5: DBas, A = right chamber, S_rel=(2,3/2), signs (-1,-1), s0=1/30, X=7
+   sealed reference ends at T=(38,19/15) after 2 contacts; mouth heights y_i=['13/30'] (m=1), vertical signs [-1]; d=5, d*s0=1/6; return hypothesis [y_i-d s0, y_i+d s0] in (0,w): True
+  PASS L=30: k=1, s=127/2310 (|s-s0|=0.02164502 <= bound 0.02597403: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 6 contacts, far-wall bounces 1 at rel. heights ['0.465801'], B horizontal-wall contacts 0
+  PASS L=101: k=2, s=247/6570 (|s-s0|=0.00426180 <= bound 0.00913242: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 10 contacts, far-wall bounces 1 at rel. heights ['0.439726'], B horizontal-wall contacts 0
+   control at L=101 keeping slope s0: end at (1.0000,2.2000), reaches T: False
+  PASS L=2003/3: k=11, s=1327/40570 (|s-s0|=0.00062444 <= bound 0.00147893: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 46 contacts, far-wall bounces 1 at rel. heights ['0.432397'], B horizontal-wall contacts 0
+  PASS L=5000: k=83, s=9967/300510 (|s-s0|=0.00016638 <= bound 0.00019966: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 334 contacts, far-wall bounces 1 at rel. heights ['0.433084'], B horizontal-wall contacts 0
+   predicted first-visit entrance/bounce/exit heights -> 0.6000, 0.4333, 0.2667; observed bounce 0.433084
+
+## 3d m=1, downward vertical sign: DB55, A = left chamber, S_rel=(1,13/5), signs (1,-1), s0=1/25, X=7
+   sealed reference ends at T=(2,58/25) after 1 contacts; mouth heights y_i=['11/25'] (m=1), vertical signs [-1]; d=5, d*s0=1/5; return hypothesis [y_i-d s0, y_i+d s0] in (0,w): True
+  PASS L=30: k=1, s=107/1925 (|s-s0|=0.01558442 <= bound 0.02597403: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 5 contacts, far-wall bounces 1 at rel. heights ['0.432208'], B horizontal-wall contacts 0
+  PASS L=101: k=2, s=69/1825 (|s-s0|=0.00219178 <= bound 0.00913242: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 9 contacts, far-wall bounces 1 at rel. heights ['0.441096'], B horizontal-wall contacts 0
+   control at L=101 keeping slope s0: corner at (106.0000,2.0000), reaches T: False
+  PASS L=2003/3: k=13, s=3921/101425 (|s-s0|=0.00134089 <= bound 0.00147893: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 53 contacts, far-wall bounces 1 at rel. heights ['0.440670'], B horizontal-wall contacts 0
+  PASS L=5000: k=100, s=10007/250425 (|s-s0|=0.00003993 <= bound 0.00019966: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 401 contacts, far-wall bounces 1 at rel. heights ['0.440020'], B horizontal-wall contacts 0
+   predicted first-visit entrance/bounce/exit heights -> 0.6400, 0.4400, 0.2400; observed bounce 0.440020
+
+## 3e m=1 after a floor reflection and 10 wall contacts: DB55, A = left chamber, S_rel=(2,1/5), signs (1,-1), s0=1/20, X=56
+   sealed reference ends at T=(2,13/5) after 12 contacts; mouth heights y_i=['9/20'] (m=1), vertical signs [1]; d=5, d*s0=1/4; return hypothesis [y_i-d s0, y_i+d s0] in (0,w): True
+   BELOW-THRESHOLD (recorded, not a failure) L=30: reaches T: False; |err| <= x|s-s0|+2m|e| at the gate x=43 is 0.1706 vs its lip margin 1/20
+   BELOW-THRESHOLD (recorded, not a failure) L=101: reaches T: False; |err| <= x|s-s0|+2m|e| at the gate x=43 is 0.2246 vs its lip margin 1/20
+  PASS L=2003/3: k=17, s=531/10510 (|s-s0|=0.00052331 <= bound 0.00142721: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 80 contacts, far-wall bounces 1 at rel. heights ['0.463083'], B horizontal-wall contacts 0
+  PASS L=5000: k=125, s=1257/25165 (|s-s0|=0.00004967 <= bound 0.00019869: True), 2me=-X(s-s0): True; exact trace: end, reaches T: True; 512 contacts, far-wall bounces 1 at rel. heights ['0.448758'], B horizontal-wall contacts 0
+   predicted first-visit entrance/bounce/exit heights -> 0.2000, 0.4500, 0.7000; observed bounce 0.448758
+   3e: explicit sufficient length L > 1087 (N > max(2240, 890)); L=2003/3 already works, so the bound is conservative
+
+## 3f steep control, hypothesis fails: DBas, A = left chamber, S_rel=(2,1/2), signs (1,1), s0=1/4, X=5
+   sealed reference ends at T=(3,7/4) after 1 contacts; mouth heights y_i=['1/4'] (m=1), vertical signs [1]; d=4, d*s0=1; return hypothesis [y_i-d s0, y_i+d s0] in (0,w): False
+  RECORD L=30: k=4, s=69/292 (|s-s0|=0.01369863 <= bound 0.02739726: True), 2me=-X(s-s0): True; exact trace: end, reaches T: False; 17 contacts, far-wall bounces 3 at rel. heights ['-0.243151', '-1.866438', '0.023973'], B horizontal-wall contacts 1
+   (hypothesis fails; recorded only) far-wall bounces 3, B horizontal contacts 1, ends end at (19.0000,1.7500)
+  RECORD L=101: k=13, s=213/860 (|s-s0|=0.00232558 <= bound 0.00930233: True), 2me=-X(s-s0): True; exact trace: end, reaches T: False; 53 contacts, far-wall bounces 6 at rel. heights ['-0.248837', '-1.769767', '0.211628', '2.193023', '3.825581', '1.844186'], B horizontal-wall contacts 2
+   (hypothesis fails; recorded only) far-wall bounces 6, B horizontal contacts 2, ends end at (43.0000,1.7500)
+  RECORD L=5000: k=626, s=10021/40052 (|s-s0|=0.00019974 <= bound 0.00019974: True), 2me=-X(s-s0): True; exact trace: end, reaches T: False; 2505 contacts, far-wall bounces 6 at rel. heights ['-0.250100', '-1.748302', '0.253296', '2.254894', '3.743508', '1.741911'], B horizontal-wall contacts 2
+   (hypothesis fails; recorded only) far-wall bounces 6, B horizontal contacts 2, ends end at (43.0000,1.7500)
+
+# 4. Obstruction families
+  PASS odd cross b=7: area 96 = 16b-16; arm width 4; wall lengths 4 and b-2, gcd 1
+  PASS odd cross b=9: area 128 = 16b-16; arm width 4; wall lengths 4 and b-2, gcd 1
+  PASS odd cross b=11: area 160 = 16b-16; arm width 4; wall lengths 4 and b-2, gcd 1
+  PASS odd cross b=101: area 1600 = 16b-16; arm width 4; wall lengths 4 and b-2, gcd 1
+  PASS DB55 top-line stretch H=5: 12 walls, horizontal lengths {5,3}, vertical {5,2,2}, gcds 1; chamber D^2 = 50; d112 needs L > 4*5 = 20 but L = 3
+  PASS DB55 top-line stretch H=7: 12 walls, horizontal lengths {5,3}, vertical {7,2,4}, gcds 1; chamber D^2 = 74; d112 needs L > 4*5 = 20 but L = 3
+  PASS DB55 top-line stretch H=9: 12 walls, horizontal lengths {5,3}, vertical {9,2,6}, gcds 1; chamber D^2 = 106; d112 needs L > 4*5 = 20 but L = 3
+  PASS DB55 top-line stretch H=101: 12 walls, horizontal lengths {5,3}, vertical {101,2,98}, gcds 1; chamber D^2 = 10226; d112 needs L > 4*5 = 20 but L = 3
+
+CPU 0.1 s; failures: 0

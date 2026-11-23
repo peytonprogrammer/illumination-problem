@@ -1,0 +1,81 @@
+# Item 1: the construction, replayed exactly
+ 1a. Many-band named room S8 (W=18): left-aligned staircase, widths top-down (1,2,4,6,8,10,12,16),
+     heights (2,1,2,3,4,5,6,3); six middle bands with d_j = u_j/2, so P = 4; delta = 1 (common left side).
+  PASS S8 has 18 walls, P = 4, 7 gates
+   S8 direct then floor: 12 pairs; test passes 11 (replayed lit 11, replay failures 0); test fails 1; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 154
+  PASS S8: every passing pair replays to T; every gate offset |l(t_j)| < delta
+ 1b. Interpolation bound: |l(t)| <= max(|err1|,|err2|) at every t in [0,D], any number of gates (symbolic).
+  PASS 2000 random gate lists (up to 40 gates): linear interpolation stays inside the endpoint errors
+ 1c. Torus phrasing equals the coordinate phrasing (theta, alpha, eps as in the note) on 60 S8/Ferrers pairs.
+  PASS exact test via k*alpha in theta + (-eps1,eps1)x(-eps2,eps2) agrees with |err_i| < delta
+
+# Item 2: failure requires a short relation; rank-one scalar test
+   sum bound 25*sum(j^-2)/pi^4 = 25/(6 pi^2) = 0.4222
+  PASS (2j+3)^2 <= 25 j^2 for j>=1 and 25/(6pi^2) < 1
+  PASS 1500 random rational instances: 415 failures, each has a nonzero m in L with max eps_i|m_i| < 2 (largest least-t seen 0.490)
+   Sharpness: alpha=(1/q,0) with eps1 < 1/(2q) misses theta1=1/(2q); the least relation (q,0) has t = q*eps1 < 1/2.
+  PASS q=7 example fails with t just under 1/2, so the constant 2 in the note is at most 4x from sharp
+   Rank-one scalar test against a float orbit (k <= 40000), irrational coordinates:
+  PASS rank-one test dist(m.theta,Z) < |m1|eps1+|m2|eps2 matches the orbit on 397 instances (including the non-primitive generator (2,2))
+
+# Item 3: the test on named rooms
+ 3a. Ferrers residuals (d171): left-wall beam, delta = w, P minimal; direct itinerary, then floor return b -> 2h-b.
+   U1: widths [2, 3, 5, 6] heights [7, 1, 1, 3], P = 30, Ph/W = 15
+   U1 direct only: 88 pairs; test passes 75 (replayed lit 75, replay failures 0); test fails 13; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 1250
+   U1 direct or floor: 88 pairs; test passes 75 (replayed lit 75, replay failures 0); test fails 13; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 1250
+  PASS U1: every passing pair replays exactly to T
+     first failing pair (Fraction(1, 1), Fraction(8, 1))-(Fraction(11, 2), Fraction(1, 1)): b = 2, Pb/(2W) = 5, P(2h-b)/(2W) = 10
+   U2: widths [1, 2, 3, 4] heights [13, 2, 1, 4], P = 6, Ph/W = 6
+   U2 direct only: 88 pairs; test passes 88 (replayed lit 88, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 267
+   U2 direct or floor: 88 pairs; test passes 88 (replayed lit 88, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 267
+  PASS U2: every passing pair replays exactly to T
+   U2b: widths [1, 2, 3, 5] heights [1, 2, 1, 4], P = 6, Ph/W = 24/5
+   U2b direct only: 29 pairs; test passes 27 (replayed lit 27, replay failures 0); test fails 2; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 992
+   U2b direct or floor: 29 pairs; test passes 29 (replayed lit 29, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 992
+  PASS U2b: every passing pair replays exactly to T
+   T1: widths [3, 4, 12, 13] heights [1, 1, 1, 1], P = 24, Ph/W = 24/13
+   T1 direct only: 13 pairs; test passes 13 (replayed lit 13, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 158
+   T1 direct or floor: 13 pairs; test passes 13 (replayed lit 13, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 158
+  PASS T1: every passing pair replays exactly to T
+ 3b. Source phase is free when delta = w and the source run shares the beam side (any x in (0,w), any phase).
+  PASS for theta1 = +-x/(2w), 0<x<w, and eps1 = 1/2 one sign always works: the test is one-dimensional
+   So on these rooms the test is: some k with dist(+-z - kPb, 2V Z) < w, i.e. with q = den(Pb/(2V)),
+   dist(z, (2V/q) Z) < w. That is the d168/d170 terminal-strip test at the single depth b.
+ 3c. Explicit failing lines for the left-wall beam (both itineraries), exact:
+  PASS U1: for b in (2/5)Z (7 lines) every z and both itineraries fail (5b/2 and 15-5b/2 integral)
+  PASS U2: b in {4/3, 8/3} (all z) and b = 4/9 with z = 15/4 fail both itineraries
+  PASS the same U1/U2 pairs are lit by the (A) floor-return shot, whose gate offsets exceed w
+ 3d. Pyramid leftovers (d172 V1-761, V2-8051, V3-5111) and the 761 V=384 obstruction room.
+   V1-761 pair (1, 7)-(5, 3): (w,u,V)=(3,4,10) d=1 delta=3 P=8
+   V1-761 (1, 7)-(5, 3) direct: 13 pairs; test passes 12 (replayed lit 12, replay failures 0); test fails 1; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 18
+  PASS V1-761 (1, 7)-(5, 3): every passing pair replays to T
+   V2-8051 pair (1, 1)-(7, 5): (w,u,V)=(4,5,11) d=1 delta=4 P=10
+   V2-8051 (1, 1)-(7, 5) direct: 13 pairs; test passes 13 (replayed lit 13, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 156
+  PASS V2-8051 (1, 1)-(7, 5): every passing pair replays to T
+   V2-8051 pair (2, 1)-(7, 5): (w,u,V)=(4,5,11) d=1 delta=4 P=10
+   V2-8051 (2, 1)-(7, 5) direct: 13 pairs; test passes 13 (replayed lit 13, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 67
+  PASS V2-8051 (2, 1)-(7, 5): every passing pair replays to T
+   V2-8051 pair (3, 1)-(7, 5): (w,u,V)=(4,5,11) d=1 delta=4 P=10
+   V2-8051 (3, 1)-(7, 5) direct: 13 pairs; test passes 13 (replayed lit 13, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 48
+  PASS V2-8051 (3, 1)-(7, 5): every passing pair replays to T
+   V3-5111 pair (1, 7)-(7, 3): (w,u,V)=(3,4,10) d=1 delta=3 P=8
+   V3-5111 (1, 7)-(7, 3) direct: 13 pairs; test passes 13 (replayed lit 13, replay failures 0); test fails 0; gate-bound violations 0; floor-corner stop-early uses 0; max reflections 60
+  PASS V3-5111 (1, 7)-(7, 3): every passing pair replays to T
+   761 V=384 forward: P=4, alpha=(Fraction(-1, 1), Fraction(1, 6)), N=6, solutions 0
+  PASS forward chart: alpha = (-1, 1/6) and the test fails (note)
+  PASS cap rotation 4*96/768 = 1/2: multiples of 384 stay 192 from z = 192, so the cap itinerary also fails
+   761 V=384 perpendicular (T to S): beam y = 33, delta = 32, P=66, alpha=(Fraction(-1551, 16), Fraction(2189, 2300)), N=9200, solutions 7460
+     replay k=-1: lit, 198 reflections, max gate offset 28.129 < 32
+  PASS 761 V=384: the perpendicular chart passes the test and its constructed shot traces T -> S exactly
+ 3e. R22 (d8 rooms.json R22-base): dark pair (0,0)-(2,2).
+   Vertical sweep from (0,0): source run x in (-1,1) for y in (-1,1); one gate y=1, opening (0,1) with vertices
+   at both ends; target run x in (0,4), y in (1,2), T on its far line (b=1). No middle band, so P is free.
+  PASS R22 chain geometry: (0,1) and (1,1) are vertices, run sides are solid
+  PASS with P generic, L has rank one, generated by m = (1,2)
+  PASS R22: dist(m.theta, Z) = 1/4 = |m1|eps1+|m2|eps2 for every lift: the strict rank-one test fails exactly at equality
+  PASS every single-pass developed line S->T crosses y=1 at an integer x (a vertex or outside the opening), so the one-gate family has no shot
+  PASS R22 polygon: 22 vertices, area 15 = 15 cells
+  PASS direct segment (0,0)->(2,2) stops at the vertex (Fraction(1, 1), Fraction(1, 1))
+  PASS control: zero-middle-band chain with P = 1/7 lights (0,0)-(2,19/10) (N=560, 60 solutions, replay k=15, 1 reflections)
+
+CPU 23.9s; FAIL 0

@@ -1,0 +1,16 @@
+{'rows': 81924, 'lit': 81094, 'rows_interior': 15512, 'lit_interior': 15263, 'max_states': 4608, 'max_depth': 7}
+(room, a, x) cases with 1 < deg N_x < n: 8529  rooms: 2800
+cases by delta: [(2, 5481), (3, 243), (4, 480), (5, 342), (6, 963), (7, 831), (8, 189)]
+cases by (delta, zeros N_x): [((2, 1), 18), ((2, 2), 120), ((2, 3), 741), ((2, 4), 4602), ((3, 1), 30), ((3, 2), 213), ((4, 1), 114), ((4, 2), 366), ((5, 1), 342), ((6, 1), 963), ((7, 1), 831), ((8, 1), 189)]
+dark 830 counterexamples 830 unresolved 0 rigRy 0 rig any 0 cut 0
+soundness violations (lit and rigRy): 0
+dark by kind: {'smooth-smooth': 535, 'same point': 79, 'interior-interior': 170, 'interior-smooth': 46}
+dark rooms: 55  rooms with a distinct-interior dark row: 29
+dark by (delta, deg N_x, zeros N_x): [((2, 8, 4), 4), ((4, 4, 1), 8), ((4, 4, 2), 8), ((4, 5, 1), 20), ((4, 5, 2), 34), ((4, 6, 2), 16), ((4, 7, 2), 56), ((4, 8, 2), 24), ((4, 9, 2), 40), ((6, 3, 1), 6), ((6, 4, 1), 184), ((6, 5, 1), 147), ((8, 4, 1), 128), ((8, 5, 1), 155)]
+dark by n: [(16, 20), (18, 6), (20, 54), (24, 200), (28, 56), (30, 147), (32, 152), (36, 40), (40, 155)]
+smallest distinct-interior counterexample rows:
+   {'room': 1490, 'n': 18, 'a': [0, 0], 'x': 'd', 'pA': [2, 3], 'pB': [2, 5], 'A': [6, 13], 'B': [9, 14], 'states': 27} {'room': 1490, 'a': [0, 0], 'x': 'd', 'n': 18, 'degNx': 3, 'k': 6, 'zerosNx': 1, 'rows': 15}
+   {'room': 1490, 'n': 18, 'a': [0, 0], 'x': 'd', 'pA': [2, 3], 'pB': [2, 5], 'A': [7, 12], 'B': [8, 15], 'states': 27} {'room': 1490, 'a': [0, 0], 'x': 'd', 'n': 18, 'degNx': 3, 'k': 6, 'zerosNx': 1, 'rows': 15}
+   {'room': 1490, 'n': 18, 'a': [1, 1], 'x': 'b', 'pA': [1, 2], 'pB': [1, 6], 'A': [0, 6], 'B': [3, 9], 'states': 27} {'room': 1490, 'a': [1, 1], 'x': 'b', 'n': 18, 'degNx': 3, 'k': 6, 'zerosNx': 1, 'rows': 16}
+   {'room': 1490, 'n': 18, 'a': [1, 1], 'x': 'b', 'pA': [1, 2], 'pB': [1, 6], 'A': [1, 5], 'B': [2, 10], 'states': 27} {'room': 1490, 'a': [1, 1], 'x': 'b', 'n': 18, 'degNx': 3, 'k': 6, 'zerosNx': 1, 'rows': 16}
+smallest counterexample overall: {'room': 453, 'n': 16, 'a': [0, 0], 'x': 'c', 'pA': [0, 2], 'sA': 'smooth', 'pB': [0, 10], 'sB': 'smooth', 'states': 24} {'room': 453, 'a': [0, 0], 'x': 'c', 'n': 16, 'degNx': 4, 'k': 4, 'zerosNx': 1, 'rows': 6}

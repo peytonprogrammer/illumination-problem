@@ -1,0 +1,29 @@
+== DB55: cells 53  pair (2, 2) (10, 2)
+(B) reference-arc criterion vs billiard over all same-parity interior pairs: agree 336 disagree 0 []
+    rows where the relaxed product A*X connects but L=A^3X^3 does not: 52
+      ...states 5000
+      ...states 15000
+      ...states 20000
+      ...states 30000
+      ...states 35000
+      ...states 50000
+      ...states 55000
+      ...states 75000
+      ...states 80000
+      ...states 85000
+      ...states 95000
+(C) full orbit of (labelled surface, g mod 2): orbit too large (>100000 states)  cpu 29.9s
+(A vs C) directions with max(|p|,|q|) <= 24 : 720 | billiard vs horizontal flow on g.O mismatches: 0 | -I in H (deck rotation) for 720 of 720  cpu 48.0s
+    cusp widths (with g mod 2): min 10 max 690
+    distinct cusps of H cap Gamma(2) met: 582 | cusps met by >=2 directions: 85 | cusps with non-constant lit status: 0
+    multi-direction cusps that are lit (all members lit): 51
+      same cusp: [(3, -23), (3, 7)] lit [True, True]
+      same cusp: [(3, -22), (3, 8)] lit [True, True]
+      same cusp: [(3, -19), (3, 11)] lit [True, True]
+      same cusp: [(3, -17), (3, 13)] lit [True, True]
+      same cusp: [(3, -16), (3, 14)] lit [True, True]
+      same cusp: [(3, -14), (3, 16)] lit [True, True]
+    class (0, 1) : directions 243 | distinct cusps 188 | lit directions 146 | lit cusps 127 | first lit [(4, -1), (4, 1), (6, -7), (6, 7), (8, -7)]
+    class (1, 0) : directions 243 | distinct cusps 199 | lit directions 166 | lit cusps 147 | first lit [(3, -2), (3, 2), (3, -4), (3, 4), (5, -4)]
+    class (1, 1) : directions 234 | distinct cusps 195 | lit directions 154 | lit cusps 137 | first lit [(3, -1), (3, 1), (5, -3), (5, -1), (5, 1)]
+cpu total 48.1s

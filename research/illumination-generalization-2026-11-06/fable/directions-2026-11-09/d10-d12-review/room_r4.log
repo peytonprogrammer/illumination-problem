@@ -1,0 +1,29 @@
+== Z-hexomino H (adjacent case; marks are wall points): 6 cells, origin (0, 0)
+   types a b c d: [[2, 2, 1, 1], [2, 2, 1, 1], [2, 2, 1, 1], [3, 3]]
+   interior lattice points: [((1, 1), 'c')]
+   factor of degree 3: types [[2, 1], [2, 1], [1, 1, 1], [3]] | kappa-invariant: True
+      regular points of DP over a or b that map to a pole of N: []
+   marks (2, 0) (status 2), (0, 2) (status 2)
+      lift pair (2, 0) certificates over B (b, c, d): ['C', '', 'P'] | full: False | decider LIT: True
+== P12 = H with its mirror in y = 0: 12 cells, origin (0, 0)
+   types a b c d: [[2, 2, 2, 2, 2, 1, 1], [2, 2, 2, 2, 2, 1, 1], [2, 2, 2, 2, 1, 1, 1, 1], [3, 3, 3, 3]]
+   interior lattice points: [((1, -1), 'c'), ((1, 0), 'b'), ((1, 1), 'c'), ((2, 0), 'a')]
+   factor of degree 6: types [[2, 2, 1, 1], [2, 2, 1, 1], [2, 2, 1, 1], [3, 3]] | kappa-invariant: True
+   factor of degree 3: types [[2, 1], [2, 1], [1, 1, 1], [3]] | kappa-invariant: True
+      regular points of DP over a or b that map to a pole of N: [('a', [3, 4]), ('b', [10, 11])]
+== L-tromino (diagonal case, control): 3 cells, origin (1, 0)
+   types a b c d: [[2, 1], [1, 1, 1], [2, 1], [3]]
+   interior lattice points: []
+== 12-wall cross, S = (1,2), T = (3,2) (the room of R4): 12 cells, origin (1, 2)
+   types a b c d: [[2, 2, 2, 2, 1, 1, 1, 1], [2, 2, 2, 2, 2, 2], [2, 2, 2, 2, 1, 1, 1, 1], [3, 3, 3, 3]]
+   interior lattice points: [((1, 2), 'a'), ((2, 1), 'c'), ((2, 2), 'b'), ((2, 3), 'c'), ((3, 2), 'a')]
+   factor of degree 6: types [[2, 2, 1, 1], [2, 2, 1, 1], [2, 2, 1, 1], [3, 3]] | kappa-invariant: True
+   factor of degree 6: types [[2, 2, 1, 1], [2, 2, 1, 1], [2, 2, 1, 1], [3, 3]] | kappa-invariant: True
+   factor of degree 6: types [[2, 2, 1, 1], [2, 2, 1, 1], [2, 2, 1, 1], [3, 3]] | kappa-invariant: True
+   factor of degree 3: types [[2, 1], [1, 1, 1], [2, 1], [3]] | kappa-invariant: True
+      regular points of DP over a or b that map to a pole of N: [('b', [0, 1]), ('b', [2, 6]), ('b', [3, 8]), ('b', [4, 7]), ('b', [5, 9]), ('b', [10, 11])]
+   marks (1, 2) (status 4), (3, 2) (status 4)
+      lift pair (0, 5) certificates over B (b, c, d): ['', 'C', 'P'] | full: False | decider LIT: True
+      lift pair (0, 6) certificates over B (b, c, d): ['', 'C', 'P'] | full: False | decider LIT: True
+      lift pair (1, 5) certificates over B (b, c, d): ['', 'C', 'P'] | full: False | decider LIT: True
+      lift pair (1, 6) certificates over B (b, c, d): ['', 'C', 'P'] | full: False | decider LIT: True

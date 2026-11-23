@@ -1,0 +1,34 @@
+== 1. Closed exterior: eight walls, correspondence, first phases ==
+PASS closed exterior has 8 walls (6 L, 2 R); open room is LLLRLLLRLR (60 named rooms x 3 widths)
+PASS S=(x2+1,y0+2), T=(x2+1,y0+3) interior in both, left of mouth, inside top strip
+PASS open and closed trajectories agree up to first mouth contact; closed ray hits the right wall there (1440 rays)
+PASS at most four first phases per mark at r=1/q
+PASS every first phase lies in (1/q)Z mod 2h
+PASS order of 2sp in Z/2hqZ is hq/gcd(hq,sp) and exceeds 4 for named h,q,p,s
+== 2. Symbolic family: travel totals, one-visit test, strip bounds ==
+PASS prefix travel a-1 (right start), a+1 (left start); totals 2d+2a-2, 2d+2a, 2d+2a+2
+PASS d=w: one-visit intersection empty, no one-visit ray reaches T; smallest total = q+2
+PASS d=w-1: one-visit path exists, smallest total = q
+PASS d=w-2: one-visit path exists, middle total = q
+PASS intersection formula agrees with direct simulation; hits are upward with travel q
+PASS (a+1+2w)/q < 2 <=> 2w+3a > 9; the suffix bound (2a+2+2w)/q < 2 also holds
+PASS prefix, first excursion and suffix of every named ray are regular (singular events occur only after the first visit)
+   info: 18 named rays meet a corner or mouth endpoint after the first completed visit (C_d or E_r undefined), e.g. [(3, 8, 5, (-18, -1), 'M-end', Fraction(36, 1)), (3, 8, 5, (-18, -1), 'M-end', Fraction(36, 1))]
+== 3. k-visit recurrence X_{k+1} = C_d(E_r(X_k)) ==
+PASS X_k from the recurrence equals the direct k-th exit phase of each start (180 (room,d,k) cases, k<=12)
+PASS X_k meets B_T exactly when that start, after its k-th regular exit, reaches T before the next mouth contact
+   info: 24 (room,d,start,k) hits; smallest k per (room,d): [((3, 8, 4), 1), ((3, 8, 5), 1), ((3, 8, 6), 4), ((4, 12, 5), 1), ((4, 12, 6), 1), ((6, 16, 7), 1), ((6, 16, 8), 1), ((9, 8, 10), 1), ((9, 8, 11), 1), ((9, 8, 12), 10), ((12, 16, 13), 1), ((12, 16, 14), 1)]
+PASS all exit phases stay in (1/q)Z mod 2h
+== 4. Unbounded visits: q = 2mL, L = a+d ==
+PASS upward starts (both horizontal signs) first reach T at travel exactly q after exactly m visits (2160 rays, m=1..6)
+PASS downward starts miss T before travel q and have completed m visits by travel q
+PASS all contacts regular up to travel q
+PASS the m upward exit heights are distinct
+== 5. d197 corrections ==
+PASS v primitive, so lam*v integral forces lam integral (Bezout); n=3..12
+PASS horizontal edge-length gcd = horizontal wall-gap gcd = 1 on named rooms
+PASS fold(u + kh) = fold(u) (k even) or h - fold(u) (k odd); {0,h} symmetric
+PASS hq | s|p| => v2(h) <= v2(s) + v2(DY) for DY = kp
+PASS even physical difference 4: unfolded DY values [2, 4] have v2 [1, 2], not 2
+
+SUMMARY: 25 PASS, 0 FAIL, CPU 2.16 s

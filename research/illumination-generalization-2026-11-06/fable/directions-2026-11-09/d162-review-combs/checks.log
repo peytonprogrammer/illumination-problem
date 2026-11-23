@@ -1,0 +1,64 @@
+# 1. Half-turn dumbbell
+   DB55 (4,1)->(9,4): a=1, b=3/2, p=-3/2, -bp/(aw)=9/4, k=2, e=-1/10, bound aw/(2(a+b))=1/5
+   developed centre (13/2,9/2); unfolded end (9, 8); direction ratio 7/5 (5,7 -> 7/5)
+   traced: end, end (9, 4), target (9, 4), contacts ['(38/7, 3)', '(43/7, 2)', '(48/7, 3)', '(53/7, 2)']
+   mouth ordinates: x=5 -> 12/5, x=8 -> 13/5; physical point at x=13/2 -> 5/2
+   (1,1) half-turn partner: (12, 4) (so (1,1)-(9,1) is not a half-turn pair)
+   saved cap path from (1,1), slope -37/8, x-travel 16: end, end (9, 1)
+      first x=5 crossing 5/2, first x=8 crossing 21/8, vertical-wall contacts ['(13, 1/2)']
+   DB55 (w=1, b=3/2): 12 walls; 81 half-lattice chamber marks; failures 0; tie cases (bp/(aw) half-integral) 16; max |e|/(w/2) 3/4; max corridor reflections 12
+   H2: [0,4]x[0,6] + corridor [4,10]x[1,3] + half-turn (w=2, b=3): 12 walls; 77 half-lattice chamber marks; failures 0; tie cases (bp/(aw) half-integral) 21; max |e|/(w/2) 7/13; max corridor reflections 20
+   H3: [0,3]x[0,7] + corridor [3,4]x[5,7] flush + half-turn (w=2, b=1/2): 8 walls; 65 half-lattice chamber marks; failures 0; tie cases (bp/(aw) half-integral) 7; max |e|/(w/2) 5/6; max corridor reflections 6
+
+# 2. Stacked halls: hall [0,A]x[0,c], rectangles (l,r,bottom,top)
+   M1: A=6,c=48; [0,3]x[48,49] > child [1,3]x[49,50]; sibling [4,6]x[48,50]
+      10 walls, r=3, area 297, edge gcds (1,1), max 8Ah/(cu) = 1, columns with >1 component 0, rows with >1 component 2
+      1073 half-lattice points (28 at y>=c); 29638 pairs with a mark at y>=c; shots [traced, failed]: direct [8373, 0], chosen [55135, 0], other candidate [55044, 0]; max leg displacement/(u/2) 18/25
+      hall-hall pairs: 545490, direct chords in the open convex hall (not traced)
+   M2: A=8,c=64; siblings [1,3]h2, [4,5]h1, [6,8]h2
+      14 walls, r=5, area 521, edge gcds (1,1), max 8Ah/(cu) = 1, columns with >1 component 0, rows with >1 component 2
+      1931 half-lattice points (26 at y>=c); 49855 pairs with a mark at y>=c; shots [traced, failed]: direct [13341, 0], chosen [99802, 0], other candidate [99725, 0]; max leg displacement/(u/2) 8/11
+      hall-hall pairs: 1813560, direct chords in the open convex hall (not traced)
+   M3: A=8,c=64; [0,4]x[64,65] > child [1,3]x[65,66]; sibling [5,7]x[64,66]
+      14 walls, r=5, area 522, edge gcds (1,1), max 8Ah/(cu) = 1, columns with >1 component 0, rows with >1 component 2
+      1937 half-lattice points (32 at y>=c); 61456 pairs with a mark at y>=c; shots [traced, failed]: direct [19074, 0], chosen [107696, 0], other candidate [107603, 0]; max leg displacement/(u/2) 8/11
+      hall-hall pairs: 1813560, direct chords in the open convex hall (not traced)
+   M4: A=5,c=80; 3 levels [0,4]x[80,81] > [1,4]x[81,82] > [1,3]x[82,83]
+      10 walls, r=3, area 409, edge gcds (1,1), max 8Ah/(cu) = 3/4, columns with >1 component 0, rows with >1 component 0
+      1461 half-lattice points (30 at y>=c); 43365 pairs with a mark at y>=c; shots [traced, failed]: direct [10038, 0], chosen [80901, 0], other candidate [80801, 0]; max leg displacement/(u/2) 50/83
+      hall-hall pairs: 1023165, direct chords in the open convex hall (not traced)
+   M5: A=9,c=72; four unit teeth [1,2],[3,4],[5,6],[7,8], h=1
+      20 walls, r=8, area 652, edge gcds (1,1), max 8Ah/(cu) = 1, columns with >1 component 0, rows with >1 component 1
+      2439 half-lattice points (8 at y>=c); 19476 pairs with a mark at y>=c; shots [traced, failed]: direct [9724, 0], chosen [39008, 0], other candidate [38938, 0]; max leg displacement/(u/2) 36/73
+      hall-hall pairs: 2953665, direct chords in the open convex hall (not traced)
+   corner rule: for y_s=y_t the E-candidate floor abscissa (X_s+X_t)/2 is never in A*Z (checked inside stack_shots by assert)
+
+# 3. Members violating 8Ah <= cu
+   V1: A=6,c=12; tall tooth [2,3]x[12,16] (T shape)
+      8 walls, r=2, area 76, edge gcds (1,4), max 8Ah/(cu) = 16, columns with >1 component 0, rows with >1 component 0
+      2052 pairs with a mark at y>=c; chosen shots [traced, failed] [7196, 3678]; other candidate [7150, 6645]; max leg displacement/(u/2) 21/2
+      pairs where every sign choice of the chosen shot fails: 110; examples [('(5/2, 12)', '(5/2, 15)'), ('(5/2, 12)', '(5/2, 31/2)'), ('(5/2, 25/2)', '(5/2, 15)')]
+      d161 adjacent-arm shot (room = hall [2,3]x[0,12] + arms L2,R3,T4) lights 110/110 of them
+   V2: M1 shape with c=24
+      10 walls, r=3, area 153, edge gcds (1,1), max 8Ah/(cu) = 2, columns with >1 component 0, rows with >1 component 2
+      14854 pairs with a mark at y>=c; chosen shots [traced, failed] [27679, 0]; other candidate [27593, 417]; max leg displacement/(u/2) 18/13
+      pairs where every sign choice of the chosen shot fails: 0; examples []
+      note's family E+2mA (m<12, all signs) lights 0/0 of them
+
+# 3b. Two-sided member (read; light test): A=24, c=192, top root [6,8]x[192,193], bottom root [16,18]x[-1,0]
+   12 walls; 12 stack/seam marks x (4393 lattice hall marks + stack marks): 52848 pairs, failures 0
+
+# 4. Sections of R22-base and DB55
+   R22-base: 22 walls, r=9, area 15, edge gcds (1, 1)
+      rows y=k+1/2 with >1 component: {'1/2': [[-1, 1], [3, 5]]}
+      columns x=k+1/2 with >1 component: {'3/2': [[-3, -1], [1, 3]]}
+      bounding box (-1, 5)x(-3, 3); walls spanning full width []; full height []
+   DB55: 12 walls, r=4, area 53, edge gcds (1, 1)
+      rows y=k+1/2 with >1 component: {'1/2': [[0, 5], [8, 13]], '3/2': [[0, 5], [8, 13]], '7/2': [[0, 5], [8, 13]], '9/2': [[0, 5], [8, 13]]}
+      columns x=k+1/2 with >1 component: {}
+      bounding box (0, 13)x(0, 5); walls spanning full width []; full height [((13, 0), (13, 5)), ((0, 5), (0, 0))]
+   DB55 = hall [0,13]x[2,3] + top roots [0,5],[8,13] (h=2) + bottom roots [0,5],[8,13] (h=2): True
+      two-sided metric: 16Ah = 416 vs cu = 5; mouth window [A/4,A/3] = [13/4,13/3] vs mouths [0,5],[8,13]
+      one-sided metric with hall [0,13]x[2,3] needs a solid floor: bottom line y=2 is open on (0,5) and (8,13)
+
+CPU 96.4s

@@ -1,0 +1,36 @@
+== 1. faithfulness (brute force, all permutations, m<=7)
+m=4 k=2: nonidentity perms acting trivially = 0
+m=5 k=2: nonidentity perms acting trivially = 0
+m=5 k=3: nonidentity perms acting trivially = 0
+m=6 k=2: nonidentity perms acting trivially = 0
+m=6 k=3: nonidentity perms acting trivially = 0
+m=6 k=4: nonidentity perms acting trivially = 0
+m=7 k=2: nonidentity perms acting trivially = 0
+m=7 k=3: nonidentity perms acting trivially = 0
+m=7 k=4: nonidentity perms acting trivially = 0
+m=7 k=5: nonidentity perms acting trivially = 0
+
+== 2. every cycle type, m<=14, 2<=k<=m-2
+(m,k,type) triples checked: 4332
+order-6 types with no k-subset 6-cycle: none
+construction failures: none
+types with all k-subset cycles in {1,2,3}: 613; of these mixing 2- and 3-cycles on letters: 0; outside 1^a2^b / 1^a3^c: 0
+letter types 1^a3^c whose k-subset action has a 2-cycle (would break corner-only): 0
+contrast k=1 (natural action), type 3+2: cycles {3: 1, 2: 1}
+
+== 3. formal tuple feasibility (product 1, transitive on k-sets), small m
+m=4 k=2 n=6: cycle-type quadruples passing R-H, r<=8, r>=1: 6
+   realizable formally: letter types ((1, 1, 1, 1), (3, 1), (3, 1), (2, 2)), r=4, W=2r+4=12, (f,k2,z) per site [(6, 0, 0), (0, 0, 2), (0, 0, 2), (2, 2, 0)]
+   realizable formally: letter types ((2, 2), (3, 1), (2, 1, 1), (2, 1, 1)), r=2, W=2r+4=8, (f,k2,z) per site [(2, 2, 0), (0, 0, 2), (2, 2, 0), (2, 2, 0)]
+m=5 k=2 n=10: cycle-type quadruples passing R-H, r<=8, r>=1: 2
+   realizable formally: letter types ((2, 2, 1), (2, 2, 1), (3, 1, 1), (2, 2, 1)), r=3, W=2r+4=10, (f,k2,z) per site [(2, 4, 0), (2, 4, 0), (1, 0, 3), (2, 4, 0)]
+m=6 k=2 n=15: cycle-type quadruples passing R-H, r<=8, r>=1: 7
+   realizable formally: letter types ((2, 2, 1, 1), (3, 3), (2, 2, 1, 1), (2, 2, 1, 1)), r=5, W=2r+4=14, (f,k2,z) per site [(3, 6, 0), (0, 0, 5), (3, 6, 0), (3, 6, 0)]
+m=6 k=3 n=20: cycle-type quadruples passing R-H, r<=8, r>=1: 4
+   no formal tuple
+m=7 k=2 n=21: cycle-type quadruples passing R-H, r<=8, r>=1: 1
+   realizable formally: letter types ((2, 2, 2, 1), (2, 2, 1, 1, 1), (3, 3, 1), (2, 2, 2, 1)), r=7, W=2r+4=18, (f,k2,z) per site [(3, 9, 0), (5, 8, 0), (0, 0, 7), (3, 9, 0)]
+m=7 k=3 n=35: cycle-type quadruples passing R-H, r<=8, r>=1: 0
+   no formal tuple
+m=8 k=2 n=28: cycle-type quadruples passing R-H, r<=8, r>=1: 0
+   no formal tuple

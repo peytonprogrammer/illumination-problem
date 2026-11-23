@@ -1,0 +1,37 @@
+Allowed n = m n_R with an escaping shape (vertex-only shapes delta = 1 / Cut0 marked *)
+ r=1: max 8; allowed (non-vertex-only) []; vertex-only only [2, 3, 4, 5, 6, 7, 8]
+ r=2: max 16; allowed (non-vertex-only) [6, 8, 10, 12, 16]; vertex-only only [2, 3, 4, 5, 7, 9, 11]
+ r=3: max 24; allowed (non-vertex-only) [6, 8, 9, 10, 12, 15, 16, 18, 24]; vertex-only only [2, 3, 4, 5, 7, 11, 13, 14]
+ r=4: max 32; allowed (non-vertex-only) [6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 24, 32]; vertex-only only [2, 3, 4, 5, 7, 11, 13, 17, 19]
+ r=5: max 40; allowed (non-vertex-only) [6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 32, 40]; vertex-only only [2, 3, 4, 5, 7, 11, 13, 17, 19, 21, 22, 23]
+ r=6: max 48; allowed (non-vertex-only) [6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 36, 40, 48]; vertex-only only [2, 3, 4, 5, 7, 11, 13, 17, 19, 23]
+ r=7: max 56; allowed (non-vertex-only) [6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 35, 36, 40, 42, 48, 56]; vertex-only only [2, 3, 4, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+ r=8: max 64; allowed (non-vertex-only) [6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 34, 35, 36, 40, 42, 48, 56, 64]; vertex-only only [2, 3, 4, 5, 7, 11, 13, 17, 19, 23, 29, 31, 33]
+
+m = 2 (three lattices, |V| = 2), lattice marks: n_R in [21, 32] (any pair), [17, 20] (different-class only)
+  W=16 n_R=18 n=36 shapes [('ParV', 3, 12, 2), ('ParV', 6, 6, 1)]  p(one lattice)=0.344 p(3)=0.717 free rooms 3.80e+06 -> 2.73e+06
+  W=16 n_R=20 n=40 shapes [('ParV', 5, 8, 1)]  p(one lattice)=0.219 p(3)=0.523 free rooms 1.35e+07 -> 7.06e+06
+  W=16 n_R=24 n=48 shapes [('ParV', 6, 8, 1)]  p(one lattice)=0.031 p(3)=0.091 free rooms 1.08e+08 -> 9.80e+06
+  W=18 n_R=18 n=36 shapes [('ParV', 3, 12, 2), ('ParV', 6, 6, 1)]  p(one lattice)=0.672 p(3)=0.965 free rooms 1.04e+07 -> 1.00e+07
+  W=18 n_R=20 n=40 shapes [('ParV', 5, 8, 1)]  p(one lattice)=0.453 p(3)=0.836 free rooms 5.05e+07 -> 4.22e+07
+  W=18 n_R=21 n=42 shapes [('ParV', 7, 6, 1)]  p(one lattice)=0.016 p(3)=0.046 free rooms 1.02e+08 -> 4.69e+06
+  W=18 n_R=24 n=48 shapes [('ParV', 6, 8, 1)]  p(one lattice)=0.125 p(3)=0.330 free rooms 6.44e+08 -> 2.13e+08
+  W=18 n_R=28 n=56 shapes [('ParV', 7, 8, 1)]  p(one lattice)=0.016 p(3)=0.046 free rooms 4.89e+09 -> 2.26e+08
+  W=20 n_R=17 n=34 shapes [('ParV', 2, 17, 4)]  p(one lattice)=0.500 p(3)=0.875 free rooms 1.49e+07 -> 1.30e+07
+  W=20 n_R=18 n=36 shapes [('ParV', 2, 18, 4), ('ParV', 3, 12, 2), ('ParV', 4, 9, 2), ('ParV', 6, 6, 1)]  p(one lattice)=1.000 p(3)=1.000 free rooms 3.44e+07 -> 3.44e+07
+  W=20 n_R=20 n=40 shapes [('ParV', 2, 20, 4), ('ParV', 4, 10, 2), ('ParV', 5, 8, 1), ('ParV', 8, 5, 1), ('Rig/ParN', 8, 5, 1)]  p(one lattice)=1.000 p(3)=1.000 free rooms 1.59e+08 -> 1.59e+08
+  W=20 n_R=21 n=42 shapes [('ParV', 7, 6, 1)]  p(one lattice)=0.070 p(3)=0.196 free rooms 3.31e+08 -> 6.50e+07
+  W=20 n_R=24 n=48 shapes [('ParV', 4, 12, 2), ('ParV', 6, 8, 1), ('ParV', 8, 6, 1)]  p(one lattice)=0.562 p(3)=0.916 free rooms 2.54e+09 -> 2.33e+09
+  W=20 n_R=28 n=56 shapes [('ParV', 7, 8, 1)]  p(one lattice)=0.070 p(3)=0.196 free rooms 2.86e+10 -> 5.62e+09
+  W=20 n_R=32 n=64 shapes [('ParV', 8, 8, 1)]  p(one lattice)=0.008 p(3)=0.023 free rooms 2.27e+11 -> 5.27e+09
+  total free rooms (GUESSED pass model) 1.40e+10
+
+m = 4, Lambda = (1/2)Z^2 (|V| = 1) and cyclic order-4 lattices (|V| = 2): allowed n_R
+  r=1: []
+  r=2: [2, 3, 4]
+  r=3: [2, 3, 4, 6]
+  r=4: [2, 3, 4, 5, 6, 8]
+  r=5: [2, 3, 4, 5, 6, 8, 10]
+  r=6: [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+  r=7: [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14]
+  r=8: [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16]

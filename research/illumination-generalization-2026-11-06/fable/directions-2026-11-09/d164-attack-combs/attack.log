@@ -1,0 +1,125 @@
+# d164 attack on stacked halls (parallel-mouth-combs.md)
+stepper vs d162 Fraction tracer, room A2: 1500 shots, disagreements 0
+stepper vs d162 Fraction tracer, DB55: 1500 shots, disagreements 0
+search consistency on A4: 258 family-lit pairs within bounds, missed by search 0
+search directions: 8812 primitive non-axis (height <= 60) + 4 axis; <= 40 reflections
+
+## A2 2x bound: A=5,c=10, tooth [1,3]x[10,11]
+   W=8, max 8Ah/(cu): top 2, bottom 0; marks 177, pairs tested 1041 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 516/0, chosen: 1397/0, other: 1379/0
+   pairs where the note's chosen shot fails for every allowed sign: 0
+   pairs where the whole family fails: 0
+   CPU 0.0s
+
+## A4 4x bound: A=5,c=5, tooth [1,3]x[5,6]
+   W=8, max 8Ah/(cu): top 4, bottom 0; marks 87, pairs tested 501 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 246/0, chosen: 677/0, other: 526/151
+   pairs where the note's chosen shot fails for every allowed sign: 0
+   pairs where the whole family fails: 0
+   CPU 0.0s
+
+## A8 8x bound: A=5,c=5, tooth [1,3]x[5,7]
+   W=8, max 8Ah/(cu): top 8, bottom 0; marks 93, pairs tested 1038 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 246/0, chosen: 1813/266, other: 787/1263
+   pairs where the note's chosen shot fails for every allowed sign: 7
+   pairs where the whole family fails: 7; e.g. [('(3/2,13/2)', '(1/2,1/2)'), ('(3/2,13/2)', '(1/2,1)'), ('(3/2,13/2)', '(1/2,3/2)')]
+   lit by search: 7/7; max direction height used 7; max reflections 13
+   mechanisms (reflection multiset of first path found): {'arm-horizx1+arm-sidex3+hall-sidex2': 1, 'arm-sidex2+floorx1+hall-sidex3': 1, 'floorx2+hall-sidex1+roofx1': 1, 'straight': 1, 'arm-sidex1+floorx2+hall-sidex1+roofx1': 1, 'arm-sidex2+floorx1+hall-sidex2': 1}
+   pairs whose first path uses attachment walls: 5; of these, no hall-walls-only path (same bounds): 0; hall-only paths found: {'straight': 2, 'hall walls only, 5 floor/roof': 1, 'hall walls only, 1 floor/roof': 1, 'hall walls only, 2 floor/roof': 1}
+   coarse: {'uses attachment walls': 5, 'hall walls only, 3 floor/roof': 1, 'straight': 1}
+      e.g. (1/2,1/2)-(3/2,13/2): dir (-2, 1), reflections ['arm-side', 'arm-horiz', 'arm-side', 'arm-side', 'hall-side', 'hall-side']
+      e.g. (1/2,1)-(3/2,13/2): dir (-2, -1), reflections ['arm-side', 'arm-side', 'hall-side', 'hall-side', 'floor']
+   CPU 0.1s
+
+## AT narrow tall arm: A=5,c=3, arm [1,2]x[3,9] (80x)
+   W=8, max 8Ah/(cu): top 80, bottom 0; marks 57, pairs tested 606 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 45/0, chosen: 572/1672, other: 530/1685
+   pairs where the note's chosen shot fails for every allowed sign: 160
+   pairs where the whole family fails: 68; e.g. [('(3/2,4)', '(3/2,3/2)'), ('(3/2,4)', '(9/2,1/2)'), ('(3/2,9/2)', '(7/2,1/2)')]
+   lit by search: 68/68; max direction height used 8; max reflections 29
+   mechanisms (reflection multiset of first path found): {'straight': 25, 'arm-sidex5': 2, 'arm-sidex3+floorx1+hall-sidex3+roofx1': 2, 'arm-sidex3+hall-sidex1': 2, 'arm-sidex10+floorx3+hall-sidex6+roofx2': 1, 'arm-sidex10+floorx2+hall-sidex4+roofx1': 1}
+   pairs whose first path uses attachment walls: 42; of these, no hall-walls-only path (same bounds): 0; hall-only paths found: {'hall walls only, 2 floor/roof': 7, 'hall walls only, 4 floor/roof': 6, 'hall walls only, 6 floor/roof': 6, 'hall walls only, 5 floor/roof': 6}
+   coarse: {'uses attachment walls': 42, 'straight': 25, 'hall walls only, 11 floor/roof': 1}
+      e.g. (1/2,1/2)-(3/2,13/2): dir (-2, -1), reflections ['arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'hall-side', 'floor', 'hall-side', 'roof', 'hall-side', 'floor', 'hall-side']
+      e.g. (1/2,1/2)-(3/2,8): dir (-2, -1), reflections ['arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'hall-side', 'floor', 'hall-side', 'hall-side', 'roof', 'hall-side', 'floor', 'hall-side', 'roof', 'hall-side', 'floor']
+   CPU 0.1s
+
+## B overhang: A=6,c=32, [1,3]x[32,33] > child [2,5]x[33,34] (metric holds)
+   W=12, max 8Ah/(cu): top 1, bottom 0; marks 705, pairs tested 8382 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 2082/0, chosen: 8439/6926, other: 7362/7995
+   pairs where the note's chosen shot fails for every allowed sign: 2743
+   pairs where the whole family fails: 2708; e.g. [('(3,67/2)', '(1/2,1/2)'), ('(3,67/2)', '(1/2,1)'), ('(3,67/2)', '(1/2,3/2)')]
+   lit by search: 2708/2708; max direction height used 13; max reflections 40
+   mechanisms (reflection multiset of first path found): {'hall-sidex1': 32, 'hall-sidex2': 31, 'arm-horizx2+hall-sidex1': 30, 'straight': 25, 'arm-horizx2+hall-sidex2': 24, 'arm-horizx2+floorx1+hall-sidex5': 23}
+   pairs whose first path uses attachment walls: 2348; of these, no hall-walls-only path (same bounds): 1345; hall-only paths found: {'hall sides only': 253, 'hall walls only, 1 floor/roof': 250, 'hall walls only, 2 floor/roof': 163, 'hall walls only, 3 floor/roof': 161}
+      needs attachment wall, e.g. (1/2,1/2)-(4,67/2): dir (3, -2), reflections ['arm-horiz', 'arm-side', 'arm-horiz', 'arm-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side']
+   coarse: {'uses attachment walls': 2348, 'hall walls only, 1 floor/roof': 121, 'hall sides only': 109, 'hall walls only, 2 floor/roof': 44, 'hall walls only, 3 floor/roof': 39, 'straight': 25, 'hall walls only, 4 floor/roof': 10, 'hall walls only, 5 floor/roof': 9, 'hall walls only, 13 floor/roof': 1, 'hall walls only, 8 floor/roof': 1, 'hall walls only, 12 floor/roof': 1}
+      e.g. (1/2,1/2)-(3,67/2): dir (-3, -2), reflections ['arm-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side']
+      e.g. (1/2,1/2)-(7/2,67/2): dir (-2, -1), reflections ['arm-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'floor', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'arm-side', 'arm-horiz', 'arm-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side', 'hall-side']
+   CPU 169.4s
+
+## C flush: A=5,c=40, [1,4]x[40,41] > child [2,4]x[41,42] flush right (metric holds)
+   W=10, max 8Ah/(cu): top 1, bottom 0; marks 727, pairs tested 11496 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 3565/0, chosen: 20136/0, other: 20098/0
+   pairs where the note's chosen shot fails for every allowed sign: 0
+   pairs where the whole family fails: 0
+   CPU 0.9s
+
+## D1 two-sided stacked: A=5,c=20, roof [1,3]x[20,21], floor [1,3]x[-1,0]
+   W=12, max 8Ah/(cu): top 1, bottom 1; marks 363, pairs tested 4278 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 2121/0, chosen: 1660/1201, other: 1661/1200, roofturn: 3337/2385, traverse: 9572/1884
+   pairs where the whole family fails: 2; e.g. [('(3/2,-1/2)', '(5/2,-1/2)'), ('(3/2,41/2)', '(5/2,41/2)')]
+   lit by search: 2/2; max direction height used 0; max reflections 0
+   mechanisms (reflection multiset of first path found): {'straight': 2}
+   pairs whose first path uses attachment walls: 0; of these, no hall-walls-only path (same bounds): 0; hall-only paths found: {}
+   coarse: {'straight': 2}
+      e.g. (3/2,-1/2)-(5/2,-1/2): dir axis, reflections []
+      e.g. (3/2,41/2)-(5/2,41/2): dir axis, reflections []
+   CPU 0.3s
+
+## D2 two-sided offset: A=6,c=24, roof [1,3]x[24,25], floor [3,5]x[-1,0]
+   W=12, max 8Ah/(cu): top 1, bottom 1; marks 529, pairs tested 6270 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 3117/0, chosen: 2690/1499, other: 2984/1196, roofturn: 5626/2743, traverse: 13818/2950
+   pairs where the whole family fails: 0
+   CPU 0.5s
+
+## D3 DB55 (y shifted by -2): hall [0,13]x[0,1], banks [0,5],[8,13] depth 2 both sides
+   W=12, max 8Ah/(cu): top 208/5, bottom 208/5; marks 169, pairs tested 13896 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 1368/0, chosen: 1869/7539, other: 346/8980, roofturn: 2255/16479, traverse: 8052/28428
+   pairs where the whole family fails: 4646; e.g. [('(1/2,-3/2)', '(1/2,1/2)'), ('(1/2,-3/2)', '(19/2,1/2)'), ('(1/2,-3/2)', '(10,1/2)')]
+   lit by search: 4646/4646; max direction height used 10; max reflections 40
+   mechanisms (reflection multiset of first path found): {'straight': 1079, 'bank-horizx1+bank-sidex1': 82, 'arm-horizx1': 57, 'bank-horizx1': 57, 'arm-horizx1+arm-sidex1+bank-horizx1+bank-sidex1': 53, 'arm-horizx2+bank-horizx2+floorx3+hall-sidex1+roofx3': 46}
+   pairs whose first path uses attachment walls: 3486; of these, no hall-walls-only path (same bounds): 2028; hall-only paths found: {'straight': 877, 'hall walls only, 2 floor/roof': 331, 'hall walls only, 1 floor/roof': 122, 'hall walls only, 3 floor/roof': 66}
+      needs attachment wall, e.g. (1/2,-3/2)-(17/2,-3/2): dir (-3, 1), reflections ['bank-side', 'roof', 'bank-side', 'bank-horiz']
+   coarse: {'uses attachment walls': 3486, 'straight': 1079, 'hall sides only': 40, 'hall walls only, 2 floor/roof': 23, 'hall walls only, 1 floor/roof': 6, 'hall walls only, 3 floor/roof': 6, 'hall walls only, 4 floor/roof': 4, 'hall walls only, 6 floor/roof': 2}
+      e.g. (1/2,-3/2)-(1/2,-1): dir axis, reflections []
+      e.g. (1/2,-3/2)-(1/2,-1/2): dir axis, reflections []
+   CPU 2.1s
+
+## E deep: A=9,c=9, 8 nested levels, zigzag flush, unit heights
+   W=20, max 8Ah/(cu): top 64, bottom 0; marks 417, pairs tested 45120 (open-hall pairs are convex chords, not traced)
+   shots traced [label: ok/fail]: direct: 4440/0, chosen: 81663/4274, other: 55208/30224
+   pairs where the note's chosen shot fails for every allowed sign: 133
+   pairs where the whole family fails: 127; e.g. [('(7/2,27/2)', '(1/2,1/2)'), ('(7/2,14)', '(1/2,1/2)'), ('(7/2,14)', '(1/2,1)')]
+   lit by search: 127/127; max direction height used 8; max reflections 38
+   mechanisms (reflection multiset of first path found): {'arm-sidex3+hall-sidex2': 6, 'arm-sidex1+floorx1+hall-sidex1': 6, 'arm-horizx1+arm-sidex1+floorx2+hall-sidex1': 4, 'arm-sidex3+floorx1+hall-sidex2': 4, 'arm-sidex3+floorx1+hall-sidex3': 3, 'arm-horizx2+arm-sidex3+floorx3+hall-sidex5': 3}
+   pairs whose first path uses attachment walls: 122; of these, no hall-walls-only path (same bounds): 0; hall-only paths found: {'straight': 57, 'hall walls only, 1 floor/roof': 44, 'hall sides only': 17, 'hall walls only, 2 floor/roof': 4}
+   coarse: {'uses attachment walls': 122, 'hall walls only, 1 floor/roof': 3, 'straight': 1, 'hall sides only': 1}
+      e.g. (1/2,1/2)-(7/2,27/2): dir (-2, -1), reflections ['arm-side', 'arm-side', 'hall-side', 'hall-side', 'floor', 'hall-side', 'hall-side', 'arm-side', 'arm-horiz', 'hall-side', 'hall-side', 'floor', 'hall-side', 'hall-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-horiz', 'arm-side', 'arm-side', 'arm-side', 'hall-side', 'hall-side', 'floor', 'hall-side']
+      e.g. (1/2,1/2)-(7/2,14): dir (-2, -1), reflections ['arm-side', 'arm-side', 'hall-side', 'hall-side', 'floor', 'hall-side', 'hall-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-horiz', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'arm-side', 'hall-side', 'hall-side', 'floor', 'hall-side', 'hall-side', 'arm-side', 'arm-horiz', 'hall-side', 'hall-side', 'floor', 'hall-side', 'hall-side', 'arm-side', 'arm-horiz', 'arm-side', 'arm-side', 'hall-side']
+   CPU 2.9s
+
+# Summary: room, W, pairs, chosen-shot fails, family fails, lit by search, no path, unresolved
+   A2 2x bound | 8 | 1041 | 0 | 0 | 0 | 0 | 0
+   A4 4x bound | 8 | 501 | 0 | 0 | 0 | 0 | 0
+   A8 8x bound | 8 | 1038 | 7 | 7 | 7 | 0 | 0
+   AT narrow tall arm | 8 | 606 | 160 | 68 | 68 | 0 | 0
+   B overhang | 12 | 8382 | 2743 | 2708 | 2708 | 0 | 0
+   C flush | 10 | 11496 | 0 | 0 | 0 | 0 | 0
+   D1 two-sided stacked | 12 | 4278 | - | 2 | 2 | 0 | 0
+   D2 two-sided offset | 12 | 6270 | - | 0 | 0 | 0 | 0
+   D3 DB55 (y shifted by -2) | 12 | 13896 | - | 4646 | 4646 | 0 | 0
+   E deep | 20 | 45120 | 133 | 127 | 127 | 0 | 0
+first room where the shot family fails: A8 8x bound: A=5,c=5, tooth [1,3]x[5,7]
+
+CPU 176.7s

@@ -1,0 +1,25 @@
+asymmetric residual P6 20 [1, 0] [3, -2]
+asymmetric residual P6found 20 [-2, 3] [0, 1]
+asymmetric residual cov598 16 [1, 2] [3, 4]
+asymmetric residual cov598 16 [3, 4] [5, 2]
+asymmetric residual cov1281 18 [1, 1] [1, 5]
+asymmetric residual cov1495 18 [1, 2] [3, 4]
+asymmetric residual cov1495 18 [1, 6] [3, 4]
+asymmetric residual cov2527 21 [1, 1] [1, 5]
+asymmetric residual cov2929 22 [3, 1] [5, 3]
+asymmetric residual cov2929 22 [3, 3] [5, 5]
+asymmetric residual cov4206 28 [3, 2] [5, 6]
+asymmetric residual cov4207 28 [3, 2] [5, 6]
+asymmetric residual cov4539 35 [3, 3] [5, 9]
+asymmetric residual cov4540 35 [3, 3] [5, 9]
+asymmetric residual cov4559 36 [1, 2] [5, 12]
+('area<=20', 'asymmetric') 7
+('area<=20', ('antidiag',)) 1
+('area<=20', ('mirror_x',)) 2
+('area<=20', ('mirror_y',)) 4
+('area<=20', ('rot180',)) 1
+('area>=21', 'asymmetric') 8
+('area>=21', ('mirror_x',)) 16
+('area>=21', ('mirror_y',)) 4
+('area>=21', ('rot180',)) 28
+python3 -B symcheck.py  0.08s user 0.01s system 90% cpu 0.103 total

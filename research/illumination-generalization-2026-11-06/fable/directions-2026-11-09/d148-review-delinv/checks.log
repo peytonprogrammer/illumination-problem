@@ -1,0 +1,40 @@
+== 0. named rooms
+DB55 strictly simple True walls 12 reflex 4 cells 53 same-parity interior pairs 112
+DBas strictly simple True walls 12 reflex 4 cells 48 same-parity interior pairs 81
+c4181s strictly simple True walls 20 reflex 8 cells 41 same-parity interior pairs 27
+U2 strictly simple True walls 10 reflex 3 cells 46 same-parity interior pairs 52
+
+== 1. DB55, S=(2,2), T=(10,2), horizontal class
+order of h=g_b g_c: 5 cycle lengths [1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+relaxed by residue [1, 1, 0, 0, 1]  legal by residue [0, 0, 0, 0, 0]
+legal per (residue, lift pair): [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+residue-0 ray (1,0) from S: hits [(3, 2), (4, 2)] blocked at (5, 2) status 3 | (8,2) status 3
+pencil lines (+-1, 2m), |m|<=60, reaching T: []
+all primitive directions |p|,|q|<=25: lines reaching T per class {2: 118, 1: 128, 3: 112} shortest {2: (3, -1), 1: (3, 2), 3: (4, 1)}
+zero-power reference lines (both diagonals for class c) reaching T: {(1, 0): False, (1, 1): False, (1, -1): False, (0, 1): False}
+orbit of sheet 0 under BC, BD, CD (even/even marking): 53 / 53
+direction (3,2) from S, lattice points up to T: [(5, 4), (2, 4), (1, 2), (4, 0), (3, 2), (0, 4), (3, 4), (6, 2), (9, 2), (12, 0), (11, 2), (8, 4), (11, 4), (12, 2), (9, 0), (10, 2)]
+
+== 3. <U,V> orbit test vs physical rays, all rooms, all pencils
+agreement counts (room, agree): {('DB55', True): 15680, ('DBas', True): 44064, ('c4181s', True): 3132, ('U2', True): 16848} | residue slices tested: 4496 (all residues)
+first mismatches: []
+
+== 3b. component bound: #<U,V> orbits - #<A,D_j> orbits <= 2(z_a+z_d), all slices
+slices 4496 violations 0 tight 2212 max increase/bound by room {'DB55': 1.0, 'DBas': 1.0, 'c4181s': 1.0, 'U2': 1.0}
+cycle lengths over sites, all rooms/origins: [1, 2, 3]
+
+== 2. row table (own algebra) and physical class witnesses
+DB55 rows {'legal': 272, 'lost': 64} | pairs by #pencil-legal classes {3: 48, 2: 64}
+   physical classes per pair (|p|,|q|<=15, plus pencil residues): {3: 112} | pairs with no physical class: 0
+   non-legal rows (kind, physically lit in that class by another arc): {('lost', True): 64} | note-legal rows not confirmed physically: 0 | rows needing the pencil-slope fallback: 0
+DBas rows {'legal': 196, 'lost': 38, 'absent': 9} | pairs by #pencil-legal classes {3: 34, 2: 47}
+   physical classes per pair (|p|,|q|<=15, plus pencil residues): {3: 81} | pairs with no physical class: 0
+   non-legal rows (kind, physically lit in that class by another arc): {('lost', True): 38, ('absent', True): 9} | note-legal rows not confirmed physically: 0 | rows needing the pencil-slope fallback: 0
+c4181s rows {'legal': 68, 'lost': 11, 'absent': 2} | pairs by #pencil-legal classes {3: 14, 2: 13}
+   physical classes per pair (|p|,|q|<=15, plus pencil residues): {3: 27} | pairs with no physical class: 0
+   non-legal rows (kind, physically lit in that class by another arc): {('lost', True): 11, ('absent', True): 2} | note-legal rows not confirmed physically: 0 | rows needing the pencil-slope fallback: 0
+U2 rows {'legal': 152, 'lost': 4} | pairs by #pencil-legal classes {3: 48, 2: 4}
+   physical classes per pair (|p|,|q|<=15, plus pencil residues): {3: 52} | pairs with no physical class: 0
+   non-legal rows (kind, physically lit in that class by another arc): {('lost', True): 4} | note-legal rows not confirmed physically: 0 | rows needing the pencil-slope fallback: 0
+
+CPU seconds 4.3

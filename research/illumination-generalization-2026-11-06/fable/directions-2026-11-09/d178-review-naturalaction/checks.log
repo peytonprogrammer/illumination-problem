@@ -1,0 +1,86 @@
+loaded d146 definitions: ['Counter', 'Double', 'Fr', 'Path', 'ROOM_FILE', 'analyse', 'block_systems', 'canonical', 'ceil', 'closure', 'counts', 'cov4181'] ...
+==============================================================================
+Note 1a: DB55 stretch rooms, l = p - 50
+==============================================================================
+[DB55 p=53 l=3] n=53 W=12 r=4 convex=8 gcd(h)=1 gcd(v)=1 strictly_simple=True
+   product g00 g10^-1 g11 g01^-1 = id: True
+   site (0, 0): type 1^2 2^24 3^1  sign +1  square is a single 3-cycle: True
+   site (1, 0): type 1^2 2^24 3^1  sign +1  square is a single 3-cycle: True
+   site (1, 1): type 1^2 2^24 3^1  sign +1  square is a single 3-cycle: True
+   site (0, 1): type 1^2 2^24 3^1  sign +1  square is a single 3-cycle: True
+   transitive True; primitive (closure of (0,j) universal for all j) True; canonical B_x block counts {(0, 0): 1, (1, 0): 1, (1, 1): 1, (0, 1): 1}
+   interior lattice points by parity: {(0, 0): 8, (0, 1): 8, (1, 0): 8, (1, 1): 8}
+   all four sites 1^2 2^24 3^1: True; p mod 4 = 1; common sign {1} -> G = A_p (given primitive + 3-cycle)
+[DB55 p=59 l=9] n=59 W=12 r=4 convex=8 gcd(h)=1 gcd(v)=1 strictly_simple=True
+   product g00 g10^-1 g11 g01^-1 = id: True
+   site (0, 0): type 1^2 2^27 3^1  sign -1  square is a single 3-cycle: True
+   site (1, 0): type 1^2 2^27 3^1  sign -1  square is a single 3-cycle: True
+   site (1, 1): type 1^2 2^27 3^1  sign -1  square is a single 3-cycle: True
+   site (0, 1): type 1^2 2^27 3^1  sign -1  square is a single 3-cycle: True
+   transitive True; primitive (closure of (0,j) universal for all j) True; canonical B_x block counts {(0, 0): 1, (1, 0): 1, (1, 1): 1, (0, 1): 1}
+   interior lattice points by parity: {(0, 0): 8, (0, 1): 8, (1, 0): 8, (1, 1): 8}
+   all four sites 1^2 2^27 3^1: True; p mod 4 = 3; common sign {-1} -> G = S_p (given primitive + 3-cycle)
+[DB55 p=61 l=11] n=61 W=12 r=4 convex=8 gcd(h)=1 gcd(v)=1 strictly_simple=True
+   product g00 g10^-1 g11 g01^-1 = id: True
+   site (0, 0): type 1^2 2^28 3^1  sign +1  square is a single 3-cycle: True
+   site (1, 0): type 1^2 2^28 3^1  sign +1  square is a single 3-cycle: True
+   site (1, 1): type 1^2 2^28 3^1  sign +1  square is a single 3-cycle: True
+   site (0, 1): type 1^2 2^28 3^1  sign +1  square is a single 3-cycle: True
+   transitive True; primitive (closure of (0,j) universal for all j) True; canonical B_x block counts {(0, 0): 1, (1, 0): 1, (1, 1): 1, (0, 1): 1}
+   interior lattice points by parity: {(0, 0): 8, (0, 1): 8, (1, 0): 8, (1, 1): 8}
+   all four sites 1^2 2^28 3^1: True; p mod 4 = 1; common sign {1} -> G = A_p (given primitive + 3-cycle)
+p=53 cell set equals d146 DB55: True
+==============================================================================
+Note 1b: Ferrers grid widths 5,3,2,1^11 (N_x=5, N_y=14)
+==============================================================================
+[Ferrers 5,3,2,1x11] n=21 W=10 r=3 convex=7 gcd(h)=1 gcd(v)=1 strictly_simple=True
+   product g00 g10^-1 g11 g01^-1 = id: True
+   site (0, 0): type 1^2 2^8 3^1  sign +1  square is a single 3-cycle: True
+   site (1, 0): type 1^3 2^9  sign -1  square is a single 3-cycle: False
+   site (1, 1): type 1^1 2^7 3^2  sign -1  square is a single 3-cycle: False
+   site (0, 1): type 1^1 2^10  sign +1  square is a single 3-cycle: False
+   transitive True; primitive (closure of (0,j) universal for all j) True; canonical B_x block counts {(0, 0): 1, (1, 0): 1, (1, 1): 1, (0, 1): 1}
+   interior lattice points by parity: {(0, 1): 1, (1, 0): 1, (1, 1): 1}
+   table matches note: {(0, 0): True, (1, 0): True, (1, 1): True, (0, 1): True}
+   interior lattice points: [(1, 1), (1, 2), (2, 1)]
+==============================================================================
+Note 1c: c4181s (d146: stretch(stretch(cov4181,0,1,2),1,4,3))
+==============================================================================
+[c4181s] n=41 W=20 r=8 convex=12 gcd(h)=1 gcd(v)=1 strictly_simple=True
+   product g00 g10^-1 g11 g01^-1 = id: True
+   site (0, 0): type 1^3 2^19  sign -1  square is a single 3-cycle: False
+   site (1, 0): type 1^4 2^8 3^7  sign +1  square is a single 3-cycle: False
+   site (1, 1): type 1^3 2^19  sign -1  square is a single 3-cycle: False
+   site (0, 1): type 1^2 2^18 3^1  sign +1  square is a single 3-cycle: True
+   transitive True; primitive (closure of (0,j) universal for all j) True; canonical B_x block counts {(0, 0): 1, (1, 0): 1, (1, 1): 1, (0, 1): 1}
+   interior lattice points by parity: {(0, 0): 4, (0, 1): 6, (1, 1): 4}
+   types match note (order 00,10,11,01): {(0, 0): True, (1, 0): True, (1, 1): True, (0, 1): True}
+==============================================================================
+Note 2a: pole counts on the unordered-pair cover Y
+==============================================================================
+   [DB55 p=53] f_x=[2, 2, 2, 2] sum f=8 (r+4=8); sum(q+2z)=104 (2n-2=104)
+   swap poles=96 (2n-2-2r=96); fixed-2-set poles=4; binom(r+4,2)=28; regular Y-points with a convex-corner leg=192
+      4(n-5)=192: True
+   [DB55 p=59] f_x=[2, 2, 2, 2] sum f=8 (r+4=8); sum(q+2z)=116 (2n-2=116)
+   swap poles=108 (2n-2-2r=108); fixed-2-set poles=4; binom(r+4,2)=28; regular Y-points with a convex-corner leg=216
+      4(n-5)=216: True
+   [DB55 p=61] f_x=[2, 2, 2, 2] sum f=8 (r+4=8); sum(q+2z)=120 (2n-2=120)
+   swap poles=112 (2n-2-2r=112); fixed-2-set poles=4; binom(r+4,2)=28; regular Y-points with a convex-corner leg=224
+      4(n-5)=224: True
+   [Ferrers21] f_x=[2, 3, 1, 1] sum f=7 (r+4=7); sum(q+2z)=40 (2n-2=40)
+   swap poles=34 (2n-2-2r=34); fixed-2-set poles=4; binom(r+4,2)=21; regular Y-points with a convex-corner leg=60
+   [c4181s] f_x=[3, 4, 3, 2] sum f=12 (r+4=12); sum(q+2z)=80 (2n-2=80)
+   swap poles=64 (2n-2-2r=64); fixed-2-set poles=13; binom(r+4,2)=66; regular Y-points with a convex-corner leg=182
+==============================================================================
+Note 2a: is binom(r+4,2) the max of sum binom(f_x,2)? (pure arithmetic, r<=8)
+==============================================================================
+   r=0: max over 4-part compositions of r+4 = 6; binom(r+4,2) = 6; swap-majority threshold n > 4
+   r=1: max over 4-part compositions of r+4 = 10; binom(r+4,2) = 10; swap-majority threshold n > 7
+   r=2: max over 4-part compositions of r+4 = 15; binom(r+4,2) = 15; swap-majority threshold n > 10
+   r=3: max over 4-part compositions of r+4 = 21; binom(r+4,2) = 21; swap-majority threshold n > 14
+   r=4: max over 4-part compositions of r+4 = 28; binom(r+4,2) = 28; swap-majority threshold n > 19
+   r=5: max over 4-part compositions of r+4 = 36; binom(r+4,2) = 36; swap-majority threshold n > 24
+   r=6: max over 4-part compositions of r+4 = 45; binom(r+4,2) = 45; swap-majority threshold n > 29
+   r=7: max over 4-part compositions of r+4 = 55; binom(r+4,2) = 55; swap-majority threshold n > 35
+   r=8: max over 4-part compositions of r+4 = 66; binom(r+4,2) = 66; swap-majority threshold n > 42
+CPU seconds: 0.03

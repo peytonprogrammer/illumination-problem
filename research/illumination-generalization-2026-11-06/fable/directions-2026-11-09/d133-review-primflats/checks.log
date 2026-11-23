@@ -1,0 +1,69 @@
+== 1. Axis stretching in the L-room [(0, 0), (4, 0), (4, 2), (2, 2), (2, 4), (0, 4)]
+  start (1, 1) dir (1, 1): 1 events, last stop-reflex at ('2', '2'); stretched trace matches event-for-event: True
+  start (Fraction(1, 2), Fraction(1, 3)) dir (3, 1): 40 events, last wall-v at ('0', '17/6'); stretched trace matches event-for-event: True
+  start (Fraction(1, 3), Fraction(7, 2)) dir (2, -5): 40 events, last wall-h at ('2/15', '4'); stretched trace matches event-for-event: True
+  start (1, 3) dir (1, -1): 1 events, last stop-reflex at ('2', '2'); stretched trace matches event-for-event: True
+  all stretched traces conjugate: True
+  direction (1,1): 45.00 deg -> stretched 9.46 deg (not an isometry)
+  D Rv D^-1 == Rv: True ; D Rh D^-1 == Rh: True
+  45-degree wall: D Rd D^-1 = [['0', '6'], ['1/6', '0']] ; specular reflection in stretched wall = [['35/37', '12/37'], ['12/37', '-35/37']] ; equal: False
+  => stretching conjugates billiards for axis-parallel walls only; it fails for 45-degree walls.
+== 1b. Linear flat invariant under all diag(a,b) splits; a non-product flat is not invariant
+  L=span{(1,2,1,1)}: image under (2x,y) stays in L: False
+  L=span{(1,2,0,0),(0,0,1,1)}: (2x,y) image of c1*e+c2*f is 2c1*e+c2*f, in L: True
+  (x,y) in L => (2x,y)-(x,y)=(x,0) in L; integer points: (x,y) integral => (x,0) integral.
+== 2. Smith normal form test
+  B1 (columns non-primitive, entries gcd 1): diag [1, 6], UBV=D True, det U -1, det V 1, diagonal True, divisibility True; gcd entries 1; column gcds [2, 3]; first column of BV [1, -4, 3] gcd 1
+  B2 (all entries even): diag [2, 2], UBV=D True, det U -1, det V 1, diagonal True, divisibility True; gcd entries 2; column gcds [2, 2]; first column of BV [2, 6, 0] gcd 2
+  B3 (3x3): diag [1, 2, 12], UBV=D True, det U 1, det V 1, diagonal True, divisibility True; gcd entries 1; column gcds [2, 2, 3]; first column of BV [9, 9, 1] gcd 1
+  B1: a=[1, -4, 3], b=[5, 4, 3], M=24: a+tMb primitive for 2000/2000 t; without M first bad t: [1, 3, 4, 5, 7]
+-- one-axis test: V1: m1 midpoint of first wall gap, m2 midpoint of last
+   Lambda basis [[0, 0, 2, 0, 0], [1, 1, -1, 0, 0], [0, 0, -1, 1, 1]]
+   Gamma = A Lambda generators [[0, 2, 0], [2, -1, 0], [0, -1, 2]]; rank 3
+   positive vector in Lambda: [1, 1, 2, 1, 1]
+   Smith diagonal [1, 2, 4]; first invariant 1; gcd of entries 1
+   z0=[1, 1, -1, 0, 0] (a=A z0=[2, -1, 0], gcd 1), v=[1, 1, 2, 1, 1] (b=[2, 2, 2]), minor rows (0,1) M=6
+   progression z0+tMv, t=1..300: positive, in Lambda, primitive 300/300
+   control without factor M (z0+tv): 0 positive non-primitive terms
+-- one-axis test: V2: as V1 plus middle wall gap = first wall gap
+   Lambda basis [[2, 2, 4, 0, 0], [-1, -1, -2, 1, 1]]
+   Gamma = A Lambda generators [[4, 4, 0], [-2, -2, 2]]; rank 2
+   positive vector in Lambda: [1, 1, 2, 1, 1]
+   Smith diagonal [2, 4]; first invariant 2; gcd of entries 2
+   REJECT: every wall vector on this flat has gcd divisible by 2
+-- one-axis test: V3: rank one, g=(3,3,2)
+   Lambda basis [[1, 2, 3, 1, 1]]
+   Gamma = A Lambda generators [[3, 3, 2]]; rank 1
+   positive vector in Lambda: [1, 2, 3, 1, 1]
+   rank one: generator g=[3, 3, 2], gcd(g)=1
+   finite enumeration (each fine gap in [1, wall gap]): 1 witness(es) [[1, 2, 3, 1, 1]]
+-- one-axis test: V4: rank one, parity forces even multiple
+   Lambda basis [[2, 2, 2, 2, 4]]
+   Gamma = A Lambda generators [[4, 2, 6]]; rank 1
+   positive vector in Lambda: [2, 2, 2, 2, 4]
+   rank one: generator g=[4, 2, 6], gcd(g)=2
+   REJECT: no primitive wall vector on this flat
+-- one-axis test: V5: rank two with free mark (kernel of A nonzero)
+   Lambda basis [[0, 2, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 1, 1, 0], [0, -1, 1, 0, 1]]
+   Gamma = A Lambda generators [[2, 0, 0], [1, 0, 0], [0, 1, 1], [-1, 1, 1]]; rank 2
+   positive vector in Lambda: [1, 1, 2, 1, 1]
+   Smith diagonal [1, 1, 0]; first invariant 1; gcd of entries 1
+   z0=[1, 0, 0, 0, 0] (a=A z0=[1, 0, 0], gcd 1), v=[1, 1, 2, 1, 1] (b=[2, 2, 2]), minor rows (0,1) M=2
+   progression z0+tMv, t=1..300: positive, in Lambda, primitive 300/300
+   control without factor M (z0+tv): 0 positive non-primitive terms
+== 3. Gap-variable and matrix counts
+  W=4: r=0, vertical edges 2 -> at most 2 x wall levels, +2 marks = 4, gaps <= 3
+  W=6: r=1, vertical edges 3 -> at most 3 x wall levels, +2 marks = 5, gaps <= 4
+  W=12: r=4, vertical edges 6 -> at most 6 x wall levels, +2 marks = 8, gaps <= 7
+  W=20: r=8, vertical edges 10 -> at most 10 x wall levels, +2 marks = 12, gaps <= 11
+  d=1, H=1: matrices with 0..d rows = 4 <= (d+1)(2H+1)^(d^2) = 6
+  d=1, H=2: matrices with 0..d rows = 6 <= (d+1)(2H+1)^(d^2) = 10
+  d=2, H=1: matrices with 0..d rows = 91 <= (d+1)(2H+1)^(d^2) = 243
+  d=2, H=2: matrices with 0..d rows = 651 <= (d+1)(2H+1)^(d^2) = 1875
+  d=3, H=1: matrices with 0..d rows = 20440 <= (d+1)(2H+1)^(d^2) = 78732
+  d=3, H=2: matrices with 0..d rows = 1968876 <= (d+1)(2H+1)^(d^2) = 7812500
+  H=1: log10(144 (2H+1)^242) = 117.6
+  H=10: log10(144 (2H+1)^242) = 322.1
+== 4. Non-primitive integral points that the primitive test rejects (scope of the reduction)
+  V2 point z=[1, 1, 2, 1, 1]: walls [2, 2, 2], gcd 2; normalized walls [1, 1, 1], marks at 1/2 and 5/2 (non-lattice)
+  => a dark flat of this type is invisible to the primitive test but is covered by the unrestricted-integral Cramer bound of parametric-orbits.md with the same H.

@@ -1,0 +1,69 @@
+§1 fixed-ratio corner: N = M^(1+k phi(2s)), M = 3s-r
+  PASS N = s-r mod 2s, gcd(N,s)=1, l=(N-s+r)/(2s) a nonnegative integer, 1+2l-theta = N/s, primes(N)=primes(M): all 277 reduced r/s with s<=30, k=0..3 (1108 cases)
+  PASS gcd(M,s) = gcd(r,s) = 1 for all those ratios
+  PASS M even forces s odd
+  INFO theta=1/3 (a=2d): M=8, phi(6)=2, N in [8, 512, 32768], N mod 6 = [2, 2, 2]
+§2 corner-targeting lemma: exhaustive over reduced p/q, q <= N
+  PASS theta=1/3, N=8: chosen j makes no p/q critical at any of 2 levels l' and gcd(2jq-p,N)<=2 (23 fractions x 3 j-windows)
+  PASS theta=1/3, N=512: chosen j makes no p/q critical at any of 170 levels l' and gcd(2jq-p,N)<=2 (79853 fractions x 3 j-windows)
+  PASS theta=1/2, N=5: chosen j makes no p/q critical at any of 2 levels l' and gcd(2jq-p,N)<=2 (11 fractions x 3 j-windows)
+  PASS theta=1/2, N=125: chosen j makes no p/q critical at any of 62 levels l' and gcd(2jq-p,N)<=2 (4797 fractions x 3 j-windows)
+  PASS theta=2/5, N=13: chosen j makes no p/q critical at any of 2 levels l' and gcd(2jq-p,N)<=2 (59 fractions x 3 j-windows)
+  PASS theta=2/3, N=7: chosen j makes no p/q critical at any of 2 levels l' and gcd(2jq-p,N)<=2 (19 fractions x 3 j-windows)
+  PASS theta=3/4, N=9: chosen j makes no p/q critical at any of 2 levels l' and gcd(2jq-p,N)<=2 (29 fractions x 3 j-windows)
+  PASS theta=1/4, N=11: chosen j makes no p/q critical at any of 2 levels l' and gcd(2jq-p,N)<=2 (43 fractions x 3 j-windows)
+  INFO theta=1/3, N=8, unrestricted j in 0..3: 4 (p/q, j) pairs put a corner on an earlier level
+  PASS theta=1/3, N=8: min distance of (2) from Z over 131 (xi,j) cases is 1/128 >= mu = 1/2048
+  PASS theta=1/2, N=5: min distance of (2) from Z over 59 (xi,j) cases is 1/50 >= mu = 1/500
+  PASS theta=2/5, N=13: min distance of (2) from Z over 347 (xi,j) cases is 1/338 >= mu = 1/8788
+§3 v0, joining equation, correction, displacement
+  PASS template speed toward the corner is v0 = kappa(2j-xi)/H (1458 grid cases)
+  PASS v - v0 = kappa(e-Bv0)/(HX+kappa B) solves xi + Hv/kappa = 2j + (e-Bv)/X exactly (972)
+  PASS |v-v0| < kappa|e-Bv0|/(HX) and every earlier-level displacement < |e-Bv0|/X (972)
+  INFO so X > 4 kappa+ R/(H eta) keeps v in J (|v-v0| <= eta/4 from the middle half), and X > 2R/mu leaves each earlier contact > R/X from Z
+§4 aspect reduction kappa in [kappa-, kappa+]
+  PASS direct failure u(a+tB)eta <= g_a implies kappa >= (1-theta)eta/2 (53856 failing tuples)
+  PASS far-wall failure and Y >= 1 imply kappa <= 16C^2/eta (61560 tuples)
+§5 explicit k, N and threshold (1) at n=1 (T=90), P=6 (st279 visited run), R=1, theta=1/3
+  PASS T = 1+F_11 = 90, eta = 1/32400
+  PASS k = 16: H eta/(4 kappa+) > Q = 4 with N = 8^33 (log10 N = 29.8)
+  INFO smallest admissible k here is 8; the formula gives 16
+  PASS the second term 4 kappa+ R/(H eta) < R/Q is always below 8RN^3 (it is redundant)
+  INFO kappa- = 1/97200, log10 kappa+ = 7.71, threshold Y > 1.980e+95 (log10 = 95.3)
+  INFO a=1, d=2: theta=2/3, M=7, kappa- = eta/6; threshold needs Y > 8R M^3/kappa- >= 5.33e+08, while Y = h/t <= 3
+  INFO a=1, d=5: theta=5/6, M=13, kappa- = eta/12; threshold needs Y > 8R M^3/kappa- >= 6.83e+09, while Y = h/t <= 6
+  INFO a=1, d=20: theta=20/21, M=43, kappa- = eta/42; threshold needs Y > 8R M^3/kappa- >= 8.66e+11, while Y = h/t <= 21
+§6 comparable-region arithmetic
+  PASS q = auP/gcd(2Dt,auP) and kappa = (1-theta)Pp/(2q) (21600 tuples)
+  PASS direct failure gives q <= P/eta, t/a <= P/(B eta), Y >= B eta/(P(1-theta)) (18804 tuples)
+  PASS (m+1)/m in both factors: quotient 1, reduced heights m+1 unbounded (m = 1..49)
+  INFO the d190 span hypothesis uR <= D means X >= R; X = (m+1)/m needs R <= 1+1/m. R(m+1)/m works for any R. The note labels the example as arithmetic only, correctly
+§7 lower-period coupling
+  PASS gcd(a,2d) | 2|p d0 - q a0| on affine rays, and a/d constant when det = 0 (49000)
+  INFO p = 0 (a fixed, d growing) has det = -q a0, so a/gcd(a,2d) <= a stays bounded
+  PASS one of k = 1,2,3 gives Res(f,g) != 0 when D/u and A/t are nonconstant (3584 form pairs)
+  PASS gcd(f(n),g(n)) divides Res(f,g) at n = 0..29 (107520 evaluations)
+§7b the junction: a=2n+1, d=n, D=16(a+1), source (D/2,d), target (0,h+1)
+  PASS n=2: D=96, W=8, 2 reflex, wall gcds (1,1), marks interior same parity, a/gcd=5; phase orders 1; no z in (0,1) solves the b=1 congruence for A=a,L
+  PASS n=4: D=160, W=8, 2 reflex, wall gcds (1,1), marks interior same parity, a/gcd=9; phase orders 1; no z in (0,1) solves the b=1 congruence for A=a,L
+  PASS n=6: D=224, W=8, 2 reflex, wall gcds (1,1), marks interior same parity, a/gcd=13; phase orders 1; no z in (0,1) solves the b=1 congruence for A=a,L
+  PASS n=8: D=288, W=8, 2 reflex, wall gcds (1,1), marks interior same parity, a/gcd=17; phase orders 1; no z in (0,1) solves the b=1 congruence for A=a,L
+  PASS n=10: D=352, W=8, 2 reflex, wall gcds (1,1), marks interior same parity, a/gcd=21; phase orders 1; no z in (0,1) solves the b=1 congruence for A=a,L
+  PASS D=96: every odd b<=7 and A with 3A+b<=D/2 makes the congruence impossible (57)
+  PASS the junction is two lattice rectangles sharing [0,1] at y=h with full overlap: the doorway-word-bound theorem applies (hypotheses read, not traced)
+§7c (D,u)=(m,m+1), (A,t)=(m,m+1)
+  PASS Au = Dt identically; primitive normal (m+1,-m) has height m+1; with P=6, g_A = 2Dt (phase order one) for m = 1..49
+  INFO D/u = m/(m+1) < 1 clips any lattice mouth whose right end is >= 1 in template units; (D,u)=(m+1,m), (A,t)=(m+1,m) gives the same identity with D >= u
+§8 scale-step v2: d190 corrections applied?
+  PASS Medium 1 (Advances line): qualified by w/b -> 0
+  INFO Medium 1 (section opening) unchanged from v1: True
+  INFO junction stated to lie outside the theorem hypotheses: False
+  INFO Low 2 (outside-span opening in open cases): True
+  INFO Low 3 (template openings): True
+  INFO Low 1 (T and W renamed): False
+  INFO Low 4 (junction wording): False
+§9 W=10 ledger realization
+  PASS strictly simple, 10 walls, turn word LLLRLLLRLR is a rotation of LLLRLLLRLR; area 8
+
+CPU seconds: 2.28
+FAILURES: 0

@@ -1,0 +1,42 @@
+== 1. Wall count, simplicity, gcds, area
+X=4 Y=4: components=1 W=20 strictly_simple=True area=35 hgcd=1
+X=2 Y=4: components=1 W=20 strictly_simple=True area=33 hgcd=1
+X=28 Y=28: components=1 W=20 strictly_simple=True area=83 hgcd=1
+X=26 Y=28: components=1 W=20 strictly_simple=True area=81 hgcd=1
+== 1. Fixed line (2,1), four launch signs --, -+, +-, ++
+X=4 Y=4 S=(2,1) T=(8,1): ['corner', 'repeat', 'repeat', 'corner']  matches note: True
+X=2 Y=4 S=(2,1) T=(6,1): ['corner', 'repeat', 'repeat', 'target']  matches note: True
+X=28 Y=28 S=(2,1) T=(32,1): ['corner', 'repeat', 'repeat', 'corner']  matches note: True
+X=26 Y=28 S=(2,1) T=(30,1): ['corner', 'repeat', 'repeat', 'target']  matches note: True
+mark parities: S=(2,1) fixed; T x-parity (4+X)%2 at X=28,26: (0, 0)
+== 2. Corridor exit height/sign vs inserted length (|v|=(2,1), w=1)
+entry y=1/2 vy=1: restored after insertion d -> {1: False, 2: False, 3: False, 4: True, 6: False, 8: True, 12: True}
+entry y=1/4 vy=-1: restored after insertion d -> {1: False, 2: False, 3: False, 4: True, 6: False, 8: True, 12: True}
+entry y=3/4 vy=1: restored after insertion d -> {1: False, 2: False, 3: False, 4: True, 6: False, 8: True, 12: True}
+formula T(p,q)=2w|p|/gcd(|q|,2w|p|) with p=2,q=1,w=1: 4
+room-level replay at period 4 and 12 (outcome tuples):
+  X=8 Y=8: ['corner', 'repeat', 'repeat', 'corner']  hgcd=1
+  X=6 Y=8: ['corner', 'repeat', 'repeat', 'target']  hgcd=1
+  X=16 Y=16: ['corner', 'repeat', 'repeat', 'corner']  hgcd=1
+  X=14 Y=16: ['corner', 'repeat', 'repeat', 'target']  hgcd=1
+  X=4 Y=8: ['corner', 'repeat', 'repeat', 'corner']  hgcd=1
+  X=2 Y=8: ['corner', 'repeat', 'repeat', 'target']  hgcd=1
+  X=40 Y=40: ['corner', 'repeat', 'repeat', 'corner']  hgcd=1
+  X=38 Y=40: ['corner', 'repeat', 'repeat', 'target']  hgcd=1
+  X=28 Y=32: ['corner', 'repeat', 'repeat', 'corner']  hgcd=1
+  X=26 Y=32: ['corner', 'repeat', 'repeat', 'target']  hgcd=1
+2 is not a period: X=Y=6 (vs X=Y=4 above) -> ['corner', 'repeat', 'repeat', 'target']
+== 1/5. One-reflection shot of slope 2/(X+2) (direction (X/2+1, 1))
+X=4 Y=4 dir=(3, 1): ('target', 1)
+X=2 Y=4 dir=(2, 1): ('target', 1)
+X=28 Y=28 dir=(15, 1): ('target', 1)
+X=26 Y=28 dir=(14, 1): ('target', 1)
+== 3. Site counts n = f + 2q + 3r (q := e2 + 2 e4)
+site (0, 0): long {'n': 83, 'f': 3, 'r': 2, 'q': 37, 'e2': 31, 'e4': 3}  short {'n': 81, 'f': 3, 'r': 2, 'q': 36, 'e2': 30, 'e4': 3}  dq=1 de2=1 de4=0
+site (0, 1): long {'n': 83, 'f': 3, 'r': 2, 'q': 37, 'e2': 31, 'e4': 3}  short {'n': 81, 'f': 3, 'r': 2, 'q': 36, 'e2': 30, 'e4': 3}  dq=1 de2=1 de4=0
+site (1, 0): long {'n': 83, 'f': 3, 'r': 2, 'q': 37, 'e2': 31, 'e4': 3}  short {'n': 81, 'f': 3, 'r': 2, 'q': 36, 'e2': 30, 'e4': 3}  dq=1 de2=1 de4=0
+site (1, 1): long {'n': 83, 'f': 3, 'r': 2, 'q': 37, 'e2': 31, 'e4': 3}  short {'n': 81, 'f': 3, 'r': 2, 'q': 36, 'e2': 30, 'e4': 3}  dq=1 de2=1 de4=0
+== 4. Dilation sanity: m=2 room, marks and direction scaled
+X=4 Y=4 m=2: ['corner', 'repeat', 'repeat', 'corner']  m=1: ['corner', 'repeat', 'repeat', 'corner']
+X=2 Y=4 m=2: ['corner', 'repeat', 'repeat', 'target']  m=1: ['corner', 'repeat', 'repeat', 'target']
+done

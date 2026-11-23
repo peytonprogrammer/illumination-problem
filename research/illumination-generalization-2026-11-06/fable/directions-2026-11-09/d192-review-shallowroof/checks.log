@@ -1,0 +1,67 @@
+§0 snapshots
+  INFO snapshot.md sha256 ac833ca2e904657eb0479af4cff07db6d8e25d33ac6cda25c91b43feba339e60
+  INFO snapshot-fixed-ratio-corner-v2.md sha256 59f00ced177df807f974e1c8f3a33a7afa805a3d137f8d340dcb1b11ab57ded8
+  PASS snapshot.md is byte-identical to bbbb/l1-shallow-roof-return.md
+  PASS snapshot-fixed-ratio-corner-v2.md is byte-identical to bbbb/l1-fixed-ratio-corner.md
+  INFO prefix 59f00ced given in the brief matches: snapshot.md=False, fixed-ratio v2=True
+§1 constants at st279 (n=1, m=4, T=1+F_11, R=1)
+  PASS T = 1+F_11 = 90
+  INFO P=6: C=10.000031, Q=6718505472064 (~10^12.83), eps ~ 10^-19.62, 1/eps ~ 10^19.62, H1=4147200, K0 ~ 10^17.51, 2K0/eps ~ 10^37.44
+  INFO P=30: C=34.000031, Q=77665584844864 (~10^13.89), eps ~ 10^-21.38, 1/eps ~ 10^21.38, H1=4147200, K0 ~ 10^19.28, 2K0/eps ~ 10^40.96
+  PASS H1 = 64(R+1)/eta = 4,147,200 at R=1, T=90
+§2 period identity (1): (2h-a)uPq in 2Dt Z, i.e. (2H-A)qP in 2X Z
+  PASS (2H-A)qP / (2X) is an integer (10752 integer tuples)
+§3 failure bounds: floor failure => X >= (2H-A+B)eta/4 and q <= 4X/((2H-A+B)eta); with far-wall => q <= Q
+  PASS floor-failure consequences hold on all 18661 failing tuples
+  PASS H >= 1: far-wall X bound <= 16HC^2/eta and the q bound <= 64C^2/eta^2 (945 cases)
+§4 reduction to (2), r*, rounding correction
+  PASS r* = (e+c0-(2H-A+B)v0)/2 at the real j* (2592)
+  PASS rounded (j,v) solves the unreduced terminal equation c0+L(v+qjP) = e-Bv mod 2X (2592)
+  PASS r - r* = AqP(j-j*)[1-2A/(L+B)] (2592)
+  PASS |v-v0| <= AqP/(L+B) and |r-r*| <= AqP/2 (2592)
+§5 interval of length >= H eta/4 with X >= H eta/4 has a point at distance >= H eta/16 from XZ
+  PASS clearance >= H eta/16 on 960 placements; least observed ratio 1/8
+  PASS tight case X = H eta/4: best clearance is exactly H eta/8 >= H eta/16
+  PASS floor corner at the midpoint forces r = -z mod 2X (378)
+§6 constructed route: closed-form instances meeting the explicit hypotheses
+  INFO synthetic constants: C=25/4, Q=40000, eps=1/10240000, H1=512
+  PASS route legal on all 162 instances with A/H <= eps, H > H1, q <= Q; least first-roof clearance / H = 7520197761160369/94227665396480000 (note: >= 3 eta/64 = 3/256)
+  INFO with A/H ~ 1/2 (outside eps), the construction fails its legality test on 13/16 instances
+§7 a/h > eps  =>  b <= 2K0/eps; theta = b/(2p+b)
+  PASS a/h = 2p/(2p+b), theta = b/(2p+b), gcd(p,b)=1 (3481)
+  PASS a/h > eps forces b < 2p/eps on every grid case (5921 implications checked)
+  INFO b/(2p+b) is not reduced (gcd 2) for 178 coprime pairs with p,b < 30; the note says use reduced theta
+§8 d191 corner threshold at reduced theta = r/s, st279 P=6; a = 1, t = 1, several d
+  INFO a=1, d=2: theta=2/3, d191 threshold Y > 10^100.0 (k=18, N=M^37) but Y = 3
+  INFO a=1, d=5: theta=5/6, d191 threshold Y > 10^197.0 (k=14, N=M^57) but Y = 6
+  INFO a=1, d=20: theta=20/21, d191 threshold Y > 10^600.0 (k=10, N=M^121) but Y = 21
+  PASS d191 alone does not cover a=1, t=1 at d = 2, 5, 20 (threshold exceeds Y = d+1)
+  INFO shallow theorem covers a=1, t=1 once d+1 > max(H1, 1/eps) ~ 10^19.62
+  INFO a=1, d=10^19: A/H<=eps: False, H>H1: True -> covered: False
+  INFO a=1, d=10^20: A/H<=eps: True, H>H1: True -> covered: True
+  INFO a=1, d=10^21: A/H<=eps: True, H>H1: True -> covered: True
+  INFO a=1, d=10^30: A/H<=eps: True, H>H1: True -> covered: True
+  PASS crossover for a=1,t=1 lies between d=10^19 and d=10^21 (P=6)
+  INFO a=1,t=1, 1/eps > d+1: p=1, b=2d <= 2K0/eps so theta=d/(d+1) is on the finite list; H* >= H2(d/(d+1)) >> d+1, so these d lie in the residual H <= H*, i.e. the combination certifies nothing there.
+  INFO H* is dominated by theta with s up to ~2K0/eps+2 ~ 10^37.4; there N >= M^(1+phi(2s)) so log10 log10 H* >~ 37.4 (phi(2s) ~ s up to log factors)
+  INFO d191 threshold log10 along theta=1/s, s=2,3,5,7,11 (not monotone; k varies): 96, 95, 202, 291, 462
+§9 direct failure u(a+tB)eta <= gcd(2Dt,auP) => A >= B eta/P (comparable section)
+  PASS A >= B eta/P on all 7846 direct-failure tuples
+§10 fixed template: dark => H <= H*, A >= B eta/P, X <= 4HC^2(1+1/(2H-A))^2/eta
+  PASS far-wall X bound is finite on the residual box (2H-A > H > 0); with u,t fixed this bounds h and D, so dark placements are finite
+§11 text checks: d191 corrections in fixed-ratio v2 and in the current scale-step note
+  INFO M1(a) v2 scope says not uniform in theta: True
+  INFO M1(a) v2 names the residual a/gcd bounded with d/a -> inf (e.g. a=1): False
+  INFO M1(a) v2 links the shallow return: True
+  INFO M1(b) scale-step open cases mention theta->1 / shallow return: False
+  INFO M2 scale-step states w/b->0: True; junction outside hypotheses: True
+  INFO Low 2 v2 cites cone argument for constant theta: False
+  INFO Low 3 v2 uses "no openings other than": False
+  INFO Low 4 v2 drops 4κ₊R/(Hη): False
+  INFO shallow note: symbol H reused (h/t here, N/s in d191): True; Q redefined: True
+§12 W=10 ledger realization
+  PASS strictly simple, 10 walls, turn word LLLRLLLRLR is a rotation of LLLRLLLRLR; area 8
+  PASS note quotes the same realization
+
+CPU seconds: 0.29
+FAILURES: 0

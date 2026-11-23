@@ -1,0 +1,72 @@
+# Item 1: condition (1) on lattice rooms
+  PASS R1: h/W=1/5 = (6/5)*d/(2u) lies in span_Q (condition (1) fails)
+  PASS R1: transposed h'/W'=1/2 in span (transposed condition fails)
+  PASS R1: room and transpose have word LLLLLRLRLR (turns LLLRLRLRLL)
+  PASS R2: h/W=2/5 = (2/5)*d/(2u) lies in span_Q (condition (1) fails)
+  PASS R2: transposed h'/W'=1/9 in span (transposed condition fails)
+  PASS R2: room and transpose have word LLLLLRLRLR (turns LLLRLRLRLL)
+  PASS R3: h/W=3/7 = (12/7)*d/(2u) lies in span_Q (condition (1) fails)
+  PASS R3: transposed h'/W'=3/7 in span (transposed condition fails)
+  PASS R3: room and transpose have word LLLLLRLRLR (turns LLLRLRLRLL)
+  PASS R4: h/W=1/8 = (5/8)*d/(2u) lies in span_Q (condition (1) fails)
+  PASS R4: transposed h'/W'=3/8 in span (transposed condition fails)
+  PASS R4: room and transpose have word LLLLLRLRLR (turns LLLRLRLRLL)
+  PASS N1: h/W=1/4 = (1)*d/(2u) lies in span_Q (condition (1) fails)
+  PASS N1: transposed h'/W'=1/4 in span (transposed condition fails)
+  PASS N1: room and transpose have word LLLLLRLRLR (turns LLLRLRLRLL)
+  PASS N2: h/W=1/4 = (1/2)*d/(2u) lies in span_Q (condition (1) fails)
+  PASS N2: transposed h'/W'=1/4 in span (transposed condition fails)
+  PASS N2: room and transpose have word LLLLLRLRLR (turns LLLRLRLRLL)
+## Denominator test, both orientations (P = minimal P0)
+   R1: P0=24 Q=2 den(P0 h/W)=5 vs Q^2=4 -> COVERED; transposed P0=12 den=1 vs 16 -> not covered
+   R2: P0=1 Q=2 den(P0 h/W)=5 vs Q^2=4 -> COVERED; transposed P0=160 den=9 vs 81 -> not covered
+   R3: P0=20 Q=2 den(P0 h/W)=7 vs Q^2=4 -> COVERED; transposed P0=24 den=7 vs 4 -> COVERED
+   R4: P0=15 Q=2 den(P0 h/W)=8 vs Q^2=4 -> COVERED; transposed P0=70 den=4 vs 64 -> not covered
+   N1: P0=12 Q=4 den(P0 h/W)=1 vs Q^2=16 -> not covered; transposed P0=12 den=1 vs 16 -> not covered
+   N2: P0=18 Q=4 den(P0 h/W)=2 vs Q^2=16 -> not covered; transposed P0=18 den=2 vs 16 -> not covered
+  PASS R1-R4 pass the direct denominator test
+  PASS N1, N2 fail the test in both orientations
+## Necessary condition floor(W/w)^2 < W (den(P0 h/W) <= W)
+   w=1: admissible W = []
+   w=2: admissible W = [5]
+   w=3: admissible W = [6, 7, 8, 10, 11]
+   w=4: admissible W = [7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19]
+   w=5: admissible W = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29]
+  PASS w=1: no W passes (Q=W, Q^2>=W)
+  PASS no W >= w^2+w passes, for w < 40 (closed form: need Q <= w, hence W <= w^2+w-1)
+## Explicit infinite family F: widths (2,3,4,5), any c,d,e >= 1, 5 not dividing h
+  PASS P0 divides 24 (dens of d/6, e/8), so P0 is prime to 5 and den(P0 h/5)=5>4 iff 5 does not divide h
+  PASS h=5 member (2,3,4,5;1,1,1,5) is not covered
+# Item 2: d15 cert_r3 entry for the staircase
+   mask 4991 counts {'A': 281, 'B': 32, 'C-perp': 8} uncovered [[[1, 7], [7, 1]]]
+   rows y=0..3 from mask (bit y*nx+x): [[1, 1, 1, 1], [1, 1, 1, 0], [1, 1, 0, 0], [1, 0, 0, 0]]
+  PASS mask = bottom full row, top row only x-cell 0
+  PASS only open-cell pair (1,7)-(7,1): top cell vs bottom-right cell [v,W]x[0,h]
+# Item 3: identities in the proof
+  PASS floor shift coefficient 1 - t_f/D = (h-b)/D < 1/2 (2000 random rational cases)
+  PASS joint bound |L(t)| <= w - (t/D)(w-|Z|) (2000 random cases)
+  PASS sum of two rationals with dens <= Q has den <= Q^2 (Q <= 8 exhaustive)
+# Note control: d17 chain N2, S=(1,10), T=(10,1), direction (163,-9)
+  PASS N2: P0=18, den(P0 h/W)=2 <= 16, test fails
+  PASS N2 at b=2: both rotation dens <= Q=4
+  PASS trace (163,-9) from (1,10): end at (10,1), 31 reflections, 0 horizontal
+# Item 4: exact replays of the note construction in covered rooms
+  PASS R1 widths 2,3,4,5 heights 1,1,1,1: construction + exact trace hits T for 10/10 pairs (routes {'floor': 4, 'direct': 6}, max reflections 52)
+  PASS R2 widths 2,3,4,5 heights 2,6,8,2: construction + exact trace hits T for 16/16 pairs (routes {'direct': 7, 'floor': 9}, max reflections 10)
+  PASS R3 widths 3,4,5,7 heights 1,2,1,3: construction + exact trace hits T for 26/26 pairs (routes {'direct': 19, 'floor': 7}, max reflections 31)
+  PASS R4 widths 3,5,6,8 heights 1,2,4,1: construction + exact trace hits T for 14/14 pairs (routes {'direct': 12, 'floor': 2}, max reflections 22)
+# Item 4b: uncovered rooms N1, N2 (named pairs only)
+   N1 (1/2,7/2)-(7/2,1/2): note construction works, k=2 direct dir=(Fraction(71, 1), Fraction(-3, 1)), 34 refl
+  PASS N1 (8/13,44/13)-(23/6,1/3): construction fails (rotation dens (1, 1), Q=4); dir (-11,-2) lights it, 8 refl, independent retrace
+   N1 (3/11,34/11)-(3086/1013,912/1013): note construction works, k=2 direct dir=(Fraction(588057, 11143), Fraction(-24410, 11143)), 22 refl
+   N1 (3/7,22/7)-(28/9,2/9): note construction works, k=2 direct dir=(Fraction(4453, 63), Fraction(-184, 63)), 28 refl
+   N2 (1,10)-(10,1): note construction works, k=1 direct dir=(Fraction(159, 1), Fraction(-9, 1)), 30 refl
+   N2 (1/2,19/2)-(19/2,1/2): note construction works, k=1 floor dir=(Fraction(182, 1), Fraction(-10, 1)), 32 refl
+   N2 (1/2,19/2)-(19/2,3/2): note construction works, k=1 floor dir=(Fraction(201, 1), Fraction(-11, 1)), 33 refl
+   N2 (1/2,19/2)-(19/2,5/2): note construction works, k=1 direct dir=(Fraction(129, 1), Fraction(-7, 1)), 26 refl
+   N2 (1/2,19/2)-(21/2,1/2): note construction works, k=1 floor dir=(Fraction(181, 1), Fraction(-10, 1)), 32 refl
+   N2 (15/101,932/101)-(31/3,2/3): note construction works, k=2 direct dir=(Fraction(92168, 303), Fraction(-2594, 303)), 52 refl
+   N2 (7/11,108/11)-(45/4,1): note construction works, k=1 direct dir=(Fraction(7067, 44), Fraction(-97, 11)), 30 refl
+   N2 (20/13,153/13)-(11,11/6): note construction works, k=1 floor dir=(Fraction(3191, 13), Fraction(-1061, 78)), 48 refl
+
+## done: 0 failures []; CPU 0.1s
