@@ -17,7 +17,7 @@ The floor test gives u(2h−a+tB)η≤2g. The far-wall window gives X≤4HC²(1+
     X ≥ (2H−A+B)η/4 ≥ Hη/4,      q ≤ 4X/[(2H−A+B)η] ≤ Q.
     (2H−A)qP ∈ 2Xℤ.                                             (1)
 
-Thus a missed route supplies an exact period for a different one.
+The period identity in (1) holds at every placement by the definition of q. Failure of both routes supplies the displayed bounds, in particular q≤Q, for using that period on a different route.
 
 ## The roof–floor route
 
@@ -54,6 +54,8 @@ This bounds the very denominator at which d191's corner threshold had diverged. 
     H*=max( H₁, max H₂(b/(2p+b)) over 1≤p≤ceil(K₀), 1≤b≤ceil(2K₀/ε) ).
 
 The finite maximum is a formula in template data; it requires no room or trajectory enumeration. Use reduced θ in computing H₂. For H>H* the preceding roof–floor argument covers the shallow placements and the reviewed fixed-ratio theorem covers each remaining candidate. This removes the fixed-ratio hypothesis from the large relative height statement. [D191 theorem and threshold](l1-fixed-ratio-corner.md)
+
+**Fixed-stretch finiteness corollary (d192).** For fixed template, u,t and the stated lattice placements, a dark placement has h≤tH* and D≤uκ_max H*, using the uniform dark-aspect bound 4C²(1+P/(Bη))²/η. There are finitely many possible lower boxes and source marks. In particular a=t=1 requires only the shallow estimate: darkness forces d+1≤max(H₁,1/ε). At the st279 review constants the reduced-depth list reaches denominators near 10³⁷. Finiteness does not make this a practical census.
 
 **What is left on the comparable product.** Failure of the direct route also forces u(a+tB)η≤auP, hence A≥Bη/P. Consequently for any surviving dark placement, H≤H* and a/h≥Bη/(PH*)>0. D190 again bounds the list of reduced depth ratios, now even inside the residual box. D191 gives a finite list of coupled aspects κ=X/H for those ratios; its upper bound remains valid at H<1 using t/a≤P/(Bη). Neither result bounds the individual reduced denominators of X and H when both lie in bounded positive intervals. The first open case is this comparable-scale product with a freely placed source and possibly high-denominator axis ratios. Changing the upper template internally, shrinking its labelled aperture relative to the template, or putting other mouths outside the prescribed span is outside the all-depth theorem. No absolute area cutoff for L1 follows.
 

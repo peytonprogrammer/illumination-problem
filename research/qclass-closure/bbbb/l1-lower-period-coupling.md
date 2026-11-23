@@ -1,4 +1,4 @@
-Advances: L1 — For a crossing with one affinely stretched upper template, a wholly dark rational product forces a horizontal width proportionality or two vertical depth proportionalities. The lower side-wall period alone gives no equidistribution, even when a/gcd(a,2d) tends to infinity.
+Advances: L1 — For a crossing with one affinely stretched upper template, a wholly dark rational product forces a horizontal width proportionality or two vertical depth proportionalities. Outside the fixed scaled-template hypotheses the lower side-wall period alone gives no equidistribution, even when a/gcd(a,2d) tends to infinity.
 
 # Which ratios are actually locked at a crossing?
 
