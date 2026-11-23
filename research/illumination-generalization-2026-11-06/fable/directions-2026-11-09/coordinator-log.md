@@ -1749,3 +1749,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 12:08 — long-neck lemma stopped
 - bbbb/l1-long-neck.md: there's no absolute C. Pocket absence doesn't separate R22 (6-reflex counterexample), and dilation makes the unnormalized statement equivalent to the full goal. The early-stop clause applies. Not reviewed: it's a stop note, and its counterexample is explicit and simple.
 - Estimate 8–10% → 6–8%. Asked Daniel the strategy question. Astra is held until he answers, rather than given another local route.
+
+## 2026-11-23 12:10 — route switch
+- Daniel asked whether L1 is the only path. I recommended per-pattern decidability (d159's Presburger idea) plus a bounded census extension; both computations need his approval. Switched Astra to the path-length theorem (theory only). Output goes to bbbb/decide-path-bound.md. Recorded in PROGRAM.md.
+- d203 is still running: checks are done, review.md not yet filled in.

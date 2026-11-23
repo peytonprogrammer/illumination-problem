@@ -96,3 +96,6 @@ L1 in its "every way of being large forces lit" form, for d152's 20-wall family 
 
 ## Long-neck route (2026-11-23): stopped
 Stopped at its early-stop clause: no 8-versus-9 mechanism. A 6-reflex long-neck room has no pocket. Route tally for 2026-11-23: chart descent, shrink descent, shear counting (not run), dark structure and long neck all lack an 8-versus-9 step. Lighting tails (d200–d202) are per-family.
+
+## Per-pattern decidability route (started 2026-11-23)
+Replaces the search for an 8-versus-9 mechanism. Target theorem: for each wall-turn word with W ≤ 20, if lattice marks are joined at all, they're joined by a path with at most a·|ℓ| + b reflections (a, b depend on the word). Then each word's "all pairs lit for all lengths" is a Presburger sentence, and computation decides the 8-versus-9 question. Decision runs and any census extension need Daniel's approval. First test: one-neck word LLLLRRLLLLRR. Stopping rule: 2026-11-26 20:00 HST, or a family whose shortest paths need superlinearly many reflections.
