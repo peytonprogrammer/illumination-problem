@@ -1,0 +1,89 @@
+Advances: L1 — Arithmetic matching for aligned rectangular chambers with arbitrary integral dimensions and two unit-height necks.
+
+Normalize the common band to 0<y<1. Chamber i has horizontal interval (lᵢ,lᵢ+wᵢ), floor −bᵢ and roof 1+tᵢ, with bᵢ,tᵢ positive integers. The two intervening gaps have arbitrary positive integral lengths. Heights alone do not fix aperture positions: both bᵢ and tᵢ matter. All lattice marks are strictly inside chamber columns (a unit neck has no interior lattice row and its mouth endpoints are corners).
+
+## Uniform theorem for prescribed constructions
+
+There is a single arithmetic predicate for a transit through a prescribed sequence of rectangular strips. It applies in either coordinate direction, with independent dimensions, and includes a reflection at a prescribed roof. The following is an exact criterion for the constructions specified below, not an equivalence between failing those constructions and darkness.
+
+**Strip data.** Use longitudinal *travel* as time, so a prescribed roof reflection reverses the physical longitudinal velocity but time continues increasing. In piece j let dⱼ be the longitudinal travel, (fⱼ,fⱼ+Bⱼ) the transverse interval, with solid transverse reflecting walls, and let the next gate be its actual allowed open interval. All data are integral. Include a gate at a roof bounce to exclude its two corners. An endpoint inside a rectangle truncates the first or last piece. Let D=Σdⱼ>0 and x₀,x_s denote the fixed transverse mark coordinates. A zero-length joining piece is removed, retaining the intersection of the coincident gate requirements. For paths along an axis use the direct segment test separately; below both absolute velocity components are positive.
+
+**Arithmetic test.** For each choice of the transverse velocity signs ε₀,…,ε_s at the source, gates and target, use the *same* sign on both sides of each gate. Form the finite abelian group
+
+    G = (Πⱼ ℤ/(2BⱼD)) / ⟨(d₁,…,d_s)⟩.
+
+In coordinate j form the expression
+
+    Eⱼ = εⱼ(zⱼ−Dfⱼ) − εⱼ₋₁(zⱼ₋₁−Dfⱼ),
+
+with z₀=Dx₀ and z_s=Dx_s. Write E=c+Σgᵢzᵢ in G, one column gᵢ for each intermediate gate. If that gate is (aᵢ,bᵢ), set Lᵢ=Daᵢ+1 and Uᵢ=Dbᵢ−1. In the integral group ring of G take the coefficient at the identity of
+
+    [c] Πᵢ [Lᵢgᵢ](1+[gᵢ]+…+[(Uᵢ−Lᵢ)gᵢ]).
+
+An empty interval gives zero; brackets denote group elements as basis monomials. Call the sum of these nonnegative coefficients over the sign choices J. This is an arithmetic expression solely in the gate and dimension data, with finite geometric series; no direction or reflection itinerary is enumerated to define the coefficients.
+
+**Proof.** In each piece the oriented phase advances by dⱼv modulo 2Bⱼ, where v is the absolute transverse speed per unit longitudinal travel. Before scaling, its endpoint difference is precisely Eⱼ/D. Unfold all reflections: the two marks have integral transverse coordinates in every reflected copy, hence Dv=n is an integer exactly. Every gate coordinate multiplied by D is consequently integral. The quotient in G simultaneously eliminates n from Eⱼ≡dⱼn modulo 2BⱼD. Conversely zero in G supplies a common integer n, which may be made positive by adding a common period. Strict gate intervals give smooth crossings with the specified signs; folding constructs the ray, including all intermediate transverse-wall reflections. Thus **J>0 iff this transit exists**. The identity Dv=n is an endpoint identity, not a presumed bound on the denominator of a best connecting ray. No effectiveness or smallness claim for the group order is needed here.
+
+### Pair classes and tests
+
+1. **Same chamber:** the straight segment always works. For distinct chambers orient the room or the path so S precedes T horizontally. **All heights, adjacent or outer chambers:** apply J in the horizontal direction to the clipped list of chambers and necks between S and T. Each chamber uses its own floor and height, each neck uses (0,1), and each seam gate is (0,1). This tests all horizontally monotone paths. Optional end-wall images are valid when that entire far wall is solid: reflect the initial or terminal chamber, insert a gate spanning the open reflecting wall, and use the same J. This includes necks with arbitrarily many vertical reversals. In particular the opposite band rows see one another directly.
+2. **Pocket to band row, or pocket to pocket:** label each mark upper for y≥1 and lower for y≤0. To reach the band from an upper mark in chamber i, use its transverse interval (lᵢ,lᵢ+wᵢ) until y=1; optionally reflect first at 1+tᵢ, splitting there. For a lower mark use 0 and −bᵢ. The first band gate is the open chamber span. Use the time-reversed choice for the target. **Opposite labels:** insert one band crossing of vertical travel 1, transverse interval (0,P), where P is the total room width. **Equal labels:** insert two band crossings. Between them choose either a bounce on a neck wall (gate is the open neck span), or an excursion into chamber k on that side (gate is the open chamber span, travel to its far wall and back). Include the actual gates on entrance, reflection and return. Use J with horizontal coordinate transverse. Marks on the band edge can start or finish there, dropping the zero travel. This gives exact arithmetic conditions also for off-band marks on the same side, which the straight common-band segment does not join. Allowing transverse reflections in the band is legal: its outer vertical ends are solid throughout 0<y<1.
+3. **The earlier pocket and gcd tests.** The preceding vertical constructions include a one-pocket match for two marks on the same band row, and an endpoint inside a pocket. For straight unreflected band legs the entry test specializes to the earlier open interval I and a progression a=a₀+jwg/(g+h). Its exact strict test is floor((inf I−a₀)/spacing)+1 < (sup I−a₀)/spacing. The gcd lift for a shot through preceding chambers to a final mark is a subtest of horizontal J. Explicitly let z be the final slow band row (0 or 1), H the final chamber height, F its floor, v the horizontal depth of T in it, and M a common multiple of all preceding chamber heights. Start the slow segment at the other band row. Adding slope 2Mm preserves all earlier gate folds at integral abscissas. The final match is gcd(2Mv,2H) | (F±(y_T−F)−z) for at least one sign. This specialized divisibility condition is needed only if using that lift; its failure does not imply J=0.
+
+### A dimension-only consequence for every opposite-side pair
+
+There is a useful case where positivity can be proved without evaluating J. Let S lie on or below the lower band edge and T on or above the upper one, in different chambers of widths u,v. Put a=−y_S, b=y_T−1, P equal to the full horizontal span, M=lcm(2u,2v), and g=gcd(M,2P). Use global abscissas with the far left wall at 0. Pick a signed residue d of x_T−x_S modulo g and set η=d/(a+1+b). The following two strict interval conditions suffice:
+
+    x_S+aη belongs to the open horizontal span of the source chamber,
+    x_T−bη belongs to the open horizontal span of the target chamber.
+
+Indeed one can choose an arbitrarily large integer m with M m ≡ x_T−x_S−d modulo 2P. Prescribe horizontal travel per unit rise c=M m+η>0 and launch up/right. During the first a units of rise the source chamber folds away Mma, a multiple of 2u. At the band the ray is at x_S+aη with rightward velocity. Traversing the band adds c modulo 2P; the congruence puts the exit at x_T−bη on the rightward sheet. The last b units of rise add Mmb+bη in the target chamber and therefore end at T. Each transition is strictly interior and the only intermediate reflections occur on solid vertical walls. The construction also applies when a or b is zero. It is a particular route counted by J.
+
+In particular, **if gcd(P,lcm(u,v))=1, every such opposite-side pair is lit**, for arbitrary chamber heights, vertical offsets and neck lengths realizing that gcd. Then g=2, so one can take |d|≤1. Each of |aη| and |bη| is strictly less than 1, while an integral interior abscissa is at least one unit from either flank. More generally, for the least absolute residue d, the sufficient test |d|max(a,b)<a+1+b certifies all horizontal offsets with that residue. Failure of coprimality alone says nothing about darkness.
+
+**Same-side consequence.** Suppose gcd(P,lcm(w₁,w₂,w₃))=1 and the two mark abscissas have opposite parity. These pairs are also lit at arbitrary depths. Orient vertically so both marks are on or below the near band edge. Let a,b be their integral depths below that edge, M=2lcm(w₁,w₂,w₃), Δ=x_T−x_S. Write Δ=2K+d with K even and d∈{−1,1}; the odd residue of Δ modulo 4 determines the choice. Since gcd(M,2P)=2, choose m with Mm ≡ K modulo 2P, positive and arbitrarily large.
+
+Unfold the horizontal end walls of the common band to an infinite chain mirrored every P. At the integer z=x_S+K choose the open unit cell immediately on the side pointed to by d. Its entire interior at the far band edge is either neck wall (set h=0) or above a single chamber aperture into a pocket of height h. This follows from integral boundaries, even when z is a seam or an outer wall. Put η=d/(a+2+2h+b), c=Mm+η. As before the source stub reaches the band at x_S+aη on the rightward sheet. After one band crossing, its abscissa in the mirrored chain, modulo 2P, is z+(a+1)η. In the chosen pocket the roof contact and return are congruent to z+(a+1+h)η and z+(a+1+2h)η respectively, modulo its side-wall unfolding period, since Mm is a multiple of every 2wᵢ. All three points lie strictly inside the chosen unit cell because their offsets have the sign of d and magnitude strictly less than 1. Therefore the pocket returns the ray on the rightward sheet in the chain; if h=0 the neck-wall bounce gives the same result. The next band crossing and target stub finish at x_S+2K+(a+2+2h+b)η=x_T modulo 2P, on the physical target sheet. The target-side band contact is x_T−bη, strictly inside its chamber. These checks also cover upper-side pairs after vertical reflection. Thus, on these coprime dimensions, **only cross-chamber, same-side, same-x-parity pairs can remain**. Some of those are decided by the more general J tests.
+
+**A dimension-only exceptional set when P is odd.** Continue under the same coprimality assumption. For equal-parity abscissas, a zero-drift return works if there are lifts X=±x_S, Y=±x_T and a midpoint z modulo 2P with
+     
+    2z ≡ X+Y (mod 2P),      z≡X (mod 2),
+
+and z is inside a chamber span or a neck span of the mirrored chain. Take K=z−X and choose Mm≡K modulo 2P as above. With η=0 every integral-depth endpoint leg in a chamber returns to its starting transverse coordinate and sheet. The first band crossing hits z. At a neck it reflects there; in a chamber even the roof contact folds to z, since Mh is divisible by the chamber period. After the second band crossing the ray reaches Y modulo 2P. Chosen lifts specify physical horizontal signs, which are free at both marks.
+
+If P is odd, for either choice Y=±x_T and X=x_S there is a unique root z of the required parity modulo 2P. Neither root is 0 or P for distinct physical abscissas in (0,P). Let E contain the four internal neck-end abscissas and their negatives modulo 2P. An equal-parity pair escaping this construction must have **both** roots z₊,z₋ in E. Consequently
+
+    x_S ≡ z₊+z₋ (mod P),    x_T ≡ z₊−z₋ (mod P).
+
+This leaves at most 8²=64 ordered abscissa pairs regardless of widths, heights or corridor lengths. The precise zero-drift exception uses both root tests; the sum/difference formula alone is an outer bound. If none of the resulting pairs lies in distinct open chamber spans with the prescribed parity, the entire layout is lit for all vertical offsets and mark heights. In the remaining cases the earlier J or mixed test can still certify lighting. This gives a dimension-level sufficient theorem and a finite abscissa residual on an unbounded class, without a claim of darkness.
+
+The two-seam exception is geometrically realizable alone. For example take widths 4,6,4+156k and neck lengths 2,1 for integral k≥1. The internal seams are 4,6,12,13 and P=17+156k is odd and coprime to every width (for the last width use gcd(P,4+156k)=gcd(13,4+156k)=1). At x_S=8 and x_T=16 the two parity-compatible roots are 12 and −4, both seams. Thus the zero-drift construction misses these abscissas at every same-side depth. This example is only a check on the arithmetic of that construction: it does not establish vanishing of J or of the other tests.
+
+### Mixed construction: both reflected neck legs and a middle pocket
+
+For two outer marks the horizontally folded prefixes may join a vertical excursion in the middle chamber, even if neither preceding strip list suffices. Here is a separate arithmetic test for the direct, one-roof joining branch of l1-neck-phase. Fold the two prefixes at a common positive r=|dy/dx| into their respective end chamber and unit neck, including optional solid outer-wall reflections. In coordinates with the shared neck at (0,1), retain regular inner mouth heights u(r),v(r) with both prefixes pointing upward when followed *toward* the middle. Write H for the height of the middle roof above the band top, and w for its width. For the lower-pocket branch reverse y about 1/2 and repeat. The constant-velocity legs to and from the pocket are clear exactly when
+
+    1−u(r)<wr,   1−v(r)<wr.
+
+A roof return with rightward exit exists precisely when, in addition,
+
+    2(1+H)−u(r)−v(r)=(2m+1)wr,    m≥0 integral.
+
+Indeed the entry and return positions are (1−u)/r and w−(1−v)/r. Both lie in (0,w); their sum lies in (0,2w), excluding a roof corner by the doubled-phase identity of the pocket lemma. For arithmetic elimination restrict to 0<r<2(1+H)/w, which follows from the displayed equation and strict mouth heights. This is a geometric speed interval, not a denominator cutoff. On each piece of the two triangular folds obtained by reduction modulo the chamber and neck periods, the clearance tests are linear and the left side is A+Br for explicit rational A,B. Fold boundaries at illegal mouth endpoints or corner hits are excluded. On an admissible interval test whether the range of (A/r+B)/w contains a positive odd integer. It is monotone or constant there, so the endpoint floors (or equality in the constant case) suffice. This eliminates the slope even on an interval with lower endpoint zero. No rational slopes need be tried.
+
+### Complement and the limit of the theorem
+
+For fixed dimensions, including the floor and roof offsets, the residual of the **union of the prescribed tests** has the following exact description. Choose different chambers, two integral interior abscissas in their spans, and heights −bᵢ<y_S<1+tᵢ and −bⱼ<y_T<1+tⱼ. Exclude direct visible pairs. Require that every applicable group-ring coefficient test above vanish, and, for outer pairs, that neither mixed roof test contain a positive odd integer on an admissible interval. A dimension tuple is residual exactly when at least one of its mark pairs satisfies these conditions. This is a per-pair arithmetic certificate for the specified constructions and a projection description for dimensions. It is not a dimension-only classification into residue families. In particular I have **neither** proved this simultaneous vanishing impossible **nor** derived a realizable dimension family where it occurs. The previous K=2A straight-stub obstruction cannot serve as an example: reflected chamber stubs can repair it. Failure of one gcd or one progression is insufficient.
+
+The first open implication is that for *every* dimension tuple and cross-chamber pair at least one coefficient or mixed-branch match is positive. Repeated excursions alternating between different pockets could supply further paths even if these tests all vanish. Thus the aligned layout is not closed by this theorem. R22 excludes a full integral pocket of width ≥3 and depth ≥1 via its corner-only odd–odd fiber. The residual predicate instead concerns access by particular marks. Even if an individual test vanishes in a chamber with such a pocket, R22's room-wide exclusion cannot explain it. No unverified joint residual is claimed to have the R22 property.
+
+### Ledger follow-on
+
+For **rectangular chambers joined by disjoint strictly inset rectangular necks**, one neck uses four reflex corners. At W≤20 there are at most two; two give a chain of three chambers. Along the central boundary each attached chamber contributes F=RRLLLLRR. Looking up the exact d163 keys for F L^j F L^(4−j), with the coordinator's STATUS.md updates through d201, leaves these OPEN words:
+
+| OPEN word | Two attachments |
+|---|---|
+| LLLLRRLLLRRLLLLRRLRR | Adjacent central sides |
+| LLLLRRLLLLRRLLLLRRRR | Same central side |
+
+The opposite-side word LLLLRRLLRRLLLLRRLLRR is PARTIAL under d201. The one-neck word LLLLRRLLLLRR is already PARTIAL in d163. This is an exhaustive list for that specified shape model. A word records turns, so the unit necks are possible realizations, never a length condition forced by the word. The ledger has no unit-neck field giving an exhaustive list for a looser definition allowing flush necks or nonrectangular chambers.

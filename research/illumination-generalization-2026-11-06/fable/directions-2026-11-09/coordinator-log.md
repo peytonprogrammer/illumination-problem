@@ -1730,3 +1730,10 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 11:15 — d201 verdict
 - CORRECT. Re-ran checks.py and checks2.py: 0 failures. Ledger STATUS.md updated: 6/274/4,294, d152 word PARTIAL. This corrects my d200 note, which called the word already PARTIAL. Its ledger status was OPEN.
 - Estimate 7–9% → 8–10%. Claim released, verdict sent to Astra, Slack posted.
+
+## 2026-11-23 11:20 — neck-phase note
+- bbbb/l1-neck-phase.md (L1). Coupled neck and pocket phase tests for displaced mouths. Claims all lengths are lit in the aligned 3×4 middle-chamber family, plus a gcd sufficient condition for arbitrary chamber heights. Launched Opus review d202-review-neckphase and claimed it on the board.
+- Briefed Astra toward a general (w, h) theorem, not case-by-case chambers.
+
+## 2026-11-23 11:35 — d202 verdict
+- CORRECT WITH GAPS. Re-ran checks.py: 0 failures. The status claim "first open area 32" was wrong (it's 21), and I repeated it from d201 in my report and Slack. Fixed in RESULTS. Claim released, verdict sent to Astra.
