@@ -72,3 +72,14 @@ T1; the pyramid leftovers).
 Stopping rule: if the W=10 resonant residuals don't yield to a
 word-independent argument within about one day of Astra's time (by
 2026-11-23), lower the estimate and report to Daniel.
+
+## Chart-descent route: stopping rule (2026-11-23 audit)
+
+Route: chart descent (d182, d184, d186, d187) plus a height bound H(C), with the
+occupied-crossing chain (d189-d195) as its main input. It currently gives
+decidability, not a census-feasible N0. By 2026-11-24 20:00, Astra runs chart
+descent end to end on LLLRLLLRLR for all lengths, symbolically with no
+searches, and reports a numerical N0. If no number comes out, or N0 exceeds
+about 40, stop the crossing chain and report to Daniel with a proposed new route.
+The 2026-11-22 resonance stopping rule fired on 2026-11-23: the estimate dropped
+from 11-13% to 9-11%.

@@ -1,6 +1,6 @@
 # State of the problem: 22-wall minimality
 
-Last updated: 2026-11-18. Start here. Details and every decision are in
+Last updated: 2026-11-23
 `coordinator-log.md` in this directory. Research led by Peyton; this
 directory holds the coordinator's 2026-11-09 to 2026-11-11 programme.
 
@@ -386,3 +386,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-22 23:30 d193 PASS WITH CORRECTIONS (3 notes): explicit area bound on both stretches u,t in the anchored overlap class, for lower-wing sources with transverse target approach. Open: source inside template-width column. Estimate 11-13%.
 - 2026-11-23 05:38 d194 PASS WITH CORRECTIONS: first-entry lemma; inside-column source bounded when opposite side solid or H≥b. Open: H<b two-component return. Estimate 11-13%.
 - 2026-11-23 07:05 d195 PASS WITH CORRECTIONS (partial, conditional strip return). Reviewer: crossing line fragmenting; Astra redirected to a crossing reduction theorem with a decreasing invariant. Estimate 11-13%.
+- 2026-11-23 07:25 Daily audit (audits/2026-11-23.md): only L1 moved, qualitatively; ~25% busy work, ~40% fragmenting crossing chain. Resonance stopping rule fired: estimate 11-13% → 9-11%. New stopping rule in PROGRAM.md: numerical N0 for LLLRLLLRLR by 2026-11-24 20:00 or stop the crossing chain.
