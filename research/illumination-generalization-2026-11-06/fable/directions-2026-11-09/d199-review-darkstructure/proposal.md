@@ -1,0 +1,18 @@
+Advances: L1 — Proposed necessity test for the three groups of reflex corners in the R22 staircase quotient.
+
+**Proposed lemma (unproved).** Let P be a normalized strictly simple orthogonal lattice room with two distinct mutually dark interior lattice points. Write Q for its flat double and B for the standard pillowcase. Then Q → B factors through an intermediate pillowcase cover N, with Q → N of degree at least three, and N has at least three distinct cone points of angle 3π. This is the candidate structure X. The scope is the orthogonal lattice-mark step of L1; the mixed 45° case belongs to L4.
+
+**Where nine enters.** Each preimage of a 3π point has angle 3π times its local degree. On Q the largest cone angle is 3π, attained precisely at physical reflex corners. Every such preimage therefore has local degree one. In degree d each of the three distinct downstairs points accounts for d distinct reflex corners, giving r ≥ 3d ≥ 9. This is an incidence count with disjoint preimages. It would exclude darkness at W≤20, where r≤8.
+
+**Why choose this structure.** D154 gives a degree-three staircase factor for dark R22. Its four regular lifts over the three clean off-source sites exhaust the ramification budget 2d−2=4: each costs at least one unit over a downstairs pole. Thus there is no remaining ramification to create a 3π point over a pole of local degree three. All nine upstairs reflexes descend from 3π points, three lifts apiece, giving exactly three downstairs. The length-two bottom, right and top arm controls still have nine reflexes but lose the physical corner-only parity class and are lit for the tested lattice pairs. The review establishes X for the R22 base; those controls do not establish necessity or identify an independent dark construction. [D154 review](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d154-review-r22arm/review.md)
+
+**First test if selected.** Use d152’s normalized 20-wall three-chamber family X=Y=3k+1, k≥6, where all four parity fibers contain regular points. Assume a dark interior lattice pair. Try to derive a nontrivial invariant partition of the sheets over a regular basepoint: continuation around each of the four pillowcase sites must permute its blocks, with at least three sheets per block. Then identify three distinct 3π points on the resulting quotient. Either step must follow from darkness. An invariant partition posited from the room’s appearance would leave the first implication open.
+
+D152 compares different corridor lengths; this test concerns a single marked cover. It needs no chart height, no transfer to a shorter room, and no shear-orbit incidence average. D154 already closes the recognized certificate types below 22. The proposed work is the converse, from a dark pair to the factor.
+
+**Stopping rule.** If Daniel selects it, report by **2026-11-26 20:00 HST** either a symbolic derivation for the named family or the first failed implication. Stop earlier if the partition argument assumes a clean site, a proper factor, or an orbit enumeration. No long proof before selection.
+
+**Two strongest objections.**
+
+1. Darkness excludes legal trajectories between two marks. An invariant partition must survive continuation of every sheet around every branch site. D154 supplies no implication between these statements; a primitive cover has no such partition.
+2. Even a proper clean quotient need not have degree at least three *and* three downstairs 3π points. R22 reaches both thresholds because its ramification budget is saturated. No second dark mechanism in the assigned evidence forces that saturation.

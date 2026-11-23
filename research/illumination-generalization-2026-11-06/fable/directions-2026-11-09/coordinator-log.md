@@ -1695,3 +1695,12 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 10:09 — idle brief
 - Astra was idle, and the counting route is on hold for Daniel. Briefed a 1-page dark-structure route proposal (bbbb/l1-route-dark-structure.md): darkness forces a structure that needs ≥ 9 reflex corners. It starts from d154. No proof before Daniel decides.
+
+## 2026-11-23 10:30 — dark-structure proposal
+- bbbb/l1-route-dark-structure.md proposes that a dark pair forces Q → B to factor through N with degree ≥ 3 and three 3π points, so r ≥ 3d ≥ 9. It's the first proposal with a sharp 8-versus-9 mechanism, and it starts from d154's R22 factor. The open part is the converse, darkness ⇒ invariant block partition.
+- Recommended it to Daniel. Astra started the first test provisionally (d152 family X = Y = 3k+1, k ≥ 6); output goes to bbbb/l1-dark-structure-test.md.
+- Sync pushed 711a8e3e7.
+
+## 2026-11-23 10:40 — dark-structure test; route approval
+- bbbb/l1-dark-structure-test.md stopped early. Sheet count N = 29+6k, and block size d ≤ 8 gives d ∈ {5,7}. Monodromy is primitive for k = 35j without any darkness hypothesis. No property of darkness forces a block. Launched Opus review d199-review-darkstructure and claimed it on the board.
+- Daniel asked why routes needed his approval. They don't: the stopping rule only required reporting the route. Route choices now proceed without approval. Astra is briefed on the primitive subfamily k = 35j (prove all pairs lit); output goes to bbbb/l1-primitive-family-lit.md, stopping 2026-11-26 20:00.
