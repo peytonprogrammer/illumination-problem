@@ -1692,3 +1692,6 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 10:07 — sharpness check
 - bbbb/l1-route-next-sharpness.md: Astra found no mechanism separating 8 reflex corners from 9. The corner budget enters only as the number of blocker terms, not their sizes. Added as objection 3 in l1-route-next.md. Astra has been idle since 09:50, waiting on Daniel's route decision.
+
+## 2026-11-23 10:09 — idle brief
+- Astra was idle, and the counting route is on hold for Daniel. Briefed a 1-page dark-structure route proposal (bbbb/l1-route-dark-structure.md): darkness forces a structure that needs ≥ 9 reflex corners. It starts from d154. No proof before Daniel decides.
