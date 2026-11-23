@@ -1,0 +1,19 @@
+Advances: L1 — Proper subset actions force a corner-only site, excluding dark rooms in this branch at W ≤ 20 at every area.
+
+# L1: exclusion of the proper subset-action branch
+
+**Claim for review.** Suppose the sheet action of the pillowcase double is permutation-isomorphic to a subgroup of the action of Sₘ on *all* k-subsets of an m-letter set, 2≤k≤m−2. In a strictly simple orthogonal lattice room with at least one reflex corner, some physical parity site is corner-only. Consequently this whole branch has no dark interior pair at W≤20, at any area, by the reviewed corner-only theorem. The proof needs no primitivity, pair-specific certificate, size search, or claim that formal sheet permutations preserve visibility.
+
+At a site x write g for its local permutation on sheets. Its possible cycle lengths are 1, 2 and 3. They correspond respectively to convex corners, regular points on the double and reflex corners. Choose x with a reflex corner. If x also has a regular point, g has order six and has no six-cycle. This is impossible in the stated subset action:
+
+1. The action is faithful: for any two distinct letters there is a k-subset containing one and excluding the other; equivalently the intersection of all k-subsets containing a specified letter is that singleton. The inducing letter permutation therefore has order six.
+2. If it has a six-cycle, select a nonempty proper consecutive interval of that cycle, of size j between max(1,k−(m−6)) and min(5,k), and fill the subset from outside the cycle. This range is nonempty. Under rotation a proper consecutive interval has period six, so the k-subset has period six.
+3. Otherwise it has a disjoint three-cycle and two-cycle. Take exactly one letter of the two-cycle, one or two letters of the three-cycle, and any required remaining letters from outside both. This realizes every size from 2 to m−2. The two intersections have periods two and three, so the k-subset again has period six.
+
+Thus **every reflex-bearing site in this action is corner-only**. Apply the all-area corner-only closure for W≤20. Its geometric budget is n=fₓ+3zₓ≤(r+4)+3r≤36; the reviewed closure also settles the cases between 21 and 36. The implication n≤20 for a dark pair in this branch is vacuous because the closure excludes such a pair entirely. This uses the specialized corner-only result in addition to L2. [Corner-only closure](../twenty/README.md)
+
+**What this removes.** In d81 Proposition P the exceptional primitive k=2 subset-action calculation permits the ambient degrees 21 and 28 by numerical counting alone. Neither can contribute a BBBB counterexample in that action. This does not exclude other primitive actions of those degrees. D81 already identifies the incompatibility of a two-cycle and a three-cycle on letters in its k=2 calculation. The addition here is the corner-only consequence for L1 and the proof for every proper subset size. I have not counted realizable rooms or claimed these actions occur. [D81 Proposition P](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d81-lower-threshold/README.md)
+
+**Limit.** The argument concerns the given action on sheets, not abstract containment in a symmetric group. In the natural action (k=1) a permutation can carry a transposition and a disjoint three-cycle without any six-cycle. In particular the large primitive Aₙ/Sₙ branch survives, as do imprimitive cases not admitting the displayed representation. There is no global N₀ here. The next structural question is what the four site permutations jointly force in the natural action; no one-site cycle argument of the above form can eliminate it.
+
+**What is the smallest W ≤ 20 room this result doesn't cover?** No ledger word moves. A smallest OPEN word is LLLRLLLRLR (ten walls), realized by (2,0),(4,0),(4,1),(3,1),(3,4),(0,4),(0,3),(1,3),(1,2),(2,2).

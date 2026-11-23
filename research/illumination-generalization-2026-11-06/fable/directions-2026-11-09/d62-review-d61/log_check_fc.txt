@@ -1,0 +1,98 @@
+R22 origin (-1, 0) n = 15 factors [1, 5]
+R22 states 5000 {'path_pole': 15000}
+  blocks= 1 truth=False FC=False : 13379
+  blocks= 1 truth=True  FC=True  : 1621
+  DISAGREEMENTS 0 []
+R22 origin (0, 0) n = 15 factors [1, 5]
+R22 states 5000 {'path_reg': 90000, 'path_pole': 225000}
+  blocks= 1 truth=False FC=False : 205394
+  blocks= 1 truth=True  FC=True  : 19606
+  blocks= 5 truth=False FC=False : 70394
+  blocks= 5 truth=True  FC=True  : 19606
+  DISAGREEMENTS 0 []
+R22 origin (2, 1) n = 15 factors [1, 5]
+R22 states 5000 {'path_pole': 15000}
+  blocks= 1 truth=False FC=False : 13413
+  blocks= 1 truth=True  FC=True  : 1587
+  DISAGREEMENTS 0 []
+CPU 7.4 s
+P6 origin (0, 0) n = 20 factors [1, 5]
+P6 states 2000 {'path_pole': 6000}
+  blocks= 1 truth=False FC=False : 5509
+  blocks= 1 truth=True  FC=True  : 491
+  DISAGREEMENTS 0 []
+P6 origin (1, 0) n = 20 factors [1, 5]
+P6 states 2000 {'path_reg': 72000, 'path_pole': 168000}
+  blocks= 1 truth=False FC=False : 155985
+  blocks= 1 truth=True  FC=True  : 12015
+  blocks= 5 truth=False FC=False : 59985
+  blocks= 5 truth=True  FC=True  : 12015
+  DISAGREEMENTS 0 []
+P6 origin (2, 3) n = 20 factors [1, 5]
+P6 states 2000 {}
+  DISAGREEMENTS 0 []
+P6 origin (3, -3) n = 20 factors [1, 5]
+P6 states 2000 {'path_pole': 24000}
+  blocks= 1 truth=False FC=False : 15793
+  blocks= 1 truth=True  FC=True  : 2207
+  blocks= 5 truth=False FC=False : 4908
+  blocks= 5 truth=True  FC=True  : 1092
+  DISAGREEMENTS 0 []
+CPU 7.3 s
+cross12 origin (0, 2) n = 12 factors [1, 3, 6, 6, 6]
+cross12 states 48 {'path_reg': 672, 'cycle': 192, 'mu_nontrivial': 192, 'path_pole': 2592}
+  blocks= 1 truth=False FC=False : 1584
+  blocks= 1 truth=True  FC=True  : 576
+  blocks= 3 truth=False FC=False : 240
+  blocks= 3 truth=True  FC=True  : 192
+  blocks= 6 truth=False FC=False : 480
+  blocks= 6 truth=True  FC=True  : 384
+  DISAGREEMENTS 0 []
+cross12 origin (1, 2) n = 12 factors [1, 3, 6, 6, 6]
+cross12 states 6 {'path_reg': 204, 'cycle': 12, 'mu_nontrivial': 12, 'path_pole': 108}
+  blocks= 1 truth=False FC=False : 72
+  blocks= 1 truth=True  FC=True  : 36
+  blocks= 3 truth=False FC=False : 72
+  blocks= 3 truth=True  FC=True  : 36
+  blocks= 6 truth=False FC=False : 72
+  blocks= 6 truth=True  FC=True  : 36
+  DISAGREEMENTS 0 []
+cross12 origin (2, 1) n = 12 factors [1, 3, 6, 6, 6]
+cross12 states 48 {'path_reg': 1632, 'cycle': 96, 'mu_nontrivial': 96, 'path_pole': 864}
+  blocks= 1 truth=False FC=False : 576
+  blocks= 1 truth=True  FC=True  : 288
+  blocks= 3 truth=False FC=False : 576
+  blocks= 3 truth=True  FC=True  : 288
+  blocks= 6 truth=False FC=False : 576
+  blocks= 6 truth=True  FC=True  : 288
+  DISAGREEMENTS 0 []
+CPU 0.1 s
+dumb12 origin (0, 1) n = 20 factors [1, 10]
+dumb12 states 1000 {'path_reg': 10730, 'cycle': 1270, 'cycle_2vertex': 670, 'mu_nontrivial': 641, 'path_pole': 108000}
+  blocks= 1 truth=False FC=False : 76774
+  blocks= 1 truth=True  FC=True  : 31226
+  blocks=10 truth=False FC=False : 7184
+  blocks=10 truth=True  FC=True  : 4816
+  DISAGREEMENTS 0 []
+dumb12 origin (0, 2) n = 20 factors [1, 10]
+dumb12 states 1000 {'path_reg': 10730, 'cycle': 1270, 'cycle_2vertex': 670, 'mu_nontrivial': 641, 'path_pole': 108000}
+  blocks= 1 truth=False FC=False : 76774
+  blocks= 1 truth=True  FC=True  : 31226
+  blocks=10 truth=False FC=False : 7184
+  blocks=10 truth=True  FC=True  : 4816
+  DISAGREEMENTS 0 []
+dumb12 origin (1, 0) n = 20 factors [1, 10]
+dumb12 states 1000 {'path_reg': 8313, 'cycle': 687, 'cycle_2vertex': 589, 'mu_nontrivial': 323, 'path_pole': 45000}
+  blocks= 1 truth=False FC=False : 33094
+  blocks= 1 truth=True  FC=True  : 11906
+  blocks=10 truth=False FC=False : 6744
+  blocks=10 truth=True  FC=True  : 2256
+  DISAGREEMENTS 0 []
+dumb12 origin (1, 1) n = 20 factors [1, 10]
+dumb12 states 1000 {'path_reg': 8313, 'cycle': 687, 'cycle_2vertex': 589, 'mu_nontrivial': 323, 'path_pole': 45000}
+  blocks= 1 truth=False FC=False : 33094
+  blocks= 1 truth=True  FC=True  : 11906
+  blocks=10 truth=False FC=False : 6744
+  blocks=10 truth=True  FC=True  : 2256
+  DISAGREEMENTS 0 []
+CPU 10.4 s

@@ -1,0 +1,204 @@
+polyominoes (all, strictly simple kept): {1: (1, 1), 2: (2, 2), 3: (6, 6), 4: (19, 19), 5: (63, 63), 6: (216, 216), 7: (760, 756)}
+200 rooms 3 s {'inst': 303, 'dp_pairs': 397, 'dp_lit_T': 385, 'dp_lit_R': 385, 'checks': 42470, 'mismatch': 0, 'skipped': 67, 't_states': 14179, 'r_states': 86700, 'slide_only': 0, 'iota_bad': 0, 'py_room': 198, 'room_pairs': 352, 'room_pairs_lit_T': 340, 'room_pairs_lit_C': 340, 'rooms': 200, 'max_r_states': 1728}
+400 rooms 25 s {'inst': 694, 'dp_pairs': 1056, 'dp_lit_T': 1044, 'dp_lit_R': 1044, 'checks': 227350, 'mismatch': 0, 'skipped': 8165, 't_states': 78505, 'r_states': 827256, 'slide_only': 0, 'iota_bad': 0, 'py_room': 398, 'room_pairs': 924, 'room_pairs_lit_T': 912, 'room_pairs_lit_C': 912, 'rooms': 400, 'max_r_states': 46656}
+600 rooms 52 s {'inst': 1079, 'dp_pairs': 1743, 'dp_lit_T': 1731, 'dp_lit_R': 1731, 'checks': 523366, 'mismatch': 0, 'skipped': 32843, 't_states': 185403, 'r_states': 1716120, 'slide_only': 0, 'iota_bad': 0, 'py_room': 598, 'room_pairs': 1516, 'room_pairs_lit_T': 1504, 'room_pairs_lit_C': 1504, 'rooms': 600, 'max_r_states': 46656}
+800 rooms 83 s {'inst': 1403, 'dp_pairs': 2331, 'dp_lit_T': 2319, 'dp_lit_R': 2319, 'checks': 835984, 'mismatch': 0, 'skipped': 63233, 't_states': 299739, 'r_states': 2726712, 'slide_only': 0, 'iota_bad': 0, 'py_room': 798, 'room_pairs': 2016, 'room_pairs_lit_T': 2004, 'room_pairs_lit_C': 2004, 'rooms': 800, 'max_r_states': 46656}
+1000 rooms 110 s {'inst': 1709, 'dp_pairs': 2899, 'dp_lit_T': 2887, 'dp_lit_R': 2887, 'checks': 1124455, 'mismatch': 0, 'skipped': 89018, 't_states': 404491, 'r_states': 3585732, 'slide_only': 0, 'iota_bad': 0, 'py_room': 998, 'room_pairs': 2510, 'room_pairs_lit_T': 2498, 'room_pairs_lit_C': 2498, 'rooms': 1000, 'max_r_states': 46656}
+{
+ "nmax": 7,
+ "nmin": 1,
+ "mode": "fixed",
+ "pycap": 1000000,
+ "checkcap": null,
+ "eps": [
+  1,
+  -1
+ ],
+ "max_norm": 400,
+ "seconds": 125.0,
+ "polyominoes": {
+  "1": {
+   "all": 1,
+   "strictly_simple": 1
+  },
+  "2": {
+   "all": 2,
+   "strictly_simple": 2
+  },
+  "3": {
+   "all": 6,
+   "strictly_simple": 6
+  },
+  "4": {
+   "all": 19,
+   "strictly_simple": 19
+  },
+  "5": {
+   "all": 63,
+   "strictly_simple": 63
+  },
+  "6": {
+   "all": 216,
+   "strictly_simple": 216
+  },
+  "7": {
+   "all": 760,
+   "strictly_simple": 756
+  }
+ },
+ "totals": {
+  "inst": 1815,
+  "dp_pairs": 3119,
+  "dp_lit_T": 3107,
+  "dp_lit_R": 3107,
+  "checks": 1249845,
+  "mismatch": 0,
+  "skipped": 104628,
+  "t_states": 451491,
+  "r_states": 4092876,
+  "slide_only": 0,
+  "iota_bad": 0,
+  "py_room": 1061,
+  "room_pairs": 2722,
+  "room_pairs_lit_T": 2710,
+  "room_pairs_lit_C": 2710,
+  "rooms": 1063,
+  "max_r_states": 46656
+ },
+ "by_area": {
+  "1": {
+   "inst": 0,
+   "dp_pairs": 0,
+   "dp_lit_T": 0,
+   "dp_lit_R": 0,
+   "checks": 0,
+   "mismatch": 0,
+   "skipped": 0,
+   "t_states": 0,
+   "r_states": 0,
+   "slide_only": 0,
+   "iota_bad": 0,
+   "py_room": 0,
+   "room_pairs": 0,
+   "room_pairs_lit_T": 0,
+   "room_pairs_lit_C": 0,
+   "rooms": 1
+  },
+  "2": {
+   "inst": 0,
+   "dp_pairs": 0,
+   "dp_lit_T": 0,
+   "dp_lit_R": 0,
+   "checks": 0,
+   "mismatch": 0,
+   "skipped": 0,
+   "t_states": 0,
+   "r_states": 6,
+   "slide_only": 0,
+   "iota_bad": 0,
+   "py_room": 2,
+   "room_pairs": 0,
+   "room_pairs_lit_T": 0,
+   "room_pairs_lit_C": 0,
+   "rooms": 2
+  },
+  "3": {
+   "inst": 0,
+   "dp_pairs": 0,
+   "dp_lit_T": 0,
+   "dp_lit_R": 0,
+   "checks": 0,
+   "mismatch": 0,
+   "skipped": 0,
+   "t_states": 0,
+   "r_states": 72,
+   "slide_only": 0,
+   "iota_bad": 0,
+   "py_room": 6,
+   "room_pairs": 0,
+   "room_pairs_lit_T": 0,
+   "room_pairs_lit_C": 0,
+   "rooms": 6
+  },
+  "4": {
+   "inst": 15,
+   "dp_pairs": 15,
+   "dp_lit_T": 15,
+   "dp_lit_R": 15,
+   "checks": 177,
+   "mismatch": 0,
+   "skipped": 0,
+   "t_states": 59,
+   "r_states": 486,
+   "slide_only": 0,
+   "iota_bad": 0,
+   "py_room": 19,
+   "room_pairs": 14,
+   "room_pairs_lit_T": 14,
+   "room_pairs_lit_C": 14,
+   "rooms": 19
+  },
+  "5": {
+   "inst": 96,
+   "dp_pairs": 96,
+   "dp_lit_T": 84,
+   "dp_lit_R": 84,
+   "checks": 4488,
+   "mismatch": 0,
+   "skipped": 0,
+   "t_states": 1496,
+   "r_states": 5808,
+   "slide_only": 0,
+   "iota_bad": 0,
+   "py_room": 62,
+   "room_pairs": 88,
+   "room_pairs_lit_T": 76,
+   "room_pairs_lit_C": 76,
+   "rooms": 63
+  },
+  "6": {
+   "inst": 340,
+   "dp_pairs": 492,
+   "dp_lit_T": 492,
+   "dp_lit_R": 492,
+   "checks": 73560,
+   "mismatch": 0,
+   "skipped": 144,
+   "t_states": 24568,
+   "r_states": 151920,
+   "slide_only": 0,
+   "iota_bad": 0,
+   "py_room": 216,
+   "room_pairs": 436,
+   "room_pairs_lit_T": 436,
+   "room_pairs_lit_C": 436,
+   "rooms": 216
+  },
+  "7": {
+   "inst": 1364,
+   "dp_pairs": 2516,
+   "dp_lit_T": 2516,
+   "dp_lit_R": 2516,
+   "checks": 1171620,
+   "mismatch": 0,
+   "skipped": 104484,
+   "t_states": 425368,
+   "r_states": 3934584,
+   "slide_only": 0,
+   "iota_bad": 0,
+   "py_room": 756,
+   "room_pairs": 2184,
+   "room_pairs_lit_T": 2184,
+   "room_pairs_lit_C": 2184,
+   "rooms": 756
+  }
+ },
+ "rooms_with_interior_pair": 0,
+ "interior_pairs": 0,
+ "interior_verdicts": {},
+ "interior_lift_pattern": {},
+ "dp_disagreements": 0,
+ "room_disagreements": 0,
+ "d8c_disagreements": 0,
+ "replay_failures": 0
+}

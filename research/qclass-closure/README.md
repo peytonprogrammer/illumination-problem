@@ -1,0 +1,30 @@
+# A sharp 22-wall minimum under one parity condition
+
+**Updated result, November 19.** The [all-area proof for arbitrary real endpoints](twenty/README.md) establishes the sharp 22-wall minimum throughout the corner-only parity class. The earlier calculation below remains part of its evidence.
+
+Consider a strictly simple orthogonal polygon with integer vertices on a specified square grid. Suppose that for at least one of the four coordinate parity classes every grid point of that class in the closed room is a polygon corner. Equivalently, that class contains neither an interior grid point nor a grid point in the relative interior of a wall. Dark pairs here mean distinct interior grid points with no corner-avoiding specular path between them.
+
+**Computer-assisted theorem.** The minimum wall count for a room satisfying these hypotheses and possessing a dark pair is 22. The statement allows the two marks to have different parities. It imposes no bound on room area or on the length of a legal path.
+
+## Why a finite computation suffices
+
+An orthogonal Jordan polygon with r inward corners has r+4 outward corners and 2r+4 walls. Every room below 22 walls therefore has r≤8. Every unit square of the room has exactly one vertex of the specified parity. Count incidences of unit squares with those vertices. Each outward corner of that class contributes 1 and each inward corner contributes 3. There are no other contributing vertices. The area is therefore at most (r+4)+3r≤36. This is the D68 counting argument. Its role is to prove that the census exhausts the class.
+
+For the upper bound use the project's existing 15-cell, 22-wall room. In the manuscript coordinates, the odd-odd class has six outward corners, three inward corners, and no other points of that class in the room. The paper proves (0,0) and (2,2) are dark. See [the manuscript](../illumination-publication/repository/preprints/twenty-two-wall/manuscript.pdf). The negative control here uses translated nonnegative coordinates. The failed bounded shot search on that control is a check on the program; the upper bound uses the paper's proof.
+
+## Exhaustion and path verification
+
+1. Anchor the leftmost cell of the bottom row. Try all four alignments of the specified parity. The 2-by-2 blocks centered at the corresponding vertices partition the infinite cell grid. Every occupied block consists of one or three squares. Starting at the anchor, query edge-neighbor cells of the connected set in deterministic order. Either a queried cell is absent or its entire block is one of the allowed masks containing it. Every qualifying connected room follows a branch. Newly placed occupied block cells are edge-connected. Prune only impossible vertex stars, inevitable excess corner counts, or area greater than 36. At completion exclude pinches and holes (outward minus inward must be four), and keep shapes with ≥2 interior grid points. Use square symmetries and translation to identify congruent rooms. Source: enumerate.cpp.
+2. An independently implemented census adds individual cells, never whole blocks, and checks topology at completion by Euler characteristic. Its counts agree for every area 1–36 and every alignment after expanding isometric copies of the first list, 144 comparisons. A third ordinary polyomino enumeration through area 15 independently agrees at each area. See compare.log, ind-*.tsv and brute15.log. These are independent implementations checked in this project, not external review.
+3. The census has **780,565** eligible shapes, **261,564** above area 20. The first path search found witnesses for all but 4,655 pairs. Running the longer direction list on the affected 4,502 rooms found witnesses for every remaining pair. Every witness was replayed by the existing independent exact planar tracer, including corner rejection. The first checker uses an unfolding. The replay works directly in the physical room. The source patch broadens the older shooter's pairing loop to all interior grid points; its legacy block and parity statistics are incidental.
+4. Reading the compressed certificates independently, audit.py reconstructs all interior grid points from each cell list and compares the unordered pairs with the exact list of claimed witnesses, including the retry. There are **3,933,192 pairs**: 907,567 same-parity and 3,025,625 different-parity, all lit. The released witness data records room cells, both endpoints, a signed primitive launch direction, and the number of lattice steps. The 4,655 first-pass misses have positive records in witnesses-retry.txt.gz.
+
+## What this removes from the full problem
+
+A strictly simple orthogonal lattice room below 22 walls with a dark pair of interior lattice points must have a regular grid point (an interior point or smooth wall point) in **every** parity class. This is a restriction on any counterexample. It does not exclude such a room.
+
+As a separate check, covers_input.py exports every saved D64 covering room with ≥2 interior grid points. All 43,524 lattice pairs in those 3,889 rooms have exact witnesses (witnesses-covers.txt.gz). Together with D64's completeness argument, reviewed in D67, this removes the proper intermediate-factor branch for different-parity integer pairs as well. These counts overlap the main census and must not be added. In the project's canonical-factor formulation the remaining normalized lattice rooms for lattice marks must have all four factors equal to the base pillowcase. Arbitrary nonlattice endpoints and general real side lengths remain outside the computation.
+
+## Reproduction
+
+Run `./reproduce.sh /path/to/new/output` with a C and C++17 compiler, patch, gzip, and Python 3. The two upstream C sources and independent small-size enumerator are in the adjacent research tree. The replay writes the exact counts and complete compressed witness files in the specified new directory. raw-sha256.txt gives SHA-256 digests of the uncompressed room list, first pass, second pass and separate covering-room run. The saved counts and certificates are local research artifacts.

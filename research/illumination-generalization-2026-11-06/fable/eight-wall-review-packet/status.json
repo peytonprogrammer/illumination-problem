@@ -1,0 +1,39 @@
+{
+  "assignment": "eight-wall external-review packet (Fable)",
+  "phase_file": ".context/codex-proof-verification/specialist-ideas/geometric-reduction-goals/staircase10-and-eight-wall-packet-phase.md",
+  "goal_file": ".context/codex-proof-verification/specialist-ideas/geometric-reduction-goals/staircase10-fable-goal.txt",
+  "goal_kind": "file-backed durable assignment; this Claude session has no native get_goal/update_goal tool, so no native goal ID or accounting readback exists for Fable",
+  "started": "2026-11-08T06:54:59Z",
+  "status": "COMPLETE_PACKET_NO_MATERIAL_GAP_FOUND",
+  "owned_dir": ".context/illumination-generalization-2026-11-06/fable/eight-wall-review-packet/",
+  "superseded_assignment": "general covering/spiral structural route (fable/general-geometry-0*.md, fable-frontier.md); history preserved; reviewer F11-F16 remain UNRESOLVED and are not used by this packet",
+  "deliverables": {
+    "theorem-and-proof.md": "done (about 9,000 words; Sections 0-8; all six normal forms; every lemma restated and proved)",
+    "figures/": "done (make_figures.py, 7 SVG files, paths.json with 7 exactly verified example paths)",
+    "reproduce.md": "done (reproduce.sh runs 12 prescribed checks from a scratch copy in about 2 s; figure and manifest commands)",
+    "dependency-manifest.json": "done (make_manifest.py; 34 sources, 13 acceptance records, 0 mismatched pins)",
+    "coverage.md": "done (shape/placement/guard ledger, 4 soft points, review limits)",
+    "cover-note.md": "done (8 review checkpoints in priority order)"
+  },
+  "limits": "No external sending, publication, git mutation, new workers, engines, census, or clock resets. Hand audit plus prescribed checks only.",
+  "completed": "2026-11-08T07:14:09Z",
+  "audit_result": "Hand re-derivation of every inequality in the chain found no material gap. Soft points are listed in coverage.md (Thm 6.8 Step 4 newest; Lemma 2.2 accepted inside wide-middle; U iteration count unbounded; path convention allows revisiting S).",
+  "checks_run": "12 prescribed scripts via reproduce.sh (all exit 0); figures/make_figures.py (7 paths, 1,261 exact checks); make_manifest.py (0 mismatched pins)",
+  "clocks": "No discovery performed; no new clocks; no engines, workers, census, fitting, git mutation, or external sending.",
+  "unrelated_provenance": "Reviewer findings F11-F16 on fable/general-geometry-0*.md remain unresolved and unused.",
+  "next": "External mathematical review remains outstanding; packet corrected and independently AI-hand-reviewed. Nothing sent.",
+  "coordinator_review": {
+    "reviewed_utc": "2026-11-08T07:36:49.619605+00:00",
+    "kind": "Independent AI HAND reconstruction and prescribed exact controls; no external referee or proof assistant",
+    "decision": "No fatal gap found after explicit corrections to derivative packet",
+    "report": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/final-review/eight-wall-review.md",
+    "receipt": ".context/illumination-generalization-2026-11-06/coordination/general-proof-priority/final-review/receipt.json",
+    "manuscript_corrections": 5,
+    "reproduction_corrections": 2,
+    "checks": "12 existing prescribed checks PASS; injected failure propagated exit19",
+    "frozen_source_edits": false,
+    "mathematical_judgment": "The corrected eight-wall theorem is proved by the constructive chain at independent AI hand-review level.",
+    "referee_addendum": "Explicit U winding-index iteration bound, exact reflection-count formula and room-dependent upper bound; U notch-floor positivity proved from strict simplicity.",
+    "u_bound_prescribed_controls": "Same six frozen U controls agree with the new analytic bounds; no ray/search rerun."
+  }
+}

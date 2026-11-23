@@ -1,0 +1,54 @@
+| k | kind | variants | W <= 21 | min W | pairs tested | unlit pairs | max p+q needed |
+|---:|---|---:|---:|---:|---:|---:|---:|
+| 1 | slit | 1 | 1 | 19 | 1 | 1 | - |
+| 1 | thick | 3 | 3 | 18 | 3 | 0 | 10 |
+| 2 | other-top+1 | 18 | 17 | 18 | 3600 | 0 | 24 |
+| 2 | other-top-1 | 18 | 18 | 17 | 4555 | 0 | 11 |
+| 2 | slit | 1 | 1 | 19 | 300 | 1 | - |
+| 2 | thick | 9 | 8 | 18 | 2326 | 0 | 19 |
+| 3 | other-top+1 | 36 | 30 | 18 | 66487 | 0 | 19 |
+| 3 | other-top-1 | 41 | 40 | 17 | 76184 | 0 | 14 |
+| 3 | slit | 1 | 1 | 19 | 2415 | 1 | - |
+| 3 | thick | 17 | 15 | 18 | 35360 | 0 | 29 |
+| 4 | other-top+1 | 50 | 41 | 18 | 376181 | 0 | 28 |
+| 4 | other-top-1 | 72 | 70 | 17 | 498398 | 0 | 22 |
+| 4 | slit | 1 | 1 | 19 | 9316 | 1 | - |
+| 4 | thick | 27 | 24 | 18 | 216194 | 0 | 36 |
+| 5 | other-top+1 | 66 | 54 | 18 | 1385551 | 0 | 19 |
+| 5 | other-top-1 | 111 | 108 | 17 | 2057159 | 0 | 17 |
+| 5 | slit | 1 | 1 | 19 | 25425 | 1 | - |
+| 5 | thick | 39 | 35 | 18 | 850033 | 0 | 35 |
+| 6 | other-top+1 | 84 | 69 | 18 | 3969160 | 0 | 35 |
+| 6 | other-top-1 | 158 | 154 | 17 | 6439997 | 0 | 28 |
+| 6 | slit | 1 | 1 | 19 | 56616 | 1 | - |
+| 6 | thick | 53 | 48 | 18 | 2565676 | 0 | 65 |
+| 7 | other-top+1 | 104 | 86 | 18 | 9620995 | 0 | 19 |
+| 7 | other-top-1 | 213 | 208 | 17 | 16752718 | 0 | 18 |
+| 7 | slit | 1 | 1 | 19 | 110215 | 1 | - |
+| 7 | thick | 69 | 63 | 18 | 6487054 | 0 | 37 |
+| 8 | other-top+1 | 126 | 105 | 18 | 20687365 | 0 | 36 |
+| 8 | other-top-1 | 276 | 270 | 17 | 38153712 | 0 | 26 |
+| 8 | slit | 1 | 1 | 19 | 195000 | 1 | - |
+| 8 | thick | 87 | 80 | 18 | 14440828 | 0 | 46 |
+| 9 | slit | 1 | 1 | 19 | 321201 | 1 | - |
+| 9 | thick | 107 | 99 | 18 | 29200047 | 0 | 41 |
+| 10 | slit | 1 | 1 | 19 | 500500 | 1 | - |
+| 10 | thick | 129 | 120 | 18 | 54763866 | 0 | 72 |
+| 11 | slit | 1 | 1 | 19 | 746031 | 1 | - |
+| 11 | thick | 153 | 143 | 18 | 96673324 | 0 | 41 |
+| 12 | slit | 1 | 1 | 19 | 1072380 | 1 | - |
+| 12 | thick | 179 | 168 | 18 | 162363182 | 0 | 79 |
+
+thick: best witness reflections by k (min / median / max), and share hitting the end face
+1 3 refl 4 4 6 len/k 7.62 7.62 7.62 end-face 3 any obstacle face 3
+2 9 refl 4 4 6 len/k 7.62 7.62 9.85 end-face 5 any obstacle face 9
+3 17 refl 4 6 7 len/k 7.62 8.25 9.55 end-face 11 any obstacle face 17
+4 27 refl 4 4 7 len/k 7.62 8.06 9.85 end-face 12 any obstacle face 27
+5 39 refl 4 4 7 len/k 7.62 8.24 10.03 end-face 14 any obstacle face 39
+6 53 refl 4 6 7 len/k 7.62 8.25 9.85 end-face 28 any obstacle face 53
+7 69 refl 4 4 10 len/k 7.62 8.19 13.04 end-face 30 any obstacle face 69
+8 87 refl 4 7 10 len/k 7.62 8.25 14.21 end-face 54 any obstacle face 87
+9 107 refl 4 6 7 len/k 7.62 8.25 9.95 end-face 53 any obstacle face 107
+10 129 refl 4 4 10 len/k 7.62 8.24 13.7 end-face 56 any obstacle face 129
+11 153 refl 4 6 10 len/k 7.62 8.25 13.04 end-face 86 any obstacle face 153
+12 179 refl 4 7 14 len/k 7.62 8.25 21.62 end-face 125 any obstacle face 179

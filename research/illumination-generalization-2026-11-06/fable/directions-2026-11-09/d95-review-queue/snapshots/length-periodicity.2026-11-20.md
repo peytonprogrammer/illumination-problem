@@ -1,0 +1,93 @@
+# Changing the length of a separating corridor
+
+**Verdict.** The proposed bounded-order shear already fails in the fixed 12-wall room DBas for one fixed pair of lattice marks. This leaves room-level periodicity open. There is an explicit period-one result for the whole interior **lattice** problem when a unit-width corridor joins two fixed rectangles, and for all **real** pairs in opposite rectangular chambers at any fixed positive integral door width.
+
+## What would give a finite reduction
+
+Fix the two chambers, the positions of their doors and their common width w. Insert a horizontal rectangle of positive integer length L between the doors, translating the right chamber. Require a separating rectangle with walls along its long sides and a strictly simple result throughout the lengths compared. Let D(L) mean that some two distinct **real interior points of the resulting room** cannot be joined by a corner-avoiding billiard path. The points may vary with L and may lie in the inserted rectangle. Write D_lat for the interior lattice version. If normalization is imposed, either work at all integral lengths before normalizing or specify which lengths are to be compared.
+
+Eventual periodicity means D(L+P)=D(L) for every L≥K. Backward implication for **all** admissible positive L is a stronger request. On the tail the implication alone, with uniform K and P, suffices to reduce a dark example by shortening. Slice-wise eventual periodicity, with K depending on the frozen lengths, does not suffice. For instance the abstract predicate X=Y on two positive integers is eventually false on every coordinate slice with period one. Shortening either coordinate of (M,M) by one loses the predicate for arbitrarily large M. This is a logical example, not a billiard counterexample.
+
+## Exact failure of the proposed partial shear
+
+For a recorded traversal with nonvertical primitive direction (p,q), inserting Δ units adds signed transverse phase ±Δq/|p| on the doubled height circle of length 2w. Replaying the traversal with the same exit position **and velocity** requires and suffices that Δq/|p| belongs to 2wℤ. Here the crossing is inside the open door, so the signed phase is unambiguous. For integral w and q nonzero the least positive insertion period is
+
+    T(p,q) = 2w|p| / gcd(|q|,2w|p|).
+
+For q=0 it is one. This is exact for preserving the crossing data. A different exit phase can still lead to the same target by another itinerary.
+
+The orders are unbounded even without changing the room, the marks, or the door width. In [DBas](band-reachability.md) take S=(1,3), T=(11,3), w=1. The two-reflection path develops to (14,−4) on the translation unfolding in its initial chart. The horizontal rim-fixing shear of coefficient 520 fixes all lattice lifts. Equivalently one can use its lift to the translation unfolding and take a fixed positive power if necessary to fix the chosen signed lifts. Apply the negative powers, choosing the sign giving increasing first coordinate. With the half-translation double's sign ambiguity removed by choosing the initial chart, the primitive directions are (7+1040j,−2) for positive j (or a fixed infinite arithmetic subsequence for the marked lift). Each image is legal and joins the same physical marks. Each must cross the separating unit doorway. The least insertion preserving its signed crossing is **7+1040j**. No integer depending even on this entire fixed room preserves all these traversals. No discovery search or assumption about typical directions enters this argument.
+
+The quantifiers matter. To propagate lighting one only needs *one* suitable witness per pair, and may change it with L. The example rules out bounded order of the partial shear on all legal lattice traversals. It supplies no change of truth value of D or D_lat. Conversely, replay of one good witness cannot transport a dark pair from a longer room into a shorter one.
+
+## A quantitative period-one tail
+
+Let the end chambers be axis-aligned lattice rectangles of horizontal depths d₁,d₂ and heights h₁,h₂. Both vertical portal intervals have integral endpoints and width w≥1. Put d=max(d₁,d₂), h=max(h₁,h₂), and set
+
+    η = w/(8d),       X = (2h+w)/η + 2d,
+    N = (⌈X/d₁⌉ + ⌈X/d₂⌉ + 4)(⌈2ηX⌉ + 2),
+    K = ⌈4w(N+1)/η⌉.
+
+For **every** integer L≥K, every pair of interior real marks in opposite chambers is lit. This threshold uses only the rectangular chamber dimensions and the door width. No compactness constant or census is needed.
+
+**Proof.** Start each mark toward its sealed portal wall and upward, tracing the target leg backward. Use slope magnitude s in [η,2η]. At successive visits to the portal wall, the unfolded height increases by 2dᵢs≤w/2. The first visit is at horizontal travel at most dᵢ. Above its unfolded height there is a full open copy of the door whose lower end is at most 2hᵢ farther up, by the doubled vertical period. A visit strictly inside that copy occurs within a further vertical rise of 2hᵢ+w. Thus a door is reached within horizontal travel X, unless the ray first hits a corner. This bound applies to each slope after removal of the exceptional slopes below.
+
+On each leg, potential vertical wall visits out to X occur at fixed horizontal travels x=x₀+kdᵢ>0. There are at most ⌈X/dᵢ⌉+2 such visits. At a visit, a vertex hit or a change at a door endpoint requires the unfolded height y₀+sx to be integral, using the room's integral coordinates. For that visit at most ⌈2ηX⌉+2 slopes in our interval can do this. Removing those slopes for both legs costs at most N points. One complementary interval has length at least η/(N+1). Take a closed interval of half that length in its interior. The first-door identities and both signed reflection sequences are constant there. Each signed crossing is strictly inside its opening.
+
+By the [one-corridor phase formula](README.md), the matching phase has derivative L+a+b, where a,b are the absolute horizontal travels of the two chamber legs. The phase range on the chosen closed interval has length at least Lη/[2(N+1)]≥2w. It contains a multiple of 2w, which glues the legs with both position and velocity matched. This proves the result uniformly in the two real starting points.
+
+For w=1, the corridor and its two open mouths contain no interior lattice sites. Two marks in a single rectangular chamber see each other directly. Hence **D_lat(L) is false for all L≥K**, with P=1, even when all lattice parities are included. For real points the cross-chamber theorem leaves chamber-to-corridor and chamber-to-mouth pairs. Corridor-to-corridor pairs have a direct segment within the strip for interior strip points. For nonrectangular chambers the [reviewed fixed-chamber theorem](README.md) still gives a uniform cross-chamber tail, but a pair in the same chamber can require reflections and a path in its sealed version can hit the removed mirror at the mouth.
+
+**Controls.** For DB55 the earlier all-lattice bound K=450 is sharper, and saved witnesses also work at L=3 modulo 6. For DBas the unit-door corollary applies to all interior lattice pairs. The earlier n>89 turn bound concerned one placement, while the archived one-cylinder argument covers all real pairs at the original length. R22's modulus ten is a contour coordinate of its fixed staircase cover. The saved R22-L1-005 edit changes the reflex count and lights the formerly dark marked pair. Neither gives a recurrence under repeatedly translating a chamber. [DB55](README.md) · [DBas](convex-cylinder.md) · [R22 contour](rim-quotient.md) · [Edit control](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d85-shadow-kill/README.md)
+
+## DB55: where five enters and how the modulus generalizes
+
+Two fives enter different calculations. In a 5×5 chamber V acts on a doubled height circle of circumference ten. At horizontal offset d its step is ±2d, giving orbit order 10/gcd(10,2d)=5 for d=1,2,3,4. This lets a common power place the two endpoints on compatible sheets. The **dependence on corridor length** instead comes from the crossing lattice. The two horizontal widths are 5 and 10+L, the endpoint distances to the seam are both one, and the crossing spacing is gcd(5,10+L)=gcd(5,L). A five-unit open overlap contains a crossing for every coset if 5∤L. At 5|L it can miss when a lattice point falls exactly at an endpoint. D108 found eight misses among 64 fixed mark/sheet configurations at heights 1 and 3 in each of L=5 and 15. These are not eight dark pairs. All same-class lattice pairs at 5∤L are covered by the repaired proof; the independent all-lattice tail L≥450 includes multiples of five. Moreover at 5|L the raw room has horizontal wall gcd five, so it lies outside the coprime family's normalization in these coordinates. [Repaired proof](twist-overlap.md) · [Exact controls](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d108-review-twist/review.md) · [All-length tail](README.md)
+
+**General formula.** Fix a two-band window with positive integral seam distances a,b, fixed first width U, and second width C+L. Its crossing spacing is
+
+    2 gcd(bU,a(C+L))/(a+b)
+      = [2g/(a+b)] gcd(M,C+L),     g=gcd(bU,a),  M=bU/g.
+
+The spacing has least positive length period M: it attains its maximum precisely on L≡−C modulo M. A strict-width test can have a smaller period, and an equality case still depends on the marked phases. For a fixed collection of such windows with fixed overlap widths, the least common multiple of their M values is a period of their strict-width tests.
+
+**No bound in terms of the reflex count for this source of periods.** In the same rectangular dumbbell layout, let the chamber widths be U and U+1 (U≥4), both heights five, with the same centered unit doorway. The room has four reflex corners at every length. It is normalized since consecutive chamber widths occur as horizontal wall lengths and the vertical lengths include two and five. In particular its area exceeds 8r and 4r+4 and it is BBBB. For a mark at height one in the left chamber and another at height three in the right, consider the seam y=2. The open overlap has length U, and the spacing is gcd(U,2U+1+L)=gcd(U,1+L). The strict inequality holds except exactly on L≡−1 modulo U. Marks of matching x parity can always be chosen in the two chamber interiors. This **strict certificate itself** has least period U: any period must preserve its single excluded residue. Thus even its Boolean outcome has unbounded period at r=4 within one supporting-line order type. This is a symbolic calculation, with no room or direction enumeration. Other windows and paths may light every length. The formula gives a period for a specified geometry but supplies no P(r) for darkness.
+
+## DBas at area 89: a change of witness
+
+For the marked placement in [band-reachability.md](band-reachability.md), **every integral corridor length L≥2 is lit**. This concerns one physical pair at each length. Write n=44+L, c=2 for even L and c=1 for odd L. The marks are (1,3) and (5+L+c,3). Set b=8−c, the horizontal travel from the right door to the target via the right cap.
+
+For the original rightward start and odd L, the admissible phase interval is ((L+11)/4, 2(L+11)/7). It must contain an even integer. At n=89, L=45 this is exactly (14,16). Either endpoint would put a door hit at a corner. For every odd L>45 the interval has length greater than two and therefore contains an even integer. Some shorter lengths also succeed; 89 is the last failure of this branch.
+
+The leftward starts saved by d109 give a second formula. Launch left and down, reflect from x=0, and enter the left door after horizontal travel 6. Trace backward from the target down and toward the right cap. For slope magnitude m the two door heights above the floor are 2−6m and 2−bm. Both chamber legs avoid all horizontal walls and both doors are open when
+
+    1/6 < m < 2/b.
+
+The left cap is reached after travel 1 and the right cap strictly before travel b, so both cap hits are smooth. Entry is downward, exit upward. Matching the signed phases on the corridor circle gives (L+6+b)m ∈ 2ℤ. Thus this branch needs one even integer in ((L+6+b)/6, 2(L+6+b)/b).
+
+* For even L, b=6. The interval length is (L+12)/6>2 at every positive even length.
+* For odd L, b=7. The interval length is 5(L+13)/42>2 at L≥5. At L=3 the even integer 4 lies strictly between 16/6 and 32/7.
+
+This proves the stated tail with P=1 without enumerating lengths. At n=67,73,89, choosing phase integers 8,8,10 respectively gives exactly d109's leftward displacements (−36,−8), (−42,−8), (−58,−10). Thus a second itinerary covers the marked pair even where the first misses, and continues to work above 89. No conclusion about L=1 or every other pair at short lengths is needed for this tail. The all-lattice-pairs tail for the room uses the separate rectangular-chamber theorem above. [D109 exact review and saved paths](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d109-check-dbas/review.md)
+
+## What can be transferred for a whole room on the lattice
+
+For **arbitrary fixed lattice end chambers and fixed integral width**, there is a finite list of possible lattice dark pairs, in end-relative coordinates, valid simultaneously at all sufficiently large lengths. It includes same-end pairs, so this is compatible with their possible darkness. Here is the reduction.
+
+The first-leg compactness argument in the [corridor theorem](README.md) gives a positive lower bound δ on an available closed slope interval for each start in either chamber; alternatively take the minimum over its finitely many interior lattice starts. The same argument works for a lattice mark on the open mouth by launching inward and using its first positive-time return. Opposite-end pairs are lit for all sufficiently large L by the two-leg theorem, including these regular mouth starts with the same inward convention. A chamber mark lights **every** corridor target at depth z≥2w/δ measured from that chamber: the one-leg signed phase has slope z+a and sweeps the full target period. This path terminates before the opposite chamber. Points in the open strip or on its open mouths see each other directly within the closed rectangle (points on one open mouth are joined along that interior cross-section). Thus choose an integer collar depth K₁>2w/δ and take L large enough for the opposite-end theorem and for the two collars to be disjoint. The only pairs left have both marks in one chamber including its mouth, or one there and one in its adjacent collar of depth less than K₁. There are finitely many lattice placements of either kind, independent of L. For rectangular ends one may use δ=η/[2(N+1)] above for interior starts; for a mouth start directed inward the first positive-time portal-wall return has travel 2dᵢ, still within the allowance X.
+
+**Arithmetic-progression consequence.** If the room is fully lattice-lit at one such length L*, it is fully lattice-lit at every L*+kP*, k≥0, for some finite P*. Place a vertical insertion cut between the two collars. Take one legal path for each of the finitely many residual placements at L*. A path crossing this cut has rational slope since its unfolded endpoints are integral. Insert a multiple of its signed-phase period in the new strip at the cut, using width w; each crossing resumes at the same height and velocity. A cut can be chosen at a noninteger abscissa avoiding the finitely many wall-reflection locations and vertical legs of these paths. Paths missing the cut persist by translation on their side. The least common multiple over the chosen witnesses therefore propagates every residual pair together, and the long-corridor bounds handle every other pair at the new lengths, including new lattice marks. The same reasoning works for either parity subset if one takes an even P* to preserve physical parity labels. In the absence of a fully lit base length this is a conditional statement.
+
+This has a sharper limitation than merely having infinitely many possible slopes: after localization the unknown is whether the good progressions for a **finite list of placements** cover a tail with a bounded modulus. Even a union of whole good progressions need not be eventually periodic (the nonsquarefree positive integers are a familiar example). No analogous finite list of real collar marks follows from localization.
+
+## Several lengths and the size of a conditional reduction
+
+For a fixed legal lattice itinerary crossing several disjoint corridors only in full traversals, with marks in the retained pieces, one can insert independent multiples of its signed-phase period in each corridor. Use the component of the velocity transverse to that corridor in the formula for T, and the longitudinal component in the denominator of the phase shift. Translating the retained pieces preserves the intervening legs whenever the resulting assembly exists with the same attachments. This gives a sufficient product lattice for replay. Its index already has no uniform bound for one traversal. The [two perpendicular corridors theorem](perpendicular-bridges.md) instead has a period-one tail for opposite end marks under its fixed-chamber hypotheses.
+
+A finite reduction of **all rooms** additionally needs a shortening move for every unbounded coordinate gap. A horizontal gap between successive vertical supporting lines may cut several disjoint passages simultaneously. A turn sequence alone records neither the ordering of parallel supporting lines nor which coordinates coincide. Even for one passage the proof above gives no K depending only on r or on that ordered type. The exact remaining issue for this approach is to transfer **existence of some dark pair** under a geometrically valid shortening, uniformly in the other gaps and allowing the marks to lie in the material being removed.
+
+For scale, suppose such moves guaranteed a dark representative with every consecutive supporting-line gap at most B. At W=2m, there are m vertical and m horizontal edges. Assign each vertical edge its x-rank and each horizontal edge its y-rank, in cyclic order starting with a vertical edge. There are at most m^(2m) rank lists, including ties and invalid lists. Each valid list has at most 2m−2 positive gaps, each with at most B choices. After translation the data determine all vertices. Thus a crude upper bound before filtering is
+
+    Σ_{m=2}^{10} m^(2m) B^(2m−2).
+
+This is a conditional room count. Certifying all real pairs in each representative would be an additional requirement. No uniform B, numerical census cost, or finite reduction of the 20-wall problem follows from the current hypotheses.

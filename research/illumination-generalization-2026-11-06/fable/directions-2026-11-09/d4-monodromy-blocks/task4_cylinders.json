@@ -1,0 +1,66 @@
+{
+ "states": 10368,
+ "horizontal_cylinders_zeros_only": {
+  "2": 2160,
+  "6": 4968,
+  "7": 1728,
+  "9": 576,
+  "10": 432,
+  "12": 504
+ },
+ "horizontal_cylinders_with_S_T_marked": {
+  "2": 2160,
+  "6": 4104,
+  "8": 2592,
+  "10": 432,
+  "11": 192,
+  "12": 600,
+  "14": 288
+ },
+ "one_cylinder_states": 0,
+ "one_cylinder_state_indices": [],
+ "counts": {
+  "square0_source_leaf_regular": 1728,
+  "states_with_some_source_on_regular_leaf": 1728,
+  "regular_source_leaves_containing_target": 0,
+  "of_these_states_T_also_on_regular_leaf": 0,
+  "of_these_states_S_and_T_cylinders_disjoint": 1728
+ },
+ "number_of_source_lifts_on_regular_leaves_per_state": {
+  "4": 1728
+ },
+ "regular_source_leaf_length_distribution": {
+  "4": 1920,
+  "12": 864
+ },
+ "source_cylinder_profile_height_circumference_level": {
+  "(2, 4, 1)": 1920,
+  "(2, 12, 1)": 864
+ },
+ "target_lifts_in_source_cylinder_interior_bottom_top": {
+  "(0, 0, 0)": 2784
+ },
+ "target_lift_locations_all_states": {
+  "T on interior regular line": 6912,
+  "T on bottom (zero) line": 34560
+ },
+ "source_cylinder_line_labels_bottom_to_top": {
+  "Z:3/3:1 | 1:2/3:2 | Z:3/3:1": 480,
+  "Z:3/0:1 | 1:2/3:2 | Z:3/0:1": 864,
+  "Z:3/3:1 | 0:3/1:1 | Z:3/3:1": 192,
+  "Z:9/0:2/3:1 | 0:6/1:4/3:2 | Z:9/0:2/3:1": 432,
+  "Z:9/3:3 | 0:6/1:4/3:2 | Z:9/3:3": 432,
+  "Z:3/3:1 | 0:2/1:2 | Z:3/3:1": 96,
+  "Z:3/0:1 | 0:3/1:1 | Z:3/3:1": 96,
+  "Z:3/3:1 | 0:3/1:1 | Z:3/0:1": 96,
+  "Z:3/0:1 | 0:2/1:2 | Z:3/3:1": 48,
+  "Z:3/3:1 | 0:2/1:2 | Z:3/0:1": 48
+ },
+ "label_key": "Z = true-zero vertex, 0 = other regular, 1 = source lift, 2 = target lift, 3 = convex-corner lift",
+ "cylinder_count_in_states_with_S_on_regular_leaf": {
+  "6": 432,
+  "7": 864,
+  "9": 288,
+  "12": 144
+ }
+}

@@ -1,0 +1,28 @@
+Advances: L1 — A sealed-chamber witness with any finite number of mouth reflections survives in every sufficiently long corridor when those reflections can use one remote wall depth with strict clearance.
+
+# Replacing repeated mouth reflections
+
+Fix two distinct real interior marks in A and a legal sealed-room shot between them. Suppose it reflects m≥1 times on the open mouth. Put its heights there at y₁,…,yₘ measured above the corridor floor, and s₀=|dy/dx|>0. Let X be its total absolute horizontal travel. Exclude corner contacts, grazing and mouth endpoints. Corridor width is w. The remote chamber B can have steps, bays and other openings elsewhere.
+
+**Return hypothesis.** For each yᵢ there is an open interval Jᵢ within (0,w) where the horizontal run from B's mouth ends at a solid vertical wall at distance d. The depth d is common to the visits. The closed interval [yᵢ−ds₀,yᵢ+ds₀] must lie inside Jᵢ. The intervals can differ and the actual wall segments need not coincide.
+
+**Conclusion.** For every sufficiently large real L the pair is lit in the assembled room. The witness visits B once for each of the m old mouth contacts. This also works for a strip target in a fixed near collar if the reference shot already ends there, uses the stated mirror at its intermediate contacts and otherwise stays in the surviving geometry. In the latter formulation the mirror is available only at the specified contacts of the reference itinerary, with an ordinary transmitted crossing into the collar allowed as the last entry.
+
+**Proof.** In a development with both coordinates increasing, append horizontal travel 2(L+d) at every former mouth reflection. The excursion has the same horizontal velocity reversal as that reflection. Use the doubled vertical phase of period 2w on the corridor. Choose k nearest to (L+d)s₀/(2w), and prescribe total slope
+
+    s = [X s₀ + 4mkw] / [X + 2m(L+d)].
+
+Put e=(L+d)s−2kw. Then
+
+    |s−s₀| ≤ 2mw/[X+2m(L+d)],
+    2m e = −X(s−s₀).
+
+Both errors tend to zero for every sequence of lengths. At the remote mouth on the outward leg, the phase differs from the launch phase by Ls ≡ e−ds modulo 2w. Hence the remote entrance height tends to yᵢ−σᵢds₀, where σᵢ is the original physical vertical sign. The remote bounce height tends to yᵢ and the exit height to yᵢ+σᵢds₀. Strict clearance keeps the entire remote excursion in the chosen horizontal run. It has one vertical-wall reflection and no horizontal-wall reflection. Back at A, the phase increment is 2(L+d)s ≡ 2e modulo 2w. For large L it stays on the original signed sheet, so the replacement preserves the physical velocity signs of the sealed reflection.
+
+For precision, after j completed excursions and sealed horizontal travel x, the error in developed height relative to the reference itinerary, after removing the complete corridor periods, is x(s−s₀)+2je. Here x≤X and j≤m. Reflection in a horizontal line changes the physical sign of this error but preserves its magnitude. The bound tends uniformly to zero. Induction through the finite list of original contacts therefore preserves every strict gate and keeps the new entries away from the mouth endpoints. Alternating horizontal-wall contacts within the open corridor are smooth. At the final mark the error is exactly zero by construction. This proves exact arrival, even when several removed reflections must be repaired by one slope. The case s₀=0 has a separate direct interpretation when all contacts lie on a clear horizontal run: a horizontal excursion returns along that run and can be truncated on encountering the other mark.
+
+**Explicit threshold (d181).** Let μ_A be a positive vertical gate clearance for the developed reference word in A (split at vertical grid or wall lines as necessary). Let μ_B be the minimum distance from [yᵢ−ds₀,yᵢ+ds₀] to the boundary of Jᵢ. Put N=X+2m(L+d). It suffices that s>0, N>2mXw/μ_A and N>(2mX+X+2md)w/μ_B. Indeed x(s−s₀)+2je=(x−jX/m)(s−s₀), with |x−jX/m|≤X. The outward arrival and return in B cost in addition at most |e|+d|s−s₀|. This gives L>1087 in the referee’s DB55 example with 1/20 clearance. [D181 threshold](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d181-review-collar/review.md)
+
+**Scope.** The rounding chooses a nearby slope separately for each length. Keeping the original slope would generally cover only selected lengths. The proof gives a marked-pair tail; strict clearance and the reference itinerary control its threshold. It supplies neither a uniform clearance for real pairs nor existence of a suitable sealed witness. Even with a rectangular B the needed inequality at a narrow mouth can fail for a steep witness. If successive remote depths differ, tuning one phase leaves an additional shift 2(dᵢ−d)s at visit i. The argument only controls that shift automatically at common depth. The [open-collar theorem](l1-open-collar-gluing.md) concerns paths avoiding the removed mirror. The present lemma covers paths using it repeatedly. D124 already covers opposite-chamber pairs and sufficiently deep corridor targets.
+
+**First open case.** Even one necessary mouth reflection is unresolved if all available sealed shots either lose clearance in B or have no controlled alternative return. To prove a diameter-only whole-room tail, one must cover those pairs and make the coverage uniform up to walls and lips. The eight-reflex budget bounds the number of depth intervals in B, but it bounds neither the ratio ds₀/w nor the margin of the marked contacts. The existing normalized multi-arm obstruction to a global area dichotomy still applies. [Decomposition](whole-room-decomposition.md)

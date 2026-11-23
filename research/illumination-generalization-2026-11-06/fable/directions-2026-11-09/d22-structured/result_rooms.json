@@ -1,0 +1,308 @@
+{
+ "two tiles (mirror in y=0)": {
+  "cells": [
+   [
+    2,
+    0
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    2
+   ]
+  ],
+  "walls": 8,
+  "degree": 2,
+  "over_base_pole": {
+   "(0, 2)": [
+    {
+     "point": [
+      2,
+      0
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      2,
+      4
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ],
+   "(1, 2)": [
+    {
+     "point": [
+      3,
+      0
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      3,
+      4
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ],
+   "(0, 0)": [
+    {
+     "point": [
+      2,
+      2
+     ],
+     "cycle_length": 2,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ],
+   "(2, 1)": [
+    {
+     "point": [
+      4,
+      1
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      4,
+      3
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ],
+   "(2, 0)": [
+    {
+     "point": [
+      4,
+      2
+     ],
+     "cycle_length": 2,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ]
+  }
+ },
+ "four tiles (mirrors in x=0, y=0)": {
+  "cells": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    2
+   ]
+  ],
+  "walls": 12,
+  "degree": 4,
+  "over_base_pole": {
+   "(2, 1)": [
+    {
+     "point": [
+      0,
+      1
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      0,
+      3
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      4,
+      1
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      4,
+      3
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ],
+   "(2, 0)": [
+    {
+     "point": [
+      0,
+      2
+     ],
+     "cycle_length": 2,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      4,
+      2
+     ],
+     "cycle_length": 2,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ],
+   "(1, 2)": [
+    {
+     "point": [
+      1,
+      0
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      1,
+      4
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      3,
+      0
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      3,
+      4
+     ],
+     "cycle_length": 1,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ],
+   "(0, 2)": [
+    {
+     "point": [
+      2,
+      0
+     ],
+     "cycle_length": 2,
+     "fixed_by_reflection": true,
+     "interior": false
+    },
+    {
+     "point": [
+      2,
+      4
+     ],
+     "cycle_length": 2,
+     "fixed_by_reflection": true,
+     "interior": false
+    }
+   ],
+   "(0, 0)": [
+    {
+     "point": [
+      2,
+      2
+     ],
+     "cycle_length": 2,
+     "fixed_by_reflection": false,
+     "interior": true
+    },
+    {
+     "point": [
+      2,
+      2
+     ],
+     "cycle_length": 2,
+     "fixed_by_reflection": false,
+     "interior": true
+    }
+   ]
+  }
+ }
+}

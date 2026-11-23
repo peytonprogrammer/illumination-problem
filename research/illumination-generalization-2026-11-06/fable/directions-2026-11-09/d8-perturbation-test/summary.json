@@ -1,0 +1,181 @@
+{
+ "rooms": 1027,
+ "rooms_by_base_level": {
+  "R22 L1": 29,
+  "R22 L0": 1,
+  "R22 L2": 445,
+  "R34 L1": 31,
+  "R34 L2": 520,
+  "R34 L0": 1
+ },
+ "orbit_status": {
+  "R22 EARLY": 474,
+  "R22 DONE": 1,
+  "R34 EARLY": 550,
+  "R34 CAP": 2
+ },
+ "pairs_total": 1464,
+ "confusion_all_pairs": {
+  "not separated | LIT/witness": 1461,
+  "separated | DARK/orbit": 1,
+  "separated | DARK/separation": 2
+ },
+ "confusion_marks_pair": {
+  "not separated | LIT/witness": 1024,
+  "separated | DARK/orbit": 1,
+  "separated | DARK/separation": 2
+ },
+ "confusion_A_class_of_marks": {
+  "not separated | LIT/witness": 1310,
+  "separated | DARK/orbit": 1,
+  "separated | DARK/separation": 2
+ },
+ "confusion_by_base_level": {
+  "R22 L0": {
+   "separated | DARK/orbit": 1
+  },
+  "R22 L1": {
+   "not separated | LIT/witness": 35
+  },
+  "R22 L2": {
+   "not separated | LIT/witness": 650
+  },
+  "R34 L0": {
+   "separated | DARK/separation": 1
+  },
+  "R34 L1": {
+   "not separated | LIT/witness": 36
+  },
+  "R34 L2": {
+   "not separated | LIT/witness": 740,
+   "separated | DARK/separation": 1
+  }
+ },
+ "counterexamples_dark_not_separated": [],
+ "contradictions_lit_separated": [],
+ "undecided": [],
+ "uncertified_lit": [],
+ "dark_marked_rooms": 3,
+ "dark_marked_rooms_by_base_level": {
+  "R22 L0": 1,
+  "R34 L0": 1,
+  "R34 L2": 1
+ },
+ "smallest_W_dark_perturbed": 34,
+ "dark_perturbed_W_le_21": [],
+ "dark_perturbed_by_k_degree": {
+  "R34 k=0 deg=19 prim=True": 1
+ },
+ "dark_perturbed_rooms": [
+  {
+   "room": "R34-L2-0346",
+   "level": 2,
+   "moves": "add(6, -3) + remove(7, -3)",
+   "W": 34,
+   "r": 15,
+   "area": 19,
+   "k": 0,
+   "nmin_degree": 19,
+   "primitive": true,
+   "group_order": 60822550204416000,
+   "method": "separation",
+   "transparent": []
+  }
+ ],
+ "marks_verdict_by_delta_k": {
+  "R22 L1 dk=+0": {
+   "LIT": 4
+  },
+  "R22 L1 dk=+1": {
+   "LIT": 10
+  },
+  "R22 L1 dk=+2": {
+   "LIT": 12
+  },
+  "R22 L1 dk=+3": {
+   "LIT": 2
+  },
+  "R22 L1 dk=-1": {
+   "LIT": 1
+  },
+  "R22 L2 dk=+0": {
+   "LIT": 25
+  },
+  "R22 L2 dk=+1": {
+   "LIT": 64
+  },
+  "R22 L2 dk=+2": {
+   "LIT": 97
+  },
+  "R22 L2 dk=+3": {
+   "LIT": 148
+  },
+  "R22 L2 dk=+4": {
+   "LIT": 67
+  },
+  "R22 L2 dk=+5": {
+   "LIT": 33
+  },
+  "R22 L2 dk=+6": {
+   "LIT": 3
+  },
+  "R22 L2 dk=+7": {
+   "LIT": 2
+  },
+  "R22 L2 dk=-1": {
+   "LIT": 6
+  },
+  "R34 L1 dk=+1": {
+   "LIT": 10
+  },
+  "R34 L1 dk=+2": {
+   "LIT": 14
+  },
+  "R34 L1 dk=+3": {
+   "LIT": 6
+  },
+  "R34 L1 dk=+5": {
+   "LIT": 1
+  },
+  "R34 L2 dk=+0": {
+   "DARK": 1
+  },
+  "R34 L2 dk=+1": {
+   "LIT": 9
+  },
+  "R34 L2 dk=+2": {
+   "LIT": 85
+  },
+  "R34 L2 dk=+3": {
+   "LIT": 152
+  },
+  "R34 L2 dk=+4": {
+   "LIT": 139
+  },
+  "R34 L2 dk=+5": {
+   "LIT": 88
+  },
+  "R34 L2 dk=+6": {
+   "LIT": 27
+  },
+  "R34 L2 dk=+7": {
+   "LIT": 11
+  },
+  "R34 L2 dk=+8": {
+   "LIT": 7
+  },
+  "R34 L2 dk=+9": {
+   "LIT": 1
+  }
+ },
+ "nmin_degree_vs_primitive": {
+  "prim=True deg=1": 1021,
+  "prim=False deg=5": 1,
+  "prim=False deg=1": 3,
+  "prim=True deg=19": 2
+ },
+ "W_range": [
+  14,
+  38
+ ]
+}

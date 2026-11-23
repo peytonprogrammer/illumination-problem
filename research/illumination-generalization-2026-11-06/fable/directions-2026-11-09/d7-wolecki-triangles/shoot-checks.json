@@ -1,0 +1,139 @@
+[
+ {
+  "room": "control: 30-60-90 hexagon star (C flat), S to S",
+  "n": 6,
+  "b": 2,
+  "walls": 6,
+  "tiles": 12,
+  "clean": false,
+  "interior_A": 1,
+  "depth": 40,
+  "radius": 14.0,
+  "shots": 60,
+  "outcomes": {
+   "BLOCKED": 12,
+   "LIT": 48
+  },
+  "first_block_class": {
+   "B": 12
+  },
+  "dark_in_range": false,
+  "expected_dark": false,
+  "PASS": true
+ },
+ {
+  "room": "control: 22.5-67.5-90 octagon star (C flat), S to S",
+  "n": 8,
+  "b": 3,
+  "walls": 8,
+  "tiles": 16,
+  "clean": false,
+  "interior_A": 1,
+  "depth": 13,
+  "radius": 12.0,
+  "shots": 178,
+  "outcomes": {
+   "MISS": 126,
+   "LIT": 13,
+   "BLOCKED": 39
+  },
+  "first_block_class": {
+   "B": 39
+  },
+  "dark_in_range": false,
+  "expected_dark": false,
+  "PASS": true
+ },
+ {
+  "room": "control: (1,2,5) two-star room with P made interior (8 tiles)",
+  "n": 8,
+  "b": 2,
+  "walls": 32,
+  "tiles": 36,
+  "clean": false,
+  "interior_A": 2,
+  "depth": 13,
+  "radius": 10.0,
+  "shots": 1128,
+  "outcomes": {
+   "BLOCKED": 384,
+   "MISS": 742,
+   "LIT": 2
+  },
+  "first_block_class": {
+   "B": 154,
+   "C": 230
+  },
+  "dark_in_range": false,
+  "expected_dark": false,
+  "PASS": true
+ },
+ {
+  "room": "(1,2,5) two-star room, 32 walls",
+  "n": 8,
+  "b": 2,
+  "walls": 32,
+  "tiles": 34,
+  "clean": true,
+  "interior_A": 2,
+  "depth": 14,
+  "radius": 10.0,
+  "shots": 1412,
+  "outcomes": {
+   "MISS": 938,
+   "BLOCKED": 474
+  },
+  "first_block_class": {
+   "B": 206,
+   "C": 268
+  },
+  "dark_in_range": true,
+  "expected_dark": true,
+  "PASS": true
+ },
+ {
+  "room": "30-60-90 arc-family room, 27 walls",
+  "n": 6,
+  "b": 2,
+  "walls": 27,
+  "tiles": 42,
+  "clean": true,
+  "interior_A": 2,
+  "depth": 40,
+  "radius": 16.0,
+  "shots": 336,
+  "outcomes": {
+   "BLOCKED": 336
+  },
+  "first_block_class": {
+   "C": 324,
+   "B": 12
+  },
+  "dark_in_range": true,
+  "expected_dark": true,
+  "PASS": true
+ },
+ {
+  "room": "(1,3,6) arc room, 42 walls",
+  "n": 10,
+  "b": 3,
+  "walls": 42,
+  "tiles": 44,
+  "clean": true,
+  "interior_A": 2,
+  "depth": 14,
+  "radius": 10.0,
+  "shots": 1536,
+  "outcomes": {
+   "MISS": 1044,
+   "BLOCKED": 492
+  },
+  "first_block_class": {
+   "B": 282,
+   "C": 210
+  },
+  "dark_in_range": true,
+  "expected_dark": true,
+  "PASS": true
+ }
+]

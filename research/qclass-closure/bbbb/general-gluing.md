@@ -1,0 +1,45 @@
+# Where first-door monotonicity fails
+
+**Verdict.** A single reflex hit can make the signed first-door mismatch jump *upward over a required residue*, even for same-parity lattice marks in a normalized BBBB room with eight reflex corners. The calculation below uses the developed travel, so unfolding the same itinerary does not restore the rectangle argument. Independently, BBBB rooms without a long separating corridor need not have compact normalized gap ratios.
+
+## Mechanism and exact first-hit control
+
+Use the existing [two-bay DBas geometry](convex-cylinder.md). The left chamber is [0,5]×[0,4] with bays over 1≤x≤3 of depths 44 above and 3 below. The right chamber is [9,13]×[−1,5]; the length-four, width-one corridor meets both chambers at 1<y<2. The room is strictly simple. Sealing the doors gives reflex counts 4 and 0; the two attachments add four more. The area is 48+2(44+3)=142. There is a unit horizontal wall and vertical wall lengths two and three, so it is normalized. The [d69 area bound](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d69-bbbb/README.md) puts it in BBBB. Take S=(2,47) and T=(10,3), both even–odd interior lattice marks.
+
+Launch S rightward and down with slope magnitude s, and trace T backward leftward and down. Use the first open door hit in each chamber. Write f for height above the corridor floor, positive when the tracing ray goes up and negative when it goes down. For the backward ray f_B=s−2 near s₀=43/33. The one-traversal condition is F=4s+f_A+f_B ∈ 2ℤ.
+
+At s₀ the source ray reaches the upper bay's lower right lip (3,4) after developed horizontal travel 33 and vertical drop 43. This is a reflex corner, so the critical ray is illegal. For slightly smaller s, the ray reflects at the right bay wall just before leaving the bay, so it enters the main chamber heading left. For slightly larger s it leaves just before that reflection and continues right. The two continuations at the lip have the following one-sided limits.
+
+* **Below s₀.** From the lip go west to x=0, reaching height 4−3s₀=3/33. After the bounce the floor is hit at x=4/s₀−3=3/43, outside the bottom bay. The top is hit at x=8/s₀−3=135/43, outside the upper bay. The first portal encounter occurs at x=5 heading down, at limiting height 12−8s₀=52/33. The total developed horizontal travel from S is 41. On this branch y_A=55−41s.
+* **Above s₀.** From the lip go straight to x=5, arriving downward at limiting height 4−2s₀=46/33. The total developed horizontal travel is 35, and y_A=47−35s.
+
+All listed noncritical contacts have strict clearance, and both limiting door heights are strictly in (1,2), so the one-sided words persist. The earlier bay bounces stay above the chamber and neither leg has used the missing mirror. On both branches f_A=1−y_A. Thus the exact mismatch around the singular slope is
+
+| Branch | F(s) | One-sided limit |
+| --- | --- | --- |
+| s<s₀ | 46s−56 | 130/33 |
+| s>s₀ | 40s−48 | 136/33 |
+
+The required multiple **4=132/33** lies strictly in the jump. The formal roots are 30/23 for the left formula and 13/10 for the right; each lies on the wrong side of s₀. As an exact control the [d109 polygon-edge tracer](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d109-check-dbas/path.py) was run only at the two prescribed slopes s₀±1/10000. It reached the predicted source door heights 521353/330000 and 91769/66000. The mismatches were 649241/165000 and 34033/8250, respectively below and above four. No direction or word search was involved.
+
+This is a discontinuity of the first-hit map itself: the longitudinal travel *drops* from 41 to 35 but the signed exit phase *increases* by 6/33. Both limiting phases lie strictly inside the same downward door sheet, so the jump is not an artifact of cutting the doubled height circle at a lip. Translating the right chamber and replacing L by 4+66k adds 86k at s₀; the jump still skips an even integer at arbitrarily large L/d (d=5). The original L=4 room is fully lit by the earlier one-cylinder theorem. The example excludes the no-upward-jump proof for fixed launches, including the version using actual developed horizontal travel. It does not exclude another launch, a sum of signed branches with cancellation, a min/max over launches, or a universal length theorem. No such all-chamber theorem is proved here.
+
+D113 also gives an actual alternative for these marks: the 31/23 upward source launch reaches the original backward target branch in one traversal. The [signed phases and stretch calculation](degree-gluing.md) identify how it recovers the residue missed by the downward launch.
+
+## The proposed structural dichotomy fails
+
+Consider the named odd crosses P_b=([−b,b]×[−2,2]) ∪ ([−2,2]×[−b,b]), with odd b≥7. Each has r=4, area 16b−16 and wall gcd one on each axis. Each is BBBB by d69. On **both** axes the consecutive supporting-line gaps are b−2,4,b−2. Their ratio (b−2)/4 diverges even after normalizing the two bounding-box sides independently.
+
+There is no separating corridor with **two genuine mouths** of the gluing theorem (both openings proper subintervals of the respective chamber sides, with two reflex lips apiece). For a horizontal corridor its two vertical mouth lines would have to be x=−2 and x=2, the only lines carrying pairs of reflexes. The only candidate long sides would then be y=±2 between those lines, which lie in the interior of the central square. Rotation handles vertical corridors. The four thin parts are capped arms of a common junction. This refutes the genuine-mouth dichotomy for every positive c. [Named geometry](every-direction.md) · [Lighting by a capped-arm construction](cross-placement.md)
+
+Allowing artificial cuts inside a constant run changes the definition but does not rescue the proposed application at c=4. A horizontal strip with continuous physical long sides must lie within one of the three constant-run x ranges: a side changes at x=±2. In an arm its length is at most b−2, while the chamber on the hub side spans at least b+2 horizontally. In the central range its length is at most 4 while a remaining chamber extends horizontally at least b−2. The same holds vertically. Hence even this wider convention gives L/d≤1 for every odd b≥7, with d the larger remaining horizontal (or rotated longitudinal) depth. These estimates concern the geometry; the fact that a different argument lights these crosses cannot imply compactness of the no-corridor class.
+
+## What a compact-part computation would actually certify
+
+There is consequently **no compact second case as stated**, and no whole-core computation size to quote from the dichotomy. A conditional finite calculation for a *specified* thick subdomain can be described exactly:
+
+1. Label the alternating edges in cyclic order at W=2m≤20. Assign weak ranks to the m vertical and m horizontal supporting lines, retain strictly simple realizations and assign both marks to cells of the resulting grid, allowing grid boundaries. Translate and normalize each bounding-box side to one. Independent positive axis scalings commute with the two specular sign changes and take unfolded line segments to line segments.
+2. If there are v,h distinct supporting lines, there are v−2+h−2 free ordered support coordinates plus four marked coordinates, at most **20 real variables**. Impose a supplied lower bound ε on positive gaps; either bound distances of marks to the boundary and to one another as well or supply endpoint-neighborhood certificates. One conservative count of shape and closed endpoint-cell chart labels before filtering is Σ_{m=2}^{10} m^{2m}(m−1)^4, since a rank list determines the vertices and each mark has at most (m−1)² cell choices. Boundary points may appear in more than one closed chart.
+3. For each chart verify that every admissible tuple belongs to at least one legal unfolded word domain, or to a separately proved certificate domain. Word legality is semialgebraic in these variables. Exact emptiness of the complement gives a certificate. With a supplied word bound B there are at most 1+2m Σ_{j=0}^{B−1}(2m−1)^j candidate words through length B (consecutive hits on the same planar wall are unnecessary). A uniform subdivision into q bins per normalized free coordinate would have at most q²⁰ boxes per chart; that is a dimensional estimate, not a sufficient resolution. The rank count alone is already above 6×10²³ before symmetry and feasibility pruning. No ε, adequate B, mesh clearance or CPU budget is established for the proposed residue. [Compact-cover assumptions and endpoint limits](thick-thin.md)
+
+**Next theorem question.** A replacement compactification must at least treat capped arms and junctions alongside two-mouth necks. For gluing, the local issue is whether upward jumps from the two continuations of a reflex encounter cancel in an aggregate over admissible launches **with their actual target phases**. Identifying a jump in one launched ray supplies neither that cancellation nor a dark pair.

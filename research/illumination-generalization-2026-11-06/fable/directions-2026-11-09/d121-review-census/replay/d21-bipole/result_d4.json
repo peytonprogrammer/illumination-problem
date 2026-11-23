@@ -1,0 +1,115 @@
+{
+ "degree": 4,
+ "tcap": 99,
+ "type_multisets": 9,
+ "type_sequences": 180,
+ "covers": 665,
+ "covers_with_bipole_pair": 625,
+ "cover_orbits_B5": 8,
+ "max_cover_orbit": 180,
+ "mass_check": true,
+ "seeds": 1603,
+ "bipole_nodes": 3630,
+ "nodes_lit_by_edge": 1216,
+ "families": 10,
+ "families_with_edge_lit_member": 10,
+ "families_dark_candidates": 0,
+ "family_sizes_minmax": [
+  60,
+  810
+ ],
+ "seconds_enum": 0.0,
+ "seconds_families": 0.0,
+ "dark_candidates": [],
+ "family_witness_pillowcase": {
+  "(2, 2)": {
+   "LIT": 10,
+   "other": 0,
+   "max_states": 1
+  },
+  "(3, 2)": {
+   "LIT": 10,
+   "other": 0,
+   "max_states": 1
+  },
+  "(3, 4)": {
+   "LIT": 10,
+   "other": 0,
+   "max_states": 1
+  }
+ },
+ "lit_families_without_k2_witness": 0,
+ "seconds_witness": 0.0,
+ "stage2_tromino_all_covers_poles_p3_p4": {
+  "covers_done": 665,
+  "nodes": 363,
+  "edge_lit": 304,
+  "pillow_lit": 58,
+  "dark": 1,
+  "cap": 0,
+  "max_states": 18,
+  "complete": true,
+  "dark_list": [
+   [
+    [
+     [
+      1,
+      0,
+      3,
+      2
+     ],
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      3,
+      2,
+      1
+     ],
+     [
+      2,
+      1,
+      0,
+      3
+     ],
+     [
+      3,
+      2,
+      1,
+      0
+     ]
+    ],
+    [
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      0
+     ]
+    ]
+   ]
+  ],
+  "dark_nodes_other_bases": {
+   "(3, 2)": {
+    "tested": 1,
+    "not_lit": 0
+   },
+   "(3, 4)": {
+    "tested": 0,
+    "not_lit": 0
+   },
+   "(5, 2)": {
+    "tested": 0,
+    "not_lit": 0
+   }
+  },
+  "dark_on_all_bases": [],
+  "seconds": 0.0
+ }
+}

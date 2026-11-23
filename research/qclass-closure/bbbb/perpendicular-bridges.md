@@ -1,0 +1,66 @@
+# Illumination through two long perpendicular corridors
+
+**Theorem (proof for review).** Fix three bounded strictly simple orthogonal chambers with positive-width doors. Connect the first to the middle by a horizontal rectangular corridor of length H and width w. Connect the middle to the last by a vertical rectangular corridor of length K and width v. The middle doors are on a vertical and a horizontal wall, respectively. Each door can be sealed to recover its chamber. The only connections between pieces are the stated openings, and the assembled polygon must be strictly simple at the lengths under consideration. For all sufficiently large H and K, **every interior mark in the first chamber lights every interior mark in the last**. A path crosses each corridor once. The threshold depends on the fixed geometry and works at every length ratio, including H=K. The marks may have arbitrary real coordinates.
+
+In particular there is a two-parameter family of normalized 20-wall rooms for which **every pair of interior lattice marks is lit**, for all sufficiently large H and K. The middle chamber forces a turn and can interrupt direct sight between the two openings. The proof uses the actual order of wall crossings. A shorter route hitting a corner elsewhere has no bearing on it.
+
+## Preparing one turn
+
+Write s for the positive absolute slope. Temporarily seal the openings. Choose a common slant for which the flows in the three chambers are minimal and the two chosen end rays have no positive-time hit on a vertex or door endpoint. Such choices exclude at most countably many slopes. The first ray runs forward from S to its first door hit. The last runs backward from T to its first door hit. Both hits are transverse and inside their doors, by density on the unfolding and the open flow box just upstream of a door. [Masur and Tabachnikov, proof of Theorem 1.8](https://math.uchicago.edu/~masur/handbook1.pdf)
+
+In the middle chamber take a complete nonsingular dense trajectory at the same slant, avoiding door endpoints. There are trajectories of this kind since trajectories through the finitely many forbidden points have area zero. Its successive hits on the two doors include a first-door hit immediately followed, among door hits, by a second-door hit: both doors recur infinitely often, and there are finitely many collisions in every compact nonsingular segment. Take that intervening segment, starting just after the first door's sealed-wall reflection and ending just before the second's. In the assembled room it enters the middle chamber at the first opening and leaves at the second. It encounters neither opening in between. The corridor phases will select the required *transverse signs* as well as the crossing positions.
+
+All three finite reflection sequences persist on open sets of slopes and starts about these reference data. Each contact has positive clearance from its wall endpoints and is transverse, so one can continue the collision times and positions successively. In particular the middle itinerary has a neighborhood of its incoming height and slope on which its first exit is still through the second door.
+
+## Signed coordinates and the matching equation
+
+Unfold the reference middle itinerary in coordinates increasing along both components of the forward velocity. Its incoming door is on X=0, its outgoing image door on Y=C. Write U for the developed entrance ordinate and X for the developed exit abscissa. The exact middle condition is
+
+    U + s X = C.
+
+Near the reference itinerary a crossing in the appropriate open portal interval on the specified sheet gives both physical position and physical velocity. The triangle-wave folding of an interval of width w has signed period 2w: outside the two turning points, the phase selects height and transverse sign together. Thus access from the first chamber prescribes
+
+    U = u + (a+H)s                 modulo P=2w.
+
+Here a is total absolute horizontal travel in the fixed first-chamber leg. Unfolding this leg makes the source a fixed point and the door a vertical line; propagation across H adds Hs in the forward transverse coordinate. On the other door, trace back from the last chamber. In the outgoing middle chart the required abscissa is
+
+    X = x − (b+K)/s                modulo Q=2v.
+
+Here b is total absolute vertical travel of the last-chamber leg. Backward travel subtracts transverse displacement in the coordinate aligned with *forward* horizontal velocity. The origins u and x absorb the fixed sheet offsets at the two doors. Reflections can reverse a physical coordinate; using the increasing developed coordinate on each end makes the signs above hold for every itinerary. The two selected middle sheets correspond to particular open subintervals of these signed circles. We must realize both phases there and satisfy the exact middle equation.
+
+## Why arbitrary length ratios work
+
+On any fixed compact interval I inside (0,∞) with positive length, the two phases, reduced modulo P,Q, become jointly uniformly distributed as min(H,K) tends to infinity, for uniform s in I. Here is a direct proof. For an integer character (j,k) other than (0,0), omit the constant phase. The required normalized integral has phase 2π times
+
+    f(s) = j(a+H)s/P − k(b+K)/(Qs).
+
+If k=0 its absolute value is O(1/H). Otherwise f′ is monotone and |f″| is bounded below by a positive constant times |k|(b+K) throughout I. The subinterval where |f′| ≤ √(b+K) has length O((b+K)^(-1/2)). On either remaining interval integration by parts gives the same order, since 1/f′ is monotone and bounded by (b+K)^(-1/2). Constants may depend on the fixed character and I. In particular the estimate survives a stationary point, uniformly in H. The constant character averages to one. Uniform approximation of continuous periodic functions by trigonometric polynomials now gives the assertion, including uniformity in the phase origins. In particular each fixed open phase box is hit on I for all sufficiently large H,K. The reciprocal dependence is essential here: two terms proportional to s could cancel identically in a nonzero character.
+
+**From a near hit to an exact hit.** Fix the reference slope and phase pair from the middle trajectory. Take a compact chart neighborhood with positive margins to its sheet ends, portal endpoints and any change of itinerary. Use an interval strictly inside its slope range. On a smaller interval I about the reference slope and a sufficiently small box about the reference pair, any hit has |U+sX−C|<ε, in the lifts to this chart. We can choose ε arbitrarily small before taking H,K large. Joint distribution supplies a hit at some t in I.
+
+Retain the same representatives (subtract the same integer periods) while changing the slope. The residual G(s)=U(s)+sX(s)−C is exactly affine on these branches, because s cancels the reciprocal in sX(s). At the near hit its derivative is
+
+    G′ = a+H + X(t) + (b+K)/t.
+
+Since X(t) is bounded in the middle chart and t stays in a fixed positive compact interval, this is at least c(H+K) for a constant c>0 once the lengths are large. Set s* = t−G(t)/G′. Its change is at most ε/[c(H+K)]. On the segment to s*, U and X change by at most a constant times ε, by their displayed formulas (the respective derivative bounds are O(H+1) and O(K+1)). Choose ε smaller than the original chart margins divided by these constants. Then the representatives stay in the chart, all three itineraries persist, and G(s*)=0. Folding gives a legal path through the two openings. No wall corner is used, even if the path makes many smooth reflections along a corridor.
+
+**Uniformity in the marks.** For fixed marks the preceding proof suffices. For the simultaneous assertion partition the closed end chambers into finitely many closed rectangles as in the [one-corridor proof](README.md). At an active edge or vertex of a rectangle launch strictly into it, and, for a start on the sealed opening, use the first positive-time return. Excluding countably many slopes still permits those initial signs. The two end-chamber legs up to their first hits persist jointly for starts in a relative neighborhood and slopes in the chosen interval. Their constants a,b,u,x vary continuously and remain bounded there. The middle chart and its margins are fixed. The character bounds above are uniform in these bounded parameters (the origins only supply a constant phase); approximation by a fixed trigonometric polynomial below a nonnegative bump in the chosen box, or uniform approximation with a fixed error below its positive mean, gives one hitting threshold on that neighborhood. The derivative and margin estimates are uniform there too. A finite cover of the compact products of end rectangles finishes the proof. Boundary starts are used only for compactness.
+
+## Application at precisely twenty walls
+
+Take the middle square [0,5]² with centered unit openings on its west and north sides. Put a 5×5 square at the far end of each corridor, also with a centered unit opening. Take positive integral H,K. Each of the four mouths contributes two reflex vertices, so r=8 and W=20. The area is 75+H+K. On each axis wall lengths include 5 and 2, giving gcd one separately. Each lattice parity has interior representatives in the middle square, and the area exceeds the proper-factor bound 8r. Thus these are in the open BBBB room class. This is a symbolic application; no room enumeration is involved.
+
+The width-one corridors and their open mouths contain no interior lattice points. All 48 interior lattice marks therefore lie in the interiors of the three squares. Same-square pairs have a direct segment. Opposite end-square pairs are covered by the theorem. For an adjacent-square pair there is one extra issue: a reflection on the *unused* middle opening would invalidate a one-corridor path. From the middle mark choose a straight segment to an interior point of the desired opening. It stays strictly inside the middle square until arrival, so misses the unused opening. This gives a nonempty **open** interval of absolute slopes (choose a nonaxial ray). In that interval take a generic slope for which the end-square ray hits its own opening cleanly for the first time. The finite legs persist, and the one-corridor phase condition from the linked proof then yields a legal connection for every sufficiently large length of that corridor. There are only finitely many adjacent lattice pairs, so one threshold suffices. This proves illumination of all 1,128 unordered interior lattice pairs, including the 256 opposite-square pairs, whenever both lengths exceed a fixed threshold. For same-parity pairs each legal path supplies a reachable regular midpoint by the [midpoint construction](midpoint-necessity.md).
+
+**An exact check of the two signs and the correction.** In these coordinates, take any positive even H,K. Start at (−H−1,3/2), and end at (15/4,K+6). At slope 1 the forward central phase is U=5/2 and the backward phase is X=11/4, missing the middle equation U+sX=5 by 1/4. On the same signed sheets the representatives are
+
+    U(s) = 3/2 + (H+1)s − H,
+    X(s) = 15/4 − (K+1)/s + K.
+
+Writing L=H+K+9/2, the exact corrected slope is L/(L+1/4). Indeed the residual is (L+1/4)s−L. The forward phase decreases from 5/2 by (H+1)/(4L+1)<1/4, and the backward phase decreases from 11/4 by (K+1)/(4L)<1/4. Both stay strictly in (2,3), with the positive transverse signs. The middle segment runs directly between the two openings; the end-square segments run from and to marks one unit deep without meeting another wall. This explicit rational pair check uses no asymptotics or search and works at every positive even pair of lengths.
+
+There is a further consequence for *opposite-square marks*: only finitely many positive integer length pairs (H,K) can fail to light some such pair, even allowing arbitrary real marks inside the two end squares. Otherwise choose a sequence of failing length pairs escaping every bounded box. The two-corridor theorem rules out a subsequence on which both lengths tend to infinity. Pass to a subsequence on which the shorter integer length and its axis are fixed. Seal the remaining long corridor at both ends; the fixed short corridor and its two adjacent chambers now form a single fixed end chamber. The uniform one-corridor theorem lights all opposite-square marks once the remaining length is large, again a contradiction.
+
+## Scope and review targets
+
+The large-length thresholds are existential. Equal lengths and unboundedly unequal lengths are both included when both tend to infinity. The explicit all-lattice-pair application uses unit widths and the square middle chamber. The general cross-chamber theorem allows other fixed positive widths, real lengths, and any middle chamber satisfying the hypotheses. It leaves arbitrary changing door widths, several simultaneous long corridors in the same orientation, marks inside the corridors, and general 20-wall rooms open. The key checks for independent review are the forward sign convention at both portals and persistence of the signed sheets during the exact root correction. No room, direction, ray or reflection-word discovery search was run.
