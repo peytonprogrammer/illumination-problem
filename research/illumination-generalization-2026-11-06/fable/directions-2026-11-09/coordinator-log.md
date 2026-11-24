@@ -1805,3 +1805,6 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Launched d213-review-marked-selection (Opus, named rooms only, 10 CPU-min); claim added.
 - Briefed Astra: bbbb/l1-selection-obstruction.md. Decide whether single-band selection fails on the √2 staircase; if so, use a multi-band lift lemma via perturbation in ratio coordinates; degenerate ratios next.
 - Estimate 8–10% unchanged pending d213.
+
+## 2026-11-23 17:45
+- Daniel approved the recommendation (17:45): drop the pending area-22 census. Next, a theorem that pins down the base the descent needs; a scoped base computation will go to Daniel for approval with a cost estimate. No search is approved.

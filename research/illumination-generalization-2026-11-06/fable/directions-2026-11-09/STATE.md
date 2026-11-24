@@ -418,3 +418,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 16:55: d212 review of descent skeleton running. Astra on marked band selection (first open L1 step). Estimate 7–9%.
 - 2026-11-23 17:10: d212 CORRECT WITH GAPS (re-run 54 PASS, 0 fail). Orthogonal L1 reduces to marked band selection + census through 121. Astra on marked selection. Estimate 7–9% → 8–10%.
 - 2026-11-23 17:32: d213 review of marked-selection running. Astra on selection obstruction / multi-band lift. Estimate 8–10%.
+- 2026-11-23 17:45: a22 request withdrawn (Daniel agreed). Next compute ask will be a scoped descent base, after d213 and Astra's obstruction note. No search approved.
