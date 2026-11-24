@@ -1,0 +1,70 @@
+
+=== Claim 1: positive lower density of strict-test success
+PASS window width (u-l) >= 2/(bH) on all 4118 (t, order, n) cases, t<=200
+PASS mod-8 class t<=200 = [40, 136, 176]: s=3/4 (n=x/8) and N=y/8 pass the interval test, both orders
+PASS t in [40, 136, 176]: exact replay delta=0 in both stages, both orders, gate passes, exact trace legal
+PASS mod-42 members t=731,1319: s=5/7 and the nearest N pass the interval test; both gains odd
+    t<=1e6: mod-8 class 15625 (expected 15625), mod-42 class 1134 (expected 1134)
+PASS classes disjoint; empirical densities 0.015625 ~ 1/64=0.015625, 0.001134 ~ 1/882=0.001134
+PASS 2/42^2 = 1/882; bound = 1/64 + 1/882 = 473/28224
+
+=== Claim 2: direct-chord simultaneous lift on the staircase
+PASS interfaces 2+3/D*, 2+3(2+x)/D*, 5-3/D*; ends in (1,3),(4,6); middle in (3,4) iff y<2x+2 and x<2y+2 (x,y<40)
+PASS exact trace: direct chord legal iff the two inequalities, 0<=x,y<=25 (mismatches [])
+PASS sqrt2 family: direct chord legal for every t=0..200 by exact trace
+PASS sqrt2 family: both inequalities hold for t<1e5 (proof: t < 2sqrt2 t - 2 + 2 <= 2y+2)
+PASS area-18 template: direct chord (3,4) legal with the same three interfaces
+PASS t=15: displacement (3,40), crossings [Fraction(83, 40), Fraction(131, 40), Fraction(197, 40)], clearance 11/40, area 126, traced legal
+PASS limiting middle abscissa 2+3/(1+sqrt2) = 3.2426
+PASS sqrt2 family t=0..200: S-T open segment is inside the room interior (directly visible pair)
+
+=== Claim 3: convex-cone ratio region for monotone direct chords
+PASS staircase heights grid: cone test == exact trace on 576 rooms (374 inside the cone)
+PASS tiers 4,5,6 with S=(1,1), T=(5,top-1): cone test == exact trace on 150 rooms (150 inside)
+PASS t=15: (x,y)=lambda(15,21) satisfies y<2x+2, x<2y+2 for all sampled lambda in [0,1] (linear => all)
+
+=== Claim 6: two-scale theorem
+    first-stage n with 3+6n in (D/2,D), x=0..11: {0: [0], 1: [0], 2: [], 3: [], 4: [], 5: [], 6: [1], 7: [1], 8: [1], 9: [1], 10: [1], 11: [1]}
+PASS an integer = 3 mod 6 lies in (D/2,D) for every x>=6 (note uses x>=9: correct, not sharp)
+PASS x in {9,10,11,15,20,40,100}, y >= 3D^2-D+1 (4 values): every first-stage n has width>6 and a passing N
+    x=9, y=495: s=9/13, window width 16.93, passing N [55, 56, 57]
+    x=10, y=575: s=9/14, window width 17.85, passing N [61, 62, 63]
+    x=11, y=661: s=3/5, window width 21.67, passing N [65, 66, 67]
+    x=15, y=1065: s=15/19, window width 15.49, passing N [140, 141, 142]
+    x=20, y=1705: s=5/8, window width 21.67, passing N [176, 177, 178, 179]
+    x=40, y=5765: s=27/44, window width 14.41, passing N [589, 590, 591]
+    x=100, y=32345: s=57/104, window width 14.34, passing N [2954, 2955, 2956]
+PASS exact traces (x, y, order, gate+legal): [(9, 495, 'L', True), (9, 495, 'U', True), (10, 575, 'L', True), (10, 575, 'U', True), (20, 1705, 'L', True), (20, 1705, 'U', True)]
+PASS x=9, y=495: direct chord is not legal (y >= 2x+2), so the two-scale lift is needed
+PASS y=floor(x^1.5) at x in 9,16,25,100: outside both the direct cone and the quadratic regime
+    open regime x=9, y=27: smaller-first passing (n: N) {1: [3]}; larger-first passes for 1 of 2 n
+    open regime x=16, y=64: smaller-first passing (n: N) {2: [8]}; larger-first passes for 1 of 5 n
+    open regime x=25, y=125: smaller-first passing (n: N) {}; larger-first passes for 1 of 10 n
+    open regime x=36, y=216: smaller-first passing (n: N) {4: [24], 6: [36]}; larger-first passes for 2 of 19 n
+    open regime x=49, y=343: smaller-first passing (n: N) {4: [29], 8: [55]}; larger-first passes for 0 of 29 n
+    open regime x=100, y=1000: smaller-first passing (n: N) {10: [101], 11: [111]}
+
+=== Claim 7: finite base F, item 2 on the staircase
+PASS staircase template: X u {2,5} = {0..7}, Y u {1,5} = {0..6}; area 18 (census side, not in F)
+PASS t=15 room fails the Y equality (reducible), as expected
+
+=== Claim 8: numerical upper bound
+    exact value = 8.674152e+17; ceil = 867,415,174,096,573,784
+PASS ceil(1/2 sum ...) = 867,415,174,096,573,784
+PASS P(k) = (k-2)(2k-3)+(k-1)(2k-1) matches order-type enumeration of two ordered coordinates, k=2..10
+PASS stub-matching bound (2m)!/(prod d! prod e!) dominates exact 0-1 matrix counts on 6 margin pairs
+
+=== Claim 9: room-first inclusion-exclusion / Burnside count
+    L-shape (0,4,0,2)+(0,2,2,4), nondirect: |G|=2, M=[('x', 1), ('x', 3), ('y', 1), ('y', 3)], qualifying pairs 1, formula 1, orbits 1
+    L-shape (0,4,0,2)+(0,2,2,4), all: |G|=2, M=[('x', 1), ('x', 3), ('y', 1), ('y', 3)], qualifying pairs 1, formula 1, orbits 1
+    symmetric U (0,5,0,2)+(0,2,2,4)+(3,5,2,4), nondirect: |G|=2, M=[('x', 1), ('x', 4), ('y', 1), ('y', 3)], qualifying pairs 2, formula 1, orbits 1
+    symmetric U (0,5,0,2)+(0,2,2,4)+(3,5,2,4), all: |G|=2, M=[('x', 1), ('x', 4), ('y', 1), ('y', 3)], qualifying pairs 2, formula 1, orbits 1
+    plus (1,3,0,4)+(0,4,1,3), nondirect: |G|=8, M=[('x', 2), ('y', 2)], qualifying pairs 0, formula 0, orbits 0
+    plus (1,3,0,4)+(0,4,1,3), all: |G|=8, M=[('x', 2), ('y', 2)], qualifying pairs 8, formula 2, orbits 2
+    plus (2,4,0,6)+(0,6,2,4), nondirect: |G|=8, M=[('x', 1), ('x', 3), ('x', 5), ('y', 1), ('y', 3), ('y', 5)], qualifying pairs 0, formula 0, orbits 0
+    plus (2,4,0,6)+(0,6,2,4), all: |G|=8, M=[('x', 1), ('x', 3), ('x', 5), ('y', 1), ('y', 3), ('y', 5)], qualifying pairs 0, formula 0, orbits 0
+PASS formula equals brute-force orbit count of covering pairs on 4 hand-built rooms, 2 predicates
+PASS L-shape (0,4,0,2)+(0,2,2,4): covering pairs [[(1, 3), (3, 1)]] are among the two diagonals
+PASS symmetric U (0,5,0,2)+(0,2,2,4)+(3,5,2,4): covering pairs [[(1, 1), (4, 3)], [(1, 3), (4, 1)]] are among the two diagonals
+
+TOTAL FAIL 0; cpu 1.9s

@@ -1818,3 +1818,6 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Launched d214-review-simultaneous-lift (Opus, named rooms, 10 CPU-min, no F enumeration); claim added.
 - Briefed Astra: bbbb/l1-ratio-compactness.md. Chart-wise compactness over ratio space using LMW/Wolecki finiteness; faces by induction on codimension; staircase chart as the test case.
 - Note: the tick text's LLLRLLLRLR stopping rule is stale. PROGRAM's current rules are the shrink-descent rule (2026-11-25) and insertion descent (2026-11-26 20:00).
+
+## 2026-11-23 18:05
+- d214 verdict CORRECT WITH GAPS. Re-ran checks.py: 30 PASS, identical. RESULTS §11 updated; claim released; verdict forwarded to Astra. The finite base F is far too large to compute (8.7e17 upper bound); the lift hypothesis is the whole open step. Estimate unchanged at 8–10%.

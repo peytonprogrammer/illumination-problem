@@ -1505,6 +1505,16 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
 - **d213 — marked band selection (L1, orthogonal), CORRECT WITH GAPS.** Selection is proved for several classes: exact replay, U=1 lifts on the same axis, and the determinant test R=U(cB−bA). On the offset √2 staircase it holds for the x≡17, y≡±17 (mod 42) class, an infinite irrational-ratio family. A two-tier example shows that an arbitrary successful first lift can block the next gate test, though not lighting. Ratio condition (3) holds strictly. Staircase checks: the direct chord is legal at t=1..200, and the interval criterion is exact against the gate test. The single-band test passes for only 65/200 values of t. First open case: t=15 (gains 15, 21, area 126), where every slope in that parent family fails the strict gate test, yet the direct chord lights the pair. This is a gap in selection, not a dark pair. [review](../d213-review-marked-selection/review.md)
 
+- **d214 — simultaneous lift, ratio lemmas and finite base F (L1, orthogonal), CORRECT WITH GAPS.** These hold:
+  - the density 1/64+1/882 of strict-test success on the √2 staircase;
+  - the direct-chord condition y<2x+2, x<2y+2;
+  - the convex-cone ratio region;
+  - the two-scale theorem (x ≥ 6 suffices);
+  - the bound of 867,415,174,096,573,784 on F, recomputed exactly;
+  - the room-first count, which matched brute force on 4 hand-built rooms.
+
+  The multi-band and collapsing-band lemmas are correct but give no explicit radius. The staircase pair is directly visible for all t, so F's item 3 discharges it; t=15 was never an L1 obligation. Main gap: the lift hypothesis at reducible areas 22–121 is the entire inductive step and is unproved; F shrinks only the base. First open staircase regime: 2x+2 ≤ y ≤ 3(4+x)²−(4+x), e.g. y=⌊x^1.5⌋. Sampled cases all pass. [review](../d214-review-simultaneous-lift/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at
