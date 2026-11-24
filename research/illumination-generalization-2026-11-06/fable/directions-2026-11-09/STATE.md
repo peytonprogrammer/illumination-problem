@@ -414,3 +414,5 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 16:25 d210 CORRECT WITH GAPS: all-residue re-aim holds; rank 11 lit at every E ≥ 0, rank 18 at E ≥ 151. ESTIMATE 6–8% → 7–9%: first reviewed mechanism turning a finite base check into an all-length tail with no residue restriction; descent now needs general collars + seed-denominator bound (PROGRAM 'Insertion-descent route').
 - 2026-11-23 16:32 Astra l1-general-collar.md (sha 37c15598): collar for arbitrary feet given a regular vertical first entry (K explicit, denominator ≤ 4B_y); rectangular-shoulder oblique extension; Λ-shear conversion (min component M ⇒ axial ≤ B_y^45·M). Review d211 launched. Astra briefed: descent skeleton (bands, slice classification, lemma list, A₁).
 - 2026-11-23 16:50 d211 CORRECT WITH GAPS: arbitrary-foot collar (vertical entry) + shoulder extension + Λ-shear hold. Descent gap (a) narrowed to oblique entry from general upper chambers; gap (b) seed denominator open. Estimate 7–9% unchanged.
+
+- 2026-11-23 16:55: d212 review of descent skeleton running. Astra on marked band selection (first open L1 step). Estimate 7–9%.

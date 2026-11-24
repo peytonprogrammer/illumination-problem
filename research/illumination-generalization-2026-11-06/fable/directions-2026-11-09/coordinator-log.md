@@ -1789,3 +1789,9 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - 16:25 d210 recorded, checks re-run, claim released, forwarded, Slack posted. Estimate 7–9%.
 - 16:32 d211 claimed/launched; Astra on descent skeleton.
 - 16:50 d211 recorded, checks re-run, claim released, forwarded.
+
+## 2026-11-23 16:55
+- Read bbbb/l1-descent-skeleton.md (L1). It claims a parallel retained transfer for k≥1, which extends d210. Marked descent: transfer + marked band selection + census through 121 imply L1. Axis-gcd scaling and a perturbation-neighborhood lemma. Staircase example: coarse estimate fails.
+- Launched d212-review-descent-skeleton (Opus, named rooms only, 10 CPU-min); board claim added.
+- Briefed Astra: marked band selection lemma (routes a–c), bbbb/l1-marked-selection.md.
+- Estimate 7–9% unchanged pending d212.
