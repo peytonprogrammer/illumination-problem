@@ -129,3 +129,10 @@ Target lemma (L1): for a nondegenerate chart with r ≤ 8 and a pinned pair, dar
 Stopping rule: by 2026-11-25 20:00 HST, a reviewed general pinned-pair lemma or a sharp obstruction (a pinned dark family with every gap unbounded). Otherwise stop the L1 theory chain and report. No searches: at most 5 hand-picked parameter points per family, as exact traces.
 
 Correction (2026-11-23 21:35, l1-pinned-pairs.md): the target "darkness forces a gap ≤ B(r)" was ill-posed. Dilation preserves darkness, so an absolute bound is equivalent to having no pinned dark pair. Interior pins are locally free, so the blocker is global aim (an itinerary whose developed target image clears every gate), not a local crossing type. End bounces realize only the sign patterns 0, +, −, (+,−). Current step: interior-bounce sign patterns (l1-interior-bounce.md). The deadline is unchanged.
+
+## PAUSED (2026-11-23 23:10, Daniel)
+
+The L1 theory chain is stopped. Pinned-pair route outcome: reviewed tools d228 (sign-cone theorem) and d229 (bounded templates, one-gap tails); closures d225/d226 and the parabola family. The residual is the seed problem: produce one legal chord for a specified pinned pair in a growing chart (l1-route-assessment.md, Astra's P = 5%). Coordinator and daily-audit crons are cancelled; Astra is on standby. To resume, either:
+- start a new theory route with a dated stopping rule; or
+- run the area-22 census as a falsification test (≈1.17B rooms, 3.1 CPU-h; needs Daniel's approval). A dark pair would refute the goal; all-lit closes only area 22.
+Estimate at pause: 5–8%.

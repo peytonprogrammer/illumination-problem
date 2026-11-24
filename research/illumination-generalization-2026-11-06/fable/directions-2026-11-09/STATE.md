@@ -450,3 +450,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 **2026-11-23 22:10.** Presburger-encoding and parity-fold conjectures refuted (l1-excursion-normal-form). Astra on witness selection. Estimate 5–8%.
 **d229 reviewed:** bounded-template witness selection works on both test families; open: figure-eight components (Astra on periodic corridor).
 **2026-11-23 22:50.** Corridor reformulation refuted; residual = seed problem again. Route-stop recommendation to Daniel. Estimate 5–8%.
+**2026-11-23 23:10 — PAUSED by Daniel.** Crons cancelled, Astra on standby. Resume options in PROGRAM.md (PAUSED section).
