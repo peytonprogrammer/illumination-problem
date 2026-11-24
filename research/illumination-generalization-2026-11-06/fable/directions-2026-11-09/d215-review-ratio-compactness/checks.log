@@ -1,0 +1,32 @@
+
+=== Claim 5: reflected construction, lower mark x=2
+PASS k_{i+1} < 2 k_i for k=3,5 mod 6 up to 1e5 (5<6, 9<10, ...)
+PASS a valid k exists for alpha = j/1000, j=1..666
+PASS integer grid 0<=x,y<=60 (3721 rooms, both orders via start at T when x>y): smallest k legal and reaches (bad [])
+PASS every admissible k (not only the smallest), x in 0..30 step 3, y 0..30: 527 traces, all legal
+PASS y=floor(x^1.5), x=0..200: smallest k legal (bad [])
+    sample k on x^1.5 curve: [(4, 3), (16, 5), (49, 9), (100, 11), (144, 15), (196, 15)]  (order sqrt x)
+PASS sqrt2 family t=0..200, both orders: smallest k legal (bad [])
+PASS rational gains x/q, y/q with q in 2,3,7 (336 rooms): construction legal (bad [])
+
+=== Claim 6: nondirect pair, lower mark x=1
+PASS (15,21): crossings [Fraction(23, 20), Fraction(71, 20), Fraction(103, 20)]; direct middle abscissa 27/10 outside (3,4)
+PASS (15,21): area 126; ray (6,40) legal and reaches T; direct chord (4,40) not legal
+PASS grid 0..60: region => ray (6,D) legal and reaches T (929 inside; failures [])
+PASS observation (not claimed by the note): (6,D) also lights the 929 grid rooms of the mirror region b>c, 2a+2c-b>0, b+c>2a (middle crossing in (4,5), extra reflection at x=4)
+PASS grid 0..60: direct chord is never legal inside the region (direct abscissa < 3)
+PASS sqrt2 family: region holds exactly for t=3..200 (t=0,1,2 have c<=b), ray (6,D) legal for all
+PASS radius at (1,15,21)/37 = 11/185
+PASS 20000 random points of the open ambient sup ball keep all three signs; radius is attained at a corner (ambient-sharp)
+PASS sqrt2 face (0,1,sqrt2)/(1+sqrt2): min is (2-sqrt2)/(5(1+sqrt2)) exactly (sign tests in Q(sqrt2))
+    numeric: 0.048528 vs 0.085786, 0.250000
+PASS y=floor(x^1.5): alpha<1/4 from x=12; for all 189 such x<=200 a k=0,4 mod 6 exists and the ray is legal
+PASS grid x=1..60, y=3x+5..3x+59 (3300 rooms, alpha<1/4): every k=0,4 mod 6 in (2/alpha,3/alpha) legal
+
+=== Claim 4: effective radius rho = min(1, min p(z)/(2 max(1,B(p))))
+PASS sum_i |d_i p| <= B(p) at 1500 random points of [-1,1]^n (300 random polynomials)
+PASS p(v) >= p(z)/2 for sampled v in the sup ball of radius rho intersected with [0,1]^n
+PASS p=1-2v at z=0: rho=1/4, p >= 1/2 there (tight half slack)
+PASS claim-4 formula on the claim-6 tests at (1,15,21)/37 gives 11/370 = (11/185)/2
+
+TOTAL FAIL 0; cpu 1.0s

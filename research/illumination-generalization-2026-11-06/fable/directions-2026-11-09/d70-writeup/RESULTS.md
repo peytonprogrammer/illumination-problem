@@ -1515,6 +1515,8 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
   The multi-band and collapsing-band lemmas are correct but give no explicit radius. The staircase pair is directly visible for all t, so F's item 3 discharges it; t=15 was never an L1 obligation. Main gap: the lift hypothesis at reducible areas 22–121 is the entire inductive step and is unproved; F shrinks only the base. First open staircase regime: 2x+2 ≤ y ≤ 3(4+x)²−(4+x), e.g. y=⌊x^1.5⌋. Sampled cases all pass. [review](../d214-review-simultaneous-lift/review.md)
 
+- **d215 — chart-wise ratio compactness (L1, orthogonal), CORRECT WITH GAPS.** The compactification K and the finite-subcover statement are correct, and so is the effective radius ρ with the B(p) bound. The face induction by codimension is correct by reading. It needs a fixed itinerary and no marks in collapsing layers. The dark locus is relatively closed. Wolecki's statement matches; the per-source wording attributed to LMW is unverified. Pinned marks defeat approximation. The staircase pair with lower mark at x=2 is lit for every real gain pair, traced on 3,721 grid rooms, the x^1.5 and √2 curves and 336 rational-gain rooms. The nondirect x=1 pair certificate is exact, and the same ray also lights the mirror region b>c. Still uncovered for that pair: the line b=c and the band 2x+2 ≤ y ≤ 3x+4. First open case: an exceptional specified pinned pair in a nondegenerate eight-reflex chart. [review](../d215-review-ratio-compactness/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at

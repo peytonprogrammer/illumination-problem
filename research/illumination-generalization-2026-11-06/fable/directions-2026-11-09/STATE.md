@@ -423,3 +423,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 17:55: d214 review running (simultaneous lift + finite base F). Astra on ratio-space compactness. Estimate 8–10%.
 - 2026-11-23 18:05: d214 CORRECT WITH GAPS. The open L1 step is the lift hypothesis (coverage) at areas 22+. Astra on ratio-space compactness. Estimate 8–10%.
 - 2026-11-23 18:12: d215 review running (ratio compactness). Astra on the periodic-point obstruction. Estimate 8–10%.
+- 2026-11-23 18:25: d215 CORRECT WITH GAPS. Astra on the periodic-point obstruction. Estimate 8–10%.

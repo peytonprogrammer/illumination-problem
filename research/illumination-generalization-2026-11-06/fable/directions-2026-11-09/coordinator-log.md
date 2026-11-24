@@ -1826,3 +1826,6 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Astra idle. New note bbbb/l1-ratio-compactness.md (L1). It states chart-wise compactness, the face induction by codimension and an explicit effective radius. It covers the whole ratio triangle for one staircase pair, and adds an open certificate for a nondirect pair at (15,21) and the √2 face. Key admission: the interior exceptional specified pair is the real gap.
 - Launched d215-review-ratio-compactness (Opus, named staircase only, 10 CPU-min); claim added.
 - Briefed Astra: bbbb/l1-periodic-obstruction.md. Dark lattice pairs as periodic-point/symmetry coincidences (HST, Apisa–Wright, Tokarsky), plus a reflex-count lemma aiming at r ≥ 9; test against the 22-wall dark room.
+
+## 2026-11-23 18:25
+- d215 verdict CORRECT WITH GAPS. Re-ran checks.py: 22 PASS, identical. RESULTS §11 updated; claim released; verdict forwarded. The core is now the exceptional pinned pair, which Astra's periodic-obstruction brief targets. Estimate unchanged at 8–10%.
