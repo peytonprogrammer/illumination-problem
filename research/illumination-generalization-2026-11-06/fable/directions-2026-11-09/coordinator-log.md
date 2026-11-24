@@ -1871,3 +1871,9 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 20:05
 - d220: all claims hold (4 CORRECT, 1 WITH GAPS). Re-ran checks.py; see above. RESULTS §11 updated; claim released; verdict forwarded. Estimate 8–10%.
+
+## 2026-11-23 20:14 (tick)
+- Astra idle. New note bbbb/l1-cylinder-levels.md (L1 case iii). Exact orbit criterion: (I) a common interior cylinder level or (II) a common open saddle connection; interior-only is false (cov446). Exact incidence counts at n=22 (52 regular sites). A cov4181 type-(I) witness. At the primitive branch, R=26 and off-class ≥15. A CRT test for two-traversal witnesses in pure-twist families.
+- Launched d221-review-cylinder-levels (Opus, named rooms, 10 CPU-min); claim added.
+- Briefed Astra: bbbb/l1-twist-existence.md. Prove the CRT test passes for some twist family at n=22 primitive, or reduce to an explicit finite list of failing tuples.
+- Assessment: d212–d220 are reviewed scoping, and case (iii) at n=22 remains open. If the twist-existence note doesn't close or finitize the primitive branch, I'll report to Daniel with a route decision (theory continuation vs. an approved finite check).
