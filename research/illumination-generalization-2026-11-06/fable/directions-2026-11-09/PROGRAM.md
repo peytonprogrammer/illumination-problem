@@ -109,3 +109,21 @@ Theory routes today (area-bound counting d207/d208, corner charging, direction d
 
 ## Insertion-descent route (2026-11-23 16:25)
 Reviewed pieces: width-w replay + flat-cap collar (d209), all-residue re-aim for retained pairs (d210). A descent proof of L1 needs (a) a collar lemma for arbitrary terminal ends and for bridges, and (b) a polynomial bound on the seed denominator v per pair for r ≤ 8. Then every room with a long single-interval slice reduces to a shorter lit room plus a threshold that the census must cover. Stopping rule: if neither (a) nor (b) has a reviewed general case by 2026-11-26 20:00, stop and report.
+
+## Affine-transfer route: stopping rule (2026-11-23 21:30 audit)
+
+Audit finding: d212–d224 gave 13 correct reformulations of L1 case (iii) at area 22 and no closures. Area 22 alone doesn't prove L1 (d212 needs the lift step at areas 22–121). Daniel approved the following (2026-11-23):
+- The symmetric-only area-22 check is dropped (it would close one branch at one area).
+- The single live theory bet is the affine-transfer lemma (bbbb/l1-affine-transfer.md): corner-fixing band multi-twists carry a short direct chord onto any target, uniform in area. Stopping rule: by 2026-11-25 20:00 HST, a reviewed general lemma, or at most two notes, whichever comes first. Then stop the L1 theory chain and report (pause vs. costed computation).
+- Opus reviews only for notes that claim a closure or a general (area-uniform) lemma. Reductions and reformulations are logged without review.
+- Estimate re-based to 5–8% until a case closes.
+
+## Pinned-pair route (2026-11-23 22:00; replaces affine transfer)
+
+Affine transfer stopped after one note: l1-affine-transfer.md proves that the corner-fixing band twists preserve displacement gcd and parity, and fix pinned sites. Daniel asked for the key blocker to a general proof.
+
+Key blocker: the descent (d212–d215) is the only mechanism that creates straight chords in rooms above the census. It lifts a parent witness when a gap grows, but it needs growth commensurate with the witness direction, or a slack window of directions (d214 claims 1 and 6). Ratio compactness (d215) supplies slack everywhere except at a specified pair **pinned to supporting-line intersections**. The affine twists also fix exactly these sites. Pinned pairs are therefore the single residual of the descent.
+
+Target lemma (L1): for a nondegenerate chart with r ≤ 8 and a pinned pair, darkness forces some refined gap ≤ B(r) for an explicit B. One-gap shrink (d214 F) then lands it in a lower chart or the census. Proposed mechanism: two-scale blow-up at each pin. The local geometry at a pin is one of finitely many crossing types, so the micro problem is finite and independent of area. Test bed: d215's x=1 staircase open strip (near b=c; and 2a+2b ≤ c with α ≥ 1/4).
+
+Stopping rule: by 2026-11-25 20:00 HST, a reviewed general pinned-pair lemma or a sharp obstruction (a pinned dark family with every gap unbounded). Otherwise stop the L1 theory chain and report. No searches: at most 5 hand-picked parameter points per family, as exact traces.

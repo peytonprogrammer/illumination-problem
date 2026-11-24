@@ -1,0 +1,70 @@
+     P(d223): area 22, reflexes 8, walls 20, seam ends [(0, 0), (0, 5)]
+PASS P(d223): area 22, no pinch, axis meets boundary at two smooth points that are convex corners of H
+     R2: area 22, reflexes 4, walls 12, seam ends [(0, 0), (0, 5)]
+PASS R2: area 22, no pinch, axis meets boundary at two smooth points that are convex corners of H
+== Claim 3: band multi-twist
+     P(d223) bands (y0,y1,a,b): [(0, 1, -2, 2), (1, 2, -3, 3), (2, 3, -2, 2), (3, 4, -3, 3), (4, 5, -1, 1)]
+PASS P(d223): every slice interval is centered on the axis x=0
+PASS P(d223): translation by W (not 2W) maps each lift (x, sheet) to (-x, other sheet)
+PASS P(d223): on a non-centered interval the half turn gives a+b-x, not sigma x
+PASS P(d223): L=24; the shear is the identity on every band boundary; all 22 corners and seam ends lie on band boundaries
+     R2 bands (y0,y1,a,b): [(0, 2, -3, 3), (2, 3, -1, 1), (3, 5, -2, 2)]
+PASS R2: every slice interval is centered on the axis x=0
+PASS R2: translation by W (not 2W) maps each lift (x, sheet) to (-x, other sheet)
+PASS R2: on a non-centered interval the half turn gives a+b-x, not sigma x
+PASS R2: L=12; the shear is the identity on every band boundary; all 14 corners and seam ends lie on band boundaries
+     P(d223): off-axis interior lattice marks 6, strictly inside a band []
+     R2: off-axis interior lattice marks 6, strictly inside a band [(-2, 1), (-1, 1), (-1, 4), (1, 1), (1, 4), (2, 1)]
+PASS d223 room: every band has height 1, so every lattice mark is on a band boundary (test vacuous)
+-- d223 room, control: lattice marks are fixed, parity does not change
+     [P(d223)] S=(1, 1) T=(1, 3) lambda=24
+       original vel (-1, 1): hit (-1, 3), axis crossings 1, walls 0; H: hit, seam contacts 1
+       image    vel (23, 1): hit (-1, 3), axis crossings 9, walls 10; H: hit, seam contacts 9
+PASS d223: shear lambda=24 of the d223 ray S=(1,1)->sigma T=(-1,3) is legal and still reaches sigma T
+-- d223 room, rational targets strictly inside the row-1 band (W=6)
+PASS lambda=24: multiple of L=24 and lambda*d = W mod 2W (d=1/4)
+     [P(d223)] S=(1, 1) T=(1/2, 5/4) lambda=24
+       original vel (-2, 1): hit (1/2, 5/4), axis crossings 0, walls 0; H: hit, seam contacts 0
+       image    vel (22, 1): hit (-1/2, 5/4), axis crossings 1, walls 1; H: hit, seam contacts 1
+PASS d223 T=(Fraction(1, 2), Fraction(5, 4)): original reaches T (even), image is legal, reaches sigma T, H-parity odd
+PASS image endpoint and 9 sampled points equal phi(original) in Q (exact)
+PASS lambda=96: multiple of L=24 and lambda*d = W mod 2W (d=9/16)
+     [P(d223)] S=(1, 1) T=(1/2, 25/16) lambda=96
+       original vel (8, 1): hit (1/2, 25/16), axis crossings 0, walls 1; H: hit, seam contacts 0
+       image    vel (104, 1): hit (-1/2, 25/16), axis crossings 9, walls 10; H: hit, seam contacts 9
+PASS d223 T=(Fraction(1, 2), Fraction(25, 16)): original reaches T (even), image is legal, reaches sigma T, H-parity odd
+PASS image endpoint and 9 sampled points equal phi(original) in Q (exact)
+-- R2, lattice marks: S=(1,1) in band [0,2] (W=6), T=(1,4) in band [3,5] (W=4)
+     [R2] S=(1, 1) T=(1, 4) lambda=12
+       original vel (-2, 3): hit (-1, 4), axis crossings 1, walls 0; H: hit, seam contacts 1
+       image    vel (34, 3): hit (1, 4), axis crossings 10, walls 11; H: hit, seam contacts 10
+PASS R2: direct ray S->sigma T (odd); shear lambda=12 gives a legal ray S->T (even) in P and in H
+PASS R2: image endpoint and 9 sampled points across three bands equal phi(original)
+     [R2] S=(1, 1) T=(1, 4) lambda=-12
+       original vel (-2, 3): hit (-1, 4), axis crossings 1, walls 0; H: hit, seam contacts 1
+       image    vel (-38, 3): hit (1, 4), axis crossings 12, walls 11; H: hit, seam contacts 12
+PASS R2: the inverse twist lambda=-12 also works
+-- divisibility test gcd(L_s d_t, 2W_t) | W_t versus brute force over one lambda period
+     P(d223): L=24, ordered off-axis pairs in distinct orbits 24; note test passes 0; generalized horizontal-twist condition passes 0
+       note-test pairs: []
+       pairs passing only the generalized condition: []
+PASS P(d223): note divisibility test equals brute force in all 24 ordered pairs
+PASS P(d223): generalized condition contains the note test
+     R2: L=12, ordered off-axis pairs in distinct orbits 24; note test passes 8; generalized horizontal-twist condition passes 16
+       note-test pairs: [((-2, 1), (-1, 4)), ((-2, 1), (1, 4)), ((-1, 1), (-1, 4)), ((-1, 1), (1, 4)), ((1, 1), (-1, 4)), ((1, 1), (1, 4)), ((2, 1), (-1, 4)), ((2, 1), (1, 4))]
+       pairs passing only the generalized condition: [((-1, 4), (-2, 1)), ((-1, 4), (-1, 1)), ((-1, 4), (1, 1)), ((-1, 4), (2, 1)), ((1, 4), (-2, 1)), ((1, 4), (-1, 1)), ((1, 4), (1, 1)), ((1, 4), (2, 1))]
+PASS R2: note divisibility test equals brute force in all 24 ordered pairs
+PASS R2: generalized condition contains the note test
+== Claim 4: path through a smooth seam end (R2, E=(0,5))
+     T=(1,1) vel (-1,4): hit (Fraction(-1, 1), Fraction(1, 1)); events [('wall-lattice', (0, 5))]
+PASS partner: T -> seam end E (transverse) -> sigma T is legal; reflection at E is diag(1,-1) = -D sigma
+     known ray extended: S=(2,1) vel (-1,4): hit (Fraction(-1, 1), Fraction(1, 1)); events [('wall', (Fraction(7, 4), Fraction(2, 1))), ('wall', (Fraction(5, 4), Fraction(0, 1))), ('pass', (1, 1)), ('wall-lattice', (0, 5))]
+PASS extension: one straight itinerary S=(2,1) -> T=(1,1) -> E -> sigma T, lights both T and sigma T
+PASS the extended itinerary stops at the convex seam end in H
+== Claim 1: seam parity
+PASS P(d223): H seam contacts (1) = P axis crossings; even <-> T, odd <-> sigma T
+PASS R2: H seam contacts (1) = P axis crossings; even <-> T, odd <-> sigma T
+PASS P(d223): every horizontal cylinder of H touches the seam, so its core crosses beta once in N (odd character)
+PASS R2: every horizontal cylinder of H touches the seam, so its core crosses beta once in N (odd character)
+CPU 0.0s
+FAILURES: 0

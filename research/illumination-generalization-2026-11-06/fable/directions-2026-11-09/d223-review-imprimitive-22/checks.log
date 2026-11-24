@@ -1,0 +1,63 @@
+== Part A: fiber arithmetic, n = 22, k = 2, m = 11, r = 8
+PASS RH for a double cover of spheres gives exactly two simple branch points
+PASS branching only over N-poles (2e<=3 forces e=1)
+PASS z = 4 and q = 2m-2-2z = 12
+PASS 2804 fiber assignments; all have upstairs degree 22 per pole, 8 three-cycles, 26 two-cycles, RH 42, 12 convex
+PASS q_x <= 5 at every pole in every assignment
+     assignments with q_x >= 1 at all four poles (BBBB-compatible): 2056
+PASS q_a in {4,5} leaves exactly (3,4,0),(0,4,1),(1,5,0)
+PASS with b_a = 2 (p_a >= 2) only (3,4,0) survives
+PASS external orbital: R = 2d - J = 40 - 16 = 24; 24 - 2 q_a >= 14
+PASS partner orbital: d = 1, R = 2 (the two smoothed branch sites), J = 0
+== Part B: double-cover graph test on random genus-0 tuples
+     genus-0 seed tuples: 120 (degrees 3..10)
+     tuples=4800, pairs=76446, mismatch=0, cyc_sep=1474, cyc_nosep=1292, path=13584, pole=15032, diff=41520, iso=3544, jordan_bad=0, sep_vs_transport_bad=0, two_trav=16128, two_trav_bad=0, partner_rule_bad=0, Bx_bad=0, Bx_tests=16466, up_genus_bad=0, nonbranch_bad=0
+PASS 4800 genus-0 double covers branched at two chosen poles were tested
+PASS every lifted cover is a sphere branched exactly at b1,b2
+PASS every quotient cycle K cuts N into exactly two regions (embedding sanity)
+PASS cycle K lifts to one cycle iff K separates b1 from b2 (cells), on every cycle met
+PASS quotient rule = brute force on all 76446 ordered pairs of distinct regular a-lifts
+PASS deck partners connect iff component meets a branch pole or is a separating cycle
+PASS two-traversal partner witness iff adjacent distinguished x-pole or odd two-edge cycle (16128 cases)
+PASS B_x: universal if inter-block 2-cycle and one external orbital; refines pairs if none (16466 tests)
+     Part B CPU 2.0s
+== Part C: hand-made symmetric rooms
+     axial room P: area 22, reflex 8, walls 20, pinches 0
+     cells of H: [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (1, 0), (1, 1), (1, 2), (1, 3), (2, 1), (2, 3)]
+PASS hand room P: area 22, 8 reflexes, no pinch
+PASS axis x=0 meets the boundary of P only at two smooth points [(0, 0), (0, 5)]
+PASS half-room H: 11 cells, 4 reflexes, 12 walls, seam ends are convex corners of H, no pinch
+PASS sigma on cells commutes with all four pole permutations (deck involution)
+PASS 11 blocks {c, sigma c} of size 2
+     parity (0, 0): (p,q,z,b) = (2,3,1,1), upstairs cycle lengths [1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3]
+     parity (0, 1): (p,q,z,b) = (1,2,2,1), upstairs cycle lengths [2, 2, 2, 2, 2, 3, 3, 3, 3]
+     parity (1, 0): (p,q,z,b) = (2,3,1,0), upstairs cycle lengths [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3]
+     parity (1, 1): (p,q,z,b) = (3,4,0,0), upstairs cycle lengths [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2]
+PASS hand room: totals (p,q,z,b) = (8, 12, 4, 2) = (8,12,4,2)
+     distinguished poles lie over the parities of the seam ends: [(0, 0), (0, 1)]
+     internal 2-cycle at parity (0, 0): cells [(-1, 0), (0, 0)]
+     internal 2-cycle at parity (0, 1): cells [(-1, 4), (0, 4)]
+PASS axial case: the two ramification points of f are the two seam ends
+     orbitals (valencies) from sheet 0: [1, 20, 1]
+     B_x at (0, 0): block sizes [22]
+     B_x at (0, 1): block sizes [22]
+     B_x at (1, 0): block sizes [22]
+     B_x at (1, 1): block sizes [22]
+PASS S=(1,1), T=(1,3) interior, off-axis, distinct orbits, same parity
+PASS two disjoint stars occupy 8 of the 11 cells of H
+PASS the four lifts of S,T have four distinct regular images in N
+     H-trace S=(1, 1) vel (-1,1): hit (1, 3); seam contacts 1; events [('wall-lattice', (0, 2))]
+     P-trace same start/velocity: hit (-1, 3); events [('pass', (0, 2))]
+PASS seam-contact parity: H-ray with odd seam contacts reaches sigma T in P, even reaches T
+PASS direct vertical H-ray (0 seam contacts) reaches T in P
+     partner test via seam end (0, 0): S=(1, 1) vel (-1, -1) -> hit (-1, 1); events [('wall-lattice', (0, 0))]
+PASS axial partner test: S -> seam end (smooth, transverse) -> sigma S is legal
+PASS the same ray is illegal in H (stops at the convex seam end): convex at (0, 0)
+PASS Z room is half-turn symmetric about interior lattice point (3,2)
+     half-turn: S=(1, 1) vel (2,-3) -> hit (3, 2); continued -> hit (5, 3); events [('wall', (Fraction(5, 3), Fraction(0, 1))), ('pass', (3, 2)), ('wall', (Fraction(13, 3), Fraction(4, 1)))]
+PASS half-turn partner test: S -> C (one reflection) continues straight through C to sigma S
+PASS half-turn on cells commutes with the pole permutations
+     half-turn ramification 2-cycles (internal to a block): [((1, 0), [(2, 1), (3, 2)]), ((1, 0), [(2, 2), (3, 1)])]
+PASS both ramification points are the two lifts of the centre (parity (1,0))
+CPU 2.1s
+FAILURES: 0

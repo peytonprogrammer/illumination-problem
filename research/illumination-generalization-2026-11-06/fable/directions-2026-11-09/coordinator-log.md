@@ -1897,3 +1897,26 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Astra briefed: seam-parity lemma (both seam-contact parities via odd-crossing cylinder), follow-on half-turn subcase.
 - Stopping rule from tick text (N0 for LLLRLLLRLR by 11-24 20:00) is superseded by PROGRAM.md deadlines (11-25/11-26).
 - Estimate 8–10% (unchanged).
+- Sync pushed 16fd9e29a (HEAD = origin/main verified); two earlier runs timed out at 150–170 s before pushing.
+- d223 done: 6 CORRECT, 2 CORRECT WITH GAPS, 0 wrong. The imprimitive branch is exactly the area-22 rooms with a parity-preserving mirror or half-turn symmetry. First open case: a half-turn with two distinct off-center orbits. The reviewer suggests a symmetric-only area-22 run built from 11-cell halves; it's a NEW SEARCH, so it needs Daniel's approval and nothing was launched. Re-run identical. Claim released, verdict forwarded.
+
+## 2026-11-23 21:10 tick
+- Astra note l1-seam-parity.md (L1 iii, axial branch): exact attainable-parity set; band multi-twist shear swaps target sides under gcd(Lₛdₜ,2Wₜ) | Wₜ; half-turn quotient has 2 branch values. Sufficient test, no closure. d224 Opus review launched (claim on board).
+- Astra briefed: affine transfer lemma on the primitive branch (corner-fixing multi-twist group A_S; orbit of a short neighbor must reach T, or an invariant partition gives case ii); follow-on: test on cov4181 class d.
+- Route proposal to Daniel: the imprimitive branch at area 22 = symmetric rooms; a symmetric-only area-22 check from 11-cell halves is small, but it's a new search and needs approval.
+- 21:15 sync failed (git fetch: cannot reach github.com:443); Slack also ECONNREFUSED. Last verified push 16fd9e29a; 21:10 notes pending.
+
+## 2026-11-23 21:30 — route audit (Daniel approved)
+- Busy-work audit: d212–d224 = 13 correct reformulations, 0 closures. Dropped the symmetric a22 check request. Affine transfer is the single live bet (deadline 11-25 20:00 or 2 notes). Review only closures/general lemmas. Estimate re-based 8–10% → 5–8%. PROGRAM.md updated; Astra told.
+
+## 2026-11-23 22:00 — key-blocker attack (Daniel: "attack that")
+- Astra's l1-affine-transfer.md (21:04) refutes my affine-transfer idea: SL₂ derivative preserves displacement gcd/parity; band twists fix pinned sites; on cov4181 the twist group acts trivially. Logged, not reviewed (an obstruction to my proposal; no closure). Affine route stopped.
+- Blocker identified: pinned pairs are the single residual of descent (d214 slack window, d215 ratio compactness, affine note). New route in PROGRAM.md, deadline 11-25 20:00. Astra briefed on the general lemma (two-scale blow-up, finitely many local pin types); Opus attack agent d225 on the d215 staircase pinned strip as the worked instance.
+- d224 done: 2 CORRECT, 4 CORRECT WITH GAPS, 0 wrong; sufficient test only (fails when every band has height 1). Re-run identical. Claim released; verdict logged for Astra (no redirect: she's on pinned pairs).
+
+## 2026-11-23 21:12 tick
+- Astra note l1-affine-transfer-obstruction.md (21:07, written before the pinned-pair brief): an area-uniform family (prime areas p ≥ 37) where the band twists fix a nondirect pair pointwise, though one floor reflection lights it. Second affine note; the route was already stopped. It obstructs a proposal, not illumination: logged, not reviewed. It confirms that pinned sites are the residual.
+- Astra is running on the pinned-pair brief (since 21:08). d225 is running (dir empty, launched 21:10). Estimate 5–8%.
+- 21:15 sync failed (git fetch: github.com:443 unreachable); Slack post ECONNREFUSED. Last verified push 16fd9e29a.
+- d225 attack done: claims the d215 x=1 staircase open strip is closed for x+y>8 (the strip near b=c, and 2a+2b ≤ c with α ≥ 1/4). Two pins block the lines α=1/2 and α=1/3, and one floor bounce fixes both. Five crossing types (P0, P+, P−, R, S). Open: lattice rooms (0,2) and (0,3) (areas 24, 27), and pins with sign order (−,+). Re-run identical, 45 PASS, 0 failures. A closure claim, so independent review d226 launched. Claim d225 released.
+- d226 done: the d225 closure HOLDS for x+y > 8 across the whole sector (2 CORRECT, 2 CORRECT WITH GAPS, 0 wrong; 62 checks, 0 failures; re-run identical). This is the first closure on the pinned-pair route. The crossing-type principle needs tightening: unfolded μ, two-sided approach (counterexample ray at (12,26)), and shifts at the non-pinned interfaces. Open: lattice rooms of areas 24 and 27. The estimate stays at 5–8%: one family is closed, and the general lemma isn't proved yet. Claim released, verdict forwarded.
