@@ -1957,3 +1957,4 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
   - Open: interleaved cycles in a branched recurrent component, and joint (diagonal) regimes.
 - Closure + general lemma, so d229 review launched.
 - Astra briefed: commuting cycle translations ⇒ target image depends only on counts; witness order = cutting sequence; branched component ⇒ Λ-periodic slit corridor (square-tiled), apply the cylinder criterion I/II.
+- d229 done: 6 CORRECT, 1 CORRECT WITH GAPS, 0 wrong. Parabola family closed; template and tail tests confirmed. Re-run identical. Claim released, verdict forwarded.

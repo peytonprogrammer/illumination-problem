@@ -1,0 +1,60 @@
+
+=== Claim 1: five-reflex parabola room is strictly simple, 5 reflexes, marks interior and pinned
+PASS (m,u)=(3,5): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(4,6): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(6,9): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(4,12): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(6,24): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(5,24): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(5,25): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(5,26): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(20,22): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(20,220): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+PASS (m,u)=(20,401): 14 vertices, orthogonal, strictly simple, 5 reflexes, S,T interior and pinned
+
+=== Claims 2-3: winding choice, gate lemma, exact traces of the note's witness
+PASS (m,u)=(3,5) U=2 branch=nearest D=5 j=2 err=1 delta=1/5 p=7/5: 0<|delta|<1, |err|<D
+PASS (m,u)=(3,5) dir=(7,5): T; 2 narrow-tier bounces alternating x=+-1; gate x=1/5 (=|delta|); upper reflections []
+PASS (m,u)=(4,6) U=2 branch=j+1 D=6 j=5 err=-4 delta=-2/3 p=7/3: 0<|delta|<1, |err|<D
+PASS (m,u)=(4,6) dir=(14,6): T; 5 narrow-tier bounces alternating x=+-1; gate x=2/3 (=|delta|); upper reflections ['(0,30/7)']
+PASS (m,u)=(6,9) U=3 branch=j+1 D=9 j=7 err=-6 delta=-2/3 p=20/9: 0<|delta|<1, |err|<D
+PASS (m,u)=(6,9) dir=(20,9): T; 7 narrow-tier bounces alternating x=+-1; gate x=2/3 (=|delta|); upper reflections ['(0,63/10)']
+PASS (m,u)=(4,12) U=8 branch=roof D=14 j=1 err=-4 delta=-2/7 p=3/7: 0<|delta|<1, |err|<D, 2(U+2)!|m^2, m-p>0
+PASS (m,u)=(4,12) dir=(6,14): T; 1 narrow-tier bounces alternating x=+-1; gate x=2/7 (=|delta|); upper reflections ['(0,14/3)', '(25/7,13)']
+PASS (m,u)=(6,24) U=18 branch=roof D=26 j=1 err=-4 delta=-2/13 p=4/13: 0<|delta|<1, |err|<D, 2(U+2)!|m^2, m-p>0
+PASS (m,u)=(6,24) dir=(8,26): T; 1 narrow-tier bounces alternating x=+-1; gate x=2/13 (=|delta|); upper reflections ['(0,13/2)', '(74/13,25)']
+PASS (m,u)=(5,24) U=19 branch=nearest D=24 j=1 err=-13 delta=-13/24 p=7/24: 0<|delta|<1, |err|<D
+PASS (m,u)=(5,24) dir=(7,24): T; 1 narrow-tier bounces alternating x=+-1; gate x=13/24 (=|delta|); upper reflections ['(0,48/7)']
+PASS (m,u)=(5,25) U=20 branch=nearest D=25 j=1 err=-15 delta=-3/5 p=7/25: 0<|delta|<1, |err|<D
+PASS (m,u)=(5,25) dir=(7,25): T; 1 narrow-tier bounces alternating x=+-1; gate x=3/5 (=|delta|); upper reflections ['(0,50/7)']
+PASS (m,u)=(5,26) U=21 branch=nearest D=26 j=1 err=-17 delta=-17/26 p=7/26: 0<|delta|<1, |err|<D
+PASS (m,u)=(5,26) dir=(7,26): T; 1 narrow-tier bounces alternating x=+-1; gate x=17/26 (=|delta|); upper reflections ['(0,52/7)']
+PASS (m,u)=(20,22) U=2 branch=j+1 D=22 j=101 err=-4 delta=-2/11 p=111/11: 0<|delta|<1, |err|<D
+PASS (m,u)=(20,22) dir=(222,22): T; 101 narrow-tier bounces alternating x=+-1; gate x=2/11 (=|delta|); upper reflections ['(0,2222/111)']
+PASS (m,u)=(20,220) U=200 branch=roof D=222 j=1 err=-4 delta=-2/111 p=11/111: 0<|delta|<1, |err|<D, 2(U+2)!|m^2, m-p>0
+PASS (m,u)=(20,220) dir=(22,222): T; 1 narrow-tier bounces alternating x=+-1; gate x=2/111 (=|delta|); upper reflections ['(0,222/11)', '(2209/111,221)']
+PASS (m,u)=(20,401) U=381 branch=nearest D=401 j=1 err=-362 delta=-362/401 p=22/401: 0<|delta|<1, |err|<D
+PASS (m,u)=(20,401) dir=(22,401): T; 1 narrow-tier bounces alternating x=+-1; gate x=362/401 (=|delta|); upper reflections ['(0,401/11)']
+-- direct template (j=0, no roof) near u=m^2, m=5
+PASS (5,24) direct chord: corner (-2,0); expected lit=False
+PASS (5,25) direct chord: corner (1,5); expected lit=False
+PASS (5,26) direct chord: T -; expected lit=True
+
+=== Claim 4: seven-reflex window room, witness (-5c,1)
+PASS c=1: room ok (7 reflexes, pinned), T, path ['(0,0)', '(-1,1/5)', '(8,2)'] = c-scaled c=1 path
+PASS c=2: room ok (7 reflexes, pinned), T, path ['(0,0)', '(-2,1/5)', '(16,2)'] = c-scaled c=1 path
+PASS c=9: room ok (7 reflexes, pinned), T, path ['(0,0)', '(-9,1/5)', '(72,2)'] = c-scaled c=1 path
+
+=== Claim 5: cycle translation and affine cleared tests (narrow-tier cycle of the (20,22) witness)
+PASS phase x=1: 51 occurrences, developed faces translate by v=(+-4,0); cleared tests affine in j; positive at extremes and hence everywhere
+PASS phase x=-1: 50 occurrences, developed faces translate by v=(+-4,0); cleared tests affine in j; positive at extremes and hence everywhere
+PASS consecutive narrow-tier event times have constant positive spacing
+
+=== Claim 6: one-gap tail, fixed word m=5, j=1, delta>0 branch, gap g=u-1-m
+PASS u=11: cleared gate tests (13,-2) predict lit=False; trace corner (1,5)
+PASS u=12: cleared gate tests (11,1) predict lit=True; trace T -
+PASS u=17: cleared gate tests (1,16) predict lit=True; trace T -
+PASS u=18: cleared gate tests (-1,19) predict lit=False; trace cap -
+
+cpu 0.02s
+FAILURES: 0
