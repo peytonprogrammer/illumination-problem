@@ -1561,6 +1561,14 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
   First open case: n=22, nondirect same-parity pair, normalized eight-reflex BBBB chart. [review](../d219-review-mod4-cocycle/review.md)
 
+- **d220 — giant monodromy at area 22 (L1 case iii): 4 CORRECT, 1 CORRECT WITH GAPS.**
+  - n=22, r=8 primitive branch: M22 and M22:2 are excluded. M22 was built from M24; its only order-3 type is 3⁶1⁴, so z_x ∈ {0,6} at every pole, while Σz=8. Hence G ∈ {A22, S22}, with the marked projection A21 or S21. Imported inputs: Σz_x=r, the 1/2/3 cycle structure, and d208's CFSG-based list.
+  - Imprimitive branch: the 20-sheet external projection is imprimitive.
+  - The Hurwitz formulas and geometric state functoriality hold; the shears reach every primitive slope of each parity (8,816 checked).
+  - cov4181: |G| = (7!)⁴·24/2 exactly, so G = (S7 wr S4) ∩ A28; the 21-orbit carries S7 wr S3.
+
+  First open case: single-state reachability at area 22 with G giant; the imprimitive branch is separate. [review](../d220-review-large-monodromy/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at

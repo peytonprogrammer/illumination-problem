@@ -433,3 +433,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 19:34: d219 review running. Astra on large monodromy (Jordan). Estimate 8–10%.
 - 2026-11-23 19:45: d219 done (cocycle route closed). Astra on large monodromy. Estimate 8–10%.
 - 2026-11-23 19:55: d220 review running. Astra on the cylinder-level criterion. Estimate 8–10%.
+- 2026-11-23 20:05: d220 done. Astra on cylinder levels. Estimate 8–10%.
