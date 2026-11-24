@@ -1958,3 +1958,10 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Closure + general lemma, so d229 review launched.
 - Astra briefed: commuting cycle translations ⇒ target image depends only on counts; witness order = cutting sequence; branched component ⇒ Λ-periodic slit corridor (square-tiled), apply the cylinder criterion I/II.
 - d229 done: 6 CORRECT, 1 CORRECT WITH GAPS, 0 wrong. Parabola family closed; template and tail tests confirmed. Re-run identical. Claim released, verdict forwarded.
+
+## 2026-11-23 22:50 tick
+- Astra note l1-periodic-corridor.md (L1). WRONG CLAIM (mine) refuted: the "Λ-periodic corridor" reformulation loses the terminal sheet. In the 7-cell pinned room ([0,3]² minus two corners, S=(1,2), T=(2,1)), (1,−7) reaches T but (13,−7) in the same cycle-lattice coset ends at the corner (0,1); likewise for all +84j.
+  - Coordinator spot check: (1,−7) traced exactly to (2,1). My quick tracer for (13,−7) was buggy; this point is unverified by me.
+- Positive: fixed-H residue test (K mod HM, finite), and the smallest pinned room (area 7, minimal).
+- Remaining step, in her words: "produce some H and a residue whose ray reaches a compatible T". That is the seed problem the route started from. Not reviewed (it refutes a coordinator proposal; it's not a closure).
+- Assessment: the pinned-pair route has produced reviewed general tools (sign-cone d228, templates d229) but has circled back to the seed problem. Asked Astra for a route assessment; reported to Daniel with a stop recommendation.

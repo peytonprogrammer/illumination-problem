@@ -21,3 +21,32 @@ There is a direct hand check on this smaller torus. The displacement (1,−1) fr
 **Large gaps in the example.** Replace 0,1,2,3 independently on each axis by any four strictly ordered integral levels. The two opposite corners of the central open rectangle corresponding to S and T remain interior marks of the room. The open diagonal remains inside that rectangle, so this pair is lit for all positive gaps, including simultaneous growth without ratio restrictions. This local proof does not need a torus-count estimate.
 
 **First open L1 case.** In a branched recurrent component with a nondirect pinned pair and growing gaps, one must find a period displacement whose continued segment reaches the specified target sheet before a forbidden contact. This example rules out dropping that condition even when the displacement is primitive and the projected segment has no interior corner value. It leaves open both a uniform sheet-sensitive existence theorem and the stronger example where every witness must traverse two distinct return cycles. The general large-gap conclusion does not follow from commutativity.
+
+### A finite sheet test at fixed vertical travel
+
+Fix an integral room, an interior lattice source, its incident copy and launch quadrant, and a positive integer H of absolute vertical travel. Take nonzero positive transverse magnitude K, with the two physical launch signs supplied by the quadrant. Let M be the lcm of twice the widths of all component intervals in the open horizontal unit strips. Then the physical endpoint, incident signs at regular crossings of integer heights, and survival to H depend on K only modulo HM. This concerns the sheet and the regularity of the trajectory up to H. Two such paths can have different numbers of ordinary side reflections.
+
+**Proof.** Sample the path after each unit of vertical travel. Given the outgoing state at one sample, the next open strip is a rectangle with transverse interval (a,a+w). Before the next integer height there is no horizontal wall. Develop the side reflections in the interval. Adding M to K/H adds a multiple of 2w to the unsigned transverse travel, so folding gives the same abscissa and the same one-sided incident horizontal sign at the next sample. Every extra side hit strictly inside the strip is on a smooth wall. At the sample the same incident sector and point determine transmission, a regular reflection, or a forbidden corner. In particular a simultaneous hit on a vertical wall at an artificial level uses the incoming sign before that wall hit. Induction through H samples proves the claim, including identical first fatal sample if there is one. At S take the sector entered by the launch vector; at a proposed T the reverse of the incoming vector must enter the chosen target sector on a compatible copy. When working cell by cell, require the entry and exit on distinct supporting sides with the intervening open segment inside the cell. Coincident subdivision-vertex events are a single event. The corresponding repeated-cell tests are polynomial jointly in lengths and exponents. [D229, claim 5](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d229-review-witness-selection/review.md)
+
+Thus fixed H admits a finite exact residue test for the terminal sheet. Any surviving positive K has a representative in 1,…,HM for the same physical endpoint, allowing the period itself for the zero residue. If membership in an additional cycle-lattice coset is required, retain that congruence too. Neither H nor M here is bounded by the reflex count.
+
+**Both outcomes inside the proposed two-cycle lattice.** In the seven-cell room use H=7, S=(1,2), initial signs (+,−), and the direct target displacement (1,−1). Both (1,−7) and (13,−7) belong to its translate by nonnegative multiples of the central cycles (6,0) and (0,−6). Both are primitive. For (1,−7) the open path stays in 1<x<2, where the column extends from 0 to 3. Folding the ordinate 2−7 into [0,3] gives 1, so the endpoint is T=(2,1).
+
+For (13,−7), fold 13/7 of transverse travel on each unit step. The table gives the **physical** abscissas in sevenths and keeps each visit to a level separate.
+
+| Accumulated vertical travel | Physical ordinate | Seven times the abscissa |
+|---:|---:|---:|
+| 0 | 2 | 7 |
+| 1 | 1 | 20 |
+| 2 | 0 | 9 |
+| 3 | 1 | 18 |
+| 4 | 2 | 11 |
+| 5 | 3 | 2 |
+| 6 | 2 | 13 |
+| 7 | 1 | 0 |
+
+The row intervals on the seven steps are (0,3), (1,3), (1,3), (0,3), (0,2), (0,2), (0,3). The turns at y=0 and y=3 are smooth. The last step ends at the convex corner (0,1). There is no earlier corner: every internal sample has nonintegral abscissa. In the plane the endpoint has exactly the requested period displacement; the lifted endpoint fails.
+
+Here M=lcm(4,6)=12. For every integer j≥1 the displacements (1+84j,−7) and (13+84j,−7) therefore give respectively T and the forbidden corner. Both central-cycle coefficients are now strictly positive in both examples. All vectors remain primitive, stay in the same launch sector, and have the direct target's coset modulo **6ℤ²**, not just modulo the absolute periods 2ℤ². This strengthens the wrong-sheet test to the actual two-generator cone at arbitrarily large winding in a fixed room.
+
+**Remaining L1 step.** For a nondirect pinned pair in a growing-gap chart, produce some H and a residue whose continued ray reaches a compatible T. The fixed-H reduction makes transverse winding finite once H and the room are given. It gives no nonempty target residue for an untested H or uniform choice across large rooms. Large winding in the example is distinct from large room area.

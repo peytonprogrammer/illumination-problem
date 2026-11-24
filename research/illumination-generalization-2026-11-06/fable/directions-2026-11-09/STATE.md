@@ -449,3 +449,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 **d228 reviewed:** sign-cone theorem correct; R22 zero clearance is a parity obstruction. Astra on normal-form completeness.
 **2026-11-23 22:10.** Presburger-encoding and parity-fold conjectures refuted (l1-excursion-normal-form). Astra on witness selection. Estimate 5–8%.
 **d229 reviewed:** bounded-template witness selection works on both test families; open: figure-eight components (Astra on periodic corridor).
+**2026-11-23 22:50.** Corridor reformulation refuted; residual = seed problem again. Route-stop recommendation to Daniel. Estimate 5–8%.
