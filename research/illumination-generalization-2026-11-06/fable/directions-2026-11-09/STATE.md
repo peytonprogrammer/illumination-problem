@@ -420,3 +420,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 17:32: d213 review of marked-selection running. Astra on selection obstruction / multi-band lift. Estimate 8–10%.
 - 2026-11-23 17:45: a22 request withdrawn (Daniel agreed). Next compute ask will be a scoped descent base, after d213 and Astra's obstruction note. No search approved.
 - 2026-11-23 17:55: d213 CORRECT WITH GAPS. Single-band selection fails at 135/200 values of t on the staircase (open case t=15). Astra on the multi-band lift and the exact descent base. Estimate 8–10%.
+- 2026-11-23 17:55: d214 review running (simultaneous lift + finite base F). Astra on ratio-space compactness. Estimate 8–10%.

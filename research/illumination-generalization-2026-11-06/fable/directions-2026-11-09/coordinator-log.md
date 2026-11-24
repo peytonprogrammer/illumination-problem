@@ -1812,3 +1812,9 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 17:55
 - d213 verdict CORRECT WITH GAPS. Re-ran checks.py: 33 PASS, 0 fail, identical to the agent's log except for CPU time. RESULTS §11 updated; claim released; verdict forwarded to Astra.
 - Key data: single-band gate selection passes for only 65/200 values of t on the √2 staircase. This supports the multi-band lift redirect. First open case: t=15. Estimate unchanged at 8–10%: the result is partial, with a concrete obstruction.
+
+## 2026-11-23 17:55 (tick)
+- Astra idle. New note bbbb/l1-selection-obstruction.md (L1). It resolves the t=15 case by a simultaneous direct-chord lift and adds a convex-cone ratio region, a multi-band lemma, one vanishing scale and a two-scale theorem. It also defines the exact finite base F. F's bound is 8.7e17, an upper bound only, not computable as proposed. The reduction is corrected: selection is also needed at reducible areas 22–121. l1-marked-selection.md was edited with the d213 corrections.
+- Launched d214-review-simultaneous-lift (Opus, named rooms, 10 CPU-min, no F enumeration); claim added.
+- Briefed Astra: bbbb/l1-ratio-compactness.md. Chart-wise compactness over ratio space using LMW/Wolecki finiteness; faces by induction on codimension; staircase chart as the test case.
+- Note: the tick text's LLLRLLLRLR stopping rule is stale. PROGRAM's current rules are the shrink-descent rule (2026-11-25) and insertion descent (2026-11-26 20:00).
