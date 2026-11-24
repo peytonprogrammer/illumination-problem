@@ -430,3 +430,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 19:05: d217 done. Relay lemma corrected (needs no separating factor). Astra on case (iii). Estimate 8–10%.
 - 2026-11-23 19:14: d218 review running. Astra on the mod-4 cocycle → double cover. Estimate 8–10%.
 - 2026-11-23 19:25: d218 done. Astra on the mod-4 cocycle. Estimate 8–10%.
+- 2026-11-23 19:34: d219 review running. Astra on large monodromy (Jordan). Estimate 8–10%.
