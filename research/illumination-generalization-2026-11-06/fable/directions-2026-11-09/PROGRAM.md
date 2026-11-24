@@ -106,3 +106,6 @@ Approved: the census at exact area 21, W ≤ 20, all interior lattice pairs acro
 
 ## Seed-profile route (selected 2026-11-23 14:12)
 Theory routes today (area-bound counting d207/d208, corner charging, direction density, common cylinders) all reduce to the seed: one straight legal chord for each pair. CC in a variable direction is equivalent to lighting (l1-common-cylinder.md). New route: rerun the approved area-21 slice recording each pair's first-witness direction height, reflection count and r; extract the hardest pairs; state a seed-type conjecture; attempt a proof for its family. Stopping rule: if by 2026-11-25 20:00 no seed type covers all area-21 pairs with a uniform description, stop and report.
+
+## Insertion-descent route (2026-11-23 16:25)
+Reviewed pieces: width-w replay + flat-cap collar (d209), all-residue re-aim for retained pairs (d210). A descent proof of L1 needs (a) a collar lemma for arbitrary terminal ends and for bridges, and (b) a polynomial bound on the seed denominator v per pair for r ≤ 8. Then every room with a long single-interval slice reduces to a shorter lit room plus a threshold that the census must cover. Stopping rule: if neither (a) nor (b) has a reviewed general case by 2026-11-26 20:00, stop and report.

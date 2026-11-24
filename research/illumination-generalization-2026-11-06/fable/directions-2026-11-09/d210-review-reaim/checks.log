@@ -1,0 +1,98 @@
+
+=== Claim 1: identity E s - 2wN = -(D/k) delta, e(t), e(D)=0 (exact over a grid)
+PASS re-aim identity and e(D)=0 over 4,104x... grid cases
+
+##### rank 11: rows [3, 3, 25, 63, 33, 60, 12], marks [(1, 1), (4, 3), (3, 6)], area 21
+
+##### rank 18: rows [6, 6, 28, 14, 3, 63, 56], marks [(2, 1), (3, 3), (1, 5), (4, 6), (5, 6)], area 21
+
+=== Claims 1-3 on rank 11: every crossing seed, re-aimed, E in 1..60
+  seed (1, 1)->(4, 3) dir (7,4) m=3: s0=7/4 D=12 k=5 selected t=[1, 2, 5, 6, 9] M=18/5 window=(-1/12,5/52) generic E>132/5
+  seed (1, 1)->(3, 6) dir (-24,5) m=1: s0=24/5 D=5 k=1 selected t=[1] M=4 window=(-1/20,1/5) generic E>35
+  tally {'pred_ok': 182, 'pred_ok_fail': 0, 'pred_bad': 177, 'pred_bad_legal': 69, 'err_checked': 1158, 'err_bad': 0, 'bound_cases': 59, 'bound_fail': 0} cpu 0.3s
+PASS rank 11: no window-predicted re-aim fails (182 traced)
+PASS rank 11: measured developed error equals (t-Db/k)delta at 1158 level visits
+PASS rank 11: |delta|<=w/(E+D/k) and legal whenever E>wvM-D/k, nearest N (59 cases)
+
+=== Claims 1-3 on rank 18: every crossing seed, re-aimed, E in 1..160
+  seed (2, 1)->(3, 3) dir (1,2) m=1: s0=1/2 D=2 k=1 selected t=[1] M=1 window=(-1/2,1/2) generic E>2
+  seed (2, 1)->(1, 5) dir (-3,8) m=3: s0=3/8 D=24 k=5 selected t=[1, 2, 5, 6, 9] M=15 window=(-1/88,1/104) generic E>1176/5
+  seed (2, 1)->(4, 6) dir (14,9) m=1: s0=14/9 D=9 k=1 selected t=[1] M=8 window=(-1/18,1/63) generic E>135
+  seed (2, 1)->(5, 6) dir (23,-5) m=3: s0=23/5 D=15 k=1 selected t=[3] M=12 window=(-1/60,1/40) generic E>105
+  seed (3, 3)->(1, 5) dir (3,-5) m=4: s0=3/5 D=20 k=4 selected t=[10, 13, 14, 17] M=9 window=(-1/35,1/40) generic E>85
+  seed (3, 3)->(4, 6) dir (3,-5) m=7: s0=3/5 D=35 k=4 selected t=[10, 13, 14, 17] M=18 window=(-1/85,1/90) generic E>685/4
+  tally {'pred_ok': 1185, 'pred_ok_fail': 0, 'pred_bad': 1679, 'pred_bad_legal': 233, 'err_checked': 10866, 'err_bad': 0, 'bound_cases': 313, 'bound_fail': 0} cpu 0.8s
+PASS rank 18: no window-predicted re-aim fails (1185 traced)
+PASS rank 18: measured developed error equals (t-Db/k)delta at 10866 level visits
+PASS rank 18: |delta|<=w/(E+D/k) and legal whenever E>wvM-D/k, nearest N (313 cases)
+
+=== Claim 2: probing the window edges on rank-18 (3,3)->(4,6)
+  (3, 3)->(4, 6): selected traversal directions (+1 up, -1 down): [-1, 1, -1, 1]
+  levels with integral base coordinate (sharpened window used): [5, 10, 15, 20, 25, 30]
+  integral-level displacements in predicted-legal cases: +side 212, -side 214, |e|>=1/v 0
+  delta outside window: 472 illegal, 5 still legal; first illegal [(1, 0, Fraction(-4, 65), (1, 4, Fraction(2, 1))), (1, 1, Fraction(68, 195), None)]
+  (3, 3)->(1, 5): selected traversal directions (+1 up, -1 down): [-1, 1, -1, 1]
+  levels with integral base coordinate (sharpened window used): [5, 10, 15]
+  integral-level displacements in predicted-legal cases: +side 158, -side 198, |e|>=1/v 0
+  delta outside window: 264 illegal, 47 still legal; first illegal [(1, 0, Fraction(-1, 10), (4, 4, Fraction(1, 1))), (1, 1, Fraction(17, 30), None)]
+
+=== Claim 4 cap table for rank 11
+  upper (4, 3): reversed dir (-7,4) s0=7/4 D1=3 interval (5/3,2) width 1/3 threshold E>=5  [note: (Fraction(7, 4), 3, Fraction(5, 3), Fraction(2, 1), 5)]
+PASS rank 11 (4, 3) cap row matches note
+  upper (3, 6): reversed dir (-24,-5) s0=24/5 D1=4 interval (19/4,5) width 1/4 threshold E>=7  [note: (Fraction(24, 5), 4, Fraction(19, 4), Fraction(5, 1), 7)]
+PASS rank 11 (3, 6) cap row matches note
+
+=== Claim 4 cap table for rank 18
+  upper (3, 3): reversed dir (-1,-2) s0=1/2 D1=1 interval (0,1) width 1 threshold E>=1  [note: (Fraction(1, 2), 1, Fraction(0, 1), Fraction(1, 1), 1)]
+PASS rank 18 (3, 3) cap row matches note
+  upper (1, 5): reversed dir (3,8) s0=3/8 D1=15 interval (4/11,5/13) width 3/143 threshold E>=127  [note: (Fraction(3, 8), 15, Fraction(4, 11), Fraction(5, 13), 127)]
+PASS rank 18 (1, 5) cap row matches note
+  upper (4, 6): reversed dir (-14,-9) s0=14/9 D1=8 interval (3/2,11/7) width 1/14 threshold E>=33  [note: (Fraction(14, 9), 8, Fraction(3, 2), Fraction(11, 7), 33)]
+PASS rank 18 (4, 6) cap row matches note
+  upper (5, 6): reversed dir (-23,-5) s0=23/5 D1=12 interval (55/12,37/8) width 1/24 threshold E>=59  [note: (Fraction(23, 5), 12, Fraction(55, 12), Fraction(37, 8), 59)]
+PASS rank 18 (5, 6) cap row matches note
+
+=== Claim 4: upper-pair windows and last missed E (rank 18)
+  (3, 3)->(1, 5): s0=3/5 D=20 k=4 sel=[10, 13, 14, 17] M=9 window=(-1/35,1/40) last missed (brute) 57, (residue formula) (57, 17); generic bound E>85
+PASS rank 18 (1, 5): D, M, window, last missed E match note
+  (3, 3)->(4, 6): s0=3/5 D=35 k=4 sel=[10, 13, 14, 17] M=18 window=(-1/85,1/90) last missed (brute) 150, (residue formula) (150, 10); generic bound E>685/4
+PASS rank 18 (4, 6): D, M, window, last missed E match note
+  rank 11 upper-upper seeds (S,T,k): [((4, 3), (3, 6), 0)]
+  rank 18 upper-upper seeds (S,T,k): [((3, 3), (1, 5), 4), ((3, 3), (4, 6), 4), ((3, 3), (5, 6), 0), ((1, 5), (4, 6), 0), ((1, 5), (5, 6), 0), ((4, 6), (5, 6), 0)]
+
+=== Claim 5: all pairs at named lengths
+  rank 11 E=7 area 35: 45/45 pairs lit, rays 125, persistence failures 0, kinds {'cap-cap direct': 28, 'cap-upper direct': 14, 'cap-upper floor': 2, 'upper-upper replay': 1}, unlit []  cpu 1.0s
+PASS rank 11 E=7: every lattice pair lit by the note's constructions; window rays persist
+  rank 11 E=8 area 37: 55/55 pairs lit, rays 155, persistence failures 0, kinds {'cap-cap direct': 36, 'cap-upper direct': 16, 'cap-upper floor': 2, 'upper-upper replay': 1}, unlit []  cpu 1.0s
+PASS rank 11 E=8: every lattice pair lit by the note's constructions; window rays persist
+  rank 11 E=9 area 39: 66/66 pairs lit, rays 189, persistence failures 0, kinds {'cap-cap direct': 45, 'cap-upper direct': 18, 'cap-upper floor': 2, 'upper-upper replay': 1}, unlit []  cpu 1.0s
+PASS rank 11 E=9: every lattice pair lit by the note's constructions; window rays persist
+  rank 11 E=10 area 41: 78/78 pairs lit, rays 227, persistence failures 0, kinds {'cap-cap direct': 55, 'cap-upper direct': 20, 'cap-upper floor': 2, 'upper-upper replay': 1}, unlit []  cpu 1.0s
+PASS rank 11 E=10: every lattice pair lit by the note's constructions; window rays persist
+  rank 11 E=13 area 47: 120/120 pairs lit, rays 358, persistence failures 0, kinds {'cap-cap direct': 91, 'cap-upper direct': 26, 'cap-upper floor': 2, 'upper-upper replay': 1}, unlit []  cpu 1.0s
+PASS rank 11 E=13: every lattice pair lit by the note's constructions; window rays persist
+  rank 18 E=151 area 323: 12090/12090 pairs lit, rays 64499, persistence failures 0, kinds {'cap-cap direct': 11476, 'cap-upper direct': 548, 'cap-upper floor': 60, 'upper-upper re-aim': 2, 'upper-upper replay': 4}, unlit []  cpu 8.7s
+PASS rank 18 E=151: every lattice pair lit by the note's constructions; window rays persist
+  rank 18 E=152 area 325: 12246/12246 pairs lit, rays 65346, persistence failures 0, kinds {'cap-cap direct': 11628, 'cap-upper direct': 552, 'cap-upper floor': 60, 'upper-upper re-aim': 2, 'upper-upper replay': 4}, unlit []  cpu 16.6s
+PASS rank 18 E=152: every lattice pair lit by the note's constructions; window rays persist
+  rank 18 E=157 area 335: 13041/13041 pairs lit, rays 69668, persistence failures 0, kinds {'cap-cap direct': 12403, 'cap-upper direct': 572, 'cap-upper floor': 60, 'upper-upper re-aim': 2, 'upper-upper replay': 4}, unlit []  cpu 25.3s
+PASS rank 18 E=157: every lattice pair lit by the note's constructions; window rays persist
+
+=== Claim 5b: rank 11 at E=1..6 (areas 23..33), every lattice pair
+  E=1 area=23 marks=4 pairs lit 6/6, cap-window witnesses 3, max steps 2 (4*area=92)  cpu 25.3s
+  E=2 area=25 marks=5 pairs lit 10/10, cap-window witnesses 6, max steps 2 (4*area=100)  cpu 25.3s
+  E=3 area=27 marks=6 pairs lit 15/15, cap-window witnesses 8, max steps 3 (4*area=108)  cpu 25.4s
+  E=4 area=29 marks=7 pairs lit 21/21, cap-window witnesses 10, max steps 4 (4*area=116)  cpu 25.4s
+  E=5 area=31 marks=8 pairs lit 28/28, cap-window witnesses 12, max steps 5 (4*area=124)  cpu 25.4s
+  E=6 area=33 marks=9 pairs lit 36/36, cap-window witnesses 14, max steps 6 (4*area=132)  cpu 25.4s
+PASS rank 11 lattice-lit at every E=1..6
+
+=== Claim 6: lattice states on the four-sheet surface
+  rank 11: area 21, nonsingular non-corner lattice states 48, reflex corners 8, 4*area-2r = 68
+PASS rank 11: states <= 4*area
+  rank 18: area 21, nonsingular non-corner lattice states 48, reflex corners 8, 4*area-2r = 68
+PASS rank 18: states <= 4*area
+
+FAILS: []
+TOTAL CPU 25.4s
+exit 0
