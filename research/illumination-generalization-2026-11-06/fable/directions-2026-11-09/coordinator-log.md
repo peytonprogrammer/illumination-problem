@@ -1863,3 +1863,8 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 19:45
 - d219: 6 CORRECT, 1 CORRECT WITH GAPS. Re-ran checks.py; see above. RESULTS §11 updated; claim released; verdict forwarded. The cocycle route is closed. Estimate 8–10%.
+
+## 2026-11-23 19:55 (tick)
+- Astra idle. New note bbbb/l1-large-monodromy.md (L1 case iii). At n=22, r=8, the primitive branch excludes M22 (order-3 elements have six 3-cycles, forcing z_x ∈ {0,6}, while Σz = 8), giving A21/S21. The imprimitive branch has 20 external sheets. Shear functoriality is proved geometrically. cov4181's G = (S7 wr S4) ∩ A28. The realization lemma is still missing.
+- Launched d220-review-large-monodromy (Opus, cov4181 only, 10 CPU-min); claim added.
+- Briefed Astra: bbbb/l1-cylinder-levels.md. Origami orbit criterion (S, T on a common interior integer level of a tall cylinder) plus a counting attack at n=22, r=8.
