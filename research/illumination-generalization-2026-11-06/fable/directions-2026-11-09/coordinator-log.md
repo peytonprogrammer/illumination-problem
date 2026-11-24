@@ -1877,3 +1877,16 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Launched d221-review-cylinder-levels (Opus, named rooms, 10 CPU-min); claim added.
 - Briefed Astra: bbbb/l1-twist-existence.md. Prove the CRT test passes for some twist family at n=22 primitive, or reduce to an explicit finite list of failing tuples.
 - Assessment: d212–d220 are reviewed scoping, and case (iii) at n=22 remains open. If the twist-existence note doesn't close or finitize the primitive branch, I'll report to Daniel with a route decision (theory continuation vs. an approved finite check).
+
+## 2026-11-23 20:25
+- d221: no wrong claims (3 CORRECT, 3 WITH GAPS). Re-ran checks.py; see above. RESULTS §11 updated; claim released; verdict forwarded.
+- **Sync failed** at 20:12 and 20:22. GitHub port 443 timed out (network). Local commit 9e3b4a3cd isn't pushed; origin/main is 4d09ed3a3. Will retry next tick.
+
+## 2026-11-23 20:40 tick
+- Astra note l1-twist-existence.md (L1 case iii, primitive branch): exact D(I,J) residue test for two-traversal twist witnesses, planar-map classification, tree filter, cov4181 j=3 witness. Reduction only; no closure or finitization at area 22. d222 Opus review launched (claim on board).
+- Astra briefed: imprimitive degree-20 branch at n=22 via the 11-block intermediate cover N (case ii vs. deck-involution witness); follow-on: general block-size-2 lemma.
+- Route decision due (condition from 20:14 met): reported to Daniel.
+- Sync: still no outbound internet (GitHub/Google time out). Local 9e3b4a3cd unpushed; origin/main 4d09ed3a3.
+- Estimate 8–10% (unchanged). Ledger 6/274/4,294.
+- Slack self-DM post failed (ECONNREFUSED); status reported in chat only. Re-post when the connection returns.
+- d222 done: 5 CORRECT, 2 CORRECT WITH GAPS (minor), 0 wrong. Exact decision procedure; no area-22 closure. Re-run identical (0 failures). RESULTS §11 updated, claim released, verdict forwarded to Astra.

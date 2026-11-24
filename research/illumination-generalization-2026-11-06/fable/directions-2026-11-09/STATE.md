@@ -435,3 +435,7 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 19:55: d220 review running. Astra on the cylinder-level criterion. Estimate 8–10%.
 - 2026-11-23 20:05: d220 done. Astra on cylinder levels. Estimate 8–10%.
 - 2026-11-23 20:14: d221 review running. Astra on twist-family existence. Estimate 8–10%.
+- 2026-11-23 20:25: d221 done. Sync failing (GitHub unreachable); 9e3b4a3cd unpushed. Estimate 8–10%.
+
+**2026-11-23 20:40.** d222 (twist-existence) in review. Astra on imprimitive n=22 branch. Primitive branch of L1 case (iii) at n=22 open; route decision reported to Daniel. Sync blocked by network outage (9e3b4a3cd unpushed). Estimate 8–10%.
+**d222 reviewed:** twist-existence test correct (2 minor gaps); primitive n=22 branch still open.

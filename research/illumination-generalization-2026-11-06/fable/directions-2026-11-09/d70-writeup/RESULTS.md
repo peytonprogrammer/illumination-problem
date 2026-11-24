@@ -1569,6 +1569,18 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
   First open case: single-state reachability at area 22 with G giant; the imprimitive branch is separate. [review](../d220-review-large-monodromy/review.md)
 
+- **d221 — origami-orbit lighting criterion (L1 case iii, reformulation), 3 CORRECT, 3 CORRECT WITH GAPS.**
+  - Criterion: a pair is lit ⇔ some marked orbit state has compatible lifts on (I) a common interior cylinder level or (II) a common open saddle connection.
+  - Complete colored orbits: cov446 (9,072 states), R22 (2,592), cov4181 (3,888). For cov446, (I) never occurs, and 2,160 states have (II).
+  - Site and saddle counts and the pair-count formula match brute force in 24 states. L=4n is common, so there's no positive lower bound.
+  - The cov4181 type-(I) witness in direction (−3,8) is exact.
+  - Twist formula and CRT test: exact on cov4181. At class b, 2/16 pass; at the dark class d, 0 pass.
+  - Gaps: the twist composition order isn't fixed, and the geometricity of the full twist isn't argued.
+
+  First open case: area 22, primitive branch, one state with (I) or (II). [review](../d221-review-cylinder-levels/review.md)
+
+- **d222 — Twist-existence test (L1, case iii), reviewed 2026-11-23.** For two adjacent poles, the two-traversal witnesses in a full-twist family are decided exactly by a residue set D(I,J) on pairs of k-cycles. The two-pole orbits are planar bipartite maps with F = 2+(B−L)/2. The complementary disks form a tree, which gives a distance-two filter. Pigeonhole sufficiency: |S|+|T| > gcd. cov4181 has a j=3 two-traversal witness in class b (checked in exact billiards). Verdicts: 5 CORRECT, 2 CORRECT WITH GAPS (genus-zero justification; sign of the shear). No closure at area 22: the primitive branch is still open. 0 failures; re-run identical. [review](../d222-review-twist-existence/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at

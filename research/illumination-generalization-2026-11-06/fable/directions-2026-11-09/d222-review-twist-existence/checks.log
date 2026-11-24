@@ -1,0 +1,79 @@
+== Part A. Combinatorial self-test of claims 1, 3, 4 ==
+   exhaustive degree <= 5 done: pairs 4721
+   stats {'pairs': 10721, 'comps': 18760, 'g0': 17968, 'gpos': 792, 'euler_bad': 0, 'b0': 8111, 'b0_bad': 0, 'path': 7217, 'path_bad': 0, 'alt': 894, 'alt_bad': 0, 'st': 545684, 'st_pass': 129430, 'd_mis': 0, 'oneorder_mis': 57210, 'pig': 9141, 'pig_bad': 0, 'origin_bad': 0, 'f_bound_bad': 0}
+PASS Euler: genus-0 components (17968) satisfy F = 2+(B-L)/2; genus>0 components (792) satisfy F = 2-2g+(B-L)/2 instead
+PASS random X,Y do produce positive-genus components, so genus zero needs the room (Q a sphere)
+PASS genus 0: F <= 2 + B/2
+PASS B=0: path (7217) -> one E-cycle, X(i)=c-i, 2j=c-pos s-pos t exact, odd E always soluble; alternating cycle (894) -> two h-cycles, X swaps faces and reverses index, equation exact, no same-face witness
+PASS D(I,J) test equals brute force over all j < ord k on 545684 ordered (s,t), 129430 positive
+PASS D test is independent of the chosen face origins
+   one-order-only D table disagrees with brute force on 57210 (s,t)
+PASS both orders of each transposition are needed (one order alone is not exact)
+PASS pigeonhole |S|+|T| > g with D nonempty always gives a witness (9141 cases)
+
+== Part B. cov4181 (d66 rows) ==
+PASS ABCD = 1 (A=V0H1, B=H1V1, C=V1H0, D=H0V0)
+   (equal, inverse) vs d220 a,b,c,d = H1V0, H1V1, H0V1, H0V0: {'a': (False, True), 'b': (True, True), 'c': (False, True), 'd': (True, True)}
+   3-cycles per pole: {'a': 1, 'b': 0, 'c': 7, 'd': 0}
+PASS A = a^-1, C = c^-1 (a, c have 3-cycles, so not equal), B = b, D = d: matches the note
+PASS B has 14 transpositions; C (class c = Q pole) has none
+PASS k = BC = H1H0
+   column k-cycles (rows from lowest): {0: [0, 1, 3, 5, 4, 2], 1: [2, 3], 2: [2, 3], 3: [0, 1, 3, 5, 4, 2], 4: [0, 1, 3, 5, 4, 2], 5: [2, 3], 6: [2], 7: [0, 1, 2]}
+PASS k-cycle table matches the note
+PASS B(i) = H1(V1(i)): V1 first, then H1
+   <B,C> orbits (columns, size): [([0, 1], 8), ([2, 3], 8), ([4, 5], 8), ([6, 7], 4)]
+PASS orbits are the column pairs, sizes 8,8,8,4
+PASS component cols [0, 1]: E=8 B=2 L=2 F=2 genus 0, face lengths by column [6, 2]
+PASS component cols [2, 3]: E=8 B=2 L=2 F=2 genus 0, face lengths by column [2, 6]
+PASS component cols [4, 5]: E=8 B=2 L=2 F=2 genus 0, face lengths by column [6, 2]
+PASS component cols [6, 7]: E=4 B=1 L=1 F=2 genus 0, face lengths by column [1, 3]
+PASS AB: every <X,Y> component has genus 0 (6 components)
+PASS BC: every <X,Y> component has genus 0 (4 components)
+PASS CD: every <X,Y> component has genus 0 (7 components)
+PASS DA: every <X,Y> component has genus 0 (5 components)
+PASS total 3-cycles over the four poles = 8 = r, so B <= 8 per two-pole map; F <= 2 + 8/2 = 6
+PASS H(X,Y)=(Y,Y^-1XY): H^2 = (k^-1Xk, k^-1Yk), product kept
+PASS s=(2,2) at S, t=(3,3) at T; B has 2-cycles (s t) and (u v)
+PASS offsets s->u = 1 mod 2 (column 2), t->v = 3 mod 6 (column 3)
+PASS k^3 sends s,t to u,v
+PASS k^-3 B k^3 exchanges s and t
+   exponents j mod 6 with (s t) in k^-j B k^j: [0, 3]
+PASS for this incidence pair exactly j = 0 and j = 3 (mod 6) work
+PASS note tuple, class b under BC: D test passes 2 of 16 incidence pairs (brute force 2)
+   passing incidence pairs by j: {0: [((2, 2), (3, 3)), ((2, 3), (3, 2))], 1: [], 2: [], 3: [((2, 2), (3, 3)), ((2, 3), (3, 2))], 4: [], 5: []}
+PASS note tuple, class d under CD: 0 of 16 incidence pairs pass (d-dark, as in d221)
+
+== Part C. Exact billiard trace of the b-twist family from S=(2,3) ==
+PASS shear (x,y)->(x+2y,y) commutes with -1, fixes the 4 poles and both rims pointwise
+PASS x-displacement 2y runs 0 -> 1 across 0<y<1/2: one full turn (Dehn twist); (x,y)->(x+y,y) moves pole (0,1/2)
+PASS unit shear is a half twist (swaps poles), so 2 is needed
+   j=0: traced witnesses S->M->T [('horizontal', (3, 3))]
+   j=1: traced witnesses S->M->T []
+   j=2: traced witnesses S->M->T []
+   j=3: traced witnesses S->M->T [((1, 6), (3, 3)), ((1, -6), (3, 3))]
+   j=4: traced witnesses S->M->T []
+   j=5: traced witnesses S->M->T []
+   combinatorial (some incidence pair passes at j or -j): {0: True, 1: False, 2: False, 3: True, 4: False, 5: False}
+PASS trace and twist test agree on every residue j mod 6 (j = 0, 3 lit; 1, 2, 4, 5 not)
+PASS j=3: exact two-step billiard path S -> class-b regular point -> T in direction (+-1, +-6)
+PASS gcd(1,6)=1: no grid-vertex hit at non-integer times
+
+== Part D. Product-relation tree, distance filter, residual graph (class a = (0,1)) ==
+PASS pair AB: 6+7 vertices, 12 edges, tree; W1W2 = k^-1
+PASS pair BC: 4+5 vertices, 8 edges, tree; W1W2 = k^-1
+PASS pair CD: 7+6 vertices, 12 edges, tree; W1W2 = k^-1
+PASS pair DA: 5+4 vertices, 8 edges, tree; W1W2 = k^-1
+   regular interior class-a marks m_a = 4: [(2, 3), (4, 1), (4, 3), (4, 5)]; t_a = 12
+PASS each mark uses two distinct A-transpositions: 2 m_a = 8 <= t_a = 12
+PASS n = 22: t_a <= 11 so m_a <= 5 and at most 10 pairs
+   family B|BC: lift pairs with a two-traversal witness = 10
+   family C|BC: lift pairs with a two-traversal witness = 0
+   family C|CD: lift pairs with a two-traversal witness = 0
+   family D|CD: lift pairs with a two-traversal witness = 16
+PASS every witness obeys the tree filter (distance 2 via one x,y-component, or same face)
+   residual graph: 6 mark pairs, 5 edges, 1 missing
+   missing pairs: [((4, 1), (4, 5))]
+PASS S=(2,3), T=(4,3) is an edge (class b)
+
+FAILURES: 0 []
+CPU 0.7 s

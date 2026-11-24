@@ -1,0 +1,111 @@
+== Rooms (cells from d72 rooms(), d66 rows) ==
+cov446 n 15 r 7
+   y=3 .#......
+   y=2 ####....
+   y=1 ########
+   y=0 .#....#.
+cov4181 n 28 r 8
+   y=5 #..##...
+   y=4 #..##...
+   y=3 ######..
+   y=2 ########
+   y=1 #..##..#
+   y=0 #..##..#
+R22 n 15 r 9
+   y=2 ..##..
+   y=1 .####.
+   y=0 ##..##
+   y=-1 ##....
+   y=-2 .##...
+   y=-3 ..#...
+PASS cov4181 from covers.json equals the d66 cell rows
+
+== Claim 3. Site, saddle-connection, and pair counts ==
+PASS cov4181: 112 incidences, 96 sites = 4n-2r, 8 triple sites = r
+PASS cov4181: |F| = 20 = 2r+4, M = 76 = 4n-4r-4
+PASS cov4181: marked incidences 36 = E = 4r+4
+PASS cov4181 v=(1, 0): cyl (w,h)=[(2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (4, 2), (4, 2), (4, 2), (4, 2), (12, 1), (12, 1), (16, 1), (16, 1)] L=84 E=36 circ sites=28 sc sites=48 crit sites=68 pairs brute=140 formula=140
+PASS cov4181 v=(0, 1): cyl (w,h)=[(2, 1), (2, 1), (4, 1), (4, 1), (4, 2), (4, 2), (6, 1), (6, 1), (12, 1), (12, 1), (12, 2), (12, 2)] L=80 E=36 circ sites=32 sc sites=44 crit sites=64 pairs brute=166 formula=166
+PASS cov4181 v=(1, 1): cyl (w,h)=[(24, 1), (24, 1), (32, 1), (32, 1)] L=112 E=36 circ sites=0 sc sites=76 crit sites=96 pairs brute=320 formula=320
+PASS cov4181 v=(-1, 1): cyl (w,h)=[(24, 1), (24, 1), (32, 1), (32, 1)] L=112 E=36 circ sites=0 sc sites=76 crit sites=96 pairs brute=320 formula=320
+PASS cov4181 v=(2, 1): cyl (w,h)=[(14, 1), (14, 1), (42, 1), (42, 1)] L=112 E=36 circ sites=0 sc sites=76 crit sites=96 pairs brute=144 formula=144
+PASS cov4181 v=(3, 2): cyl (w,h)=[(24, 1), (24, 1), (32, 1), (32, 1)] L=112 E=36 circ sites=0 sc sites=76 crit sites=96 pairs brute=512 formula=512
+PASS cov4181 v=(-3, 8): cyl (w,h)=[(8, 1), (8, 1), (8, 2), (8, 2), (32, 1), (32, 1)] L=96 E=36 circ sites=16 sc sites=60 crit sites=80 pairs brute=208 formula=208
+PASS cov4181 v=(1, 4): cyl (w,h)=[(24, 1), (24, 1), (32, 1), (32, 1)] L=112 E=36 circ sites=0 sc sites=76 crit sites=96 pairs brute=512 formula=512
+PASS R22: 60 incidences, 42 sites = 4n-2r, 9 triple sites = r
+PASS R22: |F| = 22 = 2r+4, M = 20 = 4n-4r-4
+PASS R22: marked incidences 40 = E = 4r+4
+PASS R22 v=(1, 0): cyl (w,h)=[(2, 1), (2, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 2), (4, 2), (8, 1), (8, 1)] L=52 E=40 circ sites=8 sc sites=12 crit sites=34 pairs brute=12 formula=12
+PASS R22 v=(0, 1): cyl (w,h)=[(2, 1), (2, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 2), (4, 2), (8, 1), (8, 1)] L=52 E=40 circ sites=8 sc sites=12 crit sites=34 pairs brute=12 formula=12
+PASS R22 v=(1, 1): cyl (w,h)=[(10, 1), (10, 1), (10, 1), (10, 1), (10, 1), (10, 1)] L=60 E=40 circ sites=0 sc sites=20 crit sites=42 pairs brute=0 formula=0
+PASS R22 v=(-1, 1): cyl (w,h)=[(10, 1), (10, 1), (10, 1), (10, 1), (10, 1), (10, 1)] L=60 E=40 circ sites=0 sc sites=20 crit sites=42 pairs brute=0 formula=0
+PASS R22 v=(2, 1): cyl (w,h)=[(2, 1), (2, 1), (2, 1), (2, 1), (4, 1), (4, 1), (4, 1), (4, 1), (18, 1), (18, 1)] L=60 E=40 circ sites=0 sc sites=20 crit sites=42 pairs brute=6 formula=6
+PASS R22 v=(3, 2): cyl (w,h)=[(10, 1), (10, 1), (10, 1), (10, 1), (10, 1), (10, 1)] L=60 E=40 circ sites=0 sc sites=20 crit sites=42 pairs brute=12 formula=12
+PASS R22 v=(-3, 8): cyl (w,h)=[(2, 1), (2, 1), (2, 1), (2, 1), (4, 1), (4, 1), (4, 1), (4, 1), (18, 1), (18, 1)] L=60 E=40 circ sites=0 sc sites=20 crit sites=42 pairs brute=6 formula=6
+PASS R22 v=(1, 4): cyl (w,h)=[(2, 1), (2, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 1), (4, 2), (4, 2), (8, 1), (8, 1)] L=52 E=40 circ sites=8 sc sites=12 crit sites=34 pairs brute=12 formula=12
+PASS cov446: 60 incidences, 46 sites = 4n-2r, 7 triple sites = r
+PASS cov446: |F| = 18 = 2r+4, M = 28 = 4n-4r-4
+PASS cov446: marked incidences 32 = E = 4r+4
+PASS cov446 v=(1, 0): cyl (w,h)=[(2, 1), (2, 1), (2, 1), (2, 1), (2, 1), (2, 1), (8, 1), (8, 1), (16, 1), (16, 1)] L=60 E=32 circ sites=0 sc sites=28 crit sites=46 pairs brute=54 formula=54
+PASS cov446 v=(0, 1): cyl (w,h)=[(2, 1), (2, 1), (2, 2), (2, 2), (4, 1), (4, 1), (4, 1), (4, 1), (4, 2), (4, 2), (8, 1), (8, 1)] L=48 E=32 circ sites=12 sc sites=16 crit sites=34 pairs brute=14 formula=14
+PASS cov446 v=(1, 1): cyl (w,h)=[(10, 1), (10, 1), (20, 1), (20, 1)] L=60 E=32 circ sites=0 sc sites=28 crit sites=46 pairs brute=12 formula=12
+PASS cov446 v=(-1, 1): cyl (w,h)=[(10, 1), (10, 1), (20, 1), (20, 1)] L=60 E=32 circ sites=0 sc sites=28 crit sites=46 pairs brute=12 formula=12
+PASS cov446 v=(2, 1): cyl (w,h)=[(4, 1), (4, 1), (6, 1), (6, 1), (8, 1), (8, 1), (12, 1), (12, 1)] L=60 E=32 circ sites=0 sc sites=28 crit sites=46 pairs brute=24 formula=24
+PASS cov446 v=(3, 2): cyl (w,h)=[(2, 1), (2, 1), (4, 1), (4, 1), (24, 1), (24, 1)] L=60 E=32 circ sites=0 sc sites=28 crit sites=46 pairs brute=18 formula=18
+PASS cov446 v=(-3, 8): cyl (w,h)=[(6, 1), (6, 1), (8, 1), (8, 1), (16, 1), (16, 1)] L=60 E=32 circ sites=0 sc sites=28 crit sites=46 pairs brute=48 formula=48
+PASS cov446 v=(1, 4): cyl (w,h)=[(2, 1), (2, 1), (2, 1), (2, 1), (2, 1), (2, 1), (8, 1), (8, 1), (16, 1), (16, 1)] L=60 E=32 circ sites=0 sc sites=28 crit sites=46 pairs brute=54 formula=54
+   n=22, r=8 arithmetic: incidences 88, sites 72 F 20 M 52 E 36 L range [36, 88]; circles 88-L, intervals L-36
+PASS n=22 r=8 site numbers 72, 20, 52
+
+== Claims 1-2. Complete coloured orbits: (I), CC, (II) ==
+   cov446 (1,2)-(3,2): CLOSED {'I': 0, 'CC': 0, 'II': 2160, 'states': 9072}
+PASS cov446: orbit closes at 9,072; no (I), no common open cylinder, (II) in 2160 states
+PASS cov446: horizontal chord (1,2)-(2,2)-(3,2) on a critical leaf; (4,2) is reflex
+   R22 (0,0)-(2,2): CLOSED {'I': 0, 'CC': 0, 'II': 0, 'states': 2592}
+PASS R22: complete orbit (2592 states) has neither (I) nor (II)
+   cov4181 (2,3)-(4,3): CLOSED {'I': 240, 'CC': 240, 'II': 1104, 'states': 3888}
+PASS cov4181: complete orbit has both (I) and (II) states
+
+== Claim 1. Gamma(2) reduction to (1,0),(0,1),(1,1) (bounded sample) ==
+PASS Gamma(2) shears reduce 3920 primitive vectors (|p|,|q|<=40) to their parity representative
+
+== Claim 4. cov4181 type-(I) witness in direction (-3,8) ==
+   d66 rows: positions [(2, 3), (1, 3), (4, 1), (3, 5), (4, 3), (5, 1), (4, 5), (5, 3), (2, 3)]
+   d66 rows: signs     ['-+', '++', '+-', '+-', '-+', '--', '+-', '-+', '-+']
+PASS positions match the note on the d66 cell rows (no reflection needed)
+PASS outgoing velocity signs match the note
+PASS all nine listed sites are regular
+PASS T at step 4 on the starting sheet; S at step 8 with the starting velocity
+PASS internal crossing times 1/3,2/3 and j/8 never coincide (no grid-vertex hit)
+PASS four-step witness midpoint (4,1) is in the source class
+   x-mirror: positions [(2, 3), (1, 3), (4, 1), (3, 5), (4, 3), (5, 1), (4, 5), (7, 3), (6, 3)]
+   x-mirror: signs     ['-+', '+-', '+-', '+-', '-+', '--', '+-', '++', '-+']
+   y-mirror: positions [(2, 3), (1, 3), (4, 1), (3, 5), (4, 3), (5, 1), (4, 5), (7, 3)]
+   y-mirror: signs     ['-+', '++', '+-', '+-', '-+', '--', '+-', '++']
+PASS origami state for (-3,8): S~,T~ on sheet (1,1) share one regular row (row length 8)
+PASS class-b horizontal chord (2,3)-(4,3) lies on a critical leaf ending at reflex (6,3)
+
+== Claim 5. Coincidence counts (Riemann-Hurwitz on Q) ==
+PASS cov4181 pole tuple (V0H0, H0V1, V1H1, H1V0) has product 1
+PASS cov4181: 3-cycles 8 = r, 2-cycles 38 = 2n-2-2r, and 2*38 = M on X
+   n=22 primitive branch: 2d = 2*21 = 42, J = 2*8 = 16, R = 42-16 = 26 = 2*22-2-2*8; t_a <= 11 so 26 - t_a >= 15
+PASS area-22 arithmetic
+
+== Claim 6. Full-twist formula and CRT test on the cov4181 tuple ==
+   positions (0, 0),(1, 0): ord k = 24, cycle type of k [8, 6, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]
+   positions (1, 0),(1, 1): ord k = 6, cycle type of k [6, 6, 6, 3, 2, 2, 2, 1]
+   positions (1, 1),(0, 1): ord k = 24, cycle type of k [8, 6, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]
+PASS j full twists give k^-j g k^j on both entries, other entries and product fixed (j <= 2 ord k)
+PASS sheets at S and T are 2-cycles of g_a
+   x=(0, 0) (rel (0, 1)) twisted with y=(1, 0): 12 transpositions, (s,t) incidence pairs passing CRT = 0 of 16
+   x=(1, 0) (rel (1, 1)) twisted with y=(0, 0): 0 transpositions, (s,t) incidence pairs passing CRT = 0 of 16
+   x=(1, 0) (rel (1, 1)) twisted with y=(1, 1): 0 transpositions, (s,t) incidence pairs passing CRT = 0 of 16
+   x=(1, 1) (rel (1, 0)) twisted with y=(1, 0): 14 transpositions, (s,t) incidence pairs passing CRT = 2 of 16
+PASS CRT test agrees with brute force over all exponents j < ord k
+   2-cycles per pole {(0, 0): 12, (1, 0): 0, (1, 1): 14, (0, 1): 12}
+PASS exactly one Q pole (no 2-cycles): [(1, 0)]
+   relative classes: a=(0,1), b=(1,1) [lit by (3,3)], c=(1, 0) (Q), d=(0, 0)
+PASS no two-traversal witness at the d-dark class (consistent with d66 per-target darkness)
+
+FAILURES: 0 []
+CPU 2.0 s
