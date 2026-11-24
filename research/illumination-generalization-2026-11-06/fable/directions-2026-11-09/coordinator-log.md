@@ -1890,3 +1890,10 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Estimate 8–10% (unchanged). Ledger 6/274/4,294.
 - Slack self-DM post failed (ECONNREFUSED); status reported in chat only. Re-post when the connection returns.
 - d222 done: 5 CORRECT, 2 CORRECT WITH GAPS (minor), 0 wrong. Exact decision procedure; no area-22 closure. Re-run identical (0 failures). RESULTS §11 updated, claim released, verdict forwarded to Astra.
+- Network back. Sync pushed 565ed6da6 (HEAD = origin/main verified). Slack status posted. Note: sync blocked d71-check-qclass/sample_check.py and bbbb/l1-pocket-lemma.md for private data (pre-existing filter, not published).
+
+## 2026-11-23 20:50 tick
+- Astra note l1-imprimitive-22.md (L1 case iii, imprimitive branch): quotient N is a degree-11 sphere, z=4; BBBB ⇔ qₓ≥1; (2,11) row excluded from case (ii); exact double-cover graph test; axial half-room H (11 cells) + census ⇒ S lights T or σT. No closure. d223 Opus review launched (claim on board).
+- Astra briefed: seam-parity lemma (both seam-contact parities via odd-crossing cylinder), follow-on half-turn subcase.
+- Stopping rule from tick text (N0 for LLLRLLLRLR by 11-24 20:00) is superseded by PROGRAM.md deadlines (11-25/11-26).
+- Estimate 8–10% (unchanged).

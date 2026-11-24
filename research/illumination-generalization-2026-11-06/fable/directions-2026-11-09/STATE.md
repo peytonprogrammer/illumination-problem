@@ -439,3 +439,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 
 **2026-11-23 20:40.** d222 (twist-existence) in review. Astra on imprimitive n=22 branch. Primitive branch of L1 case (iii) at n=22 open; route decision reported to Daniel. Sync blocked by network outage (9e3b4a3cd unpushed). Estimate 8–10%.
 **d222 reviewed:** twist-existence test correct (2 minor gaps); primitive n=22 branch still open.
+**2026-11-23 20:50.** d223 (imprimitive-22) in review. Astra on seam-parity lemma. Estimate 8–10%.
