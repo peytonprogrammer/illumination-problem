@@ -1851,3 +1851,6 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Astra idle. New note bbbb/l1-relay-lemma.md (L1 case iii). It has the corrected three-way split, a different-parity analogue, and a dark-room control table (R22 and P6 in (ii), R34 in (i)). It adds an exact single-state test: components are paths or cycles, with D ≡ 2 mod 4 or gcd(C,4) | 2−D.
 - Launched d218-review-relay-lemma (Opus, named rooms, 10 CPU-min); claim added.
 - Briefed Astra: bbbb/l1-mod4-cocycle.md. Darkness in (iii) as a Z/2 cocycle; invariance gives a double cover and hence a separating factor; cov4181 sanity check.
+
+## 2026-11-23 19:25
+- d218: 4 CORRECT, 2 CORRECT WITH GAPS (scoping). Re-ran checks.py; see the PASS count above. RESULTS §11 updated; claim released; verdict forwarded. Estimate unchanged at 8–10%.

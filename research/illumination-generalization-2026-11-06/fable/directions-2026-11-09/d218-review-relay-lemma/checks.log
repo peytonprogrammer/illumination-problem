@@ -1,0 +1,180 @@
+
+=== Claim 1: three-way split, single-factor (k,z,m) rows
+    rows (k,z,m,area): [(2, 2, 4, 8), (3, 2, 4, 12), (4, 2, 4, 16), (2, 3, 5, 10), (2, 4, 6, 12)]
+PASS areas in note order 8,12,16,10,12
+PASS all rows inside the completed census (areas <= 21, census-a21-status.md)
+PASS split (i) / (not i and F) / (not i and not F) is a partition of all cases
+
+=== Claim 2: fixed points of tau_e on B = (R^2/2Z^2)/{+-1}
+    e=(1, 0): torus solutions [('1/2', '0'), ('1/2', '1'), ('3/2', '0'), ('3/2', '1')], base points 2
+    e=(0, 1): torus solutions [('0', '1/2'), ('0', '3/2'), ('1', '1/2'), ('1', '3/2')], base points 2
+    e=(1, 1): torus solutions [('1/2', '1/2'), ('1/2', '3/2'), ('3/2', '1/2'), ('3/2', '3/2')], base points 2
+PASS each e: 4 torus solutions of 2u=e mod 2, 2 base points, none a pole
+PASS odd-N midpoints satisfy 2u = e mod 2 (sample primitive v of each parity)
+
+=== Claim 3: rectangle [0,8]x[0,4], S=(2,2), T=(6,2)
+PASS every unfolded target (+-6+16i, +-2+8j) agrees with S mod 4
+PASS every developed midpoint S + (T*-S)/2 has the parity of S
+PASS every connecting segment has 0 mod 4 primitive steps
+PASS horizontal chord passes only interior points (3,2),(4,2),(5,2): pair lit, midpoint (4,2) even-even
+
+=== Claim 4: dark-room controls
+PASS manuscript 22-vertex list gives the d217 R22 cells (area 15, r=9)
+    R22 regular sites: [((-1, 0), 'smooth'), ((0, 0), 'interior'), ((1, 0), 'smooth'), ((2, -2), 'smooth'), ((2, 1), 'smooth'), ((2, 2), 'interior'), ((2, 3), 'smooth'), ((4, 0), 'smooth')]
+PASS R22: S,T interior even-even; (1,0) smooth of parity (1,0)
+PASS R22: off-class smooth sites are exactly the four seam endpoints E1..E4
+PASS R22: segment (0,0)-(1,0) is interior to Q; (1,0) has the vertical exterior mirror x=1
+PASS midpoint-orbits.txt: R22 marked component d=12, regular 6,0,0,0 (zero off-class regular branches)
+    P6 (found.json) marks [(-2, 3), (0, 1)], regular sites [((-3, 3), 'smooth'), ((-2, 3), 'interior'), ((-1, 3), 'smooth'), ((0, 0), 'smooth'), ((0, 1), 'interior'), ((0, 2), 'smooth'), ((0, 5), 'smooth'), ((2, 3), 'smooth'), ((3, 2), 'smooth'), ((3, 3), 'smooth'), ((4, 3), 'smooth'), ((6, 1), 'smooth')]
+PASS P6: area 20, r=12, strictly simple
+PASS P6: marks (-2,3),(0,1) interior, class (0,1)
+PASS P6: at (3,2) cells (2,2),(3,2) above, none below; smooth wall site of class (1,0)
+PASS P6: six off-class smooth sites [(-3, 3), (-1, 3), (0, 0), (0, 2), (3, 2), (3, 3)]
+PASS found.json P6 is congruent to the d217/d61 P6 (frames differ)
+PASS midpoint-orbits.txt: P6 marked component regular 8,0,0,0
+PASS R34-base: regular sites (2,0),(6,0),(4,0),(8,-2), all even-even (branch (i))
+
+=== Claim 5: R_other >= 2 ceil(2n/3) - 16 - floor(n/2)
+    values {18: -1, 19: 1, 20: 2, 21: 2, 22: 3, 49: 26}
+PASS f(19)=1, f(21)=2, f(22)=3, f(49)=26
+PASS f(n+6) = f(n)+5
+PASS f(n) > 0 for all n >= 19
+PASS bound is monotone: 2d-2r-floor(n/2) >= f(n) whenever d >= 2n/3, r <= 8
+PASS cov4181: n=28, r=8
+PASS cov4181: R_other=21 >= 2d-2r-floor(n/2)=12 >= f(28)=8
+
+=== Claim 6: single-state path/cycle test on R22 and cov4181
+
+  --- R22: S=(0, 0), T=(2, 2), n=15, r=9
+    state base   x=b: comps [('cycle', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, 0)]; a-points compared 180
+PASS R22 base b: max degree <= 2, cycles even, paths are trees
+PASS R22 base b: note test = exact straight-walk residue (horizon 90)
+PASS R22 base b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state base   x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -1), (1, 1)]; a-points compared 0
+PASS R22 base c: max degree <= 2, cycles even, paths are trees
+PASS R22 base c: note test = exact straight-walk residue (horizon 90)
+PASS R22 base c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state base   x=d: comps [('cycle', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(0, -1), (0, 1)]; a-points compared 0
+PASS R22 base d: max degree <= 2, cycles even, paths are trees
+PASS R22 base d: note test = exact straight-walk residue (horizon 90)
+PASS R22 base d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s1^2   x=b: comps [('cycle', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, 0)]; a-points compared 180
+PASS R22 s1^2 b: max degree <= 2, cycles even, paths are trees
+PASS R22 s1^2 b: note test = exact straight-walk residue (horizon 90)
+PASS R22 s1^2 b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s1^2   x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(-1, -1), (-1, 1), (3, -1), (3, 1)]; a-points compared 0
+PASS R22 s1^2 c: max degree <= 2, cycles even, paths are trees
+PASS R22 s1^2 c: note test = exact straight-walk residue (horizon 90)
+PASS R22 s1^2 c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s1^2   x=d: comps [('path', 2)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(-2, -1), (-2, 1), (2, -1), (2, 1)]; a-points compared 0
+PASS R22 s1^2 d: max degree <= 2, cycles even, paths are trees
+PASS R22 s1^2 d: note test = exact straight-walk residue (horizon 90)
+PASS R22 s1^2 d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s1^-2  x=b: comps [('cycle', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, 0)]; a-points compared 180
+PASS R22 s1^-2 b: max degree <= 2, cycles even, paths are trees
+PASS R22 s1^-2 b: note test = exact straight-walk residue (horizon 90)
+PASS R22 s1^-2 b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s1^-2  x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(-1, -1), (-1, 1), (3, -1), (3, 1)]; a-points compared 0
+PASS R22 s1^-2 c: max degree <= 2, cycles even, paths are trees
+PASS R22 s1^-2 c: note test = exact straight-walk residue (horizon 90)
+PASS R22 s1^-2 c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s1^-2  x=d: comps [('path', 2)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(-2, -1), (-2, 1), (2, -1), (2, 1)]; a-points compared 0
+PASS R22 s1^-2 d: max degree <= 2, cycles even, paths are trees
+PASS R22 s1^-2 d: note test = exact straight-walk residue (horizon 90)
+PASS R22 s1^-2 d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s2^2   x=b: comps [('path', 2)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -2), (1, 2)]; a-points compared 2
+PASS R22 s2^2 b: max degree <= 2, cycles even, paths are trees
+PASS R22 s2^2 b: note test = exact straight-walk residue (horizon 90)
+PASS R22 s2^2 b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s2^2   x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -3), (1, -1), (1, 1), (1, 3)]; a-points compared 0
+PASS R22 s2^2 c: max degree <= 2, cycles even, paths are trees
+PASS R22 s2^2 c: note test = exact straight-walk residue (horizon 90)
+PASS R22 s2^2 c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s2^2   x=d: comps [('cycle', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(0, -1), (0, 1)]; a-points compared 0
+PASS R22 s2^2 d: max degree <= 2, cycles even, paths are trees
+PASS R22 s2^2 d: note test = exact straight-walk residue (horizon 90)
+PASS R22 s2^2 d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s2^-2  x=b: comps [('path', 2)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -2), (1, 2)]; a-points compared 2
+PASS R22 s2^-2 b: max degree <= 2, cycles even, paths are trees
+PASS R22 s2^-2 b: note test = exact straight-walk residue (horizon 90)
+PASS R22 s2^-2 b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s2^-2  x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -3), (1, -1), (1, 1), (1, 3)]; a-points compared 0
+PASS R22 s2^-2 c: max degree <= 2, cycles even, paths are trees
+PASS R22 s2^-2 c: note test = exact straight-walk residue (horizon 90)
+PASS R22 s2^-2 c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+    state s2^-2  x=d: comps [('cycle', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(0, -1), (0, 1)]; a-points compared 0
+PASS R22 s2^-2 d: max degree <= 2, cycles even, paths are trees
+PASS R22 s2^-2 d: note test = exact straight-walk residue (horizon 90)
+PASS R22 s2^-2 d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 90)
+
+  --- cov4181: S=(2, 3), T=(4, 3), n=28, r=8
+    state base   x=b: comps [('cycle', 2), ('cycle', 2), ('cycle', 2), ('cycle', 4), ('cycle', 4), ('path', 10)], maxdeg 2; S0->T0:path D=2 pass=True; S0->T1:path D=6 pass=True; S1->T0:path D=6 pass=True; S1->T1:path D=2 pass=True; test lit-pairs [(0, 0), (0, 1), (1, 0), (1, 1)]; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, 0)]; a-points compared 12
+PASS cov4181 base b: max degree <= 2, cycles even, paths are trees
+PASS cov4181 base b: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 base b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state base   x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -1), (1, 1)]; a-points compared 0
+PASS cov4181 base c: max degree <= 2, cycles even, paths are trees
+PASS cov4181 base c: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 base c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state base   x=d: comps [('cycle', 4), ('cycle', 12), ('path', 1), ('path', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(0, -1), (0, 1)]; a-points compared 336
+PASS cov4181 base d: max degree <= 2, cycles even, paths are trees
+PASS cov4181 base d: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 base d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s1^2   x=b: comps [('cycle', 2), ('cycle', 2), ('cycle', 2), ('cycle', 4), ('cycle', 4), ('path', 10)], maxdeg 2; S0->T0:path D=2 pass=True; S0->T1:path D=6 pass=True; S1->T0:path D=6 pass=True; S1->T1:path D=2 pass=True; test lit-pairs [(0, 0), (0, 1), (1, 0), (1, 1)]; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, 0)]; a-points compared 12
+PASS cov4181 s1^2 b: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s1^2 b: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s1^2 b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s1^2   x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(-1, -1), (-1, 1), (3, -1), (3, 1)]; a-points compared 0
+PASS cov4181 s1^2 c: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s1^2 c: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s1^2 c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s1^2   x=d: comps [('path', 1), ('path', 5), ('path', 7), ('path', 7)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(-2, -1), (2, 1)]; a-points compared 8
+PASS cov4181 s1^2 d: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s1^2 d: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s1^2 d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s1^-2  x=b: comps [('cycle', 2), ('cycle', 2), ('cycle', 2), ('cycle', 4), ('cycle', 4), ('path', 10)], maxdeg 2; S0->T0:path D=2 pass=True; S0->T1:path D=6 pass=True; S1->T0:path D=6 pass=True; S1->T1:path D=2 pass=True; test lit-pairs [(0, 0), (0, 1), (1, 0), (1, 1)]; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, 0)]; a-points compared 12
+PASS cov4181 s1^-2 b: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s1^-2 b: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s1^-2 b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s1^-2  x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(-1, -1), (-1, 1), (3, -1), (3, 1)]; a-points compared 0
+PASS cov4181 s1^-2 c: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s1^-2 c: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s1^-2 c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s1^-2  x=d: comps [('path', 1), ('path', 5), ('path', 7), ('path', 7)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(-2, 1), (2, -1)]; a-points compared 8
+PASS cov4181 s1^-2 d: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s1^-2 d: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s1^-2 d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s2^2   x=b: comps [('path', 2), ('path', 22)], maxdeg 2; S0->T0:path D=12 pass=False; S0->T1:path D=4 pass=False; S1->T0:path D=4 pass=False; S1->T1:path D=12 pass=False; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -2)]; a-points compared 24
+PASS cov4181 s2^2 b: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s2^2 b: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s2^2 b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s2^2   x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -3), (1, -1), (1, 1), (1, 3)]; a-points compared 0
+PASS cov4181 s2^2 c: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s2^2 c: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s2^2 c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s2^2   x=d: comps [('cycle', 4), ('cycle', 12), ('path', 1), ('path', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(0, -1), (0, 1)]; a-points compared 336
+PASS cov4181 s2^2 d: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s2^2 d: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s2^2 d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s2^-2  x=b: comps [('path', 2), ('path', 22)], maxdeg 2; S0->T0:path D=12 pass=False; S0->T1:path D=4 pass=False; S1->T0:path D=4 pass=False; S1->T1:path D=12 pass=False; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, 2)]; a-points compared 24
+PASS cov4181 s2^-2 b: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s2^-2 b: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s2^-2 b: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s2^-2  x=c: comps [], maxdeg 0; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(1, -3), (1, -1), (1, 1), (1, 3)]; a-points compared 0
+PASS cov4181 s2^-2 c: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s2^-2 c: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s2^-2 c: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+    state s2^-2  x=d: comps [('cycle', 4), ('cycle', 12), ('path', 1), ('path', 4)], maxdeg 2; S,T lifts in no common component; test lit-pairs []; Gamma walk agrees True; billiard match kap [(-1, -1), (-1, 1), (1, -1), (1, 1)] dir [(0, -1), (0, 1)]; a-points compared 336
+PASS cov4181 s2^-2 d: max degree <= 2, cycles even, paths are trees
+PASS cov4181 s2^-2 d: note test = exact straight-walk residue (horizon 168)
+PASS cov4181 s2^-2 d: Gamma walks = integer billiard (all a-class points visited, T copies; horizon 168)
+PASS R22: no state/class passes the test (pair dark)
+PASS cov4181: base state, class b passes (direct horizontal, D=2)
+PASS cov4181: class d fails in every checked state (consistent with D66)
+    non-vacuous billiard rows (some a-class point reached): 15 of 30
+    note: class c rows are vacuous in both rooms (no regular class-c point; every c ray stops at step 1).
+    note: flipping the twist sign maps (p,q) to the mirror (p,-q) for b and d arcs; the front/back lift
+    exchange absorbs this, so every sign convention fits. The slope up to mirror is what the check fixes.
+PASS billiard comparison is non-vacuous in 15 rows (classes b,d); every one matched
+
+CPU 0.06s; failures: 0

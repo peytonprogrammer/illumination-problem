@@ -1540,6 +1540,17 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
     3. regular off-class sites with no separating factor, which is open.
   - First open case: a nondirect same-parity pair in a positive eight-reflex BBBB chart, n=21, d ≥ 2n/3. [review](../d217-review-dark-implies-fold/review.md)
 
+- **d218 — Relay lemma split and the single-state mod-4 test (L1 case iii, scoping): 4 CORRECT, 2 CORRECT WITH GAPS.**
+  - The three-way split is exhaustive by construction. The five (ii) rows are census-covered: areas 8, 12, 16, 10, 12.
+  - Gaps:
+    - Rooms with only partial, per-class separating factors fall into (iii).
+    - The midpoint target needs "nondirect"; the rectangle and cov4181 σ₂^{±2} class b are lit with only source-parity midpoints.
+  - The different-parity τₑ description is correct.
+  - The dark-room controls match stored data. P6 is stated in the found.json frame.
+  - The count 2⌈2n/3⌉−16−⌊n/2⌋: f(21)=2, f(22)=3.
+  - The single-state path/cycle test matched exact straight walks in 30 (state, class) rows on R22 and cov4181.
+  - First open case that matters: n=22, nondirect same-parity pair, positive normalized eight-reflex BBBB chart, d ≥ 2n/3. [review](../d218-review-relay-lemma/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at
