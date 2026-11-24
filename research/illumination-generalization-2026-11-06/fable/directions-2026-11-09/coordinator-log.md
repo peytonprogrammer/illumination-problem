@@ -1920,3 +1920,15 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - 21:15 sync failed (git fetch: github.com:443 unreachable); Slack post ECONNREFUSED. Last verified push 16fd9e29a.
 - d225 attack done: claims the d215 x=1 staircase open strip is closed for x+y>8 (the strip near b=c, and 2a+2b ≤ c with α ≥ 1/4). Two pins block the lines α=1/2 and α=1/3, and one floor bounce fixes both. Five crossing types (P0, P+, P−, R, S). Open: lattice rooms (0,2) and (0,3) (areas 24, 27), and pins with sign order (−,+). Re-run identical, 45 PASS, 0 failures. A closure claim, so independent review d226 launched. Claim d225 released.
 - d226 done: the d225 closure HOLDS for x+y > 8 across the whole sector (2 CORRECT, 2 CORRECT WITH GAPS, 0 wrong; 62 checks, 0 failures; re-run identical). This is the first closure on the pinned-pair route. The crossing-type principle needs tightening: unfolded μ, two-sided approach (counterexample ray at (12,26)), and shifts at the non-pinned interfaces. Open: lattice rooms of areas 24 and 27. The estimate stays at 5–8%: one family is closed, and the general lemma isn't proved yet. Claim released, verdict forwarded.
+- Sync pushed 50cd80b8c (20 files; HEAD = origin/main verified). Slack status posted.
+
+## 2026-11-23 21:35 tick
+- Astra note l1-pinned-pairs.md (L1). Key findings:
+  - (a) Interior pins are locally free, so there is no local obstruction type.
+  - (b) WRONG CLAIM (mine): the lemma "darkness forces a gap ≤ B(r)" is ill-posed. Dilation preserves darkness, so the bound is equivalent to having no pinned dark pair. R22 (r=9) is pinned and dark at every dilation.
+  - (c) The graze determinant test.
+  - (d) Sign-pattern theorem: end bounces give only 0, +, −, or (+ then −); (−,+) is impossible at every scale.
+  - (e) A six-reflex room realizes the (−,+) order for a fixed chord, with arbitrary gaps. This obstructs the move, not illumination.
+  - (f) R22 has the multiple-gate type.
+- The blocker is global aim (an itinerary that hits the target image), not local. General lemma, so d227 review launched.
+- Astra redirected: interior-bounce sign patterns (a kink in q).
