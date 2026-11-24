@@ -1517,6 +1517,16 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
 - **d215 — chart-wise ratio compactness (L1, orthogonal), CORRECT WITH GAPS.** The compactification K and the finite-subcover statement are correct, and so is the effective radius ρ with the B(p) bound. The face induction by codimension is correct by reading. It needs a fixed itinerary and no marks in collapsing layers. The dark locus is relatively closed. Wolecki's statement matches; the per-source wording attributed to LMW is unverified. Pinned marks defeat approximation. The staircase pair with lower mark at x=2 is lit for every real gain pair, traced on 3,721 grid rooms, the x^1.5 and √2 curves and 336 rational-gain rooms. The nondirect x=1 pair certificate is exact, and the same ray also lights the mirror region b>c. Still uncovered for that pair: the line b=c and the band 2x+2 ≤ y ≤ 3x+4. First open case: an exceptional specified pinned pair in a nondegenerate eight-reflex chart. [review](../d215-review-ratio-compactness/review.md)
 
+- **d216 — periodic-point obstruction (L1, scoping), CORRECT WITH GAPS.**
+  - The four-copy cover has genus r+1, and J fixes only the 2r+4 corner lifts.
+  - All four literature readings match arXiv: Wolecki, HST, Apisa–Wright, and LMW Thm 2 / Cor 3. HST Thm 8 needs a non-arithmetic surface, so it never applies to lattice rooms.
+  - Periodicity and endpoint symmetry cost zero reflexes.
+  - r ≥ kz for a pillowcase factor (R22: k=z=3, r=9).
+  - The R22 darkness sketch matches the manuscript but omits three steps; the manuscript has them.
+  - Both pinned eight-reflex controls (M=7..12) are lit; the f=4 pair is lit by 4–10-bounce corridor paths.
+
+  This is scoping only, with no new bound. First open case: a dark, pinned, nondirect, same-parity pair in a positive eight-reflex chart. The missing step is the reachability lemma in bbbb/midpoint-necessity.md. [review](../d216-review-periodic-obstruction/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at

@@ -1834,3 +1834,6 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Astra idle. New note bbbb/l1-periodic-obstruction.md (L1). Lattice marks are always periodic, so periodicity and symmetry cost zero reflexes. Count r ≥ kz for a pillowcase factor; R22 accounts for k=z=3. Pinned eight-reflex controls show that symmetry and periodicity don't decide darkness.
 - Launched d216-review-periodic-obstruction (Opus, named rooms, 10 CPU-min); claim added.
 - Briefed Astra: bbbb/l1-dark-implies-fold.md. Converse via Lemma FC: darkness gives a block system, hence a factor, hence r ≥ kz; check on R22 and P6.
+
+## 2026-11-23 18:45
+- d216 verdict CORRECT WITH GAPS (scoping). Re-ran checks.py: 37 PASS, identical. RESULTS §11 updated; claim released; verdict forwarded. Both pinned controls are lit. Estimate unchanged at 8–10%.

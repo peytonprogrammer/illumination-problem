@@ -1,0 +1,54 @@
+=== Claim 1: four-copy cover genus and orientation involution
+PASS R22: r=9, W=22, chi(X)=-18, genus 10=r+1; J fixes exactly the 22 corner lifts (=2g+2), 0 lifts of interior/smooth lattice points
+PASS STAIR: r=3, W=10, chi(X)=-6, genus 4=r+1; J fixes exactly the 10 corner lifts (=2g+2), 0 lifts of interior/smooth lattice points
+PASS RECT: r=0, W=4, chi(X)=0, genus 1=r+1; J fixes exactly the 4 corner lifts (=2g+2), 0 lifts of interior/smooth lattice points
+PASS C(7,4): r=8, W=20, chi(X)=-16, genus 9=r+1; J fixes exactly the 20 corner lifts (=2g+2), 0 lifts of interior/smooth lattice points
+PASS C(7,13): r=8, W=20, chi(X)=-16, genus 9=r+1; J fixes exactly the 20 corner lifts (=2g+2), 0 lifts of interior/smooth lattice points
+
+=== Claim 3: rectangle [0,4]x[0,2] half-turn example
+PASS half-turn about (2,1) preserves the rectangle and exchanges (1,1),(3,1)
+PASS horizontal segment (1,1)->(3,1) legal (exact trace)
+PASS RECT: X = R^2/(8Z x 4Z); N=8 gives N Z^2 in Lambda, so every lattice lift is N-torsion
+
+=== Claim 4/5: R22 fold data
+PASS R22: area 15, r=9, convex 13, W=22, strictly simple; staircase z=3 reflex, 7 convex; k=3 copies; kz=9=r
+PASS r>=kz with k,z>=3 gives W=2r+4>=22
+PASS fold sends S=(0,0)->a=(0,0) (P1) and T=(2,2)->b=(2,-2) (P2)
+PASS staircase non-vertex lattice points: [(0, 0), (2, -2)] (no interior lattice points)
+PASS S, T interior in R22
+PASS sanity (consistent with darkness): no primitive direction |p|,|q|<=15 from S reaches T within 60 grid crossings
+
+=== Claim 6: pinned eight-reflex controls
+PASS M=7 f=L-1=13: r=8, W=20, strictly simple, notches disjoint, half-turn symmetric, pinned, even diff, S,T interior; direct chord legal (trace) and misses all four closed notches
+PASS M=7 f=4: same structure; slope m=2>1, chord meets top-notch floor y=4 at x=u+1/m=11/2 in (u,u+1); direct trace fails; chord meets the top notch and, by the half-turn, the bottom notch (ceiling y=L-4 at x=L-u-1/m); no other notch
+PASS M=7 f=4: independent leg-by-leg Fraction tracer confirms (3, 2) x4: 4 reflections, bounce points [(Fraction(8, 1), Fraction(5, 1)), (Fraction(6, 1), Fraction(19, 3)), (Fraction(8, 1), Fraction(23, 3)), (Fraction(6, 1), Fraction(9, 1))]
+    M=7 f=4: area 174; 62 lit primitive directions |p|,|q|<=9; shortest: direction (3, 2), 4 steps, unfolded displacement (12, 8)
+PASS M=8 f=L-1=15: r=8, W=20, strictly simple, notches disjoint, half-turn symmetric, pinned, even diff, S,T interior; direct chord legal (trace) and misses all four closed notches
+PASS M=8 f=4: same structure; slope m=5/2>1, chord meets top-notch floor y=4 at x=u+1/m=32/5 in (u,u+1); direct trace fails; chord meets the top notch and, by the half-turn, the bottom notch (ceiling y=L-4 at x=L-u-1/m); no other notch
+PASS M=8 f=4: independent leg-by-leg Fraction tracer confirms (6, 5) x2: 4 reflections, bounce points [(Fraction(9, 1), Fraction(11, 2)), (Fraction(7, 1), Fraction(43, 6)), (Fraction(9, 1), Fraction(53, 6)), (Fraction(7, 1), Fraction(21, 2))]
+    M=8 f=4: area 230; 58 lit primitive directions |p|,|q|<=9; shortest: direction (6, 5), 2 steps, unfolded displacement (12, 10)
+PASS M=9 f=L-1=17: r=8, W=20, strictly simple, notches disjoint, half-turn symmetric, pinned, even diff, S,T interior; direct chord legal (trace) and misses all four closed notches
+PASS M=9 f=4: same structure; slope m=3>1, chord meets top-notch floor y=4 at x=u+1/m=22/3 in (u,u+1); direct trace fails; chord meets the top notch and, by the half-turn, the bottom notch (ceiling y=L-4 at x=L-u-1/m); no other notch
+PASS M=9 f=4: independent leg-by-leg Fraction tracer confirms (4, 3) x4: 6 reflections, bounce points [(Fraction(10, 1), Fraction(21, 4)), (Fraction(8, 1), Fraction(27, 4)), (Fraction(10, 1), Fraction(33, 4)), (Fraction(8, 1), Fraction(39, 4)), (Fraction(10, 1), Fraction(45, 4)), (Fraction(8, 1), Fraction(51, 4))]
+    M=9 f=4: area 294; 72 lit primitive directions |p|,|q|<=9; shortest: direction (4, 3), 4 steps, unfolded displacement (16, 12)
+PASS M=10 f=L-1=19: r=8, W=20, strictly simple, notches disjoint, half-turn symmetric, pinned, even diff, S,T interior; direct chord legal (trace) and misses all four closed notches
+PASS M=10 f=4: same structure; slope m=7/2>1, chord meets top-notch floor y=4 at x=u+1/m=58/7 in (u,u+1); direct trace fails; chord meets the top notch and, by the half-turn, the bottom notch (ceiling y=L-4 at x=L-u-1/m); no other notch
+PASS M=10 f=4: independent leg-by-leg Fraction tracer confirms (8, 7) x2: 6 reflections, bounce points [(Fraction(11, 1), Fraction(45, 8)), (Fraction(9, 1), Fraction(59, 8)), (Fraction(11, 1), Fraction(73, 8)), (Fraction(9, 1), Fraction(87, 8)), (Fraction(11, 1), Fraction(101, 8)), (Fraction(9, 1), Fraction(115, 8))]
+    M=10 f=4: area 366; 50 lit primitive directions |p|,|q|<=9; shortest: direction (8, 7), 2 steps, unfolded displacement (16, 14)
+PASS M=11 f=L-1=21: r=8, W=20, strictly simple, notches disjoint, half-turn symmetric, pinned, even diff, S,T interior; direct chord legal (trace) and misses all four closed notches
+PASS M=11 f=4: same structure; slope m=4>1, chord meets top-notch floor y=4 at x=u+1/m=37/4 in (u,u+1); direct trace fails; chord meets the top notch and, by the half-turn, the bottom notch (ceiling y=L-4 at x=L-u-1/m); no other notch
+PASS M=11 f=4: independent leg-by-leg Fraction tracer confirms (5, 4) x4: 8 reflections, bounce points [(Fraction(12, 1), Fraction(27, 5)), (Fraction(10, 1), Fraction(7, 1)), (Fraction(12, 1), Fraction(43, 5)), (Fraction(10, 1), Fraction(51, 5)), (Fraction(12, 1), Fraction(59, 5)), (Fraction(10, 1), Fraction(67, 5)), (Fraction(12, 1), Fraction(15, 1)), (Fraction(10, 1), Fraction(83, 5))]
+    M=11 f=4: area 446; 63 lit primitive directions |p|,|q|<=9; shortest: direction (5, 4), 4 steps, unfolded displacement (20, 16)
+PASS M=12 f=L-1=23: r=8, W=20, strictly simple, notches disjoint, half-turn symmetric, pinned, even diff, S,T interior; direct chord legal (trace) and misses all four closed notches
+PASS M=12 f=4: same structure; slope m=9/2>1, chord meets top-notch floor y=4 at x=u+1/m=92/9 in (u,u+1); direct trace fails; chord meets the top notch and, by the half-turn, the bottom notch (ceiling y=L-4 at x=L-u-1/m); no other notch
+PASS M=12 f=4: independent leg-by-leg Fraction tracer confirms (4, 3) x6: 10 reflections, bounce points [(Fraction(13, 1), Fraction(21, 4)), (Fraction(11, 1), Fraction(27, 4)), (Fraction(13, 1), Fraction(33, 4)), (Fraction(11, 1), Fraction(39, 4)), (Fraction(13, 1), Fraction(45, 4)), (Fraction(11, 1), Fraction(51, 4)), (Fraction(13, 1), Fraction(57, 4)), (Fraction(11, 1), Fraction(63, 4)), (Fraction(13, 1), Fraction(69, 4)), (Fraction(11, 1), Fraction(75, 4))]
+    M=12 f=4: area 534; 62 lit primitive directions |p|,|q|<=9; shortest: direction (4, 3), 6 steps, unfolded displacement (24, 18)
+PASS optional: every f=4 control pair (M=7..12) is lit by a reflected path
+
+=== Links (resolved from qclass-closure/bbbb)
+PASS link resolves: fold-converse.md
+PASS link resolves: midpoint-necessity.md
+PASS link resolves: ../../illumination-publication/repository/preprints/twenty-two-wall/manuscript.tex
+PASS link resolves: ../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d215-review-ratio-compactness/review.md
+
+TOTAL FAIL 0; cpu 0.2s
