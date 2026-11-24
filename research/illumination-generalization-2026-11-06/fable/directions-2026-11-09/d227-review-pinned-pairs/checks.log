@@ -1,0 +1,111 @@
+
+=== Claim 1: local freedom at interior pins; quadrant types
+PASS R22: pin (0,0) has both coordinates on wall levels, free open square of radius delta_p=1, four occupied quadrants
+PASS R22: pin (2,2) has both coordinates on wall levels, free open square of radius delta_p=1, four occupied quadrants
+PASS R22 deformed t=2: pin (0,0) has both coordinates on wall levels, free open square of radius delta_p=2, four occupied quadrants
+PASS R22 deformed t=2: pin (4,6) has both coordinates on wall levels, free open square of radius delta_p=2, four occupied quadrants
+PASS six-reflex m=1: pin (0,0) has both coordinates on wall levels, free open square of radius delta_p=1, four occupied quadrants
+PASS six-reflex m=1: pin (44,44) has both coordinates on wall levels, free open square of radius delta_p=1, four occupied quadrants
+PASS R22 grid points: types {'ext': 19, 'convex': 13, 'smooth': 6, 'reflex': 9, 'interior': 2}; convex/reflex exactly at the 13+9 vertices, no pinch
+
+=== Claim 3: R22 deformation (0,0)->(2t,2t+2)
+PASS t=1: deformed room orthogonal, strictly simple, 22 walls, 9 reflex
+PASS t=1: marked chart preserved (vertex rank vectors in x and y agree with the dilation)
+PASS t=1: least refined gap 1, both marks pinned and interior, T=(2,4) keeps even parity
+PASS t=1: direct segment S->T is legal (no reflection); predicted interface abscissa t^2/(t+1)=1/2
+PASS t=1: crossing at y=t is 1/2 in (0,t)
+PASS t=1: dilated R22 direct chord hits corner (1,1)
+PASS t=1: det((2t,2t+2),(t,t)) = -2 = -2t (corner to the right of the ray)
+PASS t=2: deformed room orthogonal, strictly simple, 22 walls, 9 reflex
+PASS t=2: marked chart preserved (vertex rank vectors in x and y agree with the dilation)
+PASS t=2: least refined gap 2, both marks pinned and interior, T=(4,6) keeps even parity
+PASS t=2: direct segment S->T is legal (no reflection); predicted interface abscissa t^2/(t+1)=4/3
+PASS t=2: crossing at y=t is 4/3 in (0,t)
+PASS t=2: dilated R22 direct chord hits corner (2,2)
+PASS t=2: det((2t,2t+2),(t,t)) = -4 = -2t (corner to the right of the ray)
+PASS t=5: deformed room orthogonal, strictly simple, 22 walls, 9 reflex
+PASS t=5: marked chart preserved (vertex rank vectors in x and y agree with the dilation)
+PASS t=5: least refined gap 5, both marks pinned and interior, T=(10,12) keeps even parity
+PASS t=5: direct segment S->T is legal (no reflection); predicted interface abscissa t^2/(t+1)=25/6
+PASS t=5: crossing at y=t is 25/6 in (0,t)
+PASS t=5: dilated R22 direct chord hits corner (5,5)
+PASS t=5: det((2t,2t+2),(t,t)) = -10 = -2t (corner to the right of the ray)
+
+=== Claim 4: graze determinant expansion
+PASS det(tv+w,tc+e) = t[det(v,e)+det(w,c)] + det(w,e) when det(v,c)=0 (3 cases x 4 t)
+
+=== Claim 5: sign-pattern identity and attainable patterns
+PASS crossing displacement K[(D alpha+a)/(D+a+b) - alpha] = K[a(1-alpha)-b alpha]/(D+a+b)
+PASS e,f in 0..3, d0=d3: sign patterns at (1/4,3/4) = [(-1, -1), (0, -1), (0, 0), (1, -1), (1, 0), (1, 1)]; (-,+) absent
+PASS repeated end bounces (e,f in 1..3, d0=d3) give switch points ['1/4', '1/3', '2/5', '1/2', '3/5', '2/3', '3/4'], not only d0/(d0+d3)
+PASS transverse endpoint images shifted by -2 and +2 produce a (-,+) pattern (outside the note's longitudinal end-bounce model)
+
+=== Claim 6: X'_i = X_i + sigma' q_i
+PASS interpolation identity at 9 (K,D,a,b,alpha) points
+
+=== Claim 7: six-reflex room, t=10m+1
+PASS m=1: orthogonal, strictly simple, 16 walls, 6 reflex
+PASS m=1: S, T interior and pinned; x gaps ['12', '11', '11', '22', '11', '22', '11'], y gaps ['1', '11', '22', '11', '1']; min gap m, gcds 1
+   unbounced: corner (11,11); floor: cap -; roof: cap -; both: cap -
+PASS m=1: unbounced chord grazes and dies at reflex (t,t)=(11,11) [alpha=1/4 needs minus]
+PASS m=1: floor, roof and both-bounce chords fail on the first pass: each reflects off a middle-tier wall within 6 reflections (paths: floor ['(0,0)', '(22/23,-1)', '(11,19/2)', '(0,21)', '(264/23,33)'] | roof ['(0,0)', '(726/23,33)', '(44,20)', '(814/23,11)', '(330/23,33)'] | both ['(0,0)', '(11/12,-1)', '(11,10)', '(0,22)', '(121/12,33)'])
+PASS m=2: orthogonal, strictly simple, 16 walls, 6 reflex
+PASS m=2: S, T interior and pinned; x gaps ['22', '21', '21', '42', '21', '42', '21'], y gaps ['2', '21', '42', '21', '2']; min gap m, gcds 1
+   unbounced: corner (21,21); floor: cap -; roof: cap -; both: cap -
+PASS m=2: unbounced chord grazes and dies at reflex (t,t)=(21,21) [alpha=1/4 needs minus]
+PASS m=2: floor, roof and both-bounce chords fail on the first pass: each reflects off a middle-tier wall within 6 reflections (paths: floor ['(0,0)', '(21/11,-2)', '(21,18)', '(0,40)', '(483/22,63)'] | roof ['(0,0)', '(1323/22,63)', '(84,38)', '(1491/22,21)', '(609/22,63)'] | both ['(0,0)', '(42/23,-2)', '(21,19)', '(0,42)', '(441/23,63)'])
+PASS m=3: orthogonal, strictly simple, 16 walls, 6 reflex
+PASS m=3: S, T interior and pinned; x gaps ['32', '31', '31', '62', '31', '62', '31'], y gaps ['3', '31', '62', '31', '3']; min gap m, gcds 1
+   unbounced: corner (31,31); floor: cap -; roof: cap -; both: cap -
+PASS m=3: unbounced chord grazes and dies at reflex (t,t)=(31,31) [alpha=1/4 needs minus]
+PASS m=3: floor, roof and both-bounce chords fail on the first pass: each reflects off a middle-tier wall within 6 reflections (paths: floor ['(0,0)', '(186/65,-3)', '(31,53/2)', '(0,59)', '(2108/65,93)'] | roof ['(0,0)', '(5766/65,93)', '(124,56)', '(1302/13,31)', '(2666/65,93)'] | both ['(0,0)', '(93/34,-3)', '(31,28)', '(0,62)', '(961/34,93)'])
+
+=== Claim 7 (m=1): is (0,0),(44,44) lit? 20 hand-chosen directions, <=400 reflections each
+   d=(1, 1): corner (11,11) after 1 reflections  [unbounced winding (pin)]
+   d=(22, 23): cap - after 400 reflections  [roof bounce]
+   d=(22, -23): T - after 8 reflections  [floor bounce]
+   d=(11, -12): corner (-11,0) after 54 reflections  [floor+roof bounce]
+   d=(1, 2): T - after 2 reflections  [E2 roof y=3t then E2 floor y=t, monotone transverse]
+   d=(1, 3): T - after 4 reflections  [E2 roof/floor twice]
+   d=(3, 2): T - after 14 reflections  [bounce off E1/E2 walls x=t, x=0]
+   d=(5, 2): corner (-11,0) after 51 reflections  [two transverse folds]
+   d=(-1, 1): corner (-11,11) after 1 reflections  [start left, E1 wall x=-t]
+   d=(-1, 2): corner (-11,0) after 2 reflections  [start left, then E2]
+   d=(-1, -1): corner (11,-1) after 24 reflections  [end-tier floor and ceiling over (-2t-1,-t)]
+   d=(3, 1): corner (-11,11) after 2 reflections  [shallow right]
+   d=(2, 3): corner (66,44) after 38 reflections  []
+   d=(3, 4): T - after 8 reflections  []
+   d=(1, 4): T - after 6 reflections  [E2 three vertical traversals]
+   d=(1, -2): corner (66,44) after 115 reflections  [floor bounce, then (1,2) pattern]
+   d=(2, 1): corner (0,11) after 2 reflections  [shallow]
+   d=(-3, 2): corner (66,44) after 58 reflections  [left winding]
+   d=(5, 4): corner (-23,0) after 30 reflections  []
+   d=(3, 5): T - after 47 reflections  []
+PASS 20 candidate directions (budget 30)
+PASS direction (1,2) reaches T
+   LIT d=(22, -23): path (0,0) -> (22/23,-1) -> (11,19/2) -> (0,21) -> (264/23,33) -> (748/23,11) -> (44,23) -> (33,69/2) -> (990/23,45) -> (44,44)
+   LIT d=(1, 2): path (0,0) -> (33/2,33) -> (55/2,11) -> (44,44)
+   LIT d=(1, 3): path (0,0) -> (11,33) -> (55/3,11) -> (77/3,33) -> (33,11) -> (44,44)
+   LIT d=(3, 2): path (0,0) -> (11,22/3) -> (0,44/3) -> (55/2,33) -> (44,22) -> (55/2,11) -> (0,88/3) -> (11/2,33) -> (77/2,11) -> (44,44/3) -> (33/2,33) -> (0,22) -> (33/2,11) -> (44,88/3) -> (33,110/3) -> (44,44)
+   LIT d=(3, 4): path (0,0) -> (99/4,33) -> (165/4,11) -> (44,44/3) -> (121/4,33) -> (55/4,11) -> (0,88/3) -> (11/4,33) -> (77/4,11) -> (44,44)
+   LIT d=(1, 4): path (0,0) -> (33/4,33) -> (55/4,11) -> (77/4,33) -> (99/4,11) -> (121/4,33) -> (143/4,11) -> (44,44)
+   LIT d=(3, 5): path (0,0) -> (99/5,33) -> (33,11) -> (44,88/3) -> (173/5,45) -> (33,127/3) -> (44,24) -> (181/5,11) -> (23,33) -> (13/5,-1) -> (-23/5,11) -> (-11,1/3) -> (-51/5,-1) -> (-3,11) -> (21/5,-1) -> (11,31/3) -> (0,86/3) -> (13/5,33) -> (79/5,11) -> (29,33) -> (211/5,11) -> (44,14) -> (163/5,33) -> (97/5,11) -> (31/5,33) -> (0,68/3) -> (11,13/3) -> (39/5,-1) -> (0,12) -> (63/5,33) -> (129/5,11) -> (231/5,45) -> (267/5,33) -> (303/5,45) -> (66,36) -> (321/5,33) -> (57,45) -> (249/5,33) -> (213/5,45) -> (111/5,11) -> (9,33) -> (0,18) -> (11,-1/3) -> (53/5,-1) -> (0,50/3) -> (49/5,33) -> (23,11) -> (217/5,45) -> (44,44)
+PASS m=1: (1,2) witness reflects at (33/2,33) (E2 roof) and (55/2,11) (E2 floor), gate crossings (11/2,11), (77/2,33)
+PASS m=2: (1,2) witness reflects at (63/2,63) (E2 roof) and (105/2,21) (E2 floor), gate crossings (21/2,21), (147/2,63)
+PASS m=3: (1,2) witness reflects at (93/2,93) (E2 roof) and (155/2,31) (E2 floor), gate crossings (31/2,31), (217/2,93)
+PASS m=7: (1,2) witness reflects at (213/2,213) (E2 roof) and (355/2,71) (E2 floor), gate crossings (71/2,71), (497/2,213)
+
+=== Extra: an interior roof-floor double bounce realizes (-,+)
+PASS gate below the bounced slab moves by -K alpha 2L/(D+2L) < 0; gate above by +K(1-alpha)2L/(D+2L) > 0
+PASS six-reflex m=1, L=2t: displacements at the two pins are (-t/2, +t/2), the demanded (-,+)
+
+=== Claim 8: interval-chain test; R22 multiple components at y=1
+PASS R22 y=1: below [(Fraction(-1, 1), Fraction(1, 1)), (Fraction(3, 1), Fraction(5, 1))], above [(Fraction(0, 1), Fraction(4, 1))], openings [(Fraction(0, 1), Fraction(1, 1)), (Fraction(3, 1), Fraction(4, 1))]
+PASS R22 direct ray crosses y=1 at x=1, endpoint of the opening (0,1)
+PASS t=1: chain test passes the deformed direct chord and rejects the dilated one (tracer agrees)
+PASS t=2: chain test passes the deformed direct chord and rejects the dilated one (tracer agrees)
+PASS t=5: chain test passes the deformed direct chord and rejects the dilated one (tracer agrees)
+PASS six-reflex m=1: chain test rejects the unbounced chord
+
+cpu 0.06s
+FAILURES: 0

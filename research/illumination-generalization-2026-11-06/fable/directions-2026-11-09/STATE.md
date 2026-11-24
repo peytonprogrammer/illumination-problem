@@ -445,3 +445,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 **2026-11-23 21:30 audit.** Estimate 5–8% (re-based). Single bet: affine transfer, deadline 11-25 20:00 or 2 notes. Reviews only for closures/general lemmas. Symmetric a22 check dropped.
 **2026-11-23 21:45.** First pinned-pair closure reviewed (d225/d226). Astra on the general pinned lemma. Estimate 5–8%.
 **2026-11-23 21:35.** Pinned-lemma framing corrected (blocker = global aim). d227 reviewing. Astra on interior-bounce sign theorem. Estimate 5–8%.
+**d227 reviewed:** interior double bounce realizes (−,+). Next: sign-realization lemma combining end and interior bounces.

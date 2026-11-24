@@ -1932,3 +1932,4 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
   - (f) R22 has the multiple-gate type.
 - The blocker is global aim (an itinerary that hits the target image), not local. General lemma, so d227 review launched.
 - Astra redirected: interior-bounce sign patterns (a kink in q).
+- d227 done: 7 CORRECT, 1 CORRECT WITH GAPS; the six-reflex pair is LIT by an interior roof–floor double bounce, which realizes (−,+). Open: (−,+) with no double-bounce wall; mixed demands like (−,+,−). Re-run identical. Claim released, verdict forwarded.
