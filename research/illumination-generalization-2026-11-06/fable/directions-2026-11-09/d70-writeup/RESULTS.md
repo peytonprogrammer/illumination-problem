@@ -1551,6 +1551,16 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
   - The single-state path/cycle test matched exact straight walks in 30 (state, class) rows on R22 and cov4181.
   - First open case that matters: n=22, nondirect same-parity pair, positive normalized eight-reflex BBBB chart, d ≥ 2n/3. [review](../d218-review-relay-lemma/review.md)
 
+- **d219 — mod-4 cocycle route ruled out (L1 case iii): 6 CORRECT, 1 CORRECT WITH GAPS.**
+  - Darkness ⇔ the marked lifts lie in different regular components in every state and class. The converse uses level-2 shears reaching every primitive direction of a class, checked for |p|,|q| ≤ 40. It assumes the d218 calibration holds for composite braid words.
+  - Darkness imposes no cycle-parity constraint: dilated R22 has a C=10 cycle away from the marks.
+  - The triangle obstruction exists on copy 0 only.
+  - A character gives a cover above Q°, not an intermediate factor; an outer degree-two quotient has z=0.
+  - cov4181 class-b parity flips across states.
+  - n=22 counts: 3, 13, and 15 when d=21.
+
+  First open case: n=22, nondirect same-parity pair, normalized eight-reflex BBBB chart. [review](../d219-review-mod4-cocycle/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at

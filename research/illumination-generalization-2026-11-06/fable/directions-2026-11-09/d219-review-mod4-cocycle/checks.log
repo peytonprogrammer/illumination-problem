@@ -1,0 +1,90 @@
+
+=== Claim 1(a): abstract max-degree-2 multigraphs (paths, cycles incl. loops and 2-cycles)
+PASS h exact iff every cycle has C = 0 mod 4; paths always exact; c(t)-c(s) = D/2 mod 2 (both directions on exact cycles); C = 2 mod 4 cycles give both residues
+
+=== Claim 2 converse: every primitive direction of a class is a state direction (level-2 shears)
+PASS all primitive |p|,|q| <= 40 reduce by the two level-2 shears to the base arc of their class, up to sign
+
+=== Claims 1-2 on R22: S=(0, 0), T=(2, 2), five states x three classes
+    base   b: cycles C=[4] exact=[True]; S-T on common component: none
+    base   c: cycles C=[] exact=[]; S-T on common component: none
+    base   d: cycles C=[4] exact=[True]; S-T on common component: none
+    s1^2   b: cycles C=[4] exact=[True]; S-T on common component: none
+    s1^2   c: cycles C=[] exact=[]; S-T on common component: none
+    s1^2   d: cycles C=[] exact=[]; S-T on common component: none
+    s1^-2  b: cycles C=[4] exact=[True]; S-T on common component: none
+    s1^-2  c: cycles C=[] exact=[]; S-T on common component: none
+    s1^-2  d: cycles C=[] exact=[]; S-T on common component: none
+    s2^2   b: cycles C=[] exact=[]; S-T on common component: none
+    s2^2   c: cycles C=[] exact=[]; S-T on common component: none
+    s2^2   d: cycles C=[4] exact=[True]; S-T on common component: none
+    s2^-2  b: cycles C=[] exact=[]; S-T on common component: none
+    s2^-2  c: cycles C=[] exact=[]; S-T on common component: none
+    s2^-2  d: cycles C=[4] exact=[True]; S-T on common component: none
+PASS R22: per component, 2-colouring exists iff every cycle C = 0 mod 4; c(t)-c(s) = D/2 on exact components
+PASS R22: S,T lifts share a regular component iff a nonbacktracking walk joins them (lighting path)
+
+=== Claims 1-2 on cov4181: S=(2, 3), T=(4, 3), five states x three classes
+    base   b: cycles C=[2, 2, 2, 4, 4] exact=[False, False, False, True, True]; S-T on common component: [((0, 0), 2, 'path'), ((0, 1), 6, 'path'), ((1, 0), 6, 'path'), ((1, 1), 2, 'path')]
+    base   c: cycles C=[] exact=[]; S-T on common component: none
+    base   d: cycles C=[4, 12] exact=[True, True]; S-T on common component: none
+    s1^2   b: cycles C=[2, 2, 2, 4, 4] exact=[False, False, False, True, True]; S-T on common component: [((0, 0), 2, 'path'), ((0, 1), 6, 'path'), ((1, 0), 6, 'path'), ((1, 1), 2, 'path')]
+    s1^2   c: cycles C=[] exact=[]; S-T on common component: none
+    s1^2   d: cycles C=[] exact=[]; S-T on common component: none
+    s1^-2  b: cycles C=[2, 2, 2, 4, 4] exact=[False, False, False, True, True]; S-T on common component: [((0, 0), 2, 'path'), ((0, 1), 6, 'path'), ((1, 0), 6, 'path'), ((1, 1), 2, 'path')]
+    s1^-2  c: cycles C=[] exact=[]; S-T on common component: none
+    s1^-2  d: cycles C=[] exact=[]; S-T on common component: none
+    s2^2   b: cycles C=[] exact=[]; S-T on common component: [((0, 0), 12, 'path'), ((0, 1), 4, 'path'), ((1, 0), 4, 'path'), ((1, 1), 12, 'path')]
+    s2^2   c: cycles C=[] exact=[]; S-T on common component: none
+    s2^2   d: cycles C=[4, 12] exact=[True, True]; S-T on common component: none
+    s2^-2  b: cycles C=[] exact=[]; S-T on common component: [((0, 0), 12, 'path'), ((0, 1), 4, 'path'), ((1, 0), 4, 'path'), ((1, 1), 12, 'path')]
+    s2^-2  c: cycles C=[] exact=[]; S-T on common component: none
+    s2^-2  d: cycles C=[4, 12] exact=[True, True]; S-T on common component: none
+PASS cov4181: per component, 2-colouring exists iff every cycle C = 0 mod 4; c(t)-c(s) = D/2 on exact components
+PASS cov4181: S,T lifts share a regular component iff a nonbacktracking walk joins them (lighting path)
+
+=== Claims 3-4: R22 dilated by 5
+PASS R22 bottom row is the single cell (1,-3)
+    R22 row -2 cells: [0, 1]
+PASS dilated R22: area 375, 9 reflexes
+PASS lowest open band -15<y<-10 has horizontal section 5<x<10
+    statuses on y=-12, x=5..10: ['smooth', 'interior', 'interior', 'interior', 'interior', 'smooth']
+PASS y=-12: wall hits (5,-12),(10,-12) smooth, (6..9,-12) interior
+    class-b component through (6,-12): kind=cycle, C=10, a-points [(6, -12), (8, -12), (10, -12)]
+PASS horizontal y=-12 cycle: C=10 over even-even a-points (x-class odd-even); C/2=5 odd
+PASS edge cochain on that component is not exact
+PASS marked lifts are not on the C=10 cycle
+PASS dilated R22: S,T lifts share no regular component in the 15 checked (state, class) rows
+PASS A,B,C and the side midpoints (7,-14),(8,-13),(7,-13) are interior
+PASS A,B,C are a-class (even-even)
+    side (6, -14)-(8, -14) class b: copy-0 passages 1; all passages at these sites [(((6, -14), 0), ((6, -14), 1)), (((6, -14), 0), ((8, -14), 0)), (((6, -14), 1), ((8, -14), 1))]
+PASS side (6, -14)-(8, -14) is one two-step passage in class b on copy 0
+    side (8, -14)-(8, -12) class d: copy-0 passages 1; all passages at these sites [(((8, -14), 0), ((8, -14), 1)), (((8, -14), 0), ((8, -12), 0)), (((8, -14), 1), ((8, -12), 1))]
+PASS side (8, -14)-(8, -12) is one two-step passage in class d on copy 0
+    side (8, -12)-(6, -14) class c: copy-0 passages 1; all passages at these sites [(((6, -14), 0), ((8, -12), 0))]
+PASS side (8, -12)-(6, -14) is one two-step passage in class c on copy 0
+    class c passages at A: [(((6, -14), 0), ((8, -12), 0)), (((6, -14), 1), ((6, -12), 0)), (((6, -14), 1), ((8, -14), 0))]
+PASS copy 1: the class-c sheet at A reaches B on copy 0 (via the bottom wall), not C; triangle is copy-0 only
+PASS boundary sum of h over the triangle = 3 = 1 mod 2
+PASS triangle lies in the open bottom square, no corner (indeed no lattice point) strictly inside
+
+=== Claim 6: cov4181 hand calculation and class-b parity flip
+PASS S->(3,3)->T: midpoint (3,3) interior, class (1,1) (b)
+    x=2, y=2..4: ['smooth', 'interior', 'smooth']; x=4, y=0..6: ['smooth', 'interior', 'interior', 'interior', 'interior', 'interior', 'smooth']
+PASS x=2 runs y=2..4 and x=4 runs y=0..6, smooth ends
+PASS base class b: S,T on one path, D in {2,6}
+    base d: S component cycle C=4, T component cycle C=12
+PASS base class d: S on C=4 cycle, T on C=12 cycle, different components (both exact)
+PASS the two copies of S are joined by one two-step passage (D=2) on the C=4 cycle
+    class b lift distances base {(0, 0): 2, (0, 1): 6, (1, 0): 6, (1, 1): 2} vs s2^2 {(0, 0): 12, (0, 1): 4, (1, 0): 4, (1, 1): 12}
+PASS s2^2: every lift pairing flips D/2 parity (base 2/6 -> twisted 4/12)
+    class b lift distances base {(0, 0): 2, (0, 1): 6, (1, 0): 6, (1, 1): 2} vs s2^-2 {(0, 0): 12, (0, 1): 4, (1, 0): 4, (1, 1): 12}
+PASS s2^-2: every lift pairing flips D/2 parity (base 2/6 -> twisted 4/12)
+PASS base: all D/2 odd; s2^2: all D/2 even, so no lift exchange reconciles them
+PASS class d: S,T share no component in any of the five states (agrees with d218 and D66)
+
+=== Claim 7: n=22 counts
+PASS d >= 2n/3 gives d >= 15 and R_other >= 30-16-11 = 3
+PASS d >= 20 gives >= 13; d = 21 gives 15
+
+CPU 0.18s; failures: 0
