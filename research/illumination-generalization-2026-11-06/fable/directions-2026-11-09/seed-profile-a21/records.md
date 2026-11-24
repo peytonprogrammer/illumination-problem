@@ -1,0 +1,7 @@
+# First-witness archive for exact area 21
+
+Each a21/J.bin contains records in the original eligible-room order for shard J. All integers are little-endian. The room header is three unsigned bytes for reflex count, number of cell rows, and number of interior marks. It is followed by one 16-bit cell bitmap per row, bottom first, with bit x representing cell (x,y). Recover the marks from their four incident cells and order them by (y,x). The following unsigned 32-bit words correspond to the unordered pairs in lexicographic order of their two mark indices.
+
+In each word bits 0–8 give the zero-based direction index in shoot.c, bits 9–10 the signs (bit 9 negates x and bit 10 negates y), bits 11–17 the number of primitive steps, and bits 18–31 the number of wall reflections counted by verify_plane.c. Take the maximum absolute component of the decoded direction for the first-found height. The room header supplies r to each pair. Every pair has a nonzero primitive-step count. audit.c decodes every shard and profile.py traces the published examples using exact physical-wall intersections. paths.json uses the unshifted coordinates of the row bitmaps.
+
+The canonical enumerator and orbit fallback match d205. The binary and sources for the profiled run are fingerprinted in a21/manifest.json. Per-shard DONE records include counts-file SHA-256, CPU and RSS. Each counts file reproduces the original d205 shard after removing only the HIST and TOP records.
