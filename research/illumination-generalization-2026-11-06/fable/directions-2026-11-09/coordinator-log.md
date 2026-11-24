@@ -1949,3 +1949,11 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
   - The LLLRLLLRLR stress chart has no interior pinned mark, so there is no N0.
 - Not reviewed: these are counterexamples to coordinator proposals, and the key one was hand-verified.
 - Next: witness selection (bounded templates), the first open step of (A).
+
+## 2026-11-23 22:30 tick
+- Astra note l1-witness-selection.md (L1):
+  - The five-reflex parabola pinned family is lit for ALL m≥3, u≥m+2 (gate lemma + winding choice; one simple cycle). The seven-reflex family is lit by a bounded walk.
+  - General: bounded-template membership reduces to finitely many polynomial tests (extreme occurrences). One-gap tails are affine (ag+b>0).
+  - Open: interleaved cycles in a branched recurrent component, and joint (diagonal) regimes.
+- Closure + general lemma, so d229 review launched.
+- Astra briefed: commuting cycle translations ⇒ target image depends only on counts; witness order = cutting sequence; branched component ⇒ Λ-periodic slit corridor (square-tiled), apply the cylinder criterion I/II.
