@@ -1842,3 +1842,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Astra idle. New note bbbb/l1-dark-implies-fold.md (L1). R34 (degree 19, prime) refutes fold-only necessity. Corner-only off-classes force r ≥ 9 (local count). A midpoint witness ⇔ a single-state walk of length 2 mod 4. Hand check on R22/P6 gives kz = r.
 - Launched d217-review-dark-implies-fold (Opus, R22/P6/R34 only, 10 CPU-min); claim added.
 - Briefed Astra: bbbb/l1-relay-lemma.md. For r ≤ 8 the local count gives a regular off-class site; the Relay lemma would then light every same-parity pair. Test the hypothesis against every reviewed dark room.
+
+## 2026-11-23 19:05
+- d217: 4 CORRECT, 2 CORRECT WITH GAPS. Re-ran checks.py: 24 PASS, identical. RESULTS §11 updated; claim released.
+- **My Relay brief was wrong.** R22 and P6 have regular off-class sites upstairs, so "regular off-class site ⇒ lit" is false. I sent Astra a steer with the corrected lemma, which adds "no separating parity factor", and the three-way split. Estimate unchanged at 8–10%.

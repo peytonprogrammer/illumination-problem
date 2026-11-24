@@ -1527,6 +1527,19 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
   This is scoping only, with no new bound. First open case: a dark, pinned, nondirect, same-parity pair in a positive eight-reflex chart. The missing step is the reachability lemma in bbbb/midpoint-necessity.md. [review](../d216-review-periodic-obstruction/review.md)
 
+- **d217 — dark ⇒ costly obstruction (L1, scoping), 4 CORRECT, 2 CORRECT WITH GAPS.**
+  - Results:
+    - The closure of A gives the finest invariant partition; this needs G transitive.
+    - An off-class midpoint witness ⇔ a single-state legal walk of length ≡ 2 mod 4, per direction class. The witness must be a realized midpoint; cov4181 shows that algebraic membership isn't enough.
+    - R34 is strictly simple, with prime degree 19. Its only regular sites are even-even, and the pair is dark: 224 exact rays all stop at corners. **Proper-fold necessity is refuted.**
+    - Corner-only off-classes upstairs ⇒ r ≥ 9. The (k,z,m) table is exact (areas 8–16).
+    - R22 and P6 via N5: kz = r. They are corner-only in N5 only, since they have 4 and 6 off-class smooth sites upstairs.
+  - Three-way split for dark pairs:
+    1. corner-only upstairs (r ≥ 9);
+    2. a separating parity factor;
+    3. regular off-class sites with no separating factor, which is open.
+  - First open case: a nondirect same-parity pair in a positive eight-reflex BBBB chart, n=21, d ≥ 2n/3. [review](../d217-review-dark-implies-fold/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at
