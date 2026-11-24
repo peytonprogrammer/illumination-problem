@@ -1795,3 +1795,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Launched d212-review-descent-skeleton (Opus, named rooms only, 10 CPU-min); board claim added.
 - Briefed Astra: marked band selection lemma (routes a–c), bbbb/l1-marked-selection.md.
 - Estimate 7–9% unchanged pending d212.
+
+## 2026-11-23 17:10
+- d212 verdict CORRECT WITH GAPS. Re-ran checks.py: 54 PASS, 0 fail, 9.4 CPU-s, identical to the agent's log. RESULTS §11 updated; claim released; verdict forwarded to Astra.
+- Estimate 7–9% → 8–10%: L1 now has a reviewed, complete conditional reduction with one named open lemma (marked selection). The census through 121 is a dependency only; any run beyond area 21 needs Daniel's approval.

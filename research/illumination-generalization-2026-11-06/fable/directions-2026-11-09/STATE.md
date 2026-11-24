@@ -416,3 +416,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 16:50 d211 CORRECT WITH GAPS: arbitrary-foot collar (vertical entry) + shoulder extension + Λ-shear hold. Descent gap (a) narrowed to oblique entry from general upper chambers; gap (b) seed denominator open. Estimate 7–9% unchanged.
 
 - 2026-11-23 16:55: d212 review of descent skeleton running. Astra on marked band selection (first open L1 step). Estimate 7–9%.
+- 2026-11-23 17:10: d212 CORRECT WITH GAPS (re-run 54 PASS, 0 fail). Orthogonal L1 reduces to marked band selection + census through 121. Astra on marked selection. Estimate 7–9% → 8–10%.

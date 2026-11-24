@@ -1,0 +1,113 @@
+
+=== Claim 1 arithmetic
+PASS r<=8: <= r+1 <= 9 bands, <= r+3 <= 11 refined gaps; box <= 81(h0-1)^2 resp. 121(h0-1)^2
+PASS U21: max thickness 3 >= sqrt(area 21)/(r+1)
+PASS H26: max thickness 3 >= sqrt(area 26)/(r+1)
+PASS U29: max thickness 5 >= sqrt(area 29)/(r+1)
+
+=== Claims 1-2 structure on U21
+  area 21, reflex r=2, convex 6, pinch 0; walls W=8; horizontal levels [0, 1, 4], vertical levels [0, 2, 3, 6]; bands 2+3; max k 2; band row J=1 section [(0, 2), (3, 6)]
+PASS U21: strictly simple, convex = r+4
+PASS U21: bands per axis <= r+1, k <= floor((r+2)/2)
+PASS U21: section constant within each horizontal band
+PASS U21: nonsingular lattice states 72 = 4A-4r-4 <= 4A-2r (first-hit D bound)
+PASS U21 E=1: child area +E*sum(w)=5, same turns, retained marks 9, new marks 3 = E*sum(w-1), compression returns the parent
+PASS U21 E=2: child area +E*sum(w)=10, same turns, retained marks 9, new marks 6 = E*sum(w-1), compression returns the parent
+PASS U21 E=5: child area +E*sum(w)=25, same turns, retained marks 9, new marks 15 = E*sum(w-1), compression returns the parent
+PASS U21 E=9: child area +E*sum(w)=45, same turns, retained marks 9, new marks 27 = E*sum(w-1), compression returns the parent
+
+=== Claims 1-2 structure on H26
+  area 26, reflex r=4, convex 8, pinch 0; walls W=12; horizontal levels [0, 2, 3, 5], vertical levels [0, 2, 3, 6]; bands 3+3; max k 2; band row J=3 section [(0, 2), (3, 6)]
+PASS H26: strictly simple, convex = r+4
+PASS H26: bands per axis <= r+1, k <= floor((r+2)/2)
+PASS H26: section constant within each horizontal band
+PASS H26: nonsingular lattice states 84 = 4A-4r-4 <= 4A-2r (first-hit D bound)
+PASS H26 E=1: child area +E*sum(w)=5, same turns, retained marks 12, new marks 3 = E*sum(w-1), compression returns the parent
+PASS H26 E=2: child area +E*sum(w)=10, same turns, retained marks 12, new marks 6 = E*sum(w-1), compression returns the parent
+PASS H26 E=5: child area +E*sum(w)=25, same turns, retained marks 12, new marks 15 = E*sum(w-1), compression returns the parent
+PASS H26 E=9: child area +E*sum(w)=45, same turns, retained marks 12, new marks 27 = E*sum(w-1), compression returns the parent
+
+=== Claims 1-2 structure on U29
+  area 29, reflex r=2, convex 6, pinch 0; walls W=8; horizontal levels [0, 1, 4], vertical levels [0, 2, 3, 8]; bands 2+3; max k 2; band row J=1 section [(0, 2), (3, 8)]
+PASS U29: strictly simple, convex = r+4
+PASS U29: bands per axis <= r+1, k <= floor((r+2)/2)
+PASS U29: section constant within each horizontal band
+PASS U29: nonsingular lattice states 104 = 4A-4r-4 <= 4A-2r (first-hit D bound)
+PASS U29 E=1: child area +E*sum(w)=7, same turns, retained marks 15, new marks 5 = E*sum(w-1), compression returns the parent
+PASS U29 E=2: child area +E*sum(w)=14, same turns, retained marks 15, new marks 10 = E*sum(w-1), compression returns the parent
+PASS U29 E=5: child area +E*sum(w)=35, same turns, retained marks 15, new marks 25 = E*sum(w-1), compression returns the parent
+PASS U29 E=9: child area +E*sum(w)=63, same turns, retained marks 15, new marks 45 = E*sum(w-1), compression returns the parent
+
+=== Claim 3 algebra: selected-step increment (1+E)s - s0 - 2QN = (1-D/m)delta, e(D)=0
+PASS increment identity and e(D)=0 on 13860 grid cases
+
+=== Claim 3 on U21: parallel retained transfer, k=2 band, re-aimed actual seeds
+PASS U21: found 6 parent seeds traversing both components
+  seed (4, 3)->(5, 2) dir (7, -3) steps 11: s0=7/3 D=33 m=8 sel=[2, 5, 10, 13, 18, 21, 26, 29] comp-left-ends=[3, 0, 0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=4 threshold E>543/8 (~67.9)
+  seed (1, 2)->(5, 2) dir (-8, -5) steps 4: s0=8/5 D=20 m=6 sel=[1, 4, 9, 12, 17, 20] comp-left-ends=[0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=8/3 threshold E>230/3 (~76.7)
+  seed (5, 2)->(1, 2) dir (-8, -5) steps 4: s0=8/5 D=20 m=6 sel=[1, 4, 9, 12, 17, 20] comp-left-ends=[3, 0, 0, 3, 3, 0] up/down=[-1, 1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=8/3 threshold E>230/3 (~76.7)
+  seed (1, 2)->(4, 3) dir (7, -3) steps 7: s0=7/3 D=21 m=6 sel=[1, 4, 9, 12, 17, 20] comp-left-ends=[0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=3 threshold E>101/2 (~50.5)
+  seed (1, 3)->(5, 3) dir (8, -3) steps 8: s0=8/3 D=24 m=6 sel=[2, 5, 10, 13, 18, 21] comp-left-ends=[0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=3 threshold E>50 (~50.0)
+  seed (5, 3)->(1, 3) dir (-8, 3) steps 8: s0=8/3 D=24 m=6 sel=[4, 7, 12, 15, 20, 23] comp-left-ends=[3, 0, 0, 3, 3, 0] up/down=[-1, 1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=3 threshold E>50 (~50.0)
+  tally {'gate_pass': 545, 'gate_pass_illegal': 0, 'gate_fail': 998, 'gate_fail_legal': 577, 'lv_checked': 12870, 'lv_bad': 0, 'thr_cases': 150, 'thr_fail': 0, 'below_thr': 369, 'below_thr_legal': 328, 'wrongP': 1038, 'wrongP_legal': 141, 'Dbound_bad': 0, 'sens_cases': 513, 'sens_detected': 513, 'wrongP_gate': 7, 'wrongP_gate_legal': 4} cpu 1.1s
+PASS U21: every gate-passing re-aim is legal and ends at the target (545)
+PASS U21: child state equals base chart at X0(t)+e(t) at all 12870 old-level visits
+PASS U21: E > QvM - D/m with nearest N gives |delta|<=Q/(E+D/m), gate pass, legal (150)
+PASS U21: D <= (4*area-2r)*v for all chosen first-hit seeds
+  below threshold (nearest N): 369 cases, 328 legal; gate-failing re-aims 998, of which legal 577
+  wrong period 2*w1*N (not a multiple of 2*w2): 1038 traces, 141 reach the target; of those passing the same gate test 7, legal 4
+PASS U21: state check rejects the uncorrected error t*delta in all 513 cases with delta != 0
+
+=== Claim 3 on H26: parallel retained transfer, k=2 band, re-aimed actual seeds
+PASS H26: found 6 parent seeds traversing both components
+  seed (5, 2)->(4, 4) dir (-5, -6) steps 3: s0=5/6 D=18 m=5 sel=[6, 9, 12, 15, 18] comp-left-ends=[3, 3, 0, 0, 3] up/down=[1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=5 threshold E>882/5 (~176.4)
+  seed (4, 4)->(5, 2) dir (-5, -6) steps 3: s0=5/6 D=18 m=5 sel=[1, 4, 7, 10, 13] comp-left-ends=[3, 0, 0, 3, 3] up/down=[-1, 1, -1, 1, -1] widths=[2, 3] Q=6 M=5 threshold E>882/5 (~176.4)
+  seed (5, 2)->(5, 3) dir (-6, -7) steps 3: s0=6/7 D=21 m=6 sel=[6, 9, 12, 15, 18, 21] comp-left-ends=[3, 3, 0, 0, 3, 3] up/down=[1, -1, 1, -1, 1, -1] widths=[2, 3] Q=6 M=5 threshold E>413/2 (~206.5)
+  seed (5, 3)->(5, 2) dir (6, 7) steps 3: s0=6/7 D=21 m=6 sel=[1, 4, 7, 10, 13, 16] comp-left-ends=[3, 3, 0, 0, 3, 3] up/down=[1, -1, 1, -1, 1, -1] widths=[2, 3] Q=6 M=5 threshold E>413/2 (~206.5)
+  seed (1, 2)->(1, 4) dir (-7, 4) steps 6: s0=7/4 D=24 m=5 sel=[2, 5, 18, 21, 24] comp-left-ends=[0, 0, 3, 3, 0] up/down=[1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=37/5 threshold E>864/5 (~172.8)
+  seed (4, 2)->(4, 4) dir (-5, 6) steps 4: s0=5/6 D=24 m=7 sel=[2, 5, 12, 15, 18, 21, 24] comp-left-ends=[3, 3, 3, 3, 0, 0, 3] up/down=[1, -1, 1, -1, 1, -1, 1] widths=[2, 3] Q=6 M=29/7 threshold E>1020/7 (~145.7)
+  tally {'gate_pass': 973, 'gate_pass_illegal': 0, 'gate_fail': 2682, 'gate_fail_legal': 1335, 'lv_checked': 21319, 'lv_bad': 0, 'thr_cases': 150, 'thr_fail': 0, 'below_thr': 1081, 'below_thr_legal': 913, 'wrongP': 2462, 'wrongP_legal': 346, 'Dbound_bad': 0, 'sens_cases': 931, 'sens_detected': 931, 'wrongP_gate': 15, 'wrongP_gate_legal': 2} cpu 3.9s
+PASS H26: every gate-passing re-aim is legal and ends at the target (973)
+PASS H26: child state equals base chart at X0(t)+e(t) at all 21319 old-level visits
+PASS H26: E > QvM - D/m with nearest N gives |delta|<=Q/(E+D/m), gate pass, legal (150)
+PASS H26: D <= (4*area-2r)*v for all chosen first-hit seeds
+  below threshold (nearest N): 1081 cases, 913 legal; gate-failing re-aims 2682, of which legal 1335
+  wrong period 2*w1*N (not a multiple of 2*w2): 2462 traces, 346 reach the target; of those passing the same gate test 15, legal 2
+PASS H26: state check rejects the uncorrected error t*delta in all 931 cases with delta != 0
+
+=== Claim 3 on U29: parallel retained transfer, k=2 band, re-aimed actual seeds
+PASS U29: found 6 parent seeds traversing both components
+  seed (1, 2)->(7, 2) dir (10, -3) steps 18: s0=10/3 D=54 m=14 sel=[1, 4, 9, 14, 19, 22, 27, 30, 35, 38, 43, 46, 51, 54] comp-left-ends=[0, 3, 3, 3, 3, 3, 3, 0, 0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1] widths=[2, 5] Q=10 M=26/7 threshold E>753/7 (~107.6)
+  seed (1, 2)->(7, 3) dir (10, -3) steps 19: s0=10/3 D=57 m=14 sel=[1, 4, 9, 14, 19, 22, 27, 30, 35, 38, 43, 46, 51, 54] comp-left-ends=[0, 3, 3, 3, 3, 3, 3, 0, 0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1] widths=[2, 5] Q=10 M=29/7 threshold E>1683/14 (~120.2)
+  seed (1, 3)->(7, 2) dir (-10, 3) steps 19: s0=10/3 D=57 m=14 sel=[4, 7, 12, 17, 22, 25, 30, 33, 38, 41, 46, 49, 54, 57] comp-left-ends=[0, 3, 3, 3, 3, 3, 3, 0, 0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1] widths=[2, 5] Q=10 M=33/7 threshold E>1923/14 (~137.4)
+  seed (1, 3)->(7, 3) dir (-10, 3) steps 20: s0=10/3 D=60 m=14 sel=[4, 7, 12, 17, 22, 25, 30, 33, 38, 41, 46, 49, 54, 57] comp-left-ends=[0, 3, 3, 3, 3, 3, 3, 0, 0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1] widths=[2, 5] Q=10 M=27/7 threshold E>780/7 (~111.4)
+  seed (4, 3)->(6, 3) dir (8, -3) steps 10: s0=8/3 D=30 m=8 sel=[2, 5, 10, 13, 18, 21, 26, 29] comp-left-ends=[3, 0, 0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1, -1, 1] widths=[2, 5] Q=10 M=5/2 threshold E>285/4 (~71.2)
+  seed (6, 3)->(4, 3) dir (8, -3) steps 10: s0=8/3 D=30 m=8 sel=[2, 5, 10, 13, 18, 21, 26, 29] comp-left-ends=[3, 0, 0, 3, 3, 0, 0, 3] up/down=[-1, 1, -1, 1, -1, 1, -1, 1] widths=[2, 5] Q=10 M=5/2 threshold E>285/4 (~71.2)
+  tally {'gate_pass': 561, 'gate_pass_illegal': 0, 'gate_fail': 1722, 'gate_fail_legal': 1031, 'lv_checked': 28311, 'lv_bad': 0, 'thr_cases': 150, 'thr_fail': 0, 'below_thr': 617, 'below_thr_legal': 547, 'wrongP': 2301, 'wrongP_legal': 350, 'Dbound_bad': 0, 'sens_cases': 454, 'sens_detected': 454, 'wrongP_gate': 4, 'wrongP_gate_legal': 2} cpu 8.9s
+PASS U29: every gate-passing re-aim is legal and ends at the target (561)
+PASS U29: child state equals base chart at X0(t)+e(t) at all 28311 old-level visits
+PASS U29: E > QvM - D/m with nearest N gives |delta|<=Q/(E+D/m), gate pass, legal (150)
+PASS U29: D <= (4*area-2r)*v for all chosen first-hit seeds
+  below threshold (nearest N): 617 cases, 547 legal; gate-failing re-aims 1722, of which legal 1031
+  wrong period 2*w1*N (not a multiple of 2*w2): 2301 traces, 350 reach the target; of those passing the same gate test 4, legal 2
+PASS U29: state check rejects the uncorrected error t*delta in all 454 cases with delta != 0
+
+=== Claim 5: nine-row staircase scaled by t
+PASS staircase t=1: r=8, area 45=45t^2, all gaps 1, min compressed area 45 >= 36t^2
+PASS staircase t=2: r=8, area 180=45t^2, all gaps 2, min compressed area 162 >= 36t^2
+PASS staircase t=3: r=8, area 405=45t^2, all gaps 3, min compressed area 351 >= 36t^2
+PASS staircase t=4: r=8, area 720=45t^2, all gaps 4, min compressed area 612 >= 36t^2
+PASS staircase t=1: no band of thickness >= 2 on either axis (area 45 > census 21)
+
+=== Claim 6a: axis scaling lifts seeds exactly (H26)
+PASS H26: 24 scaled seed lifts legal and exact
+
+=== Claim 6b: perturbation neighbourhood of a template seed (U21 marked chart)
+  template pair (1, 3)->(4, 3), seed dir (-3, 2), steps 5, wall hits [(0, 0), (1, 4), (0, 2), (0, 0), (1, 0), (0, 6), (1, 4), (0, 3)]
+  t=6: 729 perturbed rooms (|c|<=1, rel err <= 0.167); legal 702, same itinerary 701
+  t=7: 729 perturbed rooms (|c|<=1, rel err <= 0.143); legal 720, same itinerary 720
+  t=9: 729 perturbed rooms (|c|<=1, rel err <= 0.111); legal 729, same itinerary 729
+  t=12: 729 perturbed rooms (|c|<=1, rel err <= 0.083); legal 729, same itinerary 729
+PASS perturbed rooms with t>=9 (rel err <= 1/9) keep the template itinerary and are lit
+
+TOTAL FAIL 0; cpu 9.4s
