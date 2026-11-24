@@ -1,0 +1,38 @@
+== 1. Burnside alternative at primes 23..47 ==
+p=23: |AGL(1,p)|=506, 3 | |AGL|: False, min fixed points of g_x^2 (z<=8, 3z<=p): 2
+p=29: |AGL(1,p)|=812, 3 | |AGL|: False, min fixed points of g_x^2 (z<=8, 3z<=p): 5
+p=31: |AGL(1,p)|=930, 3 | |AGL|: True, min fixed points of g_x^2 (z<=8, 3z<=p): 7
+p=37: |AGL(1,p)|=1332, 3 | |AGL|: True, min fixed points of g_x^2 (z<=8, 3z<=p): 13
+p=41: |AGL(1,p)|=1640, 3 | |AGL|: False, min fixed points of g_x^2 (z<=8, 3z<=p): 17
+p=43: |AGL(1,p)|=1806, 3 | |AGL|: True, min fixed points of g_x^2 (z<=8, 3z<=p): 19
+p=47: |AGL(1,p)|=2162, 3 | |AGL|: False, min fixed points of g_x^2 (z<=8, 3z<=p): 23
+AGL(1,29): max fixed points of a nonidentity element = 1
+
+== 2. Degree 11: M11 and PSL(2,11) cycle types ==
+|M11| = 7920
+   (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) 1
+   (2, 2, 2, 2, 1, 1, 1) 165
+   (3, 3, 3, 1, 1) 440
+   (4, 4, 1, 1, 1) 990
+   (5, 5, 1) 1584
+   (6, 3, 2) 1320
+   (8, 2, 1) 1980
+   (11,) 1440
+found subgroup of order 660 in M11: True transitive: True
+  its types: [((1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), 1), ((2, 2, 2, 2, 1, 1, 1), 55), ((3, 3, 3, 1, 1), 110), ((5, 5, 1), 264), ((6, 3, 2), 110), ((11,), 120)]
+
+== 3. Quotient tuples at m=11 (n=22, k=2) ==
+genus-0 multisets with Z>=1: 247
+all four types realizable in M11 (so H could be M11/PSL(2,11)): [(((0, 4, 3), (0, 4, 3), (3, 0, 2), (3, 0, 2)), 6)]
+  -> with Z<=4 none remain
+max 3-cycles of an element of degree 11: 3 (so z=4 at one pole is impossible)
+
+== 4. M23: order-3 elements have >= 6 three-cycles ==
+|M23| = 10200960 orbit lengths along base: [23, 22, 21, 20, 16, 3]
+pointwise stabilizer of base[:4]: order 48
+  max fixed points of a nonidentity element there: 7
+  order-3 types there: [(3, 3, 3, 3, 3, 3, 1, 1, 1, 1, 1)]
+  random order-3 element types: {(3, 3, 3, 3, 3, 3, 1, 1, 1, 1, 1): 4488}
+
+== 5. Cauchy-Davenport sanity (|A|=|B|=4 in Z/23) ==
+min |B-A| over A containing 0 and four sample B: 7

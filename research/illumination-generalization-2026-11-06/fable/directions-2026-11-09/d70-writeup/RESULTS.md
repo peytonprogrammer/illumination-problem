@@ -1493,6 +1493,8 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
 - **d207** (2026-11-23, bbbb/l1-bbbb-area-bound.md sha 0fdeb3c8) CORRECT WITH GAPS. Per-class identities n = c_y + 2m_y, Σc_y = 4r+4, Σm_y = 2(n−r−1) hold. Dark same-class pair at n ≥ 49 has hidden branches H ≥ 2⌈2n/3⌉−16−⌊n/2⌋ ≥ 26, so "H ≤ 25" is equivalent to no dark pair at n ≥ 49: a necessary condition, not a reduction (as d86). Two-class estimate n = U(I) − ⌊v_out/2⌋ exactly; its "area-25 condition" is a room-only property, unrelated to darkness. New: for different-parity marks the twisted curve f(x)=τ(f(y)) gives exactly 2d_e distinct regular midpoint candidates, none at a corner; every legal path's midpoint is one; only d_e ≥ 1 is known. No unconditional BBBB area bound. Where: `d207-review-bbbb-area-bound/review.md`.
 
+- **d208** (2026-11-23, bbbb/l1-condition-i-low.md sha 2ae1ab4e) CORRECT WITH GAPS. Condition (i) extended below 49 for normalized strictly simple rooms with r ≤ 8 and distinct same-parity interior lattice marks: d = n−1 at n = 23, 29, 31, 37, 41, 43, 47 (Burnside prime degree; affine case excluded); d ≥ 20 at n = 22 (reviewer's argument via degree-11 transitive and degree-22 primitive group lists); d ≥ 4 always (≥ 5 if 4 ∤ n). Twisted degree d_e ≥ n−1 at the seven primes (p = 23 via M23, reviewer). Minor slip: z = 4 residual at n = 22 impossible (also in d81 §6). Condition (i) now holds at 22, 23, primes 29–47 and n ≥ 49; open at composite 24–48. Gives candidate counts only; reachability (seed) still open. Where: `d208-review-condition-i-low/review.md`.
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at
