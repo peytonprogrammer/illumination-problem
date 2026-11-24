@@ -1808,3 +1808,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-23 17:45
 - Daniel approved the recommendation (17:45): drop the pending area-22 census. Next, a theorem that pins down the base the descent needs; a scoped base computation will go to Daniel for approval with a cost estimate. No search is approved.
+
+## 2026-11-23 17:55
+- d213 verdict CORRECT WITH GAPS. Re-ran checks.py: 33 PASS, 0 fail, identical to the agent's log except for CPU time. RESULTS §11 updated; claim released; verdict forwarded to Astra.
+- Key data: single-band gate selection passes for only 65/200 values of t on the √2 staircase. This supports the multi-band lift redirect. First open case: t=15. Estimate unchanged at 8–10%: the result is partial, with a concrete obstruction.

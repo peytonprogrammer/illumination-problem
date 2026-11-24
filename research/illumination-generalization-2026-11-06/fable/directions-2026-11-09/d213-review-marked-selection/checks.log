@@ -1,0 +1,69 @@
+
+=== Claim 1: template bound
+PASS r<=8: <= r+4 cut levels, <= 11 refined gaps per axis; all-unit template box <= 11x11 = 121
+PASS offset staircase: compressing both middle bands gives area 18; x walls 0,1,3,4,6,7 + marks 2,5
+
+=== Claim 3: tiers 4,5,6, S=(1,1), T=(3,4); lift [2,3] by E0 (N0=0), then [3,4] by 6T+1 (N=1)
+PASS tiers room strictly simple, r=2, y walls 0,2,3,5 (marks 1,4 => all y gaps unit)
+PASS for E0=1..30,57,100: first lift gate+legal with slope 2/T; second lift R=-2, test (2) 2T<7T+1, test (1), gate, and exact trace legal
+PASS determinant formula R=U(cB-bA)=-2 and threshold negative: every T admissible
+PASS R_j = U(c_j B - b_j A) identity on 864 grid cases
+
+=== Claim 4: two-tier widths 4,5, S=(1,1), T=(2,3); gains 80n, 80n+10
+PASS n=1: exact replay through lower band (N=5n) legal, U=1
+PASS n=1: replayed parent U=41, D=82, interface t=81 half-integral, Q=5, m=1
+PASS n=1: 19 windings with s'>0: none passes the gate; min|delta|=5/172 >= 5/(12+160n); |t delta| at interface > 1/2
+    n=1: of those 19 re-aimed replayed seeds, 9 are legal by exact trace
+PASS n=1: N=0 on both lifts passes the gate and is legal (direct chord)
+PASS n=2: exact replay through lower band (N=5n) legal, U=1
+PASS n=2: replayed parent U=81, D=162, interface t=161 half-integral, Q=5, m=1
+PASS n=2: 31 windings with s'>0: none passes the gate; min|delta|=5/332 >= 5/(12+160n); |t delta| at interface > 1/2
+    n=2: of those 31 re-aimed replayed seeds, 12 are legal by exact trace
+PASS n=2: N=0 on both lifts passes the gate and is legal (direct chord)
+PASS n=3: exact replay through lower band (N=5n) legal, U=1
+PASS n=3: replayed parent U=121, D=242, interface t=241 half-integral, Q=5, m=1
+PASS n=3: 43 windings with s'>0: none passes the gate; min|delta|=5/492 >= 5/(12+160n); |t delta| at interface > 1/2
+    n=3: of those 43 re-aimed replayed seeds, 17 are legal by exact trace
+PASS n=3: N=0 on both lifts passes the gate and is legal (direct chord)
+
+=== Claim 2: e(t) = [mt - D b(t)] R/(D D'), test (1) sufficiency
+PASS e(t) identity on 18464 (stage, level) pairs from the named-room stages
+PASS test (1) passing implies the signed gate in all 35 stages where (1) holds
+PASS U=1 two-tier seed: N=0 on both lifts passes gate and is legal for 5 height pairs
+
+=== Claim 6: offset four-tier staircase
+PASS staircase t in {1,2,5,17,100,200}: strictly simple, 6 reflex, x walls 0,1,3,4,6,7
+PASS first-stage gate set equals (1/2,1) on both orders; 26 first lifts s=(3+6n)/D traced legal
+PASS fixed template seed, n in -3..5: no first-lift slope passes for x=66..70 (and beyond: slope decreases in x)
+PASS direct chord legal for t=1..200 except t in []
+PASS for t=1..80, both orders, every first-stage n: the generic signed gate's passing windings equal the note's interval set exactly
+PASS all 31 gate-passing last lifts are legal by exact trace
+  sweep t=1..200 (arithmetic only): interval test, exact-replay gcd test, mod-42 class
+PASS exact-replay gcd criterion equals brute force over n,N for t=1..200, both orders
+    interval test passes (some n) lower-first: 46/200, upper-first: 36/200, either: 65/200
+    t<=200 where it fails in BOTH orders (135): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 24, 26, 27, 28, 29, 31, 32, 33, 34, 35, 37, 39, 41, 47, 49, 51, 52, 53, 54, 55, 56, 57, 58, 59, 61, 62, 63, 65, 66, 67, 69, 70, 72, 73, 75, 76, 78, 79, 80, 82, 83, 86, 87, 88, 93, 94, 95, 97, 98, 99, 101, 103, 104, 108, 109, 112, 113, 114, 115, 116, 117, 118, 119, 121, 122, 123, 124, 125, 126, 129, 133, 134, 137, 138, 139, 140, 141, 142, 144, 145, 148, 149, 150, 151, 154, 155, 156, 159, 161, 163, 164, 165, 166, 167, 170, 173, 175, 177, 178, 179, 180, 181, 184, 185, 186, 188, 189, 190, 193, 195, 196, 197, 199, 200]
+    t<=200 with exact replay available (t,order): 18 -> [36, 38, 40, 42, 44, 46, 68, 71, 74, 77, 100, 136, 160, 176, 191]
+    t<=200 passing only by non-replay windings: 50
+    of the failing t, both gains odd: [1, 5, 7, 11, 15, 21, 29, 31, 35, 39, 41, 49, 55, 59, 63, 65, 69, 73, 79, 83, 87, 93, 97, 103, 113, 117, 121, 123, 137, 141, 145, 151, 155, 161, 165, 175, 179, 181, 185, 189, 195, 199]
+    first failing t with area 18+3(t+f) > 121: t=15, f=21, area 126
+      order L: n=2, s=15/19, (l,u)=(11/14,4/5), window for 3+6n+6N: (31.429, 32.000) -> []
+      order U: n=2, s=3/5, (l,u)=(13/22,14/23), window for 3+6n+6N: (23.636, 24.348) -> []
+      order U: n=3, s=21/25, (l,u)=(5/6,16/19), window for 3+6n+6N: (33.333, 33.684) -> []
+    t=5 (fails interval test): nearest-winding re-aims traced 3, legal 0
+    t=17 (fails interval test): nearest-winding re-aims traced 12, legal 3
+    t=100 (fails interval test): nearest-winding re-aims traced 60, legal 6
+  mod-42 non-replay selection theorem
+PASS 360 arithmetic (x,y) in class: n integral, |6N - ys| = 1/7, N passes the interval test
+PASS traced class members (lower,upper,order,s'): [(17, 17, 'L', Fraction(27, 38)), (17, 25, 'L', Fraction(33, 46)), (67, 59, 'U', Fraction(93, 130)), (101, 59, 'L', Fraction(117, 164))]: gate + legal, |s'-5/7|=1/(7(D+y)), odd p
+    sqrt2 members t<3000 (t=17, f=+-17 mod 42): [731, 1319, 2453, 2537]
+    t=731, f=1033: s=5/7 (n=87), N=123, s'=1263/1768, gate True, legal True
+    t=1319, f=1865: s=5/7 (n=157), N=222, s'=2277/3188, gate True, legal True
+PASS sqrt2 members t=[731, 1319] traced: gate passes and exact trace reaches T
+    density check: 47 of k<2000 have f(42k+17) = 17 mod 42 (window length 1/42 -> ~48)
+PASS parity: legal last-stage seeds in odd/odd sqrt2 rooms have odd primitive x-component
+
+=== Claim 5: ratio condition |1/s' - 1/s| <= 2 on gate-passing last stages
+PASS all 31 gate-passing staircase last stages satisfy (3)
+  (3) obstruction: sqrt2*U1 = 2*Q2*m1*N2 has no solution with U1>0 integral (sqrt2 irrational)
+
+TOTAL FAIL 0; cpu 2.9s
