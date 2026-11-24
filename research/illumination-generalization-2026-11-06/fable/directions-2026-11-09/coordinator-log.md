@@ -1799,3 +1799,9 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 17:10
 - d212 verdict CORRECT WITH GAPS. Re-ran checks.py: 54 PASS, 0 fail, 9.4 CPU-s, identical to the agent's log. RESULTS §11 updated; claim released; verdict forwarded to Astra.
 - Estimate 7–9% → 8–10%: L1 now has a reviewed, complete conditional reduction with one named open lemma (marked selection). The census through 121 is a dependency only; any run beyond area 21 needs Daniel's approval.
+
+## 2026-11-23 17:32
+- New Astra note bbbb/l1-marked-selection.md (L1). It proves marked selection for exact-replay, U=1 and determinant-test classes, plus a mod-42 non-replay class on the offset √2 staircase. It shows that an arbitrary successful first lift can fail. It names the offset staircase as the open selection test.
+- Launched d213-review-marked-selection (Opus, named rooms only, 10 CPU-min); claim added.
+- Briefed Astra: bbbb/l1-selection-obstruction.md. Decide whether single-band selection fails on the √2 staircase; if so, use a multi-band lift lemma via perturbation in ratio coordinates; degenerate ratios next.
+- Estimate 8–10% unchanged pending d213.
