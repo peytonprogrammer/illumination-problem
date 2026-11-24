@@ -1937,3 +1937,4 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 ## 2026-11-23 21:52 tick
 - Astra note l1-interior-bounce.md (L1, general): exact visit displacement q = s − Hα; an interval-chain iff criterion for a fixed chain; a sign-cone theorem in which three cut rules settle every strict demand vector; an exact simultaneous-clearance condition. R22: its demand IS in the sign cone, but the turn hits corner (1,2) at zero clearance, so the cone doesn't characterize darkness. The residual is again aim/clearance, now as a linear feasibility problem over integer counts per winding. General lemma, so d228 review launched.
 - Astra briefed: completeness of slab-excursion normal form + arithmetic (zero-clearance) lemma.
+- d228 done: 5 CORRECT, 1 CORRECT WITH GAPS; sign-cone theorem confirmed. R22 fails by parity (needs 4<H<6, H even), which supports the arithmetic-clearance conjecture (B). Re-run identical. Claim released, verdict forwarded.
