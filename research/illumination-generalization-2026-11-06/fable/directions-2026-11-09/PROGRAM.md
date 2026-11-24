@@ -103,3 +103,6 @@ Correction (d204, 2026-11-23): a linear reflection bound does NOT yield a Presbu
 
 ## L2 extension: area 21 (approved by Daniel 2026-11-23)
 Approved: the census at exact area 21, W ≤ 20, all interior lattice pairs across parities, plus a log audit of different-parity coverage through area 20. Plan: bbbb/census-extension-plan.md. Run dir: d205-census-a21. Limits: nice 10, ≤ 8 processes. Validate against the area-20 counts and the W=22 dark control first. A confirmed dark pair stops the run. Areas above 21 still need approval.
+
+## Seed-profile route (selected 2026-11-23 14:12)
+Theory routes today (area-bound counting d207/d208, corner charging, direction density, common cylinders) all reduce to the seed: one straight legal chord for each pair. CC in a variable direction is equivalent to lighting (l1-common-cylinder.md). New route: rerun the approved area-21 slice recording each pair's first-witness direction height, reflection count and r; extract the hardest pairs; state a seed-type conjecture; attempt a proof for its family. Stopping rule: if by 2026-11-25 20:00 no seed type covers all area-21 pairs with a uniform description, stop and report.
