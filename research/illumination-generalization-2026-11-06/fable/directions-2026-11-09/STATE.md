@@ -426,3 +426,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - 2026-11-23 18:25: d215 CORRECT WITH GAPS. Astra on the periodic-point obstruction. Estimate 8–10%.
 - 2026-11-23 18:33: d216 review running. Astra on dark ⇒ costly fold (Lemma FC route). Estimate 8–10%.
 - 2026-11-23 18:45: d216 CORRECT WITH GAPS (scoping). Astra on dark ⇒ costly fold. Estimate 8–10%.
+- 2026-11-23 18:55: d217 review running. Astra on the Relay lemma (regular off-class site ⇒ lit). Estimate 8–10%.
