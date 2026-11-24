@@ -1938,3 +1938,14 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Astra note l1-interior-bounce.md (L1, general): exact visit displacement q = s − Hα; an interval-chain iff criterion for a fixed chain; a sign-cone theorem in which three cut rules settle every strict demand vector; an exact simultaneous-clearance condition. R22: its demand IS in the sign cone, but the turn hits corner (1,2) at zero clearance, so the cone doesn't characterize darkness. The residual is again aim/clearance, now as a linear feasibility problem over integer counts per winding. General lemma, so d228 review launched.
 - Astra briefed: completeness of slab-excursion normal form + arithmetic (zero-clearance) lemma.
 - d228 done: 5 CORRECT, 1 CORRECT WITH GAPS; sign-cone theorem confirmed. R22 fails by parity (needs 4<H<6, H even), which supports the arithmetic-clearance conjecture (B). Re-run identical. Claim released, verdict forwarded.
+
+## 2026-11-23 22:10 tick
+- Astra note l1-excursion-normal-form.md (L1). WRONG CLAIMS (both mine) refuted:
+  - (A) Presburger encoding: one fixed itinerary of a pinned pair in a five-reflex chart is legal exactly when u > m², which is non-semilinear.
+  - (B) Parity gap ⇒ fold: a seven-reflex family has R22's exact missed window 4<H<6 yet is lit by one side reflection, velocity (−5c,1). Coordinator verified this by hand: hit at x=−c, y=1/5; crossing at y=1 at x=3c ∈ (0,4c); arrives at (8c,2) inside (4c,10c).
+- Also:
+  - A finite tier graph (≤ 4(r+3)² states) describes all legal words exactly.
+  - A fixed excursion template can fail with strictly negative clearance while the pair is lit by another path.
+  - The LLLRLLLRLR stress chart has no interior pinned mark, so there is no N0.
+- Not reviewed: these are counterexamples to coordinator proposals, and the key one was hand-verified.
+- Next: witness selection (bounded templates), the first open step of (A).

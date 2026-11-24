@@ -39,3 +39,27 @@ where sᵥ is the prefix of the same sum to the visit. For m excursions in tier 
 An additional scope issue is visible without solving the inequalities: **this particular stress chart has no interior pinned mark.** At an internal horizontal support the overlap is one of (A,B),(C,F),(C,F), and each is between consecutive x supports. The exterior levels contain no interior mark either. Thus a pinned-pair theorem in this chart is vacuous, while the old stopping rule asks about *all* interior lattice marks and all length assignments of the word.
 
 **No numerical N₀.** Neither the finite walk description nor the clearance tests bound the area of a least dark realization. The first open geometric step is witness selection: if a pinned pair is joined by a walk whose downward excursions cross several interfaces, must some joining walk have a bounded sequence of repeated excursion types depending only on r? Even a positive answer would still need a separate theorem about the union of the parameter domains to recover Presburger decidability.
+
+### B, sharpened after d228. An even-height gap in a lit pinned pair
+
+**Progression test.** Suppose a specified development has a nonempty open clearance interval (a,b) for H, and the attainable heights under consideration are exactly H₀+qj for integers j≥0, q>0. The first attainable height strictly above a is
+
+    h* = H₀ + q max(0, floor((a−H₀)/q)+1).
+
+There is a witness to these scalar tests exactly when h*<b. In particular, above the progression's starting point, a missed interval lies between two consecutive progression points, with equality allowed at its excluded endpoints. This is an obstruction for that development. A geometric witness also needs every other visit and the compatible endpoint. With several independent delays, the attainable heights are H₀+Σλⱼmⱼ, mⱼ≥0. Their gcd supplies a necessary congruence; it need not describe the initial attainable heights (delays 4 and 6 miss 2). Even for the same H the visit prefixes can depend on which delays produced it. [D228, claims 2 and 6](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d228-review-interior-bounce/review.md)
+
+**Counterexample to the proposed factor inference, with exactly R22's interval.** Fix any positive integer c. At levels −1,0,1,2,3,4 use, from bottom to top, the open tier intervals
+
+    c(−2,4), c(−1,4), c(0,10), c(4,11), c(2,8).
+
+Take the interior of the union of the closed rectangles. All overlaps are positive. The side changes contribute 1+2+2+2=7 reflexes. The distinct same-parity marks S=(0,0) and T=(8c,2) are interior to overlaps and pinned: the middle tier supplies the x=0 support, and the last tier the x=8c support. The direct chord grazes (4c,1). In the direct transverse development K=8c, put the double excursion in 1<y<2. Every positive count gives the required minus sign at the y=1 transmission. For the first roof and floor hits the vertical travel prefixes are 2 and 3. Their exposed faces impose
+
+    0 < 16c/H < 4c,       4c < 24c/H < 10c.
+
+Together these inequalities are exactly 4<H<6. The first gate also passes throughout this interval. For a single excursion even the last arrival at level 2 is in the open endpoint component: at the relaxed value H=5 its abscissa is 32c/5 in (4c,10c). This illustrates the distinction between reaching the component and aiming at T. One excursion fixes H=4; allowing any positive repeat count gives H=2+2m, m≥1. The real window contains 5 and misses every attainable height. At H=4 the first roof hits its endpoint. At H=6 the first floor hits its endpoint. Larger counts already fail the floor condition. These two necessary visit tests thus exclude the entire count family without any assumption about its later turns.
+
+Yet **one ordinary reflection joins S to T for every c**. Launch with velocity (−5c,1). It hits the exposed side x=−c at y=1/5, crosses y=1 at x=3c in (0,4c), and reaches (8c,2) inside (4c,10c). Slab convexity checks both legs. This supplies a nonaxial legal ray for the very pair with the R22-type even-height gap. It also shows why parity across *all* windings is insufficient on its own: the successful ray has even vertical travel 2, but its transverse target image has changed and the interval (4,6) no longer applies.
+
+For R22 the same calculation with K=2 and its own face endpoints gives precisely (4,6); the independent three-copy fold rules out other developments. The seven-reflex example has the same missed interval, the same parity of both marks and the same endpoint failures. Hence these hypotheses do not force a factor separating S and T in the sense needed for case (ii). They do not decide whether an individual direction class admits some factor. A factor proof would need a relation on sheets respected across state changes and strong enough to obstruct every compatible development. The local height calculation gives no such relation. [R22 fold proof](l1-periodic-obstruction.md)
+
+**First open implication.** The seven-reflex example has a witness in the monotone tier form once the transverse winding changes. It settles the proposed inference from one missed progression. For (A), bounded-template witness selection remains open when a known joining ray returns across multiple interfaces. For (B), the open case is simultaneous failure over all compatible windings and all relevant itineraries in a room with at most eight reflexes. D228's fixed-chain membership criterion gives no transfer from one missed interval to the others.
