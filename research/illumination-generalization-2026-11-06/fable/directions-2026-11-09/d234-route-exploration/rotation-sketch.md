@@ -1,5 +1,9 @@
 # Coordinator sketch: the x-list on the two-gate chart as one rotation (unreviewed)
 
+**CORRECTION (2026-11-25 08:50 HST): the necessity claim in "Degenerate case is one rotation" is wrong.** Astra, bbbb/l1-two-list-rotation.md: the second-gate window is (1, m+1) ∩ (m+1−s, m+1+H−s). It moves with s and has length at most H, so its relative length can be g/(2m), not g/(2H). Her exact family (m, H, t) = (24, 2, 1), N = 6k−2, e = k has one image class that misses for every k, with (e+1)/X near 1/7, far from every fraction of denominator below 2H = 4. I checked her congruence by hand: 7(y−25) ≡ 17 (mod 24) against the gate 0 < 7(y−25) < 14. The determinant 4mH/X and the count scaling stand. The right coordinate is the third crossing y, where the window (m+1, m+1+H) is fixed and the angle is H(N+2)/(mX).
+
+Follow-up test (scan_classes.py, prediction first, P = 0.7: some hit lands on the image her class excludes, through a turn class). Result at (m,H,t,N,e) = (24,2,1,5998,1000), slopes up to 60: 13,248 hits; 6,659 land on the flipped image, every one through a downward third-gate crossing after a turn in column 3. Prediction held. The independent tracer confirms K = 7030, 17056, 175030 as hits and K = 17057 as a miss. So her obstruction is per class, not for the list.
+
 Advances: L1. Status: a sketch and a guess. Nothing here is reviewed.
 
 ## Setup

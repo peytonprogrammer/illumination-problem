@@ -2064,7 +2064,7 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Estimate 2-4% -> 3-5% (the closure that lowered it was a coordinator error).
 - Timestamps in the three entries above corrected to the machine clock (08:00 HST at the decision). Board claim d234 released. Sync pushed 582087e5b to peytonprogrammer/illumination-problem main; ls-remote confirms. Tick cron 33e5a51a at :13 and :43.
 
-## 2026-11-25 08:40 tick: closure note in review, rotation brief sent
+## 2026-11-25 08:25 tick: closure note in review, rotation brief sent
 - Astra idle with bbbb/l1-two-list-closure.md (08:03). A: the x-monotone list lights the d234 residual for every m >= 2 (later-image selection, K = 3mj + m). B: a wider region under 3mH/gcd(m,2H) < X/2. She states no outcome (a) or (b) and no H(C).
 - Cheaper test first (d234-route-exploration/check_closure_A.py, 3.6 CPU-s): A is an exact HIT for m = 2 to 12. B hits at 7 of 8 named points; the one CORNER, (3,40,7,4,5), is outside her sufficient condition. Her cited scans at m = 7, 8 re-run identically.
 - First open case in her words: arbitrary transverse gaps, where b = 2(d+e) fails (target displaced by N, e = 3N/2 - 1). Prediction written first: lit at m = 2, 3, 4 (P = 0.85). Result (scan_general.py, new, control reproduces 482/488/506): lit, first hits 644/641, 1521/1441, 4166/2561. Prediction held.
@@ -2073,9 +2073,18 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Brief to Astra with new leverage (d234-route-exploration/rotation-sketch.md, unreviewed): rank-2 lattice reduction for moderate slopes, the degenerate case as one rotation (three-distance theorem), and the lit displaced family. Stop result stated: if the resonant set inside V stays unbounded with no offset inequality, the route closes at the deadline.
 - No lemma or estimate moved yet. No sync, no Slack. Estimate 3-5%.
 
-## 2026-11-25 08:50 d235 review returned
+## 2026-11-25 08:32 d235 review returned
 - Verdict: A ACCEPT. B ACCEPT WITH CORRECTIONS (2, wording): name the "displaced-target subfamily" exactly (N = 64m², levels (-(m+2), 0, 1, m+1, 2m+2, 2m+3), m >= 3), and say the condition forces N >= 20. B uses m >= 3 only at gates 2 and 3 for small c; H >= m+1 would do for gate 3.
 - Re-run of review_check.py: identical apart from timings, 7.7 CPU-s, 20 named points, K+1 control misses.
 - Predictions scored: A ACCEPT (0.9) held. B ACCEPT (0.75) held, with wording corrections as allowed for. Reviewer: 19 of 20 of its own predictions held.
 - Surprise (reviewer): at m = 2, c = 0, outside B, the proof's gate-2 step fails yet the same chord hits by another path. Guess: B extends to m = 2. Not pursued; it doesn't change the route decision.
 - RESULTS.md section 11 and STATE.md updated. Board claim released. Verdict forwarded to Astra. Estimate 3-5%, unchanged: a family closure, not an area bound.
+- Timestamp correction: I first wrote 08:40 and 08:50 for the two entries above; the machine clock read 08:22 at the tick start and 08:35 after the review. Second time today. From now on I run `date` before I write a log header.
+- 08:43 sync: two attempts failed on github.com:443 connect timeouts (fetch, then push). A direct push of the pending commit landed; ls-remote shows 2336a1dea on peytonprogrammer/illumination-problem main. Slack self-DM posted on the second try (first timed out, verified not posted before resending). GitHub warns that manifests/files.jsonl is 61 MB (recommended max 50 MB, hard limit 100 MB); reported to Daniel.
+
+## 2026-11-25 08:50 tick: my rotation sketch refuted in part, turn-class brief sent
+- Astra idle. bbbb/l1-two-list-rotation.md (08:27): WRONG CLAIM, MINE. The short-denominator necessity in d234-route-exploration/rotation-sketch.md fails: the second-gate window moves with s and has length at most H. Her exact family (m,H,t) = (24,2,1), N = 6k-2, e = k has one image class that misses for every k. Hand check of her congruence: holds. Her cited scan re-run: 7030/7000, identical. She claims no full-list miss, no V membership, no H(C).
+- She also applied both d235 wording corrections to l1-two-list-closure.md (08:35).
+- Same-blocker check: her stop is the earlier blocker (a class miss needs a short relation plus an offset; the list of short relations grows with m/H). New leverage, tested first: turn classes change the offset. Prediction (P = 0.7): at her named point some hit lands on the image her class excludes. Result (scan_classes.py, 0.3 CPU-s, slopes up to 60): 13,248 hits, 6,659 on the flipped image, all through a downward third-gate crossing after a turn in column 3. Independent tracer (9.6 CPU-s): K = 7030, 17056, 175030 HIT, K = 17057 control misses.
+- Brief sent: decide whether the third-gate offsets of all turn classes form one coset, which would cut the x-list miss set to one congruence on the four column heights and (N+2)/X. Stop result: if each class needs its own inequality, the exceptional set isn't explicit and I close the route before the deadline. My odds: outcome (a) by the deadline 7%; moves L1 3%.
+- Estimate 3-5%, unchanged.
