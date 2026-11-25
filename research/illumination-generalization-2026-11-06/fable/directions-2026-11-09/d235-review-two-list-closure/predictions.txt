@@ -1,0 +1,9 @@
+Predictions written before running review_check.py (2026-11-25).
+
+A, m = 2..10, 16, 20: column model "ok", closed forms match, |s-(m/2+1)| < 1/16,
+  j a multiple of 2(m+2); room trace HIT with 0 vertical reflections.
+A negative control (m = 2, K+1): column model ends off y4; room trace not HIT
+  within the step budget.
+B1..B7 (inside the condition): column model "ok", closed forms match, room trace
+  HIT with 0 vertical reflections. cond(N-2) is False at B2..B6 (minimal N).
+B8 (m = 2, outside B): gate 2 fails in the column model (s/3 < 1); trace not HIT.

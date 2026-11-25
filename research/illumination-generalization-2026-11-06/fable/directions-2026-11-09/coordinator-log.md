@@ -2043,22 +2043,39 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Astra told to stand by. Tick cron dfb9f162 cancelled. Daily audit cron was never recreated.
 - Estimate 3-5% -> 2-4%: the single approved route closed without an explicit chart bound, and the remaining options need Daniel's approval.
 
-## 2026-11-25 08:00 resume (Daniel: "resume the research", coordinator role, use Astra and subagents)
+## 2026-11-25 07:35 resume (Daniel: "resume the research", coordinator role, use Astra and subagents)
 - Route choice under the research-conduct skill. Same-blocker rule applies: every closed route stopped at the seed problem.
 - Coordinator's five fresh ideas all map to reviewed ground (list in d234-route-exploration/README.md). Not briefed.
 - Opened d234: one bounded exploration round. Astra (own candidate, then the r = 3 test), Opus outsider, Opus surprise review. Predictions and stop result are in the README.
 - No searches, no census. Estimate unchanged at 2-4%.
 
-## 2026-11-25 08:35 d234 round, first two returns
+## 2026-11-25 07:55 d234 round, first two returns
 - Astra (bbbb/l1-route-candidates.md): no candidate clears the filter. Dropped per-axis gcd normalization (both divisors are 1 on the stopped family). Surprise: d233. On r = 3: no all-area proof; first open obligation is the pyramid word LLLLRLLRLR outside wb <= ud; a hand proof there would move her 5% to 10%. Coordinator check: pyramid-sweep-obstruction.md already shows one winding family can miss while the perpendicular sweep lights the pair, so r = 3 has the same two-list blocker.
 - Surprise review (d234-route-exploration/surprises.md): pattern = every hard-case witness has at most 2 reversals on one axis, with its many reflections on the other axis in one thin region. One candidate: one-pass two-list theorem (P = 3%).
 - SURPRISE, and a COORDINATOR ERROR at route close: the residual on which the gate-box route closed (N = 64m^2, gaps (m+2,1,m,1,m+1)) is LIT by x-monotone rays at m = 2, 3, 4 (first hits 482/385, 869/865, 1554/1537; 199 to 344 roof-floor bounces; 0 vertical-wall hits). Coordinator re-ran monotone_residual.py and trace_check.py: identical, 0.2 CPU-s; the independent tracer confirms all three and the d233 (1,2) control. The route closed on a weak sufficient test (sequential gcd), not on a hole. Avoidable expense: a 0.1 CPU-second exact scan of the list would have decided the residual before closure.
 - Process note: the subagent scanned slopes on 4 named rooms (cap was 3), about 1 CPU-second. It is an exact scan of one itinerary list on hand-picked rooms, not a room search. Reported to Daniel as a boundary case of the no-search rule.
 - Outsider subagent still running. No route chosen yet. Estimate unchanged at 2-4%.
 
-## 2026-11-25 08:50 d234 round closed, route decision
+## 2026-11-25 08:00 d234 round closed, route decision
 - Outsider (d234-route-exploration/outsider.md): no theory route. One decision test: lighting on non-embedded immersed discs, W <= 20, area <= 16 (a census; needs Daniel's approval; guessed < 1 CPU-h). Surprise it named: d140, an all-dark genus-9 square-tiled surface, so the reflection structure or planarity must carry the goal.
 - Coordinator added m = 5, 6 on the residual family (5 points total, the per-family cap): lit, first hits 2437/2401 and 4328/3457.
 - DECISION: reopen the last gate-box step (two-list union on the six-reflex two-gate chart) under the original deadline 2026-11-26 20:00 HST. Reasons, new leverage and stop result are in d234-route-exploration/README.md and PROGRAM.md (last section). Astra briefed.
 - Recommended to Daniel, not launched: immersed-disc control run.
 - Estimate 2-4% -> 3-5% (the closure that lowered it was a coordinator error).
+- Timestamps in the three entries above corrected to the machine clock (08:00 HST at the decision). Board claim d234 released. Sync pushed 582087e5b to peytonprogrammer/illumination-problem main; ls-remote confirms. Tick cron 33e5a51a at :13 and :43.
+
+## 2026-11-25 08:40 tick: closure note in review, rotation brief sent
+- Astra idle with bbbb/l1-two-list-closure.md (08:03). A: the x-monotone list lights the d234 residual for every m >= 2 (later-image selection, K = 3mj + m). B: a wider region under 3mH/gcd(m,2H) < X/2. She states no outcome (a) or (b) and no H(C).
+- Cheaper test first (d234-route-exploration/check_closure_A.py, 3.6 CPU-s): A is an exact HIT for m = 2 to 12. B hits at 7 of 8 named points; the one CORNER, (3,40,7,4,5), is outside her sufficient condition. Her cited scans at m = 7, 8 re-run identically.
+- First open case in her words: arbitrary transverse gaps, where b = 2(d+e) fails (target displaced by N, e = 3N/2 - 1). Prediction written first: lit at m = 2, 3, 4 (P = 0.85). Result (scan_general.py, new, control reproduces 482/488/506): lit, first hits 644/641, 1521/1441, 4166/2561. Prediction held.
+- Count check, prediction first (hits with 1 < s < m+1 within a factor 3 of mX/(8H)): 81, 223, 384, 157, 360 against 24, 65, 128, 40, 108. FAILED at 4 of 5 points (ratios 3.0 to 3.9); the scaling held, my constant is wrong.
+- d235-review-two-list-closure/: snapshot, payoff sentence, prediction (A ACCEPT 0.9, B ACCEPT 0.75). One Opus review launched. Board claim added.
+- Brief to Astra with new leverage (d234-route-exploration/rotation-sketch.md, unreviewed): rank-2 lattice reduction for moderate slopes, the degenerate case as one rotation (three-distance theorem), and the lit displaced family. Stop result stated: if the resonant set inside V stays unbounded with no offset inequality, the route closes at the deadline.
+- No lemma or estimate moved yet. No sync, no Slack. Estimate 3-5%.
+
+## 2026-11-25 08:50 d235 review returned
+- Verdict: A ACCEPT. B ACCEPT WITH CORRECTIONS (2, wording): name the "displaced-target subfamily" exactly (N = 64m², levels (-(m+2), 0, 1, m+1, 2m+2, 2m+3), m >= 3), and say the condition forces N >= 20. B uses m >= 3 only at gates 2 and 3 for small c; H >= m+1 would do for gate 3.
+- Re-run of review_check.py: identical apart from timings, 7.7 CPU-s, 20 named points, K+1 control misses.
+- Predictions scored: A ACCEPT (0.9) held. B ACCEPT (0.75) held, with wording corrections as allowed for. Reviewer: 19 of 20 of its own predictions held.
+- Surprise (reviewer): at m = 2, c = 0, outside B, the proof's gate-2 step fails yet the same chord hits by another path. Guess: B extends to m = 2. Not pursued; it doesn't change the route decision.
+- RESULTS.md section 11 and STATE.md updated. Board claim released. Verdict forwarded to Astra. Estimate 3-5%, unchanged: a family closure, not an area bound.

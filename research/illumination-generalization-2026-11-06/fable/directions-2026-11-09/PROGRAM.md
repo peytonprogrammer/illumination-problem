@@ -172,7 +172,7 @@ No live route. Astra is on standby and the tick cron dfb9f162 is cancelled. To r
 - stop and write up.
 Estimate at close: 2–4%.
 
-## Gate-box route reopened (2026-11-25 08:50 HST)
+## Gate-box route reopened (2026-11-25 08:00 HST)
 
 Reason: the closure above rested on a residual that is lit. The x-monotone list hits the target at m = 2 to 6 on N = 64m², gaps (m+2, 1, m, 1, m+1) (d234-route-exploration/, exact scan and independent tracer). The early-stop clause fired on a weak sufficient test.
 Single live step, L1: the union of the two one-pass lists on the six-reflex two-gate chart. Outcome (a): an explicit exceptional set in the vertical lock region V, which is the first explicit H(C). Outcome (b): a named unbounded family where both exact lists are hollow.

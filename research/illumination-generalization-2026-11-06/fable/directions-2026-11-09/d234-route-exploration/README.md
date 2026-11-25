@@ -61,7 +61,7 @@ One round only. If no candidate passes, report to Daniel that no theory route
 has a payoff, with a recommendation among the census options and stopping.
 No searches and no census in this round.
 
-## Outcome (2026-11-25 08:50 HST)
+## Outcome (2026-11-25 08:00 HST)
 
 | Ideator | Candidates | Their estimate |
 | --- | --- | --- |

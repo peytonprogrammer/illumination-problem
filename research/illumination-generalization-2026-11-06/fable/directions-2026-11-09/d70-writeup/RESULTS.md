@@ -1638,6 +1638,21 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
   gives a necessary thinness-and-congruence test for the vertical miss set,
   and an unbounded residual family (N = 64m², axial gaps m+2, 1, m, 1, m+1)
   where the vertical list is hollow and the horizontal list is undecided.
+- **d235 — The two-list residual is lit for every m (L1), reviewed
+  2026-11-25.** On N = 64m², levels (−(m+2), 0, 1, 1+m, 2+m, 3+2m), the
+  x-monotone ray of slope K/X with K = 3mj + m, j a multiple of 2(m+2), and
+  K/X nearest m/2 + 1, lights the pair for every integer m ≥ 2 (section A,
+  ACCEPT). Section B (ACCEPT WITH CORRECTIONS, wording only): with levels
+  (−a, 0, 1, m+1, m+1+t, m+1+H), m ≥ 3, H ≥ m+2, 1 ≤ t ≤ m+1 and
+  3mH/gcd(m,2H) < X/2, the ray with K = 3mj + (m+1−t) lights the pair. The
+  condition forces N ≥ 20. Proved, not computed. Computed: exact traces at 20
+  named points (A at m = 2 to 10, 16, 20; B at 7 points; 7.7 CPU-s), re-run
+  identical. Scope: this removes the residual as an obstruction. It gives no
+  H(C) and neither route outcome. First open case: arbitrary transverse
+  gaps, where the identity 3(N+1) = 2X+1 fails; the displaced-target family
+  (e = 3N/2 − 1) is lit at m = 2, 3, 4 by exact scan only.
+  [note](../../../../qclass-closure/bbbb/l1-two-list-closure.md) ·
+  [review](../d235-review-two-list-closure/review.md)
 
 ### Computed evidence
 
