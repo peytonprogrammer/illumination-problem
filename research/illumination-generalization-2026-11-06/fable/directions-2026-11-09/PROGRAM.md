@@ -180,3 +180,21 @@ Method change: scan the exact list at up to 5 hand-picked points per subfamily b
 Stopping rule: the original deadline, 2026-11-26 20:00 HST. Outcome (b), or no proof of (a) by then, closes the route for good.
 Pending Daniel's approval, not launched: the immersed-disc control run (d234-route-exploration/outsider.md), which tests whether planarity carries the goal.
 Estimate: 3–5% (back to the level before the mistaken closure).
+
+## Gate-box route closed, second time (2026-11-25 09:16 HST)
+
+Closed by the stop result of the last brief, before the 2026-11-26 20:00 HST deadline. This closure rests on a missing proof method. It doesn't rest on an obstruction: no scanned point has a full-list miss.
+
+What the reopened step produced:
+- Reviewed (d235): the residual of the first closure is lit for every m ≥ 2 by an explicit x-monotone chord, and a wider region is lit under 3mH/gcd(m,2H) < X/2.
+- Unreviewed, checked by the coordinator: a class of the x-list can miss on an unbounded family ((m,H,t) = (24,2,1), N = 6k−2, e = k) with no short-denominator resonance (l1-two-list-rotation.md). Other turn classes reach the same image there (scan_classes.py). A formal match of the third crossing and the target image doesn't imply a legal chord: at slope 7030/7000 + 50 both starts fail gate 1 (l1-two-list-turn-classes.md).
+
+Why it stops: two briefs in a row ended at the same blocker. Each class of the x-list needs its own gate inequalities, and the number of classes grows with the column heights. Neither a rotation argument nor one offset congruence covers the list. So there's no explicit exceptional set (outcome (a)) and no family where both lists miss (outcome (b)). I can't name new leverage.
+
+Route-close record:
+- Avoidable expense: I briefed Astra on a necessity claim (rotation-sketch.md) without writing out the second-gate window. Two lines of hand algebra show the window moves with s. Cost: one Astra cycle.
+- Surprise worth keeping: lighting is abundant at the list level and scarce at the class level. At the named point, 13,248 rays with slope up to 60 hit the target, while single classes miss for every k. Hit counts scale as mX/H at 5 points. A counting or averaging argument over classes is the only idea here that doesn't go class by class. I have no proof route for it, so it isn't a brief.
+
+Kept tools: d231 Lemma 1, d232, d233, d235, and the exact scanners in d234-route-exploration/ (scan_general.py, scan_classes.py, trace_check.py).
+No live route. Astra is on standby. Decisions that belong to Daniel: the immersed-disc control run (d234-route-exploration/outsider.md, recommended), the area-22 census, or stop and write up.
+Estimate: 2–4%.

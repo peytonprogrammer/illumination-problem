@@ -2088,3 +2088,12 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Same-blocker check: her stop is the earlier blocker (a class miss needs a short relation plus an offset; the list of short relations grows with m/H). New leverage, tested first: turn classes change the offset. Prediction (P = 0.7): at her named point some hit lands on the image her class excludes. Result (scan_classes.py, 0.3 CPU-s, slopes up to 60): 13,248 hits, 6,659 on the flipped image, all through a downward third-gate crossing after a turn in column 3. Independent tracer (9.6 CPU-s): K = 7030, 17056, 175030 HIT, K = 17057 control misses.
 - Brief sent: decide whether the third-gate offsets of all turn classes form one coset, which would cut the x-list miss set to one congruence on the four column heights and (N+2)/X. Stop result: if each class needs its own inequality, the exceptional set isn't explicit and I close the route before the deadline. My odds: outcome (a) by the deadline 7%; moves L1 3%.
 - Estimate 3-5%, unchanged.
+- 08:53 sync: commit 93925c543 pushed; the wrapper command was stopped at its time limit while its trailing ls-remote hung. Slack self-DM posted on the second try (first timed out; verified not posted before resending).
+
+## 2026-11-25 09:16 tick: stop result fired, route closed
+- Astra idle. bbbb/l1-two-list-turn-classes.md (08:51): observation 2 of my brief is refuted. At the named room, slope 7030/7000 + 50 keeps the formal third crossing (180/7) and the target image, yet both starts fail gate 1. Each turn class needs its own gate inequalities. She invokes the stop condition.
+- Coordinator check (0.4 CPU-s): her cited scan re-runs identically (slopes to 3: 321 hits, 250 unturned upward, 71 turned downward). K = 357030 isn't a hit. Her hand algebra holds (6000·50 = 48·6250; 1000·50 divisible by 4).
+- Predictions scored: my odds for outcome (a) by the deadline were 7%; it didn't happen. Observation 2 was labeled a guess and is wrong.
+- Same-blocker rule: two briefs in a row (rotation, turn classes) ended at "one inequality system per class, class count grows with the heights". No new leverage. DECISION: close the route now. PROGRAM.md has the close record (one avoidable expense, one surprise).
+- Not a reviewed closure: no lemma to review. The per-class obstruction and the +50 counterexample are logged as unreviewed, coordinator-checked.
+- Estimate 3-5% -> 2-4%. Astra told to stand by. Tick cron 33e5a51a deleted.
