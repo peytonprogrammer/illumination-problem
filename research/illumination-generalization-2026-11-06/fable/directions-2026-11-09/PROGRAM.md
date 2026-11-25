@@ -171,3 +171,12 @@ No live route. Astra is on standby and the tick cron dfb9f162 is cancelled. To r
 - a new theory route with a dated stopping rule;
 - stop and write up.
 Estimate at close: 2–4%.
+
+## Gate-box route reopened (2026-11-25 08:50 HST)
+
+Reason: the closure above rested on a residual that is lit. The x-monotone list hits the target at m = 2 to 6 on N = 64m², gaps (m+2, 1, m, 1, m+1) (d234-route-exploration/, exact scan and independent tracer). The early-stop clause fired on a weak sufficient test.
+Single live step, L1: the union of the two one-pass lists on the six-reflex two-gate chart. Outcome (a): an explicit exceptional set in the vertical lock region V, which is the first explicit H(C). Outcome (b): a named unbounded family where both exact lists are hollow.
+Method change: scan the exact list at up to 5 hand-picked points per subfamily before any proof attempt (0.1 CPU-s each). Write the prediction first.
+Stopping rule: the original deadline, 2026-11-26 20:00 HST. Outcome (b), or no proof of (a) by then, closes the route for good.
+Pending Daniel's approval, not launched: the immersed-disc control run (d234-route-exploration/outsider.md), which tests whether planarity carries the goal.
+Estimate: 3–5% (back to the level before the mistaken closure).

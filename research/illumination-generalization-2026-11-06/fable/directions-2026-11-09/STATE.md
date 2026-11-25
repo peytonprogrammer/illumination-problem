@@ -285,7 +285,7 @@ Bounded reflections; Lemma H via monodromy groups; finite-blocking theorems
 by area; twisting one-parameter families; band stabilization with bounded
 periods; rigidity without the wall bound; counting and rank bounds from the
 Astra exchange (`d25-astra/`); absolute thick-thin size reduction (scaling makes it equivalent to the target; `d40-thick-thin/`). Multi-parameter covering certificates: work for two parallel bands (`d41-two-param-cover/`), but crossing row/column parameters aren't periodic and degenerations need unbounded P, so they don't scale to W <= 20.
-- Gate-box route (d230–d233, closed 2026-11-25): one-axis lattice criterion is exact but bounded one-axis lists can't bound the area (d233); the two-axis lattice model is false; the two-list union leaves an unbounded region undecided (l1-two-list-chart.md).
+- Gate-box route (d230–d233, closed 2026-11-25): one-axis lattice criterion is exact but bounded one-axis lists can't bound the area (d233); the two-axis lattice model is false; the two-list union leaves an unbounded region undecided (l1-two-list-chart.md). CORRECTION 2026-11-25: that region is lit by the x-monotone list at m = 2 to 6 (d234-route-exploration/); the two-list step is reopened until 2026-11-26 20:00 HST, so the two-list union is not a dead end yet.
 
 ## If you resume
 
