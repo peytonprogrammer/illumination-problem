@@ -150,3 +150,5 @@ No searches. The resonance-guided census (d230, Angle 2) needs Daniel's approval
 Estimate stays 5–8% until d231 returns.
 
 Update 2026-11-24 22:45 HST (d231): Lemma 1 holds. Lemma 2 is necessary for darkness only and is silent on itineraries that revisit a slab, so it can't supply the area bound. Astra's notes refute itinerary decoupling. Live step, same stopping rule: exclude positive-dimensional dark flats with the exact projection criterion on a flat (bbbb/l1-dark-flat-exactness.md). Estimate 4–7%.
+
+Update 2026-11-24 23:15 HST: d232 reviewed (exact test on a flat, conditional tie lemma, coefficient bound; 0 wrong, no closure). Live step: collapse lemma (bbbb/l1-flat-collapse.md), which takes the seed from a collapsed boundary room of the flat. Known limit: excluding dark flats of dimension ≥ 2 gives finiteness, not an explicit N₀. Same stopping rule. Estimate 3–6%.
