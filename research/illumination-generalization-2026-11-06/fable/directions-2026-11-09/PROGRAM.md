@@ -158,3 +158,16 @@ Update 2026-11-24 23:20 HST: dark-flat line stopped (overlaps d186/d187; no expl
 Update 2026-11-24 23:35 HST: the persistence target fails for vertical itineraries on the six-reflex two-gate chart (bbbb/l1-two-gate-chart.md, d233 reviewing): an unbounded lit family needs unboundedly many axial reversals. One repaired formulation runs until the same deadline: maximal-rectangle itineraries with two windings per visit (bbbb/l1-rectangle-itineraries.md). If it also has an unbounded obstruction, the route stops. Estimate 3–5%.
 
 Update 2026-11-24 23:55 HST: the maximal-rectangle lattice model is false (bbbb/l1-rectangle-itineraries.md). Last step: the union of the vertical and horizontal one-axis lists on the six-reflex two-gate chart (bbbb/l1-two-list-chart.md). Outcome (a), an explicit exceptional set, is the first explicit H(C). Outcome (b), or an uncovered unbounded region with neither proof, closes the route before the deadline. Estimate 3–5%.
+
+## Gate-box route closed (2026-11-25 00:20 HST)
+
+Closed by the early-stop clause of the last brief, before the 2026-11-26 deadline. Outcome on the six-reflex two-gate chart: no explicit H(C) and no two-list obstruction.
+- Reviewed and kept: d231 (legal chords of a one-axis itinerary are a lattice coset; the dual is the set of modulus relations), d232 (exact test on a dark flat, conditional tie lemma, length-independent coefficient bound), d233 (bounded lists of vertical itineraries can't bound the area).
+- Refuted: flatness as a lighting certificate on revisited slabs; itinerary decoupling; tie ⇒ symmetry; the two-axis lattice model; the persistence target as stated.
+- Undecided: the union of the vertical and horizontal lists on the region N = 64m², axial gaps (m+2, 1, m, 1, m+1) (bbbb/l1-two-list-chart.md).
+No live route. Astra is on standby and the tick cron dfb9f162 is cancelled. To resume, Daniel chooses one of:
+- the area-22 census as a falsification test (about 1.17B rooms, 3.1 CPU-h);
+- the resonance-guided census (d230, Angle 2);
+- a new theory route with a dated stopping rule;
+- stop and write up.
+Estimate at close: 2–4%.

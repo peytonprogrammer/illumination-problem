@@ -285,6 +285,7 @@ Bounded reflections; Lemma H via monodromy groups; finite-blocking theorems
 by area; twisting one-parameter families; band stabilization with bounded
 periods; rigidity without the wall bound; counting and rank bounds from the
 Astra exchange (`d25-astra/`); absolute thick-thin size reduction (scaling makes it equivalent to the target; `d40-thick-thin/`). Multi-parameter covering certificates: work for two parallel bands (`d41-two-param-cover/`), but crossing row/column parameters aren't periodic and degenerations need unbounded P, so they don't scale to W <= 20.
+- Gate-box route (d230–d233, closed 2026-11-25): one-axis lattice criterion is exact but bounded one-axis lists can't bound the area (d233); the two-axis lattice model is false; the two-list union leaves an unbounded region undecided (l1-two-list-chart.md).
 
 ## If you resume
 
@@ -459,3 +460,4 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 **2026-11-24 23:35.** Stopping-rule test, outcome (b) (l1-two-gate-chart.md, d233 reviewing): an unbounded lit family in the six-reflex two-gate chart where every witness needs about N/2 axial reversals, so no bounded list of vertical itineraries gives H(C). Last formulation before the deadline: maximal-rectangle itineraries with two winding numbers per visit (l1-rectangle-itineraries.md). Estimate 3–6% → 3–5%.
 **d233 reviewed (2026-11-24 23:45):** the unbounded-reversal obstruction and its lit witness hold (0 wrong). Scope: vertical itineraries only; the witness is a monotone three-event itinerary in the other axis. First open case: a family where every witness needs unboundedly many reversals on both axes (Astra, l1-rectangle-itineraries.md). Estimate 3–5%, unchanged.
 **2026-11-24 23:55.** Two-axis lattice model refuted (l1-rectangle-itineraries.md, unreviewed): switch ordinates between maximal rectangles have unbounded denominators. The lattice criterion is one-axis only. Last step of the route: joint vertical-plus-horizontal list theorem for the six-reflex two-gate chart, with an early-stop clause (l1-two-list-chart.md). Estimate 3–5%.
+**2026-11-25 00:20 — GATE-BOX ROUTE CLOSED** by its early-stop clause (l1-two-list-chart.md): neither an explicit H(C) nor a two-list obstruction; an unbounded region stays undecided. No live route. Astra on standby, tick cron cancelled. Kept tools: d231 Lemma 1, d232 exact test and coefficient bound, d233 obstruction. Options that need Daniel: area-22 census (falsification), resonance-guided census (d230 Angle 2), or stop. Estimate 3–5% → 2–4%.

@@ -2033,3 +2033,12 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - l1-two-gate-chart.md edited by Astra after d233 (scope word "vertical").
 - Astra briefed on the last step of the route: joint two-list theorem for the chart (l1-two-list-chart.md). Vertical list and horizontal list, each an exact one-axis lattice problem; describe the vertical lock region V, then prove the horizontal list lights V outside an explicit bounded set, or name the unbounded subfamily where both are hollow. Early-stop clause: an uncovered unbounded region with neither proof closes the route.
 - No subagent running. Estimate unchanged, 3-5%.
+
+## 2026-11-25 00:15 tick
+- Astra note l1-two-list-chart.md (L1), idle after it. She invokes the early-stop clause.
+  - Necessary test for the vertical miss set V on the full chart: thinness (d1 <= q1 or d2 <= Delta/q1, and the symmetric pair) plus a congruence per parity.
+  - Closure: the d233 family with any integer middle height B >= 1 is lit by an x-monotone ray (crossings h, (N+1)h - 2Bj, (N+2)h - 2Bj; target hit by parity in the height-two last column). Coordinator hand check of B >= 2: |h* - c| <= B/(N+2), |h - h*| <= 1/X, third crossing within (N+2)/X < 1 of B+2, second within B/(N+2) + (N+1)/X < B/2 of c. B = 1 not checked. Not sent to review: the route decision doesn't rest on it; listed as unreviewed in RESULTS.md.
+  - Residual: N = 64m^2, axial gaps (m+2, 1, m, 1, m+1). The vertical list is hollow (2A_t + A_s <= 9m+21 < N/2). The horizontal list is undecided: the sequential gcd test has no free residue because 1, N+1, N+2 are coprime to X. It is a residual of the proof, not a dark family and not a two-list counterexample.
+- GATE-BOX ROUTE CLOSED on that statement, as the last brief promised. No (a), no (b). No live route.
+- Astra told to stand by. Tick cron dfb9f162 cancelled. Daily audit cron was never recreated.
+- Estimate 3-5% -> 2-4%: the single approved route closed without an explicit chart bound, and the remaining options need Daniel's approval.

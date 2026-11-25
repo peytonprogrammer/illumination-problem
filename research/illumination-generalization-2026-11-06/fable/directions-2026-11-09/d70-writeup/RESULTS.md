@@ -1631,6 +1631,13 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
   `staircase4991-*.md`: in a 12 by 12 staircase, the pair (1,10) and (10,1) is
   lit for every real middle corner, by explicit routes of at most 8 bounces.
   This survives moving each mark up to 1/40.
+- **Horizontal witness on the d233 family** (`l1-two-list-chart.md`, Astra,
+  2026-11-25). The d233 family with any integer middle height B ≥ 1 is lit by
+  an x-monotone ray with one winding count, chosen by nearest-integer
+  rounding. Coordinator hand check of the B ≥ 2 case only. The same note
+  gives a necessary thinness-and-congruence test for the vertical miss set,
+  and an unbounded residual family (N = 64m², axial gaps m+2, 1, m, 1, m+1)
+  where the vertical list is hollow and the horizontal list is undecided.
 
 ### Computed evidence
 
@@ -1703,6 +1710,15 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
   succeed only for directly visible pairs. A lit area-501 room has ≥ 228
   candidates per class, and every one fails the test.
 - **Area bound from corner alignments** (`arithmetic-rigidity.md`): none exists.
+- **Gate-box route** (d230–d233, 2026-11-24; closed 2026-11-25 by its early-stop
+  clause). One-axis itineraries have an exact lattice criterion (d231), but
+  no bounded list of vertical itineraries bounds the area on the six-reflex
+  two-gate chart (d233). Flatness is silent on revisited slabs (d231). The
+  two-axis lattice model is false (`l1-rectangle-itineraries.md`). The union
+  of the vertical and horizontal lists leaves an unbounded region undecided
+  (`l1-two-list-chart.md`). Excluding dark flats repeats d186/d187 and gives
+  no explicit N₀. Don't repeat without a membership test for mixed-axis
+  itineraries.
 
 ### Corrections log
 
