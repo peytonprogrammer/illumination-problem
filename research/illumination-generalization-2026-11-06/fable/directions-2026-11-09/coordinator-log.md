@@ -1999,3 +1999,12 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
   - Her scope statement: excluding dark flats of dimension >= 2 gives only qualitative finiteness, no numerical N0.
 - Astra briefed: collapse lemma (l1-flat-collapse.md). Darkness is closed along a flat, so a regular chord in a collapsed boundary room that avoids the merged-corner points lights nearby flat points. This takes the seed from the collapsed room. Asked for the exact payoff at r <= 8 for the stopping-rule report.
 - Estimate 4-7% -> 3-6%. Reasons: the symmetry target is unsupported, every singleton case reduces to the seed problem, and exclusion of dark flats would not give an explicit N0.
+
+## 2026-11-24 23:20 tick
+- Astra note l1-flat-collapse.md (L1), idle after it. Logged without review (a qualitative perturbation lemma and calibrations; no closure, no area-uniform claim).
+  - Collapse lemma: a regular chord on a boundary face of a flat lifts to every nearby positive point, provided the collapsed room keeps its vanished-slab stack, mirror sides and endpoint sectors. Merged-corner points alone aren't enough data.
+  - Calibrations: the eight-reflex two-arm room has a boundary certificate at L=0 and the same chord works for 0 <= L < 15 (coordinator hand check: 3(1+L)/(9+L) < 2 iff L < 15). The six-reflex 1:2 lock has no interior-pair certificate at a -> 0 because S becomes a corner; a one-sided launch works at B = 7/2. R22's stretch has no proper face.
+  - Payoff, in her words: "No numerical N0." Excluding higher-rank dark factors leaves the rank-one factors, whose height needs an effective bound.
+- COORDINATOR ERROR: the dark-flat briefs of 22:45, 22:55 and 23:15 overlap d186/d187, which already assemble qualitative L1 modulo finite-flat and isolate the height estimate H(C). About three ticks of Astra's time went to known ground. Kept from them: the reviewed d232 tools.
+- Dark-flat line stopped. Astra briefed on the stopping-rule test proper: an explicit theorem for the whole six-reflex two-gate chart (l1-two-gate-chart.md). Step 1, a hollow-rectangle lemma for g = 2 (exact, no flatness). Step 2, either an explicit bounded set of dark ratios for a fixed itinerary family, or a named unbounded subfamily where the whole family is hollow.
+- No subagent running. Estimate unchanged, 3-6%.
