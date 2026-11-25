@@ -83,3 +83,16 @@ Small-gap rooms have dense corners, so this was expected there. Large-gap rooms 
 - EMM on the whole dark locus, generic line, periodic points: d89, d115, d116, d119, d122.
 - Primitive monodromy implies A_n or S_n: l1-large-monodromy.md. It needs a braid-orbit lemma that is open.
 - Compactness in gap ratios: d215.
+
+## Corrections after review (d231, 2026-11-24)
+
+Review: `../d231-review-gate-box/review.md`. Lemma 1 is correct. Read the rest of Angle 1 with these changes.
+
+- Lemma 2 is a necessary condition for darkness. It never certifies lighting on an itinerary with a repeated full-height slab visit, because that visit pair gives a relation of width ≤ 2 < Flt(2).
+- "Universal relations need thin boxes" (open step 2) is wrong, and so is "each relation bounds a modulus ratio" for universal relations.
+- The parabola hand check is wrong. For even m with m | u−m ≤ 7m the monotone itinerary has a relation of width u/(4m). The pairs are lit (d229), but the criterion is silent.
+- Flt(g) is known exactly only for g ≤ 2. Rational independence of the moduli never holds in a lattice room.
+- The converse of the box statement needs closed endpoints at smooth wall points on a level. A mark strictly inside a slab gives a partial first or last visit with a different modulus.
+- Astra's notes refute two further claims of mine: itinerary-level decoupling (`l1-total-resonance.md`) and "cross relations fail for all but finitely many winding pairs" (`l1-room-decoupling.md`).
+
+What survives: a dark pair forces a short relation on each itinerary whose full-height visits use distinct slabs, a finite family. Turns and excursions need the exact coset test or a one-direction projection test.

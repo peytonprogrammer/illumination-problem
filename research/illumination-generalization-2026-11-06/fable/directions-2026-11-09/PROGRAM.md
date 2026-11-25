@@ -148,3 +148,5 @@ Roles: Opus reviews Lemmas 1–2 (d231). Astra runs the exact tests (R22, six-re
 Stopping rule: stop if the R22 test doesn't produce short relations, or if the persistence step has no proof for the two-gate family by 2026-11-26 20:00 HST. Then report.
 No searches. The resonance-guided census (d230, Angle 2) needs Daniel's approval and isn't approved.
 Estimate stays 5–8% until d231 returns.
+
+Update 2026-11-24 22:45 HST (d231): Lemma 1 holds. Lemma 2 is necessary for darkness only and is silent on itineraries that revisit a slab, so it can't supply the area bound. Astra's notes refute itinerary decoupling. Live step, same stopping rule: exclude positive-dimensional dark flats with the exact projection criterion on a flat (bbbb/l1-dark-flat-exactness.md). Estimate 4–7%.

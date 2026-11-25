@@ -1971,3 +1971,17 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - 2026-11-24 Daniel approved the gate-box route; pause lifted. d231 Opus review launched (claim on board). Astra briefed: tests on R22 and the locked-gate family, then the persistence step.
 - 2026-11-24 Tick cron dfb9f162 created (every 20 min, gate-box route). Daily audit cron not recreated.
 - 2026-11-24 22:20 Astra: l1-gate-box-tests.md (R22 short blockers found: arithmetic relation (1,−2), width 1/2; locked gate reproduced by relation (1,0,−1); 20-wall control unblocked) and l1-total-resonance.md (WRONG COORDINATOR CLAIM: itinerary-level decoupling refuted; a long middle visit is absent from every short relation yet the box misses via an end-to-end relation; per-excursion reflex charging fails at six reflexes). Logged without review (tests and a refutation). Astra briefed: room-level decoupling by independent end excursions (l1-room-decoupling.md). d231 still running. Estimate unchanged 5–8%.
+
+## 2026-11-24 22:45 tick
+- Astra note l1-room-decoupling.md (L1). WRONG COORDINATOR CLAIM (second on this route): "cross relations fail for all but finitely many (k0,k2)" is false. Cross relations give whole lines, such as k0 = k2. Weaker count in an aggregated model only: at most P(N+1) pairs on cross lines, P = prod over j != M of (2b_j+1).
+  - New, general, conditional on the d230 model: clearance-weighted lemma. With a common-slope realization x of both end legs and rho_i = dist(x_i, boundary of J_i), a missed coset gives a dual vector with n_M != 0 and (sum rho_i^2 l_i^2)^(1/2) <= C_g. No lcm, but it needs the clearance of a realization, which is the seed problem again.
+  - First stall: the six-reflex two-gate chart's monotone itinerary has disjoint end-slope sets, so there is no common x.
+  - Not sent to review: the lemma is conditional and d231 was still open.
+- Astra briefed: exclusion of positive-dimensional dark flats by the exact (projection) criterion on a flat, then growth rays and a tie lemma (l1-dark-flat-exactness.md).
+- d231 done (Opus, about 12 CPU-min against a 10-minute budget; two runs timed out). Verdicts: Lemma 1 CORRECT; coset parametrization, Lemma 2 and the g=1 formula CORRECT WITH GAPS; two WRONG CLAIMS of mine in d230:
+  - "Universal relations need thin boxes" is false. A slab visited twice at full height gives a relation of width <= 2 < Flt(2), so Lemma 2 never certifies an itinerary with a repeated full-height visit. Hand-checked: four gate terms, each |J| <= w, coefficient 1/(2w).
+  - The parabola hand check is false. For even m with m | U <= 7m (U = u - m) the monotone itinerary has a relation of width u/(4m), which is 3/4 at (10,30). Hand-checked with n = (-U/m, m/2, (m+2)/2). The pairs are lit (d229); the criterion is silent.
+  - Also: "explicit in general" is overstated (Flt(g) is unknown for g >= 3), and rational independence is vacuous for lattice rooms.
+- Re-run of light2.py (300 s cap): the five parabola rows and the six-reflex rows match review.md; it times out at the same B=18 roof itinerary. gatebox.py and light.py not re-run in full (they exceed the budget).
+- Consequence: flatness is a necessary condition for darkness on non-repeating itineraries only, and it can't bound the area on the parabola subfamily. The route needs the exact coset or one-direction projection test, family-wide. The new Astra brief already uses the exact form.
+- Board claim d231 released. Verdict forwarded to Astra. Estimate 5-8% -> 4-7%.

@@ -1593,6 +1593,8 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
 - **d229 — Witness selection: bounded templates (L1), reviewed 2026-11-23.** The five-reflex pinned parabola family is lit for ALL m≥3 and u≥m+2 by a bounded walk: a gate lemma, the winding choice, and the divisibility argument ruling out both 2U and 2(U+2) dividing m². Its non-Presburger set belongs only to the direct path. The seven-reflex family's witness is bounded for every c. Bounded-template membership reduces to finitely many polynomial tests at the extreme occurrences. One-gap tails are affine (ag+b>0); the diagonal caveat stands. Verdicts: 6 CORRECT, 1 CORRECT WITH GAPS (minor). 25 exact checks (11 traced parameter points, including m=20 with 101 bounces); re-run identical. First open case: a figure-eight recurrent component. [review](../d229-review-witness-selection/review.md)
 
+- **d231 — Gate-box lattice and flatness criterion (L1), reviewed 2026-11-24.** For a fixed vertical itinerary, the legal chords are the points of a lattice coset in the open box of gate intervals, and the dual lattice is the set of integer relations among the slab moduli h/2w (Lemma 1, CORRECT; it matched in all 16 itineraries analysed). Flatness (Lemma 2) is CORRECT WITH GAPS: a missed box forces a relation of width ≤ Flt(g), with Flt(1)=1 and Flt(2)=1+2/√3 (Hurkens 1990); Flt(g) is not known for g ≥ 3. It is a necessary condition for darkness only. Two claims of the source note are WRONG. First, a slab visited twice at full height always gives a relation of width ≤ 2, so flatness says nothing on any itinerary with a turn or an excursion. Second, in the parabola family with m even and m | u−m ≤ 7m, the monotone itinerary has a relation of width u/(4m) (3/4 at (10,30)), although d229 proves those pairs lit. The six-reflex lock is a one-direction projection miss of width 1/8, which is exact. The referee used about 12 CPU-minutes against a 10-minute budget and stopped before the six-reflex B=18 roof itinerary and the point (1,2,3). Coordinator re-run of the lattice pass matches. First open case: a family-wide lighting certificate for the parabola pair at (10,30). [source](../d230-fresh-angles/README.md) · [review](../d231-review-gate-box/review.md)
+
 ### Proved, not yet reviewed
 
 - **Doorway lemma** (`offgrid/doorway.md`). Dead-end door pairs are lit at
@@ -1712,3 +1714,13 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
   bound "Claimed". d86 found them sound, with one citation fix.
 - **"No proof idea has survived"** (2026-11-18). d75–d84 now cover named
   families, but no proof covers all BBBB rooms.
+- **Gate-box flatness criterion** (d231, 2026-11-24). The d230 note said that
+  universal relations need thin boxes and that the parabola family's monotone
+  itinerary has no short relation for large m, u. Both are wrong: repeated
+  slab visits always give a relation of width ≤ 2, and the parabola family
+  has short relations for even m with m | u−m ≤ 7m.
+- **Itinerary decoupling** (Astra, 2026-11-24, unreviewed refutations). The
+  coordinator's claims that a non-resonant slab splits an itinerary into
+  independent ends, and that cross relations fail for all but finitely many
+  winding pairs, are both false (`l1-total-resonance.md`,
+  `l1-room-decoupling.md`).

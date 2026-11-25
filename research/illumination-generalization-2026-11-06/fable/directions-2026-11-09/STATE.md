@@ -451,3 +451,5 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 **d229 reviewed:** bounded-template witness selection works on both test families; open: figure-eight components (Astra on periodic corridor).
 **2026-11-23 22:50.** Corridor reformulation refuted; residual = seed problem again. Route-stop recommendation to Daniel. Estimate 5–8%.
 **2026-11-23 23:10 — PAUSED by Daniel.** Crons cancelled, Astra on standby. Resume options in PROGRAM.md (PAUSED section).
+**2026-11-24 — pause lifted (Daniel).** Single route: gate-box lattice (d230). Stopping rule 2026-11-26 20:00 HST (PROGRAM.md).
+**d231 reviewed (2026-11-24 22:45):** Lemma 1 (dual lattice = modulus relations) correct. Flatness (Lemma 2) is necessary for darkness only, and it is silent on every itinerary that revisits a slab and on the parabola subfamily m even, m | u−m ≤ 7m. Two coordinator claims in d230 and two decoupling claims are wrong (corrections log). Live step: exclude positive-dimensional dark flats with the exact projection test (Astra, l1-dark-flat-exactness.md). Estimate 5–8% → 4–7%.
