@@ -1733,3 +1733,7 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
   can't all be resonant unless the room is small. A six-reflex family refutes
   it. The coordinator's expected width bound for non-split hollow rectangles
   is also wrong.
+- **Two-axis gate box** (Astra, 2026-11-24, unreviewed refutation). The
+  coordinator proposed that legal chords of a maximal-rectangle itinerary
+  form a lattice coset. They don't: switch ordinates have unbounded
+  denominators (`l1-rectangle-itineraries.md`).

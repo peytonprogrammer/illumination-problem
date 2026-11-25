@@ -2020,3 +2020,16 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Observation (coordinator): the witness is monotone in x and stays in three maximal rectangles, so the obstruction is against one-axis itineraries. Astra briefed on one last formulation before the deadline: two-axis gate box with maximal-rectangle itineraries (l1-rectangle-itineraries.md); either an explicit bound on rectangle-itinerary length in the chart, or an unbounded family that defeats it too.
 - Estimate 3-6% -> 3-5%.
 - 23:45 d233 done (Opus, 0.3 CPU-s): 7 CORRECT, 1 CORRECT WITH GAPS, 0 wrong. The obstruction holds at every step (N >= 38 already suffices for two reversals) and the witness works for every even N >= 4 with N/2 - 1 reversals. The chart has 16 walls. At N = 40 the monotone miss is a split through covector (1/80, 1/80), width 1/40, from the equal end moduli. Scope gap: the stopping-rule sentence needs the word "vertical"; the witness is monotone with 3 events in the transverse decomposition. Proof-only: the obstruction and the all-N witness. Not computed: lower-end bounce and middle-excursion itineraries. Re-run of the three scripts identical apart from CPU lines. Claim released, verdict forwarded. Estimate unchanged, 3-5%.
+
+## 2026-11-24 23:55 tick
+- Astra note l1-rectangle-itineraries.md (L1), idle after it. Logged without review (a refutation of a coordinator proposal, a conditional bound and a partial sufficient test; no closure).
+  - WRONG COORDINATOR CLAIM: the two-axis analogue of d230 Lemma 1 is false. For a fixed transition between two maximal rectangles of a six-reflex room (levels -1,0,1,2,4,5,6; S=(1,1), T=(4,4)), slopes (11+72k)/3 give legal rays whose switch ordinates 2 - 8/(11+72k) have unbounded denominators, so they lie in no lattice coset. Coordinator hand check at k = 0: crossing at 14/11, x = 14/3 at height 2, side hits at heights 2+4/11 and 2+16/11, end at (4,4).
+  - The lattice structure holds only when every event has fixed travel along one common axis.
+  - N-family: three maximal rectangles with open-gate transitions (or with one bridge rectangle); one winding counter carries all the reversals.
+  - Conditional bound: an x-monotone witness fits in at most 2r+1 maximal rectangles; in general (2r+1)(1+min(h,v)) visits for h, v reversals on the two axes.
+  - The half-period lock can't be rotated in this chart: with d = y3 - y2 >= Q/2 the signed gate images leave no omitted arc.
+  - A sequential gcd test lights a symbolic region by a transverse monotone route.
+  - First open case, hers: neither a uniform bound L nor a family forcing unbounded reversals on both axes.
+- l1-two-gate-chart.md edited by Astra after d233 (scope word "vertical").
+- Astra briefed on the last step of the route: joint two-list theorem for the chart (l1-two-list-chart.md). Vertical list and horizontal list, each an exact one-axis lattice problem; describe the vertical lock region V, then prove the horizontal list lights V outside an explicit bounded set, or name the unbounded subfamily where both are hollow. Early-stop clause: an uncovered unbounded region with neither proof closes the route.
+- No subagent running. Estimate unchanged, 3-5%.
