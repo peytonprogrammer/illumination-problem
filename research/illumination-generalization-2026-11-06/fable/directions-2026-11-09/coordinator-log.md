@@ -1985,3 +1985,9 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Re-run of light2.py (300 s cap): the five parabola rows and the six-reflex rows match review.md; it times out at the same B=18 roof itinerary. gatebox.py and light.py not re-run in full (they exceed the budget).
 - Consequence: flatness is a necessary condition for darkness on non-repeating itineraries only, and it can't bound the area on the parabola subfamily. The route needs the exact coset or one-direction projection test, family-wide. The new Astra brief already uses the exact form.
 - Board claim d231 released. Verdict forwarded to Astra. Estimate 5-8% -> 4-7%.
+
+## 2026-11-24 22:55 tick
+- Astra note l1-dark-flat-exactness.md (L1), idle after it. Claims: on a dark flat the open-box obstruction for a fixed itinerary is exactly a quotient-coset miss, and the affine levels of the persistent characters don't depend on x; a boundary-face test; six-reflex roof calibration (lit cosets 00000 and 11001 of 32); a conditional tie lemma (a growing gap crossed once with compatible end legs has n_M != 0, so it is tied to a second growing gap); a coefficient bound for a fixed itinerary that is independent of the longitudinal lengths. Her own scope statement: no relation locking every itinerary, no eight-reflex exclusion, no N0.
+- The coefficient bound is a length-uniform lemma, so d232 review launched (Opus, claim on board, snapshot in d232-review-dark-flat-exactness/).
+- Astra briefed: minimal-support ray lemma (l1-minimal-ray.md). Single-gap rays by k = 0, 1, >= 2 separating components; two-gap rays, target "tie => fold symmetry", with a calibration on a known dark family with a free length at r >= 9.
+- Estimate unchanged, 4-7%, until d232 returns.

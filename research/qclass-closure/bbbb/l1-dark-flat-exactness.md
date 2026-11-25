@@ -1,4 +1,4 @@
-Advances: L1 — on a rational dark gap flat, obstruction for a fixed oriented itinerary is exactly a quotient-coset miss. A growing gap traversed once by a pair of compatible end legs must occur in a persistent relation with another growing gap. For a fixed itinerary its coefficients have a finite bound from the transverse data alone. This does not prove that every growing gap admits such an itinerary.
+Advances: L1 — on a rational dark gap flat, obstruction for the open part of a fixed oriented itinerary is exactly a quotient-coset miss, with smooth boundary events tested on their own faces. A growing gap traversed once by a pair of compatible end legs must occur in a persistent relation with another growing gap. For a fixed itinerary its coefficients have a finite bound from the transverse data alone. This does not prove that every growing gap admits such an itinerary.
 
 ### Exact test at a generic point
 
@@ -17,6 +17,21 @@ A real character ℓ of event space is integral on Aℤᵐ iff nⱼ=Pⱼ(Σ_{i>j
 Thus the persistent characters **and their affine levels** are fixed on the flat. The offset vector v itself can vary.
 
 The closed-subgroup character theorem in Euclidean space gives the closure as the intersection of all congruences ℓ·z≡ℓ·v mod 1 (for the group itself use right side zero). Equivalently its connected direction is V=(span ℓ(D))⊥ and its image modulo V is a discrete lattice coset. Indeed A has full row rank, so the closure spans event space; a closed subgroup splits as a vector subspace plus a lattice on its orthogonal complement. The integer characters of that lattice recover exactly the stated congruences. Since J is open, meeting the closure is equivalent to meeting the actual coset. A generic miss therefore persists at every positive point of L_x, including rational specializations, where additional relations can only shrink the closure.
+
+**D231 endpoint convention.** Use the actual partial travel from an interior-slab mark to its first level, or from the last level to the target. Its modulus is this travel divided by that slab's transverse period. It need not equal a later full-visit modulus. In refined gap coordinates, if a visit spans several subgaps, its travel is their sum and its coefficient contributes once to each in the push-forward. Reusing a physical slab alone does not give a universal difference relation.
+
+For legal-event membership include an endpoint of Jᵢ when it is a smooth wall point continuing through the level and the incoming and outgoing sectors there give ordinary reflection. Keep forbidden corners excluded. The openness argument above applies to the relative interior of the original box. Merely closing an endpoint and testing the same closure can give a false hit: a dense group can approach a face without ever attaining its defining equality.
+
+Here is the exact projection test for each allowed boundary face. Write its coordinate equalities as Rz=c. First impose RA k=c−Rv **over the integers**. If insoluble, discard that face. Given one solution k₀, the exact points on its affine span form z₀+Γ, where z₀=v+Ak₀ and Γ=A ker_ℤ(RA). Take the closure of Γ *in the face direction space* and quotient there by its connected part. The relative-open face is hit iff its projection meets the discrete quotient coset through z₀. This follows by density on relative-open sets and also covers a zero-dimensional face. Apply the sector check at each simultaneous event. The legal itinerary misses iff the open part and every admitted face miss. Persistence of the full-box interior congruences above should not be read as persistence of integer solvability of an added face equality at specializations. [D231, claim 1](../../illumination-generalization-2026-11-06/fable/directions-2026-11-09/d231-review-gate-box/review.md)
+
+**Six-reflex calibration at (a,t,B)=(1,1,1).** In d231's visit order the travels are (1,1,1,3,3), with transverse widths (8,10,8,9,9). The event box has intervals (7,8), (16,17), (16,24), (16,25). At this rational point the connected part is zero. Applying the referee's exact coset membership routine to this single prescribed box gives the following physical abscissas. The bits are per-visit side-reflection parities (0 even, 1 odd), not cumulative orientation signs.
+
+| Parities | Four physical event abscissas |
+|---|---|
+| 00000 | 68/9, 145/9, 50/3, 55/3 |
+| 11001 | 64/9, 151/9, 56/3, 73/3 |
+
+Both rows lie strictly inside all four intervals; the other thirty parity cosets miss the open box. This is the open-box count reported in d231. The value 5/8 does not decide any of these memberships. No room or direction search was used.
 
 **Rank correction.** The real kernel of A is the line spanned by (aⱼ/Pⱼ). The integer winding group has rank m if that line has no nonzero integer point, and m−1 otherwise. Even on a flat of dimension ≥2, an itinerary using only one varying gap (or only proportional restrictions of gaps) has rational modulus ratios and rank m−1. The closure test needs no blanket rank-m assertion.
 
