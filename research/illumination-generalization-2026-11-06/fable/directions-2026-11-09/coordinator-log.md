@@ -2008,3 +2008,14 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - COORDINATOR ERROR: the dark-flat briefs of 22:45, 22:55 and 23:15 overlap d186/d187, which already assemble qualitative L1 modulo finite-flat and isolate the height estimate H(C). About three ticks of Astra's time went to known ground. Kept from them: the reviewed d232 tools.
 - Dark-flat line stopped. Astra briefed on the stopping-rule test proper: an explicit theorem for the whole six-reflex two-gate chart (l1-two-gate-chart.md). Step 1, a hollow-rectangle lemma for g = 2 (exact, no flatness). Step 2, either an explicit bounded set of dark ratios for a fixed itinerary family, or a named unbounded subfamily where the whole family is hollow.
 - No subagent running. Estimate unchanged, 3-6%.
+
+## 2026-11-24 23:35 tick
+- Astra note l1-two-gate-chart.md (L1), idle after it. Stopping-rule test, outcome (b):
+  - Exact hollow-rectangle row test for g = 2. WRONG COORDINATOR EXPECTATION: non-split hollow rectangles don't have width in (1, 1+2/sqrt3]; her rational one-row example has a hollow rectangle with no projection miss and vertical width 4/5.
+  - Unbounded family in the six-reflex two-gate chart (N even, N >= 40, unit gates, B = 2N+2): every ray from S to T satisfies N/2 <= 2A_t + A_s, so a ray with at most r0 axial reversals needs N <= 12(r0+1). Every vertical itinerary with bounded reversals is hollow, at fixed wall count.
+  - The pairs are lit: velocity (1,2), about N/2 roof-floor bounces in the upper end.
+  - Coordinator hand check: mirrors at 0, N, 5N/2, 2N, 3N, 4N lie in (N/2)Z; both end travels are odd; the elimination gives N/2 <= A_s + 2A_t; the witness crosses at N-1/2 and 2N+1/2, floor hits 2N+5/2+2k < 5N/2, reaches T after N-1 axial units, no integer-corner contact.
+- Consequence: the d230 persistence target (a finite chart-only family of vertical itineraries can't all be resonant unless the room is small) is false on the six-reflex chart. The route as specified fails its stopping-rule test, pending d233.
+- d233 review launched (Opus, claim on board): row test, counterexample rectangle, obstruction, witness traces at N = 40, 42, 100.
+- Observation (coordinator): the witness is monotone in x and stays in three maximal rectangles, so the obstruction is against one-axis itineraries. Astra briefed on one last formulation before the deadline: two-axis gate box with maximal-rectangle itineraries (l1-rectangle-itineraries.md); either an explicit bound on rectangle-itinerary length in the chart, or an unbounded family that defeats it too.
+- Estimate 3-6% -> 3-5%.
