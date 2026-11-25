@@ -136,3 +136,15 @@ The L1 theory chain is stopped. Pinned-pair route outcome: reviewed tools d228 (
 - start a new theory route with a dated stopping rule; or
 - run the area-22 census as a falsification test (≈1.17B rooms, 3.1 CPU-h; needs Daniel's approval). A dark pair would refute the goal; all-lit closes only area 22.
 Estimate at pause: 5–8%.
+
+## Gate-box route (2026-11-24, Daniel approved; pause lifted)
+
+Single live route. Source: d230-fresh-angles/README.md.
+- Lemma 1: for a vertical itinerary, legal chords are the points of a lattice coset in the box of gate intervals. The dual lattice is the set of integer relations among the slab moduli h/2w.
+- Lemma 2: no chord of that type forces a relation that is short against the gate widths (flatness theorem).
+- Target for L1: for r ≤ 8, a finite chart-only family of itineraries can't all be resonant unless the primitive room is small. This supplies the height bound H(C) that d187 isolated.
+
+Roles: Opus reviews Lemmas 1–2 (d231). Astra runs the exact tests (R22, six-reflex locked gate) and attacks the persistence step.
+Stopping rule: stop if the R22 test doesn't produce short relations, or if the persistence step has no proof for the two-gate family by 2026-11-26 20:00 HST. Then report.
+No searches. The resonance-guided census (d230, Angle 2) needs Daniel's approval and isn't approved.
+Estimate stays 5–8% until d231 returns.
