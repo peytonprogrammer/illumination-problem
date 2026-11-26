@@ -202,3 +202,9 @@ Estimate: 2–4%.
 ## Immersed-disc control done (2026-11-25 20:00 HST)
 
 Daniel approved the run. Result: no dark pair among 857,156 pairs on non-embedded immersed discs with W <= 20 and area <= 16 (d236-immersed-disc-control/). The control stops by its stop result. It kills no route and opens none. No live route. Open decisions for Daniel: the area-22 census, or stop and write up. Estimate 2–4%.
+
+## Two exploratory bets closed (2026-11-26 09:49 HST)
+
+- Chord count (bbbb/l1-chord-count.md): main term X/4 is exact, but the all-class discrepancy is linear in X (5X/24 against 6X/24 on a family in V). No error bound independent of N. Stopped.
+- Dark examples at W = 22 to 26 (d237): the only dark pair among immersed discs with W <= 26, area <= 16 is the 22-wall room's. Stopped.
+No live route. Open decisions for Daniel: extend d237 to W = 28 to 30 (known dark rooms exist at W = 28), the area-22 census, a change of target to W <= 10 at all sizes, or stop and write up. Estimate 2–4%.

@@ -2106,3 +2106,21 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Coordinator checks: validator re-run through area 12 (176 CPU-s): 111 rows, 0 mismatches, 373 pairs all lit. crosscheck.py: 297 production discs decided with the validator's decider, 478 of 478 lit. HARNESS BUG, mine: the first crosscheck run misread the decider's return and printed 297 pairs as not lit; fixed before any conclusion.
 - Predictions: all three held; W of the smallest overlap missed by one disc.
 - Not reviewed: a negative control with a second implementation, no lemma. RESULTS.md section 11, STATE.md, PROGRAM.md updated. Board claim released. Estimate 2-4%, unchanged.
+
+## 2026-11-26 09:21 chord-count test briefed (after Daniel asked whether the two options were my best ideas)
+- They weren't: both close out the work. I reversed my 09:16 call that the abundance surprise 'isn't a brief'. One bounded test to Astra: total hit count N(R) over all classes as main term plus error; does the error cancel across turn classes; does a total miss force a fold (d52 excludes folds at r <= 8). Payoff: an exceptional set with no class-by-class inequality. Stop result: no cancellation, or error equal to the main term with no structure forced. My odds: the test survives Astra's kill attempt 15%; it moves L1 3%. Output: bbbb/l1-chord-count.md.
+- Offered to Daniel, not started (need his yes): a dark-example census at W = 22 to 26 on immersed discs with the d236 pipeline; a change of target to a full all-sizes theorem at W <= 10.
+
+## 2026-11-26 09:23 d237 approved (Daniel: "do 2") and specified
+- Spec, gates and predictions in d237-dark-examples-w22-26/README.md, written before any run. Budget 60 CPU-min. Brief queued behind Astra's chord-count test, which is in progress (her zero-frequency predictions X/4 match the counts I supplied to within 0 to 19%).
+
+## 2026-11-26 09:24 chord-count test stopped (bbbb/l1-chord-count.md)
+- Astra: the zero-frequency main term is exact and simple: X/4 in the moderate window (96.25, 216.25, 384.25, 160.25, 360.25 against my counts 81, 223, 384, 157, 360). But the all-class discrepancy is linear in X: on m = 2, H = 4, a = 4, t = 1 inside V, the count for s < 3 is 5X/24 + O(1) against a main term 6X/24. So no error bound independent of N. Stop result fired.
+- Coordinator check (scan_classes.py, 0.3 CPU-s): at N = 80, 400, 2000 the counts are 25, 125, 625 against 5X/24 = 25.2, 125.2, 625.2 and 6X/24 = 30.2, 150.2, 750.2. Her formula holds exactly.
+- Scored: I gave the idea 15% to survive her kill attempt; it didn't. What survives is weaker: the count stayed positive and linear (5/24 of X). Positivity of a resonance-dependent leading coefficient is the old resonance blocker, so it isn't a brief. Idea 1 is closed. Unreviewed, coordinator-checked.
+
+## 2026-11-26 09:49 d237 complete: only the known dark pair
+- Astra (astra/README.md): 8,741,965 discs, 1,015,031 pairs, 1 DARK (the 22-wall room, 2,592 states, both deciders), 0 undecided. 9.7 CPU-min. Her forecast scenarios: 11 and 39 CPU-min.
+- Coordinator checks: validator with W <= 26 through area 12: 8 rows, 0 mismatches. crosscheck.py: 557 discs, 649 of 649 lit; dark disc DARK by the validator's decider. Script slip, mine: a prefix match picked the wrong disc for the dark control; fixed.
+- Predictions: 'at least one new dark pair' (45%) FAILED. Others held.
+- Certificate stage cancelled: nothing new to certify. Board claim released. RESULTS.md section 11, STATE.md, PROGRAM.md updated. Estimate 2-4%, unchanged.

@@ -1656,6 +1656,13 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
 ### Computed evidence
 
+- **Dark examples at W = 22 to 26** (d237, 2026-11-26; COMPUTED,
+  cross-checked, not reviewed). Among 8,741,965 immersed orthogonal discs
+  with W = 22, 24 or 26 and area ≤ 16 (strictly simple rooms included), the
+  only dark pair in 1,015,031 pairs of interior lattice marks is the known
+  pair of the 22-wall room (area 15). With d236, that pair is the only dark
+  pair among all immersed discs with W ≤ 26 and area ≤ 16. 9.7 CPU-min.
+  [spec and outcome](../d237-dark-examples-w22-26/README.md)
 - **Immersed-disc control** (d236, 2026-11-25; COMPUTED, cross-checked, not
   reviewed). Among immersed orthogonal discs with W ≤ 20 and area ≤ 16 that
   aren't strictly simple rooms (1,858,447 with a self-touching boundary and
