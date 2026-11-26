@@ -1656,6 +1656,14 @@ by a real path. G2, different-parity pairs and 45-degree rooms remain open.
 
 ### Computed evidence
 
+- **Immersed-disc control** (d236, 2026-11-25; COMPUTED, cross-checked, not
+  reviewed). Among immersed orthogonal discs with W ≤ 20 and area ≤ 16 that
+  aren't strictly simple rooms (1,858,447 with a self-touching boundary and
+  587,670 with overlapping cells), all 857,156 pairs of interior lattice
+  marks are lit, each by a complete orbit decision. A second implementation
+  agrees on every count through area 12 and on a 297-disc sample above it.
+  So no non-fold darkness appears when embedding is dropped, in this range.
+  8.0 CPU-min. [spec and outcome](../d236-immersed-disc-control/README.md)
 - **Common-cylinder test** (d72; method PROVED exact). It covers the full
   SL2(Z) orbit of the marked origami and matches direct tracing on 18,446
   lifts. In the 9 true BBBB rooms (every `N_x = B`), 747 of 747 pairs satisfy

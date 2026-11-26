@@ -2097,3 +2097,12 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Same-blocker rule: two briefs in a row (rotation, turn classes) ended at "one inequality system per class, class count grows with the heights". No new leverage. DECISION: close the route now. PROGRAM.md has the close record (one avoidable expense, one surprise).
 - Not a reviewed closure: no lemma to review. The per-class obstruction and the +50 counterexample are logged as unreviewed, coordinator-checked.
 - Estimate 3-5% -> 2-4%. Astra told to stand by. Tick cron 33e5a51a deleted.
+## 2026-11-25 19:11 d236 immersed-disc control approved and launched
+- Daniel: "run the immersed disc test". Spec, payoff sentence, gates and predictions are in d236-immersed-disc-control/README.md, written before any code. Budget: 60 CPU-min production (Astra), 10 CPU-min validator (Opus). Reuse: d55 orbitr.c decides abstract unfoldings, so the new parts are the enumerator and the unfolding builder.
+- 19:21 d236 gates: G1 PASS (57 embedded rows through area 11, 22,292 rooms, Astra). G3 PASS (22-wall control DARK, 2592 states; the validator's own decider agrees). G2 PASS: Astra's counts.tsv and the independent validator agree on all 69 (area, W, bucket) rows through area 10, discs and pairs; validator re-run identical. Hand prediction scored: smallest OVERLAP at area 9 held; I guessed W = 12 and missed the W = 10 disc. Note: marks are scarce in the control: 1 pair through area 10 (TOUCHING, lit). Astra told to proceed to G4 and production.
+
+## 2026-11-25 20:00 d236 complete: no dark pair
+- Astra (astra/README.md): through area 16, 2,446,117 control discs, 857,156 pairs, all lit, 0 dark, 0 undecided. 8.0 CPU-min production. Forecast scenarios 340 to 1,476 CPU-s; actual 481.
+- Coordinator checks: validator re-run through area 12 (176 CPU-s): 111 rows, 0 mismatches, 373 pairs all lit. crosscheck.py: 297 production discs decided with the validator's decider, 478 of 478 lit. HARNESS BUG, mine: the first crosscheck run misread the decider's return and printed 297 pairs as not lit; fixed before any conclusion.
+- Predictions: all three held; W of the smallest overlap missed by one disc.
+- Not reviewed: a negative control with a second implementation, no lemma. RESULTS.md section 11, STATE.md, PROGRAM.md updated. Board claim released. Estimate 2-4%, unchanged.

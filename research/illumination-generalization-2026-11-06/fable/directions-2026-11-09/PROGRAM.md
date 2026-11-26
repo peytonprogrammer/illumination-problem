@@ -198,3 +198,7 @@ Route-close record:
 Kept tools: d231 Lemma 1, d232, d233, d235, and the exact scanners in d234-route-exploration/ (scan_general.py, scan_classes.py, trace_check.py).
 No live route. Astra is on standby. Decisions that belong to Daniel: the immersed-disc control run (d234-route-exploration/outsider.md, recommended), the area-22 census, or stop and write up.
 Estimate: 2–4%.
+
+## Immersed-disc control done (2026-11-25 20:00 HST)
+
+Daniel approved the run. Result: no dark pair among 857,156 pairs on non-embedded immersed discs with W <= 20 and area <= 16 (d236-immersed-disc-control/). The control stops by its stop result. It kills no route and opens none. No live route. Open decisions for Daniel: the area-22 census, or stop and write up. Estimate 2–4%.
