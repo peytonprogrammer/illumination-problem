@@ -216,3 +216,10 @@ T10: every strictly simple orthogonal lattice room with at most 10 walls lights 
 ## Working backward from the goal (2026-11-27 23:32 HST, coordinator sketch, unreviewed)
 
 Daniel asked for a new system. Sketch and checks: d239-lattice-lines/README.md. Proposed proof shape: (A) rooms whose cell group is imprimitive fold onto a base, and darkness comes from the base; (B) rooms with a primitive cell group are fully lit, by Jordan's theorem plus an open braid-orbit step. Evidence so far: the 22-wall dark room is imprimitive; two lit pyramids and 434 sampled census rooms are primitive; lit pairs in two pyramids need at most 2 lattice steps. Not adopted as the route until Daniel decides. Pyramid chord selection (d238) is paused.
+
+## Route adopted: certificate route (2026-11-27 23:48 HST)
+
+Census-wide tests (d239 README): folding is rare (148 of 1,385,108 discs), the dark room folds, and the folded-parity certificate FP fires on exactly one of 167,043 same-class pairs, the dark one. Conjecture C: dark exactly when FP holds, on the coarsest lattice containing vertices and marks.
+Lemmas now: A' (no FP certificate at W <= 20, any area), B1 (primitive cell group contains the alternating group, by Jordan), B2 (no certificate implies a lattice line from S to T; open). Every brief names A', B1 or B2 as "Advances: ...".
+Stop result: an FP certificate at W <= 20 (it would be a dark room, so the goal is false), or a dark pair without a certificate (C is false), or no proof of A' by 2026-12-02 20:00 HST. d238 chord selection is closed in favour of this route; its lemmas stay on file.
+Route-close record for d238. Avoidable expense: two hand briefs on one word before asking what property separates the dark room. Surprise: every lit pair in two pyramids needs at most 2 lattice steps.

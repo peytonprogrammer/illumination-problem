@@ -27,3 +27,24 @@ Conjecture to test first: every dark pair sits in a room with imprimitive G, or 
 - Wolecki, arXiv 1905.09358: finitely many dark pairs per rational polygon; 22-gon example.
 - de Winter and Tokarsky, arXiv 2611.13226: lower bounds inside classes defined by the corner condition; whether fewer than 24 sides can work in general is listed as open. Already in the project notes.
 - No use of the cell group or primitivity found in four project notes searched or in two web searches. That is a thin search.
+
+## Census-wide fold test and certificate test (2026-11-27 23:48 HST; approved by Daniel)
+
+Scope: every stored census disc with at least two marks. d237 list: 832,942 discs, W = 22 to 26, area <= 16. d236 list: 552,166 control discs (touching or overlapping), W <= 20, area <= 16. Embedded W <= 20 rooms aren't stored and weren't run.
+Controls: link-based moves equal the coordinate-based ones on 1,589 embedded rooms. Marks found reproduce both census pair counts exactly (1,015,031 and 857,156). The dark room gives 5 blocks.
+
+Fold test (foldtest.py; lists in folds-d237.tsv, folds-d236.tsv):
+- d237: 66 of 832,942 discs fold (0.008%). Embedded W = 22: 8 of 491,310, and the dark room is one of the 8. Embedded W = 24: 54. Touching W = 24: 4. W = 26: none.
+- d236: 82 of 552,166 fold (0.015%).
+- Prediction (under 1% fold, 70%) held.
+
+Certificate FP for a same-class pair S, T: an invariant partition of the cells (single cells allowed) whose quotient moves for the other three classes have no 2-cycles, with S and T over different base points.
+Why FP gives darkness (sketch, unreviewed): a path from S first meets a lattice point of another class. With no quotient 2-cycles, that point is a corner or sends the base path straight back. So the path only meets class-a points over the base point of S.
+Certificate test (fp.py): 167,043 same-class pairs in the two lists. FP holds for exactly one, the dark pair, with the 5-block partition. Prediction (75%) held.
+
+Scaled copies of the dark room, scales (3,1), (2,1), (1,3), (3,3): the pair stays unreached, the room still folds, but FP on the unit lattice fails. So FP must be stated on the coarsest lattice that contains the vertices and the marks. Predicted before the run.
+
+Limits: one dark pair in the data. The tests show FP never fires on a lit pair, and folding is rare. They can't show that every dark pair has a certificate.
+
+Conjecture C: in a strictly simple orthogonal lattice room, on the coarsest lattice containing vertices and marks, a pair is dark exactly when it is a same-class pair with an FP certificate.
+Goal from C: (A') no room with W <= 20 carries an FP certificate, at any area. (B') no certificate implies lit.

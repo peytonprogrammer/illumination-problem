@@ -2148,3 +2148,8 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Prediction file, then lines.py and cellgroup.py on three named rooms, then a 434-room sample of the d237 list. Results in d239-lattice-lines/README.md.
 - Finding: the dark room's cell group is imprimitive (5 blocks of 3); every lit room tested is primitive. Lit pairs need k <= 2 lattice steps in two pyramids.
 - No brief to Astra yet. Asked Daniel to approve a census-wide run of the fold test.
+
+## 2026-11-27 23:48 fold test and certificate test run (Daniel: "yes")
+- Predictions written first. Controls passed (1,589 rooms, exact pair counts). Results in d239 README: 148 folding discs of 1,385,108; FP fires on exactly the dark pair among 167,043 same-class pairs; scaled copies need the coarsest lattice.
+- My error: one validation script used worker processes from standard input and hung until the 300 s limit. I stopped it and ran `pkill -f multiprocessing.spawn`, which matches any such process on the machine. Astra was idle. Use a script file next time and kill by task id.
+- Route adopted (PROGRAM.md). d238 closed with its record. Astra briefed on A' and on an independent check of the definitions.
