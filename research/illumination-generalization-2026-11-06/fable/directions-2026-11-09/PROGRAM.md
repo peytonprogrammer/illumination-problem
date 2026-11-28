@@ -208,3 +208,7 @@ Daniel approved the run. Result: no dark pair among 857,156 pairs on non-embedde
 - Chord count (bbbb/l1-chord-count.md): main term X/4 is exact, but the all-class discrepancy is linear in X (5X/24 against 6X/24 on a family in V). No error bound independent of N. Stopped.
 - Dark examples at W = 22 to 26 (d237): the only dark pair among immersed discs with W <= 26, area <= 16 is the 22-wall room's. Stopped.
 No live route. Open decisions for Daniel: extend d237 to W = 28 to 30 (known dark rooms exist at W = 28), the area-22 census, a change of target to W <= 10 at all sizes, or stop and write up. Estimate 2–4%.
+
+## Target changed to the ten-wall theorem (Daniel, 2026-11-27 22:55 HST)
+
+T10: every strictly simple orthogonal lattice room with at most 10 walls lights every pair of distinct interior lattice points, at every size. W <= 8 is already a reviewed theorem (d15 Theorem S). The work is the eight W = 10 words. Status, leverage, route and stop result: d238-w10-theorem/README.md. First step: pyramid word LLLLRLLRLR outside wb <= ud. Stopping rule: 2026-11-30 20:00 HST. Every brief names its word and its lemma as "Advances: T10, <word>". The W <= 20 goal stays stated and isn't worked.

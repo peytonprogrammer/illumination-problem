@@ -2121,6 +2121,12 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 
 ## 2026-11-26 09:49 d237 complete: only the known dark pair
 - Astra (astra/README.md): 8,741,965 discs, 1,015,031 pairs, 1 DARK (the 22-wall room, 2,592 states, both deciders), 0 undecided. 9.7 CPU-min. Her forecast scenarios: 11 and 39 CPU-min.
-- Coordinator checks: validator with W <= 26 through area 12: 8 rows, 0 mismatches. crosscheck.py: 557 discs, 649 of 649 lit; dark disc DARK by the validator's decider. Script slip, mine: a prefix match picked the wrong disc for the dark control; fixed.
+- Coordinator checks: validator with W <= 26 through area 12: 8 rows, 0 mismatches. crosscheck.py: 556 sampled discs, 648 of 648 lit; dark disc DARK by the validator's decider. Script slip, mine: a prefix match picked the wrong disc for the dark control; fixed.
 - Predictions: 'at least one new dark pair' (45%) FAILED. Others held.
 - Certificate stage cancelled: nothing new to certify. Board claim released. RESULTS.md section 11, STATE.md, PROGRAM.md updated. Estimate 2-4%, unchanged.
+
+## 2026-11-27 22:55 target changed to T10 (Daniel: "3")
+- Prior-work check before the brief: W <= 8 is already a reviewed theorem (d15 Theorem S, all real sizes and pairs). W = 10: 8 words, 0 COVERED, 4 with partial regions, named residuals on record. So T10 is exactly the eight W = 10 words for lattice rooms and lattice pairs.
+- Same-blocker check written in d238-w10-theorem/README.md: three items of new leverage (d235 later-image selection, one-corner gates at r = 3, exact sub-second deciders). Stop result and deadline 2026-11-30 20:00 HST. Predictions: pyramid closes 25%, T10 in two weeks 10%.
+- Astra briefed on the pyramid word.
+- Timestamp fix: the machine clock now reports PST. Log headers stay in HST, so this entry is 2026-11-27 22:55 HST (2026-11-28 00:55 PST). Use `TZ=Pacific/Honolulu date` for headers.

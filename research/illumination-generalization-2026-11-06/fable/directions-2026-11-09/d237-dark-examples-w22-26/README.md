@@ -34,7 +34,7 @@ Stop after area 16 and the certificate stage. An UNCERTIFIED dark pair: reproduc
 One dark pair, the known one. Among 8,741,965 immersed discs with W = 22, 24 or 26 and area <= 16 (5,748,169 EMBEDDED, 2,416,984 TOUCHING, 576,812 OVERLAP), 1,015,031 pairs of marks were decided by complete orbit. 1,015,030 are lit. The one DARK pair is the 22-wall room's pair (area 15, EMBEDDED, 2,592 states). 0 undecided. Production: 9.7 CPU-min (astra/README.md).
 
 Gates: G1 PASS (the census itself rediscovers the 22-wall room's pair and no other dark embedded pair, matching d9/d29). G2 PASS, but thin: only 2 nonzero rows through area 11; the coordinator added area 12 (8 rows, 0 mismatches, validator 180 CPU-s). G3 PASS.
-Coordinator cross-check (crosscheck.py, 2 CPU-s): 557 production discs decided with the validator's unfolding and decider: 649 of 649 pairs lit. The dark disc decided separately: DARK, 2,592 states, complete. (My first cross-check matched the dark disc by a prefix and picked another disc; fixed to the exact line.)
+Coordinator cross-check (crosscheck.py, 2 CPU-s): 556 sampled production discs decided with the validator's unfolding and decider: 648 of 648 pairs lit. The dark disc: DARK, 2,592 states, complete. (My first cross-check matched the dark disc by a prefix and picked another disc; fixed to the exact line.)
 
 Certificate stage: not run. The only dark pair is the 22-wall room's, whose fold certificate is already known. Nothing new to certify.
 
