@@ -52,3 +52,15 @@ Coordinator checks, onepass.py (complete one-pass list per axis over one full pe
 Review deferred: the lemma covers part of one word, and no decision depends on it until the open region has a route.
 Next: brief 2 to Astra asks for the exact hit criterion per list and either an incompatibility proof or a hand-built both-miss room (at most 5 candidates, tested with onepass.py).
 Question for Daniel: a bounded search for a room where both one-pass lists miss needs his approval.
+
+## Step 2 result (2026-11-27 23:12 HST): exact criteria and a reduction; route paused on the same blocker
+
+Astra's note: bbbb/t10-pyramid-2.md (unreviewed). No both-miss room, no proof that one can't exist.
+- Exact hit criterion for each one-pass list on mask 761, as a coset test. She confirmed the corner rules in onepass.py.
+- Reduction: for a fixed inner tuple (w,u,h,d,x,z,a,b), some outer sizes (V,q,f) miss on both axes if and only if two restricted tests both miss. One both-miss inner tuple would give infinitely many rooms.
+- Her one new candidate (24,30,1800; 2,16,5,6; 1,90,4,15): vertical 0 of 86,400, horizontal 59,760 of 1,734,432. Re-run by the coordinator, identical.
+- Other masks of the pyramid word outside wb <= ud: 763, 8051, 6131, 5111 (one line each in her note).
+
+Same-blocker rule: both notes stop where neither list can be forced to hit. Hand work has no new leverage.
+The new leverage would be a bounded search over inner tuples for a both-miss pair. It is a search, so it needs Daniel's approval. Asked 2026-11-27 23:12 HST. Until then Astra is idle on purpose.
+Review of the reduction is deferred until the search is approved: the search design is the only decision that depends on it.

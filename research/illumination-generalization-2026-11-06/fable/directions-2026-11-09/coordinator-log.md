@@ -2137,3 +2137,8 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - No review launched: partial region of one word, not load-bearing yet.
 - Same-blocker check for brief 2: new leverage is the complete one-pass decider (turns "does a list hit in the open region" into a named test) and the V-independence of the horizontal list.
 - Astra briefed (brief 2). Asked Daniel about a bounded both-miss search.
+
+## 2026-11-27 23:12 T10 step 2 back: exact criteria, reduction to 8 inner parameters, same blocker
+- Astra's candidate re-run with onepass.py: identical (0 of 86,400; 59,760 of 1,734,432).
+- Second stop at the same point (no way to force a hit, no both-miss room). No third hand brief: no new leverage.
+- Waiting on Daniel for the bounded both-miss search over inner tuples. No review launched.
