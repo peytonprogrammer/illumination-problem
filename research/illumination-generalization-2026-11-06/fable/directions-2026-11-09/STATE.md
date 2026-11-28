@@ -479,3 +479,9 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 - Astra: idle by instruction unless she names a concrete construction for B′.
 - W ≤ 20 estimate: 2–4% (was 3–6%; the route wasn't new).
 - Open routes with a payoff sentence: none.
+
+## 2026-11-28 00:13 HST — d240 verdict; backward chain (d241)
+
+- d240: cert-a.md claims 1–4 CORRECT, claim 5 CORRECT WITH GAPS. A′ stands for interior same-class pairs. Gap: d9's room list is independently checked only through area 12; no human review of d9 found.
+- d241: backward chain. Five ideas, all map to closed routes (d87, d59/d115–d117, d55/d237, d220, cert-b). New corollary to confirm: certificate-dark rooms have area ≤ W − 4.
+- W ≤ 20 estimate: 2–4%, unchanged. No route to B′ with named leverage.

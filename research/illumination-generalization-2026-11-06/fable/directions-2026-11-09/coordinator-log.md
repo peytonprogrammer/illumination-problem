@@ -2159,3 +2159,8 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - My error: the prior-work check for the "new system" missed the project's fold framework (d52, d61, d93, d217, d219, d220, fold-converse.md). Told Astra; reporting to Daniel.
 - Launched one Opus review (d240) of cert-a.md, scoped to the delta beyond d217 claims 4 and 5. Payoff: a reviewed all-area theorem or its withdrawal.
 - Closed d239 under the same-blocker rule. Astra held; no new brief. Estimate back to 2–4%.
+
+## 2026-11-28 00:13 HST d240 processed; d241 backward chain
+- d240 review: no wrong step. Reran nothing beyond the reviewer's named checks (its checks_a.py covers the three named rooms). Forwarded verdict and corrections to Astra. Board claim released.
+- Daniel: "think of new ideas, work backwards". Generated five ideas; prior-work check by concept in RESULTS.md found all five (d241 table). Asked Astra to confirm the area ≤ W − 4 corollary only.
+- Ask to Daniel: approve a recount of rooms at areas 13–16, W ≤ 20, with the certificate test (closes the d240 gap).
