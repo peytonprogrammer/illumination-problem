@@ -212,3 +212,7 @@ No live route. Open decisions for Daniel: extend d237 to W = 28 to 30 (known dar
 ## Target changed to the ten-wall theorem (Daniel, 2026-11-27 22:55 HST)
 
 T10: every strictly simple orthogonal lattice room with at most 10 walls lights every pair of distinct interior lattice points, at every size. W <= 8 is already a reviewed theorem (d15 Theorem S). The work is the eight W = 10 words. Status, leverage, route and stop result: d238-w10-theorem/README.md. First step: pyramid word LLLLRLLRLR outside wb <= ud. Stopping rule: 2026-11-30 20:00 HST. Every brief names its word and its lemma as "Advances: T10, <word>". The W <= 20 goal stays stated and isn't worked.
+
+## Working backward from the goal (2026-11-27 23:32 HST, coordinator sketch, unreviewed)
+
+Daniel asked for a new system. Sketch and checks: d239-lattice-lines/README.md. Proposed proof shape: (A) rooms whose cell group is imprimitive fold onto a base, and darkness comes from the base; (B) rooms with a primitive cell group are fully lit, by Jordan's theorem plus an open braid-orbit step. Evidence so far: the 22-wall dark room is imprimitive; two lit pyramids and 434 sampled census rooms are primitive; lit pairs in two pyramids need at most 2 lattice steps. Not adopted as the route until Daniel decides. Pyramid chord selection (d238) is paused.

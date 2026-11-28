@@ -2142,3 +2142,9 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Astra's candidate re-run with onepass.py: identical (0 of 86,400; 59,760 of 1,734,432).
 - Second stop at the same point (no way to force a hit, no both-miss room). No third hand brief: no new leverage.
 - Waiting on Daniel for the bounded both-miss search over inner tuples. No review launched.
+
+## 2026-11-27 23:32 backward analysis (Daniel: "think backwards from the goal")
+- Prior-work and literature check first (notes grep, two searches, two arXiv papers read by a fetch agent).
+- Prediction file, then lines.py and cellgroup.py on three named rooms, then a 434-room sample of the d237 list. Results in d239-lattice-lines/README.md.
+- Finding: the dark room's cell group is imprimitive (5 blocks of 3); every lit room tested is primitive. Lit pairs need k <= 2 lattice steps in two pyramids.
+- No brief to Astra yet. Asked Daniel to approve a census-wide run of the fold test.
