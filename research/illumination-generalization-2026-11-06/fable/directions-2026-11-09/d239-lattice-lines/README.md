@@ -48,3 +48,13 @@ Limits: one dark pair in the data. The tests show FP never fires on a lit pair, 
 
 Conjecture C: in a strictly simple orthogonal lattice room, on the coarsest lattice containing vertices and marks, a pair is dark exactly when it is a same-class pair with an FP certificate.
 Goal from C: (A') no room with W <= 20 carries an FP certificate, at any area. (B') no certificate implies lit.
+
+## Correction and route close (2026-11-27 23:58 HST)
+
+- **Prior work I missed.** This directory largely restates the project's fold framework: d52 (fold enumeration), d61 (pure-braid orbit, Lemma FC), d93 (the five blocks of three), d217 (dark implies fold, reviewed), d219, d220, and `bbbb/fold-converse.md`. My check grepped four files for keywords and missed them. Astra flagged it in `bbbb/cert-a.md`.
+- **What is new here.** The census-wide certificate test (FP fires on exactly the dark pair among 167,043 same-class pairs). `pi_check.py`: Astra's canonical partition Π agrees with `fp.py` on all of those pairs (1 disjoint, 0 unequal-but-overlapping). I wrote no prediction before `pi_check.py`.
+- **Withdrawn.** The "k ≤ 2 lattice steps" observation gives no leverage. `bbbb/cert-b-short-steps.md` builds six-wall L-rooms where every lighting chord needs more than any given number of primitive steps. I checked its named arithmetic by hand (P = 1155).
+- **Astra's cert-a.md (unreviewed until d240 reports).** FP implies dark on the canonical Π. A′: a room with an FP certificate has at least 22 walls, at every area, with the area ≤ 16 census as the finite base. d217 already judged the main count correct (claims 4 and 5).
+- **Route closed.** The open step B′ (no certificate implies lit) is the blocker of d61, d217, d219 and d220: each walk uses one state, and Π closes across states. Nobody has named new leverage, so the same-blocker rule stops the route before the 2026-12-02 stop date.
+- **Avoidable expense.** A census run and one Astra brief went to a framework the project already had. Before a "new" route, search RESULTS.md by concept and ask Astra for the closest earlier note.
+- **Surprise worth keeping.** Π and the any-partition test agree on every census pair. No step bound depends only on wall count, even at six walls.

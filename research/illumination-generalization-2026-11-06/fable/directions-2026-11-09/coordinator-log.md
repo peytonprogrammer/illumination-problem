@@ -2153,3 +2153,9 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Predictions written first. Controls passed (1,589 rooms, exact pair counts). Results in d239 README: 148 folding discs of 1,385,108; FP fires on exactly the dark pair among 167,043 same-class pairs; scaled copies need the coarsest lattice.
 - My error: one validation script used worker processes from standard input and hung until the 300 s limit. I stopped it and ran `pkill -f multiprocessing.spawn`, which matches any such process on the machine. Astra was idle. Use a script file next time and kill by task id.
 - Route adopted (PROGRAM.md). d238 closed with its record. Astra briefed on A' and on an independent check of the definitions.
+
+## 2026-11-27 23:58 HST cert-a and cert-b processed; route closed
+- Ran `astra_fp_controls.py` (reproduces) and `pi_check.py` (Π equals fp.py on 167,043 pairs). Checked cert-b-short-steps arithmetic by hand.
+- My error: the prior-work check for the "new system" missed the project's fold framework (d52, d61, d93, d217, d219, d220, fold-converse.md). Told Astra; reporting to Daniel.
+- Launched one Opus review (d240) of cert-a.md, scoped to the delta beyond d217 claims 4 and 5. Payoff: a reviewed all-area theorem or its withdrawal.
+- Closed d239 under the same-blocker rule. Astra held; no new brief. Estimate back to 2–4%.

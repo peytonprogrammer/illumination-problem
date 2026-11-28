@@ -1,0 +1,11 @@
+Advances: B′ (method limit). No bound depending only on wall count suffices for the number of primitive lattice steps in a lighting witness. This already fails for nondirect pairs in normalized six-wall rooms.
+
+**Construction.** Given any proposed step bound M, take four distinct odd primes greater than M, one pσ for each sign pair σ∈{±1}². Let P be their product. Use the strictly simple L-room [0,8P]×[0,2P] union [0,2P]×[0,8P]. Put T=(8P−1,2P−1). By the Chinese remainder theorem choose S satisfying Sⱼ≡σⱼTⱼ modulo pσ for every σ and j=1,2. Choose 0<S₁<2P and 6P<S₂<8P. Each open interval contains representatives of both parities: the residue modulo odd P is nonzero, and the two representatives differ by P. Thus S can have the same parity class as T or any prescribed different class.
+
+Both marks are interior. Their midpoint lies strictly in the missing upper-right quadrant, so their direct segment fails. The coarsest rectangular grid of the room and marks is the unit grid: the wall coordinates supply 2P on each axis, while T supplies 8P−1 and 2P−1, respectively.
+
+**All itineraries.** Develop any legal chord starting at S. Each wall reflection sends the corresponding coordinate t to −t+2c for c∈2Pℤ. Hence the developed endpoint is σT modulo 4P in the two coordinates for some sign pair σ. Both components of its displacement from S are divisible by pσ. The displacement is nonzero. Its primitive-step count is the gcd of the absolute components, so it exceeds M. In the same-class case it is at least 2pσ. This applies to arbitrarily many reflections and every direction. D15 Theorem S lights the pair because the room has six walls. A′ also excludes FP here.
+
+**Named arithmetic check.** Assign (++,+−,−+,−−) the primes (3,5,7,11). P=1155, S=(1079,7811), T=(9239,2309). For the four signed endpoint differences the respective coordinate pairs reduce to (0,0) modulo 3,5,7,11. Every chord takes at least six primitive steps. No orbit computation or room search is needed.
+
+**Implication.** D239's short-step observations are valid for the sampled marks, but no uniform short-step witness theorem can establish B′, even at fixed wall count and for different-class pairs. This construction supplies no dark pair. Choosing a direction whose gcd is large and whose intermediate sites are all regular remains available to a proof.

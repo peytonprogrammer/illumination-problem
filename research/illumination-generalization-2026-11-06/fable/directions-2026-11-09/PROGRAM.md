@@ -223,3 +223,11 @@ Census-wide tests (d239 README): folding is rare (148 of 1,385,108 discs), the d
 Lemmas now: A' (no FP certificate at W <= 20, any area), B1 (primitive cell group contains the alternating group, by Jordan), B2 (no certificate implies a lattice line from S to T; open). Every brief names A', B1 or B2 as "Advances: ...".
 Stop result: an FP certificate at W <= 20 (it would be a dark room, so the goal is false), or a dark pair without a certificate (C is false), or no proof of A' by 2026-12-02 20:00 HST. d238 chord selection is closed in favour of this route; its lemmas stay on file.
 Route-close record for d238. Avoidable expense: two hand briefs on one word before asking what property separates the dark room. Surprise: every lit pair in two pyramids needs at most 2 lattice steps.
+
+## Certificate route closed (2026-11-27 23:58 HST)
+
+- **Result in hand (review pending, d240).** A room with a fold-parity certificate for a same-class pair is dark there and has at least 22 walls, at every area (`bbbb/cert-a.md`). This extends d217 claims 4 and 5.
+- **Not obtained.** B′: no certificate implies lit. It is the reachability gap of d61, d217, d219 and d220. No new leverage is named. `bbbb/cert-b-short-steps.md` rules out any step bound that depends only on wall count.
+- **Correction.** The route wasn't new. d239 restates the fold framework (d52, d61, d93, d217, d219, d220, `bbbb/fold-converse.md`). The estimate for the W ≤ 20 goal returns to 2–4%.
+- **Open routes with a filled payoff sentence:** none. L1 stays open. The next step needs either a new idea for the lit side or Daniel's choice of a cheaper outcome.
+- **Avoidable expense:** see d239 README. **Surprise:** Π agrees with the any-partition test on all 167,043 census pairs.

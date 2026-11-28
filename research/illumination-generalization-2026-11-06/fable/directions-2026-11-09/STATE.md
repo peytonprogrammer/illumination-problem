@@ -471,3 +471,11 @@ Wall budget (d145): R22's darkness costs a corner-only site plus all 6 axial ref
 **2026-11-27 23:12. T10 step 2:** exact one-pass criteria and a reduction (both-miss rooms exist iff an inner tuple of 8 parameters fails two restricted tests), unreviewed. Second stop at the same blocker. **Paused: waiting on Daniel** to approve a bounded both-miss search over inner tuples. Estimates unchanged: T10 10%, W ≤ 20 2–4%.
 **2026-11-27 23:32. Backward analysis (unreviewed sketch, d239):** proposed proof shape is fold test plus Jordan's theorem. The 22-wall dark room's cell group is imprimitive; two lit pyramids and 434 sampled census rooms are primitive. d238 chord selection paused. Waiting on Daniel: adopt this route and approve a census-wide fold test. Estimates unchanged.
 **2026-11-27 23:48. CERTIFICATE ROUTE ADOPTED (d239).** Fold test on 1,385,108 census discs: 148 fold, including the dark room. Certificate FP fires on exactly 1 of 167,043 same-class pairs, the dark pair. Conjecture C: dark exactly when FP holds. Lemmas: A' (no FP at W ≤ 20, any area), B1 (Jordan), B2 (no certificate implies lit, open). Astra on A'. Stop rule 2026-12-02 20:00 HST. Estimate for W ≤ 20: 3–6% (guess, up from 2–4%).
+
+## 2026-11-27 23:58 HST — certificate route closed; cert-a under review
+
+- d239 closed: B′ is the d61/d217/d219/d220 blocker; no new leverage. k ≤ 2 leverage withdrawn (`bbbb/cert-b-short-steps.md`, arithmetic checked by hand).
+- d240: one Opus review of `bbbb/cert-a.md` running (FP implies dark; A′: certificate-dark rooms have ≥ 22 walls at every area).
+- Astra: idle by instruction unless she names a concrete construction for B′.
+- W ≤ 20 estimate: 2–4% (was 3–6%; the route wasn't new).
+- Open routes with a payoff sentence: none.
