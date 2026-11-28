@@ -35,3 +35,20 @@ If the pyramid closes: review it (it is a closure), then order the other seven w
 
 - P(the pyramid word closes for all lattice placements by the deadline) = 25%.
 - P(T10 complete within two weeks) = 10%.
+
+## Step 1 result (2026-11-27 23:05 HST): pyramid not closed, one new sufficient lemma, no counterexample
+
+Astra's note: bbbb/t10-pyramid.md (unreviewed). She stopped on the method, not on a counterexample.
+- Lemma (later-image, vertical): with g = gcd(dV, ub), eta = gcd(wg, auV)/g, L = d + b, D = a + L, the pair is lit when g/L + b*eta/D < u. A perpendicular variant needs g'/L' + b'*eta'/D' < u'/2.
+- Open region: all three of min(ub, dV) + wb > u(d+b), g/L + b*eta/D >= u, g'/L' + b'*eta'/D' >= u'/2. Named example: w=4, u=5, V=60, (q,h,d,f)=(8,4,1,2), (x,z,a,b)=(1,15,1,3), area 285.
+- Lattice marks don't remove the old obstruction: at widths (200, V, 400, 200) with V = 38400 and 57600 the vertical list misses and the horizontal list hits.
+
+Coordinator checks, onepass.py (complete one-pass list per axis over one full period, exact integers):
+- Controls: reproduces Astra's three named tests (vertical 0 hits of 2,688,000 and 4,032,000; her named displacements hit).
+- Gap room at V = 60, 120, 180, 240, 300: vertical hits at 22 and 32 (mod 10V/3), horizontal 132 hits per 1,680 at every V. Prediction held (80% for one axis at all five; 50% for both at V = 60). The gap is in the estimate, not in the lists.
+- Lemma at V = 193, 577, 1001, 4097, 20001 (third-test family): 276 vertical hits per period each. Prediction held (95%).
+- Observation, by geometry: the horizontal list from T never sees x > z, so it doesn't depend on V.
+
+Review deferred: the lemma covers part of one word, and no decision depends on it until the open region has a route.
+Next: brief 2 to Astra asks for the exact hit criterion per list and either an incompatibility proof or a hand-built both-miss room (at most 5 candidates, tested with onepass.py).
+Question for Daniel: a bounded search for a room where both one-pass lists miss needs his approval.

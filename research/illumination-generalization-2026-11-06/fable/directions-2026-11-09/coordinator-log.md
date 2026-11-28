@@ -2130,3 +2130,10 @@ Added the L1-L4 proof architecture to PROGRAM.md. L1 (area bound / descent) is t
 - Same-blocker check written in d238-w10-theorem/README.md: three items of new leverage (d235 later-image selection, one-corner gates at r = 3, exact sub-second deciders). Stop result and deadline 2026-11-30 20:00 HST. Predictions: pyramid closes 25%, T10 in two weeks 10%.
 - Astra briefed on the pyramid word.
 - Timestamp fix: the machine clock now reports PST. Log headers stay in HST, so this entry is 2026-11-27 22:55 HST (2026-11-28 00:55 PST). Use `TZ=Pacific/Honolulu date` for headers.
+
+## 2026-11-27 23:05 T10 step 1 back: pyramid not closed (bbbb/t10-pyramid.md)
+- Astra: new sufficient gcd lemma, explicit open region, named gap room (area 285). Method stop, no counterexample, no both-miss family.
+- Prediction file first (d238/PREDICTION-onepass.md), then onepass.py. Controls match her three tests. Gap room hits on both axes at five V. Lemma holds at five named V. Both predictions held.
+- No review launched: partial region of one word, not load-bearing yet.
+- Same-blocker check for brief 2: new leverage is the complete one-pass decider (turns "does a list hit in the open region" into a named test) and the V-independence of the horizontal list.
+- Astra briefed (brief 2). Asked Daniel about a bounded both-miss search.
